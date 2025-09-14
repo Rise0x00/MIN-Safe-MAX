@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="inactive_ttl">
+        <item quantity="other">%d месяцев</item>
+        <item quantity="zero">%d месяцев</item>
+        <item quantity="one">%d месяц</item>
+        <item quantity="two">%d месяца</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+    </plurals>
+    <plurals name="max_attach_count_error">
+        <item quantity="other">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="zero">Сообщение не может содержать более чем %d вложений</item>
+        <item quantity="one">Сообщение не может содержать более чем %d вложение</item>
+        <item quantity="two">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="few">Сообщение не может содержать более чем %d вложения</item>
+        <item quantity="many">Сообщение не может содержать более чем %d вложений</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нового уведомления</item>
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+    </plurals>
+    <plurals name="tt_channel_subtitle_count">
+        <item quantity="other">%d подписчиков</item>
+        <item quantity="zero">%d подписчиков</item>
+        <item quantity="one">%d подписчик</item>
+        <item quantity="two">%d подписчика</item>
+        <item quantity="few">%d подписчика</item>
+        <item quantity="many">%d подписчиков</item>
+    </plurals>
+    <plurals name="tt_chat_subtitle_count">
+        <item quantity="other">%d участников</item>
+        <item quantity="zero">%d участников</item>
+        <item quantity="one">%d участник</item>
+        <item quantity="two">%d участника</item>
+        <item quantity="few">%d участника</item>
+        <item quantity="many">%d участников</item>
+    </plurals>
+    <plurals name="tt_dates_days">
+        <item quantity="other">%d дней</item>
+        <item quantity="zero">%d дней</item>
+        <item quantity="one">%d день</item>
+        <item quantity="two">%d дня</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+    </plurals>
+    <plurals name="tt_dates_days_last_update">
+        <item quantity="other">Обновлено %d дней назад</item>
+        <item quantity="zero">Обновлено %d дней назад</item>
+        <item quantity="one">Обновлено %d день назад</item>
+        <item quantity="two">Обновлено %d дня назад</item>
+        <item quantity="few">Обновлено %d дня назад</item>
+        <item quantity="many">Обновлено %d дней назад</item>
+    </plurals>
+    <plurals name="tt_dates_days_live_location_end">
+        <item quantity="other">Завершено %d дней назад</item>
+        <item quantity="zero">Завершено %d дней назад</item>
+        <item quantity="one">Завершено %d день назад</item>
+        <item quantity="two">Завершено %d дня назад</item>
+        <item quantity="few">Завершено %d дня назад</item>
+        <item quantity="many">Завершено %d дней назад</item>
+    </plurals>
+    <plurals name="tt_dates_days_past">
+        <item quantity="other">%d дней назад</item>
+        <item quantity="zero">%d дней назад</item>
+        <item quantity="one">%d день назад</item>
+        <item quantity="two">%d дня назад</item>
+        <item quantity="few">%d дня назад</item>
+        <item quantity="many">%d дней назад</item>
+    </plurals>
+    <plurals name="tt_dates_hours">
+        <item quantity="other">%d часов</item>
+        <item quantity="zero">%d часов</item>
+        <item quantity="one">%d час</item>
+        <item quantity="two">%d часа</item>
+        <item quantity="few">%d часа</item>
+        <item quantity="many">%d часов</item>
+    </plurals>
+    <plurals name="tt_dates_hours_last_update">
+        <item quantity="other">Обновлено %d часов назад</item>
+        <item quantity="zero">Обновлено %d часов назад</item>
+        <item quantity="one">Обновлено %d час назад</item>
+        <item quantity="two">Обновлено %d часа назад</item>
+        <item quantity="few">Обновлено %d часа назад</item>
+        <item quantity="many">Обновлено %d часов назад</item>
+    </plurals>
+    <plurals name="tt_dates_hours_live_location_end">
+        <item quantity="other">Завершено %d часов назад</item>
+        <item quantity="zero">Завершено %d часов назад</item>
+        <item quantity="one">Завершено %d час назад</item>
+        <item quantity="two">Завершено %d часа назад</item>
+        <item quantity="few">Завершено %d часа назад</item>
+        <item quantity="many">Завершено %d часов назад</item>
+    </plurals>
+    <plurals name="tt_dates_hours_past">
+        <item quantity="other">%d часов назад</item>
+        <item quantity="zero">%d часов назад</item>
+        <item quantity="one">%d час назад</item>
+        <item quantity="two">%d часа назад</item>
+        <item quantity="few">%d часа назад</item>
+        <item quantity="many">%d часов назад</item>
+    </plurals>
+    <plurals name="tt_dates_minutes">
+        <item quantity="other">%d минут</item>
+        <item quantity="zero">%d минут</item>
+        <item quantity="one">%d минуту</item>
+        <item quantity="two">%d минуты</item>
+        <item quantity="few">%d минуты</item>
+        <item quantity="many">%d минут</item>
+    </plurals>
+    <plurals name="tt_dates_minutes_last_update">
+        <item quantity="other">Обновлено %d минут назад</item>
+        <item quantity="zero">Обновлено %d минут назад</item>
+        <item quantity="one">Обновлено %d минуту назад</item>
+        <item quantity="two">Обновлено %d минуты назад</item>
+        <item quantity="few">Обновлено %d минуты назад</item>
+        <item quantity="many">Обновлено %d минут назад</item>
+    </plurals>
+    <plurals name="tt_dates_minutes_live_location_end">
+        <item quantity="other">Завершено %d минут назад</item>
+        <item quantity="zero">Завершено %d минут назад</item>
+        <item quantity="one">Завершено %d минуту назад</item>
+        <item quantity="two">Завершено %d минуты назад</item>
+        <item quantity="few">Завершено %d минуты назад</item>
+        <item quantity="many">Завершено %d минут назад</item>
+    </plurals>
+    <plurals name="tt_dates_minutes_past">
+        <item quantity="other">%d минут назад</item>
+        <item quantity="zero">%d минут назад</item>
+        <item quantity="one">%d минуту назад</item>
+        <item quantity="two">%d минуты назад</item>
+        <item quantity="few">%d минуты назад</item>
+        <item quantity="many">%d минут назад</item>
+    </plurals>
+    <plurals name="tt_dates_months_last_update">
+        <item quantity="other">Обновлено %d месяцев назад</item>
+        <item quantity="zero">Обновлено %d месяцев назад</item>
+        <item quantity="one">Обновлено %d месяц назад</item>
+        <item quantity="two">Обновлено %d месяца назад</item>
+        <item quantity="few">Обновлено %d месяца назад</item>
+        <item quantity="many">Обновлено %d месяцев назад</item>
+    </plurals>
+    <plurals name="tt_dates_months_live_location_end">
+        <item quantity="other">Завершено %d месяцев назад</item>
+        <item quantity="zero">Завершено %d месяцев назад</item>
+        <item quantity="one">Завершено %d месяц назад</item>
+        <item quantity="two">Завершено %d месяца назад</item>
+        <item quantity="few">Завершено %d месяца назад</item>
+        <item quantity="many">Завершено %d месяцев назад</item>
+    </plurals>
+    <plurals name="tt_dates_months_past">
+        <item quantity="other">%d месяцев назад</item>
+        <item quantity="zero">%d месяцев назад</item>
+        <item quantity="one">%d месяц назад</item>
+        <item quantity="two">%d месяца назад</item>
+        <item quantity="few">%d месяца назад</item>
+        <item quantity="many">%d месяцев назад</item>
+    </plurals>
+    <plurals name="tt_dates_weeks_last_update">
+        <item quantity="other">Обновлено %d недель назад</item>
+        <item quantity="zero">Обновлено %d недель назад</item>
+        <item quantity="one">Обновлено %d неделю назад</item>
+        <item quantity="two">Обновлено %d недели назад</item>
+        <item quantity="few">Обновлено %d недели назад</item>
+        <item quantity="many">Обновлено %d недель назад</item>
+    </plurals>
+    <plurals name="tt_dates_weeks_live_location_end">
+        <item quantity="other">Завершено %d недель назад</item>
+        <item quantity="zero">Завершено %d недель назад</item>
+        <item quantity="one">Завершено %d неделю назад</item>
+        <item quantity="two">Завершено %d недели назад</item>
+        <item quantity="few">Завершено %d недели назад</item>
+        <item quantity="many">Завершено %d недель назад</item>
+    </plurals>
+    <plurals name="tt_dates_weeks_past">
+        <item quantity="other">%d недель назад</item>
+        <item quantity="zero">%d недель назад</item>
+        <item quantity="one">%d неделю назад</item>
+        <item quantity="two">%d недели назад</item>
+        <item quantity="few">%d недели назад</item>
+        <item quantity="many">%d недель назад</item>
+    </plurals>
+    <plurals name="tt_new_messages">
+        <item quantity="other">%d сообщений</item>
+        <item quantity="zero">%d сообщений</item>
+        <item quantity="one">%d сообщение</item>
+        <item quantity="two">%d сообщения</item>
+        <item quantity="few">%d сообщения</item>
+        <item quantity="many">%d сообщений</item>
+    </plurals>
+</resources>

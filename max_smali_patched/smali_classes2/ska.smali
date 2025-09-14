@@ -1,0 +1,6 @@
+.class public interface abstract Lska;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
