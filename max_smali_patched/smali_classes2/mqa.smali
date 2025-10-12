@@ -1,158 +1,283 @@
-.class public final Lmqa;
-.super Lgk0;
+.class public abstract Lmqa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final A:I
 
-.field public d:Ljava/lang/Object;
+.field public static final B:I
+
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    sget v0, Lvec;->chat_screen_message_send_error_delete_action:I
 
-    iput v0, p0, Lmqa;->c:I
+    sput v0, Lmqa;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lvec;->chat_screen_message_send_error_resend_action_multi:I
+
+    sput v0, Lmqa;->b:I
+
+    sget v0, Lvec;->chat_screen_message_send_error_resend_action_solo:I
+
+    sput v0, Lmqa;->c:I
+
+    sget v0, Lvec;->messages_list_chat_description_view_id:I
+
+    sput v0, Lmqa;->d:I
+
+    sget v0, Lvec;->messages_list_chat_description_view_type:I
+
+    sput v0, Lmqa;->e:I
+
+    sget v0, Lvec;->messages_list_confirm_cancel:I
+
+    sput v0, Lmqa;->f:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_extremism:I
+
+    sput v0, Lmqa;->g:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_fake:I
+
+    sput v0, Lmqa;->h:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_other:I
+
+    sput v0, Lmqa;->i:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_porno:I
+
+    sput v0, Lmqa;->j:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_spam:I
+
+    sput v0, Lmqa;->k:I
+
+    sget v0, Lvec;->messages_list_confirm_complaint_threat:I
+
+    sput v0, Lmqa;->l:I
+
+    sget v0, Lvec;->messages_list_confirm_delete:I
+
+    sput v0, Lmqa;->m:I
+
+    sget v0, Lvec;->messages_list_confirm_delete_for_all:I
+
+    sput v0, Lmqa;->n:I
+
+    sget v0, Lvec;->messages_list_confirm_pin_with_notify:I
+
+    sput v0, Lmqa;->o:I
+
+    sget v0, Lvec;->messages_list_confirm_pin_without_notify:I
+
+    sput v0, Lmqa;->p:I
+
+    sget v0, Lvec;->messages_list_context_action_copy:I
+
+    sput v0, Lmqa;->q:I
+
+    sget v0, Lvec;->messages_list_context_action_copy_photo:I
+
+    sput v0, Lmqa;->r:I
+
+    sget v0, Lvec;->messages_list_context_action_delete:I
+
+    sput v0, Lmqa;->s:I
+
+    sget v0, Lvec;->messages_list_context_action_delete_for_all:I
+
+    sput v0, Lmqa;->t:I
+
+    sget v0, Lvec;->messages_list_context_action_edit:I
+
+    sput v0, Lmqa;->u:I
+
+    sget v0, Lvec;->messages_list_context_action_forward:I
+
+    sput v0, Lmqa;->v:I
+
+    sget v0, Lvec;->messages_list_context_action_mark_as_unread:I
+
+    sput v0, Lmqa;->w:I
+
+    sget v0, Lvec;->messages_list_context_action_pin:I
+
+    sput v0, Lmqa;->x:I
+
+    sget v0, Lvec;->messages_list_context_action_reply:I
+
+    sput v0, Lmqa;->y:I
+
+    sget v0, Lvec;->messages_list_context_action_report:I
+
+    sput v0, Lmqa;->z:I
+
+    sget v0, Lvec;->messages_list_context_action_save_to_gallery:I
+
+    sput v0, Lmqa;->A:I
+
+    sget v0, Lvec;->messages_list_context_action_select:I
+
+    sput v0, Lmqa;->B:I
+
+    sget v0, Lvec;->messages_list_context_action_unpin:I
+
+    sput v0, Lmqa;->C:I
+
+    sget v0, Lvec;->messages_list_context_actions_view_type:I
+
+    sput v0, Lmqa;->D:I
+
+    sget v0, Lvec;->messages_list_context_content_container:I
+
+    sput v0, Lmqa;->E:I
+
+    sget v0, Lvec;->messages_list_context_member_view_type:I
+
+    sput v0, Lmqa;->F:I
+
+    sget v0, Lvec;->messages_list_context_members_member_cell:I
+
+    sput v0, Lmqa;->G:I
+
+    sget v0, Lvec;->messages_list_context_members_member_reaction:I
+
+    sput v0, Lmqa;->H:I
+
+    sget v0, Lvec;->messages_list_context_reactions_container:I
+
+    sput v0, Lmqa;->I:I
+
+    sget v0, Lvec;->messages_list_item_alias:I
+
+    sput v0, Lmqa;->J:I
+
+    sget v0, Lvec;->messages_list_item_date:I
+
+    sput v0, Lmqa;->K:I
+
+    sget v0, Lvec;->messages_list_item_keyboard_buttons:I
+
+    sput v0, Lmqa;->L:I
+
+    sget v0, Lvec;->messages_list_item_single_image:I
+
+    sput v0, Lmqa;->M:I
+
+    sget v0, Lvec;->messages_list_item_text:I
+
+    sput v0, Lmqa;->N:I
+
+    sget v0, Lvec;->messages_list_item_title:I
+
+    sput v0, Lmqa;->O:I
+
+    sget v0, Lvec;->messages_list_item_video_duration:I
+
+    sput v0, Lmqa;->P:I
+
+    sget v0, Lvec;->messages_list_recycler_view:I
+
+    sput v0, Lmqa;->Q:I
+
+    sget v0, Lvec;->messages_list_scroll_btn:I
+
+    sput v0, Lmqa;->R:I
+
+    sget v0, Lvec;->messages_list_share_contact_for_bot_action:I
+
+    sput v0, Lmqa;->S:I
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmqa;->c:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lmqa;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()Llx0;
-    .locals 2
-
-    iget v0, p0, Lmqa;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmqa;->d:Ljava/lang/Object;
-
-    check-cast v0, Lqtd;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lqtd;
-
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
-
-    invoke-direct {v0, v1}, Lqtd;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lmqa;->d:Ljava/lang/Object;
-
-    :cond_0
-    iget-object p0, p0, Lmqa;->d:Ljava/lang/Object;
-
-    check-cast p0, Lqtd;
-
-    return-object p0
-
-    :pswitch_0
-    new-instance v0, Lqtd;
-
-    iget-object p0, p0, Lmqa;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroid/net/Uri;
-
-    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lqtd;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 2
-
-    iget v0, p0, Lmqa;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 p0, 0x1
-
-    invoke-static {p1, p0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lmqa;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroid/net/Uri;
-
-    invoke-static {p0}, Lkv0;->q(Landroid/net/Uri;)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    new-instance v0, Landroid/graphics/Canvas;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr p1, v1
-
-    invoke-virtual {v0, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    const/4 p1, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1, v1, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

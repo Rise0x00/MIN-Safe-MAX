@@ -1,3 +1,6 @@
-.class public interface abstract Lfic;
+.class public abstract Lfic;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static webview_share:I = 0x7f120035

@@ -4,26 +4,14 @@
 
 
 # virtual methods
-.method public abstract a()Z
+.method public abstract getAppKey()Ljava/lang/String;
 .end method
 
-.method public abstract b()Lsk3;
+.method public abstract getBaseEndpoint()Ljava/lang/String;
 .end method
 
-.method public abstract c(Lzj3;)V
+.method public abstract getSessionInfo()Lzj3;
 .end method
 
-.method public abstract d()Z
-.end method
-
-.method public abstract e(Lzj3;)V
-.end method
-
-.method public abstract f()Z
-.end method
-
-.method public abstract g()Z
-.end method
-
-.method public abstract invalidate()V
+.method public abstract setSessionInfo(Lzj3;)V
 .end method

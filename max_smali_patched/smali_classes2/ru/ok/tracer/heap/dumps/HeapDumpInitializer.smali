@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb47;
+.implements Lcb7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb47;"
+        "Lcb7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/heap/dumps/HeapDumpInitializer;",
-        "Lb47;",
-        "Lfn6;",
+        "Lcb7;",
+        "Lwt6;",
         "<init>",
         "()V",
         "tracer-heap-dumps_release"
@@ -48,29 +48,29 @@
 
 # virtual methods
 .method public final a()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    const-class p0, Lru/ok/tracer/TracerInitializer;
+    const-class v0, Lru/ok/tracer/TracerInitializer;
 
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lgm;
+    new-instance v0, Lvm;
 
-    const/4 v0, 0x3
+    const/4 v1, 0x4
 
-    invoke-direct {p0, p1, v0}, Lgm;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lvm;-><init>(Landroid/content/Context;I)V
 
-    invoke-static {p0}, Lt2f;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Llnf;->a(Ljava/lang/Runnable;)V
 
-    sget-object p0, Lfn6;->a:Lfn6;
+    sget-object p1, Lwt6;->a:Lwt6;
 
-    return-object p0
+    return-object p1
 .end method

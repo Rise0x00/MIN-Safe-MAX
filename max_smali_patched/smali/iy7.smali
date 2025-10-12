@@ -1,119 +1,57 @@
-.class public final synthetic Liy7;
+.class public final Liy7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzy7;
+.field public final a:Ld02;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzy7;I)V
+.method public constructor <init>(Ld02;)V
     .locals 0
 
-    iput p2, p0, Liy7;->a:I
-
-    iput-object p1, p0, Liy7;->b:Lzy7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liy7;->a:Ld02;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    iget v0, p0, Liy7;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "[Result: <"
 
-    iget-object p0, p0, Liy7;->b:Lzy7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lzy7;->X:Ljava/util/concurrent/LinkedBlockingQueue;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
+    const-string v2, "Value: "
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/util/List;
+    iget-object v2, p0, Liy7;->a:Ld02;
 
-    iget-object p0, p0, Lzy7;->Y:Lq4e;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lg73;->L0(Ljava/lang/Iterable;)Ljava/util/List;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v1, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v1, ">]"
 
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Liy7;->b:Lzy7;
-
-    iget-object v0, p0, Lzy7;->Z:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    iget-object p0, p0, Lzy7;->n0:Lq4e;
-
-    invoke-static {v0}, Lg73;->L0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object p0, p0, Liy7;->b:Lzy7;
-
-    invoke-virtual {p0}, Lzy7;->q()Lf01;
-
-    move-result-object p0
-
-    new-instance v0, Loy7;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2, v1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-static {p0, v0}, Lfog;->w(Lbq5;Lt96;)Luv2;
-
-    move-result-object p0
-
-    new-instance v0, Lqy7;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lqy7;-><init>(Luv2;I)V
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

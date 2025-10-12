@@ -1,157 +1,64 @@
 .class public final Lja;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lab;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lth7;
-
-.field public final synthetic Z:Lka;
+# static fields
+.field public static final a:Lja;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lka;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lja;->Y:Lth7;
+    new-instance v0, Lja;
 
-    iput-object p2, p0, Lja;->Z:Lka;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lja;->a:Lja;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lia;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lja;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lja;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lja;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lja;
-
-    iget-object v1, p0, Lja;->Y:Lth7;
-
-    iget-object p0, p0, Lja;->Z:Lka;
-
-    invoke-direct {v0, v1, p0, p2}, Lja;-><init>(Lth7;Lka;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lja;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lja;->X:Ljava/lang/Object;
-
-    check-cast p1, Lia;
-
-    iget-object v0, p0, Lja;->Y:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lht1;
-
-    iget-wide v1, p1, Lia;->c:J
-
-    iget-object p1, p1, Lia;->a:Ljava/util/Map;
-
-    invoke-virtual {v0, v1, v2}, Lht1;->h(J)V
-
-    iget-object p0, p0, Lja;->Z:Lka;
-
-    iget-object v0, p0, Lka;->o:Lq4e;
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Lq4e;->getValue()Ljava/lang/Object;
+    instance-of p1, p1, Lja;
 
-    move-result-object v1
+    if-nez p1, :cond_1
 
-    move-object v2, v1
+    const/4 p1, 0x0
 
-    check-cast v2, Lha;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    sget v3, Lq9a;->j2:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, v3}, Lyte;-><init>(I)V
-
-    goto :goto_0
+    return p1
 
     :cond_1
-    sget v3, Lp9a;->a:I
+    return v0
+.end method
 
-    invoke-interface {p1}, Ljava/util/Map;->size()I
+.method public final hashCode()I
+    .locals 1
 
-    move-result v4
+    const v0, 0x7c63762a
 
-    new-instance v5, Lute;
+    return v0
+.end method
 
-    invoke-direct {v5, v3, v4}, Lute;-><init>(II)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-object v4, v5
+    const-string v0, "AdminDisableMeMic"
 
-    :goto_0
-    iget-object v3, p0, Lka;->b:Lgn6;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lgn6;->b(Ljava/util/Map;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lha;
-
-    invoke-direct {v2, v4, v3}, Lha;-><init>(Ldue;Ljava/util/List;)V
-
-    invoke-virtual {v0, v1, v2}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

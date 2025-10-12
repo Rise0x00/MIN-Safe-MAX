@@ -1,337 +1,174 @@
-.class public final Lfn3;
-.super Ljava/lang/Object;
+.class public final enum Lfn3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ldq5;
+.implements Ljava/lang/Comparable;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum X:Lfn3;
 
-.field public final synthetic b:Ldq5;
+.field public static final synthetic Y:[Lfn3;
 
-.field public final synthetic c:Lpn3;
+.field public static final synthetic Z:Lla5;
+
+.field public static final enum a:Lfn3;
+
+.field public static final enum b:Lfn3;
+
+.field public static final enum c:Lfn3;
+
+.field public static final enum o:Lfn3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldq5;Lpn3;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p3, p0, Lfn3;->a:I
+    new-instance v0, Lfn3;
 
-    iput-object p1, p0, Lfn3;->b:Ldq5;
+    const-string v1, "TYPE_UNKNOWN"
 
-    iput-object p2, p0, Lfn3;->c:Lpn3;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lfn3;->a:Lfn3;
+
+    new-instance v1, Lfn3;
+
+    const-string v2, "TYPE_WIFI"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lfn3;->b:Lfn3;
+
+    new-instance v2, Lfn3;
+
+    const-string v3, "TYPE_MOBILE_SLOW"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lfn3;->c:Lfn3;
+
+    new-instance v3, Lfn3;
+
+    const-string v4, "TYPE_MOBILE_NORMAL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lfn3;->o:Lfn3;
+
+    new-instance v4, Lfn3;
+
+    const-string v5, "TYPE_MOBILE_FAST"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lfn3;->X:Lfn3;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lfn3;
+
+    move-result-object v0
+
+    sput-object v0, Lfn3;->Y:[Lfn3;
+
+    new-instance v1, Lla5;
+
+    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lfn3;->Z:Lla5;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lfn3;
+    .locals 1
+
+    const-class v0, Lfn3;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lfn3;
+
+    return-object p0
+.end method
+
+.method public static values()[Lfn3;
+    .locals 1
+
+    sget-object v0, Lfn3;->Y:[Lfn3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lfn3;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 7
+.method public final a()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lfn3;->a:I
+    sget-object v0, Len3;->$EnumSwitchMapping$0:[I
 
-    packed-switch v0, :pswitch_data_0
-
-    instance-of v0, p2, Lgn3;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p2
-
-    check-cast v0, Lgn3;
-
-    iget v1, v0, Lgn3;->X:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lgn3;->X:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lgn3;
-
-    invoke-direct {v0, p0, p2}, Lgn3;-><init>(Lfn3;Lkotlin/coroutines/Continuation;)V
-
-    :goto_0
-    iget-object p2, v0, Lgn3;->o:Ljava/lang/Object;
-
-    iget v1, v0, Lgn3;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p2}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto/16 :goto_5
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p2}, Lltg;->C(Ljava/lang/Object;)V
-
-    check-cast p1, Lii0;
-
-    const/4 p2, 0x0
-
-    if-nez p1, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    iget-wide v3, p1, Lii0;->a:J
-
-    iget-object v1, p0, Lfn3;->c:Lpn3;
-
-    iget-object v1, v1, Lpn3;->p:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v5
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_9
-
-    iget-object p1, p1, Lii0;->b:Lloe;
-
-    iget-object p2, p1, Lloe;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lloe;->o:Ljava/lang/String;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    if-nez v1, :cond_4
+    aget v0, v0, v1
 
-    goto :goto_1
+    const/4 v1, 0x1
 
-    :cond_4
-    new-instance p2, Lh42;
+    if-eq v0, v1, :cond_3
 
-    new-instance v1, Lcue;
+    const/4 v1, 0x2
 
-    invoke-direct {v1, p1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
+    if-eq v0, v1, :cond_2
 
-    invoke-direct {p2, v1}, Lh42;-><init>(Lcue;)V
+    const/4 v1, 0x3
 
-    goto :goto_4
+    if-eq v0, v1, :cond_1
 
-    :cond_5
-    :goto_1
-    const-string p1, "service.unavailable"
+    const/4 v1, 0x4
 
-    invoke-static {p2, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_0
 
-    move-result p1
+    const-string v0, "UNKNOWN"
 
-    if-nez p1, :cond_8
+    return-object v0
 
-    const-string p1, "service.timeout"
+    :cond_0
+    const-string v0, "4G"
 
-    invoke-static {p2, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
 
-    move-result p1
+    :cond_1
+    const-string v0, "3G"
 
-    if-eqz p1, :cond_6
+    return-object v0
 
-    goto :goto_3
+    :cond_2
+    const-string v0, "2G"
 
-    :cond_6
-    const-string p1, "io.exception"
+    return-object v0
 
-    invoke-static {p2, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_3
+    const-string v0, "WIFI"
 
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    sget-object p1, Li42;->a:Li42;
-
-    :goto_2
-    move-object p2, p1
-
-    goto :goto_4
-
-    :cond_7
-    new-instance p1, Lk42;
-
-    sget p2, Lbtc;->I:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, p2}, Lyte;-><init>(I)V
-
-    invoke-direct {p1, v1}, Lk42;-><init>(Lyte;)V
-
-    goto :goto_2
-
-    :cond_8
-    :goto_3
-    sget-object p1, Lj42;->a:Lj42;
-
-    goto :goto_2
-
-    :cond_9
-    :goto_4
-    if-eqz p2, :cond_a
-
-    iput v2, v0, Lgn3;->X:I
-
-    iget-object p0, p0, Lfn3;->b:Ldq5;
-
-    invoke-interface {p0, p2, v0}, Ldq5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    :goto_5
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    :goto_6
-    return-object p1
-
-    :pswitch_0
-    instance-of v0, p2, Len3;
-
-    if-eqz v0, :cond_b
-
-    move-object v0, p2
-
-    check-cast v0, Len3;
-
-    iget v1, v0, Len3;->X:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_b
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Len3;->X:I
-
-    goto :goto_7
-
-    :cond_b
-    new-instance v0, Len3;
-
-    invoke-direct {v0, p0, p2}, Len3;-><init>(Lfn3;Lkotlin/coroutines/Continuation;)V
-
-    :goto_7
-    iget-object p2, v0, Len3;->o:Ljava/lang/Object;
-
-    iget v1, v0, Len3;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_d
-
-    if-ne v1, v2, :cond_c
-
-    invoke-static {p2}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_8
-
-    :cond_c
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_d
-    invoke-static {p2}, Lltg;->C(Ljava/lang/Object;)V
-
-    check-cast p1, Lkm3;
-
-    iget-object p2, p0, Lfn3;->c:Lpn3;
-
-    invoke-static {p2, p1}, Lpn3;->m(Lpn3;Lkm3;)Lw42;
-
-    new-instance p1, Lf42;
-
-    new-instance v1, Lt42;
-
-    sget v3, Lyga;->W1:I
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v3, v4, v4, v4}, Lt42;-><init>(IZZZ)V
-
-    iget-object v3, p2, Lg42;->g:Lkle;
-
-    invoke-virtual {v3}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lm42;
-
-    invoke-virtual {v3, p2}, Lm42;->a(Lg42;)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-direct {p1, v1, p2}, Lf42;-><init>(Lt42;Ljava/util/List;)V
-
-    iput v2, v0, Len3;->X:I
-
-    iget-object p0, p0, Lfn3;->b:Ldq5;
-
-    invoke-interface {p0, p1, v0}, Ldq5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_e
-
-    goto :goto_9
-
-    :cond_e
-    :goto_8
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    :goto_9
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

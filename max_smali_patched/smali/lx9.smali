@@ -1,152 +1,134 @@
-.class public final enum Llx9;
-.super Ljava/lang/Enum;
+.class public final Llx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
-# static fields
-.field public static final enum a:Llx9;
 
-.field public static final synthetic b:[Llx9;
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Llx9;
+    iput p2, p0, Llx9;->a:I
 
-    const-string v1, "COMPLETE"
+    packed-switch p2, :pswitch_data_0
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
 
-    sput-object v0, Llx9;->a:Llx9;
+    move-result-object p2
 
-    filled-new-array {v0}, [Llx9;
+    iput-object p2, p0, Llx9;->c:Ljava/lang/Object;
 
-    move-result-object v0
-
-    sput-object v0, Llx9;->b:[Llx9;
+    iput-object p1, p0, Llx9;->b:Ljava/lang/String;
 
     return-void
-.end method
 
-.method public static a(Ly3a;Ljava/lang/Object;)Z
-    .locals 2
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Llx9;->a:Llx9;
+    iput-object p1, p0, Llx9;->b:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    if-ne p1, v0, :cond_0
+    const/4 p2, 0x1
 
-    invoke-interface {p0}, Ly3a;->b()V
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    return v1
+    iput-object p1, p0, Llx9;->c:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v0, p1, Ljx9;
+    return-void
 
-    if-eqz v0, :cond_1
+    nop
 
-    check-cast p1, Ljx9;
-
-    iget-object p1, p1, Ljx9;->a:Ljava/lang/Throwable;
-
-    invoke-interface {p0, p1}, Ly3a;->onError(Ljava/lang/Throwable;)V
-
-    return v1
-
-    :cond_1
-    invoke-interface {p0, p1}, Ly3a;->d(Ljava/lang/Object;)V
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static b(Ly3a;Ljava/lang/Object;)Z
-    .locals 2
-
-    sget-object v0, Llx9;->a:Llx9;
-
-    const/4 v1, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    invoke-interface {p0}, Ly3a;->b()V
-
-    return v1
-
-    :cond_0
-    instance-of v0, p1, Ljx9;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Ljx9;
-
-    iget-object p1, p1, Ljx9;->a:Ljava/lang/Throwable;
-
-    invoke-interface {p0, p1}, Ly3a;->onError(Ljava/lang/Throwable;)V
-
-    return v1
-
-    :cond_1
-    instance-of v0, p1, Lix9;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lix9;
-
-    iget-object p1, p1, Lix9;->a:Lkp4;
-
-    invoke-interface {p0, p1}, Ly3a;->c(Lkp4;)V
-
-    return v1
-
-    :cond_2
-    invoke-interface {p0, p1}, Ly3a;->d(Ljava/lang/Object;)V
-
-    return v1
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llx9;
-    .locals 1
-
-    const-class v0, Llx9;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Llx9;
-
-    return-object p0
-.end method
-
-.method public static values()[Llx9;
-    .locals 1
-
-    sget-object v0, Llx9;->b:[Llx9;
-
-    invoke-virtual {v0}, [Llx9;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llx9;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 0
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 3
 
-    const-string p0, "NotificationLite.Complete"
+    iget v0, p0, Llx9;->a:I
 
-    return-object p0
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lwpb;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lwpb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Llx9;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Llx9;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "-"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/Thread;
+
+    invoke-direct {v1, v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v1
+
+    :pswitch_0
+    new-instance v0, Lyad;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Lyad;-><init>(Ljava/lang/Runnable;I)V
+
+    iget-object p1, p0, Llx9;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/ThreadFactory;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+
+    move-result-object p1
+
+    iget-object v0, p0, Llx9;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

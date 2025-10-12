@@ -1,5 +1,5 @@
 .class final synthetic Lkotlinx/coroutines/internal/LockFreeLinkedListNode$toString$1;
-.super Luqb;
+.super Ls5c;
 .source "SourceFile"
 
 
@@ -32,7 +32,7 @@
 
     const/4 v5, 0x1
 
-    const-class v2, Ly84;
+    const-class v2, Lvb4;
 
     const-string v3, "classSimpleName"
 
@@ -40,7 +40,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lwqb;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v5}, Lu5c;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -48,17 +48,17 @@
 
 # virtual methods
 .method public get()Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lds1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lns1;->receiver:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

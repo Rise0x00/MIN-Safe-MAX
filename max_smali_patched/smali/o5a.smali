@@ -1,19 +1,25 @@
-.class public final Lo5a;
+.class public abstract Lo5a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-
 # direct methods
-.method public constructor <init>(J)V
+.method public static a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
     .locals 0
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MissingPermission"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-wide p1, p0, Lo5a;->a:J
+    move-result p4
 
-    return-void
+    if-eqz p4, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Notification$MediaStyle;->setRemotePlaybackInfo(Ljava/lang/CharSequence;ILandroid/app/PendingIntent;)Landroid/app/Notification$MediaStyle;
+
+    :cond_0
+    return-object p0
 .end method

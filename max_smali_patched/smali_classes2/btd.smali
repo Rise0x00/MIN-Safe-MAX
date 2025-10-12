@@ -1,177 +1,215 @@
 .class public final Lbtd;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Latd;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbtd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    iget-boolean v0, p1, Latd;->a:Z
+    iput-object p3, p0, Lbtd;->Z:Landroid/view/View;
 
-    iput-boolean v0, p0, Lbtd;->a:Z
+    const/4 p2, 0x2
 
-    iget-boolean v0, p1, Latd;->b:Z
-
-    iput-boolean v0, p0, Lbtd;->b:Z
-
-    iget-boolean v0, p1, Latd;->c:Z
-
-    iput-boolean v0, p0, Lbtd;->c:Z
-
-    iget-boolean v0, p1, Latd;->e:Z
-
-    iput-boolean v0, p0, Lbtd;->e:Z
-
-    iget-boolean v0, p1, Latd;->d:Z
-
-    iput-boolean v0, p0, Lbtd;->d:Z
-
-    iget-boolean p1, p1, Latd;->f:Z
-
-    iput-boolean p1, p0, Lbtd;->f:Z
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbtd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbtd;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lbtd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lbtd;
+
+    iget-object v1, p0, Lbtd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+
+    iget-object v2, p0, Lbtd;->Z:Landroid/view/View;
+
+    invoke-direct {v0, p2, v1, v2}, Lbtd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
+
+    iput-object p1, v0, Lbtd;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    iget-object v0, p0, Lbtd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->J0:Lmqc;
+
+    iget-object v2, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->H0:Lmqc;
+
+    iget-object v3, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->F0:Landroid/transition/AutoTransition;
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbtd;->X:Ljava/lang/Object;
+
+    check-cast p1, Lcz6;
+
+    instance-of v4, p1, Lzy6;
+
+    const/4 v5, 0x1
+
+    if-eqz v4, :cond_0
+
+    invoke-static {v0}, Lps;->t(Lb04;)V
+
+    invoke-virtual {v0, v5}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
 
     goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_7
+    instance-of v4, p1, Laz6;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v6, 0x2
+
+    const/4 v7, 0x0
+
+    iget-object v8, p0, Lbtd;->Z:Landroid/view/View;
+
+    const/16 v9, 0x8
+
+    if-eqz v4, :cond_2
+
+    check-cast v8, Landroid/view/ViewGroup;
+
+    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    sget-object v3, Lone/me/devmenu/server/ServerHostBottomSheet;->M0:[Ltm7;
+
+    aget-object v4, v3, v7
+
+    invoke-interface {v2, v0, v4}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
+
+    aget-object v2, v3, v6
+
+    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->K0:Lmqc;
+
+    const/4 v2, 0x3
+
+    aget-object v2, v3, v2
+
+    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const-class v1, Lbtd;
+    check-cast v0, Lrxa;
 
-    if-eq v1, v0, :cond_1
+    check-cast p1, Laz6;
 
-    goto :goto_1
+    iget-object p1, p1, Laz6;->a:Ljava/lang/String;
+
+    if-nez p1, :cond_1
+
+    const-string p1, ""
 
     :cond_1
-    check-cast p1, Lbtd;
+    invoke-virtual {v0, p1}, Lrxa;->setText(Ljava/lang/CharSequence;)V
 
-    iget-boolean v0, p0, Lbtd;->a:Z
-
-    iget-boolean v1, p1, Lbtd;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Lbtd;->b:Z
+    instance-of p1, p1, Lbz6;
 
-    iget-boolean v1, p1, Lbtd;->b:Z
+    if-eqz p1, :cond_3
 
-    if-eq v0, v1, :cond_3
+    check-cast v8, Landroid/view/ViewGroup;
 
-    goto :goto_1
+    invoke-static {v8, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    :cond_3
-    iget-boolean v0, p0, Lbtd;->c:Z
+    sget-object p1, Lone/me/devmenu/server/ServerHostBottomSheet;->M0:[Ltm7;
 
-    iget-boolean v1, p1, Lbtd;->c:Z
+    aget-object v3, p1, v7
 
-    if-eq v0, v1, :cond_4
+    invoke-interface {v2, v0, v3}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v2
 
-    :cond_4
-    iget-boolean v0, p0, Lbtd;->d:Z
+    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-boolean v1, p1, Lbtd;->d:Z
+    invoke-virtual {v2, v9}, Landroid/view/View;->setVisibility(I)V
 
-    if-eq v0, v1, :cond_5
+    aget-object v2, p1, v6
 
-    goto :goto_1
+    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
-    :cond_5
-    iget-boolean v0, p0, Lbtd;->f:Z
+    move-result-object v1
 
-    iget-boolean v1, p1, Lbtd;->f:Z
+    check-cast v1, Landroid/widget/LinearLayout;
 
-    if-eq v0, v1, :cond_6
+    invoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_1
+    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->I0:Lmqc;
 
-    :cond_6
-    iget-boolean p0, p0, Lbtd;->e:Z
+    aget-object p1, p1, v5
 
-    iget-boolean p1, p1, Lbtd;->e:Z
+    invoke-interface {v1, v0, p1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_7
+    move-result-object p1
+
+    check-cast p1, Lnsa;
+
+    invoke-virtual {p1, v7}, Landroid/view/View;->setVisibility(I)V
 
     :goto_0
-    const/4 p0, 0x1
+    sget-object p1, Loyf;->a:Loyf;
 
-    return p0
+    return-object p1
 
-    :cond_7
-    :goto_1
-    const/4 p0, 0x0
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    return p0
-.end method
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lbtd;->a:Z
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lbtd;->b:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lbtd;->c:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lbtd;->e:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lbtd;->d:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lbtd;->f:Z
-
-    add-int/2addr v0, p0
-
-    return v0
+    throw p1
 .end method

@@ -1,168 +1,102 @@
-.class public final synthetic Lkqg;
-.super Ljava/lang/Object;
+.class public final Lkqg;
+.super Lv72;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ld2f;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld2f;ZZ)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lkqg;->a:Ld2f;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-boolean p2, p0, Lkqg;->b:Z
+    move-result-object v1
 
-    iput-boolean p3, p0, Lkqg;->c:Z
+    invoke-direct {p0, v1, v0}, Lv72;-><init>(Ljava/lang/Long;I)V
+
+    iput-wide p1, p0, Lkqg;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()Ljava/lang/Long;
+    .locals 2
 
-    iget-object v0, p0, Lkqg;->a:Ld2f;
+    iget-wide v0, p0, Lkqg;->c:J
 
-    iget-boolean v1, p0, Lkqg;->b:Z
-
-    iget-boolean p0, p0, Lkqg;->c:Z
-
-    iget-object v2, v0, Ld2f;->b:Ljava/lang/Object;
-
-    check-cast v2, Lhu7;
-
-    iget-object v2, v2, Lhu7;->n:Li7c;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "capture state changed, isCapturing="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, ", isFailedStart="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "OKRTCLmsAdapter"
-
-    invoke-interface {v2, v4, v3}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Ld2f;->b:Ljava/lang/Object;
-
-    check-cast v2, Lhu7;
-
-    iget-object v2, v2, Lhu7;->r:Lvx1;
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    iget-object p0, v2, Lvx1;->f:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhu7;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz p0, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    invoke-virtual {v2}, Lvx1;->b()V
-
-    :cond_3
-    :goto_1
-    iget-object p0, v0, Ld2f;->b:Ljava/lang/Object;
-
-    check-cast p0, Lhu7;
-
-    iget-object p0, p0, Lhu7;->x:Lbzd;
-
-    if-eqz p0, :cond_4
-
-    iget-object p0, p0, Lbzd;->a:Ljava/lang/Object;
-
-    check-cast p0, Lez0;
-
-    sget-object v2, Lo61;->Z:Lo61;
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v2, v1}, Lez0;->k(Lo61;Ljava/lang/Object;)V
-
-    :cond_4
-    iget-object p0, v0, Ld2f;->b:Ljava/lang/Object;
-
-    check-cast p0, Lhu7;
-
-    iget-object v0, p0, Lhu7;->c:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    :goto_2
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
+.end method
 
-    move-result v1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    if-eqz v1, :cond_5
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v1
+    return v0
 
-    check-cast v1, Liu7;
+    :cond_0
+    instance-of v1, p1, Lkqg;
 
-    invoke-interface {v1, p0}, Liu7;->b(Lhu7;)V
+    const/4 v2, 0x0
 
-    goto :goto_2
+    if-nez v1, :cond_1
 
-    :cond_5
-    :goto_3
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lkqg;
+
+    iget-wide v3, p0, Lkqg;->c:J
+
+    iget-wide v5, p1, Lkqg;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lkqg;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogBotId(sourceId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lkqg;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

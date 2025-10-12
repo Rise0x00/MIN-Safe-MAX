@@ -1,241 +1,176 @@
 .class public final Lydb;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lugb;
+
+
+# static fields
+.field public static final synthetic l:[Ltm7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
+
+.field public final d:Lbp7;
+
+.field public final e:Lbp7;
+
+.field public final f:Lbp7;
+
+.field public final g:Le8e;
+
+.field public final h:Lrqc;
+
+.field public final i:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final j:Lg65;
+
+.field public k:Le34;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lut9;
+
+    const-string v1, "addSubscribersJob"
+
+    const-string v2, "getAddSubscribersJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lydb;
+
+    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lxxc;->a:Lyxc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ltm7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lydb;->l:[Ltm7;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
-    iput-object p2, p0, Lydb;->Y:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lydb;->a:J
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lydb;->b:Lbp7;
+
+    iput-object p4, p0, Lydb;->c:Lbp7;
+
+    iput-object p5, p0, Lydb;->d:Lbp7;
+
+    iput-object p6, p0, Lydb;->e:Lbp7;
+
+    iput-object p7, p0, Lydb;->f:Lbp7;
+
+    const p1, 0x7fffffff
+
+    const/4 p2, 0x5
+
+    const/4 p3, 0x0
+
+    invoke-static {p3, p1, p2}, Lf8e;->b(III)Le8e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lydb;->g:Le8e;
+
+    new-instance p2, Lrqc;
+
+    invoke-direct {p2, p1}, Lrqc;-><init>(Lyt9;)V
+
+    iput-object p2, p0, Lydb;->h:Lrqc;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Lydb;->i:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {}, Lqxd;->w()Lg65;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lydb;->j:Lg65;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lydb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lydb;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lydb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 1
 
-    new-instance v0, Lydb;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lydb;->Y:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+    iput-object v0, p0, Lydb;->k:Le34;
 
-    invoke-direct {v0, p2, p0}, Lydb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
-
-    iput-object p1, v0, Lydb;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final b(Ljgb;)V
+    .locals 0
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iget-object p1, p0, Lydb;->X:Ljava/lang/Object;
+.method public final d(J)V
+    .locals 0
 
-    check-cast p1, Lgeb;
+    return-void
+.end method
 
-    sget-object v0, Lfeb;->a:Lfeb;
+.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 4
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p1, p0, Lydb;->k:Le34;
 
-    move-result v0
+    iget-object v0, p0, Lydb;->e:Lbp7;
 
-    const/4 v1, 0x1
-
-    iget-object p0, p0, Lydb;->Y:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:[Lof7;
-
-    invoke-virtual {p0, v1}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->I0(Z)V
-
-    goto/16 :goto_1
-
-    :cond_0
-    sget-object v0, Lbeb;->a:Lbeb;
-
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:[Lof7;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->I0(Z)V
-
-    goto/16 :goto_1
-
-    :cond_1
-    sget-object v0, Laeb;->a:Laeb;
-
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:[Lof7;
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqrc;->C()Z
-
-    goto :goto_1
-
-    :cond_2
-    instance-of v0, p1, Ldeb;
-
-    if-eqz v0, :cond_3
-
-    check-cast p1, Ldeb;
-
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:[Lof7;
-
-    sget-object v0, Lt67;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Ldeb;->a:Landroid/net/Uri;
-
-    const-string v0, "image/*"
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-static {p0, p1, v0}, Lt67;->c(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v0, p1, Lceb;
-
-    if-eqz v0, :cond_6
-
-    check-cast p1, Lceb;
-
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:[Lof7;
-
-    iget-object v0, p1, Lceb;->a:Ldue;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_4
+    check-cast v0, Leeb;
 
-    goto :goto_1
+    iget-object v0, v0, Leeb;->a:Le8e;
 
-    :cond_4
-    iget-boolean p1, p1, Lceb;->b:Z
+    new-instance v1, Lrqc;
 
-    if-eqz p1, :cond_5
+    invoke-direct {v1, v0}, Lrqc;-><init>(Lyt9;)V
 
-    sget p1, Losc;->I:I
+    new-instance v0, Lwdb;
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_5
-    sget p1, Losc;->n:I
+    invoke-direct {v0, p0, v2}, Lwdb;-><init>(Lydb;Lkotlin/coroutines/Continuation;)V
 
-    :goto_0
-    new-instance v1, Lzja;
+    new-instance v2, Ljx5;
 
-    invoke-direct {v1, p0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
+    const/4 v3, 0x1
 
-    new-instance p0, Loka;
+    invoke-direct {v2, v1, v0, v3}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-direct {p0, p1}, Loka;-><init>(I)V
+    invoke-static {v2, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
-    invoke-virtual {v1, p0}, Lzja;->e(Lska;)V
-
-    invoke-virtual {v1, v0}, Lzja;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v1}, Lzja;->i()Lyja;
-
-    goto :goto_1
-
-    :cond_6
-    instance-of v0, p1, Leeb;
-
-    if-eqz v0, :cond_8
-
-    check-cast p1, Leeb;
-
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->r0:Lmdb;
-
-    iget-object v0, v0, Lmdb;->r0:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    iget v2, p1, Leeb;->a:I
-
-    if-ltz v2, :cond_7
-
-    if-ge v2, v0, :cond_7
-
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->N0()Landroidx/viewpager2/widget/ViewPager2;
-
-    move-result-object p0
-
-    iget p1, p1, Leeb;->a:I
-
-    invoke-virtual {p0, p1, v1}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
-
-    :cond_7
-    :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :cond_8
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    return-void
 .end method

@@ -1,66 +1,75 @@
 .class public final Ld58;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public A0:J
 
-.field public final synthetic b:F
+.field public B0:I
 
-.field public final synthetic c:F
+.field public synthetic C0:Ljava/lang/Object;
+
+.field public final synthetic D0:Lg58;
+
+.field public E0:I
+
+.field public X:Lo48;
+
+.field public Y:Lvxc;
+
+.field public Z:Lr63;
+
+.field public o:Lg58;
+
+.field public w0:Lit9;
+
+.field public x0:J
+
+.field public y0:J
+
+.field public z0:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;FF)V
+.method public constructor <init>(Lg58;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld58;->D0:Lg58;
 
-    iput-object p1, p0, Ld58;->a:Landroid/view/View;
-
-    iput p2, p0, Ld58;->b:F
-
-    iput p3, p0, Ld58;->c:F
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    return-void
-.end method
+    iput-object p1, p0, Ld58;->C0:Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    iget p1, p0, Ld58;->E0:I
 
-    iget p1, p0, Ld58;->b:F
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Ld58;->a:Landroid/view/View;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleX(F)V
+    iput p1, p0, Ld58;->E0:I
 
-    iget p0, p0, Ld58;->c:F
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setScaleY(F)V
+    const-wide/16 v4, 0x0
 
-    return-void
-.end method
+    iget-object v0, p0, Ld58;->D0:Lg58;
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    const-wide/16 v1, 0x0
 
-    return-void
-.end method
+    move-object v6, p0
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-virtual/range {v0 .. v6}, Lg58;->f(JLo48;JLnz3;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

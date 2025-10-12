@@ -2,116 +2,120 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldq5;
-
 
 # instance fields
-.field public final synthetic X:J
+.field public final a:Lbp7;
 
-.field public final synthetic a:J
+.field public final b:Lbp7;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final c:Lbp7;
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final d:Lbp7;
 
-.field public final synthetic o:Lyj9;
+.field public final e:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Lyj9;J)V
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpj9;->a:J
+    iput-object p1, p0, Lpj9;->a:Lbp7;
 
-    iput-object p3, p0, Lpj9;->b:Ljava/lang/String;
+    iput-object p2, p0, Lpj9;->b:Lbp7;
 
-    iput-object p4, p0, Lpj9;->c:Ljava/lang/String;
+    iput-object p3, p0, Lpj9;->c:Lbp7;
 
-    iput-object p5, p0, Lpj9;->o:Lyj9;
+    iput-object p4, p0, Lpj9;->d:Lbp7;
 
-    iput-wide p6, p0, Lpj9;->X:J
+    iput-object p5, p0, Lpj9;->e:Lbp7;
 
     return-void
 .end method
 
+.method public static synthetic b(Lpj9;JLjava/lang/CharSequence;Ljava/lang/Long;Lh86;Lm3f;I)Ljava/lang/Object;
+    .locals 8
+
+    and-int/lit8 p7, p7, 0x8
+
+    if-eqz p7, :cond_0
+
+    const/4 p5, 0x0
+
+    :cond_0
+    move-object v5, p5
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v7, p6
+
+    invoke-virtual/range {v0 .. v7}, Lpj9;->a(JLjava/lang/CharSequence;Ljava/lang/Long;Lh86;ZLm3f;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 6
+.method public final a(JLjava/lang/CharSequence;Ljava/lang/Long;Lh86;ZLm3f;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Loq4;
+    iget-object v0, p0, Lpj9;->a:Lbp7;
 
-    iget p1, p1, Loq4;->b:I
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    const/4 p2, 0x3
+    move-result-object v0
 
-    if-ne p1, p2, :cond_0
+    check-cast v0, Lr8f;
 
-    sget p1, Lyj9;->K:I
+    check-cast v0, Lwla;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lwla;->b()Ly24;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v0
 
-    iget-wide v0, p0, Lpj9;->a:J
+    new-instance v1, Loj9;
 
-    invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v9, 0x0
 
-    const-string p2, " | "
+    move-object v2, p0
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide v3, p1
 
-    iget-object p2, p0, Lpj9;->b:Ljava/lang/String;
+    move-object v5, p3
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v6, p4
 
-    const-string v2, " is loaded, "
+    move-object v8, p5
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v7, p6
 
-    iget-object v2, p0, Lpj9;->c:Ljava/lang/String;
+    invoke-direct/range {v1 .. v9}, Loj9;-><init>(Lpj9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLh86;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 p1, p7
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, p1}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v2, "yj9"
+    sget-object p2, Lf34;->a:Lf34;
 
-    invoke-static {v2, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p1, p2, :cond_0
 
-    iget-object p1, p0, Lpj9;->o:Lyj9;
-
-    iget-object v2, p1, Lyj9;->d:Lpw8;
-
-    new-instance v3, Lim8;
-
-    const/16 v4, 0x1c
-
-    invoke-direct {v3, v4}, Lim8;-><init>(I)V
-
-    invoke-virtual {v2, v0, v1, p2, v3}, Lpw8;->v(JLjava/lang/String;Lgm3;)V
-
-    iget-object p1, p1, Lyj9;->f:Lrv0;
-
-    new-instance v0, Ldef;
-
-    iget-wide v3, p0, Lpj9;->a:J
-
-    const/4 v5, 0x0
-
-    iget-wide v1, p0, Lpj9;->X:J
-
-    invoke-direct/range {v0 .. v5}, Ldef;-><init>(JJI)V
-
-    invoke-virtual {p1, v0}, Lrv0;->c(Ljava/lang/Object;)V
+    return-object p1
 
     :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
 .end method

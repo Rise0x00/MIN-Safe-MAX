@@ -1,28 +1,14 @@
-.class public abstract Llnd;
+.class public interface abstract Llnd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Landroid/graphics/Matrix;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Llnd;->a:Landroid/graphics/Matrix;
-
-    return-void
-.end method
+# interfaces
+.implements Ldnd;
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
+.method public abstract a()J
+.end method
+
+.method public abstract c(J)J
 .end method

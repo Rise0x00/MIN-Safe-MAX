@@ -1,19 +1,15 @@
 .class public final Ley9;
-.super Ljava/lang/Object;
+.super Lgb5;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnlg;
-
-
 # direct methods
-.method public constructor <init>(Lnlg;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Loyf;->a:Loyf;
 
-    iput-object p1, p0, Ley9;->a:Lnlg;
+    invoke-direct {p0, v0}, Lgb5;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method

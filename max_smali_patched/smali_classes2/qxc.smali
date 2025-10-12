@@ -1,37 +1,72 @@
 .class public final Lqxc;
-.super Lt2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lu24;
+
+
+# instance fields
+.field public final a:Lrxc;
+
+
+# direct methods
+.method public constructor <init>(Lrxc;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqxc;->a:Lrxc;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-interface {p2, p1, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object p1
 
-    move-result p0
+    return-object p1
+.end method
 
-    check-cast p1, Ljava/lang/Boolean;
+.method public final get(Lv24;)Lu24;
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0, p1}, Lhoc;->j(Lu24;Lv24;)Lu24;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string p2, "sendWithNotification = "
+    return-object p1
+.end method
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final getKey()Lv24;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lqxc;->a:Lrxc;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object p0
+.method public final minusKey(Lv24;)Lw24;
+    .locals 0
 
-    const-string p1, "ScheduledSendPickerViewModel"
+    invoke-static {p0, p1}, Lhoc;->v(Lu24;Lv24;)Lw24;
 
-    invoke-static {p1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
+.end method
+
+.method public final plus(Lw24;)Lw24;
+    .locals 0
+
+    invoke-static {p0, p1}, Lkmc;->t(Lw24;Lw24;)Lw24;
+
+    move-result-object p1
+
+    return-object p1
 .end method

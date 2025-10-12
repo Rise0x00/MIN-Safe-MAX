@@ -4,270 +4,124 @@
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:J
 
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final d:Ldk9;
-
-.field public final e:Ldk9;
-
-.field public final f:Ldk9;
+.field public final b:Lv8f;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;)V
+.method public constructor <init>(JLv8f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lci0;->a:Lth7;
+    iput-wide p1, p0, Lci0;->a:J
 
-    iput-object p2, p0, Lci0;->b:Lth7;
-
-    iput-object p3, p0, Lci0;->c:Lth7;
-
-    sget p1, Lk67;->a:I
-
-    new-instance p1, Ldk9;
-
-    const/4 p2, 0x6
-
-    invoke-direct {p1, p2}, Ldk9;-><init>(I)V
-
-    iput-object p1, p0, Lci0;->d:Ldk9;
-
-    new-instance p1, Ldk9;
-
-    invoke-direct {p1, p2}, Ldk9;-><init>(I)V
-
-    iput-object p1, p0, Lci0;->e:Ldk9;
-
-    new-instance p1, Ldk9;
-
-    invoke-direct {p1, p2}, Ldk9;-><init>(I)V
-
-    iput-object p1, p0, Lci0;->f:Ldk9;
+    iput-object p3, p0, Lci0;->b:Lv8f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(III)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lci0;->c:Lth7;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    check-cast v0, Ljp9;
-
-    invoke-virtual {v0}, Ljp9;->d()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    iget-object v0, p0, Lci0;->a:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lz43;
-
-    check-cast v0, Lb53;
-
-    invoke-virtual {v0}, Lb53;->y()J
-
-    move-result-wide v6
-
-    const-string v8, "clicked"
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    invoke-virtual/range {v1 .. v8}, Lci0;->b(IIIIJLjava/lang/String;)V
+    return v0
 
     :cond_0
-    return-void
-.end method
+    instance-of v1, p1, Lci0;
 
-.method public final b(IIIIJLjava/lang/String;)V
-    .locals 3
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lci0;->b:Lth7;
+    if-nez v1, :cond_1
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltc;
-
-    new-instance v1, Lv18;
-
-    invoke-direct {v1}, Lv18;-><init>()V
-
-    const/4 v2, 0x1
-
-    if-eq p1, v2, :cond_2
-
-    const/4 v2, 0x2
-
-    if-eq p1, v2, :cond_1
-
-    const/4 v2, 0x3
-
-    if-ne p1, v2, :cond_0
-
-    const-string p1, "mic"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
+    return v2
 
     :cond_1
-    const-string p1, "contacts"
+    check-cast p1, Lci0;
 
-    goto :goto_0
+    iget-wide v3, p0, Lci0;->a:J
+
+    iget-wide v5, p1, Lci0;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    const-string p1, "push"
+    iget-object v1, p0, Lci0;->b:Lv8f;
 
-    :goto_0
-    const-string v2, "bannerType"
+    iget-object p1, p1, Lci0;->b:Lv8f;
 
-    invoke-virtual {v1, v2, p1}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string p1, "screen"
+    move-result p1
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez p1, :cond_3
 
-    move-result-object p2
-
-    invoke-virtual {v1, p1, p2}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    if-eq p3, p1, :cond_5
-
-    const/4 p1, 0x2
-
-    if-eq p3, p1, :cond_4
-
-    const/4 p1, 0x3
-
-    if-ne p3, p1, :cond_3
-
-    const-string p1, "large"
-
-    goto :goto_1
+    return v2
 
     :cond_3
-    const/4 p0, 0x0
+    return v0
+.end method
 
-    throw p0
+.method public final hashCode()I
+    .locals 2
 
-    :cond_4
-    const-string p1, "medium"
+    iget-wide v0, p0, Lci0;->a:J
 
-    goto :goto_1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    :cond_5
-    const-string p1, "small"
+    move-result v0
 
-    :goto_1
-    const-string p2, "bannerSize"
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v1, p2, p1}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lci0;->b:Lv8f;
 
-    const/4 p1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    if-eq p4, p1, :cond_7
+    move-result v1
 
-    const/4 p1, 0x2
+    add-int/2addr v1, v0
 
-    if-ne p4, p1, :cond_6
+    return v1
+.end method
 
-    const-string p1, "banner"
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    goto :goto_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_6
-    const/4 p0, 0x0
+    const-string v1, "BaseError(requestId="
 
-    throw p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_7
-    const-string p1, "carousel"
+    iget-wide v1, p0, Lci0;->a:J
 
-    :goto_2
-    const-string p2, "bannerShowType"
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2, p1}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", error="
 
-    invoke-virtual {v1}, Lv18;->b()Lv18;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lci0;->b:Lv8f;
 
-    new-instance p2, Lp77;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    const-string v1, ")"
 
-    const-string p3, "BANNER"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p3, p2, Lp77;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p0, p0, Lci0;->a:Lth7;
+    move-result-object v0
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz43;
-
-    check-cast p0, Le2d;
-
-    invoke-virtual {p0}, Le2d;->p()J
-
-    move-result-wide p3
-
-    iput-wide p3, p2, Lp77;->b:J
-
-    iput-wide p5, p2, Lp77;->X:J
-
-    iput-object p7, p2, Lp77;->o:Ljava/lang/String;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p3
-
-    iput-wide p3, p2, Lp77;->a:J
-
-    invoke-virtual {p2, p1}, Lp77;->c(Ljava/util/Map;)V
-
-    invoke-virtual {p2}, Lp77;->d()Lcw7;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ltc;->j(Lcw7;)Z
-
-    return-void
+    return-object v0
 .end method

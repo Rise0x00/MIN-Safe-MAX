@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract f(Lpt8;Landroid/view/MenuItem;)Z
-.end method
-
-.method public abstract w(Lpt8;)V
+.method public abstract b(Lls8;)V
 .end method

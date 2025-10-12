@@ -1,138 +1,263 @@
-.class public final enum Lhhb;
-.super Ljava/lang/Enum;
+.class public final Lhhb;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhhb;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final enum b:Lhhb;
-
-.field public static final synthetic c:[Lhhb;
-
-.field public static final synthetic o:Ly55;
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/pinbars/PinBarsWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lhhb;
-
-    const/4 v1, 0x0
-
-    const-string v2, "create"
-
-    const-string v3, "CREATE"
-
-    invoke-direct {v0, v3, v1, v2}, Lhhb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lhhb;->b:Lhhb;
-
-    new-instance v1, Lhhb;
-
-    const/4 v2, 0x1
-
-    const-string v3, "edit"
-
-    const-string v4, "EDIT"
-
-    invoke-direct {v1, v4, v2, v3}, Lhhb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    filled-new-array {v0, v1}, [Lhhb;
-
-    move-result-object v0
-
-    sput-object v0, Lhhb;->c:[Lhhb;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lhhb;->o:Ly55;
-
-    new-instance v0, Lz1b;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lz1b;-><init>(I)V
-
-    sput-object v0, Lhhb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p2, p0, Lhhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    iput-object p3, p0, Lhhb;->a:Ljava/lang/String;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lhhb;
-    .locals 1
-
-    const-class v0, Lhhb;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lhhb;
-
-    return-object p0
-.end method
-
-.method public static values()[Lhhb;
-    .locals 1
-
-    sget-object v0, Lhhb;->c:[Lhhb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lhhb;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p0
+    invoke-virtual {p0, p1, p2}, Lhhb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lhhb;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lhhb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    new-instance v0, Lhhb;
 
-    move-result-object p0
+    iget-object v1, p0, Lhhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Lhhb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    return-void
+    iput-object p1, v0, Lhhb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhhb;->X:Ljava/lang/Object;
+
+    check-cast p1, Lh40;
+
+    sget-object v0, Lf40;->a:Lf40;
+
+    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lhhb;->Y:Lone/me/pinbars/PinBarsWidget;
+
+    if-eqz v0, :cond_1
+
+    sget p1, Lone/me/pinbars/PinBarsWidget;->x0:I
+
+    iget-object p1, v1, Lone/me/pinbars/PinBarsWidget;->a:Lxkf;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lxkf;->dismiss()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-object p1, v1, Lone/me/pinbars/PinBarsWidget;->a:Lxkf;
+
+    goto/16 :goto_0
+
+    :cond_1
+    instance-of v0, p1, Lg40;
+
+    if-eqz v0, :cond_5
+
+    check-cast p1, Lg40;
+
+    iget-object p1, p1, Lg40;->a:Ljef;
+
+    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->X:Ldm9;
+
+    if-nez v0, :cond_2
+
+    goto/16 :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    const/4 v2, 0x2
+
+    new-array v4, v2, [I
+
+    invoke-virtual {v0}, Ldm9;->getTooltipAnchor()Landroid/view/View;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v4}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lk98;->o(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v5, 0x0
+
+    aget v5, v4, v5
+
+    sub-int/2addr v0, v5
+
+    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
+
+    move-result v5
+
+    div-int/2addr v5, v2
+
+    sub-int/2addr v0, v5
+
+    const/16 v2, 0x12
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v2, v5, v0}, Lnd5;->q(FFI)I
+
+    move-result v0
+
+    aget v2, v4, v3
+
+    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    new-instance v2, Landroid/graphics/Point;
+
+    invoke-direct {v2, v0, v4}, Landroid/graphics/Point;-><init>(II)V
+
+    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->a:Lxkf;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
+
+    move-result v0
+
+    if-ne v0, v3, :cond_3
+
+    iget-object v0, v1, Lone/me/pinbars/PinBarsWidget;->a:Lxkf;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lxkf;->dismiss()V
+
+    :cond_3
+    new-instance v5, Lxkf;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    new-instance v8, Lth8;
+
+    const/16 v0, 0x18
+
+    invoke-direct {v8, v0, v1}, Lth8;-><init>(ILjava/lang/Object;)V
+
+    const/4 v11, 0x3
+
+    const/16 v12, 0x8
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x1
+
+    invoke-direct/range {v5 .. v12}, Lxkf;-><init>(Landroid/content/Context;Landroid/view/View;Lve6;Lz11;III)V
+
+    invoke-virtual {v5, p1}, Lxkf;->c(Loef;)V
+
+    const p1, 0x800035
+
+    const-wide/16 v6, 0xbb8
+
+    invoke-virtual {v5, v2, p1, v6, v7}, Lxkf;->d(Landroid/graphics/Point;IJ)V
+
+    new-instance p1, Lx19;
+
+    invoke-direct {p1, v3, v1}, Lx19;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v5, p1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
+
+    iput-object v5, v1, Lone/me/pinbars/PinBarsWidget;->a:Lxkf;
+
+    goto :goto_0
+
+    :cond_4
+    new-instance v2, Lmd1;
+
+    invoke-direct {v2, v0, v1, p1, v3}, Lmd1;-><init>(Landroid/view/View;Lone/me/sdk/arch/Widget;Ljava/lang/Object;I)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :cond_5
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

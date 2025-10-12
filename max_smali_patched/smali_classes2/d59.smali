@@ -1,207 +1,205 @@
-.class public final Ld59;
-.super Lt2;
+.class public final enum Ld59;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ld59;
+.field public static final enum A0:Ld59;
+
+.field public static final enum B0:Ld59;
+
+.field public static final synthetic C0:[Ld59;
+
+.field public static final enum X:Ld59;
+
+.field public static final enum Y:Ld59;
+
+.field public static final enum Z:Ld59;
+
+.field public static final enum a:Ld59;
+
+.field public static final enum b:Ld59;
+
+.field public static final enum c:Ld59;
+
+.field public static final enum o:Ld59;
+
+.field public static final enum w0:Ld59;
+
+.field public static final enum x0:Ld59;
+
+.field public static final enum y0:Ld59;
+
+.field public static final enum z0:Ld59;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 15
 
     new-instance v0, Ld59;
 
-    const/4 v1, 0x7
+    const-string v1, "UNKNOWN"
 
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
+    const/4 v2, 0x0
 
-    sput-object v0, Ld59;->c:Ld59;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ld59;->a:Ld59;
+
+    new-instance v1, Ld59;
+
+    const-string v2, "USER_MENTION"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ld59;->b:Ld59;
+
+    new-instance v2, Ld59;
+
+    const-string v3, "GROUP_MENTION"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ld59;->c:Ld59;
+
+    new-instance v3, Ld59;
+
+    const-string v4, "MONOSPACED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ld59;->o:Ld59;
+
+    new-instance v4, Ld59;
+
+    const-string v5, "STRONG"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ld59;->X:Ld59;
+
+    new-instance v5, Ld59;
+
+    const-string v6, "EMPHASIZED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Ld59;->Y:Ld59;
+
+    new-instance v6, Ld59;
+
+    const-string v7, "LINK"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Ld59;->Z:Ld59;
+
+    new-instance v7, Ld59;
+
+    const-string v8, "STRIKETHROUGH"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Ld59;->w0:Ld59;
+
+    new-instance v8, Ld59;
+
+    const-string v9, "UNDERLINE"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Ld59;->x0:Ld59;
+
+    new-instance v9, Ld59;
+
+    const-string v10, "HEADING"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Ld59;->y0:Ld59;
+
+    new-instance v10, Ld59;
+
+    const-string v11, "CODE"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Ld59;->z0:Ld59;
+
+    new-instance v11, Ld59;
+
+    const-string v12, "ANIMOJI"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Ld59;->A0:Ld59;
+
+    new-instance v12, Ld59;
+
+    const-string v13, "QUOTE"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Ld59;->B0:Ld59;
+
+    filled-new-array/range {v0 .. v12}, [Ld59;
+
+    move-result-object v0
+
+    sput-object v0, Ld59;->C0:[Ld59;
 
     return-void
 .end method
 
-.method public static w0(Ljava/util/List;Z)Ly94;
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Ld59;
+    .locals 1
 
-    const/4 v4, 0x0
+    const-class v0, Ld59;
 
-    const/16 v5, 0x3e
-
-    const-string v1, ","
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    invoke-static/range {v0 .. v5}, Lg73;->v0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lf96;I)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, ":chats/forward?messages_ids="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "&show_ext_sharing="
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ly94;
-
-    invoke-direct {p1, p0}, Ly94;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static x0(Ld59;JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;I)Ly94;
-    .locals 2
-
-    and-int/lit8 v0, p6, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object p3, v1
-
-    :cond_0
-    and-int/lit8 v0, p6, 0x4
-
-    if-eqz v0, :cond_1
-
-    sget-object p4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    :cond_1
-    and-int/lit8 p6, p6, 0x8
-
-    if-eqz p6, :cond_2
-
-    move-object p5, v1
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lc59;
-
-    invoke-direct/range {p0 .. p5}, Lc59;-><init>(JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;)V
-
-    invoke-static {p0}, Lt2;->v0(Lf96;)Ly94;
-
-    move-result-object p0
+    check-cast p0, Ld59;
 
     return-object p0
 .end method
 
-.method public static y0(JJLjava/lang/String;Lpq4;)Ly94;
-    .locals 2
+.method public static values()[Ld59;
+    .locals 1
 
-    invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
+    sget-object v0, Ld59;->C0:[Ld59;
 
-    move-result p5
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const-string v0, ":dialogs/share-media?msg_id="
+    move-result-object v0
 
-    const-string v1, "&attach_id="
+    check-cast v0, [Ld59;
 
-    invoke-static {p0, p1, v0, v1}, Ldw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string p1, "&local_attach_id="
-
-    invoke-static {p2, p3, p1, p4, p0}, Lcx3;->l(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string p1, "&cause_ordinal="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ly94;
-
-    invoke-direct {p1, p0}, Ly94;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static z0(JLjava/lang/Long;Ljava/lang/String;Ls2g;)Ly94;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p4, p4, Ls2g;->a:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ":webapp:root?bot_id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p0, "&entry_point="
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p1, "&chat_id="
-
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p3, :cond_0
-
-    const-string p0, "&start_param="
-
-    invoke-virtual {p0, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ly94;
-
-    invoke-direct {p1, p0}, Ly94;-><init>(Ljava/lang/String;)V
-
-    return-object p1
+    return-object v0
 .end method

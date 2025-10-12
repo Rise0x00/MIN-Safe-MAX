@@ -4,24 +4,28 @@
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:Lod8;
 
-.field public final b:Lth7;
-
-.field public final c:Lth7;
+.field public final b:Lb75;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laef;->a:Lth7;
+    new-instance v0, Lod8;
 
-    iput-object p2, p0, Laef;->b:Lth7;
+    const/16 v1, 0x3e8
 
-    iput-object p3, p0, Laef;->c:Lth7;
+    invoke-direct {v0, v1}, Lod8;-><init>(I)V
+
+    iput-object v0, p0, Laef;->a:Lod8;
+
+    sget-object v0, Lb75;->a:Lb75;
+
+    iput-object v0, p0, Laef;->b:Lb75;
 
     return-void
 .end method

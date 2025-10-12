@@ -1,64 +1,101 @@
 .class public final Lci1;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lei1;
+.implements Llf6;
 
 
-# static fields
-.field public static final a:Lci1;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
+    .locals 0
 
-    new-instance v0, Lci1;
+    iput-object p2, p0, Lci1;->Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lci1;->a:Lci1;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lci1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lci1;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lci1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lci1;
+
+    iget-object v1, p0, Lci1;->Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    invoke-direct {v0, p2, v1}, Lci1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;)V
+
+    iput-object p1, v0, Lci1;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lci1;->X:Ljava/lang/Object;
 
-    return v0
+    check-cast p1, Lhy9;
+
+    instance-of v0, p1, Lj73;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lci1;->Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Li8d;->B(Lb04;)Z
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lci1;
+    instance-of v0, p1, Lzc4;
 
-    if-nez p0, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 p0, 0x0
+    sget-object v0, Ln81;->c:Ln81;
 
-    return p0
+    check-cast p1, Lzc4;
+
+    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
 
     :cond_1
-    return v0
-.end method
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x376eb9e4
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Close"
-
-    return-object p0
+    return-object p1
 .end method

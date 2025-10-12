@@ -1,26 +1,48 @@
-.class public abstract Le1c;
-.super Ljava/lang/Object;
+.class public final Le1c;
+.super Lnz3;
 
 
-# static fields
-.field public static link_context_menu_action_copy_call:I = 0x7f0a0463
+# instance fields
+.field public X:I
 
-.field public static link_context_menu_action_copy_link:I = 0x7f0a0464
+.field public final synthetic Y:Ld1c;
 
-.field public static link_context_menu_action_copy_mail:I = 0x7f0a0465
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static link_context_menu_action_copy_profile:I = 0x7f0a0466
 
-.field public static link_context_menu_action_open_call:I = 0x7f0a0467
+# direct methods
+.method public constructor <init>(Ld1c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static link_context_menu_action_open_link:I = 0x7f0a0468
+    iput-object p1, p0, Le1c;->Y:Ld1c;
 
-.field public static link_context_menu_action_open_mail:I = 0x7f0a0469
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static link_context_menu_action_open_profile:I = 0x7f0a046a
+    return-void
+.end method
 
-.field public static notification_cancel_request_id:I = 0x7f0a0614
 
-.field public static notification_content_request_id:I = 0x7f0a0615
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static text_view_animation_pending_text_tag:I = 0x7f0a0c11
+    iput-object p1, p0, Le1c;->o:Ljava/lang/Object;
+
+    iget p1, p0, Le1c;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Le1c;->X:I
+
+    iget-object p1, p0, Le1c;->Y:Ld1c;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ld1c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

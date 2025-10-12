@@ -3,62 +3,51 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmk9;
+.implements Lorg/webrtc/AndroidVideoDecoder$ErrorCallback;
+.implements Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
 
 # instance fields
-.field public final synthetic a:Lez0;
+.field public final synthetic a:Lfz0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lez0;)V
+.method public synthetic constructor <init>(Lfz0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpy0;->a:Lfz0;
 
-    iput-object p1, p0, Lpy0;->a:Lez0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Lnk9;)V
+.method public error(Ljava/lang/Exception;Ljava/lang/String;)V
     .locals 2
 
-    iget-object p0, p0, Lpy0;->a:Lez0;
+    iget-object v0, p0, Lpy0;->a:Lfz0;
 
-    iget-object p0, p0, Lez0;->H0:Lto1;
+    iget-object v0, v0, Lfz0;->L:Lpmc;
 
-    iget-object p0, p0, Lto1;->l:Lj7;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    iget-boolean p1, p1, Lnk9;->f:Z
+    invoke-direct {v1, p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object p0, p0, Lj7;->b:Ll7;
+    const-string p1, "OKRTCCall"
 
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, p0, Ll7;->b:Z
-
-    if-eqz p1, :cond_0
+    invoke-interface {v0, p1, p2, v1}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
+.end method
 
-    :cond_0
-    const/4 p1, 0x1
+.method public getSignaling()Ldce;
+    .locals 1
 
-    iput-boolean p1, p0, Ll7;->b:Z
+    iget-object v0, p0, Lpy0;->a:Lfz0;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object v0, v0, Lfz0;->h:Ldce;
 
-    move-result-wide v0
-
-    iput-wide v0, p0, Ll7;->a:J
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Ll7;->a()V
-
-    return-void
+    return-object v0
 .end method

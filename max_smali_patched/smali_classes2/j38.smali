@@ -1,11 +1,17 @@
-.class public interface abstract Lj38;
+.class public final Lj38;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqz3;
 
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-# virtual methods
-.method public abstract getType()I
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+
+    return-void
 .end method

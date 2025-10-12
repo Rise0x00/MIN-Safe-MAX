@@ -1,65 +1,92 @@
-.class public final Lhk5;
-.super Landroid/graphics/drawable/DrawableWrapper;
+.class public final synthetic Lhk5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwo3;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic b:Lok5;
 
-.field public final c:Ljava/lang/Object;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Lok5;Ljava/util/List;I)V
+    .locals 0
 
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iput p3, p0, Lhk5;->a:I
 
-    sget v1, Lrxb;->ic_file_extension:I
+    iput-object p1, p0, Lhk5;->b:Lok5;
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    iput-object p2, p0, Lhk5;->c:Ljava/util/List;
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
-
-    new-instance p1, Lgk5;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lgk5;-><init>(Lhk5;I)V
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhk5;->a:Ljava/lang/Object;
-
-    new-instance p1, Lgk5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v1}, Lgk5;-><init>(Lhk5;I)V
-
-    invoke-static {v0, p1}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhk5;->b:Ljava/lang/Object;
-
-    new-instance p1, Lgk5;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, p0, v1}, Lgk5;-><init>(Lhk5;I)V
-
-    invoke-static {v0, p1}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhk5;->c:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
+
+    iget v0, p0, Lhk5;->a:I
+
+    const-string v1, "ok5"
+
+    iget-object v2, p0, Lhk5;->c:Ljava/util/List;
+
+    iget-object v3, p0, Lhk5;->b:Lok5;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onListUpdated: failed to store sticker sets=%s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lok5;->J()V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onNotifRemoved: failed to remove sticker sets %s from cache"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lok5;->J()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

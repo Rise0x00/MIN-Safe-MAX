@@ -1,42 +1,61 @@
-.class public final synthetic Lnua;
+.class public abstract Lnua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/RtpReceiver$Observer;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lwua;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lnua;->a:Lwua;
+    sget v0, Lufc;->oneme_settings_ringtone_section_bottom_vh:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lnua;->a:I
 
-    return-void
-.end method
+    sget v0, Lufc;->oneme_settings_ringtone_section_custom_add:I
 
+    sput v0, Lnua;->b:I
 
-# virtual methods
-.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
-    .locals 2
+    sget v0, Lufc;->oneme_settings_ringtone_section_default:I
 
-    iget-object p0, p0, Lnua;->a:Lwua;
+    sput v0, Lnua;->c:I
 
-    iget-object p1, p0, Lwua;->r:Landroid/os/Handler;
+    sget v0, Lufc;->oneme_settings_ringtone_section_header_vh:I
 
-    new-instance v0, Llua;
+    sput v0, Lnua;->d:I
 
-    const/4 v1, 0x5
+    sget v0, Lufc;->oneme_settings_ringtone_section_item_vh:I
 
-    invoke-direct {v0, p0, v1}, Llua;-><init>(Lwua;I)V
+    sput v0, Lnua;->e:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget v0, Lufc;->oneme_settings_ringtone_section_system:I
+
+    sput v0, Lnua;->f:I
+
+    sget v0, Lufc;->oneme_settings_ringtone_settings_list:I
+
+    sput v0, Lnua;->g:I
+
+    sget v0, Lufc;->oneme_settings_ringtone_title:I
+
+    sput v0, Lnua;->h:I
 
     return-void
 .end method

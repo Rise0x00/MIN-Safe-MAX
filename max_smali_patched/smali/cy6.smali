@@ -1,471 +1,186 @@
 .class public final Lcy6;
-.super Ljava/lang/Object;
+.super Llbd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:[B
-
-.field public static final c:[I
-
-
 # instance fields
-.field public final a:Lu8d;
+.field public final H:Ljava/util/Map;
+
+.field public I:Lry4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lld4;Lez4;Lvc6;Ljava/util/Map;)V
+    .locals 0
 
-    const-string v0, "UTF-8"
+    invoke-direct {p0, p1, p2, p3}, Llbd;-><init>(Lld4;Lez4;Lvc6;)V
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    const-string v1, "Exif\u0000\u0000"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    sput-object v0, Lcy6;->b:[B
-
-    const/16 v0, 0xd
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lcy6;->c:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x1
-        0x1
-        0x2
-        0x4
-        0x8
-        0x1
-        0x1
-        0x2
-        0x4
-        0x8
-        0x4
-        0x8
-    .end array-data
-.end method
-
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lu8d;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1, p1}, Lu8d;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lcy6;->a:Lu8d;
+    iput-object p4, p0, Lcy6;->H:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 17
+.method public final l(Lr76;)Lr76;
+    .locals 10
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lcy6;->I:Lry4;
 
-    iget-object v0, v0, Lcy6;->a:Lu8d;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lu8d;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v1
-
-    shl-int/lit8 v1, v1, 0x8
-
-    const v2, 0xff00
-
-    and-int/2addr v1, v2
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v3
-
-    const/16 v4, 0xff
-
-    and-int/2addr v3, v4
-
-    or-int/2addr v1, v3
-
-    const v3, 0xffd8
-
-    and-int v5, v1, v3
-
-    const/16 v6, 0x4949
-
-    const/16 v7, 0x4d4d
-
-    const/4 v8, -0x1
-
-    if-eq v5, v3, :cond_0
-
-    if-eq v1, v7, :cond_0
-
-    if-ne v1, v6, :cond_18
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v1
-
-    and-int/2addr v1, v4
-
-    int-to-short v1, v1
-
-    if-eq v1, v4, :cond_1
+    iget-object v0, p1, Lr76;->D0:Lry4;
 
     :goto_0
-    move v3, v8
+    if-eqz v0, :cond_1
 
-    goto :goto_5
+    iget-object v1, p0, Lcy6;->H:Ljava/util/Map;
+
+    iget-object v2, v0, Lry4;->c:Ljava/lang/String;
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lry4;
+
+    if-eqz v1, :cond_1
+
+    move-object v0, v1
 
     :cond_1
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+    iget-object v1, p1, Lr76;->y0:Lfk9;
 
-    move-result v1
+    const/4 v2, 0x0
 
-    and-int/2addr v1, v4
-
-    int-to-short v1, v1
-
-    const/16 v3, 0xda
-
-    if-ne v1, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v3, 0xd9
-
-    if-ne v1, v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v3
-
-    shl-int/lit8 v3, v3, 0x8
-
-    and-int/2addr v3, v2
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v5
-
-    and-int/2addr v5, v4
-
-    or-int/2addr v3, v5
-
-    add-int/lit8 v3, v3, -0x2
-
-    const/16 v5, 0xe1
-
-    if-eq v1, v5, :cond_8
-
-    int-to-long v9, v3
-
-    const-wide/16 v11, 0x0
-
-    cmp-long v1, v9, v11
-
-    if-gez v1, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    move-wide v13, v9
+    if-nez v1, :cond_2
 
     :goto_1
-    cmp-long v1, v13, v11
-
-    if-lez v1, :cond_7
-
-    invoke-virtual {v0, v13, v14}, Ljava/io/InputStream;->skip(J)J
-
-    move-result-wide v15
-
-    cmp-long v1, v15, v11
-
-    if-lez v1, :cond_5
-
-    :goto_2
-    sub-long/2addr v13, v15
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v1
-
-    if-ne v1, v8, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    const-wide/16 v15, 0x1
-
-    goto :goto_2
-
-    :cond_7
-    :goto_3
-    sub-long v11, v9, v13
-
-    :goto_4
-    cmp-long v1, v11, v9
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_8
-    :goto_5
-    if-ne v3, v8, :cond_9
-
-    goto/16 :goto_d
-
-    :cond_9
-    new-array v1, v3, [B
-
-    move v2, v3
-
-    :goto_6
-    if-lez v2, :cond_a
-
-    sub-int v4, v3, v2
-
-    invoke-virtual {v0, v1, v4, v2}, Ljava/io/InputStream;->read([BII)I
-
-    move-result v4
-
-    if-eq v4, v8, :cond_a
-
-    sub-int/2addr v2, v4
+    move-object v1, v2
 
     goto :goto_6
 
-    :cond_a
-    sub-int v0, v3, v2
+    :cond_2
+    iget-object v3, v1, Lfk9;->a:[Ldk9;
 
-    if-eq v0, v3, :cond_b
+    array-length v4, v3
 
-    goto/16 :goto_d
+    const/4 v5, 0x0
 
-    :cond_b
-    sget-object v0, Lcy6;->b:[B
+    move v6, v5
 
-    array-length v2, v0
+    :goto_2
+    const/4 v7, -0x1
 
-    const/4 v4, 0x0
+    if-ge v6, v4, :cond_4
 
-    const/4 v5, 0x1
+    aget-object v8, v3, v6
 
-    if-le v3, v2, :cond_c
+    instance-of v9, v8, Lpqb;
+
+    if-eqz v9, :cond_3
+
+    check-cast v8, Lpqb;
+
+    const-string v9, "com.apple.streaming.transportStreamTimestamp"
+
+    iget-object v8, v8, Lpqb;->b:Ljava/lang/String;
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    move v6, v7
+
+    :goto_3
+    if-ne v6, v7, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    const/4 v1, 0x1
+
+    if-ne v4, v1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    add-int/lit8 v1, v4, -0x1
+
+    new-array v1, v1, [Ldk9;
+
+    :goto_4
+    if-ge v5, v4, :cond_9
+
+    if-eq v5, v6, :cond_8
+
+    if-ge v5, v6, :cond_7
 
     move v2, v5
 
-    goto :goto_7
+    goto :goto_5
 
-    :cond_c
-    move v2, v4
+    :cond_7
+    add-int/lit8 v2, v5, -0x1
 
-    :goto_7
-    if-eqz v2, :cond_e
+    :goto_5
+    aget-object v7, v3, v5
 
-    move v9, v4
+    aput-object v7, v1, v2
 
-    :goto_8
-    array-length v10, v0
+    :cond_8
+    add-int/lit8 v5, v5, 0x1
 
-    if-ge v9, v10, :cond_e
+    goto :goto_4
 
-    aget-byte v10, v1, v9
+    :cond_9
+    new-instance v2, Lfk9;
 
-    aget-byte v11, v0, v9
+    invoke-direct {v2, v1}, Lfk9;-><init>([Ldk9;)V
 
-    if-eq v10, v11, :cond_d
+    goto :goto_1
 
-    move v2, v4
+    :goto_6
+    iget-object v2, p1, Lr76;->D0:Lry4;
 
-    goto :goto_9
+    if-ne v0, v2, :cond_a
 
-    :cond_d
-    add-int/lit8 v9, v9, 0x1
+    iget-object v2, p1, Lr76;->y0:Lfk9;
 
-    goto :goto_8
+    if-eq v1, v2, :cond_b
 
-    :cond_e
-    :goto_9
-    if-eqz v2, :cond_18
+    :cond_a
+    invoke-virtual {p1}, Lr76;->a()Lp76;
 
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    move-result-object p1
 
-    move-result-object v0
+    iput-object v0, p1, Lp76;->n:Lry4;
 
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    iput-object v1, p1, Lp76;->i:Lfk9;
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    new-instance v0, Lr76;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lr76;-><init>(Lp76;)V
 
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    move-object p1, v0
 
-    move-result-object v0
+    :cond_b
+    invoke-super {p0, p1}, Llbd;->l(Lr76;)Lr76;
 
-    check-cast v0, Ljava/nio/ByteBuffer;
+    move-result-object p1
 
-    const/4 v2, 0x6
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v2
-
-    if-ne v2, v7, :cond_f
-
-    goto :goto_a
-
-    :cond_f
-    if-ne v2, v6, :cond_10
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    :cond_10
-    :goto_a
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    move-result v1
-
-    add-int/lit8 v2, v1, 0x6
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v2
-
-    :goto_b
-    if-ge v4, v2, :cond_18
-
-    add-int/lit8 v3, v1, 0x8
-
-    mul-int/lit8 v6, v4, 0xc
-
-    add-int/2addr v6, v3
-
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v3
-
-    const/16 v7, 0x112
-
-    if-eq v3, v7, :cond_11
-
-    goto :goto_c
-
-    :cond_11
-    add-int/lit8 v3, v6, 0x2
-
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v3
-
-    if-lt v3, v5, :cond_17
-
-    const/16 v7, 0xc
-
-    if-le v3, v7, :cond_12
-
-    goto :goto_c
-
-    :cond_12
-    add-int/lit8 v7, v6, 0x4
-
-    invoke-virtual {v0, v7}, Ljava/nio/ByteBuffer;->getInt(I)I
-
-    move-result v7
-
-    if-gez v7, :cond_13
-
-    goto :goto_c
-
-    :cond_13
-    sget-object v9, Lcy6;->c:[I
-
-    aget v3, v9, v3
-
-    add-int/2addr v7, v3
-
-    const/4 v3, 0x4
-
-    if-le v7, v3, :cond_14
-
-    goto :goto_c
-
-    :cond_14
-    add-int/lit8 v6, v6, 0x8
-
-    if-ltz v6, :cond_17
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v3
-
-    if-le v6, v3, :cond_15
-
-    goto :goto_c
-
-    :cond_15
-    if-ltz v7, :cond_17
-
-    add-int/2addr v7, v6
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v3
-
-    if-le v7, v3, :cond_16
-
-    goto :goto_c
-
-    :cond_16
-    invoke-virtual {v0, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
-
-    move-result v0
-
-    return v0
-
-    :cond_17
-    :goto_c
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_b
-
-    :cond_18
-    :goto_d
-    return v8
+    return-object p1
 .end method

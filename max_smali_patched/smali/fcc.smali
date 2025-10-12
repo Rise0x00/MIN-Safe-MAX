@@ -1,93 +1,42 @@
-.class public final Lfcc;
-.super Ld7c;
-.source "SourceFile"
+.class public abstract Lfcc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static file_fill_24:I = 0x7f0803e3
 
+.field public static geolocation_fill_24:I = 0x7f0804eb
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.field public static ic_arrow_down_24:I = 0x7f080526
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static ic_arrow_up_24:I = 0x7f08052f
 
-    iput-object p1, p0, Lfcc;->c:Ljava/lang/String;
+.field public static ic_camera_add_36:I = 0x7f080571
 
-    return-void
-.end method
+.field public static ic_clear_24:I = 0x7f080594
 
+.field public static ic_contact_28:I = 0x7f0805aa
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.field public static ic_cross_12:I = 0x7f0805b4
 
-    const/4 v0, 0x1
+.field public static ic_document_28:I = 0x7f0805c8
 
-    if-ne p0, p1, :cond_0
+.field public static ic_file_mode_24:I = 0x7f0805e6
 
-    return v0
+.field public static ic_gallery_28:I = 0x7f0805fb
 
-    :cond_0
-    instance-of v1, p1, Lfcc;
+.field public static ic_location_28:I = 0x7f08065b
 
-    const/4 v2, 0x0
+.field public static ic_media_mode_24:I = 0x7f080670
 
-    if-nez v1, :cond_1
+.field public static ic_snack_file_24:I = 0x7f0807a4
 
-    return v2
+.field public static ic_snack_media_24:I = 0x7f0807a5
 
-    :cond_1
-    check-cast p1, Lfcc;
+.field public static ic_videocam_20:I = 0x7f0807eb
 
-    iget-object p0, p0, Lfcc;->c:Ljava/lang/String;
+.field public static media_fill_24:I = 0x7f080897
 
-    iget-object p1, p1, Lfcc;->c:Ljava/lang/String;
+.field public static profile_fill_24:I = 0x7f080926
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lfcc;->c:Ljava/lang/String;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Avatar(avatarUrl="
-
-    const-string v1, ")"
-
-    iget-object p0, p0, Lfcc;->c:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static wallet_fill_24:I = 0x7f08098e

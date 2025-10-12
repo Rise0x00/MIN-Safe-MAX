@@ -1,140 +1,380 @@
-.class public final Lhxe;
-.super Lszd;
+.class public abstract Lhxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhxe;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Ln90;
 
+.field public static final b:Ljava/util/HashMap;
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
+.field public static final c:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 9
 
-    new-instance v0, Lcjd;
+    const-wide/16 v0, 0x3
 
-    const/16 v1, 0x18
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0, v1}, Lcjd;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lhxe;->CREATOR:Landroid/os/Parcelable$Creator;
+    const-wide/16 v1, 0x4
 
-    return-void
-.end method
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public constructor <init>(JJ)V
-    .locals 0
+    move-result-object v1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Ln90;
 
-    iput-wide p1, p0, Lhxe;->a:J
+    const-string v3, "camera2.streamSpec.streamUseCase"
 
-    iput-wide p3, p0, Lhxe;->b:J
+    sget-object v4, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    return-void
-.end method
+    const/4 v5, 0x0
 
-.method public static a(JLfsa;)J
-    .locals 6
+    invoke-direct {v2, v3, v4, v5}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    invoke-virtual {p2}, Lfsa;->u()I
+    sput-object v2, Lhxe;->a:Ln90;
 
-    move-result v0
+    new-instance v2, Ljava/util/HashMap;
 
-    int-to-long v0, v0
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    const-wide/16 v2, 0x80
+    sput-object v2, Lhxe;->b:Ljava/util/HashMap;
 
-    and-long/2addr v2, v0
+    new-instance v3, Ljava/util/HashMap;
 
-    const-wide/16 v4, 0x0
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    cmp-long v2, v2, v4
+    sput-object v3, Lhxe;->c:Ljava/util/HashMap;
 
-    if-eqz v2, :cond_0
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-wide/16 v2, 0x1
+    const/16 v5, 0x21
 
-    and-long/2addr v0, v2
+    if-lt v4, v5, :cond_0
 
-    const/16 v2, 0x20
+    new-instance v4, Ljava/util/HashSet;
 
-    shl-long/2addr v0, v2
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    invoke-virtual {p2}, Lfsa;->w()J
+    sget-object v5, Lw3g;->b:Lw3g;
 
-    move-result-wide v2
+    invoke-virtual {v4, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    or-long/2addr v0, v2
+    sget-object v6, Lw3g;->Y:Lw3g;
 
-    add-long/2addr v0, p0
+    invoke-virtual {v4, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    const-wide p0, 0x1ffffffffL
+    invoke-virtual {v2, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    and-long/2addr p0, v0
+    new-instance v4, Ljava/util/HashSet;
 
-    return-wide p0
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v4, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v4, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    sget-object v6, Lw3g;->c:Lw3g;
+
+    invoke-virtual {v4, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    const-wide/16 v6, 0x1
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    sget-object v6, Lw3g;->a:Lw3g;
+
+    invoke-virtual {v4, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    const-wide/16 v7, 0x2
+
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {v2, v7, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    sget-object v7, Lw3g;->o:Lw3g;
+
+    invoke-virtual {v4, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, v0, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v2, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, v6}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {v1, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
-
-    return-wide p0
+    return-void
 .end method
 
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method public static a(Lci3;J)Lux1;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lhxe;->a:Ln90;
 
-    const-string v1, "SCTE-35 TimeSignalCommand { ptsTime="
+    invoke-interface {p0, v0}, Lci3;->n(Ln90;)Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    iget-wide v1, p0, Lhxe;->a:J
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-interface {p0, v0}, Lci3;->h(Ln90;)Ljava/lang/Object;
 
-    const-string v1, ", playbackPositionUs= "
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Ljava/lang/Long;
 
-    iget-wide v1, p0, Lhxe;->b:J
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    const-string p0, " }"
+    move-result-wide v1
 
-    invoke-static {v0, v1, v2, p0}, Lw68;->n(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    cmp-long v1, v1, p1
+
+    if-nez v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0}, Lst9;->c(Lci3;)Lst9;
 
     move-result-object p0
 
-    return-object p0
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, p1}, Lst9;->i(Ln90;Ljava/lang/Object;)V
+
+    new-instance p1, Lux1;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2, p0}, Lzde;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static b(Lw3g;JLjava/util/List;)Z
     .locals 2
 
-    iget-wide v0, p0, Lhxe;->a:J
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    const/16 v1, 0x21
 
-    iget-wide v0, p0, Lhxe;->b:J
+    if-ge v0, v1, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    goto :goto_0
 
-    return-void
+    :cond_0
+    sget-object v0, Lw3g;->X:Lw3g;
+
+    if-ne p0, v0, :cond_4
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    sget-object v0, Lhxe;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/Set;
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    invoke-interface {p0}, Ljava/util/Set;->size()I
+
+    move-result p2
+
+    if-eq p1, p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_3
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lw3g;
+
+    invoke-interface {p0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p3
+
+    sget-object v0, Lhxe;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_6
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    :cond_5
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_6
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static c(Lci3;Lw3g;)Z
+    .locals 2
+
+    sget-object v0, Lu3g;->q0:Ln90;
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p0, v0, v1}, Lci3;->e(Ln90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lp47;->b:Ln90;
+
+    invoke-interface {p0, v0}, Lci3;->n(Ln90;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {p0, v0}, Lci3;->h(Ln90;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x2
+
+    if-ne p0, p1, :cond_3
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_3
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

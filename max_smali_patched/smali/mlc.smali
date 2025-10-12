@@ -1,58 +1,24 @@
-.class public final synthetic Lmlc;
+.class public abstract Lmlc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lks1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static ViewPager2:[I
 
-.field public final synthetic b:Lnlc;
+.field public static ViewPager2_android_orientation:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnlc;I)V
-    .locals 0
-
-    iput p2, p0, Lmlc;->a:I
-
-    iput-object p1, p0, Lmlc;->b:Lnlc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final N(Ljs1;)Ljava/lang/String;
+.method public static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lmlc;->a:I
+    const v0, 0x10100c4
 
-    iget-object p0, p0, Lmlc;->b:Lnlc;
+    filled-new-array {v0}, [I
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iput-object p1, p0, Lnlc;->f:Ljs1;
+    sput-object v0, Lmlc;->ViewPager2:[I
 
-    const-string p0, "RequestCompleteFuture"
-
-    return-object p0
-
-    :pswitch_0
-    iput-object p1, p0, Lnlc;->e:Ljs1;
-
-    const-string p0, "CaptureCompleteFuture"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

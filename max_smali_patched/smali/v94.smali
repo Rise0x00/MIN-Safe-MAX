@@ -1,52 +1,63 @@
-.class public final synthetic Lv94;
-.super Lia6;
+.class public final Lv94;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf96;
 
+# instance fields
+.field public final a:Landroid/content/Context;
 
-# static fields
-.field public static final a:Lv94;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ld2f;
+
+.field public final d:Lf7d;
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Z
+
+.field public final g:I
+
+.field public final h:Ljava/util/concurrent/Executor;
+
+.field public final i:Ljava/util/concurrent/Executor;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Ljava/util/Set;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lv94;
-
-    const-string v4, "toLong(Ljava/lang/String;)J"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Lwde;
-
-    const-string v3, "toLong"
-
-    invoke-direct/range {v0 .. v5}, Lia6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lv94;->a:Lv94;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ld2f;Lf7d;Ljava/util/ArrayList;ZILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZLjava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
-    check-cast p1, Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    iput-object p1, p0, Lv94;->a:Landroid/content/Context;
 
-    move-result-wide p0
+    iput-object p2, p0, Lv94;->b:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iput-object p3, p0, Lv94;->c:Ld2f;
 
-    move-result-object p0
+    iput-object p4, p0, Lv94;->d:Lf7d;
 
-    return-object p0
+    iput-object p5, p0, Lv94;->e:Ljava/util/List;
+
+    iput-boolean p6, p0, Lv94;->f:Z
+
+    iput p7, p0, Lv94;->g:I
+
+    iput-object p8, p0, Lv94;->h:Ljava/util/concurrent/Executor;
+
+    iput-object p9, p0, Lv94;->i:Ljava/util/concurrent/Executor;
+
+    iput-boolean p10, p0, Lv94;->j:Z
+
+    iput-boolean p11, p0, Lv94;->k:Z
+
+    iput-object p12, p0, Lv94;->l:Ljava/util/Set;
+
+    return-void
 .end method

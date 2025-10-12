@@ -1,34 +1,39 @@
-.class public final synthetic Leve;
-.super Ljava/lang/Object;
+.class public final Leve;
+.super Lgd4;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
 
+# static fields
+.field public static final b:Leve;
 
-# instance fields
-.field public final synthetic a:Lt96;
+.field public static final c:Lbd4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt96;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Leve;
 
-    iput-object p1, p0, Leve;->a:Lt96;
+    invoke-direct {v0}, Lgd4;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Leve;->b:Leve;
 
+    const/4 v1, 0x0
 
-# virtual methods
-.method public final onFrame(II)V
-    .locals 0
+    new-array v1, v1, [Ljava/lang/String;
 
-    iget-object p0, p0, Leve;->a:Lt96;
+    const/4 v2, 0x0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Lt96;II)V
+    const/16 v3, 0xe
+
+    const-string v4, ":stickers/showcase"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v0
+
+    sput-object v0, Leve;->c:Lbd4;
 
     return-void
 .end method

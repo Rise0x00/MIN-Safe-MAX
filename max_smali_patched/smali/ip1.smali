@@ -1,108 +1,125 @@
-.class public final synthetic Lip1;
-.super Ljava/lang/Object;
+.class public final Lip1;
+.super Lbf0;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final n:J
 
-.field public final synthetic b:Lkp1;
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkp1;I)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput p2, p0, Lip1;->a:I
-
-    iput-object p1, p0, Lip1;->b:Lkp1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lip1;->n:J
+
+    iput-boolean p3, p0, Lip1;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lip1;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lip1;->b:Lkp1;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lkp1;->B0:Ljp1;
-
-    if-eqz p0, :cond_1
-
-    check-cast p0, Lm;
-
-    iget-object p0, p0, Lm;->b:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->y0()Lrp1;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lrp1;->c:Lht1;
-
-    iget-object p0, p0, Lht1;->i:Lhzc;
-
-    check-cast p0, Lqzc;
-
-    iget-object p0, p0, Lqzc;->n0:Lq4e;
+    return v0
 
     :cond_0
-    invoke-virtual {p0}, Lq4e;->getValue()Ljava/lang/Object;
+    instance-of v1, p1, Lip1;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    move-object v1, v0
+    if-nez v1, :cond_1
 
-    check-cast v1, Lrzc;
+    return v2
 
-    const/16 v2, 0xb
+    :cond_1
+    check-cast p1, Lip1;
 
-    const/4 v3, 0x0
+    iget-wide v3, p0, Lip1;->n:J
 
-    invoke-static {v1, v3, v3, v3, v2}, Lrzc;->a(Lrzc;Lszc;Lgzc;Ljava/lang/String;I)Lrzc;
+    iget-wide v5, p1, Lip1;->n:J
 
-    move-result-object v1
+    cmp-long v1, v3, v5
 
-    invoke-virtual {p0, v0, v1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lip1;->o:Z
+
+    iget-boolean p1, p1, Lip1;->o:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lip1;->n:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-boolean v1, p0, Lip1;->o:Z
 
-    return-object p0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :pswitch_0
-    sget-object v0, Lzs4;->p0:Lqs9;
+    move-result v1
 
-    invoke-virtual {v0, p0}, Lqs9;->h(Landroid/view/View;)Lyda;
+    add-int/2addr v1, v0
 
-    move-result-object p0
+    return v1
+.end method
 
-    iget-object p0, p0, Lyda;->c:Lnma;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-object p0
+    const-string v0, "Chat(chatId="
 
-    nop
+    const-string v1, ", isVideo="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v2, p0, Lip1;->n:J
+
+    iget-boolean v4, p0, Lip1;->o:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final w()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lip1;->o:Z
+
+    return v0
 .end method

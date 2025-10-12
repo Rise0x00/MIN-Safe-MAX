@@ -1,66 +1,51 @@
-.class public final synthetic Ly6g;
+.class public final Ly6g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lha4;
-
-
-# instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic Y:I
-
-.field public final synthetic a:J
-
-.field public final synthetic b:Ls2g;
-
-.field public final synthetic c:Ljava/lang/Long;
-
-.field public final synthetic o:Ljava/lang/String;
-
-
-# direct methods
-.method public synthetic constructor <init>(JLs2g;Ljava/lang/Long;Ljava/lang/String;ZI)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ly6g;->a:J
-
-    iput-object p3, p0, Ly6g;->b:Ls2g;
-
-    iput-object p4, p0, Ly6g;->c:Ljava/lang/Long;
-
-    iput-object p5, p0, Ly6g;->o:Ljava/lang/String;
-
-    iput-boolean p6, p0, Ly6g;->X:Z
-
-    iput p7, p0, Ly6g;->Y:I
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    const/4 v0, 0x1
 
-    iget-wide v1, p0, Ly6g;->a:J
+    if-ne p0, p1, :cond_0
 
-    iget-object v3, p0, Ly6g;->b:Ls2g;
+    return v0
 
-    iget-object v4, p0, Ly6g;->c:Ljava/lang/Long;
+    :cond_0
+    instance-of v1, p1, Ly6g;
 
-    iget-object v5, p0, Ly6g;->o:Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    iget-boolean v6, p0, Ly6g;->X:Z
+    const/4 p1, 0x0
 
-    iget v7, p0, Ly6g;->Y:I
+    return p1
 
-    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLs2g;Ljava/lang/Long;Ljava/lang/String;ZI)V
+    :cond_1
+    check-cast p1, Ly6g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/high16 v0, 0x29000000
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
 
     return-object v0
 .end method

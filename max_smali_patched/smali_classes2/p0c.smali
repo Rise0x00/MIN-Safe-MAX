@@ -1,90 +1,208 @@
-.class public abstract Lp0c;
+.class public final Lp0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls0c;
 
 
-# static fields
-.field public static oneme_settings_storage_item_action_all_cancel:I = 0x7f0a0808
+# instance fields
+.field public final a:Loef;
 
-.field public static oneme_settings_storage_item_action_all_clear:I = 0x7f0a0809
+.field public final b:Loef;
 
-.field public static oneme_settings_storage_item_action_audio_cancel:I = 0x7f0a080a
+.field public final c:Ljava/util/List;
 
-.field public static oneme_settings_storage_item_action_audio_clear:I = 0x7f0a080b
+.field public final d:Landroid/os/Bundle;
 
-.field public static oneme_settings_storage_item_action_files_cancel:I = 0x7f0a080c
 
-.field public static oneme_settings_storage_item_action_files_clear:I = 0x7f0a080d
+# direct methods
+.method public constructor <init>(Loef;Loef;Ljava/util/List;Landroid/os/Bundle;)V
+    .locals 0
 
-.field public static oneme_settings_storage_item_action_gif_cancel:I = 0x7f0a080e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_storage_item_action_gif_clear:I = 0x7f0a080f
+    iput-object p1, p0, Lp0c;->a:Loef;
 
-.field public static oneme_settings_storage_item_action_images_cancel:I = 0x7f0a0810
+    iput-object p2, p0, Lp0c;->b:Loef;
 
-.field public static oneme_settings_storage_item_action_images_clear:I = 0x7f0a0811
+    iput-object p3, p0, Lp0c;->c:Ljava/util/List;
 
-.field public static oneme_settings_storage_item_action_music_cancel:I = 0x7f0a0812
+    iput-object p4, p0, Lp0c;->d:Landroid/os/Bundle;
 
-.field public static oneme_settings_storage_item_action_music_clear:I = 0x7f0a0813
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_action_stickers_cancel:I = 0x7f0a0814
 
-.field public static oneme_settings_storage_item_action_stickers_clear:I = 0x7f0a0815
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static oneme_settings_storage_item_action_video_cancel:I = 0x7f0a0816
+    const/4 v0, 0x1
 
-.field public static oneme_settings_storage_item_action_video_clear:I = 0x7f0a0817
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_storage_item_all_clear_title:I = 0x7f0a0818
+    return v0
 
-.field public static oneme_settings_storage_item_audio_clear_title:I = 0x7f0a0819
+    :cond_0
+    instance-of v1, p1, Lp0c;
 
-.field public static oneme_settings_storage_item_audio_messages:I = 0x7f0a081a
+    const/4 v2, 0x0
 
-.field public static oneme_settings_storage_item_clear_cache:I = 0x7f0a081b
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_storage_item_files:I = 0x7f0a081c
+    return v2
 
-.field public static oneme_settings_storage_item_files_clear_title:I = 0x7f0a081d
+    :cond_1
+    check-cast p1, Lp0c;
 
-.field public static oneme_settings_storage_item_gif:I = 0x7f0a081e
+    iget-object v1, p0, Lp0c;->a:Loef;
 
-.field public static oneme_settings_storage_item_gif_clear_title:I = 0x7f0a081f
+    iget-object v3, p1, Lp0c;->a:Loef;
 
-.field public static oneme_settings_storage_item_images:I = 0x7f0a0820
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_item_images_clear_title:I = 0x7f0a0821
+    move-result v1
 
-.field public static oneme_settings_storage_item_music:I = 0x7f0a0822
+    if-nez v1, :cond_2
 
-.field public static oneme_settings_storage_item_music_clear_title:I = 0x7f0a0823
+    return v2
 
-.field public static oneme_settings_storage_item_one_month:I = 0x7f0a0824
+    :cond_2
+    iget-object v1, p0, Lp0c;->b:Loef;
 
-.field public static oneme_settings_storage_item_one_week:I = 0x7f0a0825
+    iget-object v3, p1, Lp0c;->b:Loef;
 
-.field public static oneme_settings_storage_item_six_month:I = 0x7f0a0826
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_item_stickers:I = 0x7f0a0827
+    move-result v1
 
-.field public static oneme_settings_storage_item_stickers_clear_title:I = 0x7f0a0828
+    if-nez v1, :cond_3
 
-.field public static oneme_settings_storage_item_unlimited:I = 0x7f0a0829
+    return v2
 
-.field public static oneme_settings_storage_item_video:I = 0x7f0a082a
+    :cond_3
+    iget-object v1, p0, Lp0c;->c:Ljava/util/List;
 
-.field public static oneme_settings_storage_item_video_clear_title:I = 0x7f0a082b
+    iget-object v3, p1, Lp0c;->c:Ljava/util/List;
 
-.field public static oneme_settings_storage_screen_data_section_header:I = 0x7f0a082c
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_screen_list:I = 0x7f0a082d
+    move-result v1
 
-.field public static oneme_settings_storage_screen_preserve_media_section:I = 0x7f0a082e
+    if-nez v1, :cond_4
 
-.field public static oneme_settings_storage_screen_settings_button_vh:I = 0x7f0a082f
+    return v2
 
-.field public static oneme_settings_storage_screen_settings_header_vh:I = 0x7f0a0830
+    :cond_4
+    iget-object v1, p0, Lp0c;->d:Landroid/os/Bundle;
 
-.field public static oneme_settings_storage_screen_settings_item_vh:I = 0x7f0a0831
+    iget-object p1, p1, Lp0c;->d:Landroid/os/Bundle;
 
-.field public static oneme_settings_storage_screen_toolbar:I = 0x7f0a0832
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lp0c;->a:Loef;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lp0c;->b:Loef;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lp0c;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lp0c;->d:Landroid/os/Bundle;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmationDialog(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lp0c;->a:Loef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp0c;->b:Loef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp0c;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", payload="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp0c;->d:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

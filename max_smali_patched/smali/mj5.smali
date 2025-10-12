@@ -1,20 +1,41 @@
 .class public final Lmj5;
-.super Ljava/lang/Object;
+.super Lg3;
 .source "SourceFile"
 
-# interfaces
-.implements Ll64;
+
+# instance fields
+.field public final c:Lmv0;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lmv0;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lmv0;-><init>(I)V
+
+    iput-object v0, p0, Lmj5;->c:Lmv0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ln64;
+.method public final g()Ljava/util/Random;
     .locals 1
 
-    new-instance p0, Loj5;
+    iget-object v0, p0, Lmj5;->c:Lmv0;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    invoke-direct {p0, v0}, Lbj0;-><init>(Z)V
+    move-result-object v0
 
-    return-object p0
+    check-cast v0, Ljava/util/Random;
+
+    return-object v0
 .end method

@@ -1,100 +1,61 @@
 .class public final Lni2;
-.super Leje;
+.super Lti2;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+# static fields
+.field public static final b:Lni2;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    new-instance v0, Lni2;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Lti2;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lni2;->b:Lni2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lni2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lni2;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lni2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance v0, Lni2;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p2, p0}, Lni2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
+    return v0
 
-    iput-object p1, v0, Lni2;->X:Ljava/lang/Object;
+    :cond_0
+    instance-of p1, p1, Lni2;
 
-    return-object v0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const v0, -0x4d5d16e2
 
-    iget-object p1, p0, Lni2;->X:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast p1, Lji2;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->r0:[Lof7;
+    const-string v0, "RequestStoragePermissions"
 
-    iget-object p0, p0, Lni2;->Y:Lone/me/profile/screens/media/ChatMediaTabWidget;
-
-    iget-object p0, p0, Lone/me/profile/screens/media/ChatMediaTabWidget;->X:Lin0;
-
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->r0:[Lof7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p0}, Lin0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkna;
-
-    iget-object v0, p1, Lji2;->b:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lkna;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lji2;->a:Lbna;
-
-    invoke-virtual {p0, p1}, Lkna;->setAvatar(Lbna;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

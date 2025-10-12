@@ -1,90 +1,92 @@
-.class public final Lnqe;
-.super Leje;
+.class public final synthetic Lnqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llob;
 
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Long;I)V
     .locals 0
 
-    iput-object p1, p0, Lnqe;->X:Landroid/view/View;
+    iput p2, p0, Lnqe;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lnqe;->b:Ljava/lang/Long;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final test(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ldq5;
+    iget v0, p0, Lnqe;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lnqe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Lqre;
 
-    move-result-object p0
+    iget-wide v0, p1, Lqre;->a:J
 
-    check-cast p0, Lnqe;
+    iget-object p1, p0, Lnqe;->b:Ljava/lang/Long;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {p0, p1}, Lnqe;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-wide v2
 
-    return-object p1
-.end method
+    cmp-long p1, v0, v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    if-nez p1, :cond_0
 
-    new-instance p1, Lnqe;
-
-    iget-object p0, p0, Lnqe;->X:Landroid/view/View;
-
-    invoke-direct {p1, p0, p2}, Lnqe;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lnqe;->X:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p0, Lvh4;->e0:Lvh4;
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    sget-object p1, Llqe;->a0:Lkle;
-
-    invoke-static {p0}, Le64;->v(Landroid/content/Context;)Llqe;
+    const/4 p1, 0x0
 
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    return p1
 
-    return-object p0
+    :pswitch_0
+    check-cast p1, Lcqe;
+
+    iget-wide v0, p1, Lcqe;->a:J
+
+    iget-object p1, p0, Lnqe;->b:Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

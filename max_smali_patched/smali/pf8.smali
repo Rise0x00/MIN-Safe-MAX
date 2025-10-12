@@ -2,127 +2,127 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final e:Ljava/lang/String;
-
-.field public static final f:Ljava/lang/String;
-
-.field public static final g:Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String;
+# interfaces
+.implements Lsf8;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final a:Lxpd;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Lfif;->a:I
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpf8;->e:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpf8;->f:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpf8;->g:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpf8;->h:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Bundle;ZZZ)V
-    .locals 1
+.method public constructor <init>(Lxpd;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/os/Bundle;
+    iput-object p1, p0, Lpf8;->a:Lxpd;
 
-    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    iput-object v0, p0, Lpf8;->a:Landroid/os/Bundle;
-
-    iput-boolean p2, p0, Lpf8;->b:Z
-
-    iput-boolean p3, p0, Lpf8;->c:Z
-
-    iput-boolean p4, p0, Lpf8;->d:Z
+    iput p2, p0, Lpf8;->b:I
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Bundle;)Lpf8;
-    .locals 5
 
-    sget-object v0, Lpf8;->e:Ljava/lang/String;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Lpf8;->f:Ljava/lang/String;
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpf8;
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpf8;
+
+    iget-object v1, p0, Lpf8;->a:Lxpd;
+
+    iget-object v3, p1, Lpf8;->a:Lxpd;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    sget-object v3, Lpf8;->g:Ljava/lang/String;
+    if-nez v1, :cond_2
 
-    invoke-virtual {p0, v3, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+    return v2
 
-    move-result v3
+    :cond_2
+    iget v1, p0, Lpf8;->b:I
 
-    sget-object v4, Lpf8;->h:Ljava/lang/String;
+    iget p1, p1, Lpf8;->b:I
 
-    invoke-virtual {p0, v4, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+    if-eq v1, p1, :cond_3
 
-    move-result p0
+    return v2
 
-    new-instance v2, Lpf8;
+    :cond_3
+    return v0
+.end method
 
-    if-nez v0, :cond_0
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+    iget-object v0, p0, Lpf8;->a:Lxpd;
 
-    :cond_0
-    invoke-direct {v2, v0, v1, v3, p0}, Lpf8;-><init>(Landroid/os/Bundle;ZZZ)V
+    invoke-virtual {v0}, Lxpd;->hashCode()I
 
-    return-object v2
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lpf8;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowMediaItem(item="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpf8;->a:Lxpd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", uiPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpf8;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

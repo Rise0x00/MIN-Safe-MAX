@@ -4,17 +4,5 @@
 
 
 # virtual methods
-.method public abstract b()Ld32;
-.end method
-
-.method public abstract c()Ljava/lang/Object;
-.end method
-
-.method public abstract d(Life;)V
-.end method
-
-.method public abstract flush()V
-.end method
-
-.method public abstract release()V
+.method public abstract a()Lk94;
 .end method

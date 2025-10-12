@@ -1,37 +1,69 @@
-.class public abstract synthetic Lzm5;
+.class public final Lzm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(IIIIJLjava/lang/String;)V
+    .locals 0
 
-    invoke-static {}, Llx5;->values()[Llx5;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 2
+    iput p1, p0, Lzm5;->a:I
 
-    array-length v0, v0
+    .line 3
+    iput-object p7, p0, Lzm5;->b:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    .line 4
+    iput p2, p0, Lzm5;->c:I
 
-    :try_start_0
-    sget-object v1, Llx5;->b:Ljava/util/LinkedHashSet;
+    .line 5
+    iput p3, p0, Lzm5;->d:I
 
-    const/16 v1, 0xd
+    .line 6
+    iput p4, p0, Lzm5;->e:I
 
-    const/4 v2, 0x1
+    .line 7
+    iput-wide p5, p0, Lzm5;->f:J
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    :catch_0
-    sput-object v0, Lzm5;->$EnumSwitchMapping$0:[I
+.method public synthetic constructor <init>(ILjava/lang/String;)V
+    .locals 8
+
+    const/4 v4, 0x0
+
+    const-wide/16 v5, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v7, p2
+
+    .line 8
+    invoke-direct/range {v0 .. v7}, Lzm5;-><init>(IIIIJLjava/lang/String;)V
 
     return-void
 .end method

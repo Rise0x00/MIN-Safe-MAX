@@ -1,254 +1,305 @@
 .class public final Lahg;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Integer;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/Integer;
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-boolean p1, p0, Lahg;->a:Z
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lahg;->b:Ljava/lang/Integer;
-
-    iput-boolean p3, p0, Lahg;->c:Z
-
-    iput-object p4, p0, Lahg;->d:Ljava/lang/Integer;
-
-    iput-boolean p5, p0, Lahg;->e:Z
-
-    iput-boolean p6, p0, Lahg;->f:Z
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eq p0, p1, :cond_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    instance-of v0, p1, Lahg;
+    invoke-virtual {p0, p1, p2}, Lahg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
     check-cast p1, Lahg;
 
-    iget-boolean v0, p0, Lahg;->a:Z
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-boolean v1, p1, Lahg;->a:Z
+    invoke-virtual {p1, p2}, Lahg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lahg;->b:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lahg;->b:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lahg;->c:Z
-
-    iget-boolean v1, p1, Lahg;->c:Z
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lahg;->d:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lahg;->d:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Lahg;->e:Z
-
-    iget-boolean v1, p1, Lahg;->e:Z
-
-    if-ne v0, v1, :cond_0
-
-    iget-boolean p0, p0, Lahg;->f:Z
-
-    iget-boolean p1, p1, Lahg;->f:Z
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lahg;
+
+    iget-object v1, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {v0, p2, v1}, Lahg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+
+    iput-object p1, v0, Lahg;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-boolean v1, p0, Lahg;->a:Z
+    iget-object p1, p0, Lahg;->X:Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    check-cast p1, Licg;
 
-    move v1, v0
+    iget-object v0, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    :cond_0
-    mul-int/lit8 v1, v1, 0x1f
+    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0:Ll2d;
 
-    const/4 v2, 0x0
+    iget-object v2, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Z:Ljava/lang/Object;
 
-    iget-object v3, p0, Lahg;->b:Ljava/lang/Integer;
+    sget-object v3, Lfcg;->a:Lfcg;
 
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    invoke-static {p1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
-    goto :goto_0
+    if-eqz v3, :cond_4
+
+    invoke-interface {v2}, Lbp7;->a()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llhg;->a()F
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    cmpg-float v0, v0, v2
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {v1}, Ll2d;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Ll2d;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxdg;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lxdg;->c(Z)V
 
     :cond_1
-    move v3, v2
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    :goto_0
-    add-int/2addr v1, v3
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v3, p0, Lahg;->c:Z
-
-    if-eqz v3, :cond_2
-
-    move v3, v0
+    goto :goto_0
 
     :cond_2
-    add-int/2addr v1, v3
+    invoke-virtual {v1}, Ll2d;->a()Z
 
-    mul-int/lit8 v1, v1, 0x1f
+    move-result v0
 
-    iget-object v3, p0, Lahg;->d:Ljava/lang/Integer;
+    if-eqz v0, :cond_3
 
-    if-eqz v3, :cond_3
+    invoke-virtual {v1}, Ll2d;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    move-result-object v0
 
-    move-result v2
+    check-cast v0, Lxdg;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lxdg;->c(Z)V
 
     :cond_3
-    add-int/2addr v1, v2
+    :goto_0
+    invoke-interface {p1, v2}, Llhg;->d(F)V
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v2, p0, Lahg;->e:Z
-
-    if-eqz v2, :cond_4
-
-    move v2, v0
+    goto/16 :goto_1
 
     :cond_4
-    add-int/2addr v1, v2
+    instance-of v1, p1, Lhcg;
 
-    mul-int/lit8 v1, v1, 0x1f
+    if-eqz v1, :cond_7
 
-    iget-boolean p0, p0, Lahg;->f:Z
+    invoke-interface {v2}, Lbp7;->a()Z
 
-    if-eqz p0, :cond_5
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    goto/16 :goto_1
+
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->x0()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->pause()V
+
+    :cond_6
+    check-cast p1, Lhcg;
+
+    iget p1, p1, Lhcg;->a:F
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->getDuration()J
+
+    move-result-wide v1
+
+    long-to-float v1, v1
+
+    mul-float/2addr p1, v1
+
+    float-to-long v1, p1
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1, v2}, Llhg;->seekTo(J)V
 
     goto :goto_1
 
-    :cond_5
-    move v0, p0
+    :cond_7
+    instance-of v1, p1, Lgcg;
+
+    if-eqz v1, :cond_a
+
+    invoke-interface {v2}, Lbp7;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->x0()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->pause()V
+
+    :cond_9
+    check-cast p1, Lgcg;
+
+    iget p1, p1, Lgcg;->a:F
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Llhg;->getDuration()J
+
+    move-result-wide v1
+
+    long-to-float v1, v1
+
+    mul-float/2addr p1, v1
+
+    float-to-long v1, p1
+
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object p1
+
+    invoke-interface {p1, v1, v2}, Llhg;->seekTo(J)V
+
+    goto :goto_1
+
+    :cond_a
+    sget-object v1, Lfcg;->b:Lfcg;
+
+    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
+    invoke-interface {v2}, Lbp7;->a()Z
+
+    move-result p1
+
+    if-nez p1, :cond_b
+
+    goto :goto_1
+
+    :cond_b
+    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llhg;->play()V
 
     :goto_1
-    add-int/2addr v1, v0
+    sget-object p1, Loyf;->a:Loyf;
 
-    return v1
-.end method
+    return-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :cond_c
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    const-string v1, "WebSocketExtensions(perMessageDeflate="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lahg;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clientMaxWindowBits="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lahg;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clientNoContextTakeover="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lahg;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverMaxWindowBits="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lahg;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", serverNoContextTakeover="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lahg;->e:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unknownValues="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lahg;->f:Z
-
-    const-string v1, ")"
-
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

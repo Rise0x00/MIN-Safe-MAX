@@ -1,23 +1,103 @@
 .class public final Lbmg;
-.super Ljava/lang/Object;
+.super Lrwc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, Lbmg;->a:I
+
+    iput-object p2, p0, Lbmg;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbmg;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Lbmg;->b:Ljava/lang/String;
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget v0, p0, Lbmg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lbmg;->b:Ljava/lang/Object;
+
+    check-cast v0, Lu9h;
+
+    invoke-virtual {v0}, Lu9h;->p()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lbmg;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->w0:Z
+
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->D0:Lihd;
+
+    iput-boolean v1, v0, Lihd;->l:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbmg;->a()V
+
+    return-void
+.end method
+
+.method public final c(IILjava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbmg;->a()V
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbmg;->a()V
+
+    return-void
+.end method
+
+.method public final e(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbmg;->a()V
+
+    return-void
+.end method
+
+.method public final f(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Lbmg;->a()V
 
     return-void
 .end method

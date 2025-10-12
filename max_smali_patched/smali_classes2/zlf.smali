@@ -1,23 +1,19 @@
-.class public interface abstract Lzlf;
+.class public abstract Lzlf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e()I
-.end method
+# instance fields
+.field public final a:Lxlf;
 
-.method public abstract f()J
-.end method
 
-.method public abstract g()Landroid/net/Uri;
-.end method
+# direct methods
+.method public constructor <init>(Lxlf;)V
+    .locals 0
 
-.method public abstract getHeight()I
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getWidth()I
-.end method
+    iput-object p1, p0, Lzlf;->a:Lxlf;
 
-.method public abstract h()J
+    return-void
 .end method

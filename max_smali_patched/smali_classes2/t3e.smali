@@ -1,267 +1,127 @@
 .class public final Lt3e;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:Landroid/widget/TextView;
+.field public final synthetic Y:Lf4e;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLandroid/widget/TextView;I)V
+.method public constructor <init>(Lf4e;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lt3e;->a:I
+    iput-object p1, p0, Lt3e;->Y:Lf4e;
 
-    iput-boolean p1, p0, Lt3e;->b:Z
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lt3e;->c:Landroid/widget/TextView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lt3e;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, Lt3e;->b:Z
-
-    iget-object p0, p0, Lt3e;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lt3e;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, Lt3e;->b:Z
-
-    iget-object p0, p0, Lt3e;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p0, p0, Lt3e;->a:I
+    check-cast p1, Le34;
 
-    return-void
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Lt3e;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-boolean p1, p0, Lt3e;->b:Z
-
-    iget-object p0, p0, Lt3e;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p0, p1, p2}, Lt3e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    check-cast p1, Lt3e;
 
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+    sget-object p2, Loyf;->a:Loyf;
 
-    const/4 v0, 0x4
+    invoke-virtual {p1, p2}, Lt3e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    int-to-float v0, v0
+    move-result-object p1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    return-object p1
+.end method
 
-    move-result-object v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    new-instance p1, Lt3e;
 
-    move-result-object v1
+    iget-object v0, p0, Lt3e;->Y:Lf4e;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-direct {p1, v0, p2}, Lt3e;-><init>(Lf4e;Lkotlin/coroutines/Continuation;)V
 
-    mul-float/2addr v0, v1
+    return-object p1
+.end method
 
-    invoke-static {v0}, Litg;->z(F)I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    move-result v0
+    iget v0, p0, Lt3e;->X:I
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-eqz v0, :cond_1
 
-    const/4 p1, 0x0
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    :goto_0
-    return-void
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
+    sget-object p1, Lf4e;->W0:[Ltm7;
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lt3e;->Y:Lf4e;
 
-    throw p0
+    iget-object v0, p1, Lf4e;->E0:Lbp7;
 
-    :pswitch_0
-    return-void
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast v0, Ll2c;
+
+    invoke-virtual {p1}, Lf4e;->u()Lr63;
+
+    move-result-object p1
+
+    check-cast p1, Lxid;
+
+    invoke-virtual {p1}, Lxid;->p()J
+
+    move-result-wide v2
+
+    iput v1, p0, Lt3e;->X:I
+
+    invoke-virtual {v0, v2, v3, p0}, Ll2c;->a(JLnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

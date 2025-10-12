@@ -3,54 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lm64;
+.implements Lq1f;
+
+
+# static fields
+.field public static final b:J
 
 
 # instance fields
-.field public final a:Lc38;
-
-.field public final b:I
-
-.field public final c:I
+.field public final a:Landroid/app/ActivityManager;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x5
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lcf4;->b:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/ActivityManager;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lc38;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lc38;-><init>(I)V
-
-    iput-object v0, p0, Lcf4;->a:Lc38;
-
-    const/16 v0, 0x1f40
-
-    iput v0, p0, Lcf4;->b:I
-
-    iput v0, p0, Lcf4;->c:I
+    iput-object p1, p0, Lcf4;->a:Landroid/app/ActivityManager;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lp64;
-    .locals 3
+.method public final get()Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lgf4;
+    new-instance v0, Ld19;
 
-    iget v1, p0, Lcf4;->c:I
+    iget-object v1, p0, Lcf4;->a:Landroid/app/ActivityManager;
 
-    iget-object v2, p0, Lcf4;->a:Lc38;
+    invoke-virtual {v1}, Landroid/app/ActivityManager;->getMemoryClass()I
 
-    iget p0, p0, Lcf4;->b:I
+    move-result v1
 
-    invoke-direct {v0, p0, v1, v2}, Lgf4;-><init>(IILc38;)V
+    const/high16 v2, 0x100000
+
+    mul-int/2addr v1, v2
+
+    const v2, 0x7fffffff
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    const/high16 v2, 0x2000000
+
+    if-ge v1, v2, :cond_0
+
+    const/high16 v1, 0x400000
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v2, 0x4000000
+
+    if-ge v1, v2, :cond_1
+
+    const/high16 v1, 0x600000
+
+    goto :goto_0
+
+    :cond_1
+    div-int/lit8 v1, v1, 0x4
+
+    :goto_0
+    const v6, 0x7fffffff
+
+    sget-wide v4, Lcf4;->b:J
+
+    const/16 v2, 0x100
+
+    const v3, 0x7fffffff
+
+    invoke-direct/range {v0 .. v6}, Ld19;-><init>(IIIJI)V
 
     return-object v0
 .end method

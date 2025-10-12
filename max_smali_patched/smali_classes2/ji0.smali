@@ -1,128 +1,128 @@
-.class public final Lji0;
-.super Leje;
+.class public final synthetic Lji0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lki0;
-
-.field public final synthetic Z:Lgj0;
+.field public final synthetic b:Lve6;
 
 
 # direct methods
-.method public constructor <init>(Lki0;Lgj0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILve6;)V
     .locals 0
 
-    iput-object p1, p0, Lji0;->Y:Lki0;
+    iput p1, p0, Lji0;->a:I
 
-    iput-object p2, p0, Lji0;->Z:Lgj0;
+    iput-object p2, p0, Lji0;->b:Lve6;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lji0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lji0;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lji0;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final run()V
     .locals 1
 
-    new-instance p1, Lji0;
+    iget v0, p0, Lji0;->a:I
 
-    iget-object v0, p0, Lji0;->Y:Lki0;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lji0;->Z:Lgj0;
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    invoke-direct {p1, v0, p0, p2}, Lji0;-><init>(Lki0;Lgj0;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    return-void
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    :pswitch_0
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    iget v0, p0, Lji0;->X:I
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->g(Lve6;)V
 
-    const/4 v1, 0x1
+    return-void
 
-    if-eqz v0, :cond_1
+    :pswitch_1
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->i(Lve6;)V
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return-void
 
-    goto :goto_0
+    :pswitch_2
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->d(Lve6;)V
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_3
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    throw p0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->e(Lve6;)V
 
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Lji0;->Y:Lki0;
+    :pswitch_4
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    iget-object p1, p1, Lki0;->a:Lkpd;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->d(Lve6;)V
 
-    new-instance v0, Lii0;
+    return-void
 
-    iget-object v2, p0, Lji0;->Z:Lgj0;
+    :pswitch_5
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    iget-wide v3, v2, Lhj0;->a:J
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    iget-object v2, v2, Lgj0;->b:Lloe;
+    return-void
 
-    invoke-direct {v0, v3, v4, v2}, Lii0;-><init>(JLloe;)V
+    :pswitch_6
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    iput v1, p0, Lji0;->X:I
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p0
+    :pswitch_7
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    sget-object p1, Lq04;->a:Lq04;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_2
+    return-void
 
-    return-object p1
+    :pswitch_8
+    iget-object v0, p0, Lji0;->b:Lve6;
 
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    return-object p0
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Lji0;->b:Lve6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->a(Lve6;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,1039 +1,793 @@
-.class public abstract Lyga;
-.super Ljava/lang/Object;
+.class public final Lyga;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final A0:I
+.field public final b:Lfha;
 
-.field public static final A1:I
+.field public final c:Ljava/lang/String;
 
-.field public static final B:I
+.field public final d:Lhy4;
 
-.field public static final B0:I
+.field public e:I
 
-.field public static final B1:I
+.field public final f:Lf4d;
 
-.field public static final C:I
+.field public final g:Lr5;
 
-.field public static final C0:I
+.field public h:Ljava/lang/String;
 
-.field public static final C1:I
+.field public i:Lb67;
 
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final D1:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final E1:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final H1:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final I1:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final J1:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final K1:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final L1:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final M1:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final N1:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final O1:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final P1:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final Q1:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final R1:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final S1:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final T1:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final U1:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final V1:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final W1:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final X1:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Y1:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final Z1:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final a2:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final b2:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final c2:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final d2:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final e2:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final f2:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final g2:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final h2:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final i2:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final j2:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final k2:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final l2:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final m2:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final n2:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final o2:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public final j:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    iput-object p1, p0, Lyga;->a:Landroid/content/Context;
+
+    sget-object v0, Lcha;->a:Lcha;
+
+    iput-object v0, p0, Lyga;->b:Lfha;
+
+    const-class v0, Lyga;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lyga;->c:Ljava/lang/String;
+
+    new-instance v0, Lzj6;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lzj6;-><init>(Landroid/content/res/Resources;)V
+
+    const/4 p1, 0x0
+
+    iput p1, v0, Lzj6;->b:I
+
+    invoke-virtual {v0}, Lzj6;->a()Lyj6;
+
+    move-result-object p1
+
+    new-instance v0, Lhy4;
+
+    invoke-direct {v0, p1}, Lhy4;-><init>(Lyj6;)V
+
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    new-instance v1, Lff;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p0}, Lff;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    :cond_0
+    iput-object v0, p0, Lyga;->d:Lhy4;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lyga;->e:I
+
+    new-instance v1, Lf4d;
+
+    invoke-direct {v1}, Lf4d;-><init>()V
+
+    iput-object v1, p0, Lyga;->f:Lf4d;
+
+    new-instance v2, Lr5;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lr5;-><init>(ILjava/lang/Object;)V
+
+    iput-object v2, p0, Lyga;->g:Lr5;
+
+    const/16 v3, 0x20
+
+    int-to-float v3, v3
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lv63;->r0(F)I
+
+    move-result v3
+
+    iput v3, p0, Lyga;->j:I
+
+    sget-object v3, Lhd6;->a:Ln57;
+
+    invoke-virtual {v3}, Ln57;->a()Lhjb;
+
+    move-result-object v3
+
+    iput-object v1, v3, Ln0;->d:Lq1f;
+
+    iput-object v2, v3, Ln0;->e:Ln04;
+
+    iget-object v1, v0, Lhy4;->e:Lby4;
+
+    iput-object v1, v3, Ln0;->i:Lby4;
+
+    iput-boolean p1, v3, Ln0;->h:Z
+
+    invoke-virtual {v3}, Ln0;->a()Lgjb;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lhy4;->i(Lby4;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lb67;)V
+    .locals 8
+
+    iget-object v0, p0, Lyga;->d:Lhy4;
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v0, v1}, Lhy4;->i(Lby4;)V
+
+    goto/16 :goto_5
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v2
+
+    iget v3, p0, Lyga;->j:I
+
+    if-eqz v2, :cond_1
+
+    move v2, v3
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    if-ge v2, v4, :cond_3
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    if-ge v2, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v2
+
+    :goto_0
+    int-to-float v2, v3
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float/2addr v2, v4
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lv63;->r0(F)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    if-ge v2, v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v3, v2
+
+    :goto_1
+    int-to-float v2, v3
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float/2addr v2, v4
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lv63;->r0(F)I
+
+    move-result v2
+
+    move v7, v3
+
+    move v3, v2
+
+    move v2, v7
+
+    :goto_2
+    sget-object v4, Lzga;->a:Lic0;
+
+    iget-object p1, p1, Lb67;->b:Landroid/net/Uri;
+
+    if-lez v3, :cond_6
+
+    if-gtz v2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    new-instance v4, Lo2d;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0xc
+
+    invoke-direct {v4, v5, v3, v2, v6}, Lo2d;-><init>(FIII)V
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    move-object v4, v1
+
+    :goto_4
+    invoke-static {p1}, Lc67;->d(Landroid/net/Uri;)Lc67;
+
+    move-result-object p1
+
+    sget-object v2, Lz57;->b:Lz57;
+
+    iput-object v2, p1, Lc67;->g:Lz57;
+
+    iget-object v2, p0, Lyga;->b:Lfha;
+
+    invoke-static {v2}, Lzga;->a(Lfha;)Luj0;
+
+    move-result-object v2
+
+    iput-object v2, p1, Lc67;->k:Lznb;
+
+    if-eqz v4, :cond_7
+
+    iput-object v4, p1, Lc67;->d:Lo2d;
+
+    :cond_7
+    sget-object v2, Llqb;->c:Llqb;
+
+    iput-object v2, p1, Lc67;->j:Llqb;
+
+    invoke-virtual {p1}, Lc67;->a()Lb67;
+
+    move-result-object p1
+
+    invoke-static {}, Lhd6;->n()Lo57;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Ln57;
+
+    invoke-direct {v3, v2, p1, v1}, Ln57;-><init>(Lo57;Lb67;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lyga;->f:Lf4d;
+
+    invoke-virtual {p1, v3}, Lf4d;->a(Lq1f;)V
+
+    iget-object v1, v0, Lhy4;->e:Lby4;
+
+    if-nez v1, :cond_8
+
+    sget-object v1, Lhd6;->a:Ln57;
+
+    invoke-virtual {v1}, Ln57;->a()Lhjb;
+
+    move-result-object v1
+
+    iput-object p1, v1, Ln0;->d:Lq1f;
+
+    iget-object p1, p0, Lyga;->g:Lr5;
+
+    iput-object p1, v1, Ln0;->e:Ln04;
+
+    iget-object p1, v0, Lhy4;->e:Lby4;
+
+    iput-object p1, v1, Ln0;->i:Lby4;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v1, Ln0;->h:Z
+
+    invoke-virtual {v1}, Ln0;->a()Lgjb;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lhy4;->i(Lby4;)V
+
+    :cond_8
+    :goto_5
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final b(Lhc0;Ljava/lang/String;)V
+    .locals 8
+
+    iget-object v0, p0, Lyga;->h:Ljava/lang/String;
+
+    invoke-static {v0, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lyga;->b:Lfha;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lyga;->d:Lhy4;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    iput-object p2, p0, Lyga;->h:Ljava/lang/String;
+
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Lzga;->a:Lic0;
+
+    invoke-static {p2, v1}, Lzga;->b(Ljava/lang/String;Lfha;)Lb67;
+
+    move-result-object p2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    move-object p2, v2
+
+    :goto_1
+    iput-object p2, p0, Lyga;->i:Lb67;
+
+    if-eqz p2, :cond_3
+
+    invoke-virtual {v3}, Lhy4;->f()V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v3}, Lhy4;->g()V
+
+    :goto_2
+    iget-object p2, p0, Lyga;->i:Lb67;
+
+    invoke-virtual {p0, p2}, Lyga;->a(Lb67;)V
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :goto_3
+    const/4 p2, 0x1
+
+    const/4 v0, 0x3
+
+    if-eqz p1, :cond_5
+
+    sget-object v4, Lhc0;->c:Lhc0;
+
+    if-eq p1, v4, :cond_5
+
+    iget-wide v4, p1, Lhc0;->a:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_4
+
+    iget-object v4, p1, Lhc0;->b:Ljava/lang/CharSequence;
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    new-instance v2, Lgc0;
+
+    sget-object v4, Lbx4;->y0:Lsed;
+
+    iget-object v5, p0, Lyga;->a:Landroid/content/Context;
+
+    invoke-virtual {v4, v5}, Lsed;->k(Landroid/content/Context;)Lbx4;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lbx4;->h()Luxa;
+
+    move-result-object v4
+
+    invoke-direct {v2, v5, v1, p1, v4}, Lgc0;-><init>(Landroid/content/Context;Lfha;Lhc0;Luxa;)V
+
+    iget-object p1, v3, Lhy4;->d:Lgy4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p1, Lyj6;
+
+    invoke-virtual {p1, v2, p2}, Lyj6;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    iput v0, p0, Lyga;->e:I
+
+    goto :goto_5
+
+    :cond_5
+    :goto_4
+    iget p1, p0, Lyga;->e:I
+
+    if-ne p1, v0, :cond_6
+
+    iget-object p1, v3, Lhy4;->d:Lgy4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast p1, Lyj6;
+
+    invoke-virtual {p1, v2, p2}, Lyj6;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    iput p2, p0, Lyga;->e:I
+
+    :cond_6
+    :goto_5
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    iget-object v0, p0, Lyga;->d:Lhy4;
+
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    invoke-virtual {v0, p1}, Ld7d;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lyga;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lyga;
+
+    iget-object v1, p1, Lyga;->b:Lfha;
+
+    iget-object v3, p0, Lyga;->b:Lfha;
+
+    invoke-static {v3, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lyga;->h:Ljava/lang/String;
+
+    iget-object p1, p1, Lyga;->h:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final getAlpha()I
     .locals 1
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_channel_type:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sput v0, Lyga;->a:I
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_chat_type:I
+    move-result-object v0
 
-    sput v0, Lyga;->b:I
+    if-eqz v0, :cond_0
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_clear_channel_history:I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
-    sput v0, Lyga;->c:I
+    move-result v0
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_clear_history:I
+    return v0
 
-    sput v0, Lyga;->d:I
+    :cond_0
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_give_rights:I
+    move-result v0
 
-    sput v0, Lyga;->e:I
+    return v0
+.end method
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_leave_channel:I
+.method public final getIntrinsicHeight()I
+    .locals 1
 
-    sput v0, Lyga;->f:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_leave_chat:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput v0, Lyga;->g:I
+    const/4 v0, -0x1
 
-    sget v0, Ln4c;->oneme_profile_edit_admin_action_participants_permissions:I
+    return v0
+.end method
 
-    sput v0, Lyga;->h:I
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    sget v0, Ln4c;->oneme_profile_edit_cancel_delete_profile:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sput v0, Lyga;->i:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Ln4c;->oneme_profile_edit_cant_open_camera:I
+    const/4 v0, -0x1
 
-    sput v0, Lyga;->j:I
+    return v0
+.end method
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_channel_title:I
+.method public final getOpacity()I
+    .locals 1
 
-    sput v0, Lyga;->k:I
+    const/4 v0, -0x3
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_chat_title:I
+    return v0
+.end method
 
-    sput v0, Lyga;->l:I
+.method public final hashCode()I
+    .locals 2
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_contact_title:I
+    iget-object v0, p0, Lyga;->b:Lfha;
 
-    sput v0, Lyga;->m:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_delete_current:I
+    move-result v0
 
-    sput v0, Lyga;->n:I
+    mul-int/lit8 v0, v0, 0x1f
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_error:I
+    iget-object v1, p0, Lyga;->h:Ljava/lang/String;
 
-    sput v0, Lyga;->o:I
+    if-eqz v1, :cond_0
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_success:I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    sput v0, Lyga;->p:I
+    move-result v1
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_upload_from_camera:I
+    goto :goto_0
 
-    sput v0, Lyga;->q:I
+    :cond_0
+    const/4 v1, 0x0
 
-    sget v0, Ln4c;->oneme_profile_edit_change_avatar_upload_from_gallery:I
+    :goto_0
+    add-int/2addr v0, v1
 
-    sput v0, Lyga;->r:I
+    return v0
+.end method
 
-    sget v0, Ln4c;->oneme_profile_edit_chat_type_private:I
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 4
 
-    sput v0, Lyga;->s:I
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    sget v0, Ln4c;->oneme_profile_edit_chat_type_public:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sput v0, Lyga;->t:I
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
 
-    sget v0, Ln4c;->oneme_profile_edit_check_link_available:I
+    move-result-object v0
 
-    sput v0, Lyga;->u:I
+    if-eqz v0, :cond_0
 
-    sget v0, Ln4c;->oneme_profile_edit_check_link_process:I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
-    sput v0, Lyga;->v:I
+    move-result-object v1
 
-    sget v0, Ln4c;->oneme_profile_edit_clear_channel_history_action:I
+    const/4 v2, 0x0
 
-    sput v0, Lyga;->w:I
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    sget v0, Ln4c;->oneme_profile_edit_clear_channel_history_description:I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
-    sput v0, Lyga;->x:I
+    move-result v2
 
-    sget v0, Ln4c;->oneme_profile_edit_clear_channel_history_header:I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    sput v0, Lyga;->y:I
+    move-result p1
 
-    sget v0, Ln4c;->oneme_profile_edit_clear_chat_history_action:I
+    const/4 v3, 0x0
 
-    sput v0, Lyga;->z:I
+    invoke-virtual {v0, v3, v3, v2, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    sget v0, Ln4c;->oneme_profile_edit_clear_chat_history_header:I
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    sput v0, Lyga;->A:I
+    :cond_0
+    iget-object p1, p0, Lyga;->i:Lb67;
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel:I
+    invoke-virtual {p0, p1}, Lyga;->a(Lb67;)V
 
-    sput v0, Lyga;->B:I
+    return-void
+.end method
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_certain_action:I
+.method public final setAlpha(I)V
+    .locals 1
 
-    sput v0, Lyga;->C:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_certain_description:I
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
 
-    sput v0, Lyga;->D:I
+    move-result-object v0
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_certain_header:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lyga;->E:I
+    invoke-virtual {v0, p1}, Ln96;->setAlpha(I)V
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_description:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Lyga;->F:I
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_for_all_action:I
+    iget-object v0, p0, Lyga;->d:Lhy4;
 
-    sput v0, Lyga;->G:I
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
 
-    sget v0, Ln4c;->oneme_profile_edit_close_channel_header:I
+    move-result-object v0
 
-    sput v0, Lyga;->H:I
+    if-eqz v0, :cond_0
 
-    sget v0, Ln4c;->oneme_profile_edit_close_chat:I
+    invoke-virtual {v0, p1}, Ln96;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    sput v0, Lyga;->I:I
-
-    sget v0, Ln4c;->oneme_profile_edit_close_chat_certain_action:I
-
-    sput v0, Lyga;->J:I
-
-    sget v0, Ln4c;->oneme_profile_edit_close_chat_certain_header:I
-
-    sput v0, Lyga;->K:I
-
-    sget v0, Ln4c;->oneme_profile_edit_close_chat_description:I
-
-    sput v0, Lyga;->L:I
-
-    sget v0, Ln4c;->oneme_profile_edit_close_chat_for_all_action:I
-
-    sput v0, Lyga;->M:I
-
-    sget v0, Ln4c;->oneme_profile_edit_close_chat_header:I
-
-    sput v0, Lyga;->N:I
-
-    sget v0, Ln4c;->oneme_profile_edit_confirm_exit_action:I
-
-    sput v0, Lyga;->O:I
-
-    sget v0, Ln4c;->oneme_profile_edit_confirm_leave_title:I
-
-    sput v0, Lyga;->P:I
-
-    sget v0, Ln4c;->oneme_profile_edit_confirm_save_action:I
-
-    sput v0, Lyga;->Q:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_avatar_success:I
-
-    sput v0, Lyga;->R:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_contact:I
-
-    sput v0, Lyga;->S:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_profile:I
-
-    sput v0, Lyga;->T:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_profile_cancel_action:I
-
-    sput v0, Lyga;->U:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_profile_delete_action:I
-
-    sput v0, Lyga;->V:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_profile_description:I
-
-    sput v0, Lyga;->W:I
-
-    sget v0, Ln4c;->oneme_profile_edit_delete_profile_header:I
-
-    sput v0, Lyga;->X:I
-
-    sget v0, Ln4c;->oneme_profile_edit_description_channel_placeholder:I
-
-    sput v0, Lyga;->Y:I
-
-    sget v0, Ln4c;->oneme_profile_edit_description_chat_placeholder:I
-
-    sput v0, Lyga;->Z:I
-
-    sget v0, Ln4c;->oneme_profile_edit_description_placeholder:I
-
-    sput v0, Lyga;->a0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_first_name_placeholder:I
-
-    sput v0, Lyga;->b0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_inactive_ttl_header:I
-
-    sput v0, Lyga;->c0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_inactive_ttl_title:I
-
-    sput v0, Lyga;->d0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_invite_by_link:I
-
-    sput v0, Lyga;->e0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_last_name_placeholder:I
-
-    sput v0, Lyga;->f0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_channel_action:I
-
-    sput v0, Lyga;->g0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_channel_action_cancel:I
-
-    sput v0, Lyga;->h0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_channel_and_change_owner_action:I
-
-    sput v0, Lyga;->i0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_channel_description:I
-
-    sput v0, Lyga;->j0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_channel_header:I
-
-    sput v0, Lyga;->k0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_chat_action:I
-
-    sput v0, Lyga;->l0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_chat_action_cancel:I
-
-    sput v0, Lyga;->m0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_chat_and_change_owner_action:I
-
-    sput v0, Lyga;->n0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_chat_description:I
-
-    sput v0, Lyga;->o0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_leave_chat_header:I
-
-    sput v0, Lyga;->p0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_logout_button:I
-
-    sput v0, Lyga;->q0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_logout_button_with_call:I
-
-    sput v0, Lyga;->r0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_logout_call_subheader:I
-
-    sput v0, Lyga;->s0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_logout_confirm_action:I
-
-    sput v0, Lyga;->t0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_logout_header:I
-
-    sput v0, Lyga;->u0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_shortlink_description:I
-
-    sput v0, Lyga;->v0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_shortlink_input_description:I
-
-    sput v0, Lyga;->w0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_shortlink_placeholder:I
-
-    sput v0, Lyga;->x0:I
-
-    sget v0, Ln4c;->oneme_profile_edit_shortlink_title:I
-
-    sput v0, Lyga;->y0:I
-
-    sget v0, Ln4c;->profile_contact_deleted_snackbar_title:I
-
-    sput v0, Lyga;->z0:I
-
-    sget v0, Ln4c;->profile_delete_contact_bottom_sheet_confirm:I
-
-    sput v0, Lyga;->A0:I
-
-    sget v0, Ln4c;->profile_delete_contact_bottom_sheet_title:I
-
-    sput v0, Lyga;->B0:I
-
-    sget v0, Ln4c;->profile_delete_dates_minutes_left:I
-
-    sput v0, Lyga;->C0:I
-
-    sget v0, Ln4c;->profile_edit_admin_added:I
-
-    sput v0, Lyga;->D0:I
-
-    sget v0, Ln4c;->profile_edit_admin_new_permissions_title:I
-
-    sput v0, Lyga;->E0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_add_admin_action:I
-
-    sput v0, Lyga;->F0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_add_more_rights:I
-
-    sput v0, Lyga;->G0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_chat_info_action:I
-
-    sput v0, Lyga;->H0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_link_disabled:I
-
-    sput v0, Lyga;->I0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_owner_change_action:I
-
-    sput v0, Lyga;->J0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_owner_description:I
-
-    sput v0, Lyga;->K0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_owner_snackbar_title:I
-
-    sput v0, Lyga;->L0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_change_owner_title:I
-
-    sput v0, Lyga;->M0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_control_admin_action:I
-
-    sput v0, Lyga;->N0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_control_admin_section_description:I
-
-    sput v0, Lyga;->O0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_delete_from_admins:I
-
-    sput v0, Lyga;->P0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
-
-    sput v0, Lyga;->Q0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_delete_from_admins_title:I
-
-    sput v0, Lyga;->R0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_edit_chat_link_action:I
-
-    sput v0, Lyga;->S0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_edit_chat_members_action:I
-
-    sput v0, Lyga;->T0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_edit_messages_action:I
-
-    sput v0, Lyga;->U0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_info_section_owner_description:I
-
-    sput v0, Lyga;->V0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_info_section_smb_add_description:I
-
-    sput v0, Lyga;->W0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_info_section_you_add_description:I
-
-    sput v0, Lyga;->X0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_info_section_you_description:I
-
-    sput v0, Lyga;->Y0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_not_enough_perm_title:I
-
-    sput v0, Lyga;->Z0:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_pin_messages_action:I
-
-    sput v0, Lyga;->a1:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_save_admin_changes_action:I
-
-    sput v0, Lyga;->b1:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_section_title:I
-
-    sput v0, Lyga;->c1:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_superadmin_action:I
-
-    sput v0, Lyga;->d1:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_superadmin_section_description:I
-
-    sput v0, Lyga;->e1:I
-
-    sget v0, Ln4c;->profile_edit_admin_permissions_title:I
-
-    sput v0, Lyga;->f1:I
-
-    sget v0, Ln4c;->profile_edit_change_avatar_select_neuro_avatar:I
-
-    sput v0, Lyga;->g1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_change_chat_info_action:I
-
-    sput v0, Lyga;->h1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_change_owner_description:I
-
-    sput v0, Lyga;->i1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_delete_messages_action:I
-
-    sput v0, Lyga;->j1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_edit_chat_members_action:I
-
-    sput v0, Lyga;->k1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_edit_messages_action:I
-
-    sput v0, Lyga;->l1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_only_edit_messages_action:I
-
-    sput v0, Lyga;->m1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_send_messages_action:I
-
-    sput v0, Lyga;->n1:I
-
-    sget v0, Ln4c;->profile_edit_channel_admin_permissions_superadmin_section_description:I
-
-    sput v0, Lyga;->o1:I
-
-    sget v0, Ln4c;->profile_edit_channel_name_field_hint:I
-
-    sput v0, Lyga;->p1:I
-
-    sget v0, Ln4c;->profile_edit_channel_new_admin_permissions_change_chat_info_action:I
-
-    sput v0, Lyga;->q1:I
-
-    sget v0, Ln4c;->profile_edit_chat_name_field_hint:I
-
-    sput v0, Lyga;->r1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_add_user:I
-
-    sput v0, Lyga;->s1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_call_to_chat:I
-
-    sput v0, Lyga;->t1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_change_photo:I
-
-    sput v0, Lyga;->u1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_pin_message:I
-
-    sput v0, Lyga;->v1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_section_title:I
-
-    sput v0, Lyga;->w1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_see_private_link:I
-
-    sput v0, Lyga;->x1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_see_private_link_disabled:I
-
-    sput v0, Lyga;->y1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_toolbar_title:I
-
-    sput v0, Lyga;->z1:I
-
-    sget v0, Ln4c;->profile_edit_member_permissions_update_error:I
-
-    sput v0, Lyga;->A1:I
-
-    sget v0, Ln4c;->profile_edit_new_admin_permissions_change_chat_info_action:I
-
-    sput v0, Lyga;->B1:I
-
-    sget v0, Ln4c;->profile_edit_new_admin_permissions_change_chat_info_description:I
-
-    sput v0, Lyga;->C1:I
-
-    sget v0, Ln4c;->profile_edit_short_link:I
-
-    sput v0, Lyga;->D1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_action_copy:I
-
-    sput v0, Lyga;->E1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_action_qr_code:I
-
-    sput v0, Lyga;->F1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_action_refresh_link:I
-
-    sput v0, Lyga;->G1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_action_share_external:I
-
-    sput v0, Lyga;->H1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_button_continue:I
-
-    sput v0, Lyga;->I1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_button_submit:I
-
-    sput v0, Lyga;->J1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_private_generate_link_after_change_placeholder:I
-
-    sput v0, Lyga;->K1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_private_link_hint:I
-
-    sput v0, Lyga;->L1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_public_link_empty_hint:I
-
-    sput v0, Lyga;->M1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_public_link_hint:I
-
-    sput v0, Lyga;->N1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_title:I
-
-    sput v0, Lyga;->O1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_channel_type_section:I
-
-    sput v0, Lyga;->P1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_private_generate_button_name:I
-
-    sput v0, Lyga;->Q1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_private_link_hint:I
-
-    sput v0, Lyga;->R1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_public_link_empty_hint:I
-
-    sput v0, Lyga;->S1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_public_link_hint:I
-
-    sput v0, Lyga;->T1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_title:I
-
-    sput v0, Lyga;->U1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_chat_type_section:I
-
-    sput v0, Lyga;->V1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_contact_title:I
-
-    sput v0, Lyga;->W1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_create_link_error_no_connection_description:I
-
-    sput v0, Lyga;->X1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_create_link_error_service_unavailable_description:I
-
-    sput v0, Lyga;->Y1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_create_link_error_title_no_connection:I
-
-    sput v0, Lyga;->Z1:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_create_link_error_title_service_unavailable:I
-
-    sput v0, Lyga;->a2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_not_chosen:I
-
-    sput v0, Lyga;->b2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_private_channel_type_description:I
-
-    sput v0, Lyga;->c2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_private_link_copied:I
-
-    sput v0, Lyga;->d2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_private_type:I
-
-    sput v0, Lyga;->e2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_private_type_description:I
-
-    sput v0, Lyga;->f2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_public_channel_type_description:I
-
-    sput v0, Lyga;->g2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_public_input_placeholder:I
-
-    sput v0, Lyga;->h2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_public_link_copied:I
-
-    sput v0, Lyga;->i2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_public_type:I
-
-    sput v0, Lyga;->j2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_public_type_description:I
-
-    sput v0, Lyga;->k2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_update_action:I
-
-    sput v0, Lyga;->l2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_update_action_success:I
-
-    sput v0, Lyga;->m2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_update_confirmation_description:I
-
-    sput v0, Lyga;->n2:I
-
-    sget v0, Ln4c;->profile_edit_shortlink_update_confirmation_title:I
-
-    sput v0, Lyga;->o2:I
-
+    :cond_0
     return-void
 .end method

@@ -20,19 +20,19 @@
         "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
         "Lkotlin/Function1;",
         "",
-        "Ltcf;",
+        "Loyf;",
         "onError",
-        "Lpsd;",
+        "Ldce;",
         "getSignalingOrPassExceptionToOnError",
-        "(Lf96;)Lpsd;",
+        "(Lxe6;)Ldce;",
         "",
         "url",
         "Lkotlin/Function0;",
         "onSuccess",
         "start",
-        "(Ljava/lang/String;Ld96;Lf96;)V",
+        "(Ljava/lang/String;Lve6;Lxe6;)V",
         "stop",
-        "(Ld96;Lf96;)V",
+        "(Lve6;Lxe6;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "calls-sdk_release"
     }
@@ -61,84 +61,86 @@
     return-void
 .end method
 
-.method public static synthetic a(Lf96;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lxe6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->stop$lambda$3(Lf96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->stop$lambda$3(Lxe6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lf96;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lxe6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->start$lambda$1(Lf96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->start$lambda$1(Lxe6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic c(Ld96;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->start$lambda$0(Ld96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->start$lambda$0(Lve6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Ld96;Lorg/json/JSONObject;)V
+.method public static synthetic d(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->stop$lambda$2(Ld96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->stop$lambda$2(Lve6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final getSignalingOrPassExceptionToOnError(Lf96;)Lpsd;
-    .locals 0
+.method private final getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lf96;",
+            "Lxe6;",
             ")",
-            "Lpsd;"
+            "Ldce;"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;
+    new-instance v0, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;-><init>()V
+    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/exceptions/ConversationNotPreparedException;-><init>()V
 
-    invoke-interface {p1, p0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
+
+    return-object p1
 
     :cond_1
-    return-object p0
+    return-object v0
 .end method
 
-.method private static final start$lambda$0(Ld96;Lorg/json/JSONObject;)V
+.method private static final start$lambda$0(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final start$lambda$1(Lf96;Lorg/json/JSONObject;)V
+.method private static final start$lambda$1(Lxe6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -159,24 +161,24 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final stop$lambda$2(Ld96;Lorg/json/JSONObject;)V
+.method private static final stop$lambda$2(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final stop$lambda$3(Lf96;Lorg/json/JSONObject;)V
+.method private static final stop$lambda$3(Lxe6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -197,7 +199,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -205,101 +207,101 @@
 
 
 # virtual methods
-.method public start(Ljava/lang/String;Ld96;Lf96;)V
-    .locals 3
+.method public start(Ljava/lang/String;Lve6;Lxe6;)V
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lf96;)Lpsd;
+    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance v0, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v1, "command"
+    const-string v2, "command"
 
-    const-string v2, "start-url-sharing"
+    const-string v3, "start-url-sharing"
 
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v1, "sharedUrl"
+    const-string v2, "sharedUrl"
 
-    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    new-instance p1, Lat;
+    new-instance p1, Lvs;
 
-    const/16 v1, 0x10
+    const/16 v2, 0x10
 
-    invoke-direct {p1, v1, p2}, Lat;-><init>(ILd96;)V
+    invoke-direct {p1, v2, p2}, Lvs;-><init>(ILve6;)V
 
-    new-instance p2, Lbt;
+    new-instance p2, Lws;
 
-    const/16 v1, 0x8
+    const/16 v2, 0x8
 
-    invoke-direct {p2, v1, p3}, Lbt;-><init>(ILf96;)V
+    invoke-direct {p2, v2, p3}, Lws;-><init>(ILxe6;)V
 
-    invoke-virtual {p0, v0, p1, p2}, Lpsd;->j(Lorg/json/JSONObject;Losd;Losd;)V
+    invoke-virtual {v0, v1, p1, p2}, Ldce;->j(Lorg/json/JSONObject;Lcce;Lcce;)V
 
     return-void
 .end method
 
-.method public stop(Ld96;Lf96;)V
-    .locals 3
+.method public stop(Lve6;Lxe6;)V
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lf96;)Lpsd;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->getSignalingOrPassExceptionToOnError(Lxe6;)Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance v0, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v1, "command"
+    const-string v2, "command"
 
-    const-string v2, "stop-url-sharing"
+    const-string v3, "stop-url-sharing"
 
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    new-instance v1, Lat;
+    new-instance v2, Lvs;
 
-    const/16 v2, 0x11
+    const/16 v3, 0x11
 
-    invoke-direct {v1, v2, p1}, Lat;-><init>(ILd96;)V
+    invoke-direct {v2, v3, p1}, Lvs;-><init>(ILve6;)V
 
-    new-instance p1, Lbt;
+    new-instance p1, Lws;
 
-    const/16 v2, 0x9
+    const/16 v3, 0x9
 
-    invoke-direct {p1, v2, p2}, Lbt;-><init>(ILf96;)V
+    invoke-direct {p1, v3, p2}, Lws;-><init>(ILxe6;)V
 
-    invoke-virtual {p0, v0, v1, p1}, Lpsd;->j(Lorg/json/JSONObject;Losd;Losd;)V
+    invoke-virtual {v0, v1, v2, p1}, Ldce;->j(Lorg/json/JSONObject;Lcce;Lcce;)V
 
     return-void
 .end method

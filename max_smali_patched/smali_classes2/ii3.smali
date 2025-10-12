@@ -1,26 +1,50 @@
 .class public final Lii3;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic A0:Ljava/util/List;
 
-.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+.field public final synthetic B0:Lfj3;
+
+.field public final synthetic C0:Z
+
+.field public final synthetic D0:Ljava/lang/String;
+
+.field public X:Z
+
+.field public Y:Lfj3;
+
+.field public Z:Ljava/lang/String;
+
+.field public w0:Ljava/util/Collection;
+
+.field public x0:Ljava/util/Iterator;
+
+.field public y0:Ljava/util/Collection;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
+.method public constructor <init>(Ljava/util/List;Lfj3;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lii3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iput-object p1, p0, Lii3;->A0:Ljava/util/List;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lii3;->B0:Lfj3;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lii3;->C0:Z
+
+    iput-object p4, p0, Lii3;->D0:Ljava/lang/String;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,164 +54,337 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Le34;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lii3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lii3;
+    check-cast p1, Lii3;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lii3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lii3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 6
 
     new-instance v0, Lii3;
 
-    iget-object p0, p0, Lii3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iget-boolean v3, p0, Lii3;->C0:Z
 
-    invoke-direct {v0, p2, p0}, Lii3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
+    iget-object v4, p0, Lii3;->D0:Ljava/lang/String;
 
-    iput-object p1, v0, Lii3;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lii3;->A0:Ljava/util/List;
+
+    iget-object v2, p0, Lii3;->B0:Lfj3;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lii3;-><init>(Ljava/util/List;Lfj3;ZLjava/lang/String;Lkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-object/from16 v0, p0
 
-    iget-object p1, p0, Lii3;->X:Ljava/lang/Object;
+    iget v1, v0, Lii3;->z0:I
 
-    check-cast p1, Lli3;
+    const/4 v2, 0x4
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    const/4 v3, 0x3
 
-    move-result p1
+    const/4 v4, 0x2
 
-    const/4 v0, 0x0
+    const/4 v5, 0x1
 
-    iget-object p0, p0, Lii3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iget-object v6, v0, Lii3;->B0:Lfj3;
 
-    if-eqz p1, :cond_2
+    const/4 v7, 0x0
 
-    const/4 v1, 0x1
+    sget-object v8, Lf34;->a:Lf34;
 
-    if-eq p1, v1, :cond_1
+    if-eqz v1, :cond_4
 
-    const/4 v0, 0x2
+    if-eq v1, v5, :cond_3
 
-    if-ne p1, v0, :cond_0
+    if-eq v1, v4, :cond_2
 
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    if-eq v1, v3, :cond_1
 
-    move-result-object p1
+    if-ne v1, v2, :cond_0
 
-    sget v0, Ly4c;->oneme_settings_privacy_onboarding_error_pin_code_equals:I
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lr7;->E(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lw2b;->setErrorText(Ljava/lang/CharSequence;)V
-
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
-
-    move-result-object p0
-
-    sget-object p1, Lxi3;->c:Lxi3;
-
-    invoke-virtual {p0, p1}, Lw2b;->setState(Lxi3;)V
-
-    goto :goto_1
+    goto/16 :goto_6
 
     :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    throw p0
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 
     :cond_1
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    iget-object v6, v0, Lii3;->Y:Lfj3;
 
-    move-result-object p1
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Lw2b;->setErrorText(Ljava/lang/CharSequence;)V
+    move-object/from16 v1, p1
 
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    goto/16 :goto_4
 
-    move-result-object p0
+    :cond_2
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sget-object p1, Lxi3;->b:Lxi3;
+    goto/16 :goto_3
 
-    invoke-virtual {p0, p1}, Lw2b;->setState(Lxi3;)V
+    :cond_3
+    iget-boolean v1, v0, Lii3;->X:Z
+
+    iget-object v9, v0, Lii3;->y0:Ljava/util/Collection;
+
+    iget-object v10, v0, Lii3;->x0:Ljava/util/Iterator;
+
+    iget-object v11, v0, Lii3;->w0:Ljava/util/Collection;
+
+    iget-object v12, v0, Lii3;->Z:Ljava/lang/String;
+
+    iget-object v13, v0, Lii3;->Y:Lfj3;
+
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+
+    move-object v14, v13
+
+    move-object v13, v12
+
+    move-object v12, v11
+
+    move-object/from16 v11, p1
 
     goto :goto_1
 
-    :cond_2
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    :cond_4
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-    move-result-object p1
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0}, Lw2b;->setErrorText(Ljava/lang/CharSequence;)V
+    const/16 v9, 0xa
 
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    iget-object v10, v0, Lii3;->A0:Ljava/util/List;
 
-    move-result-object p1
+    invoke-static {v10, v9}, Lg93;->V(Ljava/lang/Iterable;I)I
 
-    iget-object p1, p1, Lw2b;->E0:Laj3;
+    move-result v9
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-direct {v1, v9}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result v1
+    invoke-interface {v10}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x0
+    move-result-object v9
+
+    iget-boolean v10, v0, Lii3;->C0:Z
+
+    iget-object v11, v0, Lii3;->D0:Ljava/lang/String;
+
+    move-object v12, v9
+
+    move-object v9, v1
+
+    move v1, v10
+
+    move-object v10, v12
+
+    move-object v13, v6
+
+    move-object v12, v11
 
     :goto_0
-    if-ge v2, v1, :cond_4
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, v2}, Laj3;->G0(I)Lr47;
+    move-result v11
 
-    move-result-object v3
+    if-eqz v11, :cond_7
 
-    if-eqz v3, :cond_3
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v3, Lixd;
+    move-result-object v11
 
-    iget-object v3, v3, Lixd;->C0:Lui3;
+    check-cast v11, Ljava/lang/Number;
 
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v11}, Ljava/lang/Number;->longValue()J
 
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    move-result-wide v14
+
+    if-eqz v1, :cond_6
+
+    iget-object v11, v13, Lfj3;->z0:Lbp7;
+
+    invoke-interface {v11}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lm13;
+
+    iput-object v13, v0, Lii3;->Y:Lfj3;
+
+    iput-object v12, v0, Lii3;->Z:Ljava/lang/String;
+
+    iput-object v9, v0, Lii3;->w0:Ljava/util/Collection;
+
+    iput-object v10, v0, Lii3;->x0:Ljava/util/Iterator;
+
+    iput-object v9, v0, Lii3;->y0:Ljava/util/Collection;
+
+    iput-boolean v1, v0, Lii3;->X:Z
+
+    iput v5, v0, Lii3;->z0:I
+
+    invoke-interface {v11, v14, v15, v0}, Lm13;->p(JLnz3;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    if-ne v11, v8, :cond_5
+
+    goto/16 :goto_5
+
+    :cond_5
+    move-object v14, v13
+
+    move-object v13, v12
+
+    move-object v12, v9
+
+    :goto_1
+    check-cast v11, Lm82;
+
+    iget-object v11, v11, Lm82;->b:Lpc2;
+
+    iget-wide v2, v11, Lpc2;->a:J
+
+    goto :goto_2
+
+    :cond_6
+    move-wide v2, v14
+
+    move-object v14, v13
+
+    move-object v13, v12
+
+    move-object v12, v9
+
+    :goto_2
+    new-instance v11, Lf92;
+
+    invoke-direct {v11, v2, v3, v13}, Lf92;-><init>(JLjava/lang/String;)V
+
+    invoke-interface {v9, v11}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    move-object v9, v12
+
+    move-object v12, v13
+
+    move-object v13, v14
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {p1}, Laj3;->I0()Z
+    :cond_7
+    check-cast v9, Ljava/util/List;
 
-    invoke-static {p0}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->x0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lw2b;
+    sget-object v1, Lfj3;->P0:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-virtual {v6}, Lfj3;->p()Lq5d;
 
-    sget-object p1, Lxi3;->o:Lxi3;
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Lw2b;->setState(Lxi3;)V
+    iput-object v7, v0, Lii3;->Y:Lfj3;
 
-    :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    iput-object v7, v0, Lii3;->Z:Ljava/lang/String;
 
-    return-object p0
+    iput-object v7, v0, Lii3;->w0:Ljava/util/Collection;
+
+    iput-object v7, v0, Lii3;->x0:Ljava/util/Iterator;
+
+    iput-object v7, v0, Lii3;->y0:Ljava/util/Collection;
+
+    iput v4, v0, Lii3;->z0:I
+
+    iget-object v2, v1, Lq5d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    new-instance v3, Ll5d;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v9, v4}, Ll5d;-><init>(Lq5d;Ljava/util/List;I)V
+
+    invoke-static {v2, v3, v0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v8, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    :goto_3
+    sget-object v1, Lfj3;->P0:Ljava/lang/String;
+
+    invoke-virtual {v6}, Lfj3;->p()Lq5d;
+
+    move-result-object v1
+
+    iput-object v6, v0, Lii3;->Y:Lfj3;
+
+    const/4 v2, 0x3
+
+    iput v2, v0, Lii3;->z0:I
+
+    invoke-virtual {v1, v0}, Lq5d;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v8, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    :goto_4
+    check-cast v1, Ljava/util/List;
+
+    iput-object v7, v0, Lii3;->Y:Lfj3;
+
+    const/4 v2, 0x4
+
+    iput v2, v0, Lii3;->z0:I
+
+    invoke-static {v6, v1, v5, v0}, Lfj3;->H(Lfj3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v8, :cond_a
+
+    :goto_5
+    return-object v8
+
+    :cond_a
+    :goto_6
+    sget-object v1, Loyf;->a:Loyf;
+
+    return-object v1
 .end method

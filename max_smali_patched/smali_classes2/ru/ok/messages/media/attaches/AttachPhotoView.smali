@@ -1,43 +1,43 @@
 .class public Lru/ok/messages/media/attaches/AttachPhotoView;
-.super Lone/me/sdk/zoom/ZoomableDraweeView;
+.super Llch;
 .source "SourceFile"
 
 # interfaces
-.implements Lgz;
+.implements Lry;
 
 
 # static fields
-.field public static final synthetic O0:I
+.field public static final synthetic W0:I
 
 
 # instance fields
-.field public final A0:Lke3;
+.field public final I0:Lsg3;
 
-.field public final B0:Landroid/view/GestureDetector;
+.field public final J0:Landroid/view/GestureDetector;
 
-.field public C0:Lh00;
+.field public K0:Lyz;
 
-.field public final D0:Lhz;
+.field public final L0:Lsy;
 
-.field public E0:Lwu8;
+.field public M0:Lw29;
 
-.field public F0:Lx10;
+.field public N0:Lo10;
 
-.field public G0:Z
+.field public O0:Z
 
-.field public H0:Z
+.field public P0:Z
 
-.field public I0:Z
+.field public Q0:Z
 
-.field public J0:Lez6;
+.field public R0:Lb67;
 
-.field public K0:Z
+.field public S0:Z
 
-.field public L0:Ll72;
+.field public T0:Lm82;
 
-.field public M0:Ly9d;
+.field public U0:Lmrd;
 
-.field public final N0:Lu8d;
+.field public final V0:Leqd;
 
 
 # direct methods
@@ -46,77 +46,75 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lone/me/sdk/zoom/ZoomableDraweeView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Llch;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {}, Lpl;->b()Lke3;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object p2
 
-    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
+    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
 
     new-instance p2, Landroid/view/GestureDetector;
 
-    new-instance v1, Lg00;
+    new-instance v1, Lxz;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lg00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lxz;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {p2, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->B0:Landroid/view/GestureDetector;
+    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->J0:Landroid/view/GestureDetector;
 
     invoke-virtual {p2, v0}, Landroid/view/GestureDetector;->setIsLongpressEnabled(Z)V
 
-    new-instance p1, Lge6;
+    new-instance p1, Lzj6;
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lge6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {p1, p2}, Lzj6;-><init>(Landroid/content/res/Resources;)V
 
-    sget-object p2, Lkwc;->o:Lkwc;
+    sget-object p2, Lzcd;->h:Lzcd;
 
-    iput-object p2, p1, Lge6;->l:Ljwc;
+    iput-object p2, p1, Lzj6;->l:Lycd;
 
-    iput v0, p1, Lge6;->b:I
+    iput v0, p1, Lzj6;->b:I
 
-    invoke-virtual {p1}, Lge6;->a()Lfe6;
+    invoke-virtual {p1}, Lzj6;->a()Lyj6;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ldu4;->setHierarchy(Lau4;)V
+    invoke-virtual {p0, p1}, Ljy4;->setHierarchy(Lgy4;)V
 
-    new-instance p1, Lhz;
+    new-instance p1, Lsy;
 
-    invoke-direct {p1, p0, p0}, Lhz;-><init>(Landroid/view/View;Lgz;)V
+    invoke-direct {p1, p0, p0}, Lsy;-><init>(Landroid/view/View;Lry;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    new-instance p1, Lu8d;
+    new-instance p1, Leqd;
 
-    iget-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
+    iget-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
 
-    check-cast p2, Loaa;
+    check-cast p2, Lyka;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p2
-
-    const-class v0, Lqyc;
-
-    invoke-virtual {p2, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()La5;
 
     move-result-object p2
 
-    check-cast p2, Lqyc;
+    const-class v0, Lffd;
 
-    const/16 v0, 0x1c
+    invoke-virtual {p2, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-direct {p1, v0, p2}, Lu8d;-><init>(ILjava/lang/Object;)V
+    move-result-object p2
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lu8d;
+    check-cast p2, Lffd;
+
+    invoke-direct {p1, p2}, Leqd;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->V0:Leqd;
 
     return-void
 .end method
@@ -124,79 +122,79 @@
 .method private getAnimatable()Landroid/graphics/drawable/Animatable;
     .locals 1
 
-    invoke-virtual {p0}, Ldu4;->getController()Lvt4;
+    invoke-virtual {p0}, Ljy4;->getController()Lby4;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ldu4;->getController()Lvt4;
+    invoke-virtual {p0}, Ljy4;->getController()Lby4;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lj0;
+    check-cast v0, Lk0;
 
-    invoke-virtual {p0}, Lj0;->c()Landroid/graphics/drawable/Animatable;
+    invoke-virtual {v0}, Lk0;->c()Landroid/graphics/drawable/Animatable;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final c(Lx10;)V
+.method public final a(Lo10;)V
     .locals 0
 
-    sget-object p1, Lq10;->b:Lq10;
+    sget-object p1, Lh10;->b:Lh10;
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lq10;)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lh10;)V
 
     return-void
 .end method
 
-.method public final d(Lx10;)V
-    .locals 3
+.method public final b(Lo10;)V
+    .locals 4
 
-    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
 
-    check-cast v0, Loaa;
+    check-cast v0, Lyka;
 
-    invoke-virtual {v0}, Loaa;->l()Lpw8;
+    invoke-virtual {v0}, Lyka;->l()Lo49;
 
     move-result-object v0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object p0, p0, Lwu8;->a:Lrw8;
+    iget-object v1, v1, Lw29;->a:Lq49;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lx10;->r:Ljava/lang/String;
+    iget-object p1, p1, Lo10;->r:Ljava/lang/String;
 
-    new-instance v1, Lim8;
+    new-instance v2, Lmu8;
 
-    const/16 v2, 0xe
+    const/16 v3, 0xa
 
-    invoke-direct {v1, v2}, Lim8;-><init>(I)V
+    invoke-direct {v2, v3}, Lmu8;-><init>(I)V
 
-    invoke-virtual {v0, p0, p1, v1}, Lpw8;->t(Lrw8;Ljava/lang/String;Lgm3;)Lrw8;
+    invoke-virtual {v0, v1, p1, v2}, Lo49;->s(Lq49;Ljava/lang/String;Lwo3;)Lq49;
 
     return-void
 
     :cond_0
-    iget-object v0, p1, Lx10;->b:Ll10;
+    iget-object v0, p1, Lo10;->b:Lc10;
 
-    iget-object v0, v0, Ll10;->o0:Ljava/lang/String;
+    iget-object v0, v0, Lc10;->x0:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -206,7 +204,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object p1, p1, Lx10;->s:Ljava/lang/String;
+    iget-object p1, p1, Lo10;->s:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -220,34 +218,34 @@
 
     if-nez p1, :cond_3
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->C0:Lh00;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Lyz;
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
-    check-cast p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    check-cast p1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->F1:Lzl9;
+    iget-object v0, p1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->O1:Luu9;
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lzl9;->c()Z
+    invoke-virtual {v0}, Luu9;->b()Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Lh86;
+    invoke-virtual {p1}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->g1()Lce6;
 
-    move-result-object p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    if-eqz v0, :cond_1
 
-    check-cast p1, Lru/ok/messages/media/attaches/ActAttachesView;
+    check-cast v0, Lru/ok/messages/media/attaches/ActAttachesView;
 
-    invoke-virtual {p1}, Lru/ok/messages/media/attaches/ActAttachesView;->e()V
+    invoke-virtual {v0}, Lru/ok/messages/media/attaches/ActAttachesView;->d()V
 
     :cond_1
-    invoke-virtual {p0, v1}, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->t1(Z)V
+    invoke-virtual {p1, v1}, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->r1(Z)V
 
     :cond_2
     return-void
@@ -287,31 +285,31 @@
     goto :goto_0
 
     :cond_5
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    invoke-virtual {p0}, Ldu4;->getController()Lvt4;
+    invoke-virtual {p0}, Ljy4;->getController()Lby4;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, v2, v2}, Lhz;->c(Lvt4;ZZZ)Lp4b;
+    invoke-virtual {p1, v0, v1, v2, v2}, Lsy;->c(Lby4;ZZZ)Lhjb;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm0;->a()Lo4b;
+    invoke-virtual {p1}, Ln0;->a()Lgjb;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->setController(Lvt4;)V
+    invoke-virtual {p0, p1}, Llch;->setController(Lby4;)V
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->C0:Lh00;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Lyz;
 
     if-eqz p1, :cond_6
 
     check-cast p1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
 
-    invoke-virtual {p1, v2}, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->s1(Z)V
+    invoke-virtual {p1, v2}, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->q1(Z)V
 
     :cond_6
     :goto_0
@@ -320,319 +318,109 @@
     return-void
 .end method
 
-.method public final e(Lx10;)V
+.method public final c(Lo10;)V
     .locals 4
 
-    iget-object v0, p1, Lx10;->o:Lq10;
+    iget-object v0, p1, Lo10;->o:Lh10;
 
-    invoke-virtual {v0}, Lq10;->e()Z
+    invoke-virtual {v0}, Lh10;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    sget-object p1, Lq10;->a:Lq10;
+    sget-object p1, Lh10;->a:Lh10;
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lq10;)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lh10;)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Ldu4;->getController()Lvt4;
+    invoke-virtual {p0}, Ljy4;->getController()Lby4;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    invoke-static {p1, v1}, Lxu7;->O(Lx10;Lwu8;)Z
+    invoke-static {p1, v1}, Lv63;->e0(Lo10;Lw29;)Z
 
     move-result p1
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v2, v3, p1}, Lhz;->c(Lvt4;ZZZ)Lp4b;
+    invoke-virtual {v1, v0, v2, v3, p1}, Lsy;->c(Lby4;ZZZ)Lhjb;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lm0;->a()Lo4b;
+    invoke-virtual {p1}, Ln0;->a()Lgjb;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->setController(Lvt4;)V
+    invoke-virtual {p0, p1}, Llch;->setController(Lby4;)V
 
     return-void
 .end method
 
-.method public final g(Lx10;)V
+.method public final g(Lo10;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final k(Ljava/lang/Throwable;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->k(Ljava/lang/Throwable;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Set photo attach failed, messageId "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
-
-    iget-object v1, v1, Lwu8;->a:Lrw8;
-
-    iget-wide v1, v1, Lej0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ru.ok.messages.media.attaches.AttachPhotoView"
-
-    invoke-static {v1, v0, p1}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    instance-of p1, p1, Ljava/lang/NullPointerException;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lq10;->o:Lq10;
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lq10;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final l(Ldy6;)V
-    .locals 5
-
-    invoke-super {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->l(Ldy6;)V
-
-    instance-of v0, p1, Ls53;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Ls53;
-
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
-
-    invoke-static {v0, v1}, Lkv0;->c(Ls53;Lx10;)V
-
-    :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
-
-    invoke-static {v0}, Lxu7;->F(Lx10;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto/16 :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
-
-    invoke-virtual {v0}, Lx10;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
-
-    iget-object v0, v0, Lx10;->b:Ll10;
-
-    iget-object v0, v0, Ll10;->o0:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {}, Ln76;->x()Lry6;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->J0:Lez6;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v4, v0, Lry6;->h:Lic4;
-
-    invoke-virtual {v4, v1, v2}, Lic4;->o(Lez6;Ljava/lang/Object;)Luo0;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lry6;->f:Let8;
-
-    invoke-interface {v0, v1}, Let8;->get(Ljava/lang/Object;)Lx53;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-static {v0}, Lx53;->r0(Lx53;)Z
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v0}, Lx53;->W(Lx53;)V
-
-    :goto_0
-    if-eqz v1, :cond_4
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
-
-    iget-object v0, v0, Lx10;->o:Lq10;
-
-    invoke-virtual {v0}, Lq10;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    sget-object v0, Lq10;->c:Lq10;
-
-    invoke-virtual {p0, v0}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lq10;)V
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
-
-    check-cast v0, Loaa;
-
-    invoke-virtual {v0}, Loaa;->n()Laab;
-
-    move-result-object v0
-
-    iget-object v0, v0, Laab;->c:Lbp;
-
-    const-string v1, "app.media.save.to.gallery"
-
-    iget-object v0, v0, Ld3;->g:Lwh7;
-
-    invoke-virtual {v0, v1, v3}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    new-instance v0, Lf00;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1, p1}, Lf00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Lmx0;
-
-    const/16 v1, 0x16
-
-    invoke-direct {p1, v1}, Lmx0;-><init>(I)V
-
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
-
-    check-cast p0, Loaa;
-
-    invoke-virtual {p0}, Loaa;->q()Lbpe;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p0, Ldpe;
-
-    invoke-virtual {p0}, Ldpe;->a()Lvxc;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v2, p1, v2}, Lrtc;->a(Lz5;Lvxc;Lz5;Lgm3;Lvxc;)Lgs1;
-
-    :cond_4
-    :goto_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {v0}, Lx53;->W(Lx53;)V
-
-    throw p0
-.end method
-
-.method public final m(Lx10;Lwu8;)V
+.method public final i(Lo10;Lw29;)V
     .locals 7
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->C0:Lh00;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Lyz;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    check-cast p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    check-cast p1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
 
-    iget-object p1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lg2d;
+    iget-object p2, p1, Lru/ok/messages/views/fragments/base/FrgBase;->u1:Lzid;
 
-    invoke-virtual {p1}, Lg2d;->u()Lkmg;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
-
-    iget-object p0, p0, Lwu8;->a:Lrw8;
-
-    iget-wide v1, p0, Lrw8;->n0:J
-
-    sget-object p2, Lck4;->o:Ldyc;
-
-    iget-wide v3, p0, Lej0;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p2}, Lzid;->u()Lnah;
 
     move-result-object p2
 
-    invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    iget-object p1, p1, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
+
+    iget-object p1, p1, Lw29;->a:Lq49;
+
+    iget-wide v1, p1, Lq49;->w0:J
+
+    sget-object v0, Lhn4;->o:Lw88;
+
+    iget-wide v3, p1, Lyi0;->a:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v3
 
-    iget-object v6, p0, Lrw8;->N0:Lck4;
+    iget-object v6, p1, Lq49;->W0:Lhn4;
 
-    new-instance v0, Lgcd;
+    new-instance v0, Lztd;
 
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    invoke-direct/range {v0 .. v6}, Lgcd;-><init>(JLjava/util/List;Lib3;ZLck4;)V
+    invoke-direct/range {v0 .. v6}, Lztd;-><init>(JLjava/util/List;Lvd3;ZLhn4;)V
 
-    invoke-virtual {p1, v0}, Lkmg;->a(Lzbd;)V
+    invoke-virtual {p2, v0}, Lnah;->b(Lstd;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final o(Lx10;)Z
+.method public final k(Lo10;)Z
     .locals 0
 
     invoke-direct {p0}, Lru/ok/messages/media/attaches/AttachPhotoView;->getAnimatable()Landroid/graphics/drawable/Animatable;
@@ -643,51 +431,261 @@
 
     invoke-direct {p0}, Lru/ok/messages/media/attaches/AttachPhotoView;->getAnimatable()Landroid/graphics/drawable/Animatable;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-interface {p0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
+    invoke-interface {p1}, Landroid/graphics/drawable/Animatable;->isRunning()Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
+.end method
+
+.method public final n(Ljava/lang/Throwable;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Llch;->n(Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Set photo attach failed, messageId "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
+
+    iget-object v1, v1, Lw29;->a:Lq49;
+
+    iget-wide v1, v1, Lyi0;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ru.ok.messages.media.attaches.AttachPhotoView"
+
+    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    instance-of p1, p1, Ljava/lang/NullPointerException;
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lh10;->o:Lh10;
+
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lh10;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final o(La57;)V
+    .locals 5
+
+    invoke-super {p0, p1}, Llch;->o(La57;)V
+
+    instance-of v0, p1, Lo73;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lo73;
+
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
+
+    invoke-static {v0, v1}, Lgh5;->d(Lo73;Lo10;)V
+
+    :cond_0
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
+
+    invoke-static {v0}, Lv63;->X(Lo10;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
+
+    invoke-virtual {v0}, Lo10;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
+
+    iget-object v0, v0, Lo10;->b:Lc10;
+
+    iget-object v0, v0, Lc10;->x0:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {}, Lhd6;->n()Lo57;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->R0:Lb67;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v3, v0, Lo57;->h:Lef4;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v1, v4}, Lef4;->i(Lb67;Ljava/lang/Object;)Lno0;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lo57;->f:Lc19;
+
+    invoke-interface {v0, v1}, Lc19;->get(Ljava/lang/Object;)Lt73;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {v0}, Lt73;->r0(Lt73;)Z
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v0}, Lt73;->W(Lt73;)V
+
+    :goto_0
+    if-eqz v1, :cond_4
+
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
+
+    iget-object v0, v0, Lo10;->o:Lh10;
+
+    invoke-virtual {v0}, Lh10;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    sget-object v0, Lh10;->c:Lh10;
+
+    invoke-virtual {p0, v0}, Lru/ok/messages/media/attaches/AttachPhotoView;->s(Lh10;)V
+
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
+
+    check-cast v0, Lyka;
+
+    invoke-virtual {v0}, Lyka;->n()Lzob;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzob;->c:Lsp;
+
+    const-string v1, "app.media.save.to.gallery"
+
+    iget-object v0, v0, Lh3;->g:Lep7;
+
+    invoke-virtual {v0, v1, v2}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    new-instance v0, Lwz;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1, p1}, Lwz;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Llx0;
+
+    const/16 v1, 0x14
+
+    invoke-direct {p1, v1}, Llx0;-><init>(I)V
+
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
+
+    check-cast v1, Lyka;
+
+    invoke-virtual {v1}, Lyka;->q()Lm9f;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v1, Ln9f;
+
+    invoke-virtual {v1}, Ln9f;->a()Lked;
+
+    move-result-object v1
+
+    invoke-static {v0, p1, v1}, Liad;->a(Le6;Lwo3;Lked;)Lqs1;
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {v0}, Lt73;->W(Lt73;)V
+
+    throw p1
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 0
+    .locals 1
 
-    invoke-super {p0}, Ldu4;->onAttachedToWindow()V
+    invoke-super {p0}, Ljy4;->onAttachedToWindow()V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lhz;->i()V
+    invoke-virtual {v0}, Lsy;->i()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onDetachedFromWindow()V
-    .locals 0
+    .locals 1
 
-    invoke-super {p0}, Ldu4;->onDetachedFromWindow()V
+    invoke-super {p0}, Ljy4;->onDetachedFromWindow()V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lhz;->t:Lfh7;
+    iget-object v0, v0, Lsy;->t:Lno7;
 
-    invoke-static {p0}, Lrtc;->b(Lkp4;)V
+    invoke-static {v0}, Liad;->b(Lss4;)V
 
     :cond_0
     return-void
@@ -712,13 +710,13 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-super {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Llch;->onDraw(Landroid/graphics/Canvas;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->o:Lq10;
+    iget-object v0, v0, Lo10;->o:Lh10;
 
-    invoke-virtual {v0}, Lq10;->c()Z
+    invoke-virtual {v0}, Lh10;->c()Z
 
     move-result v0
 
@@ -732,22 +730,22 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iget-boolean v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
-    iget-object v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    invoke-virtual {v2, p1, v0, v1}, Lhz;->b(Landroid/graphics/Canvas;Landroid/graphics/Rect;Z)V
+    invoke-virtual {v2, p1, v0, v1}, Lsy;->b(Landroid/graphics/Canvas;Landroid/graphics/Rect;Z)V
 
     :cond_0
-    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Ly9d;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->U0:Lmrd;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, p1}, Ly9d;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v0, p1}, Lmrd;->draw(Landroid/graphics/Canvas;)V
 
     :cond_1
     return-void
@@ -756,19 +754,19 @@
 .method public final onMeasure(II)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-static {v0}, Lxu7;->H(Lx10;)Z
+    invoke-static {v0}, Lv63;->Z(Lo10;)Z
 
     move-result v0
 
-    iget-boolean v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->G0:Z
+    iget-boolean v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->O0:Z
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-virtual {v1}, Lx10;->f()Z
+    invoke-virtual {v1}, Lo10;->f()Z
 
     move-result v1
 
@@ -789,29 +787,29 @@
 
     if-lez v2, :cond_2
 
-    iget-object v3, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v3, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
     if-eqz v3, :cond_2
 
     if-eqz v0, :cond_1
 
-    iget-object p1, v3, Lx10;->j:Lg10;
+    iget-object p1, v3, Lo10;->j:Lx00;
 
-    iget-object p1, p1, Lg10;->d:Lx10;
+    iget-object p1, p1, Lx00;->d:Lo10;
 
-    iget-object p1, p1, Lx10;->b:Ll10;
+    iget-object p1, p1, Lo10;->b:Lc10;
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, v3, Lx10;->b:Ll10;
+    iget-object p1, v3, Lo10;->b:Lc10;
 
     :goto_0
-    iget p2, p1, Ll10;->c:I
+    iget p2, p1, Lc10;->c:I
 
-    iget p1, p1, Ll10;->o:I
+    iget p1, p1, Lc10;->o:I
 
-    invoke-static {v1, v2, p2, p1}, Liwd;->s(IIII)[I
+    invoke-static {v1, v2, p2, p1}, Lpih;->B(IIII)[I
 
     move-result-object p1
 
@@ -828,12 +826,12 @@
     return-void
 
     :cond_2
-    invoke-super {p0, p1, p2}, Ldu4;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Ljy4;->onMeasure(II)V
 
     return-void
 
     :cond_3
-    invoke-super {p0, p1, p2}, Ldu4;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Ljy4;->onMeasure(II)V
 
     return-void
 .end method
@@ -843,13 +841,13 @@
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Ly9d;
+    iget-object p3, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->U0:Lmrd;
 
-    if-eqz p0, :cond_0
+    if-eqz p3, :cond_0
 
-    const/4 p3, 0x0
+    const/4 p4, 0x0
 
-    invoke-virtual {p0, p3, p3, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {p3, p4, p4, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :cond_0
     return-void
@@ -858,52 +856,52 @@
 .method public final onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->B0:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->J0:Landroid/view/GestureDetector;
 
     if-eqz v0, :cond_0
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->o:Lq10;
+    iget-object v0, v0, Lo10;->o:Lh10;
 
-    invoke-virtual {v0}, Lq10;->c()Z
+    invoke-virtual {v0}, Lh10;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-virtual {v0}, Lx10;->f()Z
+    invoke-virtual {v0}, Lo10;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->b:Ll10;
+    iget-object v0, v0, Lo10;->b:Lc10;
 
-    iget-boolean v0, v0, Ll10;->X:Z
+    iget-boolean v0, v0, Lc10;->X:Z
 
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-super {p0, p1}, Lone/me/sdk/zoom/ZoomableDraweeView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Llch;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     :cond_2
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
-.method public final r(Lx10;Lwu8;)V
+.method public final r(Lo10;Lw29;)V
     .locals 7
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
     const/4 v1, 0x1
 
@@ -911,9 +909,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lx10;->r:Ljava/lang/String;
+    iget-object v0, v0, Lo10;->r:Ljava/lang/String;
 
-    iget-object v3, p1, Lx10;->r:Ljava/lang/String;
+    iget-object v3, p1, Lo10;->r:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -921,11 +919,11 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->o:Lq10;
+    iget-object v0, v0, Lo10;->o:Lh10;
 
-    iget-object v3, p1, Lx10;->o:Lq10;
+    iget-object v3, p1, Lo10;->o:Lh10;
 
     if-eq v0, v3, :cond_0
 
@@ -941,13 +939,13 @@
     move v0, v1
 
     :goto_1
-    iget-object v3, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v3, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-static {v3, p2}, Lxu7;->O(Lx10;Lwu8;)Z
+    invoke-static {v3, p2}, Lv63;->e0(Lo10;Lw29;)Z
 
     move-result v3
 
-    invoke-static {p1, p2}, Lxu7;->O(Lx10;Lwu8;)Z
+    invoke-static {p1, p2}, Lv63;->e0(Lo10;Lw29;)Z
 
     move-result v4
 
@@ -961,37 +959,37 @@
     move v3, v2
 
     :goto_2
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
     if-eqz v4, :cond_3
 
-    iget-object v4, v4, Lx10;->o:Lq10;
+    iget-object v4, v4, Lo10;->o:Lh10;
 
-    iget-object v5, p1, Lx10;->o:Lq10;
+    iget-object v5, p1, Lo10;->o:Lh10;
 
     if-eq v4, v5, :cond_3
 
-    invoke-virtual {v5}, Lq10;->c()Z
+    invoke-virtual {v5}, Lh10;->c()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-virtual {v4}, Lx10;->f()Z
+    invoke-virtual {v4}, Lo10;->f()Z
 
     move-result v4
 
     if-eqz v4, :cond_3
 
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v4, v4, Lx10;->b:Ll10;
+    iget-object v4, v4, Lo10;->b:Lc10;
 
-    iget-object v4, v4, Ll10;->o0:Ljava/lang/String;
+    iget-object v4, v4, Lc10;->x0:Ljava/lang/String;
 
-    invoke-static {v4}, Lno9;->p(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Lk98;->r(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
@@ -1023,17 +1021,17 @@
     move v0, v1
 
     :goto_5
-    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iput-object p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
     const/4 v5, 0x0
 
-    iput-object v5, v4, Lhz;->u:[F
+    iput-object v5, v4, Lsy;->u:[F
 
-    iget-object v4, v4, Lhz;->s:Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;
+    iget-object v4, v4, Lsy;->s:Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;
 
     if-nez v4, :cond_6
 
@@ -1043,51 +1041,51 @@
     invoke-virtual {v4, v5}, Lru/ok/messages/video/widgets/LiveVideoPlaceHolderView;->setCorners([F)V
 
     :goto_6
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    iget-object v5, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Ll72;
+    iget-object v5, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->T0:Lm82;
 
-    invoke-virtual {v4, p1, p2, v5}, Lhz;->f(Lx10;Lwu8;Ll72;)V
+    invoke-virtual {v4, p1, p2, v5}, Lsy;->f(Lo10;Lw29;Lm82;)V
 
-    invoke-virtual {p0}, Ldu4;->getHierarchy()Lau4;
+    invoke-virtual {p0}, Ljy4;->getHierarchy()Lgy4;
 
     move-result-object v4
 
-    check-cast v4, Lfe6;
+    check-cast v4, Lyj6;
 
-    sget-object v5, Lkwc;->o:Lkwc;
+    sget-object v5, Lzcd;->h:Lzcd;
 
-    iget-object v6, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
+    iget-object v6, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
 
-    invoke-virtual {v6, v4, v5}, Lhz;->a(Lfe6;Lkc5;)V
+    invoke-virtual {v6, v4, v5}, Lsy;->a(Lyj6;Lud6;)V
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-static {v0, p2}, Lxu7;->O(Lx10;Lwu8;)Z
+    invoke-static {v0, p2}, Lv63;->e0(Lo10;Lw29;)Z
 
     move-result p2
 
-    iput-boolean p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iput-boolean p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
-    invoke-virtual {p0}, Ldu4;->getController()Lvt4;
-
-    move-result-object p2
-
-    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
-
-    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->D0:Lhz;
-
-    invoke-virtual {v4, p2, v2, v2, v0}, Lhz;->c(Lvt4;ZZZ)Lp4b;
+    invoke-virtual {p0}, Ljy4;->getController()Lby4;
 
     move-result-object p2
 
-    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
+
+    iget-object v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->L0:Lsy;
+
+    invoke-virtual {v4, p2, v2, v2, v0}, Lsy;->c(Lby4;ZZZ)Lhjb;
+
+    move-result-object p2
+
+    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
     if-eqz v0, :cond_7
 
-    new-instance v0, Ly9d;
+    new-instance v0, Lmrd;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1095,13 +1093,13 @@
 
     const/16 v5, 0x30
 
-    invoke-static {v5}, Lsn4;->b(I)I
+    invoke-static {v5}, Lxq4;->b(I)I
 
     move-result v5
 
-    invoke-direct {v0, v4, v5}, Ly9d;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v4, v5}, Lmrd;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Ly9d;
+    iput-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->U0:Lmrd;
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -1118,31 +1116,31 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Z
+    iget-boolean v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->Q0:Z
 
-    iget-boolean v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->H0:Z
+    iget-boolean v4, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->P0:Z
 
     xor-int/2addr v1, v4
 
-    invoke-static {v0, p1, p2, v2, v1}, Lz8c;->c(Landroid/content/Context;Lx10;Lp4b;ZZ)V
+    invoke-static {v0, p1, p2, v2, v1}, Loch;->f(Landroid/content/Context;Lo10;Lhjb;ZZ)V
 
-    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->H0:Z
+    iget-boolean v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->P0:Z
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-virtual {v0}, Lx10;->f()Z
+    invoke-virtual {v0}, Lo10;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->b:Ll10;
+    iget-object v0, v0, Lo10;->b:Lc10;
 
-    iget-object v0, v0, Ll10;->a:Ljava/lang/String;
+    iget-object v0, v0, Lc10;->a:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1150,87 +1148,87 @@
 
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->b:Ll10;
+    iget-object v0, v0, Lo10;->b:Lc10;
 
-    iget-object v0, v0, Ll10;->a:Ljava/lang/String;
+    iget-object v0, v0, Lc10;->a:Ljava/lang/String;
 
-    sget-object v1, Lcl0;->b:Lcl0;
+    sget-object v1, Lqk0;->b:Lqk0;
 
-    sget-object v2, Lbl0;->b:Lbl0;
+    sget-object v2, Lpk0;->b:Lpk0;
 
-    invoke-static {v0, v1, v2}, Litg;->n(Ljava/lang/String;Lcl0;Lbl0;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lve2;->A(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lk98;->p(Ljava/lang/String;Lqk0;Lpk0;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lxm5;->s(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lhd6;->s(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lfz6;->d(Landroid/net/Uri;)Lfz6;
+    invoke-static {v0}, Lpr5;->s(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lfz6;->a()Lez6;
+    invoke-static {v0}, Lc67;->d(Landroid/net/Uri;)Lc67;
 
     move-result-object v0
 
-    iput-object v0, p2, Lm0;->c:Lez6;
+    invoke-virtual {v0}, Lc67;->a()Lb67;
+
+    move-result-object v0
+
+    iput-object v0, p2, Ln0;->c:Lb67;
 
     :cond_8
-    iget-object v0, p2, Lm0;->b:Lez6;
+    iget-object v0, p2, Ln0;->b:Lb67;
 
-    iput-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->J0:Lez6;
+    iput-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->R0:Lb67;
 
-    invoke-virtual {p2}, Lm0;->a()Lo4b;
+    invoke-virtual {p2}, Ln0;->a()Lgjb;
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lone/me/sdk/zoom/ZoomableDraweeView;->setController(Lvt4;)V
+    invoke-virtual {p0, p2}, Llch;->setController(Lby4;)V
 
     if-eqz v3, :cond_9
 
-    iget-boolean p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Z
+    iget-boolean p2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->S0:Z
 
     if-nez p2, :cond_9
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->d(Lx10;)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/AttachPhotoView;->b(Lo10;)V
 
     :cond_9
     return-void
 .end method
 
-.method public final s(Lq10;)V
+.method public final s(Lh10;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->A0:Lke3;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->I0:Lsg3;
 
-    check-cast v0, Loaa;
+    check-cast v0, Lyka;
 
-    invoke-virtual {v0}, Loaa;->l()Lpw8;
+    invoke-virtual {v0}, Lyka;->l()Lo49;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object v1, v1, Lwu8;->a:Lrw8;
+    iget-object v1, v1, Lw29;->a:Lq49;
 
-    iget-object v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v2, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v2, v2, Lx10;->r:Ljava/lang/String;
+    iget-object v2, v2, Lo10;->r:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2, p1}, Lpw8;->u(Lrw8;Ljava/lang/String;Lq10;)Lwu8;
+    invoke-virtual {v0, v1, v2, p1}, Lo49;->t(Lq49;Ljava/lang/String;Lh10;)Lw29;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->C0:Lh00;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Lyz;
 
     const/4 v1, 0x0
 
@@ -1238,53 +1236,53 @@
 
     check-cast v0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Lh86;
+    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->g1()Lce6;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Lh86;
+    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->g1()Lce6;
 
     move-result-object v2
 
     check-cast v2, Lru/ok/messages/media/attaches/ActAttachesView;
 
-    invoke-virtual {v2, p1}, Lru/ok/messages/media/attaches/ActAttachesView;->f0(Lwu8;)V
+    invoke-virtual {v2, p1}, Lru/ok/messages/media/attaches/ActAttachesView;->d0(Lw29;)V
 
     :cond_0
-    iput-object p1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
+    iput-object p1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
 
     move p1, v1
 
     :goto_0
-    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
+    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
 
-    iget-object v2, v2, Lwu8;->a:Lrw8;
+    iget-object v2, v2, Lw29;->a:Lq49;
 
-    iget-object v2, v2, Lrw8;->t0:Llwg;
+    iget-object v2, v2, Lq49;->C0:Lfah;
 
-    invoke-virtual {v2}, Llwg;->q()I
+    invoke-virtual {v2}, Lfah;->g()I
 
     move-result v2
 
     if-ge p1, v2, :cond_2
 
-    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
+    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
 
-    iget-object v2, v2, Lwu8;->a:Lrw8;
+    iget-object v2, v2, Lw29;->a:Lq49;
 
-    iget-object v2, v2, Lrw8;->t0:Llwg;
+    iget-object v2, v2, Lq49;->C0:Lfah;
 
-    invoke-virtual {v2, p1}, Llwg;->p(I)Lx10;
+    invoke-virtual {v2, p1}, Lfah;->e(I)Lo10;
 
     move-result-object v2
 
-    iget-object v2, v2, Lx10;->r:Ljava/lang/String;
+    iget-object v2, v2, Lo10;->r:Ljava/lang/String;
 
-    iget-object v3, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Lx10;
+    iget-object v3, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
 
-    iget-object v3, v3, Lx10;->r:Ljava/lang/String;
+    iget-object v3, v3, Lo10;->r:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1292,17 +1290,17 @@
 
     if-eqz v2, :cond_1
 
-    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
+    iget-object v2, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->G1:Lw29;
 
-    iget-object v2, v2, Lwu8;->a:Lrw8;
+    iget-object v2, v2, Lw29;->a:Lq49;
 
-    iget-object v2, v2, Lrw8;->t0:Llwg;
+    iget-object v2, v2, Lq49;->C0:Lfah;
 
-    invoke-virtual {v2, p1}, Llwg;->p(I)Lx10;
+    invoke-virtual {v2, p1}, Lfah;->e(I)Lo10;
 
     move-result-object p1
 
-    iput-object p1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Lx10;
+    iput-object p1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->H1:Lo10;
 
     goto :goto_1
 
@@ -1313,33 +1311,33 @@
 
     :cond_2
     :goto_1
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object p1, p1, Lwu8;->a:Lrw8;
+    iget-object p1, p1, Lw29;->a:Lq49;
 
-    iget-object p1, p1, Lrw8;->t0:Llwg;
+    iget-object p1, p1, Lq49;->C0:Lfah;
 
-    invoke-virtual {p1}, Llwg;->q()I
+    invoke-virtual {p1}, Lfah;->g()I
 
     move-result p1
 
     if-ge v1, p1, :cond_4
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object p1, p1, Lwu8;->a:Lrw8;
+    iget-object p1, p1, Lw29;->a:Lq49;
 
-    iget-object p1, p1, Lrw8;->t0:Llwg;
+    iget-object p1, p1, Lq49;->C0:Lfah;
 
-    invoke-virtual {p1, v1}, Llwg;->p(I)Lx10;
+    invoke-virtual {p1, v1}, Lfah;->e(I)Lo10;
 
     move-result-object p1
 
-    iget-object p1, p1, Lx10;->r:Ljava/lang/String;
+    iget-object p1, p1, Lo10;->r:Ljava/lang/String;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object v0, v0, Lx10;->r:Ljava/lang/String;
+    iget-object v0, v0, Lo10;->r:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1360,28 +1358,28 @@
     :goto_2
     if-ltz v1, :cond_5
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    iget-object p1, p1, Lwu8;->a:Lrw8;
+    iget-object p1, p1, Lw29;->a:Lq49;
 
-    iget-object p1, p1, Lrw8;->t0:Llwg;
+    iget-object p1, p1, Lq49;->C0:Lfah;
 
-    invoke-virtual {p1, v1}, Llwg;->p(I)Lx10;
+    invoke-virtual {p1, v1}, Lfah;->e(I)Lo10;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->E0:Lwu8;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->M0:Lw29;
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/messages/media/attaches/AttachPhotoView;->r(Lx10;Lwu8;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/messages/media/attaches/AttachPhotoView;->r(Lo10;Lw29;)V
 
     :cond_5
     return-void
 .end method
 
-.method public setListener(Lh00;)V
+.method public setListener(Lyz;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->C0:Lh00;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->K0:Lyz;
 
     return-void
 .end method
@@ -1389,11 +1387,11 @@
 .method public setWrapContentMeasure(Z)V
     .locals 4
 
-    iput-boolean p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->G0:Z
+    iput-boolean p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->O0:Z
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    invoke-static {p1}, Lxu7;->H(Lx10;)Z
+    invoke-static {p1}, Lv63;->Z(Lo10;)Z
 
     move-result p1
 
@@ -1409,11 +1407,11 @@
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lx10;->f()Z
+    invoke-virtual {v0}, Lo10;->f()Z
 
     move-result v0
 
@@ -1424,25 +1422,25 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object p1, p1, Lx10;->j:Lg10;
+    iget-object p1, p1, Lo10;->j:Lx00;
 
-    iget-object p1, p1, Lg10;->d:Lx10;
+    iget-object p1, p1, Lx00;->d:Lo10;
 
-    iget-object p1, p1, Lx10;->b:Ll10;
+    iget-object p1, p1, Lo10;->b:Lc10;
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->F0:Lx10;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/AttachPhotoView;->N0:Lo10;
 
-    iget-object p1, p1, Lx10;->b:Ll10;
+    iget-object p1, p1, Lo10;->b:Lc10;
 
     :goto_0
-    iget v0, p1, Ll10;->c:I
+    iget v0, p1, Lc10;->c:I
 
-    iget p1, p1, Ll10;->o:I
+    iget p1, p1, Lc10;->o:I
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -1452,7 +1450,7 @@
 
     move-result v2
 
-    invoke-static {v1, v2, v0, p1}, Liwd;->s(IIII)[I
+    invoke-static {v1, v2, v0, p1}, Lpih;->B(IIII)[I
 
     move-result-object p1
 
@@ -1513,18 +1511,18 @@
 .method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    instance-of v0, p1, Ld20;
+    instance-of v0, p1, Lu10;
 
     if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method

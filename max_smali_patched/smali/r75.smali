@@ -1,76 +1,154 @@
-.class public final synthetic Lr75;
-.super Ljava/lang/Object;
+.class public final enum Lr75;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Ls8c;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lr75;
 
-.field public final synthetic b:Ljava/lang/reflect/Constructor;
+.field public static final synthetic b:[Lr75;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/reflect/Constructor;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lr75;->a:I
+    new-instance v0, Lr75;
 
-    iput-object p1, p0, Lr75;->b:Ljava/lang/reflect/Constructor;
+    const-string v1, "INSTANCE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lr75;->a:Lr75;
+
+    filled-new-array {v0}, [Lr75;
+
+    move-result-object v0
+
+    sput-object v0, Lr75;->b:[Lr75;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a(Lcze;)V
     .locals 1
 
-    iget v0, p0, Lr75;->a:I
+    sget-object v0, Lr75;->a:Lr75;
 
-    iget-object p0, p0, Lr75;->b:Ljava/lang/reflect/Constructor;
+    invoke-interface {p0, v0}, Lcze;->d(Leze;)V
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-interface {p0}, Lcze;->b()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->a(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+.method public static b(Ljava/lang/Throwable;Lcze;)V
+    .locals 1
 
-    move-result-object p0
+    sget-object v0, Lr75;->a:Lr75;
 
-    return-object p0
+    invoke-interface {p1, v0}, Lcze;->d(Leze;)V
 
-    :pswitch_0
-    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->c(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-interface {p1, p0}, Lcze;->onError(Ljava/lang/Throwable;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    return-object p0
+.method public static valueOf(Ljava/lang/String;)Lr75;
+    .locals 1
 
-    :pswitch_1
-    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->d(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    const-class v0, Lr75;
 
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->e(Ljava/lang/reflect/Constructor;Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lr75;
+
     return-object p0
+.end method
 
-    nop
+.method public static values()[Lr75;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object v0, Lr75;->b:[Lr75;
+
+    invoke-virtual {v0}, [Lr75;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lr75;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final cancel()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i(J)V
+    .locals 0
+
+    invoke-static {p1, p2}, Lgze;->e(J)Z
+
+    return-void
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final l(I)I
+    .locals 0
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "EmptySubscription"
+
+    return-object v0
 .end method

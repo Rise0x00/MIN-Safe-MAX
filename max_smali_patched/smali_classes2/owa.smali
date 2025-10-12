@@ -1,27 +1,31 @@
-.class public final Lowa;
+.class public abstract Lowa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:I
 
-.field public final b:[Ljava/lang/String;
+.field public static final b:I
 
-.field public final c:[I
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/String;[I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lvcc;->dragger_24:I
 
-    iput p1, p0, Lowa;->a:I
+    sput v0, Lowa;->a:I
 
-    iput-object p2, p0, Lowa;->b:[Ljava/lang/String;
+    sget v0, Lvcc;->draw_sticker_24_gradient:I
 
-    iput-object p3, p0, Lowa;->c:[I
+    sput v0, Lowa;->b:I
+
+    sget v0, Lvcc;->recent_24:I
+
+    sput v0, Lowa;->c:I
 
     return-void
 .end method

@@ -1,89 +1,113 @@
-.class public abstract Lgw3;
-.super Ljava/lang/Object;
+.class public final Lgw3;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-    .locals 6
+.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    and-int/lit8 v0, p5, 0x4
+    iput-wide p1, p0, Lgw3;->Y:J
 
-    if-eqz v0, :cond_1
+    const/4 p1, 0x2
 
-    if-nez p3, :cond_1
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object p5
+    check-cast p1, Lus3;
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p0, p3}, Lz8c;->j(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p5
-
-    if-nez p5, :cond_0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "Permission "
-
-    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
-
-    invoke-static {p1, p3, p2}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lgw3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lgw3;
 
-    throw p0
+    sget-object p2, Loyf;->a:Loyf;
 
-    :cond_1
-    and-int/lit8 v5, p5, 0x1
+    invoke-virtual {p1, p2}, Lgw3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-object v0, p0
+    move-result-object p1
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    new-instance v0, Lgw3;
 
-    move-result-object p0
+    iget-wide v1, p0, Lgw3;->Y:J
 
-    return-object p0
+    invoke-direct {v0, v1, v2, p2}, Lgw3;-><init>(JLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lgw3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgw3;->X:Ljava/lang/Object;
+
+    check-cast p1, Lus3;
+
+    new-instance v0, Lufb;
+
+    iget-wide v3, p1, Lus3;->a:J
+
+    iget-object v1, p1, Lus3;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    iget-object v1, p1, Lus3;->Z:Landroid/net/Uri;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    const-string v1, ""
+
+    :cond_1
+    move-object v7, v1
+
+    iget-object v5, p1, Lus3;->y0:Ljava/lang/CharSequence;
+
+    iget-wide v1, p0, Lgw3;->Y:J
+
+    invoke-direct/range {v0 .. v7}, Lufb;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

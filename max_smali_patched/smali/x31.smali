@@ -1,50 +1,59 @@
 .class public final Lx31;
-.super Lax3;
+.super Lbp;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public Y:Ldq5;
-
-.field public final synthetic Z:Ll40;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lx31;
 
 
 # direct methods
-.method public constructor <init>(Ll40;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lx31;->Z:Ll40;
+    new-instance v0, Lx31;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lbp;-><init>()V
+
+    sput-object v0, Lx31;->a:Lx31;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b()Lav1;
+    .locals 2
 
-    iput-object p1, p0, Lx31;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    iget p1, p0, Lx31;->X:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    const-class v1, Lav1;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput p1, p0, Lx31;->X:I
+    move-result-object v0
 
-    iget-object p1, p0, Lx31;->Z:Ll40;
+    check-cast v0, Lav1;
 
-    const/4 v0, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0, p0}, Ll40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final c()Lst1;
+    .locals 2
 
-    move-result-object p0
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    return-object p0
+    move-result-object v0
+
+    const-class v1, Lst1;
+
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lst1;
+
+    return-object v0
 .end method

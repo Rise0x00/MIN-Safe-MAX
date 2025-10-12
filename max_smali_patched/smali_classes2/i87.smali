@@ -1,85 +1,138 @@
-.class public final enum Li87;
-.super Ljava/lang/Enum;
+.class public final Li87;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
-# static fields
-.field public static final enum a:Li87;
 
-.field public static final enum b:Li87;
+# instance fields
+.field public final a:Lcq5;
 
-.field public static final enum c:Li87;
+.field public final b:Landroid/content/SharedPreferences;
 
-.field public static final synthetic o:[Li87;
+.field public final c:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Lcq5;Ld1a;)V
+    .locals 0
 
-    new-instance v0, Li87;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INVITE_BY_PHONE"
+    iput-object p2, p0, Li87;->a:Lcq5;
 
-    const/4 v2, 0x0
+    const-string p2, "app_crash_prefs"
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 p3, 0x0
 
-    sput-object v0, Li87;->a:Li87;
+    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    new-instance v1, Li87;
+    move-result-object p1
 
-    const-string v2, "INVITE_BY_QR"
+    iput-object p1, p0, Li87;->b:Landroid/content/SharedPreferences;
 
-    const/4 v3, 0x1
+    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object p1
 
-    sput-object v1, Li87;->b:Li87;
+    iput-object p1, p0, Li87;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    new-instance v2, Li87;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-string v3, "INVITE_BY_LINK"
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Li87;->c:Li87;
-
-    filled-new-array {v0, v1, v2}, [Li87;
-
-    move-result-object v0
-
-    sput-object v0, Li87;->o:[Li87;
+    iput-object p1, p0, Li87;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Li87;
-    .locals 1
 
-    const-class v0, Li87;
+# virtual methods
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-object p0
+    move-result-wide v0
 
-    check-cast p0, Li87;
+    iget-object v2, p0, Li87;->b:Landroid/content/SharedPreferences;
 
-    return-object p0
-.end method
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-.method public static values()[Li87;
-    .locals 1
+    move-result-object v2
 
-    sget-object v0, Li87;->o:[Li87;
+    const-string v3, "pref_last_crash_time"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v2, v3, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, [Li87;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    return-object v0
+    iget-object v0, p0, Li87;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+
+    :cond_0
+    sget-object p1, Lone/me/android/OneMeApplication;->x0:Lkga;
+
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_1
+
+    iget-object p1, p0, Li87;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Li87;->a:Lcq5;
+
+    if-eqz p1, :cond_1
+
+    new-instance p2, Ljava/util/Date;
+
+    invoke-direct {p2}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p2}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v0
+
+    const-string p2, "oneme_heap_dump_-"
+
+    const-string v2, ".hprof"
+
+    invoke-static {v0, v1, p2, v2}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    check-cast p1, Lpr5;
+
+    invoke-virtual {p1, p2}, Lpr5;->i(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

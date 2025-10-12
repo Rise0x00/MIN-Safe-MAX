@@ -1,86 +1,68 @@
-.class public final Lste;
-.super Ldgd;
+.class public final synthetic Lste;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final K0:Landroid/widget/TextView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-direct {p0, p1, p3}, Ldgd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+    iput p2, p0, Lste;->a:I
 
-    sget p3, Ld2c;->row_setting_text:I
+    iput-object p1, p0, Lste;->b:Ljava/lang/String;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p3, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Lste;->K0:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    sget-object p3, Llqe;->a0:Lkle;
-
-    invoke-static {p0}, Le64;->v(Landroid/content/Context;)Llqe;
-
-    move-result-object p0
-
-    iget p0, p0, Llqe;->F:I
-
-    invoke-virtual {p2, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget p0, Ld1c;->row_setting__fl_value:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/FrameLayout;
-
-    invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x(Lagd;Z)V
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Ldgd;->x(Lagd;Z)V
+    iget v0, p0, Lste;->a:I
 
-    iget-object p1, p1, Lagd;->X:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lste;->K0:Landroid/widget/TextView;
+    check-cast p1, Lfue;
 
-    if-eqz p1, :cond_0
+    new-instance p1, Lfue;
 
-    const/4 p2, 0x0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lste;->b:Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/String;
+    invoke-direct {p1, v1, v0}, Lfue;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-object p1
 
-    return-void
+    :pswitch_0
+    check-cast p1, Lpte;
 
-    :cond_0
-    const/16 p1, 0x8
+    new-instance p1, Lpte;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    const/4 v0, 0x2
 
-    return-void
+    iget-object v1, p0, Lste;->b:Ljava/lang/String;
+
+    invoke-direct {p1, v1, v0}, Lpte;-><init>(Ljava/lang/String;I)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

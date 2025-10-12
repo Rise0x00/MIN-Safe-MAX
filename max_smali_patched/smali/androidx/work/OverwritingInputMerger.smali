@@ -1,5 +1,5 @@
 .class public final Landroidx/work/OverwritingInputMerger;
-.super Lt47;
+.super Lub7;
 .source "SourceFile"
 
 
@@ -14,18 +14,18 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)Lz54;
-    .locals 2
+.method public final a(Ljava/util/ArrayList;)Lu84;
+    .locals 3
 
-    new-instance p0, Lm;
+    new-instance v0, Lrxd;
 
-    const/16 v0, 0xb
+    const/16 v1, 0xb
 
-    invoke-direct {p0, v0}, Lm;-><init>(I)V
+    invoke-direct {v0, v1}, Lrxd;-><init>(I)V
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v1, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -34,32 +34,32 @@
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lz54;
+    check-cast v2, Lu84;
 
-    iget-object v1, v1, Lz54;->a:Ljava/util/HashMap;
+    iget-object v2, v2, Lu84;->a:Ljava/util/HashMap;
 
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0}, Lm;->S(Ljava/util/Map;)V
+    invoke-virtual {v0, v1}, Lrxd;->s(Ljava/util/Map;)V
 
-    invoke-virtual {p0}, Lm;->M()Lz54;
+    invoke-virtual {v0}, Lrxd;->f()Lu84;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

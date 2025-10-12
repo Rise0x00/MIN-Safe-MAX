@@ -2,97 +2,175 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lo0a;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Le90;
-
-.field public static final b:Lfi5;
-
-.field public static final c:Lfi5;
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(IJ)V
+    .locals 0
 
-    new-instance v0, Le90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
 
-    sput-object v0, Le90;->a:Le90;
+    iput p1, p0, Le90;->a:I
 
-    new-instance v0, Lyx;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyx;-><init>(I)V
-
-    const-class v1, Ldrb;
-
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfi5;
-
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "currentCacheSizeBytes"
-
-    invoke-direct {v2, v3, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Le90;->b:Lfi5;
-
-    new-instance v0, Lyx;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lyx;-><init>(I)V
-
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfi5;
-
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "maxCacheSizeBytes"
-
-    invoke-direct {v1, v2, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Le90;->c:Lfi5;
+    iput-wide p2, p0, Le90;->b:J
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null status"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lrce;
+    if-ne p1, p0, :cond_0
 
-    check-cast p2, Lp0a;
+    goto :goto_0
 
-    sget-object p0, Le90;->b:Lfi5;
+    :cond_0
+    instance-of v0, p1, Le90;
 
-    iget-wide v0, p1, Lrce;->a:J
+    if-eqz v0, :cond_1
 
-    invoke-interface {p2, p0, v0, v1}, Lp0a;->e(Lfi5;J)Lp0a;
+    check-cast p1, Le90;
 
-    sget-object p0, Le90;->c:Lfi5;
+    iget v0, p0, Le90;->a:I
 
-    iget-wide v0, p1, Lrce;->b:J
+    iget v1, p1, Le90;->a:I
 
-    invoke-interface {p2, p0, v0, v1}, Lp0a;->e(Lfi5;J)Lp0a;
+    invoke-static {v0, v1}, Lqw1;->c(II)Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Le90;->b:J
+
+    iget-wide v2, p1, Le90;->b:J
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget v0, p0, Le90;->a:I
+
+    invoke-static {v0}, Lqw1;->u(I)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    const/16 v1, 0x20
+
+    iget-wide v2, p0, Le90;->b:J
+
+    ushr-long v4, v2, v1
+
+    xor-long v1, v4, v2
+
+    long-to-int v1, v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackendResponse{status="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Le90;->a:I
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INVALID_PAYLOAD"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "FATAL_ERROR"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "TRANSIENT_ERROR"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nextRequestWaitMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Le90;->b:J
+
+    const-string v3, "}"
+
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

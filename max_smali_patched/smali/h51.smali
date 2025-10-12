@@ -3,76 +3,175 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lha4;
+.implements Lk51;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
+.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Ljef;
+
+.field public final f:Ljef;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh51;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    sget p1, Lxja;->F:I
+
+    iput p1, p0, Lh51;->b:I
+
+    sget p1, Lwja;->m0:I
+
+    iput p1, p0, Lh51;->c:I
+
+    sget p1, Lwja;->y0:I
+
+    iput p1, p0, Lh51;->d:I
+
+    sget p1, Laka;->v2:I
+
+    new-instance v0, Ljef;
+
+    invoke-direct {v0, p1}, Ljef;-><init>(I)V
+
+    iput-object v0, p0, Lh51;->e:Ljef;
+
+    iput-object v0, p0, Lh51;->f:Ljef;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final a()I
+    .locals 1
 
-    const-string v0, "call_id"
+    iget v0, p0, Lh51;->c:I
 
-    iget-object p0, p0, Lh51;->a:Landroid/os/Bundle;
+    return v0
+.end method
 
-    invoke-static {v0, p0}, Lds0;->E0(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    .locals 1
+
+    iget-object v0, p0, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lh51;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lh51;
+
+    iget-object v1, p0, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    iget-object p1, p1, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getContentDescription()Loef;
+    .locals 1
+
+    iget-object v0, p0, Lh51;->f:Ljef;
+
+    return-object v0
+.end method
+
+.method public final getIcon()I
+    .locals 1
+
+    iget v0, p0, Lh51;->d:I
+
+    return v0
+.end method
+
+.method public final getId()I
+    .locals 1
+
+    iget v0, p0, Lh51;->b:I
+
+    return v0
+.end method
+
+.method public final getTitle()Loef;
+    .locals 1
+
+    iget-object v0, p0, Lh51;->e:Ljef;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Speakerphone(device="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lh51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "is_video"
-
-    invoke-static {v1, p0}, Lds0;->B0(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v1
-
-    const-string v2, "sdk_reasons"
-
-    invoke-virtual {p0, v2}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-static {v2, p0}, Lds0;->E0(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v2, ","
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x4
-
-    invoke-static {p0, v2, v3}, Lwde;->Q0(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    new-instance v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v2, v0, v1, p0}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZLjava/util/List;)V
-
-    return-object v2
+    return-object v0
 .end method

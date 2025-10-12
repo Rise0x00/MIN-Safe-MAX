@@ -1,102 +1,121 @@
 .class public final Ly21;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+.field public final a:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+.method public constructor <init>(Lbp7;)V
     .locals 0
 
-    iput-object p2, p0, Ly21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ly21;->a:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ly21;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ly21;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Ly21;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Lru/ok/android/externcalls/sdk/video/CameraManager;
     .locals 1
 
-    new-instance v0, Ly21;
+    iget-object v0, p0, Ly21;->a:Lbp7;
 
-    iget-object p0, p0, Ly21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, p0}, Ly21;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    move-result-object v0
 
-    iput-object p1, v0, Ly21;->X:Ljava/lang/Object;
+    check-cast v0, Ln14;
+
+    invoke-virtual {v0}, Ln14;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getCameraManager()Lru/ok/android/externcalls/sdk/video/CameraManager;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()Z
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Ly21;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
 
-    iget-object p1, p0, Ly21;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-eqz v0, :cond_0
 
-    move-result p1
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCapturingFromFrontCamera()Z
 
-    iget-object p0, p0, Ly21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    move-result v0
 
-    if-eqz p1, :cond_0
+    const/4 v2, 0x1
 
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->n0:[Lof7;
+    if-ne v0, v2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Lg21;
+    return v2
 
-    move-result-object p0
+    :cond_0
+    return v1
+.end method
 
-    invoke-virtual {p0}, Lg21;->f()V
+.method public final c(Z)V
+    .locals 5
+
+    sget-object v0, Lox9;->j:Lqpa;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->n0:[Lof7;
+    sget-object v1, Ly38;->o:Ly38;
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Lg21;
+    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
 
-    move-result-object p0
+    move-result v2
 
-    invoke-virtual {p0}, Lg21;->b()V
+    if-eqz v2, :cond_1
 
+    const-string v2, "CallCameraController camera changed="
+
+    const-string v3, " "
+
+    invoke-static {v2, v3, p1}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const-string v4, "CallCameraControllerTag"
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {p0}, Ly21;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
 
-    return-object p0
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/video/CameraManager;->setCameraEnabled(Z)V
+
+    :cond_2
+    return-void
 .end method

@@ -2,6 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzed;
-.implements Lzj3;
+
+# virtual methods
+.method public abstract a(Lope;)V
+.end method

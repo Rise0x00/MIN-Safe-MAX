@@ -1,88 +1,97 @@
 .class public final Lgoa;
-.super Lep9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Lz56;
+
+.field public final b:Lr8f;
+
+.field public final c:Lae2;
+
+.field public final d:Lov0;
+
+.field public final e:Lmoe;
+
+.field public final f:Lsqc;
+
+.field public final g:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public volatile h:Lqle;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lz56;Lr8f;Lae2;Lov0;)V
     .locals 1
 
-    sget-object v0, Ltcf;->a:Ltcf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lep9;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lgoa;->a:Lz56;
 
-    iput-object p1, p0, Lgoa;->b:Ljava/lang/String;
+    iput-object p2, p0, Lgoa;->b:Lr8f;
 
-    return-void
-.end method
+    iput-object p3, p0, Lgoa;->c:Lae2;
 
+    iput-object p4, p0, Lgoa;->d:Lov0;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    new-instance p3, Li46;
+
+    sget-object p4, Lc75;->a:Lc75;
+
+    invoke-direct {p3, p4}, Li46;-><init>(Ljava/util/Map;)V
+
+    invoke-static {p3}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lgoa;->e:Lmoe;
+
+    new-instance p4, Lsqc;
+
+    invoke-direct {p4, p3}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object p4, p0, Lgoa;->f:Lsqc;
+
+    check-cast p2, Lwla;
+
+    invoke-virtual {p2}, Lwla;->a()Ly24;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lgoa;->g:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lz56;->y()Lev5;
+
+    move-result-object p1
+
+    new-instance p3, Lg13;
+
+    const/16 p4, 0x15
+
+    invoke-direct {p3, p1, p4}, Lg13;-><init>(Lev5;I)V
+
+    invoke-static {p3}, Ltp;->w(Lev5;)Lev5;
+
+    move-result-object p1
+
+    new-instance p3, Laoa;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p0, p4}, Laoa;-><init>(Lgoa;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p4, Ljx5;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p4, p1, p3, v0}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    return v0
+    invoke-static {p4, p2}, Ltp;->a0(Lev5;Le34;)Lqle;
 
-    :cond_0
-    instance-of v1, p1, Lgoa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgoa;
-
-    iget-object p0, p0, Lgoa;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lgoa;->b:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lgoa;->b:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "OpenExternalLink(url="
-
-    const-string v1, ")"
-
-    iget-object p0, p0, Lgoa;->b:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

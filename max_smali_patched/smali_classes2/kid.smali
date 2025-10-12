@@ -1,121 +1,234 @@
 .class public final Lkid;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public final synthetic X:Lmid;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
+.field public final synthetic b:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Lmid;JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lbp7;I)V
     .locals 0
 
-    iput-object p1, p0, Lkid;->X:Lmid;
+    iput p2, p0, Lkid;->a:I
 
-    iput-wide p2, p0, Lkid;->Y:J
+    iput-object p1, p0, Lkid;->b:Lbp7;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    check-cast p1, Lp04;
+    iget v0, p0, Lkid;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lkid;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkid;->b:Lbp7;
 
-    move-result-object p0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Lkid;
+    move-result-object v1
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    check-cast v1, Llp4;
 
-    invoke-virtual {p0, p1}, Lkid;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Llp4;->h()Lz3g;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    iget-object v1, v1, Lz3g;->b:Ljava/lang/String;
 
-    new-instance p1, Lkid;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lkid;->X:Lmid;
+    move-result-object v2
 
-    iget-wide v1, p0, Lkid;->Y:J
+    check-cast v2, Llp4;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lkid;-><init>(Lmid;JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v2}, Llp4;->h()Lz3g;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-object v2, v2, Lz3g;->d:Ljava/lang/String;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Lkid;->X:Lmid;
+    move-result-object v3
 
-    iget-object v0, p1, Lmid;->X:Lth7;
+    check-cast v3, Llp4;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Llp4;->h()Lz3g;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lz3g;->g:Ljava/lang/String;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lsz2;
+    check-cast v0, Llp4;
 
-    iget-wide v1, p0, Lkid;->Y:J
+    invoke-virtual {v0}, Llp4;->h()Lz3g;
 
-    check-cast v0, Ls03;
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Ls03;->R(J)Ll72;
+    iget-object v0, v0, Lz3g;->h:Ljava/lang/String;
 
-    move-result-object p0
+    const-string v4, "OKMessages/"
 
-    if-eqz p0, :cond_0
+    const-string v5, " ("
 
-    iget-object p1, p1, Lmid;->t0:Lt65;
+    const-string v6, "; "
 
-    sget-object v0, Leld;->c:Leld;
+    invoke-static {v4, v1, v5, v2, v6}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Ll72;->a:J
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lkid;->b:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Luke;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v0, ":profile?id="
+    return-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_1
+    iget-object v0, p0, Lkid;->b:Lbp7;
 
-    invoke-virtual {p0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    const-string v0, "&type=local_chat&is_opened_from_dialog=false"
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Luke;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v0, Lvke;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0, p1}, Lmh0;->l(Ljava/lang/String;Lt65;)V
+    :try_start_1
+    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
-    :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    move-result-object v0
 
-    return-object p0
+    invoke-static {v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    check-cast v0, Ljavax/net/ssl/X509TrustManager;
+    :try_end_1
+    .catch Ljavax/net/ssl/SSLException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :goto_0
+    new-instance v1, Ljavax/net/ssl/SSLException;
+
+    const-string v2, "Failed to create trust manager"
+
+    invoke-direct {v1, v2, v0}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_1
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lkid;->b:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Luke;
+
+    const/4 v1, 0x0
+
+    check-cast v0, Lvke;
+
+    invoke-virtual {v0, v1}, Lvke;->a(Ljava/lang/String;)Ldie;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

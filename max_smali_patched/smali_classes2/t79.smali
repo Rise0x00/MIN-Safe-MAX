@@ -1,90 +1,130 @@
 .class public final Lt79;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Ly79;
+.field public final a:J
 
-.field public final synthetic Y:Lrw8;
+.field public final b:Lr79;
 
 
 # direct methods
-.method public constructor <init>(Ly79;Lrw8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLr79;)V
     .locals 0
 
-    iput-object p1, p0, Lt79;->X:Ly79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lt79;->Y:Lrw8;
+    iput-wide p1, p0, Lt79;->a:J
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lt79;->b:Lr79;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lp04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lt79;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lt79;
 
-    check-cast p0, Lt79;
+    const/4 v2, 0x0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lt79;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    return-object p1
+    :cond_1
+    check-cast p1, Lt79;
+
+    iget-wide v3, p0, Lt79;->a:J
+
+    iget-wide v5, p1, Lt79;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lt79;->b:Lr79;
+
+    iget-object p1, p1, Lt79;->b:Lr79;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lt79;
+    iget-wide v0, p0, Lt79;->a:J
 
-    iget-object v0, p0, Lt79;->X:Ly79;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object p0, p0, Lt79;->Y:Lrw8;
+    move-result v0
 
-    invoke-direct {p1, v0, p0, p2}, Lt79;-><init>(Ly79;Lrw8;Lkotlin/coroutines/Continuation;)V
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object p1
+    iget-object v1, p0, Lt79;->b:Lr79;
+
+    invoke-virtual {v1}, Lr79;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lt79;->Y:Lrw8;
+    const-string v1, "MessageReactionEntry(userId="
 
-    iget-wide v1, p1, Lej0;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Ly79;->C1:[Lof7;
+    iget-wide v1, p0, Lt79;->a:J
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lt79;->X:Ly79;
+    const-string v1, ", reaction="
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    iget-object v1, p0, Lt79;->b:Lr79;
 
-    invoke-virtual/range {v0 .. v5}, Ly79;->J(JZZZ)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    const-string v1, ")"
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

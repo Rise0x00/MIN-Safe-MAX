@@ -1,19 +1,12 @@
-.class public final Lqcc;
+.class public abstract Lqcc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static ic_row_10:I = 0x7f08077c
 
-.field public b:Lfdc;
+.field public static icon_document_24:I = 0x7f080810
 
-.field public c:J
+.field public static lock:I = 0x7f08082e
 
-.field public d:J
-
-.field public e:Le7;
-
-.field public f:Lyba;
-
-.field public g:Ls13;
+.field public static voice_to_trash:I = 0x7f08098d

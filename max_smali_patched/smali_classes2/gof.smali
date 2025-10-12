@@ -3,463 +3,190 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:Leq8;
-
-.field public final c:I
-
-.field public volatile d:Ljava/lang/Integer;
-
-.field public volatile e:Ljava/lang/Integer;
-
-.field public f:Lwwa;
-
-.field public g:Ljava/lang/Integer;
-
-.field public h:Ljava/lang/Integer;
-
-.field public i:Ljava/lang/Integer;
+# static fields
+.field public static final a:Lgof;
 
 
 # direct methods
-.method public constructor <init>(ZILeq8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgof;
 
-    iput-boolean p1, p0, Lgof;->a:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lgof;->b:Leq8;
-
-    rem-int/lit8 p1, p2, 0x10
-
-    sub-int/2addr p2, p1
-
-    const/16 p1, 0x140
-
-    const/16 p3, 0x1000
-
-    invoke-static {p2, p1, p3}, Lis8;->j(III)I
-
-    move-result p1
-
-    iput p1, p0, Lgof;->c:I
+    sput-object v0, Lgof;->a:Lgof;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lwwa;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p1
-
-    move/from16 v2, p2
-
-    iget-object v3, v0, Lgof;->d:Ljava/lang/Integer;
-
-    iget-object v4, v0, Lgof;->e:Ljava/lang/Integer;
-
-    iget v5, v0, Lgof;->c:I
-
-    if-eqz v3, :cond_0
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    :cond_2
-    :goto_0
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    const/4 v6, 0x0
-
-    if-le v3, v5, :cond_4
-
-    int-to-float v7, v5
-
-    int-to-float v3, v3
-
-    div-float/2addr v7, v3
-
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    if-lez v3, :cond_3
-
-    int-to-float v3, v3
-
-    mul-float v8, v7, v3
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v8
-
-    rem-int/lit8 v9, v8, 0x10
-
-    if-lez v9, :cond_3
-
-    sub-int v10, v8, v9
-
-    add-int/lit8 v10, v10, 0x10
-
-    sub-int v8, v10, v8
-
-    if-le v9, v8, :cond_3
-
-    int-to-float v7, v10
-
-    div-float/2addr v7, v3
-
-    :cond_3
-    int-to-float v3, v1
-
-    mul-float/2addr v3, v7
-
-    invoke-static {v3}, Litg;->z(F)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    int-to-float v8, v2
-
-    mul-float/2addr v8, v7
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    new-instance v9, Ltra;
-
-    invoke-direct {v9, v3, v8}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move v3, v4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    new-instance v9, Ltra;
-
-    invoke-direct {v9, v3, v7}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    move v3, v6
-
-    :goto_1
-    iget-object v8, v9, Ltra;->a:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Number;
-
-    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
-
-    move-result v8
-
-    iget-object v9, v9, Ltra;->b:Ljava/lang/Object;
-
-    check-cast v9, Ljava/lang/Number;
-
-    invoke-virtual {v9}, Ljava/lang/Number;->intValue()I
-
-    move-result v9
-
-    invoke-static {v8, v9}, Ljava/lang/Math;->max(II)I
-
-    move-result v10
-
-    const/16 v11, 0x140
-
-    const/4 v12, 0x2
-
-    if-ge v10, v11, :cond_5
-
-    div-int/2addr v11, v10
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->max(II)I
-
-    move-result v11
-
-    goto :goto_2
-
-    :cond_5
-    move v11, v4
-
-    :goto_2
-    if-ne v11, v4, :cond_6
-
-    move v13, v10
-
-    goto :goto_3
-
-    :cond_6
-    mul-int v13, v10, v11
-
-    :goto_3
-    invoke-static {v8, v9}, Ljava/lang/Math;->min(II)I
-
-    move-result v8
-
-    if-ne v11, v4, :cond_7
-
-    move v9, v8
-
-    goto :goto_4
-
-    :cond_7
-    mul-int v9, v8, v11
-
-    :goto_4
-    if-ge v13, v5, :cond_8
-
-    rem-int/lit8 v5, v13, 0x10
-
-    sub-int v5, v13, v5
-
-    :cond_8
-    div-int/lit8 v14, v5, 0x10
-
-    mul-int/lit8 v15, v14, 0x9
-
-    if-le v15, v9, :cond_9
-
-    invoke-static {v9, v14, v6}, Lkv0;->a(III)I
-
-    move-result v6
-
-    goto :goto_5
-
-    :cond_9
-    invoke-static {v15, v14, v9}, Lkv0;->a(III)I
-
-    move-result v6
-
-    :goto_5
-    if-ne v11, v4, :cond_a
-
-    move v10, v5
-
-    goto :goto_6
-
-    :cond_a
-    if-ne v5, v13, :cond_b
-
-    goto :goto_6
-
-    :cond_b
-    int-to-float v10, v5
-
-    int-to-float v13, v11
-
-    div-float/2addr v10, v13
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v10
-
-    :goto_6
-    if-eqz v3, :cond_c
-
-    int-to-float v10, v10
-
-    div-float/2addr v10, v7
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v10
-
-    :cond_c
-    if-ne v11, v4, :cond_d
-
-    move v8, v6
-
-    goto :goto_7
-
-    :cond_d
-    if-ne v6, v9, :cond_e
-
-    goto :goto_7
-
-    :cond_e
-    int-to-float v4, v6
-
-    int-to-float v8, v11
-
-    div-float/2addr v4, v8
-
-    invoke-static {v4}, Litg;->z(F)I
-
-    move-result v8
-
-    :goto_7
-    if-eqz v3, :cond_f
-
-    int-to-float v3, v8
-
-    div-float/2addr v3, v7
-
-    invoke-static {v3}, Litg;->z(F)I
-
-    move-result v8
-
-    :cond_f
-    if-lt v1, v2, :cond_10
-
-    sub-int/2addr v1, v10
-
-    div-int/2addr v1, v12
-
-    sub-int/2addr v2, v8
-
-    div-int/2addr v2, v12
-
-    move/from16 v16, v5
-
-    move/from16 v17, v6
-
-    move v15, v8
-
-    move v14, v10
-
-    :goto_8
-    move v12, v1
-
-    move v13, v2
-
-    goto :goto_9
-
-    :cond_10
-    sub-int/2addr v1, v8
-
-    div-int/2addr v1, v12
-
-    sub-int/2addr v2, v10
-
-    div-int/2addr v2, v12
-
-    move/from16 v17, v5
-
-    move/from16 v16, v6
-
-    move v14, v8
-
-    move v15, v10
-
-    goto :goto_8
-
-    :goto_9
-    new-instance v11, Lwwa;
-
-    iget-boolean v0, v0, Lgof;->a:Z
-
-    move/from16 v18, v0
-
-    invoke-direct/range {v11 .. v18}, Lwwa;-><init>(IIIIIIZ)V
-
-    return-object v11
-.end method
-
-.method public final b(II)Lorg/webrtc/Size;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    if-eqz p1, :cond_1
+    const/4 v0, 0x1
 
-    if-nez p2, :cond_0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgof;
+
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lgof;->a(II)Lwwa;
-
-    move-result-object p0
-
-    new-instance p1, Lorg/webrtc/Size;
-
-    iget p2, p0, Lwwa;->g:I
-
-    iget p0, p0, Lwwa;->h:I
-
-    invoke-direct {p1, p2, p0}, Lorg/webrtc/Size;-><init>(II)V
-
-    return-object p1
-
     :cond_1
+    check-cast p1, Lgof;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const p1, 0x3f333333    # 0.7f
+
+    invoke-static {p1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 p1, 0x3f400000    # 0.75f
+
+    invoke-static {p1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
     :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    sget-object v0, Lrc6;->b:Lrc6;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    sget-object v2, Lrc6;->y0:Lrc6;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const-wide/16 v3, 0x2710
+
+    invoke-static {v2, v1, v3, v4}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    const-wide/16 v2, 0x61a8
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    const/16 v2, 0x4ff
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    const/16 v2, 0x2cf
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    const v2, 0x3f333333    # 0.7f
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    const/high16 v2, 0x3f400000    # 0.75f
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v3}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    invoke-static {v2}, Lqw1;->u(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Wrong frame size: "
+    const-string v1, "TrackSelectionConfig(minFrameSize="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget-object v1, Lrc6;->b:Lrc6;
 
-    const-string p1, "x"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", maxFrameSize="
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v1, Lrc6;->y0:Lrc6;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lgof;->b:Leq8;
+    const-string v1, ", minDurationForQualityIncreaseMs=10000, maxDurationForQualityDecreaseMs=25000, minDurationToRetainAfterDiscardMs=25000, maxWidthToDiscard=1279, maxHeightToDiscard=719, bandwidthFraction=0.7, bufferedFractionToLiveEdgeForQualityIncrease=0.75, fastQualityUp=true, allowExceedsCapabilities=false, adaptationCheckpointMode="
 
-    invoke-virtual {p0, p1}, Leq8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
+    const-string v1, "DEFAULT"
 
-    return-object p0
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

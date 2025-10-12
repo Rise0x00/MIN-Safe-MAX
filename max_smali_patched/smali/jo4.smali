@@ -2,259 +2,217 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzw3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lc8c;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-.field public final synthetic e:Ljava/lang/Object;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lzw3;Ljava/util/concurrent/Executor;Lp1e;)V
-    .locals 1
+.method public constructor <init>(IILjava/lang/Class;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    .line 1
+    invoke-static {p3}, Lc8c;->a(Ljava/lang/Class;)Lc8c;
 
-    iput v0, p0, Ljo4;->a:I
+    move-result-object p3
+
+    invoke-direct {p0, p3, p1, p2}, Ljo4;-><init>(Lc8c;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lc8c;II)V
+    .locals 0
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljo4;->b:Ljava/lang/Object;
+    .line 3
+    iput-object p1, p0, Ljo4;->a:Lc8c;
 
-    iput-object p2, p0, Ljo4;->c:Ljava/lang/Object;
+    .line 4
+    iput p2, p0, Ljo4;->b:I
 
-    iput-object p3, p0, Ljo4;->d:Ljava/lang/Object;
-
-    iput-object p4, p0, Ljo4;->e:Ljava/lang/Object;
+    .line 5
+    iput p3, p0, Ljo4;->c:I
 
     return-void
 .end method
 
-.method public constructor <init>(Lko4;Locb;Llcb;Lxi0;)V
-    .locals 1
+.method public static a(Ljava/lang/Class;)Ljo4;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljo4;
 
-    iput v0, p0, Ljo4;->a:I
+    const/4 v1, 0x1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Ljo4;->e:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, p0}, Ljo4;-><init>(IILjava/lang/Class;)V
 
-    iput-object p2, p0, Ljo4;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Ljo4;->c:Ljava/lang/Object;
-
-    iput-object p4, p0, Ljo4;->d:Ljava/lang/Object;
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Ljo4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Ljo4;->d:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/Executor;
-
-    iget-object v0, p0, Ljo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/Callable;
-
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
+    instance-of v0, p1, Ljo4;
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
+    check-cast p1, Ljo4;
 
-    move-result-object v0
+    iget-object v0, p0, Ljo4;->a:Lc8c;
 
-    iget-object v1, p0, Ljo4;->c:Ljava/lang/Object;
+    iget-object v1, p1, Ljo4;->a:Lc8c;
 
-    check-cast v1, Lzw3;
+    invoke-virtual {v0, v1}, Lc8c;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Lzw3;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Ljo4;->e:Ljava/lang/Object;
+    iget v0, p0, Ljo4;->b:I
 
-    check-cast p0, Lp1e;
+    iget v1, p1, Ljo4;->b:I
 
-    iget-object p0, p0, Lp1e;->a:Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    check-cast p0, Ljo4;
+    iget v0, p0, Ljo4;->c:I
 
-    invoke-virtual {v0, p0, p1}, Lbolts/Task;->onSuccessTask(Lzw3;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    iget p1, p1, Ljo4;->c:I
 
-    move-result-object p0
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ljo4;->a:Lc8c;
+
+    invoke-virtual {v0}, Lc8c;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ljo4;->b:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Ljo4;->c:I
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Dependency{anInterface="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljo4;->a:Lc8c;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ljo4;->b:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    const-string v1, "required"
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
+    if-nez v1, :cond_1
 
-    move-result-object p0
+    const-string v1, "optional"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "set"
 
     :goto_0
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    iget-object v0, p0, Ljo4;->e:Ljava/lang/Object;
+    const-string v1, ", injection="
 
-    check-cast v0, Lko4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lko4;->d:Ljava/lang/Object;
+    iget v1, p0, Ljo4;->c:I
 
-    check-cast v0, Lko4;
+    if-eqz v1, :cond_4
 
-    iget-object v1, p0, Ljo4;->d:Ljava/lang/Object;
+    if-eq v1, v2, :cond_3
 
-    check-cast v1, Lxi0;
+    const/4 v2, 0x2
 
-    iget-object v2, p0, Ljo4;->b:Ljava/lang/Object;
+    if-ne v1, v2, :cond_2
 
-    check-cast v2, Locb;
-
-    iget-object p0, p0, Ljo4;->c:Ljava/lang/Object;
-
-    check-cast p0, Llcb;
-
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    const-string v5, "DiskCacheProducer"
-
-    if-nez v3, :cond_4
-
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
-
-    move-result-object v3
-
-    instance-of v3, v3, Ljava/util/concurrent/CancellationException;
-
-    if-eqz v3, :cond_1
+    const-string v1, "deferred"
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
-
-    move-result-object p1
-
-    invoke-interface {v2, p0, v5, p1, v4}, Locb;->d(Llcb;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, p0}, Lko4;->a(Lxi0;Llcb;)V
-
-    goto :goto_2
-
     :cond_2
-    invoke-virtual {p1}, Lbolts/Task;->getResult()Ljava/lang/Object;
+    new-instance v0, Ljava/lang/AssertionError;
 
-    move-result-object p1
+    const-string v2, "Unsupported injection: "
 
-    check-cast p1, Ll35;
+    invoke-static {v1, v2}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
 
-    if-eqz p1, :cond_3
+    move-result-object v1
 
-    invoke-virtual {p1}, Ll35;->o()I
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    move-result v0
+    throw v0
 
-    const/4 v3, 0x1
+    :cond_3
+    const-string v1, "provider"
 
-    invoke-static {v2, p0, v3, v0}, Lko4;->c(Locb;Llcb;ZI)Ljava/util/Map;
+    goto :goto_1
+
+    :cond_4
+    const-string v1, "direct"
+
+    :goto_1
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v2, p0, v5, v0}, Locb;->a(Llcb;Ljava/lang/String;Ljava/util/Map;)V
-
-    invoke-interface {v2, p0, v5, v3}, Locb;->e(Llcb;Ljava/lang/String;Z)V
-
-    check-cast p0, Lhk0;
-
-    const-string v0, "default"
-
-    const-string v2, "disk"
-
-    invoke-virtual {p0, v2, v0}, Lhk0;->h(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, p0}, Lxi0;->i(F)V
-
-    invoke-virtual {v1, v3, p1}, Lxi0;->g(ILjava/lang/Object;)V
-
-    invoke-virtual {p1}, Ll35;->close()V
-
-    goto :goto_2
-
-    :cond_3
-    const/4 p1, 0x0
-
-    invoke-static {v2, p0, p1, p1}, Lko4;->c(Locb;Llcb;ZI)Ljava/util/Map;
-
-    move-result-object p1
-
-    invoke-interface {v2, p0, v5, p1}, Locb;->a(Llcb;Ljava/lang/String;Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, p0}, Lko4;->a(Lxi0;Llcb;)V
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    invoke-interface {v2, p0, v5}, Locb;->k(Llcb;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lxi0;->c()V
-
-    :goto_2
-    return-object v4
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

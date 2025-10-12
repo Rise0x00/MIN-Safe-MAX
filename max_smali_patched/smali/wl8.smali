@@ -1,171 +1,181 @@
-.class public final Lwl8;
+.class public abstract Lwl8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgv0;
+
+
+# static fields
+.field public static final Y:Lz88;
+
 
 # instance fields
-.field public final a:Lul8;
+.field public final X:Z
+
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
-    .locals 3
-
-    .line 9
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 10
-    invoke-virtual {p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 11
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 12
-    new-instance v0, Lul8;
-
-    .line 13
-    invoke-virtual {p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPid()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getUid()I
-
-    move-result p1
-
-    invoke-direct {v0, v1, v2, p1}, Lul8;-><init>(Ljava/lang/String;II)V
-
-    .line 14
-    iput-object v0, p0, Lwl8;->a:Lul8;
-
-    return-void
-
-    .line 15
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "packageName should be nonempty"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 16
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "package shouldn\'t be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method static constructor <clinit>()V
     .locals 2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvl8;
 
-    if-eqz p1, :cond_1
+    invoke-direct {v0}, Lvl8;-><init>()V
 
-    .line 2
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0}, Lvl8;->a()Lyl8;
 
-    move-result v0
+    new-instance v0, Lz88;
 
-    if-nez v0, :cond_0
+    const/16 v1, 0x1a
 
-    .line 3
-    new-instance v0, Lul8;
+    invoke-direct {v0, v1}, Lz88;-><init>(I)V
 
-    .line 4
-    invoke-direct {v0, p1, p2, p3}, Lul8;-><init>(Ljava/lang/String;II)V
-
-    .line 5
-    new-instance v1, Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    invoke-direct {v1, p1, p2, p3}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
-
-    .line 6
-    iput-object v0, p0, Lwl8;->a:Lul8;
+    sput-object v0, Lwl8;->Y:Lz88;
 
     return-void
+.end method
 
-    .line 7
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Lvl8;)V
+    .locals 2
 
-    const-string p1, "packageName should be nonempty"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p1, Lvl8;->a:J
 
-    throw p0
+    iput-wide v0, p0, Lwl8;->a:J
 
-    .line 8
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    iget-wide v0, p1, Lvl8;->b:J
 
-    const-string p1, "package shouldn\'t be null"
+    iput-wide v0, p0, Lwl8;->b:J
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iget-boolean v0, p1, Lvl8;->c:Z
 
-    throw p0
+    iput-boolean v0, p0, Lwl8;->c:Z
+
+    iget-boolean v0, p1, Lvl8;->d:Z
+
+    iput-boolean v0, p0, Lwl8;->o:Z
+
+    iget-boolean p1, p1, Lvl8;->e:Z
+
+    iput-boolean p1, p0, Lwl8;->X:Z
+
+    return-void
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lwl8;
+    instance-of v1, p1, Lwl8;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p0, 0x0
+    if-nez v1, :cond_1
 
-    return p0
+    return v2
 
     :cond_1
     check-cast p1, Lwl8;
 
-    iget-object p1, p1, Lwl8;->a:Lul8;
+    iget-wide v3, p0, Lwl8;->a:J
 
-    iget-object p0, p0, Lwl8;->a:Lul8;
+    iget-wide v5, p1, Lwl8;->a:J
 
-    invoke-virtual {p0, p1}, Lul8;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p0
+    if-nez v1, :cond_2
 
-    return p0
+    iget-wide v3, p0, Lwl8;->b:J
+
+    iget-wide v5, p1, Lwl8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Lwl8;->c:Z
+
+    iget-boolean v3, p1, Lwl8;->c:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lwl8;->o:Z
+
+    iget-boolean v3, p1, Lwl8;->o:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lwl8;->X:Z
+
+    iget-boolean p1, p1, Lwl8;->X:Z
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 5
 
-    iget-object p0, p0, Lwl8;->a:Lul8;
+    iget-wide v0, p0, Lwl8;->a:J
 
-    invoke-virtual {p0}, Lul8;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result p0
+    ushr-long v3, v0, v2
 
-    return p0
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Lwl8;->b:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lwl8;->c:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lwl8;->o:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lwl8;->X:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

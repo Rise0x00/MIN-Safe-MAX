@@ -1,368 +1,282 @@
 .class public final Lujg;
-.super Lc7;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lnt8;
+.implements Llf6;
 
 
 # instance fields
-.field public X:Lplg;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Ljava/lang/ref/WeakReference;
-
-.field public final synthetic Z:Lvjg;
-
-.field public final c:Landroid/content/Context;
-
-.field public final o:Lpt8;
+.field public final synthetic Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
 
 # direct methods
-.method public constructor <init>(Lvjg;Landroid/content/Context;Lplg;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/video/VideoViewerWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lujg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-    iput-object p1, p0, Lujg;->Z:Lvjg;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lujg;->c:Landroid/content/Context;
-
-    iput-object p3, p0, Lujg;->X:Lplg;
-
-    new-instance p1, Lpt8;
-
-    invoke-direct {p1, p2}, Lpt8;-><init>(Landroid/content/Context;)V
-
-    const/4 p2, 0x1
-
-    iput p2, p1, Lpt8;->r0:I
-
-    iput-object p1, p0, Lujg;->o:Lpt8;
-
-    iput-object p0, p1, Lpt8;->X:Lnt8;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    iget-object v0, p0, Lujg;->Z:Lvjg;
-
-    iget-object v1, v0, Lvjg;->o:Lujg;
-
-    if-eq v1, p0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-boolean v1, v0, Lvjg;->v:Z
-
-    if-eqz v1, :cond_1
-
-    iput-object p0, v0, Lvjg;->p:Lujg;
-
-    iget-object v1, p0, Lujg;->X:Lplg;
-
-    iput-object v1, v0, Lvjg;->q:Lplg;
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lujg;->X:Lplg;
-
-    invoke-virtual {v1, p0}, Lplg;->B(Lc7;)V
-
-    :goto_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lujg;->X:Lplg;
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Lvjg;->Z(Z)V
-
-    iget-object p0, v0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/ActionBarContextView;->t0:Landroid/view/View;
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->e()V
-
-    :cond_2
-    iget-object p0, v0, Lvjg;->i:Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    iget-boolean v2, v0, Lvjg;->A:Z
-
-    invoke-virtual {p0, v2}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setHideOnContentScrollEnabled(Z)V
-
-    iput-object v1, v0, Lvjg;->o:Lujg;
-
-    return-void
-.end method
-
-.method public final b()Landroid/view/View;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lujg;->Y:Ljava/lang/ref/WeakReference;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lujg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    check-cast p1, Lujg;
 
-    check-cast p0, Landroid/view/View;
+    sget-object p2, Loyf;->a:Loyf;
 
-    return-object p0
+    invoke-virtual {p1, p2}, Lujg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object p2
 .end method
 
-.method public final c()Lpt8;
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object p0, p0, Lujg;->o:Lpt8;
+    new-instance v0, Lujg;
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lujg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-.method public final d()Landroid/view/MenuInflater;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Lujg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/video/VideoViewerWidget;)V
 
-    new-instance v0, Lshe;
-
-    iget-object p0, p0, Lujg;->c:Landroid/content/Context;
-
-    invoke-direct {v0, p0}, Lshe;-><init>(Landroid/content/Context;)V
+    iput-object p1, v0, Lujg;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final e()Ljava/lang/CharSequence;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget-object p0, p0, Lujg;->Z:Lvjg;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object p1, p0, Lujg;->X:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getSubtitle()Ljava/lang/CharSequence;
+    check-cast p1, Lpl2;
 
-    move-result-object p0
+    iget-object v0, p0, Lujg;->Y:Lone/me/chatmedia/viewer/video/VideoViewerWidget;
 
-    return-object p0
-.end method
+    iget-object v1, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->a:Ljava/lang/String;
 
-.method public final f(Lpt8;Landroid/view/MenuItem;)Z
-    .locals 0
+    sget-object v2, Lox9;->j:Lqpa;
 
-    iget-object p1, p0, Lujg;->X:Lplg;
+    const/4 v3, 0x1
 
-    if-eqz p1, :cond_0
+    if-nez v2, :cond_0
 
-    iget-object p1, p1, Lplg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lrlg;
-
-    invoke-virtual {p1, p0, p2}, Lrlg;->s(Lc7;Landroid/view/MenuItem;)Z
-
-    move-result p0
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    sget-object v4, Ly38;->o:Ly38;
 
-    return p0
-.end method
+    invoke-virtual {v2, v4}, Lqpa;->b(Ly38;)Z
 
-.method public final g()Ljava/lang/CharSequence;
-    .locals 0
+    move-result v5
 
-    iget-object p0, p0, Lujg;->Z:Lvjg;
+    if-eqz v5, :cond_2
 
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
+    iget-object v5, p1, Lpl2;->b:Lq8g;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActionBarContextView;->getTitle()Ljava/lang/CharSequence;
+    if-eqz v5, :cond_1
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final h()V
-    .locals 2
-
-    iget-object v0, p0, Lujg;->Z:Lvjg;
-
-    iget-object v0, v0, Lvjg;->o:Lujg;
-
-    if-eq v0, p0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lujg;->o:Lpt8;
-
-    invoke-virtual {v0}, Lpt8;->w()V
-
-    :try_start_0
-    iget-object v1, p0, Lujg;->X:Lplg;
-
-    invoke-virtual {v1, p0, v0}, Lplg;->G(Lc7;Landroid/view/Menu;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Lpt8;->v()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0}, Lpt8;->v()V
-
-    throw p0
-.end method
-
-.method public final i()Z
-    .locals 0
-
-    iget-object p0, p0, Lujg;->Z:Lvjg;
-
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-boolean p0, p0, Landroidx/appcompat/widget/ActionBarContextView;->B0:Z
-
-    return p0
-.end method
-
-.method public final j(Landroid/view/View;)V
-    .locals 1
-
-    iget-object v0, p0, Lujg;->Z:Lvjg;
-
-    iget-object v0, v0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setCustomView(Landroid/view/View;)V
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lujg;->Y:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public final k(I)V
-    .locals 1
-
-    iget-object v0, p0, Lujg;->Z:Lvjg;
-
-    iget-object v0, v0, Lvjg;->g:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lujg;->l(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final l(Ljava/lang/CharSequence;)V
-    .locals 0
-
-    iget-object p0, p0, Lujg;->Z:Lvjg;
-
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final m(I)V
-    .locals 1
-
-    iget-object v0, p0, Lujg;->Z:Lvjg;
-
-    iget-object v0, v0, Lvjg;->g:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lujg;->n(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final n(Ljava/lang/CharSequence;)V
-    .locals 0
-
-    iget-object p0, p0, Lujg;->Z:Lvjg;
-
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setTitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final o(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lc7;->b:Z
-
-    iget-object p0, p0, Lujg;->Z:Lvjg;
-
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setTitleOptional(Z)V
-
-    return-void
-.end method
-
-.method public final w(Lpt8;)V
-    .locals 0
-
-    iget-object p1, p0, Lujg;->X:Lplg;
-
-    if-nez p1, :cond_0
+    move v5, v3
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Lujg;->h()V
-
-    iget-object p0, p0, Lujg;->Z:Lvjg;
-
-    iget-object p0, p0, Lvjg;->l:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-object p0, p0, Landroidx/appcompat/widget/ActionBarContextView;->o:Ly6;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Ly6;->l()Z
-
     :cond_1
+    const/4 v5, 0x0
+
     :goto_0
-    return-void
+    iget-object v6, p1, Lpl2;->a:Lqm8;
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->C0()J
+
+    move-result-wide v7
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->B0()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    const-string v11, "Media viewer. Video page state changed, \n                        |hasContent:"
+
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", \n                        |item:"
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", curMsgId:"
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", \n                        |curAttachId:"
+
+    invoke-static {v7, v8, v5, v9, v10}, Lvl3;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v5, "\n                        |"
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lzxe;->O(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v2, v4, v1, v5, v6}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    iget-object v1, p1, Lpl2;->a:Lqm8;
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1}, Lqm8;->j()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->C0()J
+
+    move-result-wide v4
+
+    cmp-long v1, v1, v4
+
+    if-nez v1, :cond_6
+
+    iget-object v1, p1, Lpl2;->a:Lqm8;
+
+    invoke-interface {v1}, Lqm8;->w()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->B0()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v1, p1, Lpl2;->b:Lq8g;
+
+    if-eqz v1, :cond_6
+
+    iput-object v1, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->x0:Lq8g;
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->D0()Ltjg;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    check-cast v1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->P0()Llhg;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    iget-object p1, p1, Lpl2;->b:Lq8g;
+
+    invoke-interface {v1, p1, v3}, Llhg;->t0(Lq8g;I)V
+
+    iget-object p1, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->b:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llm5;
+
+    check-cast p1, Lnm5;
+
+    invoke-virtual {p1}, Lnm5;->o()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->F0()Lqjg;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    new-instance p1, Lwm6;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v1, v2}, Lwm6;-><init>(Ljava/lang/Object;Llhg;I)V
+
+    invoke-interface {v1, p1}, Llhg;->W(Lkhg;)V
+
+    :cond_4
+    iget-object p1, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->b:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llm5;
+
+    check-cast p1, Lnm5;
+
+    invoke-virtual {p1}, Lnm5;->o()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    iget-object p1, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->w0:Lv5d;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Lv5d;->a()V
+
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->F0()Lqjg;
+
+    move-result-object p1
+
+    iget-object v0, v0, Lone/me/chatmedia/viewer/video/VideoViewerWidget;->y0:Lose;
+
+    invoke-virtual {p1, v0}, Lqjg;->a(Ljjg;)V
+
+    :cond_6
+    :goto_2
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

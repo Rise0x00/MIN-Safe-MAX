@@ -1,26 +1,24 @@
 .class public final Lg26;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lf96;
+.field public final synthetic X:Lo26;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lf96;)V
+.method public constructor <init>(Lo26;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lg26;->Y:Lf96;
+    iput-object p1, p0, Lg26;->X:Lo26;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,49 +28,69 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Le34;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lg26;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lg26;
+    check-cast p1, Lg26;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lg26;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lg26;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    new-instance v0, Lg26;
+    new-instance p1, Lg26;
 
-    iget-object p0, p0, Lg26;->Y:Lf96;
+    iget-object v0, p0, Lg26;->X:Lo26;
 
-    invoke-direct {v0, p2, p0}, Lg26;-><init>(Lkotlin/coroutines/Continuation;Lf96;)V
+    invoke-direct {p1, v0, p2}, Lg26;-><init>(Lo26;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lg26;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lg26;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lg26;->X:Lo26;
 
-    check-cast p1, Lep9;
+    iget-object p1, p1, Lo26;->x0:Lbp7;
 
-    iget-object p0, p0, Lg26;->Y:Lf96;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-interface {p0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    check-cast p1, Lava;
 
-    return-object p0
+    sget v0, Lt9d;->m3:I
+
+    new-instance v1, Ljef;
+
+    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lava;->g(Loef;)V
+
+    sget v0, Lt9d;->l3:I
+
+    new-instance v1, Ljef;
+
+    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lava;->a(Loef;)V
+
+    invoke-virtual {p1}, Lava;->i()Lzua;
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

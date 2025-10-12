@@ -1,51 +1,34 @@
-.class public final Lqff;
-.super Lax3;
+.class public final synthetic Lqff;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-.field public n0:I
-
-.field public o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+.field public final synthetic a:Llf6;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lax3;)V
+.method public synthetic constructor <init>(Llf6;)V
     .locals 0
 
-    iput-object p1, p0, Lqff;->Z:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqff;->a:Llf6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onFrame(II)V
     .locals 1
 
-    iput-object p1, p0, Lqff;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lqff;->a:Llf6;
 
-    iget p1, p0, Lqff;->n0:I
+    invoke-static {v0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Llf6;II)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lqff;->n0:I
-
-    iget-object p1, p0, Lqff;->Z:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->k(Lax3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

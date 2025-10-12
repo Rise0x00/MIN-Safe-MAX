@@ -1,23 +1,51 @@
 .class public final Lby5;
-.super Lt2;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lby5;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Luw5;
+
+.field public Z:I
+
+.field public o:Luw5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Luw5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lby5;
+    iput-object p1, p0, Lby5;->Y:Luw5;
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
-
-    sput-object v0, Lby5;->c:Lby5;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lby5;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lby5;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lby5;->Z:I
+
+    iget-object p1, p0, Lby5;->Y:Luw5;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Luw5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,107 +1,74 @@
-.class public final synthetic Lhle;
+.class public final Lhle;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lkotlin/coroutines/Continuation;
+.implements Lg34;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lkotlin/coroutines/Continuation;
 
-.field public final synthetic b:Ljle;
+.field public final b:Lw24;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljle;I)V
+.method public constructor <init>(Lw24;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lhle;->a:I
-
-    iput-object p1, p0, Lhle;->b:Ljle;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lhle;->a:Lkotlin/coroutines/Continuation;
+
+    iput-object p1, p0, Lhle;->b:Lw24;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final getCallerFrame()Lg34;
+    .locals 2
 
-    iget v0, p0, Lhle;->a:I
+    iget-object v0, p0, Lhle;->a:Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lhle;->b:Ljle;
+    instance-of v1, v0, Lg34;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v1, :cond_0
 
-    iget-object v0, p0, Ljle;->f:Ljxg;
+    check-cast v0, Lg34;
 
-    const-string v1, "Need to call openCaptureSession before using this API."
+    return-object v0
 
-    invoke-static {v0, v1}, Lcr0;->i(Ljava/lang/Object;Ljava/lang/String;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Ljle;->b:Lny5;
+    return-object v0
+.end method
 
-    iget-object v1, v0, Lny5;->b:Ljava/lang/Object;
+.method public final getContext()Lw24;
+    .locals 1
 
-    monitor-enter v1
+    iget-object v0, p0, Lhle;->b:Lw24;
 
-    :try_start_0
-    iget-object v0, v0, Lny5;->d:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v0, Ljava/util/LinkedHashSet;
+.method public final getStackTraceElement()Ljava/lang/StackTraceElement;
+    .locals 1
 
-    invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Ljle;->f:Ljxg;
+.method public final resumeWith(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, v0, Ljxg;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lhle;->a:Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lr9b;
-
-    iget-object v0, v0, Lr9b;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
-
-    iget-object v0, p0, Ljle;->c:Load;
-
-    new-instance v1, Lhle;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lhle;-><init>(Ljle;I)V
-
-    invoke-virtual {v0, v1}, Load;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :pswitch_0
-    invoke-virtual {p0, p0}, Ljle;->g(Ljle;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

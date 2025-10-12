@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwn1;
+.implements Ljo1;
 
 
 # instance fields
@@ -23,28 +23,28 @@
 
 
 # virtual methods
-.method public final f()V
-    .locals 1
+.method public final h()V
+    .locals 2
 
-    iget-object p0, p0, Lv91;->a:Laa1;
+    iget-object v0, p0, Lv91;->a:Laa1;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Laa1;->h(Z)V
+    invoke-virtual {v0, v1}, Laa1;->h(Z)V
 
     return-void
 .end method
 
-.method public final h()V
-    .locals 1
+.method public final j()V
+    .locals 2
 
-    iget-object p0, p0, Lv91;->a:Laa1;
+    iget-object v0, p0, Lv91;->a:Laa1;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput-boolean v0, p0, Laa1;->q0:Z
+    iput-boolean v1, v0, Laa1;->A0:Z
 
-    invoke-virtual {p0, v0}, Laa1;->f(Z)V
+    invoke-virtual {v0, v1}, Laa1;->f(Z)V
 
     return-void
 .end method

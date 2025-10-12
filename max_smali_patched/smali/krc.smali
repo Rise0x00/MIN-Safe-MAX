@@ -1,52 +1,34 @@
 .class public final Lkrc;
-.super Ljrc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lapg;
+
+
+# instance fields
+.field public final a:Lz12;
+
+
+# direct methods
+.method public constructor <init>(Lz12;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkrc;->a:Lz12;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 2
+.method public final a(Lkotlinx/coroutines/internal/Segment;I)V
+    .locals 1
 
-    invoke-static {}, Lz76;->t()Ly76;
+    iget-object v0, p0, Lkrc;->a:Lz12;
 
-    iget-boolean v0, p0, Ljrc;->b:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Ljrc;->c:Z
-
-    if-nez v0, :cond_1
-
-    iget v0, p0, Ljrc;->o:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1}, Ljrc;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lz76;->t()Ly76;
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Ljrc;->f()V
-
-    invoke-virtual {p0}, Ljrc;->d()V
-
-    iget-object v0, p0, Ljrc;->X:Landroid/graphics/Path;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    invoke-super {p0, p1}, Ljrc;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lz76;->t()Ly76;
+    invoke-virtual {v0, p1, p2}, Lz12;->a(Lkotlinx/coroutines/internal/Segment;I)V
 
     return-void
 .end method

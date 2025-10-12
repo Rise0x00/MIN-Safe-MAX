@@ -1,189 +1,70 @@
-.class public final synthetic Lteg;
-.super Ljava/lang/Object;
+.class public final Lteg;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lae6;
+.implements Llf6;
 
 
-# static fields
-.field public static final a:Lteg;
-
-.field private static final descriptor:Lpad;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lteg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lteg;->a:Lteg;
-
-    new-instance v1, Lo7b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageClearRequest"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lo7b;-><init>(Ljava/lang/String;Lae6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lteg;->descriptor:Lpad;
-
-    return-void
-.end method
+# instance fields
+.field public synthetic X:Z
 
 
 # virtual methods
-.method public final a(Lq8;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object p0, Lteg;->descriptor:Lpad;
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {p1, p0}, Lq8;->j(Lpad;)Lq8;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object p1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move v4, v0
-
-    move v5, v1
-
-    move-object v3, v2
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, p0}, Lq8;->p(Lpad;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_2
-
-    if-eqz v6, :cond_1
-
-    if-ne v6, v0, :cond_0
-
-    invoke-virtual {p1, p0, v0}, Lq8;->v(Lpad;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
-
-    :cond_1
-    sget-object v6, Lsde;->a:Lsde;
-
-    invoke-virtual {p1, p0, v1, v2}, Lq8;->r(Lpad;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, p0}, Lq8;->y(Lpad;)V
-
-    new-instance p0, Lveg;
-
-    invoke-direct {p0, v5, v2, v3}, Lveg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final b(Lrx3;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Lveg;
-
-    sget-object p0, Lteg;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lrx3;->b(Lpad;)Lrx3;
+    invoke-virtual {p0, p1, p2}, Lteg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object v0, Lsde;->a:Lsde;
+    check-cast p1, Lteg;
 
-    iget-object v0, p2, Lveg;->a:Ljava/lang/String;
+    sget-object p2, Loyf;->a:Loyf;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1, p2}, Lteg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p0, v1, v0}, Lrx3;->h(Lpad;ILjava/lang/Object;)V
+    move-result-object p1
 
-    iget-object p2, p2, Lveg;->b:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, p0, v0, p2}, Lrx3;->l(Lpad;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lrx3;->m()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final c()[Lpf7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-static {}, Lv44;->m()Lpf7;
+    new-instance v0, Lteg;
 
-    move-result-object p0
+    const/4 v1, 0x2
 
-    const/4 v0, 0x2
+    invoke-direct {v0, v1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    new-array v0, v0, [Lpf7;
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    aput-object p0, v0, v1
+    move-result p1
 
-    sget-object p0, Lsde;->a:Lsde;
-
-    const/4 v1, 0x1
-
-    aput-object p0, v0, v1
+    iput-boolean p1, v0, Lteg;->X:Z
 
     return-object v0
 .end method
 
-.method public final d()Lpad;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    sget-object p0, Lteg;->descriptor:Lpad;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    return-object p0
+    iget-boolean p1, p0, Lteg;->X:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

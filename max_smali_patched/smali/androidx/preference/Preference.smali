@@ -22,7 +22,7 @@
 
 .field public final Y:Ljava/lang/Object;
 
-.field public Z:Lp9b;
+.field public Z:Lpob;
 
 .field public final a:Landroid/content/Context;
 
@@ -38,11 +38,11 @@
     .locals 2
 
     .line 72
-    sget v0, Lqvb;->preferenceStyle:I
+    sget v0, Ltac;->preferenceStyle:I
 
     const v1, 0x101008e
 
-    invoke-static {v0, v1, p1}, Lx28;->h(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Lid7;->p(IILandroid/content/Context;)I
 
     move-result v0
 
@@ -67,7 +67,7 @@
     iput-object p1, p0, Landroidx/preference/Preference;->a:Landroid/content/Context;
 
     .line 4
-    sget-object v1, Ld6c;->Preference:[I
+    sget-object v1, Lklc;->Preference:[I
 
     const/4 v2, 0x0
 
@@ -76,9 +76,9 @@
     move-result-object p1
 
     .line 5
-    sget p2, Ld6c;->Preference_icon:I
+    sget p2, Lklc;->Preference_icon:I
 
-    sget p3, Ld6c;->Preference_android_icon:I
+    sget p3, Lklc;->Preference_android_icon:I
 
     .line 6
     invoke-virtual {p1, p3, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -89,9 +89,9 @@
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     .line 8
-    sget p2, Ld6c;->Preference_key:I
+    sget p2, Lklc;->Preference_key:I
 
-    sget p3, Ld6c;->Preference_android_key:I
+    sget p3, Lklc;->Preference_android_key:I
 
     .line 9
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -110,9 +110,9 @@
     iput-object p2, p0, Landroidx/preference/Preference;->X:Ljava/lang/String;
 
     .line 12
-    sget p2, Ld6c;->Preference_title:I
+    sget p2, Lklc;->Preference_title:I
 
-    sget p3, Ld6c;->Preference_android_title:I
+    sget p3, Lklc;->Preference_android_title:I
 
     .line 13
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -131,9 +131,9 @@
     iput-object p2, p0, Landroidx/preference/Preference;->c:Ljava/lang/CharSequence;
 
     .line 16
-    sget p2, Ld6c;->Preference_summary:I
+    sget p2, Lklc;->Preference_summary:I
 
-    sget p3, Ld6c;->Preference_android_summary:I
+    sget p3, Lklc;->Preference_android_summary:I
 
     .line 17
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getText(I)Ljava/lang/CharSequence;
@@ -152,9 +152,9 @@
     iput-object p2, p0, Landroidx/preference/Preference;->o:Ljava/lang/CharSequence;
 
     .line 20
-    sget p2, Ld6c;->Preference_order:I
+    sget p2, Lklc;->Preference_order:I
 
-    sget p3, Ld6c;->Preference_android_order:I
+    sget p3, Lklc;->Preference_android_order:I
 
     .line 21
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getInt(II)I
@@ -170,9 +170,9 @@
     iput p2, p0, Landroidx/preference/Preference;->b:I
 
     .line 24
-    sget p2, Ld6c;->Preference_fragment:I
+    sget p2, Lklc;->Preference_fragment:I
 
-    sget p3, Ld6c;->Preference_android_fragment:I
+    sget p3, Lklc;->Preference_android_fragment:I
 
     .line 25
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -186,11 +186,11 @@
 
     .line 27
     :cond_3
-    sget p2, Ld6c;->Preference_layout:I
+    sget p2, Lklc;->Preference_layout:I
 
-    sget p3, Ld6c;->Preference_android_layout:I
+    sget p3, Lklc;->Preference_android_layout:I
 
-    sget v0, Ly1c;->preference:I
+    sget v0, Lbhc;->preference:I
 
     .line 28
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -201,9 +201,9 @@
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     .line 30
-    sget p2, Ld6c;->Preference_widgetLayout:I
+    sget p2, Lklc;->Preference_widgetLayout:I
 
-    sget p3, Ld6c;->Preference_android_widgetLayout:I
+    sget p3, Lklc;->Preference_android_widgetLayout:I
 
     .line 31
     invoke-virtual {p1, p3, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
@@ -214,9 +214,9 @@
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     .line 33
-    sget p2, Ld6c;->Preference_enabled:I
+    sget p2, Lklc;->Preference_enabled:I
 
-    sget p3, Ld6c;->Preference_android_enabled:I
+    sget p3, Lklc;->Preference_android_enabled:I
 
     const/4 v0, 0x1
 
@@ -229,9 +229,9 @@
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 36
-    sget p2, Ld6c;->Preference_selectable:I
+    sget p2, Lklc;->Preference_selectable:I
 
-    sget p3, Ld6c;->Preference_android_selectable:I
+    sget p3, Lklc;->Preference_android_selectable:I
 
     .line 37
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -244,9 +244,9 @@
     move-result p2
 
     .line 39
-    sget p3, Ld6c;->Preference_persistent:I
+    sget p3, Lklc;->Preference_persistent:I
 
-    sget v1, Ld6c;->Preference_android_persistent:I
+    sget v1, Lklc;->Preference_android_persistent:I
 
     .line 40
     invoke-virtual {p1, v1, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -257,9 +257,9 @@
     invoke-virtual {p1, p3, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 42
-    sget p3, Ld6c;->Preference_dependency:I
+    sget p3, Lklc;->Preference_dependency:I
 
-    sget v1, Ld6c;->Preference_android_dependency:I
+    sget v1, Lklc;->Preference_android_dependency:I
 
     .line 43
     invoke-virtual {p1, p3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
@@ -273,7 +273,7 @@
 
     .line 45
     :cond_4
-    sget p3, Ld6c;->Preference_allowDividerAbove:I
+    sget p3, Lklc;->Preference_allowDividerAbove:I
 
     .line 46
     invoke-virtual {p1, p3, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -284,7 +284,7 @@
     invoke-virtual {p1, p3, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 48
-    sget p3, Ld6c;->Preference_allowDividerBelow:I
+    sget p3, Lklc;->Preference_allowDividerBelow:I
 
     .line 49
     invoke-virtual {p1, p3, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
@@ -295,7 +295,7 @@
     invoke-virtual {p1, p3, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 51
-    sget p2, Ld6c;->Preference_defaultValue:I
+    sget p2, Lklc;->Preference_defaultValue:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -304,7 +304,7 @@
     if-eqz p2, :cond_5
 
     .line 52
-    sget p2, Ld6c;->Preference_defaultValue:I
+    sget p2, Lklc;->Preference_defaultValue:I
 
     invoke-virtual {p0, p1, p2}, Landroidx/preference/Preference;->c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
 
@@ -316,7 +316,7 @@
 
     .line 53
     :cond_5
-    sget p2, Ld6c;->Preference_android_defaultValue:I
+    sget p2, Lklc;->Preference_android_defaultValue:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -325,7 +325,7 @@
     if-eqz p2, :cond_6
 
     .line 54
-    sget p2, Ld6c;->Preference_android_defaultValue:I
+    sget p2, Lklc;->Preference_android_defaultValue:I
 
     invoke-virtual {p0, p1, p2}, Landroidx/preference/Preference;->c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
 
@@ -336,75 +336,75 @@
     .line 55
     :cond_6
     :goto_0
-    sget p0, Ld6c;->Preference_shouldDisableView:I
+    sget p2, Lklc;->Preference_shouldDisableView:I
 
-    sget p2, Ld6c;->Preference_android_shouldDisableView:I
+    sget p3, Lklc;->Preference_android_shouldDisableView:I
 
     .line 56
-    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p2
+    move-result p3
 
     .line 57
-    invoke-virtual {p1, p0, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 58
-    sget p0, Ld6c;->Preference_singleLineTitle:I
+    sget p2, Lklc;->Preference_singleLineTitle:I
 
-    invoke-virtual {p1, p0}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    .line 59
-    sget p0, Ld6c;->Preference_singleLineTitle:I
-
-    sget p2, Ld6c;->Preference_android_singleLineTitle:I
-
-    .line 60
-    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result p2
 
+    if-eqz p2, :cond_7
+
+    .line 59
+    sget p2, Lklc;->Preference_singleLineTitle:I
+
+    sget p3, Lklc;->Preference_android_singleLineTitle:I
+
+    .line 60
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p3
+
     .line 61
-    invoke-virtual {p1, p0, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 62
     :cond_7
-    sget p0, Ld6c;->Preference_iconSpaceReserved:I
+    sget p2, Lklc;->Preference_iconSpaceReserved:I
 
-    sget p2, Ld6c;->Preference_android_iconSpaceReserved:I
+    sget p3, Lklc;->Preference_android_iconSpaceReserved:I
 
     .line 63
-    invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p3, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p2
+    move-result p3
 
     .line 64
-    invoke-virtual {p1, p0, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 65
-    sget p0, Ld6c;->Preference_isPreferenceVisible:I
+    sget p2, Lklc;->Preference_isPreferenceVisible:I
 
     .line 66
-    invoke-virtual {p1, p0, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p2
+    move-result p3
 
     .line 67
-    invoke-virtual {p1, p0, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 68
-    sget p0, Ld6c;->Preference_enableCopying:I
+    sget p2, Lklc;->Preference_enableCopying:I
 
     .line 69
-    invoke-virtual {p1, p0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p2
+    move-result p3
 
     .line 70
-    invoke-virtual {p1, p0, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     .line 71
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -417,20 +417,20 @@
 .method public a()Ljava/lang/CharSequence;
     .locals 1
 
-    iget-object v0, p0, Landroidx/preference/Preference;->Z:Lp9b;
+    iget-object v0, p0, Landroidx/preference/Preference;->Z:Lpob;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0}, Lp9b;->b(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
+    invoke-interface {v0, p0}, Lpob;->a(Landroidx/preference/Preference;)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    iget-object p0, p0, Landroidx/preference/Preference;->o:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/Preference;->o:Ljava/lang/CharSequence;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public b()V
@@ -442,9 +442,9 @@
 .method public c(Landroid/content/res/TypedArray;I)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final compareTo(Ljava/lang/Object;)I
@@ -465,42 +465,42 @@
     return v1
 
     :cond_0
-    iget-object p0, p0, Landroidx/preference/Preference;->c:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroidx/preference/Preference;->c:Ljava/lang/CharSequence;
 
-    if-ne p0, p1, :cond_1
+    if-ne v0, p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_2
     if-nez p1, :cond_3
 
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 
     :cond_3
-    invoke-interface {p0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -527,37 +527,37 @@
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/Preference;->a()Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result p0
+    move-result v1
 
-    if-lez p0, :cond_2
+    if-lez v1, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result p0
+    move-result v1
 
-    add-int/lit8 p0, p0, -0x1
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->setLength(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

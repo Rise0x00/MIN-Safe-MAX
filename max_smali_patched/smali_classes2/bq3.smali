@@ -1,65 +1,106 @@
 .class public final Lbq3;
-.super Lhj0;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final b:I
+.field public final synthetic X:Lfq3;
 
-.field public final c:Ljava/lang/Object;
+.field public final synthetic Y:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IJLjava/util/List;)V
+.method public constructor <init>(Lfq3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Lhj0;-><init>(J)V
+    iput-object p1, p0, Lbq3;->X:Lfq3;
 
-    iput p1, p0, Lbq3;->b:I
+    iput-object p2, p0, Lbq3;->Y:Ljava/lang/String;
 
-    iput-object p4, p0, Lbq3;->c:Ljava/lang/Object;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbq3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbq3;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lbq3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lbq3;
 
-    const-string v1, "ContactListEvent{status="
+    iget-object v0, p0, Lbq3;->X:Lfq3;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lbq3;->Y:Ljava/lang/String;
 
-    sget-object v1, Lht3;->a:Lht3;
+    invoke-direct {p1, v0, v1, p2}, Lbq3;-><init>(Lfq3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ", from="
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget v1, p0, Lbq3;->b:I
+    iget-object p1, p0, Lbq3;->X:Lfq3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v0, p1, Lfq3;->p:Ljava/util/concurrent/atomic/AtomicLong;
 
-    const-string v1, ", count=40, contactIds="
+    iget-object p1, p1, Lfq3;->l:Lbp7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object p0, p0, Lbq3;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object v1, p1
 
-    const/16 p0, 0x7d
+    check-cast v1, Ltk;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v7, p0, Lbq3;->Y:Ljava/lang/String;
 
-    move-result-object p0
+    const/4 v2, 0x0
 
-    return-object p0
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v1 .. v7}, Ltk;->b(Ltk;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lf10;Ljava/lang/String;Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

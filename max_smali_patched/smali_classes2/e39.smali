@@ -1,128 +1,51 @@
 .class public final Le39;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lbq5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lbq5;
+.field public final synthetic Y:Lf39;
 
-.field public final synthetic c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public Z:I
+
+.field public o:Lf39;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljbc;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+.method public constructor <init>(Lf39;Lnz3;)V
     .locals 0
 
-    iput p3, p0, Le39;->a:I
+    iput-object p1, p0, Le39;->Y:Lf39;
 
-    iput-object p1, p0, Le39;->b:Lbq5;
-
-    iput-object p2, p0, Le39;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Le39;->a:I
+    iput-object p1, p0, Le39;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Le39;->Z:I
 
-    new-instance v0, Ld39;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Le39;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x2
+    iput p1, p0, Le39;->Z:I
 
-    invoke-direct {v0, p1, v1, v2}, Ld39;-><init>(Ldq5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+    iget-object p1, p0, Le39;->Y:Lf39;
 
-    iget-object p0, p0, Le39;->b:Lbq5;
+    const/4 v0, 0x0
 
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lf39;->e(Ljava/util/Set;Lnz3;)Ljava/io/Serializable;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    :goto_0
-    return-object p0
-
-    :pswitch_0
-    new-instance v0, Ld39;
-
-    iget-object v1, p0, Le39;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v1, v2}, Ld39;-><init>(Ldq5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p0, p0, Le39;->b:Lbq5;
-
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    :goto_1
-    return-object p0
-
-    :pswitch_1
-    new-instance v0, Ld39;
-
-    iget-object v1, p0, Le39;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Ld39;-><init>(Ldq5;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-
-    iget-object p0, p0, Le39;->b:Lbq5;
-
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    :goto_2
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

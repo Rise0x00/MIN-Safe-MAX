@@ -1,20 +1,20 @@
 .class public Lcom/facebook/imagepipeline/memory/NativeMemoryChunkPool;
-.super Lit8;
+.super Lg19;
 .source "SourceFile"
 
 
 # annotations
-.annotation build Laq4;
+.annotation build Lit4;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Llt8;Ly7b;Lz7b;)V
+.method public constructor <init>(Lj19;Lxmb;Lymb;)V
     .locals 0
-    .annotation build Laq4;
+    .annotation build Lit4;
     .end annotation
 
-    invoke-direct {p0, p1, p2, p3}, Lit8;-><init>(Llt8;Ly7b;Lz7b;)V
+    invoke-direct {p0, p1, p2, p3}, Lg19;-><init>(Lj19;Lxmb;Lymb;)V
 
     return-void
 .end method
@@ -22,11 +22,11 @@
 
 # virtual methods
 .method public final a(I)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    new-instance p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;
+    new-instance v0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;
 
-    invoke-direct {p0, p1}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;-><init>(I)V
 
-    return-object p0
+    return-object v0
 .end method

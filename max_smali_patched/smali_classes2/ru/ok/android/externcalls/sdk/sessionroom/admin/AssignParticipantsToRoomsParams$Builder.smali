@@ -22,13 +22,13 @@
         "",
         "<init>",
         "()V",
-        "Lred;",
+        "Lmwd;",
         "roomId",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
         "addRoomParticipant",
-        "(Lred;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;",
+        "(Lmwd;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;",
         "removeRoomParticipant",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "build",
@@ -55,7 +55,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lred;",
+            "Lmwd;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"
@@ -67,7 +67,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lred;",
+            "Lmwd;",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;"
@@ -99,7 +99,7 @@
 
 
 # virtual methods
-.method public final addRoomParticipant(Lred;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;
+.method public final addRoomParticipant(Lmwd;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;->addParticipantsToRoomsMap:Ljava/util/Map;
@@ -125,30 +125,30 @@
 .end method
 
 .method public final build()Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;->addParticipantsToRoomsMap:Ljava/util/Map;
 
-    invoke-static {v1}, Ly28;->X(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v1}, Lwa8;->a0(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;->removeParticipantsFromRoomsMap:Ljava/util/Map;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;->removeParticipantsFromRoomsMap:Ljava/util/Map;
 
-    invoke-static {p0}, Ly28;->X(Ljava/util/Map;)Ljava/util/Map;
+    invoke-static {v2}, Lwa8;->a0(Ljava/util/Map;)Ljava/util/Map;
 
-    move-result-object p0
+    move-result-object v2
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, p0, v2}, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;-><init>(Ljava/util/Map;Ljava/util/Map;Luc4;)V
+    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;-><init>(Ljava/util/Map;Ljava/util/Map;Lof4;)V
 
     return-object v0
 .end method
 
-.method public final removeRoomParticipant(Lred;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;
+.method public final removeRoomParticipant(Lmwd;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams$Builder;->removeParticipantsFromRoomsMap:Ljava/util/Map;

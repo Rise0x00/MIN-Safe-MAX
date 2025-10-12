@@ -2,81 +2,190 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljya;
+
 
 # instance fields
-.field public final a:Llya;
+.field public final a:Lpya;
 
-.field public final b:Lwy4;
+.field public final b:Lpya;
 
-.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-.field public final d:Lx33;
-
-.field public e:Lkya;
+.field public final c:Lpya;
 
 
 # direct methods
-.method public constructor <init>(Llya;Lwy4;Lru/ok/messages/photoeditor/ActPhotoEditor;Lx33;Luy4;ZZZ)V
-    .locals 8
+.method public constructor <init>(Lpya;Lpya;Lmya;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgya;->a:Llya;
+    iput-object p1, p0, Lgya;->a:Lpya;
 
-    iput-object p2, p0, Lgya;->b:Lwy4;
+    iput-object p2, p0, Lgya;->b:Lpya;
 
-    iput-object p0, p2, Lwy4;->b:Lgya;
+    iput-object p3, p0, Lgya;->c:Lpya;
 
-    iput-object p3, p0, Lgya;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
+    return-void
+.end method
 
-    iget-object p3, p1, Llya;->a:Ljava/util/HashSet;
 
-    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p4, p0, Lgya;->d:Lx33;
+    const/4 v0, 0x1
 
-    new-instance v0, Lkya;
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x0
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgya;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v6, 0x0
+    return v2
 
-    move v4, p6
+    :cond_1
+    check-cast p1, Lgya;
 
-    move v5, p7
+    iget-object v1, p0, Lgya;->a:Lpya;
 
-    move/from16 v7, p8
+    iget-object v3, p1, Lgya;->a:Lpya;
 
-    invoke-direct/range {v0 .. v7}, Lkya;-><init>(ZZZZZZZ)V
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iput-object v0, p0, Lgya;->e:Lkya;
+    move-result v1
 
-    invoke-virtual {p1, v0}, Llya;->a(Lkya;)V
+    if-nez v1, :cond_2
 
-    const/4 p0, 0x1
+    return v2
 
-    invoke-virtual {p4, p2, p5, p0}, Lx33;->c(Lwy4;Luy4;Z)V
+    :cond_2
+    iget-object v1, p0, Lgya;->b:Lpya;
 
-    if-eqz p6, :cond_0
+    iget-object v3, p1, Lgya;->b:Lpya;
 
-    if-eqz p7, :cond_0
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p2, Lwy4;->a:Laz4;
+    move-result v1
 
-    invoke-virtual {p1, p0}, Laz4;->setDrawStickerEnabled(Z)V
+    if-nez v1, :cond_3
 
-    invoke-virtual {p2}, Lwy4;->a()Luy4;
+    return v2
 
-    move-result-object p0
+    :cond_3
+    iget-object v1, p0, Lgya;->c:Lpya;
 
-    const/4 p1, 0x0
+    iget-object p1, p1, Lgya;->c:Lpya;
 
-    invoke-virtual {p4, p2, p0, p1}, Lx33;->c(Lwy4;Luy4;Z)V
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lgya;->a:Lpya;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lgya;->b:Lpya;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lgya;->c:Lpya;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "IconButtons(secondaryButton="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgya;->a:Lpya;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", primaryButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgya;->b:Lpya;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", thirdButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgya;->c:Lpya;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

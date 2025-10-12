@@ -51,7 +51,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lz6c;->TextAppearance:[I
+    sget-object v2, Lgmc;->TextAppearance:[I
 
     const v3, 0x1010041
 
@@ -63,7 +63,7 @@
 
     move-result-object v1
 
-    sget v2, Lz6c;->TextAppearance_android_textSize:I
+    sget v2, Lgmc;->TextAppearance_android_textSize:I
 
     invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
 
@@ -73,7 +73,7 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {p0, v0, v2}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p0, v0, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     :cond_0
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V

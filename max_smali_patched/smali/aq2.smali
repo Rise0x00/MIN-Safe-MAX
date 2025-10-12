@@ -1,105 +1,116 @@
-.class public final Laq2;
-.super Landroid/widget/FrameLayout;
+.class public final synthetic Laq2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyr2;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lyr2;I)V
+    .locals 0
+
+    iput p2, p0, Laq2;->a:I
+
+    iput-object p1, p0, Laq2;->b:Lyr2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final measureChildWithMargins(Landroid/view/View;IIII)V
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    if-eqz p1, :cond_2
+    iget v0, p0, Laq2;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    const/4 v1, 0x0
 
-    move-result v0
+    sget-object v2, Loyf;->a:Loyf;
 
-    sget v1, Ljaa;->b:I
+    iget-object v3, p0, Laq2;->b:Lyr2;
 
-    if-ne v0, v1, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
 
-    invoke-static {p4, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    sget-object v0, Lor2;->c:Lor2;
 
-    move-result p4
+    iget-wide v4, v3, Lyr2;->b:J
 
-    sget v0, Ljaa;->o:I
+    iget-boolean v3, v3, Lyr2;->d:Z
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Lv2;->K0()Ldd4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v7, ":call-chat?chat_id="
 
-    sget v1, Ljaa;->l:I
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v4, "&video_enabled="
 
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lyr3;->J(Landroid/view/View;)Ljava/lang/Integer;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    if-eqz v2, :cond_0
+    return-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    :pswitch_0
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
 
-    move-result v2
+    sget-object v0, Lor2;->c:Lor2;
 
-    goto :goto_0
+    iget-object v3, v3, Lyr2;->c:Ljava/lang/String;
 
-    :cond_0
-    move v2, v3
+    invoke-virtual {v0}, Lv2;->K0()Ldd4;
 
-    :goto_0
-    invoke-static {p0}, Lyr3;->Q(Landroid/view/View;)Ljava/lang/Integer;
+    move-result-object v0
 
-    move-result-object v4
+    const-string v4, ":call-join-link?link="
 
-    if-eqz v4, :cond_1
+    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+    move-result-object v3
 
-    move-result v3
+    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    :cond_1
-    add-int/2addr v2, v3
+    return-object v2
 
-    add-int/2addr v0, v1
+    :pswitch_1
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
 
-    add-int/2addr v0, v2
+    sget-object v0, Lor2;->c:Lor2;
 
-    invoke-static {p5, v0}, Ljava/lang/Math;->max(II)I
+    iget-wide v4, v3, Lyr2;->a:J
 
-    move-result p5
+    iget-boolean v1, v3, Lyr2;->d:Z
 
-    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+    invoke-virtual {v0, v4, v5, v1}, Lor2;->c1(JZ)V
 
-    return-void
+    return-object v2
 
-    :cond_2
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move v5, p5
-
-    invoke-super/range {v0 .. v5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

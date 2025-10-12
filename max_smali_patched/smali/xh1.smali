@@ -1,94 +1,120 @@
 .class public final Lxh1;
-.super Leje;
+.super Lvwc;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Lxh1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const/16 v0, 0x10
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    int-to-float v0, v0
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lv63;->r0(F)I
+
+    move-result v0
+
+    iput v0, p0, Lxh1;->a:I
+
+    const/16 v0, 0xc
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lv63;->r0(F)I
+
+    move-result v0
+
+    iput v0, p0, Lxh1;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Ljxc;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
 
-    invoke-virtual {p0, p1, p2}, Lxh1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p2
 
-    move-result-object p0
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
-    check-cast p0, Lxh1;
+    move-result-object p3
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    instance-of p4, p3, Luh1;
 
-    invoke-virtual {p0, p1}, Lxh1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p4, :cond_0
 
-    return-object p1
-.end method
+    check-cast p3, Luh1;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    goto :goto_0
 
-    new-instance v0, Lxh1;
+    :cond_0
+    const/4 p3, 0x0
 
-    iget-object p0, p0, Lxh1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    :goto_0
+    if-nez p3, :cond_1
 
-    invoke-direct {v0, p2, p0}, Lxh1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+    goto :goto_1
 
-    iput-object p1, v0, Lxh1;->X:Ljava/lang/Object;
+    :cond_1
+    if-ltz p2, :cond_2
 
-    return-object v0
-.end method
+    invoke-virtual {p3}, Lpw7;->j()I
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    move-result p3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    if-ge p2, p3, :cond_2
 
-    iget-object p1, p0, Lxh1;->X:Ljava/lang/Object;
+    iget p2, p0, Lxh1;->b:I
 
-    check-cast p1, Ljava/util/List;
+    iput p2, p1, Landroid/graphics/Rect;->left:I
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->F0:[Lof7;
+    iput p2, p1, Landroid/graphics/Rect;->right:I
 
-    iget-object p0, p0, Lxh1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget p2, p0, Lxh1;->a:I
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->B0:Ldbc;
+    iput p2, p1, Landroid/graphics/Rect;->top:I
 
-    sget-object v1, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->F0:[Lof7;
+    const/4 p2, 0x0
 
-    const/4 v2, 0x4
+    iput p2, p1, Landroid/graphics/Rect;->bottom:I
 
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p0, v1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ld8c;
-
-    invoke-virtual {p0, p1}, Ld8c;->setButtonToolDataList(Ljava/util/List;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :cond_2
+    :goto_1
+    return-void
 .end method

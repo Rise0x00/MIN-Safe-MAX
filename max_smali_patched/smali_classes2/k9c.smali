@@ -1,91 +1,98 @@
-.class public final enum Lk9c;
-.super Ljava/lang/Enum;
+.class public final synthetic Lk9c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum b:Lk9c;
-
-.field public static final synthetic c:[Lk9c;
-
-.field public static final synthetic o:Ly55;
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lp9c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lk9c;
-
-    const-string v1, "EMOJI"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lk9c;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lk9c;->b:Lk9c;
-
-    new-instance v1, Lk9c;
-
-    const-string v2, "STICKER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lk9c;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1}, [Lk9c;
-
-    move-result-object v0
-
-    sput-object v0, Lk9c;->c:[Lk9c;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lk9c;->o:Ly55;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lp9c;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lk9c;->a:I
 
-    iput p3, p0, Lk9c;->a:I
+    iput-object p1, p0, Lk9c;->b:Lp9c;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lk9c;
-    .locals 1
 
-    const-class v0, Lk9c;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lk9c;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lk9c;
+    sget v0, Lq9d;->j0:I
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lk9c;->b:Lp9c;
 
-.method public static values()[Lk9c;
-    .locals 1
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget-object v0, Lk9c;->c:[Lk9c;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    check-cast v0, [Lk9c;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    sget v0, Lq9d;->h0:I
+
+    iget-object v1, p0, Lk9c;->b:Lp9c;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lq9d;->i0:I
+
+    iget-object v1, p0, Lk9c;->b:Lp9c;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

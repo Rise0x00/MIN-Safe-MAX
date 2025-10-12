@@ -1,46 +1,49 @@
 .class public final Lpe9;
-.super Landroid/text/style/TypefaceSpan;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lj38;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lng9;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lng9;Lnz3;)V
+    .locals 0
 
-    const-string v0, "monospace"
+    iput-object p1, p0, Lpe9;->X:Lng9;
 
-    invoke-direct {p0, v0}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
-
-    const/4 v0, 0x5
-
-    iput v0, p0, Lpe9;->a:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final copy()Lqz3;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance p0, Lpe9;
+    iput-object p1, p0, Lpe9;->o:Ljava/lang/Object;
 
-    invoke-direct {p0}, Lpe9;-><init>()V
+    iget p1, p0, Lpe9;->Y:I
 
-    return-object p0
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final getType()I
-    .locals 0
+    or-int/2addr p1, v0
 
-    iget p0, p0, Lpe9;->a:I
+    iput p1, p0, Lpe9;->Y:I
 
-    return p0
+    iget-object p1, p0, Lpe9;->X:Lng9;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1, p0}, Lng9;->y(JLnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

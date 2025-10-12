@@ -1,189 +1,230 @@
-.class public final synthetic Lzoc;
+.class public final Lzoc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lww7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final synthetic b:Lbpc;
+.field public final Y:J
 
-.field public final synthetic c:J
+.field public final a:J
+
+.field public final b:Lkoc;
+
+.field public final c:Landroid/graphics/drawable/Drawable;
+
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbpc;JI)V
+.method public constructor <init>(JLkoc;Landroid/graphics/drawable/Drawable;Z)V
     .locals 0
 
-    iput p4, p0, Lzoc;->a:I
-
-    iput-object p1, p0, Lzoc;->b:Lbpc;
-
-    iput-wide p2, p0, Lzoc;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lzoc;->a:J
+
+    iput-object p3, p0, Lzoc;->b:Lkoc;
+
+    iput-object p4, p0, Lzoc;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-boolean p5, p0, Lzoc;->o:Z
+
+    sget p3, Lk9d;->b:I
+
+    iput p3, p0, Lzoc;->X:I
+
+    iput-wide p1, p0, Lzoc;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lzoc;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-wide v0, p0, Lzoc;->c:J
+    return v0
 
-    iget-object p0, p0, Lzoc;->b:Lbpc;
+    :cond_0
+    instance-of v1, p1, Lzoc;
 
-    invoke-virtual {p0}, Lbpc;->c()Llu2;
+    const/4 v2, 0x0
 
-    move-result-object v2
+    if-nez v1, :cond_1
 
-    iget-object v3, v2, Llu2;->a:Lfpc;
+    return v2
 
-    invoke-virtual {v3}, Lfpc;->c()V
+    :cond_1
+    check-cast p1, Lzoc;
 
-    :try_start_0
-    invoke-static {v2, v0, v1}, Llu2;->c(Llu2;J)V
+    iget-wide v3, p0, Lzoc;->a:J
 
-    invoke-virtual {v3}, Lfpc;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    iget-wide v5, p1, Lzoc;->a:J
 
-    invoke-virtual {v3}, Lfpc;->k()V
+    cmp-long v1, v3, v5
 
-    iget-object v2, p0, Lbpc;->d:Lkle;
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v2}, Lkle;->getValue()Ljava/lang/Object;
+    return v2
 
-    move-result-object v2
+    :cond_2
+    iget-object v1, p0, Lzoc;->b:Lkoc;
 
-    check-cast v2, Le49;
+    iget-object v3, p1, Lzoc;->b:Lkoc;
 
-    invoke-virtual {v2, v0, v1}, Le49;->f(J)V
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lbpc;->d()Lpvc;
+    move-result v1
 
-    move-result-object p0
+    if-nez v1, :cond_3
 
-    iget-object v2, p0, Lpvc;->a:Lfpc;
+    return v2
 
-    invoke-virtual {v2}, Lfpc;->b()V
+    :cond_3
+    iget-object v1, p0, Lzoc;->c:Landroid/graphics/drawable/Drawable;
 
-    iget-object p0, p0, Lpvc;->c:Lwoc;
+    iget-object v3, p1, Lzoc;->c:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Lu2;->f()Lzhe;
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    move-result v1
 
-    const/4 v4, 0x1
+    if-nez v1, :cond_4
 
-    invoke-interface {v3, v4, v0, v1}, Lxhe;->k(IJ)V
+    return v2
 
-    :try_start_1
-    invoke-virtual {v2}, Lfpc;->c()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_4
+    iget-boolean v1, p0, Lzoc;->o:Z
 
-    :try_start_2
-    invoke-interface {v3}, Lzhe;->C()I
+    iget-boolean p1, p1, Lzoc;->o:Z
 
-    invoke-virtual {v2}, Lfpc;->q()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    if-eq v1, p1, :cond_5
 
-    :try_start_3
-    invoke-virtual {v2}, Lfpc;->k()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    return v2
 
-    invoke-virtual {p0, v3}, Lu2;->u(Lzhe;)V
+    :cond_5
+    return v0
+.end method
 
-    sget-object p0, Ltcf;->a:Ltcf;
+.method public final getItemId()J
+    .locals 2
 
-    return-object p0
+    iget-wide v0, p0, Lzoc;->Y:J
 
-    :catchall_0
-    move-exception v0
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lzoc;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzoc;->b:Lkoc;
+
+    invoke-virtual {v1}, Lkoc;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lzoc;->c:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :try_start_4
-    invoke-virtual {v2}, Lfpc;->k()V
-
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    move-result v0
 
     :goto_0
-    invoke-virtual {p0, v3}, Lu2;->u(Lzhe;)V
+    add-int/2addr v1, v0
 
-    throw v0
+    mul-int/lit8 v1, v1, 0x1f
 
-    :catchall_2
-    move-exception p0
+    iget-boolean v0, p0, Lzoc;->o:Z
 
-    invoke-virtual {v3}, Lfpc;->k()V
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    throw p0
+    move-result v0
 
-    :pswitch_0
-    iget-object v0, p0, Lzoc;->b:Lbpc;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0}, Lbpc;->d()Lpvc;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final m()I
+    .locals 1
 
-    iget-wide v2, p0, Lzoc;->c:J
+    iget v0, p0, Lzoc;->X:I
 
-    invoke-virtual {v1, v2, v3}, Lpvc;->a(J)Lqvc;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    if-nez p0, :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, "ReactionModel(animojiId="
 
-    :cond_0
-    invoke-virtual {v0}, Lbpc;->c()Llu2;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    iget-wide v1, p0, Lzoc;->a:J
 
-    iget-wide v2, p0, Lqvc;->b:J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v3}, Llu2;->e(J)Lxc2;
+    const-string v1, ", reaction="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_1
+    iget-object v1, p0, Lzoc;->b:Lkoc;
 
-    invoke-virtual {v0, p0}, Lbpc;->a(Lxc2;)Lyb2;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", reactionDrawable="
 
-    goto :goto_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_1
-    const/4 p0, 0x0
+    iget-object v1, p0, Lzoc;->c:Landroid/graphics/drawable/Drawable;
 
-    :goto_2
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, ", selected="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lzoc;->o:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

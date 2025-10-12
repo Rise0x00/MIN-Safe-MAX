@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;
-.super Leh7;
+.super Lmo7;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lxe6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Ld96;Lf96;)V
+    value = Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lve6;Lxe6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Leh7;",
-        "Lf96;"
+        "Lmo7;",
+        "Lxe6;"
     }
 .end annotation
 
@@ -28,12 +28,12 @@
         "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0006\u001a\u00020\u00032\n\u0010\u0002\u001a\u00060\u0000j\u0002`\u0001H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
     }
     d2 = {
-        "Lwg1;",
+        "Lxg1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "id",
-        "Ltcf;",
+        "Loyf;",
         "invoke",
-        "(Lwg1;)V",
+        "(Lxg1;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -46,18 +46,18 @@
 
 
 # instance fields
-.field final synthetic $onError:Lf96;
+.field final synthetic $onError:Lxe6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lf96;"
+            "Lxe6;"
         }
     .end annotation
 .end field
 
-.field final synthetic $onSuccess:Ld96;
+.field final synthetic $onSuccess:Lve6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ld96;"
+            "Lve6;"
         }
     .end annotation
 .end field
@@ -68,15 +68,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Ld96;Lf96;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lve6;Lxe6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
@@ -85,13 +85,13 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$params:Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onSuccess:Ld96;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onSuccess:Lve6;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onError:Lf96;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onError:Lxe6;
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Leh7;-><init>(I)V
+    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
 
     return-void
 .end method
@@ -102,16 +102,16 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lwg1;
+    check-cast p1, Lxg1;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->invoke(Lwg1;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->invoke(Lxg1;)V
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final invoke(Lwg1;)V
+.method public final invoke(Lxg1;)V
     .locals 3
 
     .line 2
@@ -120,34 +120,34 @@
     .line 3
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$params:Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->getToRoomId()Lsed;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->getToRoomId()Lnwd;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
     .line 4
-    new-instance v2, Lzke;
+    new-instance v2, Li5f;
 
-    invoke-direct {v2, p1, v1}, Lzke;-><init>(Lwg1;Lsed;)V
+    invoke-direct {v2, p1, v1}, Li5f;-><init>(Lxg1;Lnwd;)V
 
     .line 5
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onSuccess:Ld96;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onSuccess:Lve6;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onError:Lf96;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;->$onError:Lxe6;
 
     .line 6
-    invoke-virtual {v0, v2, p1, p0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom(Lzke;Ld96;Lf96;)V
+    invoke-virtual {v0, v2, p1, v1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom(Li5f;Lve6;Lxe6;)V
 
     return-void
 
     .line 7
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "Session room id is required"
+    const-string v0, "Session room id is required"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

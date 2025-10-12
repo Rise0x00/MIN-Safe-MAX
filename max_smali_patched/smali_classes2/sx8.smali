@@ -2,32 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:J
-
-.field public static final synthetic b:I
+# interfaces
+.implements Lww7;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+# virtual methods
+.method public final h(Lww7;)Z
+    .locals 4
 
-    const/4 v0, -0x1
+    instance-of v0, p1, Lsx8;
 
-    int-to-long v0, v0
+    if-nez v0, :cond_0
 
-    const/16 v2, 0x20
+    goto :goto_0
 
-    shl-long v2, v0, v2
+    :cond_0
+    invoke-virtual {p0}, Lsx8;->j()J
 
-    const-wide v4, 0xffffffffL
+    move-result-wide v0
 
-    and-long/2addr v0, v4
+    check-cast p1, Lsx8;
 
-    or-long/2addr v0, v2
+    invoke-virtual {p1}, Lsx8;->j()J
 
-    sput-wide v0, Lsx8;->a:J
+    move-result-wide v2
 
-    return-void
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lsx8;->i()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lsx8;->i()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract i()J
+.end method
+
+.method public abstract j()J
+.end method
+
+.method public abstract l()Z
 .end method

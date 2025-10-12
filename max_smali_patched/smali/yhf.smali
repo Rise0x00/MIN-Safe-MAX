@@ -1,97 +1,141 @@
-.class public final enum Lyhf;
-.super Ljava/lang/Enum;
+.class public abstract Lyhf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lyhf;
-
-.field public static final enum a:Lyhf;
-
-.field public static final enum b:Lyhf;
-
-.field public static final enum c:Lyhf;
-
-.field public static final enum o:Lyhf;
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public static a(J)J
+    .locals 14
 
-    new-instance v0, Lyhf;
+    sget v0, Lin9;->b:I
 
-    const-string v1, "MORE"
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    const/4 v2, 0x0
+    move-result-wide v0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-wide v2, Lin9;->a:J
 
-    sput-object v0, Lyhf;->a:Lyhf;
+    sub-long/2addr v0, v2
 
-    new-instance v1, Lyhf;
+    sget-object v2, Ls05;->b:Ls05;
 
-    const-string v2, "ROTATION"
+    const-wide/16 v3, 0x1
 
-    const/4 v3, 0x1
+    sub-long v5, p0, v3
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    or-long/2addr v5, v3
 
-    sput-object v1, Lyhf;->b:Lyhf;
+    const-wide v7, 0x7fffffffffffffffL
 
-    new-instance v2, Lyhf;
+    cmp-long v5, v5, v7
 
-    const-string v3, "PIN"
+    const-wide/16 v6, 0x0
 
-    const/4 v4, 0x2
+    if-nez v5, :cond_1
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    cmp-long p0, p0, v6
 
-    sput-object v2, Lyhf;->c:Lyhf;
+    if-gez p0, :cond_0
 
-    new-instance v3, Lyhf;
+    sget-wide p0, Ln05;->c:J
 
-    const-string v4, "NONE"
+    goto :goto_0
 
-    const/4 v5, 0x3
+    :cond_0
+    sget-wide p0, Ln05;->b:J
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    :goto_0
+    invoke-static {p0, p1}, Ln05;->k(J)J
 
-    sput-object v3, Lyhf;->o:Lyhf;
+    move-result-wide p0
 
-    filled-new-array {v0, v1, v2, v3}, [Lyhf;
+    return-wide p0
 
-    move-result-object v0
+    :cond_1
+    sub-long v8, v0, p0
 
-    sput-object v0, Lyhf;->X:[Lyhf;
+    xor-long v10, v8, v0
 
-    return-void
-.end method
+    xor-long v12, v8, p0
 
-.method public static valueOf(Ljava/lang/String;)Lyhf;
-    .locals 1
+    not-long v12, v12
 
-    const-class v0, Lyhf;
+    and-long/2addr v10, v12
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    cmp-long v5, v10, v6
 
-    move-result-object p0
+    if-gez v5, :cond_4
 
-    check-cast p0, Lyhf;
+    sget-object v5, Ls05;->c:Ls05;
 
-    return-object p0
-.end method
+    invoke-virtual {v2, v5}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-.method public static values()[Lyhf;
-    .locals 1
+    move-result v10
 
-    sget-object v0, Lyhf;->X:[Lyhf;
+    if-gez v10, :cond_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v6, v2, Ls05;->a:Ljava/util/concurrent/TimeUnit;
 
-    move-result-object v0
+    iget-object v7, v5, Ls05;->a:Ljava/util/concurrent/TimeUnit;
 
-    check-cast v0, [Lyhf;
+    invoke-virtual {v6, v3, v4, v7}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    return-object v0
+    move-result-wide v3
+
+    div-long v6, v0, v3
+
+    div-long v8, p0, v3
+
+    sub-long/2addr v6, v8
+
+    rem-long/2addr v0, v3
+
+    rem-long/2addr p0, v3
+
+    sub-long/2addr v0, p0
+
+    sget p0, Ln05;->o:I
+
+    invoke-static {v6, v7, v5}, Lyhh;->P(JLs05;)J
+
+    move-result-wide p0
+
+    invoke-static {v0, v1, v2}, Lyhh;->P(JLs05;)J
+
+    move-result-wide v0
+
+    invoke-static {p0, p1, v0, v1}, Ln05;->h(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_2
+    cmp-long p0, v8, v6
+
+    if-gez p0, :cond_3
+
+    sget-wide p0, Ln05;->c:J
+
+    goto :goto_1
+
+    :cond_3
+    sget-wide p0, Ln05;->b:J
+
+    :goto_1
+    invoke-static {p0, p1}, Ln05;->k(J)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_4
+    invoke-static {v8, v9, v2}, Lyhh;->P(JLs05;)J
+
+    move-result-wide p0
+
+    return-wide p0
 .end method

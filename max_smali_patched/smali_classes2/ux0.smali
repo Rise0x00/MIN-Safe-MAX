@@ -1,129 +1,157 @@
-.class public final Lux0;
-.super Ljava/lang/Object;
+.class public final enum Lux0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final enum X:Lux0;
 
-.field public final b:Ljava/util/ArrayList;
+.field public static final enum Y:Lux0;
+
+.field public static final enum Z:Lux0;
+
+.field public static final enum a:Lux0;
+
+.field public static final enum b:Lux0;
+
+.field public static final enum c:Lux0;
+
+.field public static final enum o:Lux0;
+
+.field public static final enum w0:Lux0;
+
+.field public static final enum x0:Lux0;
+
+.field public static final synthetic y0:[Lux0;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lux0;
 
-    iput-wide p1, p0, Lux0;->a:J
+    const-string v1, "ROOT"
 
-    iput-object p3, p0, Lux0;->b:Ljava/util/ArrayList;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lux0;->a:Lux0;
+
+    new-instance v1, Lux0;
+
+    const-string v2, "IMAGES"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lux0;->b:Lux0;
+
+    new-instance v2, Lux0;
+
+    const-string v3, "AUDIO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lux0;->c:Lux0;
+
+    new-instance v3, Lux0;
+
+    const-string v4, "GIF"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lux0;->o:Lux0;
+
+    new-instance v4, Lux0;
+
+    const-string v5, "STICKERS"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lux0;->X:Lux0;
+
+    new-instance v5, Lux0;
+
+    const-string v6, "UPLOAD"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lux0;->Y:Lux0;
+
+    new-instance v6, Lux0;
+
+    const-string v7, "MUSIC"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lux0;->Z:Lux0;
+
+    new-instance v7, Lux0;
+
+    const-string v8, "VIDEO"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lux0;->w0:Lux0;
+
+    new-instance v8, Lux0;
+
+    const-string v9, "OTHERS"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lux0;->x0:Lux0;
+
+    filled-new-array/range {v0 .. v8}, [Lux0;
+
+    move-result-object v0
+
+    sput-object v0, Lux0;->y0:[Lux0;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lux0;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-class v0, Lux0;
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lux0;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lux0;
-
-    iget-wide v0, p0, Lux0;->a:J
-
-    iget-wide v2, p1, Lux0;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lux0;->b:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lux0;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lux0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lux0;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CacheState(totalSizeBytes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lux0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", items="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lux0;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lux0;
+
     return-object p0
+.end method
+
+.method public static values()[Lux0;
+    .locals 1
+
+    sget-object v0, Lux0;->y0:[Lux0;
+
+    invoke-virtual {v0}, [Lux0;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lux0;
+
+    return-object v0
 .end method

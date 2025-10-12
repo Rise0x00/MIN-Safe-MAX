@@ -1,48 +1,83 @@
 .class public final Lj92;
-.super Lax3;
+.super Lbj0;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final b:J
 
-.field public final synthetic Y:Lxl1;
+.field public final c:Ljava/util/List;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final o:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lxl1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJLjava/util/List;Ljava/util/Map;)V
     .locals 0
 
-    iput-object p1, p0, Lj92;->Y:Lxl1;
+    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lj92;->b:J
+
+    iput-object p5, p0, Lj92;->c:Ljava/util/List;
+
+    iput-object p6, p0, Lj92;->o:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lj92;->o:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lj92;->X:I
+    const-string v1, "ChatBotCommandsEvent{chatId="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-wide v1, p0, Lj92;->b:J
 
-    iput p1, p0, Lj92;->X:I
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lj92;->Y:Lxl1;
+    const-string v1, ", botCommands count="
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lxl1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lj92;->c:Ljava/util/List;
 
-    move-result-object p0
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    return-object p0
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", botsInfoMap count="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj92;->o:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "} "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Lbj0;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

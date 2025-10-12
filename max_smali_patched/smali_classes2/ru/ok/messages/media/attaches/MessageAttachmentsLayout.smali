@@ -4,36 +4,36 @@
 
 
 # instance fields
-.field public final a:Llv8;
+.field public final a:Lm39;
 
 .field public final b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-.field public final c:Lhz;
+.field public final c:Lsy;
 
-.field public final o:Lke3;
+.field public final o:Lsg3;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Lpl;->o:Lpl;
+    sget-object v0, Lem;->o:Lem;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Liwb;->message_max_attach_width:I
+    sget v1, Lmbc;->message_max_attach_width:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
-    sget-object v0, Lpl;->o:Lpl;
+    sget-object v0, Lem;->o:Lem;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Liwb;->message_min_attach_height:I
+    sget v1, Lmbc;->message_min_attach_height:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -45,21 +45,21 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lpl;->b()Lke3;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lke3;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lsg3;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lon4;->b()Lon4;
+    invoke-static {}, Ltq4;->a()Ltq4;
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lke3;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lsg3;
 
-    check-cast p1, Loaa;
+    check-cast p1, Lyka;
 
-    invoke-virtual {p1}, Loaa;->d()La20;
+    invoke-virtual {p1}, Lyka;->d()Lr10;
 
     new-instance p1, Landroid/view/ViewGroup$LayoutParams;
 
@@ -81,53 +81,53 @@
 
     iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p1}, Ldu4;->getHierarchy()Lau4;
+    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
 
     move-result-object p1
 
-    check-cast p1, Lfe6;
+    check-cast p1, Lyj6;
 
-    sget-object p2, Lkwc;->l:Lkwc;
+    sget-object p2, Lzcd;->e:Lzcd;
 
-    invoke-virtual {p1, p2}, Lfe6;->h(Ljwc;)V
+    invoke-virtual {p1, p2}, Lyj6;->h(Lycd;)V
 
-    new-instance p1, Lhz;
+    new-instance p1, Lsy;
 
     iget-object p2, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p2, v1}, Lhz;-><init>(Landroid/view/View;Lgz;)V
+    invoke-direct {p1, p2, v1}, Lsy;-><init>(Landroid/view/View;Lry;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lhz;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lsy;
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lke3;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->o:Lsg3;
 
     const/16 p2, 0xa
 
     const/4 v1, 0x2
 
-    invoke-interface {p1, p2, v1}, Lke3;->a(II)Llq0;
+    invoke-interface {p1, p2, v1}, Lsg3;->a(II)Leq0;
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    new-instance p2, Lum4;
+    new-instance p2, Lt16;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x16
 
-    invoke-direct {p2, v1, p0}, Lum4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v1, p0}, Lt16;-><init>(ILjava/lang/Object;)V
 
     const-wide/16 v1, 0x3e8
 
-    invoke-static {p1, v1, v2, p2}, Laug;->x(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    invoke-static {p1, v1, v2, p2}, Lbv0;->P(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->b:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    new-instance p2, Lrm0;
+    new-instance p2, Ljm0;
 
     const/4 v1, 0x4
 
-    invoke-direct {p2, v1, p0}, Lrm0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v1, p0}, Ljm0;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
@@ -139,21 +139,21 @@
 
     invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Llv8;
+    new-instance p1, Lm39;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Llv8;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lm39;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
-    sget p2, Ld1c;->view_message__view_attaches:I
+    sget p2, Ljgc;->view_message__view_attaches:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -168,41 +168,41 @@
 
 
 # virtual methods
-.method public getView()Llv8;
-    .locals 0
+.method public getView()Lm39;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lhz;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lsy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lhz;->i()V
+    invoke-virtual {v0}, Lsy;->i()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onDetachedFromWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onDetachedFromWindow()V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lhz;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->c:Lsy;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lhz;->t:Lfh7;
+    iget-object v0, v0, Lsy;->t:Lno7;
 
-    invoke-static {p0}, Lrtc;->b(Lkp4;)V
+    invoke-static {v0}, Liad;->b(Lss4;)V
 
     :cond_0
     return-void
@@ -219,11 +219,11 @@
 
     move-result p2
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object p3, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
-    const/4 p3, 0x0
+    const/4 p4, 0x0
 
-    invoke-virtual {p0, p3, p3, p1, p2}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {p3, p4, p4, p1, p2}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method
@@ -231,17 +231,17 @@
 .method public final onMeasure(II)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
 
-    iget-object p2, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Llv8;
+    iget-object p2, p0, Lru/ok/messages/media/attaches/MessageAttachmentsLayout;->a:Lm39;
 
     invoke-virtual {p2}, Landroid/view/View;->getMeasuredHeight()I
 

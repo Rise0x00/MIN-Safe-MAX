@@ -1,26 +1,26 @@
 .class public final Lbff;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:F
 
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public final synthetic Y:Ldff;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ldff;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lbff;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    iput-object p1, p0, Lbff;->Y:Ldff;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,151 +30,71 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lp04;
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+
+    move-result p1
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
     invoke-virtual {p0, p1, p2}, Lbff;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lbff;
+    check-cast p1, Lbff;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lbff;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lbff;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    .locals 2
 
-    new-instance p1, Lbff;
+    new-instance v0, Lbff;
 
-    iget-object p0, p0, Lbff;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    iget-object v1, p0, Lbff;->Y:Ldff;
 
-    invoke-direct {p1, p0, p2}, Lbff;-><init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Lbff;-><init>(Ldff;Lkotlin/coroutines/Continuation;)V
 
-    return-object p1
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+
+    move-result p1
+
+    iput p1, v0, Lbff;->X:F
+
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "storeDraftUpload: finish store upload = "
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget v1, p0, Lbff;->X:I
+    iget p1, p0, Lbff;->X:F
 
-    const-string v2, "UploadDraftMediaWorker"
+    iget-object v0, p0, Lbff;->Y:Ldff;
 
-    const/4 v3, 0x1
+    iget-object v1, v0, Ldff;->b:Landroid/widget/TextView;
 
-    iget-object v4, p0, Lbff;->Y:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    iget v0, v0, Ldff;->o:F
 
-    if-eqz v1, :cond_1
+    add-float/2addr v0, p1
 
-    if-ne v1, v3, :cond_0
+    const/4 p1, 0x0
 
-    :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, v4, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->b:Lkle;
-
-    invoke-virtual {p1}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldt4;
-
-    invoke-virtual {v4}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lus4;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ldt4;->a()Lpud;
-
-    move-result-object p1
-
-    new-instance v5, Lwd1;
-
-    const/16 v6, 0x8
-
-    invoke-direct {v5, v6, v1}, Lwd1;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lwb3;
-
-    const/4 v6, 0x3
-
-    invoke-direct {v1, p1, v6, v5}, Lwb3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput v3, p0, Lbff;->X:I
-
-    invoke-static {v1, p0}, Lds0;->e(Lvb3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
+    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    invoke-virtual {v4}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->c()Lus4;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
-    :goto_1
-    const-string p1, "storeDraftUpload: failed"
-
-    invoke-static {v2, p1, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

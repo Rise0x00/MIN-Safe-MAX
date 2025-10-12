@@ -1,145 +1,160 @@
-.class public final Lv38;
-.super Lo46;
+.class public final enum Lv38;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Ly5c;
 
 
 # static fields
-.field public static final X:Ljava/lang/Object;
+.field public static final enum X:Lv38;
+
+.field public static final enum Y:Lv38;
+
+.field public static final enum Z:Lv38;
+
+.field public static final enum b:Lv38;
+
+.field public static final enum c:Lv38;
+
+.field public static final enum o:Lv38;
+
+.field public static final enum w0:Lv38;
+
+.field public static final synthetic x0:[Lv38;
 
 
 # instance fields
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 9
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Lv38;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "REASON_UNKNOWN"
 
-    sput-object v0, Lv38;->X:Ljava/lang/Object;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lv38;->b:Lv38;
+
+    new-instance v1, Lv38;
+
+    const-string v2, "MESSAGE_TOO_OLD"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v3}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lv38;->c:Lv38;
+
+    new-instance v2, Lv38;
+
+    const-string v3, "CACHE_FULL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v4}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lv38;->o:Lv38;
+
+    new-instance v3, Lv38;
+
+    const-string v4, "PAYLOAD_TOO_BIG"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v5}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lv38;->X:Lv38;
+
+    new-instance v4, Lv38;
+
+    const-string v5, "MAX_RETRIES_REACHED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v6}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lv38;->Y:Lv38;
+
+    new-instance v5, Lv38;
+
+    const-string v6, "INVALID_PAYLOD"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v7}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lv38;->Z:Lv38;
+
+    new-instance v6, Lv38;
+
+    const-string v7, "SERVER_ERROR"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v8}, Lv38;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lv38;->w0:Lv38;
+
+    filled-new-array/range {v0 .. v6}, [Lv38;
+
+    move-result-object v0
+
+    sput-object v0, Lv38;->x0:[Lv38;
 
     return-void
 .end method
 
-.method public constructor <init>(Lvxe;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lo46;-><init>(Lvxe;)V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, p0, Lv38;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lv38;->o:Ljava/lang/Object;
+    iput p3, p0, Lv38;->a:I
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lv38;
+    .locals 1
+
+    const-class v0, Lv38;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lv38;
+
+    return-object p0
+.end method
+
+.method public static values()[Lv38;
+    .locals 1
+
+    sget-object v0, Lv38;->x0:[Lv38;
+
+    invoke-virtual {v0}, [Lv38;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lv38;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
+.method public final a()I
     .locals 1
 
-    sget-object v0, Lv38;->X:Ljava/lang/Object;
+    iget v0, p0, Lv38;->a:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lv38;->o:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v0
-
-    :cond_0
-    iget-object p0, p0, Lo46;->b:Lvxe;
-
-    invoke-virtual {p0, p1}, Lvxe;->b(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final f(ILqxe;Z)Lqxe;
-    .locals 1
-
-    iget-object v0, p0, Lo46;->b:Lvxe;
-
-    invoke-virtual {v0, p1, p2, p3}, Lvxe;->f(ILqxe;Z)Lqxe;
-
-    iget-object p1, p2, Lqxe;->b:Ljava/lang/Object;
-
-    iget-object p0, p0, Lv38;->o:Ljava/lang/Object;
-
-    invoke-static {p1, p0}, Ldif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p0, Lv38;->X:Ljava/lang/Object;
-
-    iput-object p0, p2, Lqxe;->b:Ljava/lang/Object;
-
-    :cond_0
-    return-object p2
-.end method
-
-.method public final l(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lo46;->b:Lvxe;
-
-    invoke-virtual {v0, p1}, Lvxe;->l(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lv38;->o:Ljava/lang/Object;
-
-    invoke-static {p1, p0}, Ldif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p0, Lv38;->X:Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final m(ILtxe;J)Ltxe;
-    .locals 1
-
-    iget-object v0, p0, Lo46;->b:Lvxe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lvxe;->m(ILtxe;J)Ltxe;
-
-    iget-object p1, p2, Ltxe;->a:Ljava/lang/Object;
-
-    iget-object p0, p0, Lv38;->c:Ljava/lang/Object;
-
-    invoke-static {p1, p0}, Ldif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p0, Ltxe;->x0:Ljava/lang/Object;
-
-    iput-object p0, p2, Ltxe;->a:Ljava/lang/Object;
-
-    :cond_0
-    return-object p2
+    return v0
 .end method

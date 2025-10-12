@@ -1,29 +1,14 @@
-.class public abstract Lkx1;
+.class public interface abstract Lkx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
-
-    return-void
+.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)Ljx7;
 .end method
 
-.method public b(ILrx1;)V
-    .locals 0
-
-    return-void
+.method public abstract b()Z
 .end method
 
-.method public c(ILwr3;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d(I)V
-    .locals 0
-
-    return-void
+.method public abstract c()V
 .end method

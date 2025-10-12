@@ -36,7 +36,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lx55;
+.field private static final synthetic $ENTRIES:Lka5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;
 
@@ -103,11 +103,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;->$VALUES:[Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;
 
-    new-instance v1, Ly55;
+    new-instance v1, Lla5;
 
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;->$ENTRIES:Lx55;
+    sput-object v1, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;->$ENTRIES:Lka5;
 
     return-void
 .end method
@@ -125,16 +125,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lx55;
+.method public static getEntries()Lka5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lx55;"
+            "Lka5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;->$ENTRIES:Lx55;
+    sget-object v0, Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;->$ENTRIES:Lka5;
 
     return-object v0
 .end method

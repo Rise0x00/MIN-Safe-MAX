@@ -1,52 +1,57 @@
-.class public final synthetic Luv;
-.super Lia6;
+.class public final Luv;
+.super Lnz3;
 .source "SourceFile"
 
-# interfaces
-.implements Lf96;
 
+# instance fields
+.field public X:Z
 
-# static fields
-.field public static final a:Luv;
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ldw;
+
+.field public final synthetic w0:Ldw;
+
+.field public x0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ldw;Lnz3;)V
+    .locals 0
 
-    new-instance v0, Luv;
+    iput-object p1, p0, Luv;->w0:Ldw;
 
-    const-string v4, "getTime()J"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Lro6;
-
-    const-string v3, "getTime"
-
-    invoke-direct/range {v0 .. v5}, Lia6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Luv;->a:Luv;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lro6;
+    iput-object p1, p0, Luv;->Z:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lro6;->l()J
+    iget p1, p0, Luv;->x0:I
 
-    move-result-wide p0
+    const/high16 v0, -0x80000000
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Luv;->x0:I
 
-    return-object p0
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Luv;->w0:Ldw;
+
+    invoke-static {v2, v0, v1, p1, p0}, Ldw;->e(Ldw;JZLnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

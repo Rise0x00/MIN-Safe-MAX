@@ -1,5 +1,5 @@
 .class public final Lnh1;
-.super Lt2;
+.super Lv2;
 .source "SourceFile"
 
 
@@ -13,9 +13,9 @@
 
     new-instance v0, Lnh1;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
 
     sput-object v0, Lnh1;->c:Lnh1;
 

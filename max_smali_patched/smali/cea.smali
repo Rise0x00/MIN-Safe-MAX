@@ -1,79 +1,49 @@
-.class public abstract Lcea;
-.super Ljava/lang/Object;
+.class public final Lcea;
+.super Li25;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final C0:Lpb8;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
+.field public final D0:F
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lpb8;F)V
     .locals 1
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view:I
+    const/4 v0, 0x0
 
-    sput v0, Lcea;->a:I
+    invoke-direct {p0, v0}, Li25;-><init>(I)V
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_icon:I
+    iput-object p1, p0, Lcea;->C0:Lpb8;
 
-    sput v0, Lcea;->b:I
+    iput p2, p0, Lcea;->D0:F
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
+    return-void
+.end method
 
-    sput v0, Lcea;->c:I
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
+# virtual methods
+.method public final A()Z
+    .locals 1
 
-    sput v0, Lcea;->d:I
+    const/4 v0, 0x1
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
+    return v0
+.end method
 
-    sput v0, Lcea;->e:I
+.method public final C(FFFLd6e;)V
+    .locals 1
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+    iget v0, p0, Lcea;->D0:F
 
-    sput v0, Lcea;->f:I
+    sub-float/2addr p2, v0
 
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_rate_view_title:I
+    iget-object v0, p0, Lcea;->C0:Lpb8;
 
-    sput v0, Lcea;->g:I
-
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_thank_view:I
-
-    sput v0, Lcea;->h:I
-
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
-
-    sput v0, Lcea;->i:I
-
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_thank_view_icon:I
-
-    sput v0, Lcea;->j:I
-
-    sget v0, Lizb;->fake_in_app_review_bottom_sheet_thank_view_title:I
-
-    sput v0, Lcea;->k:I
+    invoke-virtual {v0, p1, p2, p3, p4}, Lpb8;->C(FFFLd6e;)V
 
     return-void
 .end method

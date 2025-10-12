@@ -1,66 +1,93 @@
-.class public final Le0;
+.class public abstract Le0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lu24;
 
 
 # instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Lx64;
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Lf0;
+.field private final key:Lv24;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lv24;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lf0;ZLx64;Z)V
+.method public constructor <init>(Lv24;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Le0;->o:Lf0;
-
-    iput-boolean p2, p0, Le0;->a:Z
-
-    iput-object p3, p0, Le0;->b:Lx64;
-
-    iput-boolean p4, p0, Le0;->c:Z
+    iput-object p1, p0, Le0;->key:Lv24;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Llf6;",
+            ")TR;"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Le0;->a:Z
+    invoke-interface {p2, p1, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Le0;->o:Lf0;
+    move-result-object p1
 
-    iget-object v2, p0, Le0;->b:Lx64;
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public get(Lv24;)Lu24;
+    .locals 0
 
-    invoke-interface {v2, v1}, Lx64;->c(Lf0;)V
+    invoke-static {p0, p1}, Lhoc;->j(Lu24;Lv24;)Lu24;
 
-    return-void
+    move-result-object p1
 
-    :cond_0
-    iget-boolean p0, p0, Le0;->c:Z
+    return-object p1
+.end method
 
-    if-eqz p0, :cond_1
+.method public getKey()Lv24;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lv24;"
+        }
+    .end annotation
 
-    invoke-interface {v2}, Lx64;->d()V
+    iget-object v0, p0, Le0;->key:Lv24;
 
-    return-void
+    return-object v0
+.end method
 
-    :cond_1
-    invoke-interface {v2, v1}, Lx64;->a(Lf0;)V
+.method public minusKey(Lv24;)Lw24;
+    .locals 0
 
-    return-void
+    invoke-static {p0, p1}, Lhoc;->v(Lu24;Lv24;)Lw24;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public plus(Lw24;)Lw24;
+    .locals 0
+
+    invoke-static {p0, p1}, Lkmc;->t(Lw24;Lw24;)Lw24;
+
+    move-result-object p1
+
+    return-object p1
 .end method

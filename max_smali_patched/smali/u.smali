@@ -1,71 +1,204 @@
 .class public final Lu;
-.super Lyxf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lomg;
+.implements Lui8;
 
 
 # instance fields
-.field public final X:Ljbc;
+.field public a:I
 
-.field public final b:Lth7;
+.field public b:Z
 
-.field public final c:Lt65;
-
-.field public final o:Lq4e;
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    sget-object v0, Lg;->a:Lg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    iput-object p1, p0, Lu;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    const-class v1, Lj8a;
+    iput p1, p0, Lu;->a:I
 
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    iput-boolean p1, p0, Lu;->b:Z
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-direct {p0}, Lyxf;-><init>()V
 
-    iput-object v0, p0, Lu;->b:Lth7;
+# virtual methods
+.method public a()V
+    .locals 1
 
-    new-instance v0, Lt65;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lu;->b:Z
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 1
+
+    iget-object v0, p0, Lu;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/appcompat/widget/ActionBarContextView;
+
+    invoke-static {v0}, Landroidx/appcompat/widget/ActionBarContextView;->a(Landroidx/appcompat/widget/ActionBarContextView;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lu;->b:Z
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    iget-boolean v0, p0, Lu;->b:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lu;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/appcompat/widget/ActionBarContextView;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lt65;-><init>(I)V
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarContextView;->x0:Lmmg;
 
-    iput-object v0, p0, Lu;->c:Lt65;
+    iget v1, p0, Lu;->a:I
 
-    sget-object v0, Lr25;->a:Lr25;
+    invoke-static {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->b(Landroidx/appcompat/widget/ActionBarContextView;I)V
 
-    invoke-static {v0}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    return-void
+.end method
+
+.method public g(Lgn3;)Lwi8;
+    .locals 5
+
+    sget v0, Lt4g;->a:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_2
+
+    iget v1, p0, Lu;->a:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    if-nez v1, :cond_2
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lu;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/Context;
+
+    if-eqz v1, :cond_2
+
+    const/16 v2, 0x1c
+
+    if-lt v0, v2, :cond_2
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lu;->o:Lq4e;
+    const-string v1, "com.amazon.hardware.tv_screen"
 
-    new-instance v1, Ljbc;
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
-    invoke-direct {v1, v0}, Ljbc;-><init>(Lal9;)V
+    move-result v0
 
-    iput-object v1, p0, Lu;->X:Ljbc;
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
+    :cond_1
+    :goto_0
+    iget-object v0, p1, Lgn3;->c:Ljava/lang/Object;
 
-    new-instance v1, Ls;
+    check-cast v0, Lt76;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lt76;->n:Ljava/lang/String;
 
-    invoke-direct {v1, p0, v2}, Ls;-><init>(Lu;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Ljl9;->h(Ljava/lang/String;)I
 
-    const/4 p0, 0x3
+    move-result v0
 
-    invoke-static {v0, v2, v2, v1, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v2, "Creating an asynchronous MediaCodec adapter for track type "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lt4g;->I(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DMCodecAdapterFactory"
+
+    invoke-static {v2, v1}, Lj40;->E(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Ljd;
+
+    new-instance v2, Lfx;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Lfx;-><init>(II)V
+
+    new-instance v3, Lfx;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, v0, v4}, Lfx;-><init>(II)V
+
+    invoke-direct {v1, v2, v3}, Ljd;-><init>(Lfx;Lfx;)V
+
+    iget-boolean v0, p0, Lu;->b:Z
+
+    iput-boolean v0, v1, Ljd;->b:Z
+
+    invoke-virtual {v1, p1}, Ljd;->m(Lgn3;)Lhx;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    new-instance v0, Li25;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Li25;-><init>(I)V
+
+    invoke-virtual {v0, p1}, Li25;->g(Lgn3;)Lwi8;
+
+    move-result-object p1
+
+    return-object p1
 .end method

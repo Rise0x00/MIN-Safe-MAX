@@ -1,163 +1,172 @@
 .class public final Ld74;
-.super Lt2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
+
+# static fields
+.field public static final X:Landroid/util/SparseIntArray;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:I
 
-.field public final synthetic o:Le74;
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Le74;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Ld74;->c:I
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    packed-switch p2, :pswitch_data_0
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
-    iput-object p1, p0, Ld74;->o:Le74;
+    sput-object v0, Ld74;->X:Landroid/util/SparseIntArray;
 
-    const/16 p1, 0x8
+    const/4 v1, 0x1
 
-    const/4 p2, 0x0
+    const/16 v2, 0xa
 
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x2
+
+    const/16 v3, 0x10
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x3
+
+    const/16 v4, 0xd
+
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x5
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x6
+
+    const/4 v3, -0x2
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x7
+
+    const/4 v3, -0x4
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x8
+
+    const/4 v3, -0x6
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x9
+
+    const/4 v3, -0x5
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, -0x8
+
+    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
+.end method
 
-    :pswitch_0
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 3
 
-    iput-object p1, p0, Ld74;->o:Le74;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0x8
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Ld74;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/16 v0, 0x9
+
+    iput v0, p0, Ld74;->a:I
+
+    sget-object v2, Ld74;->X:Landroid/util/SparseIntArray;
+
+    invoke-virtual {v2, v0, v1}, Landroid/util/SparseIntArray;->get(II)I
+
+    move-result v0
+
+    iput v0, p0, Ld74;->b:I
+
+    iput-object p1, p0, Ld74;->c:Ljava/lang/String;
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 8
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
 
-    iget v0, p0, Ld74;->c:I
+    new-instance v0, Luu1;
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v1, 0x16
 
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, p0, v1, p1}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result v0
+    new-instance p1, Ljava/lang/Thread;
 
-    if-nez v0, :cond_0
+    invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    check-cast p2, Ljava/lang/Boolean;
+    :try_start_0
+    iget v0, p0, Ld74;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setPriority(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p1, Ljava/lang/Boolean;
+    :catchall_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p0, p0, Ld74;->o:Le74;
+    iget-object v1, p0, Ld74;->c:Ljava/lang/String;
 
-    iget-object p1, p0, Le74;->s0:Lizf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Le74;->d(Lizf;)V
+    const-string v1, "-"
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return-void
+    iget-object v1, p0, Ld74;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    :pswitch_0
-    move-object v0, p2
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    check-cast v0, Ljava/lang/CharSequence;
+    move-result v1
 
-    check-cast p1, Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    if-nez p1, :cond_2
+    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p0, p0, Ld74;->o:Le74;
-
-    invoke-static {p0}, Le74;->a(Le74;)Landroid/text/BoringLayout$Metrics;
-
-    move-result-object v6
-
-    sget-object v1, Le74;->z0:Landroid/text/TextPaint;
-
-    const/4 p1, 0x0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result p2
-
-    invoke-virtual {v1, v0, p1, p2}, Landroid/graphics/Paint;->measureText(Ljava/lang/CharSequence;II)F
-
-    move-result p1
-
-    invoke-static {p1}, Litg;->z(F)I
-
-    move-result p1
-
-    iput p1, v6, Landroid/text/BoringLayout$Metrics;->width:I
-
-    iget p1, p0, Le74;->q0:I
-
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v2, v6, Landroid/text/BoringLayout$Metrics;->width:I
-
-    sget-object v3, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x0
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static/range {v0 .. v7}, Landroid/text/BoringLayout;->make(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFLandroid/text/BoringLayout$Metrics;Z)Landroid/text/BoringLayout;
-
-    move-result-object p1
-
-    iput-object p1, p0, Le74;->u0:Landroid/text/BoringLayout;
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

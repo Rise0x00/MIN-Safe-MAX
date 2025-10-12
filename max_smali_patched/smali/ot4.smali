@@ -1,13 +1,11 @@
-.class public abstract Lot4;
+.class public interface abstract Lot4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/graphics/Outline;Landroid/graphics/Path;)V
-    .locals 0
+# virtual methods
+.method public abstract b()V
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
-
-    return-void
+.method public abstract l(I)V
 .end method

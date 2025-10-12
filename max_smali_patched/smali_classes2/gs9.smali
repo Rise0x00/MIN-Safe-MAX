@@ -1,85 +1,51 @@
 .class public final Lgs9;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lls9;
 
 
 # instance fields
-.field public final b:I
+.field public X:Lq49;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lzr0;
+
+.field public o:Lzr0;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lzr0;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgs9;->Z:Lzr0;
 
-    iput p1, p0, Lgs9;->b:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lgs9;->Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lgs9;->w0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lgs9;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lgs9;->w0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lgs9;->Z:Lzr0;
 
-    return v2
+    invoke-virtual {p1, p0}, Lzr0;->d(Lnz3;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lgs9;
+    move-result-object p1
 
-    iget p0, p0, Lgs9;->b:I
-
-    iget p1, p1, Lgs9;->b:I
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Lgs9;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Auto(brightnessThreshold="
-
-    const-string v1, ")"
-
-    iget p0, p0, Lgs9;->b:I
-
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

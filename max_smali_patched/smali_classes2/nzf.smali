@@ -1,128 +1,59 @@
 .class public final Lnzf;
-.super Leje;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:I
+.field public X:Ljava/util/Set;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:Lgu9;
 
-.field public final synthetic Z:Leje;
+.field public Z:J
 
-.field public final synthetic n0:Landroid/view/View;
+.field public o:Luzf;
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public final synthetic x0:Luzf;
+
+.field public y0:I
 
 
 # direct methods
-.method public constructor <init>(Lv96;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Luzf;Lnz3;)V
     .locals 0
 
-    check-cast p1, Leje;
+    iput-object p1, p0, Lnzf;->x0:Luzf;
 
-    iput-object p1, p0, Lnzf;->Z:Leje;
-
-    iput-object p2, p0, Lnzf;->n0:Landroid/view/View;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lnma;
+    iput-object p1, p0, Lnzf;->w0:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lnzf;->y0:I
 
-    invoke-virtual {p0, p1, p2}, Lnzf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    check-cast p0, Lnzf;
+    iput p1, p0, Lnzf;->y0:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lnzf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    move-result-object p0
+    iget-object v2, p0, Lnzf;->x0:Luzf;
 
-    return-object p0
-.end method
+    invoke-static {v2, v0, v1, p1, p0}, Luzf;->a(Luzf;JLjava/util/Set;Lnz3;)Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lnzf;
-
-    iget-object v1, p0, Lnzf;->Z:Leje;
-
-    iget-object p0, p0, Lnzf;->n0:Landroid/view/View;
-
-    invoke-direct {v0, v1, p0, p2}, Lnzf;-><init>(Lv96;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lnzf;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lnzf;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnzf;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lnma;
-
-    iput v1, p0, Lnzf;->X:I
-
-    iget-object v0, p0, Lnzf;->Z:Leje;
-
-    iget-object v1, p0, Lnzf;->n0:Landroid/view/View;
-
-    invoke-interface {v0, v1, p1, p0}, Lv96;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
+    move-result-object p1
 
     return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

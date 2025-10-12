@@ -1,23 +1,60 @@
-.class public final Lp7e;
+.class public final synthetic Lp7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/String;
+.field public final synthetic b:Lr7e;
 
-.field public c:Ljava/lang/String;
 
-.field public d:J
+# direct methods
+.method public synthetic constructor <init>(Lr7e;I)V
+    .locals 0
 
-.field public e:J
+    iput p2, p0, Lp7e;->a:I
 
-.field public f:J
+    iput-object p1, p0, Lp7e;->b:Lr7e;
 
-.field public g:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public h:Ljava/util/List;
+    return-void
+.end method
 
-.field public i:Z
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lp7e;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lp7e;->b:Lr7e;
+
+    invoke-static {v0}, Lr7e;->i(Lr7e;)Landroid/graphics/drawable/ShapeDrawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lp7e;->b:Lr7e;
+
+    invoke-static {v0}, Lr7e;->b(Lr7e;)Landroid/graphics/drawable/RippleDrawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

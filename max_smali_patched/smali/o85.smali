@@ -1,23 +1,56 @@
-.class public interface abstract Lo85;
+.class public final synthetic Lo85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld85;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ld85;I)V
+    .locals 0
+
+    iput p2, p0, Lo85;->a:I
+
+    iput-object p1, p0, Lo85;->b:Ld85;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()Ljava/util/concurrent/ExecutorService;
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract b()Ljava/util/concurrent/ExecutorService;
-.end method
+    iget v0, p0, Lo85;->a:I
 
-.method public abstract d()Ljava/util/concurrent/ExecutorService;
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract f()Ljava/util/concurrent/ExecutorService;
-.end method
+    iget-object v0, p0, Lo85;->b:Ld85;
 
-.method public abstract i()Ljava/util/concurrent/ExecutorService;
-.end method
+    invoke-interface {v0}, Ld85;->o()V
 
-.method public abstract j()Ljava/util/concurrent/ExecutorService;
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lo85;->b:Ld85;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

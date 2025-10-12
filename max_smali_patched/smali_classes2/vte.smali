@@ -1,44 +1,25 @@
 .class public final Lvte;
-.super Ljava/lang/Object;
+.super Lwld;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public final c:Ljava/util/ArrayList;
 
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 3
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    new-instance p0, Lwte;
+    const/4 v0, 0x2
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {p0, v0, p1}, Lwld;-><init>(ILjava/lang/String;)V
 
-    move-result v0
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    move-result v1
+    iput-object p1, p0, Lvte;->c:Ljava/util/ArrayList;
 
-    const-class v2, Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1, v0, v1}, Lwte;-><init>(Ljava/util/List;II)V
-
-    return-object p0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p0, p1, [Lwte;
-
-    return-object p0
+    return-void
 .end method

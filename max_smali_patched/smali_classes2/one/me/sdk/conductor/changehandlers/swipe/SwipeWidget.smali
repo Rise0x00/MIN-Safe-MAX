@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnke;
+.implements Lv4f;
 
 
 # annotations
@@ -14,7 +14,7 @@
     d2 = {
         "Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lnke;",
+        "Lv4f;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -51,7 +51,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     const-string p1, "SwipeWidget"
 
@@ -60,10 +60,10 @@
     return-void
 .end method
 
-.method public static D0(Lox3;)V
+.method public static H0(Lb04;)V
     .locals 6
 
-    invoke-virtual {p0}, Lox3;->getChildRouters()Ljava/util/List;
+    invoke-virtual {p0}, Lb04;->getChildRouters()Ljava/util/List;
 
     move-result-object p0
 
@@ -82,9 +82,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lqrc;
+    check-cast v0, Li8d;
 
-    invoke-virtual {v0}, Lqrc;->e()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Li8d;->e()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -103,13 +103,13 @@
 
     move-result-object v1
 
-    check-cast v1, Ltrc;
+    check-cast v1, Ll8d;
 
-    iget-object v2, v1, Ltrc;->a:Lox3;
+    iget-object v2, v1, Ll8d;->a:Lb04;
 
-    sget-object v3, Lwx3;->d:La94;
+    sget-object v3, Lj04;->d:Lzb4;
 
-    sget-object v4, Lwx3;->a:[Lof7;
+    sget-object v4, Lj04;->a:[Ltm7;
 
     const/4 v5, 0x2
 
@@ -117,7 +117,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v3, v5, v4}, La94;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    invoke-virtual {v3, v5, v4}, Lzb4;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -133,9 +133,9 @@
 
     invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, v1, Ltrc;->a:Lox3;
+    iget-object v1, v1, Ll8d;->a:Lb04;
 
-    invoke-static {v1}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->D0(Lox3;)V
+    invoke-static {v1}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->H0(Lb04;)V
 
     goto :goto_0
 
@@ -154,38 +154,109 @@
 
 
 # virtual methods
-.method public A0()V
+.method public final B0()Lb04;
+    .locals 2
+
+    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Li8d;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Li8d;->e()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lf93;->O(Ljava/util/List;)I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-static {v1, v0}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ll8d;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ll8d;->a:Lb04;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No underlying controller! Swiping won\'t work properly"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public C0()Z
+    .locals 1
+
+    instance-of v0, p0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+
+    xor-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method public D0()V
     .locals 0
 
     return-void
 .end method
 
-.method public B0()V
+.method public E0()V
     .locals 0
 
     return-void
 .end method
 
-.method public C0()V
+.method public F0()V
     .locals 0
 
     return-void
 .end method
 
-.method public E0()Ljava/lang/Long;
+.method public G0()V
     .locals 0
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
-.method public F0()Ljava/lang/Integer;
-    .locals 0
+.method public I0()Ljava/lang/Long;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
+.end method
+
+.method public J0()Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public handleBack()Z
@@ -195,36 +266,36 @@
 
     if-nez v0, :cond_1
 
-    invoke-super {p0}, Lox3;->handleBack()Z
+    invoke-super {p0}, Lb04;->handleBack()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
-.method public final onChangeEnded(Ltx3;Lux3;)V
-    .locals 20
+.method public final onChangeEnded(Lg04;Lh04;)V
+    .locals 21
 
     move-object/from16 v0, p0
 
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v1, Ly38;->o:Ly38;
 
-    invoke-super/range {p0 .. p2}, Lox3;->onChangeEnded(Ltx3;Lux3;)V
+    invoke-super/range {p0 .. p2}, Lb04;->onChangeEnded(Lg04;Lh04;)V
 
-    invoke-interface {v0}, Lnke;->b0()Z
+    invoke-interface {v0}, Lv4f;->d0()Z
 
     move-result v2
 
@@ -232,38 +303,38 @@
 
     if-nez v2, :cond_1
 
-    iget-object v0, v0, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->a:Ljava/lang/String;
+    iget-object v2, v0, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->a:Ljava/lang/String;
 
-    sget-object v2, Lz76;->f:Lvea;
+    sget-object v4, Lox9;->j:Lqpa;
 
-    if-nez v2, :cond_0
+    if-nez v4, :cond_0
 
-    goto/16 :goto_5
+    goto/16 :goto_3
 
     :cond_0
-    invoke-virtual {v2, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v4, v1}, Lqpa;->b(Ly38;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_c
+    if-eqz v5, :cond_d
 
-    const-string v4, "onChangeEnded: swipe is disabled"
+    const-string v5, "onChangeEnded: swipe is disabled"
 
-    invoke-virtual {v2, v1, v0, v4, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v4, v1, v2, v5, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_1
-    invoke-virtual {v0}, Lox3;->getView()Landroid/view/View;
+    invoke-virtual {v0}, Lb04;->getView()Landroid/view/View;
 
-    move-result-object v8
+    move-result-object v9
 
-    if-nez v8, :cond_2
+    if-nez v9, :cond_2
 
-    goto/16 :goto_5
+    goto/16 :goto_3
 
     :cond_2
-    invoke-virtual {v8}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v9}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
 
@@ -273,297 +344,249 @@
 
     check-cast v2, Landroid/view/ViewGroup;
 
-    move-object v9, v2
+    move-object v10, v2
 
     goto :goto_0
 
     :cond_3
-    move-object v9, v3
+    move-object v10, v3
 
     :goto_0
-    if-nez v9, :cond_4
+    if-nez v10, :cond_4
 
-    goto/16 :goto_5
+    goto/16 :goto_3
 
     :cond_4
-    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->x0()Lox3;
+    invoke-virtual {v0}, Lb04;->getRouter()Li8d;
 
     move-result-object v2
 
+    invoke-virtual {v2}, Li8d;->e()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    const-string v4, "For swipe feature backstack must contains more than 1 widget"
+
+    const/4 v5, 0x2
+
+    if-ge v2, v5, :cond_6
+
+    iget-object v1, v0, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->a:Ljava/lang/String;
+
+    sget-object v2, Lox9;->j:Lqpa;
+
     if-nez v2, :cond_5
 
-    move-object v10, v3
-
-    goto :goto_1
+    goto/16 :goto_3
 
     :cond_5
-    new-instance v4, Lq81;
+    sget-object v5, Ly38;->Y:Ly38;
 
-    const/16 v5, 0xe
+    invoke-virtual {v2, v5}, Lqpa;->b(Ly38;)Z
 
-    invoke-direct {v4, v2, v0, v9, v5}, Lq81;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    move-result v6
 
-    move-object v10, v4
+    if-eqz v6, :cond_d
 
-    :goto_1
-    if-nez v10, :cond_6
+    invoke-virtual {v2, v5, v1, v4, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto/16 :goto_5
+    return-void
 
     :cond_6
     move-object/from16 v2, p2
 
-    iget-boolean v2, v2, Lux3;->b:Z
+    iget-boolean v2, v2, Lh04;->b:Z
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_d
 
     iget-object v2, v0, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->a:Ljava/lang/String;
 
-    sget-object v4, Lz76;->f:Lvea;
+    sget-object v6, Lox9;->j:Lqpa;
 
-    if-nez v4, :cond_7
+    if-nez v6, :cond_7
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_7
-    invoke-virtual {v4, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v6, v1}, Lqpa;->b(Ly38;)Z
 
-    move-result v5
+    move-result v7
 
-    if-eqz v5, :cond_8
+    if-eqz v7, :cond_8
 
-    const-string v5, "onChangeEnded: setup swipe callbacks on new view"
+    const-string v7, "onChangeEnded: setup swipe callbacks on new view"
 
-    invoke-virtual {v4, v1, v2, v5, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v6, v1, v2, v7, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_8
-    :goto_2
-    instance-of v1, v8, Lwke;
+    :goto_1
+    invoke-virtual {v0}, Lb04;->getRouter()Li8d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Li8d;->e()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-le v1, v2, :cond_c
+
+    new-instance v11, Lg5f;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v11, v0, v1, v10}, Lg5f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    instance-of v1, v9, Le5f;
 
     if-eqz v1, :cond_b
 
-    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->F0()Ljava/lang/Integer;
+    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->J0()Ljava/lang/Integer;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->y0()Z
+    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->C0()Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_9
+    if-eqz v4, :cond_9
 
-    const/4 v2, 0x2
+    move v12, v5
 
-    :goto_3
-    move v11, v2
-
-    goto :goto_4
+    goto :goto_2
 
     :cond_9
-    const/4 v2, 0x1
+    move v12, v2
 
-    goto :goto_3
+    :goto_2
+    new-instance v15, Lz4f;
 
-    :goto_4
-    new-instance v14, Lrke;
+    new-instance v8, Lm6d;
 
-    new-instance v7, Lv9d;
+    const/16 v2, 0x18
 
-    const/16 v2, 0xe
+    invoke-direct {v8, v2, v0}, Lm6d;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v7, v2, v0}, Lv9d;-><init>(ILjava/lang/Object;)V
+    move-object v6, v15
 
-    move-object v5, v14
+    invoke-direct/range {v6 .. v12}, Lz4f;-><init>(Ljava/lang/Integer;Lm6d;Landroid/view/View;Landroid/view/ViewGroup;Lg5f;I)V
 
-    invoke-direct/range {v5 .. v11}, Lrke;-><init>(Ljava/lang/Integer;Lv9d;Landroid/view/View;Landroid/view/ViewGroup;Lq81;I)V
+    iput-object v0, v15, Lz4f;->q:Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;
 
-    iput-object v0, v14, Lrke;->q:Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;
+    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->I0()Ljava/lang/Long;
 
-    invoke-virtual {v0}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->E0()Ljava/lang/Long;
+    move-result-object v2
 
-    move-result-object v0
-
-    iput-object v0, v14, Lrke;->r:Ljava/lang/Long;
+    iput-object v2, v15, Lz4f;->r:Ljava/lang/Long;
 
     if-eqz v1, :cond_a
 
-    move-object v3, v8
+    move-object v3, v9
 
-    check-cast v3, Lwke;
+    check-cast v3, Le5f;
 
     :cond_a
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_d
 
-    new-instance v12, Leq8;
+    new-instance v13, Lrn7;
 
-    const/16 v18, 0x0
+    const/16 v19, 0x0
 
-    const/16 v19, 0x10
+    const/16 v20, 0x1a
 
-    const/4 v13, 0x1
+    const/4 v14, 0x1
 
-    const-class v15, Lrke;
+    const-class v16, Lz4f;
 
-    const-string v16, "onTouchEvent"
+    const-string v17, "onTouchEvent"
 
-    const-string v17, "onTouchEvent(Landroid/view/MotionEvent;)Z"
+    const-string v18, "onTouchEvent(Landroid/view/MotionEvent;)Z"
 
-    invoke-direct/range {v12 .. v19}, Leq8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v13 .. v20}, Lrn7;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-interface {v3, v12}, Lwke;->setOnTouch(Lf96;)V
+    invoke-interface {v3, v13}, Le5f;->setOnTouch(Lxe6;)V
 
-    new-instance v12, Lmf8;
+    new-instance v13, Lkd6;
 
-    const/16 v19, 0x12
+    const/16 v20, 0x17
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    const-class v15, Lrke;
+    const-class v16, Lz4f;
 
-    const-string v16, "resetDraggingState"
+    const-string v17, "resetDraggingState"
 
-    const-string v17, "resetDraggingState()V"
+    const-string v18, "resetDraggingState()V"
 
-    invoke-direct/range {v12 .. v19}, Lmf8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v13 .. v20}, Lkd6;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-interface {v3, v12}, Lwke;->setOnRequestInterceptTouchEvent(Ld96;)V
+    invoke-interface {v3, v13}, Le5f;->setOnRequestInterceptTouchEvent(Lve6;)V
 
     return-void
 
     :cond_b
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "\'To\' view must realize SwipeTouchHandler for work"
+    const-string v2, "\'To\' view must realize SwipeTouchHandler for work"
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw v0
+    throw v1
 
     :cond_c
-    :goto_5
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_d
+    :goto_3
     return-void
 .end method
 
-.method public onChangeStarted(Ltx3;Lux3;)V
-    .locals 0
+.method public onChangeStarted(Lg04;Lh04;)V
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Ltx3;Lux3;)V
+    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lg04;Lh04;)V
 
-    iget-boolean p1, p2, Lux3;->b:Z
+    iget-boolean p1, p2, Lh04;->b:Z
 
     if-nez p1, :cond_1
 
-    invoke-virtual {p0}, Lox3;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
 
-    move-result-object p0
+    move-result-object p1
 
-    instance-of p1, p0, Lwke;
+    instance-of p2, p1, Le5f;
 
-    const/4 p2, 0x0
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
-    check-cast p0, Lwke;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, p2
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p2}, Lwke;->setOnTouch(Lf96;)V
-
-    invoke-interface {p0, p2}, Lwke;->setOnRequestInterceptTouchEvent(Ld96;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final x0()Lox3;
-    .locals 5
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lqrc;->e()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lqrc;->e()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lh73;->R(Ljava/util/List;)I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-static {v1, v0}, Lg73;->r0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltrc;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Ltrc;->a:Lox3;
+    check-cast p1, Le5f;
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v1
+    move-object p1, v0
 
     :goto_0
-    if-nez v0, :cond_2
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;->a:Ljava/lang/String;
+    invoke-interface {p1, v0}, Le5f;->setOnTouch(Lxe6;)V
 
-    sget-object v2, Lz76;->f:Lvea;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
+    invoke-interface {p1, v0}, Le5f;->setOnRequestInterceptTouchEvent(Lve6;)V
 
     :cond_1
-    sget-object v3, Lhw7;->Y:Lhw7;
-
-    invoke-virtual {v2, v3}, Lvea;->a(Lhw7;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    const-string v4, "No underlying controller! Swiping won\'t work properly"
-
-    invoke-virtual {v2, v3, p0, v4, v1}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    return-object v0
-.end method
-
-.method public y0()Z
-    .locals 0
-
-    instance-of p0, p0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public z0()V
-    .locals 0
-
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz51;
+.implements Lv51;
 
 
 # static fields
@@ -35,30 +35,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lu51;
+    instance-of p1, p1, Lu51;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x7c56e03f
+    const v0, -0x293f37ba
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Finished"
+    const-string v0, "Restored"
 
-    return-object p0
+    return-object v0
 .end method

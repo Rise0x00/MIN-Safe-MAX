@@ -1,97 +1,64 @@
-.class public final Llg2;
+.class public final synthetic Llg2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Log2;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:Lq49;
+
+.field public final synthetic b:Lx00;
+
+.field public final synthetic c:Lo10;
+
+.field public final synthetic d:Lku4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public synthetic constructor <init>(Lq49;Lx00;Lo10;Lku4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llg2;->a:Ljava/util/List;
+    iput-object p1, p0, Llg2;->a:Lq49;
+
+    iput-object p2, p0, Llg2;->b:Lx00;
+
+    iput-object p3, p0, Llg2;->c:Lo10;
+
+    iput-object p4, p0, Llg2;->d:Lku4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    check-cast p1, Lmg2;
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lmg2;
 
-    return v0
+    iget-object p1, p0, Llg2;->a:Lq49;
 
-    :cond_0
-    instance-of v1, p1, Llg2;
+    iget-wide v1, p1, Lyi0;->a:J
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Llg2;->b:Lx00;
 
-    if-nez v1, :cond_1
+    iget-wide v3, p1, Lx00;->a:J
 
-    return v2
+    iget-object p1, p0, Llg2;->c:Lo10;
 
-    :cond_1
-    check-cast p1, Llg2;
+    iget-object v5, p1, Lo10;->r:Ljava/lang/String;
 
-    iget-object p0, p0, Llg2;->a:Ljava/util/List;
+    const/4 v7, 0x0
 
-    iget-object p1, p1, Llg2;->a:Ljava/util/List;
+    iget-object v6, p0, Llg2;->d:Lku4;
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct/range {v0 .. v7}, Lmg2;-><init>(JJLjava/lang/String;Lku4;Z)V
 
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Llg2;->a:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Remove(messageIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Llg2;->a:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -2,143 +2,109 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyc4;
 
-# instance fields
-.field public final a:Landroid/content/Context;
 
-.field public final b:Lqca;
+# static fields
+.field public static final a:Lmte;
 
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public static final b:Lnte;
 
 
 # direct methods
-.method public constructor <init>(Lhoe;Landroid/content/Context;Lqca;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmte;
 
-    iput-object p2, p0, Lmte;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lmte;->b:Lqca;
+    sput-object v0, Lmte;->a:Lmte;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object v0, Lnte;->b:Lnte;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lmte;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    sget-object v0, Lzs4;->p0:Lqs9;
-
-    invoke-virtual {v0, p2}, Lqs9;->c(Landroid/content/Context;)Lzs4;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lzs4;->o0:Ljava/lang/Object;
-
-    check-cast p2, Ljbc;
-
-    iget-object p3, p3, Lqca;->a:Ljbc;
-
-    new-instance v0, Luv2;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, p3, v1}, Luv2;-><init>(Lbq5;I)V
-
-    new-instance p3, Lkte;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {p3, v1, v2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Ly31;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v1, p2, v0, p3, v3}, Ly31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p2, Llte;
-
-    invoke-direct {p2, p0, v2}, Llte;-><init>(Lmte;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lgs5;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p0, v1, p2, p3}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    check-cast p1, Loba;
-
-    invoke-virtual {p1}, Loba;->a()Lj04;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    sput-object v0, Lmte;->b:Lnte;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Leue;)Landroid/text/TextPaint;
-    .locals 3
+.method public final a()Lgd4;
+    .locals 1
 
-    iget-object v0, p0, Lmte;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object v0, Lmte;->b:Lnte;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
+    .locals 9
 
-    if-nez v1, :cond_1
+    sget-object v0, Lmte;->b:Lnte;
 
-    new-instance v1, Landroid/text/TextPaint;
+    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
 
-    invoke-direct {v1}, Landroid/text/TextPaint;-><init>()V
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lmte;->a:Landroid/content/Context;
+    move-result v0
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    if-nez v0, :cond_0
 
-    move-result-object v2
+    const/4 p1, 0x0
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget-object p0, p0, Lmte;->b:Lqca;
-
-    iget-object p0, p0, Lqca;->a:Ljbc;
-
-    iget-object p0, p0, Ljbc;->a:Lj4e;
-
-    invoke-interface {p0}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lix4;
-
-    invoke-virtual {p1, v1, v2, p0}, Leue;->a(Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lix4;)V
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    move-object v1, p0
+    sget-object v0, Lnte;->b:Lnte;
 
-    :cond_1
-    :goto_0
-    check-cast v1, Landroid/text/TextPaint;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lnte;->c:Lbd4;
+
+    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Ljd4;
+
+    new-instance v7, Lon1;
+
+    const/16 v0, 0xc
+
+    invoke-direct {v7, p3, v0}, Lon1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
 
     return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v3}, Lqw1;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

@@ -1,98 +1,221 @@
 .class public final Lg6a;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
+
+.field public final b:J
+
+.field public final c:Lvab;
+
+.field public final d:Landroid/os/Bundle;
+
+.field public e:Ljava/lang/String;
+
+.field public f:Landroid/net/Uri;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;JLvab;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iput-object v0, p0, Lg6a;->d:Landroid/os/Bundle;
+
+    iput-object p1, p0, Lg6a;->a:Ljava/lang/CharSequence;
+
+    iput-wide p2, p0, Lg6a;->b:J
+
+    iput-object p4, p0, Lg6a;->c:Lvab;
+
+    return-void
+.end method
+
+.method public static a(Ljava/util/ArrayList;)[Landroid/os/Bundle;
+    .locals 9
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [Landroid/os/Bundle;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_6
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lg6a;
+
+    iget-object v4, v3, Lg6a;->c:Lvab;
+
+    new-instance v5, Landroid/os/Bundle;
+
+    invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v6, v3, Lg6a;->a:Ljava/lang/CharSequence;
+
+    if-eqz v6, :cond_0
+
+    const-string v7, "text"
+
+    invoke-virtual {v5, v7, v6}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    const-string v6, "time"
+
+    iget-wide v7, v3, Lg6a;->b:J
+
+    invoke-virtual {v5, v6, v7, v8}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+
+    if-eqz v4, :cond_2
+
+    const-string v6, "sender"
+
+    iget-object v7, v4, Lvab;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v5, v6, v7}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v7, 0x1c
+
+    if-lt v6, v7, :cond_1
+
+    invoke-static {v4}, Luab;->b(Lvab;)Landroid/app/Person;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lf6a;->a(Landroid/app/Person;)Landroid/os/Parcelable;
+
+    move-result-object v4
+
+    const-string v6, "sender_person"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v6, "person"
+
+    invoke-virtual {v4}, Lvab;->b()Landroid/os/Bundle;
+
+    move-result-object v4
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_2
+    :goto_1
+    iget-object v4, v3, Lg6a;->e:Ljava/lang/String;
+
+    if-eqz v4, :cond_3
+
+    const-string v6, "type"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    iget-object v4, v3, Lg6a;->f:Landroid/net/Uri;
+
+    if-eqz v4, :cond_4
+
+    const-string v6, "uri"
+
+    invoke-virtual {v5, v6, v4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :cond_4
+    iget-object v3, v3, Lg6a;->d:Landroid/os/Bundle;
+
+    if-eqz v3, :cond_5
+
+    const-string v4, "extras"
+
+    invoke-virtual {v5, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_5
+    aput-object v5, v0, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    return-object v0
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()Landroid/app/Notification$MessagingStyle$Message;
+    .locals 7
 
-    check-cast p1, Lnma;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x1c
 
-    invoke-virtual {p0, p1, p2}, Lg6a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    iget-wide v3, p0, Lg6a;->b:J
 
-    check-cast p0, Lg6a;
+    iget-object v5, p0, Lg6a;->a:Ljava/lang/CharSequence;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object v6, p0, Lg6a;->c:Lvab;
 
-    invoke-virtual {p0, p1}, Lg6a;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-lt v0, v1, :cond_1
 
-    return-object p1
-.end method
+    if-nez v6, :cond_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    goto :goto_0
 
-    new-instance p0, Lg6a;
+    :cond_0
+    invoke-static {v6}, Luab;->b(Lvab;)Landroid/app/Person;
 
-    const/4 p1, 0x2
+    move-result-object v2
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    :goto_0
+    invoke-static {v5, v3, v4, v2}, Lf6a;->b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    goto :goto_2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    :cond_1
+    if-nez v6, :cond_2
 
-    sget-object p0, Lg2d;->a:Lg2d;
+    goto :goto_1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    :cond_2
+    iget-object v2, v6, Lvab;->a:Ljava/lang/CharSequence;
 
-    move-result-object p0
+    :goto_1
+    invoke-static {v5, v3, v4, v2}, Le6a;->a(Ljava/lang/CharSequence;JLjava/lang/CharSequence;)Landroid/app/Notification$MessagingStyle$Message;
 
-    const-class p1, Lt49;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :goto_2
+    iget-object v1, p0, Lg6a;->e:Ljava/lang/String;
 
-    move-result-object p0
+    if-eqz v1, :cond_3
 
-    check-cast p0, Lt49;
+    iget-object v2, p0, Lg6a;->f:Landroid/net/Uri;
 
-    iget-object p1, p0, Lt49;->i:Lkle;
+    invoke-static {v0, v1, v2}, Le6a;->b(Landroid/app/Notification$MessagingStyle$Message;Ljava/lang/String;Landroid/net/Uri;)Landroid/app/Notification$MessagingStyle$Message;
 
-    invoke-virtual {p1}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ls49;
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0}, Lxz7;->j(I)V
-
-    invoke-virtual {p0}, Lt49;->e()Lxz7;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lxz7;->i()Ljava/util/LinkedHashMap;
-
-    move-result-object p1
-
-    new-instance v0, Lvj;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1, p0}, Lvj;-><init>(ILjava/lang/Object;)V
-
-    new-instance p0, La53;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p0, v1, v0}, La53;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p0}, Ljava/util/LinkedHashMap;->forEach(Ljava/util/function/BiConsumer;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :cond_3
+    return-object v0
 .end method

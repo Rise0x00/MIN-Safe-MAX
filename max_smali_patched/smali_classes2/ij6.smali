@@ -1,59 +1,48 @@
 .class public final Lij6;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lnz3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lvi6;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lvi6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lij6;->Y:Lvi6;
+
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lij6;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lij6;->X:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lij6;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lij6;->X:I
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Lij6;->Y:Lvi6;
 
-    return p0
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lij6;
+    invoke-virtual {p1, v0, p0}, Lvi6;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const p0, -0xf2f2f3
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "GradientsLoadingIconPrimaryStaticColors(filled=-15921907, transparent=-15921907)"
-
-    return-object p0
+    return-object p1
 .end method

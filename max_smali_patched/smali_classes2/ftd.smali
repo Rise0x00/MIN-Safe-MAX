@@ -4,68 +4,104 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lbp7;
 
-.field public final c:Ljava/lang/Boolean;
+.field public final c:Lbp7;
 
-.field public final d:Ljava/util/List;
+.field public final d:Lbp7;
 
-.field public final e:Ljava/util/List;
+.field public final e:Lbp7;
 
-.field public final f:Ljava/util/List;
+.field public final f:Lbp7;
 
-.field public final g:Ljava/lang/Long;
+.field public final g:Lbp7;
 
-.field public final h:Ljava/lang/Integer;
+.field public final h:Lbp7;
 
-.field public final i:Letd;
+.field public final i:Lbp7;
 
-.field public final j:Ld11;
+.field public final j:Lbp7;
 
-.field public final k:Ljava/lang/Object;
+.field public final k:Lbp7;
 
-.field public final l:Ldtd;
+.field public final l:Lbp7;
 
-.field public final m:Lwg1;
+.field public final m:Lbp7;
 
-.field public final n:Lhtd;
+.field public final n:Lbp7;
+
+.field public final o:Lbp7;
+
+.field public final p:Lbp7;
+
+.field public final q:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/Boolean;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Long;Ljava/lang/Integer;Letd;Ld11;Ljava/util/Map;Ldtd;Lwg1;Lhtd;)V
-    .locals 0
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lz24;Lr8f;Lbp7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lftd;->a:I
+    move-object/from16 v0, p17
 
-    iput-object p2, p0, Lftd;->b:Ljava/lang/String;
+    check-cast v0, Lwla;
 
-    iput-object p3, p0, Lftd;->c:Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lwla;->b()Ly24;
 
-    iput-object p4, p0, Lftd;->d:Ljava/util/List;
+    move-result-object v0
 
-    iput-object p5, p0, Lftd;->e:Ljava/util/List;
+    move-object/from16 v1, p16
 
-    iput-object p6, p0, Lftd;->f:Ljava/util/List;
+    invoke-virtual {v0, v1}, Le0;->plus(Lw24;)Lw24;
 
-    iput-object p7, p0, Lftd;->g:Ljava/lang/Long;
+    move-result-object v0
 
-    iput-object p8, p0, Lftd;->h:Ljava/lang/Integer;
+    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
 
-    iput-object p9, p0, Lftd;->i:Letd;
+    move-result-object v0
 
-    iput-object p10, p0, Lftd;->j:Ld11;
+    iput-object v0, p0, Lftd;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iput-object p11, p0, Lftd;->k:Ljava/lang/Object;
+    iput-object p1, p0, Lftd;->b:Lbp7;
 
-    iput-object p12, p0, Lftd;->l:Ldtd;
+    iput-object p2, p0, Lftd;->c:Lbp7;
 
-    iput-object p13, p0, Lftd;->m:Lwg1;
+    iput-object p3, p0, Lftd;->d:Lbp7;
 
-    iput-object p14, p0, Lftd;->n:Lhtd;
+    iput-object p4, p0, Lftd;->e:Lbp7;
+
+    iput-object p5, p0, Lftd;->f:Lbp7;
+
+    iput-object p6, p0, Lftd;->g:Lbp7;
+
+    iput-object p7, p0, Lftd;->h:Lbp7;
+
+    iput-object p8, p0, Lftd;->i:Lbp7;
+
+    iput-object p9, p0, Lftd;->j:Lbp7;
+
+    iput-object p10, p0, Lftd;->k:Lbp7;
+
+    iput-object p11, p0, Lftd;->l:Lbp7;
+
+    iput-object p12, p0, Lftd;->m:Lbp7;
+
+    iput-object p13, p0, Lftd;->n:Lbp7;
+
+    move-object/from16 p1, p14
+
+    iput-object p1, p0, Lftd;->o:Lbp7;
+
+    move-object/from16 p1, p15
+
+    iput-object p1, p0, Lftd;->p:Lbp7;
+
+    move-object/from16 p1, p18
+
+    iput-object p1, p0, Lftd;->q:Lbp7;
 
     return-void
 .end method

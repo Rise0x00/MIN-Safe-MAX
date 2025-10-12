@@ -1,6 +1,11 @@
 .class public Lru/ok/android/externcalls/analytics/internal/api/SimpleItemsApiValue;
-.super Ljs0;
+.super Lfs0;
 .source "SourceFile"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # instance fields
@@ -36,8 +41,8 @@
 
 
 # virtual methods
-.method public write(Lxe7;)V
-    .locals 2
+.method public write(Lcm7;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -45,35 +50,35 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lxe7;->u()V
+    invoke-interface {p1}, Lcm7;->u()V
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/api/SimpleItemsApiValue;->items:Ljava/lang/Iterable;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/SimpleItemsApiValue;->items:Ljava/lang/Iterable;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object v1, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
+    move-result v1
 
-    invoke-virtual {v1, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lxe7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;
+
+    sget-object v2, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
+
+    invoke-virtual {v2, p1, v1}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lcm7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lxe7;->t()V
+    invoke-interface {p1}, Lcm7;->t()V
 
     return-void
 .end method

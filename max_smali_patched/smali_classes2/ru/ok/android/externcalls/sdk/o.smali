@@ -3,26 +3,19 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Lwo3;
+.implements Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$GrantRolesRequest;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-.field public final synthetic c:Ljava/lang/Runnable;
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;I)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
     .locals 0
 
-    iput p3, p0, Lru/ok/android/externcalls/sdk/o;->a:I
-
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/o;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/o;->c:Ljava/lang/Runnable;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,38 +24,34 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public accept(Ljava/lang/Object;)V
     .locals 1
 
-    iget v0, p0, Lru/ok/android/externcalls/sdk/o;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->c:Ljava/lang/Runnable;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
     check-cast p1, Ljava/lang/Throwable;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/o;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {p0, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->R(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->m(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Throwable;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->c:Ljava/lang/Runnable;
+.method public grantRoles(Lxg1;Z[Lah1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    .locals 6
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/o;->b:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    move-object v1, p1
 
-    invoke-static {p0, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->k(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/lang/Runnable;Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    move v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->u(Lru/ok/android/externcalls/sdk/ConversationImpl;Lxg1;Z[Lah1;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

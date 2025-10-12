@@ -1,64 +1,190 @@
-.class public final synthetic Ln24;
+.class public final Ln24;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final synthetic X:Lth7;
+.field public final a:Ljava/util/ListIterator;
 
-.field public final synthetic a:Lm34;
+.field public final b:I
 
-.field public final synthetic b:Lth7;
-
-.field public final synthetic c:Lhoe;
-
-.field public final synthetic o:Lk04;
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm34;Lth7;Lhoe;Lk04;Lth7;)V
+.method public constructor <init>(Ljava/util/List;III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln24;->a:Lm34;
+    iput p3, p0, Ln24;->b:I
 
-    iput-object p2, p0, Ln24;->b:Lth7;
+    iput p4, p0, Ln24;->c:I
 
-    iput-object p3, p0, Ln24;->c:Lhoe;
+    add-int/2addr p2, p3
 
-    iput-object p4, p0, Ln24;->o:Lk04;
+    invoke-interface {p1, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
 
-    iput-object p5, p0, Ln24;->X:Lth7;
+    move-result-object p1
+
+    iput-object p1, p0, Ln24;->a:Ljava/util/ListIterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ldw5;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    new-instance v1, La47;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget-object v2, p0, Ln24;->a:Lm34;
+    throw p1
+.end method
 
-    invoke-direct {v1, v2}, La47;-><init>(Ljava/lang/Object;)V
+.method public final hasNext()Z
+    .locals 2
 
-    iget-object v2, p0, Ln24;->b:Lth7;
+    invoke-virtual {p0}, Ln24;->nextIndex()I
 
-    iget-object v3, p0, Ln24;->c:Lhoe;
+    move-result v0
 
-    iget-object v4, p0, Ln24;->o:Lk04;
+    iget v1, p0, Ln24;->c:I
 
-    iget-object v5, p0, Ln24;->X:Lth7;
+    if-ge v0, v1, :cond_0
 
-    invoke-direct/range {v0 .. v5}, Ldw5;-><init>(La47;Lth7;Lhoe;Lk04;Lth7;)V
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ln24;->previousIndex()I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ln24;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ln24;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final nextIndex()I
+    .locals 2
+
+    iget-object v0, p0, Ln24;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    iget v1, p0, Ln24;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ln24;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ln24;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 2
+
+    iget-object v0, p0, Ln24;->a:Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
+
+    move-result v0
+
+    iget v1, p0, Ln24;->b:I
+
+    sub-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

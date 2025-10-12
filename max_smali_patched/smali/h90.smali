@@ -4,100 +4,199 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:I
+.field public final b:Li90;
 
-.field public c:F
 
-.field public d:F
+# direct methods
+.method public constructor <init>(ILi90;)V
+    .locals 0
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:J
+    if-eqz p1, :cond_0
 
-.field public g:J
+    iput p1, p0, Lh90;->a:I
 
-.field public h:F
+    iput-object p2, p0, Lh90;->b:Li90;
 
-.field public i:I
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null type"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
 
 
 # virtual methods
-.method public final a(J)F
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-wide v0, p0, Lh90;->e:J
+    if-ne p1, p0, :cond_0
 
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_0
-
-    return v3
+    goto :goto_0
 
     :cond_0
-    iget-wide v4, p0, Lh90;->g:J
+    instance-of v0, p1, Lh90;
 
-    const-wide/16 v6, 0x0
+    if-eqz v0, :cond_2
 
-    cmp-long v2, v4, v6
+    check-cast p1, Lh90;
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    iget v0, p1, Lh90;->a:I
 
-    if-ltz v2, :cond_2
+    iget-object p1, p1, Lh90;->b:Li90;
 
-    cmp-long v2, p1, v4
+    iget v1, p0, Lh90;->a:I
 
-    if-gez v2, :cond_1
+    invoke-static {v1, v0}, Lqw1;->c(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lh90;->b:Li90;
+
+    if-nez v0, :cond_1
+
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_1
-    sub-long/2addr p1, v4
+    invoke-virtual {v0, p1}, Li90;->equals(Ljava/lang/Object;)Z
 
-    iget v0, p0, Lh90;->h:F
+    move-result p1
 
-    sub-float v1, v6, v0
+    if-eqz p1, :cond_2
 
-    long-to-float p1, p1
+    :goto_0
+    const/4 p1, 0x1
 
-    iget p0, p0, Lh90;->i:I
-
-    int-to-float p0, p0
-
-    div-float/2addr p1, p0
-
-    invoke-static {p1, v3, v6}, Lvp7;->b(FFF)F
-
-    move-result p0
-
-    mul-float/2addr p0, v0
-
-    add-float/2addr p0, v1
-
-    return p0
+    return p1
 
     :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lh90;->a:I
+
+    invoke-static {v0}, Lqw1;->u(I)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lh90;->b:Li90;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Li90;->hashCode()I
+
+    move-result v1
+
     :goto_0
-    sub-long/2addr p1, v0
+    xor-int/2addr v0, v1
 
-    long-to-float p1, p1
+    return v0
+.end method
 
-    iget p0, p0, Lh90;->a:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    int-to-float p0, p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    div-float/2addr p1, p0
+    const-string v1, "CameraState{type="
 
-    invoke-static {p1, v3, v6}, Lvp7;->b(FFF)F
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p0
+    const/4 v1, 0x1
 
-    const/high16 p1, 0x3f000000    # 0.5f
+    iget v2, p0, Lh90;->a:I
 
-    mul-float/2addr p0, p1
+    if-eq v2, v1, :cond_4
 
-    return p0
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x5
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "CLOSED"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "CLOSING"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "OPEN"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OPENING"
+
+    goto :goto_0
+
+    :cond_4
+    const-string v1, "PENDING_OPEN"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", error="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh90;->b:Li90;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

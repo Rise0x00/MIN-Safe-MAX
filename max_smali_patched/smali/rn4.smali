@@ -1,78 +1,120 @@
-.class public Lrn4;
-.super Lgl4;
+.class public final synthetic Lrn4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public m:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Runnable;
+
+.field public final synthetic c:Lgma;
 
 
 # direct methods
-.method public constructor <init>(Ljjg;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lgma;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lgl4;-><init>(Ljjg;)V
+    iput p3, p0, Lrn4;->a:I
 
-    instance-of p1, p1, Lxr6;
+    iput-object p1, p0, Lrn4;->b:Ljava/lang/Runnable;
 
-    if-eqz p1, :cond_0
+    iput-object p2, p0, Lrn4;->c:Lgma;
 
-    const/4 p1, 0x2
-
-    iput p1, p0, Lgl4;->e:I
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x3
-
-    iput p1, p0, Lgl4;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(I)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-boolean v0, p0, Lgl4;->j:Z
+    iget v0, p0, Lrn4;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_1
+    iget-object v0, p0, Lrn4;->b:Ljava/lang/Runnable;
 
-    :cond_0
-    const/4 v0, 0x1
+    iget-object v1, p0, Lrn4;->c:Lgma;
 
-    iput-boolean v0, p0, Lgl4;->j:Z
+    iget-object v1, v1, Lgma;->b:Ljava/lang/Object;
 
-    iput p1, p0, Lgl4;->g:I
+    check-cast v1, Lxn4;
 
-    iget-object p0, p0, Lgl4;->k:Ljava/util/ArrayList;
+    :try_start_0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x0
 
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ldl4;
-
-    invoke-interface {p1, p1}, Ldl4;->a(Ldl4;)V
+    invoke-virtual {v1, v0}, Lp3;->j(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lp3;->k(Ljava/lang/Throwable;)Z
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrn4;->b:Ljava/lang/Runnable;
+
+    :try_start_1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    iget-object v1, p0, Lrn4;->c:Lgma;
+
+    iget-object v1, v1, Lgma;->b:Ljava/lang/Object;
+
+    check-cast v1, Lxn4;
+
+    invoke-virtual {v1, v0}, Lp3;->k(Ljava/lang/Throwable;)Z
+
     :goto_1
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lrn4;->b:Ljava/lang/Runnable;
+
+    :try_start_2
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    return-void
+
+    :catch_2
+    move-exception v0
+
+    iget-object v1, p0, Lrn4;->c:Lgma;
+
+    iget-object v1, v1, Lgma;->b:Ljava/lang/Object;
+
+    check-cast v1, Lxn4;
+
+    invoke-virtual {v1, v0}, Lp3;->k(Ljava/lang/Throwable;)Z
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

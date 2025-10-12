@@ -1,142 +1,96 @@
-.class public final Lok8;
+.class public final synthetic Lok8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsx7;
+
 
 # instance fields
-.field public final a:Lwl8;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lvlb;
 
-.field public final c:I
-
-.field public final d:Lnk8;
-
-.field public final e:Landroid/os/Bundle;
+.field public final synthetic c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lwl8;IIZLnk8;Landroid/os/Bundle;)V
+.method public synthetic constructor <init>(Lvlb;Ljava/lang/Integer;I)V
     .locals 0
 
+    iput p3, p0, Lok8;->a:I
+
+    iput-object p1, p0, Lok8;->b:Lvlb;
+
+    iput-object p2, p0, Lok8;->c:Ljava/lang/Integer;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lok8;->a:Lwl8;
-
-    iput p2, p0, Lok8;->b:I
-
-    iput p3, p0, Lok8;->c:I
-
-    iput-object p5, p0, Lok8;->d:Lnk8;
-
-    iput-object p6, p0, Lok8;->e:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 3
 
-    instance-of v0, p1, Lok8;
+    iget v0, p0, Lok8;->a:I
 
-    if-nez v0, :cond_0
+    check-cast p1, Lukb;
 
-    const/4 p0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    return p0
+    iget-object v0, p0, Lok8;->b:Lvlb;
 
-    :cond_0
-    if-ne p0, p1, :cond_1
+    iget-boolean v0, v0, Lvlb;->t:Z
 
-    const/4 p0, 0x1
+    iget-object v1, p0, Lok8;->c:Ljava/lang/Integer;
 
-    return p0
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    :cond_1
-    check-cast p1, Lok8;
+    move-result v1
 
-    iget-object v0, p0, Lok8;->d:Lnk8;
+    invoke-interface {p1, v1, v0}, Lukb;->i(IZ)V
 
-    if-nez v0, :cond_3
+    return-void
 
-    iget-object v1, p1, Lok8;->d:Lnk8;
+    :pswitch_0
+    iget-object v0, p0, Lok8;->b:Lvlb;
 
-    if-eqz v1, :cond_2
+    iget-object v1, v0, Lvlb;->d:Lwkb;
 
-    goto :goto_0
+    iget-object v0, v0, Lvlb;->e:Lwkb;
 
-    :cond_2
-    iget-object p0, p0, Lok8;->a:Lwl8;
+    iget-object v2, p0, Lok8;->c:Ljava/lang/Integer;
 
-    iget-object p1, p1, Lok8;->a:Lwl8;
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p0, p1}, Lwl8;->equals(Ljava/lang/Object;)Z
+    move-result v2
 
-    move-result p0
+    invoke-interface {p1, v1, v0, v2}, Lukb;->t(Lwkb;Lwkb;I)V
 
-    return p0
+    return-void
 
-    :cond_3
-    :goto_0
-    iget-object p0, p1, Lok8;->d:Lnk8;
+    :pswitch_1
+    iget-object v0, p0, Lok8;->b:Lvlb;
 
-    invoke-static {v0, p0}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, v0, Lvlb;->j:Lmif;
 
-    move-result p0
+    iget-object v1, p0, Lok8;->c:Ljava/lang/Integer;
 
-    return p0
-.end method
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-.method public final hashCode()I
-    .locals 1
+    move-result v1
 
-    iget-object v0, p0, Lok8;->d:Lnk8;
+    invoke-interface {p1, v0, v1}, Lukb;->l0(Lmif;I)V
 
-    iget-object p0, p0, Lok8;->a:Lwl8;
+    return-void
 
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
+    nop
 
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ControllerInfo {pkg="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lok8;->a:Lwl8;
-
-    iget-object v1, p0, Lwl8;->a:Lul8;
-
-    iget-object v1, v1, Lul8;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uid="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lwl8;->a:Lul8;
-
-    iget p0, p0, Lul8;->c:I
-
-    const-string v1, "}"
-
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

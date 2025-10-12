@@ -1,128 +1,101 @@
-.class public final synthetic Lra2;
-.super Ljava/lang/Object;
+.class public final Lra2;
+.super Lbj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lim3;
 
 
 # instance fields
-.field public final synthetic a:Lbb2;
+.field public final synthetic b:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbb2;JJJ)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lra2;->a:Lbb2;
+    iput v0, p0, Lra2;->b:I
 
-    iput-wide p2, p0, Lra2;->b:J
+    .line 1
+    invoke-direct {p0}, Lbj0;-><init>()V
 
-    iput-wide p4, p0, Lra2;->c:J
+    .line 2
+    iput-wide p1, p0, Lra2;->c:J
 
-    iput-wide p6, p0, Lra2;->d:J
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lra2;->b:I
+
+    .line 3
+    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+
+    .line 4
+    iput-wide p3, p0, Lra2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 9
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Lgb2;
+    iget v0, p0, Lra2;->b:I
 
-    iget-object v0, p0, Lra2;->a:Lbb2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v0, Lbb2;->B:Lcq4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lgb2;->c()Ljava/util/Map;
+    const-string v1, "ReadMarkEvent{chatId="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lra2;->b:J
+    iget-wide v1, p0, Lra2;->c:J
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/16 v3, 0x7d
 
-    move-result-object v4
+    invoke-static {v0, v1, v2, v3}, Lvpb;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v4
+    return-object v0
 
-    check-cast v4, Ljava/lang/Long;
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v4, :cond_0
+    const-string v1, "ChatComplainEvent{chatId="
 
-    goto :goto_1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+    iget-wide v1, p0, Lra2;->c:J
 
-    move-result-wide v4
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-wide v6, p0, Lra2;->c:J
+    const-string v1, "} "
 
-    cmp-long v4, v4, v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v4, :cond_1
+    invoke-super {p0}, Lbj0;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x1
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_0
-    if-eqz v4, :cond_2
+    move-result-object v0
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object v0
 
-    move-result-object v5
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v8
-
-    invoke-interface {p1, v5, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v0}, Lbb2;->K()J
-
-    move-result-wide v4
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_3
-
-    invoke-virtual {v1}, Lcq4;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v1}, Lcq4;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvy9;
-
-    iget-wide v0, p0, Lra2;->d:J
-
-    invoke-virtual {p1, v0, v1, v6, v7}, Lvy9;->H(JJ)V
-
-    :cond_3
-    :goto_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

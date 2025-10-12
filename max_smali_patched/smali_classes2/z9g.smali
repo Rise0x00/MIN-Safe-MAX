@@ -1,57 +1,59 @@
 .class public final Lz9g;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lkle;
+.field public X:Ln10;
 
-.field public final b:Lkle;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Lkle;
+.field public final synthetic Z:Leag;
+
+.field public o:Leag;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Leag;Lnz3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz9g;->Z:Leag;
 
-    new-instance v0, Ltif;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Ltif;-><init>(I)V
-
-    new-instance v1, Lkle;
-
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
-
-    iput-object v1, p0, Lz9g;->a:Lkle;
-
-    new-instance v0, Ltif;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Ltif;-><init>(I)V
-
-    new-instance v1, Lkle;
-
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
-
-    iput-object v1, p0, Lz9g;->b:Lkle;
-
-    new-instance v0, Ltif;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Ltif;-><init>(I)V
-
-    new-instance v1, Lkle;
-
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
-
-    iput-object v1, p0, Lz9g;->c:Lkle;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iput-object p1, p0, Lz9g;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lz9g;->w0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lz9g;->w0:I
+
+    const-wide/16 v2, 0x0
+
+    const-wide/16 v4, 0x0
+
+    iget-object v0, p0, Lz9g;->Z:Leag;
+
+    const/4 v1, 0x0
+
+    move-object v6, p0
+
+    invoke-virtual/range {v0 .. v6}, Leag;->b(Lo10;JJLnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

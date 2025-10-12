@@ -1,179 +1,135 @@
-.class public final synthetic Lhw8;
+.class public final Lhw8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Law8;
 
-.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final b:J
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public volatile d:I
+
+.field public volatile e:I
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
-    .locals 0
-
-    iput p2, p0, Lhw8;->a:I
-
-    iput-object p1, p0, Lhw8;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.method public constructor <init>(Law8;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhw8;->a:Law8;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lhw8;->b:J
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lhw8;->c:Ljava/util/ArrayList;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lhw8;->d:I
+
+    iput p1, p0, Lhw8;->e:I
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lhw8;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lhw8;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+    .locals 1
 
-    iget v0, p0, Lhw8;->a:I
+    iget-object v0, p0, Lhw8;->g:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object p0, p0, Lhw8;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:[Lof7;
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0()Ldt8;
+    iget-object v0, p0, Lhw8;->a:Law8;
 
-    move-result-object p0
+    iget-object v1, v0, Law8;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ldt8;->w()Z
+    invoke-static {v1}, Lk74;->X(Ljava/util/ArrayList;)Ljava/lang/String;
 
-    move-result p0
+    move-result-object v1
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v2, p0, Lhw8;->c:Ljava/util/ArrayList;
 
-    move-result-object p0
+    invoke-static {v2}, Lk74;->U(Ljava/util/List;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v2
 
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:[Lof7;
+    iget-object v3, v0, Law8;->c:Ljava/lang/String;
 
-    new-instance v1, Ldt8;
+    const-string v4, "              "
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->E0:Lvr;
+    invoke-static {v0, v4}, Lk74;->W(Law8;Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:[Lof7;
+    move-result-object v4
 
-    const/4 v3, 0x6
-
-    aget-object v3, v2, v3
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-static {v0}, Lk74;->V(Law8;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    const-string v5, "\n              }\n              inputMedias={"
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    const-string v6, "\n              }\n              out="
 
-    move-result-wide v3
+    const-string v7, "\n            MediaTransformRequest(\n              in={"
 
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->F0:Lvr;
+    invoke-static {v7, v1, v5, v2, v6}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v5, 0x7
+    move-result-object v1
 
-    aget-object v5, v2, v5
+    const-string v2, "\n              anc={"
 
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    const-string v5, "\n              }\n              request={"
+
+    invoke-static {v1, v3, v2, v4, v5}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n              }\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    invoke-static {v0}, Lzxe;->N(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    move-result-object v0
 
-    move-result-wide v5
-
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->G0:Lvr;
-
-    const/16 v7, 0x8
-
-    aget-object v2, v2, v7
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v7
-
-    move-wide v2, v3
-
-    move-wide v4, v5
-
-    move-wide v6, v7
-
-    invoke-direct/range {v1 .. v7}, Ldt8;-><init>(JJJ)V
-
-    return-object v1
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:[Lof7;
-
-    iget-object v0, p0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->H0:Lvr;
-
-    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->W0:[Lof7;
-
-    const/16 v2, 0x9
-
-    aget-object v3, v1, v2
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Boolean;
-
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    aget-object v1, v1, v2
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p0, v1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lox3;->getTargetController()Lox3;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lqw3;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lqw3;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lqw3;->onDismiss()V
-
-    :cond_1
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

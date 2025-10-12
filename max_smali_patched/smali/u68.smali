@@ -1,109 +1,281 @@
-.class public final enum Lu68;
-.super Ljava/lang/Enum;
+.class public final Lu68;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lu68;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic Y:[Lu68;
+.field public b:I
 
-.field public static final enum a:Lu68;
-
-.field public static final enum b:Lu68;
-
-.field public static final enum c:Lu68;
-
-.field public static final enum o:Lu68;
+.field public c:[J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(I)V
+    .locals 1
 
-    new-instance v0, Lu68;
+    const/4 v0, 0x1
 
-    const-string v1, "OFF"
+    iput v0, p0, Lu68;->a:I
 
-    const/4 v2, 0x0
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 5
+    new-array p1, p1, [J
 
-    sput-object v0, Lu68;->a:Lu68;
-
-    new-instance v1, Lu68;
-
-    const-string v2, "ON"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lu68;->b:Lu68;
-
-    new-instance v2, Lu68;
-
-    const-string v3, "DISABLED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lu68;->c:Lu68;
-
-    new-instance v3, Lu68;
-
-    const-string v4, "HIDE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lu68;->o:Lu68;
-
-    new-instance v4, Lu68;
-
-    const-string v5, "UNAVAILABLE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lu68;->X:Lu68;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lu68;
-
-    move-result-object v0
-
-    sput-object v0, Lu68;->Y:[Lu68;
+    iput-object p1, p0, Lu68;->c:[J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lu68;
-    .locals 1
+.method public constructor <init>(IB)V
+    .locals 0
 
-    const-class v0, Lu68;
+    iput p1, p0, Lu68;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lu68;
+    const/16 p1, 0x20
 
-    return-object p0
+    .line 2
+    new-array p1, p1, [J
+
+    iput-object p1, p0, Lu68;->c:[J
+
+    return-void
+
+    :pswitch_0
+    const/16 p1, 0x20
+
+    .line 3
+    invoke-direct {p0, p1}, Lu68;-><init>(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lu68;
-    .locals 1
 
-    sget-object v0, Lu68;->Y:[Lu68;
+# virtual methods
+.method public final a(J)V
+    .locals 3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget v0, p0, Lu68;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lu68;->b:I
+
+    iget-object v1, p0, Lu68;->c:[J
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_0
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
 
     move-result-object v0
 
-    check-cast v0, [Lu68;
+    iput-object v0, p0, Lu68;->c:[J
 
-    return-object v0
+    :cond_0
+    iget-object v0, p0, Lu68;->c:[J
+
+    iget v1, p0, Lu68;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lu68;->b:I
+
+    aput-wide p1, v0, v1
+
+    return-void
+
+    :pswitch_0
+    iget v0, p0, Lu68;->b:I
+
+    iget-object v1, p0, Lu68;->c:[J
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_1
+
+    mul-int/lit8 v0, v0, 0x2
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([JI)[J
+
+    move-result-object v0
+
+    iput-object v0, p0, Lu68;->c:[J
+
+    :cond_1
+    iget-object v0, p0, Lu68;->c:[J
+
+    iget v1, p0, Lu68;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lu68;->b:I
+
+    aput-wide p1, v0, v1
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b([J)V
+    .locals 5
+
+    iget v0, p0, Lu68;->b:I
+
+    array-length v1, p1
+
+    add-int/2addr v0, v1
+
+    iget-object v1, p0, Lu68;->c:[J
+
+    array-length v2, v1
+
+    if-le v0, v2, :cond_0
+
+    array-length v2, v1
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([JI)[J
+
+    move-result-object v1
+
+    iput-object v1, p0, Lu68;->c:[J
+
+    :cond_0
+    iget-object v1, p0, Lu68;->c:[J
+
+    iget v2, p0, Lu68;->b:I
+
+    array-length v3, p1
+
+    const/4 v4, 0x0
+
+    invoke-static {p1, v4, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput v0, p0, Lu68;->b:I
+
+    return-void
+.end method
+
+.method public final c(I)J
+    .locals 4
+
+    iget v0, p0, Lu68;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    if-ltz p1, :cond_0
+
+    iget v0, p0, Lu68;->b:I
+
+    if-ge p1, v0, :cond_0
+
+    iget-object v0, p0, Lu68;->c:[J
+
+    aget-wide v1, v0, p1
+
+    return-wide v1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Invalid index "
+
+    const-string v2, ", size is "
+
+    invoke-static {p1, v1, v2}, Lfl7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget v1, p0, Lu68;->b:I
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    if-ltz p1, :cond_1
+
+    iget v0, p0, Lu68;->b:I
+
+    if-ge p1, v0, :cond_1
+
+    iget-object v0, p0, Lu68;->c:[J
+
+    aget-wide v1, v0, p1
+
+    return-wide v1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    iget v1, p0, Lu68;->b:I
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const/16 v3, 0x2e
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v3, "Invalid index "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", size is "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

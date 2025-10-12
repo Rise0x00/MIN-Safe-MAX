@@ -1,34 +1,67 @@
-.class public final synthetic Lrvf;
+.class public interface abstract Lrvf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/VideoSink;
-
-
-# instance fields
-.field public final synthetic a:Lorg/webrtc/VideoSource;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/VideoSource;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrvf;->a:Lorg/webrtc/VideoSource;
-
-    return-void
-.end method
+.implements Lj1e;
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 0
+.method public a()Loef;
+    .locals 1
 
-    iget-object p0, p0, Lrvf;->a:Lorg/webrtc/VideoSource;
+    const/4 v0, 0x0
 
-    invoke-static {p0, p1}, Lorg/webrtc/VideoSource;->b(Lorg/webrtc/VideoSource;Lorg/webrtc/VideoFrame;)V
+    return-object v0
+.end method
 
-    return-void
+.method public b()Lz0e;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public c()Loef;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public d()Lg1e;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public e()Llp7;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract f()I
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Li1e;
+    .locals 1
+
+    sget-object v0, Li1e;->b:Li1e;
+
+    return-object v0
 .end method

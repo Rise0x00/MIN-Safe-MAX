@@ -1,89 +1,178 @@
-.class public abstract synthetic Llw7;
+.class public Llw7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llw7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Lle7;
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    const/16 v1, 0x18
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lle7;-><init>(I)V
 
-    array-length v1, v1
+    sput-object v0, Llw7;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    new-array v1, v1, [I
+    return-void
+.end method
 
-    const/4 v2, 0x1
+.method public constructor <init>(JJJJ)V
+    .locals 0
 
-    const/4 v3, 0x0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 2
+    iput-wide p1, p0, Llw7;->a:J
 
-    :catch_0
-    const/4 v4, 0x2
+    .line 3
+    iput-wide p3, p0, Llw7;->b:J
 
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    .line 4
+    iput-wide p5, p0, Llw7;->c:J
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    .line 5
+    iput-wide p7, p0, Llw7;->o:J
 
-    :catch_2
-    sput-object v1, Llw7;->$EnumSwitchMapping$0:[I
+    return-void
+.end method
 
-    const/4 v1, 0x4
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
 
-    invoke-static {v1}, Ldw1;->w(I)[I
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v5
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    array-length v5, v5
+    move-result-wide v0
 
-    new-array v5, v5, [I
+    iput-wide v0, p0, Llw7;->a:J
 
-    :try_start_3
-    aput v2, v5, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    :catch_3
-    :try_start_4
-    aput v4, v5, v4
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result-wide v0
 
-    :catch_4
-    :try_start_5
-    aput v0, v5, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    iput-wide v0, p0, Llw7;->b:J
 
-    :catch_5
-    :try_start_6
-    aput v1, v5, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
-    :catch_6
-    sput-object v5, Llw7;->$EnumSwitchMapping$1:[I
+    move-result-wide v0
+
+    iput-wide v0, p0, Llw7;->c:J
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Llw7;->o:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeepLinkData{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Llw7;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageServerId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Llw7;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Llw7;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stickerSetId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Llw7;->o:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lvpb;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Llw7;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Llw7;->b:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Llw7;->c:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Llw7;->o:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     return-void
 .end method

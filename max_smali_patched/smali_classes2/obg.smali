@@ -1,22 +1,21 @@
 .class public final Lobg;
-.super Ljava/lang/Object;
+.super Lqbg;
 .source "SourceFile"
 
-# interfaces
-.implements Lacg;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final a:Lobg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lobg;
 
-    iput-object p1, p0, Lobg;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lobg;->a:Lobg;
 
     return-void
 .end method
@@ -24,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -33,57 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lobg;
+    instance-of p1, p1, Lobg;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lobg;
-
-    iget-object p0, p0, Lobg;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lobg;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lobg;->a:Ljava/lang/String;
+    const v0, -0x158415d4
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    const-string v0, "ShowCloseDialog(appName="
+    const-string v0, "PauseClicked"
 
-    const-string v1, ")"
-
-    iget-object p0, p0, Lobg;->a:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

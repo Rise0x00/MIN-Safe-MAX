@@ -1,181 +1,79 @@
-.class public final synthetic Lg6g;
+.class public final Lg6g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lae6;
+.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
-# static fields
-.field public static final a:Lg6g;
+# instance fields
+.field public final a:Lbp7;
 
-.field private static final descriptor:Lpad;
+.field public final b:Lbp7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(La5;)V
+    .locals 1
 
-    new-instance v0, Lg6g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lxga;
 
-    sput-object v0, Lg6g;->a:Lg6g;
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    new-instance v1, Lo7b;
+    move-result-object v0
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryUnavailableResponse"
+    iput-object v0, p0, Lg6g;->a:Lbp7;
 
-    const/4 v3, 0x2
+    const-class v0, Ltk;
 
-    invoke-direct {v1, v2, v0, v3}, Lo7b;-><init>(Ljava/lang/String;Lae6;I)V
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    const-string v0, "requestId"
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "available"
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lg6g;->descriptor:Lpad;
+    iput-object p1, p0, Lg6g;->b:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq8;)Ljava/lang/Object;
-    .locals 8
+.method public final onPushTokenGenerated(Ljava/lang/String;)V
+    .locals 1
 
-    sget-object p0, Lg6g;->descriptor:Lpad;
+    iget-object p1, p0, Lg6g;->a:Lbp7;
 
-    invoke-virtual {p1, p0}, Lq8;->j(Lpad;)Lq8;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Lxga;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Lxga;->c()Lzq0;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    move v3, v0
+    iget-boolean v0, p1, Lzq0;->a:Z
 
-    move v4, v1
+    if-eqz v0, :cond_0
 
-    move v5, v4
+    iget-boolean p1, p1, Lzq0;->b:Z
 
-    :goto_0
-    if-eqz v3, :cond_3
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1, p0}, Lq8;->p(Lpad;)I
+    iget-object p1, p0, Lg6g;->b:Lbp7;
 
-    move-result v6
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    const/4 v7, -0x1
+    move-result-object p1
 
-    if-eq v6, v7, :cond_2
+    check-cast p1, Ltk;
 
-    if-eqz v6, :cond_1
+    check-cast p1, Lbga;
 
-    if-ne v6, v0, :cond_0
-
-    invoke-virtual {p1, p0, v0}, Lq8;->o(Lpad;I)Z
-
-    move-result v5
-
-    or-int/lit8 v4, v4, 0x2
-
-    goto :goto_0
+    invoke-virtual {p1}, Lbga;->r()J
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {p1, p0, v1}, Lq8;->v(Lpad;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    or-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, p0}, Lq8;->y(Lpad;)V
-
-    new-instance p0, Li6g;
-
-    invoke-direct {p0, v2, v4, v5}, Li6g;-><init>(Ljava/lang/String;IZ)V
-
-    return-object p0
-.end method
-
-.method public final b(Lrx3;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Li6g;
-
-    sget-object p0, Lg6g;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lrx3;->b(Lpad;)Lrx3;
-
-    move-result-object p1
-
-    iget-object v0, p2, Li6g;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p0, v1, v0}, Lrx3;->l(Lpad;ILjava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iget-boolean p2, p2, Li6g;->b:Z
-
-    invoke-virtual {p1, p0, v0, p2}, Lrx3;->e(Lpad;IZ)V
-
-    invoke-virtual {p1}, Lrx3;->m()V
-
     return-void
-.end method
-
-.method public final c()[Lpf7;
-    .locals 2
-
-    const/4 p0, 0x2
-
-    new-array p0, p0, [Lpf7;
-
-    sget-object v0, Lsde;->a:Lsde;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    sget-object v0, Lrq0;->a:Lrq0;
-
-    const/4 v1, 0x1
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lpad;
-    .locals 0
-
-    sget-object p0, Lg6g;->descriptor:Lpad;
-
-    return-object p0
 .end method

@@ -1,32 +1,118 @@
-.class public abstract Lb1c;
-.super Ljava/lang/Object;
+.class public final Lb1c;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static one_chat_react_default_react_anim_view:I = 0x7f0a061e
+# instance fields
+.field public X:I
 
-.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a061f
+.field public final synthetic Y:Li1c;
 
-.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a0620
 
-.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a0621
+# direct methods
+.method public constructor <init>(Li1c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static one_chat_react_panel_layout:I = 0x7f0a0622
+    iput-object p1, p0, Lb1c;->Y:Li1c;
 
-.field public static one_chat_reactions_expand_view_type:I = 0x7f0a0623
+    const/4 p1, 0x2
 
-.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a0624
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a0625
+    return-void
+.end method
 
-.field public static onechat_react_badge_container:I = 0x7f0a0627
 
-.field public static onechat_react_bubble:I = 0x7f0a0628
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static onechat_react_bubble_counter:I = 0x7f0a0629
+    check-cast p1, Le34;
 
-.field public static onechat_react_bubble_counter_container:I = 0x7f0a062a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static onechat_react_message_reaction_bubble:I = 0x7f0a062b
+    invoke-virtual {p0, p1, p2}, Lb1c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static tag_reaction_effects_view:I = 0x7f0a0bf8
+    move-result-object p1
+
+    check-cast p1, Lb1c;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lb1c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lb1c;
+
+    iget-object v0, p0, Lb1c;->Y:Li1c;
+
+    invoke-direct {p1, v0, p2}, Lb1c;-><init>(Li1c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lb1c;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lb1c;->Y:Li1c;
+
+    iget-object v0, p1, Li1c;->D0:Lmoe;
+
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv0c;
+
+    iput v1, p0, Lb1c;->X:I
+
+    invoke-static {p1, v0, p0}, Li1c;->q(Li1c;Lv0c;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+.end method

@@ -34,21 +34,21 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Ltcf;",
+        "Loyf;",
         "sendStat",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
-        "Ls5a;",
+        "Lru/ok/android/onelog/OneLogItem;",
         "makeState",
-        "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Ls5a;",
-        "Lr5a;",
+        "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem;",
+        "Lru/ok/android/onelog/OneLogItem$Builder;",
         "builder",
         "setStat",
-        "(Lr5a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lr5a;",
+        "(Lru/ok/android/onelog/OneLogItem$Builder;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem$Builder;",
         "",
         "",
         "custom",
         "setCustom",
-        "(Lr5a;Ljava/util/Map;)V",
+        "(Lru/ok/android/onelog/OneLogItem$Builder;Ljava/util/Map;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -81,30 +81,28 @@
 .method public abstract getTime(J)J
 .end method
 
-.method public makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Ls5a;
+.method public makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TS;)",
-            "Ls5a;"
+            "Lru/ok/android/onelog/OneLogItem;"
         }
     .end annotation
 
-    new-instance v0, Lr5a;
+    invoke-static {}, Lru/ok/android/onelog/OneLogItem;->builder()Lru/ok/android/onelog/OneLogItem$Builder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lr5a;->b()V
+    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setStat(Lru/ok/android/onelog/OneLogItem$Builder;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem$Builder;
 
-    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setStat(Lr5a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lr5a;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-virtual {p1}, Lru/ok/android/onelog/OneLogItem$Builder;->build()Lru/ok/android/onelog/OneLogItem;
 
-    invoke-virtual {p0}, Lr5a;->a()Ls5a;
+    move-result-object p1
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
 .method public sendStat(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V
@@ -115,40 +113,21 @@
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Ls5a;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lp5a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    invoke-virtual {p1}, Lru/ok/android/onelog/OneLogItem;->log()V
 
     return-void
-
-    :cond_0
-    invoke-static {p0}, Ldl5;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p0
-
-    throw p0
 .end method
 
-.method public setCustom(Lr5a;Ljava/util/Map;)V
-    .locals 1
+.method public setCustom(Lru/ok/android/onelog/OneLogItem$Builder;Ljava/util/Map;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lr5a;",
+            "Lru/ok/android/onelog/OneLogItem$Builder;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -158,38 +137,38 @@
 
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
 
-    check-cast p2, Ljava/util/Map$Entry;
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-virtual {p1, v0, p2}, Lr5a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lru/ok/android/onelog/OneLogItem$Builder;->setCustom(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/onelog/OneLogItem$Builder;
 
     goto :goto_0
 
@@ -197,14 +176,14 @@
     return-void
 .end method
 
-.method public setStat(Lr5a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lr5a;
+.method public setStat(Lru/ok/android/onelog/OneLogItem$Builder;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lru/ok/android/onelog/OneLogItem$Builder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lr5a;",
+            "Lru/ok/android/onelog/OneLogItem$Builder;",
             "TS;)",
-            "Lr5a;"
+            "Lru/ok/android/onelog/OneLogItem$Builder;"
         }
     .end annotation
 
@@ -212,25 +191,31 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setCustom(Lr5a;Ljava/util/Map;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setCustom(Lru/ok/android/onelog/OneLogItem$Builder;Ljava/util/Map;)V
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getCollector()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, Lr5a;->a:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lru/ok/android/onelog/OneLogItem$Builder;->setCollector(Ljava/lang/String;)Lru/ok/android/onelog/OneLogItem$Builder;
+
+    move-result-object p1
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getType()I
 
     move-result v0
 
-    iput v0, p1, Lr5a;->b:I
+    invoke-virtual {p1, v0}, Lru/ok/android/onelog/OneLogItem$Builder;->setType(I)Lru/ok/android/onelog/OneLogItem$Builder;
+
+    move-result-object p1
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getOperation()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, Lr5a;->c:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lru/ok/android/onelog/OneLogItem$Builder;->setOperation(Ljava/lang/String;)Lru/ok/android/onelog/OneLogItem$Builder;
+
+    move-result-object p1
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getTimestamp()J
 
@@ -240,7 +225,9 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lr5a;->d(J)V
+    invoke-virtual {p1, v0, v1}, Lru/ok/android/onelog/OneLogItem$Builder;->setTime(J)Lru/ok/android/onelog/OneLogItem$Builder;
+
+    move-result-object p1
 
     return-object p1
 .end method

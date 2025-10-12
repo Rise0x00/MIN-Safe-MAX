@@ -1,106 +1,95 @@
-.class public final synthetic Lgo1;
-.super Ljava/lang/Object;
+.class public final Lgo1;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Ljo1;
+.field public final synthetic Y:Lone/me/calls/share/CallSharePickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Ljo1;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
     .locals 0
 
-    iput p3, p0, Lgo1;->a:I
+    iput-object p2, p0, Lgo1;->Y:Lone/me/calls/share/CallSharePickerScreen;
 
-    iput-object p1, p0, Lgo1;->b:Landroid/content/Context;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lgo1;->c:Ljo1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgo1;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lgo1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lsh1;
+    move-result-object p1
 
-    iget-object v1, p0, Lgo1;->b:Landroid/content/Context;
+    check-cast p1, Lgo1;
 
-    invoke-direct {v0, v1}, Lsh1;-><init>(Landroid/content/Context;)V
+    sget-object p2, Loyf;->a:Loyf;
 
-    sget-object v1, Lzs4;->p0:Lqs9;
+    invoke-virtual {p1, p2}, Lgo1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lqs9;->h(Landroid/view/View;)Lyda;
+    return-object p2
+.end method
 
-    move-result-object v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v1, v1, Lyda;->c:Lnma;
+    new-instance v0, Lgo1;
 
-    invoke-virtual {v0, v1}, Lsh1;->setPipTheme(Lnma;)V
+    iget-object v1, p0, Lgo1;->Y:Lone/me/calls/share/CallSharePickerScreen;
 
-    sget-object v1, Lph1;->b:Lph1;
+    invoke-direct {v0, p2, v1}, Lgo1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
 
-    invoke-virtual {v0, v1}, Lsh1;->setPipMode(Lph1;)V
-
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Lvfd;
-
-    const/4 v2, 0x5
-
-    iget-object p0, p0, Lgo1;->c:Ljo1;
-
-    invoke-direct {v1, v2, p0}, Lvfd;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lsh1;->setListener(Lwq1;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    new-instance v1, Lfo1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Lfo1;-><init>(Ljo1;I)V
-
-    invoke-virtual {v0, v1}, Lsh1;->setVideoLayoutUpdatesControllerProvider(Ld96;)V
+    iput-object p1, v0, Lgo1;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lgo1;->b:Landroid/content/Context;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p0, p0, Lgo1;->c:Ljo1;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-static {v0, p0}, Ljo1;->v(Landroid/content/Context;Ljo1;)Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p1, p0, Lgo1;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Ljava/util/Set;
 
-    return-object p0
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lone/me/calls/share/CallSharePickerScreen;->D0:Led7;
+
+    iget-object p1, p0, Lgo1;->Y:Lone/me/calls/share/CallSharePickerScreen;
+
+    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lveb;->c:Lugb;
+
+    check-cast p1, Leo1;
+
+    invoke-virtual {p1}, Leo1;->f()V
+
+    :cond_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

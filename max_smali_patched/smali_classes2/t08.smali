@@ -1,84 +1,94 @@
 .class public final Lt08;
-.super Leje;
+.super Lfc6;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lx08;
+.field public final f:Lwl0;
+
+.field public g:Lno7;
+
+.field public final h:Landroid/media/MediaMetadataRetriever;
+
+.field public final i:I
+
+.field public volatile j:J
 
 
 # direct methods
-.method public constructor <init>(Lx08;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lt08;->X:Lx08;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lt08;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lt08;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lt08;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lt08;
-
-    iget-object p0, p0, Lt08;->X:Lx08;
-
-    invoke-direct {p1, p0, p2}, Lt08;-><init>(Lx08;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lm9f;Lec5;Lop4;)V
     .locals 1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lfc6;-><init>(Lm9f;Lec5;)V
 
-    iget-object p0, p0, Lt08;->X:Lx08;
+    new-instance p1, Lwl0;
 
-    iget-object p0, p0, Lx08;->c:Lth7;
+    const/4 p2, 0x0
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-direct {p1, p2}, Lwl0;-><init>(Ljava/lang/Object;)V
 
-    move-result-object p0
+    iput-object p1, p0, Lt08;->f:Lwl0;
 
-    check-cast p0, Lpva;
+    new-instance p1, Landroid/media/MediaMetadataRetriever;
 
-    const/4 p1, 0x2
+    invoke-direct {p1}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lt08;->h:Landroid/media/MediaMetadataRetriever;
 
-    invoke-virtual {p0, p1, v0}, Lpva;->d(II)V
+    invoke-virtual {p3}, Llp4;->b()Lqp4;
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    move-result-object p1
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 p3, 0x1
+
+    if-eq p2, p3, :cond_1
+
+    const/4 p3, 0x2
+
+    if-ne p2, p3, :cond_0
+
+    const/16 p1, 0x14
+
+    iput p1, p0, Lt08;->i:I
+
+    return-void
+
+    :cond_0
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    const-string v0, "unknown performance class "
+
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_1
+    const/16 p1, 0xa
+
+    iput p1, p0, Lt08;->i:I
+
+    return-void
+
+    :cond_2
+    const/4 p1, 0x5
+
+    iput p1, p0, Lt08;->i:I
+
+    return-void
 .end method

@@ -24,7 +24,7 @@
         "frameDecorator",
         "(Lef1;Lorg/webrtc/RendererCommon$RendererEvents;Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)Z",
         "mirror",
-        "Ltcf;",
+        "Loyf;",
         "setMirror",
         "(Z)V",
         "Lorg/webrtc/RendererCommon$ScalingType;",
@@ -43,7 +43,7 @@
         "Lkotlin/Function2;",
         "",
         "setFrameSizeListener",
-        "(Lt96;)V",
+        "(Llf6;)V",
         "clearImage",
         "()V",
         "release",
@@ -124,11 +124,11 @@
 .method public abstract setFrameDecorator(Lru/ok/android/externcalls/sdk/ui/FrameDecorator;)V
 .end method
 
-.method public abstract setFrameSizeListener(Lt96;)V
+.method public abstract setFrameSizeListener(Llf6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lt96;",
+            "Llf6;",
             ")V"
         }
     .end annotation

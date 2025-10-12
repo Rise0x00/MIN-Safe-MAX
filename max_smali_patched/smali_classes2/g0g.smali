@@ -1,130 +1,73 @@
-.class public final Lg0g;
-.super Lhl0;
+.class public final enum Lg0g;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic b:I
+.field public static final enum a:Lg0g;
 
+.field public static final enum b:Lg0g;
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final synthetic c:[Lg0g;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg0g;
 
-    iput-object p1, p0, Lg0g;->a:Ljava/lang/String;
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lg0g;->a:Lg0g;
+
+    new-instance v1, Lg0g;
+
+    const-string v2, "NOT_ENOUGH_VIDEO_TRACKS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lg0g;->b:Lg0g;
+
+    filled-new-array {v0, v1}, [Lg0g;
+
+    move-result-object v0
+
+    sput-object v0, Lg0g;->c:[Lg0g;
 
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Lg0g;
+    .locals 1
 
-    const-string v0, "/"
+    const-class v0, Lg0g;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    array-length v2, v1
-
-    const-string v3, ""
-
-    if-nez v2, :cond_0
-
-    move-object v1, v3
-
-    goto :goto_0
-
-    :cond_0
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget-object v1, v1, v2
-
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-lez v2, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    const/4 v4, 0x0
-
-    :goto_1
-    if-ge v4, v2, :cond_2
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->charAt(I)C
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v5
-
-    if-nez v5, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    array-length v0, p0
-
-    if-nez v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    array-length v0, p0
-
-    add-int/lit8 v0, v0, -0x1
-
-    aget-object v3, p0, v0
-
-    :goto_2
-    return-object v3
-
-    :cond_4
-    :goto_3
-    const/4 p0, 0x0
+    check-cast p0, Lg0g;
 
     return-object p0
 .end method
 
+.method public static values()[Lg0g;
+    .locals 1
 
-# virtual methods
-.method public final a()Lfud;
-    .locals 2
+    sget-object v0, Lg0g;->c:[Lg0g;
 
-    new-instance v0, Lnte;
+    invoke-virtual {v0}, [Lg0g;->clone()Ljava/lang/Object;
 
-    const/16 v1, 0x13
+    move-result-object v0
 
-    invoke-direct {v0, v1, p0}, Lnte;-><init>(ILjava/lang/Object;)V
+    check-cast v0, [Lg0g;
 
-    new-instance p0, Ln3a;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v1, v0}, Ln3a;-><init>(ILjava/lang/Object;)V
-
-    return-object p0
+    return-object v0
 .end method

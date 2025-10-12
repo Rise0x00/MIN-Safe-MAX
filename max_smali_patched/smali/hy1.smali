@@ -1,24 +1,11 @@
-.class public final Lhy1;
+.class public interface abstract Lhy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqx1;
-
 
 # virtual methods
-.method public final a()Lyp7;
-    .locals 0
-
-    sget-object p0, Llz6;->c:Llz6;
-
-    return-object p0
+.method public abstract a()Ljx7;
 .end method
 
-.method public final b()Lyp7;
-    .locals 0
-
-    sget-object p0, Llz6;->c:Llz6;
-
-    return-object p0
+.method public abstract b()Ljx7;
 .end method

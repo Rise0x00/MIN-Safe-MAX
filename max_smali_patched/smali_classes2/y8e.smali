@@ -1,55 +1,49 @@
 .class public final Ly8e;
-.super Lax3;
+.super Ltde;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lz8e;
+# virtual methods
+.method public final C()V
+    .locals 2
 
-.field public Y:I
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-.field public synthetic o:Ljava/lang/Object;
+    check-cast v0, Lu8e;
 
+    iget-object v0, v0, Lu8e;->o:Lw8e;
 
-# direct methods
-.method public constructor <init>(Lz8e;Lax3;)V
-    .locals 0
+    iget-object v1, v0, Lw8e;->b:Lv8e;
 
-    iput-object p1, p0, Ly8e;->X:Lz8e;
+    invoke-virtual {v1}, Lv8e;->d()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lw8e;->c:Z
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     return-void
 .end method
 
+.method public final x(Lww7;)V
+    .locals 1
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    check-cast p1, Lx8e;
 
-    iput-object p1, p0, Ly8e;->o:Ljava/lang/Object;
+    iget-object p1, p0, Lnxc;->a:Landroid/view/View;
 
-    iget p1, p0, Ly8e;->Y:I
+    check-cast p1, Lu8e;
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p1, Lu8e;->o:Lw8e;
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Ly8e;->Y:I
+    iput-boolean v0, p1, Lw8e;->c:Z
 
-    const-wide/16 v2, 0x0
+    iget-object p1, p1, Lw8e;->b:Lv8e;
 
-    const/4 v4, 0x0
+    invoke-virtual {p1}, Lv8e;->c()V
 
-    iget-object v0, p0, Ly8e;->X:Lz8e;
-
-    const/4 v1, 0x0
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Lz8e;->c(Ljava/lang/String;JILax3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

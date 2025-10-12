@@ -1,9 +1,9 @@
 .class public final Lru/ok/tamtam/logout/b;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
@@ -11,20 +11,20 @@
 
 .field public final synthetic Y:Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-.field public final synthetic Z:Lby7;
+.field public final synthetic Z:Lu58;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lby7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lu58;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput-object p1, p0, Lru/ok/tamtam/logout/b;->Y:Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    iput-object p2, p0, Lru/ok/tamtam/logout/b;->Z:Lby7;
+    iput-object p2, p0, Lru/ok/tamtam/logout/b;->Z:Lu58;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,40 +34,40 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lp04;
+    check-cast p1, Le34;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lru/ok/tamtam/logout/b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lru/ok/tamtam/logout/b;
+    check-cast p1, Lru/ok/tamtam/logout/b;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/logout/b;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lru/ok/tamtam/logout/b;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Lru/ok/tamtam/logout/b;
 
     iget-object v0, p0, Lru/ok/tamtam/logout/b;->Y:Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    iget-object p0, p0, Lru/ok/tamtam/logout/b;->Z:Lby7;
+    iget-object v1, p0, Lru/ok/tamtam/logout/b;->Z:Lu58;
 
-    invoke-direct {p1, v0, p0, p2}, Lru/ok/tamtam/logout/b;-><init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lby7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lru/ok/tamtam/logout/b;-><init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lu58;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
     iget v0, p0, Lru/ok/tamtam/logout/b;->X:I
@@ -78,43 +78,43 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lru/ok/tamtam/logout/b;->Y:Lru/ok/tamtam/logout/LogoutEventsByBus;
 
-    iget-object p1, p1, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lkpd;
+    iget-object p1, p1, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Le8e;
 
     iput v1, p0, Lru/ok/tamtam/logout/b;->X:I
 
-    iget-object v0, p0, Lru/ok/tamtam/logout/b;->Z:Lby7;
+    iget-object v0, p0, Lru/ok/tamtam/logout/b;->Z:Lu58;
 
-    invoke-virtual {p1, v0, p0}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lq04;->a:Lq04;
+    sget-object v0, Lf34;->a:Lf34;
 
-    if-ne p0, p1, :cond_2
+    if-ne p1, v0, :cond_2
 
-    return-object p1
+    return-object v0
 
     :cond_2
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
 .end method

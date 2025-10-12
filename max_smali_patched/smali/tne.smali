@@ -1,58 +1,39 @@
-.class public final synthetic Ltne;
-.super Ljava/lang/Object;
+.class public final Ltne;
+.super Lilg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lxm1;
 
-.field public final synthetic b:Lune;
+.field public final c:Lbp7;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lune;I)V
+.method public constructor <init>(Lxm1;Lbp7;)V
     .locals 0
 
-    iput p2, p0, Ltne;->a:I
+    invoke-direct {p0}, Lilg;-><init>()V
 
-    iput-object p1, p0, Ltne;->b:Lune;
+    iput-object p1, p0, Ltne;->b:Lxm1;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ltne;->c:Lbp7;
 
-    return-void
-.end method
+    new-instance p1, Lm6d;
 
+    const/16 p2, 0x12
 
-# virtual methods
-.method public final run()V
-    .locals 1
+    invoke-direct {p1, p2, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
 
-    iget v0, p0, Ltne;->a:I
+    const/4 p2, 0x3
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p2, p1}, Lvr0;->r(ILve6;)Lbp7;
 
-    iget-object p0, p0, Ltne;->b:Lune;
+    move-result-object p1
 
-    invoke-virtual {p0}, Lune;->c()V
+    iput-object p1, p0, Ltne;->o:Ljava/lang/Object;
 
     return-void
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    iget-object p0, p0, Ltne;->b:Lune;
-
-    iput-object v0, p0, Lune;->o:Lnlc;
-
-    invoke-virtual {p0}, Lune;->c()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

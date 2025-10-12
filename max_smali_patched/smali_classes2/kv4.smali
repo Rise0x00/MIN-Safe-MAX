@@ -1,23 +1,21 @@
-.class public final Lkv4;
-.super Liud;
+.class public abstract Lkv4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final g:Ljava/lang/ref/WeakReference;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lkv4;->g:Ljava/lang/ref/WeakReference;
+    sput-object v0, Lkv4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method

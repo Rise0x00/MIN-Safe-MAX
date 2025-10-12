@@ -1,19 +1,53 @@
-.class public abstract Lpla;
-.super Ljava/lang/Object;
+.class public final Lpla;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Lq49;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lula;
+
+.field public o:Lula;
+
+.field public w0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lula;Lnz3;)V
+    .locals 0
 
-    sget v0, Lh5c;->oneme_stickers_showcase_toolbar_title:I
+    iput-object p1, p0, Lpla;->Z:Lula;
 
-    sput v0, Lpla;->a:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpla;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lpla;->w0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpla;->w0:I
+
+    iget-object p1, p0, Lpla;->Z:Lula;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lula;->e(Lq49;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

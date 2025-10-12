@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc47;
+.implements Ldb7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc47;"
+        "Ldb7;"
     }
 .end annotation
 
@@ -27,11 +27,11 @@
 
 # virtual methods
 .method public final a()Ljava/util/List;
-    .locals 0
+    .locals 1
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
@@ -41,17 +41,15 @@
 
     move-result-object p1
 
-    new-instance v0, Lgm;
+    new-instance v0, Lvm;
 
-    invoke-direct {v0, p0, p1}, Lgm;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lvm;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
 
-    invoke-static {v0}, Lakb;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Ltyb;->a(Ljava/lang/Runnable;)V
 
-    new-instance p0, Lvs9;
+    new-instance p1, Lhl6;
 
-    const/16 p1, 0xf
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lvs9;-><init>(I)V
-
-    return-object p0
+    return-object p1
 .end method

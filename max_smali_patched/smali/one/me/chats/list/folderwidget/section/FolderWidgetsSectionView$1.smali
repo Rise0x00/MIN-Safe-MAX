@@ -26,16 +26,16 @@
 # instance fields
 .field public final synthetic E:Landroid/content/Context;
 
-.field public final synthetic F:Ldz5;
+.field public final synthetic F:Le46;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldz5;)V
+.method public constructor <init>(Landroid/content/Context;Le46;)V
     .locals 0
 
     iput-object p1, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->E:Landroid/content/Context;
 
-    iput-object p2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Ldz5;
+    iput-object p2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Le46;
 
     const/4 p1, 0x0
 
@@ -47,7 +47,7 @@
 
 # virtual methods
 .method public final e()Z
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->E:Landroid/content/Context;
 
@@ -61,15 +61,15 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    sget-object v2, Lty5;->a:Lo67;
+    sget-object v2, Lu36;->a:Lqd7;
 
-    iget-object p0, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Ldz5;
+    iget-object v2, p0, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;->F:Le46;
 
-    iget-object p0, p0, Ldz5;->Q1:Lqy5;
+    iget-object v2, v2, Le46;->Z1:Lr36;
 
-    invoke-virtual {p0}, Ldp7;->j()I
+    invoke-virtual {v2}, Lpw7;->j()I
 
-    move-result p0
+    move-result v2
 
     int-to-float v1, v1
 
@@ -85,38 +85,38 @@
 
     div-float/2addr v1, v0
 
-    invoke-static {v1}, Litg;->z(F)I
+    invoke-static {v1}, Lv63;->r0(F)I
 
     move-result v0
 
-    sget-object v1, Lty5;->a:Lo67;
+    sget-object v1, Lu36;->a:Lqd7;
 
-    iget v2, v1, Lm67;->a:I
+    iget v3, v1, Lod7;->a:I
 
-    iget v1, v1, Lm67;->b:I
+    iget v1, v1, Lod7;->b:I
 
     if-gt v0, v1, :cond_0
 
-    if-gt v2, v0, :cond_0
+    if-gt v3, v0, :cond_0
 
     const/4 v0, 0x2
 
-    if-le p0, v0, :cond_1
+    if-le v2, v0, :cond_1
 
     goto :goto_0
 
     :cond_0
     const/4 v0, 0x3
 
-    if-le p0, v0, :cond_1
+    if-le v2, v0, :cond_1
 
     :goto_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

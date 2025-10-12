@@ -1,161 +1,281 @@
-.class public final synthetic Lem3;
+.class public final Lem3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhm3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:I
+
+.field public final h:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(JJJJJLjava/lang/String;II)V
     .locals 0
 
-    iput p1, p0, Lem3;->a:I
-
-    iput-object p2, p0, Lem3;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lem3;->a:J
+
+    iput-wide p3, p0, Lem3;->b:J
+
+    iput-wide p5, p0, Lem3;->c:J
+
+    iput-wide p7, p0, Lem3;->d:J
+
+    iput-wide p9, p0, Lem3;->e:J
+
+    iput-object p11, p0, Lem3;->f:Ljava/lang/String;
+
+    iput p12, p0, Lem3;->g:I
+
+    iput p13, p0, Lem3;->h:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lem3;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lem3;->b:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    check-cast p0, Lnud;
+    :cond_0
+    instance-of v1, p1, Lem3;
 
-    check-cast p1, Lwg1;
+    const/4 v2, 0x0
 
-    check-cast p0, Ljud;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Ljud;->a(Ljava/lang/Object;)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lem3;
 
-    :pswitch_0
-    check-cast p0, Lf96;
+    iget-wide v3, p0, Lem3;->a:J
 
-    check-cast p1, Lwg1;
+    iget-wide v5, p1, Lem3;->a:J
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->f(Lf96;Lwg1;)V
+    cmp-long v1, v3, v5
 
-    return-void
+    if-eqz v1, :cond_2
 
-    :pswitch_1
-    check-cast p0, Lo5e;
+    return v2
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    :cond_2
+    iget-wide v3, p0, Lem3;->b:J
 
-    new-instance v0, Lnw8;
+    iget-wide v5, p1, Lem3;->b:J
 
-    const/16 v1, 0xe
+    cmp-long v1, v3, v5
 
-    invoke-direct {v0, v1, p0}, Lnw8;-><init>(ILjava/lang/Object;)V
+    if-eqz v1, :cond_3
 
-    invoke-virtual {p1, v0}, Lorg/webrtc/PeerConnection;->getStats(Lorg/webrtc/RTCStatsCollectorCallback;)V
+    return v2
 
-    return-void
+    :cond_3
+    iget-wide v3, p0, Lem3;->c:J
 
-    :pswitch_2
-    check-cast p0, [Lorg/webrtc/IceCandidate;
+    iget-wide v5, p1, Lem3;->c:J
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    cmp-long v1, v3, v5
 
-    invoke-virtual {p1, p0}, Lorg/webrtc/PeerConnection;->removeIceCandidates([Lorg/webrtc/IceCandidate;)Z
+    if-eqz v1, :cond_4
 
-    return-void
+    return v2
 
-    :pswitch_3
-    check-cast p0, Lwg4;
+    :cond_4
+    iget-wide v3, p0, Lem3;->d:J
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    iget-wide v5, p1, Lem3;->d:J
 
-    iget-object p1, p0, Lwg4;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    cmp-long v1, v3, v5
 
-    monitor-enter p1
+    if-eqz v1, :cond_5
 
-    :try_start_0
-    iget-object v0, p0, Lwg4;->h:Ljava/util/concurrent/ConcurrentHashMap;
+    return v2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+    :cond_5
+    iget-wide v3, p0, Lem3;->e:J
 
-    move-result-object v0
+    iget-wide v5, p1, Lem3;->e:J
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    cmp-long v1, v3, v5
 
-    move-result-object v0
+    if-eqz v1, :cond_6
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lem3;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lem3;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_7
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return v2
 
-    move-result-object v1
+    :cond_7
+    iget v1, p0, Lem3;->g:I
 
-    check-cast v1, Ljava/lang/String;
+    iget v3, p1, Lem3;->g:I
 
-    iget-object v2, p0, Lwg4;->h:Ljava/util/concurrent/ConcurrentHashMap;
+    if-eq v1, v3, :cond_8
 
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object v2
+    :cond_8
+    iget v1, p0, Lem3;->h:I
 
-    check-cast v2, Ler1;
+    iget p1, p1, Lem3;->h:I
 
-    const/4 v3, 0x0
+    if-eq v1, p1, :cond_9
 
-    invoke-virtual {p0, v1, v2, v3}, Lwg4;->u(Ljava/lang/String;Ler1;Ljava/util/List;)V
+    return v2
 
-    goto :goto_0
+    :cond_9
+    return v0
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public final hashCode()I
+    .locals 4
 
-    goto :goto_1
+    iget-wide v0, p0, Lem3;->a:J
 
-    :cond_0
-    monitor-exit p1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    return-void
+    move-result v0
 
-    :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/16 v1, 0x1f
 
-    throw p0
+    mul-int/2addr v0, v1
 
-    :pswitch_4
-    check-cast p0, Ljava/lang/Runnable;
+    iget-wide v2, p0, Lem3;->b:J
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
 
-    return-void
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-wide v2, p0, Lem3;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lem3;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lem3;->e:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lem3;->f:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lem3;->g:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v1, p0, Lem3;->h:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ConnectionStat(n="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lem3;->h:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "|"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lem3;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ":"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lem3;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "|total="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lem3;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "|dns="
+
+    const-string v2, "|tcp="
+
+    iget-wide v3, p0, Lem3;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lqw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-wide v1, p0, Lem3;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "|tls="
+
+    const-string v2, ")"
+
+    iget-wide v3, p0, Lem3;->e:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lnd5;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

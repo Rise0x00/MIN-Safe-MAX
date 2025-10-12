@@ -1,106 +1,59 @@
-.class public final synthetic Lk8a;
-.super Ljava/lang/Object;
+.class public final Lk8a;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lm82;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public Y:J
 
-.field public final synthetic c:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public Z:Z
+
+.field public o:Lp8a;
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public final synthetic x0:Lp8a;
+
+.field public y0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lone/me/sdk/uikit/common/button/OneMeButton;I)V
+.method public constructor <init>(Lp8a;Lnz3;)V
     .locals 0
 
-    iput p3, p0, Lk8a;->a:I
+    iput-object p1, p0, Lk8a;->x0:Lp8a;
 
-    iput-object p1, p0, Lk8a;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lk8a;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lk8a;->a:I
+    iput-object p1, p0, Lk8a;->w0:Ljava/lang/Object;
 
-    iget-object v1, p0, Lk8a;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget p1, p0, Lk8a;->y0:I
 
-    iget-object p0, p0, Lk8a;->b:Landroid/content/Context;
+    const/high16 v0, -0x80000000
 
-    packed-switch v0, :pswitch_data_0
+    or-int/2addr p1, v0
 
-    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->w0:[Lof7;
+    iput p1, p0, Lk8a;->y0:I
 
-    new-instance v0, Luba;
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p0}, Luba;-><init>(Landroid/content/Context;)V
+    const-wide/16 v0, 0x0
 
-    sget p0, Lpsc;->f:I
+    iget-object v2, p0, Lk8a;->x0:Lp8a;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
+    invoke-static {v2, p1, v0, v1, p0}, Lp8a;->p(Lp8a;Lm82;JLnz3;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->b(I)I
+    move-result-object p1
 
-    move-result p0
-
-    invoke-virtual {v1, v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->w0:[Lof7;
-
-    new-instance v0, Lqha;
-
-    invoke-direct {v0, p0}, Lqha;-><init>(Landroid/content/Context;)V
-
-    sget p0, Lpsc;->h:I
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
-
-    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x2
-
-    invoke-direct {p0, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p0, Ljp7;
-
-    const/16 v2, 0xb
-
-    invoke-direct {p0, v2, v0, v1}, Ljp7;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
-
-    invoke-static {v0, p0}, Lyna;->a(Landroid/view/View;Ljava/lang/Runnable;)Lyna;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {v1, v0, p0}, Lyr3;->d(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

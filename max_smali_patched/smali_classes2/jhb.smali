@@ -1,97 +1,196 @@
 .class public final Ljhb;
-.super Lfa4;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final b:Ljhb;
 
-.field public static final c:Laa4;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final d:Laa4;
+.field public final synthetic Y:Lone/me/pinbars/PinBarsWidget;
 
-.field public static final e:Laa4;
-
-.field public static final f:Laa4;
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+    .locals 0
+
+    iput-object p3, p0, Ljhb;->Y:Lone/me/pinbars/PinBarsWidget;
+
+    iput-object p1, p0, Ljhb;->Z:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lgib;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ljhb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ljhb;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Ljhb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
     new-instance v0, Ljhb;
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    iget-object v1, p0, Ljhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    sput-object v0, Ljhb;->b:Ljhb;
+    iget-object v2, p0, Ljhb;->Z:Landroid/view/View;
 
-    const-string v6, "id"
+    invoke-direct {v0, v2, p2, v1}, Ljhb;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    const-string v7, "type"
+    iput-object p1, v0, Ljhb;->X:Ljava/lang/Object;
 
-    filled-new-array {v6, v7}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/16 v5, 0xe
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const/4 v4, 0x0
+    iget-object p1, p0, Ljhb;->X:Ljava/lang/Object;
 
-    const-string v1, ":profile/edit"
+    check-cast p1, Lgib;
 
-    const/4 v3, 0x0
+    iget-object v0, p0, Ljhb;->Z:Landroid/view/View;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    check-cast v0, Landroid/view/ViewGroup;
 
-    move-result-object v1
+    instance-of v1, p1, Lfib;
 
-    sput-object v1, Ljhb;->c:Laa4;
-
-    filled-new-array {v6}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/member_permissions"
-
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
-
-    move-result-object v1
-
-    sput-object v1, Ljhb;->d:Laa4;
-
-    const-string v1, "flow"
-
-    filled-new-array {v6, v7, v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/edit/link"
-
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
-
-    move-result-object v1
-
-    sput-object v1, Ljhb;->e:Laa4;
-
-    const-string v1, "contact_id"
-
-    const-string v2, "permissions_type"
-
-    const-string v3, "chat_id"
-
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v1, ":profile/edit/admin_permission"
+    iget-object v2, p0, Ljhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
     const/4 v3, 0x0
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    sget p1, Lone/me/pinbars/PinBarsWidget;->x0:I
 
-    sput-object v0, Ljhb;->f:Laa4;
+    sget p1, Lmra;->g:I
 
-    return-void
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    iput-object v3, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lpra;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lpra;
+
+    if-nez v1, :cond_2
+
+    new-instance v1, Lpra;
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {v1, v4}, Lpra;-><init>(Landroid/content/Context;)V
+
+    sget v4, Lmra;->g:I
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setId(I)V
+
+    new-instance v4, Lchb;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v2, v5}, Lchb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
+
+    invoke-virtual {v1, v4}, Lpra;->setCloseBtnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v4, Lchb;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v4, v2, v6}, Lchb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
+
+    invoke-virtual {v1, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v4, Lsua;
+
+    const/4 v6, 0x3
+
+    const/4 v7, 0x2
+
+    invoke-direct {v4, v6, v3, v7}, Lsua;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v4, v1}, Lk74;->K(Lnf6;Landroid/view/View;)V
+
+    iput-object v1, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lpra;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v3
+
+    if-gez v3, :cond_1
+
+    move v5, v3
+
+    :cond_1
+    invoke-virtual {v0, v1, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    :cond_2
+    iget-object v0, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lpra;
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    check-cast p1, Lfib;
+
+    iget-object v1, p1, Lfib;->b:Lnef;
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    const-string v1, ""
+
+    :cond_4
+    invoke-virtual {v0, v1}, Lpra;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean p1, p1, Lfib;->c:Z
+
+    invoke-virtual {v0, p1}, Lpra;->setCloseButtonVisibility(Z)V
+
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

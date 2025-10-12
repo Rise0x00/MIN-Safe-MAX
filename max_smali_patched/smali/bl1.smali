@@ -1,84 +1,84 @@
-.class public final synthetic Lbl1;
-.super Ljava/lang/Object;
+.class public final Lbl1;
+.super Lgl1;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lfl1;
+.field public final D:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lfl1;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p3, p0, Lbl1;->a:I
+    invoke-direct {p0}, Lgl1;-><init>()V
 
-    iput-object p1, p0, Lbl1;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lbl1;->c:Lfl1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p1, p0, Lbl1;->D:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lbl1;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lbl1;->b:Landroid/content/Context;
+    :cond_0
+    instance-of v0, p1, Lbl1;
 
-    iget-object p0, p0, Lbl1;->c:Lfl1;
+    if-nez v0, :cond_1
 
-    invoke-static {v0, p0}, Lfl1;->v(Landroid/content/Context;Lfl1;)Lao1;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lbl1;
 
-    return-object p0
+    iget-boolean v0, p0, Lbl1;->D:Z
 
-    :pswitch_0
-    new-instance v0, Lf31;
+    iget-boolean p1, p1, Lbl1;->D:Z
 
-    iget-object v1, p0, Lbl1;->b:Landroid/content/Context;
+    if-eq v0, p1, :cond_2
 
-    invoke-direct {v0, v1}, Lf31;-><init>(Landroid/content/Context;)V
+    :goto_0
+    const/4 p1, 0x0
 
-    new-instance v1, Lll3;
+    return p1
 
-    const/4 v2, -0x1
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    const/4 v3, 0x0
+    return p1
+.end method
 
-    invoke-direct {v1, v2, v3}, Lll3;-><init>(II)V
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-boolean v0, p0, Lbl1;->D:Z
 
-    const/16 v1, 0x8
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result v0
 
-    iget-object p0, p0, Lbl1;->c:Lfl1;
+    return v0
+.end method
 
-    iget-object p0, p0, Lfl1;->F0:Lel1;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0, p0}, Lf31;->setClickListener(Le31;)V
+    const-string v0, "ShareScreen(isEnabled="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lbl1;->D:Z
+
+    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

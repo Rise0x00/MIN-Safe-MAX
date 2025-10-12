@@ -1,73 +1,101 @@
-.class public abstract Loea;
+.class public final Loea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    sget v0, Ldxb;->add_8:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Loea;->a:I
-
-    sget v0, Ldxb;->apple_outline_24:I
-
-    sput v0, Loea;->b:I
-
-    sget v0, Ldxb;->ball_outline_24:I
-
-    sput v0, Loea;->c:I
-
-    sget v0, Ldxb;->car_outline_24:I
-
-    sput v0, Loea;->d:I
-
-    sget v0, Ldxb;->fire_24:I
-
-    sput v0, Loea;->e:I
-
-    sget v0, Ldxb;->flags_outline_24:I
-
-    sput v0, Loea;->f:I
-
-    sget v0, Ldxb;->lamp_outline_24:I
-
-    sput v0, Loea;->g:I
-
-    sget v0, Ldxb;->paw_outline_24:I
-
-    sput v0, Loea;->h:I
-
-    sget v0, Ldxb;->remove_outline_24:I
-
-    sput v0, Loea;->i:I
-
-    sget v0, Ldxb;->symbols_outline_24:I
-
-    sput v0, Loea;->j:I
+    iput-object p1, p0, Loea;->a:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Loea;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Loea;
+
+    iget-object v1, p0, Loea;->a:Ljava/lang/Object;
+
+    iget-object p1, p1, Loea;->a:Ljava/lang/Object;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Loea;->a:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OkApiResponse(response="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Loea;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,23 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
-.implements Lu96;
+.implements Le6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lrx0;
+.field public final synthetic b:Lqx0;
+
+.field public final synthetic c:Ljava/util/HashSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrx0;I)V
+.method public synthetic constructor <init>(Lqx0;Ljava/util/HashSet;I)V
     .locals 0
 
-    iput p2, p0, Lnx0;->a:I
+    iput p3, p0, Lnx0;->a:I
 
-    iput-object p1, p0, Lnx0;->b:Lrx0;
+    iput-object p1, p0, Lnx0;->b:Lqx0;
+
+    iput-object p2, p0, Lnx0;->c:Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,222 +31,136 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final run()V
+    .locals 6
 
     iget v0, p0, Lnx0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
+    iget-object v0, p0, Lnx0;->b:Lqx0;
+
+    iget-object v1, p0, Lnx0;->c:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lqx0;->l:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v1, v2}, Ljava/util/Collection;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lqx0;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :cond_0
+    return-void
+
     :pswitch_0
-    iget-object v0, p0, Lnx0;->b:Lrx0;
+    iget-object v0, p0, Lnx0;->b:Lqx0;
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v1, p0, Lnx0;->c:Ljava/util/HashSet;
 
-    monitor-enter v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p0, 0x0
+    sget-object v2, Lux0;->x0:Lux0;
 
-    :try_start_0
-    iput-object p0, v0, Lrx0;->j:Lx2a;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    monitor-exit v0
+    move-result v2
 
-    return-void
+    if-eqz v2, :cond_1
 
-    :catchall_0
-    move-exception p0
+    sget-object v2, Lux0;->Y:Lux0;
 
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    throw p0
+    move-result v3
 
-    :pswitch_1
-    iget-object v0, p0, Lnx0;->b:Lrx0;
+    if-nez v3, :cond_1
 
-    check-cast p1, Lpx0;
+    invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    monitor-enter v0
+    :cond_1
+    iget-object v2, v0, Lqx0;->k:Lox0;
 
-    :try_start_2
-    iput-object p1, v0, Lrx0;->k:Lpx0;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iget-object v2, v2, Lox0;->a:Lc28;
 
-    monitor-exit v0
+    if-eqz v2, :cond_4
 
-    return-void
+    iget-object v2, v0, Lqx0;->k:Lox0;
 
-    :catchall_1
-    move-exception p0
+    sget-object v3, Lux0;->Z:Lux0;
 
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    throw p0
+    move-result v3
 
-    :pswitch_2
-    iget-object p0, p0, Lnx0;->b:Lrx0;
+    if-nez v3, :cond_2
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget-object v3, Lux0;->c:Lux0;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    const-string v0, "rx0"
+    move-result v3
 
-    const-string v1, "onClearCacheClicked: failed"
+    if-eqz v3, :cond_3
 
-    invoke-static {v0, v1, p1}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_2
+    iget-object v3, v0, Lqx0;->b:Lc30;
 
-    iget-object p0, p0, Lrx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
+    const-string v4, "c30"
 
-    invoke-interface {p0}, Lqx0;->G()V
+    const-string v5, "stop"
 
-    return-void
+    invoke-static {v4, v5}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    :pswitch_3
-    iget-object p0, p0, Lnx0;->b:Lrx0;
+    invoke-virtual {v3}, Lc30;->u()V
 
-    check-cast p1, Lpx0;
+    iget-object v4, v3, Lc30;->c:Lws9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v4}, Lws9;->u()V
 
-    const-string v0, "rx0"
+    invoke-virtual {v3}, Lc30;->n()V
 
-    const-string v1, "onClearCacheClicked: finished"
+    :cond_3
+    iget-object v2, v2, Lox0;->a:Lc28;
 
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lc28;->w(Ljava/util/Collection;)V
 
-    iget-object p0, p0, Lrx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
+    iget-object v0, v0, Lqx0;->c:Lnah;
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
+    new-instance v2, Lutd;
 
-    iget-object v0, p1, Lpx0;->b:Ljava/lang/String;
+    invoke-direct {v2, v1}, Lutd;-><init>(Ljava/util/HashSet;)V
 
-    invoke-interface {p0, v0}, Lqx0;->g(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lnah;->b(Lstd;)V
 
-    iget-object p1, p1, Lpx0;->c:Ljava/util/ArrayList;
+    goto :goto_0
 
-    invoke-interface {p0, p1}, Lqx0;->e(Ljava/util/ArrayList;)V
+    :cond_4
+    const-string v0, "onClearCacheTypesPicked: already cleared all"
 
-    return-void
+    const/4 v1, 0x0
 
-    :pswitch_4
-    iget-object p0, p0, Lnx0;->b:Lrx0;
+    const-string v2, "qx0"
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-static {v2, v0, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "rx0"
-
-    const-string v1, "onClearCacheTypesPicked: failed"
-
-    invoke-static {v0, v1, p1}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lrx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    invoke-interface {p0}, Lqx0;->G()V
-
-    return-void
-
-    :pswitch_5
-    iget-object p0, p0, Lnx0;->b:Lrx0;
-
-    check-cast p1, Lpx0;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "rx0"
-
-    const-string v1, "onClearCacheTypesPicked: success"
-
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lrx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    invoke-interface {p0}, Lqx0;->F()V
-
-    iget-object p1, p1, Lpx0;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Lqx0;->g(Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lnx0;->b:Lrx0;
-
-    check-cast p1, Lpx0;
-
-    const-string v0, "rx0"
-
-    const-string v1, "onViewCreated: finished"
-
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lrx0;->h:Lru/ok/messages/settings/FrgBaseSettings;
-
-    iget-object p1, p1, Lpx0;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Lqx0;->g(Ljava/lang/String;)V
-
+    :goto_0
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
         :pswitch_0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
     .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lnx0;->b:Lrx0;
-
-    check-cast p1, Ljava/lang/String;
-
-    monitor-enter p0
-
-    const/4 p1, 0x0
-
-    :try_start_0
-    iput-object p1, p0, Lrx0;->j:Lx2a;
-
-    invoke-virtual {p0}, Lrx0;->c()Lt0a;
-
-    move-result-object p1
-
-    monitor-exit p0
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method

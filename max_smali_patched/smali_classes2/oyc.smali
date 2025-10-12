@@ -1,129 +1,119 @@
 .class public final Loyc;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loyc;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz1b;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lz1b;-><init>(I)V
-
-    sput-object v0, Loyc;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Loyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    iput-object p1, p0, Loyc;->a:Ljava/lang/String;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p0
+    invoke-virtual {p0, p1, p2}, Loyc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Loyc;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Loyc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    instance-of v0, p1, Loyc;
+    new-instance v0, Loyc;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Loyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    invoke-direct {v0, p2, v1}, Loyc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+
+    iput-object p1, v0, Loyc;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Loyc;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lzz9;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lzz9;
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Loyc;
-
-    iget-object p1, p1, Loyc;->a:Ljava/lang/String;
-
-    iget-object p0, p0, Loyc;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
+    const/4 p1, 0x0
 
     :goto_0
-    const/4 p0, 0x0
+    if-eqz p1, :cond_1
 
-    return p0
+    iget-object v0, p0, Loyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    invoke-virtual {v0}, Lb04;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->w0:Lmqc;
+
+    sget-object v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->I0:[Ltm7;
+
+    const/4 v3, 0x2
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llha;
+
+    iget-object p1, p1, Lzz9;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Llha;->setAvatarUrl(Ljava/lang/String;)V
 
     :cond_1
-    const/4 p0, 0x1
+    sget-object p1, Loyf;->a:Loyf;
 
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Loyc;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "ScopeId(value="
-
-    const-string v1, ")"
-
-    iget-object p0, p0, Loyc;->a:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p0, p0, Loyc;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

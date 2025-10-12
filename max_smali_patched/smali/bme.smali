@@ -2,46 +2,33 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Ljava/lang/String;
+# interfaces
+.implements Lfme;
 
 
 # instance fields
-.field public final a:Landroid/content/ComponentName;
+.field public final a:Lip1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lip1;)V
+    .locals 0
 
-    const-string v0, "SystemJobInfoConverter"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lyr3;->s0(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lbme;->b:Ljava/lang/String;
+    iput-object p1, p0, Lbme;->a:Lip1;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iget-object v0, p0, Lbme;->a:Lip1;
 
-    move-result-object p1
+    iget-boolean v0, v0, Lip1;->o:Z
 
-    new-instance v0, Landroid/content/ComponentName;
-
-    const-class v1, Landroidx/work/impl/background/systemjob/SystemJobService;
-
-    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    iput-object v0, p0, Lbme;->a:Landroid/content/ComponentName;
-
-    return-void
+    return v0
 .end method

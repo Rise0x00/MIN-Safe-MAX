@@ -1,174 +1,257 @@
-.class public final enum Lb9g;
-.super Ljava/lang/Enum;
+.class public final Lb9g;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Laag;
-
-
-# static fields
-.field public static final enum X:Lb9g;
-
-.field public static final enum Y:Lb9g;
-
-.field public static final synthetic Z:[Lb9g;
-
-.field public static final synthetic n0:Ly55;
-
-.field public static final enum o:Lb9g;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Ld8c;
 
-.field public final b:Ljava/lang/String;
+.field public final b:F
 
-.field public final c:Ljava/lang/Integer;
+.field public final c:F
+
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lb9g;
-
-    const/16 v1, 0x8
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "HAPTIC_FEEDBACK_IMPACT"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppHapticFeedbackImpact"
-
-    const-string v4, "haptic_feedback_impact"
-
-    invoke-direct/range {v0 .. v5}, Lb9g;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Lb9g;->o:Lb9g;
-
-    new-instance v1, Lb9g;
-
-    const/16 v2, 0x14
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "HAPTIC_FEEDBACK_NOTIFICATION"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppHapticFeedbackNotification"
-
-    const-string v5, "haptic_feedback_notification"
-
-    invoke-direct/range {v1 .. v6}, Lb9g;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lb9g;->X:Lb9g;
-
-    new-instance v2, Lb9g;
-
-    const/16 v3, 0x10
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "HAPTIC_FEEDBACK_SELECTION_CHANGE"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppHapticFeedbackSelectionChange"
-
-    const-string v6, "haptic_feedback_selection_change"
-
-    invoke-direct/range {v2 .. v7}, Lb9g;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Lb9g;->Y:Lb9g;
-
-    filled-new-array {v0, v1, v2}, [Lb9g;
-
-    move-result-object v0
-
-    sput-object v0, Lb9g;->Z:[Lb9g;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lb9g;->n0:Ly55;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lb9g;->a:Ljava/lang/String;
-
-    iput-object p4, p0, Lb9g;->b:Ljava/lang/String;
-
-    iput-object p5, p0, Lb9g;->c:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lb9g;
+.method public constructor <init>(Lm10;)V
     .locals 1
 
-    const-class v0, Lb9g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p1, Lm10;->c:Ld8c;
 
-    move-result-object p0
+    iput-object v0, p0, Lb9g;->a:Ld8c;
 
-    check-cast p0, Lb9g;
+    iget v0, p1, Lm10;->a:F
 
-    return-object p0
-.end method
+    iput v0, p0, Lb9g;->b:F
 
-.method public static values()[Lb9g;
-    .locals 1
+    iget v0, p1, Lm10;->b:F
 
-    sget-object v0, Lb9g;->Z:[Lb9g;
+    iput v0, p0, Lb9g;->c:F
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-boolean p1, p1, Lm10;->d:Z
 
-    move-result-object v0
+    iput-boolean p1, p0, Lb9g;->d:Z
 
-    check-cast v0, [Lb9g;
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 0
+.method public final a()Lm10;
+    .locals 2
 
-    iget-object p0, p0, Lb9g;->c:Ljava/lang/Integer;
+    new-instance v0, Lm10;
 
-    return-object p0
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lm10;-><init>(I)V
+
+    iget-object v1, p0, Lb9g;->a:Ld8c;
+
+    iput-object v1, v0, Lm10;->c:Ld8c;
+
+    iget v1, p0, Lb9g;->b:F
+
+    iput v1, v0, Lm10;->a:F
+
+    iget v1, p0, Lb9g;->c:F
+
+    iput v1, v0, Lm10;->b:F
+
+    iget-boolean v1, p0, Lb9g;->d:Z
+
+    iput-boolean v1, v0, Lm10;->d:Z
+
+    return-object v0
 .end method
 
-.method public final b()Ljava/lang/String;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p0, p0, Lb9g;->a:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_5
+
+    const-class v2, Lb9g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lb9g;
+
+    iget v2, p1, Lb9g;->b:F
+
+    iget v3, p0, Lb9g;->b:F
+
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    return v1
+
+    :cond_2
+    iget v2, p1, Lb9g;->c:F
+
+    iget v3, p0, Lb9g;->c:F
+
+    invoke-static {v2, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-boolean v2, p0, Lb9g;->d:Z
+
+    iget-boolean v3, p1, Lb9g;->d:Z
+
+    if-eq v2, v3, :cond_4
+
+    return v1
+
+    :cond_4
+    iget-object v2, p0, Lb9g;->a:Ld8c;
+
+    iget-object p1, p1, Lb9g;->a:Ld8c;
+
+    if-ne v2, p1, :cond_5
+
+    return v0
+
+    :cond_5
+    :goto_0
+    return v1
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 0
+.method public final hashCode()I
+    .locals 5
 
-    iget-object p0, p0, Lb9g;->b:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    return-object p0
+    iget-object v1, p0, Lb9g;->a:Ld8c;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lb9g;->b:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v0
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget v2, p0, Lb9g;->c:F
+
+    cmpl-float v3, v2, v3
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lb9g;->d:Z
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VideoConvertOptions{quality="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lb9g;->a:Ld8c;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startTrimPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lb9g;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endTrimPosition="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lb9g;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mute="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lb9g;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

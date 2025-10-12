@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldsc;
+.implements Lve6;
 
 
 # instance fields
@@ -27,125 +27,58 @@
 
 
 # virtual methods
-.method public a(Lyrc;Ljsc;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lgn4;->a:I
 
-    check-cast p1, Lvdf;
-
-    check-cast p2, Lxdf;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lgn4;->b:Lhn4;
+    iget-object v0, p0, Lgn4;->b:Lhn4;
 
-    iget-object p0, p0, Lhn4;->a:Li7c;
+    sget-object v1, Lhn4;->Y:Lhn4;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-ne v0, v1, :cond_0
 
-    const-string v0, "Stop stream on participant removed response: "
+    const/4 v0, 0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "DisplayLayouts"
-
-    invoke-interface {p0, p2, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p2, Lxdf;->a:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p0, p0, Lgn4;->b:Lhn4;
-
-    iget-object p1, p0, Lhn4;->a:Li7c;
-
-    const-string p2, "DisplayLayouts"
-
-    const-string v0, "Resend next time after response with errors"
-
-    invoke-interface {p1, p2, v0}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lhn4;->e:Z
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lgn4;->b:Lhn4;
+
+    sget-object v1, Lhn4;->X:Lhn4;
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(Lyrc;Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lgn4;->a:I
-
-    check-cast p1, Lvdf;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lgn4;->b:Lhn4;
-
-    iget-object p0, p0, Lhn4;->a:Li7c;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Stop stream on participant removed error: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "DisplayLayouts"
-
-    invoke-interface {p0, p2, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lgn4;->b:Lhn4;
-
-    iget-object p1, p0, Lhn4;->a:Li7c;
-
-    const-string p2, "DisplayLayouts"
-
-    const-string v0, "Resend next time after error"
-
-    invoke-interface {p1, p2, v0}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lhn4;->e:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

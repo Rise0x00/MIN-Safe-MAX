@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldb;
+.implements Lab;
 
 
 # instance fields
@@ -40,48 +40,48 @@
     :cond_1
     check-cast p1, Lsa;
 
-    iget-boolean p0, p0, Lsa;->a:Z
+    iget-boolean v0, p0, Lsa;->a:Z
 
     iget-boolean p1, p1, Lsa;->a:Z
 
-    if-eq p0, p1, :cond_2
+    if-eq v0, p1, :cond_2
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_2
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lsa;->a:Z
+    iget-boolean v0, p0, Lsa;->a:Z
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    const-string v0, "DisableAllCamerasOnce(isSuccess="
+    const-string v0, "DisableAllRaiseHandsOnce(isSuccess="
 
     const-string v1, ")"
 
-    iget-boolean p0, p0, Lsa;->a:Z
+    iget-boolean v2, p0, Lsa;->a:Z
 
-    invoke-static {v0, v1, p0}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

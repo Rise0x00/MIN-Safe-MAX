@@ -1,36 +1,31 @@
-.class public final synthetic Lr9d;
+.class public abstract Lr9d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lr9d;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lxz7;
+    sget v0, Lngc;->cancel:I
 
-    iget p0, p0, Lr9d;->a:I
+    sput v0, Lr9d;->a:I
 
-    invoke-direct {v0, p0}, Lxz7;-><init>(I)V
+    sget v0, Lngc;->presense_accent:I
 
-    return-object v0
+    sput v0, Lr9d;->b:I
+
+    sget v0, Lngc;->presense_bg:I
+
+    sput v0, Lr9d;->c:I
+
+    return-void
 .end method

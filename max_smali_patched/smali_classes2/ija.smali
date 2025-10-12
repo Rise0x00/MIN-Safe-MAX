@@ -1,163 +1,120 @@
-.class public abstract Lija;
-.super Ljava/lang/Object;
+.class public final Lija;
+.super Lv2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic c:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+.field public final synthetic o:Ljja;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljja;I)V
+    .locals 0
 
-    sget v0, Lx4c;->oneme_settings_media_action_always:I
+    iput p2, p0, Lija;->c:I
 
-    sput v0, Lija;->a:I
+    iput-object p1, p0, Lija;->o:Ljja;
 
-    sget v0, Lx4c;->oneme_settings_media_action_disabled:I
+    const/16 p1, 0x9
 
-    sput v0, Lija;->b:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Lx4c;->oneme_settings_media_action_dont_load:I
+    sget-object p2, Lcja;->b:Lcja;
 
-    sput v0, Lija;->c:I
-
-    sget v0, Lx4c;->oneme_settings_media_action_video_quality_1080:I
-
-    sput v0, Lija;->d:I
-
-    sget v0, Lx4c;->oneme_settings_media_action_video_quality_480:I
-
-    sput v0, Lija;->e:I
-
-    sget v0, Lx4c;->oneme_settings_media_action_video_quality_720:I
-
-    sput v0, Lija;->f:I
-
-    sget v0, Lx4c;->oneme_settings_media_action_wifi:I
-
-    sput v0, Lija;->g:I
-
-    sget v0, Lx4c;->oneme_settings_media_animoji:I
-
-    sput v0, Lija;->h:I
-
-    sget v0, Lx4c;->oneme_settings_media_audio:I
-
-    sput v0, Lija;->i:I
-
-    sget v0, Lx4c;->oneme_settings_media_audio_title:I
-
-    sput v0, Lija;->j:I
-
-    sget v0, Lx4c;->oneme_settings_media_caching:I
-
-    sput v0, Lija;->k:I
-
-    sget v0, Lx4c;->oneme_settings_media_gif:I
-
-    sput v0, Lija;->l:I
-
-    sget v0, Lx4c;->oneme_settings_media_gif_play:I
-
-    sput v0, Lija;->m:I
-
-    sget v0, Lx4c;->oneme_settings_media_gif_title:I
-
-    sput v0, Lija;->n:I
-
-    sget v0, Lx4c;->oneme_settings_media_load_media_in_roaming:I
-
-    sput v0, Lija;->o:I
-
-    sget v0, Lx4c;->oneme_settings_media_photo:I
-
-    sput v0, Lija;->p:I
-
-    sget v0, Lx4c;->oneme_settings_media_photo_title:I
-
-    sput v0, Lija;->q:I
-
-    sget v0, Lx4c;->oneme_settings_media_screen_autoloading_section:I
-
-    sput v0, Lija;->r:I
-
-    sget v0, Lx4c;->oneme_settings_media_screen_autoplaying_section:I
-
-    sput v0, Lija;->s:I
-
-    sget v0, Lx4c;->oneme_settings_media_screen_datapressing_section:I
-
-    sput v0, Lija;->t:I
-
-    sget v0, Lx4c;->oneme_settings_media_screen_toolbar_title:I
-
-    sput v0, Lija;->u:I
-
-    sget v0, Lx4c;->oneme_settings_media_video:I
-
-    sput v0, Lija;->v:I
-
-    sget v0, Lx4c;->oneme_settings_media_video_quality:I
-
-    sput v0, Lija;->w:I
-
-    sget v0, Lx4c;->oneme_settings_media_video_quality_title:I
-
-    sput v0, Lija;->x:I
-
-    sget v0, Lx4c;->oneme_settings_media_video_title:I
-
-    sput v0, Lija;->y:I
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p2, Lbja;->a:Lbja;
+
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lija;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Luxa;
+
+    check-cast p1, Luxa;
+
+    iget-object p1, p0, Lija;->o:Ljja;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Lbja;
+
+    check-cast p1, Lbja;
+
+    iget-object p1, p0, Lija;->o:Ljja;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    check-cast p2, Lcja;
+
+    check-cast p1, Lcja;
+
+    iget-object p1, p0, Lija;->o:Ljja;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

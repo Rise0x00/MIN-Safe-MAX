@@ -1,185 +1,139 @@
 .class public final Lind;
-.super Lmnd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lind;
+
+
 # instance fields
-.field public final c:Lknd;
+.field public final a:J
 
-.field public final d:F
-
-.field public final e:F
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lknd;FF)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lind;
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {v0, v1, v2, v1, v2}, Lind;-><init>(JJ)V
+
+    sput-object v0, Lind;->c:Lind;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJ)V
     .locals 0
 
-    invoke-direct {p0}, Lmnd;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lind;->c:Lknd;
+    iput-wide p1, p0, Lind;->a:J
 
-    iput p2, p0, Lind;->d:F
-
-    iput p3, p0, Lind;->e:F
+    iput-wide p3, p0, Lind;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Matrix;Lcnd;ILandroid/graphics/Canvas;)V
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p2
-
-    move/from16 v2, p3
-
-    move-object/from16 v3, p4
-
-    iget-object v4, v0, Lind;->c:Lknd;
-
-    iget v5, v4, Lknd;->c:F
-
-    iget v6, v0, Lind;->e:F
-
-    sub-float/2addr v5, v6
-
-    iget v4, v4, Lknd;->b:F
-
-    iget v7, v0, Lind;->d:F
-
-    sub-float/2addr v4, v7
-
-    new-instance v8, Landroid/graphics/RectF;
-
-    float-to-double v9, v5
-
-    float-to-double v4, v4
-
-    invoke-static {v9, v10, v4, v5}, Ljava/lang/Math;->hypot(DD)D
-
-    move-result-wide v4
-
-    double-to-float v4, v4
-
-    const/4 v5, 0x0
-
-    invoke-direct {v8, v5, v5, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    iget-object v4, v0, Lmnd;->a:Landroid/graphics/Matrix;
-
-    move-object/from16 v9, p1
-
-    invoke-virtual {v4, v9}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    invoke-virtual {v4, v7, v6}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    invoke-virtual {v0}, Lind;->b()F
-
-    move-result v0
-
-    invoke-virtual {v4, v0}, Landroid/graphics/Matrix;->preRotate(F)Z
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, v8, Landroid/graphics/RectF;->bottom:F
-
-    int-to-float v6, v2
-
-    add-float/2addr v0, v6
-
-    iput v0, v8, Landroid/graphics/RectF;->bottom:F
-
-    neg-int v0, v2
-
-    int-to-float v0, v0
-
-    invoke-virtual {v8, v5, v0}, Landroid/graphics/RectF;->offset(FF)V
-
-    const/4 v0, 0x0
-
-    iget v2, v1, Lcnd;->f:I
-
-    sget-object v14, Lcnd;->i:[I
-
-    aput v2, v14, v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
     const/4 v0, 0x1
 
-    iget v2, v1, Lcnd;->e:I
+    if-ne p0, p1, :cond_0
 
-    aput v2, v14, v0
+    return v0
 
-    const/4 v0, 0x2
+    :cond_0
+    const/4 v1, 0x0
 
-    iget v2, v1, Lcnd;->d:I
+    if-eqz p1, :cond_2
 
-    aput v2, v14, v0
+    const-class v2, Lind;
 
-    iget-object v0, v1, Lcnd;->c:Landroid/graphics/Paint;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v9, Landroid/graphics/LinearGradient;
+    move-result-object v3
 
-    iget v10, v8, Landroid/graphics/RectF;->left:F
+    if-eq v2, v3, :cond_1
 
-    iget v11, v8, Landroid/graphics/RectF;->top:F
+    goto :goto_0
 
-    iget v13, v8, Landroid/graphics/RectF;->bottom:F
+    :cond_1
+    check-cast p1, Lind;
 
-    sget-object v15, Lcnd;->j:[F
+    iget-wide v2, p0, Lind;->a:J
 
-    sget-object v16, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
+    iget-wide v4, p1, Lind;->a:J
 
-    move v12, v10
+    cmp-long v2, v2, v4
 
-    invoke-direct/range {v9 .. v16}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
+    if-nez v2, :cond_2
 
-    invoke-virtual {v0, v9}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+    iget-wide v2, p0, Lind;->b:J
 
-    invoke-virtual {v3}, Landroid/graphics/Canvas;->save()I
+    iget-wide v4, p1, Lind;->b:J
 
-    invoke-virtual {v3, v4}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+    cmp-long p1, v2, v4
 
-    invoke-virtual {v3, v8, v0}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    if-nez p1, :cond_2
 
-    invoke-virtual {v3}, Landroid/graphics/Canvas;->restore()V
+    return v0
 
-    return-void
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final b()F
+.method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lind;->c:Lknd;
+    iget-wide v0, p0, Lind;->a:J
 
-    iget v1, v0, Lknd;->c:F
+    long-to-int v0, v0
 
-    iget v2, p0, Lind;->e:F
+    mul-int/lit8 v0, v0, 0x1f
 
-    sub-float/2addr v1, v2
+    iget-wide v1, p0, Lind;->b:J
 
-    iget v0, v0, Lknd;->b:F
+    long-to-int v1, v1
 
-    iget p0, p0, Lind;->d:F
+    add-int/2addr v0, v1
 
-    sub-float/2addr v0, p0
+    return v0
+.end method
 
-    div-float/2addr v1, v0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    float-to-double v0, v1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->atan(D)D
+    const-string v1, "[timeUs="
 
-    move-result-wide v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
+    iget-wide v1, p0, Lind;->a:J
 
-    move-result-wide v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    double-to-float p0, v0
+    const-string v1, ", position="
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lind;->b:J
+
+    const-string v3, "]"
+
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

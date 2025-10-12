@@ -1,297 +1,355 @@
 .class public final Lssa;
-.super Lvl3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # instance fields
-.field public final f:Ljava/util/ArrayList;
+.field public final X:Ljava/util/concurrent/CountDownLatch;
 
-.field public final g:Ljava/util/ArrayList;
+.field public volatile Y:Ljava/lang/Object;
 
-.field public final h:Ljava/util/ArrayList;
+.field public final Z:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final i:Ljava/util/HashMap;
+.field public final a:Ljava/util/concurrent/Callable;
 
-.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final b:Ljava/util/concurrent/ExecutorService;
 
-.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public w0:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method public constructor <init>(Ldde;Li7c;Lnua;Lu8d;)V
+.method public constructor <init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lvl3;-><init>(Ldde;Li7c;Lnua;Lu8d;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object p1, p0, Lssa;->a:Ljava/util/concurrent/Callable;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    iput-object p2, p0, Lssa;->b:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p1, p0, Lssa;->f:Ljava/util/ArrayList;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance p1, Ljava/util/ArrayList;
+    const/4 p2, 0x0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object p1, p0, Lssa;->g:Ljava/util/ArrayList;
+    iput-object p1, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance p1, Ljava/util/ArrayList;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object p1, p0, Lssa;->h:Ljava/util/ArrayList;
+    iput-object p1, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance p1, Ljava/util/HashMap;
+    new-instance p1, Ljava/util/concurrent/CountDownLatch;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    const/4 p2, 0x1
 
-    iput-object p1, p0, Lssa;->i:Ljava/util/HashMap;
+    invoke-direct {p1, p2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p1, p0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 p2, 0x0
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lssa;->k:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lssa;->l:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lwg1;Lorg/webrtc/VideoFrame;)V
-    .locals 2
-
-    new-instance v0, Lcpc;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lcpc;-><init>(I)V
-
-    iput-object p1, v0, Lcpc;->a:Ljava/lang/Object;
-
-    sget-object p1, Lvvf;->b:Lvvf;
-
-    iput-object p1, v0, Lcpc;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lcpc;->k()Ler1;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lorg/webrtc/VideoSink;
-
-    invoke-interface {p1, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    invoke-static {}, Lsd9;->e()V
-
-    iget-object v0, p0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    iget-object p0, p0, Lssa;->i:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
-
-    return-void
-.end method
-
-.method public final e(Lwg1;Ljava/lang/String;)V
+.method public final cancel(Z)Z
     .locals 3
 
-    invoke-static {}, Lsd9;->e()V
+    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object p2, p0, Lssa;->i:Ljava/util/HashMap;
-
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Set;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v1
 
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :cond_1
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    iget-object p1, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return v2
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Ljava/util/concurrent/Delayed;
+
+    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Exception;
+
+    if-eqz v0, :cond_3
+
+    instance-of v1, v0, Ljava/util/concurrent/ExecutionException;
+
     if-eqz v1, :cond_1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-object v1, v0
 
-    move-result-object v1
-
-    check-cast v1, Ler1;
-
-    iget-object v2, p0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Ljava/util/concurrent/ExecutionException;
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    iget-object v0, p0, Lvl3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    :goto_0
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lvl3;->a:Ljava/lang/Object;
+    goto :goto_1
 
-    check-cast v0, Ldde;
+    :cond_2
+    new-instance v1, Ljava/util/concurrent/ExecutionException;
 
-    new-instance v1, Lc56;
+    invoke-direct {v1, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
 
-    const/16 v2, 0x1b
+    :goto_1
+    throw v1
 
-    invoke-direct {v1, v2, p0}, Lc56;-><init>(ILjava/lang/Object;)V
+    .line 4
+    :cond_3
+    iget-object v0, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object p0, v0, Ldde;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    check-cast p0, Lwua;
+    move-result v0
 
-    const-string v0, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
+    if-nez v0, :cond_4
 
-    invoke-virtual {p0, v0, v1}, Lwua;->i(Ljava/lang/String;Ljava/lang/Runnable;)V
+    .line 5
+    iget-object v0, p0, Lssa;->Y:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+
+    .line 6
+    :cond_4
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    const-string v1, "Future is cancelled"
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Lvl3;->a:Ljava/lang/Object;
+    .line 7
+    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast v0, Ldde;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    new-instance v1, Lvg4;
+    move-result v0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_1
 
-    invoke-direct {v1, v2, p2, p0, p1}, Lvg4;-><init>(ILjava/io/Serializable;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 8
+    iget-object v0, p0, Lssa;->X:Ljava/util/concurrent/CountDownLatch;
 
-    const-string p0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
-    invoke-virtual {v0, p0, v1}, Ldde;->a(Ljava/lang/String;Lhm3;)V
+    move-result v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final p(Ljava/lang/String;Ler1;Ljava/util/List;)V
-    .locals 0
-
-    invoke-static {}, Lsd9;->e()V
-
-    iget-object p1, p0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p0, p0, Lssa;->i:Ljava/util/HashMap;
-
-    if-nez p3, :cond_1
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p2, Ler1;->b:Lwg1;
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Set;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_0
-    return-void
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
 
-    :cond_1
-    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object p1, p2, Ler1;->b:Lwg1;
+    const-string v2, "No result for "
 
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Ljava/util/Set;
+    invoke-direct {v0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
 
-    if-nez p1, :cond_2
+    throw v0
 
-    new-instance p1, Ljava/util/HashSet;
+    .line 9
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lssa;->Z:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iget-object p3, p2, Ler1;->b:Lwg1;
+    move-result-object p1
 
-    invoke-virtual {p0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Exception;
+
+    if-eqz p1, :cond_4
+
+    instance-of p2, p1, Ljava/util/concurrent/ExecutionException;
+
+    if-eqz p2, :cond_2
+
+    move-object p2, p1
+
+    check-cast p2, Ljava/util/concurrent/ExecutionException;
+
+    goto :goto_1
 
     :cond_2
-    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    const/4 p2, 0x0
 
-    return-void
+    :goto_1
+    if-eqz p2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p2, Ljava/util/concurrent/ExecutionException;
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_2
+    throw p2
+
+    .line 10
+    :cond_4
+    iget-object p1, p0, Lssa;->Y:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
+
+    iget-object v0, p0, Lssa;->w0:Ljava/util/concurrent/ScheduledFuture;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lssa;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Lssa;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
 .end method

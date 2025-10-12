@@ -1,74 +1,113 @@
 .class public final Lqk7;
-.super Ljava/lang/Object;
+.super Lsk7;
 .source "SourceFile"
-
-# interfaces
-.implements Lkk7;
 
 
 # instance fields
-.field public final synthetic a:Lyl;
-
-.field public final synthetic b:Lrk7;
-
-.field public final synthetic c:Luk7;
+.field public final d:Ltk7;
 
 
 # direct methods
-.method public constructor <init>(Lyl;Lrk7;Luk7;)V
-    .locals 0
+.method public constructor <init>(Ltk7;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "client"
 
-    iput-object p1, p0, Lqk7;->a:Lyl;
+    const/4 v1, 0x1
 
-    iput-object p2, p0, Lqk7;->b:Lrk7;
+    invoke-direct {p0, v0, v1, p1}, Lsk7;-><init>(Ljava/lang/String;ILtk7;)V
 
-    iput-object p3, p0, Lqk7;->c:Luk7;
+    iput-object p1, p0, Lqk7;->d:Ltk7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lsk7;Luj7;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p2}, Luj7;->a()Lvj7;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    sget-object p2, Lvj7;->a:Lvj7;
+    return v0
 
-    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    :cond_0
+    instance-of v1, p1, Lqk7;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqk7;
+
+    iget-object v1, p0, Lqk7;->d:Ltk7;
+
+    iget-object p1, p1, Lqk7;->d:Ltk7;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-gtz p1, :cond_1
+    if-nez p1, :cond_2
 
-    const-string p1, "handle ON_DESTROY state"
+    return v2
 
-    const/4 p2, 0x0
+    :cond_2
+    return v0
+.end method
 
-    const-string v0, "LifecycleOnOffsetChangedListener"
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {v0, p1, p2}, Lz76;->u(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    iget-object v0, p0, Lqk7;->d:Ltk7;
 
-    iget-object p1, p0, Lqk7;->a:Lyl;
+    if-nez v0, :cond_0
 
-    iget-object p1, p1, Lyl;->q0:Ljava/util/ArrayList;
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
-
-    iget-object p2, p0, Lqk7;->b:Lrk7;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    return v0
 
     :cond_0
-    iget-object p1, p0, Lqk7;->c:Luk7;
+    invoke-virtual {v0}, Ltk7;->hashCode()I
 
-    invoke-virtual {p1, p0}, Luk7;->f(Lok7;)V
+    move-result v0
 
-    :cond_1
-    return-void
+    return v0
+.end method
+
+.method public final l()Ltk7;
+    .locals 1
+
+    iget-object v0, p0, Lqk7;->d:Ltk7;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ClientError(reason="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqk7;->d:Ltk7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

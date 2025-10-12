@@ -1,196 +1,100 @@
 .class public final Lced;
-.super Ljava/lang/Object;
+.super Lmo7;
 .source "SourceFile"
 
 # interfaces
-.implements Lt43;
+.implements Lve6;
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lth7;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lced;->a:I
 
-    iput-object p1, p0, Lced;->a:Lth7;
+    iput-object p2, p0, Lced;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ltk3;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
+    iget v0, p0, Lced;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Lt43;->a()Ltk3;
+    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    return-object v0
 
-    return-object p0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
 
-.method public final b()V
-    .locals 0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Lrlg;
 
-    invoke-interface {p0}, Lt43;->b()V
+    instance-of v1, v0, Lzs6;
 
-    return-void
-.end method
+    if-eqz v1, :cond_0
 
-.method public final c(Ljava/net/Socket;)V
-    .locals 0
+    check-cast v0, Lzs6;
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-interface {p0, p1}, Lt43;->c(Ljava/net/Socket;)V
+    :goto_0
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    invoke-interface {v0}, Lzs6;->j()Lys9;
 
-.method public final close()V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_1
+    sget-object v0, Lw44;->b:Lw44;
 
-    invoke-interface {p0}, Lt43;->close()V
+    :goto_1
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lced;->b:Ljava/lang/Object;
 
-.method public final connect()Ljava/net/Socket;
-    .locals 0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Lrlg;
 
-    invoke-interface {p0}, Lt43;->connect()Ljava/net/Socket;
+    invoke-interface {v0}, Lrlg;->u()Lqlg;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    return-object v0
 
-.method public final d()I
-    .locals 0
+    nop
 
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lt43;->d()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final e()Z
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lt43;->e()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final f()V
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lt43;->f()V
-
-    return-void
-.end method
-
-.method public final g(Z)V
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1}, Lt43;->g(Z)V
-
-    return-void
-.end method
-
-.method public final h(I)J
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0, p1}, Lt43;->h(I)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final i()Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lt43;->i()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final k()Lnj3;
-    .locals 0
-
-    invoke-virtual {p0}, Lced;->l()Lt43;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lt43;->k()Lnj3;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final l()Lt43;
-    .locals 0
-
-    iget-object p0, p0, Lced;->a:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt43;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

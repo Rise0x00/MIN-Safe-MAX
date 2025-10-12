@@ -1,136 +1,54 @@
-.class public final Lww7;
-.super Lxoe;
+.class public interface abstract Lww7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;ZJJJLjava/lang/String;JJJ)V
-    .locals 17
+# virtual methods
+.method public abstract getItemId()J
+.end method
 
-    move-object/from16 v0, p0
+.method public h(Lww7;)Z
+    .locals 4
 
-    move-wide/from16 v1, p3
+    invoke-interface {p0}, Lww7;->getItemId()J
 
-    move-wide/from16 v3, p5
+    move-result-wide v0
 
-    move-wide/from16 v5, p7
+    invoke-interface {p1}, Lww7;->getItemId()J
 
-    move-object/from16 v7, p9
+    move-result-wide v2
 
-    move-wide/from16 v8, p10
+    cmp-long p1, v0, v2
 
-    move-wide/from16 v10, p12
+    if-nez p1, :cond_0
 
-    move-wide/from16 v12, p14
+    const/4 p1, 0x1
 
-    sget-object v14, Lboa;->s0:Lboa;
-
-    invoke-direct {v0, v14}, Lxoe;-><init>(Lboa;)V
-
-    const-string v14, "token"
-
-    move-object/from16 v15, p1
-
-    invoke-virtual {v0, v14, v15}, Lxoe;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v14, "interactive"
-
-    move/from16 v15, p2
-
-    invoke-virtual {v0, v14, v15}, Lxoe;->d(Ljava/lang/String;Z)V
-
-    const-wide/16 v14, 0x0
-
-    cmp-long v16, v1, v14
-
-    move-wide/from16 p1, v14
-
-    if-lez v16, :cond_0
-
-    const-string v14, "chatsSync"
-
-    invoke-virtual {v0, v1, v2, v14}, Lxoe;->i(JLjava/lang/String;)V
+    return p1
 
     :cond_0
-    cmp-long v1, v3, p1
+    const/4 p1, 0x0
 
-    if-lez v1, :cond_1
-
-    const-string v1, "contactsSync"
-
-    invoke-virtual {v0, v3, v4, v1}, Lxoe;->i(JLjava/lang/String;)V
-
-    :cond_1
-    cmp-long v1, v5, p1
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "presenceSync"
-
-    invoke-virtual {v0, v5, v6, v1}, Lxoe;->i(JLjava/lang/String;)V
-
-    :cond_2
-    if-eqz v7, :cond_4
-
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "configHash"
-
-    invoke-virtual {v0, v1, v7}, Lxoe;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    :goto_0
-    cmp-long v1, v8, p1
-
-    if-lez v1, :cond_5
-
-    const-string v1, "callsSync"
-
-    invoke-virtual {v0, v8, v9, v1}, Lxoe;->i(JLjava/lang/String;)V
-
-    :cond_5
-    cmp-long v1, v10, p1
-
-    if-lez v1, :cond_6
-
-    const-string v1, "lastLogin"
-
-    invoke-virtual {v0, v10, v11, v1}, Lxoe;->i(JLjava/lang/String;)V
-
-    :cond_6
-    cmp-long v1, v12, p1
-
-    if-lez v1, :cond_7
-
-    const-string v1, "draftsSync"
-
-    invoke-virtual {v0, v12, v13, v1}, Lxoe;->i(JLjava/lang/String;)V
-
-    :cond_7
-    return-void
+    return p1
 .end method
 
-
-# virtual methods
-.method public final M()Lyoe;
+.method public k(Lww7;)Ljava/lang/Object;
     .locals 0
 
-    sget-object p0, Ldyc;->o:Ldyc;
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public final S()Z
+.method public abstract m()I
+.end method
+
+.method public q(Lww7;)Z
     .locals 0
 
-    const/4 p0, 0x0
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return p0
+    move-result p1
+
+    return p1
 .end method

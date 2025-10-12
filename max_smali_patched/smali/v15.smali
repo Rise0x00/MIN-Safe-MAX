@@ -3,88 +3,84 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/TransformationMethod;
+.implements Lt15;
 
 
-# instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+# static fields
+.field public static final a:Lzo6;
+
+.field public static final b:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzo6;
 
-    iput-object p1, p0, Lv15;->a:Landroid/text/method/TransformationMethod;
+    new-instance v1, Lv15;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2, v1}, Lzo6;-><init>(ILjava/lang/Object;)V
+
+    sput-object v0, Lv15;->a:Lzo6;
+
+    sget-object v0, Lp15;->d:Lp15;
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lv15;->b:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method public final a()Ljava/util/Set;
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    sget-object v0, Lv15;->b:Ljava/util/Set;
+
+    return-object v0
+.end method
+
+.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c(Lp15;)Ljava/util/Set;
+    .locals 3
+
+    sget-object v0, Lp15;->d:Lp15;
+
+    invoke-virtual {v0, p1}, Lp15;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v2, "DynamicRange is not supported: "
 
-    :cond_0
-    iget-object p0, p0, Lv15;->a:Landroid/text/method/TransformationMethod;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p0, :cond_1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    :cond_1
-    if-eqz p1, :cond_3
+    invoke-static {p1, v0}, Ll74;->h(Ljava/lang/String;Z)V
 
-    invoke-static {}, Lc05;->a()Lc05;
+    sget-object p1, Lv15;->b:Ljava/util/Set;
 
-    move-result-object p0
-
-    invoke-virtual {p0}, Lc05;->b()I
-
-    move-result p0
-
-    const/4 p2, 0x1
-
-    if-eq p0, p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Lc05;->a()Lc05;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lc05;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    :goto_0
     return-object p1
-.end method
-
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 0
-
-    iget-object p0, p0, Lv15;->a:Landroid/text/method/TransformationMethod;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface/range {p0 .. p5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-
-    :cond_0
-    return-void
 .end method

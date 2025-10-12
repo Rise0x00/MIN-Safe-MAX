@@ -1,457 +1,231 @@
-.class public final Lqg;
-.super Lxoe;
+.class public final enum Lqg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final X:Lqg;
+.field public static final enum A0:Lqg;
 
-.field public static final Y:Lqg;
+.field public static final enum B0:Lqg;
 
-.field public static final Z:Lqg;
+.field public static final synthetic C0:[Lqg;
 
-.field public static final n0:Lqg;
+.field public static final enum X:Lqg;
 
-.field public static final o0:Lqg;
+.field public static final enum Y:Lqg;
 
-.field public static final p0:Lqg;
+.field public static final enum Z:Lqg;
 
-.field public static final q0:Lqg;
+.field public static final enum b:Lqg;
 
-.field public static final r0:Lqg;
+.field public static final enum c:Lqg;
 
-.field public static final s0:Lqg;
+.field public static final enum o:Lqg;
+
+.field public static final enum w0:Lqg;
+
+.field public static final enum x0:Lqg;
+
+.field public static final enum y0:Lqg;
+
+.field public static final enum z0:Lqg;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 15
 
     new-instance v0, Lqg;
 
-    const-wide/16 v1, 0x12c
+    const/4 v1, 0x0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v2, "interpolator"
 
-    move-result-object v1
+    const-string v3, "INTERPOLATOR"
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sget-object v3, Lpg;->c:Lpg;
+    sput-object v0, Lqg;->b:Lqg;
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
-
-    sput-object v0, Lqg;->X:Lqg;
-
-    new-instance v0, Lqg;
-
-    const-string v1, ""
+    new-instance v1, Lqg;
 
     const/4 v2, 0x1
 
-    sget-object v3, Lpg;->p0:Lpg;
+    const-string v3, "duration"
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const-string v4, "DURATION"
 
-    sput-object v0, Lqg;->Y:Lqg;
+    invoke-direct {v1, v4, v2, v3}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Lqg;
+    sput-object v1, Lqg;->c:Lqg;
 
-    const-string v1, ""
+    new-instance v2, Lqg;
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    sget-object v3, Lpg;->Z:Lpg;
+    const-string v4, "valueFrom"
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const-string v5, "VALUE_FROM"
 
-    sput-object v0, Lqg;->Z:Lqg;
+    invoke-direct {v2, v5, v3, v4}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Lqg;
+    sput-object v2, Lqg;->o:Lqg;
 
-    const-string v1, ""
+    new-instance v3, Lqg;
 
-    const/4 v2, 0x3
+    const/4 v4, 0x3
 
-    sget-object v3, Lpg;->n0:Lpg;
+    const-string v5, "valueTo"
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const-string v6, "VALUE_TO"
 
-    sput-object v0, Lqg;->n0:Lqg;
+    invoke-direct {v3, v6, v4, v5}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Lqg;
+    sput-object v3, Lqg;->X:Lqg;
 
-    const-string v1, ""
+    new-instance v4, Lqg;
 
-    const/4 v2, 0x4
+    const/4 v5, 0x4
 
-    sget-object v3, Lpg;->o0:Lpg;
+    const-string v6, "valueType"
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const-string v7, "VALUE_TYPE"
 
-    sput-object v0, Lqg;->o0:Lqg;
+    invoke-direct {v4, v7, v5, v6}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Lqg;
+    sput-object v4, Lqg;->Y:Lqg;
 
-    const/4 v1, 0x0
+    new-instance v5, Lqg;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v6, 0x5
 
-    move-result-object v1
+    const-string v7, "propertyName"
 
-    const/4 v2, 0x5
+    const-string v8, "PROPERTY_NAME"
 
-    sget-object v3, Lpg;->r0:Lpg;
+    invoke-direct {v5, v8, v6, v7}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    sput-object v5, Lqg;->Z:Lqg;
 
-    sput-object v0, Lqg;->p0:Lqg;
+    new-instance v6, Lqg;
 
-    new-instance v0, Lqg;
+    const/4 v7, 0x6
 
-    const/4 v1, 0x1
+    const-string v8, "propertyXName"
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v9, "PROPERTY_X_NAME"
 
-    move-result-object v1
+    invoke-direct {v6, v9, v7, v8}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const/4 v2, 0x6
+    sput-object v6, Lqg;->w0:Lqg;
 
-    sget-object v3, Lpg;->s0:Lpg;
+    new-instance v7, Lqg;
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const/4 v8, 0x7
 
-    sput-object v0, Lqg;->q0:Lqg;
+    const-string v9, "propertyYName"
 
-    new-instance v0, Lqg;
+    const-string v10, "PROPERTY_Y_NAME"
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v7, v10, v8, v9}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sput-object v7, Lqg;->x0:Lqg;
 
-    move-result-object v1
+    new-instance v8, Lqg;
 
-    const/4 v2, 0x7
+    const/16 v9, 0x8
 
-    sget-object v3, Lpg;->q0:Lpg;
+    const-string v10, "pathData"
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    const-string v11, "PATH_DATA"
 
-    sput-object v0, Lqg;->r0:Lqg;
+    invoke-direct {v8, v11, v9, v10}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v0, Lqg;
+    sput-object v8, Lqg;->y0:Lqg;
 
-    new-instance v1, Lch;
+    new-instance v9, Lqg;
 
-    const/4 v2, 0x0
+    const/16 v10, 0x9
 
-    invoke-direct {v1, v2}, Lch;-><init>(F)V
+    const-string v11, "startOffset"
 
-    const/16 v2, 0x8
+    const-string v12, "START_OFFSET"
 
-    sget-object v3, Lpg;->Y:Lpg;
+    invoke-direct {v9, v12, v10, v11}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    invoke-direct {v0, v3, v1, v2}, Lqg;-><init>(Lpg;Ljava/lang/Object;I)V
+    sput-object v9, Lqg;->z0:Lqg;
 
-    sput-object v0, Lqg;->s0:Lqg;
+    new-instance v10, Lqg;
+
+    const/16 v11, 0xa
+
+    const-string v12, "repeatCount"
+
+    const-string v13, "REPEAT_COUNT"
+
+    invoke-direct {v10, v13, v11, v12}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v10, Lqg;->A0:Lqg;
+
+    new-instance v11, Lqg;
+
+    const/16 v12, 0xb
+
+    const-string v13, "repeatMode"
+
+    const-string v14, "REPEAT_MODE"
+
+    invoke-direct {v11, v14, v12, v13}, Lqg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v11, Lqg;->B0:Lqg;
+
+    filled-new-array/range {v0 .. v11}, [Lqg;
+
+    move-result-object v0
+
+    sput-object v0, Lqg;->C0:[Lqg;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lpg;Ljava/lang/Object;I)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lqg;->o:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p3, 0x1
-
-    invoke-direct {p0, p1, p3, p2}, Lxoe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object p3, p0, Lqg;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lqg;
+    .locals 1
 
-# virtual methods
-.method public final y(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
-    .locals 2
+    const-class v0, Lqg;
 
-    iget p0, p0, Lqg;->o:I
-
-    packed-switch p0, :pswitch_data_0
-
-    sget-object p0, Lpg;->o:Lpg;
-
-    sget-object p1, Lpg;->X:Lpg;
-
-    filled-new-array {p0, p1}, [Lpg;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
+    check-cast p0, Lqg;
 
-    move-result-object p0
+    return-object p0
+.end method
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+.method public static values()[Lqg;
+    .locals 1
 
-    move-result-object p0
+    sget-object v0, Lqg;->C0:[Lqg;
 
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpg;
-
-    invoke-static {p2}, Lyu0;->b(Landroid/content/res/XmlResourceParser;)Ljava/util/LinkedHashMap;
-
-    move-result-object v1
-
-    iget-object p1, p1, Lpg;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p0
-
-    invoke-interface {p2, p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_2
-    const/4 p0, 0x3
+    check-cast v0, [Lqg;
 
-    const/4 p1, 0x1
-
-    if-eqz v0, :cond_3
-
-    const/16 v1, 0x23
-
-    invoke-static {v0, v1}, Lwde;->S0(Ljava/lang/String;C)Z
-
-    move-result v0
-
-    if-ne v0, p1, :cond_3
-
-    move v0, p0
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_1
-    if-eqz v0, :cond_8
-
-    const/4 v1, 0x0
-
-    if-eq v0, p1, :cond_7
-
-    const/4 p1, 0x2
-
-    if-eq v0, p1, :cond_6
-
-    if-eq v0, p0, :cond_5
-
-    const/4 p0, 0x4
-
-    if-ne v0, p0, :cond_4
-
-    sget-object p0, Lfh;->a:Lfh;
-
-    goto :goto_2
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "unknown value type "
-
-    invoke-static {p2, p1}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_5
-    new-instance p0, Lbh;
-
-    invoke-direct {p0, v1}, Lbh;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_6
-    new-instance p0, Leh;
-
-    const-string p1, ""
-
-    invoke-direct {p0, p1}, Leh;-><init>(Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_7
-    new-instance p0, Ldh;
-
-    invoke-direct {p0, v1}, Ldh;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_8
-    new-instance p0, Lch;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lch;-><init>(F)V
-
-    :goto_2
-    return-object p0
-
-    :pswitch_0
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_4
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_5
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_7
-    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ldee;->g0(Ljava/lang/String;)Ljava/lang/Long;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_9
-
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide p0
-
-    goto :goto_3
-
-    :cond_9
-    const-wide/16 p0, 0x0
-
-    :goto_3
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

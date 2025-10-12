@@ -1,82 +1,125 @@
 .class public final Lrt6;
-.super Lt0a;
+.super Landroid/text/style/RelativeSizeSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Lib8;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final synthetic o:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrt6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lkle;
+.field public final a:F
 
-.field public final b:Ljava/io/File;
-
-.field public final c:Lvxc;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkle;Ljava/io/File;Lvxc;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lma4;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lma4;-><init>(I)V
+
+    sput-object v0, Lrt6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const v0, 0x3fa66666    # 1.3f
+
+    .line 1
+    invoke-direct {p0, v0}, Lrt6;-><init>(F)V
+
+    return-void
+.end method
+
+.method public constructor <init>(F)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
-    iput-object p1, p0, Lrt6;->a:Lkle;
+    .line 3
+    iput p1, p0, Lrt6;->a:F
 
-    iput-object p2, p0, Lrt6;->b:Ljava/io/File;
+    const/16 p1, 0x8
 
-    iput-object p3, p0, Lrt6;->c:Lvxc;
+    .line 4
+    iput p1, p0, Lrt6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ly3a;)V
-    .locals 3
+.method public final copy()Lf24;
+    .locals 2
 
-    new-instance v0, Lqt6;
+    new-instance v0, Lrt6;
 
-    iget-object v1, p0, Lrt6;->c:Lvxc;
+    iget v1, p0, Lrt6;->a:F
 
-    invoke-virtual {v1}, Lvxc;->a()Ltxc;
+    invoke-direct {v0, v1}, Lrt6;-><init>(F)V
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    iget-object v2, p0, Lrt6;->a:Lkle;
+.method public final getType()I
+    .locals 1
 
-    iget-object p0, p0, Lrt6;->b:Ljava/io/File;
+    iget v0, p0, Lrt6;->b:I
 
-    invoke-direct {v0, p1, v2, p0, v1}, Lqt6;-><init>(Ly3a;Lkle;Ljava/io/File;Ltxc;)V
+    return v0
+.end method
 
-    invoke-interface {p1, v0}, Ly3a;->c(Lkp4;)V
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    iget-object p0, v0, Lqt6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    const/4 v0, 0x1
 
-    move-result p0
-
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     return-void
+.end method
 
-    :cond_0
-    iget-object p0, v0, Lqt6;->a:Lkle;
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    check-cast p0, Lwt6;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    iget-object p1, v0, Lqt6;->c:Ljava/io/File;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v2, v0, Lqt6;->b:Ljava/lang/String;
+    iget p2, p0, Lrt6;->a:F
 
-    invoke-interface {p0, v2, p1, v0, v1}, Lwt6;->b(Ljava/lang/String;Ljava/io/File;Ltt6;Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
     return-void
 .end method

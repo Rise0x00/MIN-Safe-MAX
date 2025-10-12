@@ -2,49 +2,142 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo8d;
+
 
 # instance fields
+.field public final X:I
+
+.field public final synthetic Y:Lone/me/android/root/RootController;
+
 .field public final synthetic a:I
 
-.field public final b:Ljava/util/List;
+.field public final b:Li8d;
 
-.field public final c:[Lk3f;
+.field public final c:Li8d;
+
+.field public final o:Li8d;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/List;)V
+.method public constructor <init>(Lone/me/android/root/RootController;I)V
     .locals 0
 
-    iput p1, p0, La7d;->a:I
+    iput p2, p0, La7d;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch p2, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, La7d;->b:Ljava/util/List;
+    iput-object p1, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->I()Li8d;
 
-    move-result p1
+    move-result-object p2
 
-    new-array p1, p1, [Lk3f;
+    iput-object p2, p0, La7d;->b:Li8d;
 
-    iput-object p1, p0, La7d;->c:[Lk3f;
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->f0()Li8d;
+
+    move-result-object p2
+
+    iput-object p2, p0, La7d;->c:Li8d;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->a0()Li8d;
+
+    move-result-object p2
+
+    iput-object p2, p0, La7d;->o:Li8d;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->H0()Lf52;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz p2, :cond_0
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    iput p1, p0, La7d;->X:I
 
     return-void
 
     :pswitch_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, La7d;->b:Ljava/util/List;
+    iput-object p1, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->I()Li8d;
 
-    move-result p1
+    move-result-object p2
 
-    new-array p1, p1, [Lk3f;
+    iput-object p2, p0, La7d;->b:Li8d;
 
-    iput-object p1, p0, La7d;->c:[Lk3f;
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->f0()Li8d;
+
+    move-result-object p2
+
+    iput-object p2, p0, La7d;->c:Li8d;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->a0()Li8d;
+
+    move-result-object p2
+
+    iput-object p2, p0, La7d;->o:Li8d;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->H0()Lf52;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz p2, :cond_2
+
+    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_2
+    if-eqz p1, :cond_3
+
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, 0x0
+
+    :goto_3
+    iput p1, p0, La7d;->X:I
 
     return-void
 
@@ -58,304 +151,223 @@
 
 
 # virtual methods
-.method public a(JLfsa;)V
-    .locals 4
-
-    invoke-virtual {p3}, Lfsa;->a()I
-
-    move-result v0
-
-    const/16 v1, 0x9
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p3}, Lfsa;->g()I
-
-    move-result v0
-
-    invoke-virtual {p3}, Lfsa;->g()I
-
-    move-result v1
-
-    invoke-virtual {p3}, Lfsa;->u()I
-
-    move-result v2
-
-    const/16 v3, 0x1b2
-
-    if-ne v0, v3, :cond_1
-
-    const v0, 0x47413934
-
-    if-ne v1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne v2, v0, :cond_1
-
-    iget-object p0, p0, La7d;->c:[Lk3f;
-
-    invoke-static {p1, p2, p3, p0}, Lus;->r(JLfsa;[Lk3f;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final b(Lnd5;Lt6f;)V
-    .locals 9
+.method public final H(Z)Z
+    .locals 1
 
     iget v0, p0, La7d;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    move v1, v0
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->H(Z)Z
 
-    :goto_0
-    iget-object v2, p0, La7d;->c:[Lk3f;
+    move-result p1
 
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_2
-
-    invoke-virtual {p2}, Lt6f;->a()V
-
-    invoke-virtual {p2}, Lt6f;->b()V
-
-    iget v3, p2, Lt6f;->e:I
-
-    const/4 v4, 0x3
-
-    invoke-interface {p1, v3, v4}, Lnd5;->A(II)Lk3f;
-
-    move-result-object v3
-
-    iget-object v4, p0, La7d;->b:Ljava/util/List;
-
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lp26;
-
-    iget-object v5, v4, Lp26;->m:Ljava/lang/String;
-
-    const-string v6, "application/cea-608"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    const-string v6, "application/cea-708"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move v6, v0
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    const/4 v6, 0x1
-
-    :goto_2
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "Invalid closed caption MIME type provided: "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v7, v6}, Ln76;->i(Ljava/lang/Object;Z)V
-
-    new-instance v6, Lm26;
-
-    invoke-direct {v6}, Lm26;-><init>()V
-
-    invoke-virtual {p2}, Lt6f;->b()V
-
-    iget-object v7, p2, Lt6f;->f:Ljava/lang/String;
-
-    iput-object v7, v6, Lm26;->a:Ljava/lang/String;
-
-    invoke-static {v5}, Ltc9;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iput-object v5, v6, Lm26;->l:Ljava/lang/String;
-
-    iget v5, v4, Lp26;->e:I
-
-    iput v5, v6, Lm26;->e:I
-
-    iget-object v5, v4, Lp26;->d:Ljava/lang/String;
-
-    iput-object v5, v6, Lm26;->d:Ljava/lang/String;
-
-    iget v5, v4, Lp26;->F:I
-
-    iput v5, v6, Lm26;->E:I
-
-    iget-object v4, v4, Lp26;->p:Ljava/util/List;
-
-    iput-object v4, v6, Lm26;->o:Ljava/util/List;
-
-    invoke-static {v6, v3}, Lt2g;->e(Lm26;Lk3f;)V
-
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
+    return p1
 
     :pswitch_0
-    const/4 v0, 0x0
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    move v1, v0
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->H(Z)Z
 
-    :goto_3
-    iget-object v2, p0, La7d;->c:[Lk3f;
+    move-result p1
 
-    array-length v3, v2
+    return p1
 
-    if-ge v1, v3, :cond_6
+    nop
 
-    invoke-virtual {p2}, Lt6f;->a()V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p2}, Lt6f;->b()V
+.method public final I()Li8d;
+    .locals 1
 
-    iget v3, p2, Lt6f;->e:I
+    iget v0, p0, La7d;->a:I
 
-    const/4 v4, 0x3
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p1, v3, v4}, Lnd5;->A(II)Lk3f;
+    iget-object v0, p0, La7d;->b:Li8d;
 
-    move-result-object v3
+    return-object v0
 
-    iget-object v4, p0, La7d;->b:Ljava/util/List;
+    :pswitch_0
+    iget-object v0, p0, La7d;->b:Li8d;
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v4
+    nop
 
-    check-cast v4, Lp26;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-object v5, v4, Lp26;->m:Ljava/lang/String;
+.method public final L()Z
+    .locals 1
 
-    const-string v6, "application/cea-608"
+    iget v0, p0, La7d;->a:I
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v6
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    if-nez v6, :cond_4
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->L()Z
 
-    const-string v6, "application/cea-708"
+    move-result v0
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    return v0
 
-    move-result v6
+    :pswitch_0
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    if-eqz v6, :cond_3
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->L()Z
 
-    goto :goto_4
+    move-result v0
 
-    :cond_3
-    move v6, v0
+    return v0
 
-    goto :goto_5
+    nop
 
-    :cond_4
-    :goto_4
-    const/4 v6, 0x1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :goto_5
-    new-instance v7, Ljava/lang/StringBuilder;
+.method public final a0()Li8d;
+    .locals 1
 
-    const-string v8, "Invalid closed caption MIME type provided: "
+    iget v0, p0, La7d;->a:I
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, La7d;->o:Li8d;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
 
-    move-result-object v7
+    :pswitch_0
+    iget-object v0, p0, La7d;->o:Li8d;
 
-    invoke-static {v7, v6}, Ln76;->i(Ljava/lang/Object;Z)V
+    return-object v0
 
-    iget-object v6, v4, Lp26;->a:Ljava/lang/String;
+    nop
 
-    if-eqz v6, :cond_5
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    goto :goto_6
+.method public final f0()Li8d;
+    .locals 1
 
-    :cond_5
-    invoke-virtual {p2}, Lt6f;->b()V
+    iget v0, p0, La7d;->a:I
 
-    iget-object v6, p2, Lt6f;->f:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    :goto_6
-    new-instance v7, Lm26;
+    iget-object v0, p0, La7d;->c:Li8d;
 
-    invoke-direct {v7}, Lm26;-><init>()V
+    return-object v0
 
-    iput-object v6, v7, Lm26;->a:Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, La7d;->c:Li8d;
 
-    invoke-static {v5}, Ltc9;->l(Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
 
-    move-result-object v5
+    nop
 
-    iput-object v5, v7, Lm26;->l:Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget v5, v4, Lp26;->e:I
+.method public final g(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)Z
+    .locals 1
 
-    iput v5, v7, Lm26;->e:I
+    iget v0, p0, La7d;->a:I
 
-    iget-object v5, v4, Lp26;->d:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object v5, v7, Lm26;->d:Ljava/lang/String;
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    iget v5, v4, Lp26;->F:I
+    invoke-virtual {v0, p1, p2}, Lone/me/android/root/RootController;->g(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)Z
 
-    iput v5, v7, Lm26;->E:I
+    move-result p1
 
-    iget-object v4, v4, Lp26;->p:Ljava/util/List;
+    return p1
 
-    iput-object v4, v7, Lm26;->o:Ljava/util/List;
+    :pswitch_0
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
 
-    invoke-static {v7, v3}, Lt2g;->e(Lm26;Lk3f;)V
+    invoke-virtual {v0, p1, p2}, Lone/me/android/root/RootController;->g(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)Z
 
-    aput-object v3, v2, v1
+    move-result p1
 
-    add-int/lit8 v1, v1, 0x1
+    return p1
 
-    goto :goto_3
+    nop
 
-    :cond_6
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final k(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Z
+    .locals 1
+
+    iget v0, p0, La7d;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
+
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->k(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, La7d;->Y:Lone/me/android/root/RootController;
+
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->k(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final y()I
+    .locals 1
+
+    iget v0, p0, La7d;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, La7d;->X:I
+
+    return v0
+
+    :pswitch_0
+    iget v0, p0, La7d;->X:I
+
+    return v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

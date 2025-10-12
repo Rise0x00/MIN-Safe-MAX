@@ -1,21 +1,8 @@
-.class public final Lgmd;
-.super Lko;
+.class public interface abstract Lgmd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lgmd;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lgmd;
-
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, Lgmd;->a:Lgmd;
-
-    return-void
+# virtual methods
+.method public abstract b(Lpue;)V
 .end method

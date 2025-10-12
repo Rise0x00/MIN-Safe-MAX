@@ -1,63 +1,49 @@
 .class public final Lam5;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lcm5;
 
-.field public final b:Ljava/lang/String;
+.field public Y:I
 
-.field public final c:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lcm5;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lam5;->X:Lcm5;
 
-    iput-wide p1, p0, Lam5;->a:J
-
-    iput-object p3, p0, Lam5;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lam5;->c:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lam5;->b:Ljava/lang/String;
+    iput-object p1, p0, Lam5;->o:Ljava/lang/Object;
 
-    invoke-static {v0}, Lno9;->p(Ljava/lang/CharSequence;)Z
+    iget p1, p0, Lam5;->Y:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    xor-int/lit8 v0, v0, 0x1
+    or-int/2addr p1, v0
 
-    const-string v1, "FileUploadInfo{fileId="
+    iput p1, p0, Lam5;->Y:I
 
-    const-string v2, ", token=\'"
+    iget-object p1, p0, Lam5;->X:Lcm5;
 
-    iget-wide v3, p0, Lam5;->a:J
+    const/4 v0, 0x0
 
-    invoke-static {v3, v4, v1, v2, v0}, Lmh0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, p0}, Lcm5;->i1(Ljava/util/Set;Lnz3;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "\', url=\'"
-
-    const-string v2, "\'}"
-
-    iget-object p0, p0, Lam5;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, p0, v2}, Llge;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

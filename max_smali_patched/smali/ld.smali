@@ -1,92 +1,194 @@
-.class public abstract Lld;
-.super Ljava/lang/Object;
+.class public final Lld;
+.super Ljava/util/logging/Handler;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public static final b:Ljava/util/Map;
+.field public static final a:Lld;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance v0, Lld;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    invoke-direct {v0}, Ljava/util/logging/Handler;-><init>()V
 
-    sput-object v0, Lld;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput-object v0, Lld;->a:Lld;
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    const-class v1, Ln4a;
+# virtual methods
+.method public final close()V
+    .locals 0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+    return-void
+.end method
 
-    move-result-object v2
+.method public final flush()V
+    .locals 0
 
-    if-eqz v2, :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/lang/Package;->getName()Ljava/lang/String;
+.method public final publish(Ljava/util/logging/LogRecord;)V
+    .locals 7
 
-    move-result-object v2
+    sget-object v0, Lkd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLoggerName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v1
+
+    sget-object v2, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v3
+
+    const/4 v4, 0x4
+
+    if-le v1, v3, :cond_0
+
+    const/4 v1, 0x5
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
 
-    :goto_0
-    if-eqz v2, :cond_1
+    move-result-object v1
 
-    const-string v3, "OkHttp"
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
 
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
+
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_1
+
+    move v1, v4
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v1, 0x3
 
-    move-result-object v1
+    :goto_0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getMessage()Ljava/lang/String;
 
-    const-string v2, "okhttp.OkHttpClient"
+    move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getThrown()Ljava/lang/Throwable;
 
-    const-class v1, Lrs6;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget-object v3, Lkd;->b:Ljava/util/Map;
 
-    move-result-object v1
+    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v2, "okhttp.Http2"
+    move-result-object v3
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v3, Ljava/lang/String;
 
-    const-class v1, Lyre;
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object v1
+    :cond_2
+    const/16 v3, 0x17
 
-    const-string v2, "okhttp.TaskRunner"
+    invoke-static {v3, v0}, Lyxe;->J0(ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v3
 
-    const-string v1, "okhttp3.mockwebserver.MockWebServer"
+    :goto_1
+    invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    const-string v2, "okhttp.MockWebServer"
+    move-result v0
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_6
 
-    invoke-static {v0}, Ly28;->X(Ljava/util/Map;)Ljava/util/Map;
+    if-eqz p1, :cond_3
+
+    const-string v0, "\n"
+
+    invoke-static {v2, v0}, Lfl7;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sput-object v0, Lld;->b:Ljava/util/Map;
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    :goto_2
+    if-ge v0, p1, :cond_6
+
+    const/16 v5, 0xa
+
+    invoke-static {v2, v5, v0, v4}, Lyxe;->n0(Ljava/lang/CharSequence;CII)I
+
+    move-result v5
+
+    const/4 v6, -0x1
+
+    if-eq v5, v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v5, p1
+
+    :goto_3
+    add-int/lit16 v6, v0, 0xfa0
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    invoke-virtual {v2, v0, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    if-lt v6, v5, :cond_5
+
+    add-int/lit8 v0, v6, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v6
+
+    goto :goto_3
+
+    :cond_6
     return-void
 .end method

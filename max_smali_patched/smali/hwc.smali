@@ -1,285 +1,157 @@
-.class public final Lhwc;
-.super Lf46;
+.class public final enum Lhwc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljwc;
+# static fields
+.field public static final enum X:Lhwc;
 
-.field public Y:Ljava/lang/Float;
+.field public static final enum Y:Lhwc;
 
-.field public Z:I
+.field public static final enum Z:Lhwc;
 
-.field public n0:I
+.field public static final enum a:Lhwc;
 
-.field public o0:Landroid/graphics/Matrix;
+.field public static final enum b:Lhwc;
 
-.field public final p0:Landroid/graphics/Matrix;
+.field public static final enum c:Lhwc;
+
+.field public static final enum o:Lhwc;
+
+.field public static final enum w0:Lhwc;
+
+.field public static final enum x0:Lhwc;
+
+.field public static final synthetic y0:[Lhwc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Ljwc;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0, p1}, Lf46;-><init>(Landroid/graphics/drawable/Drawable;)V
+    new-instance v0, Lhwc;
 
-    new-instance p1, Landroid/graphics/Matrix;
-
-    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object p1, p0, Lhwc;->p0:Landroid/graphics/Matrix;
-
-    iput-object p2, p0, Lhwc;->X:Ljwc;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Landroid/graphics/Matrix;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lf46;->n(Landroid/graphics/Matrix;)V
-
-    invoke-virtual {p0}, Lhwc;->q()V
-
-    iget-object p0, p0, Lhwc;->o0:Landroid/graphics/Matrix;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p1, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lhwc;->q()V
-
-    iget-object v0, p0, Lhwc;->o0:Landroid/graphics/Matrix;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
-
-    iget-object v1, p0, Lhwc;->o0:Landroid/graphics/Matrix;
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
-
-    invoke-super {p0, p1}, Lf46;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1}, Lf46;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public final o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-super {p0, p1}, Lf46;->o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lhwc;->p()V
-
-    return-object p1
-.end method
-
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lhwc;->p()V
-
-    return-void
-.end method
-
-.method public final p()V
-    .locals 10
-
-    iget-object v0, p0, Lf46;->a:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x0
+    const-string v1, "CONFIGURING"
 
     const/4 v2, 0x0
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput v1, p0, Lhwc;->n0:I
+    sput-object v0, Lhwc;->a:Lhwc;
 
-    iput v1, p0, Lhwc;->Z:I
+    new-instance v1, Lhwc;
 
-    iput-object v2, p0, Lhwc;->o0:Landroid/graphics/Matrix;
+    const-string v2, "PENDING_RECORDING"
 
-    return-void
+    const/4 v3, 0x1
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v5
+    sput-object v1, Lhwc;->b:Lhwc;
 
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+    new-instance v2, Lhwc;
 
-    move-result v3
+    const-string v3, "PENDING_PAUSED"
 
-    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+    const/4 v4, 0x2
 
-    move-result v4
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    sput-object v2, Lhwc;->c:Lhwc;
 
-    move-result v6
+    new-instance v3, Lhwc;
 
-    iput v6, p0, Lhwc;->Z:I
+    const-string v4, "IDLING"
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    const/4 v5, 0x3
 
-    move-result v7
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput v7, p0, Lhwc;->n0:I
+    sput-object v3, Lhwc;->o:Lhwc;
 
-    if-lez v6, :cond_4
+    new-instance v4, Lhwc;
 
-    if-gtz v7, :cond_1
+    const-string v5, "RECORDING"
 
-    goto :goto_0
+    const/4 v6, 0x4
 
-    :cond_1
-    if-ne v6, v3, :cond_2
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne v7, v4, :cond_2
+    sput-object v4, Lhwc;->X:Lhwc;
 
-    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    new-instance v5, Lhwc;
 
-    iput-object v2, p0, Lhwc;->o0:Landroid/graphics/Matrix;
+    const-string v6, "PAUSED"
 
-    return-void
+    const/4 v7, 0x5
 
-    :cond_2
-    iget-object v3, p0, Lhwc;->X:Ljwc;
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget-object v4, Lkwc;->r:Lkwc;
+    sput-object v5, Lhwc;->Y:Lhwc;
 
-    if-ne v3, v4, :cond_3
+    new-instance v6, Lhwc;
 
-    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    const-string v7, "STOPPING"
 
-    iput-object v2, p0, Lhwc;->o0:Landroid/graphics/Matrix;
+    const/4 v8, 0x6
 
-    return-void
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_3
-    invoke-virtual {v0, v1, v1, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    sput-object v6, Lhwc;->Z:Lhwc;
 
-    iget-object v4, p0, Lhwc;->p0:Landroid/graphics/Matrix;
+    new-instance v7, Lhwc;
 
-    invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
+    const-string v8, "RESETTING"
 
-    iget-object v3, p0, Lhwc;->X:Ljwc;
+    const/4 v9, 0x7
 
-    const/high16 v8, 0x3f000000    # 0.5f
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move v9, v8
+    sput-object v7, Lhwc;->w0:Lhwc;
 
-    invoke-interface/range {v3 .. v9}, Ljwc;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    new-instance v8, Lhwc;
 
-    iput-object v4, p0, Lhwc;->o0:Landroid/graphics/Matrix;
+    const-string v9, "ERROR"
 
-    return-void
+    const/16 v10, 0x8
 
-    :cond_4
-    :goto_0
-    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v2, p0, Lhwc;->o0:Landroid/graphics/Matrix;
+    sput-object v8, Lhwc;->x0:Lhwc;
+
+    filled-new-array/range {v0 .. v8}, [Lhwc;
+
+    move-result-object v0
+
+    sput-object v0, Lhwc;->y0:[Lhwc;
 
     return-void
 .end method
 
-.method public final q()V
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lhwc;
+    .locals 1
 
-    iget-object v0, p0, Lhwc;->X:Ljwc;
+    const-class v0, Lhwc;
 
-    instance-of v1, v0, Liwc;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v1, :cond_0
+    move-result-object p0
 
-    check-cast v0, Liwc;
+    check-cast p0, Lhwc;
 
-    iget v0, v0, Liwc;->h:F
+    return-object p0
+.end method
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+.method public static values()[Lhwc;
+    .locals 1
+
+    sget-object v0, Lhwc;->y0:[Lhwc;
+
+    invoke-virtual {v0}, [Lhwc;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lhwc;->Y:Ljava/lang/Float;
+    check-cast v0, [Lhwc;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    iput-object v0, p0, Lhwc;->Y:Ljava/lang/Float;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v0, p0, Lf46;->a:Landroid/graphics/drawable/Drawable;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v2, p0, Lhwc;->Z:I
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v3
-
-    if-ne v2, v3, :cond_4
-
-    iget v2, p0, Lhwc;->n0:I
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v0
-
-    if-eq v2, v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    return-void
-
-    :cond_4
-    :goto_2
-    invoke-virtual {p0}, Lhwc;->p()V
-
-    return-void
+    return-object v0
 .end method

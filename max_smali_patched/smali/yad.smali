@@ -3,67 +3,117 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvad;
-.implements Ljava/io/Serializable;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
+    .locals 0
 
-    sget v0, Lte7;->a:I
+    iput p2, p0, Lyad;->a:I
+
+    iput-object p1, p0, Lyad;->b:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final run()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyad;->a:I
 
-    if-ne p1, p0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    const/4 v0, 0x0
 
-    :cond_0
-    if-eqz p1, :cond_2
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lyad;->b:Ljava/lang/Runnable;
 
-    move-result-object p0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    const-class v1, Lyad;
+    return-void
 
-    if-eq p0, v1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lyad;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lyad;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_2
+    :try_start_0
+    iget-object v0, p0, Lyad;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lyad;
+    :catch_0
+    move-exception v0
 
-    return v0
+    const-string v1, "Executor"
 
-    :cond_2
+    const-string v2, "Background execution failure."
+
+    invoke-static {v1, v2, v0}, Lkjd;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
     :goto_0
-    const/4 p0, 0x0
+    return-void
 
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    const/16 p0, 0x20
+    iget v0, p0, Lyad;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const-string p0, " "
+    move-result-object v0
 
-    return-object p0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lyad;->b:Ljava/lang/Runnable;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

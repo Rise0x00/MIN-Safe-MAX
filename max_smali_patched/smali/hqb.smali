@@ -1,86 +1,31 @@
 .class public final Lhqb;
-.super Ljava/lang/Object;
+.super Liqb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final f:Lhqb;
 
-.field public final b:Z
+.field public static final g:Lhqb;
 
 
 # direct methods
-.method public constructor <init>(IZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lhqb;->a:I
-
-    iput-boolean p2, p0, Lhqb;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static synthetic constructor <clinit>()V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lhqb;
 
-    goto :goto_0
+    const/16 v1, 0xf
 
-    :cond_0
-    if-eqz p1, :cond_2
+    invoke-direct {v0, v1}, Lhoc;-><init>(I)V
 
-    const-class v0, Lhqb;
+    sput-object v0, Lhqb;->f:Lhqb;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lhqb;
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lhoc;-><init>(I)V
 
-    if-eq v0, v1, :cond_1
+    sput-object v0, Lhqb;->g:Lhqb;
 
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lhqb;
-
-    iget v0, p0, Lhqb;->a:I
-
-    iget v1, p1, Lhqb;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean p0, p0, Lhqb;->b:Z
-
-    iget-boolean p1, p1, Lhqb;->b:Z
-
-    if-ne p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lhqb;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lhqb;->b:Z
-
-    add-int/2addr v0, p0
-
-    return v0
+    return-void
 .end method

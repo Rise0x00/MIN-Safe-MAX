@@ -12,11 +12,11 @@
 
 .field public final d:Ljava/util/ArrayList;
 
-.field public e:Lvc4;
+.field public e:Lqf4;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lvc4;)V
+.method public constructor <init>(ILjava/lang/String;Lqf4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,7 +25,7 @@
 
     iput-object p2, p0, Lby0;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lby0;->e:Lvc4;
+    iput-object p3, p0, Lby0;->e:Lqf4;
 
     new-instance p1, Ljava/util/TreeSet;
 
@@ -44,14 +44,154 @@
 
 
 # virtual methods
-.method public final a(JJ)Lrtd;
+.method public final a(JJ)J
+    .locals 11
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-ltz v2, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v4
+
+    :goto_0
+    invoke-static {v2}, Lpih;->i(Z)V
+
+    cmp-long v2, p3, v0
+
+    if-ltz v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v4
+
+    :goto_1
+    invoke-static {v3}, Lpih;->i(Z)V
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Lby0;->b(JJ)Lfde;
+
+    move-result-object v2
+
+    iget-wide v5, v2, Lsx0;->c:J
+
+    iget-boolean v3, v2, Lsx0;->o:Z
+
+    const-wide v7, 0x7fffffffffffffffL
+
+    if-nez v3, :cond_3
+
+    const-wide/16 p1, -0x1
+
+    cmp-long p1, v5, p1
+
+    if-nez p1, :cond_2
+
+    move-wide v5, v7
+
+    :cond_2
+    invoke-static {v5, v6, p3, p4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    neg-long p1, p1
+
+    return-wide p1
+
+    :cond_3
+    add-long v9, p1, p3
+
+    cmp-long v0, v9, v0
+
+    if-gez v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-wide v7, v9
+
+    :goto_2
+    iget-wide v0, v2, Lsx0;->b:J
+
+    add-long/2addr v0, v5
+
+    cmp-long v3, v0, v7
+
+    if-gez v3, :cond_7
+
+    iget-object v3, p0, Lby0;->c:Ljava/util/TreeSet;
+
+    invoke-virtual {v3, v2, v4}, Ljava/util/TreeSet;->tailSet(Ljava/lang/Object;Z)Ljava/util/NavigableSet;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_5
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lfde;
+
+    iget-wide v4, v3, Lsx0;->b:J
+
+    cmp-long v6, v4, v0
+
+    if-lez v6, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    iget-wide v9, v3, Lsx0;->c:J
+
+    add-long/2addr v4, v9
+
+    invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    cmp-long v3, v0, v7
+
+    if-ltz v3, :cond_5
+
+    :cond_7
+    :goto_3
+    sub-long/2addr v0, p1
+
+    invoke-static {v0, v1, p3, p4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final b(JJ)Lfde;
     .locals 21
 
     move-object/from16 v0, p0
 
     move-wide/from16 v1, p3
 
-    new-instance v3, Lrtd;
+    new-instance v3, Lfde;
 
     const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -71,7 +211,7 @@
 
     move-result-object v5
 
-    check-cast v5, Lrtd;
+    check-cast v5, Lfde;
 
     if-eqz v5, :cond_0
 
@@ -92,7 +232,7 @@
 
     move-result-object v3
 
-    check-cast v3, Lrtd;
+    check-cast v3, Lfde;
 
     if-eqz v3, :cond_2
 
@@ -119,7 +259,7 @@
     :goto_0
     move-wide/from16 v16, v1
 
-    new-instance v12, Lrtd;
+    new-instance v12, Lfde;
 
     const-wide v18, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -134,7 +274,7 @@
     return-object v12
 .end method
 
-.method public final b(JJ)Z
+.method public final c(JJ)Z
     .locals 9
 
     const/4 v0, 0x0
@@ -193,9 +333,9 @@
     if-gtz v2, :cond_2
 
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_2
     :goto_2
@@ -260,15 +400,15 @@
 
     if-eqz v2, :cond_2
 
-    iget-object p0, p0, Lby0;->e:Lvc4;
+    iget-object v2, p0, Lby0;->e:Lqf4;
 
-    iget-object p1, p1, Lby0;->e:Lvc4;
+    iget-object p1, p1, Lby0;->e:Lqf4;
 
-    invoke-virtual {p0, p1}, Lvc4;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Lqf4;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    if-eqz p1, :cond_2
 
     return v0
 
@@ -288,17 +428,17 @@
 
     iget-object v2, p0, Lby0;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcx3;->d(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
 
     move-result v0
 
-    iget-object p0, p0, Lby0;->e:Lvc4;
+    iget-object v1, p0, Lby0;->e:Lqf4;
 
-    invoke-virtual {p0}, Lvc4;->hashCode()I
+    invoke-virtual {v1}, Lqf4;->hashCode()I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 .end method

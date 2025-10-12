@@ -1,63 +1,124 @@
-.class public abstract Lyqb;
-.super Ljava/lang/Object;
+.class public final Lyqb;
+.super Lu65;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lifb;
+# instance fields
+.field final synthetic this$0:Lzqb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lzqb;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lyqb;->this$0:Lzqb;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/HashMap;
+    return-void
+.end method
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    sget-object v2, Lxwe;->b:Lxd7;
+# virtual methods
+.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 1
 
-    sget-object v3, Lc90;->a:Lc90;
+    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-class v4, Lyqb;
+    const/16 v0, 0x1d
 
-    invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-ge p2, v0, :cond_0
 
-    invoke-virtual {v1, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    sget p2, Lf1d;->b:I
 
-    sget-object v3, Lb90;->a:Lb90;
+    invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
-    const-class v4, Llb9;
+    move-result-object p1
 
-    invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p2, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
 
-    invoke-virtual {v1, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
-    sget-object v3, La90;->a:La90;
+    move-result-object p1
 
-    const-class v4, Lkb9;
+    check-cast p1, Lf1d;
 
-    invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p2, p0, Lyqb;->this$0:Lzqb;
 
-    invoke-virtual {v1, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p2, p2, Lzqb;->w0:Leqd;
 
-    new-instance v3, Lifb;
+    iput-object p2, p1, Lf1d;->a:Leqd;
 
-    new-instance v4, Ljava/util/HashMap;
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v4, v0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+.method public onActivityPaused(Landroid/app/Activity;)V
+    .locals 3
 
-    new-instance v0, Ljava/util/HashMap;
+    iget-object p1, p0, Lyqb;->this$0:Lzqb;
 
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    iget v0, p1, Lzqb;->b:I
 
-    invoke-direct {v3, v4, v0, v2}, Lifb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    add-int/lit8 v0, v0, -0x1
 
-    sput-object v3, Lyqb;->a:Lifb;
+    iput v0, p1, Lzqb;->b:I
 
+    if-nez v0, :cond_0
+
+    iget-object v0, p1, Lzqb;->X:Landroid/os/Handler;
+
+    iget-object p1, p1, Lzqb;->Z:Lsga;
+
+    const-wide/16 v1, 0x2bc
+
+    invoke-virtual {v0, p1, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public onActivityPreCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 1
+
+    new-instance p2, Lyqb$a;
+
+    iget-object v0, p0, Lyqb;->this$0:Lzqb;
+
+    invoke-direct {p2, v0}, Lyqb$a;-><init>(Lzqb;)V
+
+    invoke-static {p1, p2}, Lxqb;->a(Landroid/app/Activity;Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    return-void
+.end method
+
+.method public onActivityStopped(Landroid/app/Activity;)V
+    .locals 2
+
+    iget-object p1, p0, Lyqb;->this$0:Lzqb;
+
+    iget v0, p1, Lzqb;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p1, Lzqb;->a:I
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p1, Lzqb;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lzqb;->Y:Les7;
+
+    sget-object v1, Ldr7;->ON_STOP:Ldr7;
+
+    invoke-virtual {v0, v1}, Les7;->d(Ldr7;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lzqb;->o:Z
+
+    :cond_0
     return-void
 .end method

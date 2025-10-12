@@ -1,38 +1,59 @@
-.class public interface abstract Luhe;
+.class public abstract synthetic Luhe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# virtual methods
-.method public abstract D(Ljava/lang/String;)Lzhe;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.method public abstract G()V
-.end method
+    invoke-static {}, Lcva;->values()[Lcva;
 
-.method public abstract I()V
-.end method
+    move-result-object v0
 
-.method public abstract P(Ljava/lang/String;)Landroid/database/Cursor;
-.end method
+    array-length v0, v0
 
-.method public abstract T()V
-.end method
+    new-array v0, v0, [I
 
-.method public abstract c0()Z
-.end method
+    const/4 v1, 0x1
 
-.method public abstract f0()Z
-.end method
+    const/4 v2, 0x0
 
-.method public abstract v()V
-.end method
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public abstract x(Lyhe;)Landroid/database/Cursor;
-.end method
+    :catch_0
+    const/4 v2, 0x2
 
-.method public abstract z(Ljava/lang/String;)V
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Luhe;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

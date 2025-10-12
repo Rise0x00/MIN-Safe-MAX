@@ -13,7 +13,7 @@
 
     const-string v0, "DiagnosticsRcvr"
 
-    invoke-static {v0}, Lyr3;->s0(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -33,56 +33,56 @@
 
 # virtual methods
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+    .locals 2
 
     if-nez p2, :cond_0
 
     return-void
 
     :cond_0
-    invoke-static {}, Lyr3;->G()Lyr3;
+    invoke-static {}, Lbf0;->n()Lbf0;
 
-    move-result-object p0
+    move-result-object p2
 
-    const-string p2, "Requesting diagnostics"
+    const-string v0, "Requesting diagnostics"
 
-    sget-object v0, Landroidx/work/impl/diagnostics/DiagnosticsReceiver;->a:Ljava/lang/String;
+    sget-object v1, Landroidx/work/impl/diagnostics/DiagnosticsReceiver;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, p2}, Lyr3;->t(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v1, v0}, Lbf0;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-static {p1}, Lklg;->d(Landroid/content/Context;)Lklg;
-
-    move-result-object p0
-
-    const-class p1, Landroidx/work/impl/workers/DiagnosticsWorker;
-
-    new-instance p2, Lzna;
-
-    invoke-direct {p2, p1}, Lzna;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {p2}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+    invoke-static {p1}, Lm9h;->d(Landroid/content/Context;)Lm9h;
 
     move-result-object p1
 
-    check-cast p1, Laoa;
+    const-class p2, Landroidx/work/impl/workers/DiagnosticsWorker;
 
-    invoke-virtual {p0, p1}, Lhlg;->a(Landroidx/work/WorkRequest;)V
+    new-instance v0, Lhza;
+
+    invoke-direct {v0, p2}, Lhza;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object p2
+
+    check-cast p2, Liza;
+
+    invoke-virtual {p1, p2}, Lj9h;->a(Landroidx/work/WorkRequest;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception p0
+    move-exception p1
 
-    invoke-static {}, Lyr3;->G()Lyr3;
+    invoke-static {}, Lbf0;->n()Lbf0;
 
-    move-result-object p1
+    move-result-object p2
 
-    const-string p2, "WorkManager is not initialized"
+    const-string v0, "WorkManager is not initialized"
 
-    invoke-virtual {p1, v0, p2, p0}, Lyr3;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v1, v0, p1}, Lbf0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

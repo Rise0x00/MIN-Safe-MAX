@@ -1,53 +1,55 @@
 .class public final Lk4g;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public a:Ljava/lang/Boolean;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public b:Ljava/lang/Long;
 
-.field public final synthetic Z:Ls4g;
+.field public c:Ljava/lang/String;
 
-.field public n0:I
+.field public d:Ljava/lang/String;
 
-.field public o:Ls4g;
+.field public e:Ljava/lang/String;
 
+.field public f:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Ls4g;Lax3;)V
-    .locals 0
+.field public g:Ljava/lang/String;
 
-    iput-object p1, p0, Lk4g;->Z:Ls4g;
+.field public h:Ljava/lang/Boolean;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public i:Ljava/lang/Integer;
 
-    return-void
-.end method
+.field public j:Ljava/lang/Integer;
 
+.field public k:Ljava/lang/Integer;
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public l:Ljava/lang/Boolean;
 
-    iput-object p1, p0, Lk4g;->Y:Ljava/lang/Object;
+.field public m:Ljava/lang/Boolean;
 
-    iget p1, p0, Lk4g;->n0:I
+.field public n:Ljava/lang/Boolean;
 
-    const/high16 v0, -0x80000000
+.field public o:I
 
-    or-int/2addr p1, v0
+.field public p:I
 
-    iput p1, p0, Lk4g;->n0:I
+.field public q:Ll4g;
 
-    iget-object p1, p0, Lk4g;->Z:Ls4g;
+.field public r:I
 
-    const/4 v0, 0x0
+.field public s:I
 
-    invoke-virtual {p1, v0, p0}, Ls4g;->j(Lzn0;Lax3;)Ljava/lang/Object;
+.field public t:Ljava/lang/Boolean;
 
-    move-result-object p0
+.field public u:Ljava/lang/Boolean;
 
-    return-object p0
-.end method
+.field public v:Ljava/lang/Boolean;
+
+.field public w:I
+
+.field public x:Ljava/lang/Boolean;
+
+.field public y:Ljava/lang/Boolean;

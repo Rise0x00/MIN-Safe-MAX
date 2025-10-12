@@ -1,122 +1,122 @@
 .class public final Lqq8;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:J
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-wide p1, p0, Lqq8;->Y:J
+    iput p1, p0, Lqq8;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lqq8;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/view/animation/Animation;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
+
+    iget p1, p0, Lqq8;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
+
+    check-cast p1, Lmr8;
+
+    iget-object p1, p1, Lmr8;->B0:Lor8;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Lor8;->N0:Z
+
+    invoke-virtual {p1}, Lor8;->n()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/mediarouter/app/d;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 0
 
-    check-cast p1, Lkm3;
+    iget p1, p0, Lqq8;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqq8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqq8;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lqq8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 1
 
-    new-instance v0, Lqq8;
+    iget p1, p0, Lqq8;->a:I
 
-    iget-wide v1, p0, Lqq8;->Y:J
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, v1, v2, p2}, Lqq8;-><init>(JLkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lqq8;->b:Ljava/lang/Object;
 
-    iput-object p1, v0, Lqq8;->X:Ljava/lang/Object;
+    check-cast p1, Lmr8;
 
-    return-object v0
-.end method
+    iget-object p1, p1, Lmr8;->B0:Lor8;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iput-boolean v0, p1, Lor8;->N0:Z
 
-    iget-object p1, p0, Lqq8;->X:Ljava/lang/Object;
+    :pswitch_0
+    return-void
 
-    check-cast p1, Lkm3;
+    nop
 
-    new-instance v0, Lz0b;
-
-    invoke-virtual {p1}, Lkm3;->n()J
-
-    move-result-wide v3
-
-    invoke-virtual {p1}, Lkm3;->d()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ""
-
-    if-nez v1, :cond_0
-
-    move-object v6, v2
-
-    goto :goto_0
-
-    :cond_0
-    move-object v6, v1
-
-    :goto_0
-    sget-object v1, Lcl0;->a:Lcl0;
-
-    invoke-virtual {p1, v1}, Lkm3;->p(Lcl0;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    move-object v7, v2
-
-    goto :goto_1
-
-    :cond_1
-    move-object v7, v1
-
-    :goto_1
-    invoke-virtual {p1}, Lkm3;->m()Ljava/lang/CharSequence;
-
-    move-result-object v5
-
-    iget-wide v1, p0, Lqq8;->Y:J
-
-    invoke-direct/range {v0 .. v7}, Lz0b;-><init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

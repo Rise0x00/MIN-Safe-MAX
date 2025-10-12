@@ -26,13 +26,13 @@
 
 
 # static fields
-.field public static final synthetic x0:I
+.field public static final synthetic G0:I
 
 
 # instance fields
-.field public final v0:Lth7;
+.field public final E0:Lbp7;
 
-.field public final w0:Ljava/lang/Object;
+.field public final F0:Ljava/lang/Object;
 
 
 # direct methods
@@ -43,67 +43,67 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILuc4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILof4;)V
 
-    new-instance v0, Lkb3;
+    new-instance v0, Lyp2;
 
-    const/16 v1, 0xc
+    const/16 v1, 0x1c
 
-    invoke-direct {v0, v1}, Lkb3;-><init>(I)V
+    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
 
-    new-instance v1, Lpi2;
+    new-instance v1, Llj2;
 
     const/16 v2, 0x1d
 
-    invoke-direct {v1, v2, v0}, Lpi2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Llj2;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Llh3;
+    const-class v0, Ldk3;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ld96;)Lth7;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->v0:Lth7;
+    iput-object v0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->E0:Lbp7;
 
-    new-instance v0, Leb1;
+    new-instance v0, Lzh1;
 
-    const/16 v1, 0x15
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1, p0}, Leb1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lzh1;-><init>(ILjava/lang/Object;)V
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lltg;->s(ILd96;)Lth7;
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->w0:Ljava/lang/Object;
+    iput-object v0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->F0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B0()Lnma;
-    .locals 1
+.method public final F0()Luxa;
+    .locals 2
 
-    sget-object v0, Lzs4;->p0:Lqs9;
+    sget-object v0, Lbx4;->y0:Lsed;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Lqs9;->f(Landroid/content/Context;)Lyda;
+    invoke-virtual {v0, v1}, Lsed;->m(Landroid/content/Context;)Lloa;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p0, p0, Lyda;->c:Lnma;
+    iget-object v0, v0, Lloa;->c:Luxa;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final J0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
-    .locals 9
+.method public final N0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+    .locals 11
 
     new-instance p2, Landroid/widget/LinearLayout;
 
@@ -125,7 +125,7 @@
 
     invoke-direct {p1, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v0, Ln9a;->L0:I
+    sget v0, Lxja;->H0:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
@@ -141,7 +141,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -153,7 +153,7 @@
 
     mul-float/2addr v4, v3
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
@@ -161,23 +161,23 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v0, Lxbf;->c:Leue;
+    sget-object v0, Lrxf;->c:Lpef;
 
-    invoke-static {v0, p1}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    invoke-static {v0, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
 
-    sget-object v0, Lzs4;->p0:Lqs9;
+    sget-object v0, Lbx4;->y0:Lsed;
 
-    invoke-virtual {v0, p1}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lyda;->c:Lnma;
-
-    invoke-interface {v4}, Lnma;->getText()Lqse;
+    invoke-virtual {v0, p1}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v4
 
-    iget v4, v4, Lqse;->e:I
+    iget-object v4, v4, Lloa;->c:Luxa;
+
+    invoke-interface {v4}, Luxa;->getText()Lbdf;
+
+    move-result-object v4
+
+    iget v4, v4, Lbdf;->e:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -189,7 +189,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -201,7 +201,7 @@
 
     mul-float/2addr v5, v6
 
-    invoke-static {v5}, Litg;->z(F)I
+    invoke-static {v5}, Lv63;->r0(F)I
 
     move-result v5
 
@@ -223,29 +223,29 @@
 
     move-result-object v5
 
-    sget v6, Lq9a;->O0:I
+    sget v6, Laka;->R0:I
 
-    iget-object v7, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->v0:Lth7;
+    iget-object v7, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->E0:Lbp7;
 
-    invoke-interface {v7}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Llh3;
-
-    iget-object v7, v7, Llh3;->b:Lp31;
-
-    check-cast v7, Lb41;
-
-    iget-object v7, v7, Lb41;->k:Lq4e;
-
-    invoke-virtual {v7}, Lq4e;->getValue()Ljava/lang/Object;
+    invoke-interface {v7}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v7
 
-    check-cast v7, Lm31;
+    check-cast v7, Ldk3;
 
-    iget-object v7, v7, Lm31;->c:Ljava/lang/CharSequence;
+    iget-object v7, v7, Ldk3;->b:Ll31;
+
+    check-cast v7, Lv31;
+
+    iget-object v7, v7, Lv31;->j:Lmoe;
+
+    invoke-virtual {v7}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lg31;
+
+    iget-object v7, v7, Lg31;->c:Ljava/lang/CharSequence;
 
     filled-new-array {v7}, [Ljava/lang/Object;
 
@@ -267,7 +267,7 @@
 
     invoke-direct {p1, v5}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sget v5, Ln9a;->K0:I
+    sget v5, Lxja;->G0:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setId(I)V
 
@@ -279,7 +279,7 @@
 
     int-to-float v6, v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -291,7 +291,7 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
@@ -299,33 +299,33 @@
 
     invoke-virtual {p1, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v5, Lxbf;->q:Leue;
+    sget-object v5, Lrxf;->r:Lpef;
 
-    invoke-static {v5, p1}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    invoke-static {v5, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
 
-    invoke-virtual {v0, p1}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v5
-
-    iget-object v5, v5, Lyda;->c:Lnma;
-
-    invoke-interface {v5}, Lnma;->getText()Lqse;
+    invoke-virtual {v0, p1}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v5
 
-    iget v5, v5, Lqse;->g:I
+    iget-object v5, v5, Lloa;->c:Luxa;
+
+    invoke-interface {v5}, Luxa;->getText()Lbdf;
+
+    move-result-object v5
+
+    iget v5, v5, Lbdf;->g:I
 
     invoke-virtual {p1, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    sget v4, Lq9a;->N0:I
+    sget v4, Laka;->Q0:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lj13;
+    new-instance p1, Ld33;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -335,7 +335,7 @@
 
     invoke-direct {p1, v4, v5}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v4, Ln9a;->H0:I
+    sget v4, Lxja;->D0:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setId(I)V
 
@@ -347,7 +347,7 @@
 
     int-to-float v6, v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -359,13 +359,13 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
     iput v6, v4, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -377,13 +377,13 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
     invoke-virtual {v4, v6}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -395,7 +395,7 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
@@ -403,53 +403,138 @@
 
     invoke-virtual {p1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v4, Lq9a;->K0:I
+    sget v4, Laka;->N0:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setText(I)V
 
-    sget-object v4, Lxbf;->k:Leue;
+    sget-object v4, Lrxf;->l:Lpef;
 
-    invoke-static {v4, p1}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    invoke-static {v4, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
 
-    invoke-virtual {v0, p1}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lyda;->c:Lnma;
-
-    invoke-interface {v4}, Lnma;->getText()Lqse;
+    invoke-virtual {v0, p1}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v4
 
-    iget v4, v4, Lqse;->e:I
+    iget-object v4, v4, Lloa;->c:Luxa;
+
+    invoke-interface {v4}, Luxa;->getText()Lbdf;
+
+    move-result-object v4
+
+    iget v4, v4, Lbdf;->e:I
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v4, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->w0:Ljava/lang/Object;
+    iget-object v4, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->F0:Ljava/lang/Object;
 
-    invoke-interface {v4}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Landroid/graphics/drawable/StateListDrawable;
+    check-cast v6, Lqoe;
 
-    invoke-virtual {v0, p1}, Lqs9;->h(Landroid/view/View;)Lyda;
+    invoke-virtual {v0, p1}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v7
 
-    iget-object v7, v7, Lyda;->c:Lnma;
+    iget-object v7, v7, Lloa;->c:Luxa;
 
-    invoke-static {v6, v7}, Lcr0;->d(Landroid/graphics/drawable/StateListDrawable;Lnma;)V
+    sget-object v8, Lgh5;->a:[I
 
-    invoke-interface {v4}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v6, v8}, Lf09;->q(Lqoe;[I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v8
+
+    instance-of v9, v8, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    if-eqz v9, :cond_0
+
+    check-cast v8, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v8, v5
+
+    :goto_0
+    if-nez v8, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    sget-object v9, Lgh5;->b:[I
+
+    invoke-static {v6, v9}, Lf09;->q(Lqoe;[I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v6
+
+    instance-of v9, v6, Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v9, :cond_2
+
+    check-cast v6, Landroid/graphics/drawable/GradientDrawable;
+
+    goto :goto_1
+
+    :cond_2
+    move-object v6, v5
+
+    :goto_1
+    if-nez v6, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-interface {v7}, Luxa;->getIcon()Lk27;
+
+    move-result-object v9
+
+    iget v9, v9, Lk27;->k:I
+
+    const-string v10, "circle_background"
+
+    invoke-static {v8, v10, v9}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
+
+    const/4 v8, 0x2
+
+    int-to-float v8, v8
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v9
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v9
+
+    invoke-static {v8}, Lv63;->r0(F)I
+
+    move-result v8
+
+    invoke-interface {v7}, Luxa;->i()Ljye;
+
+    move-result-object v7
+
+    iget-object v7, v7, Ljye;->b:Loye;
+
+    iget v7, v7, Loye;->b:I
+
+    invoke-virtual {v6, v8, v7}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    :goto_2
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Landroid/graphics/drawable/StateListDrawable;
+    check-cast v4, Lqoe;
 
     invoke-virtual {p1, v4}, Landroidx/appcompat/widget/AppCompatCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -461,11 +546,11 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v3
 
-    invoke-virtual {p1, v3}, Lj13;->setPaddingBetweenCheckbox(I)V
+    invoke-virtual {p1, v3}, Ld33;->setPaddingBetweenCheckbox(I)V
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -477,7 +562,7 @@
 
     invoke-direct {v3, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v4, Ln9a;->J0:I
+    sget v4, Lxja;->F0:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
@@ -489,7 +574,7 @@
 
     int-to-float v6, v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -501,7 +586,7 @@
 
     mul-float/2addr v6, v7
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
@@ -509,37 +594,37 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v4, Ll8a;->c:Ll8a;
+    sget-object v4, Luia;->c:Luia;
 
-    invoke-virtual {v3, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ll8a;)V
+    invoke-virtual {v3, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
 
-    sget-object v6, Lo8a;->c:Lo8a;
+    sget-object v6, Lxia;->c:Lxia;
 
-    invoke-virtual {v3, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lo8a;)V
+    invoke-virtual {v3, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
 
-    sget-object v7, Ln8a;->a:Ln8a;
+    sget-object v7, Lwia;->a:Lwia;
 
-    invoke-virtual {v3, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ln8a;)V
+    invoke-virtual {v3, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
 
-    invoke-virtual {v0, v3}, Lqs9;->h(Landroid/view/View;)Lyda;
+    invoke-virtual {v0, v3}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v7
 
-    iget-object v7, v7, Lyda;->c:Lnma;
+    iget-object v7, v7, Lloa;->c:Luxa;
 
-    invoke-virtual {v3, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Lnma;)V
+    invoke-virtual {v3, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Luxa;)V
 
-    sget v7, Lq9a;->M0:I
+    sget v7, Laka;->P0:I
 
     invoke-virtual {v3, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v7, Lmb;
+    new-instance v7, Ljb;
 
     const/16 v8, 0x16
 
-    invoke-direct {v7, p0, v8, p1}, Lmb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v7, p0, v8, p1}, Ljb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v3, v7}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v3, v7}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -551,7 +636,7 @@
 
     invoke-direct {p1, v3, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v3, Ln9a;->I0:I
+    sget v3, Lxja;->E0:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setId(I)V
 
@@ -561,33 +646,33 @@
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ll8a;)V
+    invoke-virtual {p1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
 
-    invoke-virtual {p1, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lo8a;)V
+    invoke-virtual {p1, v6}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
 
-    sget-object v1, Ln8a;->b:Ln8a;
+    sget-object v1, Lwia;->b:Lwia;
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ln8a;)V
+    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
 
-    invoke-virtual {v0, p1}, Lqs9;->h(Landroid/view/View;)Lyda;
+    invoke-virtual {v0, p1}, Lsed;->o(Landroid/view/View;)Lloa;
 
     move-result-object v0
 
-    iget-object v0, v0, Lyda;->c:Lnma;
+    iget-object v0, v0, Lloa;->c:Luxa;
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Lnma;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setCustomTheme(Luxa;)V
 
-    sget v0, Lq9a;->L0:I
+    sget v0, Laka;->O0:I
 
     invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v0, Lz4;
+    new-instance v0, Lh5;
 
-    const/16 v1, 0x16
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1, p0}, Lz4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lh5;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, v0}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p1, v0}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -595,25 +680,25 @@
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->onDestroyView(Landroid/view/View;)V
 
-    iget-object p0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->v0:Lth7;
+    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->E0:Lbp7;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Llh3;
+    check-cast p1, Ldk3;
 
-    iget-object p0, p0, Llh3;->X:Lt1e;
+    iget-object p1, p1, Ldk3;->X:Lqle;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Ljc7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-virtual {p1, v0}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
     return-void
@@ -624,47 +709,47 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->v0:Lth7;
+    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;->E0:Lbp7;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llh3;
-
-    iget-object p1, p1, Llh3;->Y:Lt65;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lsk7;->L()Luk7;
-
-    move-result-object v0
-
-    sget-object v1, Lvj7;->o:Lvj7;
-
-    invoke-static {p1, v0, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Ljh3;
+    check-cast p1, Ldk3;
+
+    iget-object p1, p1, Ldk3;->Y:Ljb5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcs7;->L()Les7;
+
+    move-result-object v0
+
+    sget-object v1, Ler7;->o:Ler7;
+
+    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+
+    move-result-object p1
+
+    new-instance v0, Lbk3;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Ljh3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
+    invoke-direct {v0, v1, p0}, Lbk3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
 
-    new-instance v1, Lgs5;
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method

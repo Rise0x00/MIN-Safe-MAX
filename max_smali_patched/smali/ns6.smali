@@ -1,204 +1,81 @@
 .class public final Lns6;
-.super Ljava/lang/Object;
+.super Lked;
 .source "SourceFile"
-
-# interfaces
-.implements Lewd;
 
 
 # instance fields
-.field public final a:Lq46;
-
-.field public b:Z
-
-.field public final synthetic c:Lq8;
+.field public final c:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Lq8;)V
-    .locals 1
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lns6;->c:Lq8;
-
-    new-instance v0, Lq46;
-
-    iget-object p1, p1, Lq8;->f:Ljava/lang/Object;
-
-    check-cast p1, Ltu0;
-
-    invoke-interface {p1}, Lewd;->p()Lyxe;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lq46;-><init>(Lyxe;)V
-
-    iput-object v0, p0, Lns6;->a:Lq46;
+    iput-object p1, p0, Lns6;->c:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Lrt0;J)V
+.method public final a()Lied;
+    .locals 2
+
+    new-instance v0, Lls6;
+
+    iget-object v1, p0, Lns6;->c:Landroid/os/Handler;
+
+    invoke-direct {v0, v1}, Lls6;-><init>(Landroid/os/Handler;)V
+
+    return-object v0
+.end method
+
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
     .locals 3
 
-    iget-object v0, p0, Lns6;->c:Lq8;
+    if-eqz p1, :cond_1
 
-    iget-object v0, v0, Lq8;->f:Ljava/lang/Object;
+    if-eqz p4, :cond_0
 
-    check-cast v0, Ltu0;
+    new-instance v0, Lms6;
 
-    iget-boolean p0, p0, Lns6;->b:Z
+    iget-object v1, p0, Lns6;->c:Landroid/os/Handler;
 
-    if-nez p0, :cond_1
+    invoke-direct {v0, v1, p1}, Lms6;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    const-wide/16 v1, 0x0
+    invoke-static {v1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    cmp-long p0, p2, v1
+    move-result-object p1
 
-    if-nez p0, :cond_0
+    const/4 v2, 0x1
 
-    return-void
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p2
+
+    invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    return-object v0
 
     :cond_0
-    invoke-interface {v0, p2, p3}, Ltu0;->U(J)Ltu0;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p0, "\r\n"
+    const-string p2, "unit == null"
 
-    invoke-interface {v0, p0}, Ltu0;->O(Ljava/lang/String;)Ltu0;
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, p1, p2, p3}, Lewd;->R(Lrt0;J)V
-
-    invoke-interface {v0, p0}, Ltu0;->O(Ljava/lang/String;)Ltu0;
-
-    return-void
+    throw p1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p1, "closed"
+    const-string p2, "run == null"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    throw p0
-.end method
-
-.method public final declared-synchronized close()V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lns6;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lns6;->b:Z
-
-    iget-object v0, p0, Lns6;->c:Lq8;
-
-    iget-object v0, v0, Lq8;->f:Ljava/lang/Object;
-
-    check-cast v0, Ltu0;
-
-    const-string v1, "0\r\n\r\n"
-
-    invoke-interface {v0, v1}, Ltu0;->O(Ljava/lang/String;)Ltu0;
-
-    iget-object v0, p0, Lns6;->a:Lq46;
-
-    iget-object v1, v0, Lq46;->e:Lyxe;
-
-    sget-object v2, Lyxe;->d:Lxxe;
-
-    iput-object v2, v0, Lq46;->e:Lyxe;
-
-    invoke-virtual {v1}, Lyxe;->a()Lyxe;
-
-    invoke-virtual {v1}, Lyxe;->b()Lyxe;
-
-    iget-object v0, p0, Lns6;->c:Lq8;
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Lq8;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized flush()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lns6;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    iget-object v0, p0, Lns6;->c:Lq8;
-
-    iget-object v0, v0, Lq8;->f:Ljava/lang/Object;
-
-    check-cast v0, Ltu0;
-
-    invoke-interface {v0}, Ltu0;->flush()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public final p()Lyxe;
-    .locals 0
-
-    iget-object p0, p0, Lns6;->a:Lq46;
-
-    return-object p0
+    throw p1
 .end method

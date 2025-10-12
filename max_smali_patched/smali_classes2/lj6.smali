@@ -1,125 +1,179 @@
 .class public final Llj6;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:[I
-
-.field public final b:[I
+.field public final synthetic X:Lmj6;
 
 
 # direct methods
-.method public constructor <init>([I[I)V
+.method public constructor <init>(Lmj6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llj6;->X:Lmj6;
 
-    iput-object p1, p0, Llj6;->a:[I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Llj6;->b:[I
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Le34;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Llj6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Llj6;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llj6;
 
-    iget-object v1, p0, Llj6;->a:[I
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v3, p1, Llj6;->a:[I
+    invoke-virtual {p1, p2}, Llj6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Llj6;->b:[I
-
-    iget-object p1, p1, Llj6;->b:[I
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Llj6;->a:[I
+    new-instance p1, Llj6;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    iget-object v0, p0, Llj6;->X:Lmj6;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Llj6;-><init>(Lmj6;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Llj6;->b:[I
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget-object v0, p0, Llj6;->a:[I
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string p1, "mj6"
+
+    const-string v0, "updateUiItemsBySelections()"
+
+    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Llj6;->X:Lmj6;
+
+    iget-object v0, p1, Lmj6;->A0:Lmoe;
+
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p0, p0, Llj6;->b:[I
+    check-cast v0, Ljava/lang/Iterable;
 
-    invoke-static {p0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    new-instance v1, Ljava/util/ArrayList;
 
-    move-result-object p0
+    const/16 v2, 0xa
 
-    const-string v1, ", surfacePrimaryGradient="
+    invoke-static {v0, v2}, Lg93;->V(Ljava/lang/Iterable;I)I
 
-    const-string v2, ")"
+    move-result v2
 
-    const-string v3, "GradientsOverlayColors(surfaceGroundGradient="
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-static {v3, v0, v1, p0, v2}, Llge;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lhi6;
+
+    iget-object v2, v3, Lhi6;->c:Lh18;
+
+    invoke-virtual {p1, v2}, Lmj6;->t(Lh18;)I
+
+    move-result v7
+
+    iget-object v2, p1, Lmj6;->z0:Lmoe;
+
+    invoke-virtual {v2}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    if-lez v7, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_1
+    move v8, v2
+
+    goto :goto_3
+
+    :cond_1
+    :goto_2
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :goto_3
+    const/4 v10, 0x0
+
+    const/16 v11, 0x73f
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-static/range {v3 .. v11}, Lhi6;->b(Lhi6;Lkcb;Lb9g;Landroid/net/Uri;IZILandroid/net/Uri;I)Lhi6;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, p1, Lmj6;->A0:Lmoe;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

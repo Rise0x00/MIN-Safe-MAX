@@ -1,32 +1,30 @@
 .class public final Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;
-.super Ljava/lang/Object;
+.super Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;
 .source "SourceFile"
 
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\t\n\u0002\u0008\u0003\u0008\u0000\u0018\u00002\u00020\u0001B\u001f\u0012\u000e\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u000f\u0010\n\u001a\u00020\tH\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\r\u0010\u000c\u001a\u00020\t\u00a2\u0006\u0004\u0008\u000c\u0010\u000bR\u001c\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00030\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0004\u0010\rR\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\u000eR\u0016\u0010\u0010\u001a\u00020\u000f8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0010\u0010\u0011R\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010\u0014\u00a8\u0006\u0015"
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\t\n\u0002\u0008\u0003\u0008\u0000\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u000e\u0010\u0006\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0004\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u0017\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ\r\u0010\r\u001a\u00020\n\u00a2\u0006\u0004\u0008\r\u0010\u000eR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010\u000fR\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0011\u0010\u0012\u00a8\u0006\u0013"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;",
-        "",
-        "Lkotlin/Function0;",
-        "Ld71;",
-        "getEventualStatSender",
-        "Lexe;",
+        "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
+        "Luhf;",
         "timeProvider",
+        "Lkotlin/Function0;",
+        "Lx61;",
+        "getEventualStatSender",
         "<init>",
-        "(Ld96;Lexe;)V",
-        "Ltcf;",
+        "(Luhf;Lve6;)V",
+        "callEventualStatSender",
+        "Loyf;",
         "report",
-        "()V",
+        "(Lx61;)V",
         "onConversationPrepared",
-        "Ld96;",
-        "Lexe;",
-        "",
-        "isReported",
-        "Z",
+        "()V",
+        "Luhf;",
         "",
         "startTimeMs",
         "J",
@@ -43,40 +41,28 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Ld96;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ld96;"
-        }
-    .end annotation
-.end field
-
-.field private isReported:Z
-
 .field private final startTimeMs:J
 
-.field private final timeProvider:Lexe;
+.field private final timeProvider:Luhf;
 
 
 # direct methods
-.method public constructor <init>(Ld96;Lexe;)V
+.method public constructor <init>(Luhf;Lve6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lexe;",
+            "Luhf;",
+            "Lve6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lve6;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->getEventualStatSender:Ld96;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Luhf;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Lexe;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {p1}, Luhf;->getMsSinceBoot()J
 
     move-result-wide p1
 
@@ -85,16 +71,20 @@
     return-void
 .end method
 
-.method private final report()V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;Lx61;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->report(Lx61;)V
+
+    return-void
+.end method
+
+.method private final report(Lx61;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -102,25 +92,16 @@
 
     sub-long/2addr v0, v2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->getEventualStatSender:Ld96;
-
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ld71;
-
-    if-eqz p0, :cond_0
-
-    const-string v2, "call_warmup"
-
     invoke-static {v0, v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(J)Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
     move-result-object v0
 
-    invoke-static {p0, v2, v0}, Ld71;->a(Ld71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    const/4 v1, 0x4
 
-    :cond_0
+    const-string v2, "call_warmup"
+
+    invoke-static {p1, v2, v0, v1}, Lx61;->a(Lx61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;I)V
+
     return-void
 .end method
 
@@ -129,18 +110,11 @@
 .method public final onConversationPrepared()V
     .locals 1
 
-    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->isReported:Z
+    new-instance v0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat$onConversationPrepared$1;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat$onConversationPrepared$1;-><init>(Ljava/lang/Object;)V
 
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->isReported:Z
-
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/stat/warmup/ConversationPreparedStat;->report()V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lxe6;)V
 
     return-void
 .end method

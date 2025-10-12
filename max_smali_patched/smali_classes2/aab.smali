@@ -1,38 +1,39 @@
 .class public final Laab;
-.super Ljava/lang/Object;
+.super Lbp;
 .source "SourceFile"
 
-# interfaces
-.implements Lx9b;
 
-
-# instance fields
-.field public final a:Lb53;
-
-.field public final b:Lwbd;
-
-.field public final c:Lbp;
-
-.field public final d:Ld80;
-
-.field public final e:Lnh5;
+# static fields
+.field public static final a:Laab;
 
 
 # direct methods
-.method public constructor <init>(Lb53;Lwbd;Lbp;Ld80;Lnh5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laab;
 
-    iput-object p1, p0, Laab;->a:Lb53;
+    invoke-direct {v0}, Lbp;-><init>()V
 
-    iput-object p2, p0, Laab;->b:Lwbd;
-
-    iput-object p3, p0, Laab;->c:Lbp;
-
-    iput-object p4, p0, Laab;->d:Ld80;
-
-    iput-object p5, p0, Laab;->e:Lnh5;
+    sput-object v0, Laab;->a:Laab;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lbp7;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v0
+
+    const-class v1, Lz9b;
+
+    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v0
+
+    return-object v0
 .end method

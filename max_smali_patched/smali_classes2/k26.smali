@@ -1,91 +1,98 @@
 .class public final Lk26;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
-
-.field public final b:Lj26;
-
-.field public final c:Ljava/util/ArrayList;
+.field public final synthetic X:Lo26;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lo26;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk26;->X:Lo26;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    const/4 p1, 0x2
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
-
-    iput-object v0, p0, Lk26;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    new-instance v0, Lj26;
-
-    invoke-direct {v0, p0}, Lj26;-><init>(Lk26;)V
-
-    iput-object v0, p0, Lk26;->b:Lj26;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lk26;->c:Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lk26;Ljava/lang/String;Ld96;)Lh26;
-    .locals 1
-
-    sget-object v0, Lr25;->a:Lr25;
-
-    invoke-virtual {p0, p1, v0, p2}, Lk26;->a(Ljava/lang/String;Ljava/lang/Iterable;Ld96;)Lh26;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Ld96;)Lh26;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lh26;
+    check-cast p1, Le34;
 
-    new-instance v1, Lsj3;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v6, 0x2
+    invoke-virtual {p0, p1, p2}, Lk26;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-object v4, p0
+    move-result-object p1
 
-    move-object v5, p1
+    check-cast p1, Lk26;
 
-    move-object v2, p2
+    sget-object p2, Loyf;->a:Loyf;
 
-    move-object v3, p3
+    invoke-virtual {p1, p2}, Lk26;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v6}, Lsj3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    move-result-object p1
 
-    invoke-direct {v0, v5, v1}, Lh26;-><init>(Ljava/lang/String;Lsj3;)V
+    return-object p1
+.end method
 
-    iget-object p0, v4, Lk26;->c:Ljava/util/ArrayList;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 p1, 0x0
+    new-instance p1, Lk26;
 
-    iget-object p2, v0, Lh26;->b:Li26;
+    iget-object v0, p0, Lk26;->X:Lo26;
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Lk26;-><init>(Lo26;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0, p2}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Lk26;->X:Lo26;
+
+    iget-object p1, p1, Lo26;->x0:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lava;
+
+    sget v0, Lt9d;->m3:I
+
+    new-instance v1, Ljef;
+
+    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lava;->g(Loef;)V
+
+    sget v0, Lt9d;->l3:I
+
+    new-instance v1, Ljef;
+
+    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lava;->a(Loef;)V
+
+    invoke-virtual {p1}, Lava;->i()Lzua;
+
+    move-result-object p1
+
+    return-object p1
 .end method

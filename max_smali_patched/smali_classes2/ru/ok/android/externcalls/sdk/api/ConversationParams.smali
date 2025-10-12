@@ -6,10 +6,10 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "ConversationParams"
 
-.field public static final PARSER:Lle7;
+.field public static final PARSER:Lpl7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lle7;"
+            "Lpl7;"
         }
     .end annotation
 .end field
@@ -53,13 +53,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Liu3;
+    new-instance v0, Lt14;
 
-    const/4 v1, 0x7
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Liu3;-><init>(I)V
+    invoke-direct {v0, v1}, Lt14;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lle7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lpl7;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lqe7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method public static synthetic a(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lqe7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
     move-result-object p0
 
@@ -456,7 +456,7 @@
     return-object v4
 .end method
 
-.method private static parseCallParams(Lqe7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method private static parseCallParams(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -466,7 +466,7 @@
     .end annotation
 
     .line 36
-    invoke-static {p0}, Lxu7;->Q(Lqe7;)Lorg/json/JSONObject;
+    invoke-static {p0}, Lkjd;->B(Lvl7;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -740,7 +740,7 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -812,13 +812,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->locReg:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->locReg:Ljava/lang/String;
 
-    const-string v1, "\'}"
+    const-string v2, "\'}"
 
-    invoke-static {v0, p0, v1}, Lw68;->o(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

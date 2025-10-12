@@ -1,71 +1,49 @@
-.class public final synthetic Lqpe;
+.class public final Lqpe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lx5d;
 
-.field public final synthetic b:Lrpe;
+.field public final b:Lph;
+
+.field public final c:Lp5d;
+
+.field public final d:Lp5d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrpe;I)V
-    .locals 0
-
-    iput p2, p0, Lqpe;->a:I
-
-    iput-object p1, p0, Lqpe;->b:Lrpe;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lqpe;->a:Lx5d;
+
+    new-instance v0, Lph;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Lph;-><init>(Lx5d;I)V
+
+    iput-object v0, p0, Lqpe;->b:Lph;
+
+    new-instance v0, Lp5d;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Lp5d;-><init>(Lx5d;I)V
+
+    iput-object v0, p0, Lqpe;->c:Lp5d;
+
+    new-instance v0, Lp5d;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, p1, v1}, Lp5d;-><init>(Lx5d;I)V
+
+    iput-object v0, p0, Lqpe;->d:Lp5d;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lqpe;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lqdd;
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lqdd;->f(Z)V
-
-    :cond_0
-    iget-object p0, p0, Lqpe;->b:Lrpe;
-
-    invoke-virtual {p0}, Lrpe;->f()Lqdd;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lqpe;->b:Lrpe;
-
-    check-cast p1, Lqdd;
-
-    invoke-static {p0, p1}, Lrpe;->c(Lrpe;Lqdd;)Lqdd;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

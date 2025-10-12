@@ -1,50 +1,86 @@
-.class public abstract Lvwb;
-.super Ljava/lang/Object;
+.class public final Lvwb;
+.super Ldd0;
+.source "SourceFile"
 
 
-# static fields
-.field public static onechat_react_add_tension:I = 0x7f0703c0
+# instance fields
+.field public final b:J
 
-.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
 
-.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
+    const/16 v0, 0xd
 
-.field public static onechat_react_change_tension:I = 0x7f0703c4
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-.field public static onechat_react_counter_padding:I = 0x7f0703c5
+    iput-wide p1, p0, Lvwb;->b:J
 
-.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
+    return-void
+.end method
 
-.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
 
-.field public static onechat_react_move_tension:I = 0x7f0703c8
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
+    const/4 v0, 0x1
 
-.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
+    if-ne p0, p1, :cond_0
 
-.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
+    return v0
 
-.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
+    :cond_0
+    instance-of v1, p1, Lvwb;
 
-.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
+    const/4 v2, 0x0
 
-.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
+    if-nez v1, :cond_1
 
-.field public static onechat_react_panel_size:I = 0x7f0703cf
+    return v2
 
-.field public static onechat_react_panel_text_size:I = 0x7f0703d0
+    :cond_1
+    check-cast p1, Lvwb;
 
-.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
+    iget-wide v3, p0, Lvwb;->b:J
 
-.field public static onechat_react_scale_1_step:I = 0x7f0703d2
+    iget-wide v5, p1, Lvwb;->b:J
 
-.field public static onechat_react_scale_2_step:I = 0x7f0703d3
+    cmp-long p1, v3, v5
 
-.field public static onechat_react_scale_3_step:I = 0x7f0703d4
+    if-eqz p1, :cond_2
 
-.field public static onechat_react_side_margin:I = 0x7f0703d5
+    return v2
 
-.field public static onechat_react_text_size_small:I = 0x7f0703d6
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lvwb;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OpenChat(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lvwb;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

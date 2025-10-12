@@ -1,55 +1,58 @@
 .class public final Luff;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-.field public Y:J
-
-.field public Z:J
-
-.field public synthetic n0:Ljava/lang/Object;
-
-.field public o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-.field public final synthetic o0:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-.field public p0:I
+# static fields
+.field public static final a:Landroid/util/LruCache;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Luff;->o0:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    new-instance v0, Landroid/util/LruCache;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+
+    sput-object v0, Luff;->a:Landroid/util/LruCache;
 
     return-void
 .end method
 
+.method public static a(Lhf0;Lzff;)V
+    .locals 2
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-nez p0, :cond_0
 
-    iput-object p1, p0, Luff;->n0:Ljava/lang/Object;
+    return-void
 
-    iget p1, p0, Luff;->p0:I
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/high16 v0, -0x80000000
+    const-string v1, "Save theme "
 
-    or-int/2addr p1, v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput p1, p0, Luff;->p0:I
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Luff;->o0:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    const-string v1, " to cache."
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->l(Lax3;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    const-string v1, "ThemeBackgroundCache"
+
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Luff;->a:Landroid/util/LruCache;
+
+    invoke-virtual {v0, p0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

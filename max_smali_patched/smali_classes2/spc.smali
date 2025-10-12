@@ -1,51 +1,97 @@
-.class public final Lspc;
-.super Lax3;
+.class public final synthetic Lspc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lkpc;
 
-.field public final synthetic Y:Ltpc;
+.field public final synthetic b:Landroid/view/ViewGroup;
 
-.field public Z:I
-
-.field public o:Ltpc;
+.field public final synthetic c:Lxe6;
 
 
 # direct methods
-.method public constructor <init>(Ltpc;Lax3;)V
+.method public synthetic constructor <init>(Lkpc;Landroid/view/ViewGroup;Lxe6;)V
     .locals 0
 
-    iput-object p1, p0, Lspc;->Y:Ltpc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lspc;->a:Lkpc;
+
+    iput-object p2, p0, Lspc;->b:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, Lspc;->c:Lxe6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    iput-object p1, p0, Lspc;->X:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget p1, p0, Lspc;->Z:I
+    move-result-object p1
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Ljava/lang/Integer;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iput p1, p0, Lspc;->Z:I
+    move-result v0
 
-    iget-object p1, p0, Lspc;->Y:Ltpc;
+    iget-object v1, p0, Lspc;->a:Lkpc;
 
-    const-wide/16 v0, 0x0
+    iget-object v1, v1, Lkpc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, v0, v1, p0}, Ltpc;->k(JLax3;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object p0
+    move-result-object v2
 
-    return-object p0
+    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v2, :cond_2
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lspc;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lspc;->c:Lxe6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

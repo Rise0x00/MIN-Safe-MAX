@@ -15,16 +15,20 @@
 
 .field public final synthetic d:F
 
-.field public final synthetic e:Z
+.field public final synthetic e:F
 
-.field public final synthetic f:Lf96;
+.field public final synthetic f:F
+
+.field public final synthetic g:Z
+
+.field public final synthetic h:Lxe6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZLf96;)V
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFFFZLxe6;)V
     .locals 1
 
-    sget v0, Ln9a;->a:I
+    sget v0, Lxja;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,9 +40,13 @@
 
     iput p4, p0, Llg;->d:F
 
-    iput-boolean p5, p0, Llg;->e:Z
+    iput p5, p0, Llg;->e:F
 
-    iput-object p6, p0, Llg;->f:Lf96;
+    iput p6, p0, Llg;->f:F
+
+    iput-boolean p7, p0, Llg;->g:Z
+
+    iput-object p8, p0, Llg;->h:Lxe6;
 
     return-void
 .end method
@@ -46,109 +54,121 @@
 
 # virtual methods
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+    .locals 3
 
-    iget p1, p0, Llg;->d:F
+    iget-object p1, p0, Llg;->a:Landroid/view/View;
 
-    iget-object v0, p0, Llg;->a:Landroid/view/View;
+    iget v0, p0, Llg;->e:F
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    iget-boolean p1, p0, Llg;->e:Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
+
+    iget v0, p0, Llg;->f:F
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    iget-boolean v0, p0, Llg;->g:Z
 
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    move p1, v1
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    const/16 p1, 0x8
+    const/16 v0, 0x8
 
     :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, Llg;->f:Lf96;
+    iget-object v0, p0, Llg;->h:Lxe6;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    move-result p1
+    move-result v2
 
-    if-nez p1, :cond_1
+    if-nez v2, :cond_1
 
     const/4 v1, 0x1
 
     :cond_1
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-interface {p0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    sget p0, Ln9a;->m:I
+    sget v0, Lxja;->m:I
 
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    .locals 3
 
-    iget p1, p0, Llg;->d:F
+    iget-object p1, p0, Llg;->a:Landroid/view/View;
 
-    iget-object v0, p0, Llg;->a:Landroid/view/View;
+    iget v0, p0, Llg;->e:F
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    iget-boolean p1, p0, Llg;->e:Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
+
+    iget v0, p0, Llg;->f:F
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    iget-boolean v0, p0, Llg;->g:Z
 
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
-    move p1, v1
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    const/16 p1, 0x8
+    const/16 v0, 0x8
 
     :goto_0
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, Llg;->f:Lf96;
+    iget-object v0, p0, Llg;->h:Lxe6;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    move-result p1
+    move-result v2
 
-    if-nez p1, :cond_1
+    if-nez v2, :cond_1
 
     const/4 v1, 0x1
 
     :cond_1
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-interface {p0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    sget p0, Ln9a;->m:I
+    sget v0, Lxja;->m:I
 
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -162,7 +182,7 @@
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    sget p1, Ln9a;->m:I
+    sget p1, Lxja;->m:I
 
     iget-object v0, p0, Llg;->b:Ljava/lang/String;
 
@@ -170,13 +190,19 @@
 
     invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    iget p0, p0, Llg;->c:F
+    iget p1, p0, Llg;->c:F
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleX(F)V
 
-    const/4 p0, 0x0
+    invoke-virtual {v1, p1}, Landroid/view/View;->setScaleY(F)V
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->setVisibility(I)V
+    iget p1, p0, Llg;->d:F
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method

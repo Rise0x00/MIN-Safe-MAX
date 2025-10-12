@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Le6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final synthetic b:J
 
-.field public final synthetic c:Lpk5;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lpk5;I)V
+.method public synthetic constructor <init>(IIJ)V
     .locals 0
 
-    iput p3, p0, Lnk5;->a:I
+    iput p2, p0, Lnk5;->a:I
 
-    iput-object p1, p0, Lnk5;->b:Landroid/content/Context;
+    iput-wide p3, p0, Lnk5;->b:J
 
-    iput-object p2, p0, Lnk5;->c:Lpk5;
+    iput p1, p0, Lnk5;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,126 +31,60 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final run()V
     .locals 5
 
     iget v0, p0, Lnk5;->a:I
 
+    const-string v1, "onNotifMoved: success move id=%d to position=%d"
+
+    iget v2, p0, Lnk5;->c:I
+
+    iget-wide v3, p0, Lnk5;->b:J
+
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lglf;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Lnk5;->b:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lglf;-><init>(Landroid/content/Context;)V
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v1, 0x1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lglf;->setBackgroundEnabled(Z)V
+    filled-new-array {v0, v2}, [Ljava/lang/Object;
 
-    iget-object p0, p0, Lnk5;->c:Lpk5;
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    const-string v2, "il5"
 
-    return-object v0
+    invoke-static {v2, v1, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
 
     :pswitch_0
-    new-instance v0, Lmx6;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Lnk5;->b:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lmx6;-><init>(Landroid/content/Context;)V
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p0, p0, Lnk5;->c:Lpk5;
+    move-result-object v2
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    filled-new-array {v0, v2}, [Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
 
-    :pswitch_1
-    new-instance v0, Landroid/widget/ImageView;
+    const-string v2, "ok5"
 
-    iget-object v1, p0, Lnk5;->b:Landroid/content/Context;
+    invoke-static {v2, v1, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    return-void
 
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/16 v2, 0x2c
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Litg;->z(F)I
-
-    move-result v3
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Litg;->z(F)I
-
-    move-result v2
-
-    invoke-direct {v1, v3, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p0, p0, Lnk5;->c:Lpk5;
-
-    iget-object v1, p0, Lpk5;->G0:Landroid/graphics/drawable/ShapeDrawable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
-
-    const v1, 0x7f7fffff    # Float.MAX_VALUE
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationZ(F)V
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lwj5;
-
-    iget-object v1, p0, Lnk5;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, Lwj5;-><init>(Landroid/content/Context;)V
-
-    iget-object p0, p0, Lnk5;->c:Lpk5;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,360 +1,239 @@
 .class public final Lt67;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
+# instance fields
+.field public a:[B
+
+.field public b:I
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final c(I)V
+    .locals 4
 
-    new-instance v0, Lt67;
+    iget-object v0, p0, Lt67;->a:[B
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    array-length v1, v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sub-int v1, p1, v1
 
-    move-result-object v0
+    if-lez v1, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    array-length v1, v0
 
-    move-result-object v0
+    shl-int/lit8 v1, v1, 0x1
 
-    sput-object v0, Lt67;->a:Ljava/lang/String;
+    sub-int v2, v1, p1
 
-    return-void
-.end method
+    if-gez v2, :cond_0
 
-.method public static a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
-    .locals 5
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return-object v1
+    move v1, p1
 
     :cond_0
-    invoke-static {p1, v1}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+    const v2, 0x7ffffff7
 
-    move-result-object v0
+    sub-int v3, v1, v2
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    if-lez v3, :cond_3
 
-    move-result-object p0
+    if-ltz p1, :cond_2
+
+    if-le p1, v2, :cond_1
+
+    const p1, 0x7fffffff
+
+    move v1, p1
+
+    goto :goto_0
 
     :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    move v1, v2
 
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Landroid/content/pm/ResolveInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v3, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    const-string v4, "org.telegram.messenger"
-
-    invoke-static {v3, v4}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "org.telegram.messenger.beta"
-
-    invoke-static {v3, v4}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_2
-
-    const-string v4, "org.telegram.messenger.web"
-
-    invoke-static {v3, v4}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
+    goto :goto_0
 
     :cond_2
-    move-object v1, v2
+    new-instance p1, Ljava/lang/OutOfMemoryError;
+
+    invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
+
+    throw p1
 
     :cond_3
-    check-cast v1, Landroid/content/pm/ResolveInfo;
+    :goto_0
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    if-eqz v1, :cond_4
+    move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/Intent;->clone()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/content/Intent;
-
-    iget-object p1, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object p1, p1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance p1, Landroid/content/ComponentName;
-
-    iget-object v2, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v3, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
-
-    invoke-direct {p1, v3, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    const/high16 p1, 0x10000000
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    new-instance p1, Landroid/content/pm/LabeledIntent;
-
-    iget-object v2, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v2, v2, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    iget v3, v1, Landroid/content/pm/ResolveInfo;->labelRes:I
-
-    iget v1, v1, Landroid/content/pm/ResolveInfo;->icon:I
-
-    invoke-direct {p1, p0, v2, v3, v1}, Landroid/content/pm/LabeledIntent;-><init>(Landroid/content/Intent;Ljava/lang/String;II)V
-
-    filled-new-array {p1}, [Landroid/content/pm/LabeledIntent;
-
-    move-result-object p0
-
-    check-cast p0, [Landroid/os/Parcelable;
-
-    const-string p1, "android.intent.extra.INITIAL_INTENTS"
-
-    invoke-virtual {v0, p1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
+    iput-object p1, p0, Lt67;->a:[B
 
     :cond_4
-    return-object v0
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;Z)Landroid/content/Intent;
+.method public final d(I)V
+    .locals 4
+
+    iget v0, p0, Lt67;->b:I
+
+    add-int/lit8 v0, v0, 0x4
+
+    invoke-virtual {p0, v0}, Lt67;->c(I)V
+
+    iget-object v0, p0, Lt67;->a:[B
+
+    iget v1, p0, Lt67;->b:I
+
+    ushr-int/lit8 v2, p1, 0x18
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
+
+    add-int/lit8 v2, v1, 0x1
+
+    ushr-int/lit8 v3, p1, 0x10
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v2, v1, 0x2
+
+    ushr-int/lit8 v3, p1, 0x8
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v2, v1, 0x3
+
+    int-to-byte p1, p1
+
+    aput-byte p1, v0, v2
+
+    add-int/lit8 v1, v1, 0x4
+
+    iput v1, p0, Lt67;->b:I
+
+    return-void
+.end method
+
+.method public final declared-synchronized write(I)V
     .locals 2
 
-    if-eqz p1, :cond_0
+    monitor-enter p0
 
-    new-instance p1, Landroid/content/Intent;
-
-    const-string v0, "miui.intent.action.APP_PERM_EDITOR"
-
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "com.miui.securitycenter"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v0, "extra_package_uid"
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
-
-    move-result v1
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string v0, "extra_pkgname"
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, v0, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    const-string v1, "package"
-
-    invoke-static {v1, p0, v0}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    const-string v0, "android.settings.MANAGE_APP_USE_FULL_SCREEN_INTENT"
-
-    invoke-direct {p1, v0, p0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    return-object p1
-.end method
-
-.method public static c(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 1
-
+    .line 1
     :try_start_0
-    new-instance v0, Li9d;
+    iget v0, p0, Lt67;->b:I
 
-    invoke-direct {v0, p0}, Li9d;-><init>(Landroid/content/Context;)V
+    add-int/lit8 v0, v0, 0x1
 
-    iget-object p0, v0, Li9d;->c:Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lt67;->c(I)V
 
-    check-cast p0, Landroid/content/Intent;
+    .line 2
+    iget-object v0, p0, Lt67;->a:[B
 
-    invoke-virtual {p0, p2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    iget v1, p0, Lt67;->b:I
 
-    invoke-virtual {v0, p1}, Li9d;->N(Landroid/net/Uri;)V
+    int-to-byte p1, p1
 
-    invoke-virtual {v0}, Li9d;->P()V
+    aput-byte p1, v0, v1
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    add-int/lit8 v1, v1, 0x1
+
+    .line 3
+    iput v1, p0, Lt67;->b:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    .line 4
+    monitor-exit p0
+
+    return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lfnc;
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct {p1, p0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p0, p1
-
-    :goto_0
-    invoke-static {p0}, Lhnc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    sget-object p1, Lt67;->a:Ljava/lang/String;
-
-    const-string p2, "shareMedia: failed"
-
-    invoke-static {p1, p2, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
+    throw p1
 .end method
 
-.method public static d(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
-    .locals 3
+.method public final declared-synchronized write([BII)V
+    .locals 2
 
+    monitor-enter p0
+
+    if-ltz p2, :cond_0
+
+    .line 5
     :try_start_0
-    new-instance v0, Li9d;
+    array-length v0, p1
 
-    invoke-direct {v0, p0}, Li9d;-><init>(Landroid/content/Context;)V
+    if-gt p2, v0, :cond_0
 
-    if-eqz p2, :cond_1
+    if-ltz p3, :cond_0
 
-    sget-object v1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    add-int v0, p2, p3
 
-    invoke-virtual {p2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    array-length v1, p1
 
-    move-result v1
+    sub-int/2addr v0, v1
 
-    if-eqz v1, :cond_0
+    if-gtz v0, :cond_0
 
-    goto :goto_0
+    .line 6
+    iget v0, p0, Lt67;->b:I
 
-    :cond_0
-    const-string v1, "image/*"
+    add-int/2addr v0, p3
 
-    goto :goto_1
+    invoke-virtual {p0, v0}, Lt67;->c(I)V
 
-    :cond_1
-    :goto_0
-    const-string v1, "text/plain"
+    .line 7
+    iget-object v0, p0, Lt67;->a:[B
 
-    :goto_1
-    iget-object v2, v0, Li9d;->c:Ljava/lang/Object;
+    iget v1, p0, Lt67;->b:I
 
-    check-cast v2, Landroid/content/Intent;
+    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    .line 8
+    iget p1, p0, Lt67;->b:I
 
-    invoke-virtual {v0, p1}, Li9d;->O(Ljava/lang/CharSequence;)V
+    add-int/2addr p1, p3
 
-    invoke-virtual {v0, p2}, Li9d;->N(Landroid/net/Uri;)V
-
-    invoke-virtual {v0}, Li9d;->p()Landroid/content/Intent;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lt67;->a(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
+    iput p1, p0, Lt67;->b:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_2
+    .line 9
+    monitor-exit p0
 
-    :cond_2
-    const/4 p0, 0x0
-
-    goto :goto_2
+    return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
-    new-instance p1, Lfnc;
+    goto :goto_0
 
-    invoke-direct {p1, p0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
+    .line 10
+    :cond_0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    move-object p0, p1
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    :goto_2
-    invoke-static {p0}, Lhnc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    throw p1
 
-    move-result-object p0
+    :goto_0
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz p0, :cond_3
-
-    sget-object p1, Lt67;->a:Ljava/lang/String;
-
-    const-string p2, "showInviteDialog error"
-
-    invoke-static {p1, p2, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    return-void
+    throw p1
 .end method

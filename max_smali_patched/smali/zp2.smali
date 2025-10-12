@@ -1,191 +1,42 @@
-.class public final Lzp2;
-.super Lko;
+.class public final synthetic Lzp2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final a:Lzp2;
+
+# instance fields
+.field public final synthetic a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lzp2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, Lzp2;->a:Lzp2;
+    iput-wide p1, p0, Lzp2;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Li43;
-    .locals 8
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Li43;
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    sget-object v0, Lor2;->c:Lor2;
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    const-class v2, Lsz2;
+    iget-wide v2, p0, Lzp2;->a:J
 
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v0, v2, v3, v1}, Lor2;->c1(JZ)V
 
-    move-result-object v1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v2
-
-    const-class v3, Lhoe;
-
-    invoke-virtual {v2, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v4
-
-    const-class v5, Ljk;
-
-    invoke-virtual {v4, v5}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v4
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v5
-
-    const-class v6, Lvbd;
-
-    invoke-virtual {v5, v6}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v5
-
-    new-instance v6, Lf43;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v7, Lxre;
-
-    invoke-virtual {p0, v7}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p0
-
-    invoke-direct {v6, v3, p0}, Lf43;-><init>(Lth7;Lth7;)V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v6, v0, Li43;->b:Ljava/lang/Object;
-
-    const-class p0, Li43;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    iput-object p0, v0, Li43;->a:Ljava/lang/Object;
-
-    iput-object v1, v0, Li43;->c:Ljava/lang/Object;
-
-    iput-object v2, v0, Li43;->o:Ljava/lang/Object;
-
-    iput-object v4, v0, Li43;->X:Ljava/lang/Object;
-
-    iput-object v5, v0, Li43;->Y:Ljava/lang/Object;
+    sget-object v0, Loyf;->a:Loyf;
 
     return-object v0
-.end method
-
-.method public final c()Lya9;
-    .locals 6
-
-    new-instance v0, Lya9;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lhoe;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v2
-
-    const-class v3, Lkmg;
-
-    invoke-virtual {v2, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v3
-
-    const-class v4, Lqf6;
-
-    invoke-virtual {v3, v4}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v4
-
-    const-class v5, Li49;
-
-    invoke-virtual {v4, v5}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v4
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v5, Lwf6;
-
-    invoke-virtual {p0, v5}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lya9;-><init>(Lth7;Lth7;Lth7;Lth7;Lth7;)V
-
-    return-object v0
-.end method
-
-.method public final getDispatchers()Lhoe;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lhoe;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhoe;
-
-    return-object p0
 .end method

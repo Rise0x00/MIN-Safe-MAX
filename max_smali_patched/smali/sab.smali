@@ -1,52 +1,140 @@
 .class public final Lsab;
-.super Ljava/lang/Object;
+.super Ly1;
 .source "SourceFile"
-
-# interfaces
-.implements Lehf;
-.implements Lpy6;
-.implements Lzve;
 
 
 # instance fields
-.field public final a:Lgpa;
+.field public final c:[Ljava/lang/Object;
+
+.field public final o:Lgrf;
 
 
 # direct methods
-.method public constructor <init>(Lgpa;)V
+.method public constructor <init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ly1;-><init>(II)V
 
-    iput-object p1, p0, Lsab;->a:Lgpa;
+    iput-object p5, p0, Lsab;->c:[Ljava/lang/Object;
+
+    add-int/lit8 p2, p2, -0x1
+
+    and-int/lit8 p2, p2, -0x20
+
+    if-le p1, p2, :cond_0
+
+    move p1, p2
+
+    :cond_0
+    new-instance p5, Lgrf;
+
+    invoke-direct {p5, p4, p1, p2, p3}, Lgrf;-><init>([Ljava/lang/Object;III)V
+
+    iput-object p5, p0, Lsab;->o:Lgrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getConfig()Lpf3;
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    iget-object p0, p0, Lsab;->a:Lgpa;
+    invoke-virtual {p0}, Ly1;->hasNext()Z
 
-    return-object p0
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lsab;->o:Lgrf;
+
+    invoke-virtual {v0}, Ly1;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Ly1;->a:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Ly1;->a:I
+
+    invoke-virtual {v0}, Lgrf;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget v1, p0, Ly1;->a:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Ly1;->a:I
+
+    iget v0, v0, Ly1;->b:I
+
+    sub-int/2addr v1, v0
+
+    iget-object v0, p0, Lsab;->c:[Ljava/lang/Object;
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method
 
-.method public final getInputFormat()I
-    .locals 1
+.method public final previous()Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lfy6;->w:Lz90;
+    invoke-virtual {p0}, Ly1;->hasPrevious()Z
 
-    invoke-interface {p0, v0}, Lgbc;->h(Lz90;)Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    check-cast p0, Ljava/lang/Integer;
+    iget v0, p0, Ly1;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    iget-object v1, p0, Lsab;->o:Lgrf;
 
-    move-result p0
+    iget v2, v1, Ly1;->b:I
 
-    return p0
+    if-le v0, v2, :cond_0
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ly1;->a:I
+
+    sub-int/2addr v0, v2
+
+    iget-object v1, p0, Lsab;->c:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :cond_0
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Ly1;->a:I
+
+    invoke-virtual {v1}, Lgrf;->previous()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method

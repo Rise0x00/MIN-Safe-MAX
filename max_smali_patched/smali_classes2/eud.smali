@@ -1,34 +1,41 @@
-.class public abstract Leud;
-.super Luhc;
+.class public final Leud;
+.super Lrud;
 .source "SourceFile"
 
 
+# instance fields
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:J
+
+
+# direct methods
+.method public constructor <init>(JJJ)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p0, v0, v1}, Lrud;-><init>(J)V
+
+    iput-wide p1, p0, Leud;->g:J
+
+    iput-wide p3, p0, Leud;->h:J
+
+    iput-wide p5, p0, Leud;->i:J
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public B()V
-    .locals 0
+.method public final a()Lsud;
+    .locals 1
 
-    return-void
-.end method
+    new-instance v0, Lfud;
 
-.method public C()V
-    .locals 0
+    invoke-direct {v0, p0}, Lfud;-><init>(Leud;)V
 
-    return-void
-.end method
-
-.method public E()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract x(Llp7;)V
-.end method
-
-.method public y(Llp7;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Leud;->x(Llp7;)V
-
-    return-void
+    return-object v0
 .end method

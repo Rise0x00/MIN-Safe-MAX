@@ -1,207 +1,159 @@
 .class public final Llrf;
-.super Landroid/os/HandlerThread;
+.super Lbp9;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lorf;
+.field public final k:J
 
-.field public final a:Landroid/util/Size;
-
-.field public final b:Ljx4;
-
-.field public final c:J
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final l:J
 
 
 # direct methods
-.method public constructor <init>(Lorf;Landroid/util/Size;Ljx4;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;IIIJJZ)V
+    .locals 11
 
-    iput-object p1, p0, Llrf;->X:Lorf;
+    move-wide/from16 v7, p5
 
-    const-string p1, "videomsg-gl-thread"
+    move-wide/from16 v9, p7
 
-    invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lzo9;
 
-    iput-object p2, p0, Llrf;->a:Landroid/util/Size;
+    invoke-direct {v0, p2, p1, p3, p4}, Lzo9;-><init>(ILjava/lang/String;II)V
 
-    iput-object p3, p0, Llrf;->b:Ljx4;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    move-result-object v5
 
-    move-result-wide p1
+    const-wide/16 v1, 0x0
 
-    iput-wide p1, p0, Llrf;->c:J
+    sub-long v3, v9, v7
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    move-object v0, p0
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    move/from16 v6, p9
 
-    iput-object p1, p0, Llrf;->o:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct/range {v0 .. v6}, Lbp9;-><init>(JJLjava/util/List;Z)V
+
+    iput-wide v7, p0, Llrf;->k:J
+
+    iput-wide v9, p0, Llrf;->l:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLooperPrepared()V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Llrf;->X:Lorf;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lorf;->a:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Lz76;->f:Lvea;
+    return v0
 
-    if-nez v1, :cond_0
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Llrf;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    sget-object v2, Lhw7;->o:Lhw7;
-
-    invoke-virtual {v1, v2}, Lvea;->a(Lhw7;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v3
-
-    iget-wide v5, p0, Llrf;->c:J
-
-    sub-long/2addr v3, v5
-
-    const-string p0, "onLooperPrepared, GL thread startup took="
-
-    const-string v5, " ms"
-
-    invoke-static {v3, v4, p0, v5}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v0, p0, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_1
+    invoke-super {p0, p1}, Lbp9;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Llrf;
+
+    iget-wide v2, p0, Llrf;->k:J
+
+    iget-wide v4, p1, Llrf;->k:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-wide v2, p0, Llrf;->l:J
+
+    iget-wide v4, p1, Llrf;->l:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_4
+
+    return v0
+
+    :cond_4
     :goto_0
-    return-void
+    return v1
 .end method
 
-.method public final run()V
-    .locals 5
+.method public final h()J
+    .locals 2
 
-    iget-object v0, p0, Llrf;->X:Lorf;
+    iget-wide v0, p0, Llrf;->l:J
 
-    iget-object v0, v0, Lorf;->a:Ljava/lang/String;
+    return-wide v0
+.end method
 
-    iget-object v1, p0, Llrf;->a:Landroid/util/Size;
+.method public final hashCode()I
+    .locals 6
 
-    iget-object v2, p0, Llrf;->b:Ljx4;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "run, previewSize="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dynamicRange="
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lz76;->u(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    iget-object v0, p0, Llrf;->X:Lorf;
-
-    iget-object v0, v0, Lorf;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-super {p0}, Lbp9;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Llrf;->X:Lorf;
+    iget-wide v1, p0, Llrf;->k:J
 
-    iget-object v0, v0, Lorf;->a:Ljava/lang/String;
+    const/16 v3, 0x20
 
-    const-string v1, "run, video message processor was requested to exit during startup GL thread, skip GL initialization!"
+    ushr-long v4, v1, v3
 
-    invoke-static {v0, v1}, Lz76;->M(Ljava/lang/String;Ljava/lang/String;)V
+    xor-long/2addr v1, v4
 
-    goto :goto_0
+    long-to-int v1, v1
 
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Llrf;->X:Lorf;
+    add-int/2addr v0, v1
 
-    iget-object v1, p0, Llrf;->a:Landroid/util/Size;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v3, p0, Llrf;->b:Ljx4;
+    iget-wide v1, p0, Llrf;->l:J
 
-    invoke-static {v0, v1, v3}, Lorf;->b(Lorf;Landroid/util/Size;Ljx4;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    ushr-long v3, v1, v3
 
-    goto :goto_0
+    xor-long/2addr v1, v3
 
-    :catch_0
-    move-exception v0
+    long-to-int v1, v1
 
-    iget-object v1, p0, Llrf;->X:Lorf;
+    add-int/2addr v0, v1
 
-    iget-object v1, v1, Lorf;->a:Ljava/lang/String;
+    return v0
+.end method
 
-    const-string v3, "GL initialization failed"
+.method public final j()J
+    .locals 2
 
-    invoke-static {v1, v3, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-wide v0, p0, Llrf;->k:J
 
-    iget-object v1, p0, Llrf;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    :goto_0
-    invoke-super {p0}, Landroid/os/HandlerThread;->run()V
-
-    iget-object p0, p0, Llrf;->X:Lorf;
-
-    iget-object p0, p0, Lorf;->a:Ljava/lang/String;
-
-    sget-object v0, Lz76;->f:Lvea;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v1, Lhw7;->Y:Lhw7;
-
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    const-string v3, "run, GL thread finished"
-
-    invoke-virtual {v0, v1, p0, v3, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    return-void
+    return-wide v0
 .end method

@@ -1,28 +1,24 @@
 .class public final La61;
-.super Lu0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc61;
+.implements Lb61;
 
 
 # static fields
-.field public static final c:La61;
+.field public static final a:La61;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, La61;
 
-    sget v1, Lp3c;->call_screen_bad_connection:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lu0g;-><init>(ILjava/lang/Long;)V
-
-    sput-object v0, La61;->c:La61;
+    sput-object v0, La61;->a:La61;
 
     return-void
 .end method
@@ -39,30 +35,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, La61;
+    instance-of p1, p1, La61;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x13d36bde
+    const v0, -0x76f2ecaf
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Degraded"
+    const-string v0, "Unmuted"
 
-    return-object p0
+    return-object v0
 .end method

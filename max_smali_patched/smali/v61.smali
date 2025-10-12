@@ -1,48 +1,30 @@
 .class public final Lv61;
-.super Lax3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ldw;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ldw;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lv61;->Y:Ldw;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public a:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public a(I)V
+    .locals 2
 
-    iput-object p1, p0, Lv61;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lv61;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget p1, p0, Lv61;->X:I
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    const/high16 v0, -0x80000000
+    move-result-object v1
 
-    or-int/2addr p1, v0
+    if-eqz v1, :cond_0
 
-    iput p1, p0, Lv61;->X:I
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->u(Landroid/view/View;)V
 
-    iget-object p1, p0, Lv61;->Y:Ldw;
+    invoke-virtual {v1}, Landroid/view/View;->clearAnimation()V
 
-    const/4 v0, 0x0
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeViewAt(I)V
 
-    invoke-virtual {p1, v0, p0}, Ldw;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

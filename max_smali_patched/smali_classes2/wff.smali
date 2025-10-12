@@ -1,136 +1,296 @@
-.class public final synthetic Lwff;
+.class public final Lwff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu96;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:F
 
-.field public final synthetic b:Lxff;
+.field public final b:F
+
+.field public final c:[I
+
+.field public final d:[F
+
+.field public final e:F
+
+.field public final f:F
+
+.field public final g:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxff;I)V
+.method public constructor <init>(FFFFF[F[I)V
     .locals 0
 
-    iput p2, p0, Lwff;->a:I
-
-    iput-object p1, p0, Lwff;->b:Lxff;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lwff;->a:F
+
+    iput p2, p0, Lwff;->b:F
+
+    iput-object p7, p0, Lwff;->c:[I
+
+    iput-object p6, p0, Lwff;->d:[F
+
+    iput p3, p0, Lwff;->e:F
+
+    iput p4, p0, Lwff;->f:F
+
+    iput p5, p0, Lwff;->g:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lwff;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lnef;
-
-    iget-object v0, p1, Lnef;->a:Lvef;
-
-    iget v0, v0, Lvef;->c:I
-
-    invoke-static {v0}, Llge;->b(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lnef;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lwff;->b:Lxff;
-
-    iget-object p0, p0, Lxff;->b:Ln6e;
-
-    iget-object v0, p1, Lnef;->h:Lggf;
-
-    iget-object v0, v0, Lggf;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Ln6e;->a(Ljava/lang/String;)Lqu5;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lfud;->n()Lt0a;
-
-    move-result-object p0
-
-    new-instance v0, Lsef;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lsef;-><init>(Lnef;I)V
-
-    new-instance p1, Lm1a;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p1, p0, v0, v1}, Lm1a;-><init>(Lt0a;Lu96;I)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p0, Lv09;
+    instance-of v1, p1, Lwff;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v0}, Lv09;-><init>(Lnef;Lb6e;)V
+    if-nez v1, :cond_1
 
-    invoke-static {p0}, Lt0a;->k(Ljava/lang/Object;)Ln2a;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ls09;
-
-    iget v0, p1, Ls09;->d:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    iget-object p0, p0, Lwff;->b:Lxff;
-
-    iget-object p0, p0, Lxff;->d:Lcq4;
-
-    invoke-virtual {p0}, Lcq4;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgz3;
-
-    invoke-virtual {p0, p1}, Lgz3;->a(Ls09;)Lt0a;
-
-    move-result-object p0
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lt0a;->k(Ljava/lang/Object;)Ln2a;
+    check-cast p1, Lwff;
 
-    move-result-object p0
+    iget v1, p0, Lwff;->a:F
 
-    :goto_1
-    return-object p0
+    iget v3, p1, Lwff;->a:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lwff;->b:F
+
+    iget v3, p1, Lwff;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lwff;->c:[I
+
+    iget-object v3, p1, Lwff;->c:[I
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lwff;->d:[F
+
+    iget-object v3, p1, Lwff;->d:[F
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lwff;->e:F
+
+    iget v3, p1, Lwff;->e:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget v1, p0, Lwff;->f:F
+
+    iget v3, p1, Lwff;->f:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget v1, p0, Lwff;->g:F
+
+    iget p1, p1, Lwff;->g:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lwff;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lwff;->b:F
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v2, p0, Lwff;->c:[I
+
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lwff;->d:[F
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lwff;->e:F
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lwff;->f:F
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lwff;->g:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lwff;->c:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lwff;->d:[F
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "GradientEllipse(x="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v3, p0, Lwff;->a:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", y="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lwff;->b:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v3, ", color="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", stops="
+
+    const-string v4, ", radiusX="
+
+    invoke-static {v2, v0, v3, v1, v4}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lwff;->e:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", radiusY="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lwff;->f:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lwff;->g:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

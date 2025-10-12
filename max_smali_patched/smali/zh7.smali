@@ -1,63 +1,96 @@
-.class public final Lzh7;
-.super Lt1e;
+.class public final enum Lzh7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Iterator;
 
-# instance fields
-.field public final a:Lkotlin/coroutines/Continuation;
+
+# static fields
+.field public static final enum a:Lzh7;
+
+.field public static final synthetic b:[Lzh7;
 
 
 # direct methods
-.method public constructor <init>(Lh04;Lt96;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lzh7;
 
-    const/4 v1, 0x1
+    const-string v1, "INSTANCE"
 
-    invoke-direct {p0, p1, v1, v0}, Lc0;-><init>(Lh04;ZZ)V
+    const/4 v2, 0x0
 
-    invoke-static {p2, p0, p0}, Lu77;->m(Lt96;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sput-object v0, Lzh7;->a:Lzh7;
 
-    iput-object p1, p0, Lzh7;->a:Lkotlin/coroutines/Continuation;
+    filled-new-array {v0}, [Lzh7;
+
+    move-result-object v0
+
+    sput-object v0, Lzh7;->b:[Lzh7;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lzh7;
+    .locals 1
 
-# virtual methods
-.method public final onStart()V
-    .locals 4
+    const-class v0, Lzh7;
 
-    iget-object v0, p0, Lzh7;->a:Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :try_start_0
-    invoke-static {v0}, Lu77;->F(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p0
+
+    check-cast p0, Lzh7;
+
+    return-object p0
+.end method
+
+.method public static values()[Lzh7;
+    .locals 1
+
+    sget-object v0, Lzh7;->b:[Lzh7;
+
+    invoke-virtual {v0}, [Lzh7;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Ltcf;->a:Ltcf;
+    check-cast v0, [Lzh7;
 
-    const/4 v2, 0x2
+    return-object v0
+.end method
 
-    const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3, v2, v3}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lf96;ILjava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+# virtual methods
+.method public final hasNext()Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
 
-    :catchall_0
-    move-exception v0
+    return v0
+.end method
 
-    new-instance v1, Lfnc;
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {v1, v0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-interface {p0, v1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "no calls to next() since the last call to remove()"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method

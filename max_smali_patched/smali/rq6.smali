@@ -1,39 +1,27 @@
 .class public final Lrq6;
-.super Ljava/lang/Object;
+.super Lywc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public X:I
 
-.field public final b:Ln26;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
+.field public Y:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ln26;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lywc;-><init>(II)V
 
-    iput-object p1, p0, Lrq6;->a:Landroid/net/Uri;
+    const/4 p1, -0x1
 
-    iput-object p2, p0, Lrq6;->b:Ln26;
+    iput p1, p0, Lrq6;->X:I
 
-    iput-object p3, p0, Lrq6;->c:Ljava/lang/String;
+    const/4 p1, 0x0
 
-    iput-object p4, p0, Lrq6;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lrq6;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Lrq6;->f:Ljava/lang/String;
+    iput p1, p0, Lrq6;->Y:I
 
     return-void
 .end method

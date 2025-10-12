@@ -2,687 +2,904 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/res/XmlResourceParser;
-
 
 # instance fields
-.field public final a:Landroid/content/res/XmlResourceParser;
+.field public final a:D
+
+.field public final b:D
+
+.field public final c:D
+
+.field public final d:D
+
+.field public final e:D
+
+.field public final f:D
+
+.field public final g:D
+
+.field public final h:D
+
+.field public final i:D
+
+.field public final j:D
+
+.field public final k:D
+
+.field public final l:D
+
+.field public final m:D
+
+.field public final n:D
+
+.field public final o:D
+
+.field public final p:D
+
+.field public final q:Z
+
+.field public final r:D
+
+.field public final s:D
+
+.field public final t:D
+
+.field public final u:Z
+
+.field public final v:D
+
+.field public final w:D
+
+.field public final x:D
+
+.field public final y:D
+
+.field public final z:D
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/XmlResourceParser;)V
+.method public constructor <init>(DDDDDDDDDDDDDDDDZDDDZDDDDD)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iput-wide p1, p0, Lfy0;->a:D
+
+    iput-wide p3, p0, Lfy0;->b:D
+
+    iput-wide p5, p0, Lfy0;->c:D
+
+    iput-wide p7, p0, Lfy0;->d:D
+
+    iput-wide p9, p0, Lfy0;->e:D
+
+    iput-wide p11, p0, Lfy0;->f:D
+
+    iput-wide p13, p0, Lfy0;->g:D
+
+    move-wide p1, p15
+
+    iput-wide p1, p0, Lfy0;->h:D
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lfy0;->i:D
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lfy0;->j:D
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lfy0;->k:D
+
+    move-wide/from16 p1, p23
+
+    iput-wide p1, p0, Lfy0;->l:D
+
+    move-wide/from16 p1, p25
+
+    iput-wide p1, p0, Lfy0;->m:D
+
+    move-wide/from16 p1, p27
+
+    iput-wide p1, p0, Lfy0;->n:D
+
+    move-wide/from16 p1, p29
+
+    iput-wide p1, p0, Lfy0;->o:D
+
+    move-wide/from16 p1, p31
+
+    iput-wide p1, p0, Lfy0;->p:D
+
+    move/from16 p1, p33
+
+    iput-boolean p1, p0, Lfy0;->q:Z
+
+    move-wide/from16 p1, p34
+
+    iput-wide p1, p0, Lfy0;->r:D
+
+    move-wide/from16 p1, p36
+
+    iput-wide p1, p0, Lfy0;->s:D
+
+    move-wide/from16 p1, p38
+
+    iput-wide p1, p0, Lfy0;->t:D
+
+    move/from16 p1, p40
+
+    iput-boolean p1, p0, Lfy0;->u:Z
+
+    move-wide/from16 p1, p41
+
+    iput-wide p1, p0, Lfy0;->v:D
+
+    move-wide/from16 p1, p43
+
+    iput-wide p1, p0, Lfy0;->w:D
+
+    move-wide/from16 p1, p45
+
+    iput-wide p1, p0, Lfy0;->x:D
+
+    move-wide/from16 p1, p47
+
+    iput-wide p1, p0, Lfy0;->y:D
+
+    move-wide/from16 p1, p49
+
+    iput-wide p1, p0, Lfy0;->z:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Landroid/content/res/XmlResourceParser;->close()V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lfy0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lfy0;
+
+    iget-wide v3, p0, Lfy0;->a:D
+
+    iget-wide v5, p1, Lfy0;->a:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lfy0;->b:D
+
+    iget-wide v5, p1, Lfy0;->b:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lfy0;->c:D
+
+    iget-wide v5, p1, Lfy0;->c:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lfy0;->d:D
+
+    iget-wide v5, p1, Lfy0;->d:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lfy0;->e:D
+
+    iget-wide v5, p1, Lfy0;->e:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-wide v3, p0, Lfy0;->f:D
+
+    iget-wide v5, p1, Lfy0;->f:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-wide v3, p0, Lfy0;->g:D
+
+    iget-wide v5, p1, Lfy0;->g:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-wide v3, p0, Lfy0;->h:D
+
+    iget-wide v5, p1, Lfy0;->h:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-wide v3, p0, Lfy0;->i:D
+
+    iget-wide v5, p1, Lfy0;->i:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    return v2
+
+    :cond_a
+    iget-wide v3, p0, Lfy0;->j:D
+
+    iget-wide v5, p1, Lfy0;->j:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    return v2
+
+    :cond_b
+    iget-wide v3, p0, Lfy0;->k:D
+
+    iget-wide v5, p1, Lfy0;->k:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    return v2
+
+    :cond_c
+    iget-wide v3, p0, Lfy0;->l:D
+
+    iget-wide v5, p1, Lfy0;->l:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_d
+
+    return v2
+
+    :cond_d
+    iget-wide v3, p0, Lfy0;->m:D
+
+    iget-wide v5, p1, Lfy0;->m:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_e
+
+    return v2
+
+    :cond_e
+    iget-wide v3, p0, Lfy0;->n:D
+
+    iget-wide v5, p1, Lfy0;->n:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    return v2
+
+    :cond_f
+    iget-wide v3, p0, Lfy0;->o:D
+
+    iget-wide v5, p1, Lfy0;->o:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_10
+
+    return v2
+
+    :cond_10
+    iget-wide v3, p0, Lfy0;->p:D
+
+    iget-wide v5, p1, Lfy0;->p:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    return v2
+
+    :cond_11
+    iget-boolean v1, p0, Lfy0;->q:Z
+
+    iget-boolean v3, p1, Lfy0;->q:Z
+
+    if-eq v1, v3, :cond_12
+
+    return v2
+
+    :cond_12
+    iget-wide v3, p0, Lfy0;->r:D
+
+    iget-wide v5, p1, Lfy0;->r:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    return v2
+
+    :cond_13
+    iget-wide v3, p0, Lfy0;->s:D
+
+    iget-wide v5, p1, Lfy0;->s:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_14
+
+    return v2
+
+    :cond_14
+    iget-wide v3, p0, Lfy0;->t:D
+
+    iget-wide v5, p1, Lfy0;->t:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_15
+
+    return v2
+
+    :cond_15
+    iget-boolean v1, p0, Lfy0;->u:Z
+
+    iget-boolean v3, p1, Lfy0;->u:Z
+
+    if-eq v1, v3, :cond_16
+
+    return v2
+
+    :cond_16
+    iget-wide v3, p0, Lfy0;->v:D
+
+    iget-wide v5, p1, Lfy0;->v:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_17
+
+    return v2
+
+    :cond_17
+    iget-wide v3, p0, Lfy0;->w:D
+
+    iget-wide v5, p1, Lfy0;->w:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_18
+
+    return v2
+
+    :cond_18
+    iget-wide v3, p0, Lfy0;->x:D
+
+    iget-wide v5, p1, Lfy0;->x:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_19
+
+    return v2
+
+    :cond_19
+    iget-wide v3, p0, Lfy0;->y:D
+
+    iget-wide v5, p1, Lfy0;->y:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_1a
+
+    return v2
+
+    :cond_1a
+    iget-wide v3, p0, Lfy0;->z:D
+
+    iget-wide v5, p1, Lfy0;->z:D
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Double;->compare(DD)I
+
+    move-result p1
+
+    if-eqz p1, :cond_1b
+
+    return v2
+
+    :cond_1b
+    return v0
 .end method
 
-.method public final defineEntityReplacementText(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 4
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v0, p0, Lfy0;->a:D
 
-    invoke-interface {p0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->defineEntityReplacementText(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
 
-    return-void
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lfy0;->b:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->c:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->d:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->e:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->f:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->g:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->h:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->i:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->j:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->k:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->l:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->m:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->n:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->o:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->p:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lfy0;->q:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->r:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->s:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lfy0;->t:D
+
+    invoke-static {v0, v2, v3}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lfy0;->u:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfy0;->v:D
+
+    invoke-static {v0, v1, v2}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfy0;->w:D
+
+    invoke-static {v0, v1, v2}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfy0;->x:D
+
+    invoke-static {v0, v1, v2}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfy0;->y:D
+
+    invoke-static {v0, v1, v2}, Lpih;->b(ID)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lfy0;->z:D
+
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final getAttributeBooleanValue(IZ)Z
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2}, Landroid/util/AttributeSet;->getAttributeBooleanValue(IZ)Z
+    const-string v1, "CalcNetworkStatusConfig(redline="
 
-    move-result p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p0
-.end method
+    iget-wide v1, p0, Lfy0;->a:D
 
-.method public final getAttributeBooleanValue(Ljava/lang/String;Ljava/lang/String;Z)Z
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ", redlineMargin="
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeBooleanValue(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    iget-wide v1, p0, Lfy0;->b:D
 
-    return p0
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-.method public final getAttributeCount()I
-    .locals 0
+    const-string v1, ", ratingWeightUp="
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
+    iget-wide v1, p0, Lfy0;->c:D
 
-    move-result p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, ", ratingWeightDown="
 
-.method public final getAttributeFloatValue(IF)F
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v1, p0, Lfy0;->d:D
 
-    invoke-interface {p0, p1, p2}, Landroid/util/AttributeSet;->getAttributeFloatValue(IF)F
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v1, ", goodRtt="
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getAttributeFloatValue(Ljava/lang/String;Ljava/lang/String;F)F
-    .locals 0
+    iget-wide v1, p0, Lfy0;->e:D
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeFloatValue(Ljava/lang/String;Ljava/lang/String;F)F
+    const-string v1, ", rttWeightUp="
 
-    move-result p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    iget-wide v1, p0, Lfy0;->f:D
 
-.method public final getAttributeIntValue(II)I
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ", rttWeightDown="
 
-    invoke-interface {p0, p1, p2}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    iget-wide v1, p0, Lfy0;->g:D
 
-    return p0
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-.method public final getAttributeIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 0
+    const-string v1, ", rttStep="
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeIntValue(Ljava/lang/String;Ljava/lang/String;I)I
+    iget-wide v1, p0, Lfy0;->h:D
 
-    move-result p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, ", rttStepWeight="
 
-.method public final getAttributeListValue(I[Ljava/lang/String;I)I
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v1, p0, Lfy0;->i:D
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeListValue(I[Ljava/lang/String;I)I
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v1, ", fastLossWeight="
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getAttributeListValue(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;I)I
-    .locals 0
+    iget-wide v1, p0, Lfy0;->j:D
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2, p3, p4}, Landroid/util/AttributeSet;->getAttributeListValue(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;I)I
+    const-string v1, ", slowLossWeight="
 
-    move-result p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    iget-wide v1, p0, Lfy0;->k:D
 
-.method public final getAttributeName(I)Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ", fastLossValue="
 
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-wide v1, p0, Lfy0;->l:D
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-.method public final getAttributeNameResource(I)I
-    .locals 0
+    const-string v1, ", slowLossValue="
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1}, Landroid/util/AttributeSet;->getAttributeNameResource(I)I
+    iget-wide v1, p0, Lfy0;->m:D
 
-    move-result p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, ", criticalRtt="
 
-.method public final getAttributeNamespace(I)Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v1, p0, Lfy0;->n:D
 
-    invoke-interface {p0, p1}, Landroid/content/res/XmlResourceParser;->getAttributeNamespace(I)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", criticalFastLoss="
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getAttributePrefix(I)Ljava/lang/String;
-    .locals 0
+    iget-wide v1, p0, Lfy0;->o:D
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributePrefix(I)Ljava/lang/String;
+    const-string v1, ", criticalSlowLoss="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    iget-wide v1, p0, Lfy0;->p:D
 
-.method public final getAttributeResourceValue(II)I
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ", newNetworkRatingModelEnabled="
 
-    invoke-interface {p0, p1, p2}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    iget-boolean v1, p0, Lfy0;->q:Z
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-.method public final getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 0
+    const-string v1, ", goodLoss="
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
+    iget-wide v1, p0, Lfy0;->r:D
 
-    move-result p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, ", lossStep="
 
-.method public final getAttributeType(I)Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v1, p0, Lfy0;->s:D
 
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeType(I)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", lossStepWeight="
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getAttributeUnsignedIntValue(II)I
-    .locals 0
+    iget-wide v1, p0, Lfy0;->t:D
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1, p2}, Landroid/util/AttributeSet;->getAttributeUnsignedIntValue(II)I
+    const-string v1, ", bitrateRatingEnabled="
 
-    move-result p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    iget-boolean v1, p0, Lfy0;->u:Z
 
-.method public final getAttributeUnsignedIntValue(Ljava/lang/String;Ljava/lang/String;I)I
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ", bitrateRatingInfluenceFactor="
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeUnsignedIntValue(Ljava/lang/String;Ljava/lang/String;I)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    iget-wide v1, p0, Lfy0;->v:D
 
-    return p0
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-.method public final getAttributeValue(I)Ljava/lang/String;
-    .locals 0
+    const-string v1, ", estimatedBitrateWeightUp="
 
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    iget-wide v1, p0, Lfy0;->w:D
 
-    move-result-object p0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    const-string v1, ", estimatedBitrateWeightDown="
 
-.method public final getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    iget-wide v1, p0, Lfy0;->x:D
 
-    invoke-interface {p0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", reportedBitrateWeightUp="
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final getClassAttribute()Ljava/lang/String;
-    .locals 0
+    iget-wide v1, p0, Lfy0;->y:D
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Landroid/util/AttributeSet;->getClassAttribute()Ljava/lang/String;
+    const-string v1, ", reportedBitrateWeightDown="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    iget-wide v1, p0, Lfy0;->z:D
 
-.method public final getColumnNumber()I
-    .locals 0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
+    const-string v1, ")"
 
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getColumnNumber()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public final getDepth()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getEventType()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getFeature(Ljava/lang/String;)Z
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getFeature(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getIdAttribute()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Landroid/util/AttributeSet;->getIdAttribute()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getIdAttributeResourceValue(I)I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Landroid/util/AttributeSet;->getIdAttributeResourceValue(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getInputEncoding()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getInputEncoding()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getLineNumber()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getNamespace()Ljava/lang/String;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getNamespace(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getNamespaceCount(I)I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespaceCount(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getNamespacePrefix(I)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespacePrefix(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getNamespaceUri(I)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespaceUri(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getPositionDescription()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getPrefix()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getPrefix()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getProperty(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getProperty(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getStyleAttribute()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Landroid/util/AttributeSet;->getStyleAttribute()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getText()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getTextCharacters([I)[C
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->getTextCharacters([I)[C
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isAttributeDefault(I)Z
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->isAttributeDefault(I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final isEmptyElementTag()Z
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->isEmptyElementTag()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final isWhitespace()Z
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->isWhitespace()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final next()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final nextTag()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final nextText()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final nextToken()I
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextToken()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final require(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1, p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final setFeature(Ljava/lang/String;Z)V
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setFeature(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final setInput(Ljava/io/InputStream;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final setInput(Ljava/io/Reader;)V
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
-
-    return-void
-.end method
-
-.method public final setProperty(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Lfy0;->a:Landroid/content/res/XmlResourceParser;
-
-    invoke-interface {p0, p1, p2}, Lorg/xmlpull/v1/XmlPullParser;->setProperty(Ljava/lang/String;Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

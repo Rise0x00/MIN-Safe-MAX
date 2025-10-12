@@ -1,54 +1,48 @@
-.class public abstract Lew3;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lew3;
+.super Lnz3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Le13;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Landroid/content/Context;I)I
+.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
+    iput-object p1, p0, Lew3;->Y:Le13;
 
-    move-result p0
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/content/Context;",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object p0
+    iput-object p1, p0, Lew3;->o:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    iget p1, p0, Lew3;->X:I
 
-.method public static c(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/lang/Class<",
-            "*>;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lew3;->X:I
 
-    return-object p0
+    iget-object p1, p0, Lew3;->Y:Le13;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Le13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

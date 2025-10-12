@@ -1,46 +1,80 @@
-.class public final Llzc;
-.super Lax3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lvoa;
-
-.field public synthetic o:Ljava/lang/Object;
+.class public abstract Llzc;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lvoa;Lkotlin/coroutines/Continuation;)V
+.method public static a(Lnzc;Landroid/content/Intent;Ljava/util/Map;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnzc;",
+            "Landroid/content/Intent;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Landroid/net/Uri;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Llzc;->Y:Lvoa;
+    invoke-static {p0}, Lnzc;->a(Lnzc;)Landroid/app/RemoteInput;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
+
+    invoke-static {p0, p1, p2}, Landroid/app/RemoteInput;->addDataResultToIntent(Landroid/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
 
     return-void
 .end method
 
+.method public static b(Ljava/lang/Object;)Ljava/util/Set;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p0, Landroid/app/RemoteInput;
 
-    iput-object p1, p0, Llzc;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowedDataTypes()Ljava/util/Set;
 
-    iget p1, p0, Llzc;->X:I
+    move-result-object p0
 
-    const/high16 v0, -0x80000000
+    return-object p0
+.end method
 
-    or-int/2addr p1, v0
+.method public static c(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Intent;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Landroid/net/Uri;",
+            ">;"
+        }
+    .end annotation
 
-    iput p1, p0, Llzc;->X:I
+    invoke-static {p0, p1}, Landroid/app/RemoteInput;->getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
 
-    iget-object p1, p0, Llzc;->Y:Lvoa;
+    move-result-object p0
 
-    const/4 v0, 0x0
+    return-object p0
+.end method
 
-    invoke-virtual {p1, v0, p0}, Lvoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public static d(Landroid/app/RemoteInput$Builder;Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/app/RemoteInput$Builder;->setAllowDataType(Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
 
     move-result-object p0
 

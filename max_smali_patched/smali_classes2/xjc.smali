@@ -1,54 +1,10 @@
-.class public final synthetic Lxjc;
+.class public abstract Lxjc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static chat_media_photo:I = 0x7f130324
 
-.field public final synthetic b:Lorg/webrtc/RenderSynchronizer;
+.field public static chat_media_video:I = 0x7f130325
 
-
-# direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/RenderSynchronizer;I)V
-    .locals 0
-
-    iput p2, p0, Lxjc;->a:I
-
-    iput-object p1, p0, Lxjc;->b:Lorg/webrtc/RenderSynchronizer;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lxjc;->a:I
-
-    iget-object p0, p0, Lxjc;->b:Lorg/webrtc/RenderSynchronizer;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->c(Lorg/webrtc/RenderSynchronizer;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->a(Lorg/webrtc/RenderSynchronizer;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static media_photo_video:I = 0x7f130636

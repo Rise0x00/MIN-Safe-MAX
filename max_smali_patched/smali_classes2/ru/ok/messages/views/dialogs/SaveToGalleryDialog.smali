@@ -34,91 +34,55 @@
     return-void
 .end method
 
-.method public static final b1(Ljava/lang/String;Z)Lru/ok/messages/views/dialogs/SaveToGalleryDialog;
-    .locals 3
-
-    new-instance v0, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;
-
-    invoke-direct {v0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;-><init>()V
-
-    new-instance v1, Ltra;
-
-    const-string v2, "ru.ok.tamtam.extra.EXTRA_URL"
-
-    invoke-direct {v1, v2, p0}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    new-instance p1, Ltra;
-
-    const-string v2, "ru.ok.tamtam.extra.EXTRA_GIF"
-
-    invoke-direct {p1, v2, p0}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, p1}, [Ltra;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ly84;->c([Ltra;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroidx/fragment/app/a;->L0(Landroid/os/Bundle;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final V0()Landroid/app/Dialog;
+.method public final U0()Landroid/app/Dialog;
     .locals 4
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
 
     move-result-object v0
 
-    invoke-static {v0}, Lnoa;->h(Landroid/content/Context;)Z
+    invoke-static {v0}, Lio7;->e(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->d1()V
+    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->b1()V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lnoa;->r()[Ljava/lang/String;
+    invoke-static {}, Lio7;->m()[Ljava/lang/String;
 
     move-result-object v0
 
     const/16 v1, 0x9d
 
-    invoke-static {p0, v0, v1}, Lnoa;->H(Landroidx/fragment/app/a;[Ljava/lang/String;I)V
+    invoke-static {p0, v0, v1}, Lio7;->s(Landroidx/fragment/app/a;[Ljava/lang/String;I)V
 
     :goto_0
-    iget-object v0, p0, Landroidx/fragment/app/a;->U0:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Landroidx/fragment/app/a;->d1:Landroid/view/LayoutInflater;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/DialogFragment;->q0(Landroid/os/Bundle;)Landroid/view/LayoutInflater;
+    invoke-virtual {p0, v1}, Landroidx/fragment/app/DialogFragment;->p0(Landroid/os/Bundle;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/fragment/app/a;->U0:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Landroidx/fragment/app/a;->d1:Landroid/view/LayoutInflater;
 
     :cond_1
-    sget v2, Ld2c;->dialog_progress_with_text:I
+    sget v2, Lghc;->dialog_progress_with_text:I
 
     invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    sget v1, Ld1c;->dialog_progress__text:I
+    sget v1, Ljgc;->dialog_progress__text:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,9 +90,9 @@
 
     check-cast v1, Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v2, Lbtc;->H2:I
+    sget v2, Lt9d;->J2:I
 
-    invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->W(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->V(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -140,7 +104,7 @@
 
     if-eqz v2, :cond_2
 
-    sget-object v2, Lvh4;->e0:Lvh4;
+    sget-object v2, Ltk4;->e0:Ltk4;
 
     goto :goto_1
 
@@ -149,39 +113,39 @@
 
     move-result-object v2
 
-    sget-object v3, Llqe;->a0:Lkle;
+    sget-object v3, Lvaf;->a0:Ls5f;
 
-    invoke-static {v2}, Le64;->v(Landroid/content/Context;)Llqe;
+    invoke-static {v2}, Lnf2;->J(Landroid/content/Context;)Lvaf;
 
     move-result-object v2
 
     :goto_1
-    iget v2, v2, Llqe;->F:I
+    iget v2, v2, Lvaf;->F:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    new-instance v1, Lc48;
+    new-instance v1, Lbc8;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->I0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v2
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-direct {v1, p0, v2}, Lc48;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, v2, v3}, Lbc8;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v1, v0}, Lc48;->e(Landroid/view/View;)Lc48;
+    invoke-virtual {v1, v0}, Lbc8;->e(Landroid/view/View;)Lbc8;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Llc;->a()Lmc;
+    invoke-virtual {v0}, Lic;->a()Ljc;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final a1(I[Ljava/lang/String;[I)V
+.method public final Z0(I[Ljava/lang/String;[I)V
     .locals 7
 
     const/16 v0, 0x9d
@@ -211,7 +175,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lm5;
+    check-cast p1, Lu5;
 
     :goto_0
     move-object v0, p1
@@ -226,13 +190,13 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lnoa;->r()[Ljava/lang/String;
+    invoke-static {}, Lio7;->m()[Ljava/lang/String;
 
     move-result-object v4
 
-    sget v5, Lbtc;->n2:I
+    sget v5, Lt9d;->p2:I
 
-    sget v6, Lbtc;->m2:I
+    sget v6, Lt9d;->o2:I
 
     const/4 v1, 0x0
 
@@ -240,54 +204,54 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v6}, Lnoa;->O(Lm5;Lru/ok/messages/views/fragments/base/FrgBase;[Ljava/lang/String;[I[Ljava/lang/String;II)Z
+    invoke-static/range {v0 .. v6}, Lio7;->B(Lu5;Lru/ok/messages/views/fragments/base/FrgBase;[Ljava/lang/String;[I[Ljava/lang/String;II)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->d1()V
+    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->b1()V
 
     return-void
 
     :cond_2
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->S0()V
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->R0()V
 
     return-void
 .end method
 
-.method public final c1(Z)V
+.method public final a1(Z)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Lr9b;
+    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->I1:Lbb8;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lr9b;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
 
-    check-cast v0, Lke3;
+    check-cast v0, Lsg3;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Loaa;
+    check-cast v0, Lyka;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
     move-result-object v0
 
-    const-class v1, Lqp;
+    const-class v1, Liq;
 
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqp;
+    check-cast v0, Liq;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lr0g;
+    check-cast v0, Ldog;
 
-    invoke-virtual {v0}, Lr0g;->c()Z
+    invoke-virtual {v0}, Ldog;->d()Z
 
     move-result v0
 
@@ -295,38 +259,38 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->I0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
-    sget p1, Lbtc;->J2:I
+    sget p1, Lt9d;->L2:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lbtc;->I2:I
+    sget p1, Lt9d;->K2:I
 
     :goto_0
-    invoke-virtual {p0, p1}, Landroidx/fragment/app/a;->W(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Landroidx/fragment/app/a;->V(I)Ljava/lang/String;
 
     move-result-object p1
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0, p1}, Lr7;->V(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0, p1}, Loch;->A(ILandroid/content/Context;Ljava/lang/String;)V
 
     :cond_1
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->S0()V
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->R0()V
 
     return-void
 .end method
 
-.method public final d1()V
+.method public final b1()V
     .locals 5
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -340,12 +304,12 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->c1(Z)V
+    invoke-virtual {p0, v0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;->a1(Z)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -355,19 +319,19 @@
 
     move-result v1
 
-    invoke-static {p0}, Lev0;->t(Lsk7;)Lhk7;
+    invoke-static {p0}, Lz84;->j(Lcs7;)Lqr7;
 
     move-result-object v2
 
-    new-instance v3, Lcvc;
+    new-instance v3, Lsbd;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v0, v1, v4}, Lcvc;-><init>(Lru/ok/messages/views/dialogs/SaveToGalleryDialog;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {v3, p0, v0, v1, v4}, Lsbd;-><init>(Lru/ok/messages/views/dialogs/SaveToGalleryDialog;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
 
-    const/4 p0, 0x3
+    const/4 v0, 0x3
 
-    invoke-static {v2, v4, v4, v3, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    invoke-static {v2, v4, v4, v3, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
     return-void
 .end method

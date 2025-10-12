@@ -1,103 +1,33 @@
 .class public final Lut4;
-.super Lf46;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Landroid/graphics/drawable/Drawable;
+.field public a:Ltt4;
 
-.field public final Y:I
+.field public final b:Landroid/view/GestureDetector;
 
-.field public final Z:I
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    new-instance v0, Landroid/view/GestureDetector;
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    new-instance v1, Lxz;
 
-    move-result v1
+    const/16 v2, 0x8
 
-    invoke-direct {p0, p1}, Lf46;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v1, v2, p0}, Lxz;-><init>(ILjava/lang/Object;)V
 
-    iput-object p2, p0, Lut4;->X:Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput v0, p0, Lut4;->Y:I
-
-    iput v1, p0, Lut4;->Z:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 5
-
-    invoke-super {p0, p1}, Lf46;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v0
-
-    iget v1, p0, Lut4;->Y:I
-
-    div-int/lit8 v2, v1, 0x2
-
-    sub-int/2addr v0, v2
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v2
-
-    iget v3, p0, Lut4;->Z:I
-
-    div-int/lit8 v4, v3, 0x2
-
-    sub-int/2addr v2, v4
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v4
-
-    div-int/lit8 v1, v1, 0x2
-
-    add-int/2addr v1, v4
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v4
-
-    div-int/lit8 v3, v3, 0x2
-
-    add-int/2addr v3, v4
-
-    iget-object p0, p0, Lut4;->X:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p0, v0, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    iput-object v0, p0, Lut4;->b:Landroid/view/GestureDetector;
 
     return-void
 .end method

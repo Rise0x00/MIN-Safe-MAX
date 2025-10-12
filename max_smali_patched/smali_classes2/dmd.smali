@@ -1,40 +1,64 @@
 .class public final Ldmd;
-.super Leud;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lemd;
+
+
+# instance fields
+.field public final X:I
+
+.field public final a:Lt1e;
+
+.field public final b:Lzc4;
+
+.field public final c:I
+
+.field public final o:J
+
+
+# direct methods
+.method public constructor <init>(Lt1e;Lzc4;IJI)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldmd;->a:Lt1e;
+
+    iput-object p2, p0, Ldmd;->b:Lzc4;
+
+    iput p3, p0, Ldmd;->c:I
+
+    iput-wide p4, p0, Ldmd;->o:J
+
+    iput p6, p0, Ldmd;->X:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final x(Llp7;)V
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Ldmd;->X:I
+
+    return v0
+.end method
+
+.method public final getItemId()J
     .locals 2
 
-    instance-of v0, p1, Lf5d;
+    iget-wide v0, p0, Ldmd;->o:J
 
-    if-nez v0, :cond_0
+    return-wide v0
+.end method
 
-    return-void
+.method public final m()I
+    .locals 1
 
-    :cond_0
-    iget-object v0, p0, Luhc;->a:Landroid/view/View;
+    iget v0, p0, Ldmd;->c:I
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    check-cast p1, Lf5d;
-
-    iget-object v1, p1, Lf5d;->a:Lyte;
-
-    invoke-virtual {v1, p0}, Ldue;->a(Leud;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lf5d;->c:Lcue;
-
-    invoke-virtual {p1, p0}, Ldue;->a(Leud;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setTextBadge(Ljava/lang/CharSequence;)V
-
-    return-void
+    return v0
 .end method

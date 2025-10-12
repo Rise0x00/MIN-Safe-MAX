@@ -3,217 +3,175 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lt15;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Z
-
-.field public final a:Landroid/widget/EditText;
-
-.field public final b:Z
-
-.field public c:Ls15;
-
-.field public o:I
+.field public final a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/EditText;Z)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7fffffff
+    check-cast p1, Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
-    iput v0, p0, Lu15;->o:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lu15;->X:I
-
-    iput-object p1, p0, Lu15;->a:Landroid/widget/EditText;
-
-    iput-boolean p2, p0, Lu15;->b:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lu15;->Y:Z
+    iput-object p1, p0, Lu15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
     return-void
 .end method
 
-.method public static a(Landroid/widget/EditText;I)V
-    .locals 2
+.method public static d(Ljava/util/Set;)Ljava/util/Set;
+    .locals 6
 
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_2
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
-
-    move-result p1
-
-    invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+    invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v0
 
-    invoke-static {}, Lc05;->a()Lc05;
+    if-eqz v0, :cond_0
+
+    sget-object p0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-interface {p0}, Ljava/util/Set;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lc05;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    check-cast v1, Ljava/lang/Long;
 
-    if-ltz p1, :cond_0
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    if-ltz v0, :cond_0
+    move-result-wide v2
 
-    invoke-static {p0, p1, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+    sget-object v4, Lq15;->a:Ljava/util/HashMap;
 
-    return-void
+    invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    if-ltz p1, :cond_1
+    move-result-object v1
 
-    invoke-static {p0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    check-cast v1, Lp15;
 
-    return-void
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Dynamic range profile cannot be converted to a DynamicRange object: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Ll74;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 
     :cond_1
-    if-ltz v0, :cond_2
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    move-result-object p0
 
-    :cond_2
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final a()Ljava/util/Set;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lu15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lu15;->d(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lu15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+
+    return-object v0
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 7
+.method public final c(Lp15;)Ljava/util/Set;
+    .locals 4
 
-    iget-object v0, p0, Lu15;->a:Landroid/widget/EditText;
+    iget-object v0, p0, Lu15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
-    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
+    invoke-static {p1, v0}, Lq15;->a(Lp15;Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/lang/Long;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_5
+    if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lu15;->Y:Z
-
-    if-eqz v1, :cond_5
-
-    iget-boolean v1, p0, Lu15;->b:Z
-
-    if-nez v1, :cond_1
-
-    sget-object v1, Lc05;->m:Lc05;
-
-    if-eqz v1, :cond_0
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const/4 v1, 0x0
 
-    :cond_1
     :goto_0
-    if-gt p3, p4, :cond_5
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    instance-of p3, p1, Landroid/text/Spannable;
+    const-string v3, "DynamicRange is not supported: "
 
-    if-eqz p3, :cond_5
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lc05;->a()Lc05;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p3
-
-    invoke-virtual {p3}, Lc05;->b()I
-
-    move-result p3
-
-    if-eqz p3, :cond_3
-
-    const/4 v1, 0x1
-
-    if-eq p3, v1, :cond_2
-
-    const/4 p1, 0x3
-
-    if-eq p3, p1, :cond_3
-
-    goto :goto_1
-
-    :cond_2
-    move-object v4, p1
-
-    check-cast v4, Landroid/text/Spannable;
-
-    invoke-static {}, Lc05;->a()Lc05;
-
-    move-result-object v1
-
-    add-int v3, p2, p4
-
-    iget v5, p0, Lu15;->o:I
-
-    iget v6, p0, Lu15;->X:I
-
-    move v2, p2
-
-    invoke-virtual/range {v1 .. v6}, Lc05;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
-
-    return-void
-
-    :cond_3
-    invoke-static {}, Lc05;->a()Lc05;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object p2, p0, Lu15;->c:Ls15;
+    invoke-static {p1, v1}, Ll74;->h(Ljava/lang/String;Z)V
 
-    if-nez p2, :cond_4
+    iget-object p1, p0, Lu15;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
-    new-instance p2, Ls15;
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    invoke-direct {p2, v0}, Ls15;-><init>(Landroid/widget/EditText;)V
+    move-result-wide v0
 
-    iput-object p2, p0, Lu15;->c:Ls15;
+    invoke-virtual {p1, v0, v1}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getProfileCaptureRequestConstraints(J)Ljava/util/Set;
 
-    :cond_4
-    iget-object p0, p0, Lu15;->c:Ls15;
+    move-result-object p1
 
-    invoke-virtual {p1, p0}, Lc05;->h(La05;)V
+    invoke-static {p1}, Lu15;->d(Ljava/util/Set;)Ljava/util/Set;
 
-    :cond_5
-    :goto_1
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

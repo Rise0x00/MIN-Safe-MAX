@@ -2,175 +2,203 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly3a;
-.implements Lkp4;
+
+# static fields
+.field public static final e:Lpp4;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
+
+.field public static final i:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Ly3a;
+.field public final a:I
 
-.field public final b:Lgm3;
+.field public final b:I
 
-.field public final c:Lz5;
+.field public final c:I
 
-.field public o:Lkp4;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ly3a;Lgm3;Lz5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lmp4;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lmp4;-><init>(I)V
+
+    invoke-virtual {v0}, Lmp4;->b()Lpp4;
+
+    move-result-object v0
+
+    sput-object v0, Lpp4;->e:Lpp4;
+
+    sget v0, Lt4g;->a:I
+
+    const/16 v0, 0x24
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lpp4;->f:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lpp4;->g:Ljava/lang/String;
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lpp4;->h:Ljava/lang/String;
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lpp4;->i:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmp4;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpp4;->a:Ly3a;
+    iget v0, p1, Lmp4;->a:I
 
-    iput-object p2, p0, Lpp4;->b:Lgm3;
+    iput v0, p0, Lpp4;->a:I
 
-    iput-object p3, p0, Lpp4;->c:Lz5;
+    iget v0, p1, Lmp4;->b:I
+
+    iput v0, p0, Lpp4;->b:I
+
+    iget v0, p1, Lmp4;->c:I
+
+    iput v0, p0, Lpp4;->c:I
+
+    iget-object p1, p1, Lmp4;->d:Ljava/io/Serializable;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lpp4;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lpp4;->o:Lkp4;
+    const/4 v0, 0x1
 
-    sget-object v1, Lop4;->a:Lop4;
+    if-ne p0, p1, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lpp4;->o:Lkp4;
-
-    iget-object p0, p0, Lpp4;->a:Ly3a;
-
-    invoke-interface {p0}, Ly3a;->b()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lpp4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpp4;
+
+    iget v1, p0, Lpp4;->a:I
+
+    iget v3, p1, Lpp4;->a:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lpp4;->b:I
+
+    iget v3, p1, Lpp4;->b:I
+
+    if-ne v1, v3, :cond_2
+
+    iget v1, p0, Lpp4;->c:I
+
+    iget v3, p1, Lpp4;->c:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lpp4;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lpp4;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public final c(Lkp4;)V
+.method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lpp4;->a:Ly3a;
+    const/16 v0, 0x20f
 
-    :try_start_0
-    iget-object v1, p0, Lpp4;->b:Lgm3;
+    iget v1, p0, Lpp4;->a:I
 
-    invoke-interface {v1, p1}, Lgm3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    add-int/2addr v0, v1
 
-    iget-object v1, p0, Lpp4;->o:Lkp4;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v1, p1}, Lop4;->h(Lkp4;Lkp4;)Z
+    iget v1, p0, Lpp4;->b:I
 
-    move-result v1
+    add-int/2addr v0, v1
 
-    if-eqz v1, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput-object p1, p0, Lpp4;->o:Lkp4;
+    iget v1, p0, Lpp4;->c:I
 
-    invoke-interface {v0, p0}, Ly3a;->c(Lkp4;)V
+    add-int/2addr v0, v1
 
-    :cond_0
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :catchall_0
-    move-exception v1
+    iget-object v1, p0, Lpp4;->d:Ljava/lang/String;
 
-    invoke-static {v1}, Lve2;->b0(Ljava/lang/Throwable;)V
+    if-nez v1, :cond_0
 
-    invoke-interface {p1}, Lkp4;->f()V
-
-    sget-object p1, Lop4;->a:Lop4;
-
-    iput-object p1, p0, Lpp4;->o:Lkp4;
-
-    invoke-static {v1, v0}, Lm25;->b(Ljava/lang/Throwable;Ly3a;)V
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Lpp4;->a:Ly3a;
-
-    invoke-interface {p0, p1}, Ly3a;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 2
-
-    iget-object v0, p0, Lpp4;->o:Lkp4;
-
-    sget-object v1, Lop4;->a:Lop4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lpp4;->o:Lkp4;
-
-    :try_start_0
-    iget-object p0, p0, Lpp4;->c:Lz5;
-
-    invoke-interface {p0}, Lz5;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0}, Lkv0;->v(Ljava/lang/Throwable;)V
+    move-result v1
 
     :goto_0
-    invoke-interface {v0}, Lkp4;->f()V
+    add-int/2addr v0, v1
 
-    :cond_0
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 0
-
-    iget-object p0, p0, Lpp4;->o:Lkp4;
-
-    invoke-interface {p0}, Lkp4;->g()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget-object v0, p0, Lpp4;->o:Lkp4;
-
-    sget-object v1, Lop4;->a:Lop4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lpp4;->o:Lkp4;
-
-    iget-object p0, p0, Lpp4;->a:Ly3a;
-
-    invoke-interface {p0, p1}, Ly3a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method

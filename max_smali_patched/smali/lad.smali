@@ -1,48 +1,23 @@
-.class public final synthetic Llad;
-.super Lia6;
+.class public final Llad;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf96;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Llad;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Llad;
-
-    const-string v4, "iterator()Ljava/util/Iterator;"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Ljava/lang/Iterable;
-
-    const-string v3, "iterator"
-
-    invoke-direct/range {v0 .. v5}, Lia6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Llad;->a:Llad;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    check-cast p1, Ljava/lang/Iterable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iput-object p1, p0, Llad;->a:Ljava/lang/String;
 
-    move-result-object p0
+    iput-object p2, p0, Llad;->b:Ljava/lang/String;
 
-    return-object p0
+    return-void
 .end method

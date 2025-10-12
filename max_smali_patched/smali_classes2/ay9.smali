@@ -1,260 +1,265 @@
-.class public final Lay9;
-.super Leje;
+.class public abstract Lay9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
 
+# static fields
+.field public static final a:Ljava/lang/String; = "ay9"
 
-# instance fields
-.field public final synthetic X:Lru/ok/tamtam/android/services/NotificationTamService;
+.field public static final b:Ljava/lang/ThreadLocal;
 
-.field public final synthetic Y:J
-
-.field public final synthetic Z:J
-
-.field public final synthetic n0:J
-
-.field public final synthetic o0:Z
-
-.field public final synthetic p0:J
-
-.field public final synthetic q0:Ljava/lang/String;
+.field public static final c:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lay9;->X:Lru/ok/tamtam/android/services/NotificationTamService;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    iput-wide p2, p0, Lay9;->Y:J
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-wide p4, p0, Lay9;->Z:J
+    sput-object v0, Lay9;->b:Ljava/lang/ThreadLocal;
 
-    iput-wide p6, p0, Lay9;->n0:J
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    iput-boolean p8, p0, Lay9;->o0:Z
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-wide p9, p0, Lay9;->p0:J
-
-    iput-object p11, p0, Lay9;->q0:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p12}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lay9;->c:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public static final a(Ljava/io/Closeable;)V
     .locals 0
 
-    check-cast p1, Lp04;
+    if-eqz p0, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0, p1, p2}, Lay9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lay9;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lay9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    :catchall_0
+    :cond_0
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 13
+.method public static final b(Ljava/io/File;Ljava/io/File;)V
+    .locals 7
 
-    new-instance v0, Lay9;
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
-    iget-wide v9, p0, Lay9;->p0:J
+    move-result v0
 
-    iget-object v11, p0, Lay9;->q0:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lay9;->X:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-wide v2, p0, Lay9;->Y:J
-
-    iget-wide v4, p0, Lay9;->Z:J
-
-    iget-wide v6, p0, Lay9;->n0:J
-
-    iget-boolean v8, p0, Lay9;->o0:Z
-
-    move-object v12, p2
-
-    invoke-direct/range {v0 .. v12}, Lay9;-><init>(Lru/ok/tamtam/android/services/NotificationTamService;JJJZJLjava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lay9;->X:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object v0, p1, Lru/ok/tamtam/android/services/NotificationTamService;->Z:Lkle;
-
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lcbc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x58
-
-    iget-wide v2, p0, Lay9;->Y:J
-
-    iget-wide v4, p0, Lay9;->Z:J
-
-    iget-wide v6, p0, Lay9;->n0:J
-
-    const/4 v8, 0x0
-
-    iget-boolean v10, p0, Lay9;->o0:Z
-
-    invoke-static/range {v1 .. v11}, Lcbc;->e(Lcbc;JJJZZZI)J
-
-    iget-object v0, v1, Lcbc;->b:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfga;
-
-    invoke-virtual {v0, v2, v3}, Lfga;->a(J)V
-
-    iget-object p1, p1, Lru/ok/tamtam/android/services/NotificationTamService;->n0:Lkle;
-
-    invoke-virtual {p1}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltz9;
-
-    invoke-virtual {p1}, Ltz9;->e()Luz9;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Luz9;->d:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "onNotificationMarkAsRead: pushId="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Lay9;->p0:J
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v4, ", eventKey="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lay9;->q0:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/io/File;->createNewFile()Z
 
     :cond_0
-    :try_start_0
-    invoke-virtual {p1}, Luz9;->b()Ltc;
+    new-instance v0, Ljava/io/FileInputStream;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    const-string v4, "Action"
-
-    const-string v5, "trid"
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v2
 
-    new-instance v3, Ltra;
+    :try_start_0
+    new-instance p0, Ljava/io/FileOutputStream;
 
-    invoke-direct {v3, v5, v2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    const-string v2, "eKey"
+    invoke-virtual {p0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    new-instance v5, Ltra;
-
-    invoke-direct {v5, v2, p0}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string p0, "p_op"
-
-    const-string v2, "m_as_read"
-
-    new-instance v6, Ltra;
-
-    invoke-direct {v6, p0, v2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v3, v5, v6}, [Ltra;
-
-    move-result-object p0
-
-    invoke-static {p0}, Liwd;->h([Ltra;)Ljs;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v4, p0}, Ltc;->b(Ljava/lang/String;Ljava/util/Map;)V
+    move-result-object v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    :try_start_1
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
 
-    :catch_0
+    move-result-wide v5
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferFrom(Ljava/nio/channels/ReadableByteChannel;JJ)J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-interface {v2}, Ljava/io/Closeable;->close()V
+
+    return-void
+
+    :catchall_0
     move-exception v0
 
     move-object p0, v0
 
-    const-string v0, "onNotificationMarkAsRead: failed"
+    goto :goto_0
 
-    invoke-static {v1, v0, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :catchall_1
+    move-exception v0
 
-    invoke-virtual {p1}, Luz9;->c()Lo75;
+    move-object p0, v0
 
-    move-result-object p1
+    :try_start_3
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    new-instance v0, Lru/ok/tamtam/util/HandledException;
+    :catchall_2
+    move-exception v0
 
-    const-string v1, "failed to log mark as read"
+    move-object p1, v0
 
-    invoke-direct {v0, v1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_start_4
+    invoke-static {v1, p0}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    check-cast p1, Lsca;
-
-    invoke-virtual {p1, v0}, Lsca;->c(Ljava/lang/Throwable;)V
+    throw p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    :try_start_5
+    throw p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    :catchall_3
+    move-exception v0
+
+    move-object p1, v0
+
+    invoke-static {v2, p0}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method public static c(Ljava/io/InputStream;)Ljava/lang/String;
+    .locals 8
+
+    sget-object v0, Lay9;->b:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [B
+
+    if-nez v1, :cond_0
+
+    const/high16 v1, 0x10000
+
+    new-array v1, v1, [B
+
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    :try_start_0
+    sget-object v2, Lay9;->c:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, [B
+
+    const/4 v4, 0x0
+
+    if-nez v3, :cond_1
+
+    const/16 v3, 0x1000
+
+    new-array v3, v3, [B
+
+    invoke-virtual {v2, v3}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_1
+    move v2, v4
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    array-length v5, v3
+
+    invoke-virtual {p0, v3, v4, v5}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v5
+
+    if-ltz v5, :cond_4
+
+    array-length v6, v1
+
+    add-int v7, v2, v5
+
+    if-ge v6, v7, :cond_3
+
+    array-length v6, v1
+
+    mul-int/lit8 v6, v6, 0x2
+
+    new-array v6, v6, [B
+
+    invoke-static {v1, v4, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {v0, v6}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    move-object v1, v6
+
+    :cond_3
+    if-lez v5, :cond_2
+
+    invoke-static {v3, v4, v1, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move v2, v7
+
+    goto :goto_0
+
+    :cond_4
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v3, Li82;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v1, v4, v2, v3}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {p0}, Lay9;->a(Ljava/io/Closeable;)V
+
+    return-object v0
+
+    :goto_1
+    :try_start_1
+    sget-object v1, Lay9;->a:Ljava/lang/String;
+
+    const-string v2, "Can\'t read native media from resources"
+
+    invoke-static {v1, v2, v0}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-static {p0}, Lay9;->a(Ljava/io/Closeable;)V
+
+    const/4 p0, 0x0
 
     return-object p0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {p0}, Lay9;->a(Ljava/io/Closeable;)V
+
+    throw v0
 .end method

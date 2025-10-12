@@ -12,17 +12,17 @@
         "Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutor;",
         "",
         "Lkotlin/Function0;",
-        "Ltcf;",
+        "Loyf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "requestAttention",
-        "(Ld96;Lf96;)V",
-        "Lred;",
+        "(Lve6;Lxe6;)V",
+        "Lmwd;",
         "roomId",
         "joinRoom",
-        "(Lred;Ld96;Lf96;)V",
+        "(Lmwd;Lve6;Lxe6;)V",
         "leaveRoom",
         "calls-sdk_release"
     }
@@ -37,35 +37,35 @@
 
 
 # virtual methods
-.method public abstract joinRoom(Lred;Ld96;Lf96;)V
+.method public abstract joinRoom(Lmwd;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lred;",
-            "Ld96;",
-            "Lf96;",
+            "Lmwd;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract leaveRoom(Ld96;Lf96;)V
+.method public abstract leaveRoom(Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract requestAttention(Ld96;Lf96;)V
+.method public abstract requestAttention(Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation

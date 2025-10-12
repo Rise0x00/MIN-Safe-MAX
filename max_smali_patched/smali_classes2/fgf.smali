@@ -1,9 +1,8 @@
-.class public final Lfgf;
+.class public interface abstract Lfgf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:J
+# virtual methods
+.method public abstract p()Lvaf;
+.end method

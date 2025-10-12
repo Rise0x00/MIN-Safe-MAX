@@ -1,43 +1,108 @@
-.class public abstract synthetic Lsp1;
+.class public final synthetic Lsp1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lup1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lup1;I)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput p2, p0, Lsp1;->a:I
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    iput-object p1, p0, Lsp1;->b:Lup1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lsp1;->a:I
+
+    iget-object v1, p0, Lsp1;->b:Lup1;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, v1, Lup1;->K0:Ltp1;
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lyn6;
+
+    iget-object v0, v0, Lyn6;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+
+    sget-object v1, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Ltm7;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->C0()Lxp1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lxp1;->c:Lpt1;
+
+    iget-object v0, v0, Lpt1;->i:Lxfd;
+
+    check-cast v0, Lggd;
+
+    iget-object v0, v0, Lggd;->x0:Lmoe;
+
+    :cond_0
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    array-length v1, v1
+    move-object v2, v1
 
-    new-array v1, v1, [I
+    check-cast v2, Lhgd;
 
-    const/4 v2, 0x1
+    const/16 v3, 0xb
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v2, v4, v4, v4, v3}, Lhgd;->a(Lhgd;Ligd;Lwfd;Ljava/lang/String;I)Lhgd;
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v2
 
-    :catch_1
-    sput-object v1, Lsp1;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v0, v1, v2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_1
+    sget-object v0, Loyf;->a:Loyf;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lbx4;->y0:Lsed;
+
+    invoke-virtual {v0, v1}, Lsed;->o(Landroid/view/View;)Lloa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lloa;->c:Luxa;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

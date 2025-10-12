@@ -1,51 +1,67 @@
-.class public abstract Lyc5;
+.class public final synthetic Lyc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldd5;
+
+
 # direct methods
-.method public static a([B)Lzc5;
-    .locals 10
+.method public synthetic constructor <init>(Ldd5;I)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    iput p2, p0, Lyc5;->a:I
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
+    iput-object p1, p0, Lyc5;->b:Ldd5;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lzc5;
+# virtual methods
+.method public final a(J)V
+    .locals 2
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
+    iget v0, p0, Lyc5;->a:I
 
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
+    const-wide/16 v0, -0x1
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
+    cmp-long v0, p1, v0
 
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
+    if-eqz v0, :cond_0
 
-    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
+    iget-object v0, p0, Lyc5;->b:Ldd5;
 
-    invoke-direct/range {v0 .. v9}, Lzc5;-><init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Ldd5;->a(J)V
 
-    return-object v0
+    :cond_0
+    return-void
 
-    :catch_0
-    move-exception v0
+    :pswitch_0
+    const-wide/16 v0, -0x1
 
-    move-object p0, v0
+    cmp-long v0, p1, v0
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    iget-object v0, p0, Lyc5;->b:Ldd5;
 
-    throw v0
+    invoke-virtual {v0, p1, p2}, Ldd5;->a(J)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

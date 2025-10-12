@@ -2,126 +2,146 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lugb;
+
 
 # instance fields
-.field public final a:J
+.field public final a:Lbp7;
 
-.field public final b:Ljava/util/List;
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
+
+.field public final d:Lmoe;
+
+.field public final e:Lsqc;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
+
+    sget-object v0, Ljme;->a:Ljme;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v1
+
+    const-class v2, Lhx3;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lr8f;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v0
+
+    const-class v3, Lz9b;
+
+    invoke-virtual {v0, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ladb;->a:J
+    iput-object v1, p0, Ladb;->a:Lbp7;
 
-    iput-object p3, p0, Ladb;->b:Ljava/util/List;
+    iput-object v2, p0, Ladb;->b:Lbp7;
+
+    iput-object v0, p0, Ladb;->c:Lbp7;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ladb;->d:Lmoe;
+
+    new-instance v1, Lsqc;
+
+    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object v1, p0, Ladb;->e:Lsqc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ladb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ladb;
-
-    iget-wide v3, p0, Ladb;->a:J
-
-    iget-wide v5, p1, Ladb;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Ladb;->b:Ljava/util/List;
-
-    iget-object p1, p1, Ladb;->b:Ljava/util/List;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b(Ljgb;)V
+    .locals 0
 
-    iget-wide v0, p0, Ladb;->a:J
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.method public final d(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 4
+
+    iget-object v0, p0, Ladb;->c:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz9b;
+
+    sget-object v1, Lz9b;->f:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lz9b;->c([Ljava/lang/String;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Ladb;->b:Ljava/util/List;
+    iget-object v0, p0, Ladb;->b:Lbp7;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v0
 
-    add-int/2addr p0, v0
+    check-cast v0, Lr8f;
 
-    return p0
-.end method
+    check-cast v0, Lwla;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-virtual {v0}, Lwla;->b()Ly24;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "ProfileAvatarModel(id="
+    new-instance v1, Lzcb;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    iget-wide v1, p0, Ladb;->a:J
+    invoke-direct {v1, p0, v2}, Lzcb;-><init>(Ladb;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v3, 0x2
 
-    const-string v1, ", urls="
+    invoke-static {p1, v0, v2, v1, v3}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Ladb;->b:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

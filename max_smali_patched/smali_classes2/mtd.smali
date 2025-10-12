@@ -1,154 +1,133 @@
-.class public abstract Lmtd;
-.super Ldp7;
+.class public final Lmtd;
+.super Lat5;
 .source "SourceFile"
 
 
+# instance fields
+.field public final g:Z
+
+.field public final h:Lky0;
+
+.field public final i:Lt0h;
+
+
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 3
+.method public constructor <init>(ZLky0;Lt0h;Luhf;Lx61;Lpmc;)V
+    .locals 0
 
-    new-instance v0, Lt74;
+    invoke-direct {p0, p4, p5, p6}, Lat5;-><init>(Luhf;Lx61;Lpmc;)V
 
-    const/16 v1, 0x9
+    iput-boolean p1, p0, Lmtd;->g:Z
 
-    invoke-direct {v0, v1}, Lt74;-><init>(I)V
+    iput-object p2, p0, Lmtd;->h:Lky0;
 
-    new-instance v1, Lwd8;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p1, v2, v0}, Lwd8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0, v1}, Ldp7;-><init>(Lwd8;)V
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1}, Lygc;->A(Z)V
+    iput-object p3, p0, Lmtd;->i:Lt0h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(I)Llp7;
+.method public final b()V
     .locals 1
 
-    if-ltz p1, :cond_0
+    iget-boolean v0, p0, Lmtd;->g:Z
 
-    iget-object v0, p0, Ldp7;->o:Lwu;
+    if-nez v0, :cond_0
 
-    iget-object v0, v0, Lwu;->f:Ljava/util/List;
+    return-void
 
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
+    :cond_0
+    invoke-virtual {p0}, Lat5;->h()V
+
+    const/4 v0, 0x6
+
+    iput v0, p0, Lat5;->e:I
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    invoke-virtual {p0}, Lat5;->h()V
+
+    const/4 v0, 0x5
+
+    iput v0, p0, Lat5;->e:I
+
+    return-void
+.end method
+
+.method public final d(Lope;)V
+    .locals 1
+
+    iget-object v0, p0, Lmtd;->i:Lt0h;
+
+    invoke-virtual {v0}, Lt0h;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-ge p1, v0, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1}, Ldp7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Llp7;
-
-    return-object p0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object v0, p0, Lmtd;->h:Lky0;
 
-    return-object p0
-.end method
+    invoke-virtual {v0}, Lky0;->invoke()Ljava/lang/Object;
 
-.method public H(Leud;I)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0, p2}, Ldp7;->C(I)Ljava/lang/Object;
+    check-cast v0, Ljava/lang/Number;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    check-cast p0, Llp7;
+    move-result v0
 
-    invoke-virtual {p1, p0}, Leud;->x(Llp7;)V
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lat5;->d:Z
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1}, Lat5;->d(Lope;)V
 
     return-void
 .end method
 
-.method public I(Leud;)V
-    .locals 0
+.method public final e()V
+    .locals 1
 
-    invoke-virtual {p1}, Leud;->E()V
+    iget-boolean v0, p0, Lmtd;->g:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lat5;->h()V
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lat5;->e:I
 
     return-void
 .end method
 
-.method public k(I)J
-    .locals 0
+.method public final g()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Ldp7;->C(I)Ljava/lang/Object;
+    const-string v0, "ServerTopologyFirstDataStat"
 
-    move-result-object p0
-
-    check-cast p0, Llp7;
-
-    invoke-interface {p0}, Llp7;->getItemId()J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ldp7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Llp7;
-
-    invoke-interface {p0}, Llp7;->m()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public bridge synthetic r(Luhc;I)V
-    .locals 0
-
-    check-cast p1, Leud;
-
-    invoke-virtual {p0, p1, p2}, Lmtd;->H(Leud;I)V
-
-    return-void
-.end method
-
-.method public final w(Luhc;)V
-    .locals 0
-
-    check-cast p1, Leud;
-
-    invoke-virtual {p1}, Leud;->B()V
-
-    return-void
-.end method
-
-.method public final x(Luhc;)V
-    .locals 0
-
-    check-cast p1, Leud;
-
-    invoke-virtual {p1}, Leud;->C()V
-
-    return-void
-.end method
-
-.method public bridge synthetic y(Luhc;)V
-    .locals 0
-
-    check-cast p1, Leud;
-
-    invoke-virtual {p0, p1}, Lmtd;->I(Leud;)V
-
-    return-void
+    return-object v0
 .end method

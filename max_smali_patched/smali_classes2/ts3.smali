@@ -1,47 +1,101 @@
 .class public final Lts3;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lus3;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Lus3;Lax3;)V
+.method public constructor <init>(Ljava/lang/Boolean;)V
     .locals 0
 
-    iput-object p1, p0, Lts3;->X:Lus3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lts3;->a:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lts3;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lts3;
+
+    iget-object v1, p0, Lts3;->a:Ljava/lang/Boolean;
+
+    iget-object p1, p1, Lts3;->a:Ljava/lang/Boolean;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lts3;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lts3;->a:Ljava/lang/Boolean;
 
-    iget p1, p0, Lts3;->Y:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    const/4 v0, 0x0
 
-    or-int/2addr p1, v0
+    return v0
 
-    iput p1, p0, Lts3;->Y:I
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object p1, p0, Lts3;->X:Lus3;
+    move-result v0
 
-    invoke-virtual {p1, p0}, Lus3;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-object p0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Selection(isSelected="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lts3;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

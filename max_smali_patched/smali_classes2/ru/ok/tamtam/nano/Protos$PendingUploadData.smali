@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$PendingUploadData;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -35,7 +35,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->clear()Lru/ok/tamtam/nano/Protos$PendingUploadData;
 
@@ -49,7 +49,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -91,7 +91,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -104,7 +104,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
 
     move-result-object p0
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$PendingUploadData;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -144,37 +144,37 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
 
 .method public computeSerializedSize()I
-    .locals 3
+    .locals 4
 
-    iget-object p0, p0, Lru/ok/tamtam/nano/Protos$PendingUploadData;->pendingMap:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$PendingUploadData;->pendingMap:Ljava/util/Map;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {p0, v2, v0, v1}, Ld77;->a(Ljava/util/Map;III)I
+    invoke-static {v0, v3, v1, v2}, Lfe7;->a(Ljava/util/Map;III)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -183,14 +183,14 @@
     .end annotation
 
     .line 5
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$PendingUploadData;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$PendingUploadData;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -199,11 +199,11 @@
     .end annotation
 
     .line 1
-    sget-object v2, Le64;->b:Lb28;
+    sget-object v2, Lvu0;->g:Lx98;
 
     .line 2
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
@@ -214,7 +214,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -243,7 +243,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Ld77;->b(Lg63;Ljava/util/Map;Lb28;IILgz8;II)Ljava/util/Map;
+    invoke-static/range {v0 .. v7}, Lfe7;->b(Ld83;Ljava/util/Map;Lx98;IILg79;II)Ljava/util/Map;
 
     move-result-object p1
 
@@ -259,25 +259,25 @@
     return-object p0
 .end method
 
-.method public writeTo(Lh63;)V
-    .locals 3
+.method public writeTo(Le83;)V
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/tamtam/nano/Protos$PendingUploadData;->pendingMap:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$PendingUploadData;->pendingMap:Ljava/util/Map;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    const/16 v1, 0x9
+    const/16 v2, 0x9
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {p1, p0, v2, v0, v1}, Ld77;->d(Lh63;Ljava/util/Map;III)V
+    invoke-static {p1, v0, v3, v1, v2}, Lfe7;->d(Le83;Ljava/util/Map;III)V
 
     :cond_0
     return-void

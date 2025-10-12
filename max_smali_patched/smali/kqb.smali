@@ -1,29 +1,85 @@
-.class public final Lkqb;
-.super Lo46;
+.class public final enum Lkqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final f(ILqxe;Z)Lqxe;
-    .locals 0
+# static fields
+.field public static final enum a:Lkqb;
 
-    invoke-super {p0, p1, p2, p3}, Lo46;->f(ILqxe;Z)Lqxe;
+.field public static final enum b:Lkqb;
 
-    const/4 p0, 0x1
+.field public static final enum c:Lkqb;
 
-    iput-boolean p0, p2, Lqxe;->Y:Z
+.field public static final synthetic o:[Lkqb;
 
-    return-object p2
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lkqb;
+
+    const-string v1, "DEFAULT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkqb;->a:Lkqb;
+
+    new-instance v1, Lkqb;
+
+    const-string v2, "VERY_LOW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkqb;->b:Lkqb;
+
+    new-instance v2, Lkqb;
+
+    const-string v3, "HIGHEST"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkqb;->c:Lkqb;
+
+    filled-new-array {v0, v1, v2}, [Lkqb;
+
+    move-result-object v0
+
+    sput-object v0, Lkqb;->o:[Lkqb;
+
+    return-void
 .end method
 
-.method public final m(ILtxe;J)Ltxe;
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lkqb;
+    .locals 1
 
-    invoke-super {p0, p1, p2, p3, p4}, Lo46;->m(ILtxe;J)Ltxe;
+    const-class v0, Lkqb;
 
-    const/4 p0, 0x1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-boolean p0, p2, Ltxe;->r0:Z
+    move-result-object p0
 
-    return-object p2
+    check-cast p0, Lkqb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lkqb;
+    .locals 1
+
+    sget-object v0, Lkqb;->o:[Lkqb;
+
+    invoke-virtual {v0}, [Lkqb;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkqb;
+
+    return-object v0
 .end method

@@ -4,183 +4,48 @@
 
 
 # static fields
-.field public static j:Ljava/util/ArrayList;
-
-.field public static k:Lxo4;
-
-.field public static final l:Ljava/util/ArrayList;
-
-.field public static final m:Lorg;
+.field public static final c:Ls5f;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Ljava/lang/ThreadLocal;
 
-.field public final b:Landroid/util/SparseIntArray;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lie;
+.field public final b:Landroid/os/Looper;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Lik3;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/16 v1, 0xf
 
-    sput-object v0, Lxo4;->l:Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lik3;-><init>(I)V
 
-    new-instance v0, Lorg;
+    new-instance v1, Ls5f;
 
-    const/4 v1, 0x2
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
 
-    invoke-direct {v0, v1}, Lorg;-><init>(I)V
-
-    sput-object v0, Lxo4;->m:Lorg;
+    sput-object v1, Lxo4;->c:Ls5f;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/ThreadLocal;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lxo4;->a:Ljava/lang/ThreadLocal;
 
-    const/16 v1, 0xa
+    invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    iput-object v0, p0, Lxo4;->a:Ljava/util/ArrayList;
+    move-result-object p1
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    iput-object p1, p0, Lxo4;->b:Landroid/os/Looper;
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    iput-object v0, p0, Lxo4;->b:Landroid/util/SparseIntArray;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lxo4;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Lie;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lie;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lxo4;->i:Lie;
-
-    iput p1, p0, Lxo4;->d:I
-
-    sget-object p1, Lwo4;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {p1}, Ljava/util/Random;->nextInt()I
-
-    move-result p1
-
-    iput p1, p0, Lxo4;->f:I
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Runnable;Z)V
-    .locals 3
-
-    invoke-static {}, Lyd;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "wrong thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p0, p1}, Lto9;->j(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lxo4;->j:Ljava/util/ArrayList;
-
-    sget-object v1, Lxo4;->m:Lorg;
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Lxo4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    sput-object v0, Lxo4;->j:Ljava/util/ArrayList;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0x64
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    sput-object v0, Lxo4;->j:Ljava/util/ArrayList;
-
-    :goto_0
-    if-nez p1, :cond_2
-
-    invoke-static {v1}, Lyd;->d(Ljava/lang/Runnable;)V
-
-    :cond_2
-    sget-object v0, Lxo4;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    if-eqz p1, :cond_3
-
-    sget-object p0, Lyd;->a:Landroid/os/Handler;
-
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v1}, Lorg;->run()V
-
-    :cond_3
     return-void
 .end method

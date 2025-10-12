@@ -1,83 +1,43 @@
-.class public abstract synthetic Lej1;
+.class public final synthetic Lej1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lgj1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(ZLgj1;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    iput-boolean p1, p0, Lej1;->a:Z
 
-    move-result-object v1
+    iput-object p2, p0, Lej1;->b:Lgj1;
 
-    array-length v1, v1
+    return-void
+.end method
 
-    new-array v1, v1, [I
 
-    const/4 v2, 0x1
+# virtual methods
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 0
 
-    const/4 v3, 0x0
+    iget-boolean p1, p0, Lej1;->a:Z
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez p1, :cond_0
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object p1, p0, Lej1;->b:Lgj1;
 
-    :catch_1
-    sput-object v1, Lej1;->$EnumSwitchMapping$0:[I
+    invoke-virtual {p1}, Lgj1;->e()V
 
-    invoke-static {}, Ldj1;->values()[Ldj1;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    :try_start_2
-    aput v2, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v2, 0x3
-
-    :try_start_4
-    aput v2, v1, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    const/4 v2, 0x4
-
-    :try_start_5
-    aput v2, v1, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v1, Lej1;->$EnumSwitchMapping$1:[I
-
+    :cond_0
     return-void
 .end method

@@ -1,49 +1,85 @@
-.class public final Lmw4;
-.super Ljava/lang/Object;
+.class public final enum Lmw4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lit1;
+# static fields
+.field public static final enum a:Lmw4;
 
-.field public b:Lt1e;
+.field public static final enum b:Lmw4;
 
-.field public final c:Lkle;
+.field public static final enum c:Lmw4;
 
-.field public final d:Lq4e;
-
-.field public final e:Lq4e;
+.field public static final synthetic o:[Lmw4;
 
 
 # direct methods
-.method public constructor <init>(Lit1;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmw4;
 
-    iput-object p1, p0, Lmw4;->a:Lit1;
+    const-string v1, "ALWAYS"
 
-    new-instance p1, Lqm4;
+    const/4 v2, 0x0
 
-    const/16 v0, 0x8
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p1, v0}, Lqm4;-><init>(I)V
+    sput-object v0, Lmw4;->a:Lmw4;
 
-    new-instance v0, Lkle;
+    new-instance v1, Lmw4;
 
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
+    const-string v2, "AUTO"
 
-    iput-object v0, p0, Lmw4;->c:Lkle;
+    const/4 v3, 0x1
 
-    const/4 p1, 0x0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    sput-object v1, Lmw4;->b:Lmw4;
 
-    move-result-object p1
+    new-instance v2, Lmw4;
 
-    iput-object p1, p0, Lmw4;->d:Lq4e;
+    const-string v3, "NEVER"
 
-    iput-object p1, p0, Lmw4;->e:Lq4e;
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lmw4;->c:Lmw4;
+
+    filled-new-array {v0, v1, v2}, [Lmw4;
+
+    move-result-object v0
+
+    sput-object v0, Lmw4;->o:[Lmw4;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lmw4;
+    .locals 1
+
+    const-class v0, Lmw4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lmw4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lmw4;
+    .locals 1
+
+    sget-object v0, Lmw4;->o:[Lmw4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmw4;
+
+    return-object v0
 .end method

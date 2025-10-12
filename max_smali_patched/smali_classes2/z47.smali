@@ -1,158 +1,711 @@
 .class public final Lz47;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# static fields
+.field public static final b:[B
+
+.field public static final c:[I
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/inputname/InputNameScreen;
+.field public final a:Lzo6;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p2, p0, Lz47;->Y:Lone/me/login/inputname/InputNameScreen;
+    const-string v0, "UTF-8"
 
-    const/4 p2, 0x2
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    const-string v1, "Exif\u0000\u0000"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lz47;->b:[B
+
+    const/16 v0, 0xd
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lz47;->c:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x4
+        0x8
+    .end array-data
+.end method
+
+.method public constructor <init>(Ljava/io/InputStream;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lzo6;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1, p1}, Lzo6;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lz47;->a:Lzo6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()I
+    .locals 19
 
-    check-cast p1, Lu47;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lz47;->a:Lzo6;
 
-    invoke-virtual {p0, p1, p2}, Lz47;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v1, Lzo6;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v1, Ljava/io/InputStream;
 
-    check-cast p0, Lz47;
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result v2
 
-    invoke-virtual {p0, p1}, Lz47;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    shl-int/lit8 v2, v2, 0x8
 
-    return-object p1
-.end method
+    const v3, 0xff00
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    and-int/2addr v2, v3
 
-    new-instance v0, Lz47;
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
 
-    iget-object p0, p0, Lz47;->Y:Lone/me/login/inputname/InputNameScreen;
+    move-result v4
 
-    invoke-direct {v0, p2, p0}, Lz47;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+    const/16 v5, 0xff
 
-    iput-object p1, v0, Lz47;->X:Ljava/lang/Object;
+    and-int/2addr v4, v5
 
-    return-object v0
-.end method
+    or-int/2addr v2, v4
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    const v4, 0xffd8
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    and-int v6, v2, v4
 
-    iget-object p1, p0, Lz47;->X:Ljava/lang/Object;
+    const/16 v7, 0x4949
 
-    check-cast p1, Lu47;
+    const/16 v8, 0x4d4d
 
-    if-eqz p1, :cond_1
+    const/4 v9, 0x3
 
-    iget-object p0, p0, Lz47;->Y:Lone/me/login/inputname/InputNameScreen;
+    const/4 v10, -0x1
 
-    invoke-static {p0}, Ldjg;->u(Lox3;)V
+    const-string v11, "ImageHeaderParser"
 
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->w0:[Lof7;
+    if-eq v6, v4, :cond_1
 
-    iget-object v0, p0, Lone/me/login/inputname/InputNameScreen;->n0:Ljava/lang/Object;
+    if-eq v2, v8, :cond_1
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    if-ne v2, v7, :cond_0
 
-    move-result-object v0
-
-    check-cast v0, Lc77;
-
-    iget-object p1, p1, Lu47;->b:Lqic;
-
-    invoke-virtual {p0}, Lox3;->getArgs()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    const-string v1, "screen:input_name:avatars"
-
-    const-class v2, Loab;
-
-    invoke-static {p0, v1, v2}, Le64;->i(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    check-cast p0, Loab;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v1, p1, p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(Lqic;Loab;)V
-
-    const/4 p0, 0x0
-
-    invoke-static {v1, p0, p0}, Lus;->d(Lox3;Lwg;Lwg;)Ltrc;
-
-    move-result-object p0
-
-    const-string p1, "InputNameScreen"
-
-    invoke-virtual {v0, p0, p1}, Lc77;->a(Ltrc;Ljava/lang/String;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    move-result-object p0
+    move-result v1
 
-    const-string p1, "No value passed for key screen:input_name:avatars of type "
+    if-eqz v1, :cond_21
 
-    const-string v0, " in bundle"
+    const-string v1, "Parser doesn\'t handle magic number: "
 
-    invoke-static {p1, p0, v0}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v10
 
     :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    :goto_0
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-result v2
 
-    throw p0
+    and-int/2addr v2, v5
+
+    int-to-short v2, v2
+
+    if-eq v2, v5, :cond_3
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "Unknown segmentId="
+
+    invoke-static {v2, v3, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    :goto_1
+    move v4, v10
+
+    goto/16 :goto_6
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
+
+    move-result v2
+
+    and-int/2addr v2, v5
+
+    int-to-short v2, v2
+
+    const/16 v4, 0xda
+
+    if-ne v2, v4, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const/16 v4, 0xd9
+
+    if-ne v2, v4, :cond_5
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "Found MARKER_EOI in exif segment"
+
+    invoke-static {v11, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
+
+    move-result v4
+
+    shl-int/lit8 v4, v4, 0x8
+
+    and-int/2addr v4, v3
+
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
+
+    move-result v6
+
+    and-int/2addr v6, v5
+
+    or-int/2addr v4, v6
+
+    add-int/lit8 v4, v4, -0x2
+
+    const/16 v6, 0xe1
+
+    if-eq v2, v6, :cond_b
+
+    int-to-long v12, v4
+
+    const-wide/16 v14, 0x0
+
+    cmp-long v6, v12, v14
+
+    if-gez v6, :cond_6
+
+    goto :goto_5
+
+    :cond_6
+    move-wide v5, v12
+
+    :goto_2
+    cmp-long v16, v5, v14
+
+    if-lez v16, :cond_9
+
+    invoke-virtual {v1, v5, v6}, Ljava/io/InputStream;->skip(J)J
+
+    move-result-wide v16
+
+    cmp-long v18, v16, v14
+
+    if-lez v18, :cond_7
+
+    sub-long v5, v5, v16
+
+    goto :goto_3
+
+    :cond_7
+    invoke-virtual {v1}, Ljava/io/InputStream;->read()I
+
+    move-result v3
+
+    if-ne v3, v10, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    const-wide/16 v17, 0x1
+
+    sub-long v5, v5, v17
+
+    :goto_3
+    const v3, 0xff00
+
+    goto :goto_2
+
+    :cond_9
+    :goto_4
+    sub-long v14, v12, v5
+
+    :goto_5
+    cmp-long v3, v14, v12
+
+    if-eqz v3, :cond_a
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, ", wanted to skip: "
+
+    const-string v5, ", but actually skipped: "
+
+    const-string v6, "Unable to skip enough data, type: "
+
+    invoke-static {v6, v2, v3, v4, v5}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v11, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_a
+    const v3, 0xff00
+
+    const/16 v5, 0xff
+
+    goto/16 :goto_0
+
+    :cond_b
+    :goto_6
+    if-ne v4, v10, :cond_c
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_21
+
+    const-string v1, "Failed to parse exif segment length, or exif segment not found"
+
+    invoke-static {v11, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v10
+
+    :cond_c
+    new-array v2, v4, [B
+
+    move v3, v4
+
+    :goto_7
+    if-lez v3, :cond_d
+
+    sub-int v5, v4, v3
+
+    invoke-virtual {v1, v2, v5, v3}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v5
+
+    if-eq v5, v10, :cond_d
+
+    sub-int/2addr v3, v5
+
+    goto :goto_7
+
+    :cond_d
+    sub-int v1, v4, v3
+
+    if-eq v1, v4, :cond_e
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_21
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unable to read exif segment data, length: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", actually read: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v11, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v10
+
+    :cond_e
+    sget-object v1, Lz47;->b:[B
+
+    array-length v3, v1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-le v4, v3, :cond_f
+
+    move v3, v6
+
+    goto :goto_8
+
+    :cond_f
+    move v3, v5
+
+    :goto_8
+    if-eqz v3, :cond_11
+
+    move v12, v5
+
+    :goto_9
+    array-length v13, v1
+
+    if-ge v12, v13, :cond_11
+
+    aget-byte v13, v2, v12
+
+    aget-byte v14, v1, v12
+
+    if-eq v13, v14, :cond_10
+
+    move v3, v5
+
+    goto :goto_a
+
+    :cond_10
+    add-int/lit8 v12, v12, 0x1
+
+    goto :goto_9
+
+    :cond_11
+    :goto_a
+    if-eqz v3, :cond_20
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    sget-object v2, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/ByteBuffer;
+
+    const/4 v3, 0x6
+
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v3
+
+    if-ne v3, v8, :cond_12
+
+    goto :goto_b
+
+    :cond_12
+    if-ne v3, v7, :cond_13
+
+    sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    goto :goto_b
+
+    :cond_13
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_14
+
+    const-string v4, "Unknown endianness = "
+
+    invoke-static {v3, v4, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_14
+    :goto_b
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    const/16 v2, 0xa
+
+    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v2
+
+    add-int/lit8 v3, v2, 0x6
+
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v3
+
+    :goto_c
+    if-ge v5, v3, :cond_21
+
+    add-int/lit8 v4, v2, 0x8
+
+    mul-int/lit8 v7, v5, 0xc
+
+    add-int/2addr v7, v4
+
+    invoke-virtual {v1, v7}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v4
+
+    const/16 v8, 0x112
+
+    if-eq v4, v8, :cond_15
+
+    goto/16 :goto_10
+
+    :cond_15
+    add-int/lit8 v8, v7, 0x2
+
+    invoke-virtual {v1, v8}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v8
+
+    if-lt v8, v6, :cond_1e
+
+    const/16 v12, 0xc
+
+    if-le v8, v12, :cond_16
+
+    goto/16 :goto_f
+
+    :cond_16
+    add-int/lit8 v12, v7, 0x4
+
+    invoke-virtual {v1, v12}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v12
+
+    if-gez v12, :cond_17
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1f
+
+    const-string v4, "Negative tiff component count"
+
+    invoke-static {v11, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_10
+
+    :cond_17
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v13
+
+    const-string v14, " tagType="
+
+    if-eqz v13, :cond_18
+
+    const-string v13, "Got tagIndex="
+
+    const-string v15, " formatCode="
+
+    invoke-static {v13, v5, v14, v4, v15}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v15, " componentCount="
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-static {v11, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_18
+    sget-object v13, Lz47;->c:[I
+
+    aget v13, v13, v8
+
+    add-int/2addr v12, v13
+
+    const/4 v13, 0x4
+
+    if-le v12, v13, :cond_19
+
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1f
+
+    const-string v4, "Got byte count > 4, not orientation, continuing, formatCode="
+
+    invoke-static {v8, v4, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_10
+
+    :cond_19
+    add-int/lit8 v7, v7, 0x8
+
+    if-ltz v7, :cond_1d
+
+    invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v8
+
+    if-le v7, v8, :cond_1a
+
+    goto :goto_e
+
+    :cond_1a
+    if-ltz v12, :cond_1c
+
+    add-int/2addr v12, v7
+
+    invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v8
+
+    if-le v12, v8, :cond_1b
+
+    goto :goto_d
+
+    :cond_1b
+    invoke-virtual {v1, v7}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v1
+
+    return v1
+
+    :cond_1c
+    :goto_d
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1f
+
+    const-string v7, "Illegal number of bytes for TI tag data tagType="
+
+    invoke-static {v4, v7, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_10
+
+    :cond_1d
+    :goto_e
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1f
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v12, "Illegal tagValueOffset="
+
+    invoke-direct {v8, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v11, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_10
+
+    :cond_1e
+    :goto_f
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1f
+
+    const-string v4, "Got invalid format code = "
+
+    invoke-static {v8, v4, v11}, Lnd5;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_1f
+    :goto_10
+    add-int/lit8 v5, v5, 0x1
+
+    goto/16 :goto_c
+
+    :cond_20
+    invoke-static {v11, v9}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_21
+
+    const-string v1, "Missing jpeg exif preamble"
+
+    invoke-static {v11, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_21
+    return v10
 .end method

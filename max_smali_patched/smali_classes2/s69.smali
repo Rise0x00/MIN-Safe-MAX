@@ -1,258 +1,273 @@
 .class public final Ls69;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:Ll72;
+.field public final a:J
 
-.field public Y:I
+.field public final b:J
 
-.field public final synthetic Z:Ly79;
+.field public final c:Landroid/text/Layout;
 
-.field public final synthetic n0:Ly0d;
+.field public final d:Lp69;
+
+.field public final e:Lk69;
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Ly79;Ly0d;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJLandroid/text/Layout;Lp69;Lk69;Z)V
     .locals 0
 
-    iput-object p1, p0, Ls69;->Z:Ly79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ls69;->n0:Ly0d;
+    iput-wide p1, p0, Ls69;->a:J
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Ls69;->b:J
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p5, p0, Ls69;->c:Landroid/text/Layout;
+
+    iput-object p6, p0, Ls69;->d:Lp69;
+
+    iput-object p7, p0, Ls69;->e:Lk69;
+
+    iput-boolean p8, p0, Ls69;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lp04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ls69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Ls69;
 
-    check-cast p0, Ls69;
+    const/4 v2, 0x0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Ls69;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Ls69;
 
-    return-object p0
+    iget-wide v3, p0, Ls69;->a:J
+
+    iget-wide v5, p1, Ls69;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ls69;->b:J
+
+    iget-wide v5, p1, Ls69;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ls69;->c:Landroid/text/Layout;
+
+    iget-object v3, p1, Ls69;->c:Landroid/text/Layout;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ls69;->d:Lp69;
+
+    iget-object v3, p1, Ls69;->d:Lp69;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ls69;->e:Lk69;
+
+    iget-object v3, p1, Ls69;->e:Lk69;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Ls69;->f:Z
+
+    iget-boolean p1, p1, Ls69;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    new-instance p1, Ls69;
+    iget-wide v0, p0, Ls69;->a:J
 
-    iget-object v0, p0, Ls69;->Z:Ly79;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object p0, p0, Ls69;->n0:Ly0d;
+    move-result v0
 
-    invoke-direct {p1, v0, p0, p2}, Ls69;-><init>(Ly79;Ly0d;Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x1f
 
-    return-object p1
-.end method
+    mul-int/2addr v0, v1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    iget-wide v2, p0, Ls69;->b:J
 
-    sget-object v0, Ltcf;->a:Ltcf;
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
 
-    sget-object v1, Lq04;->a:Lq04;
+    move-result v0
 
-    iget v2, p0, Ls69;->Y:I
+    const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    iget-object v3, p0, Ls69;->c:Landroid/text/Layout;
 
-    if-eqz v2, :cond_1
+    if-nez v3, :cond_0
 
-    if-ne v2, v3, :cond_0
-
-    iget-object v1, p0, Ls69;->X:Ll72;
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls69;->Z:Ly79;
-
-    iget-object p1, p1, Ly79;->n1:Ljbc;
-
-    iget-object p1, p1, Ljbc;->a:Lj4e;
-
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll72;
-
-    if-nez p1, :cond_2
-
-    return-object v0
-
-    :cond_2
-    iget-object v2, p0, Ls69;->Z:Ly79;
-
-    iget-object v2, v2, Ly79;->L0:Lth7;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lb09;
-
-    iget-object v4, p0, Ls69;->Z:Ly79;
-
-    iget-object v4, v4, Ly79;->b:Lf99;
-
-    iget-wide v6, v4, Lf99;->a:J
-
-    iput-object p1, p0, Ls69;->X:Ll72;
-
-    iput v3, p0, Ls69;->Y:I
-
-    iget-object v2, v2, Lb09;->b:Lth7;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lsz2;
-
-    check-cast v2, Ls03;
-
-    invoke-virtual {v2}, Ls03;->M()Lbb2;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lfa2;
-
-    const/4 v10, 0x0
-
-    const-wide/16 v8, 0x0
-
-    invoke-direct/range {v5 .. v10}, Lfa2;-><init>(JJI)V
-
-    invoke-virtual {v2, v6, v7, v3, v5}, Lbb2;->h(JZLgm3;)Ll72;
-
-    iget-object v2, v2, Lbb2;->m:Lrv0;
-
-    new-instance v3, Lee2;
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-direct {v3, v6, v7, v4}, Lee2;-><init>(JLjava/lang/Long;)V
-
-    invoke-virtual {v2, v3}, Lrv0;->c(Ljava/lang/Object;)V
-
-    if-ne v0, v1, :cond_3
-
-    return-object v1
-
-    :cond_3
-    move-object v1, p1
+    move-result v3
 
     :goto_0
-    iget-object p1, p0, Ls69;->Z:Ly79;
+    add-int/2addr v0, v3
 
-    iget-object p1, p1, Ly79;->p0:Lc38;
+    mul-int/2addr v0, v1
 
-    iget-object p0, p0, Ls69;->n0:Ly0d;
+    iget-object v3, p0, Ls69;->d:Lp69;
 
-    iget-wide v7, p0, Ly0d;->a:J
+    if-nez v3, :cond_1
 
-    iget-object p0, p1, Lc38;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/String;
-
-    sget-object v2, Lz76;->f:Lvea;
-
-    if-nez v2, :cond_4
+    move v3, v2
 
     goto :goto_1
 
-    :cond_4
-    sget-object v3, Lhw7;->o:Lhw7;
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v2, v3}, Lvea;->a(Lhw7;)Z
+    move-result v3
 
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    const-string v4, "Marking as read reaction for message="
-
-    invoke-static {v7, v8, v4}, Lw68;->i(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, p0, v4, v5}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
     :goto_1
-    iget-object p0, p1, Lc38;->c:Ljava/lang/Object;
+    add-int/2addr v0, v3
 
-    check-cast p0, Lth7;
+    mul-int/2addr v0, v1
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    iget-object v3, p0, Ls69;->e:Lk69;
 
-    move-result-object p0
+    if-nez v3, :cond_2
 
-    move-object v2, p0
+    goto :goto_2
 
-    check-cast v2, Lcbc;
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    iget-object p0, v1, Ll72;->b:Lxb2;
+    move-result v2
 
-    iget-wide v3, p0, Lxb2;->a:J
+    :goto_2
+    add-int/2addr v0, v2
 
-    invoke-virtual {v1}, Ll72;->n()J
+    mul-int/2addr v0, v1
 
-    move-result-wide v5
+    iget-boolean v1, p0, Ls69;->f:Z
 
-    const/4 v11, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/4 v12, 0x1
+    move-result v1
 
-    const/4 v9, 0x0
+    add-int/2addr v1, v0
 
-    const/4 v10, 0x0
+    return v1
+.end method
 
-    invoke-virtual/range {v2 .. v12}, Lcbc;->d(JJJZZZZ)J
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "MessageLink(messageId="
+
+    const-string v1, ", messageLinkId="
+
+    iget-wide v2, p0, Ls69;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Ls69;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", senderLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls69;->c:Landroid/text/Layout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", replyModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls69;->d:Lp69;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", forwardModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls69;->e:Lk69;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isFloating="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Ls69;->f:Z
+
+    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

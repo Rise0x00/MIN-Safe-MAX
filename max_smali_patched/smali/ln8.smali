@@ -1,46 +1,114 @@
-.class public final synthetic Lln8;
+.class public abstract Lln8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzm8;
 
+# static fields
+.field public static final a:Ljava/util/HashSet;
 
-# instance fields
-.field public final synthetic a:Ltn8;
+.field public static b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltn8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p1, p0, Lln8;->a:Ltn8;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    sput-object v0, Lln8;->a:Ljava/util/HashSet;
+
+    const-string v0, "media3.common"
+
+    sput-object v0, Lln8;->b:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static declared-synchronized a(Ljava/lang/String;)V
+    .locals 3
 
-# virtual methods
-.method public final a(Lwj0;Lwxe;)V
-    .locals 0
+    const-class v0, Lln8;
 
-    iget-object p0, p0, Lln8;->a:Ltn8;
+    monitor-enter v0
 
-    iget-object p0, p0, Ltn8;->i:Ljava/lang/Object;
+    :try_start_0
+    sget-object v1, Lln8;->a:Ljava/util/HashSet;
 
-    check-cast p0, Ldb5;
+    invoke-virtual {v1, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Ldb5;->n0:Lyle;
+    move-result v1
 
-    const/4 p1, 0x2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, p1}, Lyle;->e(I)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/16 p1, 0x16
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1}, Lyle;->f(I)Z
+    sget-object v2, Lln8;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    sput-object p0, Lln8;->b:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static declared-synchronized b()Ljava/lang/String;
+    .locals 2
+
+    const-class v0, Lln8;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lln8;->b:Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

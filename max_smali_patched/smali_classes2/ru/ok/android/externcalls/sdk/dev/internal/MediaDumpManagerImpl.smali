@@ -14,15 +14,15 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
         "Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;",
-        "Lez0;",
+        "Lfz0;",
         "call",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "<init>",
-        "(Lez0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
+        "(Lfz0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
         "",
         "path",
-        "Ltcf;",
+        "Loyf;",
         "setLocalAudioDumpLocation",
         "(Ljava/lang/String;)V",
         "",
@@ -42,7 +42,7 @@
         "(ILjava/util/Set;Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;)Ljava/lang/String;",
         "cancelAudioDumpRecord",
         "()V",
-        "Lez0;",
+        "Lfz0;",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "dumpLocation",
         "Ljava/lang/String;",
@@ -59,7 +59,7 @@
 
 
 # instance fields
-.field private final call:Lez0;
+.field private final call:Lfz0;
 
 .field private dumpLocation:Ljava/lang/String;
 
@@ -67,12 +67,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lez0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+.method public constructor <init>(Lfz0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lez0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lfz0;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
@@ -127,21 +127,21 @@
 
 # virtual methods
 .method public cancelAudioDumpRecord()V
-    .locals 3
+    .locals 4
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lez0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lfz0;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lez0;->d1:Ljava/util/concurrent/ExecutorService;
+    sget-object v1, Lfz0;->f1:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Ljy0;
+    new-instance v2, Liy0;
 
-    const/4 v2, 0x4
+    const/4 v3, 0x4
 
-    invoke-direct {v1, p0, v2}, Ljy0;-><init>(Lez0;I)V
+    invoke-direct {v2, v0, v3}, Liy0;-><init>(Lfz0;I)V
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -233,7 +233,7 @@
     goto :goto_1
 
     :cond_0
-    iget-object v5, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lez0;
+    iget-object v5, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->call:Lfz0;
 
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -241,15 +241,15 @@
 
     if-eqz p2, :cond_2
 
-    new-instance p0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/16 v0, 0xa
+    const/16 v1, 0xa
 
-    invoke-static {p2, v0}, Li73;->Y(Ljava/lang/Iterable;I)I
+    invoke-static {p2, v1}, Lg93;->V(Ljava/lang/Iterable;I)I
 
-    move-result v0
+    move-result v1
 
-    invoke-direct {p0, v0}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -258,26 +258,26 @@
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$Source;
+    check-cast v1, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$Source;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$Source;->getWebrtcDumpSource$calls_sdk_release()Lorg/webrtc/DumpSource;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$Source;->getWebrtcDumpSource$calls_sdk_release()Lorg/webrtc/DumpSource;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p0}, Lg73;->P0(Ljava/util/Collection;)Ljava/util/Set;
+    invoke-static {v0}, Le93;->M0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v1
 
@@ -286,25 +286,25 @@
 
     new-instance v9, Lorg/webrtc/NativeDumpCallback;
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;
+    new-instance p2, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;
 
-    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;-><init>(Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;)V
+    invoke-direct {p2, p3}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl$recordAudioDump$1$2;-><init>(Lru/ok/android/externcalls/sdk/dev/MediaDumpManager$LocalAudioDumpRecordListener;)V
 
-    invoke-direct {v9, p0}, Lorg/webrtc/NativeDumpCallback;-><init>(Lorg/webrtc/DumpCallback;)V
+    invoke-direct {v9, p2}, Lorg/webrtc/NativeDumpCallback;-><init>(Lorg/webrtc/DumpCallback;)V
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p0, Lez0;->d1:Ljava/util/concurrent/ExecutorService;
+    sget-object p2, Lfz0;->f1:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v4, Lsy0;
+    new-instance v4, Lty0;
 
     const/4 v10, 0x0
 
     move v7, p1
 
-    invoke-direct/range {v4 .. v10}, Lsy0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct/range {v4 .. v10}, Lty0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-interface {p0, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p2, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -312,57 +312,57 @@
     :goto_1
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 
     :cond_3
     return-object v1
 .end method
 
 .method public requestMediaDump(IZZLru/ok/android/externcalls/sdk/dev/MediaDumpManager$RemoteMediaDumpRequestListener;)V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance v0, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v1, "audio"
+    const-string v2, "audio"
 
-    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string p2, "video"
 
-    invoke-virtual {v0, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string p2, "duration"
 
-    invoke-virtual {v0, p2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    invoke-virtual {v1, p2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string p1, "collect-debug-dump"
 
-    invoke-static {v0, p1}, Lds0;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lee6;
+    invoke-static {v1, p1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
 
     move-result-object p1
 
-    new-instance p2, Lyy0;
+    new-instance p2, Lzy0;
 
     const/4 p3, 0x4
 
-    invoke-direct {p2, p3, p4}, Lyy0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p4}, Lzy0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1, p2}, Lpsd;->h(Lee6;Losd;)V
+    invoke-virtual {v0, p1, p2}, Ldce;->h(Lxj6;Lcce;)V
 
     return-void
 .end method

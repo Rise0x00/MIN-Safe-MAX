@@ -3,289 +3,1124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Lu2f;
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Ljava/util/concurrent/ScheduledExecutorService;
+.field public final Y:[F
+
+.field public final Z:[F
+
+.field public final a:Lrt4;
+
+.field public final b:Landroid/os/HandlerThread;
+
+.field public final c:Lks6;
+
+.field public final o:Landroid/os/Handler;
+
+.field public final w0:Ljava/util/LinkedHashMap;
+
+.field public x0:I
+
+.field public y0:Z
+
+.field public final z0:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Ljava/util/concurrent/ScheduledExecutorService;)V
-    .locals 0
+.method public constructor <init>(Lp15;)V
+    .locals 3
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p2, p0, Lqk4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Lqk4;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/16 v0, 0x10
+
+    new-array v2, v0, [F
+
+    iput-object v2, p0, Lqk4;->Y:[F
+
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lqk4;->Z:[F
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lqk4;->w0:Ljava/util/LinkedHashMap;
+
+    iput v1, p0, Lqk4;->x0:I
+
+    iput-boolean v1, p0, Lqk4;->y0:Z
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lqk4;->z0:Ljava/util/ArrayList;
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "GL Thread"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lqk4;->b:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v1, p0, Lqk4;->o:Landroid/os/Handler;
+
+    new-instance v0, Lks6;
+
+    invoke-direct {v0, v1}, Lks6;-><init>(Landroid/os/Handler;)V
+
+    iput-object v0, p0, Lqk4;->c:Lks6;
+
+    new-instance v0, Lrt4;
+
+    invoke-direct {v0}, Lrt4;-><init>()V
+
+    iput-object v0, p0, Lqk4;->a:Lrt4;
+
+    :try_start_0
+    new-instance v0, Llk4;
+
+    invoke-direct {v0, p0, p1}, Llk4;-><init>(Lqk4;Lp15;)V
+
+    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
+
+    :try_start_1
+    invoke-virtual {p1}, Lws1;->get()Ljava/lang/Object;
+    :try_end_1
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    :goto_0
+    :try_start_2
+    instance-of v0, p1, Ljava/util/concurrent/ExecutionException;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/RuntimeException;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Ljava/lang/RuntimeException;
+
+    throw p1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Failed to create DefaultSurfaceProcessor"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    move-exception p1
+
+    invoke-virtual {p0}, Lqk4;->release()V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
+.method public final a(La3f;)V
+    .locals 3
 
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v0, p0, Lqk4;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+    invoke-virtual {p1}, La3f;->d()V
 
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    return-void
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :cond_0
+    new-instance v0, Lnk4;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1, p1}, Lnk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v1, Lok4;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lok4;-><init>(La3f;I)V
+
+    invoke-virtual {p0, v0, v1}, Lqk4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
-    .locals 0
+.method public final b()V
+    .locals 5
 
-    .line 1
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    iget-boolean v0, p0, Lqk4;->y0:Z
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    if-eqz v0, :cond_2
 
-    move-result-object p0
+    iget v0, p0, Lqk4;->x0:I
 
-    return-object p0
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lqk4;->w0:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lt2f;
+
+    invoke-virtual {v2}, Lt2f;->close()V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lqk4;->z0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lp90;
+
+    iget-object v2, v2, Lp90;->c:Lts1;
+
+    new-instance v3, Ljava/lang/Exception;
+
+    const-string v4, "Failed to snapshot: DefaultSurfaceProcessor is released."
+
+    invoke-direct {v3, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Lts1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
+
+    iget-object v0, p0, Lqk4;->a:Lrt4;
+
+    invoke-virtual {v0}, Lrt4;->q()V
+
+    iget-object v0, p0, Lqk4;->b:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
+
+    :cond_2
+    return-void
 .end method
 
-.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 0
+.method public final c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    .locals 3
 
-    .line 2
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    :try_start_0
+    iget-object v0, p0, Lqk4;->c:Lks6;
 
-    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    new-instance v1, Lk5;
 
-    move-result-object p0
+    const/16 v2, 0x18
 
-    return-object p0
+    invoke-direct {v1, p0, p2, p1, v2}, Lk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v0, v1}, Lks6;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "DefaultSurfaceProcessor"
+
+    const-string v1, "Unable to executor runnable"
+
+    invoke-static {v0, v1, p1}, Ls4d;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
+
+    return-void
 .end method
 
-.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 0
+.method public final d(Ljava/lang/Exception;)V
+    .locals 3
 
-    .line 1
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v0, p0, Lqk4;->z0:Ljava/util/ArrayList;
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v1
 
-    return-object p0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lp90;
+
+    iget-object v2, v2, Lp90;->c:Lts1;
+
+    invoke-virtual {v2, p1}, Lts1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    return-void
 .end method
 
-.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
+.method public final e(II)Ljx7;
+    .locals 1
 
-    .line 2
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    new-instance v0, Lud4;
 
-    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-direct {v0, p0, p1, p2}, Lud4;-><init>(Ljava/lang/Object;II)V
 
-    move-result-object p0
+    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
 
-    return-object p0
+    move-result-object p1
+
+    invoke-static {p1}, Lpch;->F(Ljx7;)Ljx7;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final isShutdown()Z
-    .locals 0
+.method public final f(Landroid/util/Size;[FI)Landroid/graphics/Bitmap;
+    .locals 26
 
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    move/from16 v0, p3
 
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+    invoke-virtual/range {p2 .. p2}, [F->clone()Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v1
 
-    return p0
-.end method
+    check-cast v1, [F
 
-.method public final isTerminated()Z
-    .locals 0
+    int-to-float v2, v0
 
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    invoke-static {v1, v2}, Lhv0;->I([FF)V
 
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+    invoke-static {v1}, Lhv0;->J([F)V
 
-    move-result p0
+    move-object/from16 v2, p1
 
-    return p0
-.end method
+    invoke-static {v2, v0}, Lnpf;->f(Landroid/util/Size;I)Landroid/util/Size;
 
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
+    move-result-object v0
 
-    .line 1
-    new-instance v0, Lsk4;
+    move-object/from16 v2, p0
 
-    new-instance v1, Llk4;
+    iget-object v3, v2, Lqk4;->a:Lrt4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v4
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v5
+
+    mul-int/2addr v5, v4
+
+    const/4 v4, 0x4
+
+    mul-int/2addr v5, v4
+
+    invoke-static {v5}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v6
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v7
+
+    mul-int/2addr v7, v6
+
+    mul-int/2addr v7, v4
+
+    const/4 v13, 0x1
+
+    const/4 v14, 0x0
+
+    if-ne v5, v7, :cond_0
+
+    move v5, v13
+
+    goto :goto_0
+
+    :cond_0
+    move v5, v14
+
+    :goto_0
+    const-string v6, "ByteBuffer capacity is not equal to width * height * 4."
+
+    invoke-static {v6, v5}, Ll74;->h(Ljava/lang/String;Z)V
+
+    invoke-virtual {v12}, Ljava/nio/ByteBuffer;->isDirect()Z
+
+    move-result v5
+
+    const-string v6, "ByteBuffer is not direct."
+
+    invoke-static {v6, v5}, Ll74;->h(Ljava/lang/String;Z)V
+
+    sget-object v5, Lah6;->a:[I
+
+    new-array v5, v13, [I
+
+    invoke-static {v13, v5, v14}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+
+    const-string v6, "glGenTextures"
+
+    invoke-static {v6}, Lah6;->b(Ljava/lang/String;)V
+
+    aget v5, v5, v14
+
+    const v6, 0x84c1
+
+    invoke-static {v6}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+
+    const-string v15, "glActiveTexture"
+
+    invoke-static {v15}, Lah6;->b(Ljava/lang/String;)V
+
+    const/16 v6, 0xde1
+
+    invoke-static {v6, v5}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    const-string v16, "glBindTexture"
+
+    invoke-static/range {v16 .. v16}, Lah6;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v20
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v21
+
+    const/16 v24, 0x1401
+
+    const/16 v25, 0x0
+
+    const/16 v17, 0xde1
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x1907
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x1907
+
+    invoke-static/range {v17 .. v25}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
+
+    const-string v7, "glTexImage2D"
+
+    invoke-static {v7}, Lah6;->b(Ljava/lang/String;)V
+
+    const/16 v7, 0x2800
+
+    const/16 v8, 0x2601
+
+    invoke-static {v6, v7, v8}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v7, 0x2801
+
+    invoke-static {v6, v7, v8}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    new-array v7, v13, [I
+
+    invoke-static {v13, v7, v14}, Landroid/opengl/GLES20;->glGenFramebuffers(I[II)V
+
+    const-string v8, "glGenFramebuffers"
+
+    invoke-static {v8}, Lah6;->b(Ljava/lang/String;)V
+
+    aget v7, v7, v14
+
+    const v8, 0x8d40
+
+    invoke-static {v8, v7}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
+
+    const-string v9, "glBindFramebuffer"
+
+    invoke-static {v9}, Lah6;->b(Ljava/lang/String;)V
+
+    const v9, 0x8ce0
+
+    invoke-static {v8, v9, v6, v5, v14}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
+
+    const-string v6, "glFramebufferTexture2D"
+
+    invoke-static {v6}, Lah6;->b(Ljava/lang/String;)V
+
+    const v17, 0x84c0
+
+    invoke-static/range {v17 .. v17}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+
+    invoke-static {v15}, Lah6;->b(Ljava/lang/String;)V
+
+    iget v6, v3, Lrt4;->b:I
+
+    const v9, 0x8d65
+
+    invoke-static {v9, v6}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    invoke-static/range {v16 .. v16}, Lah6;->b(Ljava/lang/String;)V
+
+    const/4 v6, 0x0
+
+    iput-object v6, v3, Lrt4;->k:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v6
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v10
+
+    invoke-static {v14, v14, v6, v10}, Landroid/opengl/GLES20;->glViewport(IIII)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v6
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v10
+
+    invoke-static {v14, v14, v6, v10}, Landroid/opengl/GLES20;->glScissor(IIII)V
+
+    iget-object v6, v3, Lrt4;->m:Ljava/lang/Object;
+
+    check-cast v6, Lyg6;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    instance-of v10, v6, Lzg6;
+
+    if-eqz v10, :cond_1
+
+    check-cast v6, Lzg6;
+
+    iget v6, v6, Lzg6;->f:I
+
+    invoke-static {v6, v13, v14, v1, v14}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
+
+    const-string v1, "glUniformMatrix4fv"
+
+    invoke-static {v1}, Lah6;->b(Ljava/lang/String;)V
+
+    :cond_1
+    const/4 v1, 0x5
+
+    invoke-static {v1, v14, v4}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    const-string v1, "glDrawArrays"
+
+    invoke-static {v1}, Lah6;->b(Ljava/lang/String;)V
+
+    move v1, v8
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v8
+
+    move v6, v9
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v9
+
+    const/16 v10, 0x1908
+
+    const/16 v11, 0x1401
+
+    move/from16 v18, v6
+
+    const/4 v6, 0x0
+
+    move/from16 v19, v7
 
     const/4 v7, 0x0
 
-    move-object v2, p0
+    move/from16 p1, v4
 
-    move-object v3, p1
+    move v4, v1
 
-    move-wide v4, p2
+    move/from16 v1, v18
 
-    move-object v6, p4
+    invoke-static/range {v6 .. v12}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
 
-    invoke-direct/range {v1 .. v7}, Llk4;-><init>(Lqk4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    const-string v6, "glReadPixels"
 
-    invoke-direct {v0, v1}, Lsk4;-><init>(Lrk4;)V
+    invoke-static {v6}, Lah6;->b(Ljava/lang/String;)V
 
-    return-object v0
+    invoke-static {v4, v14}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
+
+    filled-new-array {v5}, [I
+
+    move-result-object v4
+
+    invoke-static {v13, v4, v14}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+
+    const-string v4, "glDeleteTextures"
+
+    invoke-static {v4}, Lah6;->b(Ljava/lang/String;)V
+
+    filled-new-array/range {v19 .. v19}, [I
+
+    move-result-object v4
+
+    invoke-static {v13, v4, v14}, Landroid/opengl/GLES20;->glDeleteFramebuffers(I[II)V
+
+    const-string v4, "glDeleteFramebuffers"
+
+    invoke-static {v4}, Lah6;->b(Ljava/lang/String;)V
+
+    iget v3, v3, Lrt4;->b:I
+
+    invoke-static/range {v17 .. v17}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+
+    invoke-static {v15}, Lah6;->b(Ljava/lang/String;)V
+
+    invoke-static {v1, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    invoke-static/range {v16 .. v16}, Lah6;->b(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v3
+
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v1, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    invoke-virtual {v12}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x4
+
+    invoke-static {v1, v12, v0}, Landroidx/camera/core/ImageProcessingUtil;->e(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
+
+    return-object v1
 .end method
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
+.method public final g(Lt2f;)V
+    .locals 3
 
-    .line 2
-    new-instance v0, Lsk4;
+    iget-object v0, p0, Lqk4;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v1, Llk4;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    const/4 v7, 0x1
+    move-result v0
 
-    move-object v2, p0
+    if-eqz v0, :cond_0
 
-    move-object v3, p1
+    invoke-virtual {p1}, Lt2f;->close()V
 
-    move-wide v4, p2
+    return-void
 
-    move-object v6, p4
+    :cond_0
+    new-instance v0, Lnk4;
 
-    invoke-direct/range {v1 .. v7}, Llk4;-><init>(Lqk4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lsk4;-><init>(Lrk4;)V
+    invoke-direct {v0, p0, v1, p1}, Lnk4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object v0
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Ltd4;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, p1}, Ltd4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, v0, v1}, Lqk4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 10
+.method public final h(Lprf;)V
+    .locals 11
 
-    new-instance v0, Lsk4;
+    iget-object v0, p0, Lqk4;->z0:Ljava/util/ArrayList;
 
-    new-instance v1, Lnk4;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    const/4 v9, 0x0
+    move-result v1
 
-    move-object v2, p0
+    if-eqz v1, :cond_0
 
-    move-object v3, p1
+    return-void
 
-    move-wide v4, p2
+    :cond_0
+    if-nez p1, :cond_1
 
-    move-wide v6, p4
+    new-instance p1, Ljava/lang/Exception;
 
-    move-object/from16 v8, p6
+    const-string v0, "Failed to snapshot: no JPEG Surface."
 
-    invoke-direct/range {v1 .. v9}, Lnk4;-><init>(Ljava/lang/Object;Ljava/lang/Object;JJLjava/lang/Object;I)V
+    invoke-direct {p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lsk4;-><init>(Lrk4;)V
+    invoke-virtual {p0, p1}, Lqk4;->d(Ljava/lang/Exception;)V
 
-    return-object v0
+    return-void
+
+    :cond_1
+    :try_start_0
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x0
+
+    move v4, v2
+
+    move v6, v4
+
+    move-object v5, v3
+
+    move-object v7, v5
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_6
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lp90;
+
+    iget v9, v8, Lp90;->b:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iget v10, v8, Lp90;->a:I
+
+    if-ne v4, v9, :cond_2
+
+    if-nez v5, :cond_4
+
+    :cond_2
+    if-eqz v5, :cond_3
+
+    :try_start_2
+    invoke-virtual {v5}, Landroid/graphics/Bitmap;->recycle()V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    iget-object v4, p1, Lprf;->b:Ljava/lang/Object;
+
+    check-cast v4, Landroid/util/Size;
+
+    iget-object v5, p1, Lprf;->c:Ljava/lang/Object;
+
+    check-cast v5, [F
+
+    invoke-virtual {p0, v4, v5, v9}, Lqk4;->f(Landroid/util/Size;[FI)Landroid/graphics/Bitmap;
+
+    move-result-object v5
+
+    move v6, v2
+
+    move v4, v9
+
+    :cond_4
+    if-eq v6, v10, :cond_5
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->reset()V
+
+    sget-object v6, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    invoke-virtual {v5, v6, v10, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v7
+
+    move v6, v10
+
+    :cond_5
+    iget-object v9, p1, Lprf;->a:Ljava/lang/Object;
+
+    check-cast v9, Landroid/view/Surface;
+
+    invoke-static {v7}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v7, v9}, Landroidx/camera/core/ImageProcessingUtil;->f([BLandroid/view/Surface;)V
+
+    iget-object v8, v8, Lp90;->c:Lts1;
+
+    invoke-virtual {v8, v3}, Lts1;->b(Ljava/lang/Object;)Z
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :cond_6
+    :try_start_3
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_4
+
+    :goto_2
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_5
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_3
+    throw p1
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+
+    :goto_4
+    invoke-virtual {p0, p1}, Lqk4;->d(Ljava/lang/Exception;)V
+
+    return-void
 .end method
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 10
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+    .locals 12
 
-    new-instance v0, Lsk4;
+    iget-object v0, p0, Lqk4;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v1, Lnk4;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+
+    iget-object v0, p0, Lqk4;->Y:[F
+
+    invoke-virtual {p1, v0}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
+
+    iget-object v1, p0, Lqk4;->w0:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Map$Entry;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/Surface;
+
+    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lt2f;
+
+    iget-object v5, p0, Lqk4;->Z:[F
+
+    invoke-virtual {v3, v5, v0}, Lt2f;->n([F[F)V
+
+    iget v6, v3, Lt2f;->c:I
+
+    const/16 v7, 0x22
+
+    if-ne v6, v7, :cond_1
+
+    :try_start_0
+    iget-object v3, p0, Lqk4;->a:Lrt4;
+
+    invoke-virtual {p1}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
+
+    move-result-wide v6
+
+    invoke-virtual {v3, v6, v7, v5, v4}, Lrt4;->t(J[FLandroid/view/Surface;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v3
+
+    const-string v4, "DefaultSurfaceProcessor"
+
+    const-string v5, "Failed to render with OpenGL."
+
+    invoke-static {v4, v5, v3}, Ls4d;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v7, 0x100
+
+    const/4 v8, 0x0
 
     const/4 v9, 0x1
 
-    move-object v2, p0
+    if-ne v6, v7, :cond_2
 
-    move-object v3, p1
+    move v7, v9
 
-    move-wide v4, p2
+    goto :goto_1
 
-    move-wide v6, p4
+    :cond_2
+    move v7, v8
 
-    move-object/from16 v8, p6
+    :goto_1
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v1 .. v9}, Lnk4;-><init>(Ljava/lang/Object;Ljava/lang/Object;JJLjava/lang/Object;I)V
+    const-string v11, "Unsupported format: "
 
-    invoke-direct {v0, v1}, Lsk4;-><init>(Lrk4;)V
+    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6, v7}, Ll74;->m(Ljava/lang/String;Z)V
+
+    if-nez v2, :cond_3
+
+    move v8, v9
+
+    :cond_3
+    const-string v2, "Only one JPEG output is supported."
+
+    invoke-static {v2, v8}, Ll74;->m(Ljava/lang/String;Z)V
+
+    new-instance v2, Lprf;
+
+    iget-object v3, v3, Lt2f;->o:Landroid/util/Size;
+
+    invoke-virtual {v5}, [F->clone()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, [F
+
+    invoke-direct {v2, v4, v3, v5}, Lprf;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_4
+    :try_start_1
+    invoke-virtual {p0, v2}, Lqk4;->h(Lprf;)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_2
+
+    :catch_1
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Lqk4;->d(Ljava/lang/Exception;)V
+
+    :goto_2
+    return-void
 .end method
 
-.method public final shutdown()V
-    .locals 1
+.method public final release()V
+    .locals 3
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lqk4;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-string v0, "Shutting down is not allowed."
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    throw p0
-.end method
+    move-result v0
 
-.method public final shutdownNow()Ljava/util/List;
-    .locals 1
+    if-eqz v0, :cond_0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    return-void
 
-    const-string v0, "Shutting down is not allowed."
+    :cond_0
+    new-instance v0, Ltd4;
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x6
 
-    throw p0
-.end method
+    invoke-direct {v0, v1, p0}, Ltd4;-><init>(ILjava/lang/Object;)V
 
-.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 0
+    new-instance v1, Lac;
 
-    .line 3
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
+    const/4 v2, 0x6
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    invoke-direct {v1, v2}, Lac;-><init>(I)V
 
-    move-result-object p0
+    invoke-virtual {p0, v0, v1}, Lqk4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    return-object p0
-.end method
-
-.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lqk4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

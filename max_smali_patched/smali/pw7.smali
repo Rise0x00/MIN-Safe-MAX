@@ -1,102 +1,185 @@
-.class public final Lpw7;
-.super Ljava/io/Writer;
+.class public abstract Lpw7;
+.super Lpwc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/StringBuilder;
+.field public final o:Lru;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Llo4;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+    .line 13
+    invoke-direct {p0}, Lpwc;-><init>()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 14
+    new-instance v0, Low7;
 
-    const/16 v1, 0x80
+    invoke-direct {v0, p0}, Low7;-><init>(Lpw7;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    .line 15
+    new-instance v1, Lru;
 
-    iput-object v0, p0, Lpw7;->a:Ljava/lang/StringBuilder;
+    new-instance v2, Lk12;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lk12;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v1, v2, p1}, Lru;-><init>(Lfx7;Llo4;)V
+
+    iput-object v1, p0, Lpw7;->o:Lru;
+
+    .line 16
+    iget-object p1, v1, Lru;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method public constructor <init>(Lsx9;)V
+    .locals 6
+
+    .line 1
+    invoke-direct {p0}, Lpwc;-><init>()V
+
+    .line 2
+    new-instance v0, Low7;
+
+    invoke-direct {v0, p0}, Low7;-><init>(Lpw7;)V
+
+    .line 3
+    new-instance v1, Lru;
+
+    new-instance v2, Lk12;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lk12;-><init>(ILjava/lang/Object;)V
+
+    .line 4
+    sget-object v3, Lhv0;->a:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    .line 5
+    :try_start_0
+    sget-object v4, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
+
+    if-nez v4, :cond_0
+
+    const/4 v4, 0x2
+
+    .line 6
+    invoke-static {v4}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v4
+
+    sput-object v4, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    .line 7
+    :cond_0
+    :goto_0
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    sget-object v3, Lhv0;->b:Ljava/util/concurrent/ExecutorService;
+
+    .line 9
+    new-instance v4, Llo4;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v3, v5, p1}, Llo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 10
+    invoke-direct {v1, v2, v4}, Lru;-><init>(Lfx7;Llo4;)V
+
+    iput-object v1, p0, Lpw7;->o:Lru;
+
+    .line 11
+    iget-object p1, v1, Lru;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    .line 12
+    :goto_1
+    :try_start_1
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final C(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Lpw7;->m()V
+    iget-object v0, p0, Lpw7;->o:Lru;
+
+    iget-object v0, v0, Lru;->f:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public D(Ljava/util/List;Ljava/util/List;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final flush()V
-    .locals 0
-
-    invoke-virtual {p0}, Lpw7;->m()V
-
-    return-void
-.end method
-
-.method public final m()V
+.method public final E(Ljava/util/List;)V
     .locals 2
 
-    iget-object p0, p0, Lpw7;->a:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lpw7;->o:Lru;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Lru;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public F(Ljava/util/List;Ljava/lang/Runnable;)V
+    .locals 1
+
+    iget-object v0, p0, Lpw7;->o:Lru;
+
+    invoke-virtual {v0, p1, p2}, Lru;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public j()I
+    .locals 1
+
+    iget-object v0, p0, Lpw7;->o:Lru;
+
+    iget-object v0, v0, Lru;->f:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final write([CII)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p3, :cond_1
-
-    add-int v1, p2, v0
-
-    aget-char v1, p1, v1
-
-    const/16 v2, 0xa
-
-    if-ne v1, v2, :cond_0
-
-    invoke-virtual {p0}, Lpw7;->m()V
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v2, p0, Lpw7;->a:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return v0
 .end method

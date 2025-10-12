@@ -1,161 +1,100 @@
-.class public interface abstract Lt5b;
+.class public final Lt5b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lev5;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lir3;
+
+.field public final synthetic c:Le6b;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lir3;Le6b;I)V
+    .locals 0
+
+    iput p3, p0, Lt5b;->a:I
+
+    iput-object p1, p0, Lt5b;->b:Lir3;
+
+    iput-object p2, p0, Lt5b;->c:Le6b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public A(Lcom/google/android/exoplayer2/PlaybackException;)V
-    .locals 0
+.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    return-void
-.end method
+    iget v0, p0, Lt5b;->a:I
 
-.method public B(Le3f;Ln3f;)V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    new-instance v0, Ls5b;
 
-.method public C(Lq5b;)V
-    .locals 0
+    iget-object v1, p0, Lt5b;->c:Le6b;
 
-    return-void
-.end method
+    const/4 v2, 0x2
 
-.method public b(I)V
-    .locals 0
+    invoke-direct {v0, p1, v1, v2}, Ls5b;-><init>(Lgv5;Le6b;I)V
 
-    return-void
-.end method
+    iget-object p1, p0, Lt5b;->b:Lir3;
 
-.method public d(Z)V
-    .locals 0
+    invoke-virtual {p1, v0, p2}, Lir3;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public e(IZ)V
-    .locals 0
+    sget-object p2, Lf34;->a:Lf34;
 
-    return-void
-.end method
+    if-ne p1, p2, :cond_0
 
-.method public f(F)V
-    .locals 0
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    sget-object p1, Loyf;->a:Loyf;
 
-.method public g(I)V
-    .locals 0
+    :goto_0
+    return-object p1
 
-    return-void
-.end method
+    :pswitch_0
+    new-instance v0, Ls5b;
 
-.method public h(IZ)V
-    .locals 0
+    iget-object v1, p0, Lt5b;->c:Le6b;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public i(Z)V
-    .locals 0
+    invoke-direct {v0, p1, v1, v2}, Ls5b;-><init>(Lgv5;Le6b;I)V
 
-    return-void
-.end method
+    iget-object p1, p0, Lt5b;->b:Lir3;
 
-.method public j(Ljava/util/List;)V
-    .locals 0
+    invoke-virtual {p1, v0, p2}, Lir3;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public k(IZ)V
-    .locals 0
+    sget-object p2, Lf34;->a:Lf34;
 
-    return-void
-.end method
+    if-ne p1, p2, :cond_1
 
-.method public l(II)V
-    .locals 0
+    goto :goto_1
 
-    return-void
-.end method
+    :cond_1
+    sget-object p1, Loyf;->a:Loyf;
 
-.method public m(Z)V
-    .locals 0
+    :goto_1
+    return-object p1
 
-    return-void
-.end method
+    nop
 
-.method public n(Lgm4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onRepeatModeChanged(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Lgg8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(Lcom/google/android/exoplayer2/PlaybackException;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lpb9;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lc4f;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u(Lj5b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x(Lpvf;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y(Lre8;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public z(Lv5b;Lv5b;I)V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

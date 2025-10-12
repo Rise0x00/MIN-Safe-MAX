@@ -1,184 +1,145 @@
 .class public final Lsxf;
-.super Lanc;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public final a:Lorg/webrtc/IceCandidate;
 
-.field public c:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lorg/webrtc/IceCandidate;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lorg/webrtc/IceCandidate;Lorg/webrtc/IceCandidate;)V
     .locals 0
 
-    iput-object p1, p0, Lsxf;->X:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lsxf;->a:Lorg/webrtc/IceCandidate;
 
-    invoke-direct {p0, p1, p2}, Lanc;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lsxf;->b:Lorg/webrtc/IceCandidate;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ldad;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lsxf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lsxf;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lsxf;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lsxf;
-
-    iget-object p0, p0, Lsxf;->X:Landroid/view/View;
-
-    invoke-direct {v0, p0, p2}, Lsxf;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lsxf;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lsxf;->c:I
-
-    iget-object v1, p0, Lsxf;->X:Landroid/view/View;
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lq04;->a:Lq04;
-
-    if-eqz v0, :cond_5
-
-    sget-object v4, Ltcf;->a:Ltcf;
-
-    const/4 v5, 0x2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v5, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    return-object v4
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lsxf;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p0
+    return v2
 
     :cond_1
-    iget-object v0, p0, Lsxf;->o:Ljava/lang/Object;
+    check-cast p1, Lsxf;
 
-    check-cast v0, Ldad;
+    iget-object v1, p0, Lsxf;->a:Lorg/webrtc/IceCandidate;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v3, p1, Lsxf;->a:Lorg/webrtc/IceCandidate;
 
-    instance-of p1, v1, Landroid/view/ViewGroup;
-
-    if-eqz p1, :cond_4
-
-    check-cast v1, Landroid/view/ViewGroup;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lsxf;->o:Ljava/lang/Object;
-
-    iput v5, p0, Lsxf;->c:I
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Lb5f;
-
-    new-instance v2, Lu1;
-
-    const/4 v6, 0x5
-
-    invoke-direct {v2, v6, v1}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {p1, v2}, Lb5f;-><init>(Lu1;)V
-
-    iget-object v1, p1, Lb5f;->b:Ljava/util/Iterator;
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    move-object p0, v4
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lsxf;->b:Lorg/webrtc/IceCandidate;
+
+    iget-object p1, p1, Lsxf;->b:Lorg/webrtc/IceCandidate;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lsxf;->a:Lorg/webrtc/IceCandidate;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
 
     goto :goto_0
 
-    :cond_2
-    iput-object p1, v0, Ldad;->c:Ljava/util/Iterator;
+    :cond_0
+    invoke-virtual {v1}, Lorg/webrtc/IceCandidate;->hashCode()I
 
-    iput v5, v0, Ldad;->a:I
-
-    iput-object p0, v0, Ldad;->o:Lkotlin/coroutines/Continuation;
-
-    move-object p0, v3
+    move-result v1
 
     :goto_0
-    if-ne p0, v3, :cond_3
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lsxf;->b:Lorg/webrtc/IceCandidate;
+
+    if-nez v2, :cond_1
 
     goto :goto_1
 
-    :cond_3
-    move-object p0, v4
+    :cond_1
+    invoke-virtual {v2}, Lorg/webrtc/IceCandidate;->hashCode()I
+
+    move-result v0
 
     :goto_1
-    if-ne p0, v3, :cond_4
+    add-int/2addr v1, v0
 
-    return-object v3
+    return v1
+.end method
 
-    :cond_4
-    return-object v4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_5
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lsxf;->o:Ljava/lang/Object;
+    const-string v1, "[local="
 
-    check-cast p1, Ldad;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lsxf;->o:Ljava/lang/Object;
+    iget-object v1, p0, Lsxf;->a:Lorg/webrtc/IceCandidate;
 
-    iput v2, p0, Lsxf;->c:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v1, p0}, Ldad;->b(Ljava/lang/Object;Lanc;)V
+    const-string v1, ",remote="
 
-    return-object v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsxf;->b:Lorg/webrtc/IceCandidate;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

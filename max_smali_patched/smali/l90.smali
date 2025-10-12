@@ -2,185 +2,152 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu35;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Lay1;
 
-.field public final b:I
+.field public b:Lk67;
 
-.field public final c:Llxe;
+.field public final c:Lk67;
 
-.field public final d:I
+.field public final d:Landroid/util/Size;
 
 .field public final e:I
 
 .field public final f:I
 
+.field public final g:Z
+
+.field public final h:La25;
+
+.field public final i:La25;
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILlxe;III)V
-    .locals 0
+.method public constructor <init>(Landroid/util/Size;IIZLa25;La25;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll90;->a:Ljava/lang/String;
+    new-instance v0, Lu22;
 
-    iput p2, p0, Ll90;->b:I
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Ll90;->c:Llxe;
+    invoke-direct {v0, v1}, Lu22;-><init>(I)V
 
-    iput p4, p0, Ll90;->d:I
+    iput-object v0, p0, Ll90;->a:Lay1;
 
-    iput p5, p0, Ll90;->e:I
+    const/4 v0, 0x0
 
-    iput p6, p0, Ll90;->f:I
+    iput-object v0, p0, Ll90;->c:Lk67;
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Ll90;->d:Landroid/util/Size;
+
+    iput p2, p0, Ll90;->e:I
+
+    iput p3, p0, Ll90;->f:I
+
+    iput-boolean p4, p0, Ll90;->g:Z
+
+    iput-object p5, p0, Ll90;->h:La25;
+
+    iput-object p6, p0, Ll90;->i:La25;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null size"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Ll90;->a:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final b()Landroid/media/MediaFormat;
-    .locals 4
-
-    iget v0, p0, Ll90;->e:I
-
-    iget v1, p0, Ll90;->f:I
-
-    iget-object v2, p0, Ll90;->a:Ljava/lang/String;
-
-    invoke-static {v2, v0, v1}, Landroid/media/MediaFormat;->createAudioFormat(Ljava/lang/String;II)Landroid/media/MediaFormat;
-
-    move-result-object v0
-
-    const-string v1, "bitrate"
-
-    iget v3, p0, Ll90;->d:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    const/4 v1, -0x1
-
-    iget p0, p0, Ll90;->b:I
-
-    if-eq p0, v1, :cond_1
-
-    const-string v1, "audio/mp4a-latm"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "aac-profile"
-
-    invoke-virtual {v0, v1, p0}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    return-object v0
-
-    :cond_0
-    const-string v1, "profile"
-
-    invoke-virtual {v0, v1, p0}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final c()Llxe;
-    .locals 0
-
-    iget-object p0, p0, Ll90;->c:Llxe;
-
-    return-object p0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Ll90;
+    instance-of v0, p1, Ll90;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Ll90;
 
-    iget-object v1, p0, Ll90;->a:Ljava/lang/String;
+    iget-object v0, p0, Ll90;->d:Landroid/util/Size;
 
-    iget-object v3, p1, Ll90;->a:Ljava/lang/String;
+    iget-object v1, p1, Ll90;->d:Landroid/util/Size;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    iget v1, p0, Ll90;->b:I
+    iget v0, p0, Ll90;->e:I
 
-    iget v3, p1, Ll90;->b:I
+    iget v1, p1, Ll90;->e:I
 
-    if-ne v1, v3, :cond_1
+    if-ne v0, v1, :cond_1
 
-    iget-object v1, p0, Ll90;->c:Llxe;
+    iget v0, p0, Ll90;->f:I
 
-    iget-object v3, p1, Ll90;->c:Llxe;
+    iget v1, p1, Ll90;->f:I
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v0, v1, :cond_1
 
-    move-result v1
+    iget-boolean v0, p0, Ll90;->g:Z
 
-    if-eqz v1, :cond_1
+    iget-boolean v1, p1, Ll90;->g:Z
 
-    iget v1, p0, Ll90;->d:I
+    if-ne v0, v1, :cond_1
 
-    iget v3, p1, Ll90;->d:I
+    iget-object v0, p0, Ll90;->h:La25;
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p1, Ll90;->h:La25;
 
-    iget v1, p0, Ll90;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget v3, p1, Ll90;->e:I
+    move-result v0
 
-    if-ne v1, v3, :cond_1
+    if-eqz v0, :cond_1
 
-    iget p0, p0, Ll90;->f:I
+    iget-object v0, p0, Ll90;->i:La25;
 
-    iget p1, p1, Ll90;->f:I
+    iget-object p1, p1, Ll90;->i:La25;
 
-    if-ne p0, p1, :cond_1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return v0
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    return v2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Ll90;->a:Ljava/lang/String;
+    iget-object v0, p0, Ll90;->d:Landroid/util/Size;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
 
     move-result v0
 
@@ -190,13 +157,41 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Ll90;->b:I
+    iget v2, p0, Ll90;->e:I
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ll90;->c:Llxe;
+    iget v2, p0, Ll90;->f:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Ll90;->g:Z
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x4cf
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x4d5
+
+    :goto_0
+    xor-int/2addr v0, v2
+
+    const v2, 0x22cd8cdb
+
+    mul-int/2addr v0, v2
+
+    xor-int/lit8 v0, v0, 0x23
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ll90;->h:La25;
 
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
@@ -206,23 +201,15 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Ll90;->d:I
+    iget-object v1, p0, Ll90;->i:La25;
 
-    xor-int/2addr v0, v2
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    mul-int/2addr v0, v1
+    move-result v1
 
-    iget v2, p0, Ll90;->e:I
+    xor-int/2addr v0, v1
 
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget p0, p0, Ll90;->f:I
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -230,39 +217,15 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "AudioEncoderConfig{mimeType="
+    const-string v1, "In{size="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ll90;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll90;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inputTimebase="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll90;->c:Llxe;
+    iget-object v1, p0, Ll90;->d:Landroid/util/Size;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", bitrate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ll90;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate="
+    const-string v1, ", inputFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -270,17 +233,45 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", channelCount="
+    const-string v1, ", outputFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Ll90;->f:I
+    iget v1, p0, Ll90;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", virtualCamera="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ll90;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", imageReaderProxyProvider=null, postviewSize=null, postviewImageFormat=35, requestEdge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll90;->h:La25;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorEdge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll90;->i:La25;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "}"
 
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

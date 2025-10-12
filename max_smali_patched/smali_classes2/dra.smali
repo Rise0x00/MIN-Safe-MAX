@@ -1,287 +1,175 @@
-.class public abstract synthetic Ldra;
+.class public abstract Ldra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final A:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
+
+
 # direct methods
-.method public static bridge synthetic A(Landroid/view/WindowInsets;I)Landroid/graphics/Insets;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic B(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getLowerBound()Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic C(Landroid/view/WindowInsetsController;I)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->hide(I)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic D(Landroid/view/WindowInsetsController;Lkyd;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->removeOnControllableInsetsChangedListener(Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic a(Landroid/view/WindowInsetsAnimation;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getInterpolatedFraction()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b()I
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
+    sget v0, Lqjc;->oneme_notifications_and_sounds_settings_toolbar_title:I
 
-    move-result v0
+    sput v0, Ldra;->a:I
 
-    return v0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_chat_enable_notifications_button:I
 
-.method public static bridge synthetic c(Landroid/view/WindowInsetsAnimation;)I
-    .locals 0
+    sput v0, Ldra;->b:I
 
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getTypeMask()I
+    sget v0, Lqjc;->oneme_notifications_settings_chat_enabled_section_title:I
 
-    move-result p0
+    sput v0, Ldra;->c:I
 
-    return p0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_chat_settings_button:I
 
-.method public static bridge synthetic d(Landroid/view/WindowInsetsAnimation;)J
-    .locals 2
+    sput v0, Ldra;->d:I
 
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getDurationMillis()J
+    sget v0, Lqjc;->oneme_notifications_settings_chat_toolbar_title:I
 
-    move-result-wide v0
+    sput v0, Ldra;->e:I
 
-    return-wide v0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_chat_type_all_button:I
 
-.method public static bridge synthetic e(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 1
+    sput v0, Ldra;->f:I
 
-    const/16 v0, 0x8
+    sget v0, Lqjc;->oneme_notifications_settings_chat_type_pin_reply_button:I
 
-    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+    sput v0, Ldra;->g:I
 
-    move-result-object p0
+    sget v0, Lqjc;->oneme_notifications_settings_default_ringtone_title:I
 
-    return-object p0
-.end method
+    sput v0, Ldra;->h:I
 
-.method public static bridge synthetic f(Landroid/view/WindowInsets;I)Landroid/graphics/Insets;
-    .locals 0
+    sget v0, Lqjc;->oneme_notifications_settings_dialog_enable_notifications_button:I
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets;->getInsetsIgnoringVisibility(I)Landroid/graphics/Insets;
+    sput v0, Ldra;->i:I
 
-    move-result-object p0
+    sget v0, Lqjc;->oneme_notifications_settings_dialog_settings_button:I
 
-    return-object p0
-.end method
+    sput v0, Ldra;->j:I
 
-.method public static bridge synthetic g(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
-    .locals 0
+    sget v0, Lqjc;->oneme_notifications_settings_dialog_toolbar_title:I
 
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getUpperBound()Landroid/graphics/Insets;
+    sput v0, Ldra;->k:I
 
-    move-result-object p0
+    sget v0, Lqjc;->oneme_notifications_settings_enable_all_notifications:I
 
-    return-object p0
-.end method
+    sput v0, Ldra;->l:I
 
-.method public static bridge synthetic h(Landroid/view/WindowMetrics;)Landroid/graphics/Rect;
-    .locals 0
+    sget v0, Lqjc;->oneme_notifications_settings_open_settings_button_description:I
 
-    invoke-virtual {p0}, Landroid/view/WindowMetrics;->getBounds()Landroid/graphics/Rect;
+    sput v0, Ldra;->m:I
 
-    move-result-object p0
+    sget v0, Lqjc;->oneme_notifications_settings_open_settings_button_ringtone:I
 
-    return-object p0
-.end method
+    sput v0, Ldra;->n:I
 
-.method public static bridge synthetic i(Landroid/view/WindowMetrics;)Landroid/view/WindowInsets;
-    .locals 0
+    sget v0, Lqjc;->oneme_notifications_settings_open_settings_button_title:I
 
-    invoke-virtual {p0}, Landroid/view/WindowMetrics;->getWindowInsets()Landroid/view/WindowInsets;
+    sput v0, Ldra;->o:I
 
-    move-result-object p0
+    sget v0, Lqjc;->oneme_notifications_settings_open_settings_call_ringtone_title:I
 
-    return-object p0
-.end method
+    sput v0, Ldra;->p:I
 
-.method public static synthetic j(Landroid/graphics/Insets;Landroid/graphics/Insets;)Landroid/view/WindowInsetsAnimation$Bounds;
-    .locals 1
+    sget v0, Lqjc;->oneme_notifications_settings_open_settings_calls_vibration:I
 
-    new-instance v0, Landroid/view/WindowInsetsAnimation$Bounds;
+    sput v0, Ldra;->q:I
 
-    invoke-direct {v0, p0, p1}, Landroid/view/WindowInsetsAnimation$Bounds;-><init>(Landroid/graphics/Insets;Landroid/graphics/Insets;)V
+    sget v0, Lqjc;->oneme_notifications_settings_other_new_user_button:I
 
-    return-object v0
-.end method
+    sput v0, Ldra;->r:I
 
-.method public static synthetic k(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
-    .locals 1
+    sget v0, Lqjc;->oneme_notifications_settings_other_settings_button:I
 
-    new-instance v0, Landroid/view/WindowInsetsAnimation;
+    sput v0, Ldra;->s:I
 
-    invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/WindowInsetsAnimation;-><init>(ILandroid/view/animation/Interpolator;J)V
+    sget v0, Lqjc;->oneme_notifications_settings_other_toolbar_title:I
 
-    return-object v0
-.end method
+    sput v0, Ldra;->t:I
 
-.method public static bridge synthetic l(Ljava/lang/Object;)Landroid/view/WindowInsetsAnimation;
-    .locals 0
+    sget v0, Lqjc;->oneme_notifications_settings_reset_default_button:I
 
-    check-cast p0, Landroid/view/WindowInsetsAnimation;
+    sput v0, Ldra;->u:I
 
-    return-object p0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_reset_settings_button:I
 
-.method public static bridge synthetic m(Landroid/view/View;)Landroid/view/WindowInsetsController;
-    .locals 0
+    sput v0, Ldra;->v:I
 
-    invoke-virtual {p0}, Landroid/view/View;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+    sget v0, Lqjc;->oneme_notifications_settings_show_content_button:I
 
-    move-result-object p0
+    sput v0, Ldra;->w:I
 
-    return-object p0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_toolbar_title:I
 
-.method public static bridge synthetic n(Landroid/view/WindowManager;)Landroid/view/WindowMetrics;
-    .locals 0
+    sput v0, Ldra;->x:I
 
-    invoke-interface {p0}, Landroid/view/WindowManager;->getMaximumWindowMetrics()Landroid/view/WindowMetrics;
+    sget v0, Lqjc;->oneme_notifications_settings_type_off:I
 
-    move-result-object p0
+    sput v0, Ldra;->y:I
 
-    return-object p0
-.end method
+    sget v0, Lqjc;->oneme_notifications_settings_type_on:I
 
-.method public static bridge synthetic o(Landroid/content/pm/InstallSourceInfo;)Ljava/lang/String;
-    .locals 0
+    sput v0, Ldra;->z:I
 
-    invoke-virtual {p0}, Landroid/content/pm/InstallSourceInfo;->getInstallingPackageName()Ljava/lang/String;
+    sget v0, Lqjc;->oneme_notifications_settings_type_reply:I
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic p()V
-    .locals 1
-
-    new-instance v0, Landroid/view/WindowInsetsAnimation$Bounds;
+    sput v0, Ldra;->A:I
 
     return-void
-.end method
-
-.method public static bridge synthetic q(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
-    .locals 2
-
-    const/16 v0, 0x78
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p0, v0, v1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setUserAuthenticationParameters(II)Landroid/security/keystore/KeyGenParameterSpec$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic r(Landroid/view/Surface;FI)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/Surface;->setFrameRate(FI)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/view/View;Lzjg;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setWindowInsetsAnimationCallback(Landroid/view/WindowInsetsAnimation$Callback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setInsets(ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/view/WindowInsets$Builder;IZ)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setVisible(IZ)Landroid/view/WindowInsets$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/view/WindowInsetsAnimation;F)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsetsAnimation;->setFraction(F)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic w(Landroid/view/WindowInsetsController;I)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->show(I)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic x(Landroid/view/WindowInsetsController;Lkyd;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->addOnControllableInsetsChangedListener(Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic y(Landroid/view/WindowInsetsAnimation;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getFraction()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic z()I
-    .locals 1
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
-
-    move-result v0
-
-    return v0
 .end method

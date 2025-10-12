@@ -1,55 +1,31 @@
 .class public final Lyv7;
-.super Lax3;
+.super Lr3c;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/List;
+# virtual methods
+.method public final H(Landroid/view/View$OnClickListener;)V
+    .locals 1
 
-.field public Y:Ljava/lang/Exception;
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic n0:Law7;
-
-.field public o:Law7;
-
-.field public o0:I
-
-
-# direct methods
-.method public constructor <init>(Law7;Lax3;)V
-    .locals 0
-
-    iput-object p1, p0, Lyv7;->n0:Law7;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0, p1}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final x(Lww7;)V
     .locals 1
 
-    iput-object p1, p0, Lyv7;->Z:Ljava/lang/Object;
+    check-cast p1, Lh0c;
 
-    iget p1, p0, Lyv7;->o0:I
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-    const/high16 v0, -0x80000000
+    check-cast v0, Lxv7;
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lh0c;->a:Ljava/lang/CharSequence;
 
-    iput p1, p0, Lyv7;->o0:I
+    invoke-virtual {v0, p1}, Lxv7;->setLink(Ljava/lang/CharSequence;)V
 
-    iget-object p1, p0, Lyv7;->n0:Law7;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, v0, p0}, Law7;->a(Law7;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lax3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

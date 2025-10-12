@@ -1,88 +1,18 @@
-.class public final Lfl2;
-.super Leje;
+.class public final synthetic Lfl2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ljl2;
-
-
-# direct methods
-.method public constructor <init>(Ljl2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lfl2;->Y:Ljl2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Ljava/util/function/LongUnaryOperator;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final applyAsLong(J)J
     .locals 0
 
-    check-cast p1, Lag8;
+    sget-object p1, Lvm2;->p1:[Ltm7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-wide/16 p1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lfl2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lfl2;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lfl2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lfl2;
-
-    iget-object p0, p0, Lfl2;->Y:Ljl2;
-
-    invoke-direct {v0, p0, p2}, Lfl2;-><init>(Ljl2;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfl2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfl2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lag8;
-
-    iget-object p0, p0, Lfl2;->Y:Ljl2;
-
-    iget-object p0, p0, Ljl2;->C0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance v0, Lxz0;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p1}, Lxz0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-wide p1
 .end method

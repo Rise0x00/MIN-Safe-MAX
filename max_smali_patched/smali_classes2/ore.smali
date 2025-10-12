@@ -1,303 +1,128 @@
-.class public final Lore;
+.class public final synthetic Lore;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lrwa;
-
-.field public final c:Lzre;
-
-.field public final d:I
-
-.field public final e:J
-
-.field public final f:I
-
-.field public final g:[B
-
-.field public final h:J
+.field public final synthetic b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(JLrwa;Lzre;IJI[BJ)V
+.method public synthetic constructor <init>(Lone/me/stickerspreview/set/StickerSetBottomSheet;I)V
     .locals 0
 
+    iput p2, p0, Lore;->a:I
+
+    iput-object p1, p0, Lore;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lore;->a:J
-
-    iput-object p3, p0, Lore;->b:Lrwa;
-
-    iput-object p4, p0, Lore;->c:Lzre;
-
-    iput p5, p0, Lore;->d:I
-
-    iput-wide p6, p0, Lore;->e:J
-
-    iput p8, p0, Lore;->f:I
-
-    iput-object p9, p0, Lore;->g:[B
-
-    iput-wide p10, p0, Lore;->h:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lore;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lore;
-
-    iget-wide v3, p0, Lore;->a:J
-
-    iget-wide v5, p1, Lore;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lore;->b:Lrwa;
-
-    iget-object v3, p1, Lore;->b:Lrwa;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lore;->c:Lzre;
-
-    iget-object v3, p1, Lore;->c:Lzre;
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lore;->d:I
-
-    iget v3, p1, Lore;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-wide v3, p0, Lore;->e:J
-
-    iget-wide v5, p1, Lore;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget v1, p0, Lore;->f:I
-
-    iget v3, p1, Lore;->f:I
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lore;->g:[B
-
-    iget-object v3, p1, Lore;->g:[B
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-wide v3, p0, Lore;->h:J
-
-    iget-wide p0, p1, Lore;->h:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    iget-wide v0, p0, Lore;->a:J
+    iget p1, p0, Lore;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Lore;->b:Lone/me/stickerspreview/set/StickerSetBottomSheet;
 
-    move-result v0
+    packed-switch p1, :pswitch_data_0
 
-    const/16 v1, 0x1f
+    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->G0:[Ltm7;
 
-    mul-int/2addr v0, v1
+    iget-object p1, v0, Lone/me/stickerspreview/set/StickerSetBottomSheet;->y0:Lbp7;
 
-    iget-object v2, p0, Lore;->b:Lrwa;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    move-result-object p1
 
-    move-result v2
+    check-cast p1, Lire;
 
-    add-int/2addr v2, v0
+    iget-object v0, p1, Lire;->G0:Lsqc;
 
-    mul-int/2addr v2, v1
+    iget-object v0, v0, Lsqc;->a:Lfoe;
 
-    iget-object v0, p0, Lore;->c:Lzre;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lore;->d:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lore;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lt2g;->a(IIJ)I
-
-    move-result v0
-
-    iget v2, p0, Lore;->f:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lore;->g:[B
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v0, p0, Lore;->h:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v2
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lore;->g:[B
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v0, Lwre;
 
-    const-string v2, "TaskEntity(id="
+    if-eqz v0, :cond_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p1, Lire;->K0:Lqle;
 
-    iget-wide v2, p0, Lore;->a:J
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ld0;->isActive()Z
 
-    const-string v2, ", type="
+    move-result v1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    iget-object v2, p0, Lore;->b:Lrwa;
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v2, ", status="
+    :cond_0
+    iget-object v1, p1, Lire;->c:Lr8f;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Lwla;
 
-    iget-object v2, p0, Lore;->c:Lzre;
+    invoke-virtual {v1}, Lwla;->b()Ly24;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v2, ", failsCount="
+    new-instance v2, Lhre;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    iget v2, p0, Lore;->d:I
+    invoke-direct {v2, v0, p1, v3}, Lhre;-><init>(Lwre;Lire;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v0, 0x2
 
-    const-string v2, ", dependsRequestId="
+    invoke-static {p1, v1, v2, v0}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
 
-    const-string v3, ", dependencyType="
+    move-result-object v0
 
-    iget-wide v4, p0, Lore;->e:J
+    iput-object v0, p1, Lire;->K0:Lqle;
 
-    invoke-static {v4, v5, v2, v3, v1}, Ldw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    :cond_1
+    :goto_0
+    return-void
 
-    iget v2, p0, Lore;->f:I
+    :pswitch_0
+    sget-object p1, Lone/me/stickerspreview/set/StickerSetBottomSheet;->G0:[Ltm7;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lb04;->getParentController()Lb04;
 
-    const-string v2, ", data="
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
 
-    const-string v0, ", createdTime="
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_2
 
-    const-string v0, ")"
+    invoke-virtual {p1}, Li8d;->C()Z
 
-    iget-wide v2, p0, Lore;->h:J
+    :cond_2
+    return-void
 
-    invoke-static {v1, v2, v3, v0}, Lw68;->n(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    nop
 
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,10 +1,11 @@
-.class public abstract Lsyb;
+.class public interface abstract Lsyb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_permission_dialog_check_cancel:I = 0x7f0a01a9
+# virtual methods
+.method public abstract v()V
+.end method
 
-.field public static call_permission_dialog_check_continue:I = 0x7f0a01aa
-
-.field public static call_start_no_network_connection_neutral_button:I = 0x7f0a0200
+.method public abstract w(ILjava/lang/Object;)V
+.end method

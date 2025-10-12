@@ -1,111 +1,81 @@
 .class public final Lfpa;
-.super Lx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/RandomAccess;
 
 
 # instance fields
-.field public final a:[Lqw0;
+.field public final a:Landroid/content/Context;
 
-.field public final b:[I
+.field public final b:Lbp7;
 
 
 # direct methods
-.method public constructor <init>([Lqw0;[I)V
+.method public constructor <init>(Landroid/content/Context;Lbp7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfpa;->a:[Lqw0;
+    iput-object p1, p0, Lfpa;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lfpa;->b:[I
+    iput-object p2, p0, Lfpa;->b:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(J)V
+    .locals 2
 
-    instance-of v0, p1, Lqw0;
+    const-string v0, ":chats?id="
 
-    if-eqz v0, :cond_0
+    const-string v1, "&type=local"
 
-    check-cast p1, Lqw0;
+    invoke-static {p1, p2, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-super {p0, p1}, Lx1;->contains(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p0
+    iget-object p2, p0, Lfpa;->b:Lbp7;
 
-    return p0
+    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object p2
 
-    return p0
-.end method
+    check-cast p2, Lil;
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 0
+    check-cast p2, Lnw7;
 
-    iget-object p0, p0, Lfpa;->a:[Lqw0;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    aget-object p0, p0, p1
+    invoke-static {p1}, Lvb4;->b(Ljava/lang/String;)Landroid/net/Uri;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public final getSize()I
-    .locals 0
+    sget p2, Lone/me/android/deeplink/NewWidgetActivity;->Z0:I
 
-    iget-object p0, p0, Lfpa;->a:[Lqw0;
+    new-instance p2, Landroid/content/Intent;
 
-    array-length p0, p0
+    const-class v0, Lone/me/android/deeplink/NewWidgetActivity;
 
-    return p0
-.end method
+    iget-object v1, p0, Lfpa;->a:Landroid/content/Context;
 
-.method public final bridge indexOf(Ljava/lang/Object;)I
-    .locals 1
+    invoke-direct {p2, v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    instance-of v0, p1, Lqw0;
+    const-string v0, "deep_link"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    check-cast p1, Lqw0;
+    const-string p1, "snackbar"
 
-    invoke-super {p0, p1}, Lx1;->indexOf(Ljava/lang/Object;)I
+    const/4 v0, 0x0
 
-    move-result p0
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    return p0
+    const/high16 p1, 0x10000000
 
-    :cond_0
-    const/4 p0, -0x1
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    return p0
-.end method
+    invoke-virtual {v1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-.method public final bridge lastIndexOf(Ljava/lang/Object;)I
-    .locals 1
-
-    instance-of v0, p1, Lqw0;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lqw0;
-
-    invoke-super {p0, p1}, Lx1;->lastIndexOf(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
+    return-void
 .end method

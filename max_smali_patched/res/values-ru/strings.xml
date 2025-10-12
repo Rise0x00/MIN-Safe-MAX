@@ -160,6 +160,12 @@
     <string name="file_error_download">Не удалось скачать файл</string>
     <string name="file_error_download_not_found">Не удалось скачать файл. Файл недоступен или не найден</string>
     <string name="fingerprint_dialog_touch_sensor">Коснитесь сканера отпечатков.</string>
+    <string name="fingerprint_error_hw_not_available">Сканер отпечатков пальцев недоступен.</string>
+    <string name="fingerprint_error_hw_not_present">На этом устройстве нет сканера отпечатков пальцев.</string>
+    <string name="fingerprint_error_lockout">Слишком много попыток входа. Попробуйте ещё раз позже.</string>
+    <string name="fingerprint_error_no_fingerprints">Нет отсканированных отпечатков пальцев.</string>
+    <string name="fingerprint_error_user_canceled">Операция с отпечатком пальца отменена пользователем.</string>
+    <string name="fingerprint_not_recognized">Не распознано</string>
     <string name="folder_all">Все</string>
     <string name="folder_delete_folder">Удалить папку</string>
     <string name="folder_edit_folder">Изменить папку</string>
@@ -167,6 +173,8 @@
     <string name="folder_new_messages_max_exceeded">%d+</string>
     <string name="folder_personal">Личные</string>
     <string name="forward_message">Переслать сообщение</string>
+    <string name="generic_error_no_device_credential">Не заданы PIN-код, пароль или графический ключ.</string>
+    <string name="generic_error_no_keyguard">На этом устройстве не поддерживаются PIN-код, графический ключ и пароль.</string>
     <string name="generic_error_user_canceled">Аутентификация отменена пользователем.</string>
     <string name="go_to_message">Перейти к сообщению</string>
     <string name="icon_content_description">Значок диалогового окна</string>
@@ -438,12 +446,8 @@
     <string name="send_static_location">Отправить место</string>
     <string name="send_video">Отправить видео</string>
     <string name="sensitive_content_warning">Возможно, неприемлемый контент! Нажмите, чтобы отобразить</string>
-    <string name="service_notifications">Сервисные уведомления</string>
+    <string name="service_notifications">сервисные уведомления</string>
     <string name="set_bg_failed">Ошибка. Не удалось установить фон</string>
-    <string name="setting_day_color">День</string>
-    <string name="setting_default_color">По умолчанию</string>
-    <string name="setting_graphite_color">Графит</string>
-    <string name="setting_night_color">Ночь</string>
     <string name="share">Поделиться</string>
     <string name="share_location_title">Место</string>
     <string name="share_photo_fail">Не удалось поделиться фотографией</string>
@@ -467,6 +471,8 @@
     <string name="tt_call_incoming_video_cap">Входящий видеовызов</string>
     <string name="tt_call_missed_audio">пропущенный аудиовызов</string>
     <string name="tt_call_missed_audio_cap">Пропущенный аудиовызов</string>
+    <string name="tt_call_missed_video">пропущенный видеовызов</string>
+    <string name="tt_call_missed_video_cap">Пропущенный видеовызов</string>
     <string name="tt_call_outgoing_audio">исходящий аудиовызов</string>
     <string name="tt_call_outgoing_audio_cap">Исходящий аудиовызов</string>
     <string name="tt_call_outgoing_canceled_audio">отменённый аудиовызов</string>

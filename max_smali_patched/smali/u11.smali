@@ -1,1022 +1,834 @@
-.class public final synthetic Lu11;
-.super Lia6;
+.class public final Lu11;
+.super Lkee;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    iput p7, p0, Lu11;->a:I
+    iput p1, p0, Lu11;->b:I
 
-    move-object v0, p4
-
-    move-object p4, p2
-
-    move p2, p6
-
-    move-object p6, p5
-
-    move-object p5, v0
-
-    invoke-direct/range {p0 .. p6}, Lha6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0}, Lkee;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 21
+.method public final b(La5;)Ljava/lang/Object;
+    .locals 20
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lu11;->a:I
+    move-object/from16 v1, p1
 
-    const/4 v2, 0x6
+    iget v2, v0, Lu11;->b:I
 
-    const/4 v3, 0x7
+    const-class v3, Las3;
 
-    const/4 v4, 0x5
+    const-class v4, Ldog;
 
-    const/4 v5, 0x3
+    const-class v5, Lob1;
 
-    const/4 v6, 0x4
+    const-class v6, Ln14;
 
-    const/4 v7, 0x0
+    const-class v7, Lwm9;
 
-    const/4 v8, 0x1
+    const-class v8, Llm5;
 
-    sget-object v9, Ltcf;->a:Ltcf;
+    const-class v9, Lqv1;
 
-    const/4 v10, 0x0
+    const-class v10, Loh1;
 
-    packed-switch v1, :pswitch_data_0
+    const-class v11, Lktd;
 
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    const-class v12, Liqa;
 
-    check-cast v0, Lone/me/keyboardmedia/MediaKeyboardWidget;
+    const-class v13, Lkf2;
 
-    iget-object v1, v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Landroid/animation/ObjectAnimator;
+    const-class v14, Lov0;
 
-    if-eqz v1, :cond_0
+    const-class v15, Lrt1;
 
-    invoke-virtual {v1}, Landroid/animation/Animator;->isRunning()Z
+    const-class v0, Lhv1;
 
-    move-result v1
+    move/from16 v16, v2
 
-    if-ne v1, v8, :cond_0
+    const-class v2, Lst1;
 
-    goto :goto_0
+    move-object/from16 v17, v3
 
-    :cond_0
-    invoke-virtual {v0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->y0()Landroid/view/View;
+    const-class v3, Landroid/content/Context;
 
-    move-result-object v1
+    move-object/from16 v18, v4
 
-    invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
+    const-class v4, Lr8f;
 
-    move-result v1
+    packed-switch v16, :pswitch_data_0
 
-    const/4 v2, 0x0
+    sget-object v0, Lsh3;->i:Ls5f;
 
-    cmpg-float v1, v1, v2
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    goto :goto_0
+    check-cast v0, Lr8f;
 
-    :cond_1
-    iget-object v1, v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Landroid/animation/ObjectAnimator;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/animation/Animator;->cancel()V
-
-    :cond_2
-    invoke-virtual {v0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->y0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getTranslationY()F
-
-    move-result v1
-
-    invoke-virtual {v0}, Lone/me/keyboardmedia/MediaKeyboardWidget;->y0()Landroid/view/View;
-
-    move-result-object v3
-
-    sget-object v4, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
-
-    const/4 v5, 0x2
-
-    new-array v5, v5, [F
-
-    aput v1, v5, v10
-
-    aput v2, v5, v8
-
-    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0xc8
-
-    invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v1}, Landroid/animation/Animator;->start()V
-
-    iput-object v1, v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->v0:Landroid/animation/ObjectAnimator;
-
-    :goto_0
-    return-object v9
+    return-object v0
 
     :pswitch_0
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    sget-object v0, Lsh3;->g:Ls5f;
 
-    check-cast v0, Lone/me/main/MainScreen;
-
-    sget-object v1, Lone/me/main/MainScreen;->Z:Lb18;
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->C0()Lz08;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lz08;->o:Lf8a;
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->A0()Lqrc;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
+    check-cast v0, Lm9f;
 
-    sget-object v0, Lbsa;->f:Lbsa;
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v1, v1, Lf8a;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lqrc;->g(Ljava/lang/String;)Lox3;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lcp9;
-
-    if-eqz v1, :cond_4
-
-    move-object v7, v0
-
-    check-cast v7, Lcp9;
-
-    :cond_4
-    if-nez v7, :cond_5
-
-    sget-object v0, Lbsa;->f:Lbsa;
-
-    goto :goto_1
-
-    :cond_5
-    check-cast v7, Lone/me/chats/tab/ChatsTabWidget;
-
-    invoke-virtual {v7}, Lone/me/chats/tab/ChatsTabWidget;->D0()Lbsa;
-
-    move-result-object v0
-
-    :goto_1
     return-object v0
 
     :pswitch_1
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    sget-object v0, Lsh3;->f:Ls5f;
 
-    check-cast v0, Lone/me/main/MainScreen;
-
-    sget-object v1, Lone/me/main/MainScreen;->Z:Lb18;
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->C0()Lz08;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lz08;->o:Lf8a;
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->A0()Lqrc;
-
-    move-result-object v2
-
-    if-nez v2, :cond_6
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->B0()Lsyc;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    goto :goto_2
+    check-cast v0, Ljna;
 
-    :cond_6
-    iget-object v1, v1, Lf8a;->d:Ljava/lang/String;
-
-    invoke-virtual {v2, v1}, Lqrc;->g(Ljava/lang/String;)Lox3;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ldp9;
-
-    if-eqz v2, :cond_7
-
-    move-object v7, v1
-
-    check-cast v7, Ldp9;
-
-    :cond_7
-    if-nez v7, :cond_8
-
-    invoke-virtual {v0}, Lone/me/main/MainScreen;->B0()Lsyc;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_8
-    invoke-interface {v7}, Ldp9;->o()Lsyc;
-
-    move-result-object v0
-
-    :goto_2
     return-object v0
 
     :pswitch_2
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Leg4;
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    sget-object v1, Lsh3;->i:Ls5f;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    check-cast v1, Lr8f;
 
-    move-result-object v0
+    check-cast v1, Lwla;
+
+    invoke-virtual {v1}, Lwla;->a()Ly24;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Leg4;-><init>(Ly24;)V
 
     return-object v0
 
     :pswitch_3
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lzde;
 
-    check-cast v0, Lew5;
+    sget-object v1, Lsh3;->i:Ls5f;
 
-    check-cast v0, Lone/me/folders/edit/FolderEditScreen;
-
-    invoke-virtual {v0}, Lone/me/folders/edit/FolderEditScreen;->y0()Lkx5;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lkx5;->o:Lhoe;
-
-    check-cast v1, Loba;
-
-    invoke-virtual {v1}, Loba;->a()Lj04;
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Lax5;
+    check-cast v1, Lr8f;
 
-    invoke-direct {v2, v0, v7}, Lax5;-><init>(Lkx5;Lkotlin/coroutines/Continuation;)V
+    check-cast v1, Lwla;
 
-    iget-object v3, v0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v4, Ls04;->b:Ls04;
-
-    invoke-static {v3, v1, v4, v2}, Lyr3;->X(Lp04;Lh04;Ls04;Lt96;)Lt1e;
+    invoke-virtual {v1}, Lwla;->f()Ly24;
 
     move-result-object v1
 
-    iget-object v2, v0, Lkx5;->A0:Lvfd;
+    const/4 v2, 0x0
 
-    sget-object v3, Lkx5;->C0:[Lof7;
+    invoke-direct {v0, v2, v1}, Lzde;-><init>(ILjava/lang/Object;)V
 
-    aget-object v3, v3, v10
-
-    invoke-virtual {v2, v0, v3, v1}, Lvfd;->N(Ljava/lang/Object;Lof7;Ljava/lang/Object;)V
-
-    return-object v9
+    return-object v0
 
     :pswitch_4
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lg88;
 
-    check-cast v0, Lz43;
+    sget-object v1, Lsh3;->i:Ls5f;
 
-    check-cast v0, Lb53;
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    const-string v1, "web_app:ssl_check"
+    move-result-object v1
 
-    iget-object v0, v0, Ld3;->g:Lwh7;
+    check-cast v1, Lr8f;
 
-    invoke-virtual {v0, v1, v10}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
+    check-cast v1, Lwla;
 
-    move-result v0
+    invoke-virtual {v1}, Lwla;->c()Le88;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lg88;-><init>(Le88;)V
 
     return-object v0
 
     :pswitch_5
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lgoa;
 
-    check-cast v0, Lz43;
+    const-class v2, Lz56;
 
-    check-cast v0, Lb53;
+    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const-string v1, "app.enable_in_app_review_not_from_market_build"
+    move-result-object v2
 
-    iget-object v0, v0, Ld3;->g:Lwh7;
+    check-cast v2, Lz56;
 
-    invoke-virtual {v0, v1, v10}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v3
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    check-cast v3, Lr8f;
 
-    move-result-object v0
+    const-class v4, Lae2;
+
+    invoke-virtual {v1, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lae2;
+
+    invoke-virtual {v1, v14}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lov0;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lgoa;-><init>(Lz56;Lr8f;Lae2;Lov0;)V
 
     return-object v0
 
     :pswitch_6
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Low2;
 
-    check-cast v0, Lz43;
-
-    check-cast v0, Lb53;
-
-    const-string v1, "app.disable_in_app_review_time_condition"
-
-    iget-object v0, v0, Ld3;->g:Lwh7;
-
-    invoke-virtual {v0, v1, v10}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Low2;-><init>(La5;)V
 
     return-object v0
 
     :pswitch_7
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    invoke-virtual {v1, v13}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    check-cast v0, Leu3;
+    move-result-object v0
 
-    invoke-interface {v0}, Leu3;->Z()V
+    check-cast v0, Lpxf;
 
-    return-object v9
+    return-object v0
 
     :pswitch_8
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    invoke-virtual {v1, v13}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    check-cast v0, Leu3;
+    move-result-object v0
 
-    invoke-interface {v0}, Leu3;->Z()V
+    check-cast v0, Lgu2;
 
-    return-object v9
+    return-object v0
 
     :pswitch_9
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    invoke-virtual {v1, v12}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    check-cast v0, Lbn3;
+    move-result-object v2
 
-    iget-object v1, v0, Lbn3;->B0:Ld7a;
+    const-class v0, Ls97;
 
-    new-instance v7, Lul3;
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-direct {v7}, Lul3;-><init>()V
+    move-result-object v0
 
-    invoke-virtual {v7, v0}, Lul3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    const-class v5, La00;
 
-    iget-object v0, v0, Lbn3;->K0:Ljava/lang/Object;
+    invoke-virtual {v1, v5}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-static {v0}, Lyr3;->W(Lth7;)Z
+    move-result-object v5
 
-    move-result v8
+    const-class v6, Liff;
 
-    if-eqz v8, :cond_9
+    invoke-virtual {v1, v6}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    move-result-object v6
+
+    const-class v7, Lgp3;
+
+    invoke-virtual {v1, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    const-class v8, Lg44;
+
+    invoke-virtual {v1, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v8
 
-    check-cast v8, Landroidx/appcompat/widget/AppCompatCheckBox;
+    invoke-virtual {v1, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v8}, Landroid/view/View;->getId()I
+    move-result-object v3
 
-    move-result v8
+    move-object v9, v3
 
-    invoke-virtual {v7, v8, v5, v10, v5}, Lul3;->d(IIII)V
+    check-cast v9, Landroid/content/Context;
 
-    invoke-virtual {v7, v8, v6, v10, v6}, Lul3;->d(IIII)V
+    invoke-virtual {v1, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v7, v8, v2, v10, v2}, Lul3;->d(IIII)V
+    move-result-object v3
 
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
+    move-object v10, v3
 
-    move-result v9
+    check-cast v10, Lr8f;
 
-    invoke-virtual {v7, v8, v3, v9, v2}, Lul3;->d(IIII)V
+    const-class v3, Lbt6;
 
-    :cond_9
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result v1
+    move-result-object v3
 
-    invoke-virtual {v7, v1, v5, v10, v5}, Lul3;->d(IIII)V
+    new-instance v4, Lkf2;
 
-    invoke-virtual {v7, v1, v6, v10, v6}, Lul3;->d(IIII)V
+    new-instance v11, Lv11;
 
-    invoke-static {v0}, Lyr3;->W(Lth7;)Z
+    const/4 v12, 0x1
 
-    move-result v5
+    invoke-direct {v11, v1, v12}, Lv11;-><init>(La5;I)V
 
-    if-eqz v5, :cond_a
+    move-object v1, v4
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    move-object v4, v5
 
-    move-result-object v0
+    move-object v5, v6
 
-    check-cast v0, Landroidx/appcompat/widget/AppCompatCheckBox;
+    move-object v6, v7
 
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
+    move-object v7, v8
 
-    move-result v0
+    move-object v8, v3
 
-    invoke-virtual {v7, v1, v2, v0, v3}, Lul3;->d(IIII)V
+    move-object v3, v0
 
-    new-instance v0, Le4a;
+    invoke-direct/range {v1 .. v11}, Lkf2;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Landroid/content/Context;Lr8f;Lv11;)V
 
-    invoke-direct {v0, v7, v2, v1, v4}, Le4a;-><init>(Ljava/lang/Object;III)V
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Ldw1;->q(FFLe4a;)V
-
-    goto :goto_3
-
-    :cond_a
-    invoke-virtual {v7, v1, v2, v10, v2}, Lul3;->d(IIII)V
-
-    :goto_3
-    return-object v7
+    return-object v1
 
     :pswitch_a
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Luf2;
 
-    check-cast v0, Lbn3;
-
-    invoke-static {v0}, Lbn3;->F(Lbn3;)Lul3;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Luf2;-><init>(La5;)V
 
     return-object v0
 
     :pswitch_b
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lvma;
 
-    check-cast v0, Lbn3;
+    const-class v2, Lec5;
 
-    invoke-static {v0}, Lbn3;->E(Lbn3;)Lul3;
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result-object v0
+    move-result-object v2
+
+    const-class v3, Lo49;
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v11}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v3, v1}, Lvma;-><init>(Lbp7;Lbp7;Lbp7;)V
 
     return-object v0
 
     :pswitch_c
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lm78;
 
-    check-cast v0, Lbn3;
-
-    invoke-static {v0}, Lbn3;->D(Lbn3;)Lul3;
-
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-object v0
 
     :pswitch_d
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v1, Laa1;
 
-    check-cast v0, Lbn3;
+    sget-object v0, Lx31;->a:Lx31;
 
-    invoke-static {v0}, Lbn3;->x(Lbn3;)Lul3;
+    invoke-virtual {v0}, Lx31;->c()Lst1;
+
+    move-result-object v2
+
+    sget-object v3, Lik1;->a:Lik1;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v4
+
+    const-class v5, Lij5;
+
+    invoke-virtual {v4, v5}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lij5;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v5
+
+    const-class v6, Lp11;
+
+    invoke-virtual {v5, v6}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lp11;
+
+    invoke-virtual {v0}, Lx31;->b()Lav1;
 
     move-result-object v0
 
-    return-object v0
+    sget-object v6, Lhk1;->a:Lbp7;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v10}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v7
+
+    const-class v8, Ld81;
+
+    invoke-virtual {v7, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v3
+
+    const-class v8, Lp5b;
+
+    invoke-virtual {v3, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    move-object v3, v4
+
+    move-object v4, v5
+
+    move-object v5, v0
+
+    invoke-direct/range {v1 .. v8}, Laa1;-><init>(Lst1;Lij5;Lp11;Lav1;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v1
 
     :pswitch_e
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lob1;
 
-    check-cast v0, Lbn3;
+    const-class v2, Landroid/app/Application;
 
-    invoke-static {v0}, Lbn3;->C(Lbn3;)Lul3;
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lob1;-><init>(Lbp7;)V
 
     return-object v0
 
     :pswitch_f
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v3, Ljz0;
 
-    check-cast v0, Lbn3;
+    move-object v4, v3
 
-    invoke-static {v0}, Lbn3;->B(Lbn3;)Lul3;
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result-object v0
+    move-result-object v3
+
+    const-class v2, Lz9b;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v9}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    move-object/from16 v19, v4
+
+    move-object v4, v2
+
+    move-object/from16 v2, v19
+
+    invoke-direct/range {v2 .. v7}, Ljz0;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v2
+
+    :pswitch_10
+    new-instance v0, Ld81;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    const-class v3, Lx4d;
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Ld81;-><init>(Lbp7;Lbp7;)V
 
     return-object v0
 
-    :pswitch_10
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
-
-    check-cast v0, Lbn3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lul3;
-
-    invoke-direct {v1}, Lul3;-><init>()V
-
-    invoke-virtual {v1, v0}, Lul3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
-
-    iget-object v0, v0, Lbn3;->C0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0, v5, v10, v5}, Lul3;->d(IIII)V
-
-    invoke-virtual {v1, v0, v6, v10, v6}, Lul3;->d(IIII)V
-
-    invoke-virtual {v1, v0, v2, v10, v2}, Lul3;->d(IIII)V
-
-    new-instance v5, Le4a;
-
-    invoke-direct {v5, v1, v2, v0, v4}, Le4a;-><init>(Ljava/lang/Object;III)V
-
-    invoke-virtual {v5, v10}, Le4a;->e(I)V
-
-    invoke-virtual {v1, v0, v3, v10, v3}, Lul3;->d(IIII)V
-
-    new-instance v2, Le4a;
-
-    invoke-direct {v2, v1, v3, v0, v4}, Le4a;-><init>(Ljava/lang/Object;III)V
-
-    invoke-virtual {v2, v10}, Le4a;->e(I)V
-
-    invoke-virtual {v1, v0}, Lul3;->g(I)Lpl3;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lpl3;->d:Lql3;
-
-    iput-boolean v8, v0, Lql3;->l0:Z
-
-    return-object v1
-
     :pswitch_11
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lta1;
 
-    check-cast v0, Lbn3;
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-static {v0}, Lbn3;->w(Lbn3;)Lul3;
+    move-result-object v2
 
-    move-result-object v0
+    const-class v3, Lav1;
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lta1;-><init>(Lbp7;Lbp7;)V
 
     return-object v0
 
     :pswitch_12
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
-
-    check-cast v0, Lbn3;
-
-    invoke-static {v0}, Lbn3;->y(Lbn3;)Lul3;
+    invoke-virtual {v1, v15}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v1, v10}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    const-class v3, Lsa1;
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    new-instance v3, Lxi5;
+
+    move-object v4, v0
+
+    invoke-direct/range {v3 .. v8}, Lxi5;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v3
 
     :pswitch_13
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    const-class v0, Lhx3;
 
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    sget-object v1, Lone/me/chats/search/ChatsListSearchScreen;->E0:[Lof7;
+    move-result-object v10
 
-    invoke-virtual {v0}, Lone/me/chats/search/ChatsListSearchScreen;->y0()Lrx2;
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result-object v0
+    move-result-object v9
 
-    iget-object v0, v0, Lrx2;->A0:Ljbc;
+    const-class v0, Lr63;
 
-    iget-object v0, v0, Ljbc;->a:Lj4e;
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-interface {v0}, Lj4e;->getValue()Ljava/lang/Object;
+    move-result-object v11
 
-    move-result-object v0
+    invoke-virtual {v1, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    check-cast v0, Lax2;
+    move-result-object v12
 
-    iget-object v0, v0, Lax2;->a:Lzw2;
+    const-class v0, Ll2c;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move-result v0
+    move-result-object v13
 
-    if-eq v0, v5, :cond_b
+    new-instance v8, Lzq1;
 
-    if-eq v0, v6, :cond_b
+    invoke-direct/range {v8 .. v13}, Lzq1;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
 
-    sget-object v0, Lsyc;->s0:Lsyc;
-
-    goto :goto_4
-
-    :cond_b
-    sget-object v0, Lsyc;->t0:Lsyc;
-
-    :goto_4
-    return-object v0
+    return-object v8
 
     :pswitch_14
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lifd;
 
-    check-cast v0, Lhm2;
+    invoke-virtual {v1, v6}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-virtual {v0}, Lhm2;->s()Lbq5;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lifd;-><init>(Lbp7;)V
 
     return-object v0
 
     :pswitch_15
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v2, Lcv1;
 
-    check-cast v0, Lhm2;
-
-    invoke-virtual {v0}, Lhm2;->s()Lbq5;
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v1, v5}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v3
+
+    move-object/from16 v4, v18
+
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-direct {v2, v0, v3, v1}, Lcv1;-><init>(Lbp7;Lbp7;Lbp7;)V
+
+    return-object v2
 
     :pswitch_16
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
-
-    invoke-static {v0}, Lone/me/profile/screens/media/ChatMediaTabWidget;->x0(Lone/me/profile/screens/media/ChatMediaTabWidget;)Lsyc;
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v0
 
-    return-object v0
+    const-class v2, Lzqa;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    invoke-virtual {v1, v5}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v9
+
+    const-class v2, Lff4;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    new-instance v4, Lhv1;
+
+    move-object v5, v0
+
+    invoke-direct/range {v4 .. v9}, Lhv1;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v4
 
     :pswitch_17
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    move-object/from16 v4, v18
 
-    check-cast v0, Lc82;
+    new-instance v5, Lx4d;
 
-    iget-object v1, v0, Lc82;->c:Lth7;
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    move-result-object v6
 
-    move-result-object v1
+    invoke-virtual {v1, v11}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    check-cast v1, Lsz2;
+    move-result-object v7
 
-    iget-wide v2, v0, Lc82;->b:J
+    const-class v2, Lqp;
 
-    check-cast v1, Ls03;
-
-    invoke-virtual {v1, v2, v3}, Ls03;->N(J)Ljbc;
-
-    move-result-object v1
-
-    new-instance v2, Luv2;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v2, v1, v3}, Luv2;-><init>(Lbq5;I)V
-
-    new-instance v1, Lw72;
-
-    invoke-direct {v1, v2, v10}, Lw72;-><init>(Luv2;I)V
-
-    iget-object v0, v0, Lc82;->X:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhoe;
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->b()Lj04;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lfog;->y(Lbq5;Lh04;)Lbq5;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lfog;->p(Lbq5;)Lbq5;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
-
-    check-cast v0, Lrn1;
-
-    iget-boolean v1, v0, Lrn1;->j:Z
-
-    if-nez v1, :cond_e
-
-    iget-object v1, v0, Lrn1;->d:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljt1;
-
-    check-cast v1, Lwt1;
-
-    invoke-virtual {v1}, Lwt1;->k()Lb44;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lb44;->d:Ljava/lang/String;
-
-    invoke-static {v1}, Lkv0;->F(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lwde;->D0(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    goto :goto_5
-
-    :cond_c
-    iput-boolean v8, v0, Lrn1;->j:Z
-
-    iget-object v1, v0, Lrn1;->k:Lp04;
-
-    if-eqz v1, :cond_d
-
-    sget-object v2, Lct9;->a:Lct9;
-
-    iget-object v3, v0, Lrn1;->c:Lth7;
-
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lhoe;
-
-    check-cast v3, Loba;
-
-    invoke-virtual {v3}, Loba;->a()Lj04;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ld0;->plus(Lh04;)Lh04;
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v2
 
-    new-instance v3, Lpn1;
+    invoke-virtual {v1, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-direct {v3, v0, v7}, Lpn1;-><init>(Lrn1;Lkotlin/coroutines/Continuation;)V
+    move-result-object v9
 
-    sget-object v4, Ls04;->c:Ls04;
+    invoke-virtual {v1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-static {v1, v2, v4, v3}, Lyr3;->X(Lp04;Lh04;Ls04;Lt96;)Lt1e;
+    move-result-object v10
 
-    :cond_d
-    iget-object v0, v0, Lrn1;->h:Lkpd;
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    sget-object v1, Lp53;->b:Lp53;
+    move-result-object v11
 
-    invoke-virtual {v0, v1}, Lkpd;->h(Ljava/lang/Object;)Z
+    move-object v8, v2
 
-    :cond_e
-    :goto_5
-    return-object v9
+    invoke-direct/range {v5 .. v11}, Lx4d;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v5
+
+    :pswitch_18
+    new-instance v0, Lggd;
+
+    invoke-virtual {v1, v6}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    invoke-virtual {v1, v15}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    const-class v2, Luz0;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v9}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v10
+
+    const-class v3, Lzq1;
+
+    invoke-virtual {v1, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v11, v3
+
+    check-cast v11, Lzq1;
+
+    move-object/from16 v3, v17
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v12
+
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v13
+
+    move-object v6, v0
+
+    move-object v9, v2
+
+    invoke-direct/range {v6 .. v13}, Lggd;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lzq1;Lbp7;Lbp7;)V
+
+    return-object v6
 
     :pswitch_19
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lrt1;
 
-    check-cast v0, Lrn1;
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget-object v0, v0, Lrn1;->h:Lkpd;
+    move-result-object v2
 
-    sget-object v1, Lsn1;->b:Lsn1;
+    const-class v3, Lz24;
 
-    invoke-virtual {v0, v1}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    return-object v9
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lrt1;-><init>(Lbp7;Lbp7;)V
+
+    return-object v0
 
     :pswitch_1a
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lkv1;
 
-    check-cast v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->a:Ljt1;
-
-    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->o:Ljava/lang/Object;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Llwa;
-
-    sget-object v11, Llwa;->h:[Ljava/lang/String;
-
-    invoke-virtual {v3, v11}, Llwa;->b([Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_10
-
-    iget-object v3, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->X:Lth7;
-
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v12, v3
-
-    check-cast v12, Lcv1;
-
-    check-cast v1, Lwt1;
-
-    invoke-virtual {v1}, Lwt1;->k()Lb44;
-
-    move-result-object v3
-
-    iget-object v14, v3, Lb44;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Lwt1;->k()Lb44;
-
-    move-result-object v1
-
-    iget-boolean v1, v1, Lb44;->h:Z
-
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 v18, 0x0
-
-    const/16 v20, 0x38
-
-    const-string v13, "REQUEST_PERMISSION_MIC"
-
-    const-string v15, "BEFORE_JOIN"
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    move/from16 v19, v1
-
-    invoke-static/range {v12 .. v20}, Lcv1;->c(Lcv1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llwa;
-
-    iget-object v0, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Y:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Lcjg;
-
-    sget v14, Lq9a;->E:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v13, Ls4c;->permissions_audio_title:I
-
-    sget v15, Lqia;->g:I
-
-    invoke-static {v10, v11}, Llwa;->i(Lcjg;[Ljava/lang/String;)Z
-
-    move-result v0
-
-    const/16 v12, 0xa0
-
-    if-eqz v0, :cond_f
-
-    invoke-virtual/range {v10 .. v15}, Lcjg;->c([Ljava/lang/String;IIII)V
-
-    goto :goto_6
-
-    :cond_f
-    invoke-virtual {v1, v10, v11, v12}, Llwa;->f(Lcjg;[Ljava/lang/String;I)V
-
-    goto :goto_6
-
-    :cond_10
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->x0()Lt91;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lt91;->q()V
-
-    :goto_6
-    return-object v9
+    return-object v0
 
     :pswitch_1b
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    move-object/from16 v3, v17
 
-    check-cast v0, Lt91;
+    new-instance v0, Lv31;
 
-    iget-object v1, v0, Lt91;->X:Ljt1;
+    invoke-virtual {v1, v15}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    sget-object v2, Lfm6;->c:Lfm6;
+    move-result-object v2
 
-    check-cast v1, Lwt1;
+    check-cast v2, Lrt1;
 
-    invoke-virtual {v1, v2}, Lwt1;->w(Lfm6;)V
+    const-class v5, Lm13;
 
-    iget-object v1, v0, Lt91;->o0:Lq4e;
+    invoke-virtual {v1, v5}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    :cond_11
-    invoke-virtual {v1}, Lq4e;->getValue()Ljava/lang/Object;
+    move-result-object v5
 
-    move-result-object v0
+    const-class v6, Ltk;
 
-    move-object v2, v0
+    invoke-virtual {v1, v6}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    check-cast v2, Lr91;
+    move-result-object v6
 
-    new-instance v2, Lq91;
+    invoke-virtual {v1, v12}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-direct {v2, v10}, Lq91;-><init>(Z)V
+    move-result-object v8
 
-    invoke-virtual {v1, v0, v2}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v9, v6
 
-    move-result v0
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    if-eqz v0, :cond_11
+    move-result-object v6
 
-    return-object v9
+    const-class v4, Lkq3;
+
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    move-object v7, v8
+
+    move-object v8, v3
+
+    move-object v3, v5
+
+    move-object v5, v7
+
+    move-object v7, v4
+
+    move-object v4, v9
+
+    move-object v9, v1
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v9}, Lv31;-><init>(Lrt1;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v1
 
     :pswitch_1c
-    iget-object v0, v0, Lds1;->receiver:Ljava/lang/Object;
+    new-instance v0, Lnu1;
 
-    check-cast v0, Lz43;
+    invoke-virtual {v1, v14}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    check-cast v0, Lb53;
+    move-result-object v2
 
-    const-string v1, "app.calls_sdk.logging.webrtc"
+    invoke-virtual {v1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget-object v0, v0, Ld3;->g:Lwh7;
+    move-result-object v1
 
-    invoke-virtual {v0, v1, v10}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
+    invoke-direct {v0, v2, v1}, Lnu1;-><init>(Lbp7;Lbp7;)V
 
     return-object v0
 

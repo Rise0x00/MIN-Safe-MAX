@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhz6;
+.implements Le67;
 
 
 # annotations
-.annotation build Laq4;
+.annotation build Lit4;
 .end annotation
 
 
@@ -22,7 +22,7 @@
 # direct methods
 .method public constructor <init>(IZZ)V
     .locals 0
-    .annotation build Laq4;
+    .annotation build Lit4;
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,18 +38,18 @@
 
 
 # virtual methods
-.method public createImageTranscoder(Lay6;Z)Lgz6;
+.method public createImageTranscoder(Lx47;Z)Ld67;
     .locals 1
-    .annotation build Laq4;
+    .annotation build Lit4;
     .end annotation
 
-    sget-object v0, Ljf4;->a:Lay6;
+    sget-object v0, Lei4;->a:Lx47;
 
     if-eq p1, v0, :cond_0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 
     :cond_0
     new-instance p1, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;
@@ -66,11 +66,11 @@
 
     iput-boolean p2, p1, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoder;->c:Z
 
-    iget-boolean p0, p0, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;->c:Z
+    iget-boolean p2, p0, Lcom/facebook/imagepipeline/nativecode/NativeJpegTranscoderFactory;->c:Z
 
-    if-eqz p0, :cond_1
+    if-eqz p2, :cond_1
 
-    invoke-static {}, Lno9;->j()V
+    invoke-static {}, Lox9;->o()V
 
     :cond_1
     return-object p1

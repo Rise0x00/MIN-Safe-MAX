@@ -1,59 +1,96 @@
 .class public abstract Lr2;
-.super Ljava/util/AbstractMap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map;
-.implements Lhf7;
+
+# instance fields
+.field public transient a:Ljava/util/Set;
+
+.field public transient b:Lq2;
+
+.field public transient c:Ljava/util/Map;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final entrySet()Ljava/util/Set;
-    .locals 3
-
-    check-cast p0, Llf3;
-
-    new-instance v0, Lkf3;
-
-    new-instance v1, Lsi0;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, v2}, Lsi0;-><init>(I)V
-
-    invoke-direct {v0, p0, v1}, Lkf3;-><init>(Llf3;Lt96;)V
-
-    return-object v0
+.method public abstract a()Ljava/util/Map;
 .end method
 
-.method public final keySet()Ljava/util/Set;
-    .locals 3
-
-    check-cast p0, Llf3;
-
-    new-instance v0, Lkf3;
-
-    new-instance v1, Lsi0;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2}, Lsi0;-><init>(I)V
-
-    invoke-direct {v0, p0, v1}, Lkf3;-><init>(Llf3;Lt96;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
+.method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    check-cast p0, Llf3;
+    if-ne p1, p0, :cond_0
 
-    sget-object v0, Llf3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    return p1
 
-    move-result p0
+    :cond_0
+    instance-of v0, p1, Lr2;
 
-    return p0
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lr2;
+
+    move-object v0, p0
+
+    check-cast v0, Lz1;
+
+    invoke-virtual {v0}, Lz1;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast p1, Lz1;
+
+    invoke-virtual {p1}, Lz1;->a()Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lr2;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Map;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lr2;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

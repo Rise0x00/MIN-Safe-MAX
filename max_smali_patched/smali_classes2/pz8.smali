@@ -1,51 +1,49 @@
 .class public final Lpz8;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lvz8;
 
-.field public final b:Z
+.field public Y:I
 
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
-
-.field public final i:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ZZZZZZZZZ)V
+.method public constructor <init>(Lvz8;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpz8;->X:Lvz8;
 
-    iput-boolean p1, p0, Lpz8;->a:Z
-
-    iput-boolean p2, p0, Lpz8;->b:Z
-
-    iput-boolean p3, p0, Lpz8;->c:Z
-
-    iput-boolean p4, p0, Lpz8;->d:Z
-
-    iput-boolean p5, p0, Lpz8;->e:Z
-
-    iput-boolean p6, p0, Lpz8;->f:Z
-
-    iput-boolean p7, p0, Lpz8;->g:Z
-
-    iput-boolean p8, p0, Lpz8;->h:Z
-
-    iput-boolean p9, p0, Lpz8;->i:Z
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpz8;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lpz8;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpz8;->Y:I
+
+    iget-object p1, p0, Lpz8;->X:Lvz8;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lvz8;->r(Ljava/util/Collection;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

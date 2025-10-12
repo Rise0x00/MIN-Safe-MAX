@@ -1,182 +1,131 @@
 .class public final Lerf;
-.super Leje;
+.super Larf;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:I
+.field public b:Z
 
-.field public final synthetic Y:Liuf;
+.field public c:Ljava/util/Iterator;
 
-.field public final synthetic Z:Ljrf;
+.field public final synthetic d:Lmq5;
 
 
 # direct methods
-.method public constructor <init>(Liuf;Ljrf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmq5;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lerf;->Y:Liuf;
+    iput-object p1, p0, Lerf;->d:Lmq5;
 
-    iput-object p2, p0, Lerf;->Z:Ljrf;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lfrf;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Lp04;
+    iget-object v0, p0, Lerf;->d:Lmq5;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lmq5;->X:Lord;
 
-    invoke-virtual {p0, p1, p2}, Lerf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Liu5;
 
-    move-result-object p0
+    iget-boolean v1, p0, Lerf;->b:Z
 
-    check-cast p0, Lerf;
+    const/4 v2, 0x1
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, p1}, Lerf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v4, p0, Lfrf;->a:Ljava/lang/Object;
 
-    move-result-object p0
+    if-nez v1, :cond_1
 
-    return-object p0
-.end method
+    iget-object v0, v0, Liu5;->d:Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    check-cast v0, Lxe6;
 
-    new-instance p1, Lerf;
+    invoke-interface {v0, v4}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lerf;->Y:Liuf;
+    move-result-object v0
 
-    iget-object p0, p0, Lerf;->Z:Ljrf;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-direct {p1, v0, p0, p2}, Lerf;-><init>(Liuf;Ljrf;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lerf;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    :cond_2
-    iget-object p1, p0, Lerf;->Y:Liuf;
-
-    invoke-virtual {p1}, Liuf;->c()Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lax3;->b:Lh04;
+    return-object v3
 
-    invoke-static {v0}, Lnoa;->m(Lh04;)V
+    :cond_0
+    iput-boolean v2, p0, Lerf;->b:Z
 
-    iget-object v0, p0, Lerf;->Z:Ljrf;
+    return-object v4
 
-    iget-object v2, v0, Ljrf;->Z:Libc;
+    :cond_1
+    iget-object v1, p0, Lerf;->c:Ljava/util/Iterator;
 
-    iget-object v2, v2, Libc;->a:Lgpd;
+    if-eqz v1, :cond_2
 
-    invoke-interface {v2}, Lgpd;->b()Ljava/util/List;
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v2
+    move-result v1
 
-    invoke-static {v2}, Lg73;->q0(Ljava/util/List;)Ljava/lang/Object;
+    if-nez v1, :cond_2
 
-    move-result-object v2
+    return-object v3
 
-    check-cast v2, Lisf;
+    :cond_2
+    iget-object v1, p0, Lerf;->c:Ljava/util/Iterator;
 
-    if-eqz v2, :cond_3
+    if-nez v1, :cond_5
 
-    iget-object v0, v0, Ljrf;->Y:Lkpd;
+    iget-object v0, v0, Liu5;->c:Lxe6;
 
-    const/4 v3, 0x3
+    invoke-interface {v0, v4}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput v3, v2, Lisf;->X:I
+    move-result-object v0
 
-    invoke-virtual {p1}, Liuf;->E0()J
+    check-cast v0, Lord;
 
-    move-result-wide v3
+    if-eqz v0, :cond_3
 
-    long-to-float v3, v3
+    invoke-interface {v0}, Lord;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Liuf;->F0()J
+    move-result-object v0
 
-    move-result-wide v4
-
-    long-to-float p1, v4
-
-    div-float/2addr v3, p1
-
-    const/high16 p1, 0x42c80000    # 100.0f
-
-    mul-float/2addr v3, p1
-
-    iput v3, v2, Lisf;->Y:F
-
-    invoke-virtual {v0, v2}, Lkpd;->h(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_3
-    sget p1, Liw4;->o:I
+    move-object v0, v3
 
-    const/16 p1, 0x64
+    :goto_0
+    iput-object v0, p0, Lerf;->c:Ljava/util/Iterator;
 
-    sget-object v0, Lnw4;->c:Lnw4;
+    if-eqz v0, :cond_4
 
-    invoke-static {p1, v0}, Lj5e;->C(ILnw4;)J
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-wide v2
+    move-result v0
 
-    iput v1, p0, Lerf;->X:I
+    if-ne v0, v2, :cond_4
 
-    invoke-static {v2, v3, p0}, Lyr3;->x(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lq04;->a:Lq04;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_1
 
     :cond_4
-    sget-object p0, Ltcf;->a:Ltcf;
+    return-object v3
 
-    return-object p0
+    :cond_5
+    :goto_1
+    iget-object v0, p0, Lerf;->c:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

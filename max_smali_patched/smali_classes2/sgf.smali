@@ -1,89 +1,53 @@
-.class public final synthetic Lsgf;
-.super Ljava/lang/Object;
+.class public final Lsgf;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lhc3;
-.implements Lm68;
 
 
 # instance fields
-.field public final synthetic a:Ltgf;
+.field public X:Lgv5;
 
-.field public final synthetic b:Lvef;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljhd;
+
+.field public o:Ljhd;
+
+.field public w0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltgf;Lvef;)V
+.method public constructor <init>(Ljhd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lsgf;->a:Ltgf;
+    iput-object p1, p0, Lsgf;->Z:Ljhd;
 
-    iput-object p2, p0, Lsgf;->b:Lvef;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lu58;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lsgf;->a:Ltgf;
+    iput-object p1, p0, Lsgf;->Y:Ljava/lang/Object;
 
-    iget-object v0, v0, Ltgf;->b:Ljava/lang/Object;
+    iget p1, p0, Lsgf;->w0:I
 
-    check-cast v0, Ljava/util/Map;
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lsgf;->b:Lvef;
+    or-int/2addr p1, v0
 
-    invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p1, p0, Lsgf;->w0:I
 
-    move-result-object p0
+    iget-object p1, p0, Lsgf;->Z:Ljhd;
 
-    check-cast p0, Lnef;
+    const/4 v0, 0x0
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0, p0}, Ljhd;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lu58;->g()Z
+    sget-object p1, Lf34;->a:Lf34;
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1, p0}, Lu58;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lu58;->g()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-virtual {p1}, Lu58;->b()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public c(Lxb3;)V
-    .locals 1
-
-    iget-object v0, p0, Lsgf;->a:Ltgf;
-
-    iget-object v0, v0, Ltgf;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Map;
-
-    iget-object p0, p0, Lsgf;->b:Lvef;
-
-    invoke-interface {v0, p0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lxb3;->b()V
-
-    return-void
+    return-object p1
 .end method

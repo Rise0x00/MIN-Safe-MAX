@@ -1,22 +1,27 @@
-.class public final synthetic Lw0g;
+.class public final Lw0g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lar1;
-
 
 # instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+.field public final a:Lbp7;
+
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;)V
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw0g;->a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+    iput-object p1, p0, Lw0g;->a:Lbp7;
+
+    iput-object p2, p0, Lw0g;->b:Lbp7;
+
+    iput-object p3, p0, Lw0g;->c:Lbp7;
 
     return-void
 .end method

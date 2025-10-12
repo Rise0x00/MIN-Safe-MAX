@@ -1,84 +1,53 @@
 .class public final Lx4a;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/window/OnBackAnimationCallback;
 
 
 # instance fields
-.field public final synthetic a:Lf96;
+.field public X:Lm82;
 
-.field public final synthetic b:Lf96;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Ld96;
+.field public final synthetic Z:La5a;
 
-.field public final synthetic d:Ld96;
+.field public o:La5a;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Lf96;Lf96;Ld96;Ld96;)V
+.method public constructor <init>(La5a;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx4a;->Z:La5a;
 
-    iput-object p1, p0, Lx4a;->a:Lf96;
-
-    iput-object p2, p0, Lx4a;->b:Lf96;
-
-    iput-object p3, p0, Lx4a;->c:Ld96;
-
-    iput-object p4, p0, Lx4a;->d:Ld96;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBackCancelled()V
-    .locals 0
-
-    iget-object p0, p0, Lx4a;->d:Ld96;
-
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onBackInvoked()V
-    .locals 0
-
-    iget-object p0, p0, Lx4a;->c:Ld96;
-
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onBackProgressed(Landroid/window/BackEvent;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lwe0;
+    iput-object p1, p0, Lx4a;->Y:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Lwe0;-><init>(Landroid/window/BackEvent;)V
+    iget p1, p0, Lx4a;->w0:I
 
-    iget-object p0, p0, Lx4a;->b:Lf96;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0, v0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lx4a;->w0:I
 
-.method public final onBackStarted(Landroid/window/BackEvent;)V
-    .locals 1
+    iget-object p1, p0, Lx4a;->Z:La5a;
 
-    new-instance v0, Lwe0;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p1}, Lwe0;-><init>(Landroid/window/BackEvent;)V
+    invoke-virtual {p1, v0, p0}, La5a;->b(Lm82;Lnz3;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lx4a;->a:Lf96;
+    move-result-object p1
 
-    invoke-interface {p0, v0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

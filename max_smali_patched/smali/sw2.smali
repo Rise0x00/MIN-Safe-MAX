@@ -1,47 +1,82 @@
-.class public final synthetic Lsw2;
-.super Lo8;
+.class public final Lsw2;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lv96;
+.implements Llf6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Luw2;
+
+
+# direct methods
+.method public constructor <init>(Luw2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lsw2;->Y:Luw2;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Lp06;
 
-    check-cast p2, Lax2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lsw2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lo8;->a:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
+    check-cast p1, Lsw2;
 
-    sget-object p3, Lone/me/chats/search/ChatsListSearchScreen;->E0:[Lof7;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, p2}, Lsw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p2, Lax2;->a:Lzw2;
+    return-object p2
+.end method
 
-    sget-object p2, Lmw2;->$EnumSwitchMapping$1:[I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    new-instance v0, Lsw2;
 
-    move-result p0
+    iget-object v1, p0, Lsw2;->Y:Luw2;
 
-    aget p0, p2, p0
+    invoke-direct {v0, v1, p2}, Lsw2;-><init>(Luw2;Lkotlin/coroutines/Continuation;)V
 
-    const/4 p2, 0x2
+    iput-object p1, v0, Lsw2;->X:Ljava/lang/Object;
 
-    if-ne p0, p2, :cond_0
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsw2;->X:Ljava/lang/Object;
+
+    check-cast p1, Lp06;
+
+    iget-object v0, p0, Lsw2;->Y:Luw2;
+
+    iget-object v0, v0, Luw2;->c:Lmoe;
+
+    invoke-virtual {v0, p1}, Lmoe;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
-
-    :cond_0
-    sget-object p0, Lr25;->a:Lr25;
-
-    return-object p0
 .end method

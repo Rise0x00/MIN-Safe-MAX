@@ -1,37 +1,53 @@
-.class public abstract Ltsc;
-.super Ljava/lang/Object;
+.class public final Ltsc;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Ljava/util/List;
 
-.field public static final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static final c:I
+.field public final synthetic Z:Lusc;
 
-.field public static final d:I
+.field public o:Lusc;
+
+.field public w0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lusc;Lnz3;)V
+    .locals 0
 
-    sget v0, Ltxb;->ic_file_24:I
+    iput-object p1, p0, Ltsc;->Z:Lusc;
 
-    sput v0, Ltsc;->a:I
-
-    sget v0, Ltxb;->ic_geolocation_24:I
-
-    sput v0, Ltsc;->b:I
-
-    sget v0, Ltxb;->ic_microphone_24:I
-
-    sput v0, Ltsc;->c:I
-
-    sget v0, Ltxb;->picture_plus_outline_24:I
-
-    sput v0, Ltsc;->d:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ltsc;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Ltsc;->w0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ltsc;->w0:I
+
+    iget-object p1, p0, Ltsc;->Z:Lusc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lusc;->c(Ljava/util/List;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

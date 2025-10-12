@@ -1,127 +1,55 @@
 .class public final Lj23;
-.super Leje;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Ljava/util/Set;
 
-.field public final synthetic Y:Lzs4;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lm23;
+
+.field public o:Lm23;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Lzs4;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lm23;Lnz3;)V
     .locals 0
 
-    iput-object p1, p0, Lj23;->Y:Lzs4;
+    iput-object p1, p0, Lj23;->Z:Lm23;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lnma;
+    iput-object p1, p0, Lj23;->Y:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lj23;->w0:I
 
-    invoke-virtual {p0, p1, p2}, Lj23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    check-cast p0, Lj23;
+    iput p1, p0, Lj23;->w0:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lj23;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    return-object p1
-.end method
+    iget-object v2, p0, Lj23;->Z:Lm23;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lj23;
-
-    iget-object p0, p0, Lj23;->Y:Lzs4;
-
-    invoke-direct {v0, p0, p2}, Lj23;-><init>(Lzs4;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lj23;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lj23;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnma;
-
-    iget-object v0, p0, Lj23;->Y:Lzs4;
-
-    iget-object v0, v0, Lzs4;->Z:Ljava/lang/Object;
-
-    check-cast v0, Lq4e;
-
-    invoke-virtual {v0, p1}, Lq4e;->setValue(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lj23;->Y:Lzs4;
-
-    iget-object p0, p0, Lzs4;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/String;
-
-    sget-object v0, Lz76;->f:Lvea;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lhw7;->o:Lhw7;
-
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "big_flow: onEach "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isEmitted=true"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2, v0, v1, p1, p0}, Lm23;->S(JLjava/util/Set;Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p0, p1, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object p1
 .end method

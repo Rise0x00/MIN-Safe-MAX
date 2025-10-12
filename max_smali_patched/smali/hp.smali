@@ -1,21 +1,13 @@
-.class public final Lhp;
-.super Lko;
+.class public abstract Lhp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lhp;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a()I
     .locals 1
 
-    new-instance v0, Lhp;
+    const/16 v0, 0x200
 
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, Lhp;->a:Lhp;
-
-    return-void
+    return v0
 .end method

@@ -1,136 +1,85 @@
 .class public final Lu04;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lv04;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Landroidx/work/CoroutineWorker;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lu04;->Y:Landroidx/work/CoroutineWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lu04;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lp04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lu04;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lu04;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lu04;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lu04;
-
-    iget-object p0, p0, Lu04;->Y:Landroidx/work/CoroutineWorker;
-
-    invoke-direct {p1, p0, p2}, Lu04;-><init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Lu04;->Y:Landroidx/work/CoroutineWorker;
-
-    iget-object v1, v0, Landroidx/work/CoroutineWorker;->b:Lxfd;
-
-    iget v2, p0, Lu04;->X:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lu04;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p0
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    check-cast p1, Lu04;
 
-    :try_start_1
-    iput v3, p0, Lu04;->X:I
+    iget v1, p0, Lu04;->a:I
 
-    invoke-virtual {v0, p0}, Landroidx/work/CoroutineWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget p1, p1, Lu04;->a:I
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eq v1, p1, :cond_2
 
-    sget-object p0, Lq04;->a:Lq04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
+    return v2
 
     :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lcq7;
+    return v0
+.end method
 
-    invoke-virtual {v1, p1}, Lxfd;->i(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+.method public final hashCode()I
+    .locals 1
 
-    goto :goto_2
+    iget v0, p0, Lu04;->a:I
 
-    :goto_1
-    invoke-virtual {v1, p0}, Lxfd;->j(Ljava/lang/Throwable;)Z
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
+    move-result v0
 
-    return-object p0
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "StopSeekPlayerProgress(progress="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lu04;->a:I
+
+    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

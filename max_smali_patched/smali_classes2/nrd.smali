@@ -3,293 +3,196 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb59;
+.implements Landroid/hardware/SensorEventListener;
+
+
+# static fields
+.field public static final synthetic d:I
 
 
 # instance fields
-.field public final a:J
+.field public final a:Landroid/hardware/SensorManager;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Landroid/hardware/Sensor;
 
-.field public final c:Lbw0;
-
-.field public final d:Lwv0;
-
-.field public final e:Lyte;
-
-.field public final f:Lyte;
-
-.field public final g:Ljava/util/List;
+.field public final c:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lbw0;Lwv0;Lyte;Lyte;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lnrd;->a:J
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    iput-object p3, p0, Lnrd;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object p4, p0, Lnrd;->c:Lbw0;
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
 
-    iput-object p5, p0, Lnrd;->d:Lwv0;
+    move-result-object v0
 
-    iput-object p6, p0, Lnrd;->e:Lyte;
+    iput-object v0, p0, Lnrd;->c:Ljava/util/Set;
 
-    iput-object p7, p0, Lnrd;->f:Lyte;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    iput-object p8, p0, Lnrd;->g:Ljava/util/List;
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
+
+    const-string v0, "sensor"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/hardware/SensorManager;
+
+    iput-object p1, p0, Lnrd;->a:Landroid/hardware/SensorManager;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnrd;->b:Landroid/hardware/Sensor;
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    return-void
+.end method
 
-    goto :goto_1
+.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
+    .locals 5
+
+    iget-object v0, p0, Lnrd;->c:Ljava/util/Set;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+
+    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    if-ne v1, v2, :cond_5
+
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
+
+    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+
+    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
+
+    move-result p1
+
+    cmpg-float p1, v1, p1
+
+    if-gez p1, :cond_0
+
+    const/4 v2, 0x1
 
     :cond_0
-    instance-of v0, p1, Lnrd;
+    iget-object p1, p0, Lnrd;->c:Ljava/util/Set;
 
-    if-nez v0, :cond_1
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    goto :goto_0
+    move-result-object p1
 
     :cond_1
-    check-cast p1, Lnrd;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-wide v0, p0, Lnrd;->a:J
+    move-result v1
 
-    iget-wide v2, p1, Lnrd;->a:J
+    if-eqz v1, :cond_5
 
-    cmp-long v0, v0, v2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    move-result-object v1
+
+    check-cast v1, Lc30;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v3, "c30"
+
+    const-string v4, "onDeviceNextToEar"
+
+    invoke-static {v3, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, v1, Lc30;->c:Lws9;
+
+    iget-boolean v4, v3, Lws9;->x:Z
+
+    if-nez v4, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lnrd;->b:Ljava/lang/String;
+    invoke-virtual {v1}, Lc30;->k()Z
 
-    iget-object v1, p1, Lnrd;->b:Ljava/lang/String;
+    move-result v4
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v4, :cond_3
 
-    move-result v0
+    iget-object v1, v1, Lc30;->x0:Ls5f;
 
-    if-nez v0, :cond_3
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v1
+
+    check-cast v1, Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
     :cond_3
-    iget-object v0, p0, Lnrd;->c:Lbw0;
+    iget-boolean v1, v3, Lws9;->x:Z
 
-    iget-object v1, p1, Lnrd;->c:Lbw0;
+    if-eqz v1, :cond_1
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
+    invoke-virtual {v3}, Lws9;->l()Lsm8;
 
     goto :goto_0
 
     :cond_4
-    iget-object v0, p0, Lnrd;->d:Lwv0;
-
-    iget-object v1, p1, Lnrd;->d:Lwv0;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
+    invoke-virtual {v1}, Lc30;->m()V
 
     goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_5
-    iget-object v0, p0, Lnrd;->e:Lyte;
+    monitor-exit v0
 
-    iget-object v1, p1, Lnrd;->e:Lyte;
+    return-void
 
-    invoke-virtual {v0, v1}, Lyte;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lnrd;->f:Lyte;
-
-    iget-object v1, p1, Lnrd;->f:Lyte;
-
-    invoke-virtual {v0, v1}, Lyte;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object p0, p0, Lnrd;->g:Ljava/util/List;
-
-    iget-object p1, p1, Lnrd;->g:Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_8
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_8
     :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lnrd;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lnrd;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcx3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lnrd;->c:Lbw0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lnrd;->d:Lwv0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lnrd;->e:Lyte;
-
-    iget v2, v2, Lyte;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lnrd;->f:Lyte;
-
-    iget v2, v2, Lyte;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-object p0, p0, Lnrd;->g:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ShowShareContactForBotConfirmation(messageId="
-
-    const-string v1, ", keyboardId="
-
-    iget-wide v2, p0, Lnrd;->a:J
-
-    iget-object v4, p0, Lnrd;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lgkc;->j(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", buttonPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnrd;->c:Lbw0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", button="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnrd;->d:Lwv0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnrd;->e:Lyte;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lnrd;->f:Lyte;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lnrd;->g:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

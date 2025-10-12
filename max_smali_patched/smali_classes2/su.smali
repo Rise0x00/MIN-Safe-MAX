@@ -1,121 +1,91 @@
-.class public final Lsu;
+.class public final synthetic Lsu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxe6;
+
 
 # instance fields
-.field public volatile a:J
+.field public final synthetic a:I
 
-.field public volatile b:Lgs1;
+.field public final synthetic b:Lit9;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lit9;I)V
+    .locals 0
+
+    iput p2, p0, Lsu;->a:I
+
+    iput-object p1, p0, Lsu;->b:Lit9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Lsu;->a:J
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lsu;->b:Lgs1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p0}, Lsu;->b()V
-
-    iget-object v0, p0, Lsu;->b:Lgs1;
-
-    invoke-static {v0}, Lrtc;->b(Lkp4;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lsu;->b:Lgs1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized b()V
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    monitor-enter p0
+    iget v0, p0, Lsu;->a:I
 
-    const-wide/16 v0, -0x1
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iput-wide v0, p0, Lsu;->a:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Lreb;
 
-    monitor-exit p0
+    iget-wide v0, p1, Lreb;->a:J
 
-    return-void
+    iget-object p1, p0, Lsu;->b:Lit9;
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p1, v0, v1}, Lit9;->a(J)Z
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result p1
 
-    throw v0
-.end method
+    xor-int/lit8 p1, p1, 0x1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, "LoadOperation{operationTime="
+    return-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    check-cast p1, Liv6;
 
-    iget-wide v1, p0, Lsu;->a:J
+    invoke-interface {p1}, Liv6;->getId()J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    const-string v1, ", disposable="
+    iget-object p1, p0, Lsu;->b:Lit9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, v1}, Lit9;->d(J)Z
 
-    iget-object p0, p0, Lsu;->b:Lgs1;
+    move-result p1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string p0, ", onComplete=null}"
+    :pswitch_1
+    check-cast p1, Liv6;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Liv6;->getId()J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object p0
+    iget-object p1, p0, Lsu;->b:Lit9;
 
-    return-object p0
+    invoke-virtual {p1, v0, v1}, Lit9;->d(J)Z
+
+    move-result p1
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

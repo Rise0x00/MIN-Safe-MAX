@@ -1,64 +1,52 @@
 .class public final Lm6e;
-.super Lape;
+.super Lv2;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Lc6e;
+# static fields
+.field public static final c:Lm6e;
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    new-instance v0, Lm6e;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+
+    sput-object v0, Lm6e;->c:Lm6e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 1
+.method public final c1()V
+    .locals 3
 
-    const-string v0, "sticker"
+    invoke-virtual {p0}, Lv2;->K0()Ldd4;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p2
+    invoke-virtual {v0}, Ldd4;->d()Z
 
-    if-eqz p2, :cond_0
+    move-result v0
 
-    invoke-static {p1}, Lc6e;->a(Lq09;)Lc6e;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p0}, Lv2;->K0()Ldd4;
 
-    iput-object p1, p0, Lm6e;->c:Lc6e;
+    move-result-object v0
 
-    return-void
+    const-string v1, ":chat-list"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     :cond_0
-    invoke-virtual {p1}, Lq09;->B()V
-
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-object p0, p0, Lm6e;->c:Lc6e;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "{sticker = "
-
-    const-string v1, "}"
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

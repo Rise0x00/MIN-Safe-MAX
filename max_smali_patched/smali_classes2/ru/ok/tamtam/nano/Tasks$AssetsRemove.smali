@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Tasks$AssetsRemove;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -32,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->clear()Lru/ok/tamtam/nano/Tasks$AssetsRemove;
 
@@ -46,7 +46,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -88,7 +88,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -101,7 +101,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
 
     move-result-object p0
 
@@ -121,7 +121,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -145,13 +145,13 @@
 
     iput-wide v0, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->id:J
 
-    sget-object v0, Lv44;->d:[J
+    sget-object v0, Lo7;->f:[J
 
     iput-object v0, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
@@ -171,7 +171,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lh63;->h(IJ)I
+    invoke-static {v4, v0, v1}, Le83;->h(IJ)I
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     const/4 v4, 0x2
 
-    invoke-static {v4, v1}, Lh63;->f(II)I
+    invoke-static {v4, v1}, Le83;->f(II)I
 
     move-result v1
 
@@ -202,7 +202,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v6, v7}, Lh63;->h(IJ)I
+    invoke-static {v1, v6, v7}, Le83;->h(IJ)I
 
     move-result v1
 
@@ -226,9 +226,9 @@
 
     if-ge v5, v3, :cond_3
 
-    aget-wide v2, v2, v5
+    aget-wide v3, v2, v5
 
-    invoke-static {v2, v3}, Lh63;->k(J)I
+    invoke-static {v3, v4}, Le83;->k(J)I
 
     move-result v2
 
@@ -241,15 +241,15 @@
     :cond_3
     add-int/2addr v0, v1
 
-    array-length p0, v2
+    array-length v1, v2
 
-    add-int/2addr v0, p0
+    add-int/2addr v0, v1
 
     :cond_4
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -258,14 +258,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$AssetsRemove;
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -276,7 +276,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
@@ -305,7 +305,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -315,17 +315,17 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
     .line 5
-    invoke-virtual {p1, v0}, Lg63;->e(I)I
+    invoke-virtual {p1, v0}, Ld83;->e(I)I
 
     move-result v0
 
     .line 6
-    invoke-virtual {p1}, Lg63;->c()I
+    invoke-virtual {p1}, Ld83;->c()I
 
     move-result v1
 
@@ -333,14 +333,14 @@
 
     .line 7
     :goto_1
-    invoke-virtual {p1}, Lg63;->b()I
+    invoke-virtual {p1}, Ld83;->b()I
 
     move-result v4
 
     if-lez v4, :cond_2
 
     .line 8
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     add-int/lit8 v3, v3, 0x1
 
@@ -348,7 +348,7 @@
 
     .line 9
     :cond_2
-    invoke-virtual {p1, v1}, Lg63;->t(I)V
+    invoke-virtual {p1, v1}, Ld83;->t(I)V
 
     .line 10
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
@@ -378,7 +378,7 @@
     if-ge v4, v3, :cond_5
 
     .line 13
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v1
 
@@ -394,13 +394,13 @@
     iput-object v5, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
 
     .line 16
-    invoke-virtual {p1, v0}, Lg63;->d(I)V
+    invoke-virtual {p1, v0}, Ld83;->d(I)V
 
     goto :goto_0
 
     .line 17
     :cond_6
-    invoke-static {p1, v1}, Lv44;->p(Lg63;I)I
+    invoke-static {p1, v1}, Lo7;->m(Ld83;I)I
 
     move-result v0
 
@@ -434,7 +434,7 @@
     if-ge v3, v1, :cond_9
 
     .line 21
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v1
 
@@ -442,7 +442,7 @@
     aput-wide v1, v4, v3
 
     .line 23
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -450,7 +450,7 @@
 
     .line 24
     :cond_9
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -464,7 +464,7 @@
 
     .line 27
     :cond_a
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -475,7 +475,7 @@
 
     .line 29
     :cond_b
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
@@ -511,7 +511,7 @@
 
     .line 31
     :cond_d
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -525,7 +525,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lh63;)V
+.method public writeTo(Le83;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -543,7 +543,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
 
     :cond_0
     iget v0, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->assetType:I
@@ -552,7 +552,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v1, v0}, Lh63;->w(II)V
+    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
 
     :cond_1
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->id:J
@@ -563,7 +563,7 @@
 
     const/4 v2, 0x3
 
-    invoke-virtual {p1, v2, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Le83;->x(IJ)V
 
     :cond_2
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
@@ -587,7 +587,7 @@
 
     aget-wide v3, v1, v0
 
-    invoke-virtual {p1, v2, v3, v4}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v2, v3, v4}, Le83;->x(IJ)V
 
     add-int/lit8 v0, v0, 0x1
 

@@ -1,87 +1,101 @@
 .class public final Lug7;
-.super Ljava/lang/Object;
+.super Lilg;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
-.field public X:Z
+.field public final X:Lsqc;
 
-.field public final a:I
+.field public final b:Lbp7;
 
-.field public final b:Landroid/graphics/Rect;
+.field public final c:Lbp7;
 
-.field public final c:Lr5;
-
-.field public o:I
+.field public final o:Lmoe;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lr5;)V
-    .locals 0
+.method public constructor <init>(Lz7c;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lof7;->a:Lof7;
 
-    new-instance p1, Landroid/graphics/Rect;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+    move-result-object v1
 
-    iput-object p1, p0, Lug7;->b:Landroid/graphics/Rect;
+    const-class v2, Lmm6;
 
-    const/16 p1, 0x190
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iput p1, p0, Lug7;->a:I
+    move-result-object v1
 
-    iput-object p2, p0, Lug7;->c:Lr5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v0
+
+    const-class v2, Lr8f;
+
+    invoke-virtual {v0, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lilg;-><init>()V
+
+    iput-object v0, p0, Lug7;->b:Lbp7;
+
+    iput-object v1, p0, Lug7;->c:Lbp7;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lug7;->o:Lmoe;
+
+    new-instance v1, Lsqc;
+
+    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object v1, p0, Lug7;->X:Lsqc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lug7;->q(Lz7c;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 4
+.method public final q(Lz7c;Z)V
+    .locals 3
 
-    iget-object v0, p0, Lug7;->c:Lr5;
+    iget-object v0, p0, Lug7;->b:Lbp7;
 
-    iget-object v1, p0, Lug7;->b:Landroid/graphics/Rect;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lr5;->accept(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+    check-cast v0, Lr8f;
 
-    move-result v0
+    check-cast v0, Lwla;
 
-    iget v1, p0, Lug7;->o:I
+    invoke-virtual {v0}, Lwla;->b()Ly24;
 
-    if-eqz v1, :cond_1
+    move-result-object v0
 
-    iget v2, p0, Lug7;->a:I
+    new-instance v1, Ltg7;
 
-    add-int v3, v0, v2
+    const/4 v2, 0x0
 
-    if-le v1, v3, :cond_0
+    invoke-direct {v1, p0, p1, p2, v2}, Ltg7;-><init>(Lug7;Lz7c;ZLkotlin/coroutines/Continuation;)V
 
-    const/4 v1, 0x1
+    const/4 p1, 0x2
 
-    iput-boolean v1, p0, Lug7;->X:Z
+    iget-object p2, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    goto :goto_0
-
-    :cond_0
-    add-int/2addr v1, v2
-
-    if-ge v1, v0, :cond_1
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lug7;->X:Z
-
-    :cond_1
-    :goto_0
-    iput v0, p0, Lug7;->o:I
+    invoke-static {p2, v0, v2, v1, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
     return-void
 .end method

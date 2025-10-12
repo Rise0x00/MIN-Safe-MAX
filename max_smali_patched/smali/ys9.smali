@@ -1,22 +1,45 @@
 .class public final Lys9;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListHead;
+.super Ly44;
 .source "SourceFile"
 
-# interfaces
-.implements Ls27;
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    .line 1
+    sget-object p1, Lw44;->b:Lw44;
+
+    invoke-direct {p0, p1}, Lys9;-><init>(Ly44;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ly44;)V
+    .locals 1
+
+    .line 2
+    invoke-direct {p0}, Ly44;-><init>()V
+
+    .line 3
+    iget-object v0, p0, Ly44;->a:Ljava/util/LinkedHashMap;
+
+    iget-object p1, p1, Ly44;->a:Ljava/util/LinkedHashMap;
+
+    .line 4
+    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()Lys9;
-    .locals 0
+.method public final a(Lx44;Ljava/lang/Object;)V
+    .locals 1
 
-    return-object p0
-.end method
+    iget-object v0, p0, Ly44;->a:Ljava/util/LinkedHashMap;
 
-.method public final isActive()Z
-    .locals 0
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method

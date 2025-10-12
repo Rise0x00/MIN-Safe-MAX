@@ -11,13 +11,13 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;",
         "Lkotlin/Function0;",
-        "Ld71;",
+        "Lx61;",
         "getEventualStatSender",
-        "Lexe;",
+        "Luhf;",
         "timeProvider",
         "<init>",
-        "(Ld96;Lexe;)V",
-        "Ltcf;",
+        "(Lve6;Luhf;)V",
+        "Loyf;",
         "onFailed",
         "()V",
         "",
@@ -38,8 +38,8 @@
         "onFailedByException",
         "(Ljava/lang/Throwable;)V",
         "onTimeout",
-        "Ld96;",
-        "Lexe;",
+        "Lve6;",
+        "Luhf;",
         "",
         "connectedAtLeastOnceInCall",
         "Z",
@@ -66,10 +66,10 @@
 
 .field private firstFailTime:Ljava/lang/Long;
 
-.field private final getEventualStatSender:Ld96;
+.field private final getEventualStatSender:Lve6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ld96;"
+            "Lve6;"
         }
     .end annotation
 .end field
@@ -78,26 +78,26 @@
 
 .field private startConnectTime:J
 
-.field private final timeProvider:Lexe;
+.field private final timeProvider:Luhf;
 
 
 # direct methods
-.method public constructor <init>(Ld96;Lexe;)V
+.method public constructor <init>(Lve6;Luhf;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lexe;",
+            "Lve6;",
+            "Luhf;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Ld96;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Lve6;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
     return-void
 .end method
@@ -109,13 +109,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -130,18 +126,18 @@
 .end method
 
 .method private final report(Ljava/lang/String;Ljava/lang/Integer;)V
-    .locals 0
+    .locals 2
 
     .line 1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Lve6;
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ld71;
+    check-cast v0, Lx61;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
     if-eqz p2, :cond_0
 
@@ -160,34 +156,38 @@
 
     move-result-object p2
 
+    const/4 v1, 0x4
+
     .line 3
-    invoke-static {p0, p1, p2}, Ld71;->a(Ld71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    invoke-static {v0, p1, p2, v1}, Lx61;->a(Lx61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;I)V
 
     :cond_1
     return-void
 .end method
 
 .method private final report(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    .locals 2
 
     .line 4
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->getEventualStatSender:Lve6;
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ld71;
+    check-cast v0, Lx61;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     .line 5
     invoke-static {p2}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
     move-result-object p2
 
+    const/4 v1, 0x4
+
     .line 6
-    invoke-static {p0, p1, p2}, Ld71;->a(Ld71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    invoke-static {v0, p1, p2, v1}, Lx61;->a(Lx61;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;I)V
 
     :cond_0
     return-void
@@ -213,13 +213,9 @@
 .method public onConnect()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -239,13 +235,9 @@
 
     iput-wide v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->lastMessageReceived:J
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -315,7 +307,7 @@
     :cond_0
     const/16 p1, 0x12c
 
-    invoke-static {p1, v0}, Lwde;->X0(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lyxe;->J0(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -329,13 +321,9 @@
 .method public onFailedByPings()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -361,13 +349,9 @@
 .method public onMessageReceived()V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v0
 
@@ -403,13 +387,9 @@
 
     move-result-wide v2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Lexe;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/signaling/SignalingStat;->timeProvider:Luhf;
 
-    check-cast v0, Lfxe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-interface {v0}, Luhf;->getMsSinceBoot()J
 
     move-result-wide v4
 

@@ -2,86 +2,233 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrg0;
+
 
 # instance fields
-.field public final a:Lkpd;
+.field public final a:Ljg5;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+.field public final c:Ljza;
 
 
 # direct methods
-.method public constructor <init>(Lrv0;Lhoe;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Lim4;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lim4;-><init>(I)V
+
+    new-instance v1, Lnge;
+
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+
+    const-wide/16 v4, 0x0
+
+    invoke-static {v2, v3, v4, v5}, Lkjd;->f(DD)D
+
+    move-result-wide v2
+
+    invoke-direct {v1, v2, v3}, Lnge;-><init>(D)V
+
+    iput-object v1, v0, Lim4;->c:Ljava/lang/Object;
+
+    const-wide/32 v1, 0x1f400
+
+    iput-wide v1, v0, Lim4;->b:J
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Lim4;->a:I
+
+    new-instance v2, Lbke;
+
+    invoke-direct {v2, v0}, Lbke;-><init>(Lim4;)V
+
+    new-instance v0, Le8b;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v0, v3}, Le8b;-><init>(I)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v4, Lod8;
+
+    invoke-direct {v4}, Lod8;-><init>()V
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v4, Lpge;
+
+    invoke-direct {v4}, Lpge;-><init>()V
+
+    new-instance v4, Lkbh;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v5}, Lkbh;-><init>(I)V
+
+    new-instance v4, Ljava/util/HashMap;
+
+    const/16 v5, 0x8
+
+    invoke-direct {v4, v5}, Ljava/util/HashMap;-><init>(I)V
+
+    const/4 v5, 0x0
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide/32 v6, 0xf4240
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v5, 0x2
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x5
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, 0x9
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const/4 v1, 0x7
 
-    invoke-static {v0, v0, v1}, Llpd;->b(III)Lkpd;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lkza;->a:Lkpd;
+    invoke-virtual {v4, v1, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Loba;
+    new-instance v1, Ljg5;
 
-    invoke-virtual {p2}, Loba;->a()Lj04;
+    invoke-direct {v1, p1, v4, v0, v2}, Ljg5;-><init>(Landroid/content/Context;Ljava/util/HashMap;Le8b;Lbke;)V
 
-    move-result-object p2
+    iput-object v1, p0, Lkza;->a:Ljg5;
 
-    invoke-static {p2}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result-object p2
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    iput-object p2, p0, Lkza;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p1, p0, Lkza;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {p1, p0}, Lrv0;->d(Ljava/lang/Object;)V
+    new-instance p1, Ljza;
+
+    invoke-direct {p1, p0}, Ljza;-><init>(Lkza;)V
+
+    iput-object p1, p0, Lkza;->c:Ljza;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lam2;)V
-    .locals 2
-    .annotation runtime Lvee;
-    .end annotation
+.method public final a(Lie4;)V
+    .locals 1
 
-    .line 1
-    new-instance v0, Liza;
+    iget-object v0, p0, Lkza;->a:Ljg5;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Liza;-><init>(Lkza;Lam2;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object p0, p0, Lkza;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p0, v1, v1, v0, p1}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    invoke-virtual {v0, p1}, Ljg5;->a(Lie4;)V
 
     return-void
 .end method
 
-.method public final onEvent(Lgj0;)V
+.method public final b()J
     .locals 2
-    .annotation runtime Lvee;
-    .end annotation
 
-    .line 2
-    new-instance v0, Ljza;
+    iget-object v0, p0, Lkza;->a:Ljg5;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljg5;->b()J
 
-    invoke-direct {v0, p0, p1, v1}, Ljza;-><init>(Lkza;Lgj0;Lkotlin/coroutines/Continuation;)V
+    move-result-wide v0
 
-    const/4 p1, 0x3
+    return-wide v0
+.end method
 
-    iget-object p0, p0, Lkza;->b:Lkotlinx/coroutines/internal/ContextScope;
+.method public final e()Lipf;
+    .locals 1
 
-    invoke-static {p0, v1, v1, v0, p1}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    iget-object v0, p0, Lkza;->c:Ljza;
+
+    return-object v0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-object v0, p0, Lkza;->a:Ljg5;
+
+    invoke-virtual {v0}, Ljg5;->f()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final g(Landroid/os/Handler;Lie4;)V
+    .locals 1
+
+    iget-object v0, p0, Lkza;->a:Ljg5;
+
+    invoke-virtual {v0, p1, p2}, Ljg5;->g(Landroid/os/Handler;Lie4;)V
 
     return-void
 .end method

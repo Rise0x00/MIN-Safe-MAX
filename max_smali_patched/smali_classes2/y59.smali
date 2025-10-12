@@ -1,100 +1,62 @@
 .class public final Ly59;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
-
-
-# instance fields
-.field public final synthetic X:Ly79;
-
-
-# direct methods
-.method public constructor <init>(Ly79;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ly59;->X:Ly79;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lc69;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ly59;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ly59;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Ly59;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Ly59;
-
-    iget-object p0, p0, Ly59;->X:Ly79;
-
-    invoke-direct {p1, p0, p2}, Ly59;-><init>(Ly79;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    sget-object p1, Ly79;->C1:[Lof7;
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Ly59;->X:Ly79;
+    return v0
 
-    iget-object p1, p0, Ly79;->D0:Lth7;
+    :cond_0
+    instance-of v1, p1, Ly59;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    check-cast p1, Lzja;
+    return p1
 
-    new-instance v0, Loka;
+    :cond_1
+    check-cast p1, Ly59;
 
-    sget v1, Losc;->n:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, Loka;-><init>(I)V
+    return v0
+.end method
 
-    invoke-virtual {p1, v0}, Lzja;->e(Lska;)V
+.method public final hashCode()I
+    .locals 1
 
-    sget v0, Lsfa;->s0:I
+    const/4 v0, 0x1
 
-    new-instance v1, Lyte;
+    invoke-static {v0}, Lqw1;->u(I)I
 
-    invoke-direct {v1, v0}, Lyte;-><init>(I)V
+    move-result v0
 
-    invoke-virtual {p1, v1}, Lzja;->g(Ldue;)V
+    return v0
+.end method
 
-    invoke-virtual {p0, p1}, Ly79;->L(Lzja;)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p1}, Lzja;->i()Lyja;
+    const-string v0, "MICROPHONE"
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    const-string v1, ")"
 
-    return-object p0
+    const-string v2, "Alternate(iconType="
+
+    invoke-static {v2, v0, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

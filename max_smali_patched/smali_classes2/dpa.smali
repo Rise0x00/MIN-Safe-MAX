@@ -1,110 +1,121 @@
-.class public final Ldpa;
+.class public abstract Ldpa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Ldpa;
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldpa;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ldpa;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-
-    sput-object v0, Ldpa;->b:Ldpa;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldpa;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    instance-of v0, p1, Ldpa;
+    sget v0, Loec;->oneme_media_keyboard_bottom_panel:I
 
-    if-eqz v0, :cond_1
+    sput v0, Ldpa;->a:I
 
-    check-cast p1, Ldpa;
+    sget v0, Loec;->oneme_media_keyboard_emoji_container:I
 
-    if-eq p1, p0, :cond_0
+    sput v0, Ldpa;->b:I
 
-    if-eqz p1, :cond_1
+    sget v0, Loec;->oneme_media_keyboard_emoji_list:I
 
-    iget-object p0, p0, Ldpa;->a:Ljava/lang/Object;
+    sput v0, Ldpa;->c:I
 
-    iget-object p1, p1, Ldpa;->a:Ljava/lang/Object;
+    sget v0, Loec;->oneme_media_keyboard_emoji_tabs:I
 
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Ldpa;->d:I
 
-    move-result p0
+    sget v0, Loec;->oneme_media_keyboard_fake_search_view:I
 
-    if-eqz p0, :cond_1
+    sput v0, Ldpa;->e:I
 
-    :cond_0
-    const/4 p0, 0x1
+    sget v0, Loec;->oneme_media_keyboard_pager:I
 
-    return p0
+    sput v0, Ldpa;->f:I
 
-    :cond_1
-    const/4 p0, 0x0
+    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_action:I
 
-    return p0
-.end method
+    sput v0, Ldpa;->g:I
 
-.method public final hashCode()I
-    .locals 0
+    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
 
-    iget-object p0, p0, Ldpa;->a:Ljava/lang/Object;
+    sput v0, Ldpa;->h:I
 
-    invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    sget v0, Loec;->oneme_media_keyboard_remove_action:I
 
-    move-result p0
+    sput v0, Ldpa;->i:I
 
-    return p0
-.end method
+    sget v0, Loec;->oneme_media_keyboard_settings_action:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    sput v0, Ldpa;->j:I
 
-    iget-object p0, p0, Ldpa;->a:Ljava/lang/Object;
+    sget v0, Loec;->oneme_media_keyboard_showcase_action:I
 
-    if-eqz p0, :cond_0
+    sput v0, Ldpa;->k:I
 
-    const-string v0, "Optional[%s]"
+    sget v0, Loec;->oneme_media_keyboard_stickers_container:I
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    sput v0, Ldpa;->l:I
 
-    move-result-object p0
+    sget v0, Loec;->oneme_media_keyboard_stickers_header_title:I
 
-    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    sput v0, Ldpa;->m:I
 
-    move-result-object p0
+    sget v0, Loec;->oneme_media_keyboard_stickers_list:I
 
-    return-object p0
+    sput v0, Ldpa;->n:I
 
-    :cond_0
-    const-string p0, "Optional.empty"
+    sget v0, Loec;->oneme_media_keyboard_stickers_tabs:I
 
-    return-object p0
+    sput v0, Ldpa;->o:I
+
+    sget v0, Loec;->oneme_media_keyboard_tabs:I
+
+    sput v0, Ldpa;->p:I
+
+    sget v0, Loec;->oneme_media_keyboard_view_type_category_emoji:I
+
+    sput v0, Ldpa;->q:I
+
+    sget v0, Loec;->oneme_media_keyboard_view_type_fake_search:I
+
+    sput v0, Ldpa;->r:I
+
+    return-void
 .end method

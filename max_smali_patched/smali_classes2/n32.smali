@@ -3,226 +3,195 @@
 .source "SourceFile"
 
 # interfaces
-.implements La9b;
-
-
-# static fields
-.field public static final synthetic c:[Lof7;
+.implements Lo32;
 
 
 # instance fields
-.field public final a:[La9b;
+.field public final X:I
 
-.field public final b:Lkle;
+.field public final Y:J
+
+.field public final a:J
+
+.field public final b:Lwre;
+
+.field public final c:Loef;
+
+.field public final o:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Luk9;
-
-    const-class v1, Ln32;
-
-    const-string v2, "result"
-
-    invoke-direct {v0, v1, v2}, Luk9;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
-
-    sget-object v1, Ldic;->a:Leic;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lof7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Ln32;->c:[Lof7;
-
-    return-void
-.end method
-
-.method public constructor <init>([La9b;)V
-    .locals 2
+.method public constructor <init>(JLwre;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln32;->a:[La9b;
+    iput-wide p1, p0, Ln32;->a:J
 
-    new-instance v0, Leb1;
+    iput-object p3, p0, Ln32;->b:Lwre;
 
-    const/16 v1, 0x8
+    iget-object p1, p3, Lwre;->b:Loef;
 
-    invoke-direct {v0, v1, p0}, Leb1;-><init>(ILjava/lang/Object;)V
+    iput-object p1, p0, Ln32;->c:Loef;
 
-    new-instance v1, Lkle;
+    iget-object p1, p3, Lwre;->o:Ljava/lang/Integer;
 
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
+    iput-object p1, p0, Ln32;->o:Ljava/lang/Integer;
 
-    iput-object v1, p0, Ln32;->b:Lkle;
+    iget p1, p3, Lwre;->x0:I
 
-    array-length p0, p1
+    iput p1, p0, Ln32;->X:I
 
-    if-eqz p0, :cond_0
+    iget-wide p1, p3, Lwre;->y0:J
+
+    iput-wide p1, p0, Ln32;->Y:J
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "postprocessors must be not empty!"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;Lc5b;)Lx53;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    iget-object p0, p0, Ln32;->a:[La9b;
+    const/4 v0, 0x1
 
-    array-length v0, p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ln32;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ln32;
+
+    iget-wide v3, p0, Ln32;->a:J
+
+    iget-wide v5, p1, Ln32;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ln32;->b:Lwre;
+
+    iget-object p1, p1, Ln32;->b:Lwre;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Ln32;->Y:J
+
+    return-wide v0
+.end method
+
+.method public final getName()Loef;
+    .locals 1
+
+    iget-object v0, p0, Ln32;->c:Loef;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ln32;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ln32;->b:Lwre;
+
+    invoke-virtual {v1}, Lwre;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Ln32;->X:I
+
+    return v0
+.end method
+
+.method public final s()Z
+    .locals 2
+
+    iget-object v0, p0, Ln32;->b:Lwre;
+
+    iget v0, v0, Lwre;->Y:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p0}, Lns;->N([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9b;
-
-    invoke-interface {p0, p1, p2}, La9b;->a(Landroid/graphics/Bitmap;Lc5b;)Lx53;
-
-    move-result-object p0
-
-    return-object p0
+    return v1
 
     :cond_0
-    array-length v0, p0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    const-string v4, " should be initialized before get."
-
-    const-string v5, "Property "
-
-    sget-object v6, Ln32;->c:[Lof7;
-
-    if-ge v3, v0, :cond_2
-
-    aget-object v1, p0, v3
-
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    invoke-interface {v1, p1, p2}, La9b;->a(Landroid/graphics/Bitmap;Lc5b;)Lx53;
-
-    move-result-object v1
-
-    aget-object p1, v6, v2
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lx53;->i0()Ljava/lang/Object;
-
-    move-result-object p1
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lze7;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    aget-object p0, v6, v2
-
-    if-eqz v1, :cond_3
-
-    return-object v1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p0}, Lze7;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 .end method
 
-.method public final b()Llx0;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p0, p0, Ln32;->b:Lkle;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    const-string v1, "StickerSet(setId="
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p0, Lqtd;
+    iget-wide v1, p0, Ln32;->a:J
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.method public final getName()Ljava/lang/String;
-    .locals 0
+    const-string v1, ", model="
 
-    iget-object p0, p0, Ln32;->b:Lkle;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Ln32;->b:Lwre;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lqtd;
+    const-string v1, ")"
 
-    iget-object p0, p0, Lqtd;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

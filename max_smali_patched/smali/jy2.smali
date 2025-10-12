@@ -3,98 +3,102 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbq5;
+.implements Lfqf;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:Lbq5;
+.field public final synthetic b:Lky2;
 
-.field public final synthetic c:Lzy2;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbq5;Lzy2;I)V
+.method public constructor <init>(Landroid/view/View;Lky2;Z)V
     .locals 0
 
-    iput p3, p0, Ljy2;->a:I
-
-    iput-object p1, p0, Ljy2;->b:Lbq5;
-
-    iput-object p2, p0, Ljy2;->c:Lzy2;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljy2;->a:Landroid/view/View;
+
+    iput-object p2, p0, Ljy2;->b:Lky2;
+
+    iput-boolean p3, p0, Ljy2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Liqf;)V
+    .locals 1
 
-    iget v0, p0, Ljy2;->a:I
+    iget-object p1, p0, Ljy2;->a:Landroid/view/View;
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ldy2;
-
-    iget-object v1, p0, Ljy2;->c:Lzy2;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, p1, v1, v2}, Ldy2;-><init>(Ldq5;Lzy2;I)V
-
-    iget-object p0, p0, Ljy2;->b:Lbq5;
-
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_0
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v0, p0, Ljy2;->b:Lky2;
 
-    :goto_0
-    return-object p0
+    iget-object v0, v0, Lky2;->B0:Ljava/lang/String;
 
-    :pswitch_0
-    new-instance v0, Ldy2;
+    invoke-static {p1, v0}, Lbv0;->w(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
 
-    iget-object v1, p0, Ljy2;->c:Lzy2;
+    move-result-object p1
 
-    const/4 v2, 0x1
+    check-cast p1, Ltya;
 
-    invoke-direct {v0, p1, v1, v2}, Ldy2;-><init>(Ldq5;Lzy2;I)V
+    iget-boolean v0, p0, Ljy2;->c:Z
 
-    iget-object p0, p0, Ljy2;->b:Lbq5;
+    if-eqz v0, :cond_1
 
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ltya;->getSearchView()Ldua;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lq04;->a:Lq04;
+    if-eqz p1, :cond_2
 
-    if-ne p0, p1, :cond_1
+    invoke-virtual {p1}, Ldua;->d()V
 
-    goto :goto_1
+    return-void
 
     :cond_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {p1}, Ltya;->getSearchView()Ldua;
 
-    :goto_1
-    return-object p0
+    move-result-object p1
 
-    nop
+    if-eqz p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Ldua;->b()V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(Liqf;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final h(Liqf;)V
+    .locals 0
+
+    return-void
 .end method

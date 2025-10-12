@@ -1,101 +1,68 @@
-.class public final Lr97;
-.super Lyxf;
+.class public final synthetic Lr97;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public final X:Ljbc;
-
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final o:Lq4e;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lctb;)V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget-object v0, Ln87;->a:Ln87;
+    iput p1, p0, Lr97;->a:I
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lkg6;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v2, Lhoe;
-
-    invoke-virtual {v0, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lyxf;-><init>()V
-
-    iput-object v0, p0, Lr97;->b:Lth7;
-
-    iput-object v1, p0, Lr97;->c:Lth7;
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lr97;->o:Lq4e;
-
-    new-instance v1, Ljbc;
-
-    invoke-direct {v1, v0}, Ljbc;-><init>(Lal9;)V
-
-    iput-object v1, p0, Lr97;->X:Ljbc;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lr97;->q(Lctb;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q(Lctb;Z)V
-    .locals 3
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .locals 2
 
-    iget-object v0, p0, Lr97;->b:Lth7;
+    iget v0, p0, Lr97;->a:I
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    sget-object v0, Lvga;->a:Lvga;
 
-    check-cast v0, Lhoe;
+    sget-object v1, Lone/me/android/OneMeApplication;->x0:Lkga;
 
-    check-cast v0, Loba;
+    invoke-virtual {v0, p1}, Lvga;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Loba;->b()Lj04;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Number;
 
-    new-instance v1, Lq97;
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    const/4 v2, 0x0
+    move-result-wide v0
 
-    invoke-direct {v1, p0, p1, p2, v2}, Lq97;-><init>(Lr97;Lctb;ZLkotlin/coroutines/Continuation;)V
+    return-wide v0
 
-    const/4 p1, 0x2
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
 
-    iget-object p0, p0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-static {p0, v0, v2, v1, p1}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    move-result-object p1
 
-    return-void
+    check-cast p1, Le3a;
+
+    iget-wide v0, p1, Le3a;->a:J
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

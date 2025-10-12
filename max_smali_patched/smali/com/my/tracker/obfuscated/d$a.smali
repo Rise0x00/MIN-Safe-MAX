@@ -22,11 +22,11 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    const-class v0, Lep;
+    const-class v0, Lvp;
 
-    const-class v1, Ldp;
+    const-class v1, Lup;
 
-    const-class v2, Lcp;
+    const-class v2, Ltp;
 
     :try_start_0
     invoke-virtual {v2, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

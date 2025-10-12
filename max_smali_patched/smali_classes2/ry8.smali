@@ -2,50 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lty8;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:J
-
-.field public final c:Lwu8;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:I
-
-.field public final h:J
-
-.field public final i:J
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(IJLwu8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJ)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lry8;->a:I
-
-    iput-wide p2, p0, Lry8;->b:J
-
-    iput-object p4, p0, Lry8;->c:Lwu8;
-
-    iput-object p5, p0, Lry8;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lry8;->e:Ljava/lang/String;
-
-    iput-object p7, p0, Lry8;->f:Ljava/lang/String;
-
-    iput p8, p0, Lry8;->g:I
-
-    iput-wide p9, p0, Lry8;->h:J
-
-    iput-wide p11, p0, Lry8;->i:J
+    iput-object p1, p0, Lry8;->a:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lry8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lry8;
+
+    iget-object v1, p0, Lry8;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lry8;->a:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lry8;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactsUpdate(ids="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lry8;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

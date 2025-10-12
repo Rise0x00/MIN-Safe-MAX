@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp04;
+.implements Le34;
 
 
 # annotations
@@ -13,18 +13,18 @@
     }
     d2 = {
         "Lkotlinx/coroutines/internal/ContextScope;",
-        "Lp04;",
-        "Lh04;",
+        "Le34;",
+        "Lw24;",
         "context",
         "<init>",
-        "(Lh04;)V",
+        "(Lw24;)V",
         "",
         "toString",
         "()Ljava/lang/String;",
         "coroutineContext",
-        "Lh04;",
+        "Lw24;",
         "getCoroutineContext",
-        "()Lh04;",
+        "()Lw24;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -38,28 +38,28 @@
 
 
 # instance fields
-.field private final coroutineContext:Lh04;
+.field private final coroutineContext:Lw24;
 
 
 # direct methods
-.method public constructor <init>(Lh04;)V
+.method public constructor <init>(Lw24;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lh04;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lw24;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getCoroutineContext()Lh04;
-    .locals 0
+.method public getCoroutineContext()Lw24;
+    .locals 1
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lh04;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ContextScope;->coroutineContext:Lw24;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -71,19 +71,19 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Lh04;
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ContextScope;->getCoroutineContext()Lw24;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x29
+    const/16 v1, 0x29
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

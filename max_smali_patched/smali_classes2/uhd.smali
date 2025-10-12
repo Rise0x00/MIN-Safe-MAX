@@ -1,63 +1,69 @@
 .class public final Luhd;
-.super Lpd0;
+.super Lyya;
 .source "SourceFile"
 
+# interfaces
+.implements Lsy9;
 
-# static fields
-.field public static final b:Luhd;
+
+# instance fields
+.field public b:Z
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final onOverScrolled(IIZZ)V
+    .locals 1
 
-    new-instance v0, Luhd;
+    if-gtz p2, :cond_0
 
-    const/16 v1, 0x10
+    if-eqz p4, :cond_0
 
-    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
+    const/4 v0, 0x1
 
-    sput-object v0, Luhd;->b:Luhd;
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-boolean v0, p0, Luhd;->b:Z
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
 
     return-void
 .end method
 
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    return v0
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Luhd;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 
     :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Luhd;->b:Z
+
     return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x38170d6b
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "ChangeDisabled"
-
-    return-object p0
 .end method

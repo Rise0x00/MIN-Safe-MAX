@@ -1,26 +1,26 @@
 .class public final Lhz2;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/chats/list/ChatsListWidget;
+.field public final synthetic Y:Lkz2;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+.method public constructor <init>(Lkz2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lhz2;->Y:Lone/me/chats/list/ChatsListWidget;
+    iput-object p1, p0, Lhz2;->Y:Lkz2;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,92 +30,70 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lprf;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lhz2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lhz2;
+    check-cast p1, Lhz2;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lhz2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lhz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lhz2;
 
-    iget-object p0, p0, Lhz2;->Y:Lone/me/chats/list/ChatsListWidget;
+    iget-object v1, p0, Lhz2;->Y:Lkz2;
 
-    invoke-direct {v0, p2, p0}, Lhz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/list/ChatsListWidget;)V
+    invoke-direct {v0, v1, p2}, Lhz2;-><init>(Lkz2;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lhz2;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lhz2;->X:Ljava/lang/Object;
 
-    check-cast p1, Lep9;
+    check-cast p1, Lprf;
 
-    instance-of v0, p1, Ly94;
+    iget-object v0, p1, Lprf;->a:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast v0, Ljava/lang/String;
 
-    sget-object p0, Llu3;->c:Llu3;
+    iget-object v1, p1, Lprf;->b:Ljava/lang/Object;
 
-    check-cast p1, Ly94;
+    check-cast v1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lt2;->r0(Ly94;)V
+    iget-object p1, p1, Lprf;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lhz2;->Y:Lkz2;
+
+    invoke-virtual {v2, v0, v1, p1}, Lkz2;->e(Ljava/lang/String;Ljava/util/List;Z)V
 
     :cond_0
-    instance-of v0, p1, Le2e;
+    sget-object p1, Loyf;->a:Loyf;
 
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->G0:[Lof7;
-
-    iget-object p0, p0, Lhz2;->Y:Lone/me/chats/list/ChatsListWidget;
-
-    iget-object p0, p0, Lone/me/chats/list/ChatsListWidget;->D0:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmh1;
-
-    move-object v0, p1
-
-    check-cast v0, Le2e;
-
-    iget-wide v1, v0, Le2e;->b:J
-
-    iget-boolean v0, v0, Le2e;->c:Z
-
-    new-instance v3, Lmz2;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v4}, Lmz2;-><init>(Lep9;I)V
-
-    invoke-virtual {p0, v1, v2, v0, v3}, Lmh1;->l(JZLd96;)V
-
-    :cond_1
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object p1
 .end method

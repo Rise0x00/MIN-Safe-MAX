@@ -1,181 +1,234 @@
-.class public abstract Lae8;
-.super Ljava/lang/Object;
+.class public final Lae8;
+.super Lraa;
 .source "SourceFile"
-
-# interfaces
-.implements Ljv0;
-
-
-# static fields
-.field public static final Y:Lyd8;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic a:I
 
-.field public final a:J
+.field public final b:Lmf6;
 
-.field public final b:J
-
-.field public final c:Z
-
-.field public final o:Z
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;Lmf6;I)V
+    .locals 0
 
-    new-instance v0, Lzd8;
+    iput p3, p0, Lae8;->a:I
 
-    invoke-direct {v0}, Lzd8;-><init>()V
+    iput-object p1, p0, Lae8;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lzd8;->a()Lce8;
-
-    new-instance v0, Lyd8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lyd8;-><init>(I)V
-
-    sput-object v0, Lae8;->Y:Lyd8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzd8;)V
-    .locals 2
+    iput-object p2, p0, Lae8;->b:Lmf6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Lzd8;->a:J
-
-    iput-wide v0, p0, Lae8;->a:J
-
-    iget-wide v0, p1, Lzd8;->b:J
-
-    iput-wide v0, p0, Lae8;->b:J
-
-    iget-boolean v0, p1, Lzd8;->c:Z
-
-    iput-boolean v0, p0, Lae8;->c:Z
-
-    iget-boolean v0, p1, Lzd8;->d:Z
-
-    iput-boolean v0, p0, Lae8;->o:Z
-
-    iget-boolean p1, p1, Lzd8;->e:Z
-
-    iput-boolean p1, p0, Lae8;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final p(Lxda;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lae8;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lzd8;
+
+    iget-object v1, p0, Lae8;->b:Lmf6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p1, v1, v2}, Lzd8;-><init>(Lxda;Lmf6;I)V
+
+    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
+
+    iget-object p1, p0, Lae8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lude;
+
+    invoke-virtual {p1, v0}, Lude;->k(Lnee;)V
+
+    return-void
+
+    :pswitch_0
+    :try_start_0
+    iget-object v0, p0, Lae8;->b:Lmf6;
+
+    iget-object v1, p0, Lae8;->c:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The mapper returned a null ObservableSource"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Lnda;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    instance-of v1, v0, Ls1f;
+
+    if-eqz v1, :cond_1
+
+    :try_start_1
+    check-cast v0, Ls1f;
+
+    invoke-interface {v0}, Ls1f;->get()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lw65;->a(Lxda;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lae8;
+    new-instance v1, Llda;
+
+    invoke-direct {v1, p1, v0}, Llda;-><init>(Lxda;Ljava/lang/Object;)V
+
+    invoke-interface {p1, v1}, Lxda;->c(Lss4;)V
+
+    invoke-virtual {v1}, Llda;->run()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lw65;->b(Ljava/lang/Throwable;Lxda;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {v0, p1}, Lnda;->a(Lxda;)V
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lw65;->b(Ljava/lang/Throwable;Lxda;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lae8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lraa;
+
+    instance-of v1, v0, Ls1f;
+
+    iget-object v2, p0, Lae8;->b:Lmf6;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, Ls1f;
+
+    :try_start_2
+    invoke-interface {v0}, Ls1f;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2, v0}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The mapper returned a null SingleSource"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Lffe;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    if-nez v0, :cond_3
+
+    invoke-static {p1}, Lw65;->a(Lxda;)V
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v1, Lre8;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, v2}, Lre8;-><init>(Lxda;I)V
+
+    check-cast v0, Lude;
+
+    invoke-virtual {v0, v1}, Lude;->k(Lnee;)V
+
+    goto :goto_3
+
+    :goto_2
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lw65;->b(Ljava/lang/Throwable;Lxda;)V
+
+    goto :goto_3
+
+    :cond_4
+    new-instance v1, Ldba;
+
+    invoke-direct {v1, p1, v2}, Ldba;-><init>(Lxda;Lmf6;)V
+
+    invoke-virtual {v0, v1}, Lraa;->a(Lxda;)V
+
+    :goto_3
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lzd8;
+
+    iget-object v1, p0, Lae8;->b:Lmf6;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, p1, v1, v2}, Lzd8;-><init>(Lxda;Lmf6;I)V
 
-    return v2
+    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
 
-    :cond_1
-    check-cast p1, Lae8;
+    iget-object p1, p0, Lae8;->c:Ljava/lang/Object;
 
-    iget-wide v3, p0, Lae8;->a:J
+    check-cast p1, Lrd8;
 
-    iget-wide v5, p1, Lae8;->a:J
+    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
 
-    cmp-long v1, v3, v5
+    return-void
 
-    if-nez v1, :cond_2
+    nop
 
-    iget-wide v3, p0, Lae8;->b:J
-
-    iget-wide v5, p1, Lae8;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-boolean v1, p0, Lae8;->c:Z
-
-    iget-boolean v3, p1, Lae8;->c:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Lae8;->o:Z
-
-    iget-boolean v3, p1, Lae8;->o:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean p0, p0, Lae8;->X:Z
-
-    iget-boolean p1, p1, Lae8;->X:Z
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-wide v0, p0, Lae8;->a:J
-
-    const/16 v2, 0x20
-
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lae8;->b:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lae8;->c:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lae8;->o:Z
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lae8;->X:Z
-
-    add-int/2addr v0, p0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

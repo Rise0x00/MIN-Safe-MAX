@@ -1,33 +1,14 @@
-.class public abstract synthetic Lomg;
+.class public interface abstract Lomg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public abstract a()V
+.end method
 
+.method public abstract b()V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    invoke-static {}, Lh95;->values()[Lh95;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lomg;->$EnumSwitchMapping$0:[I
-
-    return-void
+.method public abstract c()V
 .end method

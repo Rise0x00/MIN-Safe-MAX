@@ -1,11 +1,19 @@
-.class public interface abstract Lyp7;
+.class public final Lyp7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Future;
+
+# instance fields
+.field public final synthetic a:La5;
 
 
-# virtual methods
-.method public abstract d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+# direct methods
+.method public constructor <init>(La5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyp7;->a:La5;
+
+    return-void
 .end method

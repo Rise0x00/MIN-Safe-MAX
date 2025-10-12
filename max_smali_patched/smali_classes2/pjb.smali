@@ -2,22 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnwb;
+
 
 # instance fields
-.field public final a:Ljava/lang/Long;
-
-.field public final b:Ldue;
+.field public final a:Ljef;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ldue;)V
+.method public constructor <init>(Ljef;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpjb;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lpjb;->b:Ldue;
+    iput-object p1, p0, Lpjb;->a:Ljef;
 
     return-void
 .end method
@@ -25,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 2
 
     const/4 v0, 0x1
 
@@ -36,72 +35,130 @@
     :cond_0
     instance-of v1, p1, Lpjb;
 
-    const/4 v2, 0x0
-
     if-nez v1, :cond_1
 
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lpjb;
 
-    iget-object v1, p0, Lpjb;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lpjb;->a:Ljef;
 
-    iget-object v3, p1, Lpjb;->a:Ljava/lang/Long;
+    iget-object p1, p1, Lpjb;->a:Ljef;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
-    return v2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_2
-    iget-object p0, p0, Lpjb;->b:Ldue;
-
-    iget-object p1, p1, Lpjb;->b:Ldue;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final getItemId()J
+    .locals 2
 
-    iget-object v0, p0, Lpjb;->a:Ljava/lang/Long;
+    const/high16 v0, 0x10000
 
-    if-nez v0, :cond_0
+    int-to-long v0, v0
 
-    const/4 v0, 0x0
+    return-wide v0
+.end method
 
-    goto :goto_0
+.method public final h(Lww7;)Z
+    .locals 4
+
+    const/high16 v0, 0x10000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lww7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lpjb;->a:Ljef;
+
+    iget v0, v0, Ljef;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p0, p0, Lpjb;->b:Ldue;
+    const/high16 v1, -0x7fff0000
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
+.end method
+
+.method public final k(Lww7;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lk9e;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lfxb;
+
+    check-cast p1, Lk9e;
+
+    iget-object p1, p1, Lk9e;->a:Lps;
+
+    invoke-direct {v0, p1}, Lfxb;-><init>(Lps;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/high16 v0, -0x7fff0000
+
+    return v0
+.end method
+
+.method public final q(Lww7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lpjb;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -109,29 +166,21 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "UpdateError(requestId="
+    const-string v1, "PlaceholderItem(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lpjb;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lpjb;->a:Ljef;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", errorText="
+    const-string v1, ", viewType=-2147418112)"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lpjb;->b:Ldue;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

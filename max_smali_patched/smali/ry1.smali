@@ -1,29 +1,19 @@
 .class public final Lry1;
-.super Landroid/hardware/camera2/CameraDevice$StateCallback;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+# instance fields
+.field public final a:Landroid/os/Handler;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
+    iput-object p1, p0, Lry1;->a:Landroid/os/Handler;
 
     return-void
 .end method

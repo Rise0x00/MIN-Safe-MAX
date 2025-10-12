@@ -1,262 +1,316 @@
 .class public final Lrf1;
-.super Leud;
+.super Lzce;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic B0:I
-
-
 # instance fields
-.field public final A0:Lr8;
+.field public final X:Lmle;
+
+.field public final Y:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr8;)V
-    .locals 2
+.method public constructor <init>(Lmle;)V
+    .locals 1
 
-    new-instance v0, Lbn3;
+    sget-object v0, Lzid;->a:Lzid;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lzid;->p()Ljna;
 
-    invoke-direct {v0, p1, v1}, Lbn3;-><init>(Landroid/content/Context;I)V
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Luhc;-><init>(Landroid/view/View;)V
+    invoke-virtual {v0}, Ljna;->a()Ljava/util/concurrent/ExecutorService;
 
-    iput-object p2, p0, Lrf1;->A0:Lr8;
+    move-result-object v0
 
-    sget-object p0, Lzs4;->p0:Lqs9;
+    invoke-direct {p0, v0}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
 
-    invoke-virtual {p0, p1}, Lqs9;->f(Landroid/content/Context;)Lyda;
+    iput-object p1, p0, Lrf1;->X:Lmle;
 
-    move-result-object p0
-
-    iget-object p0, p0, Lyda;->c:Lnma;
-
-    invoke-virtual {v0, p0}, Lbn3;->setCustomTheme(Lnma;)V
+    iput-object v0, p0, Lrf1;->Y:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lbh1;ZZ)V
+.method public final l(I)I
+    .locals 1
+
+    iget-object v0, p0, Lpw7;->o:Lru;
+
+    iget-object v0, v0, Lru;->f:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lww7;
+
+    invoke-interface {p1}, Lww7;->m()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final s(Lnxc;ILjava/util/List;)V
     .locals 5
 
-    const/4 v0, 0x0
+    check-cast p1, Ltde;
 
-    iget-object v1, p0, Luhc;->a:Landroid/view/View;
+    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
 
-    if-eqz p2, :cond_0
+    move-result v0
 
-    move-object p2, v1
+    iget-object v1, p0, Lpw7;->o:Lru;
 
-    check-cast p2, Lbn3;
+    if-eqz v0, :cond_0
 
-    sget v2, Lm9a;->B0:I
+    iget-object p3, v1, Lru;->f:Ljava/util/List;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p2
 
-    new-instance v3, Lw2;
+    check-cast p2, Lww7;
 
-    const/16 v4, 0xf
+    invoke-virtual {p1, p2}, Ltde;->x(Lww7;)V
 
-    invoke-direct {v3, p0, v4, p1}, Lw2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sget-object p0, Ln8a;->o:Ln8a;
-
-    sget-object p1, Ll8a;->X:Ll8a;
-
-    invoke-virtual {p2, v2, p0, p1, v3}, Lbn3;->P(Ljava/lang/Integer;Ln8a;Ll8a;Ld96;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    move-object p0, v1
+    iget-object v0, v1, Lru;->f:Ljava/util/List;
 
-    check-cast p0, Lbn3;
-
-    new-instance p1, Lr01;
-
-    const/16 p2, 0x19
-
-    invoke-direct {p1, p2}, Lr01;-><init>(I)V
-
-    const/4 p2, 0x6
-
-    invoke-static {p0, v0, p1, p2}, Lbn3;->Q(Lbn3;Ljava/lang/Integer;Ld96;I)V
-
-    :goto_0
-    if-eqz p3, :cond_1
-
-    sget p0, Lm9a;->L:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    :cond_1
-    check-cast v1, Lbn3;
+    check-cast v0, Lww7;
 
-    invoke-virtual {v1, v0}, Lbn3;->setIconInfo(Ljava/lang/Integer;)V
+    invoke-interface {v0}, Lww7;->m()I
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_8
+
+    check-cast p1, Lqf1;
+
+    iget-object p2, p1, Lnxc;->a:Landroid/view/View;
+
+    new-instance v0, Ljs;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p3}, Ljs;-><init>(ILjava/lang/Object;)V
+
+    new-instance p3, Ljd1;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p3, v1}, Ljd1;-><init>(I)V
+
+    new-instance v1, Liu5;
+
+    sget-object v2, Lzrd;->a:Lzrd;
+
+    invoke-direct {v1, v0, p3, v2}, Liu5;-><init>(Lord;Lxe6;Lxe6;)V
+
+    sget-object p3, Lz31;->B0:Lz31;
+
+    invoke-static {v1, p3}, Lxrd;->T(Lord;Lxe6;)Lvr5;
+
+    move-result-object p3
+
+    new-instance v0, Lur5;
+
+    invoke-direct {v0, p3}, Lur5;-><init>(Lvr5;)V
+
+    :goto_0
+    invoke-virtual {v0}, Lur5;->hasNext()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_7
+
+    invoke-virtual {v0}, Lur5;->next()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lkf1;
+
+    instance-of v1, p3, Ljf1;
+
+    if-eqz v1, :cond_1
+
+    move-object v1, p2
+
+    check-cast v1, Lsp3;
+
+    check-cast p3, Ljf1;
+
+    iget-object p3, p3, Ljf1;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p3}, Lsp3;->setName(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v1, p3, Lgf1;
+
+    if-eqz v1, :cond_2
+
+    move-object v1, p2
+
+    check-cast v1, Lsp3;
+
+    check-cast p3, Lgf1;
+
+    iget-object p3, p3, Lgf1;->a:Ljava/lang/Integer;
+
+    invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
+
+    move-result p3
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {v1, p3}, Lsp3;->setMessage(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :cond_2
+    instance-of v1, p3, Lff1;
+
+    if-eqz v1, :cond_3
+
+    move-object v1, p2
+
+    check-cast v1, Lsp3;
+
+    check-cast p3, Lff1;
+
+    iget-object v2, p3, Lff1;->a:Lch1;
+
+    iget-wide v2, v2, Lch1;->a:J
+
+    iget-object v4, p3, Lff1;->b:Ljava/lang/String;
+
+    iget-object p3, p3, Lff1;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3, v4, p3}, Lsp3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v1, p3, Lhf1;
+
+    if-eqz v1, :cond_4
+
+    check-cast p3, Lhf1;
+
+    iget-object v1, p3, Lhf1;->a:Lch1;
+
+    iget-boolean v2, p3, Lhf1;->b:Z
+
+    iget-boolean p3, p3, Lhf1;->c:Z
+
+    invoke-virtual {p1, v1, v2, p3}, Lqf1;->F(Lch1;ZZ)V
+
+    goto :goto_0
+
+    :cond_4
+    instance-of v1, p3, Lif1;
+
+    if-eqz v1, :cond_6
+
+    check-cast p3, Lif1;
+
+    iget-boolean v1, p3, Lif1;->a:Z
+
+    iget-object p3, p3, Lif1;->b:Lch1;
+
+    if-eqz v1, :cond_5
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    goto :goto_0
+
+    :cond_5
+    new-instance v1, Ljb;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, v2, p3}, Ljb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p2, v1}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    goto :goto_0
+
+    :cond_6
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_7
+    return-void
+
+    :cond_8
+    iget-object p3, v1, Lru;->f:Ljava/util/List;
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lww7;
+
+    invoke-virtual {p1, p2}, Ltde;->x(Lww7;)V
 
     return-void
 .end method
 
-.method public final x(Llp7;)V
-    .locals 9
+.method public final t(Landroid/view/ViewGroup;I)Lnxc;
+    .locals 2
 
-    check-cast p1, Llf1;
+    const/4 v0, 0x1
 
-    iget-boolean v0, p1, Llf1;->Z:Z
+    if-ne p2, v0, :cond_0
 
-    iget-boolean v1, p1, Llf1;->X:Z
+    new-instance p2, Lqf1;
 
-    iget-object v2, p0, Luhc;->a:Landroid/view/View;
-
-    move-object v3, v2
-
-    check-cast v3, Lbn3;
-
-    iget-wide v4, p1, Llf1;->p0:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v4, p1, Llf1;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lbn3;->setName(Ljava/lang/CharSequence;)V
-
-    iget-object v5, p1, Llf1;->a:Lbh1;
-
-    iget-wide v6, v5, Lbh1;->a:J
-
-    iget-object v8, p1, Llf1;->c:Ljava/lang/String;
-
-    invoke-virtual {v3, v6, v7, v4, v8}, Lbn3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    iget-object p1, p1, Llf1;->o0:Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v4, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v3, p1}, Lbn3;->setMessage(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lrf1;->X:Lmle;
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    invoke-direct {p2, p1, v0}, Lqf1;-><init>(Landroid/content/Context;Lmle;)V
 
-    invoke-virtual {p1, v3}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lyda;->c:Lnma;
-
-    invoke-interface {v4}, Lnma;->d()La5e;
-
-    move-result-object v4
-
-    iget-object v4, v4, La5e;->a:Ly4e;
-
-    iget-object v4, v4, Ly4e;->a:Lx4e;
-
-    iget v4, v4, Lx4e;->c:I
-
-    new-instance v6, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v7, Landroid/graphics/drawable/shapes/RectShape;
-
-    invoke-direct {v7}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
-
-    invoke-direct {v6, v7}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v7
-
-    invoke-virtual {p1, v3}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v8
-
-    iget-object v8, v8, Lyda;->c:Lnma;
-
-    invoke-interface {v8}, Lnma;->b()Ldf0;
-
-    move-result-object v8
-
-    iget v8, v8, Ldf0;->l:I
-
-    invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v7, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v4}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v4
-
-    const/4 v8, 0x0
-
-    invoke-direct {v7, v4, v6, v8}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {v3, v7}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0, v5, v1, v0}, Lrf1;->F(Lbh1;ZZ)V
-
-    if-eqz v0, :cond_0
-
-    sget v0, Lm9a;->L:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    goto :goto_0
+    return-object p2
 
     :cond_0
-    move-object v0, v8
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
-    move-object v4, v2
+    const-string v0, "Not supported viewType="
 
-    check-cast v4, Lbn3;
+    const-string v1, " for CallOpponentsListAdapter"
 
-    invoke-virtual {v4, v0}, Lbn3;->setIconInfo(Ljava/lang/Integer;)V
+    invoke-static {p2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v1, :cond_1
+    move-result-object p2
 
-    invoke-virtual {v2, v8}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Lmb;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, p0, v1, v5}, Lmb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v0}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    :goto_1
-    invoke-virtual {p1, v3}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lyda;->c:Lnma;
-
-    invoke-virtual {v3, p0}, Lbn3;->setCustomTheme(Lnma;)V
-
-    return-void
+    throw p1
 .end method

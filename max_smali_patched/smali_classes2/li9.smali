@@ -1,111 +1,55 @@
 .class public final Lli9;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic g:[Lof7;
-
-
 # instance fields
-.field public final a:Lp04;
+.field public X:I
 
-.field public final b:Lhoe;
+.field public Y:I
 
-.field public final c:Lvj;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final d:Lq4e;
+.field public o:Loi9;
 
-.field public final e:Ljbc;
+.field public final synthetic w0:Loi9;
 
-.field public final f:Lvfd;
+.field public x0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lvk9;
-
-    const-string v1, "newSelectionJob"
-
-    const-string v2, "getNewSelectionJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lli9;
-
-    invoke-direct {v0, v3, v1, v2}, Lvk9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Ldic;->a:Leic;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lof7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lli9;->g:[Lof7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;Lhoe;Lvj;)V
+.method public constructor <init>(Loi9;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lli9;->w0:Loi9;
 
-    iput-object p1, p0, Lli9;->a:Lp04;
-
-    iput-object p2, p0, Lli9;->b:Lhoe;
-
-    iput-object p3, p0, Lli9;->c:Lvj;
-
-    new-instance p1, Lfi9;
-
-    const/4 p2, 0x7
-
-    invoke-direct {p1, p2}, Lfi9;-><init>(I)V
-
-    invoke-static {p1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lli9;->d:Lq4e;
-
-    new-instance p2, Ljbc;
-
-    invoke-direct {p2, p1}, Ljbc;-><init>(Lal9;)V
-
-    iput-object p2, p0, Lli9;->e:Ljbc;
-
-    invoke-static {}, Lx28;->E()Lvfd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lli9;->f:Lvfd;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lfi9;
+    iput-object p1, p0, Lli9;->Z:Ljava/lang/Object;
 
-    const/4 v1, 0x7
+    iget p1, p0, Lli9;->x0:I
 
-    invoke-direct {v0, v1}, Lfi9;-><init>(I)V
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Lli9;->d:Lq4e;
+    iput p1, p0, Lli9;->x0:I
 
-    invoke-virtual {p0, v1, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p0, Lli9;->w0:Loi9;
 
-    return-void
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Loi9;->O(Lv6a;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

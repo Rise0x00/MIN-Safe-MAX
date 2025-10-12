@@ -1,42 +1,32 @@
-.class public final Lm37;
+.class public abstract Lm37;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ln37;
+.implements Lek9;
 
 
-# static fields
-.field public static final synthetic a:Lm37;
-
-.field public static final b:Luu2;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lm37;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lm37;->a:Lm37;
-
-    sget-object v0, Luu2;->c:Luu2;
-
-    sget-object v0, Luu2;->c:Luu2;
-
-    sput-object v0, Lm37;->b:Luu2;
+    iput-object p1, p0, Lm37;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final v()Luu2;
-    .locals 0
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    sget-object p0, Lm37;->b:Luu2;
+    iget-object v0, p0, Lm37;->a:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method

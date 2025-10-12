@@ -1,55 +1,48 @@
 .class public final La8f;
-.super Lko;
-.source "SourceFile"
+.super Lnz3;
 
 
-# static fields
-.field public static final a:La8f;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lqu7;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqu7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, La8f;
+    iput-object p1, p0, La8f;->Y:Lqu7;
 
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, La8f;->a:La8f;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lth7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    iput-object p1, p0, La8f;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, La8f;->X:I
 
-    const-class v0, Ljk;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, La8f;->X:I
 
-    return-object p0
-.end method
+    iget-object p1, p0, La8f;->Y:Lqu7;
 
-.method public final c()Lth7;
-    .locals 1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p1, v0, p0}, Lqu7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-class v0, Lhoe;
-
-    invoke-virtual {p0, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

@@ -1,6 +1,8 @@
-.class public final Lal;
+.class public interface abstract Lal;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbl;
+
+# virtual methods
+.method public abstract a(Lfl;)Ljava/lang/Object;
+.end method

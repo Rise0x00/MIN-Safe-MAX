@@ -3,101 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lr4a;
+.implements Lhb6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic a:Lu5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;I)V
+.method public synthetic constructor <init>(Lu5;)V
     .locals 0
 
-    iput p2, p0, Ls5;->a:I
-
-    iput-object p1, p0, Ls5;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls5;->a:Lu5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Landroid/view/View;Lpkg;)Lpkg;
-    .locals 4
+.method public final a(Landroidx/fragment/app/a;)V
+    .locals 1
 
-    iget p1, p0, Ls5;->a:I
+    iget-object v0, p0, Ls5;->a:Lu5;
 
-    iget-object p0, p0, Ls5;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    :try_start_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p1, v0, Lu5;->O0:Lbb8;
 
-    iget-object p0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Z0:Landroid/view/View;
+    iget-object p1, p1, Lbb8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Lpkg;->a()I
+    check-cast p1, Lsg3;
 
-    move-result p1
+    check-cast p1, Lyka;
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+    const-class v0, Lg7f;
 
-    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-eq v1, p1, :cond_0
+    move-result-object p1
 
-    iput p1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    check-cast p1, Lg7f;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1}, Lg7f;->C()Lg44;
 
-    :cond_0
-    return-object p2
+    move-result-object p1
 
-    :pswitch_0
-    iget-object p0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p2}, Lpkg;->b()I
-
-    move-result p1
-
-    invoke-virtual {p2}, Lpkg;->c()I
-
-    move-result v0
-
-    invoke-virtual {p2}, Lpkg;->a()I
-
-    move-result v1
-
-    iget-object v2, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->D0:Landroid/view/View;
-
-    invoke-static {v2, p1}, Liwd;->A(Landroid/view/View;I)V
-
-    iget-object v3, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->C0:Landroid/view/View;
-
-    invoke-static {v3, p1}, Liwd;->A(Landroid/view/View;I)V
-
-    invoke-static {v2, v0}, Liwd;->z(Landroid/view/View;I)V
-
-    invoke-static {v3, v0}, Liwd;->z(Landroid/view/View;I)V
-
-    const/4 p1, 0x0
-
-    invoke-static {p0, p1}, Liwd;->l(Landroid/view/View;I)V
-
-    invoke-static {p0, v1}, Liwd;->i(Landroid/view/View;I)V
-
-    return-object p2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :catchall_0
+    return-void
 .end method

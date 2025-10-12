@@ -1,247 +1,315 @@
-.class public final Lbhb;
-.super Leje;
+.class public final synthetic Lbhb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final synthetic b:Lone/me/pinbars/PinBarsWidget;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+.method public synthetic constructor <init>(Lone/me/pinbars/PinBarsWidget;I)V
     .locals 0
 
-    iput-object p2, p0, Lbhb;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    iput p2, p0, Lbhb;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lbhb;->b:Lone/me/pinbars/PinBarsWidget;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 19
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-object/from16 v0, p0
 
-    invoke-virtual {p0, p1, p2}, Lbhb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget v1, v0, Lbhb;->a:I
 
-    move-result-object p0
+    iget-object v2, v0, Lbhb;->b:Lone/me/pinbars/PinBarsWidget;
 
-    check-cast p0, Lbhb;
+    packed-switch v1, :pswitch_data_0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget v1, Lone/me/pinbars/PinBarsWidget;->x0:I
 
-    invoke-virtual {p0, p1}, Lbhb;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lmh1;
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lbhb;
-
-    iget-object p0, p0, Lbhb;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    invoke-direct {v0, p2, p0}, Lbhb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-
-    iput-object p1, v0, Lbhb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbhb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lcgb;
-
-    instance-of v0, p1, Lagb;
-
-    iget-object p0, p0, Lbhb;->Y:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    if-eqz v0, :cond_3
-
-    invoke-static {p0}, Ldjg;->u(Lox3;)V
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->u0:[Lof7;
-
-    check-cast p1, Lagb;
-
-    iget-object v0, p1, Lagb;->a:Ldue;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2, v2, v1}, Laug;->a(Ldue;Landroid/os/Bundle;Lsyc;I)Lcj3;
-
-    move-result-object v5
-
-    iget-object v0, p1, Lagb;->b:Ldue;
-
-    invoke-virtual {v5, v0}, Lcj3;->f(Ldue;)V
-
-    iget-object p1, p1, Lagb;->c:Ljava/util/List;
-
-    new-instance v3, Lql2;
-
-    const/16 v9, 0x8
-
-    const/16 v10, 0x9
+    new-instance v3, Lbhb;
 
     const/4 v4, 0x1
 
-    const-class v6, Lcj3;
+    invoke-direct {v3, v2, v4}, Lbhb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
 
-    const-string v7, "addButton"
+    new-instance v4, Ls5f;
 
-    const-string v8, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
+    invoke-direct {v4, v3}, Ls5f;-><init>(Lve6;)V
 
-    invoke-direct/range {v3 .. v10}, Lql2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    new-instance v3, Ld7h;
 
-    new-instance v0, Lup2;
+    const/4 v5, 0x0
 
-    const/4 v1, 0x1
+    invoke-direct {v3, v2, v5}, Ld7h;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-direct {v0, v3, v1}, Lup2;-><init>(Lo8;I)V
+    invoke-direct {v1, v4, v3}, Lmh1;-><init>(Ls5f;Ld7h;)V
 
-    invoke-interface {p1, v0}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+    return-object v1
 
-    invoke-virtual {v5}, Lcj3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    :pswitch_0
+    sget v1, Lone/me/pinbars/PinBarsWidget;->x0:I
+
+    sget-object v1, Lygb;->a:Lygb;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v3
+
+    const-class v4, Lr8f;
+
+    invoke-virtual {v3, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v5, v3
+
+    check-cast v5, Lr8f;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v3
+
+    const-class v4, Lgu2;
+
+    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v3
+
+    const-class v4, Lfp2;
+
+    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v7
 
-    invoke-virtual {v7, p0}, Lox3;->setTargetController(Lox3;)V
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
 
-    move-object p1, p0
+    move-result-object v3
 
-    :goto_0
-    invoke-virtual {p1}, Lox3;->getParentController()Lox3;
+    const-class v4, Llv2;
 
-    move-result-object v0
+    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    if-eqz v0, :cond_0
+    move-result-object v8
 
-    invoke-virtual {p1}, Lox3;->getParentController()Lox3;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
 
-    move-result-object p1
+    move-result-object v3
+
+    const-class v4, Lfs9;
+
+    invoke-virtual {v3, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object/from16 v16, v3
+
+    check-cast v16, Lfs9;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v3
+
+    const-class v4, Lava;
+
+    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v17
+
+    iget-object v2, v2, Lone/me/pinbars/PinBarsWidget;->b:Lbp7;
+
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object/from16 v18, v2
+
+    check-cast v18, Lzgb;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lhx3;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v9
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lip3;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v10
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lep3;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v11
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lr63;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v14
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Llm5;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v15
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v3, Lwm9;
+
+    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v13
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v1
+
+    const-class v2, Lst1;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v12
+
+    new-instance v4, Lahb;
+
+    invoke-direct/range {v4 .. v18}, Lahb;-><init>(Lr8f;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lfs9;Lbp7;Lzgb;)V
+
+    return-object v4
+
+    :pswitch_1
+    sget v1, Lone/me/pinbars/PinBarsWidget;->x0:I
+
+    invoke-virtual {v2}, Lb04;->getRouter()Li8d;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_2
+    sget v1, Lone/me/pinbars/PinBarsWidget;->x0:I
+
+    invoke-virtual {v2}, Lone/me/pinbars/PinBarsWidget;->B0()Lahb;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lahb;->X:Lhr6;
+
+    if-eqz v1, :cond_3
+
+    iget-object v2, v1, Lhr6;->a:Lfoe;
+
+    invoke-interface {v2}, Lfoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lm82;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Lm82;->r()Lq00;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, v2, Lq00;->c:Ljava/io/Serializable;
+
+    check-cast v2, Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lwrc;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    :goto_0
+    if-eqz v2, :cond_2
 
-    check-cast p1, Lwrc;
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-nez v3, :cond_1
 
     goto :goto_1
 
     :cond_1
-    move-object p1, v2
+    iget-object v1, v1, Lhr6;->g:Le8e;
 
-    :goto_1
-    if-eqz p1, :cond_2
+    new-instance v3, Lmr6;
 
-    invoke-interface {p1}, Lwrc;->d0()Lqrc;
+    invoke-direct {v3, v2}, Lmr6;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
-
-    :cond_2
-    invoke-virtual {v7, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->L0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v2, :cond_6
-
-    new-instance v6, Ltrc;
-
-    const/4 v11, 0x0
-
-    const/4 v12, -0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v6 .. v12}, Ltrc;-><init>(Lox3;Ljava/lang/String;Ltx3;Ltx3;ZI)V
-
-    const/4 p0, 0x0
-
-    const-string p1, "BottomSheetWidget"
-
-    invoke-static {p0, v6, v1, p1}, Lmh0;->m(ZLtrc;ZLjava/lang/String;)V
-
-    invoke-virtual {v2, v6}, Lqrc;->H(Ltrc;)V
+    invoke-virtual {v1, v3}, Le8e;->h(Ljava/lang/Object;)Z
 
     goto :goto_2
 
+    :cond_2
+    :goto_1
+    const-class v1, Lhr6;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Can\'t join to group call in chat because joinLink is empty"
+
+    invoke-static {v1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
     :cond_3
-    instance-of v0, p1, Lbgb;
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->r0:Lyja;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Lyja;->a()V
-
-    :cond_4
-    new-instance v0, Lzja;
-
-    invoke-direct {v0, p0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    check-cast p1, Lbgb;
-
-    iget-object v1, p1, Lbgb;->a:Ldue;
-
-    invoke-virtual {v0, v1}, Lzja;->g(Ldue;)V
-
-    iget-object p1, p1, Lbgb;->b:Ljava/lang/Integer;
-
-    if-eqz p1, :cond_5
-
-    new-instance v1, Loka;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-direct {v1, p1}, Loka;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lzja;->e(Lska;)V
-
-    :cond_5
-    invoke-virtual {v0}, Lzja;->i()Lyja;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->r0:Lyja;
-
-    :cond_6
     :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object v1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object v1
 
-    :cond_7
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

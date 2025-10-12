@@ -1,142 +1,117 @@
-.class public final synthetic Lmi2;
-.super Ljava/lang/Object;
+.class public final Lmi2;
+.super Lti2;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Lone/me/profile/screens/media/ChatMediaTabWidget;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/media/ChatMediaTabWidget;I)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput p2, p0, Lmi2;->a:I
+    invoke-direct {p0}, Lti2;-><init>()V
 
-    iput-object p1, p0, Lmi2;->b:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    iput-wide p1, p0, Lmi2;->b:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p3, p0, Lmi2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lmi2;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x2
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Lmi2;->b:Lone/me/profile/screens/media/ChatMediaTabWidget;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->r0:[Lof7;
-
-    new-instance v0, Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
-
-    sget v2, Lzga;->p0:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
-
-    new-instance v2, Lei0;
-
-    invoke-direct {v2, v1, p0}, Lei0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Landroidx/viewpager2/widget/ViewPager2;->b(Lxyf;)V
-
-    invoke-static {v0}, Lkc5;->r(Landroidx/viewpager2/widget/ViewPager2;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->r0:[Lof7;
-
-    new-instance v0, Lcma;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lmi2;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v2}, Lcma;-><init>(Landroid/content/Context;I)V
+    if-nez v1, :cond_1
 
-    sget p0, Lzga;->n0:I
+    return v2
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
+    :cond_1
+    check-cast p1, Lmi2;
 
-    invoke-virtual {v0, v2}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
+    iget-wide v3, p0, Lmi2;->b:J
 
-    invoke-virtual {v0, v1}, Lcom/google/android/material/tabs/TabLayout;->setTabGravity(I)V
+    iget-wide v5, p1, Lmi2;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lmi2;->c:J
+
+    iget-wide v5, p1, Lmi2;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lmi2;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lmi2;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OpenMessage(chatId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lmi2;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lmi2;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/profile/screens/media/ChatMediaTabWidget;->r0:[Lof7;
-
-    new-instance v0, Lkna;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p0, v1}, Lkna;-><init>(Landroid/content/Context;I)V
-
-    sget p0, Lzga;->r0:I
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
-
-    sget-object p0, Lcna;->a:Lcna;
-
-    invoke-virtual {v0, p0}, Lkna;->setForm(Lcna;)V
-
-    new-instance p0, Lsma;
-
-    new-instance v1, Lmf1;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v1, v2}, Lmf1;-><init>(I)V
-
-    invoke-direct {p0, v1}, Lsma;-><init>(Lf96;)V
-
-    invoke-virtual {v0, p0}, Lkna;->setLeftActions(Lyma;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

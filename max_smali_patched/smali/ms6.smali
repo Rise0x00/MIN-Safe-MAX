@@ -1,138 +1,188 @@
-.class public abstract Lms6;
+.class public final Lms6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lryd;
+.implements Ljava/lang/Runnable;
+.implements Lss4;
 
 
 # instance fields
-.field public final a:Lq46;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public volatile b:Z
 
-.field public final synthetic c:Lq8;
+.field public final c:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lq8;)V
+.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lms6;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lms6;->c:Lq8;
+    .line 2
+    iput-object p1, p0, Lms6;->c:Ljava/lang/Object;
 
-    new-instance v0, Lq46;
+    .line 3
+    iput-object p2, p0, Lms6;->o:Ljava/lang/Object;
 
-    iget-object p1, p1, Lq8;->e:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast p1, Luu0;
+.method public constructor <init>(Ljava/lang/Runnable;Lied;)V
+    .locals 1
 
-    invoke-interface {p1}, Lryd;->p()Lyxe;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    iput v0, p0, Lms6;->a:I
 
-    invoke-direct {v0, p1}, Lq46;-><init>(Lyxe;)V
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lms6;->a:Lq46;
+    .line 5
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p1, p0, Lms6;->c:Ljava/lang/Object;
+
+    .line 6
+    iput-object p2, p0, Lms6;->o:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lrt0;J)J
-    .locals 2
+.method public final g()V
+    .locals 1
 
-    iget-object v0, p0, Lms6;->c:Lq8;
+    iget v0, p0, Lms6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lms6;->b:Z
+
+    iget-object v0, p0, Lms6;->o:Ljava/lang/Object;
+
+    check-cast v0, Lied;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lms6;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lms6;->b:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lms6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lms6;->b:Z
+
+    return v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Lms6;->b:Z
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lms6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lms6;->b:Z
+
+    if-nez v0, :cond_0
 
     :try_start_0
-    iget-object v1, v0, Lq8;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lms6;->c:Ljava/lang/Object;
 
-    check-cast v1, Luu0;
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v1, p1, p2, p3}, Lryd;->b(Lrt0;J)J
-
-    move-result-wide p0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-wide p0
+    goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :catchall_0
+    move-exception v0
 
-    iget-object p2, v0, Lq8;->d:Ljava/lang/Object;
+    invoke-virtual {p0}, Lms6;->g()V
 
-    check-cast p2, Lsbc;
+    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p2}, Lsbc;->k()V
-
-    invoke-virtual {p0}, Lms6;->m()V
-
-    throw p1
-.end method
-
-.method public final m()V
-    .locals 4
-
-    iget-object v0, p0, Lms6;->c:Lq8;
-
-    iget v1, v0, Lq8;->a:I
-
-    const/4 v2, 0x6
-
-    if-ne v1, v2, :cond_0
-
-    return-void
+    throw v0
 
     :cond_0
-    const/4 v3, 0x5
-
-    if-ne v1, v3, :cond_1
-
-    iget-object p0, p0, Lms6;->a:Lq46;
-
-    iget-object v1, p0, Lq46;->e:Lyxe;
-
-    sget-object v3, Lyxe;->d:Lxxe;
-
-    iput-object v3, p0, Lq46;->e:Lyxe;
-
-    invoke-virtual {v1}, Lyxe;->a()Lyxe;
-
-    invoke-virtual {v1}, Lyxe;->b()Lyxe;
-
-    iput v2, v0, Lq8;->a:I
-
+    :goto_0
     return-void
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Lms6;->o:Ljava/lang/Object;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v0, Ljava/lang/Runnable;
 
-    const-string v2, "state: "
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    iget v0, v0, Lq8;->a:I
+    :catchall_1
+    move-exception v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    return-void
 
-    move-result-object v0
+    nop
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final p()Lyxe;
-    .locals 0
-
-    iget-object p0, p0, Lms6;->a:Lq46;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

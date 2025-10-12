@@ -1,51 +1,87 @@
 .class public final Levc;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfvc;
 
 
 # instance fields
-.field public final synthetic X:Livc;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Livc;Lax3;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Levc;->X:Livc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Levc;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Levc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Levc;
+
+    iget-wide v3, p0, Levc;->a:J
+
+    iget-wide v5, p1, Levc;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Levc;->o:Ljava/lang/Object;
+    iget-wide v0, p0, Levc;->a:J
 
-    iget p1, p0, Levc;->Y:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Levc;->Y:I
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    const/4 p1, 0x0
+    const-string v0, "VideoMsg(duration="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    iget-object v1, p0, Levc;->X:Livc;
+    iget-wide v2, p0, Levc;->a:J
 
-    invoke-virtual {v1, p1, v0, p0}, Livc;->b(Ljava/lang/String;ZLax3;)Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

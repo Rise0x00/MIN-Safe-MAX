@@ -1,105 +1,176 @@
-.class public final synthetic Lxq4;
+.class public abstract Lxq4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgm3;
 
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-# instance fields
-.field public final synthetic X:Ljava/io/File;
+.field public static final b:Ljava/lang/Object;
 
-.field public final synthetic a:Lq10;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:J
-
-.field public final synthetic o:J
+.field public static final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq10;IJJLjava/io/File;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lik3;
 
-    iput-object p1, p0, Lxq4;->a:Lq10;
+    const/16 v1, 0x13
 
-    iput p2, p0, Lxq4;->b:I
+    invoke-direct {v0, v1}, Lik3;-><init>(I)V
 
-    iput-wide p3, p0, Lxq4;->c:J
+    const/4 v1, 0x2
 
-    iput-wide p5, p0, Lxq4;->o:J
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
 
-    iput-object p7, p0, Lxq4;->X:Ljava/io/File;
+    move-result-object v0
+
+    sput-object v0, Lxq4;->a:Ljava/lang/Object;
+
+    new-instance v0, Lik3;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Lik3;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    sput-object v0, Lxq4;->b:Ljava/lang/Object;
+
+    new-instance v0, Lik3;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2}, Lik3;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    sput-object v0, Lxq4;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a(Landroid/content/Context;)I
+    .locals 4
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    new-instance v0, Landroid/util/TypedValue;
 
-    check-cast p1, Ly00;
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    iget-object v0, p0, Lxq4;->a:Lq10;
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
-    iput-object v0, p1, Ly00;->i:Lq10;
+    move-result-object v1
 
-    iget v0, p0, Lxq4;->b:I
+    const v2, 0x10102eb
 
-    int-to-float v1, v0
+    const/4 v3, 0x1
 
-    iput v1, p1, Ly00;->k:F
+    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
-    iget-wide v1, p0, Lxq4;->c:J
+    move-result v1
 
-    iput-wide v1, p1, Ly00;->p:J
+    if-eqz v1, :cond_0
 
-    iget-wide v1, p0, Lxq4;->o:J
+    iget v0, v0, Landroid/util/TypedValue;->data:I
 
-    iput-wide v1, p1, Ly00;->o:J
-
-    iget-object p0, p0, Lxq4;->X:Ljava/io/File;
-
-    if-eqz p0, :cond_1
-
-    const/16 v1, 0x64
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p1, Ly00;->r:Lg10;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p1, Ly00;->d:Lw10;
-
-    if-eqz v0, :cond_1
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Ly00;->u:J
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    iput-object p0, p1, Ly00;->m:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    return-void
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/TypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final b(I)I
+    .locals 1
+
+    int-to-float p0, p0
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p0, v0
+
+    invoke-static {p0}, Lv63;->r0(F)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final c()F
+    .locals 1
+
+    sget-object v0, Lxq4;->c:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static final d()Landroid/content/res/Resources;
+    .locals 1
+
+    sget-object v0, Lxq4;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/res/Resources;
+
+    return-object v0
+.end method
+
+.method public static final e(F)F
+    .locals 2
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, p0, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
 .end method

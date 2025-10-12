@@ -1,19 +1,13 @@
-.class public final Ljng;
-.super Luhc;
+.class public abstract Ljng;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final A0:Landroid/widget/TextView;
-
-
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
+.method public static a(Landroid/view/View;IIII)V
     .locals 0
 
-    invoke-direct {p0, p1}, Luhc;-><init>(Landroid/view/View;)V
-
-    iput-object p1, p0, Ljng;->A0:Landroid/widget/TextView;
+    invoke-static {p0, p1, p2, p3, p4}, Lyzc;->x(Landroid/view/View;IIII)V
 
     return-void
 .end method

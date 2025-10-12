@@ -16,11 +16,28 @@
     <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
     <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:maxSdkVersion="29" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <queries>
         <intent>
             <action android:name="android.intent.action.SEND"/>
             <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="yandexmaps"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="yandexnavi"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="dgis"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="petalmaps"/>
         </intent>
         <intent>
             <action android:name="android.support.customtabs.action.CustomTabsService"/>
@@ -32,32 +49,27 @@
         </intent>
         <package android:name="com.google.android.apps.maps"/>
     </queries>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- По идее нужно для отображения экрана звонка -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
     <uses-permission android:maxSdkVersion="30" android:name="android.permission.BLUETOOTH"/>
-    <!-- <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/> -->
-    <!-- <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/> -->
-    <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/> <!-- Для переключения устройств при звонке -->
     <!-- <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/> -->
     <!-- <uses-permission android:name="android.permission.READ_CONTACTS"/> -->
     <!-- <uses-permission android:name="android.permission.WRITE_CONTACTS"/> -->
     <!-- <uses-permission android:name="android.permission.CAMERA"/> -->
     <!-- <uses-permission android:maxSdkVersion="32" android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
-    <!-- <uses-permission android:maxSdkVersion="28" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
     <!-- <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/> -->
     <!-- <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/> -->
-    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO"/> -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>  <!-- Оставил для звонков -->
     <!-- <uses-permission android:name="android.permission.WAKE_LOCK"/> -->
-    <!-- <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/> -->
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/> <!-- Для переключения устройств при звонке -->
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> -->
-    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> <!-- Фоновая работа с обязательным показом уведомления -->
     <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
-    <!-- <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/> -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
     <uses-feature android:name="android.hardware.telephony" android:required="false"/>
     <uses-feature android:name="android.hardware.location" android:required="false"/>
@@ -73,17 +85,12 @@
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
     <permission android:name="ru.oneme.app.permission.settings.READ" android:protectionLevel="signature"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
-    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/> -->
-    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/> -->
-    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/> -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
     <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA"/> -->
     <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
-    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"/> -->
-    <!-- <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/> -->
-    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/> -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
@@ -93,7 +100,7 @@
     <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
     <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:theme="@style/OneMe.Launch">
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:requestLegacyExternalStorage="true" android:theme="@style/OneMe.Launch">
         <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <activity android:configChanges="locale|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light">
             <intent-filter>
@@ -120,14 +127,14 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:pathPattern="/..*"/>
                 <data android:scheme="http"/>
-                <data android:scheme="@string/web_scheme"/>
+                <data android:scheme="https"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <intent-filter android:label="max">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="@string/app_scheme"/>
+                <data android:scheme="max"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
@@ -146,9 +153,7 @@
         <activity android:name="one.me.android.calls.CallNotifierFixActivity" android:showOnLockScreen="true" android:theme="@style/CallNotifierFixActivityTheme" android:turnScreenOn="true"/>
         <service android:name="ru.ok.tamtam.android.services.NotificationTamService"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.attaches.ActAttachesView" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow"/>
-        <activity android:exported="false" android:name="ru.ok.messages.contacts.profile.ActContactAvatars" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.mediabar.ActLocalMedias" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow.NoCaps" android:windowSoftInputMode="stateUnchanged|adjustResize"/>
-        <activity android:exported="false" android:name="ru.ok.messages.views.ActProfilePhoto" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.mediabar.ActLocalMedias" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow.NoCaps.Portrait" android:windowSoftInputMode="stateUnchanged|adjustResize"/>
         <activity android:exported="false" android:name="ru.ok.messages.views.ActAvatarCrop" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
         <activity android:exported="false" android:name="ru.ok.messages.settings.ActSettings" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="ru.ok.messages.media.crop.ActTamCropImage" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
@@ -171,6 +176,17 @@
         <service android:exported="false" android:name="one.me.sdk.vendor.push.FcmMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:foregroundServiceType="mediaPlayback" android:name="one.me.android.media.service.OneMeMediaSessionService">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="one.me.android.media.service.OneMeDownloadService">
+            <intent-filter>
+                <action android:name="androidx.media3.exoplayer.downloadService.action.RESTART"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
         <service android:exported="false" android:foregroundServiceType="mediaProjection" android:name="ru.ok.tamtam.android.calls.MediaProjectionService"/>
@@ -201,22 +217,6 @@
         </service>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <service android:exported="true" android:foregroundServiceType="mediaPlayback" android:name="one.me.android.media.service.OneMeMediaSessionService">
-            <intent-filter>
-                <action android:name="androidx.media3.session.MediaSessionService"/>
-            </intent-filter>
-        </service>
-        <receiver android:exported="true" android:name="androidx.media3.session.MediaButtonReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON"/>
-            </intent-filter>
-        </receiver>
-        <service android:exported="false" android:foregroundServiceType="dataSync" android:name="one.me.android.media.service.OneMeDownloadService">
-            <intent-filter>
-                <action android:name="androidx.media3.exoplayer.downloadService.action.RESTART"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
         <service android:exported="false" android:name="ru.ok.android.externcalls.analytics.internal.upload.UploadService" android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
                 <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
@@ -272,11 +272,14 @@
                 <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
             </intent-filter>
         </receiver>
+        <service android:exported="false" android:name="ru.ok.android.onelog.UploadService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="ru.ok.android.onelog.action.UPLOAD"/>
+            </intent-filter>
+        </service>
         <uses-library android:name="androidx.window.extensions" android:required="false"/>
         <uses-library android:name="androidx.window.sidecar" android:required="false"/>
         <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-        <provider android:authorities="ru.oneme.app.ApplicationProvider" android:exported="false" android:name="ru.ok.android.commons.app.ApplicationProvider"/>
         <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
             <intent-filter>
                 <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
@@ -291,6 +294,8 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
             </intent-filter>
         </receiver>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="ru.oneme.app.ApplicationProvider" android:exported="false" android:name="ru.ok.android.commons.app.ApplicationProvider"/>
         <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
             <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
         </service>

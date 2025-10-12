@@ -1,3 +1,3 @@
-.class public final Lwh;
-.super Ljava/lang/Object;
+.class public abstract Lwh;
+.super La1b;
 .source "SourceFile"

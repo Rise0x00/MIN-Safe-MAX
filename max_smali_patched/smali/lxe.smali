@@ -1,73 +1,43 @@
-.class public final enum Llxe;
-.super Ljava/lang/Enum;
+.class public abstract Llxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Llxe;
-
-.field public static final enum b:Llxe;
-
-.field public static final synthetic c:[Llxe;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    new-instance v0, Llxe;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-string v1, "UPTIME"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v0, Luse;
 
-    sput-object v0, Llxe;->a:Llxe;
+    const/4 v2, 0x3
 
-    new-instance v1, Llxe;
+    invoke-direct {v0, v2}, Luse;-><init>(I)V
 
-    const-string v2, "REALTIME"
+    new-instance v2, Ls5f;
 
-    const/4 v3, 0x1
+    invoke-direct {v2, v0}, Ls5f;-><init>(Lve6;)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v0, 0x3
 
-    sput-object v1, Llxe;->b:Llxe;
+    invoke-static {v0, v1, v0}, Lf8e;->a(III)Le8e;
 
-    filled-new-array {v0, v1}, [Llxe;
+    move-result-object v1
 
-    move-result-object v0
+    new-instance v2, Lrqc;
 
-    sput-object v0, Llxe;->c:[Llxe;
+    invoke-direct {v2, v1}, Lrqc;-><init>(Lyt9;)V
+
+    invoke-static {v2, v0}, Ltp;->x0(Lev5;I)Lax5;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llxe;
-    .locals 1
-
-    const-class v0, Llxe;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Llxe;
-
-    return-object p0
-.end method
-
-.method public static values()[Llxe;
-    .locals 1
-
-    sget-object v0, Llxe;->c:[Llxe;
-
-    invoke-virtual {v0}, [Llxe;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llxe;
-
-    return-object v0
 .end method

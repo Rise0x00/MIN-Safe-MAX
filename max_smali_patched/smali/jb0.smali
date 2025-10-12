@@ -3,40 +3,97 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lecb;
+# static fields
+.field public static final f:Landroid/util/Range;
 
-.field public final b:Lwy6;
+
+# instance fields
+.field public final a:Landroid/util/Size;
+
+.field public final b:Lp15;
+
+.field public final c:Landroid/util/Range;
+
+.field public final d:Lci3;
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lecb;Lwy6;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroid/util/Range;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Range;-><init>(Ljava/lang/Comparable;Ljava/lang/Comparable;)V
+
+    sput-object v0, Ljb0;->f:Landroid/util/Range;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/util/Size;Lp15;Landroid/util/Range;Lci3;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Ljb0;->a:Landroid/util/Size;
 
-    iput-object p1, p0, Ljb0;->a:Lecb;
+    iput-object p2, p0, Ljb0;->b:Lp15;
 
-    iput-object p2, p0, Ljb0;->b:Lwy6;
+    iput-object p3, p0, Ljb0;->c:Landroid/util/Range;
+
+    iput-object p4, p0, Ljb0;->d:Lci3;
+
+    iput-boolean p5, p0, Ljb0;->e:Z
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null processingRequest"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
+.method public final a()Lmmc;
+    .locals 2
+
+    new-instance v0, Lmmc;
+
+    invoke-direct {v0}, Lmmc;-><init>()V
+
+    iget-object v1, p0, Ljb0;->a:Landroid/util/Size;
+
+    iput-object v1, v0, Lmmc;->b:Ljava/lang/Object;
+
+    iget-object v1, p0, Ljb0;->b:Lp15;
+
+    iput-object v1, v0, Lmmc;->c:Ljava/lang/Object;
+
+    iget-object v1, p0, Ljb0;->c:Landroid/util/Range;
+
+    iput-object v1, v0, Lmmc;->d:Ljava/lang/Object;
+
+    iget-object v1, p0, Ljb0;->d:Lci3;
+
+    iput-object v1, v0, Lmmc;->e:Ljava/lang/Object;
+
+    iget-boolean v1, p0, Ljb0;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lmmc;->f:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -49,42 +106,76 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     check-cast p1, Ljb0;
 
-    iget-object v1, p0, Ljb0;->a:Lecb;
+    iget-object v1, p1, Ljb0;->a:Landroid/util/Size;
 
-    iget-object v3, p1, Ljb0;->a:Lecb;
+    iget-object v3, p1, Ljb0;->d:Lci3;
 
+    iget-object v4, p0, Ljb0;->a:Landroid/util/Size;
+
+    invoke-virtual {v4, v1}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Ljb0;->b:Lp15;
+
+    iget-object v4, p1, Ljb0;->b:Lp15;
+
+    invoke-virtual {v1, v4}, Lp15;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Ljb0;->c:Landroid/util/Range;
+
+    iget-object v4, p1, Ljb0;->c:Landroid/util/Range;
+
+    invoke-virtual {v1, v4}, Landroid/util/Range;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Ljb0;->d:Lci3;
+
+    if-nez v1, :cond_1
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
+
+    :cond_1
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    iget-object p0, p0, Ljb0;->b:Lwy6;
+    :goto_0
+    iget-boolean v1, p0, Ljb0;->e:Z
 
-    iget-object p1, p1, Ljb0;->b:Lwy6;
+    iget-boolean p1, p1, Ljb0;->e:Z
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    if-ne v1, p1, :cond_2
 
     return v0
 
-    :cond_1
+    :cond_2
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Ljb0;->a:Lecb;
+    iget-object v0, p0, Ljb0;->a:Landroid/util/Size;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Landroid/util/Size;->hashCode()I
 
     move-result v0
 
@@ -94,45 +185,109 @@
 
     mul-int/2addr v0, v1
 
-    iget-object p0, p0, Ljb0;->b:Lwy6;
+    iget-object v2, p0, Ljb0;->b:Lp15;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Lp15;->hashCode()I
 
-    move-result p0
+    move-result v2
 
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v2
 
-    return p0
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ljb0;->c:Landroid/util/Range;
+
+    invoke-virtual {v2}, Landroid/util/Range;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ljb0;->d:Lci3;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Ljb0;->e:Z
+
+    if-eqz v1, :cond_1
+
+    const/16 v1, 0x4cf
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v1, 0x4d5
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "InputPacket{processingRequest="
+    const-string v1, "StreamSpec{resolution="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ljb0;->a:Lecb;
+    iget-object v1, p0, Ljb0;->a:Landroid/util/Size;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", imageProxy="
+    const-string v1, ", dynamicRange="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Ljb0;->b:Lwy6;
+    iget-object v1, p0, Ljb0;->b:Lp15;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, "}"
+    const-string v1, ", expectedFrameRateRange="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Ljb0;->c:Landroid/util/Range;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v1, ", implementationOptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljb0;->d:Lci3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zslDisabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ljb0;->e:Z
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

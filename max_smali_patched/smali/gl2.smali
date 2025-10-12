@@ -1,48 +1,67 @@
-.class public final Lgl2;
-.super Lax3;
+.class public final synthetic Lgl2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lvm2;
 
-.field public final synthetic Y:Lel2;
+.field public final synthetic b:Lxn8;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Lq49;
 
 
 # direct methods
-.method public constructor <init>(Lel2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lvm2;Lxn8;Lq49;)V
     .locals 0
 
-    iput-object p1, p0, Lgl2;->Y:Lel2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgl2;->a:Lvm2;
+
+    iput-object p2, p0, Lgl2;->b:Lxn8;
+
+    iput-object p3, p0, Lgl2;->c:Lq49;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iput-object p1, p0, Lgl2;->o:Ljava/lang/Object;
+    check-cast p1, Lxn8;
 
-    iget p1, p0, Lgl2;->X:I
+    iget-object p1, p0, Lgl2;->a:Lvm2;
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lgl2;->b:Lxn8;
 
-    or-int/2addr p1, v0
+    invoke-static {p1, v0}, Lvm2;->u(Lvm2;Lxn8;)Z
 
-    iput p1, p0, Lgl2;->X:I
+    move-result v1
 
-    iget-object p1, p0, Lgl2;->Y:Lel2;
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x0
+    return-object v0
 
-    invoke-virtual {p1, v0, p0}, Lel2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    new-instance v2, Lxn8;
 
-    move-result-object p0
+    iget-object v0, p0, Lgl2;->c:Lq49;
 
-    return-object p0
+    iget-wide v3, v0, Lq49;->b:J
+
+    iget-object v7, p1, Lvm2;->M0:Ljava/util/Set;
+
+    iget-wide v8, p1, Lvm2;->b:J
+
+    move-wide v5, v3
+
+    invoke-direct/range {v2 .. v9}, Lxn8;-><init>(JJLjava/util/Set;J)V
+
+    return-object v2
 .end method

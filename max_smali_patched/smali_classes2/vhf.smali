@@ -1,113 +1,120 @@
-.class public final enum Lvhf;
-.super Ljava/lang/Enum;
+.class public final Lvhf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lvhf;
-
-.field public static final synthetic Y:[Lvhf;
-
-.field public static final enum c:Lvhf;
-
-.field public static final enum o:Lvhf;
+# interfaces
+.implements Luhf;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Ljava/lang/Long;
 
-.field public final b:I
+.field public b:Ljava/lang/Long;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
+# virtual methods
+.method public final getMsSinceBoot()J
+    .locals 2
 
-    new-instance v0, Lvhf;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    const-string v1, "TTL_1M"
+    move-result-wide v0
 
-    const/4 v2, 0x0
+    return-wide v0
+.end method
 
-    const/4 v3, 0x1
+.method public final getServerTimeMs()Ljava/lang/Long;
+    .locals 6
 
-    const-string v4, "1M"
+    iget-object v0, p0, Lvhf;->b:Ljava/lang/Long;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvhf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lvhf;->c:Lvhf;
+    if-eqz v0, :cond_0
 
-    new-instance v1, Lvhf;
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    const-string v2, "3M"
+    move-result-wide v2
 
-    const/4 v4, 0x3
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    const-string v5, "TTL_3M"
+    move-result-wide v4
 
-    invoke-direct {v1, v5, v3, v4, v2}, Lvhf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    sub-long/2addr v4, v2
 
-    sput-object v1, Lvhf;->o:Lvhf;
+    iget-object v0, p0, Lvhf;->a:Ljava/lang/Long;
 
-    new-instance v2, Lvhf;
+    if-eqz v0, :cond_0
 
-    const-string v3, "6M"
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    const/4 v4, 0x6
+    move-result-wide v0
 
-    const-string v5, "TTL_6M"
+    add-long/2addr v0, v4
 
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v4, v3}, Lvhf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v2, Lvhf;->X:Lvhf;
-
-    filled-new-array {v0, v1, v2}, [Lvhf;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
-
-    sput-object v0, Lvhf;->Y:[Lvhf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p4, p0, Lvhf;->a:Ljava/lang/String;
-
-    iput p3, p0, Lvhf;->b:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lvhf;
-    .locals 1
-
-    const-class v0, Lvhf;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lvhf;
-
-    return-object p0
-.end method
-
-.method public static values()[Lvhf;
-    .locals 1
-
-    sget-object v0, Lvhf;->Y:[Lvhf;
-
-    invoke-virtual {v0}, [Lvhf;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lvhf;
 
     return-object v0
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public final localTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
+    .locals 2
+
+    invoke-virtual {p0}, Lvhf;->getServerTimeMs()Ljava/lang/Long;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    sub-long/2addr p1, v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final utcTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

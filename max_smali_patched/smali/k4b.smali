@@ -1,152 +1,200 @@
-.class public final synthetic Lk4b;
-.super Ljava/lang/Object;
+.class public final Lk4b;
+.super Lws7;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic q:I
 
-.field public final synthetic b:Lone/me/calls/ui/ui/pip/PipScreen;
+.field public final synthetic r:Lx94;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
+.method public synthetic constructor <init>(Lx94;Landroid/content/Context;I)V
     .locals 0
 
-    iput p2, p0, Lk4b;->a:I
+    iput p3, p0, Lk4b;->q:I
 
-    iput-object p1, p0, Lk4b;->b:Lone/me/calls/ui/ui/pip/PipScreen;
+    iput-object p1, p0, Lk4b;->r:Lx94;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lws7;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final d(Landroid/util/DisplayMetrics;)F
+    .locals 1
 
-    iget v0, p0, Lk4b;->a:I
-
-    iget-object p0, p0, Lk4b;->b:Lone/me/calls/ui/ui/pip/PipScreen;
+    iget v0, p0, Lk4b;->q:I
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    iget-object p0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
+    :goto_0
+    int-to-float p1, p1
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    move-result-object p0
+    div-float/2addr v0, p1
 
-    check-cast p0, Le4b;
-
-    iget-object p0, p0, Le4b;->Y:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmof;
-
-    return-object p0
+    return v0
 
     :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    sget-object v0, Ld41;->a:Ld41;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lwsa;
-
-    invoke-virtual {v1, v2}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lwsa;
-
-    invoke-virtual {v0}, Ld41;->c()Lou1;
-
-    move-result-object v5
-
-    invoke-virtual {v0}, Ld41;->d()Ljt1;
-
-    move-result-object v4
-
-    new-instance v6, Lm;
-
-    const/16 v0, 0x17
-
-    invoke-direct {v6, v0, p0}, Lm;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lwj1;->b()Lth7;
-
-    move-result-object v7
-
-    new-instance v2, Le4b;
-
-    invoke-direct/range {v2 .. v7}, Le4b;-><init>(Lwsa;Ljt1;Lou1;Lc4b;Lth7;)V
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
-
-    new-instance v0, Lsh1;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lsh1;-><init>(Landroid/content/Context;)V
-
-    sget-object v1, Lzs4;->p0:Lqs9;
-
-    invoke-virtual {v1, v0}, Lqs9;->h(Landroid/view/View;)Lyda;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lyda;->c:Lnma;
-
-    invoke-virtual {v0, v1}, Lsh1;->setPipTheme(Lnma;)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Lk4b;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p0, v2}, Lk4b;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
-
-    invoke-virtual {v0, v1}, Lsh1;->setVideoLayoutUpdatesControllerProvider(Ld96;)V
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Lsh1;->setBackgroundCorners(F)V
-
-    return-object v0
+    goto :goto_0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(I)I
+    .locals 1
+
+    iget v0, p0, Lk4b;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lws7;->f(I)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const/16 v0, 0x64
+
+    invoke-super {p0, p1}, Lws7;->f(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Landroid/view/View;Ljxc;Lhxc;)V
+    .locals 2
+
+    iget p2, p0, Lk4b;->q:I
+
+    packed-switch p2, :pswitch_data_0
+
+    iget-object p2, p0, Lk4b;->r:Lx94;
+
+    iget-object v0, p2, Lx94;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Lx94;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lws7;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v1, p0, Lws7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lhxc;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p2, p0, Lk4b;->r:Lx94;
+
+    iget-object v0, p2, Lx94;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Lx94;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lws7;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    iget-object v1, p0, Lws7;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lhxc;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldy6;
+.implements La57;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
 .field private final height:I
 
-.field private final qualityInfo:Ljtb;
+.field private final qualityInfo:Lh8c;
 
 .field private final sizeInBytes:I
 
@@ -28,12 +28,12 @@
 
 
 # direct methods
-.method public constructor <init>(IIILjtb;Ljava/util/Map;)V
+.method public constructor <init>(IIILh8c;Ljava/util/Map;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(III",
-            "Ljtb;",
+            "Lh8c;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -49,7 +49,7 @@
 
     iput p3, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->sizeInBytes:I
 
-    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Ljtb;
+    iput-object p4, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lh8c;
 
     iput-object p5, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->extras:Ljava/util/Map;
 
@@ -59,7 +59,7 @@
 
 # virtual methods
 .method public getExtras()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -70,39 +70,39 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->extras:Ljava/util/Map;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->extras:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->height:I
+    iget v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->height:I
 
-    return p0
+    return v0
 .end method
 
-.method public getQualityInfo()Ljtb;
-    .locals 0
+.method public getQualityInfo()Lh8c;
+    .locals 1
 
-    iget-object p0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Ljtb;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->qualityInfo:Lh8c;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSizeInBytes()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->sizeInBytes:I
+    iget v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->sizeInBytes:I
 
-    return p0
+    return v0
 .end method
 
 .method public getWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->width:I
+    iget v0, p0, Lcom/facebook/imagepipeline/image/ImageInfoImpl;->width:I
 
-    return p0
+    return v0
 .end method

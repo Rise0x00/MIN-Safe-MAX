@@ -1,58 +1,79 @@
 .class public final Lte2;
-.super Ljava/lang/Object;
+.super Lbj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lo31;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(IJJLjava/lang/String;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lbj0;-><init>(J)V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p6, p0, Lte2;->b:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-wide p4, p0, Lte2;->c:J
 
-    iput-object v0, p0, Lte2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput p1, p0, Lte2;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onNewMessage(Lo27;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p0, p0, Lte2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    const-string v1, "ChatJoinEvent{link=\'"
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v1, p0, Lte2;->b:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, "\', chatId="
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lte2;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lte2;->o:I
+
+    invoke-static {v1}, Lgy1;->u(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Lbj0;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lo31;
-
-    invoke-interface {v0, p1}, Lo31;->onNewMessage(Lo27;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

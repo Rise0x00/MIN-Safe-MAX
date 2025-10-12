@@ -1,90 +1,162 @@
 .class public final Lag0;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public final a:Z
 
-.field public final synthetic Y:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lag0;->Y:I
+    iput-boolean p1, p0, Lag0;->a:Z
 
-    const/4 p1, 0x2
+    iput-boolean p2, p0, Lag0;->b:Z
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
+.end method
 
+.method public static a(ZLpmc;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "["
+
+    const-string v0, "]: "
+
+    invoke-static {p0, p2, v0, p3}, Lqe0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p2, "BadNetworkIndicatorConfig"
+
+    invoke-interface {p1, p2, p0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lag0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lag0;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lag0;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b(Lpmc;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    new-instance p1, Lag0;
+    iget-boolean v0, p0, Lag0;->a:Z
 
-    iget-object v0, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-static {v0, p1, p2, p3}, Lag0;->a(ZLpmc;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget p0, p0, Lag0;->Y:I
-
-    invoke-direct {p1, v0, p0, p2}, Lag0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Lpmc;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lag0;->b:Z
 
-    iget-object p1, p0, Lag0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
+    invoke-static {v0, p1, p2, p3}, Lag0;->a(ZLpmc;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Lnlg;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {p1}, Lnlg;->g()Landroidx/work/impl/model/WorkersQueueDao;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    iget p0, p0, Lag0;->Y:I
+    return v0
 
-    invoke-interface {p1, p0}, Landroidx/work/impl/model/WorkersQueueDao;->getItemsForRunning(I)Ljava/util/List;
+    :cond_0
+    instance-of v1, p1, Lag0;
 
-    move-result-object p0
+    const/4 v2, 0x0
 
-    return-object p0
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lag0;
+
+    iget-boolean v1, p0, Lag0;->a:Z
+
+    iget-boolean v3, p1, Lag0;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lag0;->b:Z
+
+    iget-boolean p1, p1, Lag0;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lag0;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lag0;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DebugLoggingConfig(debugLogging="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lag0;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", debugVerboseLogging="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lag0;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

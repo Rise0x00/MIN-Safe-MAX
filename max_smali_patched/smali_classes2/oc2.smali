@@ -1,51 +1,97 @@
-.class public final Loc2;
-.super Lax3;
+.class public final enum Loc2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final synthetic X:[Loc2;
 
-.field public final synthetic Y:Lwc2;
+.field public static final enum a:Loc2;
 
-.field public Z:I
+.field public static final enum b:Loc2;
 
-.field public o:Ljava/util/concurrent/atomic/AtomicLong;
+.field public static final enum c:Loc2;
+
+.field public static final enum o:Loc2;
 
 
 # direct methods
-.method public constructor <init>(Lwc2;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Loc2;->Y:Lwc2;
+    new-instance v0, Loc2;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "DIALOG"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Loc2;->a:Loc2;
+
+    new-instance v1, Loc2;
+
+    const-string v2, "CHAT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Loc2;->b:Loc2;
+
+    new-instance v2, Loc2;
+
+    const-string v3, "CHANNEL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Loc2;->c:Loc2;
+
+    new-instance v3, Loc2;
+
+    const-string v4, "GROUP_CHAT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Loc2;->o:Loc2;
+
+    filled-new-array {v0, v1, v2, v3}, [Loc2;
+
+    move-result-object v0
+
+    sput-object v0, Loc2;->X:[Loc2;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Loc2;
     .locals 1
 
-    iput-object p1, p0, Loc2;->X:Ljava/lang/Object;
+    const-class v0, Loc2;
 
-    iget p1, p0, Loc2;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loc2;->Z:I
-
-    iget-object p1, p0, Loc2;->Y:Lwc2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lwc2;->h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Loc2;
+
     return-object p0
+.end method
+
+.method public static values()[Loc2;
+    .locals 1
+
+    sget-object v0, Loc2;->X:[Loc2;
+
+    invoke-virtual {v0}, [Loc2;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loc2;
+
+    return-object v0
 .end method

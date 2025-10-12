@@ -2,163 +2,219 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lke8;
+.implements Lnee;
+.implements Lss4;
+.implements Lxda;
+
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic a:I
 
-.field public final b:Lg07;
+.field public b:Lss4;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lyr3;Lg07;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput p1, p0, Lle8;->a:I
+
+    iput-object p2, p0, Lle8;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lle8;->a:Landroid/net/Uri;
-
-    iput-object p3, p0, Lle8;->b:Lg07;
-
-    invoke-static {}, Lg07;->i()Le07;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
-
-    move-result p2
-
-    if-ge p1, p2, :cond_0
-
-    invoke-interface {p3, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lne8;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p2, Lne8;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p0, p2}, Lxz6;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Le07;->h()Lvic;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public a(Ljava/lang/Object;)V
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lle8;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lke8;
 
-    :cond_0
-    instance-of v0, p1, Lle8;
+    invoke-interface {v0, p1}, Lke8;->a(Ljava/lang/Object;)V
 
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lle8;
-
-    iget-object v0, p0, Lle8;->a:Landroid/net/Uri;
-
-    iget-object v1, p1, Lle8;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget v0, Ldif;->a:I
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v0}, Ldif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-interface {v0, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object p0, p0, Lle8;->b:Lg07;
-
-    iget-object p1, p1, Lle8;->b:Lg07;
-
-    invoke-virtual {p0, p1}, Lg07;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b()V
+    .locals 1
 
-    iget-object v0, p0, Lle8;->a:Landroid/net/Uri;
+    iget v0, p0, Lle8;->a:I
 
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lle8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lve3;
+
+    invoke-interface {v0}, Lve3;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lle8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lke8;
+
+    invoke-interface {v0}, Lke8;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lss4;)V
+    .locals 1
+
+    iget v0, p0, Lle8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput-object p1, p0, Lle8;->b:Lss4;
+
+    iget-object p1, p0, Lle8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lve3;
+
+    invoke-interface {p1, p0}, Lve3;->c(Lss4;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lle8;->b:Lss4;
+
+    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
 
     move-result v0
 
-    const v1, 0xe1781
+    if-eqz v0, :cond_0
 
-    mul-int/2addr v0, v1
+    iput-object p1, p0, Lle8;->b:Lss4;
 
-    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iget-object p1, p0, Lle8;->c:Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    check-cast p1, Lke8;
 
-    move-result v1
+    invoke-interface {p1, p0}, Lke8;->c(Lss4;)V
 
-    add-int/2addr v1, v0
+    :cond_0
+    return-void
 
-    mul-int/lit16 v1, v1, 0x3c1
+    nop
 
-    iget-object p0, p0, Lle8;->b:Lg07;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p0}, Lg07;->hashCode()I
+.method public f(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result p0
+    return-void
+.end method
 
-    add-int/2addr p0, v1
+.method public final g()V
+    .locals 1
 
-    mul-int/lit8 p0, p0, 0x1f
+    iget v0, p0, Lle8;->a:I
 
-    return p0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lle8;->b:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lle8;->b:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lle8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lle8;->b:Lss4;
+
+    invoke-interface {v0}, Lss4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lle8;->b:Lss4;
+
+    invoke-interface {v0}, Lss4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lle8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lle8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lve3;
+
+    invoke-interface {v0, p1}, Lve3;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lle8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lke8;
+
+    invoke-interface {p1}, Lke8;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

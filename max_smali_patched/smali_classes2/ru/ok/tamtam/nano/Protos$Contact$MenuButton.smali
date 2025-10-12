@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -26,7 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->clear()Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
 
@@ -40,7 +40,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -82,7 +82,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -95,7 +95,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
 
     move-result-object p0
 
@@ -115,7 +115,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -135,7 +135,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
@@ -155,21 +155,21 @@
 
     const/4 v0, 0x1
 
-    iget-object p0, p0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Le83;->l(ILjava/lang/String;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -178,14 +178,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Contact$MenuButton;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -196,7 +196,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
@@ -207,7 +207,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -217,7 +217,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lh63;)V
+.method public writeTo(Le83;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -250,9 +250,9 @@
 
     const/4 v0, 0x1
 
-    iget-object p0, p0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Contact$MenuButton;->text:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
 
     :cond_0
     return-void

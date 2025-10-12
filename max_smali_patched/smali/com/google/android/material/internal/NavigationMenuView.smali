@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Liu8;
+.implements Lg29;
 
 
 # direct methods
@@ -27,16 +27,16 @@
 
 
 # virtual methods
-.method public final b(Lpt8;)V
+.method public final b(Ln19;)V
     .locals 0
 
     return-void
 .end method
 
 .method public getWindowAnimations()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method

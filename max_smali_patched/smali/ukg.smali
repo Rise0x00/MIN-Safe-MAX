@@ -1,27 +1,25 @@
-.class public final Lukg;
+.class public abstract Lukg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Intent;
-
-.field public final b:Ljre;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public static a(Landroid/view/ViewConfiguration;)I
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHoverSlop()I
 
-    new-instance v0, Ljre;
+    move-result p0
 
-    invoke-direct {v0}, Ljre;-><init>()V
+    return p0
+.end method
 
-    iput-object v0, p0, Lukg;->b:Ljre;
+.method public static b(Landroid/view/ViewConfiguration;)Z
+    .locals 0
 
-    iput-object p1, p0, Lukg;->a:Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->shouldShowMenuShortcutsWhenKeyboardPresent()Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method

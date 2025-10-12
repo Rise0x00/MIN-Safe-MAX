@@ -1,71 +1,100 @@
-.class public abstract synthetic Lzda;
-.super Ljava/lang/Object;
+.class public Lzda;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public a:Ltlg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    invoke-static {}, Lr00;->values()[Lr00;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lr00;->b:Lr00;
-
-    const/16 v1, 0x9
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lr00;->b:Lr00;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Lr00;->b:Lr00;
-
-    const/16 v1, 0xa
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lr00;->b:Lr00;
-
-    const/4 v1, 0x4
-
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lzda;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getObserverSpanListener()Ltlg;
+    .locals 1
+
+    iget-object v0, p0, Lzda;->a:Ltlg;
+
+    return-object v0
+.end method
+
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    if-eqz p1, :cond_1
+
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lzda;->a:Ltlg;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Ltlg;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lzda;->a:Ltlg;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Ltlg;->a(Landroid/widget/TextView;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final setObserverSpanListener(Ltlg;)V
+    .locals 0
+
+    iput-object p1, p0, Lzda;->a:Ltlg;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -3,118 +3,178 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lbb2;
+.field public final synthetic a:Lub2;
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final synthetic c:Lm82;
 
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbb2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lub2;JLm82;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lza2;->a:Lbb2;
+    iput-object p1, p0, Lza2;->a:Lub2;
 
-    iput-object p2, p0, Lza2;->b:Ljava/util/List;
+    iput-wide p2, p0, Lza2;->b:J
 
-    iput-object p3, p0, Lza2;->c:Ljava/lang/String;
+    iput-object p4, p0, Lza2;->c:Lm82;
 
-    iput-object p4, p0, Lza2;->o:Ljava/lang/String;
+    iput-boolean p5, p0, Lza2;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final run()V
+    .locals 17
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    const-string v1, "createMultiChat, contacts.size() = "
+    iget-object v1, v0, Lza2;->a:Lub2;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, v1, Lub2;->h:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v1, p0, Lza2;->b:Ljava/util/List;
+    iget-object v3, v1, Lub2;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    iget-wide v4, v0, Lza2;->b:J
 
-    move-result v2
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v6
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v6}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v6
 
-    const-string v2, "bb2"
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v2, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v7
 
-    sget-object v0, Lwb2;->b:Lwb2;
+    iget-object v8, v0, Lza2;->c:Lm82;
 
-    iget-object v2, p0, Lza2;->a:Lbb2;
+    invoke-virtual {v3, v7, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, p0, Lza2;->c:Ljava/lang/String;
+    invoke-virtual {v1}, Lub2;->K()J
 
-    iget-object p0, p0, Lza2;->o:Ljava/lang/String;
+    move-result-wide v9
 
-    invoke-virtual {v2, v0, v1, v3, p0}, Lbb2;->b(Lwb2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Ll72;
+    iget-object v3, v8, Lm82;->b:Lpc2;
 
-    move-result-object p0
+    invoke-virtual {v3, v9, v10}, Lpc2;->e(J)Z
 
-    new-instance v0, Lc10;
+    move-result v7
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-wide v9, v3, Lpc2;->a:J
 
-    sget-object v4, Ld10;->b:Ld10;
+    if-nez v7, :cond_0
 
-    iput-object v4, v0, Lc10;->a:Ld10;
+    iget-object v11, v1, Lub2;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 v4, 0x3
+    iget-wide v12, v3, Lpc2;->l:J
 
-    iput v4, v0, Lc10;->l:I
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-object v1, v0, Lc10;->c:Ljava/util/Collection;
+    move-result-object v12
 
-    iput-object v3, v0, Lc10;->d:Ljava/lang/String;
+    invoke-virtual {v11, v12, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lc10;->a()Le10;
+    :cond_0
+    if-nez v7, :cond_1
 
-    move-result-object v0
+    const-wide/16 v11, 0x0
 
-    iget-wide v3, p0, Ll72;->a:J
+    cmp-long v7, v9, v11
 
-    new-instance v1, Ldcd;
+    if-eqz v7, :cond_2
 
-    const/4 v5, 0x1
+    :cond_1
+    iget-object v7, v1, Lub2;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v1, v3, v4, v0, v5}, Ldcd;-><init>(JLjava/lang/Object;I)V
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    new-instance v0, Lecd;
+    move-result-object v9
 
-    const/4 v3, 0x0
+    invoke-virtual {v7, v9, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v3}, Lecd;-><init>(Ldcd;B)V
+    :cond_2
+    iget-object v3, v3, Lpc2;->H:Ljava/lang/String;
 
-    iget-object v1, v2, Lbb2;->w:Lcq4;
+    invoke-static {v3}, Lk98;->r(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v1}, Lcq4;->get()Ljava/lang/Object;
+    move-result v3
 
-    move-result-object v1
+    if-nez v3, :cond_3
 
-    check-cast v1, Lkmg;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v1, v0}, Lkmg;->a(Lzbd;)V
+    move-result-object v3
 
-    return-object p0
+    invoke-virtual {v2, v3, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_0
+    if-eqz v6, :cond_4
+
+    iget-boolean v2, v0, Lza2;->o:Z
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v10
+
+    sget-object v13, Lhn4;->X:Lhn4;
+
+    new-instance v9, La33;
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v15, 0x1
+
+    sget-object v16, Ll75;->a:Ll75;
+
+    invoke-direct/range {v9 .. v16}, La33;-><init>(Ljava/util/Collection;ZZLhn4;Laj0;ZLjava/util/Set;)V
+
+    iget-object v2, v1, Lub2;->m:Lov0;
+
+    invoke-virtual {v2, v9}, Lov0;->c(Ljava/lang/Object;)V
+
+    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lub2;->G:Ltb2;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v2}, Ltb2;->x(Ljava/util/Collection;)V
+
+    :cond_4
+    return-void
 .end method

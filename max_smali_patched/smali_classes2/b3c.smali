@@ -1,18 +1,96 @@
-.class public abstract Lb3c;
-.super Ljava/lang/Object;
+.class public final Lb3c;
+.super Ll3c;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_participant_joined:I = 0x7f120006
+# instance fields
+.field public final a:Llef;
 
-.field public static call_participant_removed:I = 0x7f120007
 
-.field public static call_reconnect:I = 0x7f120008
+# direct methods
+.method public constructor <init>(Llef;)V
+    .locals 0
 
-.field public static google_map_night_style:I = 0x7f120031
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static palette:I = 0x7f120035
+    iput-object p1, p0, Lb3c;->a:Llef;
 
-.field public static sent_message:I = 0x7f120038
+    return-void
+.end method
 
-.field public static tt_msg_inapp:I = 0x7f120039
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lb3c;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lb3c;
+
+    iget-object v0, p0, Lb3c;->a:Llef;
+
+    iget-object p1, p1, Lb3c;->a:Llef;
+
+    invoke-virtual {v0, p1}, Llef;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lb3c;->a:Llef;
+
+    invoke-virtual {v0}, Llef;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExternalShareChannelLink(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lb3c;->a:Llef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

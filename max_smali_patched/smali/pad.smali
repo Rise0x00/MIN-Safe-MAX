@@ -1,38 +1,23 @@
-.class public interface abstract Lpad;
+.class public abstract Lpad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# static fields
+.field public static final a:Lnf6;
 
-.method public abstract c()Z
-.end method
 
-.method public abstract d(Ljava/lang/String;)I
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.method public abstract e()Lnoa;
-.end method
+    sget-object v0, Load;->a:Load;
 
-.method public abstract f()I
-.end method
+    const/4 v1, 0x3
 
-.method public abstract g(I)Ljava/lang/String;
-.end method
+    invoke-static {v1, v0}, Lhxf;->e(ILjava/lang/Object;)V
 
-.method public abstract getAnnotations()Ljava/util/List;
-.end method
+    sput-object v0, Lpad;->a:Lnf6;
 
-.method public abstract h(I)Ljava/util/List;
-.end method
-
-.method public abstract i(I)Lpad;
-.end method
-
-.method public abstract isInline()Z
-.end method
-
-.method public abstract j(I)Z
+    return-void
 .end method

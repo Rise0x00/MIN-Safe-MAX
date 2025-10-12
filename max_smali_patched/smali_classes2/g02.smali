@@ -3,148 +3,75 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvhb;
+.implements Lcs7;
 
 
 # instance fields
-.field public final a:Ldue;
+.field public final a:Les7;
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Ldue;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg02;->a:Ldue;
+    new-instance v0, Les7;
+
+    invoke-direct {v0, p0}, Les7;-><init>(Lcs7;)V
+
+    iput-object v0, p0, Lg02;->a:Les7;
+
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v1, p0, Lg02;->b:Landroid/os/Handler;
+
+    sget-object v1, Ldr7;->ON_CREATE:Ldr7;
+
+    invoke-virtual {v0, v1}, Les7;->d(Ldr7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final L()Les7;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lg02;->a:Les7;
 
-    if-ne p0, p1, :cond_0
+    return-object v0
+.end method
 
-    return v0
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 1
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lg02;
+    iget-object v0, p0, Lg02;->b:Landroid/os/Handler;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lg02;
-
-    iget-object p0, p0, Lg02;->a:Ldue;
-
-    iget-object p1, p1, Lg02;->a:Ldue;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 p0, 0x100
-
-    int-to-long v0, p0
-
-    return-wide v0
-.end method
-
-.method public final h(Llp7;)Z
-    .locals 2
-
-    const/16 p0, 0x100
-
-    int-to-long v0, p0
-
-    invoke-interface {p1}, Llp7;->getItemId()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lg02;->a:Ldue;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    const/16 p0, 0x100
-
-    return p0
-.end method
-
-.method public final q(Llp7;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lg02;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelDeleteProfileItem(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lg02;->a:Ldue;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

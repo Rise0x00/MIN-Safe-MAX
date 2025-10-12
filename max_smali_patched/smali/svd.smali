@@ -1,358 +1,254 @@
 .class public final Lsvd;
-.super Lfud;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzud;
-
-
-# static fields
-.field public static final X:[Lrvd;
-
-.field public static final Y:[Lrvd;
+.implements Luvd;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public c:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Throwable;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/util/ArrayList;Lcsd;Lsy1;)V
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Landroid/hardware/camera2/params/SessionConfiguration;
 
-    new-array v1, v0, [Lrvd;
+    invoke-static {p1}, Lvvd;->a(Ljava/util/List;)Ljava/util/ArrayList;
 
-    sput-object v1, Lsvd;->X:[Lrvd;
+    move-result-object p1
 
-    new-array v0, v0, [Lrvd;
+    const/4 v1, 0x0
 
-    sput-object v0, Lsvd;->Y:[Lrvd;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
+    invoke-direct {v0, v1, p1, p2, p3}, Landroid/hardware/camera2/params/SessionConfiguration;-><init>(ILjava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$StateCallback;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->getOutputConfigurations()Ljava/util/List;
 
-    iput-object v0, p0, Lsvd;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object p1
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance p2, Ljava/util/ArrayList;
 
-    sget-object v1, Lsvd;->X:[Lrvd;
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    move-result p3
 
-    iput-object v0, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    if-nez p3, :cond_0
+
+    const/4 p3, 0x0
+
+    goto :goto_2
+
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_1
+
+    new-instance v0, Lw2b;
+
+    invoke-direct {v0, p3}, Lt2b;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_2
+
+    new-instance v0, Lv2b;
+
+    new-instance v1, Lu2b;
+
+    invoke-direct {v1, p3}, Lu2b;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    invoke-direct {v0, v1}, Lt2b;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Lt2b;
+
+    new-instance v1, Ls2b;
+
+    invoke-direct {v1, p3}, Ls2b;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    invoke-direct {v0, v1}, Lt2b;-><init>(Ljava/lang/Object;)V
+
+    :goto_1
+    new-instance p3, Lr2b;
+
+    invoke-direct {p3, v0}, Lr2b;-><init>(Lt2b;)V
+
+    :goto_2
+    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsvd;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "onSuccess called with a null value."
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-static {p1, v0}, Lq75;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    const/4 v0, 0x1
+.method public final b()Lpb7;
+    .locals 1
 
-    iget-object v1, p0, Lsvd;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->getInputConfiguration()Landroid/hardware/camera2/params/InputConfiguration;
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    move-result-object v0
+
+    invoke-static {v0}, Lpb7;->a(Ljava/lang/Object;)Lpb7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/util/concurrent/Executor;
+    .locals 1
+
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->getExecutor()Ljava/util/concurrent/Executor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->getSessionType()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lsvd;->c:Ljava/lang/Object;
-
-    iget-object p0, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v0, Lsvd;->Y:[Lrvd;
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [Lrvd;
-
-    array-length v0, p0
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    aget-object v1, p0, v2
-
-    iget-object v1, v1, Lrvd;->a:Lzud;
-
-    invoke-interface {v1, p1}, Lzud;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final c(Lkp4;)V
+.method public final e()Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
     .locals 1
 
-    iget-object p0, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->getStateCallback()Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget-object v0, Lsvd;->Y:[Lrvd;
-
-    if-ne p0, v0, :cond_0
-
-    invoke-interface {p1}, Lkp4;->f()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final l(Lzud;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lrvd;
+    instance-of v0, p1, Lsvd;
 
-    invoke-direct {v0, p1, p0}, Lrvd;-><init>(Lzud;Lsvd;)V
+    if-nez v0, :cond_0
 
-    invoke-interface {p1, v0}, Lzud;->c(Lkp4;)V
+    const/4 p1, 0x0
 
-    :goto_0
-    iget-object v1, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, [Lrvd;
-
-    sget-object v3, Lsvd;->Y:[Lrvd;
-
-    if-ne v2, v3, :cond_1
-
-    iget-object v0, p0, Lsvd;->o:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1, v0}, Lzud;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return p1
 
     :cond_0
-    iget-object p0, p0, Lsvd;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-interface {p1, p0}, Lzud;->a(Ljava/lang/Object;)V
+    check-cast p1, Lsvd;
 
-    return-void
+    iget-object p1, p1, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    :cond_1
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Lrvd;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v0, v4, v3
-
-    :cond_2
-    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v0}, Lrvd;->g()Z
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0, v0}, Lsvd;->o(Lrvd;)V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v2, :cond_2
-
-    goto :goto_0
+    return p1
 .end method
 
-.method public final o(Lrvd;)V
-    .locals 7
+.method public final f()Ljava/util/List;
+    .locals 1
 
-    :goto_0
-    iget-object v0, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lsvd;->b:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lrvd;
-
-    array-length v2, v1
-
-    if-nez v2, :cond_0
-
-    goto :goto_4
-
-    :cond_0
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_1
-    if-ge v4, v2, :cond_2
-
-    aget-object v5, v1, v4
-
-    if-ne v5, p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v4, -0x1
-
-    :goto_2
-    if-gez v4, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    const/4 v5, 0x1
-
-    if-ne v2, v5, :cond_4
-
-    sget-object v2, Lsvd;->X:[Lrvd;
-
-    goto :goto_3
-
-    :cond_4
-    add-int/lit8 v6, v2, -0x1
-
-    new-array v6, v6, [Lrvd;
-
-    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/lit8 v3, v4, 0x1
-
-    sub-int/2addr v2, v4
-
-    sub-int/2addr v2, v5
-
-    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move-object v2, v6
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    :goto_4
-    return-void
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_5
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 3
+.method public final g(Landroid/hardware/camera2/CaptureRequest;)V
+    .locals 1
 
-    const-string v0, "onError called with a null Throwable."
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-static {p1, v0}, Lq75;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/SessionConfiguration;->setSessionParameters(Landroid/hardware/camera2/CaptureRequest;)V
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    iget-object v1, p0, Lsvd;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public final h(Lpb7;)V
+    .locals 1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    iget-object p1, p1, Lpb7;->a:Lnb7;
+
+    iget-object p1, p1, Lnb7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/SessionConfiguration;->setInputConfiguration(Landroid/hardware/camera2/params/InputConfiguration;)V
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lsvd;->a:Landroid/hardware/camera2/params/SessionConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/SessionConfiguration;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lsvd;->o:Ljava/lang/Throwable;
-
-    iget-object p0, p0, Lsvd;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v0, Lsvd;->Y:[Lrvd;
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [Lrvd;
-
-    array-length v0, p0
-
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    aget-object v1, p0, v2
-
-    iget-object v1, v1, Lrvd;->a:Lzud;
-
-    invoke-interface {v1, p1}, Lzud;->onError(Ljava/lang/Throwable;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-static {p1}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    return-void
+    return v0
 .end method

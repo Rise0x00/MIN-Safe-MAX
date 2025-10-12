@@ -1,65 +1,43 @@
 .class public final Ltze;
-.super Landroid/view/ViewGroup$MarginLayoutParams;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final c:Ltze;
 
-.field public b:I
+
+# instance fields
+.field public a:Z
+
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, -0x2
+    new-instance v0, Ltze;
 
-    .line 1
-    invoke-direct {p0, p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-    const/4 p1, 0x0
+    const/4 v3, 0x0
 
-    .line 2
-    iput p1, p0, Ltze;->b:I
+    invoke-direct {v0, v1, v2, v3}, Ltze;-><init>(JZ)V
 
-    const p1, 0x800013
-
-    .line 3
-    iput p1, p0, Ltze;->a:I
+    sput-object v0, Ltze;->c:Ltze;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    .line 7
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-wide p1, p0, Ltze;->b:J
 
-    .line 8
-    iput p1, p0, Ltze;->a:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ltze;)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
-
-    const/4 v0, 0x0
-
-    .line 5
-    iput v0, p0, Ltze;->a:I
-
-    .line 6
-    iget p1, p1, Ltze;->a:I
-
-    iput p1, p0, Ltze;->a:I
+    iput-boolean p3, p0, Ltze;->a:Z
 
     return-void
 .end method

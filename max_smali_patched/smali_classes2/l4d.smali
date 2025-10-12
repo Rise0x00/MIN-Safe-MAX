@@ -1,33 +1,55 @@
-.class public final Ll4d;
+.class public abstract Ll4d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhd7;
+
 
 # instance fields
-.field public a:Lj52;
+.field public a:Ljava/lang/ref/SoftReference;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# virtual methods
+.method public final a(La5;)Ljava/lang/Object;
+    .locals 2
 
-.field public d:Ljava/util/List;
+    iget-object v0, p0, Ll4d;->a:Ljava/lang/ref/SoftReference;
 
-.field public e:Ljava/util/List;
+    const/4 v1, 0x0
 
-.field public f:Ljava/util/List;
+    if-eqz v0, :cond_0
 
-.field public g:J
+    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
 
-.field public h:I
+    move-result-object v0
 
-.field public i:Z
+    goto :goto_0
 
-.field public j:J
+    :cond_0
+    move-object v0, v1
 
-.field public k:Ljava/util/List;
+    :goto_0
+    if-eqz v0, :cond_1
 
-.field public l:Ljava/util/List;
+    return-object v0
 
-.field public m:Ljava/lang/String;
+    :cond_1
+    invoke-virtual {p0, p1}, Ll4d;->b(La5;)Ljava/lang/Object;
 
-.field public n:Ljava/util/List;
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    new-instance v1, Ljava/lang/ref/SoftReference;
+
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
+
+    :cond_2
+    iput-object v1, p0, Ll4d;->a:Ljava/lang/ref/SoftReference;
+
+    return-object p1
+.end method
+
+.method public abstract b(La5;)Ljava/lang/Object;
+.end method

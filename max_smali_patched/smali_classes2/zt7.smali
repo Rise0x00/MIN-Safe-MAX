@@ -2,150 +2,167 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhu7;
+.implements Lfu7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzt7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lth7;
+.field public final X:Ljava/lang/String;
 
-.field public final b:Lth7;
+.field public final a:J
 
-.field public final c:Lth7;
+.field public final b:J
+
+.field public final c:Z
+
+.field public final o:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lle7;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lle7;-><init>(I)V
+
+    sput-object v0, Lzt7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JJLjava/lang/Long;Ljava/lang/String;I)V
+    .locals 8
+
+    and-int/lit8 v0, p7, 0x2
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 p3, 0x0
+
+    :cond_0
+    move-wide v3, p3
+
+    and-int/lit8 p3, p7, 0x8
+
+    if-eqz p3, :cond_1
+
+    const/4 p5, 0x0
+
+    :cond_1
+    move-object v6, p5
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v7, p6
+
+    .line 1
+    invoke-direct/range {v0 .. v7}, Lzt7;-><init>(JJZLjava/lang/Long;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JJZLjava/lang/Long;Ljava/lang/String;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzt7;->a:Lth7;
+    .line 3
+    iput-wide p1, p0, Lzt7;->a:J
 
-    iput-object p2, p0, Lzt7;->b:Lth7;
+    .line 4
+    iput-wide p3, p0, Lzt7;->b:J
 
-    iput-object p3, p0, Lzt7;->c:Lth7;
+    .line 5
+    iput-boolean p5, p0, Lzt7;->c:Z
+
+    .line 6
+    iput-object p6, p0, Lzt7;->o:Ljava/lang/Long;
+
+    .line 7
+    iput-object p7, p0, Lzt7;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmu7;Lqt7;)Lau7;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    instance-of v0, p2, Lzz;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lzt7;->b:Lth7;
+    return v0
+.end method
 
-    iget-object v2, p0, Lzt7;->a:Lth7;
+.method public final n()Ljava/lang/String;
+    .locals 1
 
-    if-eqz v0, :cond_2
+    iget-object v0, p0, Lzt7;->X:Ljava/lang/String;
 
-    new-instance v0, Lb00;
+    return-object v0
+.end method
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    move-result-object v2
+    iget-wide v0, p0, Lzt7;->a:J
 
-    check-cast v2, Ln8d;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    iget-wide v0, p0, Lzt7;->b:J
 
-    move-result-object v1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    check-cast v1, Lbpe;
+    iget-boolean p2, p0, Lzt7;->c:Z
 
-    check-cast p2, Lzz;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object p0, p0, Lzt7;->c:Lth7;
+    iget-object p2, p0, Lzt7;->o:Ljava/lang/Long;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    if-nez p2, :cond_0
 
-    move-result-object p0
+    const/4 p2, 0x0
 
-    check-cast p0, Lez;
-
-    invoke-direct {v0, p1, v2, v1, p2}, Lau7;-><init>(Lmu7;Ln8d;Lbpe;Lqt7;)V
-
-    iget-object v1, p2, Lzz;->p0:Lx10;
-
-    iget-object v1, v1, Lx10;->s:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/io/File;
+    const/4 v0, 0x1
 
-    iget-object v1, p2, Lzz;->p0:Lx10;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, v1, Lx10;->s:Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
-    invoke-direct {p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result-wide v0
 
-    invoke-virtual {v2, p2, p0}, Ln8d;->o(Lqt7;Ljava/io/File;)V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    const/4 p0, 0x0
-
-    invoke-interface {p1, p0}, Lmu7;->A(Z)V
-
-    return-object v0
-
-    :cond_1
     :goto_0
-    const-string v1, "b00"
+    iget-object p2, p0, Lzt7;->X:Ljava/lang/String;
 
-    const-string v2, "Start download attach"
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-static {v1, v2}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    invoke-interface {p1, v1}, Lmu7;->A(Z)V
-
-    iget-object p1, p2, Lzz;->p0:Lx10;
-
-    invoke-virtual {p0, p1}, Lez;->a(Lx10;)Lame;
-
-    move-result-object p0
-
-    new-instance p1, Ly8;
-
-    invoke-direct {p1, v0, v1, p2}, Ly8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p2, Lprc;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p2, v1, v0}, Lprc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1, p2}, Lame;->A(Lgm3;Lgm3;)V
-
-    iput-object p0, v0, Lb00;->Y:Lame;
-
-    return-object v0
-
-    :cond_2
-    new-instance p0, Lau7;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ln8d;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbpe;
-
-    invoke-direct {p0, p1, v0, v1, p2}, Lau7;-><init>(Lmu7;Ln8d;Lbpe;Lqt7;)V
-
-    return-object p0
+    return-void
 .end method

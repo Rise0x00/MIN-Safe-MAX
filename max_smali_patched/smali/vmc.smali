@@ -1,95 +1,121 @@
-.class public final Lvmc;
+.class public final synthetic Lvmc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzed;
-.implements Ley7;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final a:Lth7;
-
-.field public final b:Lth7;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final o:Lq4e;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lhoe;Lk04;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;I)V
     .locals 0
 
+    iput p2, p0, Lvmc;->a:I
+
+    iput-object p1, p0, Lvmc;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvmc;->a:Lth7;
-
-    iput-object p2, p0, Lvmc;->b:Lth7;
-
-    check-cast p3, Loba;
-
-    invoke-virtual {p3}, Loba;->a()Lj04;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    const-string p3, "restore-tasks-on-connect"
-
-    invoke-virtual {p1, p2, p3}, Lj04;->limitedParallelism(ILjava/lang/String;)Lj04;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p4}, Ld0;->plus(Lh04;)Lh04;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvmc;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvmc;->o:Lq4e;
-
-    const-string p1, "RestoreScheduledTaskExecutor"
-
-    iput-object p1, p0, Lvmc;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    return-void
-.end method
+    iget p1, p0, Lvmc;->a:I
 
-.method public final p(I)V
-    .locals 0
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lvmc;->o:Lq4e;
+    iget-object v1, p0, Lvmc;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    packed-switch p1, :pswitch_data_0
+
+    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->H0:[Ltm7;
+
+    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->E0:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lq4e;->setValue(Ljava/lang/Object;)V
+    check-cast p1, Lxmc;
+
+    iget-object v2, p1, Lxmc;->b:Lch1;
+
+    iget-object p1, p1, Lxmc;->c:Lpt1;
+
+    invoke-virtual {p1}, Lpt1;->d()Lg5b;
+
+    move-result-object v3
+
+    iget-object p1, p1, Lpt1;->l:Luz0;
+
+    iget-object v3, v3, Lg5b;->a:Leh1;
+
+    invoke-interface {v3}, Leh1;->getId()Lch1;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 v2, 0x0
+
+    check-cast p1, Lp01;
+
+    invoke-virtual {p1, v2}, Lp01;->i(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lp01;
+
+    invoke-virtual {p1}, Lp01;->f()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-static {v2}, Ln5b;->c(Lch1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->lowerHandParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+
+    :cond_1
+    iget-object p1, p1, Lp01;->H0:Le8e;
+
+    sget-object v2, Lxa;->a:Lxa;
+
+    invoke-virtual {p1, v2}, Le8e;->h(Ljava/lang/Object;)Z
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
 
     return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->H0:[Ltm7;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

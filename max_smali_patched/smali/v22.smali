@@ -1,93 +1,123 @@
-.class public final Lv22;
+.class public final synthetic Lv22;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ll00;
+# interfaces
+.implements Lus1;
 
 
 # instance fields
-.field public final a:Lw34;
-
-.field public final b:I
+.field public final synthetic a:Lx22;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lx22;)V
+    .locals 0
 
-    new-instance v0, Ll00;
+    iput-object p1, p0, Lv22;->a:Lx22;
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ll00;-><init>(I)V
-
-    sput-object v0, Lv22;->c:Ll00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
-    .locals 20
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public a()V
+    .locals 4
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lv22;->a:Lx22;
 
-    if-eqz p7, :cond_0
+    iget-object v1, v0, Lx22;->a:Ljava/lang/Object;
 
-    move/from16 v17, p8
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, v0, Lx22;->i:I
+
+    const/4 v3, 0x5
+
+    if-ne v2, v3, :cond_0
+
+    iget-object v2, v0, Lx22;->f:Lrvd;
+
+    invoke-virtual {v0, v2}, Lx22;->k(Lrvd;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public o(Lts1;)Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lv22;->a:Lx22;
+
+    const-string v1, "Release[session="
+
+    iget-object v2, v0, Lx22;->a:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-object v3, v0, Lx22;->k:Lts1;
+
+    if-nez v3, :cond_0
+
+    const/4 v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/high16 v1, -0x1000000
-
-    move/from16 v17, v1
+    const/4 v3, 0x0
 
     :goto_0
-    new-instance v2, Lw34;
+    const-string v4, "Release completer expected to be null"
 
-    const/4 v5, 0x0
+    invoke-static {v4, v3}, Ll74;->m(Ljava/lang/String;Z)V
 
-    const/4 v8, 0x0
+    iput-object p1, v0, Lx22;->k:Lts1;
 
-    const/high16 v12, -0x80000000
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const v13, -0x800001
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v14, -0x800001
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v19, 0x0
+    const-string v0, "]"
 
-    move-object v6, v5
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v15, v13
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move/from16 v18, v12
+    move-result-object p1
 
-    move-object/from16 v3, p1
+    monitor-exit v2
 
-    move-object/from16 v4, p2
+    return-object p1
 
-    move/from16 v7, p3
+    :catchall_0
+    move-exception p1
 
-    move/from16 v9, p4
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move/from16 v10, p5
-
-    move/from16 v11, p6
-
-    move/from16 v16, p7
-
-    invoke-direct/range {v2 .. v19}, Lw34;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
-
-    iput-object v2, v0, Lv22;->a:Lw34;
-
-    move/from16 v1, p9
-
-    iput v1, v0, Lv22;->b:I
-
-    return-void
+    throw p1
 .end method

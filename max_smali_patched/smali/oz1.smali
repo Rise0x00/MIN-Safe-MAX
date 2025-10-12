@@ -1,121 +1,86 @@
-.class public final Loz1;
+.class public final synthetic Loz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:J
+.field public final synthetic b:Lnw1;
 
-.field public c:Ljava/lang/Object;
+.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
-.method public constructor <init>(ILjava/net/URL;J)V
+.method public synthetic constructor <init>(Lnw1;Landroid/hardware/camera2/CameraDevice;I)V
     .locals 0
 
-    .line 16
+    iput p3, p0, Loz1;->a:I
+
+    iput-object p1, p0, Loz1;->b:Lnw1;
+
+    iput-object p2, p0, Loz1;->c:Landroid/hardware/camera2/CameraDevice;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    iput p1, p0, Loz1;->a:I
-
-    .line 18
-    iput-object p2, p0, Loz1;->c:Ljava/lang/Object;
-
-    .line 19
-    iput-wide p3, p0, Loz1;->b:J
 
     return-void
 .end method
 
-.method public constructor <init>(JLjava/lang/Exception;)V
+
+# virtual methods
+.method public final run()V
     .locals 2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Loz1;->a:I
 
-    .line 2
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v0
+    iget-object v0, p0, Loz1;->b:Lnw1;
 
-    sub-long/2addr v0, p1
+    iget-object v0, v0, Lnw1;->b:Ljava/lang/Object;
 
-    iput-wide v0, p0, Loz1;->b:J
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    .line 3
-    instance-of p1, p3, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+    iget-object v1, p0, Loz1;->c:Landroid/hardware/camera2/CameraDevice;
 
-    const/4 p2, 0x2
-
-    if-eqz p1, :cond_0
-
-    .line 4
-    iput p2, p0, Loz1;->a:I
-
-    .line 5
-    iput-object p3, p0, Loz1;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    .line 6
-    :cond_0
-    instance-of p1, p3, Landroidx/camera/core/InitializationException;
+    :pswitch_0
+    iget-object v0, p0, Loz1;->b:Lnw1;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lnw1;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_4
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    .line 7
-    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    iget-object v1, p0, Loz1;->c:Landroid/hardware/camera2/CameraDevice;
 
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    move-object p3, p1
-
-    .line 8
-    :cond_1
-    iput-object p3, p0, Loz1;->c:Ljava/lang/Object;
-
-    .line 9
-    instance-of p1, p3, Landroidx/camera/core/CameraUnavailableException;
-
-    if-eqz p1, :cond_2
-
-    .line 10
-    iput p2, p0, Loz1;->a:I
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    .line 11
-    :cond_2
-    instance-of p1, p3, Ljava/lang/IllegalArgumentException;
+    :pswitch_1
+    iget-object v0, p0, Loz1;->b:Lnw1;
 
-    if-eqz p1, :cond_3
+    iget-object v0, v0, Lnw1;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    .line 12
-    iput p1, p0, Loz1;->a:I
+    iget-object v1, p0, Loz1;->c:Landroid/hardware/camera2/CameraDevice;
 
-    return-void
-
-    .line 13
-    :cond_3
-    iput v0, p0, Loz1;->a:I
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    .line 14
-    :cond_4
-    iput v0, p0, Loz1;->a:I
+    nop
 
-    .line 15
-    iput-object p3, p0, Loz1;->c:Ljava/lang/Object;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

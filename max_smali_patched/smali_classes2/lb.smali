@@ -1,26 +1,28 @@
 .class public final Llb;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lrb;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+.method public constructor <init>(Lrb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Llb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    iput-object p1, p0, Llb;->Z:Lrb;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,61 +32,89 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Ljava/util/List;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Llb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Llb;
+    check-cast p1, Llb;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Llb;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Llb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Llb;
 
-    iget-object p0, p0, Llb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    iget-object v1, p0, Llb;->Z:Lrb;
 
-    invoke-direct {v0, p2, p0}, Llb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+    invoke-direct {v0, v1, p2}, Llb;-><init>(Lrb;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Llb;->X:Ljava/lang/Object;
+    iput-object p1, v0, Llb;->Y:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget v0, p0, Llb;->X:I
 
-    iget-object p1, p0, Llb;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->p0:[Lof7;
+    if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Llb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lth7;
+    goto :goto_0
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object p0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast p0, Lub;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lub;->Z:Lq4e;
+    throw p1
 
-    invoke-virtual {p0, p1}, Lq4e;->setValue(Ljava/lang/Object;)V
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object p1, p0, Llb;->Y:Ljava/lang/Object;
 
-    return-object p0
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Llb;->Z:Lrb;
+
+    iget-object v0, v0, Lrb;->Y:Le8e;
+
+    iput v1, p0, Llb;->X:I
+
+    invoke-virtual {v0, p1, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

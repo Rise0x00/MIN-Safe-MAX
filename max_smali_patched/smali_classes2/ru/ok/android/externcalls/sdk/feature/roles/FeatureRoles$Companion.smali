@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Luc4;)V
+.method public synthetic constructor <init>(Lof4;)V
     .locals 0
 
     .line 1
@@ -57,13 +57,13 @@
 
 # virtual methods
 .method public final createDisabledForAll()Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;
-    .locals 1
+    .locals 2
 
-    new-instance p0, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;
+    new-instance v0, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;
 
-    sget-object v0, La35;->a:La35;
+    sget-object v1, Ll75;->a:Ll75;
 
-    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;-><init>(Ljava/util/Set;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForRoles;-><init>(Ljava/util/Set;)V
 
-    return-object p0
+    return-object v0
 .end method

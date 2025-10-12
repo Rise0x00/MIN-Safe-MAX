@@ -1,35 +1,67 @@
-.class public interface abstract Ldja;
+.class public abstract synthetic Ldja;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public N(Ljava/lang/CharSequence;)V
-    .locals 0
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-    return-void
-.end method
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.method public e()V
-    .locals 0
 
-    return-void
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.method public e0()V
-    .locals 0
+    invoke-static {}, Lcja;->values()[Lcja;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public n()V
-    .locals 0
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-.method public p()V
-    .locals 0
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v3, 0x2
+
+    :try_start_1
+    aput v3, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Ldja;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lbja;->values()[Lbja;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v3, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Ldja;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

@@ -17,13 +17,13 @@
 
     new-instance v0, Lt0;
 
-    new-instance v1, Lr0;
+    new-instance v1, Ls0;
 
     const-string v2, "Failure occurred while trying to finish a future."
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3}, Lr0;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v2, v3}, Ls0;-><init>(Ljava/lang/String;I)V
 
     invoke-direct {v0, v1}, Lt0;-><init>(Ljava/lang/Throwable;)V
 
@@ -33,11 +33,9 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-boolean v0, Lm1;->o:Z
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 

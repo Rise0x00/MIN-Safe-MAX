@@ -1,53 +1,87 @@
 .class public final Ll81;
-.super Lfa4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lm81;
 
-# static fields
-.field public static final b:Ll81;
 
-.field public static final c:Laa4;
-
-.field public static final d:Laa4;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ll81;->a:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    new-instance v0, Ll81;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    sput-object v0, Ll81;->b:Ll81;
+    return v0
 
-    const/4 v6, 0x0
+    :cond_0
+    instance-of v1, p1, Ll81;
 
-    new-array v2, v6, [Ljava/lang/String;
+    const/4 v2, 0x0
 
-    const/16 v5, 0xe
+    if-nez v1, :cond_1
 
-    const/4 v4, 0x0
+    return v2
 
-    const-string v1, ":calls-history"
+    :cond_1
+    check-cast p1, Ll81;
 
-    const/4 v3, 0x0
+    iget-wide v3, p0, Ll81;->a:J
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    iget-wide v5, p1, Ll81;->a:J
 
-    move-result-object v1
+    cmp-long p1, v3, v5
 
-    sput-object v1, Ll81;->c:Laa4;
+    if-eqz p1, :cond_2
 
-    new-array v2, v6, [Ljava/lang/String;
+    return v2
 
-    const-string v1, ":call-history-info"
+    :cond_2
+    return v0
+.end method
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ll81;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Error(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ll81;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Ll81;->d:Laa4;
-
-    return-void
+    return-object v0
 .end method

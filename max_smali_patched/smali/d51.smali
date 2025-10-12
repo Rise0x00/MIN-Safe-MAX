@@ -1,132 +1,119 @@
 .class public final Ld51;
-.super Ljava/lang/Object;
+.super Lxg;
 .source "SourceFile"
-
-# interfaces
-.implements Lha4;
 
 
 # instance fields
-.field public final synthetic X:Z
-
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Z
+.field public final z0:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZZZ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v0, -0x1
 
-    iput-object p1, p0, Ld51;->a:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    iput-boolean p2, p0, Ld51;->b:Z
+    .line 1
+    invoke-direct {p0, v0, v1, v2}, Ld51;-><init>(JZ)V
 
-    iput-boolean p3, p0, Ld51;->c:Z
+    return-void
+.end method
 
-    iput-boolean p4, p0, Ld51;->o:Z
+.method public constructor <init>(JZ)V
+    .locals 1
 
-    iput-boolean p5, p0, Ld51;->X:Z
+    const/4 v0, 0x2
+
+    .line 2
+    invoke-direct {p0, p1, p2, v0}, Lxg;-><init>(JI)V
+
+    .line 3
+    iput-boolean p3, p0, Ld51;->z0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final d()Z
+    .locals 1
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->I0:Lu1d;
+    iget-boolean v0, p0, Ld51;->z0:Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
+.end method
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
+    .locals 2
 
-    new-instance v1, Ltra;
+    new-instance p1, Landroid/animation/AnimatorSet;
 
-    const-string v2, "type"
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
 
-    const-string v3, "LINK"
+    new-instance p5, Ljava/util/ArrayList;
 
-    invoke-direct {v1, v2, v3}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v2, Ltra;
+    if-eqz p4, :cond_0
 
-    const-string v3, "link"
+    if-eqz p3, :cond_0
 
-    iget-object v4, p0, Ld51;->a:Ljava/lang/String;
+    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    invoke-direct {v2, v3, v4}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 p4, 0x2
 
-    iget-boolean v3, p0, Ld51;->b:Z
+    new-array p4, p4, [F
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    fill-array-data p4, :array_0
 
-    move-result-object v3
+    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    move-object v4, v3
+    move-result-object p2
 
-    new-instance v3, Ltra;
+    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v5, "video_enabled"
+    goto :goto_0
 
-    invoke-direct {v3, v5, v4}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_0
+    if-nez p4, :cond_1
 
-    iget-boolean v4, p0, Ld51;->c:Z
+    if-eqz p2, :cond_1
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    move-result-object v4
+    const/4 p4, 0x1
 
-    move-object v5, v4
+    new-array p4, p4, [F
 
-    new-instance v4, Ltra;
+    const/4 v0, 0x0
 
-    const-string v6, "microphone_enabled"
+    const/4 v1, 0x0
 
-    invoke-direct {v4, v6, v5}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    aput v0, p4, v1
 
-    iget-boolean v5, p0, Ld51;->o:Z
+    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object p2
 
-    move-result-object v5
+    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-object v6, v5
+    :cond_1
+    :goto_0
+    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    new-instance v5, Ltra;
+    return-object p1
 
-    const-string v7, "front_camera_enabled"
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
 
-    invoke-direct {v5, v7, v6}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final n(Landroid/view/View;)V
+    .locals 0
 
-    iget-boolean p0, p0, Ld51;->X:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    new-instance v6, Ltra;
-
-    const-string v7, "is_new"
-
-    invoke-direct {v6, v7, p0}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v1 .. v6}, [Ltra;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ly84;->c([Ltra;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
+    return-void
 .end method

@@ -1,326 +1,250 @@
 .class public final Lzl9;
-.super Lt2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwn9;
-.implements Lrm9;
-.implements Lzvf;
-.implements Lxh8;
-.implements Lwh8;
+.implements Lam9;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final a:Loef;
 
-.field public Y:Lsg6;
+.field public final b:Loef;
 
-.field public final c:Lyh8;
+.field public final c:Lhkb;
 
-.field public final o:Ljl5;
+.field public final d:Z
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Lnn9;Lyh8;Ljl5;Lqm9;)V
-    .locals 1
+.method public constructor <init>(Loef;Loef;Lhkb;ZI)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Lt2;-><init>(ILjava/lang/Object;)V
+    iput-object p1, p0, Lzl9;->a:Loef;
 
-    iput-object p2, p0, Lzl9;->c:Lyh8;
+    iput-object p2, p0, Lzl9;->b:Loef;
 
-    iput-object p3, p0, Lzl9;->o:Ljl5;
+    iput-object p3, p0, Lzl9;->c:Lhkb;
 
-    iput-object p4, p0, Lzl9;->X:Ljava/lang/Object;
+    iput-boolean p4, p0, Lzl9;->d:Z
 
-    invoke-virtual {p1, p0}, Lu2;->t(Ljava/lang/Object;)V
-
-    check-cast p2, Lyt7;
-
-    iput-object p0, p2, Lyt7;->e:Lt2;
+    iput p5, p0, Lzl9;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()V
-    .locals 1
-
-    iget-object v0, p0, Lzl9;->Y:Lsg6;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object p0, p0, Lzl9;->X:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lqm9;->x()V
-
-    return-void
-.end method
-
-.method public final F()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final I()I
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->c:Lyh8;
-
-    check-cast p0, Lyt7;
-
-    invoke-virtual {p0}, Lyt7;->h()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final L(Z)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object p1, p0, Lt2;->b:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lsm9;
-
-    iget-object v0, p0, Lzl9;->c:Lyh8;
-
-    check-cast v0, Lyt7;
-
-    iget-object v1, v0, Lyt7;->g:Lwh8;
-
-    if-ne v1, p0, :cond_0
-
-    invoke-virtual {v0}, Lyt7;->t()V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lyt7;->e:Lt2;
-
-    invoke-virtual {v0, v1}, Lyt7;->q(Landroid/view/Surface;)V
-
-    iput-object v1, v0, Lyt7;->g:Lwh8;
-
-    iput-object v1, p0, Lzl9;->Y:Lsg6;
-
-    check-cast p1, Lxn9;
-
-    move-object v0, p1
-
-    check-cast v0, Lu2;
-
-    iget-object v0, v0, Lu2;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Set;
-
-    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    invoke-interface {p1}, Lxn9;->release()V
+    goto :goto_1
 
     :cond_0
-    return-void
+    instance-of v0, p1, Lzl9;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lzl9;
+
+    iget-object v0, p0, Lzl9;->a:Loef;
+
+    iget-object v1, p1, Lzl9;->a:Loef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lzl9;->b:Loef;
+
+    iget-object v1, p1, Lzl9;->b:Loef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lzl9;->c:Lhkb;
+
+    iget-object v1, p1, Lzl9;->c:Lhkb;
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-boolean v0, p0, Lzl9;->d:Z
+
+    iget-boolean v1, p1, Lzl9;->d:Z
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lzl9;->e:I
+
+    iget p1, p1, Lzl9;->e:I
+
+    if-eq v0, p1, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final R()Landroid/view/View;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    iget-object p0, p0, Lt2;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lzl9;->a:Loef;
 
-    check-cast p0, Lsm9;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p0, Lxn9;
+    move-result v0
 
-    check-cast p0, Lu2;
+    const/16 v1, 0x1f
 
-    iget-object p0, p0, Lu2;->c:Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    check-cast p0, Landroid/view/View;
+    iget-object v2, p0, Lzl9;->b:Loef;
 
-    if-eqz p0, :cond_0
+    invoke-static {v0, v1, v2}, Lqe0;->b(IILoef;)I
 
-    return-object p0
+    move-result v0
+
+    iget-object v2, p0, Lzl9;->c:Lhkb;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    const-string v0, "Mvc view root is null"
+    move-result v2
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_0
+    add-int/2addr v0, v2
 
-    throw p0
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lzl9;->d:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget v1, p0, Lzl9;->e:I
+
+    invoke-static {v1}, Lqw1;->u(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final X(Ljava/lang/Throwable;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p0, p0, Lzl9;->X:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {p0, p1}, Lqm9;->B(Ljava/lang/Throwable;)V
+    const-string v1, "State(title="
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final c()Z
-    .locals 0
+    iget-object v1, p0, Lzl9;->a:Loef;
 
-    iget-object p0, p0, Lzl9;->c:Lyh8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lyt7;
+    const-string v1, ", subtitle="
 
-    invoke-virtual {p0}, Lyt7;->j()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    iget-object v1, p0, Lzl9;->b:Loef;
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final e()I
-    .locals 0
+    const-string v1, ", speed="
 
-    iget-object p0, p0, Lzl9;->c:Lyh8;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Lyt7;
+    iget-object v1, p0, Lzl9;->c:Lhkb;
 
-    iget-object p0, p0, Lyt7;->f:Lzlf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez p0, :cond_0
+    const-string v1, ", isPlaying="
 
-    const/4 p0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    iget-boolean v1, p0, Lzl9;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lzl9;->e:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lzlf;->e()I
+    const-string v1, "VIDEO_MSG"
 
-    move-result p0
+    goto :goto_0
 
-    return p0
-.end method
+    :cond_1
+    const-string v1, "AUDIO"
 
-.method public final f()J
-    .locals 2
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lzl9;->c:Lyh8;
+    const-string v1, ")"
 
-    check-cast p0, Lyt7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lyt7;->e()J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-wide v0
+    move-result-object v0
 
-    return-wide v0
-.end method
-
-.method public final g(Landroid/view/Surface;)V
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->c:Lyh8;
-
-    check-cast p0, Lyt7;
-
-    invoke-virtual {p0, p1}, Lyt7;->q(Landroid/view/Surface;)V
-
-    return-void
-.end method
-
-.method public final getDuration()J
-    .locals 2
-
-    iget-object p0, p0, Lzl9;->c:Lyh8;
-
-    check-cast p0, Lyt7;
-
-    invoke-virtual {p0}, Lyt7;->f()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i(III)V
-    .locals 0
-
-    iget-object p0, p0, Lt2;->b:Ljava/lang/Object;
-
-    check-cast p0, Lsm9;
-
-    check-cast p0, Lxn9;
-
-    invoke-interface {p0, p1, p2}, Lxn9;->a(II)V
-
-    return-void
-.end method
-
-.method public final j()I
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->c:Lyh8;
-
-    check-cast p0, Lyt7;
-
-    invoke-virtual {p0}, Lyt7;->i()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final k()V
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->X:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lqm9;->k()V
-
-    return-void
-.end method
-
-.method public final l()V
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->X:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lqm9;->l()V
-
-    return-void
-.end method
-
-.method public final m()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final q()I
-    .locals 0
-
-    iget-object p0, p0, Lzl9;->c:Lyh8;
-
-    check-cast p0, Lyt7;
-
-    invoke-virtual {p0}, Lyt7;->g()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final w()V
-    .locals 1
-
-    const-string p0, "zl9"
-
-    const-string v0, "onMediaPlayerControllerDetach"
-
-    invoke-static {p0, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

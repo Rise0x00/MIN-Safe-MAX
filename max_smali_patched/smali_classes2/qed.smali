@@ -2,23 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsed;
 
-
-# static fields
-.field public static final a:Lqed;
+# instance fields
+.field public final a:Lked;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lked;)V
+    .locals 0
 
-    new-instance v0, Lqed;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqed;->a:Lqed;
+    iput-object p1, p0, Lqed;->a:Lked;
 
     return-void
 .end method

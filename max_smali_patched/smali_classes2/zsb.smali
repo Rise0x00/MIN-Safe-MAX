@@ -1,180 +1,64 @@
 .class public final Lzsb;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lftb;
 
 
-# instance fields
-.field public final synthetic X:Ljava/io/File;
-
-.field public final synthetic Y:Ljava/io/File;
-
-.field public final synthetic Z:Lxm5;
-
-.field public final synthetic n0:Landroid/content/Context;
-
-.field public final synthetic o0:Landroid/graphics/Bitmap;
+# static fields
+.field public static final a:Lzsb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/io/File;Lxm5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lzsb;->X:Ljava/io/File;
+    new-instance v0, Lzsb;
 
-    iput-object p2, p0, Lzsb;->Y:Ljava/io/File;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lzsb;->Z:Lxm5;
-
-    iput-object p4, p0, Lzsb;->n0:Landroid/content/Context;
-
-    iput-object p5, p0, Lzsb;->o0:Landroid/graphics/Bitmap;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lzsb;->a:Lzsb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lp04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lzsb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lzsb;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lzsb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
-
-    new-instance v0, Lzsb;
-
-    iget-object v4, p0, Lzsb;->n0:Landroid/content/Context;
-
-    iget-object v5, p0, Lzsb;->o0:Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lzsb;->X:Ljava/io/File;
-
-    iget-object v2, p0, Lzsb;->Y:Ljava/io/File;
-
-    iget-object v3, p0, Lzsb;->Z:Lxm5;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lzsb;-><init>(Ljava/io/File;Ljava/io/File;Lxm5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzsb;->X:Ljava/io/File;
-
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/File;->mkdirs()Z
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/io/FileOutputStream;
+    instance-of p1, p1, Lzsb;
 
-    iget-object v0, p0, Lzsb;->Y:Ljava/io/File;
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Lzsb;->o0:Landroid/graphics/Bitmap;
-
-    :try_start_0
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v3, 0x64
-
-    invoke-virtual {v1, v2, v3, p1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lzsb;->Z:Lxm5;
-
-    iget-object p0, p0, Lzsb;->n0:Landroid/content/Context;
-
-    invoke-virtual {p1, p0, v0}, Lxm5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
+    return p1
 
     :cond_1
-    new-instance p0, Ljava/io/IOException;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+.method public final hashCode()I
+    .locals 1
 
-    move-result-object p1
+    const v0, -0x7ce09cf0
 
-    const-string v0, "Failed to create QR code file: "
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
+    const-string v0, "Finish"
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {p1, p0}, Ll18;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

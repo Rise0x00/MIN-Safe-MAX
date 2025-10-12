@@ -1,75 +1,84 @@
-.class public abstract synthetic Lvzc;
-.super Ljava/lang/Object;
+.class public final Lvzc;
+.super Ll9f;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(J)V
+    .locals 0
 
-    const/4 v0, 0x3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    iput-wide p1, p0, Lvzc;->c:J
 
-    move-result-object v1
+    return-void
+.end method
 
-    array-length v1, v1
 
-    new-array v1, v1, [I
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const/4 v2, 0x1
+    const/4 v0, 0x1
 
-    const/4 v3, 0x0
+    if-ne p0, p1, :cond_0
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return v0
 
-    :catch_0
-    const/4 v4, 0x2
+    :cond_0
+    instance-of v1, p1, Lvzc;
 
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/4 v2, 0x0
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    if-nez v1, :cond_1
 
-    :catch_2
-    sput-object v1, Lvzc;->$EnumSwitchMapping$0:[I
+    return v2
 
-    invoke-static {v4}, Ldw1;->w(I)[I
+    :cond_1
+    check-cast p1, Lvzc;
+
+    iget-wide v3, p0, Lvzc;->c:J
+
+    iget-wide v5, p1, Lvzc;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lvzc;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Response(timestampRemoveProfile="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lvzc;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_3
-    aput v2, v0, v3
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v4, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Lvzc;->$EnumSwitchMapping$1:[I
-
-    return-void
+    return-object v0
 .end method

@@ -1,152 +1,57 @@
-.class public final Lm3f;
-.super Ljava/lang/Object;
+.class public abstract Lm3f;
+.super Lnz3;
 .source "SourceFile"
+
+# interfaces
+.implements Lyf6;
 
 
 # instance fields
-.field public final a:Lw2f;
-
-.field public final b:I
-
-.field public final c:[J
-
-.field public final d:[I
-
-.field public final e:I
-
-.field public final f:[J
-
-.field public final g:[I
-
-.field public final h:J
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lw2f;[J[II[J[IJ)V
-    .locals 4
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    array-length v0, p3
+    iput p1, p0, Lm3f;->o:I
 
-    array-length v1, p5
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    invoke-static {v0}, Ln76;->j(Z)V
-
-    array-length v0, p2
-
-    array-length v1, p5
-
-    if-ne v0, v1, :cond_1
-
-    move v0, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v2
-
-    :goto_1
-    invoke-static {v0}, Ln76;->j(Z)V
-
-    array-length v0, p6
-
-    array-length v1, p5
-
-    if-ne v0, v1, :cond_2
-
-    move v2, v3
-
-    :cond_2
-    invoke-static {v2}, Ln76;->j(Z)V
-
-    iput-object p1, p0, Lm3f;->a:Lw2f;
-
-    iput-object p2, p0, Lm3f;->c:[J
-
-    iput-object p3, p0, Lm3f;->d:[I
-
-    iput p4, p0, Lm3f;->e:I
-
-    iput-object p5, p0, Lm3f;->f:[J
-
-    iput-object p6, p0, Lm3f;->g:[I
-
-    iput-wide p7, p0, Lm3f;->h:J
-
-    array-length p1, p2
-
-    iput p1, p0, Lm3f;->b:I
-
-    array-length p0, p6
-
-    if-lez p0, :cond_3
-
-    array-length p0, p6
-
-    sub-int/2addr p0, v3
-
-    aget p1, p6, p0
-
-    const/high16 p2, 0x20000000
-
-    or-int/2addr p1, p2
-
-    aput p1, p6, p0
-
-    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)I
-    .locals 2
+.method public final getArity()I
+    .locals 1
 
-    iget-object v0, p0, Lm3f;->f:[J
+    iget v0, p0, Lm3f;->o:I
 
-    const/4 v1, 0x1
+    return v0
+.end method
 
-    invoke-static {v0, p1, p2, v1}, Lfif;->b([JJZ)I
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result p1
+    iget-object v0, p0, Lri0;->a:Lkotlin/coroutines/Continuation;
 
-    :goto_0
-    array-length p2, v0
+    if-nez v0, :cond_0
 
-    if-ge p1, p2, :cond_1
+    sget-object v0, Lxxc;->a:Lyxc;
 
-    iget-object p2, p0, Lm3f;->g:[I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    aget p2, p2, p1
+    invoke-static {p0}, Lyxc;->a(Lyf6;)Ljava/lang/String;
 
-    and-int/2addr p2, v1
+    move-result-object v0
 
-    if-eqz p2, :cond_0
-
-    return p1
+    return-object v0
 
     :cond_0
-    add-int/lit8 p1, p1, 0x1
+    invoke-super {p0}, Lri0;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_1
-    const/4 p0, -0x1
-
-    return p0
+    return-object v0
 .end method

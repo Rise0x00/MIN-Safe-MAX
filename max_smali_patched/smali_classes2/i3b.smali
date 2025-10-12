@@ -1,215 +1,253 @@
 .class public final Li3b;
-.super Leje;
+.super Landroid/widget/EdgeEffect;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:Ll72;
+.field public a:Leke;
 
-.field public Y:J
+.field public final synthetic b:I
 
-.field public Z:J
+.field public final synthetic c:Lj3b;
 
-.field public n0:I
-
-.field public final synthetic o0:Lj3b;
-
-.field public final synthetic p0:I
+.field public final synthetic d:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public constructor <init>(Lj3b;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ILj3b;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Li3b;->o0:Lj3b;
+    iput p1, p0, Li3b;->b:I
 
-    iput p2, p0, Li3b;->p0:I
+    iput-object p2, p0, Li3b;->c:Lj3b;
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Li3b;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p4}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Leke;
+    .locals 4
 
-    check-cast p1, Lp04;
+    new-instance v0, Leke;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Li3b;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, p1, p2}, Li3b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v2, Leke;->q:Lj15;
 
-    move-result-object p0
+    invoke-direct {v0, v1, v2}, Leke;-><init>(Ljava/lang/Object;Lyhh;)V
 
-    check-cast p0, Li3b;
+    new-instance v1, Lfke;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    invoke-direct {v1}, Lfke;-><init>()V
 
-    invoke-virtual {p0, p1}, Li3b;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    float-to-double v2, v2
 
-    return-object p0
+    iput-wide v2, v1, Lfke;->i:D
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v2}, Lfke;->a(F)V
+
+    const/high16 v2, 0x43480000    # 200.0f
+
+    invoke-virtual {v1, v2}, Lfke;->b(F)V
+
+    iput-object v1, v0, Leke;->m:Lfke;
+
+    return-object v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final b(F)V
+    .locals 3
 
-    new-instance p1, Li3b;
+    iget v0, p0, Li3b;->b:I
 
-    iget-object v0, p0, Li3b;->o0:Lj3b;
+    const/4 v1, 0x3
 
-    iget p0, p0, Li3b;->p0:I
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {p1, v0, p0, p2}, Li3b;-><init>(Lj3b;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 23
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Li3b;->n0:I
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Ltcf;->a:Ltcf;
-
-    iget-object v5, v0, Li3b;->o0:Lj3b;
-
-    sget-object v6, Lq04;->a:Lq04;
-
-    if-eqz v1, :cond_3
-
-    if-eq v1, v3, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static/range {p1 .. p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    return-object v4
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    iget-wide v7, v0, Li3b;->Z:J
-
-    iget-wide v9, v0, Li3b;->Y:J
-
-    iget-object v1, v0, Li3b;->X:Ll72;
-
-    invoke-static/range {p1 .. p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    :cond_2
-    move-object/from16 v17, v1
-
-    move-wide/from16 v20, v7
-
-    move-wide/from16 v18, v9
+    const/4 v0, -0x1
 
     goto :goto_0
 
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object v1, v5, Lj3b;->a:Lj4e;
-
-    invoke-interface {v1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll72;
-
-    if-nez v1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v7, v1, Ll72;->b:Lxb2;
-
-    iget-wide v9, v7, Lxb2;->a:J
-
-    iget-object v7, v1, Ll72;->X:Lwu8;
-
-    if-eqz v7, :cond_5
-
-    iget-object v7, v7, Lwu8;->a:Lrw8;
-
-    iget-wide v7, v7, Lej0;->a:J
-
-    iget-object v11, v5, Lj3b;->c:Lxt2;
-
-    iget-wide v12, v1, Ll72;->a:J
-
-    iput-object v1, v0, Li3b;->X:Ll72;
-
-    iput-wide v9, v0, Li3b;->Y:J
-
-    iput-wide v7, v0, Li3b;->Z:J
-
-    iput v3, v0, Li3b;->n0:I
-
-    invoke-virtual {v11, v12, v13, v9, v10}, Lxt2;->a(JJ)Ltcf;
-
-    if-ne v4, v6, :cond_2
-
-    goto :goto_1
+    :cond_0
+    const/4 v0, 0x1
 
     :goto_0
-    iget-object v1, v5, Lj3b;->b:Lhoe;
+    iget-object v1, p0, Li3b;->c:Lj3b;
 
-    check-cast v1, Loba;
+    iget v2, v1, Lj3b;->a:I
 
-    invoke-virtual {v1}, Loba;->c()Li08;
+    mul-int/2addr v0, v2
 
-    move-result-object v1
+    int-to-float v0, v0
 
-    new-instance v14, Lh3b;
+    mul-float/2addr v0, p1
 
-    iget v3, v0, Li3b;->p0:I
+    iget p1, v1, Lj3b;->b:F
 
-    const/16 v22, 0x0
+    mul-float/2addr v0, p1
 
-    iget-object v15, v0, Li3b;->o0:Lj3b;
+    iget-object p1, p0, Li3b;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    move/from16 v16, v3
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
-    invoke-direct/range {v14 .. v22}, Lh3b;-><init>(Lj3b;ILl72;JJLkotlin/coroutines/Continuation;)V
+    move-result v1
 
-    const/4 v3, 0x0
+    add-float/2addr v1, v0
 
-    iput-object v3, v0, Li3b;->X:Ll72;
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    iput v2, v0, Li3b;->n0:I
+    iget-object p1, p0, Li3b;->a:Leke;
 
-    invoke-static {v1, v14, v0}, Lyr3;->B0(Lh04;Lt96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Leke;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final isFinished()Z
+    .locals 1
+
+    iget-object v0, p0, Li3b;->a:Leke;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, v0, Leke;->f:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final onAbsorb(I)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+
+    iget v0, p0, Li3b;->b:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    mul-int/2addr v0, p1
+
+    int-to-float p1, v0
+
+    iget-object v0, p0, Li3b;->c:Lj3b;
+
+    iget v0, v0, Lj3b;->c:F
+
+    mul-float/2addr p1, v0
+
+    iget-object v0, p0, Li3b;->a:Leke;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Leke;->b()V
+
+    :cond_1
+    invoke-virtual {p0}, Li3b;->a()Leke;
 
     move-result-object v0
 
-    if-ne v0, v6, :cond_5
+    iput p1, v0, Leke;->a:F
 
-    :goto_1
-    return-object v6
+    invoke-virtual {v0}, Leke;->g()V
 
-    :cond_5
-    :goto_2
-    return-object v4
+    iput-object v0, p0, Li3b;->a:Leke;
+
+    return-void
+.end method
+
+.method public final onPull(F)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Landroid/widget/EdgeEffect;->onPull(F)V
+
+    .line 2
+    invoke-virtual {p0, p1}, Li3b;->b(F)V
+
+    return-void
+.end method
+
+.method public final onPull(FF)V
+    .locals 0
+
+    .line 3
+    invoke-super {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+
+    .line 4
+    invoke-virtual {p0, p1}, Li3b;->b(F)V
+
+    return-void
+.end method
+
+.method public final onRelease()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/widget/EdgeEffect;->onRelease()V
+
+    iget-object v0, p0, Li3b;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Li3b;->a()Leke;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Leke;->g()V
+
+    iput-object v0, p0, Li3b;->a:Leke;
+
+    return-void
 .end method

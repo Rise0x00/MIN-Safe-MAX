@@ -532,7 +532,7 @@
 
     const-string p2, "Malformed input at offset "
 
-    invoke-static {p1, p2}, Lw68;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

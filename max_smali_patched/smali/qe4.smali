@@ -1,25 +1,29 @@
-.class public abstract Lqe4;
+.class public final Lqe4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lgkb;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgkb;JJ)V
+    .locals 0
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lqe4;->a:Lgkb;
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+    iput-wide p2, p0, Lqe4;->b:J
 
-    move-result v0
-
-    sput v0, Lqe4;->a:I
+    iput-wide p4, p0, Lqe4;->c:J
 
     return-void
 .end method

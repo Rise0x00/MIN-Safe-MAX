@@ -1,23 +1,14 @@
-.class public final Lgjc;
-.super Ll66;
-.source "SourceFile"
+.class public abstract Lgjc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final f:Lry6;
+# static fields
+.field public static oneme_in_app_review_close:I = 0x7f13083d
 
-.field public g:Lf0;
+.field public static oneme_in_app_review_not_now:I = 0x7f13083e
 
-.field public h:Lf0;
+.field public static oneme_in_app_review_send:I = 0x7f13083f
 
+.field public static oneme_in_app_review_subtitle:I = 0x7f130840
 
-# direct methods
-.method public constructor <init>(Lbpe;Lo75;Lry6;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ll66;-><init>(Lbpe;Lo75;)V
-
-    iput-object p3, p0, Lgjc;->f:Lry6;
-
-    return-void
-.end method
+.field public static oneme_in_app_review_thanks:I = 0x7f130841

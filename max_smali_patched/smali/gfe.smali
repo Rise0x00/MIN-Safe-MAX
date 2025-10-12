@@ -1,44 +1,64 @@
 .class public final Lgfe;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Lss4;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:[B
+.field public final a:Lnee;
 
 
 # direct methods
-.method public constructor <init>(J[B)V
+.method public constructor <init>(Lnee;Lhfe;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-wide p1, p0, Lgfe;->a:J
+    iput-object p1, p0, Lgfe;->a:Lnee;
 
-    iput-object p3, p0, Lgfe;->b:[B
+    invoke-virtual {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+.method public final g()V
+    .locals 1
 
-    check-cast p1, Lgfe;
+    const/4 v0, 0x0
 
-    iget-wide v0, p0, Lgfe;->a:J
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide p0, p1, Lgfe;->a:J
+    move-result-object v0
 
-    invoke-static {v0, v1, p0, p1}, Ljava/lang/Long;->compare(JJ)I
+    check-cast v0, Lhfe;
 
-    move-result p0
+    if-eqz v0, :cond_0
 
-    return p0
+    invoke-virtual {v0, p0}, Lhfe;->o(Lgfe;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

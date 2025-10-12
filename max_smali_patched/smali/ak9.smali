@@ -1,45 +1,55 @@
 .class public final Lak9;
-.super Li24;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lyj9;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:I
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:Ljava/lang/String;
+
+.field public final j:Ljava/lang/String;
+
+
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Lyj9;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1
-    sget-object p1, Lg24;->b:Lg24;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lak9;-><init>(Li24;)V
+    iput-wide p1, p0, Lak9;->a:J
 
-    return-void
-.end method
+    iput-object p3, p0, Lak9;->b:Ljava/lang/String;
 
-.method public constructor <init>(Li24;)V
-    .locals 0
+    iput-object p4, p0, Lak9;->c:Ljava/lang/String;
 
-    .line 2
-    invoke-direct {p0}, Li24;-><init>()V
+    iput-object p5, p0, Lak9;->d:Lyj9;
 
-    .line 3
-    iget-object p0, p0, Li24;->a:Ljava/util/LinkedHashMap;
+    iput-object p6, p0, Lak9;->e:Ljava/lang/String;
 
-    iget-object p1, p1, Li24;->a:Ljava/util/LinkedHashMap;
+    iput-object p7, p0, Lak9;->f:Ljava/lang/String;
 
-    .line 4
-    invoke-interface {p0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    iput p8, p0, Lak9;->g:I
 
-    return-void
-.end method
+    iput-object p9, p0, Lak9;->h:Ljava/lang/String;
 
+    iput-object p10, p0, Lak9;->i:Ljava/lang/String;
 
-# virtual methods
-.method public final a(Lh24;Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Li24;->a:Ljava/util/LinkedHashMap;
-
-    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p11, p0, Lak9;->j:Ljava/lang/String;
 
     return-void
 .end method

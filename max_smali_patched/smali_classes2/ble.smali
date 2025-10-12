@@ -1,84 +1,53 @@
-.class public final Lble;
-.super Lhj0;
+.class public abstract Lble;
+.super Lele;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Z
+.field public final h:Ljava/math/BigInteger;
+
+.field public final i:Ljava/math/BigInteger;
+
+.field public final j:Ljava/math/BigInteger;
+
+.field public final k:Ljava/lang/Long;
+
+.field public final l:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/Long;Ljava/lang/String;Lkw8;Ljava/lang/Boolean;)V
+    .locals 8
 
-    invoke-direct {p0}, Lhj0;-><init>()V
+    const/4 v2, 0x2
 
-    iput-boolean p1, p0, Lble;->b:Z
+    move-object v0, p0
+
+    move v1, p1
+
+    move-wide v3, p2
+
+    move-object v5, p4
+
+    move-object/from16 v6, p9
+
+    move-object/from16 v7, p10
+
+    invoke-direct/range {v0 .. v7}, Lele;-><init>(IIJLjava/lang/String;Ljava/lang/String;Lkw8;)V
+
+    iput-object p5, p0, Lble;->h:Ljava/math/BigInteger;
+
+    iput-object p6, p0, Lble;->i:Ljava/math/BigInteger;
+
+    iput-object p7, p0, Lble;->j:Ljava/math/BigInteger;
+
+    move-object/from16 p1, p11
+
+    iput-object p1, p0, Lble;->l:Ljava/lang/Boolean;
+
+    move-object/from16 p1, p8
+
+    iput-object p1, p0, Lble;->k:Ljava/lang/Long;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lble;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lble;
-
-    iget-boolean p0, p0, Lble;->b:Z
-
-    iget-boolean p1, p1, Lble;->b:Z
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Lble;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "SyncMutedChatsEvent(isSuccessful="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lble;->b:Z
-
-    invoke-static {v0, v1, p0}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

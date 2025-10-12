@@ -13,7 +13,7 @@
     name = "OreoUtils"
 .end annotation
 
-.annotation build Lzp4;
+.annotation build Lht4;
 .end annotation
 
 

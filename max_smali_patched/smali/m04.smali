@@ -1,66 +1,44 @@
 .class public final Lm04;
-.super Ld0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcs7;
 
-# static fields
-.field public static final a:Ldyc;
+
+# instance fields
+.field public final a:Les7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
+    .locals 2
 
-    new-instance v0, Ldyc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Les7;
 
-    sput-object v0, Lm04;->a:Ldyc;
+    invoke-direct {v0, p0}, Les7;-><init>(Lcs7;)V
+
+    iput-object v0, p0, Lm04;->a:Les7;
+
+    new-instance v0, Ll04;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Ll04;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lb04;->addLifecycleListener(Lzz3;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
+.method public final L()Les7;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lm04;->a:Les7;
 
-    goto :goto_0
-
-    :cond_0
-    instance-of p0, p1, Lm04;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    check-cast p1, Lm04;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x563f3220
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "CoroutineName(LogController)"
-
-    return-object p0
+    return-object v0
 .end method

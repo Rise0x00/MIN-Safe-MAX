@@ -1,118 +1,95 @@
 .class public final Lhj2;
-.super Leje;
+.super Lilg;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lx10;
+.field public final b:Lmoe;
 
-.field public final synthetic Y:Loj2;
+.field public final c:Lsqc;
 
 
 # direct methods
-.method public constructor <init>(Lx10;Loj2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 5
 
-    iput-object p1, p0, Lhj2;->X:Lx10;
+    sget-object v0, Lcub;->a:Lcub;
 
-    iput-object p2, p0, Lhj2;->Y:Loj2;
+    invoke-virtual {v0}, Lcub;->c()Lbp7;
 
-    const/4 p1, 0x2
+    move-result-object v1
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast v1, Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm13;
+
+    invoke-virtual {v0}, Lcub;->f()Lbp7;
+
+    move-result-object v0
+
+    check-cast v0, Ls5f;
+
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr8f;
+
+    invoke-direct {p0}, Lilg;-><init>()V
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lhj2;->b:Lmoe;
+
+    new-instance v4, Lsqc;
+
+    invoke-direct {v4, v3}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object v4, p0, Lhj2;->c:Lsqc;
+
+    check-cast v1, Lm23;
+
+    invoke-virtual {v1, p1, p2}, Lm23;->N(J)Lsqc;
+
+    move-result-object p1
+
+    new-instance p2, Lg13;
+
+    const/16 v1, 0x9
+
+    invoke-direct {p2, p1, v1}, Lg13;-><init>(Lev5;I)V
+
+    new-instance p1, Lfj2;
+
+    invoke-direct {p1, p0, v2}, Lfj2;-><init>(Lhj2;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Ljx5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p2, p1, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    check-cast v0, Lwla;
+
+    invoke-virtual {v0}, Lwla;->a()Ly24;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Ltp;->G(Lev5;Lw24;)Lev5;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhj2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lhj2;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lhj2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lhj2;
-
-    iget-object v0, p0, Lhj2;->X:Lx10;
-
-    iget-object p0, p0, Lhj2;->Y:Loj2;
-
-    invoke-direct {p1, v0, p0, p2}, Lhj2;-><init>(Lx10;Loj2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhj2;->X:Lx10;
-
-    invoke-virtual {p1}, Lx10;->d()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget p1, Lbha;->N1:I
-
-    goto :goto_0
-
-    :cond_0
-    sget p1, Lbha;->O1:I
-
-    :goto_0
-    sget-object v0, Loj2;->M0:[Lof7;
-
-    iget-object p0, p0, Lhj2;->Y:Loj2;
-
-    iget-object p0, p0, Loj2;->s0:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzja;
-
-    new-instance v0, Lyte;
-
-    invoke-direct {v0, p1}, Lyte;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Lzja;->g(Ldue;)V
-
-    new-instance p1, Loka;
-
-    sget v0, Losc;->n:I
-
-    invoke-direct {p1, v0}, Loka;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Lzja;->e(Lska;)V
-
-    invoke-virtual {p0}, Lzja;->i()Lyja;
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

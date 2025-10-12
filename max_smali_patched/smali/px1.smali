@@ -1,109 +1,147 @@
-.class public final enum Lpx1;
-.super Ljava/lang/Enum;
+.class public final synthetic Lpx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lus1;
+.implements Lhu;
 
-# static fields
-.field public static final enum X:Lpx1;
 
-.field public static final synthetic Y:[Lpx1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum a:Lpx1;
-
-.field public static final enum b:Lpx1;
-
-.field public static final enum c:Lpx1;
-
-.field public static final enum o:Lpx1;
+.field public final synthetic b:Lqx1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lqx1;I)V
+    .locals 0
 
-    new-instance v0, Lpx1;
+    iput p2, p0, Lpx1;->a:I
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lpx1;->b:Lqx1;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpx1;->a:Lpx1;
-
-    new-instance v1, Lpx1;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpx1;->b:Lpx1;
-
-    new-instance v2, Lpx1;
-
-    const-string v3, "METERING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpx1;->c:Lpx1;
-
-    new-instance v3, Lpx1;
-
-    const-string v4, "CONVERGED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpx1;->o:Lpx1;
-
-    new-instance v4, Lpx1;
-
-    const-string v5, "LOCKED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lpx1;->X:Lpx1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lpx1;
-
-    move-result-object v0
-
-    sput-object v0, Lpx1;->Y:[Lpx1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpx1;
-    .locals 1
 
-    const-class v0, Lpx1;
+# virtual methods
+.method public apply(Ljava/lang/Object;)Ljx7;
+    .locals 8
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lpx1;->a:I
 
-    move-result-object p0
+    check-cast p1, Ljava/lang/Void;
 
-    check-cast p0, Lpx1;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
+    sget-wide v0, Lqx1;->g:J
+
+    iget-object p1, p0, Lpx1;->b:Lqx1;
+
+    iget-object v4, p1, Lqx1;->e:Ljava/util/concurrent/ScheduledExecutorService;
+
+    iget-object p1, p1, Lqx1;->a:Ljw1;
+
+    new-instance v2, Lb71;
+
+    const/4 v3, 0x6
+
+    invoke-direct {v2, v3}, Lb71;-><init>(I)V
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v5
+
+    new-instance v0, Llx1;
+
+    invoke-direct {v0, v2}, Llx1;-><init>(Lb71;)V
+
+    invoke-virtual {p1, v0}, Ljw1;->p(Liw1;)V
+
+    new-instance v1, Luu1;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, p1, v2, v0}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p1, Ljw1;->c:Lcsd;
+
+    iget-object v3, v0, Llx1;->b:Lws1;
+
+    iget-object v0, v3, Lws1;->b:Lvs1;
+
+    invoke-virtual {v0, v1, p1}, Lp3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    new-instance v2, Lab2;
+
+    const/4 v7, 0x7
+
+    invoke-direct/range {v2 .. v7}, Lab2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+
+    invoke-static {v2}, Lvr0;->k(Lus1;)Lws1;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Lpx1;->b:Lqx1;
+
+    iget-boolean v0, p1, Lqx1;->f:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lqx1;->a:Ljw1;
+
+    iget-object p1, p1, Ljw1;->h:Lm06;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lkp5;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p1}, Lkp5;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Li67;->c:Li67;
+
+    :goto_0
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lpx1;
-    .locals 1
+.method public o(Lts1;)Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lpx1;->Y:[Lpx1;
+    iget-object v0, p0, Lpx1;->b:Lqx1;
 
-    invoke-virtual {v0}, [Lpx1;->clone()Ljava/lang/Object;
+    iget-object v0, v0, Lqx1;->a:Ljw1;
 
-    move-result-object v0
+    iget-object v0, v0, Ljw1;->j:Lfmf;
 
-    check-cast v0, [Lpx1;
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-virtual {v0, p1, v1}, Lfmf;->a(Lts1;Z)V
+
+    const-string p1, "TorchOn"
+
+    return-object p1
 .end method

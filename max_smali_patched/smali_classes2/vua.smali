@@ -1,50 +1,61 @@
-.class public interface abstract Lvua;
+.class public abstract Lvua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lwua;Lorg/webrtc/SessionDescription;)V
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b(Lwua;)V
-.end method
+.field public static final b:I
 
-.method public abstract c(Lwua;)V
-.end method
+.field public static final c:I
 
-.method public abstract d()V
-.end method
+.field public static final d:I
 
-.method public abstract e(Ljava/lang/String;)V
-.end method
+.field public static final e:I
 
-.method public abstract f()V
-.end method
+.field public static final f:I
 
-.method public abstract g(Lwua;Ljava/lang/String;)V
-.end method
+.field public static final g:I
 
-.method public abstract h(Lwua;[Lorg/webrtc/IceCandidate;)V
-.end method
+.field public static final h:I
 
-.method public abstract k(Lwua;Lorg/webrtc/PeerConnection$SignalingState;)V
-.end method
 
-.method public abstract l(Lwua;Lorg/webrtc/IceCandidate;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract m(Lwua;Lorg/webrtc/SessionDescription;)V
-.end method
+    sget v0, Ljkc;->share_confirm_cancel:I
 
-.method public abstract n(Lwua;Lorg/webrtc/PeerConnection$IceConnectionState;)V
-.end method
+    sput v0, Lvua;->a:I
 
-.method public o(Lwua;J)V
-    .locals 0
+    sget v0, Ljkc;->share_confirm_close:I
+
+    sput v0, Lvua;->b:I
+
+    sget v0, Ljkc;->share_confirmation_close_title:I
+
+    sput v0, Lvua;->c:I
+
+    sget v0, Ljkc;->share_message_hint:I
+
+    sput v0, Lvua;->d:I
+
+    sget v0, Ljkc;->share_search_hint:I
+
+    sput v0, Lvua;->e:I
+
+    sget v0, Ljkc;->share_toolbar_action_cancel_selection:I
+
+    sput v0, Lvua;->f:I
+
+    sget v0, Ljkc;->share_toolbar_action_select:I
+
+    sput v0, Lvua;->g:I
+
+    sget v0, Ljkc;->share_toolbar_title:I
+
+    sput v0, Lvua;->h:I
 
     return-void
-.end method
-
-.method public abstract r(Lwua;)V
 .end method

@@ -1,76 +1,61 @@
-.class public interface abstract Lgd3;
+.class public abstract Lgd3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Led3;
+
+.field public static final b:Lfd3;
+
+.field public static final c:Lfd3;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Led3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lgd3;->a:Led3;
+
+    new-instance v0, Lfd3;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1}, Lfd3;-><init>(I)V
+
+    sput-object v0, Lgd3;->b:Lfd3;
+
+    new-instance v0, Lfd3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lfd3;-><init>(I)V
+
+    sput-object v0, Lgd3;->c:Lfd3;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public a(Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lftb;->a(Ljava/lang/Class;)Lftb;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Lgd3;->f(Lftb;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract a(II)Lgd3;
 .end method
 
-.method public b(Lftb;)Ljava/util/Set;
-    .locals 0
-
-    invoke-interface {p0, p1}, Lgd3;->d(Lftb;)Ltrb;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ltrb;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Set;
-
-    return-object p0
+.method public abstract b(JJ)Lgd3;
 .end method
 
-.method public c(Ljava/lang/Class;)Ltrb;
-    .locals 0
-
-    invoke-static {p1}, Lftb;->a(Ljava/lang/Class;)Lftb;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Lgd3;->e(Lftb;)Ltrb;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lgd3;
 .end method
 
-.method public abstract d(Lftb;)Ltrb;
+.method public abstract d(ZZ)Lgd3;
 .end method
 
-.method public abstract e(Lftb;)Ltrb;
+.method public abstract e(ZZ)Lgd3;
 .end method
 
-.method public f(Lftb;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-interface {p0, p1}, Lgd3;->e(Lftb;)Ltrb;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0}, Ltrb;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract f()I
 .end method

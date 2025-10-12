@@ -1,104 +1,174 @@
 .class public final Lnib;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Loib;
 
 
 # instance fields
-.field public final a:Lcp;
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lrib;
+
+.field public final c:Landroid/content/IntentFilter;
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Lcp;)V
+.method public constructor <init>(Landroid/content/Context;Lrib;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Lnib;->a:Lcp;
+    iput-object p1, p0, Lnib;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lnib;->b:Lrib;
+
+    new-instance p1, Landroid/content/IntentFilter;
+
+    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
+
+    iput-object p1, p0, Lnib;->c:Landroid/content/IntentFilter;
+
+    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
+
+    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
+
+    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
+
+    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lnib;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p1
 
-    return v0
+    if-eqz p1, :cond_4
+
+    iget-object p2, p0, Lnib;->c:Landroid/content/IntentFilter;
+
+    invoke-virtual {p2, p1}, Landroid/content/IntentFilter;->hasAction(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lnib;
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    const/4 v2, 0x0
+    move-result p2
 
-    if-nez v1, :cond_1
+    const/4 v0, 0x2
 
-    return v2
+    const/4 v1, 0x1
+
+    const/4 v2, -0x1
+
+    sparse-switch p2, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lnib;
+    move v2, v0
 
-    iget-object p0, p0, Lnib;->a:Lcp;
+    goto :goto_0
 
-    iget-object p1, p1, Lnib;->a:Lcp;
+    :sswitch_1
+    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    return v0
-.end method
+    move v2, v1
 
-.method public final hashCode()I
-    .locals 0
+    goto :goto_0
 
-    iget-object p0, p0, Lnib;->a:Lcp;
+    :sswitch_2
+    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
 
-    if-nez p0, :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 p0, 0x0
+    move-result p1
 
-    return p0
+    if-nez p1, :cond_3
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    goto :goto_0
 
-    move-result p0
+    :cond_3
+    const/4 v2, 0x0
 
-    return p0
-.end method
+    :goto_0
+    iget-object p1, p0, Lnib;->b:Lrib;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    packed-switch v2, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const-string v1, "ShortLinkPayload(state="
+    :pswitch_0
+    invoke-virtual {p1, v0}, Lrib;->b(I)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
 
-    iget-object p0, p0, Lnib;->a:Lcp;
+    :pswitch_1
+    const/4 p2, 0x3
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Lrib;->b(I)V
 
-    const-string p0, ")"
+    return-void
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_2
+    invoke-virtual {p1, v1}, Lrib;->b(I)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_4
+    :goto_1
+    return-void
 
-    move-result-object p0
+    nop
 
-    return-object p0
+    :sswitch_data_0
+    .sparse-switch
+        -0x610323f9 -> :sswitch_2
+        -0x6101a72b -> :sswitch_1
+        0x4099ef63 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

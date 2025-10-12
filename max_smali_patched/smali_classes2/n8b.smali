@@ -1,93 +1,74 @@
-.class public final Ln8b;
-.super Landroid/view/View$BaseSavedState;
+.class public final enum Ln8b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Li8b;
 
 
 # static fields
-.field public static final CREATOR:Lm8b;
+.field public static final enum a:Ln8b;
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Z
+.field public static final synthetic b:[Ln8b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Lm8b;
+    new-instance v0, Ln8b;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "TIMEOUT"
 
-    sput-object v0, Ln8b;->CREATOR:Lm8b;
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+    sput-object v0, Ln8b;->a:Ln8b;
 
-    .line 4
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+    filled-new-array {v0}, [Ln8b;
 
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result-object v0
 
-    move-result v0
-
-    iput v0, p0, Ln8b;->a:I
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Ln8b;->b:Z
+    sput-object v0, Ln8b;->b:[Ln8b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcelable;IZ)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Ln8b;
+    .locals 1
 
-    .line 1
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
+    const-class v0, Ln8b;
 
-    .line 2
-    iput p2, p0, Ln8b;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 3
-    iput-boolean p3, p0, Ln8b;->b:Z
+    move-result-object p0
 
-    return-void
+    check-cast p0, Ln8b;
+
+    return-object p0
+.end method
+
+.method public static values()[Ln8b;
+    .locals 1
+
+    sget-object v0, Ln8b;->b:[Ln8b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ln8b;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    const/4 v0, 0x0
 
-    iget p2, p0, Ln8b;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p0, p0, Ln8b;->b:Z
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
-
-    return-void
+    return v0
 .end method

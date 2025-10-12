@@ -1,82 +1,56 @@
 .class public final Lq1b;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lr6c;
+
+
+# static fields
+.field public static final c:Lwu9;
+
+.field public static final d:Lyf3;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Lwu9;
 
-.field public final synthetic Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public volatile b:Lr6c;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lq1b;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+    new-instance v0, Lwu9;
 
-    const/4 p1, 0x2
+    const/16 v1, 0x13
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lwu9;-><init>(I)V
+
+    sput-object v0, Lq1b;->c:Lwu9;
+
+    new-instance v0, Lyf3;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lyf3;-><init>(I)V
+
+    sput-object v0, Lq1b;->d:Lyf3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lq1b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lq1b;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lq1b;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lq1b;
+    iget-object v0, p0, Lq1b;->b:Lr6c;
 
-    iget-object p0, p0, Lq1b;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+    invoke-interface {v0}, Lr6c;->get()Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p2}, Lq1b;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lq1b;->X:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq1b;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Lq1b;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    iget-object p0, p0, Lone/me/chats/picker/members/PickerMembersListWidget;->n0:Luza;
-
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

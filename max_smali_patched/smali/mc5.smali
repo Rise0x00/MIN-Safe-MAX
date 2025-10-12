@@ -1,45 +1,63 @@
 .class public final Lmc5;
-.super Lfa4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lmc5;
-
-.field public static final c:Laa4;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lmc5;
+    iput-object p1, p0, Lmc5;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lmc5;->b:Lmc5;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public static a(J)Ljava/lang/String;
+    .locals 2
 
-    new-array v2, v1, [Ljava/lang/String;
+    const-wide v0, 0x7fffffffffffffffL
 
-    const-string v1, "params"
+    cmp-long v0, p0, v0
 
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    if-nez v0, :cond_0
 
-    move-result-object v3
+    const-string p0, "Long.MAX_VALUE"
 
-    const/16 v5, 0xc
+    return-object p0
 
-    const/4 v4, 0x0
+    :cond_0
+    const-wide/high16 v0, -0x8000000000000000L
 
-    const-string v1, ":external_callback"
+    cmp-long v0, p0, v0
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    if-nez v0, :cond_1
 
-    move-result-object v0
+    const-string p0, "Long.MIN_VALUE"
 
-    sput-object v0, Lmc5;->c:Laa4;
+    return-object p0
+
+    :cond_1
+    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public b(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lmc5;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

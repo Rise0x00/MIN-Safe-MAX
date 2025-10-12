@@ -1,45 +1,51 @@
 .class public final Lhve;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyr7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lth7;
+.field public final synthetic Y:Llve;
+
+.field public Z:I
+
+.field public o:Llve;
 
 
 # direct methods
-.method public constructor <init>(Ls4;)V
-    .locals 3
+.method public constructor <init>(Llve;Lnz3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhve;->Y:Llve;
 
-    new-instance v0, Lyr7;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    const-class v1, Lhoe;
+    return-void
+.end method
 
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
 
-    move-result-object v1
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-class v2, Llh5;
+    iput-object p1, p0, Lhve;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    iget p1, p0, Lhve;->Z:I
 
-    move-result-object v2
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, v1, v2}, Lyr7;-><init>(Lth7;Lth7;)V
+    or-int/2addr p1, v0
 
-    iput-object v0, p0, Lhve;->a:Lyr7;
+    iput p1, p0, Lhve;->Z:I
 
-    const-class v0, Landroid/content/Context;
+    iget-object p1, p0, Lhve;->Y:Llve;
 
-    invoke-virtual {p1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Llve;->q(Llve;Ljava/util/List;Lgue;Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lhve;->b:Lth7;
-
-    return-void
+    return-object p1
 .end method

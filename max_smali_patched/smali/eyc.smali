@@ -1,21 +1,14 @@
-.class public abstract Leyc;
+.class public interface abstract Leyc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lre3;
+# virtual methods
+.method public abstract a()I
+.end method
 
+.method public abstract b(Ldyc;)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lre3;
-
-    invoke-direct {v0}, Lre3;-><init>()V
-
-    sput-object v0, Leyc;->a:Lre3;
-
-    return-void
+.method public abstract c()V
 .end method

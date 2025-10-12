@@ -1,45 +1,45 @@
-.class public final Lira;
+.class public final synthetic Lira;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/InputFilter;
+
 
 # instance fields
-.field public final a:Lxoe;
-
-.field public final b:Z
-
-.field public final c:Laoe;
-
-.field public volatile d:J
+.field public final synthetic a:Llra;
 
 
 # direct methods
-.method public constructor <init>(Lxoe;ZLaoe;)V
+.method public synthetic constructor <init>(Llra;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lira;->a:Lxoe;
-
-    iput-boolean p2, p0, Lira;->b:Z
-
-    iput-object p3, p0, Lira;->c:Laoe;
-
-    sget p1, Lqf7;->a:I
-
-    sget p1, Liw4;->o:I
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p1
-
-    sget-object p3, Lnw4;->c:Lnw4;
-
-    invoke-static {p1, p2, p3}, Lj5e;->D(JLnw4;)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lira;->d:J
+    iput-object p1, p0, Lira;->a:Llra;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
+
+    iget-object p2, p0, Lira;->a:Llra;
+
+    iget-object p2, p2, Llra;->o:Layc;
+
+    invoke-virtual {p2, p1}, Layc;->a(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    const-string p1, ""
+
+    return-object p1
 .end method

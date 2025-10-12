@@ -11,19 +11,19 @@
     d2 = {
         "Lscout/Component;",
         "",
-        "Lnyc;",
+        "Lcfd;",
         "scope",
         "<init>",
-        "(Lnyc;)V",
+        "(Lcfd;)V",
         "T",
         "get",
         "()Ljava/lang/Object;",
-        "Lth7;",
+        "Lbp7;",
         "getLazy",
-        "()Lth7;",
-        "Lsrb;",
+        "()Lbp7;",
+        "Lq6c;",
         "getProvider",
-        "()Lsrb;",
+        "()Lq6c;",
         "opt",
         "optLazy",
         "optProvider",
@@ -33,9 +33,9 @@
         "collect",
         "(Z)Ljava/util/List;",
         "collectLazy",
-        "(Z)Lth7;",
+        "(Z)Lbp7;",
         "collectProvider",
-        "(Z)Lsrb;",
+        "(Z)Lq6c;",
         "K",
         "V",
         "",
@@ -43,14 +43,14 @@
         "(Z)Ljava/util/Map;",
         "associateLazy",
         "associateProvider",
-        "Lnyc;",
+        "Lcfd;",
         "getScope",
-        "()Lnyc;",
-        "Ls4;",
+        "()Lcfd;",
+        "La5;",
         "accessor",
-        "Ls4;",
+        "La5;",
         "getAccessor",
-        "()Ls4;",
+        "()La5;",
         "getAccessor$annotations",
         "()V",
         "core"
@@ -66,22 +66,22 @@
 
 
 # instance fields
-.field private final accessor:Ls4;
+.field private final accessor:La5;
 
-.field private final scope:Lnyc;
+.field private final scope:Lcfd;
 
 
 # direct methods
-.method public constructor <init>(Lnyc;)V
+.method public constructor <init>(Lcfd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lscout/Component;->scope:Lnyc;
+    iput-object p1, p0, Lscout/Component;->scope:Lcfd;
 
-    iget-object p1, p1, Lnyc;->g:Ls4;
+    iget-object p1, p1, Lcfd;->g:La5;
 
-    iput-object p1, p0, Lscout/Component;->accessor:Ls4;
+    iput-object p1, p0, Lscout/Component;->accessor:La5;
 
     return-void
 .end method
@@ -91,9 +91,9 @@
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -109,14 +109,14 @@
     throw p0
 .end method
 
-.method public static associateLazy$default(Lscout/Component;ZILjava/lang/Object;)Lth7;
+.method public static associateLazy$default(Lscout/Component;ZILjava/lang/Object;)Lbp7;
     .locals 0
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -132,14 +132,14 @@
     throw p0
 .end method
 
-.method public static associateProvider$default(Lscout/Component;ZILjava/lang/Object;)Lsrb;
+.method public static associateProvider$default(Lscout/Component;ZILjava/lang/Object;)Lq6c;
     .locals 0
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -160,9 +160,9 @@
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -178,14 +178,14 @@
     throw p0
 .end method
 
-.method public static collectLazy$default(Lscout/Component;ZILjava/lang/Object;)Lth7;
+.method public static collectLazy$default(Lscout/Component;ZILjava/lang/Object;)Lbp7;
     .locals 0
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -201,14 +201,14 @@
     throw p0
 .end method
 
-.method public static collectProvider$default(Lscout/Component;ZILjava/lang/Object;)Lsrb;
+.method public static collectProvider$default(Lscout/Component;ZILjava/lang/Object;)Lq6c;
     .locals 0
 
     if-nez p3, :cond_0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
     const/4 p0, 0x0
 
@@ -246,16 +246,16 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final associateLazy(Z)Lth7;
+.method public final associateLazy(Z)Lbp7;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -264,20 +264,20 @@
             "V:",
             "Ljava/lang/Object;",
             ">(Z)",
-            "Lth7;"
+            "Lbp7;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final associateProvider(Z)Lsrb;
+.method public final associateProvider(Z)Lq6c;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -286,17 +286,17 @@
             "V:",
             "Ljava/lang/Object;",
             ">(Z)",
-            "Lsrb;"
+            "Lq6c;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public final collect(Z)Ljava/util/List;
@@ -311,57 +311,57 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final collectLazy(Z)Lth7;
+.method public final collectLazy(Z)Lbp7;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(Z)",
-            "Lth7;"
+            "Lbp7;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
-.method public final collectProvider(Z)Lsrb;
+.method public final collectProvider(Z)Lq6c;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(Z)",
-            "Lsrb;"
+            "Lq6c;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 .end method
 
 .method public final get()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -370,73 +370,73 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
-.method public final getAccessor()Ls4;
-    .locals 0
+.method public final getAccessor()La5;
+    .locals 1
 
-    iget-object p0, p0, Lscout/Component;->accessor:Ls4;
+    iget-object v0, p0, Lscout/Component;->accessor:La5;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getLazy()Lth7;
-    .locals 0
+.method public final getLazy()Lbp7;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lth7;"
+            "Lbp7;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
-.method public final getProvider()Lsrb;
-    .locals 0
+.method public final getProvider()Lq6c;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lsrb;"
+            "Lq6c;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
-.method public final getScope()Lnyc;
-    .locals 0
+.method public final getScope()Lcfd;
+    .locals 1
 
-    iget-object p0, p0, Lscout/Component;->scope:Lnyc;
+    iget-object v0, p0, Lscout/Component;->scope:Lcfd;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final opt()Ljava/lang/Object;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -445,51 +445,51 @@
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
-.method public final optLazy()Lth7;
-    .locals 0
+.method public final optLazy()Lbp7;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lth7;"
+            "Lbp7;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method
 
-.method public final optProvider()Lsrb;
-    .locals 0
+.method public final optProvider()Lq6c;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lsrb;"
+            "Lq6c;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {}, Lg67;->w()V
+    invoke-static {}, Lsx9;->z()V
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    throw p0
+    throw v0
 .end method

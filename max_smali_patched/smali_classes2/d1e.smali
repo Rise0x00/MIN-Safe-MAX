@@ -1,47 +1,169 @@
-.class public abstract Ld1e;
-.super Lh1e;
+.class public final Ld1e;
+.super Lg1e;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ld1e;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final h:Ljava/math/BigInteger;
+.field public final a:Z
 
-.field public final i:Ljava/math/BigInteger;
-
-.field public final j:Ljava/math/BigInteger;
-
-.field public final k:J
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;Llwg;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v2, 0x1
+    new-instance v0, Ltdd;
 
-    move-object v0, p0
+    const/16 v1, 0x8
 
-    move v1, p1
+    invoke-direct {v0, v1}, Ltdd;-><init>(I)V
 
-    move-wide v3, p2
+    sput-object v0, Ld1e;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    move-object v5, p4
+    return-void
+.end method
 
-    move-object/from16 v6, p10
+.method public constructor <init>(ZZ)V
+    .locals 0
 
-    move-object/from16 v7, p11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct/range {v0 .. v7}, Lh1e;-><init>(IIJLjava/lang/String;Ljava/lang/String;Llwg;)V
+    iput-boolean p1, p0, Ld1e;->a:Z
 
-    iput-object p5, p0, Ld1e;->h:Ljava/math/BigInteger;
+    iput-boolean p2, p0, Ld1e;->b:Z
 
-    iput-object p6, p0, Ld1e;->i:Ljava/math/BigInteger;
+    return-void
+.end method
 
-    iput-object p7, p0, Ld1e;->j:Ljava/math/BigInteger;
 
-    move-wide/from16 p1, p8
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    iput-wide p1, p0, Ld1e;->k:J
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld1e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ld1e;
+
+    iget-boolean v1, p0, Ld1e;->a:Z
+
+    iget-boolean v3, p1, Ld1e;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Ld1e;->b:Z
+
+    iget-boolean p1, p1, Ld1e;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Ld1e;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Ld1e;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Radio(isChecked="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Ld1e;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ld1e;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-boolean p2, p0, Ld1e;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ld1e;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

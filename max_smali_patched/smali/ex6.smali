@@ -1,155 +1,229 @@
-.class public final synthetic Lex6;
-.super Ljava/lang/Object;
+.class public final Lex6;
+.super Lox6;
 .source "SourceFile"
-
-# interfaces
-.implements Lg46;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final d:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:J
+
+.field public final i:Z
+
+.field public final j:I
+
+.field public final k:J
+
+.field public final l:I
+
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:Z
+
+.field public final p:Z
+
+.field public final q:Lsy4;
+
+.field public final r:Le77;
+
+.field public final s:Le77;
+
+.field public final t:Li77;
+
+.field public final u:J
+
+.field public final v:Lcx6;
+
+.field public final w:Le77;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLsy4;Ljava/util/List;Ljava/util/List;Lcx6;Ljava/util/Map;Ljava/util/List;)V
+    .locals 4
 
-    .line 1
-    iput p1, p0, Lex6;->a:I
+    move/from16 v0, p18
 
-    iput-object p2, p0, Lex6;->b:Ljava/lang/Object;
+    invoke-direct {p0, p2, p3, v0}, Lox6;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lex6;->d:I
 
-    return-void
-.end method
+    iput-wide p7, p0, Lex6;->h:J
 
-.method public synthetic constructor <init>(Lwy6;Lwy6;)V
-    .locals 0
+    iput-boolean p6, p0, Lex6;->g:Z
 
-    .line 2
+    iput-boolean p9, p0, Lex6;->i:Z
+
+    iput p10, p0, Lex6;->j:I
+
+    move-wide p1, p11
+
+    iput-wide p1, p0, Lex6;->k:J
+
+    move/from16 p1, p13
+
+    iput p1, p0, Lex6;->l:I
+
+    move-wide/from16 p1, p14
+
+    iput-wide p1, p0, Lex6;->m:J
+
+    move-wide/from16 p1, p16
+
+    iput-wide p1, p0, Lex6;->n:J
+
+    move/from16 p1, p19
+
+    iput-boolean p1, p0, Lex6;->o:Z
+
+    move/from16 p1, p20
+
+    iput-boolean p1, p0, Lex6;->p:Z
+
+    move-object/from16 p1, p21
+
+    iput-object p1, p0, Lex6;->q:Lsy4;
+
+    invoke-static/range {p22 .. p22}, Le77;->j(Ljava/util/Collection;)Le77;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lex6;->r:Le77;
+
+    invoke-static/range {p23 .. p23}, Le77;->j(Ljava/util/Collection;)Le77;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lex6;->s:Le77;
+
+    invoke-static/range {p25 .. p25}, Li77;->a(Ljava/util/Map;)Li77;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lex6;->t:Li77;
+
+    invoke-static/range {p26 .. p26}, Le77;->j(Ljava/util/Collection;)Le77;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lex6;->w:Le77;
+
+    invoke-interface/range {p23 .. p23}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    const-wide/16 p2, 0x0
+
+    if-nez p1, :cond_0
+
+    invoke-static/range {p23 .. p23}, Ls4d;->s(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvw6;
+
+    iget-wide v0, p1, Lbx6;->X:J
+
+    iget-wide v2, p1, Lbx6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lex6;->u:J
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface/range {p22 .. p22}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-static/range {p22 .. p22}, Ls4d;->s(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzw6;
+
+    iget-wide v0, p1, Lbx6;->X:J
+
+    iget-wide v2, p1, Lbx6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lex6;->u:J
+
+    goto :goto_0
+
+    :cond_1
+    iput-wide p2, p0, Lex6;->u:J
+
+    :goto_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, p4, v0
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_3
+
+    iget-wide v0, p0, Lex6;->u:J
+
+    invoke-static {v0, v1, p4, p5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    goto :goto_1
+
+    :cond_3
+    iget-wide v0, p0, Lex6;->u:J
+
+    add-long/2addr v0, p4
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :goto_1
+    iput-wide v0, p0, Lex6;->e:J
+
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_4
+
     const/4 p1, 0x1
 
-    iput p1, p0, Lex6;->a:I
+    goto :goto_2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_4
+    const/4 p1, 0x0
 
-    iput-object p2, p0, Lex6;->b:Ljava/lang/Object;
+    :goto_2
+    iput-boolean p1, p0, Lex6;->f:Z
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Lex6;->v:Lcx6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lh46;)V
-    .locals 3
+.method public final a(Ljava/util/List;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lex6;->a:I
-
-    iget-object p0, p0, Lex6;->b:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p0, Ly98;
-
-    iget-object v0, p0, Ly98;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget v1, p0, Ly98;->b:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Ly98;->b:I
-
-    iget-boolean v2, p0, Ly98;->c:Z
-
-    if-eqz v2, :cond_0
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Ly98;->close()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object p0, p0, Ly98;->Y:Ljava/lang/Object;
-
-    check-cast p0, Lg46;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p1}, Lg46;->a(Lh46;)V
-
-    :cond_1
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :pswitch_0
-    check-cast p0, Lwy6;
-
-    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
-
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-
-    :cond_2
-    return-void
-
-    :pswitch_1
-    check-cast p0, Lfx6;
-
-    iget-object p0, p0, Lfx6;->X:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgx6;
-
-    if-eqz p0, :cond_3
-
-    iget-object p1, p0, Lgx6;->t0:Ljava/util/concurrent/Executor;
-
-    new-instance v0, Lc56;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p0}, Lc56;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -3,33 +3,33 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfve;
+.implements Lrff;
 
 
 # static fields
-.field public static final synthetic L0:I
+.field public static final synthetic U0:I
 
 
 # instance fields
-.field public final B0:Landroid/widget/TextView;
+.field public final K0:Landroid/widget/TextView;
 
-.field public final C0:Landroid/widget/TextView;
+.field public final L0:Landroid/widget/TextView;
 
-.field public final D0:Landroid/widget/TextView;
+.field public final M0:Landroid/widget/TextView;
 
-.field public final E0:Landroid/widget/ImageView;
+.field public final N0:Landroid/widget/ImageView;
 
-.field public final F0:Landroid/view/View;
+.field public final O0:Landroid/view/View;
 
-.field public final G0:Landroid/view/View;
+.field public final P0:Landroid/view/View;
 
-.field public final H0:Landroid/view/View;
+.field public final Q0:Landroid/view/View;
 
-.field public final I0:Landroid/view/View;
+.field public final R0:Landroid/view/View;
 
-.field public final J0:Landroid/widget/ImageView;
+.field public final S0:Landroid/widget/ImageView;
 
-.field public final K0:Landroid/view/View;
+.field public final T0:Landroid/view/View;
 
 
 # direct methods
@@ -40,19 +40,19 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {p0}, Lcr0;->a(Landroid/view/View;)V
+    invoke-static {p0}, Lvu0;->c(Landroid/view/View;)V
 
-    invoke-static {p0}, Lcr0;->u(Landroid/view/View;)Z
+    invoke-static {p0}, Lvu0;->q(Landroid/view/View;)Z
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lpl;->b()Lke3;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object p1
 
-    check-cast p1, Loaa;
+    check-cast p1, Lyka;
 
-    invoke-virtual {p1}, Loaa;->c()Lng;
+    invoke-virtual {p1}, Lyka;->c()Log;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -62,13 +62,13 @@
 
     move-result-object p1
 
-    sget p2, Ld2c;->view_audio_record:I
+    sget p2, Lghc;->view_audio_record:I
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, p2, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget p1, Ld1c;->view_audio_record__tv_duration:I
+    sget p1, Ljgc;->view_audio_record__tv_duration:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -76,9 +76,9 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->B0:Landroid/widget/TextView;
+    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->K0:Landroid/widget/TextView;
 
-    sget p1, Ld1c;->view_audio_record__tv_swipe_cancel:I
+    sget p1, Ljgc;->view_audio_record__tv_swipe_cancel:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -86,9 +86,9 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->C0:Landroid/widget/TextView;
+    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->L0:Landroid/widget/TextView;
 
-    sget p1, Ld1c;->frg_chat__iv_icon:I
+    sget p1, Ljgc;->frg_chat__iv_icon:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -96,9 +96,9 @@
 
     check-cast p1, Landroid/widget/ImageView;
 
-    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->E0:Landroid/widget/ImageView;
+    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->N0:Landroid/widget/ImageView;
 
-    sget p1, Ld1c;->view_audio_record__tv_click_cancel:I
+    sget p1, Ljgc;->view_audio_record__tv_click_cancel:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,41 +106,41 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->D0:Landroid/widget/TextView;
+    iput-object p1, p0, Lru/ok/messages/media/audio/AudioRecordView;->M0:Landroid/widget/TextView;
 
-    sget p2, Ld1c;->view_audio_record__duration_panel:I
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lru/ok/messages/media/audio/AudioRecordView;->F0:Landroid/view/View;
-
-    sget p2, Ld1c;->view_audio_record__static_circle:I
+    sget p2, Ljgc;->view_audio_record__duration_panel:I
 
     invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
-    iput-object p2, p0, Lru/ok/messages/media/audio/AudioRecordView;->G0:Landroid/view/View;
+    iput-object p2, p0, Lru/ok/messages/media/audio/AudioRecordView;->O0:Landroid/view/View;
 
-    sget v1, Ld1c;->view_audio_record__audio_circle:I
+    sget p2, Ljgc;->view_audio_record__static_circle:I
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lru/ok/messages/media/audio/AudioRecordView;->P0:Landroid/view/View;
+
+    sget v1, Ljgc;->view_audio_record__audio_circle:I
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->H0:Landroid/view/View;
+    iput-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->Q0:Landroid/view/View;
 
-    sget v1, Ld1c;->view_audio_record__slide_panel:I
+    sget v1, Ljgc;->view_audio_record__slide_panel:I
 
     invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->I0:Landroid/view/View;
+    iput-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->R0:Landroid/view/View;
 
-    sget v2, Ld1c;->view_audio_record__im_arrow:I
+    sget v2, Ljgc;->view_audio_record__im_arrow:I
 
     invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    iput-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->J0:Landroid/widget/ImageView;
+    iput-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->S0:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -159,53 +159,53 @@
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
     :cond_0
-    sget v0, Ld1c;->view_audio_record__root_panel:I
+    sget v0, Ljgc;->view_audio_record__root_panel:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/messages/media/audio/AudioRecordView;->K0:Landroid/view/View;
+    iput-object v0, p0, Lru/ok/messages/media/audio/AudioRecordView;->T0:Landroid/view/View;
 
-    new-instance v0, Lb5;
+    new-instance v0, Lj5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v2, p0}, Lb5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, p0}, Lj5;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v1, v0}, Lve2;->k(Landroid/view/View;Lz5;)Lfh7;
+    invoke-static {v1, v0}, Lk74;->i(Landroid/view/View;Le6;)Lno7;
 
-    new-instance v0, Lb5;
+    new-instance v0, Lj5;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lb5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lj5;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p2, v0}, Lve2;->k(Landroid/view/View;Lz5;)Lfh7;
+    invoke-static {p2, v0}, Lk74;->i(Landroid/view/View;Le6;)Lno7;
 
-    new-instance p2, Lb5;
+    new-instance p2, Lj5;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, v0, p0}, Lb5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lj5;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, p2}, Lve2;->k(Landroid/view/View;Lz5;)Lfh7;
+    invoke-static {p1, p2}, Lk74;->i(Landroid/view/View;Le6;)Lno7;
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    sget-object p1, Lbx4;->y0:Lsed;
 
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
+    invoke-virtual {p1, p0}, Lsed;->l(Landroid/view/View;)Luxa;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/audio/AudioRecordView;->onThemeChanged(Lnma;)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/audio/AudioRecordView;->onThemeChanged(Luxa;)V
 
     return-void
 .end method
 
 .method private getStaticCircleSize()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lru/ok/messages/media/audio/AudioRecordView;->G0:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/messages/media/audio/AudioRecordView;->P0:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -215,15 +215,13 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p0
+    move-result-object v0
 
-    sget v0, Liwb;->audio_record_static_circle_size:I
+    sget v1, Lmbc;->audio_record_static_circle_size:I
 
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result p0
-
-    return p0
+    move-result v0
 
     :cond_0
     return v0
@@ -231,54 +229,54 @@
 
 
 # virtual methods
-.method public final onThemeChanged(Lnma;)V
+.method public final onThemeChanged(Luxa;)V
     .locals 4
 
-    sget-object v0, Lzs4;->p0:Lqs9;
+    sget-object v0, Lbx4;->y0:Lsed;
 
-    invoke-virtual {v0, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lnma;->a()Lts2;
+    invoke-virtual {v0, p0}, Lsed;->l(Landroid/view/View;)Luxa;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lts2;->i()Lzmg;
+    invoke-interface {v0}, Luxa;->a()Liu2;
 
     move-result-object v0
 
-    sget-object v1, Lxbf;->a:Leue;
+    invoke-interface {v0}, Liu2;->k()Lcbh;
 
-    sget-object v1, Lxbf;->m:Leue;
+    move-result-object v0
 
-    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->B0:Landroid/widget/TextView;
+    sget-object v1, Lrxf;->a:Lpef;
 
-    invoke-static {v1, v2}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    sget-object v1, Lrxf;->n:Lpef;
 
-    invoke-interface {p1}, Lnma;->getText()Lqse;
+    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->K0:Landroid/widget/TextView;
+
+    invoke-static {v1, v2}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
+
+    invoke-interface {p1}, Luxa;->getText()Lbdf;
 
     move-result-object v1
 
-    iget v1, v1, Lqse;->e:I
+    iget v1, v1, Lbdf;->e:I
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-interface {p1}, Lnma;->getIcon()Lmv6;
+    invoke-interface {p1}, Luxa;->getIcon()Lk27;
 
     move-result-object v1
 
-    iget v1, v1, Lmv6;->b:I
+    iget v1, v1, Lk27;->b:I
 
-    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->E0:Landroid/widget/ImageView;
+    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->N0:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    invoke-interface {p1}, Lnma;->f()Lv3;
+    invoke-interface {p1}, Luxa;->e()La4;
 
     move-result-object v1
 
-    iget v1, v1, Lv3;->c:I
+    iget v1, v1, La4;->c:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -286,25 +284,25 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2, v2}, Ly84;->E(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v1, v2, v2}, Lnu3;->s(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v1
 
-    iget-object v3, p0, Lru/ok/messages/media/audio/AudioRecordView;->G0:Landroid/view/View;
+    iget-object v3, p0, Lru/ok/messages/media/audio/AudioRecordView;->P0:Landroid/view/View;
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-interface {p1}, Lnma;->f()Lv3;
+    invoke-interface {p1}, Luxa;->e()La4;
 
     move-result-object v1
 
-    iget v1, v1, Lv3;->c:I
+    iget v1, v1, La4;->c:I
 
-    sget-object v3, Llqe;->a0:Lkle;
+    sget-object v3, Lvaf;->a0:Ls5f;
 
     const v3, 0x3e4ccccd    # 0.2f
 
-    invoke-static {v1, v3}, Lpo9;->X(IF)I
+    invoke-static {v1, v3}, Lyhh;->R(IF)I
 
     move-result v1
 
@@ -312,66 +310,66 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2, v2}, Ly84;->E(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v1, v2, v2}, Lnu3;->s(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v1
 
-    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->H0:Landroid/view/View;
+    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->Q0:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->J0:Landroid/widget/ImageView;
+    iget-object v1, p0, Lru/ok/messages/media/audio/AudioRecordView;->S0:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-interface {p1}, Lnma;->getText()Lqse;
+    invoke-interface {p1}, Luxa;->getText()Lbdf;
 
     move-result-object v2
 
-    iget v2, v2, Lqse;->g:I
+    iget v2, v2, Lbdf;->g:I
 
-    invoke-static {v1, v2}, Lz8c;->M(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v1, v2}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
 
-    sget-object v1, Lxbf;->q:Leue;
+    sget-object v1, Lrxf;->r:Lpef;
 
-    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->C0:Landroid/widget/TextView;
+    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->L0:Landroid/widget/TextView;
 
-    invoke-static {v1, v2}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    invoke-static {v1, v2}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
 
-    invoke-interface {p1}, Lnma;->getText()Lqse;
+    invoke-interface {p1}, Luxa;->getText()Lbdf;
 
     move-result-object v3
 
-    iget v3, v3, Lqse;->g:I
+    iget v3, v3, Lbdf;->g:I
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->D0:Landroid/widget/TextView;
+    iget-object v2, p0, Lru/ok/messages/media/audio/AudioRecordView;->M0:Landroid/widget/TextView;
 
-    invoke-static {v1, v2}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    invoke-static {v1, v2}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
 
-    invoke-interface {p1}, Lnma;->getText()Lqse;
+    invoke-interface {p1}, Luxa;->getText()Lbdf;
 
     move-result-object p1
 
-    iget p1, p1, Lqse;->b:I
+    iget p1, p1, Lbdf;->b:I
 
     invoke-virtual {v2, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object p1, v0, Lzmg;->a:Lymg;
+    iget-object p1, v0, Lcbh;->a:Lbbh;
 
-    iget p1, p1, Lymg;->d:I
+    iget p1, p1, Lbbh;->d:I
 
-    iget-object p0, p0, Lru/ok/messages/media/audio/AudioRecordView;->K0:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/messages/media/audio/AudioRecordView;->T0:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
     return-void
 .end method
 
-.method public setListener(Ld60;)V
+.method public setListener(Ls50;)V
     .locals 0
 
     return-void

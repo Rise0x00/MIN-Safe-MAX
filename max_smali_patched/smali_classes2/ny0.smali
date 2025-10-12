@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final synthetic a:Lez0;
+.field public final synthetic a:Lfz0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lez0;)V
+.method public synthetic constructor <init>(Lfz0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lny0;->a:Lez0;
+    iput-object p1, p0, Lny0;->a:Lfz0;
 
     return-void
 .end method

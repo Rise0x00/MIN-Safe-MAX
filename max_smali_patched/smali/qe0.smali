@@ -1,405 +1,567 @@
-.class public final Lqe0;
+.class public abstract synthetic Lqe0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljd5;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lfsa;
-
-.field public final c:Lfvd;
-
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public static synthetic a(I)C
+    .locals 1
 
-    iput p1, p0, Lqe0;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-eq p0, v0, :cond_1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    new-instance p1, Lfsa;
+    if-ne p0, v0, :cond_0
 
-    const/4 v0, 0x4
+    const/16 p0, 0x67
 
-    invoke-direct {p1, v0}, Lfsa;-><init>(I)V
+    return p0
 
-    iput-object p1, p0, Lqe0;->b:Lfsa;
+    :cond_0
+    const/4 p0, 0x0
 
-    new-instance p1, Lfvd;
+    throw p0
 
-    const/4 v0, -0x1
+    :cond_1
+    const/16 p0, 0x75
 
-    const-string v1, "image/avif"
+    return p0
+.end method
 
-    invoke-direct {p1, v0, v0, v1}, Lfvd;-><init>(IILjava/lang/String;)V
+.method public static b(IILoef;)I
+    .locals 0
 
-    iput-object p1, p0, Lqe0;->c:Lfvd;
+    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
+
+    move-result p2
+
+    add-int/2addr p2, p0
+
+    mul-int/2addr p2, p1
+
+    return p2
+.end method
+
+.method public static c(ILandroid/os/Bundle;Lhfd;I)Lsl3;
+    .locals 1
+
+    new-instance v0, Ljef;
+
+    invoke-direct {v0, p0}, Ljef;-><init>(I)V
+
+    invoke-static {v0, p1, p2, p3}, Ll74;->a(Loef;Landroid/os/Bundle;Lhfd;I)Lsl3;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static synthetic l(Landroid/media/MediaMetadataRetriever;)V
+    .locals 5
+
+    instance-of v0, p0, Ljava/lang/AutoCloseable;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Ljava/lang/AutoCloseable;
+
+    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
 
     return-void
+
+    :cond_0
+    instance-of v0, p0, Ljava/util/concurrent/ExecutorService;
+
+    if-eqz v0, :cond_5
+
+    check-cast p0, Ljava/util/concurrent/ExecutorService;
+
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+
+    move-result-object v0
+
+    if-ne p0, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    const/4 v1, 0x0
+
+    :cond_2
+    :goto_0
+    if-nez v0, :cond_3
+
+    :try_start_0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0x1
+
+    invoke-interface {p0, v3, v4, v2}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    if-nez v1, :cond_2
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v1, :cond_4
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :cond_5
+    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
+
+    return-void
+.end method
+
+.method public static m(Ljava/lang/String;Ljb5;)V
+    .locals 1
+
+    new-instance v0, Lzc4;
+
+    invoke-direct {v0, p0}, Lzc4;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static n(ZLl8d;ZLjava/lang/String;)V
+    .locals 1
+
+    new-instance v0, Lsde;
+
+    invoke-direct {v0, p0}, Lsde;-><init>(Z)V
+
+    invoke-virtual {p1, v0}, Ll8d;->c(Lg04;)V
+
+    new-instance p0, Lsde;
+
+    invoke-direct {p0, p2}, Lsde;-><init>(Z)V
+
+    invoke-virtual {p1, p0}, Ll8d;->a(Lg04;)V
+
+    invoke-virtual {p1, p3}, Ll8d;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static synthetic o(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "GROUP"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "USER"
+
+    return-object p0
+.end method
+
+.method public static synthetic p(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    throw p0
 
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p0, "CONFIGURED"
 
-    new-instance p1, Lfsa;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Lfsa;-><init>(I)V
-
-    iput-object p1, p0, Lqe0;->b:Lfsa;
-
-    new-instance p1, Lfvd;
-
-    const/4 v0, -0x1
-
-    const-string v1, "image/webp"
-
-    invoke-direct {p1, v0, v0, v1}, Lfvd;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lqe0;->c:Lfvd;
-
-    return-void
+    return-object p0
 
     :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p0, "OPENED"
 
-    new-instance p1, Lfsa;
+    return-object p0
 
-    const/4 v0, 0x4
+    :pswitch_2
+    const-string p0, "OPENING"
 
-    invoke-direct {p1, v0}, Lfsa;-><init>(I)V
+    return-object p0
 
-    iput-object p1, p0, Lqe0;->b:Lfsa;
+    :pswitch_3
+    const-string p0, "REOPENING"
 
-    new-instance p1, Lfvd;
+    return-object p0
 
-    const/4 v0, -0x1
+    :pswitch_4
+    const-string p0, "REOPENING_QUIRK"
 
-    const-string v1, "image/heif"
+    return-object p0
 
-    invoke-direct {p1, v0, v0, v1}, Lfvd;-><init>(IILjava/lang/String;)V
+    :pswitch_5
+    const-string p0, "CLOSING"
 
-    iput-object p1, p0, Lqe0;->c:Lfvd;
+    return-object p0
 
-    return-void
+    :pswitch_6
+    const-string p0, "PENDING_OPEN"
+
+    return-object p0
+
+    :pswitch_7
+    const-string p0, "INITIALIZED"
+
+    return-object p0
+
+    :pswitch_8
+    const-string p0, "RELEASING"
+
+    return-object p0
+
+    :pswitch_9
+    const-string p0, "RELEASED"
+
+    return-object p0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method private final a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c()V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final W(Lnd5;)V
+.method public static synthetic q(I)Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lqe0;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eq p0, v0, :cond_2
 
-    iget-object p0, p0, Lqe0;->c:Lfvd;
+    const/4 v0, 0x2
 
-    invoke-virtual {p0, p1}, Lfvd;->W(Lnd5;)V
+    if-eq p0, v0, :cond_1
 
-    return-void
+    const/4 v0, 0x3
 
-    :pswitch_0
-    iget-object p0, p0, Lqe0;->c:Lfvd;
+    if-eq p0, v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lfvd;->W(Lnd5;)V
+    const-string p0, "null"
 
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1}, Lfvd;->W(Lnd5;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final X(Lld5;Le7;)I
-    .locals 1
-
-    iget v0, p0, Lqe0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2}, Lfvd;->X(Lld5;Le7;)I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2}, Lfvd;->X(Lld5;Le7;)I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2}, Lfvd;->X(Lld5;Le7;)I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(JJ)V
-    .locals 1
-
-    iget v0, p0, Lqe0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lfvd;->d(JJ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lfvd;->d(JJ)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lqe0;->c:Lfvd;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lfvd;->d(JJ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Lld5;)Z
-    .locals 7
-
-    iget v0, p0, Lqe0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lqe0;->b:Lfsa;
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
-
-    iget-object v1, p0, Lfsa;->a:[B
-
-    const/4 v2, 0x0
-
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
-
-    invoke-virtual {p0}, Lfsa;->w()J
-
-    move-result-wide v3
-
-    const-wide/32 v5, 0x52494646
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    invoke-interface {p1, v0}, Lld5;->p(I)V
+    const-string p0, "DROP_LATEST"
 
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
-
-    iget-object v1, p0, Lfsa;->a:[B
-
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
-
-    invoke-virtual {p0}, Lfsa;->w()J
-
-    move-result-wide p0
-
-    const-wide/32 v0, 0x57454250
-
-    cmp-long p0, p0, v0
-
-    if-nez p0, :cond_1
-
-    const/4 v2, 0x1
+    return-object p0
 
     :cond_1
-    :goto_0
-    return v2
+    const-string p0, "DROP_OLDEST"
 
-    :pswitch_0
-    const/4 v0, 0x4
-
-    invoke-interface {p1, v0}, Lld5;->p(I)V
-
-    iget-object p0, p0, Lqe0;->b:Lfsa;
-
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
-
-    iget-object v1, p0, Lfsa;->a:[B
-
-    const/4 v2, 0x0
-
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
-
-    invoke-virtual {p0}, Lfsa;->w()J
-
-    move-result-wide v3
-
-    const v1, 0x66747970
-
-    int-to-long v5, v1
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
-
-    iget-object v1, p0, Lfsa;->a:[B
-
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
-
-    invoke-virtual {p0}, Lfsa;->w()J
-
-    move-result-wide p0
-
-    const v0, 0x68656963
-
-    int-to-long v0, v0
-
-    cmp-long p0, p0, v0
-
-    if-nez p0, :cond_2
-
-    const/4 v2, 0x1
+    return-object p0
 
     :cond_2
-    return v2
+    const-string p0, "SUSPEND"
+
+    return-object p0
+.end method
+
+.method public static synthetic r(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "VIDEO"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "AUDIO"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+.end method
+
+.method public static synthetic s(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "CONFIGURED"
+
+    return-object p0
 
     :pswitch_1
-    const/4 v0, 0x4
+    const-string p0, "OPENED"
 
-    invoke-interface {p1, v0}, Lld5;->p(I)V
+    return-object p0
 
-    iget-object p0, p0, Lqe0;->b:Lfsa;
+    :pswitch_2
+    const-string p0, "OPENING"
 
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
+    return-object p0
 
-    iget-object v1, p0, Lfsa;->a:[B
+    :pswitch_3
+    const-string p0, "REOPENING"
 
-    const/4 v2, 0x0
+    return-object p0
 
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
+    :pswitch_4
+    const-string p0, "REOPENING_QUIRK"
 
-    invoke-virtual {p0}, Lfsa;->w()J
+    return-object p0
 
-    move-result-wide v3
+    :pswitch_5
+    const-string p0, "CLOSING"
 
-    const v1, 0x66747970
+    return-object p0
 
-    int-to-long v5, v1
+    :pswitch_6
+    const-string p0, "PENDING_OPEN"
 
-    cmp-long v1, v3, v5
+    return-object p0
 
-    if-nez v1, :cond_3
+    :pswitch_7
+    const-string p0, "INITIALIZED"
 
-    invoke-virtual {p0, v0}, Lfsa;->D(I)V
+    return-object p0
 
-    iget-object v1, p0, Lfsa;->a:[B
+    :pswitch_8
+    const-string p0, "RELEASING"
 
-    invoke-interface {p1, v2, v1, v0}, Lld5;->i(I[BI)V
+    return-object p0
 
-    invoke-virtual {p0}, Lfsa;->w()J
+    :pswitch_9
+    const-string p0, "RELEASED"
 
-    move-result-wide p0
-
-    const v0, 0x61766966
-
-    int-to-long v0, v0
-
-    cmp-long p0, p0, v0
-
-    if-nez p0, :cond_3
-
-    const/4 v2, 0x1
-
-    :cond_3
-    return v2
-
-    nop
+    return-object p0
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x1
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 0
-
-    iget p0, p0, Lqe0;->a:I
-
-    return-void
 .end method

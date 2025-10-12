@@ -1,27 +1,21 @@
 .class public final Lqq6;
-.super Ljava/lang/Object;
+.super Lsq6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/net/Uri;
-
-.field public final b:Lp26;
-
-.field public final c:Ljava/lang/String;
-
-
-# direct methods
-.method public constructor <init>(Landroid/net/Uri;Lp26;Ljava/lang/String;)V
+# virtual methods
+.method public final b(II)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    rem-int/2addr p1, p2
 
-    iput-object p1, p0, Lqq6;->a:Landroid/net/Uri;
+    return p1
+.end method
 
-    iput-object p2, p0, Lqq6;->b:Lp26;
+.method public final c(I)I
+    .locals 0
 
-    iput-object p3, p0, Lqq6;->c:Ljava/lang/String;
+    const/4 p1, 0x1
 
-    return-void
+    return p1
 .end method

@@ -1,70 +1,48 @@
-.class public final synthetic Luve;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lz5;
+.class public final Luve;
+.super Lnz3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Li13;
+.field public final synthetic Y:Ldoa;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li13;I)V
+.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Luve;->a:I
+    iput-object p1, p0, Luve;->Y:Ldoa;
 
-    iput-object p1, p0, Luve;->b:Li13;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Luve;->a:I
+    iput-object p1, p0, Luve;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Luve;->X:I
 
-    iget-object p0, p0, Luve;->b:Li13;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Ldgd;->I0:Lru/ok/messages/settings/FrgBaseSettings;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Ldgd;->H0:Lagd;
+    iput p1, p0, Luve;->X:I
 
-    iget p0, p0, Lagd;->a:I
+    iget-object p1, p0, Luve;->Y:Ldoa;
 
-    invoke-virtual {v0, p0}, Lru/ok/messages/settings/FrgBaseSettings;->h1(I)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p0, p0, Luve;->b:Li13;
+    move-result-object p1
 
-    iget-object v0, p0, Ldgd;->I0:Lru/ok/messages/settings/FrgBaseSettings;
-
-    iget-object p0, p0, Ldgd;->H0:Lagd;
-
-    iget v1, p0, Lagd;->a:I
-
-    iget-object p0, p0, Lagd;->X:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1, p0}, Lru/ok/messages/settings/FrgBaseSettings;->i1(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

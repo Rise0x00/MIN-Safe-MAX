@@ -1,4 +1,4 @@
-.class public final synthetic Lyog;
+.class public final Lyog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,20 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lnd;
-
-.field public final synthetic c:Lyrc;
+.field public final synthetic b:Lzog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnd;Lyrc;I)V
+.method public synthetic constructor <init>(Lzog;I)V
     .locals 0
 
-    iput p3, p0, Lyog;->a:I
+    iput p2, p0, Lyog;->a:I
 
-    iput-object p1, p0, Lyog;->b:Lnd;
-
-    iput-object p2, p0, Lyog;->c:Lyrc;
+    iput-object p1, p0, Lyog;->b:Lzog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,210 +34,241 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyog;->c:Lyrc;
+    iget-object v0, p0, Lyog;->b:Lzog;
 
-    iget-object p0, p0, Lyog;->b:Lnd;
+    iget-object v0, v0, Lzog;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lnd;->b:Ljava/lang/Object;
+    monitor-enter v0
 
-    check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    :try_start_0
+    iget-object v1, p0, Lyog;->b:Lzog;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, v1, Lzog;->q:La4d;
 
-    move-result-object v1
+    const-string v2, "transport.DISCONNECT"
+
+    invoke-virtual {v1, v2}, La4d;->l(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyog;->b:Lzog;
+
+    iget-object v1, v1, Lzog;->c:Lirc;
+
+    if-eqz v1, :cond_0
+
+    const-string v2, "dispose"
+
+    const/16 v3, 0x3e9
+
+    invoke-virtual {v1, v3, v2}, Lirc;->b(ILjava/lang/String;)Z
+
+    iget-object v1, p0, Lyog;->b:Lzog;
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Lzog;->c:Lirc;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
 
     :cond_0
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    monitor-exit v0
 
-    move-result v2
+    return-void
 
-    if-eqz v2, :cond_1
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    throw v1
 
-    move-result-object v2
+    :pswitch_0
+    invoke-static {}, Landroid/os/Process;->myTid()I
 
-    check-cast v2, Lcsc;
+    move-result v0
 
-    :try_start_0
-    iget-object v3, v2, Lcsc;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-static {v0}, Landroid/os/Process;->getThreadPriority(I)I
 
-    invoke-virtual {v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
+
+    const/16 v1, 0xa
+
+    :try_start_1
+    invoke-static {v1}, Landroid/os/Process;->setThreadPriority(I)V
+
+    iget-object v1, p0, Lyog;->b:Lzog;
+
+    iget-object v1, v1, Lzog;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :try_start_2
+    iget-object v2, p0, Lyog;->b:Lzog;
+
+    iget-object v3, v2, Lzog;->c:Lirc;
+
+    if-eqz v3, :cond_2
+
+    iget-object v2, v2, Lzog;->q:La4d;
+
+    iget-object v3, v3, Lirc;->r:Lq1d;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v3}, Lq1d;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/Long;
+    iget-object v4, v2, La4d;->c:Ljava/lang/Object;
 
-    if-eqz v3, :cond_0
+    check-cast v4, Lqmc;
 
-    iget-object v4, v2, Lcsc;->b:Li7c;
+    invoke-interface {v4}, Lqmc;->shouldHideSensitiveInformation()Z
 
-    iget-object v2, v2, Lcsc;->a:Ljava/lang/String;
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v3}, Lvr0;->g(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_1
+    iget-object v2, v2, La4d;->b:Ljava/lang/Object;
+
+    check-cast v2, Lpmc;
+
+    const-string v4, "OKWSSignaling"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string v6, "-> ["
+    const-string v6, "May be ERROR, socket is already with "
 
     invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, "]: "
-
     invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v4, v2, v3}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v2, v4, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    iget-object v3, p0, Lnd;->a:Ljava/lang/Object;
-
-    check-cast v3, Li7c;
-
-    const-string v4, "CallsListeners"
-
-    const-string v5, "rtc.command.handle.listeners.oncommandsent"
-
-    invoke-interface {v3, v4, v5, v2}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lyog;->c:Lyrc;
-
-    iget-object p0, p0, Lyog;->b:Lnd;
-
-    iget-object v1, p0, Lnd;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcsc;
-
-    :try_start_1
-    iget-object v2, v2, Lcsc;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
+    goto :goto_2
 
     :catchall_1
     move-exception v2
 
-    iget-object v3, p0, Lnd;->a:Ljava/lang/Object;
-
-    check-cast v3, Li7c;
-
-    const-string v4, "CallsListeners"
-
-    const-string v5, "rtc.command.handle.listeners.oncommandremove"
-
-    invoke-interface {v3, v4, v5, v2}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
+    goto :goto_3
 
     :cond_2
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lyog;->c:Lyrc;
-
-    iget-object p0, p0, Lyog;->b:Lnd;
-
-    iget-object v1, p0, Lnd;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
     :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v2, p0, Lyog;->b:Lzog;
 
-    move-result v2
+    iget-object v3, v2, Lzog;->q:La4d;
 
-    if-eqz v2, :cond_3
+    iget-object v2, v2, Lzog;->h:Ljava/lang/String;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v4, v3, La4d;->c:Ljava/lang/Object;
+
+    check-cast v4, Lqmc;
+
+    invoke-interface {v4}, Lqmc;->shouldHideSensitiveInformation()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-static {v2}, Lvr0;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lcsc;
+    :cond_3
+    iget-object v3, v3, La4d;->b:Ljava/lang/Object;
 
-    :try_start_2
-    iget-object v3, v2, Lcsc;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    check-cast v3, Lpmc;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+    const-string v4, "OKWSSignaling"
 
-    move-result-wide v3
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    iget-object v2, v2, Lcsc;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    const-string v6, "Connect to "
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v3
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v3, v4, v2}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Ld16;
+
+    invoke-direct {v2}, Ld16;-><init>()V
+
+    iget-object v3, p0, Lyog;->b:Lzog;
+
+    iget-object v3, v3, Lzog;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ld16;->q(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ld16;->b()Lq1d;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lyog;->b:Lzog;
+
+    iget-object v4, v3, Lzog;->o:Lrea;
+
+    new-instance v5, Lb5e;
+
+    invoke-direct {v5, p0}, Lb5e;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v4, v2, v5}, Lrea;->c(Lq1d;Lb5e;)Lirc;
+
+    move-result-object v2
+
+    iput-object v2, v3, Lzog;->c:Lirc;
+
+    monitor-exit v1
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    goto :goto_2
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    return-void
+
+    :goto_3
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     :catchall_2
-    move-exception v2
+    move-exception v1
 
-    iget-object v3, p0, Lnd;->a:Ljava/lang/Object;
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    check-cast v3, Li7c;
-
-    const-string v4, "CallsListeners"
-
-    const-string v5, "rtc.command.handle.listeners.oncommandsubmit"
-
-    invoke-interface {v3, v4, v5, v2}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_3
-    return-void
+    throw v1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

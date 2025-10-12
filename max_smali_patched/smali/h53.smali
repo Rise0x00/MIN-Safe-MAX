@@ -1,949 +1,237 @@
-.class public final Lh53;
-.super Ljava/lang/Object;
+.class public abstract Lh53;
+.super Lzj0;
 .source "SourceFile"
 
-# interfaces
-.implements Lyg8;
-.implements Lwg8;
 
-
-# instance fields
-.field public X:J
-
-.field public Y:J
-
-.field public Z:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-.field public final a:Lyg8;
-
-.field public b:Lwg8;
-
-.field public c:[Lf53;
-
-.field public o:J
+# static fields
+.field public static final E0:I
 
 
 # direct methods
-.method public constructor <init>(Lyg8;ZJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ldlc;->Widget_MaterialComponents_CircularProgressIndicator:I
 
-    iput-object p1, p0, Lh53;->a:Lyg8;
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Lf53;
-
-    iput-object p1, p0, Lh53;->c:[Lf53;
-
-    if-eqz p2, :cond_0
-
-    move-wide p1, p3
-
-    goto :goto_0
-
-    :cond_0
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_0
-    iput-wide p1, p0, Lh53;->o:J
-
-    iput-wide p3, p0, Lh53;->X:J
-
-    iput-wide p5, p0, Lh53;->Y:J
+    sput v0, Lh53;->E0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B([Ljb5;[Z[Lxuc;[ZJ)J
-    .locals 14
+.method public final a(Landroid/content/Context;)Lak0;
+    .locals 10
 
-    move-object/from16 v0, p3
+    new-instance v0, Li53;
 
-    array-length v1, v0
+    sget v4, Lvac;->circularProgressIndicatorStyle:I
 
-    new-array v1, v1, [Lf53;
+    sget v5, Lh53;->E0:I
 
-    iput-object v1, p0, Lh53;->c:[Lf53;
+    invoke-direct {v0, v4, v5, p1}, Lak0;-><init>(IILandroid/content/Context;)V
 
-    array-length v1, v0
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    new-array v5, v1, [Lxuc;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    sget v2, Lwbc;->mtrl_progress_circular_size_medium:I
 
-    move v2, v1
-
-    :goto_0
-    array-length v3, v0
-
-    const/4 v9, 0x0
-
-    if-ge v2, v3, :cond_1
-
-    iget-object v3, p0, Lh53;->c:[Lf53;
-
-    aget-object v4, v0, v2
-
-    check-cast v4, Lf53;
-
-    aput-object v4, v3, v2
-
-    if-eqz v4, :cond_0
-
-    iget-object v9, v4, Lf53;->a:Lxuc;
-
-    :cond_0
-    aput-object v9, v5, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v2, p0, Lh53;->a:Lyg8;
-
-    move-object v3, p1
-
-    move-object/from16 v4, p2
-
-    move-object/from16 v6, p4
-
-    move-wide/from16 v7, p5
-
-    invoke-interface/range {v2 .. v8}, Lyg8;->B([Ljb5;[Z[Lxuc;[ZJ)J
-
-    move-result-wide v10
-
-    invoke-virtual {p0}, Lh53;->a()Z
-
-    move-result v2
-
-    const/4 v4, 0x1
-
-    if-eqz v2, :cond_12
-
-    iget-wide v6, p0, Lh53;->X:J
-
-    cmp-long v2, p5, v6
-
-    if-nez v2, :cond_12
-
-    const-wide/16 v12, 0x0
-
-    cmp-long v2, v6, v12
-
-    if-eqz v2, :cond_12
-
-    array-length v2, p1
-
-    move v6, v1
-
-    :goto_1
-    if-ge v6, v2, :cond_12
-
-    aget-object v7, p1, v6
-
-    if-eqz v7, :cond_11
-
-    invoke-interface {v7}, Ljb5;->j()Ln26;
-
-    move-result-object v7
-
-    iget-object v8, v7, Ln26;->r0:Ljava/lang/String;
-
-    iget-object v7, v7, Ln26;->o0:Ljava/lang/String;
-
-    sget-object v12, Lsc9;->a:Ljava/util/ArrayList;
-
-    if-nez v8, :cond_2
-
-    goto/16 :goto_3
-
-    :cond_2
-    invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
-
-    move-result v12
-
-    const/4 v13, -0x1
-
-    sparse-switch v12, :sswitch_data_0
-
-    goto/16 :goto_2
-
-    :sswitch_0
-    const-string v12, "audio/g711-mlaw"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_3
-
-    goto/16 :goto_2
-
-    :cond_3
-    const/16 v13, 0xa
-
-    goto/16 :goto_2
-
-    :sswitch_1
-    const-string v12, "audio/g711-alaw"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_4
-
-    goto/16 :goto_2
-
-    :cond_4
-    const/16 v13, 0x9
-
-    goto/16 :goto_2
-
-    :sswitch_2
-    const-string v12, "audio/mpeg"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_5
-
-    goto/16 :goto_2
-
-    :cond_5
-    const/16 v13, 0x8
-
-    goto/16 :goto_2
-
-    :sswitch_3
-    const-string v12, "audio/flac"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    const/4 v13, 0x7
-
-    goto :goto_2
-
-    :sswitch_4
-    const-string v12, "audio/eac3"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    const/4 v13, 0x6
-
-    goto :goto_2
-
-    :sswitch_5
-    const-string v12, "audio/raw"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    const/4 v13, 0x5
-
-    goto :goto_2
-
-    :sswitch_6
-    const-string v12, "audio/ac3"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_9
-
-    goto :goto_2
-
-    :cond_9
-    const/4 v13, 0x4
-
-    goto :goto_2
-
-    :sswitch_7
-    const-string v12, "audio/mp4a-latm"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_a
-
-    goto :goto_2
-
-    :cond_a
-    const/4 v13, 0x3
-
-    goto :goto_2
-
-    :sswitch_8
-    const-string v12, "audio/mpeg-L2"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_b
-
-    goto :goto_2
-
-    :cond_b
-    const/4 v13, 0x2
-
-    goto :goto_2
-
-    :sswitch_9
-    const-string v12, "audio/mpeg-L1"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_c
-
-    goto :goto_2
-
-    :cond_c
-    move v13, v4
-
-    goto :goto_2
-
-    :sswitch_a
-    const-string v12, "audio/eac3-joc"
-
-    invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_d
-
-    goto :goto_2
-
-    :cond_d
-    move v13, v1
-
-    :goto_2
-    packed-switch v13, :pswitch_data_0
-
-    goto :goto_3
-
-    :pswitch_0
-    if-nez v7, :cond_e
-
-    goto :goto_3
-
-    :cond_e
-    invoke-static {v7}, Lsc9;->e(Ljava/lang/String;)Lxs;
-
-    move-result-object v7
-
-    if-nez v7, :cond_f
-
-    goto :goto_3
-
-    :cond_f
-    invoke-virtual {v7}, Lxs;->b()I
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v7
 
-    if-eqz v7, :cond_10
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/16 v8, 0x10
+    move-result-object v1
 
-    if-eq v7, v8, :cond_10
+    sget v2, Lwbc;->mtrl_progress_circular_inset_medium:I
 
-    goto :goto_4
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    :cond_10
-    :goto_3
-    move-wide v2, v10
+    move-result v8
 
-    goto :goto_5
+    sget-object v3, Lqlc;->CircularProgressIndicator:[I
 
-    :cond_11
-    :goto_4
-    :pswitch_1
-    add-int/lit8 v6, v6, 0x1
+    const/4 v9, 0x0
 
-    goto/16 :goto_1
-
-    :cond_12
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_5
-    iput-wide v2, p0, Lh53;->o:J
-
-    cmp-long p1, v10, p5
-
-    if-eqz p1, :cond_14
-
-    iget-wide v2, p0, Lh53;->X:J
-
-    cmp-long p1, v10, v2
-
-    if-ltz p1, :cond_13
-
-    iget-wide v2, p0, Lh53;->Y:J
-
-    const-wide/high16 v6, -0x8000000000000000L
-
-    cmp-long p1, v2, v6
-
-    if-eqz p1, :cond_14
-
-    cmp-long p1, v10, v2
-
-    if-gtz p1, :cond_13
-
-    goto :goto_6
-
-    :cond_13
-    move v4, v1
-
-    :cond_14
-    :goto_6
-    invoke-static {v4}, Lkc5;->j(Z)V
-
-    :goto_7
-    array-length p1, v0
-
-    if-ge v1, p1, :cond_18
-
-    aget-object p1, v5, v1
-
-    if-nez p1, :cond_15
-
-    iget-object p1, p0, Lh53;->c:[Lf53;
-
-    aput-object v9, p1, v1
-
-    goto :goto_8
-
-    :cond_15
-    iget-object v2, p0, Lh53;->c:[Lf53;
-
-    aget-object v3, v2, v1
-
-    if-eqz v3, :cond_16
-
-    iget-object v3, v3, Lf53;->a:Lxuc;
-
-    if-eq v3, p1, :cond_17
-
-    :cond_16
-    new-instance v3, Lf53;
-
-    invoke-direct {v3, p0, p1}, Lf53;-><init>(Lh53;Lxuc;)V
-
-    aput-object v3, v2, v1
-
-    :cond_17
-    :goto_8
-    iget-object p1, p0, Lh53;->c:[Lf53;
-
-    aget-object p1, p1, v1
-
-    aput-object p1, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_7
-
-    :cond_18
-    return-wide v10
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7e929daa -> :sswitch_a
-        -0x19cc928c -> :sswitch_9
-        -0x19cc928b -> :sswitch_8
-        -0x3313c2e -> :sswitch_7
-        0xb269698 -> :sswitch_6
-        0xb26d66f -> :sswitch_5
-        0x59ae0c65 -> :sswitch_4
-        0x59aeaa01 -> :sswitch_3
-        0x59b1e81e -> :sswitch_2
-        0x71710385 -> :sswitch_1
-        0x717677f9 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final a()Z
-    .locals 4
-
-    iget-wide v0, p0, Lh53;->o:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p0, v0, v2
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final b(Lgad;)V
-    .locals 0
-
-    check-cast p1, Lyg8;
-
-    iget-object p1, p0, Lh53;->b:Lwg8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lead;->b(Lgad;)V
-
-    return-void
-.end method
-
-.method public final c(Lyg8;)V
-    .locals 0
-
-    iget-object p1, p0, Lh53;->Z:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, Lh53;->b:Lwg8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lwg8;->c(Lyg8;)V
-
-    return-void
-.end method
-
-.method public final d()J
-    .locals 6
-
-    iget-object v0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {v0}, Lgad;->d()J
-
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide v4, p0, Lh53;->Y:J
-
-    cmp-long p0, v4, v2
-
-    if-eqz p0, :cond_0
-
-    cmp-long p0, v0, v4
-
-    if-ltz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v0
-
-    :cond_1
-    :goto_0
-    return-wide v2
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lh53;->Z:Lcom/google/android/exoplayer2/source/ClippingMediaSource$IllegalClippingException;
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0}, Lyg8;->f()V
-
-    return-void
-
-    :cond_0
-    throw v0
-.end method
-
-.method public final h(J)J
-    .locals 5
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lh53;->o:J
-
-    iget-object v0, p0, Lh53;->c:[Lf53;
-
-    array-length v1, v0
+    new-array v6, v9, [I
 
     const/4 v2, 0x0
 
-    move v3, v2
+    invoke-static {p1, v2, v4, v5}, Lagf;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    :goto_0
-    if-ge v3, v1, :cond_1
+    move-object v1, p1
 
-    aget-object v4, v0, v3
+    invoke-static/range {v1 .. v6}, Lagf;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
-    if-eqz v4, :cond_0
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    iput-boolean v2, v4, Lf53;->b:Z
+    move-result-object p1
+
+    sget v2, Lqlc;->CircularProgressIndicator_indicatorSize:I
+
+    invoke-static {v1, p1, v2, v7}, Lj40;->w(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v2
+
+    iget v3, v0, Lak0;->a:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iput v2, v0, Li53;->h:I
+
+    sget v2, Lqlc;->CircularProgressIndicator_indicatorInset:I
+
+    invoke-static {v1, p1, v2, v8}, Lj40;->w(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Li53;->i:I
+
+    sget v1, Lqlc;->CircularProgressIndicator_indicatorDirectionCircular:I
+
+    invoke-virtual {p1, v1, v9}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, v0, Li53;->j:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {v0}, Lak0;->a()V
+
+    return-object v0
+.end method
+
+.method public getIndicatorDirection()I
+    .locals 1
+
+    iget-object v0, p0, Lzj0;->a:Lak0;
+
+    check-cast v0, Li53;
+
+    iget v0, v0, Li53;->j:I
+
+    return v0
+.end method
+
+.method public getIndicatorInset()I
+    .locals 1
+
+    iget-object v0, p0, Lzj0;->a:Lak0;
+
+    check-cast v0, Li53;
+
+    iget v0, v0, Li53;->i:I
+
+    return v0
+.end method
+
+.method public getIndicatorSize()I
+    .locals 1
+
+    iget-object v0, p0, Lzj0;->a:Lak0;
+
+    check-cast v0, Li53;
+
+    iget v0, v0, Li53;->h:I
+
+    return v0
+.end method
+
+.method public setIndicatorDirection(I)V
+    .locals 1
+
+    iget-object v0, p0, Lzj0;->a:Lak0;
+
+    check-cast v0, Li53;
+
+    iput p1, v0, Li53;->j:I
+
+    invoke-virtual {p0}, Lzj0;->invalidate()V
+
+    return-void
+.end method
+
+.method public setIndicatorInset(I)V
+    .locals 2
+
+    iget-object v0, p0, Lzj0;->a:Lak0;
+
+    move-object v1, v0
+
+    check-cast v1, Li53;
+
+    iget v1, v1, Li53;->i:I
+
+    if-eq v1, p1, :cond_0
+
+    check-cast v0, Li53;
+
+    iput p1, v0, Li53;->i:I
+
+    invoke-virtual {p0}, Lzj0;->invalidate()V
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {v0, p1, p2}, Lyg8;->h(J)J
-
-    move-result-wide v0
-
-    cmp-long p1, v0, p1
-
-    if-eqz p1, :cond_2
-
-    iget-wide p1, p0, Lh53;->X:J
-
-    cmp-long p1, v0, p1
-
-    if-ltz p1, :cond_3
-
-    iget-wide p0, p0, Lh53;->Y:J
-
-    const-wide/high16 v3, -0x8000000000000000L
-
-    cmp-long p2, p0, v3
-
-    if-eqz p2, :cond_2
-
-    cmp-long p0, v0, p0
-
-    if-gtz p0, :cond_3
-
-    :cond_2
-    const/4 v2, 0x1
-
-    :cond_3
-    invoke-static {v2}, Lkc5;->j(Z)V
-
-    return-wide v0
+    return-void
 .end method
 
-.method public final i()Z
-    .locals 0
+.method public setIndicatorSize(I)V
+    .locals 2
 
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0}, Lgad;->i()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final l()J
-    .locals 9
-
-    invoke-virtual {p0}, Lh53;->a()Z
+    invoke-virtual {p0}, Lzj0;->getTrackThickness()I
 
     move-result v0
 
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+    mul-int/lit8 v0, v0, 0x2
 
-    if-eqz v0, :cond_1
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
-    iget-wide v3, p0, Lh53;->o:J
+    move-result p1
 
-    iput-wide v1, p0, Lh53;->o:J
+    iget-object v0, p0, Lzj0;->a:Lak0;
 
-    invoke-virtual {p0}, Lh53;->l()J
+    move-object v1, v0
 
-    move-result-wide v5
+    check-cast v1, Li53;
 
-    cmp-long p0, v5, v1
+    iget v1, v1, Li53;->h:I
 
-    if-eqz p0, :cond_0
+    if-eq v1, p1, :cond_0
 
-    return-wide v5
+    move-object v1, v0
 
-    :cond_0
-    return-wide v3
+    check-cast v1, Li53;
 
-    :cond_1
-    iget-object v0, p0, Lh53;->a:Lyg8;
+    iput p1, v1, Li53;->h:I
 
-    invoke-interface {v0}, Lyg8;->l()J
+    check-cast v0, Li53;
 
-    move-result-wide v3
+    invoke-virtual {v0}, Lak0;->a()V
 
-    cmp-long v0, v3, v1
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    if-nez v0, :cond_2
-
-    return-wide v1
-
-    :cond_2
-    iget-wide v0, p0, Lh53;->X:J
-
-    cmp-long v0, v3, v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-ltz v0, :cond_3
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_3
-    move v0, v1
-
-    :goto_0
-    invoke-static {v0}, Lkc5;->j(Z)V
-
-    iget-wide v5, p0, Lh53;->Y:J
-
-    const-wide/high16 v7, -0x8000000000000000L
-
-    cmp-long p0, v5, v7
-
-    if-eqz p0, :cond_4
-
-    cmp-long p0, v3, v5
-
-    if-gtz p0, :cond_5
-
-    :cond_4
-    move v1, v2
-
-    :cond_5
-    invoke-static {v1}, Lkc5;->j(Z)V
-
-    return-wide v3
-.end method
-
-.method public final m()Le3f;
-    .locals 0
-
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0}, Lyg8;->m()Le3f;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final n()J
-    .locals 6
-
-    iget-object v0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {v0}, Lgad;->n()J
-
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide v4, p0, Lh53;->Y:J
-
-    cmp-long p0, v4, v2
-
-    if-eqz p0, :cond_0
-
-    cmp-long p0, v0, v4
-
-    if-ltz p0, :cond_0
-
-    goto :goto_0
+    invoke-virtual {p0}, Lzj0;->invalidate()V
 
     :cond_0
-    return-wide v0
-
-    :cond_1
-    :goto_0
-    return-wide v2
-.end method
-
-.method public final o(J)V
-    .locals 0
-
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0, p1, p2}, Lgad;->o(J)V
-
     return-void
 .end method
 
-.method public final t(JLt5d;)J
-    .locals 9
-
-    iget-wide v0, p0, Lh53;->X:J
-
-    cmp-long v2, p1, v0
-
-    if-nez v2, :cond_0
-
-    return-wide v0
-
-    :cond_0
-    iget-wide v3, p3, Lt5d;->a:J
-
-    const-wide/16 v5, 0x0
-
-    sub-long v7, p1, v0
-
-    invoke-static/range {v3 .. v8}, Ldif;->j(JJJ)J
-
-    move-result-wide v0
-
-    iget-wide v2, p3, Lt5d;->b:J
-
-    iget-wide v4, p0, Lh53;->Y:J
-
-    const-wide/high16 v6, -0x8000000000000000L
-
-    cmp-long v6, v4, v6
-
-    if-nez v6, :cond_1
-
-    const-wide v4, 0x7fffffffffffffffL
-
-    :goto_0
-    move-wide v6, v4
-
-    goto :goto_1
-
-    :cond_1
-    sub-long/2addr v4, p1
-
-    goto :goto_0
-
-    :goto_1
-    const-wide/16 v4, 0x0
-
-    invoke-static/range {v2 .. v7}, Ldif;->j(JJJ)J
-
-    move-result-wide v2
-
-    iget-wide v4, p3, Lt5d;->a:J
-
-    cmp-long v4, v0, v4
-
-    if-nez v4, :cond_2
-
-    iget-wide v4, p3, Lt5d;->b:J
-
-    cmp-long v4, v2, v4
-
-    if-nez v4, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    new-instance p3, Lt5d;
-
-    invoke-direct {p3, v0, v1, v2, v3}, Lt5d;-><init>(JJ)V
-
-    :goto_2
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0, p1, p2, p3}, Lyg8;->t(JLt5d;)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final w(J)V
+.method public setTrackThickness(I)V
     .locals 0
 
-    iget-object p0, p0, Lh53;->a:Lyg8;
+    invoke-super {p0, p1}, Lzj0;->setTrackThickness(I)V
 
-    invoke-interface {p0, p1, p2}, Lyg8;->w(J)V
+    iget-object p1, p0, Lzj0;->a:Lak0;
 
-    return-void
-.end method
+    check-cast p1, Li53;
 
-.method public final y(J)Z
-    .locals 0
-
-    iget-object p0, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p0, p1, p2}, Lgad;->y(J)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final z(Lwg8;J)V
-    .locals 0
-
-    iput-object p1, p0, Lh53;->b:Lwg8;
-
-    iget-object p1, p0, Lh53;->a:Lyg8;
-
-    invoke-interface {p1, p0, p2, p3}, Lyg8;->z(Lwg8;J)V
+    invoke-virtual {p1}, Lak0;->a()V
 
     return-void
 .end method

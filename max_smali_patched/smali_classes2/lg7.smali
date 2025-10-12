@@ -1,48 +1,34 @@
 .class public final Llg7;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Llg7;->Y:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public X:I
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Llbe;
+    check-cast p1, Le34;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Llg7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Llg7;
+    check-cast p1, Llg7;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Llg7;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Llg7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
@@ -50,41 +36,67 @@
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    new-instance v0, Llg7;
+    new-instance p1, Llg7;
 
-    iget-object p0, p0, Llg7;->Y:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    const/4 v0, 0x2
 
-    invoke-direct {v0, p0, p2}, Llg7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Llg7;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget v0, p0, Llg7;->X:I
 
-    iget-object p1, p0, Llg7;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Llbe;
+    if-eqz v0, :cond_1
 
-    iget-object p0, p0, Llg7;->Y:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lxu2;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v1, p1, Llbe;->a:Ljava/util/List;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ldp7;->E(Ljava/util/List;)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Z:Ln8e;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p1, p1, Llbe;->b:Ljava/util/List;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
+    throw p1
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    return-object p0
+    sget p1, Ln05;->o:I
+
+    const/4 p1, 0x2
+
+    sget-object v0, Ls05;->o:Ls05;
+
+    invoke-static {p1, v0}, Lyhh;->O(ILs05;)J
+
+    move-result-wide v2
+
+    iput v1, p0, Llg7;->X:I
+
+    invoke-static {v2, v3, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

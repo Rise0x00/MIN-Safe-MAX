@@ -1,99 +1,133 @@
-.class public final Lzka;
-.super Lt2;
+.class public abstract Lzka;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic o:Lala;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
-.method public constructor <init>(Lala;I)V
-    .locals 0
-
-    iput p2, p0, Lzka;->c:I
-
-    iput-object p1, p0, Lzka;->o:Lala;
-
-    const/16 p1, 0x8
-
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Lpka;->a:Lpka;
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p2, Lvka;->a:Lvka;
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lzka;->c:I
+    sget v0, Ldec;->oneme_contactlist_action_audio_call:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lzka;->a:I
 
-    check-cast p2, Lxka;
+    sget v0, Ldec;->oneme_contactlist_action_block:I
 
-    check-cast p1, Lxka;
+    sput v0, Lzka;->b:I
 
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Ldec;->oneme_contactlist_action_delete:I
 
-    move-result p1
+    sput v0, Lzka;->c:I
 
-    if-nez p1, :cond_0
+    sget v0, Ldec;->oneme_contactlist_action_open_profile:I
 
-    iget-object p0, p0, Lzka;->o:Lala;
+    sput v0, Lzka;->d:I
 
-    invoke-static {p0, p2}, Lala;->v(Lala;Lxka;)V
+    sget v0, Ldec;->oneme_contactlist_action_select:I
 
-    invoke-virtual {p0}, Lala;->w()V
+    sput v0, Lzka;->e:I
 
-    :cond_0
+    sget v0, Ldec;->oneme_contactlist_action_share_contact:I
+
+    sput v0, Lzka;->f:I
+
+    sget v0, Ldec;->oneme_contactlist_action_suspend_bot:I
+
+    sput v0, Lzka;->g:I
+
+    sget v0, Ldec;->oneme_contactlist_action_video_call:I
+
+    sput v0, Lzka;->h:I
+
+    sget v0, Ldec;->oneme_contactlist_action_write:I
+
+    sput v0, Lzka;->i:I
+
+    sget v0, Ldec;->oneme_contactlist_confirm_block:I
+
+    sput v0, Lzka;->j:I
+
+    sget v0, Ldec;->oneme_contactlist_confirm_cancel:I
+
+    sput v0, Lzka;->k:I
+
+    sget v0, Ldec;->oneme_contactlist_confirm_delete:I
+
+    sput v0, Lzka;->l:I
+
+    sget v0, Ldec;->oneme_contactlist_contact_view_type:I
+
+    sput v0, Lzka;->m:I
+
+    sget v0, Ldec;->oneme_contactlist_container:I
+
+    sput v0, Lzka;->n:I
+
+    sget v0, Ldec;->oneme_contactlist_empty_search_result_view_type:I
+
+    sput v0, Lzka;->o:I
+
+    sget v0, Ldec;->oneme_contactlist_global_contact_view_type:I
+
+    sput v0, Lzka;->p:I
+
+    sget v0, Ldec;->oneme_contactlist_menu_item_add_contact:I
+
+    sput v0, Lzka;->q:I
+
+    sget v0, Ldec;->oneme_contactlist_menu_item_create_chat:I
+
+    sput v0, Lzka;->r:I
+
+    sget v0, Ldec;->oneme_contactlist_phonebook_contact_view_type:I
+
+    sput v0, Lzka;->s:I
+
+    sget v0, Ldec;->oneme_contactlist_toolbar:I
+
+    sput v0, Lzka;->t:I
+
     return-void
-
-    :pswitch_0
-    check-cast p2, Lska;
-
-    check-cast p1, Lska;
-
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    iget-object p0, p0, Lzka;->o:Lala;
-
-    invoke-static {p0, p2}, Lala;->u(Lala;Lska;)V
-
-    invoke-virtual {p0}, Lala;->w()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

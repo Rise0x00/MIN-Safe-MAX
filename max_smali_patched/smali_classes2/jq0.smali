@@ -1,96 +1,67 @@
-.class public final synthetic Ljq0;
-.super Ljava/lang/Object;
+.class public final Ljq0;
+.super Lll;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    iput p1, p0, Ljq0;->a:I
+    invoke-direct {p0, p1}, Lll;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Ljq0;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Ljq0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 3
+.method public final d(Lcm7;)V
+    .locals 1
 
-    iget v0, p0, Ljq0;->a:I
+    iget-object v0, p0, Lll;->a:Ljava/lang/String;
 
-    iget-object p0, p0, Ljq0;->b:Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lcm7;->k0(Ljava/lang/String;)Lcm7;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lt1;
 
-    check-cast p0, Lmb5;
+    iget-boolean v0, p0, Ljq0;->b:Z
 
-    iget-boolean v0, p0, Lmb5;->s0:Z
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lmb5;->b(I)V
-
-    iput-boolean v1, p0, Lmb5;->s0:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_0
-    iget-boolean v0, p0, Lmb5;->s0:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v2, p0, Lmb5;->w0:Ljq0;
+    invoke-virtual {p1, v0}, Lt1;->c(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iput-object v0, p0, Lmb5;->w0:Ljq0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_1
-    return v1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :pswitch_0
-    check-cast p0, Lkq0;
+    iget-object v1, p0, Lll;->a:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lkq0;->c()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x1
+    const-string v1, " = "
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v1, p0, Ljq0;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

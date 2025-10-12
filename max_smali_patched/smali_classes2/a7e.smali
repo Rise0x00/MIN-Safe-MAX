@@ -1,52 +1,48 @@
-.class public final synthetic La7e;
-.super Lo8;
-.source "SourceFile"
-
-# interfaces
-.implements Lv96;
+.class public final La7e;
+.super Lnz3;
 
 
-# static fields
-.field public static final n0:La7e;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Ldoa;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, La7e;
+    iput-object p1, p0, La7e;->Y:Ldoa;
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Ltra;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lo8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, La7e;->n0:La7e;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lj7e;
+    iput-object p1, p0, La7e;->o:Ljava/lang/Object;
 
-    check-cast p2, Ljava/lang/Boolean;
+    iget p1, p0, La7e;->X:I
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    sget-object p0, Lf7e;->C0:[Lof7;
+    or-int/2addr p1, v0
 
-    new-instance p0, Ltra;
+    iput p1, p0, La7e;->X:I
 
-    invoke-direct {p0, p1, p2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object p1, p0, La7e;->Y:Ldoa;
 
-    return-object p0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,35 +1,14 @@
-.class public final Lko0;
-.super Lm94;
+.class public interface abstract Lko0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Landroid/graphics/Bitmap;
-
-.field public final synthetic Y:Lmo0;
-
-
-# direct methods
-.method public constructor <init>(Lmo0;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0}, Ley;-><init>(I)V
-
-    iput-object p1, p0, Lko0;->Y:Lmo0;
-
-    return-void
+# virtual methods
+.method public abstract h(Landroid/net/Uri;)Ljx7;
 .end method
 
+.method public abstract i(Ljava/lang/String;)Z
+.end method
 
-# virtual methods
-.method public final w()V
-    .locals 1
-
-    iget-object v0, p0, Lko0;->Y:Lmo0;
-
-    invoke-virtual {v0, p0}, Lmo0;->k(Lm94;)V
-
-    return-void
+.method public abstract l([B)Ljx7;
 .end method

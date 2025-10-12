@@ -1,57 +1,126 @@
 .class public final Lyq7;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Lcz1;
+.field public X:I
+
+.field public final synthetic Y:Lzq7;
 
 
 # direct methods
-.method public constructor <init>(Lcz1;)V
+.method public constructor <init>(Lzq7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyq7;->Y:Lzq7;
 
-    iput-object p1, p0, Lyq7;->a:Lcz1;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Le34;
 
-    const-string v1, "[Result: <"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lyq7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "Value: "
+    check-cast p1, Lyq7;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object p0, p0, Lyq7;->a:Lcz1;
+    invoke-virtual {p1, p2}, Lyq7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p1, Lyq7;
 
-    const-string p0, ">]"
+    iget-object v0, p0, Lyq7;->Y:Lzq7;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0, p2}, Lyq7;-><init>(Lzq7;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    return-object p0
+    iget v0, p0, Lyq7;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    new-instance p1, Lk1c;
+
+    iget-object v0, p0, Lyq7;->Y:Lzq7;
+
+    iget-object v2, v0, Lzq7;->d:Ljava/lang/Object;
+
+    check-cast v2, Lbp7;
+
+    iget-object v3, v0, Lzq7;->e:Ljava/lang/Object;
+
+    check-cast v3, Lbp7;
+
+    iget-object v0, v0, Lzq7;->f:Ljava/lang/Object;
+
+    check-cast v0, Lbp7;
+
+    invoke-direct {p1, v2, v3, v0}, Lk1c;-><init>(Lbp7;Lbp7;Lbp7;)V
+
+    iput v1, p0, Lyq7;->X:I
+
+    invoke-virtual {p1, p0}, Lk1c;->a(Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

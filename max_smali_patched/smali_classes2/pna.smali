@@ -1,111 +1,310 @@
 .class public final Lpna;
-.super Landroid/webkit/WebChromeClient;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Lxe6;
 
 
 # instance fields
-.field public final a:Lqcg;
+.field public final synthetic X:I
+
+.field public final synthetic Y:Ljava/nio/file/Path;
+
+.field public final synthetic Z:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqcg;)V
+.method public synthetic constructor <init>(Ljava/nio/file/Path;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+    iput p4, p0, Lpna;->X:I
 
-    iput-object p1, p0, Lpna;->a:Lqcg;
+    iput-object p1, p0, Lpna;->Y:Ljava/nio/file/Path;
+
+    iput-object p2, p0, Lpna;->Z:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    new-instance p2, Lqna;
+    iget v0, p0, Lpna;->X:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast p1, Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    const/16 p3, 0xe
+    new-instance v0, Lpna;
 
-    invoke-direct {p2, p1, p3}, Lqna;-><init>(Landroid/content/Context;I)V
+    iget-object v1, p0, Lpna;->Z:Ljava/lang/Object;
 
-    new-instance p1, Lona;
+    check-cast v1, Lzb4;
 
-    invoke-direct {p1, p0, p2}, Lona;-><init>(Lpna;Lqna;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {p2, p1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+    iget-object v3, p0, Lpna;->Y:Ljava/nio/file/Path;
 
-    if-eqz p4, :cond_0
+    invoke-direct {v0, v3, v1, p1, v2}, Lpna;-><init>(Ljava/nio/file/Path;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    iget-object p0, p4, Landroid/os/Message;->obj:Ljava/lang/Object;
+    sget-object p1, Loyf;->a:Loyf;
 
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lpna;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 p0, 0x0
+    return-object p1
 
-    :goto_0
-    check-cast p0, Landroid/webkit/WebView$WebViewTransport;
+    :pswitch_0
+    new-instance v0, Lpna;
 
-    invoke-virtual {p0, p2}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
+    iget-object v1, p0, Lpna;->Z:Ljava/lang/Object;
 
-    invoke-virtual {p4}, Landroid/os/Message;->sendToTarget()V
+    check-cast v1, Lzna;
 
-    const/4 p0, 0x1
+    const/4 v2, 0x0
 
-    return p0
+    iget-object v3, p0, Lpna;->Y:Ljava/nio/file/Path;
+
+    invoke-direct {v0, v3, v1, p1, v2}, Lpna;-><init>(Ljava/nio/file/Path;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-virtual {v0, p1}, Lpna;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    instance-of v0, p1, Lqna;
+    iget v0, p0, Lpna;->X:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    check-cast p1, Lqna;
+    new-instance p1, Ljava/util/zip/ZipOutputStream;
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/nio/file/OpenOption;
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/nio/file/OpenOption;
+
+    iget-object v2, p0, Lpna;->Y:Ljava/nio/file/Path;
+
+    invoke-static {v2, v1}, Ljava/nio/file/Files;->newOutputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/OutputStream;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Ljava/util/zip/ZipOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iget-object v1, p0, Lpna;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lzb4;
+
+    :try_start_0
+    iget-object v1, v1, Lzb4;->b:Ljava/lang/Object;
+
+    check-cast v1, Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/nio/file/Path;
+
+    invoke-interface {v1}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    aget-object v3, v1, v0
+
+    new-instance v4, Ljava/util/zip/ZipEntry;
+
+    invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/util/zip/ZipEntry;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v4}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
+
+    invoke-static {v3}, Lqr5;->F(Ljava/io/File;)[B
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/io/OutputStream;->write([B)V
+
+    invoke-virtual {p1}, Ljava/util/zip/ZipOutputStream;->closeEntry()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
     :cond_0
-    move-object p1, v1
+    invoke-virtual {p1}, Ljava/util/zip/ZipOutputStream;->close()V
 
-    :goto_0
-    if-nez p1, :cond_1
+    sget-object p1, Loyf;->a:Loyf;
 
-    const/4 p0, 0x0
+    return-object p1
 
-    return p0
+    :goto_1
+    :try_start_1
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-static {p1, v0}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    new-instance p1, Ljava/util/zip/ZipOutputStream;
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/nio/file/OpenOption;
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Ljava/nio/file/OpenOption;
+
+    iget-object v2, p0, Lpna;->Y:Ljava/nio/file/Path;
+
+    invoke-static {v2, v1}, Ljava/nio/file/Files;->newOutputStream(Ljava/nio/file/Path;[Ljava/nio/file/OpenOption;)Ljava/io/OutputStream;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Ljava/util/zip/ZipOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iget-object v1, p0, Lpna;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lzna;
+
+    :try_start_2
+    invoke-virtual {v1}, Lzna;->f()Ljava/nio/file/Path;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
+
+    move-result-object v1
+
+    new-instance v2, Llna;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Llna;-><init>(I)V
+
+    invoke-virtual {v1, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    move v3, v0
+
+    :goto_2
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v1, v3
+
+    invoke-virtual {p1, v0}, Ljava/util/zip/ZipOutputStream;->setLevel(I)V
+
+    new-instance v5, Ljava/util/zip/ZipEntry;
+
+    invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Ljava/util/zip/ZipEntry;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v5}, Ljava/util/zip/ZipOutputStream;->putNextEntry(Ljava/util/zip/ZipEntry;)V
+
+    invoke-static {v4}, Lqr5;->F(Ljava/io/File;)[B
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/io/OutputStream;->write([B)V
+
+    invoke-virtual {p1}, Ljava/util/zip/ZipOutputStream;->closeEntry()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_3
 
     :cond_1
-    invoke-virtual {p1}, Lqna;->getFilePathCallback()Landroid/webkit/ValueCallback;
+    invoke-interface {p1}, Ljava/io/Closeable;->close()V
 
-    move-result-object v0
+    sget-object p1, Loyf;->a:Loyf;
 
-    if-eqz v0, :cond_2
+    return-object p1
 
-    invoke-interface {v0, v1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
+    :goto_3
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    :cond_2
-    invoke-virtual {p1, p2}, Lqna;->setFilePathCallback(Landroid/webkit/ValueCallback;)V
+    :catchall_3
+    move-exception v1
 
-    iget-object p0, p0, Lpna;->a:Lqcg;
+    invoke-static {p1, v0}, Ly6b;->h(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    iget-object p0, p0, Lqcg;->N0:Lt65;
+    throw v1
 
-    new-instance p1, Lrbg;
+    nop
 
-    invoke-direct {p1, p3}, Lrbg;-><init>(Landroid/webkit/WebChromeClient$FileChooserParams;)V
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    const/4 p0, 0x1
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

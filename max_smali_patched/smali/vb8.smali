@@ -1,70 +1,143 @@
-.class public abstract Lvb8;
-.super Ljava/lang/Object;
+.class public final Lvb8;
+.super Lia6;
 .source "SourceFile"
 
 
+# static fields
+.field public static final h:Ljava/lang/Object;
+
+
+# instance fields
+.field public final f:Ljava/lang/Object;
+
+.field public final g:Ljava/lang/Object;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;)Z
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 1
 
-    const-string v0, "display"
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    sput-object v0, Lvb8;->h:Ljava/lang/Object;
 
-    check-cast p0, Landroid/hardware/display/DisplayManager;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public constructor <init>(Lmif;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0, p1}, Lia6;-><init>(Lmif;)V
 
-    invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManager;->getDisplay(I)Landroid/view/Display;
+    iput-object p2, p0, Lvb8;->f:Ljava/lang/Object;
 
-    move-result-object p0
+    iput-object p3, p0, Lvb8;->g:Ljava/lang/Object;
 
-    goto :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Object;)I
+    .locals 1
+
+    sget-object v0, Lvb8;->h:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvb8;->g:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    move-object p1, v0
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object v0, p0, Lia6;->e:Lmif;
 
-    :goto_0
-    if-eqz p0, :cond_2
+    invoke-virtual {v0, p1}, Lmif;->b(Ljava/lang/Object;)I
 
-    invoke-virtual {p0}, Landroid/view/Display;->isHdr()Z
+    move-result p1
 
-    move-result v1
+    return p1
+.end method
 
-    if-eqz v1, :cond_2
+.method public final f(ILhif;Z)Lhif;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/Display;->getHdrCapabilities()Landroid/view/Display$HdrCapabilities;
+    iget-object v0, p0, Lia6;->e:Lmif;
 
-    move-result-object p0
+    invoke-virtual {v0, p1, p2, p3}, Lmif;->f(ILhif;Z)Lhif;
 
-    invoke-virtual {p0}, Landroid/view/Display$HdrCapabilities;->getSupportedHdrTypes()[I
+    iget-object p1, p2, Lhif;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    iget-object v0, p0, Lvb8;->g:Ljava/lang/Object;
 
-    array-length v1, p0
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move v2, v0
+    move-result p1
 
-    :goto_1
-    if-ge v2, v1, :cond_2
+    if-eqz p1, :cond_0
 
-    aget v3, p0, v2
+    if-eqz p3, :cond_0
 
-    const/4 v4, 0x1
+    sget-object p1, Lvb8;->h:Ljava/lang/Object;
 
-    if-ne v3, v4, :cond_1
+    iput-object p1, p2, Lhif;->b:Ljava/lang/Object;
 
-    return v4
+    :cond_0
+    return-object p2
+.end method
 
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+.method public final l(I)Ljava/lang/Object;
+    .locals 1
 
-    goto :goto_1
+    iget-object v0, p0, Lia6;->e:Lmif;
 
-    :cond_2
-    return v0
+    invoke-virtual {v0, p1}, Lmif;->l(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lvb8;->g:Ljava/lang/Object;
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lvb8;->h:Ljava/lang/Object;
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final m(ILkif;J)Lkif;
+    .locals 1
+
+    iget-object v0, p0, Lia6;->e:Lmif;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lmif;->m(ILkif;J)Lkif;
+
+    iget-object p1, p2, Lkif;->a:Ljava/lang/Object;
+
+    iget-object p3, p0, Lvb8;->f:Ljava/lang/Object;
+
+    invoke-static {p1, p3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lkif;->q:Ljava/lang/Object;
+
+    iput-object p1, p2, Lkif;->a:Ljava/lang/Object;
+
+    :cond_0
+    return-object p2
 .end method

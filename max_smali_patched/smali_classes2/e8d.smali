@@ -1,43 +1,79 @@
 .class public final Le8d;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+# instance fields
+.field public final synthetic a:I
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+.field public final b:Landroid/graphics/Rect;
 
-    move-result v0
+.field public final c:F
 
-    const/16 v1, 0x96
 
-    int-to-float v1, v1
+# direct methods
+.method public constructor <init>(Landroid/graphics/Rect;FI)V
+    .locals 0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iput p3, p0, Le8d;->a:I
 
-    move-result-object v2
+    packed-switch p3, :pswitch_data_0
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
-    move-result-object v2
+    iput-object p1, p0, Le8d;->b:Landroid/graphics/Rect;
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lcx3;->q(FFI)I
-
-    move-result v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result p2
-
-    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
+    iput p2, p0, Le8d;->c:F
 
     return-void
+
+    :pswitch_0
+    iput-object p1, p0, Le8d;->b:Landroid/graphics/Rect;
+
+    iput p2, p0, Le8d;->c:F
+
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 1
+
+    iget p1, p0, Le8d;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Le8d;->b:Landroid/graphics/Rect;
+
+    iget v0, p0, Le8d;->c:F
+
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Le8d;->b:Landroid/graphics/Rect;
+
+    iget v0, p0, Le8d;->c:F
+
+    invoke-virtual {p2, p1, v0}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -4,228 +4,369 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lr4;
 
-.field public final b:Z
+.field public final b:Lej4;
 
-.field public final c:Z
+.field public final c:Ljava/util/concurrent/ExecutorService;
 
-.field public final d:Z
+.field public final d:Ljava/lang/String;
 
-.field public final e:Z
+.field public volatile e:Z
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public volatile g:Ljava/util/concurrent/Future;
 
 
 # direct methods
-.method public constructor <init>(IZZZ)V
+.method public constructor <init>(Lr4;Lej4;Ljava/util/concurrent/ExecutorService;Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxx9;->a:I
+    iput-object p1, p0, Lxx9;->a:Lr4;
 
-    iput-boolean p2, p0, Lxx9;->b:Z
+    iput-object p2, p0, Lxx9;->b:Lej4;
 
-    iput-boolean p3, p0, Lxx9;->c:Z
+    iput-object p3, p0, Lxx9;->c:Ljava/util/concurrent/ExecutorService;
 
-    iput-boolean p4, p0, Lxx9;->d:Z
+    iput-object p4, p0, Lxx9;->d:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    iput-boolean p5, p0, Lxx9;->e:Z
 
-    const/4 p1, 0x1
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    goto :goto_0
+    new-instance p2, Ljava/util/ArrayList;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    :goto_0
-    iput-boolean p1, p0, Lxx9;->e:Z
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lxx9;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
-.method public static a(Lxx9;IZZZI)Lxx9;
-    .locals 1
-
-    and-int/lit8 v0, p5, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget p1, p0, Lxx9;->a:I
-
-    :cond_0
-    and-int/lit8 v0, p5, 0x2
-
-    if-eqz v0, :cond_1
-
-    iget-boolean p2, p0, Lxx9;->b:Z
-
-    :cond_1
-    and-int/lit8 v0, p5, 0x4
-
-    if-eqz v0, :cond_2
-
-    iget-boolean p3, p0, Lxx9;->c:Z
-
-    :cond_2
-    and-int/lit8 p5, p5, 0x8
-
-    if-eqz p5, :cond_3
-
-    iget-boolean p4, p0, Lxx9;->d:Z
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lxx9;
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lxx9;-><init>(IZZZ)V
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lyx9;)V
+    .locals 7
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lxx9;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_0
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v6
+
+    if-nez v6, :cond_1
+
+    invoke-interface {v4}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v5}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    if-ne v5, p1, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxx9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxx9;
-
-    iget v1, p0, Lxx9;->a:I
-
-    iget v3, p1, Lxx9;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
     :cond_2
-    iget-boolean v1, p0, Lxx9;->b:Z
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v3, p1, Lxx9;->b:Z
+    move-result v4
 
-    if-eq v1, v3, :cond_3
+    if-eqz v4, :cond_6
 
-    return v2
+    if-eqz v0, :cond_3
+
+    return-void
 
     :cond_3
-    iget-boolean v1, p0, Lxx9;->c:Z
+    :goto_2
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iget-boolean v3, p1, Lxx9;->c:Z
+    move-result-object v0
 
-    if-eq v1, v3, :cond_4
+    move-object v4, v0
 
-    return v2
+    check-cast v4, Ljava/util/ArrayList;
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_4
-    iget-boolean p0, p0, Lxx9;->d:Z
+    invoke-virtual {v1, v4, v5}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean p1, p1, Lxx9;->d:Z
+    move-result v0
 
-    if-eq p0, p1, :cond_5
+    if-eqz v0, :cond_5
 
-    return v2
+    return-void
 
     :cond_5
-    return v0
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eq v0, v4, :cond_4
+
+    goto :goto_2
+
+    :cond_6
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    if-eq v4, v2, :cond_2
+
+    goto :goto_0
 .end method
 
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lxx9;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lxx9;->b:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lxx9;->c:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lxx9;->d:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final b(Lby9;Lyx9;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_1
 
-    const-string v1, "NotificationStackModel(hasCounterValue="
+    :try_start_0
+    iget-object v0, p1, Lby9;->b:Ljava/io/File;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    iget v1, p0, Lxx9;->a:I
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v1, ", hasReaction="
+    iget-object v0, p1, Lby9;->b:Ljava/io/File;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/io/File;->canRead()Z
 
-    iget-boolean v1, p0, Lxx9;->b:Z
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v1, ", hasMention="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    iget-object v0, p0, Lxx9;->d:Ljava/lang/String;
 
-    iget-boolean v1, p0, Lxx9;->c:Z
+    iget-object v1, p1, Lby9;->b:Ljava/io/File;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lby9;->a:Ljava/lang/String;
 
-    const-string v1, ", isMuted="
+    invoke-interface {p2, v0, v1, p1}, Lyx9;->onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-boolean p0, p0, Lxx9;->d:Z
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const-string p0, ")"
+    :cond_1
+    :goto_0
+    iget-boolean p1, p0, Lxx9;->e:Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lxx9;->a(Lyx9;)V
 
-    move-result-object p0
+    invoke-virtual {p0}, Lxx9;->d()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    return-void
+
+    :goto_1
+    instance-of v0, p1, Ljava/util/concurrent/ExecutionException;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p2, p1}, Lyx9;->onFailed(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {p2, p1}, Lyx9;->onFailed(Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_2
+    iget-boolean p1, p0, Lxx9;->e:Z
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p0, p2}, Lxx9;->a(Lyx9;)V
+
+    invoke-virtual {p0}, Lxx9;->d()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public final c(Ljava/io/File;Ljava/lang/String;)V
+    .locals 4
+
+    iget-object v0, p0, Lxx9;->f:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lyx9;
+
+    if-eqz v2, :cond_0
+
+    iget-object v3, p0, Lxx9;->d:Ljava/lang/String;
+
+    invoke-interface {v2, v3, p1, p2}, Lyx9;->onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->clear()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d()V
+    .locals 3
+
+    iget-object v0, p0, Lxx9;->g:Ljava/util/concurrent/Future;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lxx9;->c:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lp5;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, v2, p0}, Lp5;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lxx9;->g:Ljava/util/concurrent/Future;
+
+    return-void
+.end method
+
+.method public final e(Lyx9;)V
+    .locals 3
+
+    iget-object v0, p0, Lxx9;->g:Ljava/util/concurrent/Future;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lxx9;->g:Ljava/util/concurrent/Future;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lxx9;->c:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lbt8;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, p0, v2, p1}, Lbt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p1}, Lxx9;->a(Lyx9;)V
+
+    return-void
 .end method

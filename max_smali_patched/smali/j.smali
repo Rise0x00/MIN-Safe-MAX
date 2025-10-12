@@ -1,41 +1,23 @@
 .class public final Lj;
-.super Lfa4;
+.super Lv2;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lj;
-
-.field public static final c:Laa4;
+.field public static final c:Lj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     new-instance v0, Lj;
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    const/16 v1, 0x8
 
-    sput-object v0, Lj;->b:Lj;
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
 
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const/16 v5, 0xe
-
-    const/4 v4, 0x0
-
-    const-string v1, ":settings/aboutapp"
-
-    const/4 v3, 0x0
-
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
-
-    move-result-object v0
-
-    sput-object v0, Lj;->c:Laa4;
+    sput-object v0, Lj;->c:Lj;
 
     return-void
 .end method

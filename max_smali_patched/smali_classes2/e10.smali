@@ -1,125 +1,85 @@
-.class public final Le10;
-.super Ljava/lang/Object;
+.class public final enum Le10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic p:I
+.field public static final enum a:Le10;
 
+.field public static final enum b:Le10;
 
-# instance fields
-.field public final a:Ld10;
+.field public static final enum c:Le10;
 
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Lo10;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Ljava/lang/String;
+.field public static final synthetic o:[Le10;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    new-instance v0, Lc10;
+    new-instance v0, Le10;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "DEFAULT"
 
-    invoke-virtual {v0}, Lc10;->a()Le10;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Le10;->a:Le10;
+
+    new-instance v1, Le10;
+
+    const-string v2, "PROCESSING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Le10;->b:Le10;
+
+    new-instance v2, Le10;
+
+    const-string v3, "PROCESSED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Le10;->c:Le10;
+
+    filled-new-array {v0, v1, v2}, [Le10;
+
+    move-result-object v0
+
+    sput-object v0, Le10;->o:[Le10;
 
     return-void
 .end method
 
-.method public constructor <init>(Lc10;)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Le10;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Le10;
 
-    iget-object v0, p1, Lc10;->a:Ld10;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object v0, p0, Le10;->a:Ld10;
+    move-result-object p0
 
-    iget-wide v0, p1, Lc10;->b:J
+    check-cast p0, Le10;
 
-    iput-wide v0, p0, Le10;->b:J
+    return-object p0
+.end method
 
-    new-instance v0, Ljava/util/ArrayList;
+.method public static values()[Le10;
+    .locals 1
 
-    iget-object v1, p1, Lc10;->c:Ljava/util/Collection;
+    sget-object v0, Le10;->o:[Le10;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {v0}, [Le10;->clone()Ljava/lang/Object;
 
-    iput-object v0, p0, Le10;->c:Ljava/util/ArrayList;
+    move-result-object v0
 
-    iget-object v0, p1, Lc10;->d:Ljava/lang/String;
+    check-cast v0, [Le10;
 
-    iput-object v0, p0, Le10;->d:Ljava/lang/String;
-
-    iget-object v0, p1, Lc10;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Le10;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lc10;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Le10;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Lc10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Le10;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Lc10;->h:Lo10;
-
-    iput-object v0, p0, Le10;->h:Lo10;
-
-    iget-object v0, p1, Lc10;->i:Ljava/lang/String;
-
-    iput-object v0, p0, Le10;->i:Ljava/lang/String;
-
-    iget-object v0, p1, Lc10;->j:Ljava/lang/String;
-
-    iput-object v0, p0, Le10;->j:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lc10;->k:Z
-
-    iput-boolean v0, p0, Le10;->k:Z
-
-    iget v0, p1, Lc10;->l:I
-
-    iput v0, p0, Le10;->l:I
-
-    iget-wide v0, p1, Lc10;->m:J
-
-    iput-wide v0, p0, Le10;->m:J
-
-    iget-wide v0, p1, Lc10;->n:J
-
-    iput-wide v0, p0, Le10;->n:J
-
-    iget-object p1, p1, Lc10;->o:Ljava/lang/String;
-
-    iput-object p1, p0, Le10;->o:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

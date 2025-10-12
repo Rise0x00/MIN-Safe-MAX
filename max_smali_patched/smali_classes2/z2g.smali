@@ -1,59 +1,125 @@
 .class public final Lz2g;
-.super Lu62;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:J
+
+.field public final synthetic o:La3g;
+
+
+# direct methods
+.method public constructor <init>(La3g;Ljava/lang/String;IJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz2g;->o:La3g;
+
+    iput-object p2, p0, Lz2g;->a:Ljava/lang/String;
+
+    iput p3, p0, Lz2g;->b:I
+
+    iput-wide p4, p0, Lz2g;->c:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final call()Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lz2g;->o:La3g;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, v0, La3g;->c:Lp5d;
 
-    return v0
+    iget-object v0, v0, La3g;->a:Lx5d;
+
+    invoke-virtual {v1}, Lw2;->f()Lh2f;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lz2g;->a:Ljava/lang/String;
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v2, v3}, Lf2f;->Z(I)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lz2g;
+    invoke-interface {v2, v3, v4}, Lf2f;->f(ILjava/lang/String;)V
 
-    if-nez p0, :cond_1
+    :goto_0
+    iget v3, p0, Lz2g;->b:I
 
-    const/4 p0, 0x0
+    invoke-static {v3}, Lqw1;->u(I)I
 
-    return p0
+    move-result v3
 
-    :cond_1
-    check-cast p1, Lz2g;
+    int-to-long v3, v3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v5, 0x2
 
-    return v0
-.end method
+    invoke-interface {v2, v5, v3, v4}, Lf2f;->k(IJ)V
 
-.method public final hashCode()I
-    .locals 0
+    const/4 v3, 0x3
 
-    const/4 p0, 0x2
+    iget-wide v4, p0, Lz2g;->c:J
 
-    invoke-static {p0}, Ldw1;->t(I)I
+    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
 
-    move-result p0
+    :try_start_0
+    invoke-virtual {v0}, Lx5d;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p0
-.end method
+    :try_start_1
+    invoke-interface {v2}, Lh2f;->C()I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {v0}, Lx5d;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    const-string p0, "CUSTOM"
+    :try_start_2
+    invoke-virtual {v0}, Lx5d;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const-string v0, ")"
+    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
 
-    const-string v1, "Folder(source="
+    const/4 v0, 0x0
 
-    invoke-static {v1, p0, v0}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
 
-    move-result-object p0
+    :catchall_0
+    move-exception v0
 
-    return-object p0
+    goto :goto_1
+
+    :catchall_1
+    move-exception v3
+
+    :try_start_3
+    invoke-virtual {v0}, Lx5d;->k()V
+
+    throw v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+
+    throw v0
 .end method

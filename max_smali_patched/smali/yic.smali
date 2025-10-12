@@ -1,100 +1,100 @@
-.class public final Lyic;
-.super Lq07;
-.source "SourceFile"
+.class public abstract Lyic;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final transient X:Lzic;
+# static fields
+.field public static audio_record_click_to_cancel:I = 0x7f130086
 
-.field public final transient o:Lj07;
+.field public static audio_record_swipe_to_cancel:I = 0x7f130097
 
+.field public static chat_screen__leave_chat_action:I = 0x7f130355
 
-# direct methods
-.method public constructor <init>(Lj07;Lzic;)V
-    .locals 0
+.field public static chat_screen__leave_chat_title:I = 0x7f130356
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static chat_screen__remove_chat_action:I = 0x7f130357
 
-    iput-object p1, p0, Lyic;->o:Lj07;
+.field public static chat_screen__remove_chat_title:I = 0x7f130358
 
-    iput-object p2, p0, Lyic;->X:Lzic;
+.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130359
 
-    return-void
-.end method
+.field public static chat_screen__search_result_not_found:I = 0x7f13035a
 
+.field public static chat_screen__search_result_success:I = 0x7f13035b
 
-# virtual methods
-.method public final a()Lg07;
-    .locals 0
+.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f13035c
 
-    iget-object p0, p0, Lyic;->X:Lzic;
+.field public static chat_screen__start_chat_with_bot:I = 0x7f13035d
 
-    return-object p0
-.end method
+.field public static chat_screen_channel_search_hint:I = 0x7f130375
 
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 0
+.field public static chat_screen_file_too_big_caption:I = 0x7f130382
 
-    iget-object p0, p0, Lyic;->X:Lzic;
+.field public static chat_screen_file_too_big_title:I = 0x7f130383
 
-    invoke-virtual {p0, p1, p2}, Lg07;->b(I[Ljava/lang/Object;)I
+.field public static chat_screen_join_channel:I = 0x7f13038a
 
-    move-result p0
+.field public static chat_screen_join_chat:I = 0x7f13038b
 
-    return p0
-.end method
+.field public static chat_screen_leave_chat:I = 0x7f13038c
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
+.field public static chat_screen_remove_chat:I = 0x7f1303a6
 
-    iget-object p0, p0, Lyic;->o:Lj07;
+.field public static chat_screen_search_hint:I = 0x7f1303ad
 
-    invoke-virtual {p0, p1}, Lj07;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static chat_screen_status_mute_chat:I = 0x7f1303b0
 
-    move-result-object p0
+.field public static chat_screen_status_subscribe_chat:I = 0x7f1303b1
 
-    if-eqz p0, :cond_0
+.field public static chat_screen_status_unmute_chat:I = 0x7f1303b2
 
-    const/4 p0, 0x1
+.field public static chat_screen_unblock_contact:I = 0x7f1303b4
 
-    return p0
+.field public static media_bar_recent:I = 0x7f130622
 
-    :cond_0
-    const/4 p0, 0x0
+.field public static media_bar_restricted_media_action:I = 0x7f130623
 
-    return p0
-.end method
+.field public static media_bar_restricted_media_subtitle:I = 0x7f130624
 
-.method public final f()Z
-    .locals 0
+.field public static media_bar_restricted_media_title:I = 0x7f130625
 
-    const/4 p0, 0x1
+.field public static media_type_picker__close_dialog__accept:I = 0x7f130669
 
-    return p0
-.end method
+.field public static media_type_picker__close_dialog__title:I = 0x7f13066a
 
-.method public final g()Lbdf;
-    .locals 1
+.field public static media_type_picker__contact:I = 0x7f13066b
 
-    iget-object p0, p0, Lyic;->X:Lzic;
+.field public static media_type_picker__file:I = 0x7f13066c
 
-    const/4 v0, 0x0
+.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f13066d
 
-    invoke-virtual {p0, v0}, Lg07;->l(I)Lzu5;
+.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f13066e
 
-    move-result-object p0
+.field public static media_type_picker__file_dialog__title:I = 0x7f13066f
 
-    return-object p0
-.end method
+.field public static media_type_picker__gallery:I = 0x7f130670
 
-.method public final size()I
-    .locals 0
+.field public static media_type_picker__input_hint:I = 0x7f130671
 
-    iget-object p0, p0, Lyic;->o:Lj07;
+.field public static media_type_picker__money:I = 0x7f130672
 
-    invoke-interface {p0}, Ljava/util/Map;->size()I
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f130673
 
-    move-result p0
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f130674
 
-    return p0
-.end method
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f130675
+
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f130676
+
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f130677
+
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130678
+
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130679
+
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f13067a
+
+.field public static media_type_picker__place:I = 0x7f13067b
+
+.field public static media_type_picker__snack_file:I = 0x7f13067c
+
+.field public static media_type_picker__snack_media:I = 0x7f13067d

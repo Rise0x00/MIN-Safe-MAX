@@ -1,101 +1,194 @@
-.class public abstract Lwj1;
-.super Ljava/lang/Object;
+.class public final Lwj1;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final a:Lth7;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    iput-object p2, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    const/4 p2, 0x2
 
-    move-result-object v0
-
-    const-class v1, Lsz2;
-
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
-
-    sput-object v0, Lwj1;->a:Lth7;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()Lth7;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwj1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwj1;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lwj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    new-instance v0, Lwj1;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    iget-object v1, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lwj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
 
-    const-class v1, Ltz0;
-
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
+    iput-object p1, v0, Lwj1;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public static b()Lth7;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    iget-object p1, p0, Lwj1;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    const-class v1, Lzo1;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    move-result p1
 
-    move-result-object v0
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->S0:Lza8;
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lwj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-.method public static c()Lth7;
-    .locals 2
+    const/4 v1, 0x0
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lp33;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-class v1, Lcv1;
+    invoke-virtual {p1}, Lp33;->b()Lb04;
 
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    move-result-object p1
 
-    move-result-object v0
+    instance-of v0, p1, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public static d()Lth7;
-    .locals 2
+    move-object v1, p1
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    check-cast v1, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    :cond_0
+    if-eqz v1, :cond_4
 
-    move-result-object v0
+    invoke-static {v1}, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;->E0(Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;)V
 
-    const-class v1, Llh5;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    :cond_1
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lp33;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p1}, Lp33;->b()Lb04;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lp33;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lp33;->b()Lb04;
+
+    move-result-object p1
+
+    instance-of v2, p1, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
+
+    if-eqz v2, :cond_2
+
+    move-object v1, p1
+
+    check-cast v1, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;->E0(Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Lp33;
+
+    move-result-object p1
+
+    iget-object v2, p1, Lp33;->a:Li8d;
+
+    invoke-virtual {p1}, Lp33;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "call_waiting_room_widget_tag"
+
+    invoke-static {p1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v2, p1}, Li8d;->R(Z)V
+
+    new-instance v5, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;
+
+    iget-object p1, v0, Lone/me/calls/ui/ui/call/CallScreen;->x0:Ljava/lang/String;
+
+    invoke-direct {v5, p1, v1}, Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;-><init>(Ljava/lang/String;Lof4;)V
+
+    invoke-virtual {v0, v5}, Lone/me/calls/ui/ui/call/CallScreen;->E0(Lone/me/calls/ui/ui/waitingroom/event/CallWaitingRoomEventsWidget;)V
+
+    new-instance v4, Ll8d;
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
+
+    invoke-virtual {v4, v3}, Ll8d;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v4}, Li8d;->S(Ll8d;)V
+
+    :cond_4
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

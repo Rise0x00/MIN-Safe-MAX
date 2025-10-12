@@ -1,130 +1,156 @@
 .class public final Ldhd;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lxe6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lvgd;
 
-.field public final synthetic Y:Lkhd;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic Z:Z
+.field public final synthetic b:Lehd;
+
+.field public final synthetic c:Lzgd;
+
+.field public final synthetic o:Lehd;
 
 
 # direct methods
-.method public constructor <init>(Lkhd;ZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lvgd;Lehd;Lzgd;Lehd;Lvgd;)V
     .locals 0
 
-    iput-object p1, p0, Ldhd;->Y:Lkhd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Ldhd;->Z:Z
+    iput-object p1, p0, Ldhd;->a:Landroid/view/View;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ldhd;->b:Lehd;
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Ldhd;->c:Lzgd;
+
+    iput-object p4, p0, Ldhd;->o:Lehd;
+
+    iput-object p5, p0, Ldhd;->X:Lvgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lp04;
+    check-cast p1, Landroid/animation/ValueAnimator;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Ldhd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    int-to-float v1, v0
 
-    move-result-object p0
+    iget-object v2, p0, Ldhd;->a:Landroid/view/View;
 
-    check-cast p0, Ldhd;
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result v3
 
-    invoke-virtual {p0, p1}, Ldhd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object p0
+    move-result-object v4
 
-    return-object p0
-.end method
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result-object v4
 
-    new-instance p1, Ldhd;
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    iget-object v0, p0, Ldhd;->Y:Lkhd;
+    const/high16 v5, 0x40800000    # 4.0f
 
-    iget-boolean p0, p0, Ldhd;->Z:Z
+    mul-float/2addr v4, v5
 
-    invoke-direct {p1, v0, p0, p2}, Ldhd;-><init>(Lkhd;ZLkotlin/coroutines/Continuation;)V
+    div-float/2addr v3, v4
 
-    return-object p1
-.end method
+    sub-float/2addr v1, v3
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    if-eqz p1, :cond_0
 
-    iget v0, p0, Ldhd;->X:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v2
 
-    throw p0
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v3
 
-    sget-object p1, Lkhd;->v0:[Lof7;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object p1, p0, Ldhd;->Y:Lkhd;
+    move-result-object v3
 
-    invoke-virtual {p1}, Lkhd;->r()Lh1d;
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v5
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [F
+
+    const/4 v5, 0x0
+
+    aput v2, v4, v5
+
+    aput v3, v4, v0
+
+    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    check-cast v0, Lbp;
+    const-wide/16 v2, 0xc8
 
-    const-string v2, "app.media.autoplay.gif"
+    long-to-float v2, v2
 
-    iget-boolean v3, p0, Ldhd;->Z:Z
+    mul-float/2addr v2, v1
 
-    invoke-virtual {v0, v2, v3}, Ld3;->g(Ljava/lang/String;Z)V
+    float-to-long v1, v2
 
-    iput v1, p0, Ldhd;->X:I
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    invoke-static {p1, p0}, Lkhd;->q(Lkhd;Leje;)Ljava/lang/Object;
+    sget-object v1, Lehd;->B0:Landroid/view/animation/AccelerateDecelerateInterpolator;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    sget-object p1, Lq04;->a:Lq04;
+    new-instance v2, Lbhd;
 
-    if-ne p0, p1, :cond_2
+    iget-object v6, p0, Ldhd;->o:Lehd;
 
-    return-object p1
+    iget-object v7, p0, Ldhd;->X:Lvgd;
 
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v3, p0, Ldhd;->a:Landroid/view/View;
 
-    return-object p0
+    iget-object v4, p0, Ldhd;->b:Lehd;
+
+    iget-object v5, p0, Ldhd;->c:Lzgd;
+
+    invoke-direct/range {v2 .. v7}, Lbhd;-><init>(Landroid/view/View;Lehd;Lzgd;Lehd;Lvgd;)V
+
+    invoke-virtual {v0, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v1, Lchd;
+
+    invoke-direct {v1, v3, p1}, Lchd;-><init>(Landroid/view/View;F)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    return-object v0
 .end method

@@ -1,58 +1,37 @@
-.class public final Ll87;
-.super Leud;
+.class public abstract synthetic Ll87;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final F(Lj87;)V
-    .locals 2
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
 
-    check-cast p0, Lk87;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p1, Lj87;->b:Lyte;
+    const/16 v0, 0xb
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v0}, Lqw1;->y(I)[I
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    array-length v0, v0
 
-    const-string v0, ""
+    new-array v0, v0, [I
 
-    :cond_0
-    invoke-virtual {p0, v0}, Lk87;->setText(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Lj87;->c:Ljava/lang/Integer;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lk87;->setIcon(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic x(Llp7;)V
-    .locals 0
-
-    check-cast p1, Lj87;
-
-    invoke-virtual {p0, p1}, Ll87;->F(Lj87;)V
+    :catch_0
+    sput-object v0, Ll87;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

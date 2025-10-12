@@ -1,125 +1,181 @@
-.class public final Lbra;
-.super Lcra;
+.class public abstract Lbra;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Ljava/nio/ByteBuffer;
+# static fields
+.field public static final A:I
+
+.field public static final B:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>([BII)V
+.method static constructor <clinit>()V
     .locals 1
 
-    shr-int/lit8 v0, p3, 0x2
+    sget v0, Lxec;->oneme_notifications_settings_chat_enable_notifications_button:I
 
-    invoke-direct {p0, p1, v0, p2}, Lcra;-><init>([BII)V
+    sput v0, Lbra;->a:I
 
-    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    sget v0, Lxec;->oneme_notifications_settings_chat_linearlayout:I
 
-    move-result-object p1
+    sput v0, Lbra;->b:I
 
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    sget v0, Lxec;->oneme_notifications_settings_chat_recycler_view:I
 
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    sput v0, Lbra;->c:I
 
-    move-result-object p1
+    sget v0, Lxec;->oneme_notifications_settings_chat_settings_button:I
 
-    iput-object p1, p0, Lbra;->d:Ljava/nio/ByteBuffer;
+    sput v0, Lbra;->d:I
+
+    sget v0, Lxec;->oneme_notifications_settings_chat_toolbar:I
+
+    sput v0, Lbra;->e:I
+
+    sget v0, Lxec;->oneme_notifications_settings_chat_type_all_button:I
+
+    sput v0, Lbra;->f:I
+
+    sget v0, Lxec;->oneme_notifications_settings_chat_type_pin_reply_button:I
+
+    sput v0, Lbra;->g:I
+
+    sget v0, Lxec;->oneme_notifications_settings_dialog_enable_notifications_button:I
+
+    sput v0, Lbra;->h:I
+
+    sget v0, Lxec;->oneme_notifications_settings_dialog_linearlayout:I
+
+    sput v0, Lbra;->i:I
+
+    sget v0, Lxec;->oneme_notifications_settings_dialog_recycler_view:I
+
+    sput v0, Lbra;->j:I
+
+    sget v0, Lxec;->oneme_notifications_settings_dialog_settings_button:I
+
+    sput v0, Lbra;->k:I
+
+    sget v0, Lxec;->oneme_notifications_settings_dialog_toolbar:I
+
+    sput v0, Lbra;->l:I
+
+    sget v0, Lxec;->oneme_notifications_settings_enable_all_notifications_button:I
+
+    sput v0, Lbra;->m:I
+
+    sget v0, Lxec;->oneme_notifications_settings_header_vh:I
+
+    sput v0, Lbra;->n:I
+
+    sget v0, Lxec;->oneme_notifications_settings_item_vh:I
+
+    sput v0, Lbra;->o:I
+
+    sget v0, Lxec;->oneme_notifications_settings_linearlayout:I
+
+    sput v0, Lbra;->p:I
+
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_button:I
+
+    sput v0, Lbra;->q:I
+
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_calls_ringtone:I
+
+    sput v0, Lbra;->r:I
+
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_calls_vibration:I
+
+    sput v0, Lbra;->s:I
+
+    sget v0, Lxec;->oneme_notifications_settings_other_linearlayout:I
+
+    sput v0, Lbra;->t:I
+
+    sget v0, Lxec;->oneme_notifications_settings_other_new_user_button:I
+
+    sput v0, Lbra;->u:I
+
+    sget v0, Lxec;->oneme_notifications_settings_other_recycler_view:I
+
+    sput v0, Lbra;->v:I
+
+    sget v0, Lxec;->oneme_notifications_settings_other_settings_button:I
+
+    sput v0, Lbra;->w:I
+
+    sget v0, Lxec;->oneme_notifications_settings_other_toolbar:I
+
+    sput v0, Lbra;->x:I
+
+    sget v0, Lxec;->oneme_notifications_settings_recycler_view:I
+
+    sput v0, Lbra;->y:I
+
+    sget v0, Lxec;->oneme_notifications_settings_reset_default_button:I
+
+    sput v0, Lbra;->z:I
+
+    sget v0, Lxec;->oneme_notifications_settings_show_content_button:I
+
+    sput v0, Lbra;->A:I
+
+    sget v0, Lxec;->oneme_notifications_settings_toolbar:I
+
+    sput v0, Lbra;->B:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)S
-    .locals 2
-
-    shl-int/lit8 p1, p1, 0x2
-
-    iget-object p0, p0, Lbra;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result p0
-
-    float-to-double p0, p0
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr p0, v0
-
-    const-wide v0, 0x40dfffe000000000L    # 32767.5
-
-    mul-double/2addr p0, v0
-
-    double-to-int p0, p0
-
-    add-int/lit16 p0, p0, -0x8000
-
-    int-to-short p0, p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM float ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lcra;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_0
-
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Lbra;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    const-string v3, ", "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    shl-int/lit8 v3, v2, 0x2
-
-    invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

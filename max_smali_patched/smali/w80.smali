@@ -1,158 +1,37 @@
 .class public final Lw80;
-.super Ljava/lang/Object;
+.super Lqqf;
 .source "SourceFile"
-
-# interfaces
-.implements Lo0a;
-
-
-# static fields
-.field public static final a:Lw80;
-
-.field public static final b:Lfi5;
-
-.field public static final c:Lfi5;
-
-.field public static final d:Lfi5;
-
-.field public static final e:Lfi5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Lw80;
+    invoke-direct {p0}, Lqqf;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Lw80;->a:Lw80;
+    invoke-virtual {p0, v0}, Lqqf;->U(I)V
 
-    new-instance v0, Lyx;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lyx;-><init>(I)V
-
-    const-class v1, Ldrb;
-
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfi5;
-
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "window"
-
-    invoke-direct {v2, v3, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lw80;->b:Lfi5;
-
-    new-instance v0, Lyx;
+    new-instance v1, Lri5;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2}, Lyx;-><init>(I)V
+    invoke-direct {v1, v2}, Lri5;-><init>(I)V
 
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
+    invoke-virtual {p0, v1}, Lqqf;->R(Liqf;)V
 
-    move-result-object v0
+    new-instance v1, Ly42;
 
-    new-instance v2, Lfi5;
+    invoke-direct {v1}, Liqf;-><init>()V
 
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-virtual {p0, v1}, Lqqf;->R(Liqf;)V
 
-    move-result-object v0
+    new-instance v1, Lri5;
 
-    const-string v3, "logSourceMetrics"
+    invoke-direct {v1, v0}, Lri5;-><init>(I)V
 
-    invoke-direct {v2, v3, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lw80;->c:Lfi5;
-
-    new-instance v0, Lyx;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lyx;-><init>(I)V
-
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfi5;
-
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "globalMetrics"
-
-    invoke-direct {v2, v3, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lw80;->d:Lfi5;
-
-    new-instance v0, Lyx;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Lyx;-><init>(I)V
-
-    invoke-static {v1, v0}, Ldw1;->o(Ljava/lang/Class;Lyx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfi5;
-
-    invoke-static {v0}, Ldw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "appNamespace"
-
-    invoke-direct {v1, v2, v0}, Lfi5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lw80;->e:Lfi5;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Ly43;
-
-    check-cast p2, Lp0a;
-
-    sget-object p0, Lw80;->b:Lfi5;
-
-    iget-object v0, p1, Ly43;->a:Lkxe;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Lw80;->c:Lfi5;
-
-    iget-object v0, p1, Ly43;->b:Ljava/util/List;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Lw80;->d:Lfi5;
-
-    iget-object v0, p1, Ly43;->c:Lth6;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Lw80;->e:Lfi5;
-
-    iget-object p1, p1, Ly43;->d:Ljava/lang/String;
-
-    invoke-interface {p2, p0, p1}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
+    invoke-virtual {p0, v1}, Lqqf;->R(Liqf;)V
 
     return-void
 .end method

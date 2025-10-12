@@ -1,25 +1,11 @@
-.class public abstract synthetic Lve6;
+.class public interface abstract Lve6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqf6;
 
-# static fields
-.field public static final synthetic a:Ly55;
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    invoke-static {}, Lib3;->values()[Lib3;
-
-    move-result-object v0
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lve6;->a:Ly55;
-
-    return-void
+# virtual methods
+.method public abstract invoke()Ljava/lang/Object;
 .end method

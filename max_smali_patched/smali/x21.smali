@@ -1,118 +1,141 @@
 .class public final Lx21;
-.super Leje;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final K0:Luq1;
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-.field public final synthetic Z:Lg21;
+.field public L0:Lw21;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lg21;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    iput-object p1, p0, Lx21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lx21;->Z:Lg21;
+    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 p1, 0x2
+    new-instance v0, Lao3;
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1}, Lao3;-><init>(II)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v0, Lbx4;->y0:Lsed;
+
+    invoke-virtual {v0, p0}, Lsed;->o(Landroid/view/View;)Lloa;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lloa;->c:Luxa;
+
+    invoke-interface {v0}, Luxa;->b()Lue0;
+
+    move-result-object v0
+
+    iget v0, v0, Lue0;->l:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
+
+    new-instance v0, Luq1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v2}, Luq1;-><init>(Landroid/content/Context;I)V
+
+    sget v3, Lydc;->call_user_full_avatar:I
+
+    invoke-virtual {v0, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    sget-object v3, Lqq1;->b:Lqq1;
+
+    invoke-virtual {v0, v3}, Luq1;->setMode(Lqq1;)V
+
+    iput-object v0, p0, Lx21;->K0:Luq1;
+
+    new-instance v3, Landroid/view/ViewStub;
+
+    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
+
+    sget v4, Lydc;->call_recall:I
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
+
+    new-instance v3, Landroid/view/ViewStub;
+
+    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
+
+    sget p1, Lydc;->call_cancel:I
+
+    invoke-virtual {v3, p1}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {p0, v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    invoke-static {p0}, Lvb4;->f(Landroidx/constraintlayout/widget/ConstraintLayout;)Lko3;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    const/4 v1, 0x7
+
+    invoke-virtual {p1, v0, v1, v2, v1}, Lko3;->d(IIII)V
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p1, v0, v1, v2, v1}, Lko3;->d(IIII)V
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v0, v1, v2, v1}, Lko3;->d(IIII)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v0, v1, v2, v1}, Lko3;->d(IIII)V
+
+    invoke-virtual {p1, p0}, Lko3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final setClickListener(Lw21;)V
     .locals 0
 
-    check-cast p1, Lp04;
+    iput-object p1, p0, Lx21;->L0:Lw21;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lx21;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lx21;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lx21;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final setName(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    new-instance v0, Lx21;
+    iget-object v0, p0, Lx21;->K0:Luq1;
 
-    iget-object v1, p0, Lx21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    invoke-virtual {v0, p1}, Luq1;->setName(Ljava/lang/CharSequence;)V
 
-    iget-object p0, p0, Lx21;->Z:Lg21;
-
-    invoke-direct {v0, v1, p0, p2}, Lx21;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lg21;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lx21;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final setStatus(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v0, p0, Lx21;->K0:Luq1;
 
-    iget-object p1, p0, Lx21;->X:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Luq1;->setStatus(Ljava/lang/CharSequence;)V
 
-    check-cast p1, Lp04;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->n0:[Lof7;
-
-    iget-object v0, p0, Lx21;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lw21;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lw21;->s0:Ltb;
-
-    new-instance v1, Ldr0;
-
-    const/4 v7, 0x4
-
-    const/4 v8, 0x3
-
-    const/4 v2, 0x2
-
-    iget-object v3, p0, Lx21;->Z:Lg21;
-
-    const-class v4, Lg21;
-
-    const-string v5, "setVolumeMicrophone"
-
-    const-string v6, "setVolumeMicrophone(F)V"
-
-    invoke-direct/range {v1 .. v8}, Ldr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance p0, Lgs5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p0, v0, v1, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    invoke-static {p0, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-void
 .end method

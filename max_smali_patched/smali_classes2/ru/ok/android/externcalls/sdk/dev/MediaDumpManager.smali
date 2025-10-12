@@ -21,7 +21,7 @@
         "",
         "",
         "path",
-        "Ltcf;",
+        "Loyf;",
         "setLocalAudioDumpLocation",
         "(Ljava/lang/String;)V",
         "",

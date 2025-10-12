@@ -2,171 +2,86 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
-
-# static fields
-.field public static final X:Landroid/util/SparseIntArray;
-
 
 # instance fields
-.field public final a:I
+.field public final a:Le8e;
 
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
-
-    sput-object v0, Lp44;->X:Landroid/util/SparseIntArray;
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x2
-
-    const/16 v3, 0x10
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x3
-
-    const/16 v4, 0xd
-
-    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x5
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x6
-
-    const/4 v3, -0x2
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x7
-
-    const/4 v3, -0x4
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/16 v1, 0x8
-
-    const/4 v3, -0x6
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/16 v1, 0x9
-
-    const/4 v3, -0x5
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, -0x8
-
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 3
+.method public constructor <init>(Lov0;Lr8f;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
 
-    iput-object v0, p0, Lp44;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object v0
 
-    const/16 v0, 0x9
+    iput-object v0, p0, Lp44;->a:Le8e;
 
-    iput v0, p0, Lp44;->a:I
+    check-cast p2, Lwla;
 
-    sget-object v2, Lp44;->X:Landroid/util/SparseIntArray;
+    invoke-virtual {p2}, Lwla;->a()Ly24;
 
-    invoke-virtual {v2, v0, v1}, Landroid/util/SparseIntArray;->get(II)I
+    move-result-object p2
 
-    move-result v0
+    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
 
-    iput v0, p0, Lp44;->b:I
+    move-result-object p2
 
-    iput-object p1, p0, Lp44;->c:Ljava/lang/String;
+    iput-object p2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
+.method public final onEvent(Laj0;)V
+    .locals 3
+    .annotation runtime Lxye;
+    .end annotation
 
-    new-instance v0, Lyv1;
+    .line 2
+    new-instance v0, Lo44;
 
-    const/16 v1, 0x10
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1, p1}, Lyv1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, p1, v1}, Lo44;-><init>(Lp44;Laj0;Lkotlin/coroutines/Continuation;)V
 
-    new-instance p1, Ljava/lang/Thread;
+    const/4 p1, 0x3
 
-    invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    iget-object v2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :try_start_0
-    iget v0, p0, Lp44;->a:I
+    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
-    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setPriority(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-void
+.end method
 
-    :catchall_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final onEvent(Lp62;)V
+    .locals 3
+    .annotation runtime Lxye;
+    .end annotation
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    .line 1
+    new-instance v0, Ln44;
 
-    iget-object v1, p0, Lp44;->c:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p0, p1, v1}, Ln44;-><init>(Lp44;Lp62;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "-"
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lp44;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object p0, p0, Lp44;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    return-object p1
+    return-void
 .end method

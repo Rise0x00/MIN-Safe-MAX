@@ -3,128 +3,120 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lth7;
-.implements Ljava/io/Serializable;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lkle;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Ld96;
+.field public X:I
 
-.field public volatile b:Ljava/lang/Object;
+.field public Y:[I
 
-.field public final c:Ljava/lang/Object;
+.field public Z:Ljava/util/ArrayList;
+
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public o:[I
+
+.field public w0:Z
+
+.field public x0:Z
+
+.field public y0:Z
 
 
 # direct methods
-.method public constructor <init>(Ld96;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltdd;
 
-    iput-object p1, p0, Lkle;->a:Ld96;
+    const/16 v1, 0x13
 
-    sget-object p1, Lus9;->Y:Lus9;
+    invoke-direct {v0, v1}, Ltdd;-><init>(I)V
 
-    iput-object p1, p0, Lkle;->b:Ljava/lang/Object;
-
-    iput-object p0, p0, Lkle;->c:Ljava/lang/Object;
+    sput-object v0, Lkle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final describeContents()I
     .locals 1
 
-    iget-object p0, p0, Lkle;->b:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    sget-object v0, Lus9;->Y:Lus9;
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v0, p0, Lkle;->b:Ljava/lang/Object;
+    iget p2, p0, Lkle;->a:I
 
-    sget-object v1, Lus9;->Y:Lus9;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eq v0, v1, :cond_0
+    iget p2, p0, Lkle;->b:I
 
-    return-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lkle;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lkle;->c:I
+
+    if-lez p2, :cond_0
+
+    iget-object p2, p0, Lkle;->o:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
     :cond_0
-    iget-object v0, p0, Lkle;->c:Ljava/lang/Object;
+    iget p2, p0, Lkle;->X:I
 
-    monitor-enter v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :try_start_0
-    iget-object v2, p0, Lkle;->b:Ljava/lang/Object;
+    iget p2, p0, Lkle;->X:I
 
-    if-eq v2, v1, :cond_1
+    if-lez p2, :cond_1
 
-    goto :goto_0
+    iget-object p2, p0, Lkle;->Y:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
     :cond_1
-    iget-object v1, p0, Lkle;->a:Ld96;
+    iget-boolean p2, p0, Lkle;->w0:Z
 
-    invoke-interface {v1}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v2
+    iget-boolean p2, p0, Lkle;->x0:Z
 
-    iput-object v2, p0, Lkle;->b:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v1, 0x0
+    iget-boolean p2, p0, Lkle;->y0:Z
 
-    iput-object v1, p0, Lkle;->a:Ld96;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :goto_0
-    monitor-exit v0
+    iget-object p2, p0, Lkle;->Z:Ljava/util/ArrayList;
 
-    return-object v2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p0}, Lkle;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "Lazy value not initialized yet."
-
-    return-object p0
+    return-void
 .end method

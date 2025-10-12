@@ -1,89 +1,69 @@
-.class public final synthetic Lzia;
-.super Ljava/lang/Object;
+.class public final enum Lzia;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final enum a:Lzia;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgja;
+.field public static final synthetic b:[Lzia;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgja;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lzia;->a:I
+    new-instance v0, Lzia;
 
-    iput-object p1, p0, Lzia;->b:Lgja;
+    const-string v1, "IDLE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzia;->a:Lzia;
+
+    new-instance v1, Lzia;
+
+    const-string v2, "LOADING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1}, [Lzia;
+
+    move-result-object v0
+
+    sput-object v0, Lzia;->b:[Lzia;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lzia;
+    .locals 1
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+    const-class v0, Lzia;
 
-    iget p1, p0, Lzia;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p0, p0, Lzia;->b:Lgja;
-
-    iget-object p0, p0, Lgja;->x0:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Landroidx/appcompat/widget/AppCompatEditText;
+    check-cast p0, Lzia;
 
-    const/4 p1, 0x0
+    return-object p0
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.method public static values()[Lzia;
+    .locals 1
 
-    return-void
+    sget-object v0, Lzia;->b:[Lzia;
 
-    :pswitch_0
-    iget-object p0, p0, Lzia;->b:Lgja;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lgja;->d()V
+    move-result-object v0
 
-    return-void
+    check-cast v0, [Lzia;
 
-    :pswitch_1
-    iget-object p0, p0, Lzia;->b:Lgja;
-
-    invoke-virtual {p0}, Lgja;->b()V
-
-    iget-object p0, p0, Lgja;->p0:Ldja;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Ldja;->p()V
-
-    :cond_0
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lzia;->b:Lgja;
-
-    invoke-virtual {p0}, Lgja;->d()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

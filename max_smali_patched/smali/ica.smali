@@ -3,185 +3,214 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbs4;
+.implements Lxda;
+.implements Lss4;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lpcb;
+.field public final b:Lxda;
+
+.field public c:Lss4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lpcb;)V
+.method public synthetic constructor <init>(Lxda;I)V
     .locals 0
+
+    iput p2, p0, Lica;->a:I
+
+    iput-object p1, p0, Lica;->b:Lxda;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lica;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Lica;->b:Lpcb;
+.method private final a(Ljava/lang/Object;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Loq4;Ljava/lang/Exception;)V
-    .locals 5
+.method public final b()V
+    .locals 1
 
-    iget-object v0, p1, Loq4;->a:Lgs4;
+    iget v0, p0, Lica;->a:I
 
-    iget-object v0, v0, Lgs4;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lica;->a:Ljava/lang/String;
+    iget-object v0, p0, Lica;->b:Lxda;
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0}, Lxda;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->b:Lxda;
+
+    invoke-interface {v0}, Lxda;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Lss4;)V
+    .locals 1
+
+    iget v0, p0, Lica;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput-object p1, p0, Lica;->c:Lss4;
+
+    iget-object p1, p0, Lica;->b:Lxda;
+
+    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->c:Lss4;
+
+    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    iget-object v0, p1, Loq4;->a:Lgs4;
+    iput-object p1, p0, Lica;->c:Lss4;
 
-    iget-object v0, v0, Lgs4;->a:Ljava/lang/String;
+    iget-object p1, p0, Lica;->b:Lxda;
 
-    iget v1, p1, Loq4;->b:I
-
-    iget-object v2, p1, Loq4;->h:Lfs4;
-
-    iget v2, v2, Lfs4;->b:F
-
-    const-string v3, "onDownloadChanged, "
-
-    const-string v4, ", "
-
-    invoke-static {v1, v3, v0, v4, v4}, Lw68;->p(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "%"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OneMeDownloadController"
-
-    invoke-static {v1, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p2, :cond_0
-
-    iget-object p0, p0, Lica;->b:Lpcb;
-
-    check-cast p0, Lmcb;
-
-    invoke-virtual {p0, p2}, Lmcb;->D(Ljava/lang/Throwable;)Z
-
-    return-void
+    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
 
     :cond_0
-    iget-object p2, p0, Lica;->b:Lpcb;
-
-    check-cast p2, Lmcb;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2, p1}, Lmcb;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget p1, p1, Loq4;->b:I
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Lica;->b:Lpcb;
-
-    check-cast p1, Lmcb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lmcb;->a:Lou0;
-
-    invoke-virtual {p1}, Lou0;->v()Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    iget-object p0, p0, Lica;->b:Lpcb;
-
-    check-cast p0, Lmcb;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lmcb;->D(Ljava/lang/Throwable;)Z
-
-    :cond_2
-    :goto_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final f(Lds4;Loq4;)V
+.method public final f(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object p2, p2, Loq4;->a:Lgs4;
+    iget v0, p0, Lica;->a:I
 
-    iget-object p2, p2, Lgs4;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lica;->a:Ljava/lang/String;
-
-    invoke-static {p2, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p1, Lds4;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
-
-    iget-object p0, p0, Lica;->b:Lpcb;
-
-    check-cast p0, Lmcb;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Lmcb;->a:Lou0;
-
-    invoke-virtual {p1}, Lou0;->v()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lmcb;->D(Ljava/lang/Throwable;)Z
-
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->b:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Lica;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lica;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget v0, p0, Lica;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lica;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->h()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lica;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lica;->b:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lica;->b:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

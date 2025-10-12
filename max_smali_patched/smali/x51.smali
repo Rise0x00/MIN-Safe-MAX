@@ -1,32 +1,22 @@
 .class public final Lx51;
-.super Lu0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz51;
+.implements Le61;
 
 
-# static fields
-.field public static final c:Lx51;
+# instance fields
+.field public final a:Lft7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lft7;)V
+    .locals 0
 
-    new-instance v0, Lx51;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lp3c;->call_screen_connection_restored:I
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Lu0g;-><init>(ILjava/lang/Long;)V
-
-    sput-object v0, Lx51;->c:Lx51;
+    iput-object p1, p0, Lx51;->a:Lft7;
 
     return-void
 .end method
@@ -34,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -43,30 +33,65 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lx51;
+    instance-of v1, p1, Lx51;
 
-    if-nez p0, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p0, 0x0
+    if-nez v1, :cond_1
 
-    return p0
+    return v2
 
     :cond_1
+    check-cast p1, Lx51;
+
+    iget-object v1, p0, Lx51;->a:Lft7;
+
+    iget-object p1, p1, Lx51;->a:Lft7;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x426150a3
+    iget-object v0, p0, Lx51;->a:Lft7;
 
-    return p0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 2
 
-    const-string p0, "Restored"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v1, "LinkInfo(info="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lx51;->a:Lft7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

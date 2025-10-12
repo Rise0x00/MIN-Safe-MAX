@@ -1,3 +1,3 @@
 .class public final Lge1;
-.super Lt2;
+.super Lv2;
 .source "SourceFile"

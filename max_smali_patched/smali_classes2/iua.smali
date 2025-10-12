@@ -1,139 +1,135 @@
-.class public final synthetic Liua;
+.class public abstract Liua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhm3;
 
+# static fields
+.field public static final a:J
 
-# instance fields
-.field public final synthetic a:Lwua;
+.field public static final b:J
 
-.field public final synthetic b:Lorg/webrtc/Size;
+.field public static final c:J
 
-.field public final synthetic c:I
+.field public static final d:J
 
-.field public final synthetic d:I
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
+
+.field public static final j:J
+
+.field public static final k:J
+
+.field public static final l:J
+
+.field public static final m:J
+
+.field public static final n:J
+
+.field public static final o:J
+
+.field public static final synthetic p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;Lorg/webrtc/Size;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ltfc;->oneme_settings_privacy_content_level_access:I
 
-    iput-object p1, p0, Liua;->a:Lwua;
+    int-to-long v0, v0
 
-    iput-object p2, p0, Liua;->b:Lorg/webrtc/Size;
+    sput-wide v0, Liua;->a:J
 
-    iput p3, p0, Liua;->c:I
+    sget v0, Ltfc;->oneme_settings_privacy_info_header:I
 
-    iput p4, p0, Liua;->d:I
+    int-to-long v0, v0
 
-    return-void
-.end method
+    sput-wide v0, Liua;->b:J
 
+    sget v0, Ltfc;->oneme_settings_privacy_safe_files:I
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+    int-to-long v0, v0
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    sput-wide v0, Liua;->c:J
 
-    iget-object v0, p0, Liua;->a:Lwua;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-    iget-object v1, v0, Lwua;->c0:Lp34;
+    int-to-long v0, v0
 
-    invoke-virtual {v0}, Lwua;->E()V
+    sput-wide v0, Liua;->d:J
 
-    iget-object v2, p0, Liua;->b:Lorg/webrtc/Size;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_black_list:I
 
-    iget v3, v2, Lorg/webrtc/Size;->width:I
+    int-to-long v0, v0
 
-    iget v2, v2, Lorg/webrtc/Size;->height:I
+    sput-wide v0, Liua;->e:J
 
-    iget v4, v0, Lwua;->n:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_call_me:I
 
-    const/4 v5, 0x0
+    int-to-long v0, v0
 
-    if-ne v4, v3, :cond_0
+    sput-wide v0, Liua;->f:J
 
-    iget v4, v0, Lwua;->o:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_finished_sessions:I
 
-    if-eq v4, v2, :cond_1
+    int-to-long v0, v0
 
-    :cond_0
-    iput v2, v1, Lp34;->f:I
+    sput-wide v0, Liua;->g:J
 
-    iput v3, v1, Lp34;->c:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_how_session:I
 
-    iget-object v4, v0, Lwua;->y:Li7c;
+    int-to-long v0, v0
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    sput-wide v0, Liua;->h:J
 
-    const-string v7, "Camera video size changed: "
+    sget v0, Ltfc;->oneme_settings_privacy_screen_safe_mode:I
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    int-to-long v0, v0
 
-    iget v7, v0, Lwua;->n:I
+    sput-wide v0, Liua;->i:J
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_search_by_phone:I
 
-    const-string v7, "x"
+    int-to-long v0, v0
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-wide v0, Liua;->j:J
 
-    iget v8, v0, Lwua;->o:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_see_online_state:I
 
-    const-string v9, " -> "
+    int-to-long v0, v0
 
-    invoke-static {v6, v8, v9, v3, v7}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    sput-wide v0, Liua;->k:J
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_twofa:I
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    int-to-long v0, v0
 
-    move-result-object v6
+    sput-wide v0, Liua;->l:J
 
-    const-string v7, "PCRTCClient"
+    sget v0, Ltfc;->oneme_settings_privacy_screen_twofa_profile_delete:I
 
-    invoke-interface {v4, v7, v6}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    int-to-long v0, v0
 
-    iput v3, v0, Lwua;->n:I
+    sput-wide v0, Liua;->m:J
 
-    iput v2, v0, Lwua;->o:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_twofa_warning_item:I
 
-    invoke-virtual {v0, p1, v5}, Lwua;->t(Lorg/webrtc/PeerConnection;Z)V
+    int-to-long v0, v0
 
-    :cond_1
-    iget v2, v0, Lwua;->l:I
+    sput-wide v0, Liua;->n:J
 
-    iget v3, p0, Liua;->c:I
+    sget v0, Ltfc;->oneme_settings_privacy_screen_web_apps:I
 
-    iget p0, p0, Liua;->d:I
+    int-to-long v0, v0
 
-    if-ne v2, v3, :cond_3
-
-    iget v2, v0, Lwua;->m:I
-
-    if-eq v2, p0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-
-    :cond_3
-    :goto_0
-    iput v3, v1, Lp34;->g:I
-
-    iput p0, v1, Lp34;->h:I
-
-    iput v3, v0, Lwua;->l:I
-
-    iput p0, v0, Lwua;->m:I
-
-    invoke-virtual {v0, p1, v5}, Lwua;->k(Lorg/webrtc/PeerConnection;Z)V
+    sput-wide v0, Liua;->o:J
 
     return-void
 .end method

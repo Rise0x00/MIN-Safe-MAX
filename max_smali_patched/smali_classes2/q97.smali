@@ -1,168 +1,203 @@
 .class public final Lq97;
-.super Leje;
+.super Lat5;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:Lq4e;
+.field public final synthetic g:I
 
-.field public Y:I
+.field public final h:Z
 
-.field public final synthetic Z:Lr97;
+.field public final i:Z
 
-.field public final synthetic n0:Lctb;
-
-.field public final synthetic o0:Z
+.field public final j:Lag6;
 
 
 # direct methods
-.method public constructor <init>(Lr97;Lctb;ZLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lag6;ZZLuhf;Lx61;Lpmc;I)V
     .locals 0
 
-    iput-object p1, p0, Lq97;->Z:Lr97;
+    iput p7, p0, Lq97;->g:I
 
-    iput-object p2, p0, Lq97;->n0:Lctb;
+    invoke-direct {p0, p4, p5, p6}, Lat5;-><init>(Luhf;Lx61;Lpmc;)V
 
-    iput-boolean p3, p0, Lq97;->o0:Z
+    iput-object p1, p0, Lq97;->j:Lag6;
 
-    const/4 p1, 0x2
+    iput-boolean p2, p0, Lq97;->h:Z
 
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lq97;->i:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public b()V
+    .locals 1
 
-    check-cast p1, Lp04;
+    iget v0, p0, Lq97;->g:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lq97;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
 
-    move-result-object p0
+    :pswitch_0
+    invoke-virtual {p0}, Lat5;->h()V
 
-    check-cast p0, Lq97;
+    return-void
 
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lq97;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d(Lope;)V
+    .locals 1
 
-    new-instance p1, Lq97;
+    iget v0, p0, Lq97;->g:I
 
-    iget-object v0, p0, Lq97;->n0:Lctb;
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v1, p0, Lq97;->o0:Z
+    iget-object v0, p0, Lq97;->j:Lag6;
 
-    iget-object p0, p0, Lq97;->Z:Lr97;
+    check-cast v0, Lt0h;
 
-    invoke-direct {p1, p0, v0, v1, p2}, Lq97;-><init>(Lr97;Lctb;ZLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lt0h;->invoke()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget v0, p0, Lq97;->Y:I
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v1, 0x2
+    move-result v0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_1
 
-    sget-object v3, Lq04;->a:Lq04;
+    iget-boolean v0, p0, Lq97;->h:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    if-eq v0, v2, :cond_1
+    iget-boolean v0, p0, Lq97;->i:Z
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    iget-object v0, p0, Lq97;->X:Lq4e;
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    :cond_0
+    invoke-super {p0, p1}, Lat5;->d(Lope;)V
 
-    iget-object p1, p0, Lq97;->Z:Lr97;
+    :cond_1
+    :goto_0
+    return-void
 
-    iget-object v0, p1, Lr97;->o:Lq4e;
+    :pswitch_0
+    iget-object v0, p0, Lq97;->j:Lag6;
 
-    iget-object p1, p1, Lr97;->c:Lth7;
+    check-cast v0, Lt0h;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lt0h;->invoke()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lkg6;
+    check-cast v0, Ljava/lang/Boolean;
 
-    iput-object v0, p0, Lq97;->X:Lq4e;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput v2, p0, Lq97;->Y:I
+    move-result v0
 
-    iget-object v2, p0, Lq97;->n0:Lctb;
+    if-nez v0, :cond_3
 
-    iget-boolean v4, p0, Lq97;->o0:Z
+    iget-boolean v0, p0, Lq97;->h:Z
 
-    invoke-virtual {p1, v2, v4, p0}, Lkg6;->a(Lctb;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-nez v0, :cond_3
 
-    move-result-object p1
+    iget-boolean v0, p0, Lq97;->i:Z
 
-    if-ne p1, v3, :cond_3
+    if-eqz v0, :cond_2
 
     goto :goto_1
 
+    :cond_2
+    invoke-super {p0, p1}, Lat5;->d(Lope;)V
+
     :cond_3
-    :goto_0
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lq97;->X:Lq4e;
-
-    iput v1, p0, Lq97;->Y:I
-
-    invoke-interface {v0, p1, p0}, Lzk9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v3, :cond_4
-
     :goto_1
-    return-object v3
+    return-void
 
-    :cond_4
-    :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
+    nop
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e()V
+    .locals 1
+
+    iget v0, p0, Lq97;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lat5;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lq97;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x3
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lq97;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "OutgoingP2PFirstDataStat"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "incomingP2PFirstDataStat"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

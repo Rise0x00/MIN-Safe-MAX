@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/contacts/ContactCallManager;
-.implements Li41;
+.implements Lc41;
 
 
 # annotations
@@ -15,20 +15,20 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;",
         "Lru/ok/android/externcalls/sdk/contacts/ContactCallManager;",
-        "Li41;",
+        "Lc41;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantsStore",
         "",
         "iAmAnonymous",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Z)V",
-        "Ltcf;",
+        "Loyf;",
         "notifyContactCallStateChanged",
         "()V",
-        "Lh41;",
+        "Lb41;",
         "info",
         "onDecorativeParticipantIdChanged",
-        "(Lh41;)V",
+        "(Lb41;)V",
         "Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;",
         "listener",
         "addContactCallListener",
@@ -96,28 +96,28 @@
 .end method
 
 .method private final notifyContactCallStateChanged()V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;->onContactCallMyAnonChanged()V
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;->onContactCallMyAnonChanged()V
 
     goto :goto_0
 
@@ -128,32 +128,32 @@
 
 # virtual methods
 .method public addContactCallListener(Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public getIAmAnonymous()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->iAmAnonymous:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->iAmAnonymous:Z
 
-    return p0
+    return v0
 .end method
 
 .method public getIWasInitiallyAnonymous()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->iWasInitiallyAnonymous:Z
+    iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->iWasInitiallyAnonymous:Z
 
-    return p0
+    return v0
 .end method
 
-.method public onDecorativeParticipantIdChanged(Lh41;)V
+.method public onDecorativeParticipantIdChanged(Lb41;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->participantsStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
@@ -164,7 +164,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lah1;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
 
     move-result-object v0
 
@@ -185,11 +185,11 @@
 
     if-eqz v1, :cond_2
 
-    iget-object p1, p1, Lh41;->a:Lwg1;
+    iget-object p1, p1, Lb41;->a:Lxg1;
 
-    iget-object v0, v0, Lah1;->a:Lwg1;
+    iget-object v0, v0, Lbh1;->a:Lxg1;
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -207,11 +207,11 @@
 .end method
 
 .method public removeContactCallListener(Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/contacts/internal/ContactCallManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

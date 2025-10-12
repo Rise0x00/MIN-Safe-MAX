@@ -1,107 +1,53 @@
 .class public final Lz4a;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lkk7;
-.implements Lt02;
 
 
 # instance fields
-.field public final a:Luk7;
+.field public X:Ljava/lang/String;
 
-.field public final b:Lt4a;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:La5a;
+.field public final synthetic Z:La5a;
 
-.field public final synthetic o:Lb5a;
+.field public o:La5a;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Lb5a;Luk7;Lt4a;)V
+.method public constructor <init>(La5a;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz4a;->Z:La5a;
 
-    iput-object p1, p0, Lz4a;->o:Lb5a;
-
-    iput-object p2, p0, Lz4a;->a:Luk7;
-
-    iput-object p3, p0, Lz4a;->b:Lt4a;
-
-    invoke-virtual {p2, p0}, Luk7;->a(Lok7;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lz4a;->a:Luk7;
+    iput-object p1, p0, Lz4a;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Luk7;->f(Lok7;)V
+    iget p1, p0, Lz4a;->w0:I
 
-    iget-object v0, p0, Lz4a;->b:Lt4a;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, v0, Lt4a;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+    iput p1, p0, Lz4a;->w0:I
 
-    iget-object v0, p0, Lz4a;->c:La5a;
+    iget-object p1, p0, Lz4a;->Z:La5a;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, La5a;->cancel()V
-
-    :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lz4a;->c:La5a;
-
-    return-void
-.end method
-
-.method public final d(Lsk7;Luj7;)V
-    .locals 0
-
-    sget-object p1, Luj7;->ON_START:Luj7;
-
-    if-ne p2, p1, :cond_0
-
-    iget-object p1, p0, Lz4a;->o:Lb5a;
-
-    iget-object p2, p0, Lz4a;->b:Lt4a;
-
-    invoke-virtual {p1, p2}, Lb5a;->b(Lt4a;)La5a;
+    invoke-virtual {p1, v0, p0}, La5a;->d(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lz4a;->c:La5a;
-
-    return-void
-
-    :cond_0
-    sget-object p1, Luj7;->ON_STOP:Luj7;
-
-    if-ne p2, p1, :cond_1
-
-    iget-object p0, p0, Lz4a;->c:La5a;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, La5a;->cancel()V
-
-    return-void
-
-    :cond_1
-    sget-object p1, Luj7;->ON_DESTROY:Luj7;
-
-    if-ne p2, p1, :cond_2
-
-    invoke-virtual {p0}, Lz4a;->cancel()V
-
-    :cond_2
-    return-void
+    return-object p1
 .end method

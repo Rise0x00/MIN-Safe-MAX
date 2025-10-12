@@ -1,49 +1,35 @@
-.class public final Ld69;
-.super Lax3;
+.class public abstract synthetic Ld69;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Ly79;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ly79;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ld69;->X:Ly79;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Lqw1;->y(I)[I
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v0, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v1, Ld69;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Ld69;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ld69;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ld69;->Y:I
-
-    iget-object p1, p0, Ld69;->X:Ly79;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Ly79;->y(JLax3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

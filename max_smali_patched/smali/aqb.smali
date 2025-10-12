@@ -1,73 +1,73 @@
-.class public final synthetic Laqb;
-.super Ljava/lang/Object;
+.class public final enum Laqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Laqb;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Laqb;
 
-.field public final synthetic b:Ljqb;
+.field public static final synthetic c:[Laqb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljqb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Laqb;->a:I
+    new-instance v0, Laqb;
 
-    iput-object p1, p0, Laqb;->b:Ljqb;
+    const-string v1, "IDLE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Laqb;->a:Laqb;
+
+    new-instance v1, Laqb;
+
+    const-string v2, "STREAMING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Laqb;->b:Laqb;
+
+    filled-new-array {v0, v1}, [Laqb;
+
+    move-result-object v0
+
+    sput-object v0, Laqb;->c:[Laqb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static valueOf(Ljava/lang/String;)Laqb;
     .locals 1
 
-    iget v0, p0, Laqb;->a:I
+    const-class v0, Laqb;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p0, p0, Laqb;->b:Ljqb;
+    move-result-object p0
 
-    iget-boolean v0, p0, Ljqb;->T0:Z
+    check-cast p0, Laqb;
 
-    if-nez v0, :cond_0
+    return-object p0
+.end method
 
-    iget-object v0, p0, Ljqb;->x0:Lxg8;
+.method public static values()[Laqb;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Laqb;->c:[Laqb;
 
-    invoke-interface {v0, p0}, Lfad;->p(Lhad;)V
+    invoke-virtual {v0}, [Laqb;->clone()Ljava/lang/Object;
 
-    :cond_0
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object p0, p0, Laqb;->b:Ljqb;
+    check-cast v0, [Laqb;
 
-    invoke-virtual {p0}, Ljqb;->u()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Laqb;->b:Ljqb;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ljqb;->N0:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

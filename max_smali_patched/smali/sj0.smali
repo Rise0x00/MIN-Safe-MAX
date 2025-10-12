@@ -1,199 +1,80 @@
-.class public abstract Lsj0;
-.super Ljava/lang/Object;
+.class public final Lsj0;
+.super Len9;
 .source "SourceFile"
-
-# interfaces
-.implements Lna8;
-.implements Loa8;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:J
-
-.field public final c:J
-
-.field public o:J
-
-
-# direct methods
-.method public constructor <init>(JJI)V
-    .locals 0
-
-    iput p5, p0, Lsj0;->a:I
-
-    packed-switch p5, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lsj0;->b:J
-
-    iput-wide p3, p0, Lsj0;->c:J
-
-    const-wide/16 p3, 0x1
-
-    sub-long/2addr p1, p3
-
-    iput-wide p1, p0, Lsj0;->o:J
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lsj0;->b:J
-
-    iput-wide p3, p0, Lsj0;->c:J
-
-    const-wide/16 p3, 0x1
-
-    sub-long/2addr p1, p3
-
-    iput-wide p1, p0, Lsj0;->o:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 4
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-    iget v0, p0, Lsj0;->a:I
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-wide v0, p0, Lsj0;->o:J
+    if-eq v0, v1, :cond_1
 
-    iget-wide v2, p0, Lsj0;->b:J
+    const/4 v1, 0x2
 
-    cmp-long v2, v0, v2
+    if-eq v0, v1, :cond_0
 
-    if-ltz v2, :cond_0
+    const-string p1, "Don\'t know how to handle message: "
 
-    iget-wide v2, p0, Lsj0;->c:J
+    invoke-static {v0, p1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
 
-    cmp-long p0, v0, v2
+    move-result-object p1
 
-    if-gtz p0, :cond_0
+    new-instance v0, Ljava/lang/Exception;
+
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+
+    const-string v1, "BasePendingResult"
+
+    invoke-static {v1, p1, v0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/util/NoSuchElementException;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    check-cast p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;
 
-    throw p0
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->w0:Lcom/google/android/gms/common/api/Status;
 
-    :pswitch_0
-    iget-wide v0, p0, Lsj0;->o:J
-
-    iget-wide v2, p0, Lsj0;->b:J
-
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_1
-
-    iget-wide v2, p0, Lsj0;->c:J
-
-    cmp-long p0, v0, v2
-
-    if-gtz p0, :cond_1
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->U(Lcom/google/android/gms/common/api/Status;)V
 
     return-void
 
     :cond_1
-    new-instance p0, Ljava/util/NoSuchElementException;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    check-cast p1, Landroid/util/Pair;
 
-    throw p0
+    iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    nop
+    if-nez v0, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-.method public final next()Z
-    .locals 4
+    check-cast p1, Lz3d;
 
-    iget v0, p0, Lsj0;->a:I
+    const/4 p1, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    throw p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-wide v0, p0, Lsj0;->o:J
+    :catch_0
+    move-exception p1
 
-    const-wide/16 v2, 0x1
+    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->k:Lmv0;
 
-    add-long/2addr v0, v2
+    throw p1
 
-    iput-wide v0, p0, Lsj0;->o:J
+    :cond_2
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    iget-wide v2, p0, Lsj0;->c:J
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    cmp-long p0, v0, v2
-
-    const/4 v0, 0x1
-
-    if-lez p0, :cond_0
-
-    move p0, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    xor-int/2addr p0, v0
-
-    return p0
-
-    :pswitch_0
-    iget-wide v0, p0, Lsj0;->o:J
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lsj0;->o:J
-
-    iget-wide v2, p0, Lsj0;->c:J
-
-    cmp-long p0, v0, v2
-
-    const/4 v0, 0x1
-
-    if-lez p0, :cond_1
-
-    move p0, v0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_1
-    xor-int/2addr p0, v0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

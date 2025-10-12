@@ -1,66 +1,71 @@
-.class public abstract Lh05;
-.super Lbi;
+.class public final Lh05;
+.super Ldq1;
 .source "SourceFile"
 
 
-# instance fields
-.field public q0:Lh25;
+# direct methods
+.method public constructor <init>(Lgh1;Lwg1;Lpmc;Lsmc;Lwd1;Luhf;)V
+    .locals 12
+
+    new-instance v2, Lmt9;
+
+    invoke-direct {v2}, Lmt9;-><init>()V
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v8, p5
+
+    move-object/from16 v11, p6
+
+    invoke-direct/range {v0 .. v11}, Ldq1;-><init>(Lgh1;Lmt9;Lwg1;Lpmc;Lsmc;Lct5;Lrw0;Lwd1;Ldf8;Ljfd;Luhf;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onTextContextMenuItem(I)Z
+.method public final C()Ljava/lang/String;
     .locals 1
 
-    const v0, 0x1020022
+    const-string v0, "DummyCallTopology"
 
-    if-ne p1, v0, :cond_0
-
-    const p1, 0x1020031
-
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method
 
-.method public setReplaceTextSmiles(Z)V
+.method public final T(Ly7b;)V
     .locals 0
 
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lh05;->q0:Lh25;
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Lh25;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lh05;->q0:Lh25;
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
     return-void
+.end method
 
-    :cond_0
-    iget-object p1, p0, Lh05;->q0:Lh25;
+.method public final v()Ljava/lang/Runnable;
+    .locals 1
 
-    if-eqz p1, :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+    return-object v0
+.end method
 
-    const/4 p1, 0x0
+.method public final x()Lwlf;
+    .locals 1
 
-    iput-object p1, p0, Lh05;->q0:Lh25;
+    sget-object v0, Lwlf;->a:Lwlf;
 
-    :cond_1
-    return-void
+    return-object v0
 .end method

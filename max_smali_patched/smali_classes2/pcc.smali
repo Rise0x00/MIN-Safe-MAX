@@ -1,49 +1,54 @@
-.class public final Lpcc;
+.class public abstract Lpcc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lfpc;
+# static fields
+.field public static emoji_sprite_0:I = 0x7f080371
 
-.field public final b:Lmh;
+.field public static emoji_sprite_1:I = 0x7f080372
 
-.field public final c:Lbe4;
+.field public static emoji_sprite_10:I = 0x7f080373
 
-.field public final d:La49;
+.field public static emoji_sprite_11:I = 0x7f080374
 
+.field public static emoji_sprite_12:I = 0x7f080375
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.field public static emoji_sprite_13:I = 0x7f080376
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static emoji_sprite_14:I = 0x7f080377
 
-    iput-object p1, p0, Lpcc;->a:Lfpc;
+.field public static emoji_sprite_15:I = 0x7f080378
 
-    new-instance v0, Lmh;
+.field public static emoji_sprite_16:I = 0x7f080379
 
-    const/16 v1, 0x13
+.field public static emoji_sprite_17:I = 0x7f08037a
 
-    invoke-direct {v0, p1, v1}, Lmh;-><init>(Lfpc;I)V
+.field public static emoji_sprite_18:I = 0x7f08037b
 
-    iput-object v0, p0, Lpcc;->b:Lmh;
+.field public static emoji_sprite_19:I = 0x7f08037c
 
-    new-instance v0, Lbe4;
+.field public static emoji_sprite_2:I = 0x7f08037d
 
-    const/4 v1, 0x4
+.field public static emoji_sprite_20:I = 0x7f08037e
 
-    invoke-direct {v0, p1, v1}, Lbe4;-><init>(Lfpc;I)V
+.field public static emoji_sprite_21:I = 0x7f08037f
 
-    iput-object v0, p0, Lpcc;->c:Lbe4;
+.field public static emoji_sprite_22:I = 0x7f080380
 
-    new-instance v0, La49;
+.field public static emoji_sprite_23:I = 0x7f080381
 
-    const/16 v1, 0x18
+.field public static emoji_sprite_24:I = 0x7f080382
 
-    invoke-direct {v0, p1, v1}, La49;-><init>(Lfpc;I)V
+.field public static emoji_sprite_3:I = 0x7f080383
 
-    iput-object v0, p0, Lpcc;->d:La49;
+.field public static emoji_sprite_4:I = 0x7f080384
 
-    return-void
-.end method
+.field public static emoji_sprite_5:I = 0x7f080385
+
+.field public static emoji_sprite_6:I = 0x7f080386
+
+.field public static emoji_sprite_7:I = 0x7f080387
+
+.field public static emoji_sprite_8:I = 0x7f080388
+
+.field public static emoji_sprite_9:I = 0x7f080389

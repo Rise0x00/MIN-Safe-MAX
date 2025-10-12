@@ -1,41 +1,41 @@
 .class public final Luh9;
-.super Lgj0;
+.super Lth7;
 .source "SourceFile"
+
+# interfaces
+.implements Lrff;
 
 
 # instance fields
-.field public final c:J
+.field public final synthetic R0:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(JLloe;J)V
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Ld5f;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lgj0;-><init>(JLloe;)V
+    iput-object p1, p0, Luh9;->R0:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iput-wide p4, p0, Luh9;->c:J
+    invoke-direct {p0, p2}, Lth7;-><init>(Lsh7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onThemeChanged(Luxa;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Luh9;->R0:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const-string v1, "MsgSendError{chatId="
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->E0:Ld5f;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    iget-wide v1, p0, Luh9;->c:J
+    const/4 v0, 0x0
 
-    const/16 p0, 0x7d
+    :cond_0
+    invoke-virtual {v0, p1}, Ld5f;->onThemeChanged(Luxa;)V
 
-    invoke-static {v0, v1, v2, p0}, Ljq9;->h(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

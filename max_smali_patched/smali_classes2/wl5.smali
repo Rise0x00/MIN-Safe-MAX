@@ -1,76 +1,53 @@
-.class public final synthetic Lwl5;
-.super Ljava/lang/Object;
+.class public final Lwl5;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lem5;
 
-.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lcm5;
+
+.field public o:Lcm5;
+
+.field public w0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
+.method public constructor <init>(Lcm5;Lnz3;)V
     .locals 0
 
-    iput p2, p0, Lwl5;->a:I
+    iput-object p1, p0, Lwl5;->Z:Lcm5;
 
-    iput-object p1, p0, Lwl5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lwl5;->a:I
+    iput-object p1, p0, Lwl5;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lwl5;->w0:I
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
 
-    check-cast p1, Ljava/lang/Integer;
+    iput p1, p0, Lwl5;->w0:I
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object p1, p0, Lwl5;->Z:Lcm5;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lwl5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lcm5;->g1(Lem5;Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lwl5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {p0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

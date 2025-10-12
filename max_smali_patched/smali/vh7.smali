@@ -1,63 +1,45 @@
 .class public final Lvh7;
-.super Lpj4;
+.super Lf06;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lkotlin/coroutines/Continuation;
+.field public final synthetic a:Ljava/lang/Iterable;
+
+.field public final synthetic b:Lkob;
 
 
 # direct methods
-.method public constructor <init>(Lh04;Lt96;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Iterable;Lkob;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lvh7;->a:Ljava/lang/Iterable;
 
-    invoke-direct {p0, p1, v1, v0}, Lc0;-><init>(Lh04;ZZ)V
-
-    invoke-static {p2, p0, p0}, Lu77;->m(Lt96;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvh7;->a:Lkotlin/coroutines/Continuation;
+    iput-object p2, p0, Lvh7;->b:Lkob;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onStart()V
-    .locals 4
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    iget-object v0, p0, Lvh7;->a:Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lvh7;->a:Ljava/lang/Iterable;
 
-    :try_start_0
-    invoke-static {v0}, Lu77;->F(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    sget-object v1, Ltcf;->a:Ltcf;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x2
+    new-instance v1, Lwh7;
 
-    const/4 v3, 0x0
+    iget-object v2, p0, Lvh7;->b:Lkob;
 
-    invoke-static {v0, v1, v3, v2, v3}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lf96;ILjava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v1, v0, v2}, Lwh7;-><init>(Ljava/util/Iterator;Lkob;)V
 
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lfnc;
-
-    invoke-direct {v1, v0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {p0, v1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    throw v0
+    return-object v1
 .end method

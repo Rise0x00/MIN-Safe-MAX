@@ -1,147 +1,111 @@
 .class public final Lxya;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebChromeClient;
 .source "SourceFile"
-
-# interfaces
-.implements Ly1b;
 
 
 # instance fields
-.field public final a:Lth7;
-
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final d:Lq4e;
-
-.field public final e:Ljbc;
+.field public final a:Li0h;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Li0h;)V
+    .locals 0
 
-    sget-object v0, Lm2e;->a:Lm2e;
+    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lvu3;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v2
-
-    const-class v3, Lhoe;
-
-    invoke-virtual {v2, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v3, Llwa;
-
-    invoke-virtual {v0, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, p0, Lxya;->a:Lth7;
-
-    iput-object v2, p0, Lxya;->b:Lth7;
-
-    iput-object v0, p0, Lxya;->c:Lth7;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v0}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxya;->d:Lq4e;
-
-    new-instance v1, Ljbc;
-
-    invoke-direct {v1, v0}, Ljbc;-><init>(Lal9;)V
-
-    iput-object v1, p0, Lxya;->e:Ljbc;
+    iput-object p1, p0, Lxya;->a:Li0h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
     .locals 0
 
-    return-void
-.end method
+    new-instance p2, Lyya;
 
-.method public final b(Lo1b;)V
-    .locals 0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final d(J)V
-    .locals 0
+    const/16 p3, 0xe
 
-    return-void
-.end method
+    invoke-direct {p2, p1, p3}, Lyya;-><init>(Landroid/content/Context;I)V
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 3
+    new-instance p1, Lwya;
 
-    iget-object v0, p0, Lxya;->c:Lth7;
+    invoke-direct {p1, p0, p2}, Lwya;-><init>(Lxya;Lyya;)V
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    move-result-object v0
+    if-eqz p4, :cond_0
 
-    check-cast v0, Llwa;
+    iget-object p1, p4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    sget-object v1, Llwa;->f:[Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Llwa;->b([Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lxya;->b:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhoe;
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->b()Lj04;
-
-    move-result-object v0
-
-    new-instance v1, Lwya;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lwya;-><init>(Lxya;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {p1, v0, v2, v1, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    :goto_0
+    check-cast p1, Landroid/webkit/WebView$WebViewTransport;
+
+    invoke-virtual {p1, p2}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
+
+    invoke-virtual {p4}, Landroid/os/Message;->sendToTarget()V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
+    .locals 2
+
+    instance-of v0, p1, Lyya;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lyya;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v1
+
+    :goto_0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    invoke-virtual {p1}, Lyya;->getFilePathCallback()Landroid/webkit/ValueCallback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, v1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
+
+    :cond_2
+    invoke-virtual {p1, p2}, Lyya;->setFilePathCallback(Landroid/webkit/ValueCallback;)V
+
+    iget-object p1, p0, Lxya;->a:Li0h;
+
+    iget-object p1, p1, Li0h;->c1:Ljb5;
+
+    new-instance p2, Lgzg;
+
+    invoke-direct {p2, p3}, Lgzg;-><init>(Landroid/webkit/WebChromeClient$FileChooserParams;)V
+
+    invoke-static {p1, p2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -1,81 +1,50 @@
-.class public final synthetic Lie5;
+.class public interface abstract Lie5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# virtual methods
+.method public abstract A()I
+.end method
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;I)V
+.method public C([BLslb;)V
     .locals 0
-
-    iput p2, p0, Lie5;->a:I
-
-    iput-object p1, p0, Lie5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public abstract d([B)Ljava/util/Map;
+.end method
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public abstract l()Lhe5;
+.end method
 
-    iget p1, p0, Lie5;->a:I
+.method public abstract m(Lkbh;)V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract o([B)Lc64;
+.end method
 
-    iget-object p0, p0, Lie5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+.method public abstract r()[B
+.end method
 
-    packed-switch p1, :pswitch_data_0
+.method public abstract release()V
+.end method
 
-    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->E0:[Lof7;
+.method public abstract s([BLjava/lang/String;)Z
+.end method
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
+.method public abstract t([B[B)V
+.end method
 
-    return-void
+.method public abstract v([B)V
+.end method
 
-    :pswitch_0
-    const/4 p1, 0x0
+.method public abstract w([B[B)[B
+.end method
 
-    iput-boolean p1, p0, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->D0:Z
+.method public abstract y([B)V
+.end method
 
-    sget-object p1, Lx07;->a:Lx07;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ls4;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lb17;
-
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1}, Lb17;->b(I)V
-
-    :cond_0
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract z([BLjava/util/List;ILjava/util/HashMap;)Lge5;
 .end method

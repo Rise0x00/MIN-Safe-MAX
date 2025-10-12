@@ -1,12 +1,12 @@
 .class public Lcom/google/android/material/search/SearchView$Behavior;
-.super Lkz3;
+.super Lz14;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lkz3;"
+        "Lz14;"
     }
 .end annotation
 
@@ -35,9 +35,9 @@
 .method public final h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;)Z
     .locals 0
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    new-instance p1, Ljava/lang/ClassCastException;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
 
-    throw p0
+    throw p1
 .end method

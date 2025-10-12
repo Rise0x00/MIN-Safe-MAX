@@ -21,15 +21,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ButtonBarLayout;->c:I
 
-    sget-object v0, Lz6c;->ButtonBarLayout:[I
+    sget-object v0, Lgmc;->ButtonBarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v5
 
-    sget-object v3, Lz6c;->ButtonBarLayout:[I
-
-    sget-object v0, Lixf;->a:Ljava/util/WeakHashMap;
+    sget-object v3, Lgmc;->ButtonBarLayout:[I
 
     const/4 v6, 0x0
 
@@ -41,29 +39,29 @@
 
     move-object v4, p2
 
-    invoke-static/range {v1 .. v7}, Ldxf;->d(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v1 .. v7}, Lskg;->m(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
-    sget p0, Lz6c;->ButtonBarLayout_allowStacking:I
+    sget p1, Lgmc;->ButtonBarLayout_allowStacking:I
 
-    const/4 p1, 0x1
+    const/4 p2, 0x1
 
-    invoke-virtual {v5, p0, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    invoke-virtual {v5, p1, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    move-result p0
+    move-result p1
 
-    iput-boolean p0, v1, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
+    iput-boolean p1, v1, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
     invoke-virtual {v5}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getOrientation()I
+    invoke-virtual {p0}, Landroid/widget/LinearLayout;->getOrientation()I
 
-    move-result p0
+    move-result p1
 
-    if-ne p0, p1, :cond_0
+    if-ne p1, p2, :cond_0
 
-    iget-boolean p0, v1, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
+    iget-boolean p1, v1, Landroidx/appcompat/widget/ButtonBarLayout;->a:Z
 
-    invoke-direct {v1, p0}, Landroidx/appcompat/widget/ButtonBarLayout;->setStacked(Z)V
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/ButtonBarLayout;->setStacked(Z)V
 
     :cond_0
     return-void
@@ -99,7 +97,7 @@
     :goto_0
     invoke-virtual {p0, v0}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    sget v0, Loyb;->spacer:I
+    sget v0, Ltdc;->spacer:I
 
     invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -378,7 +376,7 @@
 
     :cond_b
     :goto_5
-    sget-object v0, Lixf;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lskg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->getMinimumHeight()I
 

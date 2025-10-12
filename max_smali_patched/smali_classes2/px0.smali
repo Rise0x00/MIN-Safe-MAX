@@ -1,27 +1,23 @@
-.class public final Lpx0;
+.class public interface abstract Lpx0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lmo8;
+# virtual methods
+.method public abstract C()V
+.end method
 
-.field public final b:Ljava/lang/String;
+.method public abstract F()V
+.end method
 
-.field public final c:Ljava/util/ArrayList;
+.method public abstract G()V
+.end method
 
+.method public abstract N()V
+.end method
 
-# direct methods
-.method public constructor <init>(Lmo8;Ljava/lang/String;Ljava/util/ArrayList;)V
-    .locals 0
+.method public abstract a(Ljava/util/ArrayList;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpx0;->a:Lmo8;
-
-    iput-object p2, p0, Lpx0;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lpx0;->c:Ljava/util/ArrayList;
-
-    return-void
+.method public abstract g(Ljava/lang/String;)V
 .end method

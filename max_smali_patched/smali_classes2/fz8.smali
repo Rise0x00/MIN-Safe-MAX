@@ -1,84 +1,45 @@
 .class public final Lfz8;
-.super Ljava/lang/Object;
+.super Lbp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:Lfz8;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfz8;
 
-    iput-wide p1, p0, Lfz8;->a:J
+    invoke-direct {v0}, Lbp;-><init>()V
+
+    sput-object v0, Lfz8;->a:Lfz8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lfz8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lfz8;
-
-    iget-wide v3, p0, Lfz8;->a:J
-
-    iget-wide p0, p1, Lfz8;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final b()Ljava/util/concurrent/ExecutorService;
     .locals 2
 
-    iget-wide v0, p0, Lfz8;->a:J
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object v0
 
-    move-result p0
+    const-class v1, Ljna;
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object v0
 
-    const-string v0, "ControlInfo(pinnedMessageId="
+    check-cast v0, Ljna;
 
-    const-string v1, ")"
+    invoke-virtual {v0}, Ljna;->a()Ljava/util/concurrent/ExecutorService;
 
-    iget-wide v2, p0, Lfz8;->a:J
+    move-result-object v0
 
-    invoke-static {v2, v3, v0, v1}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

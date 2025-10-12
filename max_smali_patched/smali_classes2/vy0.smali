@@ -3,113 +3,109 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcce;
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final synthetic b:Lfz0;
 
-.field public final synthetic a:Lez0;
-
-.field public final synthetic b:Lbt9;
-
-.field public final synthetic c:Lqpd;
-
-.field public final synthetic o:Z
+.field public final synthetic c:Lxg1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lez0;Lbt9;Lqpd;ZZLjava/lang/String;)V
+.method public synthetic constructor <init>(Lfz0;Lxg1;I)V
     .locals 0
 
+    iput p3, p0, Lvy0;->a:I
+
+    iput-object p1, p0, Lvy0;->b:Lfz0;
+
+    iput-object p2, p0, Lvy0;->c:Lxg1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvy0;->a:Lez0;
-
-    iput-object p2, p0, Lvy0;->b:Lbt9;
-
-    iput-object p3, p0, Lvy0;->c:Lqpd;
-
-    iput-boolean p4, p0, Lvy0;->o:Z
-
-    iput-boolean p5, p0, Lvy0;->X:Z
-
-    iput-object p6, p0, Lvy0;->Y:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 3
 
-    iget-object v0, p0, Lvy0;->a:Lez0;
+    iget p1, p0, Lvy0;->a:I
 
-    iget-object v1, p0, Lvy0;->b:Lbt9;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v2, p0, Lvy0;->c:Lqpd;
+    iget-object p1, p0, Lvy0;->b:Lfz0;
 
-    iget-boolean v3, p0, Lvy0;->o:Z
+    iget-object v0, p1, Lfz0;->z0:Lxg1;
 
-    iget-boolean v5, p0, Lvy0;->X:Z
+    iget-object v1, p0, Lvy0;->c:Lxg1;
 
-    iget-object v7, p0, Lvy0;->Y:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lxg1;->equals(Ljava/lang/Object;)Z
 
-    iget-object p0, v1, Lbt9;->m:Ljava/lang/Runnable;
+    move-result v0
 
-    iget-object v4, v2, Lqpd;->a:Ljava/util/concurrent/ExecutorService;
+    if-eqz v0, :cond_0
 
-    new-instance v6, Lopd;
+    const/4 v0, 0x0
 
-    const/4 v8, 0x2
+    iput-object v0, p1, Lfz0;->z0:Lxg1;
 
-    invoke-direct {v6, v2, v3, v8}, Lopd;-><init>(Lqpd;ZI)V
+    sget-object v1, Lh61;->M0:Lh61;
 
-    invoke-interface {v4, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v1, v0}, Lfz0;->l(Lh61;Ljava/lang/Object;)V
 
-    iget-object v4, v2, Lqpd;->d:Lorg/webrtc/PeerConnectionFactory;
+    :cond_0
+    return-void
 
-    iget-object v6, v1, Lbt9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    :pswitch_0
+    iget-object p1, p0, Lvy0;->b:Lfz0;
 
-    iget v8, v1, Lbt9;->g:I
+    iget-object v0, p1, Lfz0;->a0:Lxo6;
 
-    iget v9, v1, Lbt9;->h:I
+    iget-object p1, p1, Lfz0;->g0:Lgh1;
 
-    iget v10, v1, Lbt9;->i:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v11, v1, Lbt9;->j:I
+    iget-object v1, p0, Lvy0;->c:Lxg1;
 
-    iget v12, v1, Lbt9;->k:I
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    iget-boolean v13, v1, Lbt9;->l:Z
-
-    if-eqz v5, :cond_0
-
-    new-instance v1, Lxy0;
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, p0, v2}, Lxy0;-><init>(Lez0;Ljava/lang/Runnable;I)V
+    invoke-virtual {p1, v2, v1}, Lgh1;->k(Lnwd;Ljava/util/List;)Ljava/util/ArrayList;
 
-    :goto_0
-    move-object v14, v1
+    move-result-object p1
 
-    goto :goto_1
+    invoke-static {p1}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance v1, Ldc;
+    move-result-object p1
 
-    const/4 p0, 0x5
+    check-cast p1, Lbh1;
 
-    invoke-direct {v1, p0}, Ldc;-><init>(I)V
+    if-eqz p1, :cond_1
+
+    iget-object v0, v0, Lxo6;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :goto_1
-    invoke-virtual/range {v4 .. v14}, Lorg/webrtc/PeerConnectionFactory;->setPreprocessorParams(ZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLjava/lang/Runnable;)V
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    :goto_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

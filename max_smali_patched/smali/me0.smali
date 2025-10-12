@@ -1,363 +1,95 @@
-.class public Lme0;
+.class public final Lme0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls5d;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:F
 
-.field public final b:J
+.field public final b:F
 
-.field public final c:Ljava/lang/Object;
+.field public final c:F
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Landroid/window/BackEvent;)V
+    .locals 4
 
-    const/4 v0, 0x2
+    sget-object v0, Lyk;->a:Lyk;
 
-    iput v0, p0, Lme0;->a:I
+    invoke-virtual {v0, p1}, Lyk;->d(Landroid/window/BackEvent;)F
 
-    const-wide/16 v0, 0x0
+    move-result v1
 
-    .line 2
-    invoke-direct {p0, p1, p2, v0, v1}, Lme0;-><init>(JJ)V
+    invoke-virtual {v0, p1}, Lyk;->e(Landroid/window/BackEvent;)F
 
-    return-void
-.end method
+    move-result v2
 
-.method public constructor <init>(JJ)V
-    .locals 2
+    invoke-virtual {v0, p1}, Lyk;->b(Landroid/window/BackEvent;)F
 
-    const/4 v0, 0x2
+    move-result v3
 
-    iput v0, p0, Lme0;->a:I
+    invoke-virtual {v0, p1}, Lyk;->c(Landroid/window/BackEvent;)I
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-wide p1, p0, Lme0;->b:J
-
-    .line 5
-    new-instance p1, Lq5d;
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p2, p3, v0
-
-    if-nez p2, :cond_0
-
-    .line 6
-    sget-object p2, Lw5d;->c:Lw5d;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Lw5d;
-
-    invoke-direct {p2, v0, v1, p3, p4}, Lw5d;-><init>(JJ)V
-
-    .line 7
-    :goto_0
-    invoke-direct {p1, p2, p2}, Lq5d;-><init>(Lw5d;Lw5d;)V
-
-    .line 8
-    iput-object p1, p0, Lme0;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
-    .locals 0
-
-    .line 1
-    iput p4, p0, Lme0;->a:I
-
-    iput-object p1, p0, Lme0;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lme0;->b:J
+    move-result p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput v1, p0, Lme0;->a:F
+
+    iput v2, p0, Lme0;->b:F
+
+    iput v3, p0, Lme0;->c:F
+
+    iput p1, p0, Lme0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget p0, p0, Lme0;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch p0, :pswitch_data_0
+    const-string v1, "BackEventCompat{touchX="
 
-    const/4 p0, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p0
+    iget v1, p0, Lme0;->a:F
 
-    :pswitch_0
-    const/4 p0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    return p0
+    const-string v1, ", touchY="
 
-    :pswitch_1
-    const/4 p0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    iget v1, p0, Lme0;->b:F
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    const-string v1, ", progress="
 
-.method public final e(J)Lq5d;
-    .locals 13
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lme0;->a:I
+    iget v1, p0, Lme0;->c:F
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lme0;->c:Ljava/lang/Object;
+    const-string v1, ", swipeEdge="
 
-    check-cast p0, Lq5d;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget v1, p0, Lme0;->d:I
 
-    :pswitch_0
-    iget-object v0, p0, Lme0;->c:Ljava/lang/Object;
+    const/16 v2, 0x7d
 
-    check-cast v0, Lep5;
-
-    iget-object v1, v0, Lep5;->l:Ljava/lang/Object;
-
-    check-cast v1, Lplg;
-
-    invoke-static {v1}, Ln76;->o(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lep5;->l:Ljava/lang/Object;
-
-    check-cast v1, Lplg;
-
-    iget-object v2, v1, Lplg;->b:Ljava/lang/Object;
-
-    check-cast v2, [J
-
-    iget-object v1, v1, Lplg;->c:Ljava/lang/Object;
-
-    check-cast v1, [J
-
-    iget v3, v0, Lep5;->f:I
-
-    int-to-long v3, v3
-
-    mul-long/2addr v3, p1
-
-    const-wide/32 v5, 0xf4240
-
-    div-long v7, v3, v5
-
-    iget-wide v3, v0, Lep5;->k:J
-
-    const-wide/16 v9, 0x1
-
-    sub-long v11, v3, v9
-
-    const-wide/16 v9, 0x0
-
-    invoke-static/range {v7 .. v12}, Lfif;->j(JJJ)J
-
-    move-result-wide v3
-
-    const/4 v7, 0x0
-
-    invoke-static {v2, v3, v4, v7}, Lfif;->e([JJZ)I
-
-    move-result v3
-
-    const-wide/16 v7, 0x0
-
-    const/4 v4, -0x1
-
-    if-ne v3, v4, :cond_0
-
-    move-wide v9, v7
-
-    goto :goto_0
-
-    :cond_0
-    aget-wide v9, v2, v3
-
-    :goto_0
-    if-ne v3, v4, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    aget-wide v7, v1, v3
-
-    :goto_1
-    mul-long/2addr v9, v5
-
-    iget v0, v0, Lep5;->f:I
-
-    int-to-long v11, v0
-
-    div-long/2addr v9, v11
-
-    iget-wide v11, p0, Lme0;->b:J
-
-    add-long/2addr v7, v11
-
-    new-instance p0, Lw5d;
-
-    invoke-direct {p0, v9, v10, v7, v8}, Lw5d;-><init>(JJ)V
-
-    cmp-long p1, v9, p1
-
-    if-eqz p1, :cond_3
-
-    array-length p1, v2
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-ne v3, p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    aget-wide p1, v2, v3
-
-    aget-wide v1, v1, v3
-
-    mul-long/2addr p1, v5
-
-    int-to-long v3, v0
-
-    div-long/2addr p1, v3
-
-    add-long/2addr v11, v1
-
-    new-instance v0, Lw5d;
-
-    invoke-direct {v0, p1, p2, v11, v12}, Lw5d;-><init>(JJ)V
-
-    new-instance p1, Lq5d;
-
-    invoke-direct {p1, p0, v0}, Lq5d;-><init>(Lw5d;Lw5d;)V
-
-    goto :goto_3
-
-    :cond_3
-    :goto_2
-    new-instance p1, Lq5d;
-
-    invoke-direct {p1, p0, p0}, Lq5d;-><init>(Lw5d;Lw5d;)V
-
-    :goto_3
-    return-object p1
-
-    :pswitch_1
-    iget-object p0, p0, Lme0;->c:Ljava/lang/Object;
-
-    check-cast p0, Lne0;
-
-    iget-object v0, p0, Lne0;->o0:[Lx23;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0, p1, p2}, Lx23;->b(J)Lq5d;
+    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x1
-
-    :goto_4
-    iget-object v2, p0, Lne0;->o0:[Lx23;
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_5
-
-    aget-object v2, v2, v1
-
-    invoke-virtual {v2, p1, p2}, Lx23;->b(J)Lq5d;
-
-    move-result-object v2
-
-    iget-object v3, v2, Lq5d;->a:Lw5d;
-
-    iget-wide v3, v3, Lw5d;->b:J
-
-    iget-object v5, v0, Lq5d;->a:Lw5d;
-
-    iget-wide v5, v5, Lw5d;->b:J
-
-    cmp-long v3, v3, v5
-
-    if-gez v3, :cond_4
-
-    move-object v0, v2
-
-    :cond_4
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_4
-
-    :cond_5
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget v0, p0, Lme0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-wide v0, p0, Lme0;->b:J
-
-    return-wide v0
-
-    :pswitch_0
-    iget-object p0, p0, Lme0;->c:Ljava/lang/Object;
-
-    check-cast p0, Lep5;
-
-    invoke-virtual {p0}, Lep5;->c()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :pswitch_1
-    iget-wide v0, p0, Lme0;->b:J
-
-    return-wide v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

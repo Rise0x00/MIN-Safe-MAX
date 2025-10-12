@@ -3,65 +3,65 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhjd;
+.implements Lj1e;
 
 
 # virtual methods
-.method public abstract a()I
+.method public a()Loef;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
-.method public b()Ldue;
-    .locals 0
+.method public b()Lz0e;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public c()Lxid;
-    .locals 0
+.method public c()Loef;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public d()Ldue;
-    .locals 0
+.method public d()Lg1e;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public e()Lejd;
-    .locals 0
+.method public e()Llp7;
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public f()Ldi7;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
+.method public abstract f()I
 .end method
 
 .method public g()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
-.method public getType()Lgjd;
-    .locals 0
+.method public getType()Li1e;
+    .locals 1
 
-    sget-object p0, Lgjd;->b:Lgjd;
+    sget-object v0, Li1e;->b:Li1e;
 
-    return-object p0
+    return-object v0
 .end method

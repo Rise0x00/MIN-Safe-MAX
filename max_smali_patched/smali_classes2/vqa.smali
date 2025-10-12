@@ -1,42 +1,31 @@
-.class public final synthetic Lvqa;
+.class public abstract Lvqa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lyqa;
+.field public static final b:I
 
-.field public final synthetic b:D
+.field public static final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyqa;D)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lojc;->oneme_messages_settings_send_by_enter_action_title:I
 
-    iput-object p1, p0, Lvqa;->a:Lyqa;
+    sput v0, Lvqa;->a:I
 
-    iput-wide p2, p0, Lvqa;->b:D
+    sget v0, Lojc;->oneme_messages_settings_stickers_settings_action_title:I
 
-    return-void
-.end method
+    sput v0, Lvqa;->b:I
 
+    sget v0, Lojc;->oneme_messages_settings_toolbar_title:I
 
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    iget-wide v0, p0, Lvqa;->b:D
-
-    iget-object p0, p0, Lvqa;->a:Lyqa;
-
-    iget-object p0, p0, Lyqa;->b:Lxqa;
-
-    invoke-interface {p0, v0, v1}, Lxqa;->b(D)V
+    sput v0, Lvqa;->c:I
 
     return-void
 .end method

@@ -1,404 +1,971 @@
-.class public final synthetic Lvg4;
-.super Ljava/lang/Object;
+.class public final Lvg4;
+.super Lga5;
 .source "SourceFile"
-
-# interfaces
-.implements Lhm3;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/io/Serializable;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/io/Serializable;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Llcf;Lx5d;)V
     .locals 0
 
-    iput p1, p0, Lvg4;->a:I
+    const/4 p1, 0x6
 
-    iput-object p3, p0, Lvg4;->d:Ljava/lang/Object;
+    iput p1, p0, Lvg4;->o:I
 
-    iput-object p4, p0, Lvg4;->b:Ljava/lang/Object;
+    .line 2
+    invoke-direct {p0, p2}, Lw2;-><init>(Lx5d;)V
 
-    iput-object p2, p0, Lvg4;->c:Ljava/io/Serializable;
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public synthetic constructor <init>(Lx5d;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lvg4;->o:I
+
+    invoke-direct {p0, p1}, Lw2;-><init>(Lx5d;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+.method public final B(Lh2f;Ljava/lang/Object;)V
+    .locals 11
 
-    iget v0, p0, Lvg4;->a:I
+    iget v0, p0, Lvg4;->o:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvg4;->d:Ljava/lang/Object;
+    check-cast p2, Lbah;
 
-    check-cast v0, Lf96;
+    iget-object v0, p2, Lbah;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lvg4;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v1, Lf96;
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Lvg4;->c:Ljava/io/Serializable;
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
 
-    check-cast p0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    check-cast p1, Lwg1;
-
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->b(Lf96;Lf96;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lwg1;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lvg4;->d:Ljava/lang/Object;
-
-    check-cast v0, Lssa;
-
-    iget-object v1, p0, Lvg4;->b:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/RtpReceiver;
-
-    iget-object p0, p0, Lvg4;->c:Ljava/io/Serializable;
-
-    check-cast p0, [Lorg/webrtc/MediaStream;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {v1}, Lorg/webrtc/RtpReceiver;->track()Lorg/webrtc/MediaStreamTrack;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    aget-object p0, p0, v1
-
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
+    goto :goto_0
 
     :cond_0
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p2, Lbah;->b:Lg9h;
 
-    move-result v1
+    invoke-static {v0}, Lkjd;->H(Lg9h;)I
 
-    if-eqz v1, :cond_3
+    move-result v0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    move-result-object v1
+    int-to-long v2, v0
 
-    check-cast v1, Lorg/webrtc/VideoTrack;
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
 
-    invoke-virtual {v1}, Lorg/webrtc/MediaStreamTrack;->id()Ljava/lang/String;
+    iget-object v0, p2, Lbah;->c:Ljava/lang/String;
 
-    move-result-object v2
+    const/4 v1, 0x3
 
-    iget-object v3, v0, Lvl3;->b:Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    check-cast v3, Li7c;
-
-    const-string v4, "ParticipantsAgnosticVideoTracks"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "remote video track "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v3, v4, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lorg/webrtc/MediaStreamTrack;->id()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v3, v0, Lvl3;->b:Ljava/lang/Object;
-
-    check-cast v3, Li7c;
-
-    const-string v4, "ParticipantsAgnosticVideoTracks"
-
-    const-string v5, "add remote video track "
-
-    invoke-virtual {v5, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v3, v4, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v3, Ltsa;
-
-    iget-object v4, v0, Lssa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v5, v0, Lvl3;->e:Ljava/lang/Object;
-
-    check-cast v5, Lu8d;
-
-    invoke-direct {v3, v4, v5}, Ltsa;-><init>(Ljava/util/concurrent/ConcurrentHashMap;Lu8d;)V
-
-    new-instance v4, Lrsa;
-
-    invoke-direct {v4, v0, v2}, Lrsa;-><init>(Lssa;Ljava/lang/String;)V
-
-    iget-object v2, v0, Lssa;->g:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v2, v0, Lssa;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v2, v0, Lssa;->f:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v1}, Lorg/webrtc/MediaStreamTrack;->isDisposed()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v1, v0, Lvl3;->b:Ljava/lang/Object;
-
-    check-cast v1, Li7c;
-
-    const-string v2, "ParticipantsAgnosticVideoTracks"
-
-    const-string v3, "error: video track is disposed"
-
-    invoke-interface {v1, v2, v3}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {v1, v3}, Lorg/webrtc/VideoTrack;->addSink(Lorg/webrtc/VideoSink;)V
-
-    invoke-virtual {v1, v4}, Lorg/webrtc/VideoTrack;->addSink(Lorg/webrtc/VideoSink;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :cond_3
-    monitor-exit v0
-
-    return-void
+    :cond_1
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
 
     :goto_1
-    monitor-exit v0
+    iget-object v0, p2, Lbah;->d:Ljava/lang/String;
 
-    throw p0
+    const/4 v1, 0x4
 
-    :pswitch_1
-    iget-object v0, p0, Lvg4;->d:Ljava/lang/Object;
+    if-nez v0, :cond_2
 
-    check-cast v0, Lwg4;
-
-    iget-object v1, p0, Lvg4;->b:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/RtpReceiver;
-
-    iget-object p0, p0, Lvg4;->c:Ljava/io/Serializable;
-
-    check-cast p0, [Lorg/webrtc/MediaStream;
-
-    check-cast p1, Lorg/webrtc/PeerConnection;
-
-    const-string p1, "DefaultRemoteVideoTracks"
-
-    iget-object v2, v0, Lvl3;->b:Ljava/lang/Object;
-
-    check-cast v2, Li7c;
-
-    invoke-virtual {v1}, Lorg/webrtc/RtpReceiver;->track()Lorg/webrtc/MediaStreamTrack;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    aget-object p0, p0, v3
-
-    iget-object p0, p0, Lorg/webrtc/MediaStream;->videoTracks:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_4
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lorg/webrtc/VideoTrack;
-
-    invoke-virtual {v3}, Lorg/webrtc/MediaStreamTrack;->id()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "remote video track "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v2, p1, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Lorg/webrtc/MediaStreamTrack;->id()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
 
     goto :goto_2
 
-    :cond_5
-    const-string v5, "add remote video track "
+    :cond_2
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
 
-    invoke-virtual {v5, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :goto_2
+    iget-object v0, p2, Lbah;->e:Lu84;
 
-    move-result-object v5
+    invoke-static {v0}, Lu84;->f(Lu84;)[B
 
-    invoke-interface {v2, p1, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    const-string v5, "video-"
+    const/4 v1, 0x5
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    if-nez v0, :cond_3
 
-    move-result v5
-
-    if-nez v5, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    const/4 v5, 0x6
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "u"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_8
-
-    const-string v6, "g"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_7
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
 
     goto :goto_3
 
-    :cond_7
-    const-string v6, "video-u"
+    :cond_3
+    invoke-interface {p1, v1, v0}, Lf2f;->l(I[B)V
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :goto_3
+    iget-object v0, p2, Lbah;->f:Lu84;
 
-    move-result-object v5
+    invoke-static {v0}, Lu84;->f(Lu84;)[B
+
+    move-result-object v0
+
+    const/4 v1, 0x6
+
+    if-nez v0, :cond_4
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
 
     goto :goto_4
 
-    :cond_8
-    :goto_3
-    move-object v5, v4
+    :cond_4
+    invoke-interface {p1, v1, v0}, Lf2f;->l(I[B)V
 
     :goto_4
-    iget-object v6, v0, Lwg4;->g:Ljava/util/HashMap;
+    const/4 v0, 0x7
 
-    invoke-virtual {v6, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v1, p2, Lbah;->g:J
 
-    const/4 v5, 0x1
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
 
-    invoke-virtual {v3, v5}, Lorg/webrtc/MediaStreamTrack;->setEnabled(Z)Z
+    const/16 v0, 0x8
 
-    iget-object v3, v0, Lvl3;->d:Ljava/lang/Object;
+    iget-wide v1, p2, Lbah;->h:J
 
-    check-cast v3, Lnua;
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
 
-    iget-object v3, v3, Lnua;->a:Lwua;
+    const/16 v0, 0x9
 
-    iget-object v5, v3, Lwua;->r:Landroid/os/Handler;
+    iget-wide v1, p2, Lbah;->i:J
 
-    new-instance v6, Lhua;
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
 
-    const/4 v7, 0x2
+    iget v0, p2, Lbah;->k:I
 
-    invoke-direct {v6, v3, v4, v7}, Lhua;-><init>(Lwua;Ljava/lang/String;I)V
+    int-to-long v0, v0
 
-    invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/16 v2, 0xa
 
-    goto :goto_2
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lbah;->l:Luf0;
+
+    invoke-static {v0}, Lkjd;->b(Luf0;)I
+
+    move-result v0
+
+    const/16 v1, 0xb
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0xc
+
+    iget-wide v1, p2, Lbah;->m:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0xd
+
+    iget-wide v1, p2, Lbah;->n:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0xe
+
+    iget-wide v1, p2, Lbah;->o:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0xf
+
+    iget-wide v1, p2, Lbah;->p:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget-boolean v0, p2, Lbah;->q:Z
+
+    const/16 v1, 0x10
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lbah;->r:Lh2b;
+
+    invoke-static {v0}, Lkjd;->D(Lh2b;)I
+
+    move-result v0
+
+    const/16 v1, 0x11
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget v0, p2, Lbah;->s:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x12
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget v0, p2, Lbah;->t:I
+
+    int-to-long v0, v0
+
+    const/16 v2, 0x13
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lbah;->j:Lro3;
+
+    const/16 v1, 0x1b
+
+    const/16 v2, 0x1a
+
+    const/16 v3, 0x19
+
+    const/16 v4, 0x18
+
+    const/16 v5, 0x17
+
+    const/16 v6, 0x16
+
+    const/16 v7, 0x15
+
+    const/16 v8, 0x14
+
+    if-eqz v0, :cond_5
+
+    iget v9, v0, Lro3;->a:I
+
+    invoke-static {v9}, Lkjd;->A(I)I
+
+    move-result v9
+
+    int-to-long v9, v9
+
+    invoke-interface {p1, v8, v9, v10}, Lf2f;->k(IJ)V
+
+    iget-boolean v8, v0, Lro3;->b:Z
+
+    int-to-long v8, v8
+
+    invoke-interface {p1, v7, v8, v9}, Lf2f;->k(IJ)V
+
+    iget-boolean v7, v0, Lro3;->c:Z
+
+    int-to-long v7, v7
+
+    invoke-interface {p1, v6, v7, v8}, Lf2f;->k(IJ)V
+
+    iget-boolean v6, v0, Lro3;->d:Z
+
+    int-to-long v6, v6
+
+    invoke-interface {p1, v5, v6, v7}, Lf2f;->k(IJ)V
+
+    iget-boolean v5, v0, Lro3;->e:Z
+
+    int-to-long v5, v5
+
+    invoke-interface {p1, v4, v5, v6}, Lf2f;->k(IJ)V
+
+    iget-wide v4, v0, Lro3;->f:J
+
+    invoke-interface {p1, v3, v4, v5}, Lf2f;->k(IJ)V
+
+    iget-wide v3, v0, Lro3;->g:J
+
+    invoke-interface {p1, v2, v3, v4}, Lf2f;->k(IJ)V
+
+    iget-object v0, v0, Lro3;->h:Ljava/util/Set;
+
+    invoke-static {v0}, Lkjd;->G(Ljava/util/Set;)[B
+
+    move-result-object v0
+
+    invoke-interface {p1, v1, v0}, Lf2f;->l(I[B)V
+
+    goto :goto_5
+
+    :cond_5
+    invoke-interface {p1, v8}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v7}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v6}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v5}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v4}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v3}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v2}, Lf2f;->Z(I)V
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    :goto_5
+    iget-object p2, p2, Lbah;->a:Ljava/lang/String;
+
+    const/16 v0, 0x1c
+
+    if-nez p2, :cond_6
+
+    invoke-interface {p1, v0}, Lf2f;->Z(I)V
+
+    goto :goto_6
+
+    :cond_6
+    invoke-interface {p1, v0, p2}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_6
+    return-void
+
+    :pswitch_0
+    check-cast p2, Lgsg;
+
+    const/4 v0, 0x1
+
+    iget-wide v1, p2, Lgsg;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/4 v0, 0x2
+
+    iget-wide v1, p2, Lgsg;->b:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/4 v0, 0x3
+
+    iget-wide v1, p2, Lgsg;->c:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lgsg;->d:Ljava/lang/String;
+
+    const/4 v1, 0x4
+
+    if-nez v0, :cond_7
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_7
+
+    :cond_7
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_7
+    iget-boolean v0, p2, Lgsg;->e:Z
+
+    const/4 v1, 0x5
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget-boolean v0, p2, Lgsg;->f:Z
+
+    const/4 v1, 0x6
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    const/4 v0, 0x7
+
+    iget-wide v1, p2, Lgsg;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    return-void
+
+    :pswitch_1
+    check-cast p2, Lybf;
+
+    const/4 v0, 0x1
+
+    iget-wide v1, p2, Lybf;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lybf;->b:Ldab;
+
+    iget v0, v0, Ldab;->a:I
+
+    const/4 v1, 0x2
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lybf;->c:Lkcf;
+
+    iget v0, v0, Lkcf;->a:I
+
+    const/4 v1, 0x3
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget v0, p2, Lybf;->d:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x4
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    const/4 v0, 0x5
+
+    iget-wide v1, p2, Lybf;->e:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget v0, p2, Lybf;->f:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x6
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Lybf;->g:[B
+
+    const/4 v1, 0x7
+
+    if-nez v0, :cond_8
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_8
+
+    :cond_8
+    invoke-interface {p1, v1, v0}, Lf2f;->l(I[B)V
+
+    :goto_8
+    const/16 v0, 0x8
+
+    iget-wide v1, p2, Lybf;->h:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0x9
+
+    iget-wide v1, p2, Lybf;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p2, Ld5d;
+
+    iget-object v0, p2, Ld5d;->a:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_9
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_9
 
     :cond_9
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_9
+    iget-object v0, p2, Ld5d;->b:Ljava/lang/String;
+
+    const/4 v1, 0x2
+
+    if-nez v0, :cond_a
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_a
+
+    :cond_a
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_a
+    iget v0, p2, Ld5d;->c:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x3
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Ld5d;->d:Ljava/lang/String;
+
+    const/4 v1, 0x4
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_b
+
+    :cond_b
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_b
+    iget-object v0, p2, Ld5d;->e:Ljava/util/Set;
+
+    invoke-static {v0}, Ls4d;->h(Ljava/util/Set;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x5
+
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    iget-boolean v0, p2, Ld5d;->f:Z
+
+    const/4 v1, 0x6
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Ld5d;->g:Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_c
+
+    invoke-static {v0}, Lc59;->b(Ljava/util/List;)[B
+
+    move-result-object v0
+
+    goto :goto_c
+
+    :cond_c
+    move-object v0, v1
+
+    :goto_c
+    const/4 v2, 0x7
+
+    if-nez v0, :cond_d
+
+    invoke-interface {p1, v2}, Lf2f;->Z(I)V
+
+    goto :goto_d
+
+    :cond_d
+    invoke-interface {p1, v2, v0}, Lf2f;->l(I[B)V
+
+    :goto_d
+    iget-object v0, p2, Ld5d;->h:Ljava/util/Map;
+
+    if-eqz v0, :cond_e
+
+    invoke-static {v0}, Lpch;->q(Ljava/util/Map;)Lu56;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
+
+    move-result-object v0
+
+    goto :goto_e
+
+    :cond_e
+    move-object v0, v1
+
+    :goto_e
+    const/16 v2, 0x8
+
+    if-nez v0, :cond_f
+
+    invoke-interface {p1, v2}, Lf2f;->Z(I)V
+
+    goto :goto_f
+
+    :cond_f
+    invoke-interface {p1, v2, v0}, Lf2f;->l(I[B)V
+
+    :goto_f
+    iget-object v0, p2, Ld5d;->i:Ljava/util/List;
+
+    if-eqz v0, :cond_10
+
+    invoke-static {v0}, Lpch;->s(Ljava/util/List;)Lu56;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
+
+    move-result-object v0
+
+    goto :goto_10
+
+    :cond_10
+    move-object v0, v1
+
+    :goto_10
+    const/16 v2, 0x9
+
+    if-nez v0, :cond_11
+
+    invoke-interface {p1, v2}, Lf2f;->Z(I)V
+
+    goto :goto_11
+
+    :cond_11
+    invoke-interface {p1, v2, v0}, Lf2f;->l(I[B)V
+
+    :goto_11
+    iget-object v0, p2, Ld5d;->j:Ljava/util/Set;
+
+    if-eqz v0, :cond_12
+
+    invoke-static {v0}, Lpch;->r(Ljava/util/Set;)Lu56;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
+
+    move-result-object v1
+
+    :cond_12
+    const/16 v0, 0xa
+
+    if-nez v1, :cond_13
+
+    invoke-interface {p1, v0}, Lf2f;->Z(I)V
+
+    goto :goto_12
+
+    :cond_13
+    invoke-interface {p1, v0, v1}, Lf2f;->l(I[B)V
+
+    :goto_12
+    const/16 v0, 0xb
+
+    iget-wide v1, p2, Ld5d;->k:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Ld5d;->l:Lit9;
+
+    invoke-static {v0}, Ls4d;->B(Lit9;)[B
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    if-nez v0, :cond_14
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_13
+
+    :cond_14
+    invoke-interface {p1, v1, v0}, Lf2f;->l(I[B)V
+
+    :goto_13
+    iget-object v0, p2, Ld5d;->m:Ljava/lang/Long;
+
+    const/16 v1, 0xd
+
+    if-nez v0, :cond_15
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_14
+
+    :cond_15
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    :goto_14
+    iget-object v0, p2, Ld5d;->n:Ljava/lang/Long;
+
+    const/16 v1, 0xe
+
+    if-nez v0, :cond_16
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_15
+
+    :cond_16
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    :goto_15
+    iget-object p2, p2, Ld5d;->a:Ljava/lang/String;
+
+    const/16 v0, 0xf
+
+    if-nez p2, :cond_17
+
+    invoke-interface {p1, v0}, Lf2f;->Z(I)V
+
+    goto :goto_16
+
+    :cond_17
+    invoke-interface {p1, v0, p2}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_16
     return-void
+
+    :pswitch_3
+    check-cast p2, Lasc;
+
+    const/4 v0, 0x1
+
+    iget-wide v1, p2, Lasc;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    return-void
+
+    :pswitch_4
+    check-cast p2, Libb;
+
+    const/4 v0, 0x1
+
+    iget-wide v1, p2, Libb;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    const/4 v0, 0x2
+
+    iget-wide v1, p2, Libb;->b:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget v0, p2, Libb;->c:I
+
+    int-to-long v0, v0
+
+    const/4 v2, 0x3
+
+    invoke-interface {p1, v2, v0, v1}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Libb;->d:Ljava/lang/String;
+
+    const/4 v1, 0x4
+
+    if-nez v0, :cond_18
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_17
+
+    :cond_18
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_17
+    const/4 v0, 0x5
+
+    iget-wide v1, p2, Libb;->e:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    iget-object v0, p2, Libb;->f:Ljava/lang/String;
+
+    const/4 v1, 0x6
+
+    if-nez v0, :cond_19
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_18
+
+    :cond_19
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_18
+    iget-object v0, p2, Libb;->g:Ljava/lang/String;
+
+    const/4 v1, 0x7
+
+    if-nez v0, :cond_1a
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_19
+
+    :cond_1a
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_19
+    iget-object v0, p2, Libb;->h:Ljava/lang/String;
+
+    const/16 v1, 0x8
+
+    if-nez v0, :cond_1b
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_1a
+
+    :cond_1b
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_1a
+    iget-object v0, p2, Libb;->i:Ljava/lang/String;
+
+    const/16 v1, 0x9
+
+    if-nez v0, :cond_1c
+
+    invoke-interface {p1, v1}, Lf2f;->Z(I)V
+
+    goto :goto_1b
+
+    :cond_1c
+    invoke-interface {p1, v1, v0}, Lf2f;->f(ILjava/lang/String;)V
+
+    :goto_1b
+    iget v0, p2, Libb;->j:I
+
+    invoke-static {v0}, Lqw1;->u(I)I
+
+    move-result v0
+
+    const/16 v1, 0xa
+
+    int-to-long v2, v0
+
+    invoke-interface {p1, v1, v2, v3}, Lf2f;->k(IJ)V
+
+    const/16 v0, 0xb
+
+    iget-wide v1, p2, Libb;->a:J
+
+    invoke-interface {p1, v0, v1, v2}, Lf2f;->k(IJ)V
+
+    return-void
+
+    :pswitch_5
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :pswitch_6
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :pswitch_7
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lvg4;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "UPDATE OR ABORT `WorkSpec` SET `id` = ?,`state` = ?,`worker_class_name` = ?,`input_merger_class_name` = ?,`input` = ?,`output` = ?,`initial_delay` = ?,`interval_duration` = ?,`flex_duration` = ?,`run_attempt_count` = ?,`backoff_policy` = ?,`backoff_delay_duration` = ?,`last_enqueue_time` = ?,`minimum_retention_duration` = ?,`schedule_requested_at` = ?,`run_in_foreground` = ?,`out_of_quota_policy` = ?,`period_count` = ?,`generation` = ?,`required_network_type` = ?,`requires_charging` = ?,`requires_device_idle` = ?,`requires_battery_not_low` = ?,`requires_storage_not_low` = ?,`trigger_content_update_delay` = ?,`trigger_max_content_delay` = ?,`content_uri_triggers` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "UPDATE OR REPLACE `webapp_biometry` SET `id` = ?,`user_id` = ?,`bot_id` = ?,`token` = ?,`access_requested` = ?,`access_granted` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_1
+    const-string v0, "UPDATE OR REPLACE `tasks` SET `id` = ?,`type` = ?,`status` = ?,`fails_count` = ?,`depends_request_id` = ?,`dependency_type` = ?,`data` = ?,`created_time` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_2
+    const-string v0, "UPDATE OR REPLACE `chat_folder` SET `id` = ?,`title` = ?,`order` = ?,`emoji` = ?,`filters` = ?,`isHiddenForAllFolder` = ?,`elements` = ?,`filterSubjects` = ?,`widgets` = ?,`options` = ?,`updateTime` = ?,`favorites` = ?,`templateId` = ?,`sourceId` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_3
+    const-string v0, "DELETE FROM `recent` WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_4
+    const-string v0, "UPDATE OR ABORT `phones` SET `id` = ?,`phonebook_id` = ?,`contact_id` = ?,`phone` = ?,`server_phone` = ?,`email` = ?,`first_name` = ?,`last_name` = ?,`avatar_path` = ?,`type` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_5
+    const-string v0, "UPDATE OR ABORT `messages` SET `id` = ?,`view_time` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_6
+    const-string v0, "UPDATE OR ABORT `messages` SET `id` = ?,`server_id` = ?,`cid` = ?,`time` = ?,`time_local` = ?,`view_time` = ?,`options` = ?,`live_until` = ?,`delivery_status` = ?,`status` = ?,`delayed_attrs_time_to_fire` = ?,`delayed_attrs_notify_sender` = ? WHERE `id` = ?"
+
+    return-object v0
+
+    :pswitch_7
+    const-string v0, "DELETE FROM `default_emoji` WHERE `emoji` = ?"
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

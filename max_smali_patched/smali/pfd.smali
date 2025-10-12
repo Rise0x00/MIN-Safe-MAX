@@ -1,207 +1,148 @@
 .class public final Lpfd;
-.super Ls2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final b:Lpfd;
+.implements Ln47;
 
 
 # instance fields
-.field public final a:Lv18;
+.field public a:F
+
+.field public b:Landroid/animation/ValueAnimator;
+
+.field public final synthetic c:Lqfd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpfd;
-
-    sget-object v1, Lv18;->t0:Lv18;
-
-    sget-object v1, Lv18;->t0:Lv18;
-
-    invoke-direct {v0, v1}, Lpfd;-><init>(Lv18;)V
-
-    sput-object v0, Lpfd;->b:Lpfd;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 3
-    new-instance v0, Lv18;
-
-    invoke-direct {v0}, Lv18;-><init>()V
-
-    invoke-direct {p0, v0}, Lpfd;-><init>(Lv18;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lv18;)V
+.method public constructor <init>(Lqfd;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lpfd;->a:Lv18;
+    iput-object p1, p0, Lpfd;->c:Lqfd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
+.method public final a(JLnx1;)V
+    .locals 3
 
-    iget-object p0, p0, Lpfd;->a:Lv18;
+    const-string p1, "ScreenFlash#apply"
 
-    invoke-virtual {p0, p1}, Lv18;->a(Ljava/lang/Object;)I
+    const-string p2, "ScreenFlashView"
 
-    move-result p0
+    invoke-static {p2, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ltz p0, :cond_0
+    iget-object p1, p0, Lpfd;->c:Lqfd;
 
-    const/4 p0, 0x1
+    invoke-static {p1}, Lqfd;->a(Lqfd;)F
 
-    return p0
+    move-result v0
+
+    iput v0, p0, Lpfd;->a:F
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0}, Lqfd;->b(Lqfd;F)V
+
+    iget-object v0, p0, Lpfd;->b:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
-    const/4 p0, 0x0
+    invoke-static {p3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p0
-.end method
+    new-instance v0, Lsga;
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
+    const/16 v1, 0x15
 
-    iget-object v0, p0, Lpfd;->a:Lv18;
+    invoke-direct {v0, v1, p3}, Lsga;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Lv18;->c()V
+    const-string p3, "animateToFullOpacity"
 
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    invoke-static {p2, p3}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result p0
+    const/4 p2, 0x2
 
-    return p0
+    new-array p2, p2, [F
+
+    fill-array-data p2, :array_0
+
+    invoke-static {p2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Lqfd;->getVisibilityRampUpAnimationDurationMillis()J
+
+    move-result-wide v1
+
+    invoke-virtual {p2, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance p3, Lg00;
+
+    const/16 v1, 0x14
+
+    invoke-direct {p3, v1, p1}, Lg00;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance p1, Lcf;
+
+    const/16 p3, 0x9
+
+    invoke-direct {p1, p3, v0}, Lcf;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p2, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
+
+    iput-object p2, p0, Lpfd;->b:Landroid/animation/ValueAnimator;
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
 .method public final clear()V
-    .locals 0
-
-    iget-object p0, p0, Lpfd;->a:Lv18;
-
-    invoke-virtual {p0}, Lv18;->clear()V
-
-    return-void
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    iget-object p0, p0, Lpfd;->a:Lv18;
-
-    invoke-virtual {p0, p1}, Lv18;->containsKey(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getSize()I
-    .locals 0
-
-    iget-object p0, p0, Lpfd;->a:Lv18;
-
-    iget p0, p0, Lv18;->o0:I
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-object p0, p0, Lpfd;->a:Lv18;
-
-    invoke-virtual {p0}, Lv18;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    iget-object p0, p0, Lpfd;->a:Lv18;
+    const-string v0, "ScreenFlashView"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "ScreenFlash#clearScreenFlashUi"
 
-    new-instance v0, Ls18;
+    invoke-static {v0, v1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lpfd;->b:Landroid/animation/ValueAnimator;
 
-    invoke-direct {v0, v1, p0}, Ls18;-><init>(ILv18;)V
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lpfd;->a:Lv18;
-
-    invoke-virtual {p0}, Lv18;->c()V
-
-    invoke-virtual {p0, p1}, Lv18;->f(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-gez p1, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
+    iput-object v0, p0, Lpfd;->b:Landroid/animation/ValueAnimator;
 
     :cond_0
-    invoke-virtual {p0, p1}, Lv18;->i(I)V
+    const/4 v0, 0x0
 
-    const/4 p0, 0x1
+    iget-object v1, p0, Lpfd;->c:Lqfd;
 
-    return p0
-.end method
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 1
+    iget v0, p0, Lpfd;->a:F
 
-    iget-object v0, p0, Lpfd;->a:Lv18;
+    invoke-static {v1, v0}, Lqfd;->b(Lqfd;F)V
 
-    invoke-virtual {v0}, Lv18;->c()V
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 1
-
-    iget-object v0, p0, Lpfd;->a:Lv18;
-
-    invoke-virtual {v0}, Lv18;->c()V
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

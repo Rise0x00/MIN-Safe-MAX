@@ -1,73 +1,163 @@
-.class public abstract Lqia;
+.class public final synthetic Lqia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic b:Lria;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lria;I)V
+    .locals 0
 
-    sget v0, Ls4c;->permissions_allow_access:I
+    iput p2, p0, Lqia;->a:I
 
-    sput v0, Lqia;->a:I
+    iput-object p1, p0, Lqia;->b:Lria;
 
-    sget v0, Ls4c;->permissions_audio_denied_title:I
-
-    sput v0, Lqia;->b:I
-
-    sget v0, Ls4c;->permissions_audio_request_denied:I
-
-    sput v0, Lqia;->c:I
-
-    sget v0, Ls4c;->permissions_audio_title:I
-
-    sput v0, Lqia;->d:I
-
-    sget v0, Ls4c;->permissions_dialog_no:I
-
-    sput v0, Lqia;->e:I
-
-    sget v0, Ls4c;->permissions_dialog_open_setting:I
-
-    sput v0, Lqia;->f:I
-
-    sget v0, Ls4c;->permissions_dialog_yes:I
-
-    sput v0, Lqia;->g:I
-
-    sget v0, Ls4c;->permissions_video_message_request:I
-
-    sput v0, Lqia;->h:I
-
-    sget v0, Ls4c;->permissions_video_message_request_only_camera_title:I
-
-    sput v0, Lqia;->i:I
-
-    sget v0, Ls4c;->permissions_video_message_request_title:I
-
-    sput v0, Lqia;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lqia;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqia;->b:Lria;
+
+    iget-object v0, v0, Lria;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v2, v2
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v2, v1
+
+    const/high16 v1, 0x44480000    # 800.0f
+
+    cmpl-float v1, v2, v1
+
+    if-lez v1, :cond_0
+
+    invoke-static {v0}, Lkmc;->l(Landroid/content/Context;)Landroid/util/Size;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    const/16 v1, 0x64
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lnd5;->q(FFI)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_1
+
+    const/16 v0, 0x123
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lv63;->r0(F)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v0, 0xf8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lv63;->r0(F)I
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lqia;->b:Lria;
+
+    iget-object v0, v0, Lria;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Loch;->b(Landroid/content/Context;)Ldyf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

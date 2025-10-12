@@ -1,194 +1,128 @@
-.class public abstract Lyt8;
+.class public Lyt8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lurd;
-.implements Lgu8;
-.implements Landroid/widget/AdapterView$OnItemClickListener;
-
 
 # instance fields
-.field public a:Landroid/graphics/Rect;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public static m(Landroid/widget/ListAdapter;Landroid/content/Context;I)I
-    .locals 10
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iput-object p1, p0, Lyt8;->a:Ljava/lang/String;
 
-    move-result v1
+    iput p2, p0, Lyt8;->b:I
 
-    invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iput p3, p0, Lyt8;->c:I
 
-    move-result v2
-
-    invoke-interface {p0}, Landroid/widget/Adapter;->getCount()I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    move v5, v0
-
-    move v6, v5
-
-    move-object v7, v4
-
-    move-object v8, v7
-
-    :goto_0
-    if-ge v0, v3, :cond_4
-
-    invoke-interface {p0, v0}, Landroid/widget/Adapter;->getItemViewType(I)I
-
-    move-result v9
-
-    if-eq v9, v6, :cond_0
-
-    move-object v8, v4
-
-    move v6, v9
-
-    :cond_0
-    if-nez v7, :cond_1
-
-    new-instance v7, Landroid/widget/FrameLayout;
-
-    invoke-direct {v7, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    :cond_1
-    invoke-interface {p0, v0, v8, v7}, Landroid/widget/Adapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v1, v2}, Landroid/view/View;->measure(II)V
-
-    invoke-virtual {v8}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v9
-
-    if-lt v9, p2, :cond_2
-
-    return p2
-
-    :cond_2
-    if-le v9, v5, :cond_3
-
-    move v5, v9
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v5
+    return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ltt8;)Z
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    const/4 p0, 0x0
+    const/4 v0, 0x1
 
-    return p0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final h(Ltt8;)Z
-    .locals 0
+    return v0
 
-    const/4 p0, 0x0
+    :cond_0
+    instance-of v1, p1, Lyt8;
 
-    return p0
-.end method
+    const/4 v2, 0x0
 
-.method public final k(Landroid/content/Context;Lpt8;)V
-    .locals 0
+    if-nez v1, :cond_1
 
-    return-void
-.end method
+    return v2
 
-.method public abstract l(Lpt8;)V
-.end method
+    :cond_1
+    check-cast p1, Lyt8;
 
-.method public abstract n(Landroid/view/View;)V
-.end method
+    iget v1, p0, Lyt8;->c:I
 
-.method public abstract o(Z)V
-.end method
+    iget-object v3, p0, Lyt8;->a:Ljava/lang/String;
 
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+    iget v4, p0, Lyt8;->b:I
 
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+    if-ltz v4, :cond_4
 
-    move-result-object p1
+    iget v5, p1, Lyt8;->b:I
 
-    check-cast p1, Landroid/widget/ListAdapter;
-
-    instance-of p2, p1, Landroid/widget/HeaderViewListAdapter;
-
-    if-eqz p2, :cond_0
-
-    move-object p2, p1
-
-    check-cast p2, Landroid/widget/HeaderViewListAdapter;
-
-    invoke-virtual {p2}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object p2
-
-    check-cast p2, Lmt8;
+    if-gez v5, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    move-object p2, p1
+    :cond_2
+    iget-object v5, p1, Lyt8;->a:Ljava/lang/String;
 
-    check-cast p2, Lmt8;
+    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget v3, p1, Lyt8;->b:I
+
+    if-ne v4, v3, :cond_3
+
+    iget p1, p1, Lyt8;->c:I
+
+    if-ne v1, p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v2
+
+    :cond_4
     :goto_0
-    iget-object p2, p2, Lmt8;->a:Lpt8;
+    iget-object v4, p1, Lyt8;->a:Ljava/lang/String;
 
-    invoke-interface {p1, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    move-result-object p1
+    move-result v3
 
-    check-cast p1, Landroid/view/MenuItem;
+    if-eqz v3, :cond_5
 
-    instance-of p3, p0, Le22;
+    iget p1, p1, Lyt8;->c:I
 
-    if-nez p3, :cond_1
+    if-ne v1, p1, :cond_5
 
-    const/4 p3, 0x0
+    return v0
 
-    goto :goto_1
-
-    :cond_1
-    const/4 p3, 0x4
-
-    :goto_1
-    invoke-virtual {p2, p1, p0, p3}, Lpt8;->q(Landroid/view/MenuItem;Lgu8;I)Z
-
-    return-void
+    :cond_5
+    return v2
 .end method
 
-.method public abstract p(I)V
-.end method
+.method public final hashCode()I
+    .locals 2
 
-.method public abstract q(I)V
-.end method
+    iget v0, p0, Lyt8;->c:I
 
-.method public abstract r(Landroid/widget/PopupWindow$OnDismissListener;)V
-.end method
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.method public abstract s(Z)V
-.end method
+    move-result-object v0
 
-.method public abstract t(I)V
+    iget-object v1, p0, Lyt8;->a:Ljava/lang/String;
+
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

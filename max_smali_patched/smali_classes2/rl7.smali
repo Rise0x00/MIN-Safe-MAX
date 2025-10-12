@@ -1,8 +1,3 @@
-.class public abstract Lrl7;
-.super Ljava/lang/Object;
+.class public final Lrl7;
+.super Lk74;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a()J
-.end method

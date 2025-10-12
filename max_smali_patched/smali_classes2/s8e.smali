@@ -2,129 +2,104 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx94;
 
+# instance fields
+.field public final a:[F
 
-# static fields
-.field public static final a:Ls8e;
+.field public final b:[I
 
-.field public static final b:Lt8e;
+.field public final c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public final g:F
+
+.field public final h:F
+
+.field public final i:Z
+
+.field public j:Z
+
+.field public k:Landroid/graphics/PorterDuff$Mode;
+
+.field public final l:I
+
+.field public final m:I
+
+.field public n:J
+
+.field public final o:J
+
+.field public p:Landroid/view/animation/Interpolator;
+
+.field public q:Landroid/animation/ValueAnimator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Ls8e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x5
 
-    sput-object v0, Ls8e;->a:Ls8e;
+    new-array v1, v0, [F
 
-    sget-object v0, Lt8e;->b:Lt8e;
+    iput-object v1, p0, Ls8e;->a:[F
 
-    sput-object v0, Ls8e;->b:Lt8e;
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Ls8e;->b:[I
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ls8e;->c:I
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Ls8e;->d:I
+
+    const v2, -0x777778
+
+    iput v2, p0, Ls8e;->e:I
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    iput v2, p0, Ls8e;->g:F
+
+    iput v2, p0, Ls8e;->h:F
+
+    iput-boolean v0, p0, Ls8e;->i:Z
+
+    iput-boolean v0, p0, Ls8e;->j:Z
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v2, p0, Ls8e;->k:Landroid/graphics/PorterDuff$Mode;
+
+    iput v1, p0, Ls8e;->l:I
+
+    iput v0, p0, Ls8e;->m:I
+
+    const-wide/16 v0, 0x4b0
+
+    iput-wide v0, p0, Ls8e;->n:J
+
+    iput-wide v0, p0, Ls8e;->o:J
+
+    new-instance v0, Ltj5;
+
+    invoke-direct {v0}, Ltj5;-><init>()V
+
+    iput-object v0, p0, Ls8e;->p:Landroid/view/animation/Interpolator;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lfa4;
-    .locals 0
-
-    sget-object p0, Ls8e;->b:Lt8e;
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;Laa4;Landroid/os/Bundle;)Lia4;
-    .locals 7
-
-    sget-object p0, Ls8e;->b:Lt8e;
-
-    iget-object p0, p0, Lfa4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lt8e;->b:Lt8e;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lt8e;->c:Laa4;
-
-    invoke-virtual {p2, p0}, Laa4;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance v5, Lga4;
-
-    new-instance p0, Loxd;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p0, v0}, Loxd;-><init>(I)V
-
-    new-instance v0, Loxd;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Loxd;-><init>(I)V
-
-    invoke-direct {v5, p0, v0}, Lga4;-><init>(Ld96;Ld96;)V
-
-    const-string p0, "sticker_id"
-
-    invoke-static {p0, p3}, Lds0;->C0(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v0
-
-    move-wide v1, v0
-
-    new-instance v0, Lia4;
-
-    new-instance v6, Llfb;
-
-    const/4 p0, 0x2
-
-    invoke-direct {v6, v1, v2, p3, p0}, Llfb;-><init>(JLandroid/os/Parcelable;I)V
-
-    const/4 v4, 0x1
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v6}, Lia4;-><init>(Ljava/lang/String;Laa4;Landroid/os/Bundle;ILga4;Lha4;)V
-
-    return-object v0
-
-    :cond_1
-    move-object v2, p2
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "invalid route "
-
-    invoke-static {p1, v2}, Ldw1;->g(Ljava/lang/String;Laa4;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

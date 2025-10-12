@@ -1,26 +1,32 @@
 .class public final Lx87;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lk87;
 
-.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+.field public Y:I
+
+.field public Z:I
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public final synthetic x0:Lk97;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+.method public constructor <init>(Lk97;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lx87;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    iput-object p1, p0, Lx87;->x0:Lk97;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,171 +36,588 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Le34;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lx87;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lx87;
+    check-cast p1, Lx87;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lx87;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lx87;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lx87;
 
-    iget-object p0, p0, Lx87;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    iget-object v1, p0, Lx87;->x0:Lk97;
 
-    invoke-direct {v0, p2, p0}, Lx87;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    invoke-direct {v0, v1, p2}, Lx87;-><init>(Lk97;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lx87;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lx87;->w0:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 22
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-object/from16 v0, p0
 
-    iget-object p1, p0, Lx87;->X:Ljava/lang/Object;
+    iget-object v4, v0, Lx87;->x0:Lk97;
 
-    check-cast p1, Lj14;
+    iget-object v9, v4, Lk97;->x0:Lmoe;
 
-    iget-object p0, p0, Lx87;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    iget-object v10, v4, Lk97;->w0:Lmoe;
 
-    iget-object v0, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->s0:Lth7;
+    iget-object v11, v4, Lk97;->F0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v1, p1, Lj14;->a:Lwba;
+    iget-object v12, v4, Lk97;->Y:Lmoe;
 
-    iget v2, p1, Lj14;->b:I
+    iget-object v13, v4, Lk97;->E0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v3, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->u0:Lvr;
+    iget-object v14, v4, Lk97;->B0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sget-object v4, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->w0:[Lof7;
+    iget v1, v0, Lx87;->Z:I
 
-    const/4 v5, 0x6
+    const/4 v15, 0x3
 
-    aget-object v4, v4, v5
+    const/4 v2, 0x2
 
-    invoke-virtual {v3, p0, v1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    const/4 v3, 0x1
 
-    iget-object v3, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->t0:Lq77;
+    sget-object v16, Loyf;->a:Loyf;
 
-    if-nez v3, :cond_0
+    const-string v5, "prefetch "
 
-    new-instance v3, Lq77;
+    sget-object v6, Lf34;->a:Lf34;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object v4
+    if-eq v1, v3, :cond_2
 
-    check-cast v4, Lixa;
+    if-eq v1, v2, :cond_1
 
-    iget-object v5, v1, Lwba;->a:Ljava/lang/String;
+    if-ne v1, v15, :cond_0
 
-    iget v6, v1, Lwba;->b:I
+    iget v1, v0, Lx87;->Y:I
 
-    invoke-direct {v3, v4, v5, v6, v2}, Lq77;-><init>(Lixa;Ljava/lang/String;II)V
+    iget-object v2, v0, Lx87;->X:Lk87;
 
-    iput-object v3, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->t0:Lq77;
+    iget-object v3, v0, Lx87;->w0:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0()Loga;
+    check-cast v3, Le34;
 
-    move-result-object v2
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v2, v2, Loga;->r0:Landroid/widget/EditText;
+    move-object/from16 v20, v9
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    move-object/from16 v18, v14
 
-    goto :goto_0
+    move-object v14, v5
+
+    move-object/from16 v5, p1
+
+    goto/16 :goto_3
 
     :cond_0
-    iget-object v4, v1, Lwba;->a:Ljava/lang/String;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    iget v5, v1, Lwba;->b:I
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v3, v5, v4}, Lq77;->b(ILjava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->t0:Lq77;
-
-    if-eqz v3, :cond_1
-
-    iput v2, v3, Lq77;->Y:I
+    throw v1
 
     :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->A0()Ll97;
+    iget-object v1, v0, Lx87;->X:Lk87;
+
+    iget-object v2, v0, Lx87;->w0:Ljava/lang/Object;
+
+    check-cast v2, Le34;
+
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+
+    move-object v3, v2
+
+    move-object v2, v1
+
+    move-object v1, v3
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v18, v14
+
+    move-object v14, v5
+
+    move-object v9, v6
+
+    goto/16 :goto_1
+
+    :cond_2
+    iget-object v1, v0, Lx87;->w0:Ljava/lang/Object;
+
+    check-cast v1, Le34;
+
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+
+    move-object v2, v1
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v18, v14
+
+    move-object/from16 v1, p1
+
+    move-object v14, v5
+
+    move-object v9, v6
+
+    goto/16 :goto_0
+
+    :cond_3
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lx87;->w0:Ljava/lang/Object;
+
+    check-cast v1, Le34;
+
+    sget-object v7, Lk97;->I0:Ljava/lang/String;
+
+    invoke-virtual {v14}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v8
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ": start to load virtual albums"
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v7, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    invoke-virtual {v14}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    check-cast v0, Lixa;
+    move-result v2
 
-    iget-object v3, v1, Lwba;->a:Ljava/lang/String;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Lixa;->e(Ljava/lang/String;)Lzxa;
+    invoke-direct {v8, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ": start fetch medias"
+
+    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Lcbf;
+
+    iget-object v7, v4, Lk97;->B0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v7
+
+    const-string v8, " virtual albums recent items"
+
+    invoke-static {v7, v5, v8}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v2, v7}, Lcbf;-><init>(Ljava/lang/String;)V
+
+    move-object v7, v2
+
+    sget-object v2, Lkh6;->a:Lkh6;
+
+    iput-object v1, v0, Lx87;->w0:Ljava/lang/Object;
+
+    iput v3, v0, Lx87;->Z:I
+
+    iget-object v3, v4, Lk97;->c:Lr8f;
+
+    check-cast v3, Lwla;
+
+    invoke-virtual {v3}, Lwla;->b()Ly24;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lixa;->m(Lzxa;)Z
+    move-object v8, v1
 
-    move-result v4
+    new-instance v1, Lt87;
 
-    if-nez v4, :cond_2
+    move-object/from16 v17, v8
 
-    const v0, 0x7fffffff
+    const/4 v8, 0x0
 
-    goto :goto_1
+    move-object/from16 v18, v5
 
-    :cond_2
-    const/4 v4, 0x1
+    const/16 v5, 0x28
 
-    invoke-virtual {v0, v3, v4}, Lixa;->d(Lzxa;I)Ljava/lang/String;
+    move-object/from16 v19, v6
 
-    move-result-object v0
+    const/4 v6, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-object/from16 v20, v3
 
-    move-result v0
+    move-object v3, v7
+
+    const/4 v7, 0x0
+
+    move-object/from16 v15, v18
+
+    move-object/from16 v18, v14
+
+    move-object v14, v15
+
+    move-object/from16 v15, v20
+
+    move-object/from16 v20, v9
+
+    move-object/from16 v9, v19
+
+    invoke-direct/range {v1 .. v8}, Lt87;-><init>(Lnh6;Lcbf;Lk97;IIZLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v15, v1, v0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v9, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object/from16 v2, v17
+
+    :goto_0
+    check-cast v1, Lk87;
+
+    invoke-static {v2}, Lipe;->r(Le34;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    sget-object v3, Lk97;->I0:Ljava/lang/String;
+
+    invoke-virtual/range {v18 .. v18}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ": finish fetch medias"
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v3, Ljh6;->a:Ljh6;
+
+    iput-object v2, v0, Lx87;->w0:Ljava/lang/Object;
+
+    iput-object v1, v0, Lx87;->X:Lk87;
+
+    const/4 v5, 0x2
+
+    iput v5, v0, Lx87;->Z:I
+
+    invoke-static {v4, v3, v0}, Lk97;->a(Lk97;Lnh6;Lm3f;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-ne v3, v9, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    move-object/from16 v21, v2
+
+    move-object v2, v1
+
+    move-object/from16 v1, v21
 
     :goto_1
-    iput v0, v2, Ll97;->z0:I
+    check-cast v3, Ljava/lang/Number;
 
-    iget-object p1, p1, Lj14;->c:Ldue;
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result v3
 
-    move-result-object v0
+    sget-object v5, Llh6;->a:Llh6;
 
-    invoke-virtual {p1, v0}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iput-object v1, v0, Lx87;->w0:Ljava/lang/Object;
 
-    move-result-object p1
+    iput-object v2, v0, Lx87;->X:Lk87;
 
-    if-nez p1, :cond_3
+    iput v3, v0, Lx87;->Y:I
 
-    const-string p1, ""
+    const/4 v6, 0x3
 
-    :cond_3
-    invoke-virtual {p0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->z0()Loga;
+    iput v6, v0, Lx87;->Z:I
 
-    move-result-object p0
+    invoke-static {v4, v5, v0}, Lk97;->a(Lk97;Lnh6;Lm3f;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Loga;->setHint(Ljava/lang/CharSequence;)V
+    move-result-object v5
 
-    invoke-virtual {p0, v1}, Loga;->setCountry(Lwba;)V
+    if-ne v5, v9, :cond_7
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :goto_2
+    return-object v9
 
-    return-object p0
+    :cond_7
+    move/from16 v21, v3
+
+    move-object v3, v1
+
+    move/from16 v1, v21
+
+    :goto_3
+    check-cast v5, Ljava/lang/Number;
+
+    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
+
+    move-result v5
+
+    invoke-static {v3}, Lipe;->r(Le34;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_8
+
+    :goto_4
+    return-object v16
+
+    :cond_8
+    iget-object v3, v4, Lk97;->D0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    add-int v6, v1, v5
+
+    invoke-virtual {v3, v6}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    invoke-virtual {v13}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    invoke-virtual {v12}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Loh6;
+
+    iget-object v3, v3, Loh6;->a:Lnh6;
+
+    iget-object v7, v2, Lk87;->a:Ljava/util/List;
+
+    iget-object v8, v2, Lk87;->c:Ljava/util/List;
+
+    iget-object v9, v2, Lk87;->b:Ljava/util/List;
+
+    invoke-virtual {v13, v3, v7}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v2, v2, Lk87;->a:Ljava/util/List;
+
+    invoke-static {v2}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lh18;
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v12}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Loh6;
+
+    iget-object v3, v3, Loh6;->a:Lnh6;
+
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_9
+    invoke-virtual {v10}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loh6;
+
+    iget-object v2, v2, Loh6;->a:Lnh6;
+
+    invoke-virtual {v13, v2, v9}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v9}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lh18;
+
+    if-eqz v2, :cond_a
+
+    invoke-virtual {v10}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Loh6;
+
+    iget-object v3, v3, Loh6;->a:Lnh6;
+
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
+    invoke-virtual/range {v20 .. v20}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loh6;
+
+    iget-object v2, v2, Loh6;->a:Lnh6;
+
+    invoke-virtual {v13, v2, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v8}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lh18;
+
+    if-eqz v2, :cond_b
+
+    invoke-virtual/range {v20 .. v20}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Loh6;
+
+    iget-object v3, v3, Loh6;->a:Lnh6;
+
+    invoke-virtual {v11, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_b
+    invoke-virtual {v12}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loh6;
+
+    const/16 v3, 0x9
+
+    invoke-static {v2, v6, v3}, Loh6;->a(Loh6;II)Loh6;
+
+    move-result-object v2
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v12, v6, v2}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual {v10}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loh6;
+
+    invoke-static {v2, v5, v3}, Loh6;->a(Loh6;II)Loh6;
+
+    move-result-object v2
+
+    invoke-virtual {v10, v6, v2}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    invoke-virtual/range {v20 .. v20}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Loh6;
+
+    invoke-static {v2, v1, v3}, Loh6;->a(Loh6;II)Loh6;
+
+    move-result-object v1
+
+    move-object/from16 v2, v20
+
+    invoke-virtual {v2, v6, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    iget-object v1, v4, Lk97;->z0:Lmoe;
+
+    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgb5;
+
+    if-eqz v2, :cond_c
+
+    iget-object v2, v2, Lgb5;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/List;
+
+    if-nez v2, :cond_d
+
+    :cond_c
+    sget-object v2, Lb75;->a:Lb75;
+
+    :cond_d
+    new-instance v3, Lgb5;
+
+    invoke-direct {v3, v2}, Lgb5;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v6, v3}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object v1, Lk97;->I0:Ljava/lang/String;
+
+    invoke-virtual/range {v18 .. v18}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ": finish load virtual albums"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v16
 .end method

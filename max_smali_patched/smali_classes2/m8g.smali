@@ -1,23 +1,23 @@
-.class public abstract Lm8g;
-.super Ljava/lang/Throwable;
+.class public final Lm8g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Lds3;
 
-.field public final b:I
+.field public b:Ljava/lang/String;
 
+.field public c:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.field public d:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+.field public e:I
 
-    iput-object p1, p0, Lm8g;->a:Ljava/lang/String;
+.field public f:J
 
-    iput p2, p0, Lm8g;->b:I
+.field public g:Ljava/util/List;
 
-    return-void
-.end method
+.field public h:B
+
+.field public i:J

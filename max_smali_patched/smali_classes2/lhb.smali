@@ -1,212 +1,101 @@
 .class public final Llhb;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lohb;
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public synthetic X:F
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic Y:Lone/me/pinbars/PinBarsWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Llhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    iput-object p1, p0, Llhb;->a:Ljava/lang/Long;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Llhb;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Llhb;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Llhb;->d:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Number;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    return v0
+    move-result p1
 
-    :cond_0
-    instance-of v1, p1, Llhb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    invoke-virtual {p0, p1, p2}, Llhb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_1
+    move-result-object p1
+
     check-cast p1, Llhb;
 
-    iget-object v1, p0, Llhb;->a:Ljava/lang/Long;
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v3, p1, Llhb;->a:Ljava/lang/Long;
+    invoke-virtual {p1, p2}, Llhb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Llhb;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Llhb;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Llhb;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Llhb;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object p0, p0, Llhb;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Llhb;->d:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Llhb;->a:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Llhb;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lcx3;->d(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v3, p0, Llhb;->c:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lcx3;->d(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object p0, p0, Llhb;->d:Ljava/lang/String;
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Llhb;
 
-    const-string v1, "ContactUpdate(requestId="
+    iget-object v1, p0, Llhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Llhb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    iget-object v1, p0, Llhb;->a:Ljava/lang/Long;
+    check-cast p1, Ljava/lang/Number;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    const-string v1, ", fullName="
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput p1, v0, Llhb;->X:F
 
-    iget-object v1, p0, Llhb;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v1, ", nickName="
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget p1, p0, Llhb;->X:F
 
-    iget-object v1, p0, Llhb;->c:Ljava/lang/String;
+    iget-object v0, p0, Llhb;->Y:Lone/me/pinbars/PinBarsWidget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lone/me/pinbars/PinBarsWidget;->X:Ldm9;
 
-    const-string v1, ", avatarUrl="
+    sget-object v1, Loyf;->a:Loyf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    iget-object p0, p0, Llhb;->d:Ljava/lang/String;
+    return-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {v0, p1}, Ldm9;->setProgress(F)V
 
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

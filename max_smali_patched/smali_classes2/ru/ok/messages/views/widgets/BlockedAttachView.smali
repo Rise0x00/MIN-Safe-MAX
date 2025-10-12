@@ -17,7 +17,7 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lon4;->b()Lon4;
+    invoke-static {}, Ltq4;->a()Ltq4;
 
     move-result-object p1
 
@@ -39,9 +39,9 @@
 
     move-result-object v1
 
-    sget v2, Lwsc;->d:I
+    sget v2, Lo9d;->c:I
 
-    invoke-static {v1, v2}, Lew3;->a(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lqy3;->a(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v1, Lysc;->i0:I
+    sget v1, Lq9d;->D0:I
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
@@ -93,11 +93,11 @@
 
     iget-object p2, p0, Lru/ok/messages/views/widgets/BlockedAttachView;->a:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget v0, p1, Lon4;->G:F
+    iget v0, p1, Ltq4;->F:F
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p2, v1, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     iget-object p2, p0, Lru/ok/messages/views/widgets/BlockedAttachView;->a:Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -105,7 +105,7 @@
 
     move-result-object v0
 
-    sget v2, Lbtc;->W:I
+    sget v2, Lt9d;->X:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -119,7 +119,7 @@
 
     iget-object p2, p0, Lru/ok/messages/views/widgets/BlockedAttachView;->a:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget p1, p1, Lon4;->i:I
+    iget p1, p1, Ltq4;->i:I
 
     invoke-virtual {p2, v1, p1, v1, v1}, Landroid/widget/TextView;->setPadding(IIII)V
 
@@ -137,11 +137,11 @@
 
 # virtual methods
 .method public setCorners([F)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/messages/views/widgets/BlockedAttachView;->b:Landroid/graphics/drawable/GradientDrawable;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/BlockedAttachView;->b:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadii([F)V
 
     return-void
 .end method

@@ -3,100 +3,82 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnp4;
+.implements Lnf6;
+
+
+# static fields
+.field public static final b:Lhpd;
+
+.field public static final c:Lhpd;
 
 
 # instance fields
-.field public final a:Lkpd;
-
-.field public final b:J
-
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Lv02;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lkpd;JLjava/lang/Object;Lv02;)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lhpd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lhpd;-><init>(I)V
+
+    sput-object v0, Lhpd;->b:Lhpd;
+
+    new-instance v0, Lhpd;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lhpd;-><init>(I)V
+
+    sput-object v0, Lhpd;->c:Lhpd;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lhpd;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhpd;->a:Lkpd;
-
-    iput-wide p2, p0, Lhpd;->b:J
-
-    iput-object p4, p0, Lhpd;->c:Ljava/lang/Object;
-
-    iput-object p5, p0, Lhpd;->o:Lv02;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lhpd;->a:Lkpd;
+    iget v0, p0, Lhpd;->a:I
 
-    monitor-enter v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-wide v1, p0, Lhpd;->b:J
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {v0}, Lkpd;->s()J
+    check-cast p2, Ld3d;
 
-    move-result-wide v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p3, Lw24;
 
-    cmp-long v1, v1, v3
+    invoke-static {p2}, Ls4g;->c(Ljava/io/Closeable;)V
 
-    if-gez v1, :cond_0
+    sget-object p1, Loyf;->a:Loyf;
 
-    monitor-exit v0
+    return-object p1
 
-    return-void
+    :pswitch_0
+    const/4 p1, 0x0
 
-    :cond_0
-    :try_start_1
-    iget-object v1, v0, Lkpd;->n0:[Ljava/lang/Object;
+    return-object p1
 
-    iget-wide v2, p0, Lhpd;->b:J
+    nop
 
-    invoke-static {v1, v2, v3}, Llpd;->c([Ljava/lang/Object;J)Ljava/lang/Object;
-
-    move-result-object v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-eq v2, p0, :cond_1
-
-    monitor-exit v0
-
-    return-void
-
-    :cond_1
-    :try_start_2
-    iget-wide v2, p0, Lhpd;->b:J
-
-    sget-object p0, Llpd;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    invoke-static {v1, v2, v3, p0}, Llpd;->d([Ljava/lang/Object;JLjava/lang/Object;)V
-
-    invoke-virtual {v0}, Lkpd;->n()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

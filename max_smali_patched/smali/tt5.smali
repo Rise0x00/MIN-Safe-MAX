@@ -1,42 +1,35 @@
 .class public final Ltt5;
-.super Lkt5;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lewc;
-
-
-# static fields
-.field public static final b:Ltt5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ltt5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ltt5;->b:Ltt5;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final g(Luu5;)V
-    .locals 0
+.method public final b()I
+    .locals 1
 
-    invoke-static {p1}, Lg35;->a(Lwee;)V
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public final k()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final m()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final t(JJJLjava/util/List;[Lni8;)V
     .locals 0
 
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method

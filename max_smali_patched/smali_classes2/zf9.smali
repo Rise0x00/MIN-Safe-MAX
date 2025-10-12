@@ -1,52 +1,55 @@
-.class public abstract Lzf9;
-.super Ljava/lang/Object;
+.class public final Lzf9;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:F
+# instance fields
+.field public X:Lq49;
+
+.field public Y:Lo10;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lng9;
+
+.field public final synthetic w0:Lng9;
+
+.field public x0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lng9;Lnz3;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lzf9;->w0:Lng9;
 
-    invoke-static {v0}, Lzf9;->a(F)V
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {v0}, Lzf9;->a(F)V
-
-    sput v0, Lzf9;->a:F
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(F)V
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Lzf9;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lzf9;->x0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzf9;->x0:I
+
+    iget-object p1, p0, Lzf9;->w0:Lng9;
 
     const/4 v0, 0x0
 
-    cmpg-float v0, v0, p0
+    invoke-static {p1, v0, p0}, Lng9;->s(Lng9;Lq49;Lnz3;)Ljava/lang/Object;
 
-    if-gtz v0, :cond_0
+    move-result-object p1
 
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    cmpg-float p0, p0, v0
-
-    if-gtz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Gain must be in range of 0f and 1f"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p1
 .end method

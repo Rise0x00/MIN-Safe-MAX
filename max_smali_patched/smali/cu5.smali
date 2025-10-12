@@ -1,372 +1,239 @@
 .class public final Lcu5;
-.super Lrl0;
+.super Ldxe;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/util/Iterator;
+.field public o:Leu5;
 
-.field public volatile b:Z
-
-.field public c:Z
-
-.field public final o:Lwee;
-
-
-# direct methods
-.method public constructor <init>(Lwee;Ljava/util/Iterator;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p2, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    iput-object p1, p0, Lcu5;->o:Lwee;
-
-    return-void
-.end method
+.field public p:Lzr0;
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
+.method public final b(Ly4b;)J
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p1, Ly4b;->a:[B
 
-    iput-boolean v0, p0, Lcu5;->b:Z
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    aget-byte v2, v0, v1
 
-.method public final clear()V
-    .locals 1
+    const/4 v3, -0x1
 
-    const/4 v0, 0x0
+    if-ne v2, v3, :cond_2
 
-    iput-object v0, p0, Lcu5;->a:Ljava/util/Iterator;
+    const/4 v2, 0x2
 
-    return-void
-.end method
+    aget-byte v0, v0, v2
 
-.method public final h(J)V
-    .locals 9
+    and-int/lit16 v0, v0, 0xff
 
-    invoke-static {p1, p2}, Lafe;->d(J)Z
+    const/4 v2, 0x4
+
+    shr-int/2addr v0, v2
+
+    const/4 v3, 0x6
+
+    if-eq v0, v3, :cond_0
+
+    const/4 v3, 0x7
+
+    if-ne v0, v3, :cond_1
+
+    :cond_0
+    invoke-virtual {p1, v2}, Ly4b;->H(I)V
+
+    invoke-virtual {p1}, Ly4b;->B()J
+
+    :cond_1
+    invoke-static {v0, p1}, Ly6b;->C(ILy4b;)I
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    invoke-virtual {p1, v1}, Ly4b;->G(I)V
 
-    invoke-static {p0, p1, p2}, Lxwe;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    int-to-long v0, v0
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_e
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    cmp-long v0, p1, v0
-
-    const-string v1, "Iterator.next() returned a null value"
-
-    if-nez v0, :cond_5
-
-    iget-object p1, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    iget-object p2, p0, Lcu5;->o:Lwee;
-
-    :cond_0
-    iget-boolean v0, p0, Lcu5;->b:Z
-
-    if-eqz v0, :cond_1
-
-    goto/16 :goto_1
-
-    :cond_1
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    iget-boolean v2, p0, Lcu5;->b:Z
-
-    if-eqz v2, :cond_2
-
-    goto/16 :goto_1
+    return-wide v0
 
     :cond_2
-    if-nez v0, :cond_3
+    const-wide/16 v0, -0x1
 
-    new-instance p0, Ljava/lang/NullPointerException;
+    return-wide v0
+.end method
 
-    invoke-direct {p0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+.method public final d(Ly4b;JLa4d;)Z
+    .locals 21
 
-    invoke-interface {p2, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
+    move-object/from16 v0, p0
 
-    return-void
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p4
+
+    iget-object v3, v1, Ly4b;->a:[B
+
+    iget-object v4, v0, Lcu5;->o:Leu5;
+
+    const/4 v5, 0x1
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Leu5;
+
+    const/16 v6, 0x11
+
+    const/4 v7, 0x1
+
+    invoke-direct {v4, v3, v6, v7}, Leu5;-><init>([BII)V
+
+    iput-object v4, v0, Lcu5;->o:Leu5;
+
+    const/16 v6, 0x9
+
+    iget v1, v1, Ly4b;->c:I
+
+    invoke-static {v3, v6, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v4, v1, v3}, Leu5;->e([BLgk9;)Lt76;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lt76;->a()Lq76;
+
+    move-result-object v1
+
+    const-string v3, "audio/ogg"
+
+    invoke-static {v3}, Ljl9;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v1, Lq76;->l:Ljava/lang/String;
+
+    new-instance v3, Lt76;
+
+    invoke-direct {v3, v1}, Lt76;-><init>(Lq76;)V
+
+    iput-object v3, v2, La4d;->b:Ljava/lang/Object;
+
+    return v5
+
+    :cond_0
+    const/4 v6, 0x0
+
+    aget-byte v3, v3, v6
+
+    and-int/lit8 v7, v3, 0x7f
+
+    const/4 v8, 0x3
+
+    if-ne v7, v8, :cond_1
+
+    invoke-static {v1}, Lpch;->M(Ly4b;)Lbb8;
+
+    move-result-object v19
+
+    new-instance v9, Leu5;
+
+    iget v10, v4, Leu5;->b:I
+
+    iget v11, v4, Leu5;->c:I
+
+    iget v12, v4, Leu5;->d:I
+
+    iget v13, v4, Leu5;->e:I
+
+    iget v14, v4, Leu5;->f:I
+
+    iget v15, v4, Leu5;->h:I
+
+    iget v1, v4, Leu5;->i:I
+
+    iget-wide v2, v4, Leu5;->k:J
+
+    iget-object v4, v4, Leu5;->m:Ljava/lang/Object;
+
+    move-object/from16 v20, v4
+
+    check-cast v20, Lgk9;
+
+    move/from16 v16, v1
+
+    move-wide/from16 v17, v2
+
+    invoke-direct/range {v9 .. v20}, Leu5;-><init>(IIIIIIIJLbb8;Lgk9;)V
+
+    move-object/from16 v1, v19
+
+    iput-object v9, v0, Lcu5;->o:Leu5;
+
+    new-instance v2, Lzr0;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3}, Lzr0;-><init>(I)V
+
+    iput-object v9, v2, Lzr0;->o:Ljava/lang/Object;
+
+    iput-object v1, v2, Lzr0;->X:Ljava/lang/Object;
+
+    const-wide/16 v3, -0x1
+
+    iput-wide v3, v2, Lzr0;->b:J
+
+    iput-wide v3, v2, Lzr0;->c:J
+
+    iput-object v2, v0, Lcu5;->p:Lzr0;
+
+    return v5
+
+    :cond_1
+    const/4 v1, -0x1
+
+    if-ne v3, v1, :cond_3
+
+    iget-object v1, v0, Lcu5;->p:Lzr0;
+
+    if-eqz v1, :cond_2
+
+    move-wide/from16 v3, p2
+
+    iput-wide v3, v1, Lzr0;->b:J
+
+    iput-object v1, v2, La4d;->c:Ljava/lang/Object;
+
+    :cond_2
+    iget-object v1, v2, La4d;->b:Ljava/lang/Object;
+
+    check-cast v1, Lt76;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v6
 
     :cond_3
-    invoke-interface {p2, v0}, Lwee;->d(Ljava/lang/Object;)V
-
-    iget-boolean v0, p0, Lcu5;->b:Z
-
-    if-eqz v0, :cond_4
-
-    goto/16 :goto_1
-
-    :cond_4
-    :try_start_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez v0, :cond_0
-
-    iget-boolean p0, p0, Lcu5;->b:Z
-
-    if-nez p0, :cond_e
-
-    invoke-interface {p2}, Lwee;->b()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-interface {p2, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    goto/16 :goto_1
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-interface {p2, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v0, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    iget-object v4, p0, Lcu5;->o:Lwee;
-
-    :cond_6
-    move-wide v5, v2
-
-    :cond_7
-    :goto_0
-    cmp-long v7, v5, p1
-
-    if-eqz v7, :cond_d
-
-    iget-boolean v7, p0, Lcu5;->b:Z
-
-    if-eqz v7, :cond_8
-
-    goto :goto_1
-
-    :cond_8
-    :try_start_2
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_3
-
-    iget-boolean v8, p0, Lcu5;->b:Z
-
-    if-eqz v8, :cond_9
-
-    goto :goto_1
-
-    :cond_9
-    if-nez v7, :cond_a
-
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v4, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_a
-    invoke-interface {v4, v7}, Lwee;->d(Ljava/lang/Object;)V
-
-    iget-boolean v7, p0, Lcu5;->b:Z
-
-    if-eqz v7, :cond_b
-
-    goto :goto_1
-
-    :cond_b
-    :try_start_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    if-nez v7, :cond_c
-
-    iget-boolean p0, p0, Lcu5;->b:Z
-
-    if-nez p0, :cond_e
-
-    invoke-interface {v4}, Lwee;->b()V
-
-    return-void
-
-    :cond_c
-    const-wide/16 v7, 0x1
-
-    add-long/2addr v5, v7
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-interface {v4, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_3
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-interface {v4, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_d
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide p1
-
-    cmp-long v7, v5, p1
-
-    if-nez v7, :cond_7
-
-    neg-long p1, v5
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
-
-    move-result-wide p1
-
-    cmp-long v5, p1, v2
-
-    if-nez v5, :cond_6
-
-    :cond_e
-    :goto_1
-    return-void
+    return v5
 .end method
 
-.method public final isEmpty()Z
-    .locals 2
-
-    iget-object v0, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v1, p0, Lcu5;->c:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v1, p0, Lcu5;->c:Z
-
-    if-nez v1, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcu5;->c:Z
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_2
-    :goto_1
-    iget-object p0, p0, Lcu5;->a:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string v0, "Iterator.next() returned a null value"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public final t(I)I
+.method public final f(Z)V
     .locals 0
 
-    const/4 p0, 0x1
+    invoke-super {p0, p1}, Ldxe;->f(Z)V
 
-    return p0
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lcu5;->o:Leu5;
+
+    iput-object p1, p0, Lcu5;->p:Lzr0;
+
+    :cond_0
+    return-void
 .end method

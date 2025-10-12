@@ -1,89 +1,130 @@
 .class public final Lvy5;
-.super Ljava/lang/Object;
+.super Loy5;
 .source "SourceFile"
-
-# interfaces
-.implements Lwy5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic b:I
+
+.field public final c:Ljava/lang/Object;
+
+.field public final o:Lmf6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lmf6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lvy5;->b:I
 
-    iput-object p1, p0, Lvy5;->a:Ljava/lang/String;
+    iput-object p1, p0, Lvy5;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lvy5;->o:Lmf6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final g(Lyz5;)V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lvy5;->b:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    :try_start_0
+    iget-object v0, p0, Lvy5;->o:Lmf6;
+
+    check-cast v0, Lfaf;
+
+    iget-object v1, p0, Lvy5;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Lfaf;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj7c;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    instance-of v1, v0, Ls1f;
+
+    if-eqz v1, :cond_1
+
+    :try_start_1
+    check-cast v0, Ls1f;
+
+    invoke-interface {v0}, Ls1f;->get()Ljava/lang/Object;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lr75;->a(Lcze;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lvy5;
+    new-instance v1, Ltcd;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, p1, v0}, Ltcd;-><init>(Lcze;Ljava/lang/Object;)V
 
-    if-nez v1, :cond_1
+    invoke-interface {p1, v1}, Lcze;->d(Leze;)V
 
-    return v2
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lr75;->b(Ljava/lang/Throwable;Lcze;)V
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lvy5;
+    check-cast v0, Loy5;
 
-    iget-object p0, p0, Lvy5;->a:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Loy5;->e(Lcze;)V
 
-    iget-object p1, p1, Lvy5;->a:Ljava/lang/String;
+    goto :goto_0
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :catchall_1
+    move-exception v0
 
-    move-result p0
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
 
-    if-nez p0, :cond_2
+    invoke-static {v0, p1}, Lr75;->b(Ljava/lang/Throwable;Lcze;)V
 
-    return v2
+    :goto_0
+    return-void
 
-    :cond_2
-    return v0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lvy5;->c:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 0
+    check-cast v0, Lud8;
 
-    iget-object p0, p0, Lvy5;->a:Ljava/lang/String;
+    new-instance v1, Luy5;
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    iget-object v2, p0, Lvy5;->o:Lmf6;
 
-    move-result p0
+    check-cast v2, Lyre;
 
-    return p0
-.end method
+    invoke-direct {v1, p1, v2}, Luy5;-><init>(Lcze;Lyre;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {v0, v1}, Loy5;->c(Lyz5;)V
 
-    const-string v0, "OpenUrl(url="
+    return-void
 
-    const-string v1, ")"
+    nop
 
-    iget-object p0, p0, Lvy5;->a:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

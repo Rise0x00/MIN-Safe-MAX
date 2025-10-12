@@ -1,507 +1,269 @@
-.class public Lju8;
-.super Lxoe;
+.class public final synthetic Lju8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/Menu;
+.implements Lvo3;
 
 
 # instance fields
-.field public final o:Lpt8;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lls8;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lpt8;)V
+.method public synthetic constructor <init>(Lls8;II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxoe;-><init>(Landroid/content/Context;)V
+    iput p3, p0, Lju8;->a:I
 
-    if-eqz p2, :cond_0
+    iput-object p1, p0, Lju8;->b:Lls8;
 
-    iput-object p2, p0, Lju8;->o:Lpt8;
+    iput p2, p0, Lju8;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Wrapped Object can not be null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final add(I)Landroid/view/MenuItem;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 16
 
-    .line 4
-    iget-object v0, p0, Lju8;->o:Lpt8;
+    move-object/from16 v1, p0
 
-    invoke-virtual {v0, p1}, Lpt8;->add(I)Landroid/view/MenuItem;
+    iget v0, v1, Lju8;->a:I
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    const/4 v3, -0x1
 
-    move-result-object p0
+    const-string v4, "MediaSessionStub"
 
-    return-object p0
-.end method
+    iget v5, v1, Lju8;->c:I
 
-.method public final add(IIII)Landroid/view/MenuItem;
-    .locals 1
+    iget-object v6, v1, Lju8;->b:Lls8;
 
-    .line 8
-    iget-object v0, p0, Lju8;->o:Lpt8;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lpt8;->add(IIII)Landroid/view/MenuItem;
+    move-object/from16 v0, p1
 
-    move-result-object p1
+    check-cast v0, Ljx7;
 
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    :try_start_0
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    check-cast v0, Lgwd;
 
-.method public final add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 1
+    const-string v7, "SessionResult must not be null"
 
-    .line 5
-    iget-object v0, p0, Lju8;->o:Lpt8;
-
-    .line 6
-    invoke-virtual {v0, p1, p2, p3, p4}, Lpt8;->a(IIILjava/lang/CharSequence;)Ltt8;
-
-    move-result-object p1
-
-    .line 7
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final add(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lju8;->o:Lpt8;
-
-    const/4 v1, 0x0
-
-    .line 2
-    invoke-virtual {v0, v1, v1, v1, p1}, Lpt8;->a(IIILjava/lang/CharSequence;)Ltt8;
-
-    move-result-object p1
-
-    .line 3
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
-    .locals 11
-
-    move-object/from16 v0, p8
-
-    if-eqz v0, :cond_0
-
-    array-length v1, v0
-
-    new-array v1, v1, [Landroid/view/MenuItem;
-
-    :goto_0
-    move-object v10, v1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    iget-object v2, p0, Lju8;->o:Lpt8;
-
-    move v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    move-object v6, p4
-
-    move-object/from16 v7, p5
-
-    move-object/from16 v8, p6
-
-    move/from16 v9, p7
-
-    invoke-virtual/range {v2 .. v10}, Lpt8;->addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
-
-    move-result p1
-
-    if-eqz v10, :cond_1
-
-    array-length p2, v10
-
-    const/4 p3, 0x0
-
-    :goto_2
-    if-ge p3, p2, :cond_1
-
-    aget-object p4, v10, p3
-
-    invoke-virtual {p0, p4}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p4
-
-    aput-object p4, v0, p3
-
-    add-int/lit8 p3, p3, 0x1
+    invoke-static {v0, v7}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_2
 
-    :cond_1
-    return p1
-.end method
+    :catch_0
+    move-exception v0
 
-.method public final addSubMenu(I)Landroid/view/SubMenu;
-    .locals 0
+    goto :goto_0
 
-    .line 3
-    iget-object p0, p0, Lju8;->o:Lpt8;
+    :catch_1
+    move-exception v0
 
-    invoke-virtual {p0, p1}, Lpt8;->addSubMenu(I)Landroid/view/SubMenu;
+    goto :goto_0
 
-    move-result-object p0
+    :catch_2
+    move-exception v0
 
-    return-object p0
-.end method
+    goto :goto_1
 
-.method public final addSubMenu(IIII)Landroid/view/SubMenu;
-    .locals 0
+    :goto_0
+    const-string v2, "Session operation failed"
 
-    .line 5
-    iget-object p0, p0, Lju8;->o:Lpt8;
+    invoke-static {v4, v2, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 6
-    invoke-virtual {p0, p1, p2, p3, p4}, Lpt8;->addSubMenu(IIII)Landroid/view/SubMenu;
+    new-instance v2, Lgwd;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-    .locals 0
-
-    .line 4
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lpt8;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final addSubMenu(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 1
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-virtual {p0, v0, v0, v0, p1}, Lpt8;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lntd;
+    instance-of v0, v0, Ljava/lang/UnsupportedOperationException;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lntd;->clear()V
+    const/4 v3, -0x6
 
     :cond_0
-    iget-object p0, p0, Lju8;->o:Lpt8;
+    invoke-direct {v2, v3}, Lgwd;-><init>(I)V
 
-    invoke-virtual {p0}, Lpt8;->clear()V
+    move-object v0, v2
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final close()V
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0}, Lpt8;->close()V
-
-    return-void
-.end method
-
-.method public final findItem(I)Landroid/view/MenuItem;
-    .locals 1
-
-    iget-object v0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {v0, p1}, Lpt8;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getItem(I)Landroid/view/MenuItem;
-    .locals 1
-
-    iget-object v0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {v0, p1}, Lpt8;->getItem(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lxoe;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final hasVisibleItems()Z
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0}, Lpt8;->hasVisibleItems()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final isShortcutKey(ILandroid/view/KeyEvent;)Z
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2}, Lpt8;->isShortcutKey(ILandroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final performIdentifierAction(II)Z
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2}, Lpt8;->performIdentifierAction(II)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final performShortcut(ILandroid/view/KeyEvent;I)Z
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2, p3}, Lpt8;->performShortcut(ILandroid/view/KeyEvent;I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final removeGroup(I)V
-    .locals 3
-
-    iget-object v0, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lntd;
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v1, Lntd;
-
-    iget v2, v1, Lntd;->c:I
-
-    if-ge v0, v2, :cond_2
-
-    invoke-virtual {v1, v0}, Lntd;->f(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lthe;
-
-    invoke-interface {v1}, Landroid/view/MenuItem;->getGroupId()I
-
-    move-result v1
-
-    if-ne v1, p1, :cond_1
-
-    iget-object v1, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v1, Lntd;
-
-    invoke-virtual {v1, v0}, Lntd;->g(I)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     :goto_1
-    iget-object p0, p0, Lju8;->o:Lpt8;
+    const-string v3, "Session operation cancelled"
 
-    invoke-virtual {p0, p1}, Lpt8;->removeGroup(I)V
+    invoke-static {v4, v3, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-void
-.end method
+    new-instance v0, Lgwd;
 
-.method public final removeItem(I)V
-    .locals 3
+    invoke-direct {v0, v2}, Lgwd;-><init>(I)V
 
-    iget-object v0, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v0, Lntd;
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v1, Lntd;
-
-    iget v2, v1, Lntd;->c:I
-
-    if-ge v0, v2, :cond_2
-
-    invoke-virtual {v1, v0}, Lntd;->f(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lthe;
-
-    invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result v1
-
-    if-ne v1, p1, :cond_1
-
-    iget-object v1, p0, Lxoe;->c:Ljava/lang/Object;
-
-    check-cast v1, Lntd;
-
-    invoke-virtual {v1, v0}, Lntd;->g(I)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1}, Lpt8;->removeItem(I)V
+    :goto_2
+    invoke-static {v6, v5, v0}, Lru8;->e0(Lls8;ILgwd;)V
 
     return-void
-.end method
 
-.method public final setGroupCheckable(IZZ)V
-    .locals 0
+    :pswitch_0
+    const-string v7, "no error message provided"
 
-    iget-object p0, p0, Lju8;->o:Lpt8;
+    move-object/from16 v0, p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lpt8;->setGroupCheckable(IZZ)V
+    check-cast v0, Ljx7;
 
+    :try_start_1
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Luq7;
+
+    const-string v8, "LibraryResult must not be null"
+
+    invoke-static {v0, v8}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_5
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_4
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
+
+    goto :goto_6
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_5
+
+    :goto_3
+    const-string v2, "Library operation failed"
+
+    invoke-static {v4, v2, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v0, Luq7;->g:Ljava/lang/String;
+
+    new-instance v13, Lwvd;
+
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    invoke-direct {v13, v7, v3, v0}, Lwvd;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
+
+    new-instance v8, Luq7;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v10
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x4
+
+    iget v9, v13, Lwvd;->a:I
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v8 .. v15}, Luq7;-><init>(IJLmn8;Lwvd;Ljava/lang/Object;I)V
+
+    :goto_4
+    move-object v0, v8
+
+    goto :goto_6
+
+    :goto_5
+    const-string v3, "Library operation cancelled"
+
+    invoke-static {v4, v3, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object v0, Luq7;->g:Ljava/lang/String;
+
+    new-instance v13, Lwvd;
+
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    invoke-direct {v13, v7, v2, v0}, Lwvd;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
+
+    new-instance v8, Luq7;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v10
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x4
+
+    iget v9, v13, Lwvd;->a:I
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v8 .. v15}, Luq7;-><init>(IJLmn8;Lwvd;Ljava/lang/Object;I)V
+
+    goto :goto_4
+
+    :goto_6
+    :try_start_2
+    iget-object v2, v6, Lls8;->d:Lks8;
+
+    invoke-static {v2}, Lpih;->p(Ljava/lang/Object;)V
+
+    invoke-interface {v2, v5, v0}, Lks8;->e(ILuq7;)V
+    :try_end_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_6
+
+    goto :goto_7
+
+    :catch_6
+    move-exception v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to send result to browser "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v4, v2, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_7
     return-void
-.end method
 
-.method public final setGroupEnabled(IZ)V
-    .locals 0
+    nop
 
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2}, Lpt8;->setGroupEnabled(IZ)V
-
-    return-void
-.end method
-
-.method public final setGroupVisible(IZ)V
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0, p1, p2}, Lpt8;->setGroupVisible(IZ)V
-
-    return-void
-.end method
-
-.method public final setQwertyMode(Z)V
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-interface {p0, p1}, Landroid/view/Menu;->setQwertyMode(Z)V
-
-    return-void
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Lju8;->o:Lpt8;
-
-    invoke-virtual {p0}, Lpt8;->size()I
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

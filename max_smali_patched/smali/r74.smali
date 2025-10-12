@@ -1,61 +1,35 @@
-.class public abstract Lr74;
+.class public interface abstract Lr74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lpv0;
+# virtual methods
+.method public abstract b()V
+.end method
 
+.method public abstract c(JLgnd;)J
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 17
+.method public abstract d(Lo43;ZLfz7;Llu3;)Z
+.end method
 
-    new-instance v0, Lpv0;
+.method public abstract e(Lo43;)V
+.end method
 
-    const/4 v1, 0x2
+.method public abstract f(JLo43;Ljava/util/List;)Z
+.end method
 
-    invoke-direct {v0, v1}, Lpv0;-><init>(I)V
+.method public abstract g(Lw74;I)V
+.end method
 
-    sput-object v0, Lr74;->a:Lpv0;
+.method public abstract h(Leg5;)V
+.end method
 
-    const-string v15, "EEE, dd-MM-yyyy HH:mm:ss z"
+.method public abstract i(JLjava/util/List;)I
+.end method
 
-    const-string v16, "EEE MMM d yyyy HH:mm:ss z"
+.method public abstract j(La08;JLjava/util/List;Lke0;)V
+.end method
 
-    const-string v2, "EEE, dd MMM yyyy HH:mm:ss zzz"
-
-    const-string v3, "EEEE, dd-MMM-yy HH:mm:ss zzz"
-
-    const-string v4, "EEE MMM d HH:mm:ss yyyy"
-
-    const-string v5, "EEE, dd-MMM-yyyy HH:mm:ss z"
-
-    const-string v6, "EEE, dd-MMM-yyyy HH-mm-ss z"
-
-    const-string v7, "EEE, dd MMM yy HH:mm:ss z"
-
-    const-string v8, "EEE dd-MMM-yyyy HH:mm:ss z"
-
-    const-string v9, "EEE dd MMM yyyy HH:mm:ss z"
-
-    const-string v10, "EEE dd-MMM-yyyy HH-mm-ss z"
-
-    const-string v11, "EEE dd-MMM-yy HH:mm:ss z"
-
-    const-string v12, "EEE dd MMM yy HH:mm:ss z"
-
-    const-string v13, "EEE,dd-MMM-yy HH:mm:ss z"
-
-    const-string v14, "EEE,dd-MMM-yyyy HH:mm:ss z"
-
-    filled-new-array/range {v2 .. v16}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Ljava/text/DateFormat;
-
-    return-void
+.method public abstract release()V
 .end method

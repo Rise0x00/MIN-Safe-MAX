@@ -1,84 +1,84 @@
 .class public Lru/ok/messages/location/ActLocationMap;
-.super Lm5;
+.super Lu5;
 .source "SourceFile"
 
 # interfaces
-.implements Lp86;
+.implements Lge6;
 
 
 # static fields
-.field public static final synthetic P0:I
+.field public static final synthetic Y0:I
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lm5;-><init>()V
+    invoke-direct {p0}, Lu5;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Q()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final T(IILandroid/content/Intent;)V
+.method public final O()Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lm56;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    const-string v0, "ru.ok.messages.location.FrgLocationMap"
+.method public final R(IILandroid/content/Intent;)V
+    .locals 2
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Lru/ok/messages/location/FrgLocationMap;
+    const-string v1, "ru.ok.messages.location.FrgLocationMap"
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lru/ok/messages/location/FrgLocationMap;
+
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    check-cast p0, Lru/ok/messages/location/FrgLocationMap;
+    check-cast v0, Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/messages/location/FrgLocationMap;->Z0(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lru/ok/messages/location/FrgLocationMap;->Y0(IILandroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public final d()V
-    .locals 1
+.method public final c()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lm56;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "ru.ok.messages.location.FrgLocationMap"
+    const-string v1, "ru.ok.messages.location.FrgLocationMap"
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Lru/ok/messages/location/FrgLocationMap;
+    instance-of v1, v0, Lru/ok/messages/location/FrgLocationMap;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    check-cast p0, Lru/ok/messages/location/FrgLocationMap;
+    check-cast v0, Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-virtual {p0}, Lru/ok/messages/location/FrgLocationMap;->d()V
+    invoke-virtual {v0}, Lru/ok/messages/location/FrgLocationMap;->c()V
 
     return-void
 .end method
@@ -88,17 +88,17 @@
 
     move-object/from16 v0, p0
 
-    invoke-super/range {p0 .. p1}, Lm5;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lu5;->onCreate(Landroid/os/Bundle;)V
 
-    sget v1, Ld2c;->act_single_fragment:I
+    sget v1, Lghc;->act_single_fragment:I
 
-    invoke-virtual {v0, v1}, Lm5;->setContentView(I)V
+    invoke-virtual {v0, v1}, Lu5;->setContentView(I)V
 
-    iget-object v1, v0, Lm5;->I0:Llqe;
+    iget-object v1, v0, Lu5;->R0:Lvaf;
 
-    iget v1, v1, Llqe;->L:I
+    iget v1, v1, Lvaf;->L:I
 
-    invoke-virtual {v0, v1}, Lm5;->X(I)V
+    invoke-virtual {v0, v1}, Lu5;->U(I)V
 
     if-eqz p1, :cond_0
 
@@ -135,11 +135,11 @@
 
     move-result-object v14
 
-    check-cast v14, Lav7;
+    check-cast v14, Ll28;
 
     if-nez v14, :cond_1
 
-    sget-object v14, Lav7;->Z:Lav7;
+    sget-object v14, Ll28;->Z:Ll28;
 
     :cond_1
     const/high16 v15, 0x41600000    # 14.0f
@@ -284,71 +284,71 @@
 
     invoke-virtual {v3, v2, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-virtual {v1, v3}, Landroidx/fragment/app/a;->L0(Landroid/os/Bundle;)V
+    invoke-virtual {v1, v3}, Landroidx/fragment/app/a;->K0(Landroid/os/Bundle;)V
 
-    invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/b;->F()Lm56;
+    invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/b;->D()Lfb6;
 
     move-result-object v0
 
-    sget v2, Ld1c;->act_single_fragment__container:I
+    sget v2, Ljgc;->act_single_fragment__container:I
 
     const-string v3, "ru.ok.messages.location.FrgLocationMap"
 
-    invoke-static {v0, v2, v1, v3}, Lv44;->c(Lm56;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
+    invoke-static {v0, v2, v1, v3}, Lud6;->b(Lfb6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final u()V
-    .locals 1
+.method public final r()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lm56;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "ru.ok.messages.location.FrgLocationMap"
+    const-string v1, "ru.ok.messages.location.FrgLocationMap"
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Lru/ok/messages/location/FrgLocationMap;
+    instance-of v1, v0, Lru/ok/messages/location/FrgLocationMap;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    check-cast p0, Lru/ok/messages/location/FrgLocationMap;
+    check-cast v0, Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
-.method public final w()V
-    .locals 1
+.method public final v()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->F()Lm56;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->D()Lfb6;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "ru.ok.messages.location.FrgLocationMap"
+    const-string v1, "ru.ok.messages.location.FrgLocationMap"
 
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, Lru/ok/messages/location/FrgLocationMap;
+    instance-of v1, v0, Lru/ok/messages/location/FrgLocationMap;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    check-cast p0, Lru/ok/messages/location/FrgLocationMap;
+    check-cast v0, Lru/ok/messages/location/FrgLocationMap;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method

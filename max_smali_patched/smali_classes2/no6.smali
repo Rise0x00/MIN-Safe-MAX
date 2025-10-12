@@ -1,96 +1,104 @@
-.class public final Lno6;
+.class public final synthetic Lno6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loo6;
+.implements Lifa;
+.implements Lkfa;
 
 
 # instance fields
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Ljava/util/List;
-
-.field public final e:Z
+.field public final synthetic a:Lzlh;
 
 
 # direct methods
-.method public constructor <init>(Loo6;)V
-    .locals 2
+.method public synthetic constructor <init>(Lzlh;)V
+    .locals 0
+
+    iput-object p1, p0, Lno6;->a:Lzlh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {p1}, Loo6;->g()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lno6;->b:J
-
-    invoke-interface {p1}, Loo6;->h()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lno6;->c:J
-
-    invoke-interface {p1}, Loo6;->i()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lg73;->L0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lno6;->d:Ljava/util/List;
-
-    invoke-interface {p1}, Loo6;->b()V
-
-    invoke-interface {p1}, Loo6;->a()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lno6;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public onFailure(Ljava/lang/Exception;)V
     .locals 0
 
-    iget-boolean p0, p0, Lno6;->e:Z
+    iget-object p1, p0, Lno6;->a:Lzlh;
 
-    return p0
-.end method
+    iget-object p1, p1, Lzlh;->b:Ljava/lang/Object;
 
-.method public final b()V
-    .locals 0
+    check-cast p1, Lx28;
+
+    invoke-interface {p1}, Lx28;->N()V
 
     return-void
 .end method
 
-.method public final g()J
-    .locals 2
+.method public v(Lcom/google/android/gms/tasks/Task;)V
+    .locals 11
 
-    iget-wide v0, p0, Lno6;->b:J
+    iget-object v0, p0, Lno6;->a:Lzlh;
 
-    return-wide v0
-.end method
+    iget-object v0, v0, Lzlh;->b:Ljava/lang/Object;
 
-.method public final h()J
-    .locals 2
+    check-cast v0, Lx28;
 
-    iget-wide v0, p0, Lno6;->c:J
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
 
-    return-wide v0
-.end method
+    move-result v1
 
-.method public final i()Ljava/util/List;
-    .locals 0
+    if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lno6;->d:Ljava/util/List;
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/location/Location;
+
+    new-instance v1, Ll28;
+
+    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v2
+
+    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v4
+
+    invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
+
+    move-result-wide v6
+
+    invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
+
+    move-result v8
+
+    invoke-virtual {p1}, Landroid/location/Location;->getBearing()F
+
+    move-result v9
+
+    invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
+
+    move-result v10
+
+    invoke-direct/range {v1 .. v10}, Ll28;-><init>(DDDFFF)V
+
+    invoke-interface {v0, v1}, Lx28;->i0(Ll28;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Lx28;->N()V
+
+    return-void
 .end method

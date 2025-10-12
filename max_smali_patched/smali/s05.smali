@@ -1,150 +1,157 @@
-.class public final Ls05;
-.super Ljava/lang/Object;
+.class public final enum Ls05;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/InputFilter;
+
+# static fields
+.field public static final enum X:Ls05;
+
+.field public static final enum Y:Ls05;
+
+.field public static final enum Z:Ls05;
+
+.field public static final enum b:Ls05;
+
+.field public static final enum c:Ls05;
+
+.field public static final enum o:Ls05;
+
+.field public static final synthetic w0:[Ls05;
 
 
 # instance fields
-.field public final a:Landroid/widget/TextView;
-
-.field public b:Lr05;
+.field public final a:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ls05;
 
-    iput-object p1, p0, Ls05;->a:Landroid/widget/TextView;
+    const/4 v1, 0x0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v3, "NANOSECONDS"
+
+    invoke-direct {v0, v3, v1, v2}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v0, Ls05;->b:Ls05;
+
+    new-instance v1, Ls05;
+
+    const/4 v2, 0x1
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v4, "MICROSECONDS"
+
+    invoke-direct {v1, v4, v2, v3}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    new-instance v2, Ls05;
+
+    const/4 v3, 0x2
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v5, "MILLISECONDS"
+
+    invoke-direct {v2, v5, v3, v4}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v2, Ls05;->c:Ls05;
+
+    new-instance v3, Ls05;
+
+    const/4 v4, 0x3
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v6, "SECONDS"
+
+    invoke-direct {v3, v6, v4, v5}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v3, Ls05;->o:Ls05;
+
+    new-instance v4, Ls05;
+
+    const/4 v5, 0x4
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-string v7, "MINUTES"
+
+    invoke-direct {v4, v7, v5, v6}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v4, Ls05;->X:Ls05;
+
+    new-instance v5, Ls05;
+
+    const/4 v6, 0x5
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v8, "HOURS"
+
+    invoke-direct {v5, v8, v6, v7}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v5, Ls05;->Y:Ls05;
+
+    new-instance v6, Ls05;
+
+    const/4 v7, 0x6
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v9, "DAYS"
+
+    invoke-direct {v6, v9, v7, v8}, Ls05;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v6, Ls05;->Z:Ls05;
+
+    filled-new-array/range {v0 .. v6}, [Ls05;
+
+    move-result-object v0
+
+    sput-object v0, Ls05;->w0:[Ls05;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    .locals 0
 
-# virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 6
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Ls05;->a:Landroid/widget/TextView;
+    iput-object p3, p0, Ls05;->a:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
+    return-void
+.end method
 
-    move-result v1
+.method public static valueOf(Ljava/lang/String;)Ls05;
+    .locals 1
 
-    if-eqz v1, :cond_0
+    const-class v0, Ls05;
 
-    goto :goto_2
-
-    :cond_0
-    invoke-static {}, Lc05;->a()Lc05;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lc05;->b()I
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    const/4 p2, 0x3
-
-    if-eq v1, p2, :cond_5
-
-    goto :goto_2
-
-    :cond_1
-    if-nez p6, :cond_2
-
-    if-nez p5, :cond_2
-
-    invoke-interface {p4}, Ljava/lang/CharSequence;->length()I
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    if-ne p1, p0, :cond_2
+    check-cast p0, Ls05;
 
-    goto :goto_2
+    return-object p0
+.end method
 
-    :cond_2
-    if-eqz p1, :cond_4
+.method public static values()[Ls05;
+    .locals 1
 
-    if-nez p2, :cond_3
+    sget-object v0, Ls05;->w0:[Ls05;
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p0
-
-    if-ne p3, p0, :cond_3
-
-    :goto_0
-    move-object v3, p1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :goto_1
-    invoke-static {}, Lc05;->a()Lc05;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
+    check-cast v0, [Ls05;
 
-    move-result v2
-
-    const v4, 0x7fffffff
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Lc05;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_4
-    :goto_2
-    return-object p1
-
-    :cond_5
-    invoke-static {}, Lc05;->a()Lc05;
-
-    move-result-object p2
-
-    iget-object p3, p0, Ls05;->b:Lr05;
-
-    if-nez p3, :cond_6
-
-    new-instance p3, Lr05;
-
-    invoke-direct {p3, v0, p0}, Lr05;-><init>(Landroid/widget/TextView;Ls05;)V
-
-    iput-object p3, p0, Ls05;->b:Lr05;
-
-    :cond_6
-    iget-object p0, p0, Ls05;->b:Lr05;
-
-    invoke-virtual {p2, p0}, Lc05;->h(La05;)V
-
-    return-object p1
+    return-object v0
 .end method

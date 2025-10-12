@@ -2,33 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llp7;
-
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
 .field public final b:I
 
-.field public final c:J
-
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(JI)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ldqd;->a:I
+    iput-wide p1, p0, Ldqd;->a:J
 
-    sget v0, Lifa;->d:I
-
-    iput v0, p0, Ldqd;->b:I
-
-    int-to-long v0, p1
-
-    iput-wide v0, p0, Ldqd;->c:J
+    iput p3, p0, Ldqd;->b:I
 
     return-void
 .end method
@@ -36,78 +25,118 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 4
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ldqd;
+    instance-of v0, p1, Ldqd;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Ldqd;
 
-    iget p0, p0, Ldqd;->a:I
+    iget-wide v0, p0, Ldqd;->a:J
 
-    iget p1, p1, Ldqd;->a:I
+    iget-wide v2, p1, Ldqd;->a:J
 
-    if-eq p0, p1, :cond_2
+    cmp-long v0, v0, v2
 
-    return v2
+    if-eqz v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    return v0
-.end method
+    iget v0, p0, Ldqd;->b:I
 
-.method public final getItemId()J
-    .locals 2
+    iget p1, p1, Ldqd;->b:I
 
-    iget-wide v0, p0, Ldqd;->c:J
+    if-eq v0, p1, :cond_3
 
-    return-wide v0
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 2
 
-    iget p0, p0, Ldqd;->a:I
+    iget-wide v0, p0, Ldqd;->a:J
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result p0
+    move-result v0
 
-    return p0
-.end method
+    mul-int/lit8 v0, v0, 0x1f
 
-.method public final m()I
-    .locals 0
+    iget v1, p0, Ldqd;->b:I
 
-    iget p0, p0, Ldqd;->b:I
+    invoke-static {v1}, Lqw1;->u(I)I
 
-    return p0
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    const-string v0, "ShimmerMemberListItem(pos="
+    const-string v0, "SelectedMention(id="
+
+    const-string v1, ", selectedMentionType="
+
+    iget-wide v2, p0, Ldqd;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Ldqd;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "NAME"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "SHORTLINK"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget p0, p0, Ldqd;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

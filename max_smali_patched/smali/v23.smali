@@ -1,220 +1,120 @@
 .class public final Lv23;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lr5d;
+.implements Llf6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:[I
-
-.field public final c:[J
-
-.field public final d:[J
-
-.field public final e:[J
-
-.field public final f:J
+.field public final synthetic Y:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>([I[J[J[J)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lv23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    iput-object p1, p0, Lv23;->b:[I
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lv23;->c:[J
-
-    iput-object p3, p0, Lv23;->d:[J
-
-    iput-object p4, p0, Lv23;->e:[J
-
-    array-length p1, p1
-
-    iput p1, p0, Lv23;->a:I
-
-    if-lez p1, :cond_0
-
-    add-int/lit8 p2, p1, -0x1
-
-    aget-wide p2, p3, p2
-
-    add-int/lit8 p1, p1, -0x1
-
-    aget-wide v0, p4, p1
-
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Lv23;->f:J
-
-    return-void
-
-    :cond_0
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Lv23;->f:J
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p0
+    invoke-virtual {p0, p1, p2}, Lv23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lv23;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lv23;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final e(J)Lp5d;
-    .locals 9
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lv23;->e:[J
+    new-instance v0, Lv23;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lv23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-static {v0, p1, p2, v1}, Ldif;->e([JJZ)I
+    invoke-direct {v0, p2, v1}, Lv23;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    move-result v2
+    iput-object p1, v0, Lv23;->X:Ljava/lang/Object;
 
-    new-instance v3, Lv5d;
+    return-object v0
+.end method
 
-    aget-wide v4, v0, v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v6, p0, Lv23;->c:[J
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    aget-wide v7, v6, v2
+    iget-object p1, p0, Lv23;->X:Ljava/lang/Object;
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lv5d;-><init>(JJ)V
+    check-cast p1, Ljava/util/List;
 
-    cmp-long p1, v4, p1
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    if-gez p1, :cond_1
+    move-result p1
 
-    iget p0, p0, Lv23;->a:I
+    const/4 v0, 0x0
 
-    sub-int/2addr p0, v1
+    iget-object v1, p0, Lv23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    if-ne v2, p0, :cond_0
+    const/4 v2, 0x1
+
+    if-le p1, v2, :cond_0
+
+    sget-object p1, Lone/me/chats/tab/ChatsTabWidget;->H0:[Ltm7;
+
+    invoke-virtual {v1}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lixa;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v1}, Lone/me/chats/tab/ChatsTabWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Landroidx/viewpager2/widget/ViewPager2;->setUserInputEnabled(Z)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lv5d;
+    sget-object p1, Lone/me/chats/tab/ChatsTabWidget;->H0:[Ltm7;
 
-    add-int/2addr v2, v1
+    invoke-virtual {v1}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lixa;
 
-    aget-wide p1, v0, v2
+    move-result-object p1
 
-    aget-wide v0, v6, v2
+    const/16 v2, 0x8
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lv5d;-><init>(JJ)V
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance p1, Lp5d;
+    invoke-virtual {v1}, Lone/me/chats/tab/ChatsTabWidget;->D0()Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-direct {p1, v3, p0}, Lp5d;-><init>(Lv5d;Lv5d;)V
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setUserInputEnabled(Z)V
+
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
-
-    :cond_1
-    :goto_0
-    new-instance p0, Lp5d;
-
-    invoke-direct {p0, v3, v3}, Lp5d;-><init>(Lv5d;Lv5d;)V
-
-    return-object p0
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lv23;->f:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lv23;->b:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lv23;->c:[J
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lv23;->e:[J
-
-    invoke-static {v2}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lv23;->d:[J
-
-    invoke-static {v3}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/16 v4, 0x47
-
-    invoke-static {v4, v0}, Lcx3;->f(ILjava/lang/String;)I
-
-    move-result v4
-
-    invoke-static {v4, v1}, Lcx3;->f(ILjava/lang/String;)I
-
-    move-result v4
-
-    invoke-static {v4, v2}, Lcx3;->f(ILjava/lang/String;)I
-
-    move-result v4
-
-    invoke-static {v4, v3}, Lcx3;->f(ILjava/lang/String;)I
-
-    move-result v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v4}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v4, "ChunkIndex(length="
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lv23;->a:I
-
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", sizes="
-
-    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", offsets="
-
-    const-string v0, ", timeUs="
-
-    invoke-static {v5, p0, v1, v0, v2}, Ldl5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p0, ", durationsUs="
-
-    const-string v0, ")"
-
-    invoke-static {v5, p0, v3, v0}, Llge;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

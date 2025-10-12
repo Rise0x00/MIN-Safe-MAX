@@ -1,8 +1,15 @@
-.class public interface abstract Lc5a;
+.class public abstract Lc5a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d()V
+# direct methods
+.method public static a(Landroid/app/NotificationChannel;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBubble()Z
+
+    move-result p0
+
+    return p0
 .end method

@@ -1,221 +1,229 @@
 .class public final Lmq6;
-.super Lwq6;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+
 # instance fields
-.field public final d:I
+.field public a:Loq6;
 
-.field public final e:J
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:J
-
-.field public final i:Z
-
-.field public final j:I
-
-.field public final k:J
-
-.field public final l:I
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Z
-
-.field public final p:Z
-
-.field public final q:Lmu4;
-
-.field public final r:Lg07;
-
-.field public final s:Lg07;
-
-.field public final t:Lj07;
-
-.field public final u:J
-
-.field public final v:Lkq6;
+.field public b:Loq6;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLmu4;Ljava/util/List;Ljava/util/List;Lkq6;Ljava/util/Map;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 2
 
-    move/from16 v0, p18
+    const/high16 v0, -0x80000000
 
-    invoke-direct {p0, p2, v0, p3}, Lwq6;-><init>(Ljava/lang/String;ZLjava/util/List;)V
+    const v1, -0x7fffffff
 
-    iput p1, p0, Lmq6;->d:I
+    sub-int/2addr v1, v0
 
-    iput-wide p7, p0, Lmq6;->h:J
+    sput v1, Lmq6;->c:I
 
-    iput-boolean p6, p0, Lmq6;->g:Z
+    sget v0, Lemc;->GridLayout_Layout_android_layout_margin:I
 
-    iput-boolean p9, p0, Lmq6;->i:Z
+    sput v0, Lmq6;->d:I
 
-    iput p10, p0, Lmq6;->j:I
+    sget v0, Lemc;->GridLayout_Layout_android_layout_marginLeft:I
 
-    move-wide p1, p11
+    sput v0, Lmq6;->e:I
 
-    iput-wide p1, p0, Lmq6;->k:J
+    sget v0, Lemc;->GridLayout_Layout_android_layout_marginTop:I
 
-    move/from16 p1, p13
+    sput v0, Lmq6;->f:I
 
-    iput p1, p0, Lmq6;->l:I
+    sget v0, Lemc;->GridLayout_Layout_android_layout_marginRight:I
 
-    move-wide/from16 p1, p14
+    sput v0, Lmq6;->g:I
 
-    iput-wide p1, p0, Lmq6;->m:J
+    sget v0, Lemc;->GridLayout_Layout_android_layout_marginBottom:I
 
-    move-wide/from16 p1, p16
+    sput v0, Lmq6;->h:I
 
-    iput-wide p1, p0, Lmq6;->n:J
+    sget v0, Lemc;->GridLayout_Layout_layout_column:I
 
-    move/from16 p1, p19
+    sput v0, Lmq6;->i:I
 
-    iput-boolean p1, p0, Lmq6;->o:Z
+    sget v0, Lemc;->GridLayout_Layout_layout_columnSpan:I
 
-    move/from16 p1, p20
+    sput v0, Lmq6;->j:I
 
-    iput-boolean p1, p0, Lmq6;->p:Z
+    sget v0, Lemc;->GridLayout_Layout_layout_columnWeight:I
 
-    move-object/from16 p1, p21
+    sput v0, Lmq6;->k:I
 
-    iput-object p1, p0, Lmq6;->q:Lmu4;
+    sget v0, Lemc;->GridLayout_Layout_layout_row:I
 
-    invoke-static/range {p22 .. p22}, Lg07;->j(Ljava/util/Collection;)Lg07;
+    sput v0, Lmq6;->l:I
 
-    move-result-object p1
+    sget v0, Lemc;->GridLayout_Layout_layout_rowSpan:I
 
-    iput-object p1, p0, Lmq6;->r:Lg07;
+    sput v0, Lmq6;->m:I
 
-    invoke-static/range {p23 .. p23}, Lg07;->j(Ljava/util/Collection;)Lg07;
+    sget v0, Lemc;->GridLayout_Layout_layout_rowWeight:I
 
-    move-result-object p1
+    sput v0, Lmq6;->n:I
 
-    iput-object p1, p0, Lmq6;->s:Lg07;
+    sget v0, Lemc;->GridLayout_Layout_layout_gravity:I
 
-    invoke-static/range {p25 .. p25}, Lj07;->a(Ljava/util/Map;)Lj07;
+    sput v0, Lmq6;->o:I
 
-    move-result-object p1
+    return-void
+.end method
 
-    iput-object p1, p0, Lmq6;->t:Lj07;
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-interface/range {p23 .. p23}, Ljava/util/List;->isEmpty()Z
+    sget-object v0, Loq6;->e:Loq6;
 
-    move-result p1
+    const/4 v1, -0x2
 
-    const-wide/16 p2, 0x0
+    invoke-direct {p0, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    if-nez p1, :cond_0
+    iput-object v0, p0, Lmq6;->a:Loq6;
 
-    invoke-static/range {p23 .. p23}, Ll18;->n(Ljava/lang/Iterable;)Ljava/lang/Object;
+    iput-object v0, p0, Lmq6;->b:Loq6;
 
-    move-result-object p1
+    const/high16 v1, -0x80000000
 
-    check-cast p1, Ldq6;
+    invoke-virtual {p0, v1, v1, v1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    iget-wide v0, p1, Ljq6;->X:J
+    iput-object v0, p0, Lmq6;->a:Loq6;
 
-    iget-wide v2, p1, Ljq6;->c:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lmq6;->u:J
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface/range {p22 .. p22}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    invoke-static/range {p22 .. p22}, Ll18;->n(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhq6;
-
-    iget-wide v0, p1, Ljq6;->X:J
-
-    iget-wide v2, p1, Ljq6;->c:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lmq6;->u:J
-
-    goto :goto_0
-
-    :cond_1
-    iput-wide p2, p0, Lmq6;->u:J
-
-    :goto_0
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long p1, p4, v0
-
-    if-nez p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    cmp-long p1, p4, p2
-
-    if-ltz p1, :cond_3
-
-    iget-wide v0, p0, Lmq6;->u:J
-
-    invoke-static {v0, v1, p4, p5}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    goto :goto_1
-
-    :cond_3
-    iget-wide v0, p0, Lmq6;->u:J
-
-    add-long/2addr v0, p4
-
-    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
-
-    :goto_1
-    iput-wide v0, p0, Lmq6;->e:J
-
-    cmp-long p1, p4, p2
-
-    if-ltz p1, :cond_4
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_2
-    iput-boolean p1, p0, Lmq6;->f:Z
-
-    move-object/from16 p1, p24
-
-    iput-object p1, p0, Lmq6;->v:Lkq6;
+    iput-object v0, p0, Lmq6;->b:Loq6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-object p0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Lmq6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lmq6;
+
+    iget-object v2, p0, Lmq6;->b:Loq6;
+
+    iget-object v3, p1, Lmq6;->b:Loq6;
+
+    invoke-virtual {v2, v3}, Loq6;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v2, p0, Lmq6;->a:Loq6;
+
+    iget-object p1, p1, Lmq6;->a:Loq6;
+
+    invoke-virtual {v2, p1}, Loq6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v1
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lmq6;->a:Loq6;
+
+    invoke-virtual {v0}, Loq6;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lmq6;->b:Loq6;
+
+    invoke-virtual {v1}, Loq6;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final setBaseAttributes(Landroid/content/res/TypedArray;II)V
+    .locals 1
+
+    const/4 v0, -0x2
+
+    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
+
+    move-result p2
+
+    iput p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+
+    invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
+
+    move-result p1
+
+    iput p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
+
+    return-void
 .end method

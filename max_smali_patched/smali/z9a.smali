@@ -4,28 +4,40 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-.field public static final b:I
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
 
-.field public static final c:I
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Laxb;->fast_forward_24:I
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    sput v0, Lz9a;->a:I
+    const-string v1, "NULL"
 
-    sget v0, Laxb;->fast_rewind_24:I
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    sput v0, Lz9a;->b:I
+    sput-object v0, Lz9a;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    sget v0, Laxb;->save_to_gallery_24:I
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    sput v0, Lz9a;->c:I
+    const-string v1, "UNINITIALIZED"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lz9a;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "DONE"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lz9a;->c:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method

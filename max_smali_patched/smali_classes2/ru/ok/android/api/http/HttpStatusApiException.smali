@@ -33,7 +33,7 @@
 
     const-string v0, "HTTP "
 
-    invoke-static {p1, v0}, Lw68;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

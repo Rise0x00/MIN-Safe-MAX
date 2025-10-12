@@ -1,48 +1,100 @@
-.class public abstract Lmx9;
+.class public final Lmx9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/FilenameFilter;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static a(Landroid/app/NotificationManager;)Ljava/util/List;
+.method public synthetic constructor <init>(I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/service/notification/StatusBarNotification;",
-            ">;"
-        }
-    .end annotation
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getActiveNotifications()[Landroid/service/notification/StatusBarNotification;
+    iput p1, p0, Lmx9;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p0, :cond_0
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/NotificationManager;)I
+
+# virtual methods
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getCurrentInterruptionFilter()I
+    iget p1, p0, Lmx9;->a:I
 
-    move-result p0
+    packed-switch p1, :pswitch_data_0
 
-    return p0
+    const-string p1, "dso_state"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "dso_lock"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "dso_deps"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    const-string p1, "liblz4-java-"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, ".lck"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

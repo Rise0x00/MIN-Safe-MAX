@@ -1,58 +1,48 @@
-.class public final synthetic Lvod;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ld96;
+.class public final Lvod;
+.super Lnz3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lxod;
+.field public final synthetic Y:Lfa2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxod;I)V
+.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lvod;->a:I
+    iput-object p1, p0, Lvod;->Y:Lfa2;
 
-    iput-object p1, p0, Lvod;->b:Lxod;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lvod;->a:I
+    iput-object p1, p0, Lvod;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lvod;->b:Lxod;
+    iget p1, p0, Lvod;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    invoke-static {p0}, Lxod;->i(Lxod;)Landroid/graphics/drawable/ShapeDrawable;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lvod;->X:I
 
-    return-object p0
+    iget-object p1, p0, Lvod;->Y:Lfa2;
 
-    :pswitch_0
-    invoke-static {p0}, Lxod;->b(Lxod;)Landroid/graphics/drawable/RippleDrawable;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

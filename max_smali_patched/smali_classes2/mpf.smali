@@ -1,342 +1,494 @@
-.class public final synthetic Lmpf;
-.super Ljava/lang/Object;
+.class public abstract Lmpf;
+.super Landroidx/appcompat/widget/AppCompatImageView;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A0:[F
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public B0:Z
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public C0:Z
+
+.field public D0:I
+
+.field public E0:Ljava/lang/String;
+
+.field public F0:F
+
+.field public final o:[F
+
+.field public final w0:[F
+
+.field public final x0:[F
+
+.field public final y0:Landroid/graphics/Matrix;
+
+.field public z0:[F
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Liqf;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    .line 1
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    iput v0, p0, Lmpf;->a:I
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, v0, v1}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p1, p0, Lmpf;->b:Ljava/lang/Object;
+    const/16 p1, 0x8
 
-    iput-object p2, p0, Lmpf;->c:Ljava/lang/Object;
+    new-array p1, p1, [F
 
-    return-void
-.end method
+    iput-object p1, p0, Lmpf;->o:[F
 
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+    const/4 p1, 0x2
 
-    .line 2
-    iput p2, p0, Lmpf;->a:I
+    new-array p1, p1, [F
 
-    iput-object p1, p0, Lmpf;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lmpf;->w0:[F
 
-    iput-object p3, p0, Lmpf;->b:Ljava/lang/Object;
+    const/16 p1, 0x9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array p1, p1, [F
+
+    iput-object p1, p0, Lmpf;->x0:[F
+
+    new-instance p1, Landroid/graphics/Matrix;
+
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object p1, p0, Lmpf;->y0:Landroid/graphics/Matrix;
+
+    iput-boolean v1, p0, Lmpf;->B0:Z
+
+    iput-boolean v1, p0, Lmpf;->C0:Z
+
+    iput v1, p0, Lmpf;->D0:I
+
+    move-object p1, p0
+
+    check-cast p1, Lik6;
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {p1, v1}, Lmpf;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    new-instance v1, Landroid/view/GestureDetector;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v3, Lxz;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v3, v4, p1}, Lxz;-><init>(ILjava/lang/Object;)V
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v2, v3, v0, v4}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;Z)V
+
+    iput-object v1, p1, Lik6;->T0:Landroid/view/GestureDetector;
+
+    new-instance v0, Landroid/view/ScaleGestureDetector;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v2, Lhk6;
+
+    invoke-direct {v2, p1}, Lhk6;-><init>(Lik6;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;)V
+
+    iput-object v0, p1, Lik6;->R0:Landroid/view/ScaleGestureDetector;
+
+    new-instance v0, Li7d;
+
+    new-instance v1, Lzlh;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v2, p1}, Lzlh;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, v0, Li7d;->i:Lzlh;
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Li7d;->e:I
+
+    iput v1, v0, Li7d;->f:I
+
+    iput-object v0, p1, Lik6;->S0:Li7d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public abstract f()V
+.end method
 
-    iget v0, p0, Lmpf;->a:I
+.method public final g(FF)V
+    .locals 2
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lmpf;->c:Ljava/lang/Object;
+    cmpl-float v1, p1, v0
 
-    check-cast v0, Lqcg;
+    if-nez v1, :cond_1
 
-    iget-object p0, p0, Lmpf;->b:Ljava/lang/Object;
+    cmpl-float v0, p2, v0
 
-    move-object v10, p0
-
-    check-cast v10, Lth7;
-
-    new-instance v1, Ls4g;
-
-    iget-object p0, v0, Lqcg;->Z:Lz43;
-
-    check-cast p0, Le2d;
-
-    invoke-virtual {p0}, Le2d;->p()J
-
-    move-result-wide v2
-
-    iget-wide v4, v0, Lqcg;->b:J
-
-    iget-object v6, v0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object p0, Lx6g;->a:Lx6g;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v7
-
-    const-class v8, Landroid/content/Context;
-
-    invoke-virtual {v7, v8}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/content/Context;
-
-    iget-object v0, v0, Lqcg;->H0:Lq4e;
-
-    new-instance v8, Ljbc;
-
-    invoke-direct {v8, v0}, Ljbc;-><init>(Lal9;)V
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lq3g;
-
-    invoke-virtual {p0, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v9
-
-    invoke-direct/range {v1 .. v10}, Ls4g;-><init>(JJLkotlinx/coroutines/internal/ContextScope;Landroid/content/Context;Ljbc;Lth7;Lth7;)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lmpf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lorf;
-
-    iget-object p0, p0, Lmpf;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/graphics/Bitmap;
-
-    iget-object v0, v0, Lorf;->p0:Lfsf;
-
-    if-eqz v0, :cond_5
-
-    sget-object v1, Lhw7;->o:Lhw7;
-
-    iget-object v2, v0, Lfsf;->p:Ljava/lang/String;
-
-    sget-object v3, Lz76;->f:Lvea;
-
-    const/4 v4, 0x0
-
-    const-string v5, ", recycle_after_consume=true"
-
-    if-nez v3, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3, v1}, Lvea;->a(Lhw7;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    invoke-static {p0}, Le64;->s(Landroid/graphics/Bitmap;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "setStencilBitmap, "
-
-    invoke-static {v7, v6, v5}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v3, v1, v2, v6, v4}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-void
 
     :cond_1
     :goto_0
-    iget-object v2, v0, Lfsf;->q:Lz5e;
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
 
-    if-nez v2, :cond_2
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    new-instance v2, Lz5e;
+    invoke-virtual {p0, v0}, Lmpf;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    iget-object v3, v0, Lfsf;->o:Landroid/util/Size;
+    return-void
+.end method
 
-    invoke-direct {v2, v3}, Lz5e;-><init>(Landroid/util/Size;)V
+.method public getCurrentAngle()F
+    .locals 4
 
-    iput-object v2, v0, Lfsf;->q:Lz5e;
+    const/4 v0, 0x1
 
-    :cond_2
-    iget-object v0, v2, Lz5e;->d:Ljava/io/Serializable;
+    iget-object v1, p0, Lmpf;->y0:Landroid/graphics/Matrix;
 
-    check-cast v0, Ljava/lang/String;
+    invoke-static {v1, v0}, Lbv0;->D(Landroid/graphics/Matrix;I)F
 
-    sget-object v3, Lz76;->f:Lvea;
+    move-result v0
 
-    if-nez v3, :cond_3
+    float-to-double v2, v0
 
-    goto :goto_1
+    sget-object v0, Lbv0;->b:[F
 
-    :cond_3
-    invoke-virtual {v3, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
-    move-result v6
+    const/4 v1, 0x0
 
-    if-eqz v6, :cond_4
+    aget v0, v0, v1
 
-    invoke-static {p0}, Le64;->s(Landroid/graphics/Bitmap;)Ljava/lang/String;
+    float-to-double v0, v0
 
-    move-result-object v6
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->atan2(DD)D
 
-    const-string v7, "setBitmap, "
+    move-result-wide v0
 
-    invoke-static {v7, v6, v5}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-wide v2, 0x404ca5dc1a63c1f8L    # 57.29577951308232
 
-    move-result-object v5
+    mul-double/2addr v0, v2
 
-    invoke-virtual {v3, v1, v0, v5, v4}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    neg-double v0, v0
 
-    :cond_4
-    :goto_1
-    iget-object v0, v2, Lz5e;->e:Ljava/lang/Object;
+    double-to-float v0, v0
 
-    check-cast v0, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+    return v0
+.end method
 
-    const/4 v1, 0x1
+.method public getCurrentImageCorners()[F
+    .locals 1
 
-    invoke-virtual {v0, p0, v1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->setStencilBitmap(Landroid/graphics/Bitmap;Z)V
+    iget-object v0, p0, Lmpf;->o:[F
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    return-object v0
+.end method
 
-    return-object p0
+.method public getCurrentImageMatrix()Landroid/graphics/Matrix;
+    .locals 1
 
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
 
-    const-string v0, "Required value was null."
+    return-object v0
+.end method
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.method public getCurrentMatrixValues()[F
+    .locals 2
 
-    throw p0
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
 
-    :pswitch_1
-    iget-object v0, p0, Lmpf;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lmpf;->x0:[F
 
-    check-cast v0, Lkie;
-
-    iget-object p0, p0, Lmpf;->b:Ljava/lang/Object;
-
-    check-cast p0, Lorf;
-
-    iget-object v1, p0, Lorf;->X:Lwl6;
-
-    new-instance v2, Lmrf;
-
-    invoke-direct {v2, p0, v0}, Lmrf;-><init>(Lorf;Lkie;)V
-
-    invoke-virtual {v0, v1, v2}, Lkie;->d(Lwl6;Ljm3;)Landroid/view/Surface;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lorf;->p0:Lfsf;
-
-    if-eqz v2, :cond_6
-
-    invoke-virtual {v2, v1}, Lkq4;->p(Landroid/view/Surface;)V
-
-    iget-object p0, p0, Lorf;->Z:Ljava/util/LinkedHashMap;
-
-    invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_2
-    iget-object v0, p0, Lmpf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lorf;
-
-    iget-object p0, p0, Lmpf;->b:Ljava/lang/Object;
-
-    check-cast p0, Loeb;
-
-    iget-object v0, v0, Lorf;->p0:Lfsf;
-
-    if-eqz v0, :cond_7
-
-    iput-object p0, v0, Lfsf;->w:Loeb;
-
-    :cond_7
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_3
-    iget-object v0, p0, Lmpf;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object p0, p0, Lmpf;->c:Ljava/lang/Object;
-
-    check-cast p0, Liqf;
-
-    new-instance v1, Lqpf;
-
-    invoke-direct {v1, v0}, Lqpf;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v1, p0}, Lqpf;->setListener(Lopf;)V
-
-    new-instance p0, Lrm0;
-
-    const/16 v0, 0xd
-
-    invoke-direct {p0, v0, v1}, Lrm0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
     return-object v1
+.end method
 
-    :pswitch_4
-    iget-object v0, p0, Lmpf;->c:Ljava/lang/Object;
+.method public getCurrentScale()F
+    .locals 1
 
-    check-cast v0, Lqpf;
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
 
-    iget-object p0, p0, Lmpf;->b:Ljava/lang/Object;
+    invoke-static {v0}, Lbv0;->C(Landroid/graphics/Matrix;)F
 
-    check-cast p0, Landroid/content/Context;
+    move-result v0
 
-    invoke-static {v0, p0}, Lqpf;->a(Lqpf;Landroid/content/Context;)Landroid/graphics/Bitmap;
+    return v0
+.end method
 
-    move-result-object p0
+.method public getImageOutputPath()Ljava/lang/String;
+    .locals 1
 
-    return-object p0
+    iget-object v0, p0, Lmpf;->E0:Ljava/lang/String;
 
-    nop
+    return-object v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public getInitialImageCorners()[F
+    .locals 1
+
+    iget-object v0, p0, Lmpf;->z0:[F
+
+    return-object v0
+.end method
+
+.method public getMaxBitmapSize()I
+    .locals 1
+
+    iget v0, p0, Lmpf;->D0:I
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, La1b;->c(Landroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lmpf;->D0:I
+
+    :cond_0
+    iget v0, p0, Lmpf;->D0:I
+
+    return v0
+.end method
+
+.method public getMinOverlaySize()F
+    .locals 2
+
+    iget v0, p0, Lmpf;->F0:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p0}, Lmpf;->getCurrentScale()F
+
+    move-result v0
+
+    iget v1, p0, Lmpf;->F0:F
+
+    mul-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public getViewBitmap()Landroid/graphics/Bitmap;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lrj5;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lrj5;
+
+    iget-object v0, v0, Lrj5;->b:Landroid/graphics/Bitmap;
+
+    return-object v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final onLayout(ZIIII)V
+    .locals 0
+
+    invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
+
+    move p2, p1
+
+    move-object p1, p0
+
+    if-nez p2, :cond_1
+
+    iget-boolean p2, p1, Lmpf;->B0:Z
+
+    if-eqz p2, :cond_0
+
+    iget-boolean p2, p1, Lmpf;->C0:Z
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    invoke-virtual {p0}, Lmpf;->f()V
+
+    return-void
+.end method
+
+.method public setCurrentMatrixValues([F)V
+    .locals 1
+
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->setValues([F)V
+
+    invoke-virtual {p0, v0}, Lmpf;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method public setImageBitmap(Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    new-instance v0, Lrj5;
+
+    invoke-direct {v0, p1}, Lrj5;-><init>(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public setImageMatrix(Landroid/graphics/Matrix;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    iget-object v0, p0, Lmpf;->y0:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    :try_start_0
+    iget-object p1, p0, Lmpf;->o:[F
+
+    iget-object v1, p0, Lmpf;->z0:[F
+
+    invoke-virtual {v0, p1, v1}, Landroid/graphics/Matrix;->mapPoints([F[F)V
+
+    iget-object p1, p0, Lmpf;->w0:[F
+
+    iget-object v1, p0, Lmpf;->A0:[F
+
+    invoke-virtual {v0, p1, v1}, Landroid/graphics/Matrix;->mapPoints([F[F)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "TransformImageView"
+
+    const-string v1, "Can\'t updateCurrentImagePoints"
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+.end method
+
+.method public setMaxBitmapSize(I)V
+    .locals 0
+
+    iput p1, p0, Lmpf;->D0:I
+
+    return-void
+.end method
+
+.method public setMinImageSize(F)V
+    .locals 0
+
+    iput p1, p0, Lmpf;->F0:F
+
+    return-void
+.end method
+
+.method public setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    .locals 1
+
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    if-ne p1, v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    return-void
+
+    :cond_0
+    const-string p1, "TransformImageView"
+
+    const-string v0, "Invalid ScaleType. Only ScaleType.MATRIX can be used"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public setTransformImageListener(Llpf;)V
+    .locals 0
+
+    return-void
 .end method

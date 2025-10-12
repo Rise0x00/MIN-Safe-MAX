@@ -1,76 +1,65 @@
 .class public final Lje2;
-.super Lvg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Le8e;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+
+
+# direct methods
+.method public constructor <init>(Lov0;Lr8f;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lje2;->a:Le8e;
+
+    check-cast p2, Lwla;
+
+    invoke-virtual {p2}, Lwla;->c()Le88;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lje2;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final F(Lup8;Lf96;Lt96;)V
-    .locals 2
+.method public final onEvent(Lhe2;)V
+    .locals 3
+    .annotation runtime Lxye;
+    .end annotation
 
-    check-cast p1, Lsp8;
+    new-instance v0, Lie2;
 
-    iget-object v0, p0, Luhc;->a:Landroid/view/View;
+    const/4 v1, 0x0
 
-    check-cast v0, Lsg2;
+    invoke-direct {v0, p0, p1, v1}, Lie2;-><init>(Lje2;Lhe2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0, p1}, Lje2;->G(Lsp8;)V
+    const/4 p1, 0x3
 
-    new-instance v1, Lmb;
+    iget-object v2, p0, Lje2;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {v1, p2, p1}, Lmb;-><init>(Lf96;Lsp8;)V
-
-    invoke-static {v0, v1}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance p2, Lh82;
-
-    invoke-direct {p2, p3, p1, p0}, Lh82;-><init>(Lt96;Lsp8;Lje2;)V
-
-    invoke-virtual {v0, p2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    return-void
-.end method
-
-.method public final G(Lsp8;)V
-    .locals 2
-
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
-
-    check-cast p0, Lsg2;
-
-    iget-wide v0, p1, Lsp8;->a:J
-
-    long-to-int v0, v0
-
-    invoke-virtual {p0, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    iget-object v0, p1, Lsp8;->X:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lsg2;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p1, Lsp8;->Z:Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v0}, Lsg2;->setLink(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    iget-object v0, p1, Lsp8;->Y:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0, v0}, Lsg2;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lsp8;->o:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lsg2;->setLinkPhoto(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic x(Llp7;)V
-    .locals 0
-
-    check-cast p1, Lsp8;
-
-    invoke-virtual {p0, p1}, Lje2;->G(Lsp8;)V
+    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
     return-void
 .end method

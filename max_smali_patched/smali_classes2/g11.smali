@@ -1,11 +1,19 @@
-.class public interface abstract Lg11;
+.class public final Lg11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract onAsrRecordStarted(Le11;)V
-.end method
+# instance fields
+.field public final a:Lnwd;
 
-.method public abstract onAsrRecordStopped(Lf11;)V
+
+# direct methods
+.method public constructor <init>(Lnwd;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg11;->a:Lnwd;
+
+    return-void
 .end method

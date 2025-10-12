@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Tasks$MsgEdit;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -46,7 +46,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;->clear()Lru/ok/tamtam/nano/Tasks$MsgEdit;
 
@@ -60,7 +60,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -102,7 +102,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -115,7 +115,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
 
     move-result-object p0
 
@@ -135,7 +135,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -181,7 +181,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
@@ -199,7 +199,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lh63;->h(IJ)I
+    invoke-static {v4, v0, v1}, Le83;->h(IJ)I
 
     move-result v0
 
@@ -217,7 +217,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1, v4, v5}, Lh63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Le83;->h(IJ)I
 
     move-result v1
 
@@ -232,7 +232,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v4, v5}, Lh63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Le83;->h(IJ)I
 
     move-result v1
 
@@ -247,7 +247,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1, v4, v5}, Lh63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Le83;->h(IJ)I
 
     move-result v1
 
@@ -262,7 +262,7 @@
 
     const/4 v1, 0x5
 
-    invoke-static {v1, v4, v5}, Lh63;->h(IJ)I
+    invoke-static {v1, v4, v5}, Le83;->h(IJ)I
 
     move-result v1
 
@@ -283,7 +283,7 @@
 
     iget-object v3, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v1, v3}, Le83;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -302,7 +302,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Le83;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -315,7 +315,7 @@
 
     const/16 v2, 0x8
 
-    invoke-static {v2, v1}, Lh63;->f(II)I
+    invoke-static {v2, v1}, Le83;->f(II)I
 
     move-result v1
 
@@ -328,7 +328,7 @@
 
     const/16 v2, 0x9
 
-    invoke-static {v2, v1}, Lh63;->i(ILgz8;)I
+    invoke-static {v2, v1}, Le83;->i(ILg79;)I
 
     move-result v1
 
@@ -341,32 +341,32 @@
 
     const/16 v1, 0xa
 
-    invoke-static {v1}, Lh63;->a(I)I
+    invoke-static {v1}, Le83;->a(I)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
     :cond_9
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
+    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
 
-    if-eqz p0, :cond_a
+    if-eqz v1, :cond_a
 
-    const/16 v1, 0xb
+    const/16 v2, 0xb
 
-    invoke-static {v1, p0}, Lh63;->i(ILgz8;)I
+    invoke-static {v2, v1}, Le83;->i(ILg79;)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 
     :cond_a
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -375,14 +375,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$MsgEdit;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$MsgEdit;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Tasks$MsgEdit;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -393,14 +393,14 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -425,13 +425,13 @@
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
 
-    invoke-virtual {p1, v0}, Lg63;->j(Lgz8;)V
+    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
 
     goto :goto_0
 
     .line 7
     :sswitch_1
-    invoke-virtual {p1}, Lg63;->f()Z
+    invoke-virtual {p1}, Ld83;->f()Z
 
     move-result v0
 
@@ -456,13 +456,13 @@
     :cond_2
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldAttaches:Lru/ok/tamtam/nano/Protos$Attaches;
 
-    invoke-virtual {p1, v0}, Lg63;->j(Lgz8;)V
+    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
 
     goto :goto_0
 
     .line 11
     :sswitch_3
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
@@ -473,7 +473,7 @@
 
     .line 13
     :sswitch_4
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -483,7 +483,7 @@
 
     .line 14
     :sswitch_5
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -493,7 +493,7 @@
 
     .line 15
     :sswitch_6
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -504,7 +504,7 @@
 
     .line 17
     :sswitch_7
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -515,7 +515,7 @@
 
     .line 19
     :sswitch_8
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -526,7 +526,7 @@
 
     .line 21
     :sswitch_9
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -537,7 +537,7 @@
 
     .line 23
     :sswitch_a
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -567,7 +567,7 @@
     .end sparse-switch
 .end method
 
-.method public writeTo(Lh63;)V
+.method public writeTo(Le83;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -585,7 +585,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
 
     :cond_0
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatId:J
@@ -596,7 +596,7 @@
 
     const/4 v4, 0x2
 
-    invoke-virtual {p1, v4, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
 
     :cond_1
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageId:J
@@ -607,7 +607,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
 
     :cond_2
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatServerId:J
@@ -618,7 +618,7 @@
 
     const/4 v4, 0x4
 
-    invoke-virtual {p1, v4, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Le83;->x(IJ)V
 
     :cond_3
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageServerId:J
@@ -629,7 +629,7 @@
 
     const/4 v2, 0x5
 
-    invoke-virtual {p1, v2, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Le83;->x(IJ)V
 
     :cond_4
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
@@ -646,7 +646,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Le83;->E(ILjava/lang/String;)V
 
     :cond_5
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
@@ -661,7 +661,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
 
     :cond_6
     iget v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldStatus:I
@@ -670,7 +670,7 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {p1, v1, v0}, Lh63;->w(II)V
+    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
 
     :cond_7
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldAttaches:Lru/ok/tamtam/nano/Protos$Attaches;
@@ -679,7 +679,7 @@
 
     const/16 v1, 0x9
 
-    invoke-virtual {p1, v1, v0}, Lh63;->y(ILgz8;)V
+    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
 
     :cond_8
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->editAttaches:Z
@@ -688,16 +688,16 @@
 
     const/16 v1, 0xa
 
-    invoke-virtual {p1, v1, v0}, Lh63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Le83;->r(IZ)V
 
     :cond_9
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
 
-    if-eqz p0, :cond_a
+    if-eqz v0, :cond_a
 
-    const/16 v0, 0xb
+    const/16 v1, 0xb
 
-    invoke-virtual {p1, v0, p0}, Lh63;->y(ILgz8;)V
+    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
 
     :cond_a
     return-void

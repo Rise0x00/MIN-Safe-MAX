@@ -4,79 +4,152 @@
 
 
 # instance fields
-.field public a:J
+.field public a:Ljava/util/List;
 
-.field public b:Ljava/lang/String;
+.field public b:Lfb7;
 
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ll10;
-
-.field public g:Lx10;
-
-.field public h:Z
+.field public c:La1d;
 
 
-# direct methods
-.method public constructor <init>(Lp10;)V
-    .locals 2
+# virtual methods
+.method public final a(Lo10;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
 
-    iget-wide v0, p1, Lp10;->a:J
+    if-nez v0, :cond_0
 
-    iput-wide v0, p0, Lp10;->a:J
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v0, p1, Lp10;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lp10;->b:Ljava/lang/String;
+    iput-object v0, p0, Lp10;->a:Ljava/util/List;
 
-    iget-object v0, p1, Lp10;->c:Ljava/lang/String;
+    :cond_0
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
 
-    iput-object v0, p0, Lp10;->c:Ljava/lang/String;
-
-    iget-object v0, p1, Lp10;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lp10;->d:Ljava/lang/String;
-
-    iget-object v0, p1, Lp10;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Lp10;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lp10;->f:Ll10;
-
-    iput-object v0, p0, Lp10;->f:Ll10;
-
-    iget-object v0, p1, Lp10;->g:Lx10;
-
-    iput-object v0, p0, Lp10;->g:Lx10;
-
-    iget-boolean p1, p1, Lp10;->h:Z
-
-    iput-boolean p1, p0, Lp10;->h:Z
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
+.method public final b()I
+    .locals 1
 
-# virtual methods
-.method public a()Z
-    .locals 0
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
 
-    iget-object p0, p0, Lp10;->g:Lx10;
+    if-eqz v0, :cond_0
 
-    if-eqz p0, :cond_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/4 p0, 0x1
+    move-result v0
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
+.end method
+
+.method public final c()Lfah;
+    .locals 2
+
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    :cond_0
+    new-instance v0, Lfah;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Lp10;->a:Ljava/util/List;
+
+    iput-object v1, v0, Lfah;->a:Ljava/lang/Object;
+
+    iget-object v1, p0, Lp10;->b:Lfb7;
+
+    iput-object v1, v0, Lfah;->b:Ljava/lang/Object;
+
+    iget-object v1, p0, Lp10;->c:La1d;
+
+    iput-object v1, v0, Lfah;->c:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final d(I)Lo10;
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    invoke-virtual {p0}, Lp10;->b()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_0
+
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lo10;
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "index < 0 or index >= attaches.size()"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e(ILo10;)V
+    .locals 1
+
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    invoke-virtual {p0}, Lp10;->b()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_1
+
+    iget-object v0, p0, Lp10;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "index < 0 or index >= attaches.size()"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

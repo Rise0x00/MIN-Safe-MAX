@@ -1,305 +1,162 @@
 .class public final Luw2;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lone/me/chats/search/ChatsListSearchScreen;
+.field public final b:Lz56;
+
+.field public final c:Lmoe;
+
+.field public final d:Lg13;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lz56;Lr8f;)V
+    .locals 3
 
-    iput-object p2, p0, Luw2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Luw2;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Luw2;->b:Lz56;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object v0
+
+    iput-object v0, p0, Luw2;->c:Lmoe;
+
+    new-instance v1, Lg13;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v0, v2}, Lg13;-><init>(Lev5;I)V
+
+    iput-object v1, p0, Luw2;->d:Lg13;
+
+    check-cast p3, Lwla;
+
+    invoke-virtual {p3}, Lwla;->a()Ly24;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    invoke-interface {p2}, Lz56;->y()Lev5;
+
+    move-result-object p2
+
+    new-instance v1, Lqb;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, p2, p0, v2}, Lqb;-><init>(Lev5;Ljava/lang/Object;I)V
+
+    new-instance p2, Lsw2;
+
+    invoke-direct {p2, p0, p1}, Lsw2;-><init>(Luw2;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p1, Ljx5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v1, p2, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    invoke-virtual {p3}, Lwla;->a()Ly24;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Ltp;->G(Lev5;Lw24;)Lev5;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lp06;
+    .locals 4
 
-    check-cast p1, Lev2;
+    iget-object v0, p0, Luw2;->a:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "folder "
 
-    invoke-virtual {p0, p1, p2}, Luw2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_0
+    iget-object v2, p0, Luw2;->c:Lmoe;
 
-    move-result-object p0
+    invoke-virtual {v2}, Lmoe;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Luw2;
+    move-result-object v2
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    check-cast v2, Lp06;
 
-    invoke-virtual {p0, p1}, Luw2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v2, :cond_1
 
-    return-object p1
-.end method
+    iget-object v2, p0, Luw2;->b:Lz56;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-interface {v2, v0}, Lz56;->B(Ljava/lang/String;)Lp06;
 
-    new-instance v0, Luw2;
-
-    iget-object p0, p0, Luw2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-direct {v0, p2, p0}, Luw2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
-
-    iput-object p1, v0, Luw2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 18
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Luw2;->X:Ljava/lang/Object;
-
-    check-cast v1, Lev2;
-
-    instance-of v2, v1, Lb1d;
-
-    sget-object v3, Ltcf;->a:Ltcf;
-
-    const/4 v4, 0x1
-
-    iget-object v0, v0, Luw2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+    move-result-object v2
 
     if-eqz v2, :cond_0
 
-    sget-object v2, Lone/me/chats/search/ChatsListSearchScreen;->E0:[Lof7;
-
-    invoke-virtual {v0}, Lone/me/chats/search/ChatsListSearchScreen;->B0()V
-
-    check-cast v1, Lb1d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lgu2;->a:Lgu2;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ls4;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lb17;
-
-    if-eqz v0, :cond_7
-
-    new-instance v1, La17;
-
-    sget-object v2, Ly07;->n0:Ly07;
-
-    invoke-direct {v1, v2, v4}, La17;-><init>(Ly07;I)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v1
-
-    sget-object v2, Lsyc;->t0:Lsyc;
-
-    invoke-virtual {v0, v1, v2}, Lb17;->f(Ljava/util/Set;Lsyc;)V
-
-    return-object v3
+    return-object v2
 
     :cond_0
-    instance-of v2, v1, Lqrd;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v2, :cond_3
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v1, Lqrd;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lqrd;->a:Ldue;
+    const-string v1, " not found"
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    goto/16 :goto_2
-
-    :cond_1
-    iget-object v2, v0, Lone/me/chats/search/ChatsListSearchScreen;->D0:Lyja;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lyja;->a()V
-
-    :cond_2
-    new-instance v2, Lzja;
-
-    invoke-direct {v2, v0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v2, v1}, Lzja;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2}, Lzja;->i()Lyja;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, v0, Lone/me/chats/search/ChatsListSearchScreen;->D0:Lyja;
+    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object v3
+    throw v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_3
-    instance-of v2, v1, Lfrd;
-
-    if-eqz v2, :cond_7
-
-    check-cast v1, Lfrd;
-
-    sget-object v2, Lone/me/chats/search/ChatsListSearchScreen;->E0:[Lof7;
-
-    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->u0:[Lof7;
-
-    iget-object v2, v1, Lfrd;->b:Ldue;
-
-    iget-wide v5, v1, Lfrd;->a:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    new-instance v6, Ltra;
-
-    const-string v7, "selected.chatId.Action"
-
-    invoke-direct {v6, v7, v5}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v6}, [Ltra;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ly84;->c([Ltra;)Landroid/os/Bundle;
-
-    move-result-object v5
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x0
-
-    invoke-static {v2, v5, v7, v6}, Laug;->a(Ldue;Landroid/os/Bundle;Lsyc;I)Lcj3;
-
-    move-result-object v10
-
-    iget-object v2, v1, Lfrd;->c:Ldue;
-
-    invoke-virtual {v10, v2}, Lcj3;->f(Ldue;)V
-
-    iget-object v1, v1, Lfrd;->d:Ljava/util/List;
-
-    new-instance v8, Lql2;
-
-    const/16 v14, 0x8
-
-    const/4 v15, 0x2
-
-    const/4 v9, 0x1
-
-    const-class v11, Lcj3;
-
-    const-string v12, "addButton"
-
-    const-string v13, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
-
-    invoke-direct/range {v8 .. v15}, Lql2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Lol2;
-
-    invoke-direct {v2, v8, v4}, Lol2;-><init>(Lo8;I)V
-
-    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {v10}, Lcj3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v12
-
-    invoke-virtual {v12, v0}, Lox3;->setTargetController(Lox3;)V
-
-    move-object v1, v0
-
-    :goto_0
-    invoke-virtual {v1}, Lox3;->getParentController()Lox3;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Lox3;->getParentController()Lox3;
-
-    move-result-object v1
+    :catchall_0
+    move-exception v1
 
     goto :goto_0
 
-    :cond_4
-    instance-of v2, v1, Lwrc;
+    :cond_1
+    return-object v2
 
-    if-eqz v2, :cond_5
+    :goto_0
+    const-class v2, Luw2;
 
-    check-cast v1, Lwrc;
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v2
 
-    :cond_5
-    move-object v1, v7
+    const-string v3, "fail to get folderValue for id "
 
-    :goto_1
-    if-eqz v1, :cond_6
+    invoke-static {v3, v0, v2, v1}, Lnd5;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v1}, Lwrc;->d0()Lqrc;
-
-    move-result-object v7
-
-    :cond_6
-    invoke-virtual {v12, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->L0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v7, :cond_7
-
-    new-instance v11, Ltrc;
-
-    const/16 v16, 0x0
-
-    const/16 v17, -0x1
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    invoke-direct/range {v11 .. v17}, Ltrc;-><init>(Lox3;Ljava/lang/String;Ltx3;Ltx3;ZI)V
-
-    const/4 v0, 0x0
-
-    const-string v1, "BottomSheetWidget"
-
-    invoke-static {v0, v11, v4, v1}, Lmh0;->m(ZLtrc;ZLjava/lang/String;)V
-
-    invoke-virtual {v7, v11}, Lqrc;->H(Ltrc;)V
-
-    :cond_7
-    :goto_2
-    return-object v3
+    throw v1
 .end method

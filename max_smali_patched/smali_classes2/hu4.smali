@@ -3,253 +3,114 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhu4;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lk3f;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-.field public final b:[F
+.field public final synthetic b:Lo10;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldj3;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Ldj3;-><init>(I)V
-
-    sput-object v0, Lhu4;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I[F)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lhu4;->a:I
+    iput-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    .line 3
-    iput-object p2, p0, Lhu4;->b:[F
+    iput-object p2, p0, Lhu4;->b:Lo10;
 
     return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
-
-    move-result-object v0
-
-    iput-object v0, p0, Lhu4;->b:[F
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    .line 7
-    const-string v0, "LINE"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "CUBIC_BEZIER"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x2
-
-    .line 8
-    :goto_0
-    iput p1, p0, Lhu4;->a:I
-
-    return-void
-
-    .line 9
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "No enum constant ru.ok.tamtam.photoeditor.state.DrawingPrimitive.Type."
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Name is null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    if-eqz p1, :cond_3
-
-    const-class v0, Lhu4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lhu4;
-
-    iget v0, p0, Lhu4;->a:I
-
-    iget v1, p1, Lhu4;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lhu4;->b:[F
-
-    iget-object p1, p1, Lhu4;->b:[F
-
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([F[F)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final a(FJJLnz3;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lhu4;->a:I
+    new-instance p2, Ljava/lang/Float;
 
-    if-eqz v0, :cond_0
+    invoke-direct {p2, p1}, Ljava/lang/Float;-><init>(F)V
 
-    invoke-static {v0}, Ldw1;->t(I)I
+    iget-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    move-result v0
+    iget-object p3, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->I0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    goto :goto_0
+    iget-object p4, p0, Lhu4;->b:Lo10;
+
+    iget-object p4, p4, Lo10;->d:Ln10;
+
+    iget-wide p4, p4, Ln10;->a:J
+
+    new-instance v0, Ljava/lang/Long;
+
+    invoke-direct {v0, p4, p5}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-virtual {p3, v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1, p6}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lf34;->a:Lf34;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object p1, Loyf;->a:Loyf;
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lhu4;->b:[F
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([F)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final e(Ljava/io/File;Lnz3;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p2, p0, Lhu4;->b:[F
+    iget-object p1, p0, Lhu4;->a:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
+    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->I0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 p2, 0x1
+    iget-object v1, p0, Lhu4;->b:Lo10;
 
-    iget p0, p0, Lhu4;->a:I
+    iget-object v1, v1, Lo10;->d:Ln10;
 
-    if-eq p0, p2, :cond_1
+    iget-wide v1, v1, Ln10;->a:J
 
-    const/4 p2, 0x2
+    new-instance v3, Ljava/lang/Long;
 
-    if-ne p0, p2, :cond_0
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
-    const-string p0, "CUBIC_BEZIER"
+    new-instance v1, Ljava/lang/Float;
 
-    goto :goto_0
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    invoke-direct {v1, v2}, Ljava/lang/Float;-><init>(F)V
+
+    invoke-virtual {v0, v3, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1, p2}, Lru/ok/tamtam/upload/workers/ForegroundWorker;->updateForeground(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lf34;->a:Lf34;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    const/4 p0, 0x0
+    sget-object p1, Loyf;->a:Loyf;
 
-    throw p0
+    return-object p1
+.end method
 
-    :cond_1
-    const-string p0, "LINE"
+.method public final getDownloadContext()Ljava/lang/String;
+    .locals 1
 
-    :goto_0
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    return-void
+    return-object v0
 .end method

@@ -1,41 +1,25 @@
-.class public interface abstract Lnma;
+.class public abstract Lnma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lts2;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Ldf0;
-.end method
+.field public static final b:I
 
-.method public abstract c(I)I
-.end method
 
-.method public abstract d()La5e;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract e()Lzi6;
-.end method
+    sget v0, Lkec;->oneme_file_download_warning_confirm:I
 
-.method public abstract f()Lv3;
-.end method
+    sput v0, Lnma;->a:I
 
-.method public abstract g()Llkf;
-.end method
+    sget v0, Lkec;->oneme_file_download_warning_deny:I
 
-.method public abstract getIcon()Lmv6;
-.end method
+    sput v0, Lnma;->b:I
 
-.method public abstract getName()Ljava/lang/String;
-.end method
-
-.method public abstract getText()Lqse;
-.end method
-
-.method public abstract h()Lu73;
-.end method
-
-.method public abstract i()Lhee;
+    return-void
 .end method

@@ -3,81 +3,52 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/Set;
-
-.field public static final b:Ljava/util/Set;
-
-.field public static final c:Ljava/util/Set;
-
-.field public static final d:Ljava/util/Set;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a(Landroid/content/Context;I)I
+    .locals 0
 
-    sget-object v0, Lox1;->Y:Lox1;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
 
-    sget-object v1, Lox1;->Z:Lox1;
+    move-result p0
 
-    sget-object v2, Lox1;->o:Lox1;
+    return p0
+.end method
 
-    sget-object v3, Lox1;->X:Lox1;
+.method public static b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-    invoke-static {v2, v3, v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public static c(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/String;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
-    sput-object v0, Lqy3;->a:Ljava/util/Set;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemServiceName(Ljava/lang/Class;)Ljava/lang/String;
 
-    sget-object v0, Lpx1;->o:Lpx1;
+    move-result-object p0
 
-    sget-object v1, Lpx1;->a:Lpx1;
-
-    invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lqy3;->b:Ljava/util/Set;
-
-    sget-object v0, Lnx1;->X:Lnx1;
-
-    sget-object v1, Lnx1;->o:Lnx1;
-
-    sget-object v2, Lnx1;->a:Lnx1;
-
-    invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lqy3;->c:Ljava/util/Set;
-
-    invoke-static {v0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lqy3;->d:Ljava/util/Set;
-
-    return-void
+    return-object p0
 .end method

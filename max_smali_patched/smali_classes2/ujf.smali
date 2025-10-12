@@ -1,59 +1,59 @@
 .class public final Lujf;
-.super Lko;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lujf;
+# instance fields
+.field public X:Ljava/lang/Object;
+
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljavax/net/ssl/SSLEngine;
+
+.field public o:Ljava/lang/Object;
+
+.field public w0:Lvjf;
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Lvjf;
+
+.field public z0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lvjf;Lnz3;)V
+    .locals 0
 
-    new-instance v0, Lujf;
+    iput-object p1, p0, Lujf;->y0:Lvjf;
 
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, Lujf;->a:Lujf;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lj8a;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    iput-object p1, p0, Lujf;->x0:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lujf;->z0:I
 
-    const-class v0, Lj8a;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object p0
+    iput p1, p0, Lujf;->z0:I
 
-    check-cast p0, Lj8a;
+    iget-object p1, p0, Lujf;->y0:Lvjf;
 
-    return-object p0
-.end method
+    const/4 v0, 0x0
 
-.method public final c()Lq14;
-    .locals 1
+    invoke-virtual {p1, v0, p0}, Lvjf;->b(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    move-result-object p1
 
-    move-result-object p0
-
-    const-class v0, Lq14;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lq14;
-
-    return-object p0
+    return-object p1
 .end method

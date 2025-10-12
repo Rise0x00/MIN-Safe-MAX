@@ -1,192 +1,94 @@
-.class public final synthetic Lat;
+.class public final Lat;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Losd;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ld96;
+.field public final a:Lnwd;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILd96;)V
+.method public constructor <init>(Lnwd;)V
     .locals 0
 
-    iput p1, p0, Lat;->a:I
-
-    iput-object p2, p0, Lat;->b:Ld96;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lat;->a:Lnwd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Lorg/json/JSONObject;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lat;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lat;
+
+    iget-object v1, p0, Lat;->a:Lnwd;
+
+    iget-object p1, p1, Lat;->a:Lnwd;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lat;->a:I
+    iget-object v0, p0, Lat;->a:Lnwd;
 
-    iget-object p0, p0, Lat;->b:Ld96;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->g(Ld96;Lorg/json/JSONObject;)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :pswitch_0
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->m(Ld96;Lorg/json/JSONObject;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, "StopAsrRecord(sessionRoomId="
 
-    :pswitch_1
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->d(Ld96;Lorg/json/JSONObject;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget-object v1, p0, Lat;->a:Lnwd;
 
-    :pswitch_2
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->i(Ld96;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ")"
 
-    :pswitch_3
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->l(Ld96;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_4
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->k(Ld96;Lorg/json/JSONObject;)V
+    move-result-object v0
 
-    return-void
-
-    :pswitch_5
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->f(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_6
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->d(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_7
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->c(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_8
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_9
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->h(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_a
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->e(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_b
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->b(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_c
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->e(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_d
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_e
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_f
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->b(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_10
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->b(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_11
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->c(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_12
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->d(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_13
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_14
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_15
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_16
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->b(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_17
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->a(Ld96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

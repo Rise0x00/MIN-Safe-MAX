@@ -2,182 +2,316 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lry4;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Lte8;
+.field public final a:[Lpy4;
 
-.field public final b:Z
+.field public b:I
 
-.field public final c:Z
-
-.field public final d:J
-
-.field public final e:I
-
-.field public final f:Lbz4;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lte8;ZZJILbz4;)V
+.method static constructor <clinit>()V
     .locals 2
 
+    new-instance v0, Lma4;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lma4;-><init>(I)V
+
+    sput-object v0, Lry4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p2, :cond_1
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    if-nez p3, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    iput-object v0, p0, Lry4;->c:Ljava/lang/String;
 
-    :cond_0
+    .line 10
+    sget-object v0, Lpy4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Lpy4;
+
+    sget v0, Lr4g;->a:I
+
+    iput-object p1, p0, Lry4;->a:[Lpy4;
+
+    .line 11
+    array-length p1, p1
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 2
+
     const/4 v0, 0x0
 
-    goto :goto_1
+    .line 1
+    new-array v1, v0, [Lpy4;
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :goto_1
-    const-string v1, "Audio and video cannot both be removed"
+    move-result-object p2
 
-    invoke-static {v1, v0}, Ln76;->m(Ljava/lang/Object;Z)V
+    check-cast p2, [Lpy4;
 
-    iput-object p1, p0, Lry4;->a:Lte8;
+    invoke-direct {p0, p1, v0, p2}, Lry4;-><init>(Ljava/lang/String;Z[Lpy4;)V
 
-    iput-boolean p2, p0, Lry4;->b:Z
+    return-void
+.end method
 
-    iput-boolean p3, p0, Lry4;->c:Z
+.method public varargs constructor <init>(Ljava/lang/String;Z[Lpy4;)V
+    .locals 0
 
-    iput-wide p4, p0, Lry4;->d:J
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p6, p0, Lry4;->e:I
+    .line 3
+    iput-object p1, p0, Lry4;->c:Ljava/lang/String;
 
-    iput-object p7, p0, Lry4;->f:Lbz4;
+    if-eqz p2, :cond_0
+
+    .line 4
+    invoke-virtual {p3}, [Lpy4;->clone()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object p3, p1
+
+    check-cast p3, [Lpy4;
+
+    .line 5
+    :cond_0
+    iput-object p3, p0, Lry4;->a:[Lpy4;
+
+    .line 6
+    array-length p1, p3
+
+    .line 7
+    invoke-static {p3, p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqy4;
+.method public final a(Ljava/lang/String;)Lry4;
     .locals 3
 
-    new-instance v0, Lqy4;
+    iget-object v0, p0, Lry4;->c:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, p1}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lry4;->a:Lte8;
+    move-result v0
 
-    iput-object v1, v0, Lqy4;->a:Lte8;
+    if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lry4;->b:Z
+    return-object p0
 
-    iput-boolean v1, v0, Lqy4;->b:Z
+    :cond_0
+    new-instance v0, Lry4;
 
-    iget-boolean v1, p0, Lry4;->c:Z
+    const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lqy4;->c:Z
+    iget-object v2, p0, Lry4;->a:[Lpy4;
 
-    iget-wide v1, p0, Lry4;->d:J
-
-    iput-wide v1, v0, Lqy4;->d:J
-
-    iget v1, p0, Lry4;->e:I
-
-    iput v1, v0, Lqy4;->e:I
-
-    iget-object p0, p0, Lry4;->f:Lbz4;
-
-    iput-object p0, v0, Lqy4;->f:Lbz4;
+    invoke-direct {v0, p1, v1, v2}, Lry4;-><init>(Ljava/lang/String;Z[Lpy4;)V
 
     return-object v0
 .end method
 
-.method public final b(J)J
-    .locals 8
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
-    iget-boolean v0, p0, Lry4;->b:Z
+    check-cast p1, Lpy4;
 
-    const/4 v1, 0x0
+    check-cast p2, Lpy4;
 
-    iget-object v2, p0, Lry4;->f:Lbz4;
+    sget-object v0, Lpw0;->a:Ljava/util/UUID;
 
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v1, p1, Lpy4;->b:Ljava/util/UUID;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
-    move-wide v5, v3
+    move-result v1
 
-    goto :goto_1
+    if-eqz v1, :cond_1
+
+    iget-object p1, p2, Lpy4;->b:Ljava/util/UUID;
+
+    invoke-virtual {v0, p1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_0
-    iget-object v0, v2, Lbz4;->a:Lg07;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v1}, Lg07;->l(I)Lzu5;
+    return p1
 
-    move-result-object v0
+    :cond_1
+    iget-object p1, p1, Lpy4;->b:Ljava/util/UUID;
 
-    move-wide v5, p1
+    iget-object p2, p2, Lpy4;->b:Ljava/util/UUID;
 
-    :goto_0
-    invoke-virtual {v0}, Lp1;->hasNext()Z
+    invoke-virtual {p1, p2}, Ljava/util/UUID;->compareTo(Ljava/util/UUID;)I
 
-    move-result v7
+    move-result p1
 
-    if-eqz v7, :cond_1
+    return p1
+.end method
 
-    invoke-virtual {v0}, Lp1;->next()Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 1
 
-    move-result-object v7
+    const/4 v0, 0x0
 
-    check-cast v7, Lz50;
+    return v0
+.end method
 
-    invoke-interface {v7, v5, v6}, Lz50;->f(J)J
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result-wide v5
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lry4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    :goto_1
-    iget-boolean p0, p0, Lry4;->c:Z
+    check-cast p1, Lry4;
 
-    if-eqz p0, :cond_2
+    iget-object v2, p0, Lry4;->c:Ljava/lang/String;
 
-    move-wide p1, v3
+    iget-object v3, p1, Lry4;->c:Ljava/lang/String;
 
-    goto :goto_3
+    invoke-static {v2, v3}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lry4;->a:[Lpy4;
+
+    iget-object p1, p1, Lry4;->a:[Lpy4;
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    iget-object p0, v2, Lbz4;->b:Lg07;
+    :goto_0
+    return v1
+.end method
 
-    invoke-virtual {p0, v1}, Lg07;->l(I)Lzu5;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object p0
+    iget v0, p0, Lry4;->b:I
 
-    :goto_2
-    invoke-virtual {p0}, Lp1;->hasNext()Z
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lry4;->c:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p0}, Lp1;->next()Ljava/lang/Object;
+    iget-object v1, p0, Lry4;->a:[Lpy4;
 
-    move-result-object v0
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    check-cast v0, Lj58;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    add-int/2addr v0, v1
 
-    goto :goto_2
+    iput v0, p0, Lry4;->b:I
 
-    :cond_3
-    :goto_3
-    invoke-static {v5, v6, p1, p2}, Ljava/lang/Math;->max(JJ)J
+    :cond_1
+    iget v0, p0, Lry4;->b:I
 
-    move-result-wide p0
+    return v0
+.end method
 
-    return-wide p0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object p2, p0, Lry4;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lry4;->a:[Lpy4;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, p2, v0}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

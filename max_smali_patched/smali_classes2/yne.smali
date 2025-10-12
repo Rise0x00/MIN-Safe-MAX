@@ -1,164 +1,154 @@
 .class public final Lyne;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final b:J
+
+.field public final c:Lt38;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJLt38;)V
     .locals 0
 
-    iput-object p1, p0, Lyne;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lyne;->a:J
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lyne;->b:J
+
+    iput-object p5, p0, Lyne;->c:Lt38;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Llqe;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lyne;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lyne;
 
-    check-cast p0, Lyne;
+    const/4 v2, 0x0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lyne;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    return-object p1
+    :cond_1
+    check-cast p1, Lyne;
+
+    iget-wide v3, p0, Lyne;->a:J
+
+    iget-wide v5, p1, Lyne;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lyne;->b:J
+
+    iget-wide v5, p1, Lyne;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lyne;->c:Lt38;
+
+    iget-object p1, p1, Lyne;->c:Lt38;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    new-instance v0, Lyne;
+    iget-wide v0, p0, Lyne;->a:J
 
-    iget-object p0, p0, Lyne;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {v0, p0, p2}, Lyne;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lyne;->X:Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    return-object v0
-.end method
+    mul-int/2addr v0, v1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-wide v2, p0, Lyne;->b:J
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
 
-    iget-object p1, p0, Lyne;->X:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p1, Llqe;
+    iget-object v1, p0, Lyne;->c:Lt38;
 
-    iget-object p0, p0, Lyne;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->r1:Landroid/app/Dialog;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/high16 v1, -0x80000000
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getSystemUiVisibility()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    iget-boolean v2, p1, Llqe;->c:Z
+    add-int/2addr v1, v0
 
-    if-eqz v2, :cond_0
+    return v1
+.end method
 
-    and-int/lit8 v1, v1, -0x11
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    goto :goto_0
+    const-string v0, "StatEntity(id="
 
-    :cond_0
-    or-int/lit8 v1, v1, 0x10
+    const-string v1, ", timestamp="
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    iget-wide v2, p0, Lyne;->a:J
 
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
-
-    iget v1, p1, Llqe;->H:I
-
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setNavigationBarColor(I)V
-
-    :cond_1
-    iget-object v0, p0, Landroidx/fragment/app/a;->P0:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_1
+    iget-wide v1, p0, Lyne;->b:J
 
-    :cond_2
-    move-object v0, v1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :goto_1
-    instance-of v2, v0, Landroid/view/ViewGroup;
+    const-string v1, ", data="
 
-    if-eqz v2, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v1, v0
+    iget-object v1, p0, Lyne;->c:Lt38;
 
-    check-cast v1, Landroid/view/ViewGroup;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    if-nez v1, :cond_4
+    const-string v1, ")"
 
-    goto :goto_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
-    iget v0, p1, Llqe;->m:I
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
-
-    :goto_2
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->z(Llqe;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

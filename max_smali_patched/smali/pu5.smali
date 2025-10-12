@@ -2,206 +2,92 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luu5;
-.implements Lkp4;
-
 
 # instance fields
-.field public final a:Lzud;
+.field public a:I
 
-.field public b:Lyee;
+.field public b:Z
 
-.field public c:Z
+.field public c:I
 
-.field public o:Ljava/lang/Object;
+.field public d:I
 
+.field public e:I
 
-# direct methods
-.method public constructor <init>(Lzud;)V
-    .locals 0
+.field public f:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public g:I
 
-    iput-object p1, p0, Lpu5;->a:Lzud;
+.field public h:I
 
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-boolean v0, p0, Lpu5;->c:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, "LayoutState{mAvailable="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    const/4 v0, 0x1
+    iget v1, p0, Lpu5;->a:I
 
-    iput-boolean v0, p0, Lpu5;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lafe;->a:Lafe;
+    const-string v1, ", mFlexLinePosition="
 
-    iput-object v0, p0, Lpu5;->b:Lyee;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lpu5;->o:Ljava/lang/Object;
+    iget v1, p0, Lpu5;->c:I
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iput-object v1, p0, Lpu5;->o:Ljava/lang/Object;
+    const-string v1, ", mPosition="
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v0, v1
+    iget v1, p0, Lpu5;->d:I
 
-    :cond_1
-    iget-object p0, p0, Lpu5;->a:Lzud;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    const-string v1, ", mOffset="
 
-    invoke-interface {p0, v0}, Lzud;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v1, p0, Lpu5;->e:I
 
-    :cond_2
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    const-string v1, ", mScrollingOffset="
 
-    invoke-interface {p0, v0}, Lzud;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget v1, p0, Lpu5;->f:I
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lpu5;->c:Z
+    const-string v1, ", mLastScrollDelta="
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v1, p0, Lpu5;->g:I
 
-    :cond_0
-    iget-object v0, p0, Lpu5;->o:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    const-string v1, ", mItemDirection=1, mLayoutDirection="
 
-    const/4 p1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean p1, p0, Lpu5;->c:Z
+    iget v1, p0, Lpu5;->h:I
 
-    iget-object p1, p0, Lpu5;->b:Lyee;
+    const/16 v2, 0x7d
 
-    invoke-interface {p1}, Lyee;->cancel()V
+    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    sget-object p1, Lafe;->a:Lafe;
+    move-result-object v0
 
-    iput-object p1, p0, Lpu5;->b:Lyee;
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Sequence contains more than one element!"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lpu5;->a:Lzud;
-
-    invoke-interface {p0, p1}, Lzud;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lpu5;->o:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final e(Lyee;)V
-    .locals 2
-
-    iget-object v0, p0, Lpu5;->b:Lyee;
-
-    invoke-static {v0, p1}, Lafe;->e(Lyee;Lyee;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lpu5;->b:Lyee;
-
-    iget-object v0, p0, Lpu5;->a:Lzud;
-
-    invoke-interface {v0, p0}, Lzud;->c(Lkp4;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lyee;->h(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lpu5;->b:Lyee;
-
-    invoke-interface {v0}, Lyee;->cancel()V
-
-    sget-object v0, Lafe;->a:Lafe;
-
-    iput-object v0, p0, Lpu5;->b:Lyee;
-
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object p0, p0, Lpu5;->b:Lyee;
-
-    sget-object v0, Lafe;->a:Lafe;
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lpu5;->c:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lpu5;->c:Z
-
-    sget-object v0, Lafe;->a:Lafe;
-
-    iput-object v0, p0, Lpu5;->b:Lyee;
-
-    iget-object p0, p0, Lpu5;->a:Lzud;
-
-    invoke-interface {p0, p1}, Lzud;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

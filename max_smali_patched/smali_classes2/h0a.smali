@@ -2,13 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llif;
-
 
 # virtual methods
-.method public abstract b()J
-.end method
-
-.method public abstract h()Ljava/math/BigInteger;
+.method public abstract a(Lzz9;)V
 .end method

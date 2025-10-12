@@ -2,96 +2,152 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnx4;
+
 
 # instance fields
-.field public final a:Lac9;
+.field public final a:Landroid/content/res/Resources;
 
-.field public final b:Lbi9;
+.field public final b:Lnx4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/res/Resources;Lnx4;)V
+    .locals 0
 
-    new-instance v0, Lig4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lp33;
+    iput-object p1, p0, Lig4;->a:Landroid/content/res/Resources;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-direct {v0, v1}, Lig4;-><init>(Lzb9;)V
+    iput-object p2, p0, Lig4;->b:Lnx4;
 
     return-void
 .end method
 
-.method public constructor <init>(Lzb9;)V
-    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final a(Lq73;)Landroid/graphics/drawable/Drawable;
+    .locals 3
 
-    new-instance p1, Lac9;
+    :try_start_0
+    invoke-static {}, Lud6;->s()Ltd6;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    iput-object p1, p0, Lig4;->a:Lac9;
+    if-eqz v0, :cond_2
 
-    new-instance p1, Lbi9;
+    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    const-string v0, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto"
+    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-direct {p1, v0}, Lbi9;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lig4;->a:Landroid/content/res/Resources;
 
-    iput-object p1, p0, Lig4;->b:Lbi9;
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
 
-    new-instance p0, Lbi9;
+    move-result-object v2
 
-    const-string p1, "/io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto"
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    invoke-direct {p0, p1}, Lbi9;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
-    new-instance p0, Lbi9;
+    move-result v1
 
-    const-string p1, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto"
+    if-eqz v1, :cond_0
 
-    invoke-direct {p0, p1}, Lbi9;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
-    new-instance p0, Lc38;
+    move-result v1
 
-    new-instance p1, Lhe9;
+    const/4 v2, -0x1
 
-    const/16 v0, 0xd
+    if-eq v1, v2, :cond_0
 
-    invoke-direct {p1, v0}, Lhe9;-><init>(I)V
+    goto :goto_0
 
-    invoke-direct {p0, p1}, Lc38;-><init>(Lr18;)V
+    :cond_0
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    new-instance p0, Lc38;
+    move-result v1
 
-    new-instance p1, La38;
+    const/4 v2, 0x1
 
-    invoke-direct {p1, v0}, La38;-><init>(I)V
+    if-eq v1, v2, :cond_1
 
-    invoke-direct {p0, p1}, Lc38;-><init>(Lr18;)V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    new-instance p0, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result v1
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    if-eqz v1, :cond_1
 
-    new-instance p0, Ljava/util/concurrent/ConcurrentHashMap;
+    :goto_0
+    new-instance v1, Lc2b;
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
 
-    new-instance p0, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result v2
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
 
-    new-instance p0, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result p1
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-direct {v1, v0, v2, p1}, Lc2b;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p0, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-static {}, Lud6;->s()Ltd6;
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    return-object v1
 
-    return-void
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {}, Lud6;->s()Ltd6;
+
+    return-object v0
+
+    :cond_2
+    iget-object v0, p0, Lig4;->b:Lnx4;
+
+    if-eqz v0, :cond_3
+
+    :try_start_1
+    invoke-interface {v0, p1}, Lnx4;->b(Lq73;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0, p1}, Lnx4;->a(Lq73;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lud6;->s()Ltd6;
+
+    return-object p1
+
+    :cond_3
+    invoke-static {}, Lud6;->s()Ltd6;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_1
+    invoke-static {}, Lud6;->s()Ltd6;
+
+    throw p1
+.end method
+
+.method public final b(Lq73;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

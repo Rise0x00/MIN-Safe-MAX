@@ -1,73 +1,127 @@
-.class public final enum Liwa;
-.super Ljava/lang/Enum;
+.class public abstract Liwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Liwa;
+.field public static final a:I
 
-.field public static final enum b:Liwa;
+.field public static final b:I
 
-.field public static final synthetic c:[Liwa;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Liwa;
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
 
-    const-string v1, "GRANTED"
+    sput v0, Liwa;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Liwa;->b:I
 
-    sput-object v0, Liwa;->a:Liwa;
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
 
-    new-instance v1, Liwa;
+    sput v0, Liwa;->c:I
 
-    const-string v2, "DENIED"
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_constraint_layout:I
 
-    const/4 v3, 0x1
+    sput v0, Liwa;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_create_button_view:I
 
-    sput-object v1, Liwa;->b:Liwa;
+    sput v0, Liwa;->e:I
 
-    filled-new-array {v0, v1}, [Liwa;
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
 
-    move-result-object v0
+    sput v0, Liwa;->f:I
 
-    sput-object v0, Liwa;->c:[Liwa;
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_description_view:I
+
+    sput v0, Liwa;->g:I
+
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_icon_view:I
+
+    sput v0, Liwa;->h:I
+
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_title_view:I
+
+    sput v0, Liwa;->i:I
+
+    sget v0, Lzfc;->oneme_startconversation_chat_titleicon_toolbar:I
+
+    sput v0, Liwa;->j:I
+
+    sget v0, Lzfc;->oneme_startconversation_chat_toolbar:I
+
+    sput v0, Liwa;->k:I
+
+    sget v0, Lzfc;->oneme_startconversation_confirm_add_subscribers_button:I
+
+    sput v0, Liwa;->l:I
+
+    sget v0, Lzfc;->oneme_startconversation_container:I
+
+    sput v0, Liwa;->m:I
+
+    sget v0, Lzfc;->oneme_startconversation_create_button_view_type:I
+
+    sput v0, Liwa;->n:I
+
+    sget v0, Lzfc;->oneme_startconversation_recyclerview:I
+
+    sput v0, Liwa;->o:I
+
+    sget v0, Lzfc;->oneme_startconversation_select_channel_subscribers_toolbar:I
+
+    sput v0, Liwa;->p:I
+
+    sget v0, Lzfc;->oneme_startconversation_toolbar:I
+
+    sput v0, Liwa;->q:I
+
+    sget v0, Lzfc;->oneme_startconversations_create_channel:I
+
+    sput v0, Liwa;->r:I
+
+    sget v0, Lzfc;->oneme_startconversations_create_chat:I
+
+    sput v0, Liwa;->s:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Liwa;
-    .locals 1
-
-    const-class v0, Liwa;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Liwa;
-
-    return-object p0
-.end method
-
-.method public static values()[Liwa;
-    .locals 1
-
-    sget-object v0, Liwa;->c:[Liwa;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Liwa;
-
-    return-object v0
 .end method

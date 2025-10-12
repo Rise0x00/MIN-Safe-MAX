@@ -1,232 +1,160 @@
-.class public abstract Lcwc;
+.class public final synthetic Lcwc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lus1;
 
-# static fields
-.field public static final a:Ljava/util/List;
 
-.field public static final b:Ljava/util/List;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Liwc;
+
+.field public final synthetic c:Lbb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Liwc;Lbb0;I)V
+    .locals 0
 
-    const-class v0, Landroid/app/Application;
+    iput p3, p0, Lcwc;->a:I
 
-    const-class v1, Luvc;
+    iput-object p1, p0, Lcwc;->b:Liwc;
 
-    filled-new-array {v0, v1}, [Ljava/lang/Class;
+    iput-object p2, p0, Lcwc;->c:Lbb0;
 
-    move-result-object v0
-
-    invoke-static {v0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lcwc;->a:Ljava/util/List;
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lcwc;->b:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
-    .locals 6
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
+# virtual methods
+.method public final o(Lts1;)Ljava/lang/String;
+    .locals 9
 
-    move-result-object v0
+    iget v0, p0, Lcwc;->a:I
 
-    array-length v1, v0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lcwc;->b:Liwc;
 
-    :goto_0
-    if-ge v2, v1, :cond_3
+    iget-object v1, p0, Lcwc;->c:Lbb0;
 
-    aget-object v3, v0, v2
+    new-instance v2, Lb12;
 
-    invoke-virtual {v3}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
+    const/4 v3, 0x4
 
-    move-result-object v4
+    invoke-direct {v2, v0, v3, p1}, Lb12;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v4}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
+    iget-object v3, v0, Liwc;->D:Ld60;
 
-    move-result-object v4
+    iget-object v4, v0, Liwc;->e:Lcsd;
 
-    invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    new-instance v5, Lhcb;
 
-    move-result v5
+    const/4 v6, 0x3
 
-    if-eqz v5, :cond_0
+    const/4 v7, 0x0
 
-    return-object v3
+    invoke-direct {v5, v0, v2, v7, v6}, Lhcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget-object v6, v3, Ld60;->a:Lcsd;
 
-    move-result v3
+    new-instance v7, Lk5;
 
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    const/4 v8, 0x4
 
-    move-result v5
+    invoke-direct {v7, v3, v4, v5, v8}, Lk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    if-ne v3, v5, :cond_2
+    invoke-virtual {v6, v7}, Lcsd;->execute(Ljava/lang/Runnable;)V
 
-    invoke-interface {v4, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+    iget-object v3, v0, Liwc;->G:Lr85;
 
-    move-result v3
+    new-instance v5, Lr26;
 
-    if-nez v3, :cond_1
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_1
+    iput-object v0, v5, Lr26;->o:Ljava/lang/Object;
 
-    :cond_1
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iput-object p1, v5, Lr26;->a:Ljava/lang/Object;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iput-object v2, v5, Lr26;->b:Ljava/lang/Object;
 
-    const-string v2, "Class "
+    iput-object v1, v5, Lr26;->c:Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, v3, Lr85;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " must have parameters in the proper order: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static final varargs b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lzxf;
-    .locals 2
+    monitor-enter v0
 
     :try_start_0
-    array-length v0, p2
+    iput-object v5, v3, Lr85;->r:Ld85;
 
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    iput-object v4, v3, Lr85;->s:Ljava/util/concurrent/Executor;
 
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzxf;
+    monitor-exit v0
     :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-string p1, "audioEncodingFuture"
 
     return-object p1
 
-    :catch_0
+    :catchall_0
     move-exception p1
 
-    goto :goto_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :catch_1
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lcwc;->b:Liwc;
+
+    iget-object v1, p0, Lcwc;->c:Lbb0;
+
+    iget-object v2, v0, Liwc;->E:Lr85;
+
+    new-instance v3, Lc28;
+
+    invoke-direct {v3, v0, p1, v1}, Lc28;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object p1, v0, Liwc;->e:Lcsd;
+
+    iget-object v0, v2, Lr85;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_2
+    iput-object v3, v2, Lr85;->r:Ld85;
+
+    iput-object p1, v2, Lr85;->s:Ljava/util/concurrent/Executor;
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    const-string p1, "videoEncodingFuture"
+
+    return-object p1
+
+    :catchall_1
     move-exception p1
 
-    goto :goto_1
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    :catch_2
-    move-exception p1
+    throw p1
 
-    goto :goto_2
+    nop
 
-    :goto_0
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "An exception happened in constructor of "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :goto_1
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "A "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " cannot be instantiated."
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :goto_2
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed to access "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

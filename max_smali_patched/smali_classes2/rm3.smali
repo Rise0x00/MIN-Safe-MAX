@@ -1,62 +1,72 @@
-.class public final Lrm3;
+.class public final synthetic Lrm3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Le00;
+.implements Lve6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/CharSequence;
-
-.field public final f:I
-
-.field public final g:Z
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:Landroid/graphics/drawable/Drawable;
-
-.field public final j:Landroid/graphics/drawable/Drawable;
-
-.field public final k:J
+.field public final synthetic b:Lum3;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;IZLjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
+.method public synthetic constructor <init>(Lum3;I)V
     .locals 0
+
+    iput p2, p0, Lrm3;->a:I
+
+    iput-object p1, p0, Lrm3;->b:Lum3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lrm3;->a:J
-
-    iput-object p3, p0, Lrm3;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lrm3;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lrm3;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lrm3;->e:Ljava/lang/CharSequence;
-
-    iput p7, p0, Lrm3;->f:I
-
-    iput-boolean p8, p0, Lrm3;->g:Z
-
-    iput-object p9, p0, Lrm3;->h:Ljava/lang/String;
-
-    iput-object p10, p0, Lrm3;->i:Landroid/graphics/drawable/Drawable;
-
-    iput-object p11, p0, Lrm3;->j:Landroid/graphics/drawable/Drawable;
-
-    iput-wide p12, p0, Lrm3;->k:J
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lrm3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lrm3;->b:Lum3;
+
+    iget-object v0, v0, Lum3;->a:Landroid/content/Context;
+
+    const-string v1, "phone"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/TelephonyManager;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lrm3;->b:Lum3;
+
+    iget-object v0, v0, Lum3;->a:Landroid/content/Context;
+
+    const-string v1, "connectivity"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

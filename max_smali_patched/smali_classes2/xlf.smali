@@ -1,156 +1,129 @@
-.class public final Lxlf;
-.super Ljava/lang/Object;
+.class public final enum Lxlf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final enum X:Lxlf;
+
+.field public static final synthetic Y:[Lxlf;
+
+.field public static final enum b:Lxlf;
+
+.field public static final enum c:Lxlf;
+
+.field public static final enum o:Lxlf;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:J
-
-.field public final Z:J
-
-.field public final a:Lmp3;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final n0:I
-
-.field public final o:Ljava/lang/String;
-
-.field public final o0:Ljava/util/List;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lwlf;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxlf;
 
-    iget-object v0, p1, Lwlf;->a:Lmp3;
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lxlf;->a:Lmp3;
+    const-string v2, "no_connection_timeout"
 
-    iget-object v0, p1, Lwlf;->b:Ljava/lang/String;
+    const-string v3, "NO_CONNECTION_TIMEOUT"
 
-    iput-object v0, p0, Lxlf;->b:Ljava/lang/String;
+    invoke-direct {v0, v3, v1, v2}, Lxlf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iget-object v0, p1, Lwlf;->c:Ljava/lang/String;
+    sput-object v0, Lxlf;->b:Lxlf;
 
-    iput-object v0, p0, Lxlf;->o:Ljava/lang/String;
+    new-instance v1, Lxlf;
 
-    iget-object v0, p1, Lwlf;->d:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    iput-object v0, p0, Lxlf;->c:Ljava/lang/String;
+    const-string v3, "no_data_timeout"
 
-    iget v0, p1, Lwlf;->e:I
+    const-string v4, "NO_DATA_TIMEOUT"
 
-    iput v0, p0, Lxlf;->X:I
+    invoke-direct {v1, v4, v2, v3}, Lxlf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iget-wide v0, p1, Lwlf;->f:J
+    sput-object v1, Lxlf;->c:Lxlf;
 
-    iput-wide v0, p0, Lxlf;->Y:J
+    new-instance v2, Lxlf;
 
-    iget-byte v0, p1, Lwlf;->h:B
+    const/4 v3, 0x2
 
-    iput v0, p0, Lxlf;->n0:I
+    const-string v4, "connection_failed"
 
-    iget-wide v0, p1, Lwlf;->i:J
+    const-string v5, "CONNECTION_FAILED"
 
-    iput-wide v0, p0, Lxlf;->Z:J
+    invoke-direct {v2, v5, v3, v4}, Lxlf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iget-object p1, p1, Lwlf;->g:Ljava/util/List;
+    new-instance v3, Lxlf;
 
-    iput-object p1, p0, Lxlf;->o0:Ljava/util/List;
+    const/4 v4, 0x3
+
+    const-string v5, "success_audio"
+
+    const-string v6, "SUCCESS_AUDIO"
+
+    invoke-direct {v3, v6, v4, v5}, Lxlf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lxlf;->o:Lxlf;
+
+    new-instance v4, Lxlf;
+
+    const/4 v5, 0x4
+
+    const-string v6, "success_connection"
+
+    const-string v7, "SUCCESS_CONNECTION"
+
+    invoke-direct {v4, v7, v5, v6}, Lxlf;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lxlf;->X:Lxlf;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lxlf;
+
+    move-result-object v0
+
+    sput-object v0, Lxlf;->Y:[Lxlf;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lxlf;->o0:Ljava/util/List;
+    iput-object p3, p0, Lxlf;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lah7;->l(Ljava/util/Collection;)I
+    return-void
+.end method
 
-    move-result v0
+.method public static valueOf(Ljava/lang/String;)Lxlf;
+    .locals 1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-class v0, Lxlf;
 
-    const-string v2, "VideoConference{owner="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lxlf;->a:Lmp3;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", joinLink=\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lxlf;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\', conversationId=\'"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\', callName=\'"
-
-    const-string v3, "\', participantsCount="
-
-    iget-object v4, p0, Lxlf;->c:Ljava/lang/String;
-
-    iget-object v5, p0, Lxlf;->o:Ljava/lang/String;
-
-    invoke-static {v1, v4, v2, v5, v3}, Ldl5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v2, p0, Lxlf;->X:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", startedAt="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v2, p0, Lxlf;->Y:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ", type="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lxlf;->n0:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", chatId="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", previewParticipantIds="
-
-    iget-wide v3, p0, Lxlf;->Z:J
-
-    invoke-static {v1, v3, v4, v2, v0}, Lcx3;->p(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
-
-    const-string p0, "}"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lxlf;
+
     return-object p0
+.end method
+
+.method public static values()[Lxlf;
+    .locals 1
+
+    sget-object v0, Lxlf;->Y:[Lxlf;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lxlf;
+
+    return-object v0
 .end method

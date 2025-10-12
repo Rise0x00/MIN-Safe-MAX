@@ -1,109 +1,99 @@
-.class public final synthetic La5;
+.class public abstract La5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgm3;
-.implements Lr4a;
-
 
 # instance fields
-.field public final synthetic a:Lru/ok/messages/media/attaches/ActAttachesView;
+.field public final a:Lcfd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/ActAttachesView;)V
+.method public constructor <init>(Lcfd;)V
     .locals 0
 
-    iput-object p1, p0, La5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La5;->a:Lcfd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public H(Landroid/view/View;Lpkg;)Lpkg;
-    .locals 3
+.method public a(Ljava/lang/Class;)Ljava/util/ArrayList;
+    .locals 1
 
-    iget-object p0, p0, La5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
+    iget-object v0, p0, La5;->a:Lcfd;
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->T0:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0, p1}, Lcfd;->b(Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    invoke-virtual {p2}, Lpkg;->a()I
-
-    move-result v0
-
-    iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->T0:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->T0:Landroid/view/View;
-
-    invoke-virtual {p2}, Lpkg;->b()I
-
-    move-result v0
-
-    iget-object v1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->T0:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p2}, Lpkg;->c()I
-
-    move-result v2
-
-    iget-object p0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->T0:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result p0
-
-    invoke-virtual {p1, v0, v1, v2, p0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-object p2
+    return-object p1
 .end method
 
-.method public accept(Ljava/lang/Object;)V
+.method public b(Ljava/lang/Class;)Ls5f;
+    .locals 3
+
+    new-instance v0, Lug5;
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, La5;->a:Lcfd;
+
+    invoke-direct {v0, v2, v1, p1}, Lug5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ls5f;
+
+    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
+
+    return-object p1
+.end method
+
+.method public c(Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
-    check-cast p1, Lwu8;
-
-    iget-object p0, p0, La5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->R0:Le20;
-
-    iget-object v1, v0, Le20;->j:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->clear()V
-
-    iget-object v0, v0, Le20;->i:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->R0:Le20;
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
+    iget-object v0, p0, La5;->a:Lcfd;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Le20;->j(Ljava/util/List;Z)V
+    invoke-virtual {v0, p1, v1}, Lcfd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/ActAttachesView;->j0(I)V
+    return-object p1
+.end method
 
-    return-void
+.method public d(Ljava/lang/Class;)Ls5f;
+    .locals 3
+
+    new-instance v0, Lbfd;
+
+    iget-object v1, p0, La5;->a:Lcfd;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Lbfd;-><init>(Lcfd;Ljava/lang/Class;Z)V
+
+    new-instance p1, Ls5f;
+
+    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
+
+    return-object p1
+.end method
+
+.method public e()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, La5;->a:Lcfd;
+
+    const/4 v1, 0x0
+
+    const-class v2, Lb87;
+
+    invoke-virtual {v0, v2, v1}, Lcfd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

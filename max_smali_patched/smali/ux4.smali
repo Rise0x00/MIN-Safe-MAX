@@ -4,10 +4,10 @@
 
 
 # direct methods
-.method public static a(Landroid/widget/EdgeEffect;FF)V
+.method public static a(Landroid/graphics/Outline;Landroid/graphics/Path;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
+    invoke-static {p0, p1}, Lj4;->y(Landroid/graphics/Outline;Landroid/graphics/Path;)V
 
     return-void
 .end method

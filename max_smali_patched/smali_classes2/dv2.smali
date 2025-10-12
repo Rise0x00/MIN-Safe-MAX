@@ -1,106 +1,108 @@
 .class public final Ldv2;
-.super Lape;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final synthetic X:Lhv2;
 
-.field public o:J
+.field public final synthetic Y:Landroid/graphics/RectF;
+
+.field public final synthetic Z:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
+.method public constructor <init>(Lhv2;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    iput-object p1, p0, Ldv2;->X:Lhv2;
 
-    iget-object p1, p0, Ldv2;->c:Ljava/util/List;
+    iput-object p2, p0, Ldv2;->Y:Landroid/graphics/RectF;
 
-    if-nez p1, :cond_0
+    iput-object p3, p0, Ldv2;->Z:Landroid/graphics/Rect;
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Ldv2;->c:Ljava/util/List;
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Le34;
 
-    const-string v0, "marker"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "chats"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lq09;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lmz;->b(Lq09;)Lmz;
+    invoke-virtual {p0, p1, p2}, Ldv2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Ldv2;->c:Ljava/util/List;
+    check-cast p1, Ldv2;
 
-    return-void
+    sget-object p2, Loyf;->a:Loyf;
 
-    :cond_1
-    invoke-virtual {p1}, Lq09;->A0()J
+    invoke-virtual {p1, p2}, Ldv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide p1
-
-    iput-wide p1, p0, Ldv2;->o:J
-
-    return-void
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-wide v0, p0, Ldv2;->o:J
+    new-instance p1, Ldv2;
 
-    iget-object p0, p0, Ldv2;->c:Ljava/util/List;
+    iget-object v0, p0, Ldv2;->Y:Landroid/graphics/RectF;
 
-    invoke-static {p0}, Lah7;->l(Ljava/util/Collection;)I
+    iget-object v1, p0, Ldv2;->Z:Landroid/graphics/Rect;
 
-    move-result p0
+    iget-object v2, p0, Ldv2;->X:Lhv2;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {p1, v2, v0, v1, p2}, Ldv2;-><init>(Lhv2;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
 
-    const-string v3, "marker="
+    return-object p1
+.end method
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const-string v0, ", chats="
+    iget-object p1, p0, Ldv2;->X:Lhv2;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Lhv2;->N0:[Ltm7;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lhv2;->r()Lpr5;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
+    iget-object v0, p0, Ldv2;->X:Lhv2;
 
-    return-object p0
+    iget-object v0, v0, Lhv2;->K0:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lpr5;->r(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ldv2;->X:Lhv2;
+
+    iget-object v1, p0, Ldv2;->Y:Landroid/graphics/RectF;
+
+    iget-object v2, p0, Ldv2;->Z:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, p1, v1, v2}, Lhv2;->s(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

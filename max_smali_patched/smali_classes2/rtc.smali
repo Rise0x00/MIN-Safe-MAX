@@ -1,111 +1,76 @@
-.class public abstract Lrtc;
+.class public final Lrtc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyba;
+# instance fields
+.field public volatile a:Lqle;
+
+.field public b:J
+
+.field public c:J
+
+.field public final d:Lmoe;
+
+.field public final e:Lsqc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lyba;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Liyc;->b()Lvxc;
+    const-wide/16 v0, 0x0
 
-    move-result-object v1
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/16 v2, 0x1a
+    move-result-object v0
 
-    invoke-direct {v0, v2, v1}, Lyba;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
-    sput-object v0, Lrtc;->a:Lyba;
+    move-result-object v0
+
+    iput-object v0, p0, Lrtc;->d:Lmoe;
+
+    new-instance v1, Lsqc;
+
+    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object v1, p0, Lrtc;->e:Lsqc;
 
     return-void
 .end method
 
-.method public static a(Lz5;Lvxc;Lz5;Lgm3;Lvxc;)Lgs1;
+
+# virtual methods
+.method public final a()V
     .locals 2
 
-    new-instance v0, Lqtc;
-
-    invoke-direct {v0, p0}, Lqtc;-><init>(Lz5;)V
-
-    new-instance p0, Lyb3;
+    iget-object v0, p0, Lrtc;->a:Lqle;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1, v0}, Lyb3;-><init>(ILjava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lvb3;->k(Lvxc;)Lfc3;
-
-    move-result-object p0
-
-    if-eqz p4, :cond_0
-
-    invoke-virtual {p0, p4}, Lvb3;->h(Lvxc;)Lfc3;
-
-    move-result-object p0
+    invoke-virtual {v0, v1}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    if-nez p2, :cond_1
+    iput-object v1, p0, Lrtc;->a:Lqle;
 
-    new-instance p2, Lzd4;
+    iget-object v0, p0, Lrtc;->d:Lmoe;
 
-    const/16 p1, 0x9
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p2, p1}, Lzd4;-><init>(I)V
+    move-result-object v0
 
-    :cond_1
-    new-instance p1, Lgs1;
+    check-cast v0, Ljava/lang/Number;
 
-    const/4 p4, 0x0
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    invoke-direct {p1, p3, p4, p2}, Lgs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-wide v0
 
-    invoke-virtual {p0, p1}, Lvb3;->i(Lgc3;)V
+    iput-wide v0, p0, Lrtc;->b:J
 
-    return-object p1
-.end method
-
-.method public static b(Lkp4;)V
-    .locals 1
-
-    invoke-static {p0}, Lrtc;->c(Lkp4;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p0}, Lkp4;->f()V
-
-    :cond_0
     return-void
-.end method
-
-.method public static c(Lkp4;)Z
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lkp4;->g()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
 .end method

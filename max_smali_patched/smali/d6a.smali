@@ -1,53 +1,25 @@
-.class public final synthetic Ld6a;
+.class public abstract Ld6a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a(Ljava/lang/Throwable;)V
-    .locals 3
+.method public static a(Landroid/app/Person;)Landroid/app/Notification$MessagingStyle;
+    .locals 1
 
-    sget v0, Lone/me/android/OneMeApplication;->o0:I
+    new-instance v0, Landroid/app/Notification$MessagingStyle;
 
-    const-string v0, "Payload"
+    invoke-direct {v0, p0}, Landroid/app/Notification$MessagingStyle;-><init>(Landroid/app/Person;)V
 
-    :try_start_0
-    const-string v1, "error while parse payload"
+    return-object v0
+.end method
 
-    invoke-static {v0, v1, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public static b(Landroid/app/Notification$MessagingStyle;Z)Landroid/app/Notification$MessagingStyle;
+    .locals 0
 
-    sget-object v1, Lujf;->a:Lujf;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->setGroupConversation(Z)Landroid/app/Notification$MessagingStyle;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Ls4;
+    move-result-object p0
 
-    move-result-object v1
-
-    const-class v2, Lvme;
-
-    invoke-virtual {v1, v2}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvme;
-
-    invoke-virtual {v1}, Lvme;->x()Lq14;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, p0}, Lq14;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    const-string v1, "failed to collect exception"
-
-    invoke-static {v0, v1, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p0
 .end method

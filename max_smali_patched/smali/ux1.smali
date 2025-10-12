@@ -1,47 +1,115 @@
 .class public final Lux1;
-.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+.super Lzde;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+# static fields
+.field public static final X:Ln90;
+
+.field public static final Y:Ln90;
+
+.field public static final Z:Ln90;
+
+.field public static final c:Ln90;
+
+.field public static final o:Ln90;
+
+.field public static final w0:Ln90;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.captureRequest.templateType"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->c:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.cameraCaptureSession.streamUseCase"
+
+    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->o:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.cameraDevice.stateCallback"
+
+    const-class v2, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->X:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.cameraCaptureSession.stateCallback"
+
+    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->Y:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.cameraCaptureSession.captureCallback"
+
+    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->Z:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camera2.cameraCaptureSession.physicalCameraId"
+
+    const-class v2, Ljava/lang/String;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lux1;->w0:Ln90;
 
     return-void
 .end method
 
-.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+.method public static O(Landroid/hardware/camera2/CaptureRequest$Key;)Ln90;
+    .locals 3
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    const-string v1, "camera2.captureRequest.option."
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    new-instance v1, Ln90;
 
-.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
-    .locals 0
+    const-class v2, Ljava/lang/Object;
 
-    return-void
+    invoke-direct {v1, v0, v2, p0}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    return-object v1
 .end method

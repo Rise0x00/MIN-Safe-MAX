@@ -1,122 +1,221 @@
 .class public final Ldx6;
-.super Ljava/lang/Object;
+.super Lnx6;
 .source "SourceFile"
-
-# interfaces
-.implements Lehf;
-.implements Lpy6;
-.implements Lzve;
-
-
-# static fields
-.field public static final X:Lz90;
-
-.field public static final Y:Lz90;
-
-.field public static final Z:Lz90;
-
-.field public static final b:Lz90;
-
-.field public static final c:Lz90;
-
-.field public static final o:Lz90;
 
 
 # instance fields
-.field public final a:Lgpa;
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:J
+
+.field public final i:Z
+
+.field public final j:I
+
+.field public final k:J
+
+.field public final l:I
+
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:Z
+
+.field public final p:Z
+
+.field public final q:Lry4;
+
+.field public final r:Le77;
+
+.field public final s:Le77;
+
+.field public final t:Li77;
+
+.field public final u:J
+
+.field public final v:Lcx6;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLry4;Ljava/util/List;Ljava/util/List;Lcx6;Ljava/util/Map;)V
     .locals 4
 
-    new-instance v0, Lz90;
+    move/from16 v0, p18
 
-    const-string v1, "camerax.core.imageAnalysis.backpressureStrategy"
+    invoke-direct {p0, p2, p3, v0}, Lnx6;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
-    const-class v2, Lww6;
+    iput p1, p0, Ldx6;->d:I
 
-    const/4 v3, 0x0
+    iput-wide p7, p0, Ldx6;->h:J
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    iput-boolean p6, p0, Ldx6;->g:Z
 
-    sput-object v0, Ldx6;->b:Lz90;
+    iput-boolean p9, p0, Ldx6;->i:Z
 
-    new-instance v0, Lz90;
+    iput p10, p0, Ldx6;->j:I
 
-    const-string v1, "camerax.core.imageAnalysis.imageQueueDepth"
+    move-wide p1, p11
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput-wide p1, p0, Ldx6;->k:J
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move/from16 p1, p13
 
-    sput-object v0, Ldx6;->c:Lz90;
+    iput p1, p0, Ldx6;->l:I
 
-    new-instance v0, Lz90;
+    move-wide/from16 p1, p14
 
-    const-string v1, "camerax.core.imageAnalysis.imageReaderProxyProvider"
+    iput-wide p1, p0, Ldx6;->m:J
 
-    const-class v2, Lzy6;
+    move-wide/from16 p1, p16
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    iput-wide p1, p0, Ldx6;->n:J
 
-    sput-object v0, Ldx6;->o:Lz90;
+    move/from16 p1, p19
 
-    new-instance v0, Lz90;
+    iput-boolean p1, p0, Ldx6;->o:Z
 
-    const-string v1, "camerax.core.imageAnalysis.outputImageFormat"
+    move/from16 p1, p20
 
-    const-class v2, Lzw6;
+    iput-boolean p1, p0, Ldx6;->p:Z
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move-object/from16 p1, p21
 
-    sput-object v0, Ldx6;->X:Lz90;
+    iput-object p1, p0, Ldx6;->q:Lry4;
 
-    new-instance v0, Lz90;
+    invoke-static/range {p22 .. p22}, Le77;->j(Ljava/util/Collection;)Le77;
 
-    const-string v1, "camerax.core.imageAnalysis.onePixelShiftEnabled"
+    move-result-object p1
 
-    const-class v2, Ljava/lang/Boolean;
+    iput-object p1, p0, Ldx6;->r:Le77;
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    invoke-static/range {p23 .. p23}, Le77;->j(Ljava/util/Collection;)Le77;
 
-    sput-object v0, Ldx6;->Y:Lz90;
+    move-result-object p1
 
-    new-instance v0, Lz90;
+    iput-object p1, p0, Ldx6;->s:Le77;
 
-    const-string v1, "camerax.core.imageAnalysis.outputImageRotationEnabled"
+    invoke-static/range {p25 .. p25}, Li77;->a(Ljava/util/Map;)Li77;
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move-result-object p1
 
-    sput-object v0, Ldx6;->Z:Lz90;
+    iput-object p1, p0, Ldx6;->t:Li77;
 
-    return-void
-.end method
+    invoke-interface/range {p23 .. p23}, Ljava/util/List;->isEmpty()Z
 
-.method public constructor <init>(Lgpa;)V
-    .locals 0
+    move-result p1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 p2, 0x0
 
-    iput-object p1, p0, Ldx6;->a:Lgpa;
+    if-nez p1, :cond_0
+
+    invoke-static/range {p23 .. p23}, Ls4d;->s(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luw6;
+
+    iget-wide v0, p1, Lax6;->X:J
+
+    iget-wide v2, p1, Lax6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ldx6;->u:J
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface/range {p22 .. p22}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-static/range {p22 .. p22}, Ls4d;->s(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyw6;
+
+    iget-wide v0, p1, Lax6;->X:J
+
+    iget-wide v2, p1, Lax6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Ldx6;->u:J
+
+    goto :goto_0
+
+    :cond_1
+    iput-wide p2, p0, Ldx6;->u:J
+
+    :goto_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, p4, v0
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_3
+
+    iget-wide v0, p0, Ldx6;->u:J
+
+    invoke-static {v0, v1, p4, p5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    goto :goto_1
+
+    :cond_3
+    iget-wide v0, p0, Ldx6;->u:J
+
+    add-long/2addr v0, p4
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :goto_1
+    iput-wide v0, p0, Ldx6;->e:J
+
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_4
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    iput-boolean p1, p0, Ldx6;->f:Z
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Ldx6;->v:Lcx6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getConfig()Lpf3;
+.method public final a(Ljava/util/List;)Ljava/lang/Object;
     .locals 0
-
-    iget-object p0, p0, Ldx6;->a:Lgpa;
 
     return-object p0
-.end method
-
-.method public final getInputFormat()I
-    .locals 0
-
-    const/16 p0, 0x23
-
-    return p0
 .end method

@@ -1,99 +1,118 @@
-.class public abstract Lc8b;
-.super Ljava/lang/Object;
+.class public final Lc8b;
+.super Lsnc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
+# instance fields
+.field public final b:F
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lg0c;->pooling_container_listener_holder_tag:I
-
-    sput v0, Lc8b;->a:I
-
-    sget v0, Lg0c;->is_pooling_container_tag:I
-
-    sput v0, Lc8b;->b:I
+    .locals 0
 
     return-void
 .end method
 
-.method public static final a(Landroid/view/View;)V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-static {p0}, Le64;->h(Landroid/view/View;)Lps;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    const/high16 v0, -0x40800000    # -1.0f
 
-    iget-object p0, p0, Lps;->b:Ljava/lang/Object;
+    .line 2
+    iput v0, p0, Lc8b;->b:F
 
-    check-cast p0, Lanc;
+    return-void
+.end method
 
-    invoke-static {p0}, Lno9;->r(Lt96;)Ldad;
+.method public constructor <init>(F)V
+    .locals 2
 
-    move-result-object p0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :goto_0
-    invoke-virtual {p0}, Ldad;->hasNext()Z
+    const/4 v0, 0x0
 
-    move-result v0
+    cmpl-float v0, p1, v0
 
-    if-eqz v0, :cond_2
+    if-ltz v0, :cond_0
 
-    invoke-virtual {p0}, Ldad;->next()Ljava/lang/Object;
+    const/high16 v0, 0x42c80000    # 100.0f
 
-    move-result-object v0
+    cmpg-float v0, p1, v0
 
-    check-cast v0, Landroid/view/View;
+    if-gtz v0, :cond_0
 
-    sget v1, Lc8b;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ld8b;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Ld8b;
-
-    invoke-direct {v2}, Ld8b;-><init>()V
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, v2, Ld8b;->a:Ljava/util/ArrayList;
-
-    invoke-static {v0}, Lh73;->R(Ljava/util/List;)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-lt v2, v1, :cond_1
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object p0
+    .line 4
+    :goto_0
+    const-string v1, "percent must be in the range of [0, 100]"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1, v0}, Lyhh;->d(Ljava/lang/String;Z)V
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    .line 5
+    iput p1, p0, Lc8b;->b:F
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p0
-
-    :cond_2
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Lc8b;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Lc8b;
+
+    iget p1, p1, Lc8b;->b:F
+
+    iget v0, p0, Lc8b;->b:F
+
+    cmpl-float p1, v0, p1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lc8b;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

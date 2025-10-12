@@ -1,99 +1,391 @@
-.class public final La3d;
+.class public abstract La3d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lkpd;
+# static fields
+.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public static final b:Ljava/util/WeakHashMap;
+
+.field public static final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    const/4 v1, 0x7
+    sput-object v0, La3d;->a:Ljava/lang/ThreadLocal;
 
-    invoke-static {v0, v0, v1}, Llpd;->b(III)Lkpd;
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/WeakHashMap;-><init>(I)V
+
+    sput-object v0, La3d;->b:Ljava/util/WeakHashMap;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, La3d;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    .locals 7
+
+    invoke-virtual {p0}, Landroid/content/Context;->isRestricted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    new-instance v2, Landroid/util/TypedValue;
+
+    invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    invoke-static/range {v0 .. v6}, La3d;->b(Landroid/content/Context;ILandroid/util/TypedValue;ILtp;ZZ)Landroid/graphics/Typeface;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/content/Context;ILandroid/util/TypedValue;ILtp;ZZ)Landroid/graphics/Typeface;
+    .locals 12
+
+    move-object/from16 v7, p4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, p1, p2, v0}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
+
+    const-string v9, "ResourcesCompat"
+
+    iget-object v0, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_c
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v0, "res/"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/4 v10, 0x0
+
+    const/4 v11, -0x3
+
+    if-nez v0, :cond_0
+
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ltp;->i(I)V
+
+    goto/16 :goto_4
+
+    :cond_0
+    iget v0, p2, Landroid/util/TypedValue;->assetCookie:I
+
+    sget-object v6, Lixf;->b:Lt78;
+
+    invoke-static {v2, p1, v4, v0, p3}, Lixf;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, La3d;->a:Lkpd;
+    invoke-virtual {v6, v0}, Lt78;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {p2}, Lth7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p2
+    check-cast v0, Landroid/graphics/Typeface;
 
-    check-cast p2, Lhoe;
+    if-eqz v0, :cond_2
 
-    check-cast p2, Loba;
+    if-eqz v7, :cond_1
 
-    invoke-virtual {p2}, Loba;->c()Li08;
+    new-instance p0, Landroid/os/Handler;
 
-    move-result-object p2
-
-    invoke-static {p2}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object p2
 
-    iput-object p2, p0, La3d;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    new-instance p2, Lwpb;
+
+    const/16 p3, 0xf
+
+    invoke-direct {p2, v7, p3, v0}, Lwpb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    move-object v10, v0
+
+    goto/16 :goto_4
+
+    :cond_2
+    if-eqz p6, :cond_3
+
+    goto/16 :goto_4
+
+    :cond_3
+    :try_start_0
+    invoke-virtual {v4}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ".xml"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lnu3;->t(Landroid/content/res/XmlResourceParser;Landroid/content/res/Resources;)Lv66;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    const-string p0, "Failed to find font-family tag"
+
+    invoke-static {v9, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ltp;->i(I)V
+
+    goto/16 :goto_4
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    move-object p0, v0
+
+    goto :goto_2
+
+    :cond_4
+    iget v5, p2, Landroid/util/TypedValue;->assetCookie:I
+
+    move-object v0, p0
+
+    move v3, p1
+
+    move v6, p3
+
+    move/from16 v8, p5
+
+    invoke-static/range {v0 .. v8}, Lixf;->b(Landroid/content/Context;Lv66;Landroid/content/res/Resources;ILjava/lang/String;IILtp;Z)Landroid/graphics/Typeface;
+
+    move-result-object v10
+
+    goto :goto_4
+
+    :cond_5
+    iget p2, p2, Landroid/util/TypedValue;->assetCookie:I
+
+    sget-object v0, Lixf;->a:Lv2;
+
+    move-object v1, p0
+
+    move v3, p1
+
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lv2;->C0(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_6
+
+    invoke-static {v2, p1, v4, p2, p3}, Lixf;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v6, p2, p0}, Lt78;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6
+    if-eqz v7, :cond_7
+
+    if-eqz p0, :cond_8
+
+    new-instance p2, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance p3, Lwpb;
+
+    const/16 v0, 0xf
+
+    invoke-direct {p3, v7, v0, p0}, Lwpb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p2, p3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_7
+    :goto_0
+    move-object v10, p0
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v7, v11}, Ltp;->i(I)V
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :goto_1
+    const-string p2, "Failed to read xml resource "
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_3
+
+    :goto_2
+    const-string p2, "Failed to parse xml resource "
+
+    invoke-virtual {p2, v4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_3
+    if-eqz v7, :cond_9
+
+    invoke-virtual {v7, v11}, Ltp;->i(I)V
+
+    :cond_9
+    :goto_4
+    if-nez v10, :cond_b
+
+    if-nez v7, :cond_b
+
+    if-eqz p6, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    new-instance p0, Landroid/content/res/Resources$NotFoundException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Font resource ID #0x"
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lrv0;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Lrv0;->d(Ljava/lang/Object;)V
+    const-string p1, " could not be retrieved."
 
-    return-void
-.end method
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-# virtual methods
-.method public final onEvent(Lgj0;)V
-    .locals 2
-    .annotation runtime Lvee;
-    .end annotation
+    move-result-object p1
 
-    .line 2
-    new-instance v0, Lz2d;
+    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    throw p0
 
-    invoke-direct {v0, p0, p1, v1}, Lz2d;-><init>(La3d;Lgj0;Lkotlin/coroutines/Continuation;)V
+    :cond_b
+    :goto_5
+    return-object v10
 
-    const/4 p1, 0x3
+    :cond_c
+    new-instance p0, Landroid/content/res/Resources$NotFoundException;
 
-    iget-object p0, p0, La3d;->b:Lkotlinx/coroutines/internal/ContextScope;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v1, v1, v0, p1}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    const-string v0, "Resource \""
 
-    return-void
-.end method
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final onEvent(Lpm2;)V
-    .locals 2
-    .annotation runtime Lvee;
-    .end annotation
+    invoke-virtual {v2, p1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
-    .line 1
-    new-instance v0, Ly2d;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p0, p1, v1}, Ly2d;-><init>(La3d;Lpm2;Lkotlin/coroutines/Continuation;)V
+    const-string v0, "\" ("
 
-    const/4 p1, 0x3
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, La3d;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    invoke-static {p0, v1, v1, v0, p1}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    move-result-object p1
 
-    return-void
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ") is not a Font: "
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

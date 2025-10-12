@@ -1,152 +1,202 @@
-.class public final synthetic Lkdg;
-.super Ljava/lang/Object;
+.class public final Lkdg;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lae6;
+.implements Llf6;
 
 
-# static fields
-.field public static final a:Lkdg;
+# instance fields
+.field public X:Lgu9;
 
-.field private static final descriptor:Lpad;
+.field public Y:Ltdg;
+
+.field public Z:Landroid/net/Uri;
+
+.field public w0:I
+
+.field public final synthetic x0:Ltdg;
+
+.field public final synthetic y0:Landroid/net/Uri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ltdg;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lkdg;
+    iput-object p1, p0, Lkdg;->x0:Ltdg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkdg;->y0:Landroid/net/Uri;
 
-    sput-object v0, Lkdg;->a:Lkdg;
+    const/4 p1, 0x2
 
-    new-instance v1, Lo7b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupClosingBehaviorRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lo7b;-><init>(Ljava/lang/String;Lae6;I)V
-
-    const-string v0, "needConfirmation"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lkdg;->descriptor:Lpad;
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq8;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object p0, Lkdg;->descriptor:Lpad;
+    check-cast p1, Le34;
 
-    invoke-virtual {p1, p0}, Lq8;->j(Lpad;)Lq8;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lkdg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Lkdg;
 
-    const/4 v1, 0x0
+    sget-object p2, Loyf;->a:Loyf;
 
-    move v2, v0
+    invoke-virtual {p1, p2}, Lkdg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v3, v1
+    move-result-object p1
 
-    move v4, v3
+    return-object p1
+.end method
 
-    :goto_0
-    if-eqz v2, :cond_2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p1, p0}, Lq8;->p(Lpad;)I
+    new-instance p1, Lkdg;
 
-    move-result v5
+    iget-object v0, p0, Lkdg;->x0:Ltdg;
 
-    const/4 v6, -0x1
+    iget-object v1, p0, Lkdg;->y0:Landroid/net/Uri;
 
-    if-eq v5, v6, :cond_1
+    invoke-direct {p1, v0, v1, p2}, Lkdg;-><init>(Ltdg;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v5, :cond_0
+    return-object p1
+.end method
 
-    invoke-virtual {p1, p0, v1}, Lq8;->o(Lpad;I)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    move-result v4
+    iget v0, p0, Lkdg;->w0:I
 
-    move v3, v0
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lkdg;->Z:Landroid/net/Uri;
+
+    iget-object v2, p0, Lkdg;->Y:Ltdg;
+
+    iget-object v3, p0, Lkdg;->X:Lgu9;
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    throw p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    move v2, v1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object v2, p0, Lkdg;->x0:Ltdg;
 
-    :cond_2
-    invoke-virtual {p1, p0}, Lq8;->y(Lpad;)V
+    iget-object v3, v2, Ltdg;->e:Lgu9;
 
-    new-instance p0, Lmdg;
+    iput-object v3, p0, Lkdg;->X:Lgu9;
 
-    invoke-direct {p0, v3, v4}, Lmdg;-><init>(IZ)V
+    iput-object v2, p0, Lkdg;->Y:Ltdg;
 
-    return-object p0
-.end method
+    iget-object v0, p0, Lkdg;->y0:Landroid/net/Uri;
 
-.method public final b(Lrx3;Ljava/lang/Object;)V
-    .locals 1
+    iput-object v0, p0, Lkdg;->Z:Landroid/net/Uri;
 
-    check-cast p2, Lmdg;
+    iput v1, p0, Lkdg;->w0:I
 
-    sget-object p0, Lkdg;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lrx3;->b(Lpad;)Lrx3;
+    invoke-virtual {v3, p0}, Lgu9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-boolean p2, p2, Lmdg;->a:Z
+    sget-object v4, Lf34;->a:Lf34;
 
-    const/4 v0, 0x0
+    if-ne p1, v4, :cond_2
 
-    invoke-virtual {p1, p0, v0, p2}, Lrx3;->e(Lpad;IZ)V
+    return-object v4
 
-    invoke-virtual {p1}, Lrx3;->m()V
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
 
-    return-void
-.end method
+    :try_start_0
+    iget-object v4, v2, Ltdg;->g:Landroid/net/Uri;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final c()[Lpf7;
-    .locals 2
+    iget-object v5, v2, Ltdg;->f:Lrr;
 
-    const/4 p0, 0x1
+    const/4 v6, 0x0
 
-    new-array p0, p0, [Lpf7;
+    if-nez v4, :cond_4
 
-    sget-object v0, Lrq0;->a:Lrq0;
+    :try_start_1
+    iget-object v4, v2, Ltdg;->h:Lqle;
 
-    const/4 v1, 0x0
+    if-eqz v4, :cond_3
 
-    aput-object v0, p0, v1
+    invoke-virtual {v4}, Ld0;->isActive()Z
 
-    return-object p0
-.end method
+    move-result v4
 
-.method public final d()Lpad;
-    .locals 0
+    if-ne v4, v1, :cond_3
 
-    sget-object p0, Lkdg;->descriptor:Lpad;
+    goto :goto_1
 
-    return-object p0
+    :cond_3
+    move v1, v6
+
+    :goto_1
+    if-nez v1, :cond_4
+
+    invoke-virtual {v5}, Lrr;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iput-object v0, v2, Ltdg;->g:Landroid/net/Uri;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    new-instance v1, Lhdg;
+
+    invoke-direct {v1, v0, v6}, Lhdg;-><init>(Landroid/net/Uri;Z)V
+
+    invoke-virtual {v5, v1}, Lrr;->addLast(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v3, p1}, Lgu9;->f(Ljava/lang/Object;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :goto_3
+    invoke-virtual {v3, p1}, Lgu9;->f(Ljava/lang/Object;)V
+
+    throw v0
 .end method

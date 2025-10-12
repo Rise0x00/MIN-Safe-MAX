@@ -1,40 +1,67 @@
 .class public final Lrk7;
-.super Ljava/lang/Object;
+.super Lsk7;
 .source "SourceFile"
 
-# interfaces
-.implements Lvl;
 
-
-# instance fields
-.field public final synthetic a:Lvl;
+# static fields
+.field public static final d:Lrk7;
 
 
 # direct methods
-.method public constructor <init>(Lyl;Luk7;Lxl;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrk7;
 
-    iput-object p3, p0, Lrk7;->a:Lvl;
+    const/4 v1, 0x6
 
-    new-instance p3, Lqk7;
+    const/4 v2, 0x0
 
-    invoke-direct {p3, p1, p0, p2}, Lqk7;-><init>(Lyl;Lrk7;Luk7;)V
+    const-string v3, "unknown"
 
-    invoke-virtual {p2, p3}, Luk7;->a(Lok7;)V
+    invoke-direct {v0, v3, v1, v2}, Lsk7;-><init>(Ljava/lang/String;ILtk7;)V
+
+    sput-object v0, Lrk7;->d:Lrk7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f0(Lyl;I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lrk7;->a:Lvl;
+    const/4 v0, 0x1
 
-    invoke-interface {p0, p1, p2}, Lvl;->f0(Lyl;I)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lrk7;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2c724b44
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "UnknownError"
+
+    return-object v0
 .end method

@@ -3,70 +3,73 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lav5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
+.field public final synthetic b:Lrib;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
+.method public synthetic constructor <init>(Lrib;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqib;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqib;->b:Lrib;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lrib;Lw29;Lo10;)V
     .locals 0
+
+    .line 2
+    const/4 p2, 0x1
 
     iput p2, p0, Lqib;->a:I
 
-    iput-object p1, p0, Lqib;->b:Lone/me/profileedit/ProfileEditScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqib;->b:Lrib;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final a()V
+    .locals 2
 
-    iget p1, p0, Lqib;->a:I
+    iget v0, p0, Lqib;->a:I
 
-    iget-object p0, p0, Lqib;->b:Lone/me/profileedit/ProfileEditScreen;
+    packed-switch v0, :pswitch_data_0
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Lqib;->b:Lrib;
 
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->t0:[Lof7;
+    iget-object v0, v0, Lrib;->G0:Lru/ok/messages/video/widgets/FloatingVideoView;
 
-    invoke-virtual {p0}, Lone/me/profileedit/ProfileEditScreen;->y0()Lmjb;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p0}, Lmjb;->w()V
-
+    :cond_0
     return-void
 
     :pswitch_0
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->t0:[Lof7;
+    iget-object v0, p0, Lqib;->b:Lrib;
 
-    invoke-virtual {p0}, Lone/me/profileedit/ProfileEditScreen;->y0()Lmjb;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Lrib;->k(Z)V
 
-    iget-object p0, p0, Lmjb;->b:Lmy4;
-
-    invoke-virtual {p0}, Lmy4;->d()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lmy4;->k()V
-
-    :goto_0
     return-void
 
     :pswitch_data_0

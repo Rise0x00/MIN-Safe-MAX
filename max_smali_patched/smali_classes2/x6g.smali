@@ -1,21 +1,51 @@
 .class public final Lx6g;
-.super Lko;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lx6g;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
+    const/4 v0, 0x1
 
-# direct methods
-.method static constructor <clinit>()V
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lx6g;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lx6g;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    new-instance v0, Lx6g;
+    const/high16 v0, 0x1f000000
 
-    invoke-direct {v0}, Lko;-><init>()V
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sput-object v0, Lx6g;->a:Lx6g;
+    move-result v0
 
-    return-void
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "VfxButtonIconOverlayPlainElevation1Colors(color=520093696)"
+
+    return-object v0
 .end method

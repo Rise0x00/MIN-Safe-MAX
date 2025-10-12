@@ -1,25 +1,16 @@
-.class public final Lmkc;
-.super Lry;
-.source "SourceFile"
+.class public abstract Lmkc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final X:Llkc;
+# static fields
+.field public static oneme_stickers_preview_action_favorite_title:I = 0x7f130a3f
 
-.field public final o:Z
+.field public static oneme_stickers_preview_action_forward_title:I = 0x7f130a40
 
+.field public static oneme_stickers_preview_action_in_favorite_title:I = 0x7f130a41
 
-# direct methods
-.method public constructor <init>(ZLlkc;ZZ)V
-    .locals 1
+.field public static oneme_stickers_preview_action_send_title:I = 0x7f130a42
 
-    sget-object v0, Lr00;->v0:Lr00;
+.field public static oneme_stickers_preview_snackbar_favorite_added:I = 0x7f130a43
 
-    invoke-direct {p0, v0, p3, p4}, Lry;-><init>(Lr00;ZZ)V
-
-    iput-boolean p1, p0, Lmkc;->o:Z
-
-    iput-object p2, p0, Lmkc;->X:Llkc;
-
-    return-void
-.end method
+.field public static oneme_stickers_preview_snackbar_favorite_removed:I = 0x7f130a44

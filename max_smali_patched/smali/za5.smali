@@ -2,38 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhb5;
+
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Ljava/lang/Object;
+.field public final a:Lqm8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JJZZZ)V
+.method public constructor <init>(Lqm8;)V
     .locals 0
 
-    iput-object p1, p0, Lza5;->f:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lza5;->a:J
-
-    iput-wide p4, p0, Lza5;->b:J
-
-    iput-boolean p6, p0, Lza5;->c:Z
-
-    iput-boolean p7, p0, Lza5;->d:Z
-
-    iput-boolean p8, p0, Lza5;->e:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lza5;->a:Lqm8;
 
     return-void
 .end method

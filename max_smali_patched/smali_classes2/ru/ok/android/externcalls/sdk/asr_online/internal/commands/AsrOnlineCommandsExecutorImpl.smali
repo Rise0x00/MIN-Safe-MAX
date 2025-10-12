@@ -15,20 +15,20 @@
         "Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;",
         "Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutor;",
         "Lkotlin/Function0;",
-        "Lez0;",
+        "Lfz0;",
         "getCall",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "<init>",
-        "(Ld96;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
+        "(Lve6;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
         "",
         "isEnabled",
-        "Ltcf;",
+        "Loyf;",
         "enableAsrOnline",
         "(Z)V",
         "onMigratedToServerCallTopology",
         "()V",
-        "Ld96;",
+        "Lve6;",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "isAsrOnlineEnabled",
         "Z",
@@ -45,10 +45,10 @@
 
 
 # instance fields
-.field private final getCall:Ld96;
+.field private final getCall:Lve6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ld96;"
+            "Lve6;"
         }
     .end annotation
 .end field
@@ -59,12 +59,12 @@
 
 
 # direct methods
-.method public constructor <init>(Ld96;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+.method public constructor <init>(Lve6;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
+            "Lve6;",
             "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
             ")V"
         }
@@ -72,7 +72,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Ld96;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Lve6;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
@@ -86,24 +86,24 @@
 
     iput-boolean p1, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->isAsrOnlineEnabled:Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Lve6;
 
-    invoke-interface {v0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lez0;
+    check-cast v0, Lfz0;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, v0, Lez0;->i0:Lwp1;
+    iget-object v0, v0, Lfz0;->k0:Ldq1;
 
-    sget-object v1, Lh1f;->b:Lh1f;
+    sget-object v1, Lwlf;->b:Lwlf;
 
-    invoke-virtual {v0, v1}, Lwp1;->H(Lh1f;)Z
+    invoke-virtual {v0, v1}, Ldq1;->G(Lwlf;)Z
 
     move-result v0
 
@@ -113,36 +113,36 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0, p1}, Lds0;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lee6;
+    invoke-static {v0, p1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
 
     move-result-object p1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p0, p1}, Lpsd;->i(Lssd;)V
+    invoke-virtual {v0, p1}, Ldce;->i(Lgce;)V
 
     return-void
 
     :cond_1
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Lve6;
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lez0;
+    check-cast v0, Lfz0;
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lez0;->i0:Lwp1;
+    iget-object v0, v0, Lfz0;->k0:Ldq1;
 
-    invoke-virtual {p0, p1}, Lwp1;->O(Z)V
+    invoke-virtual {v0, p1}, Ldq1;->N(Z)V
 
     :cond_2
     :goto_0
@@ -150,27 +150,27 @@
 .end method
 
 .method public onMigratedToServerCallTopology()V
-    .locals 1
+    .locals 2
 
     iget-boolean v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->isAsrOnlineEnabled:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->getCall:Lve6;
 
-    invoke-interface {v0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lez0;
+    check-cast v0, Lfz0;
 
     if-eqz v0, :cond_0
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->isAsrOnlineEnabled:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/asr_online/internal/commands/AsrOnlineCommandsExecutorImpl;->isAsrOnlineEnabled:Z
 
-    iget-object v0, v0, Lez0;->i0:Lwp1;
+    iget-object v0, v0, Lfz0;->k0:Ldq1;
 
-    invoke-virtual {v0, p0}, Lwp1;->O(Z)V
+    invoke-virtual {v0, v1}, Ldq1;->N(Z)V
 
     :cond_0
     return-void

@@ -2,63 +2,48 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfr4;
 
+# instance fields
+.field public a:Lk8e;
 
-# static fields
-.field public static final a:Lbr4;
+.field public b:Lrw0;
 
+.field public c:Ln8f;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public d:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v0, Lbr4;
+.field public e:Landroid/content/Context;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public f:Lorg/webrtc/EglBase;
 
-    sput-object v0, Lbr4;->a:Lbr4;
+.field public g:Lmt9;
 
-    return-void
-.end method
+.field public h:Lgh1;
 
+.field public i:Ldce;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public j:Lwg1;
 
-    const/4 v0, 0x1
+.field public k:Lpmc;
 
-    if-ne p0, p1, :cond_0
+.field public l:Lsmc;
 
-    return v0
+.field public m:Lct5;
 
-    :cond_0
-    instance-of p0, p1, Lbr4;
+.field public n:Z
 
-    if-nez p0, :cond_1
+.field public o:Lrxd;
 
-    const/4 p0, 0x0
+.field public p:Loh;
 
-    return p0
+.field public q:Lwd1;
 
-    :cond_1
-    return v0
-.end method
+.field public r:Ldf8;
 
-.method public final hashCode()I
-    .locals 0
+.field public s:Ly8d;
 
-    const p0, 0x6c825a23
+.field public t:Luhf;
 
-    return p0
-.end method
+.field public u:Lfz0;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Fail"
-
-    return-object p0
-.end method
+.field public v:Lfz0;

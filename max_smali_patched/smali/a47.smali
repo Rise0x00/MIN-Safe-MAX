@@ -1,53 +1,43 @@
 .class public final La47;
-.super Ljava/lang/Object;
+.super Lz37;
 .source "SourceFile"
 
-# interfaces
-.implements Lth7;
-.implements Ljava/io/Serializable;
 
-
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+# virtual methods
+.method public final a(Lv57;)Lt57;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p1}, Lv57;->o()Lt57;
 
-    iput-object p1, p0, La47;->a:Ljava/lang/Object;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c()V
+    .locals 0
 
     return-void
 .end method
 
+.method public final f(Lt57;)V
+    .locals 3
 
-# virtual methods
-.method public final a()Z
-    .locals 0
+    invoke-virtual {p0, p1}, Lz37;->b(Lt57;)Ljx7;
 
-    const/4 p0, 0x1
+    move-result-object v0
 
-    return p0
-.end method
+    new-instance v1, Lf7d;
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 0
+    const/16 v2, 0x12
 
-    iget-object p0, p0, La47;->a:Ljava/lang/Object;
+    invoke-direct {v1, v2, p1}, Lf7d;-><init>(ILjava/lang/Object;)V
 
-    return-object p0
-.end method
+    invoke-static {}, Lvb4;->j()Lgr4;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-result-object p1
 
-    iget-object p0, p0, La47;->a:Ljava/lang/Object;
+    invoke-static {v0, v1, p1}, Lpch;->b(Ljx7;Llg6;Ljava/util/concurrent/Executor;)V
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

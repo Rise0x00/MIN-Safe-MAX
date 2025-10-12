@@ -1,190 +1,90 @@
 .class public final Ltd5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lpd5;
 .source "SourceFile"
-
-# interfaces
-.implements Lg5f;
-
-
-# instance fields
-.field public final a:Landroid/view/View;
-
-.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    .line 3
+    invoke-direct {p0, p1}, Lpd5;-><init>(Ljava/io/InputStream;)V
 
-    const/4 v0, 0x0
+    .line 4
+    invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
 
-    iput-boolean v0, p0, Ltd5;->b:Z
+    move-result p1
 
-    iput-object p1, p0, Ltd5;->a:Landroid/view/View;
+    if-eqz p1, :cond_0
+
+    .line 5
+    iget-object p1, p0, Lpd5;->a:Ljava/io/DataInputStream;
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
+
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public constructor <init>([B)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0, p1}, Lpd5;-><init>([B)V
+
+    .line 2
+    iget-object p1, p0, Lpd5;->a:Ljava/io/DataInputStream;
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Li5f;)V
-    .locals 0
+.method public final d(J)V
+    .locals 3
 
-    return-void
-.end method
+    iget v0, p0, Lpd5;->c:I
 
-.method public final b()V
-    .locals 2
+    int-to-long v1, v0
 
-    iget-object p0, p0, Ltd5;->a:Landroid/view/View;
+    cmp-long v1, v1, p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
+    if-lez v1, :cond_0
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    iput v0, p0, Lpd5;->c:I
 
-    sget-object v0, Lxzf;->a:Ls32;
+    iget-object v0, p0, Lpd5;->a:Ljava/io/DataInputStream;
 
-    invoke-virtual {p0}, Landroid/view/View;->getTransitionAlpha()F
-
-    move-result v0
+    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    int-to-long v0, v0
+
+    sub-long/2addr p1, v0
 
     :goto_0
-    sget v1, Liyb;->transition_pause_alpha:I
+    long-to-int p1, p1
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {p0, p1}, Lpd5;->c(I)V
 
-    move-result-object v0
-
-    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final c(Li5f;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d(Li5f;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 2
-
-    sget v0, Liyb;->transition_pause_alpha:I
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Ltd5;->a:Landroid/view/View;
-
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final h(Li5f;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    sget-object p1, Lxzf;->a:Ls32;
-
-    iget-object p0, p0, Ltd5;->a:Landroid/view/View;
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionAlpha(F)V
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-virtual {p0, p1, v0}, Ltd5;->onAnimationEnd(Landroid/animation/Animator;Z)V
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 1
-
-    .line 2
-    iget-boolean p1, p0, Ltd5;->b:Z
-
-    iget-object p0, p0, Ltd5;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    const/4 v0, 0x0
-
-    .line 3
-    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    :cond_0
-    if-nez p2, :cond_1
-
-    .line 4
-    sget-object p1, Lxzf;->a:Ls32;
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 5
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionAlpha(F)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, Ltd5;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->hasOverlappingRendering()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltd5;->b:Z
-
-    const/4 p0, 0x2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p0, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    :cond_0
     return-void
 .end method

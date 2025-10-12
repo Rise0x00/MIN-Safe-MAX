@@ -1,34 +1,86 @@
-.class public abstract Luwb;
-.super Ljava/lang/Object;
+.class public final Luwb;
+.super Ldd0;
+.source "SourceFile"
 
 
-# static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
+# instance fields
+.field public final b:J
 
-.field public static flash_close_button_height:I = 0x7f0700f8
 
-.field public static flash_close_button_width:I = 0x7f0700f9
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static flash_close_wrapper_height:I = 0x7f0700fa
+    const/16 v0, 0xd
 
-.field public static flash_close_wrapper_width:I = 0x7f0700fb
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-.field public static full_screen_mode_button_height:I = 0x7f070114
+    iput-wide p1, p0, Luwb;->b:J
 
-.field public static full_screen_mode_button_width:I = 0x7f070115
+    return-void
+.end method
 
-.field public static gallery_album_cover_size:I = 0x7f070116
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static quick_camera_button_margin:I = 0x7f0703f0
+    const/4 v0, 0x1
 
-.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+    if-ne p0, p1, :cond_0
 
-.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+    return v0
 
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+    :cond_0
+    instance-of v1, p1, Luwb;
 
-.field public static quick_camera_wrapper_height:I = 0x7f0703f4
+    const/4 v2, 0x0
 
-.field public static quick_camera_wrapper_width:I = 0x7f0703f5
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Luwb;
+
+    iget-wide v3, p0, Luwb;->b:J
+
+    iget-wide v5, p1, Luwb;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Luwb;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "InviteByLink(id="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Luwb;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

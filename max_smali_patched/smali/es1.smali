@@ -1,11 +1,64 @@
-.class public interface abstract Les1;
+.class public final Les1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# virtual methods
-.method public abstract g(Lobc;Lomc;)V
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lc5f;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lc5f;Lc5f;I)V
+    .locals 0
+
+    iput p3, p0, Les1;->a:I
+
+    iput-object p2, p0, Les1;->b:Lc5f;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract i(Lobc;Ljava/io/IOException;)V
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Les1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Les1;->b:Lc5f;
+
+    invoke-virtual {v0}, Lc5f;->d()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Les1;->b:Lc5f;
+
+    invoke-virtual {v0}, Lc5f;->d()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Les1;->b:Lc5f;
+
+    invoke-virtual {v0}, Lc5f;->d()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

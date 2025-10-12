@@ -1,119 +1,215 @@
 .class public final Laib;
-.super Lpd0;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public X:Lm82;
 
-.field public final c:Ljava/lang/String;
+.field public Y:J
+
+.field public Z:J
+
+.field public w0:I
+
+.field public final synthetic x0:Lbib;
+
+.field public final synthetic y0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lbib;ILkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0xd
+    iput-object p1, p0, Laib;->x0:Lbib;
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    iput p2, p0, Laib;->y0:I
 
-    iput-object p1, p0, Laib;->b:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Laib;->c:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Le34;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Laib;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Laib;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Laib;
 
-    iget-object v1, p0, Laib;->b:Ljava/lang/String;
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v3, p1, Laib;->b:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Laib;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
+    return-object p1
+.end method
 
-    if-nez v1, :cond_2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return v2
+    new-instance p1, Laib;
+
+    iget-object v0, p0, Laib;->x0:Lbib;
+
+    iget v1, p0, Laib;->y0:I
+
+    invoke-direct {p1, v0, v1, p2}, Laib;-><init>(Lbib;ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 23
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Laib;->w0:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Loyf;->a:Loyf;
+
+    iget-object v5, v0, Laib;->x0:Lbib;
+
+    sget-object v6, Lf34;->a:Lf34;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v3, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+
+    return-object v4
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    iget-wide v7, v0, Laib;->Z:J
+
+    iget-wide v9, v0, Laib;->Y:J
+
+    iget-object v1, v0, Laib;->X:Lm82;
+
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
     :cond_2
-    iget-object p0, p0, Laib;->c:Ljava/lang/String;
+    move-object/from16 v17, v1
 
-    iget-object p1, p1, Laib;->c:Ljava/lang/String;
+    move-wide/from16 v20, v7
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-wide/from16 v18, v9
 
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
+    goto :goto_0
 
     :cond_3
-    return v0
-.end method
+    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v1, v5, Lbib;->a:Lfoe;
 
-    iget-object v0, p0, Laib;->b:Ljava/lang/String;
+    invoke-interface {v1}, Lfoe;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object v1
 
-    move-result v0
+    check-cast v1, Lm82;
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v1, :cond_4
 
-    iget-object p0, p0, Laib;->c:Ljava/lang/String;
+    goto :goto_2
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    :cond_4
+    iget-object v7, v1, Lm82;->b:Lpc2;
 
-    move-result p0
+    iget-wide v9, v7, Lpc2;->a:J
 
-    add-int/2addr p0, v0
+    iget-object v7, v1, Lm82;->X:Lw29;
 
-    return p0
-.end method
+    if-eqz v7, :cond_5
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-object v7, v7, Lw29;->a:Lq49;
 
-    const-string v0, ", path="
+    iget-wide v7, v7, Lyi0;->a:J
 
-    const-string v1, ")"
+    iget-object v11, v5, Lbib;->c:Llv2;
 
-    const-string v2, "CropAvatar(uriAsString="
+    iget-wide v12, v1, Lm82;->a:J
 
-    iget-object v3, p0, Laib;->b:Ljava/lang/String;
+    iput-object v1, v0, Laib;->X:Lm82;
 
-    iget-object p0, p0, Laib;->c:Ljava/lang/String;
+    iput-wide v9, v0, Laib;->Y:J
 
-    invoke-static {v2, v3, v0, p0, v1}, Llge;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput-wide v7, v0, Laib;->Z:J
 
-    move-result-object p0
+    iput v3, v0, Laib;->w0:I
 
-    return-object p0
+    invoke-virtual {v11, v12, v13, v9, v10}, Llv2;->a(JJ)Loyf;
+
+    if-ne v4, v6, :cond_2
+
+    goto :goto_1
+
+    :goto_0
+    iget-object v1, v5, Lbib;->b:Lr8f;
+
+    check-cast v1, Lwla;
+
+    invoke-virtual {v1}, Lwla;->c()Le88;
+
+    move-result-object v1
+
+    new-instance v14, Lzhb;
+
+    iget v3, v0, Laib;->y0:I
+
+    const/16 v22, 0x0
+
+    iget-object v15, v0, Laib;->x0:Lbib;
+
+    move/from16 v16, v3
+
+    invoke-direct/range {v14 .. v22}, Lzhb;-><init>(Lbib;ILm82;JJLkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x0
+
+    iput-object v3, v0, Laib;->X:Lm82;
+
+    iput v2, v0, Laib;->w0:I
+
+    invoke-static {v1, v14, v0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_5
+
+    :goto_1
+    return-object v6
+
+    :cond_5
+    :goto_2
+    return-object v4
 .end method

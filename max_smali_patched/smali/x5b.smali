@@ -1,95 +1,48 @@
-.class public interface abstract Lx5b;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lx5b;
+.super Lnz3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Ls5b;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ls5b;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lx5b;->Y:Ls5b;
+
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A(Ljava/util/List;)V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract a()F
-.end method
+    iput-object p1, p0, Lx5b;->o:Ljava/lang/Object;
 
-.method public abstract b()Lte8;
-.end method
+    iget p1, p0, Lx5b;->X:I
 
-.method public abstract c(I)Z
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract d()Landroid/os/Looper;
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract f()J
-.end method
+    iput p1, p0, Lx5b;->X:I
 
-.method public abstract g()Z
-.end method
+    iget-object p1, p0, Lx5b;->Y:Ls5b;
 
-.method public abstract getDuration()J
-.end method
+    const/4 v0, 0x0
 
-.method public abstract getPlaybackState()I
-.end method
+    invoke-virtual {p1, v0, p0}, Ls5b;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public abstract getRepeatMode()I
-.end method
+    move-result-object p1
 
-.method public abstract h()J
-.end method
-
-.method public abstract i(Lte8;J)V
-.end method
-
-.method public abstract j()Z
-.end method
-
-.method public abstract k(Lu5b;)V
-.end method
-
-.method public abstract l()I
-.end method
-
-.method public abstract m()V
-.end method
-
-.method public abstract n()I
-.end method
-
-.method public abstract p()Landroidx/media3/common/PlaybackException;
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract prepare()V
-.end method
-
-.method public abstract q()J
-.end method
-
-.method public abstract r()La4f;
-.end method
-
-.method public abstract s()I
-.end method
-
-.method public abstract t()I
-.end method
-
-.method public abstract u(Lu5b;)V
-.end method
-
-.method public abstract v()I
-.end method
-
-.method public abstract w()Lwxe;
-.end method
-
-.method public abstract x(Lte8;)V
-.end method
-
-.method public abstract y()Z
-.end method
-
-.method public abstract z(IJLjava/util/List;)V
+    return-object p1
 .end method

@@ -1,71 +1,131 @@
 .class public final Lz6g;
-.super Lfa4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lz6g;
+# instance fields
+.field public final a:Lw6g;
 
-.field public static final c:Laa4;
-
-.field public static final d:Laa4;
-
-.field public static final e:Laa4;
+.field public final b:La7g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lw6g;La7g;)V
+    .locals 0
 
-    new-instance v0, Lz6g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    iput-object p1, p0, Lz6g;->a:Lw6g;
 
-    sput-object v0, Lz6g;->b:Lz6g;
+    iput-object p2, p0, Lz6g;->b:La7g;
 
-    const-string v6, "bot_id"
+    return-void
+.end method
 
-    filled-new-array {v6}, [Ljava/lang/String;
 
-    move-result-object v2
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const/16 v5, 0xe
+    const/4 v0, 0x1
 
-    const/4 v4, 0x0
+    if-ne p0, p1, :cond_0
 
-    const-string v1, ":webapp:root"
+    return v0
 
-    const/4 v3, 0x0
+    :cond_0
+    instance-of v1, p1, Lz6g;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    sput-object v1, Lz6g;->c:Laa4;
+    return v2
 
-    const/4 v1, 0x0
+    :cond_1
+    check-cast p1, Lz6g;
 
-    new-array v2, v1, [Ljava/lang/String;
+    iget-object v1, p0, Lz6g;->a:Lw6g;
 
-    const-string v1, ":settings/webapps"
+    iget-object v3, p1, Lz6g;->a:Lw6g;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v1
 
-    sput-object v1, Lz6g;->d:Laa4;
+    if-nez v1, :cond_2
 
-    filled-new-array {v6}, [Ljava/lang/String;
+    return v2
 
-    move-result-object v2
+    :cond_2
+    iget-object v1, p0, Lz6g;->b:La7g;
 
-    const-string v1, ":settings/webapp"
+    iget-object p1, p1, Lz6g;->b:La7g;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lz6g;->a:Lw6g;
+
+    invoke-virtual {v0}, Lw6g;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lz6g;->b:La7g;
+
+    iget-object v1, v1, La7g;->a:Lb7g;
+
+    invoke-virtual {v1}, Lb7g;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VfxColors(buttonIconOverlayPlain="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lz6g;->a:Lw6g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", emptyBlock="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lz6g;->b:La7g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lz6g;->e:Laa4;
-
-    return-void
+    return-object v0
 .end method

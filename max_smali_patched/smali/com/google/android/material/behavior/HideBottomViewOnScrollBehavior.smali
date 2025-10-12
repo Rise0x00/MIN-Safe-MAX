@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
-.super Lkz3;
+.super Lz14;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
         "<V:",
         "Landroid/view/View;",
         ">",
-        "Lkz3;"
+        "Lz14;"
     }
 .end annotation
 
@@ -44,15 +44,15 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lsvb;->motionDurationLong2:I
+    sget v0, Lvac;->motionDurationLong2:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->i:I
 
-    sget v0, Lsvb;->motionDurationMedium4:I
+    sget v0, Lvac;->motionDurationMedium4:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->j:I
 
-    sget v0, Lsvb;->motionEasingEmphasizedInterpolator:I
+    sget v0, Lvac;->motionEasingEmphasizedInterpolator:I
 
     sput v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->k:I
 
@@ -140,7 +140,7 @@
 
     const/16 v0, 0xe1
 
-    invoke-static {p3, v0, p1}, Lj5e;->v(IILandroid/content/Context;)I
+    invoke-static {p3, v0, p1}, Lpih;->U(IILandroid/content/Context;)I
 
     move-result p1
 
@@ -154,7 +154,7 @@
 
     const/16 v0, 0xaf
 
-    invoke-static {p3, v0, p1}, Lj5e;->v(IILandroid/content/Context;)I
+    invoke-static {p3, v0, p1}, Lpih;->U(IILandroid/content/Context;)I
 
     move-result p1
 
@@ -164,11 +164,11 @@
 
     move-result-object p1
 
-    sget-object p3, Lhg;->d:Lte5;
+    sget-object p3, Lgg;->d:Lsj5;
 
     sget v0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->k:I
 
-    invoke-static {p1, v0, p3}, Lj5e;->w(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    invoke-static {p1, v0, p3}, Lpih;->V(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
     move-result-object p1
 
@@ -178,17 +178,17 @@
 
     move-result-object p1
 
-    sget-object p2, Lhg;->c:Lte5;
+    sget-object p2, Lgg;->c:Lsj5;
 
-    invoke-static {p1, v0, p2}, Lj5e;->w(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    invoke-static {p1, v0, p2}, Lpih;->V(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->e:Landroid/animation/TimeInterpolator;
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final p(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIIII[I)V
@@ -254,11 +254,11 @@
 
     move-result-object p1
 
-    new-instance p2, Lb6;
+    new-instance p2, Lh6;
 
     const/4 p3, 0x6
 
-    invoke-direct {p2, p3, p0}, Lb6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Lh6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -269,11 +269,11 @@
     return-void
 
     :cond_2
-    invoke-static {p1}, Ldl5;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Lnd5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_3
     if-gez p5, :cond_7
@@ -334,11 +334,11 @@
 
     move-result-object p1
 
-    new-instance p2, Lb6;
+    new-instance p2, Lh6;
 
     const/4 p3, 0x6
 
-    invoke-direct {p2, p3, p0}, Lb6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Lh6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -349,11 +349,11 @@
     return-void
 
     :cond_6
-    invoke-static {p1}, Ldl5;->h(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
+    invoke-static {p1}, Lnd5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
 
-    move-result-object p0
+    move-result-object p1
 
-    throw p0
+    throw p1
 
     :cond_7
     :goto_0
@@ -363,16 +363,16 @@
 .method public u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;II)Z
     .locals 0
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    if-ne p5, p0, :cond_0
+    if-ne p5, p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method

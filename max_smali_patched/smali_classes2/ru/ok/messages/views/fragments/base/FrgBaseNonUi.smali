@@ -14,18 +14,18 @@
 
 
 # virtual methods
-.method public final T0()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public k0(Landroid/os/Bundle;)V
+.method public final S0()Ljava/lang/String;
     .locals 1
 
-    invoke-super {p0, p1}, Lru/ok/messages/views/fragments/base/FrgBase;->k0(Landroid/os/Bundle;)V
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public j0(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lru/ok/messages/views/fragments/base/FrgBase;->j0(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -43,9 +43,9 @@
 
     const-string v0, "ru.ok.messages.views.fragments.base.FrgBaseNonUi"
 
-    invoke-static {v0, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->O0()V
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->N0()V
 
     return-void
 .end method

@@ -1,225 +1,169 @@
 .class public final Lolf;
-.super Lape;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
+.field public final a:I
 
-.field public Y:Z
+.field public final b:I
 
-.field public c:Ljava/util/List;
+.field public final c:I
 
-.field public o:J
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
+.method public constructor <init>(IIII)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p0, Lolf;->c:Ljava/util/List;
+    iput p1, p0, Lolf;->a:I
 
-    if-nez p1, :cond_0
+    iput p2, p0, Lolf;->b:I
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput p3, p0, Lolf;->c:I
 
-    iput-object p1, p0, Lolf;->c:Ljava/util/List;
+    iput p4, p0, Lolf;->d:I
 
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "backwardMarker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    const/4 v1, 0x3
+    instance-of v0, p1, Lolf;
 
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "history"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x2
+    check-cast p1, Lolf;
 
-    goto :goto_0
+    iget v0, p0, Lolf;->a:I
 
-    :sswitch_2
-    const-string v0, "hasMore"
+    iget v1, p1, Lolf;->a:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    const/4 v1, 0x1
+    iget v0, p0, Lolf;->b:I
 
-    goto :goto_0
+    iget v1, p1, Lolf;->b:I
 
-    :sswitch_3
-    const-string v0, "forwardMarker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
+    if-eq v0, v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    const/4 v1, 0x0
+    iget v0, p0, Lolf;->c:I
+
+    iget v1, p1, Lolf;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lolf;->d:I
+
+    iget p1, p1, Lolf;->d:I
+
+    if-eq v0, p1, :cond_5
 
     :goto_0
-    const-wide/16 v2, 0x0
+    const/4 p1, 0x0
 
-    packed-switch v1, :pswitch_data_0
+    return p1
 
-    invoke-virtual {p1}, Lq09;->B()V
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
 
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, v2, v3}, Lxu7;->j0(Lq09;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lolf;->X:J
-
-    return-void
-
-    :pswitch_1
-    new-instance p2, Lb18;
-
-    const/16 v0, 0x12
-
-    invoke-direct {p2, v0}, Lb18;-><init>(I)V
-
-    invoke-static {p1, p2}, Lxu7;->t0(Lq09;Lkh9;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lolf;->c:Ljava/util/List;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lxu7;->d0(Lq09;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lolf;->Y:Z
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, v2, v3}, Lxu7;->j0(Lq09;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lolf;->o:J
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x22b4d4a1 -> :sswitch_3
-        0x2987650f -> :sswitch_2
-        0x373fe494 -> :sswitch_1
-        0x3d0e95fd -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 7
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lolf;->c:Ljava/util/List;
+    iget v0, p0, Lolf;->a:I
 
-    invoke-static {v0}, Lah7;->l(Ljava/util/Collection;)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    iget-wide v1, p0, Lolf;->o:J
+    const/16 v1, 0x1f
 
-    iget-wide v3, p0, Lolf;->X:J
+    mul-int/2addr v0, v1
 
-    iget-boolean p0, p0, Lolf;->Y:Z
+    const/4 v2, -0x1
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    const-string v6, "{calls="
+    move-result v0
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lolf;->b:I
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    const-string v0, ", forwardMarker="
+    move-result v0
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lolf;->c:I
 
-    invoke-virtual {v5, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    const-string v0, ", backwardMarker="
+    move-result v0
 
-    const-string v1, ", hasMore="
+    iget v1, p0, Lolf;->d:I
 
-    invoke-static {v3, v4, v0, v1, v5}, Ldw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    const-string v0, "}"
+    move-result v1
 
-    invoke-static {v5, p0, v0}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    add-int/2addr v1, v0
 
-    move-result-object p0
+    return v1
+.end method
 
-    return-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", contrastStatic=-1, primary="
+
+    const-string v1, ", secondary="
+
+    const-string v2, "TopbarTextDefaultColors(contrast="
+
+    iget v3, p0, Lolf;->a:I
+
+    iget v4, p0, Lolf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", themed="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lolf;->c:I
+
+    iget v4, p0, Lolf;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

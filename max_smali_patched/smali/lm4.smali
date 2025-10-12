@@ -1,37 +1,68 @@
-.class public abstract Llm4;
+.class public final synthetic Llm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static volatile a:Lu8d;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrob;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lrob;I)V
+    .locals 0
 
-    sget-object v0, Lxub;->c:Lxub;
+    iput p2, p0, Llm4;->a:I
 
-    invoke-static {}, Lgog;->i()Lbo4;
+    iput-object p1, p0, Llm4;->b:Lrob;
 
-    move-result-object v1
-
-    new-instance v2, Lxj0;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v2, v3}, Lxj0;-><init>(I)V
-
-    iget-object v0, v0, Lxub;->a:Lbl9;
-
-    new-instance v3, Lwub;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v2}, Lwub;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1, v3}, Lbl9;->g(Ljava/util/concurrent/Executor;Ls0a;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Llm4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Llm4;->b:Lrob;
+
+    iget-object v0, v0, Lrob;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmm4;
+
+    iget-object v0, v0, Lmm4;->i:Luig;
+
+    invoke-interface {v0}, Luig;->v()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llm4;->b:Lrob;
+
+    iget-object v0, v0, Lrob;->c:Ljava/lang/Object;
+
+    check-cast v0, Lmm4;
+
+    iget-object v0, v0, Lmm4;->i:Luig;
+
+    invoke-interface {v0}, Luig;->onFirstFrameRendered()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

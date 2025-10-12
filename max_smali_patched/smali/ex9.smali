@@ -1,47 +1,43 @@
-.class public abstract Lex9;
+.class public final Lex9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:[I
+
+.field public final f:I
+
+.field public final g:F
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
+.method public constructor <init>(IZII[IIIIF)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setAllowSystemGeneratedContextualActions(Z)Landroid/app/Notification$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput p1, p0, Lex9;->a:I
 
-    return-object p0
-.end method
+    iput-boolean p2, p0, Lex9;->b:Z
 
-.method public static b(Landroid/app/Notification$Builder;Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
-    .locals 0
+    iput p3, p0, Lex9;->c:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBubbleMetadata(Landroid/app/Notification$BubbleMetadata;)Landroid/app/Notification$Builder;
+    iput p4, p0, Lex9;->d:I
 
-    move-result-object p0
+    iput-object p5, p0, Lex9;->e:[I
 
-    return-object p0
-.end method
+    iput p6, p0, Lex9;->f:I
 
-.method public static c(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
-    .locals 0
+    iput p9, p0, Lex9;->g:F
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setContextual(Z)Landroid/app/Notification$Action$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/app/Notification$Builder;Ljava/lang/Object;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    check-cast p1, Landroid/content/LocusId;
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setLocusId(Landroid/content/LocusId;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -1,25 +1,51 @@
-.class public abstract Lssc;
-.super Ljava/lang/Object;
+.class public final Lssc;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Ljava/util/ArrayList;
 
-.field public static final b:I
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lusc;
+
+.field public o:Lusc;
+
+.field public w0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lusc;Lnz3;)V
+    .locals 0
 
-    sget v0, Lb1c;->one_chat_reactions_expand_view_type:I
+    iput-object p1, p0, Lssc;->Z:Lusc;
 
-    sput v0, Lssc;->a:I
-
-    sget v0, Lb1c;->one_chat_reactions_selection_animoji_view_type:I
-
-    sput v0, Lssc;->b:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lssc;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lssc;->w0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lssc;->w0:I
+
+    iget-object p1, p0, Lssc;->Z:Lusc;
+
+    invoke-virtual {p1, p0}, Lusc;->a(Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

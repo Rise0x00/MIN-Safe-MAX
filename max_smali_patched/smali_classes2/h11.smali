@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract onAsrDataPackage(Lht;)V
+.method public abstract onAsrRecordStarted(Lf11;)V
+.end method
+
+.method public abstract onAsrRecordStopped(Lg11;)V
 .end method

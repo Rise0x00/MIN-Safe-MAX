@@ -1,57 +1,51 @@
 .class public final Lv09;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lnef;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lb6e;
+.field public final synthetic Y:Lb19;
+
+.field public Z:I
+
+.field public o:Lb19;
 
 
 # direct methods
-.method public constructor <init>(Lnef;Lb6e;)V
+.method public constructor <init>(Lb19;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lv09;->Y:Lb19;
 
-    iput-object p1, p0, Lv09;->a:Lnef;
-
-    iput-object p2, p0, Lv09;->b:Lb6e;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lv09;->X:Ljava/lang/Object;
 
-    const-string v1, "MessageUploadState{upload="
+    iget p1, p0, Lv09;->Z:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lv09;->a:Lnef;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lv09;->Z:I
 
-    const-string v1, ", sticker="
+    iget-object p1, p0, Lv09;->Y:Lb19;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lv09;->b:Lb6e;
+    invoke-static {p1, v0, p0}, Lb19;->s(Lb19;Lm82;Lnz3;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

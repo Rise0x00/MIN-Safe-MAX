@@ -23,13 +23,13 @@
         "Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;",
         "message",
         "Lkotlin/Function0;",
-        "Ltcf;",
+        "Loyf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "sendMessage",
-        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Ld96;Lf96;)V",
+        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lve6;Lxe6;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "calls-sdk_release"
@@ -63,34 +63,34 @@
     return-void
 .end method
 
-.method public static synthetic a(Ld96;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->sendMessage$lambda$2(Ld96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->sendMessage$lambda$2(Lve6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lf96;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lxe6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->sendMessage$lambda$3(Lf96;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->sendMessage$lambda$3(Lxe6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private static final sendMessage$lambda$2(Ld96;Lorg/json/JSONObject;)V
+.method private static final sendMessage$lambda$2(Lve6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final sendMessage$lambda$3(Lf96;Lorg/json/JSONObject;)V
+.method private static final sendMessage$lambda$3(Lxe6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -111,7 +111,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -119,21 +119,21 @@
 
 
 # virtual methods
-.method public sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Ld96;Lf96;)V
-    .locals 3
+.method public sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Lve6;Lxe6;)V
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lf96;)Lpsd;
+    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lxe6;)Ldce;
 
     move-result-object v0
 
@@ -150,106 +150,112 @@
 
     if-eqz v1, :cond_2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
+    iget-object v3, p0, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-interface {p0, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-interface {v3, v1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;->getByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    move-result-object p0
+    move-result-object v3
 
-    if-nez p0, :cond_3
+    if-nez v3, :cond_3
 
     if-eqz p3, :cond_1
 
-    new-instance p0, Ljava/lang/NullPointerException;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    const-string p2, "Couldn\'t find a ConversationParticipant for participantId="
+    const-string v0, "Couldn\'t find a ConversationParticipant for participantId="
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p3, p0}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     :goto_0
     return-void
 
     :cond_2
-    move-object p0, v2
+    move-object v3, v2
 
     :cond_3
-    if-eqz p0, :cond_4
+    if-eqz v3, :cond_4
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lwg1;
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lxg1;
 
-    move-result-object p0
+    move-result-object v1
 
     goto :goto_1
 
     :cond_4
-    move-object p0, v2
+    move-object v1, v2
 
     :goto_1
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;->getText()Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p0, :cond_5
+    if-eqz v1, :cond_5
 
     :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    const/4 v1, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {p0, v2, v1}, Lds0;->c(Lwg1;Lorg/json/JSONObject;Z)V
+    invoke-static {v1, v2, v3}, Lv63;->c(Lxg1;Lorg/json/JSONObject;Z)V
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_3
 
     :cond_5
-    const-string p0, "chat-message"
+    :goto_2
+    const-string v1, "chat-message"
 
-    invoke-static {v2, p0}, Lds0;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lee6;
+    invoke-static {v2, v1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "message"
+    const-string v2, "message"
 
-    iget-object v2, p0, Lee6;->a:Lorg/json/JSONObject;
+    iget-object v3, v1, Lxj6;->a:Lorg/json/JSONObject;
 
-    invoke-virtual {v2, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v3, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance p1, Lat;
+    new-instance p1, Lvs;
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    invoke-direct {p1, v1, p2}, Lat;-><init>(ILd96;)V
+    invoke-direct {p1, v2, p2}, Lvs;-><init>(ILve6;)V
 
-    new-instance p2, Lbt;
+    new-instance p2, Lws;
 
-    invoke-direct {p2, v1, p3}, Lbt;-><init>(ILf96;)V
+    invoke-direct {p2, v2, p3}, Lws;-><init>(ILxe6;)V
 
     const/4 p3, 0x0
 
-    invoke-virtual {v0, p0, p3, p1, p2}, Lpsd;->d(Lssd;ZLosd;Losd;)V
+    invoke-virtual {v0, v1, p3, p1, p2}, Ldce;->d(Lgce;ZLcce;Lcce;)V
 
     return-void
 
-    :catch_0
-    move-exception p0
+    :goto_3
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    throw p2
 .end method

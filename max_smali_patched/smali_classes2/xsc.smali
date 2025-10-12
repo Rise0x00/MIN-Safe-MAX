@@ -1,37 +1,32 @@
-.class public abstract Lxsc;
+.class public interface abstract Lxsc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public static final b:I
+.method public abstract b()V
+.end method
 
-.field public static final c:I
+.method public abstract c(Z)V
+.end method
 
-.field public static final d:I
+.method public abstract clear()V
+.end method
 
+.method public abstract d()V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract e()V
+.end method
 
-    sget v0, Llwb;->font_normal:I
+.method public abstract f()V
+.end method
 
-    sput v0, Lxsc;->a:I
+.method public abstract g(Ljava/lang/Long;)V
+.end method
 
-    sget v0, Llwb;->font_only_emoji:I
-
-    sput v0, Lxsc;->b:I
-
-    sget v0, Llwb;->font_small:I
-
-    sput v0, Lxsc;->c:I
-
-    sget v0, Llwb;->huge_horizontal_margin:I
-
-    sput v0, Lxsc;->d:I
-
-    return-void
+.method public abstract h(Lbtc;)V
 .end method

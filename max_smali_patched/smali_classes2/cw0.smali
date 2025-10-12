@@ -1,3 +1,3 @@
-.class public final Lcw0;
-.super Ljava/util/ArrayList;
+.class public interface abstract Lcw0;
+.super Ljava/lang/Object;
 .source "SourceFile"

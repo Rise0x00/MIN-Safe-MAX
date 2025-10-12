@@ -65,19 +65,19 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Ly5f;->b(Landroid/content/Context;)V
+    invoke-static {v4}, Lzqf;->b(Landroid/content/Context;)V
 
-    invoke-static {}, Lhc0;->a()Lru7;
+    invoke-static {}, Lvb0;->a()Lc28;
 
     move-result-object v4
 
-    invoke-virtual {v4, v0}, Lru7;->x(Ljava/lang/String;)V
+    invoke-virtual {v4, v0}, Lc28;->G(Ljava/lang/String;)V
 
-    invoke-static {v2}, Lmbb;->b(I)Ljbb;
+    invoke-static {v2}, Lnqb;->b(I)Lkqb;
 
     move-result-object v0
 
-    iput-object v0, v4, Lru7;->c:Ljava/lang/Object;
+    iput-object v0, v4, Lc28;->c:Ljava/lang/Object;
 
     if-eqz v1, :cond_0
 
@@ -87,42 +87,42 @@
 
     move-result-object v0
 
-    iput-object v0, v4, Lru7;->b:Ljava/lang/Object;
+    iput-object v0, v4, Lc28;->b:Ljava/lang/Object;
 
     :cond_0
-    invoke-static {}, Ly5f;->a()Ly5f;
+    invoke-static {}, Lzqf;->a()Lzqf;
 
     move-result-object v0
 
-    iget-object v0, v0, Ly5f;->d:Lkgf;
+    iget-object v0, v0, Lzqf;->d:Lx2g;
 
-    invoke-virtual {v4}, Lru7;->i()Lhc0;
+    invoke-virtual {v4}, Lc28;->t()Lvb0;
 
     move-result-object v1
 
-    new-instance v2, Ll77;
+    new-instance v2, Lwr5;
 
-    const/4 v4, 0x2
+    const/16 v4, 0xe
 
-    invoke-direct {v2, p0, v4, p1}, Ll77;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v4, p1}, Lwr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object p0, v0, Lkgf;->e:Ljava/util/concurrent/Executor;
+    iget-object p1, v0, Lx2g;->e:Ljava/util/concurrent/Executor;
 
-    new-instance p1, Lx35;
+    new-instance v4, Li85;
 
-    invoke-direct {p1, v0, v1, v3, v2}, Lx35;-><init>(Lkgf;Lhc0;ILjava/lang/Runnable;)V
+    invoke-direct {v4, v0, v1, v3, v2}, Li85;-><init>(Lx2g;Lvb0;ILjava/lang/Runnable;)V
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p1, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method

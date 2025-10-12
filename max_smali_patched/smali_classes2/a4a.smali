@@ -1,100 +1,39 @@
-.class public La4a;
-.super Landroid/widget/TextView;
+.class public final La4a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljyf;
+.field public final a:Lbp7;
+
+.field public final b:Lbp7;
+
+.field public final c:Lxob;
+
+.field public final d:Lov0;
+
+.field public final e:Lbp7;
+
+.field public final f:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getObserverSpanListener()Ljyf;
+.method public constructor <init>(Lbp7;Lbp7;Lxob;Lov0;Lbp7;Lbp7;)V
     .locals 0
 
-    iget-object p0, p0, La4a;->a:Ljyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
-.end method
+    iput-object p1, p0, La4a;->a:Lbp7;
 
-.method public final onWindowVisibilityChanged(I)V
-    .locals 1
+    iput-object p2, p0, La4a;->b:Lbp7;
 
-    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+    iput-object p3, p0, La4a;->c:Lxob;
 
-    if-eqz p1, :cond_1
+    iput-object p4, p0, La4a;->d:Lov0;
 
-    const/16 v0, 0x8
+    iput-object p5, p0, La4a;->e:Lbp7;
 
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, La4a;->a:Ljyf;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p0}, Ljyf;->onViewDetachedFromWindow(Landroid/view/View;)V
+    iput-object p6, p0, La4a;->f:Lbp7;
 
     return-void
-
-    :cond_1
-    iget-object p1, p0, La4a;->a:Ljyf;
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p0}, Ljyf;->a(Landroid/widget/TextView;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final setObserverSpanListener(Ljyf;)V
-    .locals 0
-
-    iput-object p1, p0, La4a;->a:Ljyf;
-
-    return-void
-.end method
-
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
-
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
-
-    if-nez v0, :cond_1
-
-    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
 .end method

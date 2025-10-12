@@ -26,7 +26,7 @@
         "(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V",
         "Landroid/graphics/Matrix;",
         "matrix",
-        "Ltcf;",
+        "Loyf;",
         "transform",
         "(Landroid/graphics/Matrix;)V",
         "Ljava/lang/String;",
@@ -34,7 +34,7 @@
         "()Ljava/lang/String;",
         "Landroid/graphics/Path;",
         "path$delegate",
-        "Lth7;",
+        "Lbp7;",
         "getPath",
         "()Landroid/graphics/Path;",
         "path",
@@ -62,7 +62,7 @@
 
 .field private final originalPath:Landroid/graphics/Path;
 
-.field private final path$delegate:Lth7;
+.field private final path$delegate:Lbp7;
 
 
 # direct methods
@@ -76,24 +76,24 @@
     iput-object p1, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->name:Ljava/lang/String;
 
     .line 3
-    new-instance p1, Leb1;
+    new-instance p1, Lzh1;
 
-    const/16 v0, 0x13
+    const/16 v0, 0x11
 
-    invoke-direct {p1, v0, p0}, Leb1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lzh1;-><init>(ILjava/lang/Object;)V
 
     .line 4
-    new-instance v0, Lkle;
+    new-instance v0, Ls5f;
 
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
 
     .line 5
-    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lth7;
+    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lbp7;
 
     if-eqz p2, :cond_0
 
     .line 6
-    invoke-static {p2}, Lis8;->o(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {p2}, Lxkg;->l(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p1
 
@@ -161,11 +161,11 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
 
     .line 14
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->clipPaint:Landroid/graphics/Paint;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->clipPaint:Landroid/graphics/Paint;
 
     iget-object p1, p1, Lone/me/sdk/richvector/internal/element/ClipPathElement;->clipPaint:Landroid/graphics/Paint;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -195,25 +195,25 @@
 
 # virtual methods
 .method public final getName()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->name:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->name:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getPath()Landroid/graphics/Path;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lth7;
+    iget-object v0, p0, Lone/me/sdk/richvector/internal/element/ClipPathElement;->path$delegate:Lbp7;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/graphics/Path;
+    check-cast v0, Landroid/graphics/Path;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final transform(Landroid/graphics/Matrix;)V
@@ -229,9 +229,9 @@
 
     invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ClipPathElement;->getPath()Landroid/graphics/Path;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
 
     return-void
 .end method

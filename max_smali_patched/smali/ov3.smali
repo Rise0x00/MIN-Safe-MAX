@@ -1,273 +1,414 @@
-.class public abstract synthetic Lov3;
-.super Ljava/lang/Object;
+.class public final Lov3;
+.super Lgkd;
 .source "SourceFile"
 
 
+# instance fields
+.field public final A0:J
+
+.field public final X:Ljava/lang/CharSequence;
+
+.field public final Y:Z
+
+.field public final Z:Z
+
+.field public final c:J
+
+.field public final o:Ljava/lang/CharSequence;
+
+.field public final w0:Ljava/util/List;
+
+.field public final x0:Landroid/net/Uri;
+
+.field public final y0:Ljava/lang/CharSequence;
+
+.field public final z0:I
+
+
 # direct methods
-.method public static bridge synthetic A(Landroid/media/metrics/TrackChangeEvent$Builder;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setSampleMimeType(Ljava/lang/String;)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic B(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setWidth(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic C(Landroid/media/metrics/TrackChangeEvent$Builder;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setCodecName(Ljava/lang/String;)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic D(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setHeight(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic a(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)I
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/media/AudioManager;->getPlaybackOffloadSupport(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/view/ContentInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/ContentInfo;->getFlags()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Ljava/lang/IllegalStateException;)Landroid/app/ForegroundServiceStartNotAllowedException;
-    .locals 0
-
-    check-cast p0, Landroid/app/ForegroundServiceStartNotAllowedException;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(Landroid/view/ContentInfo;)Landroid/content/ClipData;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/ContentInfo;->getClip()Landroid/content/ClipData;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(Landroid/media/MediaDrm;[B)Landroid/media/MediaDrm$PlaybackComponent;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaDrm;->getPlaybackComponent([B)Landroid/media/MediaDrm$PlaybackComponent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(Ljava/lang/Object;)Landroid/media/MediaDrm$PlaybackComponent;
-    .locals 0
-
-    check-cast p0, Landroid/media/MediaDrm$PlaybackComponent;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g()Landroid/media/metrics/LogSessionId;
+.method public constructor <init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZLjava/util/List;Landroid/net/Uri;Ljava/lang/CharSequence;)V
     .locals 1
 
-    sget-object v0, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
+    const/4 v0, 0x3
+
+    invoke-direct {p0, v0, p7}, Lgkd;-><init>(ILjava/util/List;)V
+
+    iput-wide p1, p0, Lov3;->c:J
+
+    iput-object p3, p0, Lov3;->o:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lov3;->X:Ljava/lang/CharSequence;
+
+    iput-boolean p5, p0, Lov3;->Y:Z
+
+    iput-boolean p6, p0, Lov3;->Z:Z
+
+    iput-object p7, p0, Lov3;->w0:Ljava/util/List;
+
+    iput-object p8, p0, Lov3;->x0:Landroid/net/Uri;
+
+    iput-object p9, p0, Lov3;->y0:Ljava/lang/CharSequence;
+
+    sget p3, Loka;->m:I
+
+    iput p3, p0, Lov3;->z0:I
+
+    iput-wide p1, p0, Lov3;->A0:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lov3;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lov3;
+
+    iget-wide v0, p0, Lov3;->c:J
+
+    iget-wide v2, p1, Lov3;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lov3;->o:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lov3;->o:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lov3;->X:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lov3;->X:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-boolean v0, p0, Lov3;->Y:Z
+
+    iget-boolean v1, p1, Lov3;->Y:Z
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Lov3;->Z:Z
+
+    iget-boolean v1, p1, Lov3;->Z:Z
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lov3;->w0:Ljava/util/List;
+
+    iget-object v1, p1, Lov3;->w0:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lov3;->x0:Landroid/net/Uri;
+
+    iget-object v1, p1, Lov3;->x0:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v0, p0, Lov3;->y0:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lov3;->y0:Ljava/lang/CharSequence;
+
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_9
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lov3;->A0:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lov3;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lov3;->o:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lov3;->X:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v3, p0, Lov3;->Y:Z
+
+    invoke-static {v0, v1, v3}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v3, p0, Lov3;->Z:Z
+
+    invoke-static {v0, v1, v3}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lov3;->w0:Ljava/util/List;
+
+    invoke-static {v3, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v3, p0, Lov3;->x0:Landroid/net/Uri;
+
+    if-nez v3, :cond_2
+
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
+
+    move-result v3
+
+    :goto_2
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lov3;->y0:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final l(Lgkd;)Z
+    .locals 0
+
+    check-cast p1, Lov3;
+
+    invoke-virtual {p0, p1}, Lov3;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lov3;->z0:I
+
+    return v0
+.end method
+
+.method public final n(Lgkd;)Z
+    .locals 4
+
+    iget-wide v0, p0, Lov3;->A0:J
+
+    invoke-interface {p1}, Lww7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactSearchModel(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lov3;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lov3;->o:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lov3;->X:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isOnline="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lov3;->Y:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVerified="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lov3;->Z:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactHighlights="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lov3;->w0:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lov3;->x0:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", selected=false, abbreviation="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lov3;->y0:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public static bridge synthetic h(Ljava/lang/Object;)Landroid/media/metrics/MediaMetricsManager;
-    .locals 0
-
-    check-cast p0, Landroid/media/metrics/MediaMetricsManager;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/view/ContentInfo;)Landroid/net/Uri;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/ContentInfo;->getLinkUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/view/ContentInfo;)Landroid/os/Bundle;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/ContentInfo;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic k(Landroid/view/ContentInfo;)Landroid/view/ContentInfo$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/view/ContentInfo$Builder;
-
-    invoke-direct {v0, p0}, Landroid/view/ContentInfo$Builder;-><init>(Landroid/view/ContentInfo;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic l()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Landroid/os/Build;->SOC_MANUFACTURER:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic m(Landroid/app/ForegroundServiceStartNotAllowedException;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/ForegroundServiceStartNotAllowedException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/LogSessionId;->getStringId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic o()V
-    .locals 1
-
-    new-instance v0, Landroid/view/ContentInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic p(Landroid/media/AudioTrack;Landroid/media/metrics/LogSessionId;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioTrack;->setLogSessionId(Landroid/media/metrics/LogSessionId;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic q(Landroid/media/MediaDrm$PlaybackComponent;Landroid/media/metrics/LogSessionId;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaDrm$PlaybackComponent;->setLogSessionId(Landroid/media/metrics/LogSessionId;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic r(Landroid/media/metrics/TrackChangeEvent$Builder;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/media/metrics/TrackChangeEvent$Builder;->setTrackState(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setTrackChangeReason(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/media/metrics/TrackChangeEvent$Builder;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setContainerMimeType(Ljava/lang/String;)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/view/ContentInfo$Builder;Landroid/content/ClipData;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/ContentInfo$Builder;->setClip(Landroid/content/ClipData;)Landroid/view/ContentInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/media/MediaDrm;Ljava/lang/String;)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaDrm;->requiresSecureDecoder(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic w(Landroid/media/metrics/LogSessionId;)Z
-    .locals 1
-
-    sget-object v0, Landroid/media/metrics/LogSessionId;->LOG_SESSION_ID_NONE:Landroid/media/metrics/LogSessionId;
-
-    invoke-virtual {p0, v0}, Landroid/media/metrics/LogSessionId;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic x(Ljava/lang/IllegalStateException;)Z
-    .locals 0
-
-    instance-of p0, p0, Landroid/app/ForegroundServiceStartNotAllowedException;
-
-    return p0
-.end method
-
-.method public static bridge synthetic y(Landroid/view/ContentInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/ContentInfo;->getSource()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic z(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setBitrate(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
 .end method

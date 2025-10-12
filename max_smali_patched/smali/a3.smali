@@ -1,147 +1,126 @@
-.class public final La3;
-.super Leje;
+.class public final synthetic La3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chats/picker/AbstractPickerScreen;
+.field public final synthetic b:Lone/me/chats/picker/AbstractPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
+.method public synthetic constructor <init>(Lone/me/chats/picker/AbstractPickerScreen;I)V
     .locals 0
 
-    iput-object p2, p0, La3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    iput p2, p0, La3;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, La3;->b:Lone/me/chats/picker/AbstractPickerScreen;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, La3;->a:I
 
-    invoke-virtual {p0, p1, p2}, La3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, La3;->b:Lone/me/chats/picker/AbstractPickerScreen;
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, La3;
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->x0:[Ltm7;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    new-instance v0, Lfla;
 
-    invoke-virtual {p0, p1}, La3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-direct {v0, v2}, Lfla;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, La3;
+    invoke-virtual {v0}, Lfla;->getEditText()Landroid/widget/EditText;
 
-    iget-object p0, p0, La3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    move-result-object v2
 
-    invoke-direct {v0, p2, p0}, La3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
+    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lfoe;
 
-    iput-object p1, v0, La3;->X:Ljava/lang/Object;
+    move-result-object v3
 
-    return-object v0
-.end method
+    if-eqz v3, :cond_0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    check-cast v3, Lmoe;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-virtual {v3}, Lmoe;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, La3;->X:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast p1, Ld0b;
+    check-cast v3, Loef;
 
-    sget-object v0, Lb0b;->a:Lb0b;
+    if-eqz v3, :cond_0
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v4
 
-    iget-object p0, p0, La3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    invoke-virtual {v3, v4}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->C0()Lwaa;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lwaa;->getEditText()Landroid/widget/EditText;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result-object v3
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lc0b;
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lone/me/chats/picker/AbstractPickerScreen;->n0:Lyja;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lyja;->a()V
-
-    :cond_1
-    new-instance v0, Lzja;
-
-    invoke-direct {v0, p0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    check-cast p1, Lc0b;
-
-    iget-object p1, p1, Lc0b;->a:Lyte;
-
-    invoke-virtual {v0, p1}, Lzja;->g(Ldue;)V
-
-    new-instance p1, Loka;
-
-    sget v1, Lysc;->A0:I
-
-    invoke-direct {p1, v1}, Loka;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Lzja;->e(Lska;)V
-
-    invoke-virtual {v0}, Lzja;->i()Lyja;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/chats/picker/AbstractPickerScreen;->n0:Lyja;
-
-    :cond_2
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
-    return-object p0
+    new-instance v2, Ls9h;
 
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {v2, v1, v3, v0}, Ls9h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    throw p0
+    invoke-virtual {v0, v2}, Lfla;->setCallback(Ldla;)V
+
+    invoke-virtual {v0}, Lfla;->getEditText()Landroid/widget/EditText;
+
+    move-result-object v2
+
+    new-instance v3, Lc3;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4, v1}, Lc3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->x0:[Ltm7;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->E0(Landroid/content/Context;)Ltya;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

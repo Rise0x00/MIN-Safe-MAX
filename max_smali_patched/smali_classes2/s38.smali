@@ -1,91 +1,148 @@
-.class public final enum Ls38;
-.super Ljava/lang/Enum;
+.class public final Ls38;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Ls38;
-
-.field public static final enum c:Ls38;
-
-.field public static final synthetic o:[Ls38;
-
-
 # instance fields
-.field public final a:F
+.field public final a:J
+
+.field public final b:[B
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(J[B)V
+    .locals 0
 
-    new-instance v0, Ls38;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ls38;->a:J
+
+    iput-object p3, p0, Ls38;->b:[B
+
+    array-length p1, p3
+
+    add-int/lit8 p1, p1, 0x1e
+
+    iput p1, p0, Ls38;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/io/OutputStream;I)V
+    .locals 2
+
+    const/16 v0, 0x23
+
+    invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lsx9;->b(Ljava/io/OutputStream;Ljava/lang/String;)V
+
+    const/16 p2, 0x20
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
+
+    iget-wide v0, p0, Ls38;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lsx9;->b(Ljava/io/OutputStream;Ljava/lang/String;)V
+
+    const-string p2, " | "
+
+    invoke-static {p1, p2}, Lsx9;->b(Ljava/io/OutputStream;Ljava/lang/String;)V
+
+    iget-object p2, p0, Ls38;->b:[B
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write([B)V
+
+    const/16 p2, 0xa
+
+    invoke-virtual {p1, p2}, Ljava/io/OutputStream;->write(I)V
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Ls38;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ls38;
+
+    iget-wide v0, p1, Ls38;->a:J
+
+    iget-wide v2, p0, Ls38;->a:J
+
+    cmp-long v0, v2, v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ls38;->b:[B
+
+    iget-object p1, p1, Ls38;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ls38;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    iget-object v1, p0, Ls38;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     const/4 v1, 0x0
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    invoke-virtual {p0, v0, v1}, Ls38;->a(Ljava/io/OutputStream;I)V
 
-    const-string v3, "NOT_FOCUSED"
-
-    invoke-direct {v0, v2, v1, v3}, Ls38;-><init>(FILjava/lang/String;)V
-
-    sput-object v0, Ls38;->b:Ls38;
-
-    new-instance v1, Ls38;
-
-    const/4 v2, 0x1
-
-    const v3, 0x3fa66666    # 1.3f
-
-    const-string v4, "FOCUSED"
-
-    invoke-direct {v1, v3, v2, v4}, Ls38;-><init>(FILjava/lang/String;)V
-
-    sput-object v1, Ls38;->c:Ls38;
-
-    filled-new-array {v0, v1}, [Ls38;
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    sput-object v0, Ls38;->o:[Ls38;
-
-    return-void
-.end method
-
-.method public constructor <init>(FILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p3, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p1, p0, Ls38;->a:F
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ls38;
-    .locals 1
-
-    const-class v0, Ls38;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ls38;
-
-    return-object p0
-.end method
-
-.method public static values()[Ls38;
-    .locals 1
-
-    sget-object v0, Ls38;->o:[Ls38;
-
-    invoke-virtual {v0}, [Ls38;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ls38;
 
     return-object v0
 .end method

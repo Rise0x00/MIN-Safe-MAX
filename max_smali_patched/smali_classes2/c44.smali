@@ -3,163 +3,201 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmk9;
+.implements Loqc;
 
 
 # instance fields
-.field public final a:Lly0;
+.field public final a:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Boolean;
+.field public b:Ljava/lang/Object;
 
-.field public c:Ljava/lang/Boolean;
-
-.field public d:Ljava/lang/Boolean;
-
-.field public e:Ljava/lang/Boolean;
+.field public volatile c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lly0;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Class;)V
+    .locals 1
 
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc44;->a:Lly0;
+    .line 10
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lc44;->a:Ljava/lang/Object;
+
+    .line 11
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc44;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls5f;Lbw6;)V
+    .locals 0
+
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 13
+    iput-object p1, p0, Lc44;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lc44;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Luhf;)V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lc44;->a:Ljava/lang/Object;
+
+    .line 3
+    new-instance p1, Lgd6;
+
+    const/4 v0, 0x0
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {p1, v0, v1, v2}, Lgd6;-><init>(IJ)V
+
+    iput-object p1, p0, Lc44;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lyqd;)V
+    .locals 2
+
+    .line 4
+    new-instance v0, Ls9h;
+
+    invoke-direct {v0, p1}, Ls9h;-><init>(Lyqd;)V
+
+    .line 5
+    new-instance v1, Loy3;
+
+    invoke-direct {v1, p1}, Loy3;-><init>(Ljava/lang/Object;)V
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    iput-object v0, p0, Lc44;->a:Ljava/lang/Object;
+
+    .line 8
+    iput-object v1, p0, Lc44;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Lnk9;)V
+.method public M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p1, p0, Lc44;->c:Ljava/lang/Object;
+
+    if-eqz p1, :cond_0
+
+    return-object p1
+
+    :cond_0
+    iget-object p1, p0, Lc44;->a:Ljava/lang/Object;
+
+    check-cast p1, Ls5f;
+
+    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc44;->c:Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public a()Ljava/util/logging/Logger;
     .locals 2
 
-    iget-object v0, p0, Lc44;->b:Ljava/lang/Boolean;
+    iget-object v0, p0, Lc44;->c:Ljava/lang/Object;
 
-    iget-boolean v1, p1, Lnk9;->e:Z
+    check-cast v0, Ljava/util/logging/Logger;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    return-object v0
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_0
+    iget-object v0, p0, Lc44;->a:Ljava/lang/Object;
 
-    move-result v0
+    monitor-enter v0
 
-    if-eqz v0, :cond_1
+    :try_start_0
+    iget-object v1, p0, Lc44;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lc44;->c:Ljava/lang/Boolean;
+    check-cast v1, Ljava/util/logging/Logger;
 
-    iget-boolean v1, p1, Lnk9;->f:Z
+    if-eqz v1, :cond_1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    monitor-exit v0
 
-    move-result-object v1
+    return-object v1
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lc44;->d:Ljava/lang/Boolean;
-
-    iget-boolean v1, p1, Lnk9;->g:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lc44;->e:Ljava/lang/Boolean;
-
-    iget-boolean v1, p1, Lnk9;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    :catchall_0
+    move-exception v1
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
     :cond_1
+    iget-object v1, p0, Lc44;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v1}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lc44;->c:Ljava/lang/Object;
+
+    monitor-exit v0
+
+    return-object v1
+
     :goto_0
-    const/4 v0, 0x1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_1
-    iget-boolean v1, p1, Lnk9;->e:Z
+    throw v1
+.end method
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object v1
+    iget-object p1, p0, Lc44;->c:Ljava/lang/Object;
 
-    iput-object v1, p0, Lc44;->b:Ljava/lang/Boolean;
+    iput-object p3, p0, Lc44;->c:Ljava/lang/Object;
 
-    iget-boolean v1, p1, Lnk9;->f:Z
+    check-cast p3, Lfv6;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    check-cast p1, Lfv6;
 
-    move-result-object v1
+    iget-object p1, p0, Lc44;->b:Ljava/lang/Object;
 
-    iput-object v1, p0, Lc44;->c:Ljava/lang/Boolean;
+    check-cast p1, Lbw6;
 
-    iget-boolean v1, p1, Lnk9;->g:Z
+    iget-object p1, p1, Lbw6;->c:Lj94;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
-
-    iput-object v1, p0, Lc44;->d:Ljava/lang/Boolean;
-
-    iget-boolean p1, p1, Lnk9;->b:Z
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lc44;->e:Ljava/lang/Boolean;
-
-    if-eqz v0, :cond_3
-
-    iget-object p0, p0, Lc44;->a:Lly0;
-
-    iget-object p0, p0, Lly0;->a:Lfh1;
-
-    iget-object p1, p0, Lfh1;->a:Lah1;
-
-    iget-object v0, p1, Lah1;->a:Lwg1;
-
-    if-nez v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p0, v0}, Lfh1;->c(Lwg1;)Lsed;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Lfh1;->e(Lsed;Ljava/util/List;)V
-
-    :cond_3
-    :goto_2
     return-void
 .end method

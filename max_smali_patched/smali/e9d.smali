@@ -1,83 +1,65 @@
 .class public final Le9d;
-.super Lkotlinx/coroutines/internal/Segment;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public a:I
 
+.field public b:I
 
-# direct methods
-.method public constructor <init>(JLe9d;I)V
-    .locals 0
+.field public c:I
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lkotlinx/coroutines/internal/Segment;-><init>(JLkotlinx/coroutines/internal/Segment;I)V
+.field public d:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public e:I
 
-    sget p2, Ld9d;->f:I
+.field public f:I
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
+.field public g:Z
 
-    iput-object p1, p0, Le9d;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    return-void
-.end method
+.field public h:Z
 
 
 # virtual methods
-.method public final getNumberOfSlots()I
-    .locals 0
+.method public final a(II)V
+    .locals 2
 
-    sget p0, Ld9d;->f:I
+    iput p1, p0, Le9d;->c:I
 
-    return p0
-.end method
+    iput p2, p0, Le9d;->d:I
 
-.method public final onCancellation(ILjava/lang/Throwable;Lh04;)V
-    .locals 0
+    const/4 v0, 0x1
 
-    sget-object p2, Ld9d;->e:Lkotlinx/coroutines/internal/Symbol;
+    iput-boolean v0, p0, Le9d;->h:Z
 
-    iget-object p3, p0, Le9d;->a:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    iget-boolean v0, p0, Le9d;->g:Z
 
-    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+    const/high16 v1, -0x80000000
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
+    if-eqz v0, :cond_1
+
+    if-eq p2, v1, :cond_0
+
+    iput p2, p0, Le9d;->a:I
+
+    :cond_0
+    if-eq p1, v1, :cond_3
+
+    iput p1, p0, Le9d;->b:I
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_1
+    if-eq p1, v1, :cond_2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput p1, p0, Le9d;->a:I
 
-    const-string v1, "SemaphoreSegment[id="
+    :cond_2
+    if-eq p2, v1, :cond_3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput p2, p0, Le9d;->b:I
 
-    iget-wide v1, p0, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hashCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_3
+    return-void
 .end method

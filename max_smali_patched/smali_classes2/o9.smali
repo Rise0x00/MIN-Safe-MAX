@@ -1,162 +1,159 @@
 .class public final Lo9;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lnd9;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lkoc;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;)V
+.method public constructor <init>(JLkoc;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Lo9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p3, p0, Lo9;->a:Lkoc;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lo9;->b:Ljava/lang/String;
+
+    iput-wide p1, p0, Lo9;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lo9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lo9;
+    :cond_0
+    instance-of v1, p1, Lo9;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lo9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    return-object p1
-.end method
+    return v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_1
+    check-cast p1, Lo9;
 
-    new-instance v0, Lo9;
+    iget-object v1, p0, Lo9;->a:Lkoc;
 
-    iget-object p0, p0, Lo9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
+    iget-object v3, p1, Lo9;->a:Lkoc;
 
-    invoke-direct {v0, p2, p0}, Lo9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;)V
-
-    iput-object p1, v0, Lo9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lo9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lio7;
-
-    iget-object v0, p1, Lio7;->b:Ldue;
-
-    iget-object p0, p0, Lo9;->Y:Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_2
 
-    goto :goto_0
+    return v2
 
-    :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->J0()Lkma;
+    :cond_2
+    iget-object v1, p0, Lo9;->b:Ljava/lang/String;
 
-    move-result-object v1
+    iget-object v3, p1, Lo9;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v1
 
-    sget-object v2, Lhma;->a:Lhma;
+    if-nez v1, :cond_3
 
-    invoke-virtual {v1, v0, v2}, Lkma;->g(Ljava/lang/String;Lhma;)V
+    return v2
 
-    goto :goto_1
+    :cond_3
+    iget-wide v3, p0, Lo9;->c:J
 
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->J0()Lkma;
+    iget-wide v5, p1, Lo9;->c:J
 
-    move-result-object v0
+    cmp-long p1, v3, v5
 
-    invoke-virtual {v0}, Lkma;->d()V
+    if-eqz p1, :cond_4
 
-    :goto_1
-    iget-object v0, p0, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->r0:Ldbc;
+    return v2
 
-    sget-object v1, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->u0:[Lof7;
+    :cond_4
+    return v0
+.end method
 
-    const/4 v2, 0x2
+.method public final hashCode()I
+    .locals 3
 
-    aget-object v1, v1, v2
+    iget-object v0, p0, Lo9;->a:Lkoc;
 
-    invoke-interface {v0, p0, v1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    iget-object v0, p1, Lio7;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Lkoc;->hashCode()I
 
     move-result v0
 
-    if-lez v0, :cond_2
+    const/16 v1, 0x1f
 
-    iget-object p1, p1, Lio7;->b:Ldue;
+    mul-int/2addr v0, v1
 
-    sget-object v0, Ldue;->a:Lcue;
+    iget-object v2, p0, Lo9;->b:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_2
+    iget-wide v1, p0, Lo9;->c:J
 
-    const/4 p1, 0x1
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    goto :goto_2
+    move-result v1
 
-    :cond_2
-    const/4 p1, 0x0
+    add-int/2addr v1, v0
 
-    :goto_2
-    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    return v1
+.end method
 
-    sget-object p0, Ltcf;->a:Ltcf;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-object p0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AddReactionEffect(reaction="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lo9;->a:Lkoc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", effectUrl="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo9;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", msgId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lo9;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

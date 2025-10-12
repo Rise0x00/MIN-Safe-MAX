@@ -1,62 +1,217 @@
-.class public abstract Lab7;
-.super Ljava/lang/Object;
+.class public final Lab7;
+.super Lo43;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Integer;
+# instance fields
+.field public A0:J
+
+.field public volatile B0:Z
+
+.field public final y0:Lp43;
+
+.field public z0:Llo4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lk94;Lr94;Lt76;ILjava/lang/Object;Lp43;)V
+    .locals 11
 
-    const/4 v0, 0x0
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
 
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v3, 0x2
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    move-object/from16 v6, p5
+
+    invoke-direct/range {v0 .. v10}, Lo43;-><init>(Lk94;Lr94;ILt76;ILjava/lang/Object;JJ)V
+
+    move-object/from16 p1, p6
+
+    iput-object p1, p0, Lab7;->y0:Lp43;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lab7;->B0:Z
+
+    return-void
+.end method
+
+.method public final load()V
+    .locals 7
+
+    iget-wide v0, p0, Lab7;->A0:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lab7;->y0:Lp43;
+
+    iget-object v2, p0, Lab7;->z0:Llo4;
+
+    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
+
+    move-object v1, v0
+
+    check-cast v1, Llv0;
+
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-virtual/range {v1 .. v6}, Llv0;->b(Llo4;JJ)V
+
+    :cond_0
     :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    iget-object v0, p0, Lo43;->b:Lr94;
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    iget-wide v1, p0, Lab7;->A0:J
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Lr94;->c(J)Lr94;
 
-    const-string v2, "SDK_INT"
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    new-instance v1, Lhh4;
 
-    move-result-object v1
+    iget-object v2, p0, Lo43;->x0:Lspe;
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v3, v0, Lr94;->f:J
 
-    move-result-object v1
+    invoke-virtual {v2, v0}, Lspe;->G(Lr94;)J
 
-    instance-of v2, v1, Ljava/lang/Integer;
+    move-result-wide v5
 
-    if-eqz v2, :cond_0
-
-    check-cast v1, Ljava/lang/Integer;
+    invoke-direct/range {v1 .. v6}, Lhh4;-><init>(Ld94;JJ)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :goto_0
+    :try_start_1
+    iget-boolean v0, p0, Lab7;->B0:Z
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lab7;->y0:Lp43;
+
+    check-cast v0, Llv0;
+
+    iget-object v0, v0, Llv0;->a:Lfi5;
+
+    sget-object v2, Llv0;->y0:Lc7;
+
+    invoke-interface {v0, v1, v2}, Lfi5;->o(Lhi5;Lc7;)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_1
+
+    move v4, v3
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v2
+
+    :goto_1
+    invoke-static {v4}, Lpih;->o(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    if-eqz v2, :cond_3
 
     goto :goto_0
 
     :catchall_0
-    :cond_0
-    move-object v1, v0
+    move-exception v0
 
-    :goto_0
-    if-eqz v1, :cond_1
+    goto :goto_2
 
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    :cond_3
+    :try_start_2
+    iget-wide v0, v1, Lhh4;->o:J
 
-    move-result v2
+    iget-object v2, p0, Lo43;->b:Lr94;
 
-    if-lez v2, :cond_1
+    iget-wide v2, v2, Lr94;->f:J
 
-    move-object v0, v1
+    sub-long/2addr v0, v2
 
-    :cond_1
-    sput-object v0, Lab7;->a:Ljava/lang/Integer;
+    iput-wide v0, p0, Lab7;->A0:J
+
+    iget-object v0, p0, Lab7;->y0:Lp43;
+
+    check-cast v0, Llv0;
+
+    invoke-virtual {v0}, Llv0;->a()Lr43;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    iget-object v0, p0, Lo43;->x0:Lspe;
+
+    invoke-static {v0}, Lj40;->f(Lk94;)V
 
     return-void
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :goto_2
+    :try_start_3
+    iget-wide v1, v1, Lhh4;->o:J
+
+    iget-object v3, p0, Lo43;->b:Lr94;
+
+    iget-wide v3, v3, Lr94;->f:J
+
+    sub-long/2addr v1, v3
+
+    iput-wide v1, p0, Lab7;->A0:J
+
+    iget-object v1, p0, Lab7;->y0:Lp43;
+
+    check-cast v1, Llv0;
+
+    invoke-virtual {v1}, Llv0;->a()Lr43;
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :goto_3
+    iget-object v1, p0, Lo43;->x0:Lspe;
+
+    invoke-static {v1}, Lj40;->f(Lk94;)V
+
+    throw v0
 .end method

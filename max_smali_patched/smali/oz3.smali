@@ -1,38 +1,14 @@
-.class public final Loz3;
+.class public interface abstract Loz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
-
-
-# instance fields
-.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-
-# direct methods
-.method public constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loz3;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    return-void
-.end method
+.implements Lu24;
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 1
+.method public abstract interceptContinuation(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.end method
 
-    iget-object p0, p0, Loz3;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->o(I)V
-
-    const/4 p0, 0x1
-
-    return p0
+.method public abstract releaseInterceptedContinuation(Lkotlin/coroutines/Continuation;)V
 .end method

@@ -1,282 +1,223 @@
 .class public final Lbu5;
-.super Lrl0;
+.super Ldxe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public o:Leu5;
 
-.field public b:I
-
-.field public volatile c:Z
-
-.field public final o:Lwee;
-
-
-# direct methods
-.method public constructor <init>(Lwee;[Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p2, p0, Lbu5;->a:[Ljava/lang/Object;
-
-    iput-object p1, p0, Lbu5;->o:Lwee;
-
-    return-void
-.end method
+.field public p:Lzr0;
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
+.method public final c(Lg5g;)J
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p1, Lg5g;->a:[B
 
-    iput-boolean v0, p0, Lbu5;->c:Z
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    aget-byte v2, v0, v1
 
-.method public final clear()V
-    .locals 1
+    const/4 v3, -0x1
 
-    iget-object v0, p0, Lbu5;->a:[Ljava/lang/Object;
+    if-ne v2, v3, :cond_2
 
-    array-length v0, v0
+    const/4 v2, 0x2
 
-    iput v0, p0, Lbu5;->b:I
+    aget-byte v0, v0, v2
 
-    return-void
-.end method
+    and-int/lit16 v0, v0, 0xff
 
-.method public final h(J)V
-    .locals 12
+    const/4 v2, 0x4
 
-    invoke-static {p1, p2}, Lafe;->d(J)Z
+    shr-int/2addr v0, v2
+
+    const/4 v3, 0x6
+
+    if-eq v0, v3, :cond_0
+
+    const/4 v3, 0x7
+
+    if-ne v0, v3, :cond_1
+
+    :cond_0
+    invoke-virtual {p1, v2}, Lg5g;->F(I)V
+
+    invoke-virtual {p1}, Lg5g;->A()J
+
+    :cond_1
+    invoke-static {v0, p1}, Lxkg;->D(ILg5g;)I
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    invoke-virtual {p1, v1}, Lg5g;->E(I)V
 
-    invoke-static {p0, p1, p2}, Lxwe;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    int-to-long v0, v0
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_b
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    cmp-long v0, p1, v0
-
-    const-string v1, " is null"
-
-    const-string v4, "The element at index "
-
-    if-nez v0, :cond_4
-
-    iget-object p1, p0, Lbu5;->a:[Ljava/lang/Object;
-
-    array-length p2, p1
-
-    iget-object v0, p0, Lbu5;->o:Lwee;
-
-    iget v2, p0, Lbu5;->b:I
-
-    :goto_0
-    if-eq v2, p2, :cond_2
-
-    iget-boolean v3, p0, Lbu5;->c:Z
-
-    if-eqz v3, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    aget-object v3, p1, v2
-
-    if-nez v3, :cond_1
-
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-static {v2, v4, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    invoke-interface {v0, v3}, Lwee;->d(Ljava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    return-wide v0
 
     :cond_2
-    iget-boolean p0, p0, Lbu5;->c:Z
+    const-wide/16 v0, -0x1
 
-    if-eqz p0, :cond_3
+    return-wide v0
+.end method
 
-    goto :goto_2
+.method public final e(Lg5g;JLw7b;)Z
+    .locals 21
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p4
+
+    iget-object v3, v1, Lg5g;->a:[B
+
+    iget-object v4, v0, Lbu5;->o:Leu5;
+
+    const/4 v5, 0x1
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Leu5;
+
+    const/16 v6, 0x11
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v3, v6, v7}, Leu5;-><init>([BII)V
+
+    iput-object v4, v0, Lbu5;->o:Leu5;
+
+    const/16 v6, 0x9
+
+    iget v1, v1, Lg5g;->c:I
+
+    invoke-static {v3, v6, v1}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v4, v1, v3}, Leu5;->d([BLfk9;)Lr76;
+
+    move-result-object v1
+
+    iput-object v1, v2, Lw7b;->b:Ljava/lang/Object;
+
+    return v5
+
+    :cond_0
+    const/4 v6, 0x0
+
+    aget-byte v3, v3, v6
+
+    and-int/lit8 v7, v3, 0x7f
+
+    const/4 v8, 0x3
+
+    if-ne v7, v8, :cond_1
+
+    invoke-static {v1}, Loch;->w(Lg5g;)Llo4;
+
+    move-result-object v19
+
+    new-instance v9, Leu5;
+
+    iget v10, v4, Leu5;->b:I
+
+    iget v11, v4, Leu5;->c:I
+
+    iget v12, v4, Leu5;->d:I
+
+    iget v13, v4, Leu5;->e:I
+
+    iget v14, v4, Leu5;->f:I
+
+    iget v15, v4, Leu5;->h:I
+
+    iget v1, v4, Leu5;->i:I
+
+    iget-wide v2, v4, Leu5;->k:J
+
+    iget-object v4, v4, Leu5;->m:Ljava/lang/Object;
+
+    move-object/from16 v20, v4
+
+    check-cast v20, Lfk9;
+
+    move/from16 v16, v1
+
+    move-wide/from16 v17, v2
+
+    invoke-direct/range {v9 .. v20}, Leu5;-><init>(IIIIIIIJLlo4;Lfk9;)V
+
+    move-object/from16 v1, v19
+
+    iput-object v9, v0, Lbu5;->o:Leu5;
+
+    new-instance v2, Lzr0;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3}, Lzr0;-><init>(I)V
+
+    iput-object v9, v2, Lzr0;->o:Ljava/lang/Object;
+
+    iput-object v1, v2, Lzr0;->X:Ljava/lang/Object;
+
+    const-wide/16 v3, -0x1
+
+    iput-wide v3, v2, Lzr0;->b:J
+
+    iput-wide v3, v2, Lzr0;->c:J
+
+    iput-object v2, v0, Lbu5;->p:Lzr0;
+
+    return v5
+
+    :cond_1
+    const/4 v1, -0x1
+
+    if-ne v3, v1, :cond_3
+
+    iget-object v1, v0, Lbu5;->p:Lzr0;
+
+    if-eqz v1, :cond_2
+
+    move-wide/from16 v3, p2
+
+    iput-wide v3, v1, Lzr0;->b:J
+
+    iput-object v1, v2, Lw7b;->c:Ljava/lang/Object;
+
+    :cond_2
+    iget-object v1, v2, Lw7b;->b:Ljava/lang/Object;
+
+    check-cast v1, Lr76;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v6
 
     :cond_3
-    invoke-interface {v0}, Lwee;->b()V
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lbu5;->a:[Ljava/lang/Object;
-
-    array-length v5, v0
-
-    iget v6, p0, Lbu5;->b:I
-
-    iget-object v7, p0, Lbu5;->o:Lwee;
-
-    :cond_5
-    move-wide v8, v2
-
-    :cond_6
-    :goto_1
-    cmp-long v10, v8, p1
-
-    if-eqz v10, :cond_9
-
-    if-eq v6, v5, :cond_9
-
-    iget-boolean v10, p0, Lbu5;->c:Z
-
-    if-eqz v10, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    aget-object v10, v0, v6
-
-    if-nez v10, :cond_8
-
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-static {v6, v4, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v7, p0}, Lwee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_8
-    invoke-interface {v7, v10}, Lwee;->d(Ljava/lang/Object;)V
-
-    const-wide/16 v10, 0x1
-
-    add-long/2addr v8, v10
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_1
-
-    :cond_9
-    if-ne v6, v5, :cond_a
-
-    iget-boolean p0, p0, Lbu5;->c:Z
-
-    if-nez p0, :cond_b
-
-    invoke-interface {v7}, Lwee;->b()V
-
-    return-void
-
-    :cond_a
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide p1
-
-    cmp-long v10, v8, p1
-
-    if-nez v10, :cond_6
-
-    iput v6, p0, Lbu5;->b:I
-
-    neg-long p1, v8
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
-
-    move-result-wide p1
-
-    cmp-long v8, p1, v2
-
-    if-nez v8, :cond_5
-
-    :cond_b
-    :goto_2
-    return-void
+    return v5
 .end method
 
-.method public final isEmpty()Z
-    .locals 1
-
-    iget v0, p0, Lbu5;->b:I
-
-    iget-object p0, p0, Lbu5;->a:[Ljava/lang/Object;
-
-    array-length p0, p0
-
-    if-ne v0, p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lbu5;->b:I
-
-    iget-object v1, p0, Lbu5;->a:[Ljava/lang/Object;
-
-    array-length v2, v1
-
-    if-ne v0, v2, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    add-int/lit8 v2, v0, 0x1
-
-    iput v2, p0, Lbu5;->b:I
-
-    aget-object p0, v1, v0
-
-    const-string v0, "array element is null"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public final t(I)I
+.method public final f(Z)V
     .locals 0
 
-    const/4 p0, 0x1
+    invoke-super {p0, p1}, Ldxe;->f(Z)V
 
-    return p0
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lbu5;->o:Leu5;
+
+    iput-object p1, p0, Lbu5;->p:Lzr0;
+
+    :cond_0
+    return-void
 .end method

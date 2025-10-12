@@ -1,75 +1,16 @@
-.class public final Lwic;
-.super Lg07;
-.source "SourceFile"
+.class public abstract Lwic;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic c:Lxic;
+# static fields
+.field public static forward_message_hint:I = 0x7f130556
 
+.field public static forward_search_hint:I = 0x7f130557
 
-# direct methods
-.method public constructor <init>(Lxic;)V
-    .locals 0
+.field public static forward_snackbar_goto:I = 0x7f130558
 
-    iput-object p1, p0, Lwic;->c:Lxic;
+.field public static forward_toolbar_action_cancel_selection:I = 0x7f130559
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static forward_toolbar_action_select:I = 0x7f13055a
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final f()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
-
-    iget-object p0, p0, Lwic;->c:Lxic;
-
-    iget v0, p0, Lxic;->Z:I
-
-    invoke-static {p1, v0}, Lr7;->k(II)V
-
-    iget-object v0, p0, Lxic;->X:[Ljava/lang/Object;
-
-    mul-int/lit8 p1, p1, 0x2
-
-    iget p0, p0, Lxic;->Y:I
-
-    add-int v1, p1, p0
-
-    aget-object v1, v0, v1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    xor-int/lit8 p0, p0, 0x1
-
-    add-int/2addr p1, p0
-
-    aget-object p0, v0, p1
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {p1, v1, p0}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget-object p0, p0, Lwic;->c:Lxic;
-
-    iget p0, p0, Lxic;->Z:I
-
-    return p0
-.end method
+.field public static forward_toolbar_title:I = 0x7f13055b

@@ -3,41 +3,21 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:J
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
+# static fields
+.field public static final a:Lpid;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpid;
 
-    iput-wide p1, p0, Lih;->a:J
+    const/16 v1, 0x8
 
-    iput-wide p3, p0, Lih;->b:J
+    invoke-direct {v0, v1}, Lpid;-><init>(I)V
 
-    iput-object p5, p0, Lih;->c:Ljava/lang/String;
-
-    iput-wide p6, p0, Lih;->d:J
-
-    iput-object p8, p0, Lih;->e:Ljava/lang/String;
-
-    iput-object p9, p0, Lih;->f:Ljava/lang/String;
-
-    iput-object p10, p0, Lih;->g:Ljava/lang/String;
+    sput-object v0, Lih;->a:Lpid;
 
     return-void
 .end method

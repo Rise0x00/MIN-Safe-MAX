@@ -1,111 +1,116 @@
-.class public final enum Lzre;
-.super Ljava/lang/Enum;
+.class public final synthetic Lzre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lzre;
-
-.field public static final synthetic Y:Ly55;
-
-.field public static final enum b:Lzre;
-
-.field public static final enum c:Lzre;
-
-.field public static final enum o:Lzre;
+# interfaces
+.implements Lmf6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldse;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Ldse;I)V
+    .locals 0
 
-    new-instance v0, Lzre;
+    iput p2, p0, Lzre;->a:I
 
-    const-string v1, "WAITING"
+    iput-object p1, p0, Lzre;->b:Ldse;
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v2}, Lzre;-><init>(Ljava/lang/String;II)V
+    return-void
+.end method
 
-    sput-object v0, Lzre;->b:Lzre;
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lzre;->a:I
+
+    check-cast p1, Ljava/util/List;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzre;->b:Ldse;
+
+    iget-object v0, v0, Ldse;->a:Ly5d;
+
+    invoke-virtual {v0}, Ly5d;->n()Lmda;
+
+    move-result-object v0
+
+    new-instance v1, Lmqe;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v1, v2}, Lmqe;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object v0
+
+    new-instance v1, Lcb2;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v1, v2, p1}, Lcb2;-><init>(ILjava/util/List;)V
+
+    new-instance p1, Lme3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v2, v1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lzre;->b:Ldse;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lraa;->i(Ljava/lang/Iterable;)Lbf3;
+
+    move-result-object p1
+
+    new-instance v1, Lmqe;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v2}, Lmqe;-><init>(I)V
+
+    new-instance v2, Lkba;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, p1, v1, v3}, Lkba;-><init>(Lraa;Lmf6;I)V
+
+    invoke-virtual {v2}, Lraa;->u()Lvaa;
+
+    move-result-object p1
 
     new-instance v1, Lzre;
 
     const/4 v2, 0x1
 
-    const/16 v3, 0xa
+    invoke-direct {v1, v0, v2}, Lzre;-><init>(Ldse;I)V
 
-    const-string v4, "PROCESSING"
+    new-instance v0, Lme3;
 
-    invoke-direct {v1, v4, v2, v3}, Lzre;-><init>(Ljava/lang/String;II)V
+    const/4 v2, 0x2
 
-    sput-object v1, Lzre;->c:Lzre;
-
-    new-instance v2, Lzre;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x14
-
-    const-string v5, "FAILED"
-
-    invoke-direct {v2, v5, v3, v4}, Lzre;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lzre;->o:Lzre;
-
-    filled-new-array {v0, v1, v2}, [Lzre;
-
-    move-result-object v0
-
-    sput-object v0, Lzre;->X:[Lzre;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lzre;->Y:Ly55;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lzre;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lzre;
-    .locals 1
-
-    const-class v0, Lzre;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lzre;
-
-    return-object p0
-.end method
-
-.method public static values()[Lzre;
-    .locals 1
-
-    sget-object v0, Lzre;->X:[Lzre;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lzre;
+    invoke-direct {v0, p1, v2, v1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

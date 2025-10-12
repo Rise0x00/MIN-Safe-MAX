@@ -1,121 +1,69 @@
 .class public final Lzwa;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Ljava/lang/Object;
 
-.field public final b:J
+.field public Y:Ljava/util/Iterator;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ldxa;
+
+.field public final synthetic w0:Ldxa;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;J)V
+.method public constructor <init>(Ldxa;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzwa;->w0:Ldxa;
 
-    iput-object p1, p0, Lzwa;->a:Ljava/lang/String;
-
-    iput-wide p2, p0, Lzwa;->b:J
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lzwa;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lzwa;->x0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lzwa;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lzwa;->x0:I
 
-    if-nez v1, :cond_1
+    const/4 v7, 0x0
 
-    return v2
+    const/4 v8, 0x0
 
-    :cond_1
-    check-cast p1, Lzwa;
+    iget-object v0, p0, Lzwa;->w0:Ldxa;
 
-    iget-object v1, p0, Lzwa;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iget-object v3, p1, Lzwa;->a:Ljava/lang/String;
+    const-wide/16 v2, 0x0
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v4, 0x0
 
-    move-result v1
+    const/4 v5, 0x0
 
-    if-nez v1, :cond_2
+    const/4 v6, 0x0
 
-    return v2
+    move-object v9, p0
 
-    :cond_2
-    iget-wide v3, p0, Lzwa;->b:J
+    invoke-virtual/range {v0 .. v9}, Ldxa;->f(Lf3d;JLjava/io/File;Ld3d;Lwwa;Ljava/io/File;ZLnz3;)Ljava/lang/Object;
 
-    iget-wide p0, p1, Lzwa;->b:J
+    move-result-object p1
 
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lzwa;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lzwa;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "PhoneAndServerPhone(phone="
-
-    const-string v1, ", serverPhone="
-
-    iget-wide v2, p0, Lzwa;->b:J
-
-    iget-object p0, p0, Lzwa;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, p0, v1}, Llge;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

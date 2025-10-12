@@ -1,213 +1,63 @@
 .class public final Lwoc;
-.super Lu2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public a:Z
+
+.field public final synthetic b:Lxoc;
+
+.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfpc;I)V
+.method public constructor <init>(Lxoc;Lone/me/rlottie/RLottieImageView;)V
     .locals 0
 
-    iput p2, p0, Lwoc;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lu2;-><init>(Lfpc;)V
+    iput-object p1, p0, Lwoc;->b:Lxoc;
+
+    iput-object p2, p0, Lwoc;->c:Lone/me/rlottie/RLottieImageView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()Ljava/lang/String;
-    .locals 0
+.method public final onAllFramesRendered(Lone/me/rlottie/RLottieDrawable;Z)V
+    .locals 2
 
-    iget p0, p0, Lwoc;->o:I
+    iget-object p1, p0, Lwoc;->b:Lxoc;
 
-    packed-switch p0, :pswitch_data_0
+    iget-object p2, p1, Lxoc;->a:Ljava/lang/String;
 
-    const-string p0, "UPDATE workspec SET schedule_requested_at=? WHERE id=?"
+    iget-boolean v0, p0, Lwoc;->a:Z
 
-    return-object p0
+    const-string v1, "Reaction effect. OnAllFramesRendered, called:"
 
-    :pswitch_0
-    const-string p0, "DELETE FROM WorkProgress"
+    invoke-static {v1, p2, v0}, Lfl7;->p(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    return-object p0
+    iget-boolean p2, p0, Lwoc;->a:Z
 
-    :pswitch_1
-    const-string p0, "DELETE from WorkProgress where work_spec_id=?"
+    if-eqz p2, :cond_0
 
-    return-object p0
+    return-void
 
-    :pswitch_2
-    const-string p0, "DELETE FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
+    :cond_0
+    new-instance p2, Lq7b;
 
-    return-object p0
+    const/4 v0, 0x2
 
-    :pswitch_3
-    const-string p0, "DELETE FROM webapp_biometry"
+    iget-object v1, p0, Lwoc;->c:Lone/me/rlottie/RLottieImageView;
 
-    return-object p0
+    invoke-direct {p2, p0, p1, v1, v0}, Lq7b;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    :pswitch_4
-    const-string p0, "UPDATE webapp_biometry SET access_requested = ?, access_granted = ? WHERE user_id = ? AND bot_id = ?"
+    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "UPDATE webapp_biometry SET token = ? WHERE user_id = ? AND bot_id = ?"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "DELETE FROM video_conversions"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "DELETE FROM video_conversions WHERE source_uri=? AND quality=? AND start_trim_position=? AND end_trim_position=? AND mute=?"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "DELETE FROM uploads"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "DELETE FROM uploads WHERE photo_token=?"
-
-    return-object p0
-
-    :pswitch_a
-    const-string p0, "DELETE FROM uploads WHERE attach_id=?"
-
-    return-object p0
-
-    :pswitch_b
-    const-string p0, "DELETE FROM uploads WHERE path=? AND upload_type=? AND last_modified=?"
-
-    return-object p0
-
-    :pswitch_c
-    const-string p0, "DELETE FROM tasks WHERE type = ?"
-
-    return-object p0
-
-    :pswitch_d
-    const-string p0, "DELETE FROM tasks"
-
-    return-object p0
-
-    :pswitch_e
-    const-string p0, "DELETE FROM tasks WHERE id = ?"
-
-    return-object p0
-
-    :pswitch_f
-    const-string p0, "UPDATE tasks SET fails_count = fails_count + 1 WHERE id = ?"
-
-    return-object p0
-
-    :pswitch_10
-    const-string p0, "UPDATE tasks SET data = ?, status = ? WHERE id = ?"
-
-    return-object p0
-
-    :pswitch_11
-    const-string p0, "UPDATE tasks SET data = ? WHERE id = ?"
-
-    return-object p0
-
-    :pswitch_12
-    const-string p0, "UPDATE tasks SET status = ? WHERE id = ?"
-
-    return-object p0
-
-    :pswitch_13
-    const-string p0, "DELETE FROM SystemIdInfo where work_spec_id=?"
-
-    return-object p0
-
-    :pswitch_14
-    const-string p0, "DELETE FROM SystemIdInfo where work_spec_id=? AND generation=?"
-
-    return-object p0
-
-    :pswitch_15
-    const-string p0, "DELETE FROM stickers"
-
-    return-object p0
-
-    :pswitch_16
-    const-string p0, "DELETE FROM sticker_sets"
-
-    return-object p0
-
-    :pswitch_17
-    const-string p0, "\n            DELETE FROM stat_events\n            WHERE timestamp < ?\n        "
-
-    return-object p0
-
-    :pswitch_18
-    const-string p0, "DELETE FROM stat_events"
-
-    return-object p0
-
-    :pswitch_19
-    const-string p0, "DELETE FROM saved_msg_chat"
-
-    return-object p0
-
-    :pswitch_1a
-    const-string p0, "DELETE FROM saved_msg_chat WHERE chat_id = ?"
-
-    return-object p0
-
-    :pswitch_1b
-    const-string p0, "INSERT OR REPLACE INTO saved_msg_chat(user_id, chat_id) VALUES(?, ?)"
-
-    return-object p0
-
-    :pswitch_1c
-    const-string p0, "DELETE FROM folder_and_chats WHERE chatId = ?"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

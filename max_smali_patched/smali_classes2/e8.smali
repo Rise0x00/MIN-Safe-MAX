@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lxe6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lnma;
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILnma;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
-    iput p1, p0, Le8;->a:I
+    iput p3, p0, Le8;->a:I
 
-    iput-object p2, p0, Le8;->b:Lnma;
+    iput-object p1, p0, Le8;->c:Ljava/lang/Object;
+
+    iput p2, p0, Le8;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,80 +32,188 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 11
 
     iget v0, p0, Le8;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lnma;
+    iget-object v0, p0, Le8;->c:Ljava/lang/Object;
 
-    iget-object p0, p0, Le8;->b:Lnma;
+    check-cast v0, Lo65;
 
-    invoke-interface {p0}, Lnma;->b()Ldf0;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p0, p0, Ldf0;->m:I
+    iget-object p1, v0, Lo65;->y0:Lsqc;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object p1, p1, Lsqc;->a:Lfoe;
 
-    move-result-object p0
+    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
 
-    :pswitch_0
-    check-cast p1, Lnma;
+    check-cast p1, Ll65;
 
-    iget-object p0, p0, Le8;->b:Lnma;
+    iget-object p1, p1, Ll65;->b:Ljava/util/List;
 
-    invoke-interface {p0}, Lnma;->getIcon()Lmv6;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget p0, p0, Lmv6;->h:I
+    const/4 v1, 0x0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move v2, v1
 
-    move-result-object p0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
+    move-result v3
 
-    :pswitch_1
-    iget-object p0, p0, Le8;->b:Lnma;
+    if-eqz v3, :cond_2
 
-    check-cast p1, Landroid/view/View;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {p1, p0}, Lcsa;->f(Landroid/view/View;Lnma;)V
+    move-result-object v3
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    add-int/lit8 v4, v2, 0x1
 
-    return-object p0
+    const/4 v5, 0x0
 
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
+    if-ltz v2, :cond_1
 
-    instance-of v0, p1, Lfve;
+    check-cast v3, Lww7;
 
-    if-eqz v0, :cond_0
+    instance-of v6, v3, Lm32;
 
-    iget-object p0, p0, Le8;->b:Lnma;
+    if-eqz v6, :cond_0
 
-    invoke-static {p1, p0}, Lcsa;->f(Landroid/view/View;Lnma;)V
+    check-cast v3, Lm32;
 
-    const/4 p0, 0x0
+    iget v3, v3, Lm32;->a:I
+
+    iget v6, p0, Le8;->b:I
+
+    if-ne v3, v6, :cond_0
+
+    iget-object v3, v0, Lo65;->Y:Lmoe;
+
+    new-instance v7, Lm65;
+
+    const/4 v8, 0x4
+
+    invoke-direct {v7, v6, v2, v1, v8}, Lm65;-><init>(IIII)V
+
+    invoke-virtual {v3, v5, v7}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    move v2, v4
 
     goto :goto_0
 
-    :cond_0
-    const/4 p0, 0x1
+    :cond_1
+    invoke-static {}, Lf93;->U()V
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    throw v5
 
-    move-result-object p0
+    :cond_2
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Le8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lw55;
+
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object p1, v0, Lw55;->f:Ls5f;
+
+    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Le34;
+
+    new-instance v1, Lv55;
+
+    iget v2, p0, Le8;->b:I
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v0, v3}, Lv55;-><init>(ILw55;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {p1, v3, v3, v1, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Le8;->c:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Ljava/lang/String;
+
+    check-cast p1, Ldi;
+
+    new-instance v1, Lone/me/rlottie/RLottieFactory$Way$Url;
+
+    const/4 v3, 0x1
+
+    const/4 v6, 0x1
+
+    iget v4, p0, Le8;->b:I
+
+    move v5, v4
+
+    invoke-direct/range {v1 .. v6}, Lone/me/rlottie/RLottieFactory$Way$Url;-><init>(Ljava/lang/String;ZIIZ)V
+
+    new-instance v3, Lone/me/rlottie/RLottieFactory$Config;
+
+    const/16 v9, 0x12
+
+    const/4 v10, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    move-object v4, v1
+
+    invoke-direct/range {v3 .. v10}, Lone/me/rlottie/RLottieFactory$Config;-><init>(Lone/me/rlottie/RLottieFactory$Way;ZZZZILof4;)V
+
+    invoke-static {v3}, Lone/me/rlottie/RLottieFactory;->create(Lone/me/rlottie/RLottieFactory$Config;)Lone/me/rlottie/RLottieDrawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Le8;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    check-cast p1, Lnxc;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/b;
+
+    move-result-object p1
+
+    iget v0, p0, Le8;->b:I
+
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/b;->getRecycledView(I)Lnxc;
+
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0

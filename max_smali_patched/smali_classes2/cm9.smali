@@ -1,184 +1,85 @@
-.class public final synthetic Lcm9;
-.super Ljava/lang/Object;
+.class public final enum Lcm9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lea6;
 
+# static fields
+.field public static final enum a:Lcm9;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lcm9;
 
-.field public final synthetic b:Lhm9;
+.field public static final enum c:Lcm9;
+
+.field public static final synthetic o:[Lcm9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhm9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lcm9;->a:I
+    new-instance v0, Lcm9;
 
-    iput-object p1, p0, Lcm9;->b:Lhm9;
+    const-string v1, "X1"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcm9;->a:Lcm9;
+
+    new-instance v1, Lcm9;
+
+    const-string v2, "X1_5"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcm9;->b:Lcm9;
+
+    new-instance v2, Lcm9;
+
+    const-string v3, "X2"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lcm9;->c:Lcm9;
+
+    filled-new-array {v0, v1, v2}, [Lcm9;
+
+    move-result-object v0
+
+    sput-object v0, Lcm9;->o:[Lcm9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lcm9;
+    .locals 1
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const-class v0, Lcm9;
 
-    iget v0, p0, Lcm9;->a:I
-
-    check-cast p1, Lku7;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lcm9;->b:Lhm9;
-
-    iget-object p0, p0, Lhm9;->p0:Lhya;
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lhya;->b:Landroid/net/Uri;
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    iput-boolean p0, p1, Lku7;->l:Z
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p0, p0, Lcm9;->b:Lhm9;
-
-    iget-object v0, p0, Lhm9;->r0:Ln8d;
-
-    iget-object p0, p0, Lhm9;->X:Lqt7;
-
-    invoke-virtual {v0, p0}, Ln8d;->g(Lqt7;)I
-
-    move-result p0
-
-    if-gtz p0, :cond_2
-
-    invoke-virtual {v0}, Ln8d;->c()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/16 v1, 0x64
-
-    if-ge v0, v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 v0, 0x1
-
-    :goto_2
-    iput-boolean v0, p1, Lku7;->j:Z
-
-    iput p0, p1, Lku7;->k:I
-
-    return-object p1
-
-    :pswitch_1
-    iget-object p0, p0, Lcm9;->b:Lhm9;
-
-    iget-boolean p0, p0, Lhm9;->w0:Z
-
-    iput-boolean p0, p1, Lku7;->g:Z
-
-    iput-boolean p0, p1, Lku7;->h:Z
-
-    const/4 p0, 0x0
-
-    iput-boolean p0, p1, Lku7;->e:Z
-
-    return-object p1
-
-    :pswitch_2
-    iget-object p0, p0, Lcm9;->b:Lhm9;
-
-    iget-boolean v0, p0, Lhm9;->w0:Z
-
-    iput-boolean v0, p1, Lku7;->e:Z
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p1, Lku7;->g:Z
-
-    iput-boolean v1, p1, Lku7;->h:Z
-
-    iput-boolean v0, p1, Lku7;->a:Z
-
-    iget-object p0, p0, Lhm9;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()Lru/ok/messages/media/mediabar/FrgLocalMedia;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    if-nez p0, :cond_3
+    check-cast p0, Lcm9;
 
-    goto :goto_3
+    return-object p0
+.end method
 
-    :cond_3
-    instance-of v1, p0, Lru/ok/messages/media/mediabar/FrgLocalVideo;
+.method public static values()[Lcm9;
+    .locals 1
 
-    :goto_3
-    iput-boolean v1, p1, Lku7;->f:Z
+    sget-object v0, Lcm9;->o:[Lcm9;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :pswitch_3
-    iget-object p0, p0, Lcm9;->b:Lhm9;
+    move-result-object v0
 
-    iget-object p0, p0, Lhm9;->p0:Lhya;
+    check-cast v0, [Lcm9;
 
-    if-eqz p0, :cond_4
-
-    iget-object p0, p0, Lhya;->o:Luy4;
-
-    if-eqz p0, :cond_4
-
-    const/4 p0, 0x1
-
-    goto :goto_4
-
-    :cond_4
-    const/4 p0, 0x0
-
-    :goto_4
-    iput-boolean p0, p1, Lku7;->m:Z
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

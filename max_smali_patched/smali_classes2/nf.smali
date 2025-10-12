@@ -2,295 +2,182 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lmqc;
+# interfaces
+.implements Lmf;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public a:[I
 
-.field public final b:Landroid/content/res/Resources;
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 2
 
-    new-instance v0, Lmqc;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lmqc;-><init>(I)V
-
-    sput-object v0, Lnf;->c:Lmqc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnf;->a:Landroid/content/Context;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    filled-new-array {v1, p1, v0}, [I
 
     move-result-object p1
 
-    iput-object p1, p0, Lnf;->b:Landroid/content/res/Resources;
+    iput-object p1, p0, Lnf;->a:[I
 
     return-void
-.end method
 
-.method public static c(Landroid/animation/Animator;)Z
-    .locals 4
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v0, p0, Landroid/animation/AnimatorSet;
+    const/16 p1, 0x8
 
-    const/4 v1, 0x0
+    new-array p1, p1, [I
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lnf;->a:[I
 
-    move-object v0, p0
+    return-void
 
-    check-cast v0, Landroid/animation/AnimatorSet;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    const-string v2, "pathData"
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->getChildAnimations()Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/animation/Animator;
-
-    instance-of v3, v0, Landroid/animation/ObjectAnimator;
-
-    if-eqz v3, :cond_3
-
-    check-cast v0, Landroid/animation/ObjectAnimator;
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v1
-
-    :goto_1
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->getPropertyName()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_4
-    move-object v0, v1
-
-    :goto_2
-    invoke-static {v0, v2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_5
-    :goto_3
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    instance-of v0, p0, Landroid/animation/ObjectAnimator;
-
-    if-eqz v0, :cond_7
-
-    check-cast p0, Landroid/animation/ObjectAnimator;
-
-    goto :goto_4
-
-    :cond_7
-    move-object p0, v1
-
-    :goto_4
-    if-eqz p0, :cond_8
-
-    invoke-virtual {p0}, Landroid/animation/ObjectAnimator;->getPropertyName()Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_8
-    invoke-static {v1, v2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(I)Landroid/animation/Animator;
-    .locals 4
+.method public a()I
+    .locals 2
 
-    new-instance v0, Lah;
+    iget v0, p0, Lnf;->b:I
 
-    iget-object p0, p0, Lnf;->a:Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, p0}, Lah;-><init>(Landroid/content/Context;)V
+    iget-object v1, p0, Lnf;->a:[I
 
-    sget-object p0, Lah;->c:Lmqc;
+    add-int/lit8 v0, v0, -0x1
 
-    iget-object v1, p0, Lmqc;->b:Ljava/lang/Object;
+    aget v0, v1, v0
 
-    check-cast v1, Landroid/util/LruCache;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/animation/Animator;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/animation/Animator;->clone()Landroid/animation/Animator;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 
     :cond_0
-    iget-object v1, v0, Lah;->b:Landroid/content/res/Resources;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getAnimation(I)Landroid/content/res/XmlResourceParser;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3, v2}, Lah;->a(Landroid/content/res/XmlResourceParser;Landroid/animation/AnimatorSet;I)Landroid/animation/Animator;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->clone()Landroid/animation/Animator;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lmqc;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/util/LruCache;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, v1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Required value was null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    throw v0
 .end method
 
-.method public final b(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/EnhancedVectorDrawable;
-    .locals 5
+.method public b()I
+    .locals 2
 
-    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
+    iget v0, p0, Lnf;->b:I
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lnf;->a:[I
 
-    move v2, v1
+    add-int/lit8 v0, v0, -0x1
 
-    :goto_0
-    if-ge v2, v0, :cond_1
+    iput v0, p0, Lnf;->b:I
 
-    invoke-interface {p1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
+    aget v0, v1, v0
 
-    move-result-object v3
-
-    const-string v4, "drawable"
-
-    invoke-static {v3, v4}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {p1, v2, v1}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    iget-object p0, p0, Lnf;->b:Landroid/content/res/Resources;
-
-    invoke-direct {v0, p0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/res/Resources;I)V
-
-    return-object v0
+    return v0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public c()I
+    .locals 3
+
+    iget-object v0, p0, Lnf;->a:[I
+
+    iget v1, p0, Lnf;->b:I
+
+    aget v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iput v1, p0, Lnf;->b:I
+
+    return v2
+.end method
+
+.method public d(I)V
+    .locals 2
+
+    iget v0, p0, Lnf;->b:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lnf;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aput p1, v1, v0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p1}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p1
+.end method
+
+.method public e(I)V
+    .locals 4
+
+    iget-object v0, p0, Lnf;->a:[I
+
+    array-length v1, v0
+
+    iget v2, p0, Lnf;->b:I
+
+    if-ge v2, v1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :cond_0
+    mul-int/lit8 v2, v1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    new-array v2, v2, [I
 
-    throw p0
+    const/4 v3, 0x0
+
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v2, p0, Lnf;->a:[I
+
+    move-object v0, v2
+
+    :goto_0
+    iget v1, p0, Lnf;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lnf;->b:I
+
+    aput p1, v0, v1
+
+    return-void
 .end method

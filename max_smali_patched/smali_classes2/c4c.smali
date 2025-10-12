@@ -1,32 +1,98 @@
-.class public abstract Lc4c;
-.super Ljava/lang/Object;
+.class public final Lc4c;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static oneme_action_share_qr_code_error:I = 0x7f130791
+# instance fields
+.field public final synthetic X:Lp4c;
 
-.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f1307e0
+.field public final synthetic Y:J
 
-.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f1307e2
 
-.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f1307e3
+# direct methods
+.method public constructor <init>(Lp4c;JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_found_contact_is_self_error:I = 0x7f130813
+    iput-object p1, p0, Lc4c;->X:Lp4c;
 
-.field public static oneme_invite_actions_header:I = 0x7f13081f
+    iput-wide p2, p0, Lc4c;->Y:J
 
-.field public static oneme_invite_by_link_action:I = 0x7f130820
+    const/4 p1, 0x2
 
-.field public static oneme_invite_by_phone_action:I = 0x7f130821
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_invite_by_phone_continue_button:I = 0x7f130822
+    return-void
+.end method
 
-.field public static oneme_invite_by_phone_description:I = 0x7f130823
 
-.field public static oneme_invite_by_phone_hint_default:I = 0x7f130824
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_invite_by_phone_title:I = 0x7f130825
+    check-cast p1, Le34;
 
-.field public static oneme_invite_by_qr_action:I = 0x7f130826
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f130827
+    invoke-virtual {p0, p1, p2}, Lc4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lc4c;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lc4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lc4c;
+
+    iget-object v0, p0, Lc4c;->X:Lp4c;
+
+    iget-wide v1, p0, Lc4c;->Y:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lc4c;-><init>(Lp4c;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    sget-object p1, Lp4c;->Z0:[Ltm7;
+
+    iget-object p1, p0, Lc4c;->X:Lp4c;
+
+    invoke-virtual {p1}, Lp4c;->s()Lm13;
+
+    move-result-object v0
+
+    check-cast v0, Lm23;
+
+    invoke-virtual {v0}, Lm23;->M()Lub2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lc4c;->Y:J
+
+    invoke-virtual {v0, v1, v2}, Lub2;->Q(J)V
+
+    iget-object p1, p1, Lp4c;->H0:Ljb5;
+
+    sget-object v0, Lz1c;->b:Lz1c;
+
+    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+.end method

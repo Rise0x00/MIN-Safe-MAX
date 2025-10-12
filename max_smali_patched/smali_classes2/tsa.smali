@@ -1,123 +1,37 @@
-.class public final Ltsa;
+.class public abstract Ltsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/util/Map;
+.field public static final b:I
 
-.field public final b:Lu8d;
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ConcurrentHashMap;Lu8d;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ldfc;->oneme_bottom_sheet_popup:I
 
-    iput-object p1, p0, Ltsa;->a:Ljava/util/Map;
+    sput v0, Ltsa;->a:I
 
-    iput-object p2, p0, Ltsa;->b:Lu8d;
+    sget v0, Ldfc;->oneme_bottom_sheet_popup_card:I
 
-    return-void
-.end method
+    sput v0, Ltsa;->b:I
 
+    sget v0, Ldfc;->oneme_bottom_sheet_toolbar:I
 
-# virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 2
+    sput v0, Ltsa;->c:I
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedWidth()I
+    sget v0, Ldfc;->oneme_too_many_requests_bottomsheet_positive_button:I
 
-    move-result v0
+    sput v0, Ltsa;->d:I
 
-    const/16 v1, 0x10
-
-    if-gt v0, v1, :cond_0
-
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedHeight()I
-
-    move-result v0
-
-    if-gt v0, v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    iget-object v1, p0, Ltsa;->b:Lu8d;
-
-    iget-object v1, v1, Lu8d;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ler1;
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object p0, p0, Ltsa;->a:Ljava/util/Map;
-
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    if-nez p0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoSink;
-
-    invoke-interface {v0, p1}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
-
-    goto :goto_0
-
-    :cond_4
-    :goto_1
     return-void
 .end method

@@ -1,121 +1,94 @@
 .class public final Lya9;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Lth7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final d:Lth7;
-
-.field public final e:Lth7;
+.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;Lth7;Lth7;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lya9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    iput-object p1, p0, Lya9;->a:Lth7;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lya9;->b:Lth7;
-
-    iput-object p3, p0, Lya9;->c:Lth7;
-
-    iput-object p4, p0, Lya9;->d:Lth7;
-
-    iput-object p5, p0, Lya9;->e:Lth7;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lya9;JLjava/lang/CharSequence;Ljava/lang/Long;Lb36;Leje;I)Ljava/lang/Object;
-    .locals 8
-
-    and-int/lit8 p7, p7, 0x8
-
-    if-eqz p7, :cond_0
-
-    const/4 p5, 0x0
-
-    :cond_0
-    move-object v5, p5
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v7, p6
-
-    invoke-virtual/range {v0 .. v7}, Lya9;->a(JLjava/lang/CharSequence;Ljava/lang/Long;Lb36;ZLeje;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(JLjava/lang/CharSequence;Ljava/lang/Long;Lb36;ZLeje;)Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lya9;->a:Lth7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lya9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lya9;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lya9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lya9;
+
+    iget-object v1, p0, Lya9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {v0, p2, v1}, Lya9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+
+    iput-object p1, v0, Lya9;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lya9;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
+
+    iget-object v0, p0, Lya9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lh69;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
 
     move-result-object v0
 
-    check-cast v0, Lhoe;
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    check-cast v0, Loba;
+    move-result p1
 
-    invoke-virtual {v0}, Loba;->b()Lj04;
+    invoke-virtual {v0, p1}, Lh69;->h(I)V
 
-    move-result-object v0
+    sget-object p1, Loyf;->a:Loyf;
 
-    new-instance v1, Lxa9;
-
-    const/4 v9, 0x0
-
-    move-object v2, p0
-
-    move-wide v3, p1
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    move-object v8, p5
-
-    move/from16 v7, p6
-
-    invoke-direct/range {v1 .. v9}, Lxa9;-><init>(Lya9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLb36;Lkotlin/coroutines/Continuation;)V
-
-    move-object/from16 p0, p7
-
-    invoke-static {v0, v1, p0}, Lyr3;->B0(Lh04;Lt96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object p1
 .end method

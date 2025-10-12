@@ -3,42 +3,34 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Le6;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public final synthetic Y:Ljava/lang/CharSequence;
-
-.field public final synthetic Z:Z
-
 .field public final synthetic a:I
 
-.field public final synthetic b:Lt49;
+.field public final synthetic b:Lo49;
 
-.field public final synthetic c:Ll72;
+.field public final synthetic c:Ljava/lang/String;
 
-.field public final synthetic o:Lwu8;
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt49;Ll72;Lwu8;ILjava/lang/CharSequence;ZI)V
+.method public synthetic constructor <init>(Lo49;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;I)V
     .locals 0
 
-    iput p7, p0, Lm49;->a:I
+    iput p5, p0, Lm49;->a:I
 
-    iput-object p1, p0, Lm49;->b:Lt49;
+    iput-object p1, p0, Lm49;->b:Lo49;
 
-    iput-object p2, p0, Lm49;->c:Ll72;
+    iput-object p2, p0, Lm49;->d:Ljava/lang/Object;
 
-    iput-object p3, p0, Lm49;->o:Lwu8;
+    iput-object p3, p0, Lm49;->c:Ljava/lang/String;
 
-    iput p4, p0, Lm49;->X:I
-
-    iput-object p5, p0, Lm49;->Y:Ljava/lang/CharSequence;
-
-    iput-boolean p6, p0, Lm49;->Z:Z
+    iput-object p4, p0, Lm49;->e:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,51 +39,139 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final run()V
+    .locals 20
 
-    iget v0, p0, Lm49;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Lm49;->a:I
 
-    iget-object v5, p0, Lm49;->Y:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lm49;->e:Ljava/lang/Object;
 
-    iget-boolean v6, p0, Lm49;->Z:Z
+    iget-object v3, v0, Lm49;->d:Ljava/lang/Object;
 
-    iget-object v1, p0, Lm49;->b:Lt49;
+    iget-object v4, v0, Lm49;->b:Lo49;
 
-    iget-object v2, p0, Lm49;->c:Ll72;
+    packed-switch v1, :pswitch_data_0
 
-    iget-object v3, p0, Lm49;->o:Lwu8;
+    check-cast v3, Lq49;
 
-    iget v4, p0, Lm49;->X:I
+    check-cast v2, Lwo3;
 
-    invoke-virtual/range {v1 .. v6}, Lt49;->b(Ll72;Lwu8;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+    iget-wide v5, v3, Lyi0;->a:J
 
-    move-result-object p0
+    iget-object v1, v0, Lm49;->c:Ljava/lang/String;
 
-    return-object p0
+    invoke-virtual {v4, v5, v6, v1, v2}, Lo49;->u(JLjava/lang/String;Lwo3;)V
+
+    iget-object v1, v4, Lo49;->b:Lov0;
+
+    new-instance v4, Ln0g;
+
+    iget-wide v6, v3, Lq49;->w0:J
+
+    iget-wide v8, v3, Lyi0;->a:J
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v4 .. v9}, Ln0g;-><init>(IJJ)V
+
+    invoke-virtual {v1, v4}, Lov0;->c(Ljava/lang/Object;)V
+
+    return-void
 
     :pswitch_0
-    iget-object v4, p0, Lm49;->Y:Ljava/lang/CharSequence;
+    check-cast v3, Lw29;
 
-    iget-boolean v5, p0, Lm49;->Z:Z
+    move-object v5, v2
 
-    iget-object v0, p0, Lm49;->b:Lt49;
+    check-cast v5, Lv89;
 
-    iget-object v1, p0, Lm49;->c:Ll72;
+    iget-object v1, v3, Lw29;->a:Lq49;
 
-    iget-object v2, p0, Lm49;->o:Lwu8;
+    iget-object v2, v1, Lq49;->C0:Lfah;
 
-    iget v3, p0, Lm49;->X:I
+    iget-wide v11, v1, Lyi0;->a:J
 
-    invoke-virtual/range {v0 .. v5}, Lt49;->b(Ll72;Lwu8;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+    invoke-virtual {v2}, Lfah;->g()I
 
-    move-result-object p0
+    move-result v2
 
-    return-object p0
+    iget-object v8, v0, Lm49;->c:Ljava/lang/String;
 
-    nop
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    iget-object v2, v4, Lo49;->e:Lnah;
+
+    iget-wide v14, v1, Lq49;->w0:J
+
+    sget-object v6, Lhn4;->o:Lw88;
+
+    iget-wide v6, v1, Lyi0;->a:J
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    invoke-static {v6}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v16
+
+    iget-object v6, v1, Lq49;->W0:Lhn4;
+
+    new-instance v13, Lztd;
+
+    const/16 v17, 0x0
+
+    move/from16 v18, v3
+
+    move-object/from16 v19, v6
+
+    invoke-direct/range {v13 .. v19}, Lztd;-><init>(JLjava/util/List;Lvd3;ZLhn4;)V
+
+    invoke-virtual {v2, v13}, Lnah;->b(Lstd;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, v4, Lo49;->a:Lu94;
+
+    check-cast v2, Lb94;
+
+    iget-object v2, v2, Lb94;->c:Ll6d;
+
+    new-instance v3, Lrb2;
+
+    const/4 v6, 0x2
+
+    invoke-direct {v3, v8, v6}, Lrb2;-><init>(Ljava/lang/String;I)V
+
+    invoke-virtual {v2, v11, v12, v3}, Ll6d;->o(JLwo3;)V
+
+    :goto_0
+    iget-wide v6, v1, Lyi0;->a:J
+
+    iget-wide v9, v1, Lq49;->w0:J
+
+    invoke-virtual/range {v5 .. v10}, Lv89;->a(JLjava/lang/String;J)V
+
+    iget-object v2, v4, Lo49;->b:Lov0;
+
+    new-instance v6, Ln0g;
+
+    iget-wide v8, v1, Lq49;->w0:J
+
+    const/4 v7, 0x0
+
+    move-wide v10, v11
+
+    invoke-direct/range {v6 .. v11}, Ln0g;-><init>(IJJ)V
+
+    invoke-virtual {v2, v6}, Lov0;->c(Ljava/lang/Object;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

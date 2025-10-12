@@ -1,90 +1,110 @@
 .class public final Lsk4;
-.super Ll3;
+.super Lvb4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
 
 
 # instance fields
-.field public final n0:Ljava/util/concurrent/ScheduledFuture;
+.field public final X:Ljava/util/concurrent/ExecutorService;
+
+.field public volatile Y:Landroid/os/Handler;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lrk4;)V
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lu8d;
+    new-instance v0, Ljava/lang/Object;
 
-    const/16 v1, 0xd
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, p0}, Lu8d;-><init>(ILjava/lang/Object;)V
+    iput-object v0, p0, Lsk4;->o:Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Lrk4;->b(Lu8d;)Ljava/util/concurrent/ScheduledFuture;
+    new-instance v0, Lf30;
 
-    move-result-object p1
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Lsk4;->n0:Ljava/util/concurrent/ScheduledFuture;
+    invoke-direct {v0, v1}, Lf30;-><init>(I)V
+
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsk4;->X:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
+.method public static p0(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 4
 
-# virtual methods
-.method public final b()V
-    .locals 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v0, p0, Lsk4;->n0:Ljava/util/concurrent/ScheduledFuture;
+    const/16 v1, 0x1c
 
-    iget-object p0, p0, Ll3;->a:Ljava/lang/Object;
+    if-lt v0, v1, :cond_0
 
-    instance-of v1, p0, Lf3;
+    invoke-static {p0}, Lrk4;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    if-eqz v1, :cond_0
+    move-result-object p0
 
-    check-cast p0, Lf3;
-
-    iget-boolean p0, p0, Lf3;->a:Z
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    const/4 p0, 0x0
+    :try_start_0
+    const-class v0, Landroid/os/Handler;
 
-    :goto_0
-    invoke-interface {v0, p0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const-class v1, Landroid/os/Looper;
 
-    return-void
-.end method
+    const-class v2, Landroid/os/Handler$Callback;
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Class;
 
-    iget-object p0, p0, Lsk4;->n0:Ljava/util/concurrent/ScheduledFuture;
+    move-result-object v1
 
-    invoke-interface {p0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 0
+    const/4 v2, 0x0
 
-    iget-object p0, p0, Lsk4;->n0:Ljava/util/concurrent/ScheduledFuture;
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+    move-result-object v1
 
-    move-result-wide p0
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-wide p0
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Handler;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-object v0
+
+    :catch_1
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-object v0
 .end method

@@ -3,275 +3,129 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcm4;
+.implements Lbp7;
+.implements Ljava/io/Serializable;
+
+
+# static fields
+.field public static final c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
 
 # instance fields
-.field public final a:Lcue;
+.field public volatile a:Lve6;
 
-.field public final b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-.field public final c:Z
-
-.field public final d:Lth7;
-
-.field public final e:Lth7;
-
-.field public final f:J
-
-.field public final g:Lq4e;
-
-.field public final h:Ljbc;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcue;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Ljava/lang/Object;
 
-    .line 2
-    iput-object p1, p0, Lcbd;->a:Lcue;
+    const-string v1, "b"
 
-    .line 3
-    iput-object p2, p0, Lcbd;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+    const-class v2, Lcbd;
 
-    .line 4
-    iput-boolean p3, p0, Lcbd;->c:Z
-
-    .line 5
-    sget-object p1, Lom4;->a:Lom4;
-
-    .line 6
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p2
-
-    const-class p3, Ll2d;
-
-    invoke-virtual {p2, p3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p2
-
-    .line 7
-    iput-object p2, p0, Lcbd;->d:Lth7;
-
-    .line 8
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p1
-
-    const-class p2, Ln2d;
-
-    invoke-virtual {p1, p2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    .line 9
-    iput-object p1, p0, Lcbd;->e:Lth7;
-
-    .line 10
-    sget-object p1, Lsl4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 11
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide p1
-
-    .line 12
-    iput-wide p1, p0, Lcbd;->f:J
-
-    .line 13
-    invoke-virtual {p0}, Lcbd;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcbd;->g:Lq4e;
-
-    .line 14
-    new-instance p2, Ljbc;
-
-    invoke-direct {p2, p1}, Ljbc;-><init>(Lal9;)V
-
-    .line 15
-    iput-object p2, p0, Lcbd;->h:Ljbc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-    .locals 1
-
-    .line 19
-    new-instance v0, Lcue;
-
-    invoke-direct {v0, p1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 20
-    invoke-direct {p0, v0, p2, p3}, Lcbd;-><init>(Lcue;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
-    .locals 2
-
-    .line 16
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     move-result-object v0
 
-    .line 17
-    new-instance v1, Lcue;
-
-    invoke-direct {v1, v0}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v0, 0x0
-
-    .line 18
-    invoke-direct {p0, v1, p1, v0}, Lcbd;-><init>(Lcue;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    sput-object v0, Lcbd;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lj4e;
-    .locals 0
+.method public final a()Z
+    .locals 2
 
-    iget-object p0, p0, Lcbd;->h:Ljbc;
+    iget-object v0, p0, Lcbd;->b:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    sget-object v1, Lmf2;->w0:Lmf2;
 
-.method public final d(Lx84;)V
-    .locals 4
+    if-eq v0, v1, :cond_0
 
-    iget-wide v0, p1, Lx84;->a:J
+    const/4 v0, 0x1
 
-    iget-wide v2, p0, Lcbd;->f:J
-
-    invoke-static {v0, v1, v2, v3}, Lsl4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lcbd;->d:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll2d;
-
-    iget-boolean v1, p0, Lcbd;->c:Z
-
-    iget-object v2, p0, Lcbd;->b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v0, v2, v1}, Ll2d;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v0
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll2d;
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Ld3;->g(Ljava/lang/String;Z)V
-
-    invoke-virtual {p0}, Lcbd;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    iget-object p0, p0, Lcbd;->g:Lq4e;
-
-    invoke-virtual {p0, v0, p1}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return v0
 
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final e()Ljava/util/List;
-    .locals 7
+.method public final getValue()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v6, Lw84;
+    iget-object v0, p0, Lcbd;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcbd;->d:Lth7;
+    sget-object v1, Lmf2;->w0:Lmf2;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    if-eq v0, v1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcbd;->a:Lve6;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll2d;
+    sget-object v2, Lcbd;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    iget-object v1, p0, Lcbd;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+    :cond_1
+    invoke-virtual {v2, p0, v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v2, p0, Lcbd;->c:Z
+    move-result v3
 
-    invoke-virtual {v0, v1, v2}, Ll2d;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    if-eqz v3, :cond_2
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcbd;->a:Lve6;
+
+    return-object v0
+
+    :cond_2
+    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_1
+
+    :cond_3
+    iget-object v0, p0, Lcbd;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lcbd;->a()Z
 
     move-result v0
 
-    invoke-direct {v6, v0}, Lw84;-><init>(Z)V
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcbd;->e:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcbd;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ln2d;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v0, v0, Ld3;->g:Lwh7;
-
-    invoke-virtual {v0, v1, v2}, Lwh7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    const-string v1, "Server: "
-
-    invoke-static {v1, v0}, Ljq9;->g(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v5, Lcue;
+    return-object v0
 
-    invoke-direct {v5, v0}, Lcue;-><init>(Ljava/lang/CharSequence;)V
+    :cond_0
+    const-string v0, "Lazy value not initialized yet."
 
-    new-instance v0, Lx84;
-
-    iget-wide v1, p0, Lcbd;->f:J
-
-    iget-object v3, p0, Lcbd;->a:Lcue;
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lx84;-><init>(JLdue;ILdue;Lcp;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

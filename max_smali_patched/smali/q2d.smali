@@ -1,43 +1,35 @@
 .class public final Lq2d;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfve;
+
+# static fields
+.field public static final c:Lq2d;
 
 
-# virtual methods
-.method public final onThemeChanged(Lnma;)V
-    .locals 1
+# instance fields
+.field public a:Landroid/util/Size;
 
-    const/4 v0, 0x0
+.field public b:I
 
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    instance-of v0, p0, Landroid/widget/ProgressBar;
+    new-instance v0, Lq2d;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Landroid/widget/ProgressBar;
+    const/4 v1, 0x0
 
-    goto :goto_0
+    iput-object v1, v0, Lq2d;->a:Landroid/util/Size;
 
-    :cond_0
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    :goto_0
-    if-eqz p0, :cond_1
+    iput v1, v0, Lq2d;->b:I
 
-    invoke-interface {p1}, Lnma;->getIcon()Lmv6;
+    sput-object v0, Lq2d;->c:Lq2d;
 
-    move-result-object p1
-
-    iget p1, p1, Lmv6;->i:I
-
-    invoke-static {p0, p1}, Lz8c;->N(Landroid/widget/ProgressBar;I)V
-
-    :cond_1
     return-void
 .end method

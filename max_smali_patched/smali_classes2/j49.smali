@@ -1,259 +1,134 @@
-.class public final Lj49;
-.super Lml7;
+.class public final synthetic Lj49;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final p:Z
+.field public final synthetic a:I
 
-.field public final q:Lv55;
+.field public final synthetic b:Lhy9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;IZLv55;)V
+.method public synthetic constructor <init>(Lhy9;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lml7;-><init>(Landroid/content/Context;)V
+    .line 1
+    iput p2, p0, Lj49;->a:I
 
-    iput-boolean p3, p0, Lj49;->p:Z
+    iput-object p1, p0, Lj49;->b:Lhy9;
 
-    iput-object p4, p0, Lj49;->q:Lv55;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ltz p2, :cond_0
+    return-void
+.end method
 
-    iput p2, p0, Lml7;->a:I
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Lhy9;)V
+    .locals 0
 
-    :cond_0
+    .line 2
+    const/4 p1, 0x0
+
+    iput p1, p0, Lj49;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lj49;->b:Lhy9;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    invoke-super {p0}, Lml7;->j()V
+    iget v0, p0, Lj49;->a:I
 
-    iget-object p0, p0, Lj49;->q:Lv55;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Lv55;->invoke()Ljava/lang/Object;
+    sget-object v2, Loyf;->a:Loyf;
 
-    return-void
-.end method
+    iget-object v3, p0, Lj49;->b:Lhy9;
 
-.method public final k(Landroid/view/View;Lka4;)V
-    .locals 7
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lml7;->h()I
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    move-result v5
+    sget-object v0, Lpd9;->c:Lpd9;
 
-    iget-object v0, p0, Lml7;->c:Landroidx/recyclerview/widget/a;
+    check-cast v3, Lp0b;
 
-    const/4 v6, 0x0
+    iget-object v3, v3, Lp0b;->d:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lv2;->K0()Ldd4;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->f()Z
+    move-result-object v0
 
-    move-result v1
+    const-string v4, ":call-join-link?link="
 
-    if-nez v1, :cond_1
+    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_0
-    move-object v0, p0
+    move-result-object v3
 
-    goto :goto_0
+    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    return-object v2
 
-    move-result-object v1
+    :pswitch_0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    check-cast v1, Lghc;
+    sget-object v0, Lpd9;->c:Lpd9;
 
-    invoke-static {p1}, Landroidx/recyclerview/widget/a;->F(Landroid/view/View;)I
+    check-cast v3, Lc1b;
 
-    move-result v2
+    iget-wide v4, v3, Lc1b;->b:J
 
-    iget v3, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+    iget-boolean v3, v3, Lc1b;->c:Z
 
-    sub-int/2addr v2, v3
+    invoke-virtual {v0}, Lv2;->K0()Ldd4;
 
-    invoke-static {p1}, Landroidx/recyclerview/widget/a;->z(Landroid/view/View;)I
+    move-result-object v0
 
-    move-result p1
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    const-string v7, ":call-user?opponent_id="
 
-    add-int/2addr p1, v1
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->L()I
+    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string v4, "&video_enabled="
 
-    iget v1, v0, Landroidx/recyclerview/widget/a;->o:I
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->I()I
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sub-int v4, v1, v0
+    move-result-object v3
 
-    move-object v0, p0
+    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    move v1, v2
+    return-object v2
 
-    move v2, p1
+    :pswitch_1
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
 
-    invoke-virtual/range {v0 .. v5}, Lj49;->m(IIIII)I
+    sget-object v0, Lpd9;->c:Lpd9;
 
-    move-result p0
+    check-cast v3, Lzc4;
 
-    goto :goto_1
+    invoke-virtual {v0, v3}, Lv2;->N0(Lzc4;)V
 
-    :goto_0
-    move p0, v6
+    return-object v2
 
-    :goto_1
-    invoke-virtual {v0, p0}, Lml7;->e(I)I
-
-    move-result p1
-
-    if-lez p1, :cond_3
-
-    neg-int p0, p0
-
-    const/16 v1, 0x12c
-
-    if-le p1, v1, :cond_2
-
-    move p1, v1
-
-    :cond_2
-    iget-object v0, v0, Lml7;->i:Landroid/view/animation/DecelerateInterpolator;
-
-    invoke-virtual {p2, v6, p0, p1, v0}, Lka4;->e(IIILandroid/view/animation/BaseInterpolator;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final m(IIIII)I
-    .locals 6
-
-    const/4 v0, -0x1
-
-    if-eq p5, v0, :cond_6
-
-    iget-boolean v0, p0, Lj49;->p:Z
-
-    if-eqz p5, :cond_2
-
-    const/4 p0, 0x1
-
-    if-ne p5, p0, :cond_1
-
-    sub-int/2addr p4, p2
-
-    sub-int/2addr p2, p1
-
-    sub-int p0, p4, p2
-
-    if-ge p0, p3, :cond_0
-
-    if-nez v0, :cond_0
-
-    sub-int/2addr p3, p1
-
-    return p3
-
-    :cond_0
-    return p4
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "snap preference should be one of the constants defined in SmoothScroller, starting with SNAP_"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    if-nez v0, :cond_3
-
-    const/4 v5, -0x1
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lj49;->m(IIIII)I
-
-    move-result p0
-
-    if-lez p0, :cond_4
-
-    return p0
-
-    :cond_3
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    :cond_4
-    const/4 v5, 0x1
-
-    invoke-virtual/range {v0 .. v5}, Lj49;->m(IIIII)I
-
-    move-result p0
-
-    if-gez p0, :cond_5
-
-    return p0
-
-    :cond_5
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    move v1, p1
-
-    move v3, p3
-
-    sub-int p3, v3, v1
-
-    const/16 p0, 0x1e
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p0, p1, p3}, Lcx3;->b(FFI)I
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

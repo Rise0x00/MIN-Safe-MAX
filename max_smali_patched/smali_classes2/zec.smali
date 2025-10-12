@@ -1,1019 +1,282 @@
-.class public final Lzec;
+.class public abstract Lzec;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static profile_add_admins_empty_search_view:I = 0x7f0a091a
 
-# instance fields
-.field public final synthetic a:I
+.field public static profile_add_admins_from_contacts_list:I = 0x7f0a091b
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_add_admins_tab_chat_members:I = 0x7f0a091c
 
+.field public static profile_add_admins_tab_contacts:I = 0x7f0a091d
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static profile_add_admins_tabs:I = 0x7f0a091e
 
-    iput p2, p0, Lzec;->a:I
+.field public static profile_add_admins_toolbar:I = 0x7f0a091f
 
-    iput-object p1, p0, Lzec;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_add_admins_view_pager:I = 0x7f0a0920
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static profile_add_chat_member_action:I = 0x7f0a0921
 
-    return-void
-.end method
+.field public static profile_add_members_show_history_cancel_action:I = 0x7f0a0922
 
-.method private final A(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_add_members_show_history_negative_action:I = 0x7f0a0923
 
-    return-void
-.end method
+.field public static profile_add_members_show_history_positive_action:I = 0x7f0a0924
 
-.method private final B(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_add_members_toolbar:I = 0x7f0a0925
 
-    return-void
-.end method
+.field public static profile_audio_button:I = 0x7f0a0926
 
-.method private final C(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_block_user_confirmation_sheet_confirm:I = 0x7f0a0928
 
-    return-void
-.end method
+.field public static profile_change_avatar_upload_from_camera:I = 0x7f0a0929
 
-.method private final D(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_change_avatar_upload_from_gallery:I = 0x7f0a092a
 
-    return-void
-.end method
+.field public static profile_change_owner_cancel_action:I = 0x7f0a092e
 
-.method private final E(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_change_owner_change_action:I = 0x7f0a092f
 
-    return-void
-.end method
+.field public static profile_change_owner_chat_confirmation_sheet_confirm:I = 0x7f0a0930
 
-.method private final F(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_change_owner_members_list_container:I = 0x7f0a0931
 
-    return-void
-.end method
+.field public static profile_change_owner_toolbar:I = 0x7f0a0932
 
-.method private final G(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_channel_link_view_hint:I = 0x7f0a0933
 
-    return-void
-.end method
+.field public static profile_channel_link_view_link:I = 0x7f0a0934
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_channel_link_view_share_icon:I = 0x7f0a0935
 
-    return-void
-.end method
+.field public static profile_channel_link_view_share_qr_code:I = 0x7f0a0936
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_clear_history_confirmation_sheet_confirm:I = 0x7f0a0937
 
-    return-void
-.end method
+.field public static profile_confirmation_sheet_cancel:I = 0x7f0a0938
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_contact_avatars_image_view:I = 0x7f0a0939
 
-    return-void
-.end method
+.field public static profile_contact_avatars_progress_indicator:I = 0x7f0a093a
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_contact_avatars_toolbar:I = 0x7f0a093b
 
-    return-void
-.end method
+.field public static profile_contact_avatars_viewpager:I = 0x7f0a093c
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_debug_info_action_copy:I = 0x7f0a093d
 
-    return-void
-.end method
+.field public static profile_debug_info_button:I = 0x7f0a093e
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_debug_profile_info_btn:I = 0x7f0a093f
 
-    return-void
-.end method
+.field public static profile_debug_profile_new_media_list_btn:I = 0x7f0a0940
 
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_delete_channel_confirmation_sheet_confirm:I = 0x7f0a0941
 
-    return-void
-.end method
+.field public static profile_delete_chat_confirmation_sheet_confirm:I = 0x7f0a0942
 
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_delete_chat_with_bot_confirm_with_suspend:I = 0x7f0a0943
 
-    return-void
-.end method
+.field public static profile_delete_chat_with_bot_confirm_without_suspend:I = 0x7f0a0944
 
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_delete_chat_with_bot_official_confirm_with_suspend:I = 0x7f0a0945
 
-    return-void
-.end method
+.field public static profile_dot_divider_view:I = 0x7f0a0947
 
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_by_link_action:I = 0x7f0a099a
 
-    return-void
-.end method
+.field public static profile_invite_chatlinkview_avatar_view:I = 0x7f0a099b
 
-.method private final k(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_chatlinkview_confirm_update:I = 0x7f0a099c
 
-    return-void
-.end method
+.field public static profile_invite_chatlinkview_copy_iv:I = 0x7f0a099d
 
-.method private final l(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_chatlinkview_link_tv:I = 0x7f0a099e
 
-    return-void
-.end method
+.field public static profile_invite_chatlinkview_more_actions_button:I = 0x7f0a099f
 
-.method private final m(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_chatlinkview_refresh_button:I = 0x7f0a09a0
 
-    return-void
-.end method
+.field public static profile_invite_chatlinkview_title_tv:I = 0x7f0a09a1
 
-.method private final n(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_configure_type:I = 0x7f0a09a2
 
-    return-void
-.end method
+.field public static profile_invite_create_link_error_confirm:I = 0x7f0a09a3
 
-.method private final o(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_qr_code:I = 0x7f0a09a4
 
-    return-void
-.end method
+.field public static profile_invite_send_link:I = 0x7f0a09a5
 
-.method private final p(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_invite_share_link:I = 0x7f0a09a6
 
-    return-void
-.end method
+.field public static profile_leave_chat_and_move_rights_confirmation_sheet_confirm:I = 0x7f0a09a7
 
-.method private final q(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_leave_chat_confirmation_sheet_confirm:I = 0x7f0a09a8
 
-    return-void
-.end method
+.field public static profile_link_action_copy:I = 0x7f0a09a9
 
-.method private final r(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_link_button:I = 0x7f0a09aa
 
-    return-void
-.end method
+.field public static profile_link_view:I = 0x7f0a09ab
 
-.method private final s(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_action_copy_link:I = 0x7f0a09ad
 
-    return-void
-.end method
+.field public static profile_media_action_delete_all:I = 0x7f0a09ae
 
-.method private final t(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_action_delete_self:I = 0x7f0a09af
 
-    return-void
-.end method
+.field public static profile_media_action_forward:I = 0x7f0a09b0
 
-.method private final u(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_action_goto_message:I = 0x7f0a09b1
 
-    return-void
-.end method
+.field public static profile_media_action_open_link:I = 0x7f0a09b2
 
-.method private final v(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_action_save:I = 0x7f0a09b3
 
-    return-void
-.end method
+.field public static profile_media_action_share_link:I = 0x7f0a09b4
 
-.method private final w(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_action_show_delete_confirmation:I = 0x7f0a09b5
 
-    return-void
-.end method
+.field public static profile_media_file_content_ll:I = 0x7f0a09b6
 
-.method private final x(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_file_download_state_icon:I = 0x7f0a09b7
 
-    return-void
-.end method
+.field public static profile_media_file_icon:I = 0x7f0a09b8
 
-.method private final y(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_file_preview:I = 0x7f0a09b9
 
-    return-void
-.end method
+.field public static profile_media_link_content_ll:I = 0x7f0a09ba
 
-.method private final z(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_link_preview:I = 0x7f0a09bb
 
-    return-void
-.end method
+.field public static profile_media_list_empty_view:I = 0x7f0a09bc
 
+.field public static profile_media_list_rv:I = 0x7f0a09bd
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.field public static profile_media_tabs:I = 0x7f0a09be
 
-    iget p0, p0, Lzec;->a:I
+.field public static profile_media_tabs_linearlayout:I = 0x7f0a09bf
 
-    return-void
-.end method
+.field public static profile_media_tabs_pager:I = 0x7f0a09c0
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 5
+.field public static profile_media_tabs_pinbars_container:I = 0x7f0a09c1
 
-    iget p1, p0, Lzec;->a:I
+.field public static profile_media_toolbar:I = 0x7f0a09c2
 
-    const/4 v0, 0x1
+.field public static profile_members_list_action_delete_from_admin:I = 0x7f0a09c3
 
-    const/4 v1, 0x0
+.field public static profile_members_list_action_delete_from_channel:I = 0x7f0a09c4
 
-    const/4 v2, 0x0
+.field public static profile_members_list_action_delete_from_chat:I = 0x7f0a09c5
 
-    const/high16 v3, 0x3f800000    # 1.0f
+.field public static profile_members_list_action_select:I = 0x7f0a09c6
 
-    const/16 v4, 0x8
+.field public static profile_members_list_add_admin_to_chat_action:I = 0x7f0a09c7
 
-    iget-object p0, p0, Lzec;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_members_list_add_to_channel_action:I = 0x7f0a09c8
 
-    packed-switch p1, :pswitch_data_0
+.field public static profile_members_list_add_to_chat_action:I = 0x7f0a09c9
 
-    :pswitch_0
-    return-void
+.field public static profile_members_list_container:I = 0x7f0a09ca
 
-    :pswitch_1
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static profile_members_list_container_admin:I = 0x7f0a09cb
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
+.field public static profile_members_list_delete_from_admin_btn:I = 0x7f0a09cc
 
-    move-result-object p1
+.field public static profile_members_list_delete_from_admin_btn_cancel:I = 0x7f0a09cd
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static profile_members_list_delete_from_channel_btn:I = 0x7f0a09ce
 
-    iget-object p0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
+.field public static profile_members_list_delete_from_chat_btn:I = 0x7f0a09cf
 
-    if-eqz p0, :cond_0
+.field public static profile_members_list_delete_from_chat_btn_cancel:I = 0x7f0a09d0
 
-    invoke-virtual {p0}, Lp2g;->f()V
+.field public static profile_members_list_delete_from_chat_btn_with_clean:I = 0x7f0a09d1
 
-    :cond_0
-    :pswitch_2
-    return-void
+.field public static profile_members_list_invite_by_link_action:I = 0x7f0a09d2
 
-    :pswitch_3
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static profile_members_list_toolbar:I = 0x7f0a09d3
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
+.field public static profile_members_list_toolbar_admin:I = 0x7f0a09d4
 
-    move-result-object p0
+.field public static profile_more_action_add_to_folder:I = 0x7f0a09d5
 
-    invoke-virtual {p0, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static profile_more_action_block:I = 0x7f0a09d6
 
-    :pswitch_4
-    return-void
+.field public static profile_more_action_clear_history:I = 0x7f0a09d7
 
-    :pswitch_5
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static profile_more_action_delete_channel:I = 0x7f0a09d8
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
+.field public static profile_more_action_delete_chat:I = 0x7f0a09d9
 
-    move-result-object p1
+.field public static profile_more_action_delete_chat_and_suspend_bot:I = 0x7f0a09da
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static profile_more_action_delete_chat_and_suspend_bot_official:I = 0x7f0a09db
 
-    iget-object p0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
+.field public static profile_more_action_leave_channel:I = 0x7f0a09dc
 
-    if-eqz p0, :cond_1
+.field public static profile_more_action_leave_chat:I = 0x7f0a09dd
 
-    invoke-virtual {p0}, Lp2g;->f()V
+.field public static profile_more_action_report:I = 0x7f0a09de
 
-    :cond_1
-    return-void
+.field public static profile_more_action_suspend_bot:I = 0x7f0a09df
 
-    :pswitch_6
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static profile_more_action_suspend_bot_official:I = 0x7f0a09e0
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
+.field public static profile_notifications_confirmation_sheet_1_day:I = 0x7f0a09e1
 
-    move-result-object p1
+.field public static profile_notifications_confirmation_sheet_1_hour:I = 0x7f0a09e2
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+.field public static profile_notifications_confirmation_sheet_4_hour:I = 0x7f0a09e3
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
+.field public static profile_notifications_confirmation_sheet_forever:I = 0x7f0a09e4
 
-    move-result-object p1
+.field public static profile_notifs_disabled_button:I = 0x7f0a09e5
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static profile_notifs_enabled_button:I = 0x7f0a09e6
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/widget/ImageView;
+.field public static profile_open_all_chat_members_action:I = 0x7f0a09e8
 
-    move-result-object p1
+.field public static profile_phone_number_action_copy:I = 0x7f0a09e9
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static profile_phone_number_action_tt_video_call:I = 0x7f0a09ea
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->O0()Landroid/widget/ImageView;
+.field public static profile_phone_number_action_tt_voice_call:I = 0x7f0a09eb
 
-    move-result-object p1
+.field public static profile_phone_number_action_voice_call:I = 0x7f0a09ec
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static profile_phone_number_button:I = 0x7f0a09ed
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
+.field public static profile_screen_appbarlayout:I = 0x7f0a09ee
 
-    move-result-object p1
+.field public static profile_screen_avatar_view:I = 0x7f0a09ef
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static profile_screen_collapsiblecontainerlinearlayout:I = 0x7f0a09f0
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
+.field public static profile_screen_coordinator_layout:I = 0x7f0a09f1
 
-    move-result-object p1
+.field public static profile_screen_expandedsubtitle_view:I = 0x7f0a09f2
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static profile_screen_expandedtitle_view:I = 0x7f0a09f3
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
+.field public static profile_screen_memberlist_container:I = 0x7f0a09f4
 
-    move-result-object p1
+.field public static profile_screen_onemetoolbar:I = 0x7f0a09f5
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
+.field public static profile_screen_recyclerview:I = 0x7f0a09f6
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
+.field public static profile_search_button:I = 0x7f0a09f7
 
-    move-result-object p1
+.field public static profile_start_bot_button:I = 0x7f0a09f9
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
+.field public static profile_start_chat_button:I = 0x7f0a09fa
 
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
+.field public static profile_unblock_button:I = 0x7f0a09fb
 
-    if-eqz p1, :cond_2
+.field public static profile_video_button:I = 0x7f0a09fc
 
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
+.field public static rkn_bottom_sheet_subtitle:I = 0x7f0a0a18
 
-    invoke-virtual {p1, v1}, Lp2g;->setBackgroundColor(Z)V
-
-    invoke-virtual {p1, v1}, Lp2g;->setDurationColor(Z)V
-
-    invoke-virtual {p1, v1}, Lp2g;->setVisiblePlayPauseButton(Z)V
-
-    :cond_2
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lox3;->getParentController()Lox3;
-
-    move-result-object p1
-
-    instance-of v1, p1, Lc53;
-
-    if-eqz v1, :cond_3
-
-    check-cast p1, Lc53;
-
-    goto :goto_0
-
-    :cond_3
-    move-object p1, v2
-
-    :goto_0
-    if-eqz p1, :cond_4
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->A0(Z)V
-
-    :cond_4
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0()V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lsec;->r0:Lq4e;
-
-    invoke-virtual {p0, v2}, Lq4e;->setValue(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_7
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v3}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_8
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lox3;->getParentController()Lox3;
-
-    move-result-object p1
-
-    instance-of v1, p1, Lc53;
-
-    if-eqz v1, :cond_5
-
-    check-cast p1, Lc53;
-
-    goto :goto_1
-
-    :cond_5
-    move-object p1, v2
-
-    :goto_1
-    if-eqz p1, :cond_6
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->A0(Z)V
-
-    :cond_6
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0()V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lsec;->r0:Lq4e;
-
-    invoke-virtual {p0, v2}, Lq4e;->setValue(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_9
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
-
-    if-eqz p1, :cond_7
-
-    invoke-virtual {p1, v2}, Lp2g;->setDurationText(Ljava/lang/String;)V
-
-    :cond_7
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lox3;->getParentController()Lox3;
-
-    move-result-object p1
-
-    instance-of v1, p1, Lc53;
-
-    if-eqz v1, :cond_8
-
-    check-cast p1, Lc53;
-
-    goto :goto_2
-
-    :cond_8
-    move-object p1, v2
-
-    :goto_2
-    if-eqz p1, :cond_9
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->A0(Z)V
-
-    :cond_9
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->A0()V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lsec;->r0:Lq4e;
-
-    invoke-virtual {p0, v2}, Lq4e;->setValue(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p0, p0, Lzec;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
-
-    iget p1, p0, Lzec;->a:I
-
-    const/16 v0, 0x8
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lzec;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x42900000    # 72.0f
-
-    mul-float/2addr v0, v2
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->H0()Landroid/view/View;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setTranslationX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v3, 0x428c0000    # 70.0f
-
-    mul-float/2addr v2, v3
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-static {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->x0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->E0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lox3;->getParentController()Lox3;
-
-    move-result-object p0
-
-    instance-of p1, p0, Lc53;
-
-    if-eqz p1, :cond_0
-
-    check-cast p0, Lc53;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    check-cast p0, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p0, v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->A0(Z)V
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lp2g;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_1
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
-
-    if-eqz p0, :cond_3
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lp2g;->setVisiblePlayPauseButton(Z)V
-
-    invoke-virtual {p0}, Lp2g;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lp2g;->d()V
-
-    :cond_3
-    :pswitch_3
-    return-void
-
-    :pswitch_4
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->B0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    iget-object v2, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Ljava/lang/Object;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object p1, p0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->z0:Lp2g;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lp2g;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_4
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/ImageView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_5
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static rkn_bottom_sheet_title:I = 0x7f0a0a19

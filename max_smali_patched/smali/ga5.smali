@@ -1,56 +1,83 @@
-.class public final synthetic Lga5;
-.super Ljava/lang/Object;
+.class public abstract Lga5;
+.super Lw2;
 .source "SourceFile"
-
-# interfaces
-.implements Lhq7;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lt20;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lt20;I)V
-    .locals 0
-
-    iput p2, p0, Lga5;->a:I
-
-    iput-object p1, p0, Lga5;->b:Lt20;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public abstract B(Lh2f;Ljava/lang/Object;)V
+.end method
+
+.method public final C(Ljava/lang/Object;)I
     .locals 1
 
-    iget v0, p0, Lga5;->a:I
+    invoke-virtual {p0}, Lw2;->f()Lh2f;
 
-    iget-object p0, p0, Lga5;->b:Lt20;
+    move-result-object v0
 
-    check-cast p1, Lu5b;
+    :try_start_0
+    invoke-virtual {p0, v0, p1}, Lga5;->B(Lh2f;Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lh2f;->C()I
 
-    invoke-interface {p1, p0}, Lu5b;->v(Lt20;)V
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
+
+    throw p1
+.end method
+
+.method public final D(Ljava/lang/Iterable;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lw2;->f()Lh2f;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v0, v1}, Lga5;->B(Lh2f;Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lh2f;->C()I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
 
     return-void
 
-    :pswitch_0
-    invoke-interface {p1, p0}, Lu5b;->v(Lt20;)V
+    :goto_1
+    invoke-virtual {p0, v0}, Lw2;->v(Lh2f;)V
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

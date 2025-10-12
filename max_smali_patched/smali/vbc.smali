@@ -1,23 +1,16 @@
-.class public final Lvbc;
+.class public abstract Lvbc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static fastscroll_default_thickness:I = 0x7f0700f4
 
-.field public final b:Lqw0;
+.field public static fastscroll_margin:I = 0x7f0700f5
 
+.field public static fastscroll_minimum_range:I = 0x7f0700f6
 
-# direct methods
-.method public constructor <init>(ILqw0;)V
-    .locals 0
+.field public static item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070120
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static item_touch_helper_swipe_escape_max_velocity:I = 0x7f070121
 
-    iput p1, p0, Lvbc;->a:I
-
-    iput-object p2, p0, Lvbc;->b:Lqw0;
-
-    return-void
-.end method
+.field public static item_touch_helper_swipe_escape_velocity:I = 0x7f070122

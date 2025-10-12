@@ -3,17 +3,11 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lpf7;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lpf7;"
-        }
-    .end annotation
+# instance fields
+.field public a:Lw8g;
 
-    sget-object p0, Lw8g;->a:Lw8g;
+.field public b:Z
 
-    return-object p0
-.end method
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;

@@ -1,55 +1,85 @@
-.class public final Ljnb;
-.super Lax3;
+.class public abstract Ljnb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lkm3;
+# virtual methods
+.method public abstract a()I
+.end method
 
-.field public Y:Ll72;
+.method public b()I
+    .locals 1
 
-.field public synthetic Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-.field public final synthetic n0:Lknb;
+    return v0
+.end method
 
-.field public o:Lknb;
+.method public abstract c()I
+.end method
 
-.field public o0:I
+.method public d()Landroid/view/View;
+    .locals 1
 
+    const/4 v0, 0x0
 
-# direct methods
-.method public constructor <init>(Lknb;Lax3;)V
+    return-object v0
+.end method
+
+.method public abstract e()I
+.end method
+
+.method public abstract f()Landroid/view/View;
+.end method
+
+.method public g(Lnnb;Lnnb;)Lnnb;
     .locals 0
 
-    iput-object p1, p0, Ljnb;->n0:Lknb;
+    return-object p2
+.end method
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+.method public h()V
+    .locals 0
 
     return-void
 .end method
 
+.method public i()V
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
+
+.method public j()Z
     .locals 1
 
-    iput-object p1, p0, Ljnb;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ljnb;->o0:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public k()V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Ljnb;->o0:I
+.method public l(Lnnb;)V
+    .locals 0
 
-    iget-object p1, p0, Ljnb;->n0:Lknb;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public m(I)V
+    .locals 0
 
-    invoke-virtual {p1, v0, v0, v0, p0}, Lknb;->j(Ljava/lang/Long;Lkm3;Ll72;Lax3;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
+.method public n(FF)Z
+    .locals 0
 
-    return-object p0
+    const/4 p1, 0x1
+
+    return p1
 .end method

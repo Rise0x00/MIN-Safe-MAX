@@ -1,65 +1,25 @@
-.class public final La34;
-.super Lax3;
+.class public final synthetic La34;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Lsk9;
-
-.field public Y:Ljava/util/List;
-
-.field public Z:Lm34;
-
-.field public n0:J
-
-.field public o:Lm34;
-
-.field public synthetic o0:Ljava/lang/Object;
-
-.field public final synthetic p0:Lm34;
-
-.field public q0:I
-
-
-# direct methods
-.method public constructor <init>(Lm34;Lax3;)V
-    .locals 0
-
-    iput-object p1, p0, La34;->p0:Lm34;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/function/BinaryOperator;
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, La34;->o0:Ljava/lang/Object;
+    check-cast p1, Lji7;
 
-    iget p1, p0, La34;->q0:I
+    check-cast p2, Lji7;
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x0
 
-    iput p1, p0, La34;->q0:I
+    invoke-interface {p1, v0}, Lji7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget-object v0, p0, La34;->p0:Lm34;
-
-    const-wide/16 v1, 0x0
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Lm34;->o(JLsk9;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-object p2
 .end method

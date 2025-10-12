@@ -1,54 +1,67 @@
-.class public final synthetic Lj81;
-.super Ljava/lang/Object;
+.class public final Lj81;
+.super Lgd4;
 .source "SourceFile"
 
-# interfaces
-.implements Lha4;
 
+# static fields
+.field public static final b:Lj81;
 
-# instance fields
-.field public final synthetic a:Ljava/lang/Long;
+.field public static final c:Lbd4;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public static final d:Lbd4;
 
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public static final e:Lbd4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj81;
 
-    iput-object p1, p0, Lj81;->a:Ljava/lang/Long;
+    invoke-direct {v0}, Lgd4;-><init>()V
 
-    iput-object p2, p0, Lj81;->b:Ljava/lang/String;
+    sput-object v0, Lj81;->b:Lj81;
 
-    iput-object p3, p0, Lj81;->c:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-boolean p4, p0, Lj81;->o:Z
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v3, ":calls-history"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    invoke-static {v0, v3, v2, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v2
+
+    sput-object v2, Lj81;->c:Lbd4;
+
+    const-string v2, ":call-history-info"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v1
+
+    sput-object v1, Lj81;->d:Lbd4;
+
+    const-string v1, "chat_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-presettings"
+
+    invoke-static {v0, v2, v1, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v0
+
+    sput-object v0, Lj81;->e:Lbd4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
-
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
-    iget-object v1, p0, Lj81;->a:Ljava/lang/Long;
-
-    iget-object v2, p0, Lj81;->b:Ljava/lang/String;
-
-    iget-object v3, p0, Lj81;->c:Ljava/lang/String;
-
-    iget-boolean p0, p0, Lj81;->o:Z
-
-    invoke-direct {v0, v1, v2, v3, p0}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    return-object v0
 .end method

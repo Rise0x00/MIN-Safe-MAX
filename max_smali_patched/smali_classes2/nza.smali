@@ -1,92 +1,64 @@
-.class public final Lnza;
-.super Leje;
+.class public final synthetic Lnza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final synthetic b:Lqza;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lqza;I)V
     .locals 0
 
-    iput-object p1, p0, Lnza;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
+    iput p2, p0, Lnza;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lnza;->b:Lqza;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnza;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lnza;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lnza;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lnza;
+    iget v0, p0, Lnza;->a:I
 
-    iget-object p0, p0, Lnza;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p2}, Lnza;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lnza;->b:Lqza;
 
-    iput-object p1, v0, Lnza;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lqza;->C:Lb75;
 
     return-object v0
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :pswitch_0
+    iget-object v0, p0, Lnza;->b:Lqza;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lnza;->X:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast p1, Ljava/util/Set;
+    return-object v0
 
-    invoke-static {p1}, Lg73;->M0(Ljava/util/Collection;)[J
+    :pswitch_1
+    iget-object v0, p0, Lnza;->b:Lqza;
 
-    move-result-object p1
+    iget-object v0, v0, Lzk0;->r:Lu8;
 
-    iget-object p0, p0, Lnza;->Y:Lone/me/startconversation/channel/PickSubscribersScreen;
+    return-object v0
 
-    iget-object v0, p0, Lone/me/startconversation/channel/PickSubscribersScreen;->p0:Lvr;
-
-    sget-object v1, Lone/me/startconversation/channel/PickSubscribersScreen;->v0:[Lof7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, p0, p1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

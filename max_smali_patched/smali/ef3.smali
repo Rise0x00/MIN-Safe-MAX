@@ -1,9 +1,15 @@
-.class public final synthetic Lef3;
+.class public final Lef3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+.implements Lkotlin/coroutines/Continuation;
+
+
+# static fields
+.field public static final b:Lef3;
+
+.field public static final c:Lef3;
 
 
 # instance fields
@@ -11,6 +17,28 @@
 
 
 # direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lef3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lef3;-><init>(I)V
+
+    sput-object v0, Lef3;->b:Lef3;
+
+    new-instance v0, Lef3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lef3;-><init>(I)V
+
+    sput-object v0, Lef3;->c:Lef3;
+
+    return-void
+.end method
+
 .method public synthetic constructor <init>(I)V
     .locals 0
 
@@ -21,252 +49,81 @@
     return-void
 .end method
 
+.method private final a(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 5
+.method public final getContext()Lw24;
+    .locals 2
 
-    iget p0, p0, Lef3;->a:I
+    iget v0, p0, Lef3;->a:I
 
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    :goto_0
-    instance-of p0, p2, Ljava/lang/OutOfMemoryError;
+    sget-object v0, Lv65;->a:Lv65;
 
-    if-eqz p0, :cond_7
+    return-object v0
 
-    sget-object p0, Lfn6;->a:Lfn6;
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    sget-boolean p0, Lu1f;->b:Z
+    const-string v1, "This continuation is already complete"
 
-    if-eqz p0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    goto/16 :goto_4
+    throw v0
 
-    :cond_0
-    sget-object p0, Lfn6;->c:Landroid/content/Context;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-nez p0, :cond_1
+.method public final resumeWith(Ljava/lang/Object;)V
+    .locals 1
 
-    goto/16 :goto_4
+    iget p1, p0, Lef3;->a:I
 
-    :cond_1
-    sget-object p1, Lfn6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    sget-object p1, Lu1f;->c:Lrl8;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object p1, v0
-
-    :goto_1
-    iget-object p1, p1, Lrl8;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {}, Lev0;->u()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    const-string p2, "tracer"
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "tracer-"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v3, 0x3a
-
-    const/16 v4, 0x2d
-
-    invoke-static {v1, v3, v4, p2}, Leee;->n0(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    :goto_2
-    new-instance v1, Ljava/io/File;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0, p2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string p0, "dump-tmp.hprof"
-
-    invoke-static {v1, p0}, Lym5;->V(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p0
-
-    const-string p2, "dump-tmp-meta.json"
-
-    invoke-static {v1, p2}, Lym5;->V(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p2
-
-    :try_start_0
-    invoke-static {v1}, Lis8;->x(Ljava/io/File;)V
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/os/Debug;->dumpHprofData(Ljava/lang/String;)V
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v3, "buildUuid"
-
-    invoke-virtual {v2, v3, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string p1, "tag"
-
-    invoke-virtual {v2, p1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lym5;->W(Ljava/io/File;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    :catch_0
-    invoke-static {p0}, Lfn6;->a(Ljava/io/File;)V
-
-    invoke-static {p2}, Lfn6;->a(Ljava/io/File;)V
-
-    :goto_3
-    const-string p1, "dump.hprof"
-
-    invoke-static {v1, p1}, Lym5;->V(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p1
-
-    const-string v0, "dump-meta.json"
-
-    invoke-static {v1, v0}, Lym5;->V(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    :try_start_1
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-static {p1}, Lis8;->q(Ljava/io/File;)V
-
-    :cond_5
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    invoke-static {v0}, Lis8;->q(Ljava/io/File;)V
-
-    :cond_6
-    invoke-static {p0, p1}, Lis8;->I(Ljava/io/File;Ljava/io/File;)V
-
-    invoke-static {p2, v0}, Lis8;->I(Ljava/io/File;Ljava/io/File;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_4
-
-    :catch_1
-    invoke-static {p1}, Lfn6;->a(Ljava/io/File;)V
-
-    invoke-static {v0}, Lfn6;->a(Ljava/io/File;)V
-
-    goto :goto_4
-
-    :cond_7
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_9
-
-    if-ne p0, p2, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    move-object p2, p0
-
-    goto/16 :goto_0
-
-    :cond_9
-    :goto_4
     return-void
 
     :pswitch_0
-    new-instance p0, Lone/me/android/concurrent/UncaughtException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    const-string v0, "This continuation is already complete"
 
-    const-string p1, "UncaughtException"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string p2, "handle uncaught exception"
+    throw p1
 
-    invoke-static {p1, p2, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    sget-object p1, Lg2d;->a:Lg2d;
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1}, Lg2d;->i()Lo75;
+    iget v0, p0, Lef3;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, p0}, Lo75;->b(Lo75;Ljava/lang/Throwable;)V
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "This continuation is already complete"
+
+    return-object v0
 
     nop
 

@@ -3,17 +3,21 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lpf7;
+# instance fields
+.field public final a:Lan5;
+
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(Lan5;J)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lpf7;"
-        }
-    .end annotation
 
-    sget-object p0, Lw9g;->a:Lw9g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    iput-object p1, p0, Lx9g;->a:Lan5;
+
+    iput-wide p2, p0, Lx9g;->b:J
+
+    return-void
 .end method

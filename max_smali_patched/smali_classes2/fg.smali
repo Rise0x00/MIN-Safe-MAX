@@ -1,24 +1,24 @@
-.class public final synthetic Lfg;
+.class public final Lfg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lfg;->a:I
+    iput p1, p0, Lfg;->a:I
 
-    iput-object p1, p0, Lfg;->b:Landroid/view/View;
+    iput-object p2, p0, Lfg;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,98 +27,102 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    iget v0, p0, Lfg;->a:I
+    return-void
+.end method
 
-    const/16 v1, 0x8
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
 
-    const/4 v2, 0x0
+    iget p1, p0, Lfg;->a:I
 
-    iget-object p0, p0, Lfg;->b:Landroid/view/View;
+    packed-switch p1, :pswitch_data_0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lfg;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast p1, Lk98;
 
-    move-result-object v0
-
-    const-class v1, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-static {v0, v1}, Lew3;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p0, v1}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+    invoke-virtual {p1}, Lk98;->y()V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lfg;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Landroid/view/View;
 
-    const-string v1, "input_method"
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
-    move-result-object v0
+    const/16 v0, 0x8
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    invoke-virtual {v0, p0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 
     :pswitch_1
-    invoke-virtual {p0}, Landroid/view/View;->requestApplyInsets()V
+    iget-object p1, p0, Lfg;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Landroid/view/View;
 
-    :pswitch_2
-    sget-object v0, Lixf;->a:Ljava/util/WeakHashMap;
+    const/4 v0, 0x0
 
-    invoke-static {p0}, Lvwf;->c(Landroid/view/View;)V
-
-    return-void
-
-    :pswitch_3
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_4
-    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_5
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_6
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 1
+
+    iget p1, p0, Lfg;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lfg;->b:Ljava/lang/Object;
+
+    check-cast p1, Lk98;
+
+    invoke-virtual {p1}, Lk98;->z()V
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lfg;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/view/View;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
     .end packed-switch
 .end method

@@ -1,158 +1,114 @@
-.class public final Lvs5;
-.super Leje;
+.class public final synthetic Lvs5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lsfa;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lbq5;
-
-.field public final synthetic n0:Lac3;
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
 
 # direct methods
-.method public constructor <init>(Lbq5;Lac3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
     .locals 0
 
-    iput-object p1, p0, Lvs5;->Z:Lbq5;
+    iput p2, p0, Lvs5;->a:I
 
-    iput-object p2, p0, Lvs5;->n0:Lac3;
+    iput-object p1, p0, Lvs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvs5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lvs5;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lvs5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Lvs5;
+    iget v0, p0, Lvs5;->a:I
 
-    iget-object v1, p0, Lvs5;->Z:Lbq5;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lvs5;->n0:Lac3;
+    iget-object v0, p0, Lvs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    invoke-direct {v0, v1, p0, p2}, Lvs5;-><init>(Lbq5;Lac3;Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Lw73;
 
-    iput-object p1, v0, Lvs5;->Y:Ljava/lang/Object;
+    sget-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Lwwc;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    if-eqz p1, :cond_0
 
-    iget v0, p0, Lvs5;->X:I
+    iget-object p1, p1, Lw73;->a:Landroid/content/Intent;
 
-    iget-object v1, p0, Lvs5;->n0:Lac3;
+    invoke-static {p1}, Lhxf;->F(Landroid/content/Intent;)V
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lvs5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    check-cast p1, Ltlf;
+
+    iget-object v0, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lmd6;
+
+    invoke-virtual {v0}, Lmd6;->j()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v2, :cond_0
+    iget-object v0, p1, Ltlf;->h:Lrlf;
+
+    invoke-virtual {v0}, Lrlf;->a()Lqlf;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    monitor-enter p1
 
     :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-boolean v0, p1, Ltlf;->g:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    if-nez v0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Ltlf;->f(J)V
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvs5;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lp04;
+    move-exception v0
 
     :try_start_1
-    new-instance v0, Lcic;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v3, p0, Lvs5;->Z:Lbq5;
-
-    new-instance v4, Ll40;
-
-    const/4 v5, 0x6
-
-    invoke-direct {v4, v0, p1, v1, v5}, Ll40;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iput v2, p0, Lvs5;->X:I
-
-    invoke-interface {v3, v4, p0}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
+    monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-object p1, Lq04;->a:Lq04;
+    throw v0
 
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
+    :cond_1
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    return-void
 
-    return-object p0
+    nop
 
-    :goto_1
-    new-instance p1, Lrc3;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lrc3;-><init>(Ljava/lang/Throwable;Z)V
-
-    invoke-virtual {v1, p1}, Ljc7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

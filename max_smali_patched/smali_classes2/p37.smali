@@ -1,116 +1,106 @@
 .class public final Lp37;
-.super Lgz8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lx8d;
 
 
 # instance fields
-.field public a:[B
+.field public final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/HashMap;)V
+    .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lv44;->g:[B
-
-    iput-object v0, p0, Lp37;->a:[B
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput-object p1, p0, Lp37;->a:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lp37;->a:[B
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Lv44;->g:[B
+    const/4 p1, 0x1
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iget-object p0, p0, Lp37;->a:[B
-
-    invoke-static {v0, p0}, Lh63;->b(I[B)I
-
-    move-result p0
-
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    if-eqz p1, :cond_2
 
-    return p0
-.end method
+    const-class v0, Lp37;
 
-.method public final mergeFrom(Lg63;)Lgz8;
-    .locals 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0xa
+    move-result-object v1
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {p1}, Lg63;->g()[B
+    check-cast p1, Lp37;
+
+    iget-object v0, p0, Lp37;->a:Ljava/util/HashMap;
+
+    iget-object p1, p1, Lp37;->a:Ljava/util/HashMap;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lp37;->a:Ljava/util/HashMap;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lp37;->a:[B
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lh63;)V
-    .locals 2
-
-    iget-object v0, p0, Lp37;->a:[B
-
-    sget-object v1, Lv44;->g:[B
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    const/4 v0, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p0, p0, Lp37;->a:[B
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0, p0}, Lh63;->s(I[B)V
+    const-string v1, "IdMappingsNotification{mapping="
 
-    :cond_0
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lp37;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

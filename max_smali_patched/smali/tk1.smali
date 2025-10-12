@@ -1,29 +1,21 @@
 .class public final Ltk1;
-.super Lvk1;
+.super Lgl1;
 .source "SourceFile"
 
 
-# instance fields
-.field public final D:Lbk1;
-
-.field public final E:Ldue;
-
-.field public final F:Ljava/lang/Integer;
+# static fields
+.field public static final D:Ltk1;
 
 
 # direct methods
-.method public constructor <init>(Ldue;Ljava/lang/Integer;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Lvk1;-><init>()V
+    new-instance v0, Ltk1;
 
-    sget-object v0, Lbk1;->a:Lbk1;
+    invoke-direct {v0}, Lgl1;-><init>()V
 
-    iput-object v0, p0, Ltk1;->D:Lbk1;
-
-    iput-object p1, p0, Ltk1;->E:Ldue;
-
-    iput-object p2, p0, Ltk1;->F:Ljava/lang/Integer;
+    sput-object v0, Ltk1;->D:Ltk1;
 
     return-void
 .end method
@@ -31,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -40,129 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Ltk1;
+    instance-of p1, p1, Ltk1;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Ltk1;
-
-    iget-object v1, p0, Ltk1;->D:Lbk1;
-
-    iget-object v3, p1, Ltk1;->D:Lbk1;
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ltk1;->E:Ldue;
-
-    iget-object v3, p1, Ltk1;->E:Ldue;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object p0, p0, Ltk1;->F:Ljava/lang/Integer;
-
-    iget-object p1, p1, Ltk1;->F:Ljava/lang/Integer;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Ltk1;->D:Lbk1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ltk1;->E:Ldue;
-
-    invoke-static {v0, v1, v2}, Lmh0;->c(IILdue;)I
-
-    move-result v0
-
-    iget-object p0, p0, Ltk1;->F:Ljava/lang/Integer;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    :goto_0
-    add-int/2addr v0, p0
+    const v0, -0x78c1725f
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "OpenMoreAction"
 
-    const-string v1, "ShowSnackbar(priority="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltk1;->D:Lbk1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSource="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltk1;->E:Ldue;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Ltk1;->F:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

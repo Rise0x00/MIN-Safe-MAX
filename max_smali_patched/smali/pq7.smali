@@ -1,133 +1,81 @@
 .class public final Lpq7;
-.super Ljava/util/AbstractList;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/RandomAccess;
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Lp96;
-
-
-# direct methods
-.method public constructor <init>(Lp96;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p2, p0, Lpq7;->a:Ljava/util/List;
-
-    iput-object p1, p0, Lpq7;->b:Lp96;
-
-    return-void
-.end method
+.field public a:J
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final write(I)V
+    .locals 4
 
-    iget-object v0, p0, Lpq7;->a:Ljava/util/List;
+    .line 1
+    iget-wide v0, p0, Lpq7;->a:J
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const-wide/16 v2, 0x1
 
-    move-result-object p1
+    add-long/2addr v0, v2
 
-    iget-object p0, p0, Lpq7;->b:Lp96;
-
-    invoke-interface {p0, p1}, Lp96;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    iget-object p0, p0, Lpq7;->a:Ljava/util/List;
-
-    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
-
-    new-instance v0, Loq7;
-
-    iget-object v1, p0, Lpq7;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Loq7;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-
-    return-object v0
-.end method
-
-.method public final remove(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lpq7;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lpq7;->b:Lp96;
-
-    invoke-interface {p0, p1}, Lp96;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final removeRange(II)V
-    .locals 0
-
-    iget-object p0, p0, Lpq7;->a:Ljava/util/List;
-
-    invoke-interface {p0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    iput-wide v0, p0, Lpq7;->a:J
 
     return-void
 .end method
 
-.method public final size()I
-    .locals 0
+.method public final write([B)V
+    .locals 4
 
-    iget-object p0, p0, Lpq7;->a:Ljava/util/List;
+    .line 2
+    iget-wide v0, p0, Lpq7;->a:J
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    array-length p1, p1
 
-    move-result p0
+    int-to-long v2, p1
 
-    return p0
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lpq7;->a:J
+
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 2
+
+    if-ltz p2, :cond_0
+
+    .line 3
+    array-length v0, p1
+
+    if-gt p2, v0, :cond_0
+
+    if-ltz p3, :cond_0
+
+    add-int/2addr p2, p3
+
+    array-length p1, p1
+
+    if-gt p2, p1, :cond_0
+
+    if-ltz p2, :cond_0
+
+    .line 4
+    iget-wide p1, p0, Lpq7;->a:J
+
+    int-to-long v0, p3
+
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lpq7;->a:J
+
+    return-void
+
+    .line 5
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
 .end method

@@ -1,21 +1,51 @@
 .class public final Lfk6;
-.super Lhk6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final b(II)I
+# instance fields
+.field public a:Lk0;
+
+.field public final b:F
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:J
+
+.field public f:F
+
+.field public g:F
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    rem-int/2addr p1, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
-.end method
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-.method public final c(I)I
-    .locals 0
+    move-result-object p1
 
-    const/4 p0, 0x1
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-    return p0
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lfk6;->b:F
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lfk6;->a:Lk0;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lfk6;->c:Z
+
+    iput-boolean p1, p0, Lfk6;->d:Z
+
+    return-void
 .end method

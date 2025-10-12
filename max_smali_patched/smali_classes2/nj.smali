@@ -3,58 +3,37 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Lc9d;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Loj;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Loj;)V
     .locals 0
 
-    iput p1, p0, Lnj;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnj;->a:Loj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final a(Lv84;Z)V
     .locals 0
 
-    iget p0, p0, Lnj;->a:I
+    iget-object p1, p0, Lnj;->a:Loj;
 
-    packed-switch p0, :pswitch_data_0
+    iget-object p1, p1, Loj;->g:Lh45;
 
-    new-instance p0, Landroid/util/ArraySet;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p0}, Landroid/util/ArraySet;-><init>()V
+    invoke-virtual {p1}, Lh45;->a()V
 
-    return-object p0
-
-    :pswitch_0
-    new-instance p0, Landroid/text/BoringLayout$Metrics;
-
-    invoke-direct {p0}, Landroid/text/BoringLayout$Metrics;-><init>()V
-
-    return-object p0
-
-    :pswitch_1
-    new-instance p0, Landroid/graphics/Picture;
-
-    invoke-direct {p0}, Landroid/graphics/Picture;-><init>()V
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

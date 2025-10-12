@@ -1,94 +1,73 @@
 .class public final Lbpb;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# static fields
+.field public static final c:Lbpb;
+
+.field public static final d:Lbpb;
 
 
 # instance fields
-.field public final synthetic X:Lrpb;
+.field public final a:I
 
-.field public final synthetic Y:J
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lrpb;JLkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lbpb;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Lbpb;-><init>(II)V
+
+    sput-object v0, Lbpb;->c:Lbpb;
+
+    new-instance v0, Lbpb;
+
+    const/16 v2, 0x1e
+
+    invoke-direct {v0, v2, v1}, Lbpb;-><init>(II)V
+
+    sput-object v0, Lbpb;->d:Lbpb;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lbpb;->X:Lrpb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lbpb;->Y:J
+    iput p1, p0, Lbpb;->a:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lbpb;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    check-cast p1, Lp04;
+    const-string v0, ",seen="
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "}"
 
-    invoke-virtual {p0, p1, p2}, Lbpb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "Presence{type="
 
-    move-result-object p0
+    iget v3, p0, Lbpb;->a:I
 
-    check-cast p0, Lbpb;
+    iget v4, p0, Lbpb;->b:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lbpb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lbpb;
-
-    iget-object v0, p0, Lbpb;->X:Lrpb;
-
-    iget-wide v1, p0, Lbpb;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lbpb;-><init>(Lrpb;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbpb;->X:Lrpb;
-
-    iget-object v0, p1, Lrpb;->X:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v4, v1}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lojc;
-
-    iget-wide v1, p0, Lbpb;->Y:J
-
-    invoke-static {v0, v1, v2}, Lojc;->a(Lojc;J)V
-
-    iget-object p0, p1, Lrpb;->y0:Lt65;
-
-    sget-object p1, Lenb;->b:Lenb;
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

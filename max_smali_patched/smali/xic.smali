@@ -1,130 +1,156 @@
-.class public final Lxic;
-.super Lq07;
-.source "SourceFile"
+.class public abstract Lxic;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final transient X:[Ljava/lang/Object;
+# static fields
+.field public static cancel:I = 0x7f13029b
 
-.field public final transient Y:I
+.field public static channel_close_title:I = 0x7f1302b5
 
-.field public final transient Z:I
+.field public static channel_delete_for_all:I = 0x7f1302b8
 
-.field public final transient o:Lj07;
+.field public static channel_delete_title:I = 0x7f1302b9
 
+.field public static channel_leave_title:I = 0x7f1302c1
 
-# direct methods
-.method public constructor <init>(Lj07;[Ljava/lang/Object;II)V
-    .locals 0
+.field public static channel_move_rights_and_leave:I = 0x7f1302c5
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static chat_clear_history_snackbar_title:I = 0x7f1302f6
 
-    iput-object p1, p0, Lxic;->o:Lj07;
+.field public static chat_delete_confirm:I = 0x7f130303
 
-    iput-object p2, p0, Lxic;->X:[Ljava/lang/Object;
+.field public static chat_delete_for_all:I = 0x7f130304
 
-    iput p3, p0, Lxic;->Y:I
+.field public static chat_delete_for_all_title:I = 0x7f130305
 
-    iput p4, p0, Lxic;->Z:I
+.field public static chat_delete_for_both:I = 0x7f130306
 
-    return-void
-.end method
+.field public static chat_delete_for_self:I = 0x7f130307
 
+.field public static chat_delete_title:I = 0x7f130308
 
-# virtual methods
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 0
+.field public static chat_leave_cancel:I = 0x7f13031b
 
-    invoke-virtual {p0}, Lq07;->a()Lg07;
+.field public static chat_leave_title:I = 0x7f13031e
 
-    move-result-object p0
+.field public static chat_list_confirm_clear_saved_messages_history_negative_button:I = 0x7f13031f
 
-    invoke-virtual {p0, p1, p2}, Lg07;->b(I[Ljava/lang/Object;)I
+.field public static chat_list_confirm_clear_saved_messages_history_subtitle:I = 0x7f130320
 
-    move-result p0
+.field public static chat_list_confirm_clear_saved_messages_history_title:I = 0x7f130321
 
-    return p0
-.end method
+.field public static chat_list_toolbar_title:I = 0x7f130322
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 2
+.field public static chat_list_toolbar_transition_name:I = 0x7f130323
 
-    instance-of v0, p1, Ljava/util/Map$Entry;
+.field public static chat_move_rights_and_leave:I = 0x7f13033e
 
-    const/4 v1, 0x0
+.field public static chats_list_empty_state_action:I = 0x7f1303bf
 
-    if-eqz v0, :cond_0
+.field public static chats_list_empty_state_title:I = 0x7f1303c0
 
-    check-cast p1, Ljava/util/Map$Entry;
+.field public static chats_list_search_clear_recent_dialog_confirm_text:I = 0x7f1303c1
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+.field public static chats_list_search_clear_recent_dialog_title:I = 0x7f1303c2
 
-    move-result-object v0
+.field public static chats_list_search_contacts_header:I = 0x7f1303c3
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+.field public static chats_list_search_hint:I = 0x7f1303c4
 
-    move-result-object p1
+.field public static chats_list_search_messages_header:I = 0x7f1303c5
 
-    if-eqz p1, :cond_0
+.field public static chats_list_search_recent_header:I = 0x7f1303c6
 
-    iget-object p0, p0, Lxic;->o:Lj07;
+.field public static chats_list_search_recent_header_clear:I = 0x7f1303c7
 
-    invoke-virtual {p0, v0}, Lj07;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static confirmation_block:I = 0x7f1303ef
 
-    move-result-object p0
+.field public static confirmation_close:I = 0x7f1303f0
 
-    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.field public static confirmation_close_channel:I = 0x7f1303f1
 
-    move-result p0
+.field public static confirmation_leave_channel:I = 0x7f1303f2
 
-    if-eqz p0, :cond_0
+.field public static confirmation_leave_chat:I = 0x7f1303f3
 
-    const/4 p0, 0x1
+.field public static contact_block_title:I = 0x7f130404
 
-    return p0
+.field public static contact_blocked_snackbar_title:I = 0x7f130406
 
-    :cond_0
-    return v1
-.end method
+.field public static contact_empty_last_seen:I = 0x7f130407
 
-.method public final f()Z
-    .locals 0
+.field public static contacts_picker_search_hint:I = 0x7f130420
 
-    const/4 p0, 0x1
+.field public static contacts_picker_send_btn_title:I = 0x7f130421
 
-    return p0
-.end method
+.field public static contacts_picker_toolbar_title:I = 0x7f130422
 
-.method public final g()Lbdf;
-    .locals 1
+.field public static dialog_delete_title:I = 0x7f130450
 
-    invoke-virtual {p0}, Lq07;->a()Lg07;
+.field public static notifications_1_day:I = 0x7f130781
 
-    move-result-object p0
+.field public static notifications_1_hour:I = 0x7f130782
 
-    const/4 v0, 0x0
+.field public static notifications_4_hour:I = 0x7f130783
 
-    invoke-virtual {p0, v0}, Lg07;->l(I)Lzu5;
+.field public static notifications_disable:I = 0x7f130785
 
-    move-result-object p0
+.field public static notifications_infinite:I = 0x7f13078c
 
-    return-object p0
-.end method
+.field public static picker_chats_add_button:I = 0x7f130adf
 
-.method public final k()Lg07;
-    .locals 1
+.field public static picker_chats_adding_disabled_bot:I = 0x7f130ae0
 
-    new-instance v0, Lwic;
+.field public static picker_chats_adding_disabled_bot_official:I = 0x7f130ae1
 
-    invoke-direct {v0, p0}, Lwic;-><init>(Lxic;)V
+.field public static picker_chats_adding_disabled_default:I = 0x7f130ae2
 
-    return-object v0
-.end method
+.field public static picker_chats_adding_disabled_to_channel_bot:I = 0x7f130ae3
 
-.method public final size()I
-    .locals 0
+.field public static picker_chats_adding_disabled_to_channel_bot_official:I = 0x7f130ae4
 
-    iget p0, p0, Lxic;->Z:I
+.field public static picker_chats_adding_disabled_to_channel_default:I = 0x7f130ae5
 
-    return p0
-.end method
+.field public static picker_chats_confirm_close:I = 0x7f130ae6
+
+.field public static picker_chats_confirmation_close_title:I = 0x7f130ae7
+
+.field public static picker_chats_creating_disabled_bot:I = 0x7f130ae8
+
+.field public static picker_chats_creating_disabled_bot_official:I = 0x7f130ae9
+
+.field public static picker_chats_creating_disabled_channel_bot:I = 0x7f130aea
+
+.field public static picker_chats_creating_disabled_channel_bot_official:I = 0x7f130aeb
+
+.field public static picker_chats_creating_disabled_channel_default:I = 0x7f130aec
+
+.field public static picker_chats_creating_disabled_default:I = 0x7f130aed
+
+.field public static picker_chats_forward_disabled_bot:I = 0x7f130aee
+
+.field public static picker_chats_forward_disabled_bot_official:I = 0x7f130aef
+
+.field public static picker_chats_forward_disabled_channel:I = 0x7f130af0
+
+.field public static picker_chats_forward_disabled_default:I = 0x7f130af1
+
+.field public static picker_chats_forward_from_channel:I = 0x7f130af2
+
+.field public static picker_chats_forward_from_self:I = 0x7f130af3
+
+.field public static picker_chats_forward_from_somebody:I = 0x7f130af4
+
+.field public static picker_chats_forward_quote_title:I = 0x7f130af5
+
+.field public static picker_chats_forward_title:I = 0x7f130af6
+
+.field public static picker_chats_list_share_contact:I = 0x7f130af7
+
+.field public static picker_chats_list_share_link:I = 0x7f130af8
+
+.field public static picker_chats_message_hint:I = 0x7f130af9
+
+.field public static picker_chats_search_hint:I = 0x7f130afa
+
+.field public static picker_chats_toolbar_title:I = 0x7f130afb

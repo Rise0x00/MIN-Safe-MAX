@@ -1,63 +1,125 @@
 .class public final Laa9;
-.super Lax3;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Lpf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lba9;
+.field public synthetic Y:Lm99;
 
-.field public Z:I
+.field public synthetic Z:Lp99;
 
-.field public o:Z
+.field public synthetic w0:Z
+
+.field public final synthetic x0:Lma9;
 
 
 # direct methods
-.method public constructor <init>(Lba9;Lax3;)V
+.method public constructor <init>(Lma9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Laa9;->Y:Lba9;
+    iput-object p1, p0, Laa9;->x0:Lma9;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x4
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Laa9;->X:Ljava/lang/Object;
+    check-cast p1, Lm99;
 
-    iget p1, p0, Laa9;->Z:I
+    check-cast p2, Lp99;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Ljava/lang/Boolean;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput p1, p0, Laa9;->Z:I
+    move-result p3
 
-    const/4 v8, 0x0
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    const/4 v9, 0x0
+    new-instance v0, Laa9;
 
-    iget-object v0, p0, Laa9;->Y:Lba9;
+    iget-object v1, p0, Laa9;->x0:Lma9;
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v0, v1, p4}, Laa9;-><init>(Lma9;Lkotlin/coroutines/Continuation;)V
 
-    const-wide/16 v3, 0x0
+    iput-object p1, v0, Laa9;->Y:Lm99;
 
-    const-wide/16 v5, 0x0
+    iput-object p2, v0, Laa9;->Z:Lp99;
 
-    const/4 v7, 0x0
+    iput-boolean p3, v0, Laa9;->w0:Z
 
-    move-object v10, p0
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-virtual/range {v0 .. v10}, Lba9;->c(JJJZILck4;Lax3;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Laa9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Laa9;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Laa9;->Y:Lm99;
+
+    iget-object v0, p0, Laa9;->Z:Lp99;
+
+    iget-boolean v2, p0, Laa9;->w0:Z
+
+    const/4 v3, 0x0
+
+    iput-object v3, p0, Laa9;->Y:Lm99;
+
+    iput v1, p0, Laa9;->X:I
+
+    iget-object v1, p0, Laa9;->x0:Lma9;
+
+    invoke-static {v1, p1, v0, v2, p0}, Lma9;->q(Lma9;Lm99;Lp99;ZLnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

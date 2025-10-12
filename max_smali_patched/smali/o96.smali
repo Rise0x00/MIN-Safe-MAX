@@ -2,5 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly96;
+
+# virtual methods
+.method public abstract a(Lp96;)V
+.end method

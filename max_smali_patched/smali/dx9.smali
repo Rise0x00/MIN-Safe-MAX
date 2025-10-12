@@ -1,25 +1,35 @@
-.class public abstract Ldx9;
+.class public final Ldx9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
+.method public constructor <init>(IIIII)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput p1, p0, Ldx9;->a:I
 
-    return-object p0
-.end method
+    iput p2, p0, Ldx9;->b:I
 
-.method public static b(Landroid/app/Notification$Action$Builder;I)Landroid/app/Notification$Action$Builder;
-    .locals 0
+    iput p3, p0, Ldx9;->c:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setSemanticAction(I)Landroid/app/Notification$Action$Builder;
+    iput p4, p0, Ldx9;->d:I
 
-    move-result-object p0
+    iput p5, p0, Ldx9;->e:I
 
-    return-object p0
+    return-void
 .end method

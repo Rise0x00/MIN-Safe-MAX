@@ -1,151 +1,169 @@
-.class public final synthetic Lhua;
+.class public abstract Lhua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lwua;
+.field public static final c:I
 
-.field public final synthetic c:Ljava/lang/String;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lhua;->a:I
+    sget v0, Ltfc;->oneme_settings_privacy_black_list_empty_state:I
 
-    iput-object p1, p0, Lhua;->b:Lwua;
+    sput v0, Lhua;->a:I
 
-    iput-object p2, p0, Lhua;->c:Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_black_list_rv:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lhua;->b:I
 
-    return-void
-.end method
+    sget v0, Ltfc;->oneme_settings_privacy_black_list_toolbar:I
 
+    sput v0, Lhua;->c:I
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    sget v0, Ltfc;->oneme_settings_privacy_black_list_unblock_action:I
 
-    iget v0, p0, Lhua;->a:I
+    sput v0, Lhua;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    sget v0, Ltfc;->oneme_settings_privacy_black_list_unblock_cancel_action:I
 
-    iget-object v0, p0, Lhua;->b:Lwua;
+    sput v0, Lhua;->e:I
 
-    iget-object v1, v0, Lwua;->N:Lvua;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_add_chat_button_all:I
 
-    if-eqz v1, :cond_0
+    sput v0, Lhua;->f:I
 
-    iget-object p0, p0, Lhua;->c:Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I
 
-    invoke-interface {v1, v0, p0}, Lvua;->g(Lwua;Ljava/lang/String;)V
+    sput v0, Lhua;->g:I
 
-    :cond_0
-    return-void
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_call_button_all:I
 
-    :pswitch_0
-    iget-object v0, p0, Lhua;->b:Lwua;
+    sput v0, Lhua;->h:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_call_button_contacts:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sput v0, Lhua;->i:I
 
-    const-string v2, "create sdp error "
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_content_level_access_all:I
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput v0, Lhua;->j:I
 
-    iget-object p0, p0, Lhua;->c:Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_content_level_access_safe:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput v0, Lhua;->k:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I
 
-    move-result-object v1
+    sput v0, Lhua;->l:I
 
-    const-string v2, "create.sdp2"
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I
 
-    invoke-virtual {v0, v1, v2}, Lwua;->j(Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, Lhua;->m:I
 
-    iget-object v1, v0, Lwua;->x:Ll7c;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_online_button_contacts:I
 
-    const-string v2, "onCreateSDPFailed"
+    sput v0, Lhua;->n:I
 
-    const/4 v3, 0x0
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_online_button_nobody:I
 
-    sget-object v4, Le4e;->c:Le4e;
+    sput v0, Lhua;->o:I
 
-    invoke-virtual {v1, v4, v2, v3}, Ll7c;->log(Le4e;Ljava/lang/String;Ljava/lang/String;)V
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_online_never_accept_btn:I
 
-    iget-object v1, v0, Lwua;->r:Landroid/os/Handler;
+    sput v0, Lhua;->p:I
 
-    new-instance v2, Llua;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I
 
-    const/4 v3, 0x1
+    sput v0, Lhua;->q:I
 
-    invoke-direct {v2, v0, p0, v3}, Llua;-><init>(Lwua;Ljava/lang/String;I)V
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_safe_file_no_btn:I
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput v0, Lhua;->r:I
 
-    return-void
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I
 
-    :pswitch_1
-    iget-object v0, p0, Lhua;->b:Lwua;
+    sput v0, Lhua;->s:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_search_by_phone_all:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sput v0, Lhua;->t:I
 
-    const-string v2, "set sdp error "
+    sget v0, Ltfc;->oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput v0, Lhua;->u:I
 
-    iget-object p0, p0, Lhua;->c:Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_list:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput v0, Lhua;->v:I
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_settings_header_vh:I
 
-    move-result-object v1
+    sput v0, Lhua;->w:I
 
-    const-string v2, "set.sdp2"
+    sget v0, Ltfc;->oneme_settings_privacy_screen_settings_item_vh:I
 
-    invoke-virtual {v0, v1, v2}, Lwua;->j(Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, Lhua;->x:I
 
-    iget-object v1, v0, Lwua;->x:Ll7c;
+    sget v0, Ltfc;->oneme_settings_privacy_screen_settings_warning_vh:I
 
-    const-string v2, "setSdpFailed"
+    sput v0, Lhua;->y:I
 
-    const/4 v3, 0x0
+    sget v0, Ltfc;->oneme_settings_privacy_screen_toolbar:I
 
-    sget-object v4, Le4e;->c:Le4e;
-
-    invoke-virtual {v1, v4, v2, v3}, Ll7c;->log(Le4e;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lwua;->r:Landroid/os/Handler;
-
-    new-instance v2, Llua;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, p0, v3}, Llua;-><init>(Lwua;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput v0, Lhua;->z:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,207 +1,74 @@
-.class public final enum Luj7;
-.super Ljava/lang/Enum;
+.class public final Luj7;
+.super Lv2;
 .source "SourceFile"
 
 
 # static fields
-.field private static final synthetic $VALUES:[Luj7;
-
-.field public static final Companion:Lsj7;
-
-.field public static final enum ON_ANY:Luj7;
-
-.field public static final enum ON_CREATE:Luj7;
-
-.field public static final enum ON_DESTROY:Luj7;
-
-.field public static final enum ON_PAUSE:Luj7;
-
-.field public static final enum ON_RESUME:Luj7;
-
-.field public static final enum ON_START:Luj7;
-
-.field public static final enum ON_STOP:Luj7;
+.field public static final c:Luj7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 2
 
     new-instance v0, Luj7;
 
-    const-string v1, "ON_CREATE"
+    const/16 v1, 0x8
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Luj7;->ON_CREATE:Luj7;
-
-    new-instance v1, Luj7;
-
-    const-string v2, "ON_START"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luj7;->ON_START:Luj7;
-
-    new-instance v2, Luj7;
-
-    const-string v3, "ON_RESUME"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Luj7;->ON_RESUME:Luj7;
-
-    new-instance v3, Luj7;
-
-    const-string v4, "ON_PAUSE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Luj7;->ON_PAUSE:Luj7;
-
-    new-instance v4, Luj7;
-
-    const-string v5, "ON_STOP"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Luj7;->ON_STOP:Luj7;
-
-    new-instance v5, Luj7;
-
-    const-string v6, "ON_DESTROY"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Luj7;->ON_DESTROY:Luj7;
-
-    new-instance v6, Luj7;
-
-    const-string v7, "ON_ANY"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Luj7;->ON_ANY:Luj7;
-
-    filled-new-array/range {v0 .. v6}, [Luj7;
-
-    move-result-object v0
-
-    sput-object v0, Luj7;->$VALUES:[Luj7;
-
-    new-instance v0, Lsj7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Luj7;->Companion:Lsj7;
+    sput-object v0, Luj7;->c:Luj7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luj7;
-    .locals 1
-
-    const-class v0, Luj7;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Luj7;
-
-    return-object p0
-.end method
-
-.method public static values()[Luj7;
-    .locals 1
-
-    sget-object v0, Luj7;->$VALUES:[Luj7;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Luj7;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()Lvj7;
+.method public static c1(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
     .locals 2
 
-    sget-object v0, Ltj7;->$EnumSwitchMapping$0:[I
+    new-instance v0, Lcd4;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0}, Lcd4;-><init>()V
 
-    move-result v1
+    const-string v1, ":join"
 
-    aget v0, v0, v1
+    iput-object v1, v0, Lcd4;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "id"
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " has no target state"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p0, v1}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    throw v0
+    const-string p0, "link"
 
-    :pswitch_0
-    sget-object p0, Lvj7;->a:Lvj7;
+    invoke-virtual {v0, p3, p0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "channel"
+
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, p0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "no_anim"
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1, p0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p2, :cond_0
+
+    const-string p0, "title"
+
+    invoke-virtual {v0, p2, p0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lcd4;->a()Landroid/net/Uri;
+
+    move-result-object p0
 
     return-object p0
-
-    :pswitch_1
-    sget-object p0, Lvj7;->X:Lvj7;
-
-    return-object p0
-
-    :pswitch_2
-    sget-object p0, Lvj7;->o:Lvj7;
-
-    return-object p0
-
-    :pswitch_3
-    sget-object p0, Lvj7;->c:Lvj7;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

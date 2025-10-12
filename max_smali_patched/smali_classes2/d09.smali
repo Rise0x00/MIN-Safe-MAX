@@ -3,82 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Le09;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lsqc;
 
-.field public final b:Lxu8;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/util/List;
+.field public final b:Lz65;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;JLxu8;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld09;->c:Ljava/lang/String;
+    sget-object v0, Lb75;->a:Lb75;
 
-    iput-object p2, p0, Ld09;->o:Ljava/util/List;
+    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
-    iput-wide p3, p0, Ld09;->a:J
+    move-result-object v0
 
-    iput-object p5, p0, Ld09;->b:Lxu8;
+    new-instance v1, Lsqc;
+
+    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
+
+    iput-object v1, p0, Ld09;->a:Lsqc;
+
+    sget-object v0, Lz65;->a:Lz65;
+
+    iput-object v0, p0, Ld09;->b:Lz65;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final a(Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Ld09;->c:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-static {v0}, Lno9;->v(Ljava/lang/CharSequence;)Ljava/lang/String;
+.method public final b()Lev5;
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Ld09;->b:Lz65;
 
-    iget-object v1, p0, Ld09;->o:Ljava/util/List;
+    return-object v0
+.end method
 
-    invoke-static {v1}, Lah7;->l(Ljava/util/Collection;)I
+.method public final c()Z
+    .locals 1
 
-    move-result v1
+    const/4 v0, 0x0
 
-    const-string v2, "\', highlights="
+    return v0
+.end method
 
-    const-string v3, ", chatId=\'"
+.method public final d()Lsqc;
+    .locals 1
 
-    const-string v4, "{, feedback=\'"
+    iget-object v0, p0, Ld09;->a:Lsqc;
 
-    invoke-static {v1, v4, v0, v2, v3}, Lw68;->p(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final e()V
+    .locals 0
 
-    iget-wide v1, p0, Ld09;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', message="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Ld09;->b:Lxu8;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

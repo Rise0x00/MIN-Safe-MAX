@@ -1,14 +1,15 @@
-.class public interface abstract Len0;
+.class public abstract Len0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public e()V
+# direct methods
+.method public static a(Landroid/app/KeyguardManager;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
     .locals 0
 
-    return-void
-.end method
+    invoke-virtual {p0, p1, p2}, Landroid/app/KeyguardManager;->createConfirmDeviceCredentialIntent(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-.method public abstract f(Lkd5;J)Ldn0;
+    move-result-object p0
+
+    return-object p0
 .end method

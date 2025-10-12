@@ -1,311 +1,58 @@
-.class public final Lhkc;
+.class public abstract Lhkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static oneme_settings_storage_action_one_month:I = 0x7f1309d3
 
-.field public final b:I
+.field public static oneme_settings_storage_action_one_week:I = 0x7f1309d4
 
-.field public final c:Ljava/lang/String;
+.field public static oneme_settings_storage_action_six_month:I = 0x7f1309d5
 
-.field public final d:Ll10;
+.field public static oneme_settings_storage_action_unlimited:I = 0x7f1309d6
 
-.field public final e:J
+.field public static oneme_settings_storage_audio_messages:I = 0x7f1309d7
 
+.field public static oneme_settings_storage_clear_cache:I = 0x7f1309d8
 
-# direct methods
-.method public constructor <init>(IILjava/lang/String;Ll10;J)V
-    .locals 0
+.field public static oneme_settings_storage_clear_cache_dialog_action_clear:I = 0x7f1309d9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_storage_clear_cache_dialog_all_title:I = 0x7f1309da
 
-    iput p1, p0, Lhkc;->a:I
+.field public static oneme_settings_storage_clear_cache_dialog_audio_title:I = 0x7f1309db
 
-    iput p2, p0, Lhkc;->b:I
+.field public static oneme_settings_storage_clear_cache_dialog_desc:I = 0x7f1309dc
 
-    iput-object p3, p0, Lhkc;->c:Ljava/lang/String;
+.field public static oneme_settings_storage_clear_cache_dialog_files_title:I = 0x7f1309dd
 
-    iput-object p4, p0, Lhkc;->d:Ll10;
+.field public static oneme_settings_storage_clear_cache_dialog_gif_title:I = 0x7f1309de
 
-    iput-wide p5, p0, Lhkc;->e:J
+.field public static oneme_settings_storage_clear_cache_dialog_images_title:I = 0x7f1309df
 
-    return-void
-.end method
+.field public static oneme_settings_storage_clear_cache_dialog_music_title:I = 0x7f1309e0
 
+.field public static oneme_settings_storage_clear_cache_dialog_stickers_title:I = 0x7f1309e1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static oneme_settings_storage_clear_cache_dialog_video_title:I = 0x7f1309e2
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_settings_storage_clear_cache_success_snackbar:I = 0x7f1309e3
 
-    goto :goto_1
+.field public static oneme_settings_storage_files:I = 0x7f1309e4
 
-    :cond_0
-    instance-of v0, p1, Lhkc;
+.field public static oneme_settings_storage_gif:I = 0x7f1309e5
 
-    if-nez v0, :cond_1
+.field public static oneme_settings_storage_images:I = 0x7f1309e6
 
-    goto :goto_0
+.field public static oneme_settings_storage_music:I = 0x7f1309e7
 
-    :cond_1
-    check-cast p1, Lhkc;
+.field public static oneme_settings_storage_screen_data_section:I = 0x7f1309e8
 
-    iget v0, p0, Lhkc;->a:I
+.field public static oneme_settings_storage_screen_preserve_media_cache_desc:I = 0x7f1309e9
 
-    iget v1, p1, Lhkc;->a:I
+.field public static oneme_settings_storage_screen_preserve_media_cache_title:I = 0x7f1309ea
 
-    if-eq v0, v1, :cond_2
+.field public static oneme_settings_storage_screen_toolbar_title:I = 0x7f1309eb
 
-    goto :goto_0
+.field public static oneme_settings_storage_stickers:I = 0x7f1309ec
 
-    :cond_2
-    iget v0, p0, Lhkc;->b:I
-
-    iget v1, p1, Lhkc;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lhkc;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lhkc;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lhkc;->d:Ll10;
-
-    iget-object v1, p1, Lhkc;->d:Ll10;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-wide v0, p0, Lhkc;->e:J
-
-    iget-wide p0, p1, Lhkc;->e:J
-
-    cmp-long p0, v0, p0
-
-    if-eqz p0, :cond_6
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lhkc;->a:I
-
-    invoke-static {v0}, Ldw1;->t(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lhkc;->b:I
-
-    invoke-static {v2, v0, v1}, Ljq9;->f(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhkc;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcx3;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhkc;->d:Ll10;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-wide v1, p0, Lhkc;->e:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReplyButton(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lhkc;->a:I
-
-    if-eq v2, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "UNKNOWN"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "LOCATION"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "CONTACT"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "IMAGE"
-
-    goto :goto_0
-
-    :cond_4
-    const-string v1, "MESSAGE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", intent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lhkc;->b:I
-
-    if-eq v2, v1, :cond_8
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_7
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_6
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_5
-
-    const-string v1, "null"
-
-    goto :goto_1
-
-    :cond_5
-    const-string v1, "UNKNOWN"
-
-    goto :goto_1
-
-    :cond_6
-    const-string v1, "NEGATIVE"
-
-    goto :goto_1
-
-    :cond_7
-    const-string v1, "POSITIVE"
-
-    goto :goto_1
-
-    :cond_8
-    const-string v1, "DEFAULT"
-
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhkc;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", image="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhkc;->d:Ll10;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", outgoingMessageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lhkc;->e:J
-
-    invoke-static {v0, v2, v3, v1}, Lw68;->n(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_settings_storage_video:I = 0x7f1309ed

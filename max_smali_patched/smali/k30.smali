@@ -1,132 +1,104 @@
-.class public final synthetic Lk30;
+.class public final Lk30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final b:Landroid/os/Handler;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
+.method public constructor <init>(Landroid/media/AudioManager$OnAudioFocusChangeListener;Landroid/os/Handler;)V
+    .locals 1
 
-    iput p2, p0, Lk30;->a:I
+    const/4 v0, 0x1
 
-    iput p1, p0, Lk30;->b:I
+    iput v0, p0, Lk30;->a:I
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lk30;->c:Ljava/lang/Object;
+
+    .line 3
+    invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    sget p2, Lt4g;->a:I
+
+    .line 4
+    new-instance p2, Landroid/os/Handler;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    .line 5
+    iput-object p2, p0, Lk30;->b:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ll30;Landroid/os/Handler;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lk30;->a:I
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk30;->c:Ljava/lang/Object;
+
+    .line 7
+    iput-object p2, p0, Lk30;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final onAudioFocusChange(I)V
     .locals 2
 
     iget v0, p0, Lk30;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/util/Size;
+    new-instance v0, Lj30;
 
-    check-cast p2, Landroid/util/Size;
+    const/4 v1, 0x1
 
-    invoke-static {p1}, Lgwd;->a(Landroid/util/Size;)I
+    invoke-direct {v0, p0, p1, v1}, Lj30;-><init>(Ljava/lang/Object;II)V
 
-    move-result p1
+    iget-object p1, p0, Lk30;->b:Landroid/os/Handler;
 
-    iget p0, p0, Lk30;->b:I
+    invoke-static {p1, v0}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    sub-int/2addr p1, p0
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    invoke-static {p2}, Lgwd;->a(Landroid/util/Size;)I
-
-    move-result p2
-
-    sub-int/2addr p2, p0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p0
-
-    sub-int/2addr p1, p0
-
-    return p1
+    return-void
 
     :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
+    new-instance v0, Lj30;
 
-    check-cast p2, Ljava/lang/Integer;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v0, p0, p1, v1}, Lj30;-><init>(Ljava/lang/Object;II)V
 
-    move-result v0
+    iget-object p1, p0, Lk30;->b:Landroid/os/Handler;
 
-    iget p0, p0, Lk30;->b:I
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    sub-int/2addr v0, p0
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    sub-int/2addr v1, p0
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p0
-
-    sub-int/2addr v0, p0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    sub-int/2addr p0, p1
-
-    int-to-float p0, p0
-
-    invoke-static {p0}, Ljava/lang/Math;->signum(F)F
-
-    move-result p0
-
-    :goto_0
-    float-to-int p0, p0
-
-    goto :goto_1
-
-    :cond_0
-    int-to-float p0, v0
-
-    invoke-static {p0}, Ljava/lang/Math;->signum(F)F
-
-    move-result p0
-
-    goto :goto_0
-
-    :goto_1
-    return p0
+    return-void
 
     nop
 

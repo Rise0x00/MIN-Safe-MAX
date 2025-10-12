@@ -3,37 +3,47 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/lang/String;
+
+
 # instance fields
-.field public a:I
+.field public final a:Lcq6;
 
-.field public b:I
+.field public final b:Lzo6;
 
-.field public c:I
-
-.field public d:I
+.field public final c:Ljava/util/HashMap;
 
 
-# virtual methods
-.method public final a()I
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lln4;->d:I
+    const-string v0, "DelayedWorkTracker"
 
-    iget p0, p0, Lln4;->c:I
+    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
 
-    sub-int/2addr v0, p0
+    move-result-object v0
 
-    return v0
+    sput-object v0, Lln4;->d:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public final b()I
-    .locals 1
+.method public constructor <init>(Lcq6;Lzo6;)V
+    .locals 0
 
-    iget v0, p0, Lln4;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p0, p0, Lln4;->a:I
+    iput-object p1, p0, Lln4;->a:Lcq6;
 
-    sub-int/2addr v0, p0
+    iput-object p2, p0, Lln4;->b:Lzo6;
 
-    return v0
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lln4;->c:Ljava/util/HashMap;
+
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public final Ltb1;
-.super Lyb1;
+.super Lwb1;
 .source "SourceFile"
 
 
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Ltb1;
 
-    iget-boolean p0, p0, Ltb1;->a:Z
+    iget-boolean v1, p0, Ltb1;->a:Z
 
     iget-boolean p1, p1, Ltb1;->a:Z
 
-    if-eq p0, p1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
@@ -54,29 +54,29 @@
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Ltb1;->a:Z
+    iget-boolean v0, p0, Ltb1;->a:Z
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    const-string v0, "LoadingState(isEnabled="
+    const-string v0, "RaiseHand(isRaised="
 
     const-string v1, ")"
 
-    iget-boolean p0, p0, Ltb1;->a:Z
+    iget-boolean v2, p0, Ltb1;->a:Z
 
-    invoke-static {v0, v1, p0}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -1,56 +1,50 @@
 .class public final Lbfd;
-.super Ljava/lang/Object;
+.super Lmo7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzj3;
+.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:Lcfd;
 
+.field public final synthetic b:Ljava/lang/Class;
+
+.field public final synthetic c:Z
+
 
 # direct methods
-.method public constructor <init>(Lcfd;)V
+.method public constructor <init>(Lcfd;Ljava/lang/Class;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     iput-object p1, p0, Lbfd;->a:Lcfd;
+
+    iput-object p2, p0, Lbfd;->b:Ljava/lang/Class;
+
+    iput-boolean p3, p0, Lbfd;->c:Z
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const-string v0, "cfd"
+    iget-object v0, p0, Lbfd;->b:Ljava/lang/Class;
 
-    const-string v1, "onBackgroundDataEnabledChange"
+    iget-boolean v1, p0, Lbfd;->c:Z
 
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, p0, Lbfd;->a:Lcfd;
 
-    iget-object p0, p0, Lbfd;->a:Lcfd;
+    invoke-virtual {v2, v0, v1}, Lcfd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcfd;->b()V
+    move-result-object v0
 
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    const-string v0, "cfd"
-
-    const-string v1, "onConnectionTypeChange"
-
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lbfd;->a:Lcfd;
-
-    invoke-virtual {p0}, Lcfd;->b()V
-
-    return-void
+    return-object v0
 .end method

@@ -1,8 +1,15 @@
-.class public interface abstract Lk5a;
+.class public abstract Lk5a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Landroid/view/View;Lsv3;)Lsv3;
+# direct methods
+.method public static a(Landroid/app/Notification$Action;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getAllowGeneratedReplies()Z
+
+    move-result p0
+
+    return p0
 .end method

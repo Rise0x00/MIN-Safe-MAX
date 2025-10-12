@@ -1,22 +1,14 @@
-.class public interface abstract Lra8;
+.class public abstract Lra8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Lvf5;
+
+.field public b:Lrg0;
+
+
 # virtual methods
-.method public abstract H(Lk5b;)V
-.end method
-
-.method public J()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public abstract d()Lk5b;
-.end method
-
-.method public abstract q()J
+.method public abstract a(Loof;)V
 .end method

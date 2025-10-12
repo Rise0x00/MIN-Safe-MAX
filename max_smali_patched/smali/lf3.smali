@@ -1,335 +1,127 @@
-.class public final Llf3;
-.super Lr2;
+.class public final synthetic Llf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+# interfaces
+.implements Lpcd;
 
 
 # instance fields
-.field private volatile synthetic _size$volatile:I
+.field public final synthetic a:I
 
-.field public final a:Ljava/lang/ref/ReferenceQueue;
-
-.field private volatile synthetic core$volatile:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
+    .locals 0
 
-    const-string v0, "_size$volatile"
+    iput p2, p0, Llf3;->a:I
 
-    const-class v1, Llf3;
+    iput-object p1, p0, Llf3;->b:Landroidx/fragment/app/b;
 
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Llf3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const-class v0, Ljava/lang/Object;
-
-    const-string v2, "core$volatile"
-
-    invoke-static {v1, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
-
-    new-instance v0, Lif3;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, p0, v1}, Lif3;-><init>(Llf3;I)V
-
-    iput-object v0, p0, Llf3;->core$volatile:Ljava/lang/Object;
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Ljava/lang/ref/ReferenceQueue;
-
-    invoke-direct {p1}, Ljava/lang/ref/ReferenceQueue;-><init>()V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Llf3;->a:Ljava/lang/ref/ReferenceQueue;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a()Landroid/os/Bundle;
+    .locals 5
 
-    monitor-enter p0
+    iget v0, p0, Llf3;->a:I
 
-    :try_start_0
-    sget-object v0, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Llf3;->b:Landroidx/fragment/app/b;
 
-    move-result-object v0
-
-    check-cast v0, Lif3;
-
-    :goto_0
-    sget-object v1, Lif3;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, p2, v1}, Lif3;->a(Ljava/lang/Object;Ljava/lang/Object;Lqm6;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/b;->D()Lfb6;
 
     move-result-object v1
 
-    sget-object v2, Lmf3;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eq v1, v2, :cond_0
-
-    monitor-exit p0
-
-    return-object v1
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {v0}, Lif3;->b()Lif3;
-
-    move-result-object v0
-
-    sget-object v1, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final clear()V
-    .locals 2
-
-    invoke-virtual {p0}, Lr2;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    check-cast v0, Lkf3;
-
-    invoke-virtual {v0}, Lkf3;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1}, Landroidx/fragment/app/b;->E(Landroidx/fragment/app/c;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/fragment/app/b;->J0:Les7;
 
-    move-result-object v1
+    sget-object v1, Ldr7;->ON_STOP:Ldr7;
 
-    invoke-virtual {p0, v1}, Llf3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Les7;->d(Ldr7;)V
 
-    goto :goto_0
+    new-instance v0, Landroid/os/Bundle;
 
-    :cond_0
-    return-void
-.end method
-
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget-object v0, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lif3;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const v1, -0x61c88647
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lif3;->b:I
-
-    ushr-int/2addr v0, v1
-
-    :goto_0
-    iget-object v1, p0, Lif3;->d:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqm6;
-
-    if-nez v1, :cond_1
-
-    :goto_1
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object p0, p0, Lif3;->e:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    instance-of p1, p0, Ll38;
-
-    if-eqz p1, :cond_2
-
-    check-cast p0, Ll38;
-
-    iget-object p0, p0, Ll38;->a:Ljava/lang/Object;
-
-    :cond_2
-    return-object p0
-
-    :cond_3
-    if-nez v1, :cond_4
-
-    invoke-virtual {p0, v0}, Lif3;->c(I)V
-
-    :cond_4
-    if-nez v0, :cond_5
-
-    iget v0, p0, Lif3;->a:I
-
-    :cond_5
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    sget-object v0, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lif3;
-
-    sget-object v1, Lif3;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, p2, v1}, Lif3;->a(Ljava/lang/Object;Ljava/lang/Object;Lqm6;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lmf3;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p0, p1, p2}, Llf3;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    sget-object p1, Llf3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->incrementAndGet(Ljava/lang/Object;)I
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     return-object v0
 
-    :cond_0
-    sget-object v1, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    :pswitch_0
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    move-result-object v1
+    iget-object v1, p0, Llf3;->b:Landroidx/fragment/app/b;
 
-    check-cast v1, Lif3;
+    iget-object v1, v1, Ltf3;->w0:Lrf3;
 
-    sget-object v2, Lif3;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, p1, v0, v0}, Lif3;->a(Ljava/lang/Object;Ljava/lang/Object;Lqm6;)Ljava/lang/Object;
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-result-object v1
+    iget-object v3, v1, Lrf3;->b:Ljava/util/LinkedHashMap;
 
-    sget-object v2, Lmf3;->a:Lkotlinx/coroutines/internal/Symbol;
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    if-ne v1, v2, :cond_1
+    move-result-object v4
 
-    invoke-virtual {p0, p1, v0}, Llf3;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    move-result-object v1
+    const-string v4, "KEY_COMPONENT_ACTIVITY_REGISTERED_RCS"
 
-    :cond_1
-    if-eqz v1, :cond_2
+    invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    sget-object p1, Llf3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
-    :cond_2
-    return-object v1
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    const-string v3, "KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    iget-object v3, v1, Lrf3;->d:Ljava/util/ArrayList;
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    const-string v3, "KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS"
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    new-instance v2, Landroid/os/Bundle;
+
+    iget-object v1, v1, Lrf3;->g:Landroid/os/Bundle;
+
+    invoke-direct {v2, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    const-string v1, "KEY_COMPONENT_ACTIVITY_PENDING_RESULT"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

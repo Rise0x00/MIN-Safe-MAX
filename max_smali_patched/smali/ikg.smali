@@ -1,108 +1,55 @@
 .class public abstract Likg;
-.super Lhkg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public m:La67;
-
-
 # direct methods
-.method public constructor <init>(Lpkg;Landroid/view/WindowInsets;)V
+.method public static a(Landroid/view/View;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lhkg;-><init>(Lpkg;Landroid/view/WindowInsets;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Likg;->m:La67;
+    invoke-virtual {p0}, Landroid/view/View;->cancelDragAndDrop()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public b()Lpkg;
-    .locals 1
-
-    iget-object p0, p0, Lhkg;->c:Landroid/view/WindowInsets;
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->consumeStableInsets()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, p0}, Lpkg;->f(Landroid/view/View;Landroid/view/WindowInsets;)Lpkg;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public c()Lpkg;
-    .locals 1
-
-    iget-object p0, p0, Lhkg;->c:Landroid/view/WindowInsets;
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, p0}, Lpkg;->f(Landroid/view/View;Landroid/view/WindowInsets;)Lpkg;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final h()La67;
-    .locals 4
-
-    iget-object v0, p0, Likg;->m:La67;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lhkg;->c:Landroid/view/WindowInsets;
-
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetLeft()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetTop()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetRight()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetBottom()I
-
-    move-result v0
-
-    invoke-static {v1, v2, v3, v0}, La67;->b(IIII)La67;
-
-    move-result-object v0
-
-    iput-object v0, p0, Likg;->m:La67;
-
-    :cond_0
-    iget-object p0, p0, Likg;->m:La67;
-
-    return-object p0
-.end method
-
-.method public m()Z
+.method public static b(Landroid/view/View;)V
     .locals 0
 
-    iget-object p0, p0, Lhkg;->c:Landroid/view/WindowInsets;
+    invoke-virtual {p0}, Landroid/view/View;->dispatchFinishTemporaryDetach()V
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->isConsumed()Z
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->dispatchStartTemporaryDetach()V
+
+    return-void
+.end method
+
+.method public static d(Landroid/view/View;Landroid/view/PointerIcon;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setPointerIcon(Landroid/view/PointerIcon;)V
+
+    return-void
+.end method
+
+.method public static e(Landroid/view/View;Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->startDragAndDrop(Landroid/content/ClipData;Landroid/view/View$DragShadowBuilder;Ljava/lang/Object;I)Z
 
     move-result p0
 
     return p0
+.end method
+
+.method public static f(Landroid/view/View;Landroid/view/View$DragShadowBuilder;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->updateDragShadow(Landroid/view/View$DragShadowBuilder;)V
+
+    return-void
 .end method

@@ -1,156 +1,110 @@
 .class public final Lrzf;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic a:I
+.field public final synthetic Y:Luzf;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic Z:J
 
-.field public final synthetic c:Ltzf;
-
-.field public final synthetic o:Landroid/view/ViewTreeObserver;
+.field public final synthetic w0:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Ltzf;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+.method public constructor <init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p5, p0, Lrzf;->a:I
+    iput-object p1, p0, Lrzf;->Y:Luzf;
 
-    iput-object p1, p0, Lrzf;->b:Landroid/view/View;
+    iput-wide p2, p0, Lrzf;->Z:J
 
-    iput-object p2, p0, Lrzf;->c:Ltzf;
+    iput-object p4, p0, Lrzf;->w0:Ljava/util/List;
 
-    iput-object p3, p0, Lrzf;->o:Landroid/view/ViewTreeObserver;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lrzf;->X:Landroid/view/View;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/view/View;)V
-    .locals 0
+    invoke-direct {p0, p1, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lrzf;->a:I
+    check-cast p1, Le34;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :pswitch_0
-    return-void
+    invoke-virtual {p0, p1, p2}, Lrzf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :pswitch_1
-    iget-object v0, p0, Lrzf;->b:Landroid/view/View;
+    move-result-object p1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    check-cast p1, Lrzf;
 
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+    sget-object p2, Loyf;->a:Loyf;
 
-    move-result v0
+    invoke-virtual {p1, p2}, Lrzf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v5, p0, Lrzf;->X:Landroid/view/View;
+    move-result-object p1
 
-    iget-object v4, p0, Lrzf;->o:Landroid/view/ViewTreeObserver;
-
-    iget-object v3, p0, Lrzf;->c:Ltzf;
-
-    if-nez v0, :cond_0
-
-    invoke-static {v3, v4, v5}, Luzf;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Lrzf;
-
-    const/4 v6, 0x2
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, Lrzf;-><init>(Landroid/view/View;Ltzf;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget p1, p0, Lrzf;->a:I
+    new-instance v0, Lrzf;
 
-    packed-switch p1, :pswitch_data_0
+    iget-wide v2, p0, Lrzf;->Z:J
 
-    iget-object p1, p0, Lrzf;->b:Landroid/view/View;
+    iget-object v4, p0, Lrzf;->w0:Ljava/util/List;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v1, p0, Lrzf;->Y:Luzf;
 
-    iget-object p1, p0, Lrzf;->o:Landroid/view/ViewTreeObserver;
+    move-object v5, p2
 
-    iget-object v0, p0, Lrzf;->X:Landroid/view/View;
+    invoke-direct/range {v0 .. v5}, Lrzf;-><init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p0, p0, Lrzf;->c:Ltzf;
+    iput-object p1, v0, Lrzf;->X:Ljava/lang/Object;
 
-    invoke-static {p0, p1, v0}, Luzf;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    :pswitch_0
-    iget-object p1, p0, Lrzf;->b:Landroid/view/View;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object p1, p0, Lrzf;->X:Ljava/lang/Object;
 
-    iget-object p1, p0, Lrzf;->o:Landroid/view/ViewTreeObserver;
+    check-cast p1, Le34;
 
-    iget-object v0, p0, Lrzf;->X:Landroid/view/View;
+    new-instance v0, Lqzf;
 
-    iget-object p0, p0, Lrzf;->c:Ltzf;
+    iget-object v4, p0, Lrzf;->w0:Ljava/util/List;
 
-    invoke-static {p0, p1, v0}, Luzf;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    const/4 v5, 0x0
 
-    :pswitch_1
-    return-void
+    iget-object v1, p0, Lrzf;->Y:Luzf;
 
-    nop
+    iget-wide v2, p0, Lrzf;->Z:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct/range {v0 .. v5}, Lqzf;-><init>(Luzf;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v2, v0, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+
+    move-result-object p1
+
+    return-object p1
 .end method

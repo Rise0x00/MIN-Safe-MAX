@@ -1,26 +1,28 @@
 .class public final Lckd;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lekd;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/settings/SettingsListScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lekd;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lckd;->Y:Lone/me/settings/SettingsListScreen;
+    iput-object p1, p0, Lckd;->Z:Lekd;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,53 +32,84 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Ljava/lang/Throwable;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lckd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lckd;
+    check-cast p1, Lckd;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lckd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lckd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lckd;
 
-    iget-object p0, p0, Lckd;->Y:Lone/me/settings/SettingsListScreen;
+    iget-object v1, p0, Lckd;->Z:Lekd;
 
-    invoke-direct {v0, p0, p2}, Lckd;-><init>(Lone/me/settings/SettingsListScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Lckd;-><init>(Lekd;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lckd;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lckd;->Y:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget v0, p0, Lckd;->X:I
 
-    iget-object p1, p0, Lckd;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Ljava/util/List;
+    if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lckd;->Y:Lone/me/settings/SettingsListScreen;
+    if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Lone/me/settings/SettingsListScreen;->u0:Ljjd;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
+    return-object p1
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-object p0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lckd;->Y:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    iput v1, p0, Lckd;->X:I
+
+    iget-object v0, p0, Lckd;->Z:Lekd;
+
+    invoke-static {v0, p1, p0}, Lekd;->b(Lekd;Ljava/lang/Throwable;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

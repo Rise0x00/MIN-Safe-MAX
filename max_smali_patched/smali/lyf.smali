@@ -1,84 +1,168 @@
 .class public final Llyf;
-.super Ljava/lang/Object;
+.super Lgl0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/view/View;
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+.field public final synthetic a:Lmyf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method public constructor <init>(Lmyf;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llyf;->a:Lmyf;
 
-    iput-object p1, p0, Llyf;->a:Landroid/view/View;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final cancel()V
+    .locals 2
 
-    iget v0, p0, Llyf;->d:I
+    iget-object v0, p0, Llyf;->a:Lmyf;
 
-    iget-object v1, p0, Llyf;->a:Landroid/view/View;
+    iget-boolean v0, v0, Lmyf;->w0:Z
 
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+    if-eqz v0, :cond_0
 
-    move-result v2
+    goto :goto_0
 
-    iget v3, p0, Llyf;->b:I
+    :cond_0
+    iget-object v0, p0, Llyf;->a:Lmyf;
 
-    sub-int/2addr v2, v3
+    const/4 v1, 0x1
 
-    sub-int/2addr v0, v2
+    iput-boolean v1, v0, Lmyf;->w0:Z
 
-    sget-object v2, Lixf;->a:Ljava/util/WeakHashMap;
+    iget-object v0, p0, Llyf;->a:Lmyf;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
+    iget-object v0, v0, Lmyf;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    :cond_1
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-object v0, v0, Lmyf;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-object v0, v0, Lmyf;->y0:Llyf;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
 
-    iget p0, p0, Llyf;->c:I
+    if-nez v0, :cond_2
 
-    sub-int/2addr v0, p0
+    iget-object v0, p0, Llyf;->a:Lmyf;
 
-    rsub-int/lit8 p0, v0, 0x0
+    iget-object v0, v0, Lmyf;->Z:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->offsetLeftAndRight(I)V
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-boolean v1, v0, Lmyf;->A0:Z
+
+    if-nez v1, :cond_2
+
+    iget-object v0, v0, Lmyf;->b:Ljke;
+
+    invoke-virtual {v0}, Ljke;->clear()V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-object v0, v0, Lmyf;->b:Ljke;
+
+    invoke-virtual {v0}, Ljke;->clear()V
 
     return-void
 .end method
 
-.method public final b(I)Z
-    .locals 1
+.method public final i(J)V
+    .locals 2
 
-    iget v0, p0, Llyf;->d:I
+    invoke-static {p1, p2}, Lgze;->e(J)Z
 
-    if-eq v0, p1, :cond_0
+    move-result v0
 
-    iput p1, p0, Llyf;->d:I
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Llyf;->a()V
+    iget-object v0, p0, Llyf;->a:Lmyf;
 
-    const/4 p0, 0x1
+    iget-object v1, v0, Lmyf;->z0:Ljava/util/concurrent/atomic/AtomicLong;
 
-    return p0
+    invoke-static {v1, p1, p2}, Lid7;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    invoke-virtual {v0}, Lmyf;->i()V
 
     :cond_0
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    return p0
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-object v0, v0, Lmyf;->b:Ljke;
+
+    invoke-virtual {v0}, Ljke;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final l(I)I
+    .locals 1
+
+    iget-object p1, p0, Llyf;->a:Lmyf;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lmyf;->A0:Z
+
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Llyf;->a:Lmyf;
+
+    iget-object v0, v0, Lmyf;->b:Ljke;
+
+    invoke-virtual {v0}, Ljke;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

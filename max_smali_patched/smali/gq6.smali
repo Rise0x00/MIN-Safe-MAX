@@ -1,97 +1,71 @@
 .class public final Lgq6;
-.super Liq6;
+.super Lkq6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Lg07;
+.field public d:I
 
 
-# direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 19
+# virtual methods
+.method public final a(Lpq6;Landroid/view/View;Ls4d;IZ)I
+    .locals 1
 
-    .line 1
-    sget-object v0, Lg07;->b:Lzu5;
+    const/4 v0, 0x0
 
-    .line 2
-    sget-object v18, Lvic;->X:Lvic;
+    invoke-super/range {p0 .. p5}, Lkq6;->a(Lpq6;Landroid/view/View;Ls4d;IZ)I
 
-    const/4 v3, 0x0
+    move-result p1
 
-    .line 3
-    const-string v4, ""
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    const-wide/16 v5, 0x0
+    move-result p1
 
-    const/4 v7, -0x1
+    return p1
+.end method
 
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+.method public final b(II)V
+    .locals 1
 
-    const/4 v10, 0x0
+    invoke-super {p0, p1, p2}, Lkq6;->b(II)V
 
-    const/16 v17, 0x0
+    iget v0, p0, Lgq6;->d:I
 
-    move-object/from16 v1, p0
+    add-int/2addr p1, p2
 
-    move-wide/from16 v13, p1
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    move-wide/from16 v15, p3
+    move-result p1
 
-    move-object/from16 v2, p5
-
-    move-object/from16 v11, p6
-
-    move-object/from16 v12, p7
-
-    invoke-direct/range {v1 .. v18}, Lgq6;-><init>(Ljava/lang/String;Lgq6;Ljava/lang/String;JIJLlu4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    iput p1, p0, Lgq6;->d:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lgq6;Ljava/lang/String;JIJLlu4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
-    .locals 16
+.method public final c()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    invoke-super {p0}, Lkq6;->c()V
 
-    move-object/from16 v1, p1
+    const/high16 v0, -0x80000000
 
-    move-object/from16 v2, p2
-
-    move-wide/from16 v3, p4
-
-    move/from16 v5, p6
-
-    move-wide/from16 v6, p7
-
-    move-object/from16 v8, p9
-
-    move-object/from16 v9, p10
-
-    move-object/from16 v10, p11
-
-    move-wide/from16 v11, p12
-
-    move-wide/from16 v13, p14
-
-    move/from16 v15, p16
-
-    .line 4
-    invoke-direct/range {v0 .. v15}, Liq6;-><init>(Ljava/lang/String;Lgq6;JIJLlu4;Ljava/lang/String;Ljava/lang/String;JJZ)V
-
-    move-object/from16 v1, p3
-
-    .line 5
-    iput-object v1, v0, Lgq6;->r0:Ljava/lang/String;
-
-    .line 6
-    invoke-static/range {p17 .. p17}, Lg07;->j(Ljava/util/Collection;)Lg07;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lgq6;->s0:Lg07;
+    iput v0, p0, Lgq6;->d:I
 
     return-void
+.end method
+
+.method public final d(Z)I
+    .locals 1
+
+    invoke-super {p0, p1}, Lkq6;->d(Z)I
+
+    move-result p1
+
+    iget v0, p0, Lgq6;->d:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    return p1
 .end method

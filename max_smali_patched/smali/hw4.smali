@@ -3,74 +3,174 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyo0;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lhw4;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public final a:J
+
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lma4;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lma4;-><init>(I)V
+
+    sput-object v0, Lhw4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 8
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/IdentityHashMap;
+    const-wide/16 v4, 0x0
 
-    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
+    cmp-long p1, v0, v4
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    const/4 v6, 0x0
 
-    move-result-object v0
+    const/4 v7, 0x1
 
-    iput-object v0, p0, Lhw4;->a:Ljava/util/Set;
+    if-ltz p1, :cond_0
+
+    move p1, v7
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v6
+
+    :goto_0
+    invoke-static {p1}, Lpih;->i(Z)V
+
+    cmp-long p1, v2, v4
+
+    if-gez p1, :cond_1
+
+    const-wide/16 v4, -0x1
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_2
+
+    :cond_1
+    move v6, v7
+
+    :cond_2
+    invoke-static {v6}, Lpih;->i(Z)V
+
+    iput-wide v0, p0, Lhw4;->a:J
+
+    iput-wide v2, p0, Lhw4;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ljava/lang/Object;)V
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lhw4;->a:Ljava/util/Set;
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
-
-    return-void
+    return v0
 .end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    int-to-double v0, p1
+    instance-of v0, p1, Lhw4;
 
-    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+    const/4 v1, 0x0
 
-    div-double/2addr v0, v2
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+    return v1
 
-    move-result-wide v0
+    :cond_0
+    check-cast p1, Lhw4;
 
-    double-to-int p1, v0
+    iget-wide v2, p0, Lhw4;->a:J
 
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+    iget-wide v4, p1, Lhw4;->a:J
 
-    const/4 v1, 0x1
+    cmp-long v0, v2, v4
 
-    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    iget-wide v2, p0, Lhw4;->b:J
 
-    iget-object p0, p0, Lhw4;->a:Ljava/util/Set;
+    iget-wide v4, p1, Lhw4;->b:J
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    cmp-long p1, v2, v4
 
-    return-object p1
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lhw4;->a:J
+
+    long-to-int v0, v0
+
+    mul-int/lit16 v0, v0, 0x3c1
+
+    iget-wide v1, p0, Lhw4;->b:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lhw4;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Lhw4;->b:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    return-void
 .end method

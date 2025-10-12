@@ -1,14 +1,10 @@
 .class public abstract Lkhc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public a(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+# static fields
+.field public static ic_launcher:I = 0x7f100003
 
-    return-void
-.end method
+.field public static ic_launcher_background:I = 0x7f100004
 
-.method public abstract b(Landroidx/recyclerview/widget/RecyclerView;II)V
-.end method
+.field public static ic_launcher_foreground:I = 0x7f100005

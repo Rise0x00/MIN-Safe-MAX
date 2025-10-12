@@ -1,41 +1,35 @@
 .class public final Lql;
-.super Lry;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/String;
+.field public final b:Lfl;
 
-.field public final Z:Ljava/lang/String;
-
-.field public final n0:I
-
-.field public final o:J
-
-.field public final o0:J
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IJZZ)V
-    .locals 1
+.method public constructor <init>(Lfl;Lfl;)V
+    .locals 0
 
-    sget-object v0, Lr00;->o0:Lr00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p9, p10}, Lry;-><init>(Lr00;ZZ)V
+    iput-object p1, p0, Lql;->a:Ljava/lang/Object;
 
-    iput-wide p1, p0, Lql;->o:J
+    iput-object p2, p0, Lql;->b:Lfl;
 
-    iput-object p3, p0, Lql;->X:Ljava/lang/String;
+    invoke-interface {p2}, Lnl;->getUri()Landroid/net/Uri;
 
-    iput-object p4, p0, Lql;->Y:Ljava/lang/String;
+    move-result-object p1
 
-    iput-object p5, p0, Lql;->Z:Ljava/lang/String;
+    invoke-static {p1}, Lbm;->b(Landroid/net/Uri;)Ljava/lang/String;
 
-    iput p6, p0, Lql;->n0:I
+    move-result-object p1
 
-    iput-wide p7, p0, Lql;->o0:J
+    iput-object p1, p0, Lql;->c:Ljava/lang/String;
 
     return-void
 .end method

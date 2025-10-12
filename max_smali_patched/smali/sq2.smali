@@ -1,26 +1,26 @@
 .class public final Lsq2;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lxr2;
+.field public final synthetic Y:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
-.method public constructor <init>(Lxr2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lsq2;->Y:Lxr2;
+    iput-object p2, p0, Lsq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,122 +30,142 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lp04;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lsq2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lsq2;
+    check-cast p1, Lsq2;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lsq2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lsq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    .locals 2
 
-    new-instance p1, Lsq2;
+    new-instance v0, Lsq2;
 
-    iget-object p0, p0, Lsq2;->Y:Lxr2;
+    iget-object v1, p0, Lsq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p1, p0, p2}, Lsq2;-><init>(Lxr2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lsq2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lsq2;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    iget v0, p0, Lsq2;->X:I
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sget-object v1, Ltcf;->a:Ltcf;
+    iget-object p1, p0, Lsq2;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v3, 0x1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v4, p0, Lsq2;->Y:Lxr2;
+    move-result p1
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lsq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    if-ne v0, v3, :cond_0
+    iget-object v1, v0, Lone/me/chatscreen/ChatScreen;->b1:Lmqc;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    sget-object v2, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+
+    invoke-virtual {v0}, Lone/me/chatscreen/ChatScreen;->f1()Lf52;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    if-eqz p1, :cond_0
+
+    move v4, v3
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/16 v4, 0x8
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/16 v2, 0x11
 
-    throw p0
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+
+    aget-object p1, p1, v2
+
+    invoke-interface {v1, v0, p1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lp33;
+
+    iget-object v0, p1, Lp33;->a:Li8d;
+
+    invoke-virtual {p1}, Lp33;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "video_msg_controller"
+
+    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0, v3}, Li8d;->R(Z)V
+
+    new-instance v5, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {v5}, Lone/me/chatscreen/videomsg/VideoMessageWidget;-><init>()V
+
+    new-instance v4, Ll8d;
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
+
+    invoke-virtual {v4, v1}, Ll8d;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Li8d;->S(Ll8d;)V
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
 
-    iget-object p1, v4, Lxr2;->T0:Ljbc;
+    aget-object p1, p1, v2
 
-    iget-object p1, p1, Ljbc;->a:Lj4e;
-
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
+    invoke-interface {v1, v0, p1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ll72;
+    check-cast p1, Lp33;
 
-    if-eqz p1, :cond_5
-
-    iget-wide v5, p1, Ll72;->a:J
-
-    iget-object p1, v4, Lxr2;->w0:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ld2e;
-
-    iget-object v0, v4, Lxr2;->b:Ljava/lang/String;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    if-nez v7, :cond_3
+    invoke-virtual {p1}, Lp33;->a()V
 
     :cond_2
-    move-object v0, v2
-
-    :cond_3
-    iput v3, p0, Lsq2;->X:I
-
-    invoke-virtual {p1, v5, v6, p0, v0}, Ld2e;->a(JLax3;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_4
+    :goto_1
+    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
-
-    :cond_4
-    :goto_0
-    iput-object v2, v4, Lxr2;->b:Ljava/lang/String;
-
-    :cond_5
-    return-object v1
 .end method

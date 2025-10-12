@@ -3,56 +3,131 @@
 .source "SourceFile"
 
 # interfaces
-.implements La1b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroidx/mediarouter/app/d;
 
 
 # direct methods
-.method public constructor <init>(Lth7;)V
+.method public synthetic constructor <init>(Landroidx/mediarouter/app/d;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lrq8;->a:I
 
-    iput-object p1, p0, Lrq8;->a:Lth7;
+    iput-object p1, p0, Lrq8;->b:Landroidx/mediarouter/app/d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(J)Lbq5;
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-object p0, p0, Lrq8;->a:Lth7;
+    iget p1, p0, Lrq8;->a:I
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p1, p0, Lrq8;->b:Landroidx/mediarouter/app/d;
 
-    check-cast p0, Lvu3;
+    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->s1:Z
 
-    invoke-virtual {p0, p1, p2}, Lvu3;->c(J)Ljbc;
+    xor-int/lit8 v1, v0, 0x1
 
-    move-result-object p0
+    iput-boolean v1, p1, Landroidx/mediarouter/app/d;->s1:Z
 
-    new-instance v0, Luv2;
+    if-nez v0, :cond_0
 
-    const/16 v1, 0xb
-
-    invoke-direct {v0, p0, v1}, Luv2;-><init>(Lbq5;I)V
-
-    new-instance p0, Lqq8;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2, v1}, Lqq8;-><init>(JLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {v0, p0}, Lfog;->I(Lbq5;Lt96;)Le62;
+    :cond_0
+    iget-boolean v0, p1, Landroidx/mediarouter/app/d;->s1:Z
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    return-object p0
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->z1:Landroid/view/animation/Interpolator;
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->A1:Landroid/view/animation/Interpolator;
+
+    :goto_0
+    iput-object v0, p1, Landroidx/mediarouter/app/d;->y1:Landroid/view/animation/Interpolator;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->s(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lrq8;->b:Landroidx/mediarouter/app/d;
+
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->g1:Landroid/support/v4/media/session/MediaControllerCompat;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaControllerCompat;->getSessionActivity()Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    :try_start_0
+    invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
+
+    invoke-virtual {p1}, Lmn;->dismiss()V
+    :try_end_0
+    .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " was not sent, it had been canceled."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "MediaRouteCtrlDialog"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lrq8;->b:Landroidx/mediarouter/app/d;
+
+    invoke-virtual {p1}, Lmn;->dismiss()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

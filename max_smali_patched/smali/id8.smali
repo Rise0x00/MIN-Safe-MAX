@@ -3,149 +3,123 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:[I
+
+.field public static final b:[I
+
+
 # direct methods
-.method public static a(Landroid/media/MediaDescription$Builder;)Landroid/media/MediaDescription;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/media/MediaDescription$Builder;->build()Landroid/media/MediaDescription;
+    const/high16 v0, 0x1010000
 
-    move-result-object p0
+    sget v1, Lvac;->theme:I
 
-    return-object p0
-.end method
+    filled-new-array {v0, v1}, [I
 
-.method public static b()Landroid/media/MediaDescription$Builder;
-    .locals 1
+    move-result-object v0
 
-    new-instance v0, Landroid/media/MediaDescription$Builder;
+    sput-object v0, Lid8;->a:[I
 
-    invoke-direct {v0}, Landroid/media/MediaDescription$Builder;-><init>()V
+    sget v0, Lvac;->materialThemeOverlay:I
 
-    return-object v0
-.end method
+    filled-new-array {v0}, [I
 
-.method public static c(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getDescription()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/media/MediaDescription;)Landroid/os/Bundle;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/media/MediaDescription;)Landroid/graphics/Bitmap;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Landroid/media/MediaDescription;)Landroid/net/Uri;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/media/MediaDescription;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getSubtitle()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Landroid/media/MediaDescription;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+    sput-object v0, Lid8;->b:[I
 
     return-void
 .end method
 
-.method public static k(Landroid/media/MediaDescription$Builder;Landroid/os/Bundle;)V
-    .locals 0
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/MediaDescription$Builder;
+    sget-object v0, Lid8;->b:[I
 
-    return-void
-.end method
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-.method public static l(Landroid/media/MediaDescription$Builder;Landroid/graphics/Bitmap;)V
-    .locals 0
+    move-result-object p2
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/media/MediaDescription$Builder;
+    const/4 p3, 0x0
 
-    return-void
-.end method
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-.method public static m(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
-    .locals 0
+    move-result v0
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setIconUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    return-void
-.end method
+    instance-of p2, p0, Ljz3;
 
-.method public static n(Landroid/media/MediaDescription$Builder;Ljava/lang/String;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setMediaId(Ljava/lang/String;)Landroid/media/MediaDescription$Builder;
+    if-eqz p2, :cond_0
 
-    return-void
-.end method
+    move-object p2, p0
 
-.method public static o(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
-    .locals 0
+    check-cast p2, Ljz3;
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+    iget p2, p2, Ljz3;->a:I
 
-    return-void
-.end method
+    if-ne p2, v0, :cond_0
 
-.method public static p(Landroid/media/MediaDescription$Builder;Ljava/lang/CharSequence;)V
-    .locals 0
+    move p2, v1
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+    goto :goto_0
 
-    return-void
+    :cond_0
+    move p2, p3
+
+    :goto_0
+    if-eqz v0, :cond_4
+
+    if-eqz p2, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    new-instance p2, Ljz3;
+
+    invoke-direct {p2, p0, v0}, Ljz3;-><init>(Landroid/content/Context;I)V
+
+    sget-object v0, Lid8;->a:[I
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move p1, p3
+
+    :goto_1
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2}, Ljz3;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

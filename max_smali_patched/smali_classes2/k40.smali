@@ -1,48 +1,25 @@
 .class public final Lk40;
-.super Lax3;
+.super Llde;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final c:J
 
-.field public final synthetic Y:Ll40;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final o:[B
 
 
 # direct methods
-.method public constructor <init>(Ll40;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lk40;->Y:Ll40;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;J[B)V
     .locals 1
 
-    iput-object p1, p0, Lk40;->o:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    iget p1, p0, Lk40;->X:I
+    invoke-direct {p0, v0, p1}, Llde;-><init>(ILjava/lang/String;)V
 
-    const/high16 v0, -0x80000000
+    iput-wide p2, p0, Lk40;->c:J
 
-    or-int/2addr p1, v0
+    iput-object p4, p0, Lk40;->o:[B
 
-    iput p1, p0, Lk40;->X:I
-
-    iget-object p1, p0, Lk40;->Y:Ll40;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ll40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

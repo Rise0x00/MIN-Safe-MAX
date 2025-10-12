@@ -3,41 +3,19 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Builder;Landroid/app/Person;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    sget v0, Lnyb;->oneme_force_update_app_icon:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Landroid/app/Person;)Landroid/app/Notification$Builder;
 
-    sput v0, Lx5a;->a:I
+    move-result-object p0
 
-    sget v0, Lnyb;->oneme_force_update_subtitle:I
+    return-object p0
+.end method
 
-    sput v0, Lx5a;->b:I
+.method public static b(Landroid/app/Person;)Landroid/os/Parcelable;
+    .locals 0
 
-    sget v0, Lnyb;->oneme_force_update_title:I
-
-    sput v0, Lx5a;->c:I
-
-    sget v0, Lnyb;->oneme_force_update_update_button:I
-
-    sput v0, Lx5a;->d:I
-
-    sget v0, Lnyb;->oneme_force_update_update_icon:I
-
-    sput v0, Lx5a;->e:I
-
-    return-void
+    return-object p0
 .end method

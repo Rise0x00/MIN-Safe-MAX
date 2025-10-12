@@ -1,87 +1,56 @@
 .class public final Lgqg;
-.super Ljava/lang/Object;
+.super Ljava/lang/ref/WeakReference;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lkle;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Throwable;
+# interfaces
+.implements Lss4;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final g()V
+    .locals 1
 
-    new-instance v0, Ltif;
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    const/16 v1, 0x1a
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ltif;-><init>(I)V
+    check-cast v0, Lss4;
 
-    new-instance v1, Lkle;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
+    invoke-interface {v0}, Lss4;->g()V
 
-    sput-object v1, Lgqg;->c:Lkle;
-
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 3
+.method public final h()Z
+    .locals 1
 
-    const-string v0, "gleff"
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    const-class v1, Lgqg;
+    check-cast v0, Lss4;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    invoke-interface {v0}, Lss4;->h()Z
 
-    iput-object v1, p0, Lgqg;->a:Ljava/lang/String;
+    move-result v0
 
-    sget-object v1, Lfqg;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lgqg;->a:Ljava/lang/String;
-
-    const-string v2, "failed to load gl-effects library with system loader"
-
-    invoke-static {v1, v2, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iput-object v0, p0, Lgqg;->b:Ljava/lang/Throwable;
-
-    return-void
-
     :cond_0
-    new-instance p0, Ljava/lang/ClassCastException;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    return v0
 
-    throw p0
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

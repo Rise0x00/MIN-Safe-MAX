@@ -15,23 +15,23 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Ltc;",
+        "Lqc;",
         "analytics",
-        "Lwo;",
+        "Lnp;",
         "appNotifications",
-        "Lak3;",
+        "Lpm3;",
         "connectionInfo",
-        "Lhm4;",
+        "Lop4;",
         "deviceInfo",
-        "Luce;",
+        "Lxwe;",
         "storeServicesInfo",
-        "Lhwa;",
+        "Lv9b;",
         "permissionStats",
-        "Lth7;",
-        "Lg64;",
+        "Lbp7;",
+        "Lb94;",
         "dataManager",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Ltc;Lwo;Lak3;Lhm4;Luce;Lhwa;Lth7;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lqc;Lnp;Lpm3;Lop4;Lxwe;Lv9b;Lbp7;)V",
         "tamtam-app_release"
     }
     k = 0x1
@@ -45,83 +45,83 @@
 
 
 # static fields
-.field public static final o0:Lgic;
+.field public static final x0:Layc;
 
 
 # instance fields
-.field public final X:Lhm4;
+.field public final X:Lop4;
 
-.field public final Y:Luce;
+.field public final Y:Lxwe;
 
-.field public final Z:Lhwa;
+.field public final Z:Lv9b;
 
-.field public final b:Ltc;
+.field public final b:Lqc;
 
-.field public final c:Lwo;
+.field public final c:Lnp;
 
-.field public final n0:Lth7;
+.field public final o:Lpm3;
 
-.field public final o:Lak3;
+.field public final w0:Lbp7;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lgic;
+    new-instance v0, Layc;
 
     const-string v1, "\\s+"
 
-    invoke-direct {v0, v1}, Lgic;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Layc;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o0:Lgic;
+    sput-object v0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->x0:Layc;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Ltc;Lwo;Lak3;Lhm4;Luce;Lhwa;Lth7;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lqc;Lnp;Lpm3;Lop4;Lxwe;Lv9b;Lbp7;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Landroidx/work/WorkerParameters;",
-            "Ltc;",
-            "Lwo;",
-            "Lak3;",
-            "Lhm4;",
-            "Luce;",
-            "Lhwa;",
-            "Lth7;",
+            "Lqc;",
+            "Lnp;",
+            "Lpm3;",
+            "Lop4;",
+            "Lxwe;",
+            "Lv9b;",
+            "Lbp7;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0, p1, p2}, Landroidx/work/Worker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->b:Ltc;
+    iput-object p3, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->b:Lqc;
 
-    iput-object p4, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->c:Lwo;
+    iput-object p4, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->c:Lnp;
 
-    iput-object p5, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o:Lak3;
+    iput-object p5, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o:Lpm3;
 
-    iput-object p6, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->X:Lhm4;
+    iput-object p6, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->X:Lop4;
 
-    iput-object p7, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Y:Luce;
+    iput-object p7, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Y:Lxwe;
 
-    iput-object p8, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Z:Lhwa;
+    iput-object p8, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Z:Lv9b;
 
-    iput-object p9, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->n0:Lth7;
+    iput-object p9, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->w0:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcq7;
+.method public final a()Lnx7;
     .locals 11
 
-    invoke-virtual {p0}, Ldq7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
@@ -143,17 +143,17 @@
 
     const-string v1, "ru.ok.messages.analytics.DailyAnalyticsWorker"
 
-    invoke-static {v1, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Z:Lhwa;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Z:Lv9b;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v3, Lv18;
+    new-instance v3, Lr98;
 
-    invoke-direct {v3}, Lv18;-><init>()V
+    invoke-direct {v3}, Lr98;-><init>()V
 
-    invoke-static {}, Lno9;->f()Lgp7;
+    invoke-static {}, Lvhh;->p()Lsw7;
 
     move-result-object v4
 
@@ -167,204 +167,229 @@
 
     if-lt v5, v6, :cond_0
 
-    new-instance v6, Lv18;
+    new-instance v6, Lr98;
 
-    invoke-direct {v6}, Lv18;-><init>()V
+    invoke-direct {v6}, Lr98;-><init>()V
 
     const-string v9, "push"
 
-    invoke-virtual {v6, v8, v9}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v8, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v9, v0, Lhwa;->d:Lkwa;
+    iget-object v9, v0, Lv9b;->d:Ly9b;
 
-    invoke-static {v9}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v9}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v6, v7, v9}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v7, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v6}, Lv18;->b()Lv18;
+    invoke-virtual {v6}, Lr98;->b()Lr98;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Lsw7;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    new-instance v6, Lv18;
+    new-instance v6, Lr98;
 
-    invoke-direct {v6}, Lv18;-><init>()V
+    invoke-direct {v6}, Lr98;-><init>()V
 
     const-string v9, "contacts"
 
-    invoke-virtual {v6, v8, v9}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v8, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v9, v0, Lhwa;->e:Lkwa;
+    iget-object v9, v0, Lv9b;->e:Ly9b;
 
-    invoke-static {v9}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v9}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v6, v7, v9}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v7, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v6}, Lv18;->b()Lv18;
+    invoke-virtual {v6}, Lr98;->b()Lr98;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v6}, Lsw7;->add(Ljava/lang/Object;)Z
 
-    new-instance v6, Lv18;
+    new-instance v6, Lr98;
 
-    invoke-direct {v6}, Lv18;-><init>()V
+    invoke-direct {v6}, Lr98;-><init>()V
+
+    const-string v9, "fsi"
+
+    invoke-virtual {v6, v8, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v9, v0, Lv9b;->k:Lme6;
+
+    if-eqz v9, :cond_1
+
+    invoke-static {v9}, Lv9b;->b(Ly9b;)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v6, v7, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v6}, Lr98;->b()Lr98;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lsw7;->add(Ljava/lang/Object;)Z
+
+    new-instance v6, Lr98;
+
+    invoke-direct {v6}, Lr98;-><init>()V
 
     const-string v9, "gallery"
 
-    invoke-virtual {v6, v8, v9}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v8, v9}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v9, v0, Lhwa;->f:Lkwa;
+    iget-object v9, v0, Lv9b;->f:Ly9b;
 
     const/16 v10, 0x22
 
-    if-ge v5, v10, :cond_1
+    if-ge v5, v10, :cond_2
 
-    invoke-static {v9}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v9}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v5
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v9}, Lkwa;->i()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    const-string v5, "allowed"
-
-    goto :goto_0
-
     :cond_2
-    iget-object v5, v0, Lhwa;->g:Lkwa;
-
-    invoke-virtual {v5}, Lkwa;->i()Z
+    invoke-virtual {v9}, Ly9b;->l()Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    const-string v5, "partial"
+    const-string v5, "allowed"
 
     goto :goto_0
 
     :cond_3
+    iget-object v5, v0, Lv9b;->g:Ly9b;
+
+    invoke-virtual {v5}, Ly9b;->l()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    const-string v5, "partial"
+
+    goto :goto_0
+
+    :cond_4
     const-string v5, "denied"
 
     :goto_0
-    invoke-virtual {v6, v7, v5}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v7, v5}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v6}, Lv18;->b()Lv18;
+    invoke-virtual {v6}, Lr98;->b()Lr98;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Lsw7;->add(Ljava/lang/Object;)Z
 
-    new-instance v5, Lv18;
+    new-instance v5, Lr98;
 
-    invoke-direct {v5}, Lv18;-><init>()V
+    invoke-direct {v5}, Lr98;-><init>()V
 
     const-string v6, "camera"
 
-    invoke-virtual {v5, v8, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v8, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, v0, Lhwa;->h:Lkwa;
+    iget-object v6, v0, Lv9b;->h:Ly9b;
 
-    invoke-static {v6}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v6}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v5, v7, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v5}, Lv18;->b()Lv18;
+    invoke-virtual {v5}, Lr98;->b()Lr98;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Lsw7;->add(Ljava/lang/Object;)Z
 
-    new-instance v5, Lv18;
+    new-instance v5, Lr98;
 
-    invoke-direct {v5}, Lv18;-><init>()V
+    invoke-direct {v5}, Lr98;-><init>()V
 
     const-string v6, "microphone"
 
-    invoke-virtual {v5, v8, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v8, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, v0, Lhwa;->i:Lkwa;
+    iget-object v6, v0, Lv9b;->i:Ly9b;
 
-    invoke-static {v6}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v6}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v5, v7, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v5}, Lv18;->b()Lv18;
+    invoke-virtual {v5}, Lr98;->b()Lr98;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Lsw7;->add(Ljava/lang/Object;)Z
 
-    new-instance v5, Lv18;
+    new-instance v5, Lr98;
 
-    invoke-direct {v5}, Lv18;-><init>()V
+    invoke-direct {v5}, Lr98;-><init>()V
 
     const-string v6, "geo"
 
-    invoke-virtual {v5, v8, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v8, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v6, v0, Lhwa;->j:Lkwa;
+    iget-object v6, v0, Lv9b;->j:Ly9b;
 
-    invoke-static {v6}, Lhwa;->b(Lkwa;)Ljava/lang/String;
+    invoke-static {v6}, Lv9b;->b(Ly9b;)Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v5, v7, v6}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v7, v6}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v5}, Lv18;->b()Lv18;
+    invoke-virtual {v5}, Lr98;->b()Lr98;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Lsw7;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v4}, Lno9;->b(Ljava/util/List;)Lgp7;
+    invoke-static {v4}, Lvhh;->e(Ljava/util/List;)Lsw7;
 
     move-result-object v4
 
     const-string v5, "permissions"
 
-    invoke-virtual {v3, v5, v4}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v5, v4}, Lr98;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v3}, Lv18;->b()Lv18;
+    invoke-virtual {v3}, Lr98;->b()Lr98;
 
     move-result-object v3
 
     const-string v4, "permission_status"
 
-    invoke-virtual {v0, v4, v3}, Lhwa;->c(Ljava/lang/String;Lv18;)V
+    invoke-virtual {v0, v4, v3}, Lv9b;->c(Ljava/lang/String;Lr98;)V
 
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->c:Lwo;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->c:Lnp;
 
-    invoke-virtual {v0}, Lepe;->a()Lega;
+    invoke-virtual {v0}, Lo9f;->a()Lzqa;
 
     move-result-object v0
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Lega;->i(Z)Ltx9;
+    invoke-virtual {v0, v3}, Lzqa;->i(Z)Li7a;
 
     move-result-object v0
 
-    iget-object v0, v0, Ltx9;->b:Landroid/app/NotificationManager;
+    iget-object v0, v0, Li7a;->b:Landroid/app/NotificationManager;
 
-    invoke-static {v0}, Lnx9;->a(Landroid/app/NotificationManager;)Z
+    invoke-static {v0}, Lc7a;->a(Landroid/app/NotificationManager;)Z
 
     move-result v0
 
@@ -372,33 +397,33 @@
 
     const-string v5, "1"
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     move-object v0, v5
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     move-object v0, v4
 
     :goto_1
-    iget-object v6, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->b:Ltc;
+    iget-object v6, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->b:Lqc;
 
     const-string v7, "ACTION_ARE_NOTIFICATIONS_ENABLED"
 
-    invoke-virtual {v6, v7, v0}, Ltc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, v7, v0}, Lqc;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->n0:Lth7;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->w0:Lbp7;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lg64;
+    check-cast v0, Lb94;
 
-    iget-object v0, v0, Lg64;->b:Lbpc;
+    iget-object v0, v0, Lb94;->b:Lu5d;
 
-    invoke-virtual {v0}, Lbpc;->c()Llu2;
+    invoke-virtual {v0}, Lu5d;->c()Lyv2;
 
     move-result-object v0
 
@@ -406,15 +431,15 @@
 
     const-string v7, "SELECT COUNT(*) FROM chats"
 
-    invoke-static {v3, v7}, Lvpc;->c(ILjava/lang/String;)Lvpc;
+    invoke-static {v3, v7}, Lo6d;->c(ILjava/lang/String;)Lo6d;
 
     move-result-object v7
 
-    iget-object v0, v0, Llu2;->a:Lfpc;
+    iget-object v0, v0, Lyv2;->a:Lx5d;
 
-    invoke-virtual {v0}, Lfpc;->b()V
+    invoke-virtual {v0}, Lx5d;->b()V
 
-    invoke-virtual {v0, v7}, Lfpc;->n(Lyhe;)Landroid/database/Cursor;
+    invoke-virtual {v0, v7}, Lx5d;->n(Lg2f;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -423,7 +448,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_6
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getLong(I)J
 
@@ -434,31 +459,31 @@
     goto :goto_2
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto/16 :goto_6
 
-    :cond_5
+    :cond_6
     const-wide/16 v8, 0x0
 
     :goto_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    invoke-virtual {v7}, Lvpc;->o()V
+    invoke-virtual {v7}, Lo6d;->n()V
 
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o:Lak3;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o:Lpm3;
 
-    invoke-interface {v0}, Lak3;->a()Z
+    invoke-interface {v0}, Lpm3;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     move-object v0, v5
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
     move-object v0, v4
 
     :goto_3
@@ -466,53 +491,53 @@
 
     move-result-object v3
 
-    invoke-virtual {v6}, Ltc;->a()Law7;
+    invoke-virtual {v6}, Lqc;->a()Lr38;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Law7;->e()Z
+    invoke-virtual {v7}, Lr38;->e()Z
 
     move-result v7
 
-    if-eqz v7, :cond_7
+    if-eqz v7, :cond_8
 
     goto :goto_4
 
-    :cond_7
-    new-instance v7, Lp77;
+    :cond_8
+    new-instance v7, Lqe7;
 
     invoke-direct {v7}, Ljava/lang/Object;-><init>()V
 
     const-string v8, "ACTION"
 
-    iput-object v8, v7, Lp77;->c:Ljava/lang/String;
+    iput-object v8, v7, Lqe7;->c:Ljava/lang/String;
 
     const-string v8, "ACTION_IS_BACKGROUND_DATA_ENABLED"
 
-    iput-object v8, v7, Lp77;->o:Ljava/lang/String;
+    iput-object v8, v7, Lqe7;->o:Ljava/lang/String;
 
     const-string v8, "value"
 
-    invoke-virtual {v7, v0, v8}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v7, v0, v8}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "param1"
 
-    invoke-virtual {v7, v3, v0}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v7, v3, v0}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lp77;->d()Lcw7;
+    invoke-virtual {v7}, Lqe7;->d()Lt38;
 
     move-result-object v0
 
-    invoke-virtual {v6, v0}, Ltc;->j(Lcw7;)Z
+    invoke-virtual {v6, v0}, Lqc;->i(Lt38;)Z
 
     :goto_4
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->X:Lhm4;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->X:Lop4;
 
-    iget-object v3, v0, Lem4;->a:Landroid/content/Context;
+    iget-object v3, v0, Llp4;->a:Landroid/content/Context;
 
-    iget-object v7, v0, Lem4;->d:Landroid/os/PowerManager;
+    iget-object v7, v0, Llp4;->d:Landroid/os/PowerManager;
 
-    if-nez v7, :cond_8
+    if-nez v7, :cond_9
 
     const-string v7, "power"
 
@@ -522,10 +547,10 @@
 
     check-cast v7, Landroid/os/PowerManager;
 
-    iput-object v7, v0, Lem4;->d:Landroid/os/PowerManager;
+    iput-object v7, v0, Llp4;->d:Landroid/os/PowerManager;
 
-    :cond_8
-    iget-object v0, v0, Lem4;->d:Landroid/os/PowerManager;
+    :cond_9
+    iget-object v0, v0, Llp4;->d:Landroid/os/PowerManager;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -535,54 +560,44 @@
 
     move-result v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, "lp4"
 
     const-string v7, "isIgnoringBatteryOptimizations: "
 
-    invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v7, v3, v0}, Lfl7;->p(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v7, "em4"
-
-    invoke-static {v7, v3}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     move-object v0, v5
 
     goto :goto_5
 
-    :cond_9
+    :cond_a
     move-object v0, v4
 
     :goto_5
     const-string v3, "ACTION_IS_IGNORING_BATTERY_OPTIMIZATIONS"
 
-    invoke-virtual {v6, v3, v0}, Ltc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, v3, v0}, Lqc;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Y:Luce;
+    iget-object v0, p0, Lru/ok/messages/analytics/DailyAnalyticsWorker;->Y:Lxwe;
 
-    check-cast v0, Lui6;
+    check-cast v0, Lfp6;
 
-    iget-object v3, v0, Lui6;->f:Ljava/lang/String;
+    iget-object v3, v0, Lfp6;->f:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lui6;->a()Z
+    invoke-virtual {v0}, Lfp6;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     move-object v4, v5
 
-    :cond_a
+    :cond_b
     const-string v0, "-"
 
-    invoke-static {v3, v0, v4}, Lcx3;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0, v4}, Lvl3;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -592,48 +607,48 @@
 
     move-result-object v0
 
-    sget-object v3, Lru/ok/messages/analytics/DailyAnalyticsWorker;->o0:Lgic;
+    sget-object v3, Lru/ok/messages/analytics/DailyAnalyticsWorker;->x0:Layc;
 
     const-string v4, "_"
 
-    invoke-virtual {v3, v0, v4}, Lgic;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v0, v4}, Layc;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v3, "ARE_SERVICES_AVAILABLE"
 
-    invoke-virtual {v6, v3, v0}, Ltc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, v3, v0}, Lqc;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ldq7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, " finished"
+    const-string v0, " finished"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {v1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcq7;->b()Lbq7;
+    invoke-static {}, Lnx7;->b()Lmx7;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :goto_6
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    invoke-virtual {v7}, Lvpc;->o()V
+    invoke-virtual {v7}, Lo6d;->n()V
 
-    throw p0
+    throw v1
 .end method

@@ -1,51 +1,48 @@
 .class public final Lzb7;
-.super Lax3;
-.source "SourceFile"
+.super Lnz3;
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
+.field public X:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:Le13;
 
-.field public final synthetic Z:Lny5;
-
-.field public n0:I
-
-.field public o:Ljava/util/concurrent/ConcurrentHashMap;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lny5;Lax3;)V
+.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lzb7;->Z:Lny5;
+    iput-object p1, p0, Lzb7;->Y:Le13;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lzb7;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lzb7;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lzb7;->n0:I
+    iget p1, p0, Lzb7;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lzb7;->n0:I
+    iput p1, p0, Lzb7;->X:I
 
-    iget-object p1, p0, Lzb7;->Z:Lny5;
+    iget-object p1, p0, Lzb7;->Y:Le13;
 
-    invoke-virtual {p1, p0}, Lny5;->b(Lax3;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    invoke-virtual {p1, v0, p0}, Le13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p0
+    move-result-object p1
+
+    return-object p1
 .end method

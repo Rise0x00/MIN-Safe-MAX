@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Li05;
+.field public a:Lr45;
 
 .field public final b:Z
 
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lv6c;->EmojiEditText:[I
+    sget-object v1, Lcmc;->EmojiEditText:[I
 
     const v2, 0x101006e
 
@@ -39,7 +39,7 @@
 
     move-result-object p1
 
-    sget p2, Lv6c;->EmojiEditText_maxEmojiCount:I
+    sget p2, Lcmc;->EmojiEditText_maxEmojiCount:I
 
     const v0, 0x7fffffff
 
@@ -64,73 +64,77 @@
     return-void
 .end method
 
-.method private getEmojiEditTextHelper()Li05;
+.method private getEmojiEditTextHelper()Lr45;
     .locals 2
 
-    iget-object v0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Li05;
+    iget-object v0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Lr45;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Li05;
+    new-instance v0, Lr45;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Li05;-><init>(Landroid/widget/EditText;Z)V
+    invoke-direct {v0, p0, v1}, Lr45;-><init>(Landroid/widget/EditText;Z)V
 
-    iput-object v0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Li05;
+    iput-object v0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Lr45;
 
     :cond_0
-    iget-object p0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Li05;
+    iget-object v0, p0, Landroidx/emoji2/widget/EmojiExtractEditText;->a:Lr45;
 
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public getEmojiReplaceStrategy()I
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget p0, p0, Li05;->c:I
+    iget v0, v0, Lr45;->c:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMaxEmojiCount()I
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget p0, p0, Li05;->b:I
+    iget v0, v0, Lr45;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public final onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1}, Landroid/view/View;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0, v0, p1}, Li05;->a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lq05;
+    invoke-virtual {v1, v0, p1}, Lr45;->a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lz45;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
     .locals 0
+
+    invoke-static {p1, p0}, Landroidx/core/widget/a;->f(Landroid/view/ActionMode$Callback;Landroid/widget/TextView;)Landroid/view/ActionMode$Callback;
+
+    move-result-object p1
 
     invoke-super {p0, p1}, Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
 
@@ -138,21 +142,21 @@
 .end method
 
 .method public setEmojiReplaceStrategy(I)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
-    move-result-object p0
+    move-result-object v0
 
-    iput p1, p0, Li05;->c:I
+    iput p1, v0, Lr45;->c:I
 
-    iget-object p0, p0, Li05;->a:Lplg;
+    iget-object v0, v0, Lr45;->a:Lbb8;
 
-    iget-object p0, p0, Lplg;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lbb8;->c:Ljava/lang/Object;
 
-    check-cast p0, Lu15;
+    check-cast v0, Le65;
 
-    iput p1, p0, Lu15;->X:I
+    iput p1, v0, Le65;->X:I
 
     return-void
 .end method
@@ -162,15 +166,15 @@
 
     if-eqz p1, :cond_2
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
     move-result-object v0
 
-    iget-object v0, v0, Li05;->a:Lplg;
+    iget-object v0, v0, Lr45;->a:Lbb8;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of v0, p1, Lu05;
+    instance-of v0, p1, Ld55;
 
     if-eqz v0, :cond_0
 
@@ -184,9 +188,9 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lu05;
+    new-instance v0, Ld55;
 
-    invoke-direct {v0, p1}, Lu05;-><init>(Landroid/text/method/KeyListener;)V
+    invoke-direct {v0, p1}, Ld55;-><init>(Landroid/text/method/KeyListener;)V
 
     move-object p1, v0
 
@@ -198,34 +202,34 @@
 .end method
 
 .method public setMaxEmojiCount(I)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Li05;
+    invoke-direct {p0}, Landroidx/emoji2/widget/EmojiExtractEditText;->getEmojiEditTextHelper()Lr45;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     if-ltz p1, :cond_0
 
-    iput p1, p0, Li05;->b:I
+    iput p1, v0, Lr45;->b:I
 
-    iget-object p0, p0, Li05;->a:Lplg;
+    iget-object v0, v0, Lr45;->a:Lbb8;
 
-    iget-object p0, p0, Lplg;->c:Ljava/lang/Object;
+    iget-object v0, v0, Lbb8;->c:Ljava/lang/Object;
 
-    check-cast p0, Lu15;
+    check-cast v0, Le65;
 
-    iput p1, p0, Lu15;->o:I
+    iput p1, v0, Le65;->o:I
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string p1, "maxEmojiCount should be greater than 0"
+    const-string v0, "maxEmojiCount should be greater than 0"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 .end method

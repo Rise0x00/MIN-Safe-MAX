@@ -6,66 +6,26 @@
 # instance fields
 .field public final a:Lcf0;
 
-.field public final b:Llf0;
+.field public final b:Lef0;
 
-.field public final c:I
+.field public final c:Lff0;
 
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
+.field public final d:Lgf0;
 
 
 # direct methods
-.method public constructor <init>(Lcf0;Llf0;IIIIIIIIIIII)V
+.method public constructor <init>(Lcf0;Lef0;Lff0;Lgf0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Ldf0;->a:Lcf0;
 
-    iput-object p2, p0, Ldf0;->b:Llf0;
+    iput-object p2, p0, Ldf0;->b:Lef0;
 
-    iput p3, p0, Ldf0;->c:I
+    iput-object p3, p0, Ldf0;->c:Lff0;
 
-    iput p4, p0, Ldf0;->d:I
-
-    iput p5, p0, Ldf0;->e:I
-
-    iput p6, p0, Ldf0;->f:I
-
-    iput p7, p0, Ldf0;->g:I
-
-    iput p8, p0, Ldf0;->h:I
-
-    iput p9, p0, Ldf0;->i:I
-
-    iput p10, p0, Ldf0;->j:I
-
-    iput p11, p0, Ldf0;->k:I
-
-    iput p12, p0, Ldf0;->l:I
-
-    iput p13, p0, Ldf0;->m:I
-
-    iput p14, p0, Ldf0;->n:I
+    iput-object p4, p0, Ldf0;->d:Lgf0;
 
     return-void
 .end method
@@ -73,7 +33,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -84,150 +44,67 @@
     :cond_0
     instance-of v1, p1, Ldf0;
 
+    const/4 v2, 0x0
+
     if-nez v1, :cond_1
 
-    goto/16 :goto_0
+    return v2
 
     :cond_1
     check-cast p1, Ldf0;
 
     iget-object v1, p0, Ldf0;->a:Lcf0;
 
-    iget-object v2, p1, Ldf0;->a:Lcf0;
+    iget-object v3, p1, Ldf0;->a:Lcf0;
 
-    invoke-virtual {v1, v2}, Lcf0;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    goto/16 :goto_0
+    return v2
 
     :cond_2
-    iget-object v1, p0, Ldf0;->b:Llf0;
+    iget-object v1, p0, Ldf0;->b:Lef0;
 
-    iget-object v2, p1, Ldf0;->b:Llf0;
+    iget-object v3, p1, Ldf0;->b:Lef0;
 
-    invoke-virtual {v1, v2}, Llf0;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    goto :goto_0
+    return v2
 
     :cond_3
-    iget v1, p0, Ldf0;->c:I
+    iget-object v1, p0, Ldf0;->c:Lff0;
 
-    iget v2, p1, Ldf0;->c:I
+    iget-object v3, p1, Ldf0;->c:Lff0;
 
-    if-eq v1, v2, :cond_4
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
 
     :cond_4
-    iget v1, p0, Ldf0;->d:I
+    iget-object v1, p0, Ldf0;->d:Lgf0;
 
-    iget v2, p1, Ldf0;->d:I
+    iget-object p1, p1, Ldf0;->d:Lgf0;
 
-    if-eq v1, v2, :cond_5
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
 
     :cond_5
-    iget v1, p0, Ldf0;->e:I
-
-    iget v2, p1, Ldf0;->e:I
-
-    if-eq v1, v2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v1, p0, Ldf0;->f:I
-
-    iget v2, p1, Ldf0;->f:I
-
-    if-eq v1, v2, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v1, p0, Ldf0;->g:I
-
-    iget v2, p1, Ldf0;->g:I
-
-    if-eq v1, v2, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v1, p0, Ldf0;->h:I
-
-    iget v2, p1, Ldf0;->h:I
-
-    if-eq v1, v2, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget v1, p0, Ldf0;->i:I
-
-    iget v2, p1, Ldf0;->i:I
-
-    if-eq v1, v2, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget v1, p0, Ldf0;->j:I
-
-    iget v2, p1, Ldf0;->j:I
-
-    if-eq v1, v2, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    iget v1, p0, Ldf0;->k:I
-
-    iget v2, p1, Ldf0;->k:I
-
-    if-eq v1, v2, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    iget v1, p0, Ldf0;->l:I
-
-    iget v2, p1, Ldf0;->l:I
-
-    if-eq v1, v2, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    iget v1, p0, Ldf0;->m:I
-
-    iget v2, p1, Ldf0;->m:I
-
-    if-eq v1, v2, :cond_e
-
-    goto :goto_0
-
-    :cond_e
-    iget p0, p0, Ldf0;->n:I
-
-    iget p1, p1, Ldf0;->n:I
-
-    if-eq p0, p1, :cond_f
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_f
     return v0
 .end method
 
@@ -244,9 +121,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ldf0;->b:Llf0;
+    iget-object v2, p0, Ldf0;->b:Lef0;
 
-    invoke-virtual {v2}, Llf0;->hashCode()I
+    invoke-virtual {v2}, Lef0;->hashCode()I
 
     move-result v2
 
@@ -254,101 +131,31 @@
 
     mul-int/2addr v2, v1
 
-    iget v0, p0, Ldf0;->c:I
+    iget-object v0, p0, Ldf0;->c:Lff0;
 
-    invoke-static {v0, v2, v1}, Llge;->m(III)I
+    iget v0, v0, Lff0;->a:I
 
-    move-result v0
-
-    iget v2, p0, Ldf0;->d:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    invoke-static {v0, v2, v1}, Lhqd;->e(III)I
 
     move-result v0
 
-    iget v2, p0, Ldf0;->e:I
+    iget-object v1, p0, Ldf0;->d:Lgf0;
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    invoke-virtual {v1}, Lgf0;->hashCode()I
 
-    move-result v0
+    move-result v1
 
-    iget v2, p0, Ldf0;->f:I
+    add-int/2addr v1, v0
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    const/high16 v2, -0x67000000
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->g:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->h:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->i:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->j:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->k:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->l:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldf0;->m:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Ldf0;->n:I
-
-    invoke-static {p0, v0, v1}, Llge;->m(III)I
-
-    move-result p0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, p0
-
-    return v0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "BackgroundColors(accent="
+    const-string v1, "BackgroundLocalColors(chips="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -356,79 +163,37 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", local="
+    const-string v1, ", fileType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ldf0;->b:Llf0;
+    iget-object v1, p0, Ldf0;->b:Lef0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", contrastFloating="
+    const-string v1, ", tabBar="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", contrastFloatingSecondary="
+    iget-object v1, p0, Ldf0;->c:Lff0;
 
-    const-string v2, ", neutralFloating="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Ldf0;->c:I
+    const-string v1, ", topBar="
 
-    iget v4, p0, Ldf0;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    iget-object v1, p0, Ldf0;->d:Lgf0;
 
-    const-string v1, ", overlay="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", overlaySecondary=-1728053248, overlayStatic="
+    const-string v1, ")"
 
-    iget v3, p0, Ldf0;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Ldf0;->f:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    move-result-object v0
 
-    const-string v1, ", surfaceCard="
-
-    const-string v2, ", surfaceCardSecondary="
-
-    iget v3, p0, Ldf0;->g:I
-
-    iget v4, p0, Ldf0;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", surfaceFloating="
-
-    const-string v2, ", surfaceGround="
-
-    iget v3, p0, Ldf0;->i:I
-
-    iget v4, p0, Ldf0;->j:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", surfacePrimary="
-
-    const-string v2, ", surfaceSecondary="
-
-    iget v3, p0, Ldf0;->k:I
-
-    iget v4, p0, Ldf0;->l:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", surfaceTertiary="
-
-    const-string v2, ", transparent=0)"
-
-    iget v3, p0, Ldf0;->m:I
-
-    iget p0, p0, Ldf0;->n:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lmh0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -8,5 +8,14 @@
 
 
 # virtual methods
-.method public abstract a()V
+.method public abstract a()Lkr1;
+.end method
+
+.method public abstract b(Ljava/lang/Object;)V
+.end method
+
+.method public abstract c(Lcf1;)V
+.end method
+
+.method public abstract d(Lef1;Lcf1;)V
 .end method

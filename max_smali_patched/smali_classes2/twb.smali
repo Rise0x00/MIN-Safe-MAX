@@ -1,26 +1,96 @@
-.class public abstract Ltwb;
-.super Ljava/lang/Object;
+.class public final Ltwb;
+.super Ldd0;
+.source "SourceFile"
 
 
-# static fields
-.field public static size_border_radius_new_banner:I = 0x7f0703fe
+# instance fields
+.field public final b:Landroid/content/Intent;
 
-.field public static size_border_radius_semantic_border_radius_card:I = 0x7f0703ff
 
-.field public static spacing_size_2xl:I = 0x7f070402
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-.field public static spacing_size_2xs:I = 0x7f070403
+    const/16 v0, 0xd
 
-.field public static spacing_size_3xl:I = 0x7f070404
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-.field public static spacing_size_4xl:I = 0x7f070405
+    iput-object p1, p0, Ltwb;->b:Landroid/content/Intent;
 
-.field public static spacing_size_l:I = 0x7f070406
+    return-void
+.end method
 
-.field public static spacing_size_m:I = 0x7f070407
 
-.field public static spacing_size_s:I = 0x7f070408
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static spacing_size_xl:I = 0x7f070409
+    const/4 v0, 0x1
 
-.field public static spacing_size_xs:I = 0x7f07040a
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ltwb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ltwb;
+
+    iget-object v1, p0, Ltwb;->b:Landroid/content/Intent;
+
+    iget-object p1, p1, Ltwb;->b:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ltwb;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CropAvatarOld(intent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltwb;->b:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

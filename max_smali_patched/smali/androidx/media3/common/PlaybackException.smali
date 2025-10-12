@@ -10,11 +10,11 @@
 
 .field public static final Z:Ljava/lang/String;
 
-.field public static final n0:Ljava/lang/String;
-
 .field public static final o:Ljava/lang/String;
 
-.field public static final o0:Ljava/lang/String;
+.field public static final w0:Ljava/lang/String;
+
+.field public static final x0:Ljava/lang/String;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Lfif;->a:I
+    sget v0, Lt4g;->a:I
 
     const/4 v0, 0x0
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->n0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->w0:Ljava/lang/String;
 
     const/4 v0, 0x5
 
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->o0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->x0:Ljava/lang/String;
 
     return-void
 .end method
@@ -147,7 +147,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -194,7 +194,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -202,11 +202,11 @@
 
     iget-wide v2, p0, Landroidx/media3/common/PlaybackException;->b:J
 
-    iget-wide p0, p1, Landroidx/media3/common/PlaybackException;->b:J
+    iget-wide v4, p1, Landroidx/media3/common/PlaybackException;->b:J
 
-    cmp-long p0, v2, p0
+    cmp-long p1, v2, v4
 
-    if-nez p0, :cond_5
+    if-nez p1, :cond_5
 
     return v0
 
@@ -216,329 +216,329 @@
 .end method
 
 .method public final b()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     const/16 v0, -0x64
 
-    iget p0, p0, Landroidx/media3/common/PlaybackException;->a:I
+    iget v1, p0, Landroidx/media3/common/PlaybackException;->a:I
 
-    if-eq p0, v0, :cond_7
+    if-eq v1, v0, :cond_7
 
     const/4 v0, -0x6
 
-    if-eq p0, v0, :cond_6
+    if-eq v1, v0, :cond_6
 
     const/4 v0, -0x4
 
-    if-eq p0, v0, :cond_5
+    if-eq v1, v0, :cond_5
 
     const/4 v0, -0x3
 
-    if-eq p0, v0, :cond_4
+    if-eq v1, v0, :cond_4
 
     const/4 v0, -0x2
 
-    if-eq p0, v0, :cond_3
+    if-eq v1, v0, :cond_3
 
     const/16 v0, 0x1b58
 
-    if-eq p0, v0, :cond_2
+    if-eq v1, v0, :cond_2
 
     const/16 v0, 0x1b59
 
-    if-eq p0, v0, :cond_1
+    if-eq v1, v0, :cond_1
 
-    packed-switch p0, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
-    packed-switch p0, :pswitch_data_1
+    packed-switch v1, :pswitch_data_1
 
-    packed-switch p0, :pswitch_data_2
+    packed-switch v1, :pswitch_data_2
 
-    packed-switch p0, :pswitch_data_3
+    packed-switch v1, :pswitch_data_3
 
-    packed-switch p0, :pswitch_data_4
+    packed-switch v1, :pswitch_data_4
 
-    packed-switch p0, :pswitch_data_5
+    packed-switch v1, :pswitch_data_5
 
-    packed-switch p0, :pswitch_data_6
+    packed-switch v1, :pswitch_data_6
 
     const v0, 0xf4240
 
-    if-lt p0, v0, :cond_0
+    if-lt v1, v0, :cond_0
 
-    const-string p0, "custom error code"
+    const-string v0, "custom error code"
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    const-string p0, "invalid error code"
+    const-string v0, "invalid error code"
 
-    return-object p0
+    return-object v0
 
     :pswitch_0
-    const-string p0, "ERROR_CODE_DRM_LICENSE_EXPIRED"
+    const-string v0, "ERROR_CODE_DRM_LICENSE_EXPIRED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1
-    const-string p0, "ERROR_CODE_DRM_DEVICE_REVOKED"
+    const-string v0, "ERROR_CODE_DRM_DEVICE_REVOKED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_2
-    const-string p0, "ERROR_CODE_DRM_SYSTEM_ERROR"
+    const-string v0, "ERROR_CODE_DRM_SYSTEM_ERROR"
 
-    return-object p0
+    return-object v0
 
     :pswitch_3
-    const-string p0, "ERROR_CODE_DRM_DISALLOWED_OPERATION"
+    const-string v0, "ERROR_CODE_DRM_DISALLOWED_OPERATION"
 
-    return-object p0
+    return-object v0
 
     :pswitch_4
-    const-string p0, "ERROR_CODE_DRM_LICENSE_ACQUISITION_FAILED"
+    const-string v0, "ERROR_CODE_DRM_LICENSE_ACQUISITION_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_5
-    const-string p0, "ERROR_CODE_DRM_CONTENT_ERROR"
+    const-string v0, "ERROR_CODE_DRM_CONTENT_ERROR"
 
-    return-object p0
+    return-object v0
 
     :pswitch_6
-    const-string p0, "ERROR_CODE_DRM_PROVISIONING_FAILED"
+    const-string v0, "ERROR_CODE_DRM_PROVISIONING_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_7
-    const-string p0, "ERROR_CODE_DRM_SCHEME_UNSUPPORTED"
+    const-string v0, "ERROR_CODE_DRM_SCHEME_UNSUPPORTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_8
-    const-string p0, "ERROR_CODE_DRM_UNSPECIFIED"
+    const-string v0, "ERROR_CODE_DRM_UNSPECIFIED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_9
-    const-string p0, "ERROR_CODE_AUDIO_TRACK_OFFLOAD_INIT_FAILED"
+    const-string v0, "ERROR_CODE_AUDIO_TRACK_OFFLOAD_INIT_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_a
-    const-string p0, "ERROR_CODE_AUDIO_TRACK_OFFLOAD_WRITE_FAILED"
+    const-string v0, "ERROR_CODE_AUDIO_TRACK_OFFLOAD_WRITE_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_b
-    const-string p0, "ERROR_CODE_AUDIO_TRACK_WRITE_FAILED"
+    const-string v0, "ERROR_CODE_AUDIO_TRACK_WRITE_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_c
-    const-string p0, "ERROR_CODE_AUDIO_TRACK_INIT_FAILED"
+    const-string v0, "ERROR_CODE_AUDIO_TRACK_INIT_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_d
-    const-string p0, "ERROR_CODE_DECODING_RESOURCES_RECLAIMED"
+    const-string v0, "ERROR_CODE_DECODING_RESOURCES_RECLAIMED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_e
-    const-string p0, "ERROR_CODE_DECODING_FORMAT_UNSUPPORTED"
+    const-string v0, "ERROR_CODE_DECODING_FORMAT_UNSUPPORTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_f
-    const-string p0, "ERROR_CODE_DECODING_FORMAT_EXCEEDS_CAPABILITIES"
+    const-string v0, "ERROR_CODE_DECODING_FORMAT_EXCEEDS_CAPABILITIES"
 
-    return-object p0
+    return-object v0
 
     :pswitch_10
-    const-string p0, "ERROR_CODE_DECODING_FAILED"
+    const-string v0, "ERROR_CODE_DECODING_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_11
-    const-string p0, "ERROR_CODE_DECODER_QUERY_FAILED"
+    const-string v0, "ERROR_CODE_DECODER_QUERY_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_12
-    const-string p0, "ERROR_CODE_DECODER_INIT_FAILED"
+    const-string v0, "ERROR_CODE_DECODER_INIT_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_13
-    const-string p0, "ERROR_CODE_PARSING_MANIFEST_UNSUPPORTED"
+    const-string v0, "ERROR_CODE_PARSING_MANIFEST_UNSUPPORTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_14
-    const-string p0, "ERROR_CODE_PARSING_CONTAINER_UNSUPPORTED"
+    const-string v0, "ERROR_CODE_PARSING_CONTAINER_UNSUPPORTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_15
-    const-string p0, "ERROR_CODE_PARSING_MANIFEST_MALFORMED"
+    const-string v0, "ERROR_CODE_PARSING_MANIFEST_MALFORMED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_16
-    const-string p0, "ERROR_CODE_PARSING_CONTAINER_MALFORMED"
+    const-string v0, "ERROR_CODE_PARSING_CONTAINER_MALFORMED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_17
-    const-string p0, "ERROR_CODE_IO_READ_POSITION_OUT_OF_RANGE"
+    const-string v0, "ERROR_CODE_IO_READ_POSITION_OUT_OF_RANGE"
 
-    return-object p0
+    return-object v0
 
     :pswitch_18
-    const-string p0, "ERROR_CODE_IO_CLEARTEXT_NOT_PERMITTED"
+    const-string v0, "ERROR_CODE_IO_CLEARTEXT_NOT_PERMITTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_19
-    const-string p0, "ERROR_CODE_IO_NO_PERMISSION"
+    const-string v0, "ERROR_CODE_IO_NO_PERMISSION"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1a
-    const-string p0, "ERROR_CODE_IO_FILE_NOT_FOUND"
+    const-string v0, "ERROR_CODE_IO_FILE_NOT_FOUND"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1b
-    const-string p0, "ERROR_CODE_IO_BAD_HTTP_STATUS"
+    const-string v0, "ERROR_CODE_IO_BAD_HTTP_STATUS"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1c
-    const-string p0, "ERROR_CODE_IO_INVALID_HTTP_CONTENT_TYPE"
+    const-string v0, "ERROR_CODE_IO_INVALID_HTTP_CONTENT_TYPE"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1d
-    const-string p0, "ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT"
+    const-string v0, "ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1e
-    const-string p0, "ERROR_CODE_IO_NETWORK_CONNECTION_FAILED"
+    const-string v0, "ERROR_CODE_IO_NETWORK_CONNECTION_FAILED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_1f
-    const-string p0, "ERROR_CODE_IO_UNSPECIFIED"
+    const-string v0, "ERROR_CODE_IO_UNSPECIFIED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_20
-    const-string p0, "ERROR_CODE_FAILED_RUNTIME_CHECK"
+    const-string v0, "ERROR_CODE_FAILED_RUNTIME_CHECK"
 
-    return-object p0
+    return-object v0
 
     :pswitch_21
-    const-string p0, "ERROR_CODE_TIMEOUT"
+    const-string v0, "ERROR_CODE_TIMEOUT"
 
-    return-object p0
+    return-object v0
 
     :pswitch_22
-    const-string p0, "ERROR_CODE_BEHIND_LIVE_WINDOW"
+    const-string v0, "ERROR_CODE_BEHIND_LIVE_WINDOW"
 
-    return-object p0
+    return-object v0
 
     :pswitch_23
-    const-string p0, "ERROR_CODE_REMOTE_ERROR"
+    const-string v0, "ERROR_CODE_REMOTE_ERROR"
 
-    return-object p0
+    return-object v0
 
     :pswitch_24
-    const-string p0, "ERROR_CODE_UNSPECIFIED"
+    const-string v0, "ERROR_CODE_UNSPECIFIED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_25
-    const-string p0, "ERROR_CODE_AUTHENTICATION_EXPIRED"
+    const-string v0, "ERROR_CODE_AUTHENTICATION_EXPIRED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_26
-    const-string p0, "ERROR_CODE_PREMIUM_ACCOUNT_REQUIRED"
+    const-string v0, "ERROR_CODE_PREMIUM_ACCOUNT_REQUIRED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_27
-    const-string p0, "ERROR_CODE_CONCURRENT_STREAM_LIMIT"
+    const-string v0, "ERROR_CODE_CONCURRENT_STREAM_LIMIT"
 
-    return-object p0
+    return-object v0
 
     :pswitch_28
-    const-string p0, "ERROR_CODE_PARENTAL_CONTROL_RESTRICTED"
+    const-string v0, "ERROR_CODE_PARENTAL_CONTROL_RESTRICTED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_29
-    const-string p0, "ERROR_CODE_NOT_AVAILABLE_IN_REGION"
+    const-string v0, "ERROR_CODE_NOT_AVAILABLE_IN_REGION"
 
-    return-object p0
+    return-object v0
 
     :pswitch_2a
-    const-string p0, "ERROR_CODE_SKIP_LIMIT_REACHED"
+    const-string v0, "ERROR_CODE_SKIP_LIMIT_REACHED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_2b
-    const-string p0, "ERROR_CODE_SETUP_REQUIRED"
+    const-string v0, "ERROR_CODE_SETUP_REQUIRED"
 
-    return-object p0
+    return-object v0
 
     :pswitch_2c
-    const-string p0, "ERROR_CODE_END_OF_PLAYLIST"
+    const-string v0, "ERROR_CODE_END_OF_PLAYLIST"
 
-    return-object p0
+    return-object v0
 
     :pswitch_2d
-    const-string p0, "ERROR_CODE_CONTENT_ALREADY_PLAYING"
+    const-string v0, "ERROR_CODE_CONTENT_ALREADY_PLAYING"
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    const-string p0, "ERROR_CODE_VIDEO_FRAME_PROCESSING_FAILED"
+    const-string v0, "ERROR_CODE_VIDEO_FRAME_PROCESSING_FAILED"
 
-    return-object p0
+    return-object v0
 
     :cond_2
-    const-string p0, "ERROR_CODE_VIDEO_FRAME_PROCESSOR_INIT_FAILED"
+    const-string v0, "ERROR_CODE_VIDEO_FRAME_PROCESSOR_INIT_FAILED"
 
-    return-object p0
+    return-object v0
 
     :cond_3
-    const-string p0, "ERROR_CODE_INVALID_STATE"
+    const-string v0, "ERROR_CODE_INVALID_STATE"
 
-    return-object p0
+    return-object v0
 
     :cond_4
-    const-string p0, "ERROR_CODE_BAD_VALUE"
+    const-string v0, "ERROR_CODE_BAD_VALUE"
 
-    return-object p0
+    return-object v0
 
     :cond_5
-    const-string p0, "ERROR_CODE_PERMISSION_DENIED"
+    const-string v0, "ERROR_CODE_PERMISSION_DENIED"
 
-    return-object p0
+    return-object v0
 
     :cond_6
-    const-string p0, "ERROR_CODE_NOT_SUPPORTED"
+    const-string v0, "ERROR_CODE_NOT_SUPPORTED"
 
-    return-object p0
+    return-object v0
 
     :cond_7
-    const-string p0, "ERROR_CODE_DISCONNECTED"
+    const-string v0, "ERROR_CODE_DISCONNECTED"
 
-    return-object p0
+    return-object v0
 
     nop
 
@@ -615,67 +615,4 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public c()Landroid/os/Bundle;
-    .locals 4
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->o:Ljava/lang/String;
-
-    iget v2, p0, Landroidx/media3/common/PlaybackException;->a:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->X:Ljava/lang/String;
-
-    iget-wide v2, p0, Landroidx/media3/common/PlaybackException;->b:J
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->Y:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->o0:Ljava/lang/String;
-
-    iget-object v2, p0, Landroidx/media3/common/PlaybackException;->c:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/media3/common/PlaybackException;->Z:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->n0:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-object v0
 .end method

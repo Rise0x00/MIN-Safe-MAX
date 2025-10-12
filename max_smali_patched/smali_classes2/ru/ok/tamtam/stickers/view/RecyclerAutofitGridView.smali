@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public final Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+.field public final Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
-.field public R1:I
+.field public a2:I
 
-.field public S1:I
+.field public b2:I
 
-.field public T1:Landroid/view/View;
+.field public c2:Landroid/view/View;
 
-.field public final U1:Lt25;
+.field public final d2:Le75;
 
 
 # direct methods
@@ -23,25 +23,25 @@
 
     const/4 p1, 0x5
 
-    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->R1:I
+    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->a2:I
 
-    new-instance p1, Lt25;
+    new-instance p1, Le75;
 
     const/4 p2, 0x5
 
-    invoke-direct {p1, p2, p0}, Lt25;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Le75;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->U1:Lt25;
+    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->d2:Le75;
 
     new-instance p1, Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget p2, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->R1:I
+    iget p2, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->a2:I
 
     invoke-direct {p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
 
-    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
@@ -51,24 +51,24 @@
 
 # virtual methods
 .method public final E0()V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->T1:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->c2:Landroid/view/View;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v0
 
-    iget-object p0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->T1:Landroid/view/View;
+    iget-object v1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->c2:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lygc;->j()I
+    invoke-virtual {v0}, Lpwc;->j()I
 
     move-result v0
 
@@ -86,17 +86,17 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
 .method public getSpanCount()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->R1:I
+    iget v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->a2:I
 
-    return p0
+    return v0
 .end method
 
 .method public final onMeasure(II)V
@@ -104,7 +104,7 @@
 
     invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
 
-    iget p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->S1:I
+    iget p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->b2:I
 
     if-lez p1, :cond_0
 
@@ -112,7 +112,7 @@
 
     move-result p1
 
-    iget p2, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->S1:I
+    iget p2, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->b2:I
 
     div-int/2addr p1, p2
 
@@ -122,37 +122,37 @@
 
     move-result p1
 
-    iget-object p0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+    iget-object p2, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->z1(I)V
+    invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->z1(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public setAdapter(Lygc;)V
+.method public setAdapter(Lpwc;)V
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->U1:Lt25;
+    iget-object v1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->d2:Le75;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lygc;->B(Lahc;)V
+    invoke-virtual {v0, v1}, Lpwc;->B(Lrwc;)V
 
     :cond_0
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lygc;)V
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
 
-    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->T1:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->c2:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1, v1}, Lygc;->z(Lahc;)V
+    invoke-virtual {p1, v1}, Lpwc;->z(Lrwc;)V
 
     :cond_1
     invoke-virtual {p0}, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->E0()V
@@ -164,7 +164,7 @@
 .method public setColumnWidth(I)V
     .locals 0
 
-    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->S1:I
+    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->b2:I
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->requestLayout()V
 
@@ -174,9 +174,9 @@
 .method public setDefaultColumns(I)V
     .locals 1
 
-    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->R1:I
+    iput p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->a2:I
 
-    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->z1(I)V
 
@@ -184,7 +184,7 @@
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+    iget-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
@@ -194,17 +194,17 @@
 .method public setEmptyView(Landroid/view/View;)V
     .locals 1
 
-    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->T1:Landroid/view/View;
+    iput-object p1, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->c2:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->U1:Lt25;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->d2:Le75;
 
-    invoke-virtual {p1, v0}, Lygc;->z(Lahc;)V
+    invoke-virtual {p1, v0}, Lpwc;->z(Lrwc;)V
 
     :cond_0
     invoke-virtual {p0}, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->E0()V
@@ -212,12 +212,12 @@
     return-void
 .end method
 
-.method public setSpanSizeLookup(Lhk6;)V
-    .locals 0
+.method public setSpanSizeLookup(Lsq6;)V
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Q1:Landroidx/recyclerview/widget/GridLayoutManager;
+    iget-object v0, p0, Lru/ok/tamtam/stickers/view/RecyclerAutofitGridView;->Z1:Landroidx/recyclerview/widget/GridLayoutManager;
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/GridLayoutManager;->K:Lhk6;
+    iput-object p1, v0, Landroidx/recyclerview/widget/GridLayoutManager;->K:Lsq6;
 
     return-void
 .end method

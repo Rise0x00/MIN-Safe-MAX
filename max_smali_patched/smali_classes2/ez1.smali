@@ -1,95 +1,104 @@
-.class public final Lez1;
+.class public final synthetic Lez1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsk7;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final b:Luk7;
+.field public final synthetic Y:F
+
+.field public final synthetic Z:F
+
+.field public final synthetic a:Lgz1;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic o:I
+
+.field public final synthetic w0:I
+
+.field public final synthetic x0:I
+
+.field public final synthetic y0:I
+
+.field public final synthetic z0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lgz1;IIIIFFIIII)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lez1;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    new-instance v0, Luk7;
+    iput-object p1, p0, Lez1;->a:Lgz1;
 
-    invoke-direct {v0, p0}, Luk7;-><init>(Lsk7;)V
+    iput p2, p0, Lez1;->b:I
 
-    iput-object v0, p0, Lez1;->b:Luk7;
+    iput p3, p0, Lez1;->c:I
 
-    .line 3
-    sget-object p0, Luj7;->ON_CREATE:Luj7;
+    iput p4, p0, Lez1;->o:I
 
-    invoke-virtual {v0, p0}, Luk7;->d(Luj7;)V
+    iput p5, p0, Lez1;->X:I
 
-    return-void
-.end method
+    iput p6, p0, Lez1;->Y:F
 
-.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
-    .locals 2
+    iput p7, p0, Lez1;->Z:F
 
-    const/4 v0, 0x1
+    iput p8, p0, Lez1;->w0:I
 
-    iput v0, p0, Lez1;->a:I
+    iput p9, p0, Lez1;->x0:I
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p10, p0, Lez1;->y0:I
 
-    .line 5
-    new-instance v0, Luk7;
-
-    invoke-direct {v0, p0}, Luk7;-><init>(Lsk7;)V
-
-    iput-object v0, p0, Lez1;->b:Luk7;
-
-    .line 6
-    new-instance v0, Lob3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lob3;-><init>(ILjava/lang/Object;)V
-
-    .line 7
-    invoke-virtual {p1, v0}, Lox3;->addLifecycleListener(Lmx3;)V
+    iput p11, p0, Lez1;->z0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L()Luk7;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 12
 
-    iget v0, p0, Lez1;->a:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object p0, p0, Lez1;->b:Luk7;
+    check-cast p1, Ljava/lang/Float;
 
-    return-object p0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    :pswitch_0
-    iget-object p0, p0, Lez1;->b:Luk7;
+    move-result v11
 
-    return-object p0
+    iget-object v0, p0, Lez1;->a:Lgz1;
 
-    nop
+    iget v1, p0, Lez1;->b:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget v2, p0, Lez1;->c:I
+
+    iget v3, p0, Lez1;->o:I
+
+    iget v4, p0, Lez1;->X:I
+
+    iget v5, p0, Lez1;->Y:F
+
+    iget v6, p0, Lez1;->Z:F
+
+    iget v7, p0, Lez1;->w0:I
+
+    iget v8, p0, Lez1;->x0:I
+
+    iget v9, p0, Lez1;->y0:I
+
+    iget v10, p0, Lez1;->z0:I
+
+    invoke-static/range {v0 .. v11}, Lgz1;->b(Lgz1;IIIIFFIIIIF)V
+
+    return-void
 .end method

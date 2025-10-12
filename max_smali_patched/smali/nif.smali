@@ -1,8 +1,23 @@
-.class public interface abstract Lnif;
-.super Ljava/lang/Object;
+.class public final Lnif;
+.super Loif;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract m(Ljava/lang/Object;)I
+.method public final d(J)Loif;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final g(JLjava/util/concurrent/TimeUnit;)Loif;
+    .locals 0
+
+    return-object p0
 .end method

@@ -1,224 +1,520 @@
 .class public final Ldp1;
-.super Lape;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final n:Ljava/util/Set;
+
+
 # instance fields
-.field public final X:J
+.field public final a:Lc11;
 
-.field public final Y:J
+.field public final b:Lpmc;
 
-.field public final c:Ljava/lang/String;
+.field public final c:Ln8f;
 
-.field public final o:J
+.field public final d:Lf7d;
+
+.field public final e:Lrob;
+
+.field public final f:Luhf;
+
+.field public final g:Lb5e;
+
+.field public final h:Lbx4;
+
+.field public final i:Ldah;
+
+.field public final j:Lo36;
+
+.field public final k:Lkw8;
+
+.field public final l:Lfub;
+
+.field public final m:Loid;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 8
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v6, 0x0
-
-    .line 7
-    const-string v1, ""
-
-    const-wide/16 v2, 0x0
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v7}, Ldp1;-><init>(Ljava/lang/String;JJJ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;JJJ)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Ldp1;->c:Ljava/lang/String;
-
-    .line 3
-    iput-wide p2, p0, Ldp1;->o:J
-
-    .line 4
-    iput-wide p4, p0, Ldp1;->X:J
-
-    .line 5
-    iput-wide p6, p0, Ldp1;->Y:J
-
-    .line 6
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide p2
-
-    sub-long/2addr p2, p6
-
-    invoke-static {p2, p3}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide p2
-
-    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lej0;->a:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ldp1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldp1;
-
-    iget-object v1, p0, Ldp1;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Ldp1;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Ldp1;->o:J
-
-    iget-wide v5, p1, Ldp1;->o:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Ldp1;->X:J
-
-    iget-wide v5, p1, Ldp1;->X:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-wide v3, p0, Ldp1;->Y:J
-
-    iget-wide p0, p1, Ldp1;->Y:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Ldp1;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ldp1;->o:J
-
-    invoke-static {v0, v1, v2, v3}, Lt2g;->a(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Ldp1;->X:J
-
-    invoke-static {v0, v1, v2, v3}, Lt2g;->a(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Ldp1;->Y:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 5
 
-    iget-object v0, p0, Ldp1;->c:Ljava/lang/String;
+    const/16 v0, 0x27
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-static {v0}, Lqw1;->y(I)[I
 
-    move-result v1
+    move-result-object v0
 
-    const-string v2, "*"
+    new-instance v1, Ljava/util/ArrayList;
+
+    array-length v2, v0
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v2, v0
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v3, v1, v2}, Lwde;->N0(Ljava/lang/CharSequence;IILjava/lang/CharSequence;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget v4, v0, v3
+
+    packed-switch v4, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    throw v0
+
+    :pswitch_0
+    const-string v4, "br_retransmit"
+
+    goto/16 :goto_1
+
+    :pswitch_1
+    const-string v4, "br_transmit"
+
+    goto/16 :goto_1
+
+    :pswitch_2
+    const-string v4, "br_encode"
+
+    goto/16 :goto_1
+
+    :pswitch_3
+    const-string v4, "frames_encoded"
+
+    goto/16 :goto_1
+
+    :pswitch_4
+    const-string v4, "adaptation_changes"
+
+    goto/16 :goto_1
+
+    :pswitch_5
+    const-string v4, "fir_received"
+
+    goto/16 :goto_1
+
+    :pswitch_6
+    const-string v4, "pli_received"
+
+    goto/16 :goto_1
+
+    :pswitch_7
+    const-string v4, "nack_received"
+
+    goto/16 :goto_1
+
+    :pswitch_8
+    const-string v4, "video_loss"
+
+    goto/16 :goto_1
+
+    :pswitch_9
+    const-string v4, "in_video_loss"
+
+    goto/16 :goto_1
+
+    :pswitch_a
+    const-string v4, "total_freezes_duration"
+
+    goto/16 :goto_1
+
+    :pswitch_b
+    const-string v4, "freeze_count"
+
+    goto/16 :goto_1
+
+    :pswitch_c
+    const-string v4, "interframe_delay_variance"
+
+    goto/16 :goto_1
+
+    :pswitch_d
+    const-string v4, "jitter_video"
+
+    goto :goto_1
+
+    :pswitch_e
+    const-string v4, "frames_dropped"
+
+    goto :goto_1
+
+    :pswitch_f
+    const-string v4, "frames_decoded"
+
+    goto :goto_1
+
+    :pswitch_10
+    const-string v4, "fir_sent"
+
+    goto :goto_1
+
+    :pswitch_11
+    const-string v4, "pli_sent"
+
+    goto :goto_1
+
+    :pswitch_12
+    const-string v4, "nack_sent"
+
+    goto :goto_1
+
+    :pswitch_13
+    const-string v4, "audio_loss"
+
+    goto :goto_1
+
+    :pswitch_14
+    const-string v4, "in_audio_loss"
+
+    goto :goto_1
+
+    :pswitch_15
+    const-string v4, "total_audio_energy"
+
+    goto :goto_1
+
+    :pswitch_16
+    const-string v4, "audio_level"
+
+    goto :goto_1
+
+    :pswitch_17
+    const-string v4, "concealment_audio_avg_size"
+
+    goto :goto_1
+
+    :pswitch_18
+    const-string v4, "concealed_silent_audio_samples"
+
+    goto :goto_1
+
+    :pswitch_19
+    const-string v4, "jitter_audio"
+
+    goto :goto_1
+
+    :pswitch_1a
+    const-string v4, "concealed_audio_samples"
+
+    goto :goto_1
+
+    :pswitch_1b
+    const-string v4, "removed_audio_samples_for_acceleration"
+
+    goto :goto_1
+
+    :pswitch_1c
+    const-string v4, "inserted_audio_samples_for_deceleration"
+
+    goto :goto_1
+
+    :pswitch_1d
+    const-string v4, "battery_level_change"
+
+    goto :goto_1
+
+    :pswitch_1e
+    const-string v4, "memory_usage_mb_avg"
+
+    goto :goto_1
+
+    :pswitch_1f
+    const-string v4, "memory_usage_mb_max"
+
+    goto :goto_1
+
+    :pswitch_20
+    const-string v4, "cpu_hardware_concurrency"
+
+    goto :goto_1
+
+    :pswitch_21
+    const-string v4, "cpu_score_avg"
+
+    goto :goto_1
+
+    :pswitch_22
+    const-string v4, "cpu_score_max"
+
+    goto :goto_1
+
+    :pswitch_23
+    const-string v4, "cpu_usage_percent_total"
+
+    goto :goto_1
+
+    :pswitch_24
+    const-string v4, "ss_total_freezes_duration"
+
+    goto :goto_1
+
+    :pswitch_25
+    const-string v4, "ss_freeze_count"
+
+    goto :goto_1
+
+    :pswitch_26
+    const-string v4, "rtt"
+
+    :goto_1
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto/16 :goto_0
+
+    :cond_0
+    invoke-static {v1}, Le93;->M0(Ljava/lang/Iterable;)Ljava/util/Set;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sput-object v0, Ldp1;->n:Ljava/util/Set;
 
-    move-result-object v0
+    return-void
 
-    const-string v1, "Response(token="
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_26
+        :pswitch_25
+        :pswitch_24
+        :pswitch_23
+        :pswitch_22
+        :pswitch_21
+        :pswitch_20
+        :pswitch_1f
+        :pswitch_1e
+        :pswitch_1d
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v2, " expiredDurationSec="
+.method public constructor <init>(Lc11;Lpmc;Ln8f;Lmf2;Lf7d;Lrob;Luhf;)V
+    .locals 0
 
-    iget-wide v3, p0, Ldp1;->o:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v3, v4, v0, v2}, Llge;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ldp1;->a:Lc11;
 
-    move-result-object p0
+    iput-object p2, p0, Ldp1;->b:Lpmc;
 
-    const-string v0, ")"
+    iput-object p3, p0, Ldp1;->c:Ln8f;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p5, p0, Ldp1;->d:Lf7d;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object p6, p0, Ldp1;->e:Lrob;
 
-    move-result-object p0
+    iput-object p7, p0, Ldp1;->f:Luhf;
 
-    return-object p0
+    new-instance p1, Lb5e;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldp1;->g:Lb5e;
+
+    new-instance p1, Lbx4;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    new-instance p3, Lg65;
+
+    const/16 p4, 0x14
+
+    const/4 p5, 0x0
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->b:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->c:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->a:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->o:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->X:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->Y:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->Z:Ljava/lang/Object;
+
+    new-instance p3, Lg65;
+
+    invoke-direct {p3, p4, p5}, Lg65;-><init>(IZ)V
+
+    iput-object p3, p1, Lbx4;->w0:Ljava/lang/Object;
+
+    new-instance p3, Lzlh;
+
+    const/16 p4, 0x1c
+
+    invoke-direct {p3, p4}, Lzlh;-><init>(I)V
+
+    iput-object p3, p1, Lbx4;->x0:Ljava/lang/Object;
+
+    iput-object p1, p0, Ldp1;->h:Lbx4;
+
+    new-instance p1, Ldah;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p1, Ldah;->a:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    const/16 p3, 0x14
+
+    const/4 p4, 0x0
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->b:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->c:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->d:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->e:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->f:Ljava/lang/Object;
+
+    new-instance p2, Ljava/util/HashMap;
+
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p1, Ldah;->g:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->h:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->i:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->j:Ljava/lang/Object;
+
+    new-instance p2, Lg65;
+
+    invoke-direct {p2, p3, p4}, Lg65;-><init>(IZ)V
+
+    iput-object p2, p1, Ldah;->k:Ljava/lang/Object;
+
+    new-instance p2, Lzlh;
+
+    const/16 p3, 0x1c
+
+    invoke-direct {p2, p3}, Lzlh;-><init>(I)V
+
+    iput-object p2, p1, Ldah;->l:Ljava/lang/Object;
+
+    iput-object p1, p0, Ldp1;->i:Ldah;
+
+    new-instance p1, Lo36;
+
+    invoke-direct {p1}, Lo36;-><init>()V
+
+    iput-object p1, p0, Ldp1;->j:Lo36;
+
+    new-instance p1, Lkw8;
+
+    const/4 p2, 0x7
+
+    invoke-direct {p1, p2}, Lkw8;-><init>(I)V
+
+    iput-object p1, p0, Ldp1;->k:Lkw8;
+
+    new-instance p1, Lfub;
+
+    invoke-direct {p1, p2}, Lfub;-><init>(I)V
+
+    iput-object p1, p0, Ldp1;->l:Lfub;
+
+    new-instance p1, Loid;
+
+    const/16 p2, 0xd
+
+    invoke-direct {p1, p2}, Loid;-><init>(I)V
+
+    iput-object p1, p0, Ldp1;->m:Loid;
+
+    return-void
 .end method

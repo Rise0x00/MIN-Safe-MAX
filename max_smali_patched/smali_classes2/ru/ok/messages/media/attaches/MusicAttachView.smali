@@ -5,25 +5,25 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
-.implements Lcj9;
+.implements Lzr9;
 
 
 # instance fields
-.field public final a:Lon4;
+.field public final a:Ltq4;
 
 .field public final b:Landroidx/appcompat/widget/AppCompatTextView;
 
 .field public final c:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public final n0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
 .field public final o:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public final o0:Landroid/widget/FrameLayout;
+.field public final w0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-.field public final p0:Llqe;
+.field public final x0:Landroid/widget/FrameLayout;
 
-.field public final q0:Ldj9;
+.field public final y0:Lvaf;
+
+.field public final z0:Las9;
 
 
 # direct methods
@@ -34,55 +34,55 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lon4;->b()Lon4;
+    invoke-static {}, Ltq4;->a()Ltq4;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget p1, p1, Lon4;->i:I
+    iget p1, p1, Ltq4;->i:I
 
-    sget-object p2, Lixf;->a:Ljava/util/WeakHashMap;
+    sget-object p2, Lskg;->a:Ljava/util/WeakHashMap;
 
     const/4 p2, 0x0
 
     invoke-virtual {p0, p1, p2, p1, p2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
-    new-instance p1, Ldj9;
+    new-instance p1, Las9;
 
-    invoke-static {}, Lpl;->b()Lke3;
-
-    move-result-object v0
-
-    check-cast v0, Loaa;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object v0
 
-    const-class v1, Lrx8;
+    check-cast v0, Lyka;
 
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
     move-result-object v0
 
-    check-cast v0, Lrx8;
+    const-class v1, Lr59;
 
-    invoke-direct {p1, p0}, Ldj9;-><init>(Lcj9;)V
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    move-result-object v0
+
+    check-cast v0, Lr59;
+
+    invoke-direct {p1, p0}, Las9;-><init>(Lzr9;)V
+
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget-object v0, Llqe;->a0:Lkle;
+    sget-object v0, Lvaf;->a0:Ls5f;
 
-    invoke-static {p1}, Le64;->v(Landroid/content/Context;)Llqe;
+    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
     new-instance p1, Landroid/widget/FrameLayout;
 
@@ -92,35 +92,35 @@
 
     invoke-direct {p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
-    sget v0, Ld1c;->view_music_attach__ll_play:I
+    sget v0, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
     new-instance p1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v0, v0, Lon4;->v:I
+    iget v0, v0, Ltq4;->v:I
 
     invoke-direct {p1, v0, v0}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v1, v0, Lon4;->b:I
+    iget v1, v0, Ltq4;->b:I
 
     iput v1, p1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    iget v0, v0, Lon4;->h:I
+    iget v0, v0, Ltq4;->h:I
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
     invoke-virtual {p0, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -132,35 +132,35 @@
 
     invoke-direct {p1, v0}, Lcom/facebook/drawee/view/SimpleDraweeView;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->n0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->w0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p1}, Ldu4;->getHierarchy()Lau4;
-
-    move-result-object p1
-
-    check-cast p1, Lfe6;
-
-    sget-object v0, Lkwc;->l:Lkwc;
-
-    invoke-virtual {p1, v0}, Lfe6;->h(Ljwc;)V
-
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->n0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    invoke-virtual {p1}, Ldu4;->getHierarchy()Lau4;
+    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
 
     move-result-object p1
 
-    check-cast p1, Lfe6;
+    check-cast p1, Lyj6;
 
-    invoke-static {}, Lmrc;->a()Lmrc;
+    sget-object v0, Lzcd;->e:Lzcd;
+
+    invoke-virtual {p1, v0}, Lyj6;->h(Lycd;)V
+
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->w0:Lcom/facebook/drawee/view/SimpleDraweeView;
+
+    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
+
+    move-result-object p1
+
+    check-cast p1, Lyj6;
+
+    invoke-static {}, Lf8d;->a()Lf8d;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lfe6;->m(Lmrc;)V
+    invoke-virtual {p1, v0}, Lyj6;->m(Lf8d;)V
 
-    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->n0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->w0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -182,7 +182,7 @@
 
     iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v0, Ld1c;->view_music_attach__tv_name:I
+    sget v0, Ljgc;->view_music_attach__tv_name:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
@@ -204,11 +204,11 @@
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v4, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v4, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v4, v4, Lon4;->H:F
+    iget v4, v4, Ltq4;->G:F
 
-    invoke-virtual {p1, p2, v4}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, p2, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -218,9 +218,9 @@
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v5, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v5, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget v5, v5, Llqe;->F:I
+    iget v5, v5, Lvaf;->F:I
 
     invoke-virtual {p1, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -246,11 +246,11 @@
 
     invoke-direct {p1, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    sget v7, Ld1c;->view_music_attach__ll_play:I
+    sget v7, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v3, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    sget v7, Ld1c;->view_music_attach__ll_play:I
+    sget v7, Ljgc;->view_music_attach__ll_play:I
 
     const/16 v8, 0x11
 
@@ -262,9 +262,9 @@
 
     iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v7, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v7, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v7, v7, Lon4;->e:I
+    iget v7, v7, Ltq4;->e:I
 
     invoke-virtual {v2, p2, p2, v7, p2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
@@ -282,7 +282,7 @@
 
     iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v2, Ld1c;->view_music_attach__tv_artist:I
+    sget v2, Ljgc;->view_music_attach__tv_artist:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setId(I)V
 
@@ -300,11 +300,11 @@
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v0, v0, Lon4;->H:F
+    iget v0, v0, Ltq4;->G:F
 
-    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -312,9 +312,9 @@
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget v0, v0, Llqe;->v:I
+    iget v0, v0, Lvaf;->v:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -324,11 +324,11 @@
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v0, v0, Lon4;->b:I
+    iget v0, v0, Ltq4;->b:I
 
-    invoke-static {p1, v0}, Liwd;->l(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lpih;->f(Landroid/view/View;I)V
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -338,15 +338,15 @@
 
     invoke-direct {p1, v6, v6}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    sget v0, Ld1c;->view_music_attach__ll_play:I
+    sget v0, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v3, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    sget v0, Ld1c;->view_music_attach__ll_play:I
+    sget v0, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v8, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    sget v0, Ld1c;->view_music_attach__tv_name:I
+    sget v0, Ljgc;->view_music_attach__tv_name:I
 
     const/4 v2, 0x3
 
@@ -366,17 +366,17 @@
 
     iput-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget v0, v0, Lon4;->G:F
+    iget v0, v0, Ltq4;->F:F
 
-    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/AppCompatTextView;->setTextSize(IF)V
 
     iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object p2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object p2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget p2, p2, Llqe;->v:I
+    iget p2, p2, Lvaf;->v:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
@@ -386,21 +386,21 @@
 
     new-instance p1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    iget-object p2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Lon4;
+    iget-object p2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->a:Ltq4;
 
-    iget p2, p2, Lon4;->m:I
+    iget p2, p2, Ltq4;->m:I
 
     invoke-direct {p1, v6, p2}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    sget p2, Ld1c;->view_music_attach__ll_play:I
+    sget p2, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v3, p2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    sget p2, Ld1c;->view_music_attach__ll_play:I
+    sget p2, Ljgc;->view_music_attach__ll_play:I
 
     invoke-virtual {p1, v8, p2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    sget p2, Ld1c;->view_music_attach__tv_artist:I
+    sget p2, Ljgc;->view_music_attach__tv_artist:I
 
     invoke-virtual {p1, v2, p2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
@@ -412,11 +412,11 @@
 .end method
 
 .method private getPlayPauseSelector()Landroid/graphics/drawable/Drawable;
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget v0, v0, Llqe;->q:I
+    iget v0, v0, Lvaf;->q:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -424,47 +424,47 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1, v1}, Ly84;->E(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v0, v1, v1}, Lnu3;->s(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object v0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget p0, p0, Llqe;->q:I
+    iget v2, v2, Lvaf;->q:I
 
-    const v2, 0x3f4ccccd    # 0.8f
+    const v3, 0x3f4ccccd    # 0.8f
 
-    invoke-static {p0, v2}, Lpo9;->X(IF)I
+    invoke-static {v2, v3}, Lyhh;->R(IF)I
 
-    move-result p0
+    move-result v2
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-static {p0, v1, v1}, Ly84;->E(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v2, v1, v1}, Lnu3;->s(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-static {v0, p0, v1}, Ly84;->L(Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-static {v0, v2, v1}, Lnu3;->I(Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;Landroid/graphics/drawable/GradientDrawable;)Landroid/graphics/drawable/StateListDrawable;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public final onAttachedToWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
@@ -476,26 +476,26 @@
 
     move-result p1
 
-    sget v0, Ld1c;->view_music_attach__ll_play:I
+    sget v0, Ljgc;->view_music_attach__ll_play:I
 
     if-ne p1, v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_0
     return-void
 .end method
 
 .method public final onDetachedFromWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
@@ -503,9 +503,9 @@
 .method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
@@ -513,31 +513,31 @@
 .method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
     .locals 0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 .method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p1, Lc56;
+    new-instance v0, Li56;
 
-    const/16 v0, 0x13
+    const/16 v1, 0x18
 
-    invoke-direct {p1, v0, p0}, Lc56;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Li56;-><init>(ILjava/lang/Object;)V
 
-    const-wide/16 v0, 0x1f4
+    const-wide/16 v1, 0x1f4
 
-    invoke-static {p1, v0, v1}, Lve2;->Z(Ljava/lang/Runnable;J)Lkp4;
+    invoke-static {v0, v1, v2}, Lk74;->R(Ljava/lang/Runnable;J)Lss4;
 
     return-void
 .end method
@@ -551,29 +551,29 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
 .method public setDurationText(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->b:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public setListener(Lj20;)V
+.method public setListener(La20;)V
     .locals 0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->q0:Ldj9;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->z0:Las9;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
@@ -589,23 +589,23 @@
 
     move-result-object v0
 
-    sget v1, Lysc;->X:I
+    sget v1, Lq9d;->p0:I
 
-    iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget v2, v2, Llqe;->s:I
+    iget v2, v2, Lvaf;->s:I
 
-    invoke-static {v1, v2, v0}, Lz8c;->w(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, v0}, Lv4b;->o(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    new-instance v1, Lut4;
+    new-instance v1, Lay4;
 
-    invoke-direct {v1, p1, v0}, Lut4;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v1, p1, v0}, Lay4;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -621,23 +621,23 @@
 
     move-result-object v0
 
-    sget v1, Lysc;->a0:I
+    sget v1, Lq9d;->t0:I
 
-    iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->p0:Llqe;
+    iget-object v2, p0, Lru/ok/messages/media/attaches/MusicAttachView;->y0:Lvaf;
 
-    iget v2, v2, Llqe;->s:I
+    iget v2, v2, Lvaf;->s:I
 
-    invoke-static {v1, v2, v0}, Lz8c;->w(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, v0}, Lv4b;->o(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    new-instance v1, Lut4;
+    new-instance v1, Lay4;
 
-    invoke-direct {v1, p1, v0}, Lut4;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v1, p1, v0}, Lay4;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o0:Landroid/widget/FrameLayout;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->x0:Landroid/widget/FrameLayout;
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -651,28 +651,28 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->n0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->w0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->setImageURI(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->setImageURI(Ljava/lang/String;)V
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->n0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/MusicAttachView;->w0:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Ldu4;->setController(Lvt4;)V
+    invoke-virtual {p1, v0}, Ljy4;->setController(Lby4;)V
 
     return-void
 .end method
 
 .method public setTrackName(Ljava/lang/CharSequence;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/MusicAttachView;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

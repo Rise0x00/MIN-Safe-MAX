@@ -1,145 +1,305 @@
 .class public final Ln89;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lm82;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final b:Lw29;
+
+.field public final c:Ls5f;
+
+.field public final d:Ls5f;
+
+.field public final e:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lm82;Lw29;Ls5f;)V
     .locals 0
 
-    iput-object p2, p0, Ln89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ln89;->a:Lm82;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ln89;->b:Lw29;
+
+    iput-object p3, p0, Ln89;->c:Ls5f;
+
+    new-instance p1, Lzf7;
+
+    const/16 p2, 0xe
+
+    invoke-direct {p1, p2, p0}, Lzf7;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Ls5f;
+
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+
+    iput-object p2, p0, Ln89;->d:Ls5f;
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object p1, p0, Ln89;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln89;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ln89;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Ln89;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Landroid/text/Layout;
     .locals 1
 
-    new-instance v0, Ln89;
+    iget-object v0, p0, Ln89;->c:Ls5f;
 
-    iget-object p0, p0, Ln89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, p0}, Ln89;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    move-result-object v0
 
-    iput-object p1, v0, Ln89;->X:Ljava/lang/Object;
+    check-cast v0, Landroid/text/Layout;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final b(Landroid/text/Layout;)V
+    .locals 4
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    new-instance v0, Ll89;
 
-    iget-object p1, p0, Ln89;->X:Ljava/lang/Object;
+    invoke-direct {v0, p1}, Ll89;-><init>(Landroid/text/Layout;)V
 
-    check-cast p1, Lq0d;
+    new-instance v1, Ls5f;
 
-    iget-object p0, p0, Ln89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
 
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+    new-instance v0, Ll89;
 
-    sget-object v1, Lz76;->f:Lvea;
+    invoke-direct {v0, p0, p1}, Ll89;-><init>(Ln89;Landroid/text/Layout;)V
 
-    if-nez v1, :cond_0
+    new-instance p1, Ls5f;
+
+    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
+
+    iget-object p1, p0, Ln89;->e:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm89;
+
+    check-cast v0, Lp89;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p0}, Lp89;->setLayout(Ln89;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lhw7;->o:Lhw7;
+    invoke-virtual {v0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    invoke-virtual {v1, v2}, Lvea;->a(Lhw7;)Z
+    move-result-object v1
 
-    move-result v3
+    if-eqz v1, :cond_1
 
-    if-eqz v3, :cond_1
+    new-instance v2, Lsg6;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/16 v3, 0xf
 
-    const-string v4, "Got new scrollEvent="
+    invoke-direct {v2, v0, v3, p0}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_1
+    new-instance v1, Ltg6;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v0, v2, p0}, Ltg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ln89;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    invoke-virtual {p0}, Ln89;->a()Landroid/text/Layout;
+
+    move-result-object v1
+
+    check-cast p1, Ln89;
+
+    invoke-virtual {p1}, Ln89;->a()Landroid/text/Layout;
 
     move-result-object v3
 
-    const/4 v4, 0x0
+    if-eq v1, v3, :cond_2
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
-    :cond_1
+    :cond_2
+    const/4 v1, 0x0
+
+    iget-object v3, p0, Ln89;->a:Lm82;
+
+    if-eqz v3, :cond_3
+
+    iget-wide v3, v3, Lm82;->a:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    goto :goto_0
+
+    :cond_3
+    move-object v3, v1
+
     :goto_0
-    iget-boolean p1, p1, Lq0d;->b:Z
+    iget-object v4, p1, Ln89;->a:Lm82;
 
-    if-eqz p1, :cond_2
+    if-eqz v4, :cond_4
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    iget-wide v4, v4, Lm82;->a:J
 
-    move-result-object p1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v0, "ScrollEvent"
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->t1(Ljava/lang/String;)V
+    :cond_4
+    invoke-static {v3, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lwa9;
+    move-result v1
 
-    move-result-object p0
+    if-nez v1, :cond_5
 
-    invoke-virtual {p0}, Lwa9;->b()Z
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ln89;->b:Lw29;
+
+    iget-object v1, v1, Lw29;->a:Lq49;
+
+    iget-wide v3, v1, Lyi0;->a:J
+
+    iget-object p1, p1, Ln89;->b:Lw29;
+
+    iget-object p1, p1, Lw29;->a:Lq49;
+
+    iget-wide v5, p1, Lyi0;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Ln89;->a:Lm82;
+
+    if-eqz v0, :cond_0
+
+    iget-wide v0, v0, Lm82;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object p1
-
-    new-instance v0, Lk89;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lk89;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
-
-    invoke-virtual {p1, v0}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lk49;)V
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    const/16 v1, 0x1f
 
-    return-object p0
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ln89;->b:Lw29;
+
+    iget-object v2, v2, Lw29;->a:Lq49;
+
+    iget-wide v2, v2, Lyi0;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ln89;->a()Landroid/text/Layout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

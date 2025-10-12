@@ -1,140 +1,62 @@
-.class public final Lqkc;
+.class public abstract Lqkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lyrc;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static web_app_root_biometry_open_settings_dialog_accept:I = 0x7f130e4f
 
-.field public final b:J
+.field public static web_app_root_biometry_open_settings_dialog_title:I = 0x7f130e50
 
+.field public static web_app_root_biometry_request_dialog_accept:I = 0x7f130e51
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.field public static web_app_root_biometry_request_dialog_decline:I = 0x7f130e52
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static web_app_root_biometry_request_dialog_default_reason:I = 0x7f130e53
 
-    iput-wide p1, p0, Lqkc;->a:J
+.field public static web_app_root_biometry_request_dialog_title:I = 0x7f130e54
 
-    iput-wide p3, p0, Lqkc;->b:J
+.field public static web_app_root_biometry_setting:I = 0x7f130e55
 
-    return-void
-.end method
+.field public static web_app_root_biometry_setting_description:I = 0x7f130e56
 
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f130e57
 
-# virtual methods
-.method public final a()Z
-    .locals 0
+.field public static web_app_root_choose_media_bottomsheet_title:I = 0x7f130e58
 
-    const/4 p0, 0x1
+.field public static web_app_root_close_dialog_accept:I = 0x7f130e59
 
-    return p0
-.end method
+.field public static web_app_root_close_dialog_subtitle:I = 0x7f130e5a
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.field public static web_app_root_close_dialog_title:I = 0x7f130e5b
 
-    const/4 v0, 0x1
+.field public static web_app_root_dots_menu_refresh:I = 0x7f130e5c
 
-    if-ne p0, p1, :cond_0
+.field public static web_app_root_download_file_bottomsheet_accept:I = 0x7f130e5d
 
-    return v0
+.field public static web_app_root_download_file_bottomsheet_subtitle:I = 0x7f130e5e
 
-    :cond_0
-    const/4 v1, 0x0
+.field public static web_app_root_download_file_bottomsheet_title:I = 0x7f130e5f
 
-    if-eqz p1, :cond_2
+.field public static web_app_root_error_retry_button:I = 0x7f130e60
 
-    const-class v2, Lqkc;
+.field public static web_app_root_error_subtitle:I = 0x7f130e61
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static web_app_root_error_title:I = 0x7f130e62
 
-    move-result-object v3
+.field public static web_app_root_max_share_quote_title:I = 0x7f130e63
 
-    if-eq v2, v3, :cond_1
+.field public static web_app_root_phone_request_dialog_accept:I = 0x7f130e64
 
-    goto :goto_0
+.field public static web_app_root_phone_request_dialog_decline:I = 0x7f130e65
 
-    :cond_1
-    check-cast p1, Lqkc;
+.field public static web_app_root_phone_request_dialog_subtitle:I = 0x7f130e66
 
-    iget-wide v2, p0, Lqkc;->a:J
+.field public static web_app_root_phone_request_dialog_title:I = 0x7f130e67
 
-    iget-wide v4, p1, Lqkc;->a:J
+.field public static web_app_root_setting_open_webapp:I = 0x7f130e68
 
-    cmp-long v2, v2, v4
+.field public static web_app_root_settings_header_subtitle:I = 0x7f130e69
 
-    if-nez v2, :cond_2
+.field public static web_app_root_settings_header_title:I = 0x7f130e6a
 
-    iget-wide v2, p0, Lqkc;->b:J
-
-    iget-wide p0, p1, Lqkc;->b:J
-
-    cmp-long p0, v2, p0
-
-    if-nez p0, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lqkc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lqkc;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReportNetworkStat{timestamp="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lqkc;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sendBitrate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqkc;->b:J
-
-    const/16 p0, 0x7d
-
-    invoke-static {v0, v1, v2, p0}, Ljq9;->h(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static web_app_root_settings_webapps:I = 0x7f130e6b

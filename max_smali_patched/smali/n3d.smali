@@ -1,85 +1,93 @@
 .class public final Ln3d;
-.super Ljava/lang/Object;
+.super Ll96;
 .source "SourceFile"
-
-# interfaces
-.implements Lp3d;
 
 
 # instance fields
-.field public final a:Z
+.field public final b:Lc02;
+
+.field public final c:Lcz1;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public constructor <init>(Lc02;Lcz1;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ll96;-><init>(Lc02;)V
 
-    iput-boolean p1, p0, Ln3d;->a:Z
+    iput-object p1, p0, Ln3d;->b:Lc02;
+
+    iput-object p2, p0, Ln3d;->c:Lcz1;
+
+    invoke-interface {p2}, Laz1;->C()V
+
+    sget-object p1, Laz1;->j:Ln90;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p2, p1, v0}, Lpqc;->e(Ln90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Laz1;->k:Ln90;
+
+    invoke-interface {p2, p1, v0}, Lpqc;->e(Ln90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final e()Lfy7;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ln3d;->b:Lc02;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Lc02;->e()Lfy7;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of v1, p1, Ln3d;
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final g()Lc02;
+    .locals 1
 
-    if-nez v1, :cond_1
+    iget-object v0, p0, Ln3d;->b:Lc02;
 
-    return v2
+    return-object v0
+.end method
 
-    :cond_1
-    check-cast p1, Ln3d;
+.method public final m()Z
+    .locals 1
 
-    iget-boolean p0, p0, Ln3d;->a:Z
+    iget-object v0, p0, Ln3d;->b:Lc02;
 
-    iget-boolean p1, p1, Ln3d;->a:Z
+    invoke-interface {v0}, Lc02;->m()Z
 
-    if-eq p0, p1, :cond_2
+    move-result v0
 
-    return v2
-
-    :cond_2
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final q()Lfy7;
+    .locals 1
 
-    iget-boolean p0, p0, Ln3d;->a:Z
+    iget-object v0, p0, Ln3d;->b:Lc02;
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-interface {v0}, Lc02;->q()Lfy7;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Show(openWithAnimation="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Ln3d;->a:Z
-
-    invoke-static {v0, v1, p0}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

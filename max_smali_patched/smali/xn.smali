@@ -1,41 +1,66 @@
-.class public abstract Lxn;
-.super Ljava/lang/Object;
+.class public final Lxn;
+.super Lca6;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic y0:Lfo;
+
+.field public final synthetic z0:Lio;
+
+
 # direct methods
-.method public static a(Landroid/widget/TextView;)I
+.method public constructor <init>(Lio;Lio;Lfo;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+    iput-object p1, p0, Lxn;->z0:Lio;
 
-    move-result p0
+    iput-object p3, p0, Lxn;->y0:Lfo;
 
-    return p0
-.end method
-
-.method public static b(Landroid/widget/TextView;IIII)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    invoke-direct {p0, p2}, Lca6;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static c(Landroid/widget/TextView;[II)V
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+# virtual methods
+.method public final b()Lhbe;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lxn;->y0:Lfo;
+
+    return-object v0
 .end method
 
-.method public static d(Landroid/widget/TextView;Ljava/lang/String;)Z
-    .locals 0
+.method public final c()Z
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
+    iget-object v0, p0, Lxn;->z0:Lio;
 
-    move-result p0
+    invoke-virtual {v0}, Lio;->getInternalPopup()Lho;
 
-    return p0
+    move-result-object v1
+
+    invoke-interface {v1}, Lho;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lio;->x0:Lho;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
+
+    move-result v0
+
+    invoke-interface {v1, v2, v0}, Lho;->n(II)V
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -1,42 +1,35 @@
-.class public interface abstract annotation Lq84;
+.class public interface abstract Lq84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
-
-
-# annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lq84;
-        c = ""
-        f = ""
-        i = {}
-        l = {}
-        m = ""
-        n = {}
-        s = {}
-        v = 0x1
-    .end subannotation
-.end annotation
-
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
-
 
 # virtual methods
-.method public abstract c()Ljava/lang/String;
+.method public abstract B()J
 .end method
 
-.method public abstract f()Ljava/lang/String;
+.method public abstract C(J)J
 .end method
 
-.method public abstract l()[I
+.method public abstract D(JJ)J
 .end method
 
-.method public abstract m()Ljava/lang/String;
+.method public abstract c(J)J
 .end method
 
-.method public abstract v()I
+.method public abstract h(JJ)J
+.end method
+
+.method public abstract j(JJ)J
+.end method
+
+.method public abstract k(JJ)J
+.end method
+
+.method public abstract l(J)Lenc;
+.end method
+
+.method public abstract t(JJ)J
+.end method
+
+.method public abstract z()Z
 .end method

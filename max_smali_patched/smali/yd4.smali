@@ -1,157 +1,68 @@
-.class public final Lyd4;
+.class public final synthetic Lyd4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsx7;
+
 
 # instance fields
-.field public final a:[B
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/ArrayDeque;
+.field public final synthetic b:Lwc;
 
-.field public c:I
-
-.field public d:I
-
-.field public e:J
-
-.field public final f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
+.field public final synthetic c:Lt76;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public synthetic constructor <init>(Lwc;Lt76;Lnc4;I)V
+    .locals 0
 
-    packed-switch p1, :pswitch_data_0
+    iput p4, p0, Lyd4;->a:I
+
+    iput-object p1, p0, Lyd4;->b:Lwc;
+
+    iput-object p2, p0, Lyd4;->c:Lt76;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 p1, 0x8
+    return-void
+.end method
 
-    new-array p1, p1, [B
 
-    iput-object p1, p0, Lyd4;->a:[B
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance p1, Ljava/util/ArrayDeque;
+    iget v0, p0, Lyd4;->a:I
 
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p1, p0, Lyd4;->b:Ljava/util/ArrayDeque;
+    iget-object v0, p0, Lyd4;->c:Lt76;
 
-    new-instance p1, Lqif;
+    check-cast p1, Lxc;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lyd4;->b:Lwc;
 
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lqif;-><init>(IZ)V
-
-    iput-object p1, p0, Lyd4;->f:Ljava/lang/Object;
+    invoke-interface {p1, v1, v0}, Lxc;->L(Lwc;Lt76;)V
 
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lyd4;->c:Lt76;
 
-    const/16 p1, 0x8
+    check-cast p1, Lxc;
 
-    new-array p1, p1, [B
+    iget-object v1, p0, Lyd4;->b:Lwc;
 
-    iput-object p1, p0, Lyd4;->a:[B
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lyd4;->b:Ljava/util/ArrayDeque;
-
-    new-instance p1, Lqif;
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lqif;-><init>(IZ)V
-
-    iput-object p1, p0, Lyd4;->f:Ljava/lang/Object;
+    invoke-interface {p1, v1, v0}, Lxc;->a0(Lwc;Lt76;)V
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a(Lkd5;I)J
-    .locals 5
-
-    iget-object p0, p0, Lyd4;->a:[B
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, p0, v0, p2}, Lkd5;->readFully([BII)V
-
-    const-wide/16 v1, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_0
-
-    const/16 p1, 0x8
-
-    shl-long/2addr v1, p1
-
-    aget-byte p1, p0, v0
-
-    and-int/lit16 p1, p1, 0xff
-
-    int-to-long v3, p1
-
-    or-long/2addr v1, v3
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v1
-.end method
-
-.method public b(Lld5;I)J
-    .locals 5
-
-    iget-object p0, p0, Lyd4;->a:[B
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, p0, v0, p2}, Lld5;->readFully([BII)V
-
-    const-wide/16 v1, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_0
-
-    const/16 p1, 0x8
-
-    shl-long/2addr v1, p1
-
-    aget-byte p1, p0, v0
-
-    and-int/lit16 p1, p1, 0xff
-
-    int-to-long v3, p1
-
-    or-long/2addr v1, v3
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v1
 .end method

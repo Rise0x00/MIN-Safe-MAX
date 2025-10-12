@@ -1,41 +1,30 @@
 .class public final Lik8;
-.super Landroid/media/MediaRouter$VolumeCallback;
+.super Lhk8;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lhk8;
-
-
-# direct methods
-.method public constructor <init>(Lhk8;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/media/MediaRouter$VolumeCallback;-><init>()V
-
-    iput-object p1, p0, Lik8;->a:Lhk8;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final onVolumeSetRequest(Landroid/media/MediaRouter$RouteInfo;I)V
-    .locals 0
+.method public final q0(F)V
+    .locals 1
 
-    iget-object p0, p0, Lik8;->a:Lhk8;
+    const/4 v0, 0x0
 
-    invoke-interface {p0, p1, p2}, Lhk8;->a(Landroid/media/MediaRouter$RouteInfo;I)V
+    cmpl-float v0, p1, v0
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final onVolumeUpdateRequest(Landroid/media/MediaRouter$RouteInfo;I)V
-    .locals 0
+    iget-object v0, p0, Lhk8;->o:Landroid/media/session/MediaController$TransportControls;
 
-    iget-object p0, p0, Lik8;->a:Lhk8;
-
-    invoke-interface {p0, p1, p2}, Lhk8;->b(Landroid/media/MediaRouter$RouteInfo;I)V
+    invoke-static {v0, p1}, Lqx4;->r(Landroid/media/session/MediaController$TransportControls;F)V
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "speed must not be zero"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

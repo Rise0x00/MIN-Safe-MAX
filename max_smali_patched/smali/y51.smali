@@ -1,28 +1,24 @@
 .class public final Ly51;
-.super Lu0g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz51;
+.implements Le61;
 
 
 # static fields
-.field public static final c:Ly51;
+.field public static final a:Ly51;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Ly51;
 
-    sget v1, Lp3c;->call_screen_connection_restoring:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lu0g;-><init>(ILjava/lang/Long;)V
-
-    sput-object v0, Ly51;->c:Ly51;
+    sput-object v0, Ly51;->a:Ly51;
 
     return-void
 .end method
@@ -39,30 +35,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Ly51;
+    instance-of p1, p1, Ly51;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x9c8d45e
+    const v0, -0x3f0d84a0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Restoring"
+    const-string v0, "Logout"
 
-    return-object p0
+    return-object v0
 .end method

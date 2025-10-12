@@ -1,42 +1,26 @@
 .class public final Lfm5;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic Z:Llm5;
-
-.field public final synthetic n0:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public final synthetic o0:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic p0:Lpcb;
+.field public final synthetic Y:Lgm5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Llm5;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Lpcb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgm5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lfm5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-object p2, p0, Lfm5;->Z:Llm5;
-
-    iput-object p3, p0, Lfm5;->n0:Ljava/nio/channels/AsynchronousFileChannel;
-
-    iput-object p4, p0, Lfm5;->o0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p5, p0, Lfm5;->p0:Lpcb;
+    iput-object p1, p0, Lfm5;->Y:Lgm5;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p6}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -46,94 +30,117 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lgze;
+    check-cast p1, Le34;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lfm5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lfm5;
+    check-cast p1, Lfm5;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lfm5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lfm5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    .locals 1
 
-    new-instance v0, Lfm5;
+    new-instance p1, Lfm5;
 
-    iget-object v4, p0, Lfm5;->o0:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lfm5;->Y:Lgm5;
 
-    iget-object v5, p0, Lfm5;->p0:Lpcb;
+    invoke-direct {p1, v0, p2}, Lfm5;-><init>(Lgm5;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lfm5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iget-object v2, p0, Lfm5;->Z:Llm5;
-
-    iget-object v3, p0, Lfm5;->n0:Ljava/nio/channels/AsynchronousFileChannel;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lfm5;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Llm5;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Lpcb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfm5;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget v0, p0, Lfm5;->X:I
 
-    iget-object p1, p0, Lfm5;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-object v2, p1
+    if-eqz v0, :cond_1
 
-    check-cast v2, Lgze;
+    if-ne v0, v1, :cond_0
 
-    iget-object v4, p0, Lfm5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :try_start_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    goto :goto_1
 
-    move-result p1
+    :catchall_0
+    move-exception p1
 
-    sget-object v8, Ltcf;->a:Ltcf;
+    goto :goto_0
 
-    if-nez p1, :cond_0
+    :catch_0
+    move-exception p1
 
-    return-object v8
+    goto :goto_2
 
     :cond_0
-    iget-object v1, p0, Lfm5;->Z:Llm5;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, v1, Llm5;->q:Lkotlinx/coroutines/internal/ContextScope;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v9, v1, Llm5;->p:Lib7;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lem5;
+    throw p1
 
-    iget-object v6, p0, Lfm5;->p0:Lpcb;
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const/4 v7, 0x0
+    iget-object p1, p0, Lfm5;->Y:Lgm5;
 
-    iget-object v3, p0, Lfm5;->n0:Ljava/nio/channels/AsynchronousFileChannel;
+    :try_start_1
+    iput v1, p0, Lfm5;->X:I
 
-    iget-object v5, p0, Lfm5;->o0:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p1, Lgm5;->a:Lx5d;
 
-    invoke-direct/range {v0 .. v7}, Lem5;-><init>(Llm5;Lgze;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicReference;Lpcb;Lkotlin/coroutines/Continuation;)V
+    new-instance v1, Lwg4;
 
-    const/4 p0, 0x2
+    const/4 v2, 0x5
 
-    const/4 v1, 0x0
+    invoke-direct {v1, v2, p1}, Lwg4;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, v9, v1, v0, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    invoke-static {v0, v1, p0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v8
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    const-string v0, "FcmNotificationHistoryDao"
+
+    const-string v1, "onLogout: clear failed"
+
+    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

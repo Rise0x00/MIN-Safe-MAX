@@ -1,90 +1,77 @@
-.class public final Lpof;
+.class public abstract Lpof;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[B
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpof;->a:[B
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lvc6;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x4
 
-    return v0
+    invoke-direct {v0, v1}, Lvc6;-><init>(I)V
 
-    :cond_0
-    instance-of v1, p1, Lpof;
+    const v1, 0x9c40
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    sget-object v2, Lrc6;->b:Lrc6;
 
-    :cond_1
-    check-cast p1, Lpof;
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    iget-object p0, p0, Lpof;->a:[B
+    sget-object v2, Lrc6;->c:Lrc6;
 
-    iget-object p1, p1, Lpof;->a:[B
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v2, Lrc6;->o:Lrc6;
 
-    move-result p0
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    if-nez p0, :cond_2
+    const v1, 0x26160
 
-    return v2
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object v1
 
-.method public final hashCode()I
-    .locals 0
+    sget-object v2, Lrc6;->X:Lrc6;
 
-    iget-object p0, p0, Lpof;->a:[B
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([B)I
+    sget-object v2, Lrc6;->Y:Lrc6;
 
-    move-result p0
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    return p0
-.end method
+    const v1, 0x493e0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p0, p0, Lpof;->a:[B
+    move-result-object v1
 
-    invoke-static {p0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
+    sget-object v2, Lrc6;->Z:Lrc6;
 
-    move-result-object p0
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    const-string v0, "FirstFrameReady(frameByteArray="
+    sget-object v2, Lrc6;->w0:Lrc6;
 
-    const-string v1, ")"
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget-object v2, Lrc6;->x0:Lrc6;
 
-    move-result-object p0
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
 
-    return-object p0
+    sget-object v2, Lrc6;->y0:Lrc6;
+
+    invoke-virtual {v0, v2, v1}, Lvc6;->U(Ljava/lang/Object;Ljava/lang/Object;)Lvc6;
+
+    invoke-virtual {v0}, Lvc6;->D()Li77;
+
+    return-void
 .end method

@@ -1,43 +1,26 @@
-.class public abstract synthetic Lmec;
+.class public abstract Lmec;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a0381
 
+.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a0382
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a0383
 
-    invoke-static {}, Lmdc;->values()[Lmdc;
+.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a0384
 
-    move-result-object v0
+.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a0385
 
-    array-length v0, v0
+.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0386
 
-    new-array v0, v0, [I
+.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0387
 
-    const/4 v1, 0x1
+.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0388
 
-    const/4 v2, 0x0
+.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0389
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a038a
 
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lmec;->$EnumSwitchMapping$0:[I
-
-    return-void
-.end method
+.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a038b

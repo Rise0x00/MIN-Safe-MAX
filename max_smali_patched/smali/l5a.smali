@@ -1,8 +1,15 @@
-.class public interface abstract Ll5a;
+.class public abstract Ll5a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Lsv3;)Lsv3;
+# direct methods
+.method public static a(Landroid/app/Notification$Action;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
+
+    move-result p0
+
+    return p0
 .end method

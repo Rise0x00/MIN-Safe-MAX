@@ -3,32 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lz5d;
+.implements Lj4d;
 
 
 # instance fields
-.field public final a:[J
+.field public final b:J
 
-.field public final b:[J
-
-.field public final c:J
-
-.field public final d:J
+.field public final c:Lj4d;
 
 
 # direct methods
-.method public constructor <init>([J[JJJ)V
-    .locals 0
+.method public constructor <init>(JLj4d;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrif;->a:[J
+    const-wide/16 v0, 0x0
 
-    iput-object p2, p0, Lrif;->b:[J
+    cmp-long v0, p1, v0
 
-    iput-wide p3, p0, Lrif;->c:J
+    if-ltz v0, :cond_0
 
-    iput-wide p5, p0, Lrif;->d:J
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "Timeout must be non-negative."
+
+    invoke-static {v1, v0}, Ll74;->h(Ljava/lang/String;Z)V
+
+    iput-wide p1, p0, Lrif;->b:J
+
+    iput-object p3, p0, Lrif;->c:Lj4d;
 
     return-void
 .end method
@@ -38,100 +48,42 @@
 .method public final a()J
     .locals 2
 
-    iget-wide v0, p0, Lrif;->d:J
+    iget-wide v0, p0, Lrif;->b:J
 
     return-wide v0
 .end method
 
-.method public final b(J)J
-    .locals 2
+.method public final b(Lt02;)Li4d;
+    .locals 7
 
-    iget-object v0, p0, Lrif;->b:[J
+    iget-object v0, p0, Lrif;->c:Lj4d;
 
-    const/4 v1, 0x1
+    invoke-interface {v0, p1}, Lj4d;->b(Lt02;)Li4d;
 
-    invoke-static {v0, p1, p2, v1}, Ldif;->e([JJZ)I
+    move-result-object v0
 
-    move-result p1
+    const-wide/16 v1, 0x0
 
-    iget-object p0, p0, Lrif;->a:[J
+    iget-wide v3, p0, Lrif;->b:J
 
-    aget-wide p0, p0, p1
+    cmp-long v1, v3, v1
 
-    return-wide p0
-.end method
+    if-lez v1, :cond_0
 
-.method public final c()Z
-    .locals 0
+    iget-wide v1, p1, Lt02;->c:J
 
-    const/4 p0, 0x1
+    iget-wide v5, v0, Li4d;->a:J
 
-    return p0
-.end method
+    sub-long/2addr v3, v5
 
-.method public final e(J)Lp5d;
-    .locals 8
+    cmp-long p1, v1, v3
 
-    iget-object v0, p0, Lrif;->a:[J
+    if-ltz p1, :cond_0
 
-    const/4 v1, 0x1
+    sget-object p1, Li4d;->d:Li4d;
 
-    invoke-static {v0, p1, p2, v1}, Ldif;->e([JJZ)I
-
-    move-result v2
-
-    new-instance v3, Lv5d;
-
-    aget-wide v4, v0, v2
-
-    iget-object p0, p0, Lrif;->b:[J
-
-    aget-wide v6, p0, v2
-
-    invoke-direct {v3, v4, v5, v6, v7}, Lv5d;-><init>(JJ)V
-
-    cmp-long p1, v4, p1
-
-    if-gez p1, :cond_1
-
-    array-length p1, v0
-
-    sub-int/2addr p1, v1
-
-    if-ne v2, p1, :cond_0
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    new-instance p1, Lv5d;
-
-    add-int/2addr v2, v1
-
-    aget-wide v0, v0, v2
-
-    aget-wide v4, p0, v2
-
-    invoke-direct {p1, v0, v1, v4, v5}, Lv5d;-><init>(JJ)V
-
-    new-instance p0, Lp5d;
-
-    invoke-direct {p0, v3, p1}, Lp5d;-><init>(Lv5d;Lv5d;)V
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    new-instance p0, Lp5d;
-
-    invoke-direct {p0, v3, v3}, Lp5d;-><init>(Lv5d;Lv5d;)V
-
-    return-object p0
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lrif;->c:J
-
-    return-wide v0
+    return-object v0
 .end method

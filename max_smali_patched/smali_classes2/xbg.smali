@@ -1,104 +1,57 @@
 .class public final Lxbg;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lacg;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public X:Lm82;
+
+.field public Y:Llbg;
+
+.field public Z:J
+
+.field public o:Lecg;
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public final synthetic x0:Lecg;
+
+.field public y0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Lecg;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxbg;->x0:Lecg;
 
-    iput-object p1, p0, Lxbg;->a:Landroid/net/Uri;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lxbg;->w0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lxbg;->y0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lxbg;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lxbg;->y0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lxbg;->x0:Lecg;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lxbg;
+    invoke-virtual {p1, v0, v0, v0, p0}, Lecg;->a(Lm82;Llbg;Ljava/lang/Float;Lnz3;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lxbg;->a:Landroid/net/Uri;
+    move-result-object p1
 
-    iget-object p1, p1, Lxbg;->a:Landroid/net/Uri;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lxbg;->a:Landroid/net/Uri;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UploadCameraPhoto(data="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lxbg;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

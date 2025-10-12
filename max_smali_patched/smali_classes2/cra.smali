@@ -3,30 +3,37 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:J
 
-.field public final b:[B
+.field public static final b:J
 
-.field public final c:I
+.field public static final c:J
+
+.field public static final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_call_ringtone_title:I
 
-    iput-object p1, p0, Lcra;->b:[B
+    int-to-long v0, v0
 
-    iput p2, p0, Lcra;->a:I
+    sput-wide v0, Lcra;->a:J
 
-    iput p3, p0, Lcra;->c:I
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_calls_ringtone:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lcra;->b:J
+
+    sget v0, Lxec;->oneme_notifications_settings_open_settings_calls_vibration:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lcra;->c:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a(I)S
 .end method

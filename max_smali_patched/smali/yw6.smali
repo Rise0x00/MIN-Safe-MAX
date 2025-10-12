@@ -1,106 +1,97 @@
 .class public final Lyw6;
-.super Ljava/lang/Object;
+.super Lax6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ldx6;
+# instance fields
+.field public final A0:Ljava/lang/String;
+
+.field public final B0:Le77;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 19
 
-    new-instance v0, Landroid/util/Size;
+    .line 1
+    sget-object v0, Le77;->b:Ld06;
 
-    const/16 v1, 0x280
+    .line 2
+    sget-object v18, Lxyc;->X:Lxyc;
 
-    const/16 v2, 0x1e0
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+    .line 3
+    const-string v4, ""
 
-    sget-object v1, Lso5;->c:Lso5;
+    const-wide/16 v5, 0x0
 
-    new-instance v2, Lbmc;
+    const/4 v7, -0x1
 
-    sget-object v3, Lgwd;->c:Landroid/util/Size;
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    const/4 v10, 0x0
 
-    iput-object v3, v2, Lbmc;->a:Landroid/util/Size;
+    const/16 v17, 0x0
 
-    const/4 v3, 0x1
+    move-object/from16 v1, p0
 
-    iput v3, v2, Lbmc;->b:I
+    move-wide/from16 v13, p1
 
-    new-instance v4, Lamc;
+    move-wide/from16 v15, p3
 
-    invoke-direct {v4, v1, v2}, Lamc;-><init>(Lso5;Lbmc;)V
+    move-object/from16 v2, p5
 
-    new-instance v1, Lxw6;
+    move-object/from16 v11, p6
 
-    const/4 v2, 0x0
+    move-object/from16 v12, p7
 
-    invoke-direct {v1, v2}, Lxw6;-><init>(I)V
+    invoke-direct/range {v1 .. v18}, Lyw6;-><init>(Ljava/lang/String;Lyw6;Ljava/lang/String;JIJLry4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
-    sget-object v2, Lpy6;->D:Lz90;
+    return-void
+.end method
 
-    iget-object v1, v1, Lxw6;->b:Ltk9;
+.method public constructor <init>(Ljava/lang/String;Lyw6;Ljava/lang/String;JIJLry4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    .locals 16
 
-    invoke-virtual {v1, v2, v0}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    move-object/from16 v0, p0
 
-    sget-object v0, Lehf;->f0:Lz90;
+    move-object/from16 v1, p1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-object/from16 v2, p2
 
-    move-result-object v2
+    move-wide/from16 v3, p4
 
-    invoke-virtual {v1, v0, v2}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    move/from16 v5, p6
 
-    sget-object v0, Lpy6;->y:Lz90;
+    move-wide/from16 v6, p7
 
-    const/4 v2, 0x0
+    move-object/from16 v8, p9
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-object/from16 v9, p10
 
-    move-result-object v2
+    move-object/from16 v10, p11
 
-    invoke-virtual {v1, v0, v2}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    move-wide/from16 v11, p12
 
-    sget-object v0, Lpy6;->G:Lz90;
+    move-wide/from16 v13, p14
 
-    invoke-virtual {v1, v0, v4}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    move/from16 v15, p16
 
-    sget-object v0, Ljx4;->d:Ljx4;
+    .line 4
+    invoke-direct/range {v0 .. v15}, Lax6;-><init>(Ljava/lang/String;Lyw6;JIJLry4;Ljava/lang/String;Ljava/lang/String;JJZ)V
 
-    invoke-virtual {v0, v0}, Ljx4;->equals(Ljava/lang/Object;)Z
+    move-object/from16 v1, p3
 
-    move-result v2
+    .line 5
+    iput-object v1, v0, Lyw6;->A0:Ljava/lang/String;
 
-    if-eqz v2, :cond_0
-
-    sget-object v2, Lfy6;->x:Lz90;
-
-    invoke-virtual {v1, v2, v0}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    new-instance v0, Ldx6;
-
-    invoke-static {v1}, Lgpa;->a(Lpf3;)Lgpa;
+    .line 6
+    invoke-static/range {p17 .. p17}, Le77;->j(Ljava/util/Collection;)Le77;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ldx6;-><init>(Lgpa;)V
-
-    sput-object v0, Lyw6;->a:Ldx6;
+    iput-object v1, v0, Lyw6;->B0:Le77;
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "ImageAnalysis currently only supports SDR"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

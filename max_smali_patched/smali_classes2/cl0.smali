@@ -1,109 +1,118 @@
-.class public final enum Lcl0;
-.super Ljava/lang/Enum;
+.class public final Lcl0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfl;
 
-# static fields
-.field public static final enum X:Lcl0;
 
-.field public static final synthetic Y:[Lcl0;
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static final enum a:Lcl0;
+.field public final b:Ltl;
 
-.field public static final enum b:Lcl0;
+.field public final c:Lml;
 
-.field public static final enum c:Lcl0;
-
-.field public static final enum o:Lcl0;
+.field public final d:Lpl7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Landroid/net/Uri;Ltl;Lml;Lpl7;)V
+    .locals 0
 
-    new-instance v0, Lcl0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SMALLEST"
+    iput-object p1, p0, Lcl0;->a:Landroid/net/Uri;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lcl0;->b:Ltl;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lcl0;->c:Lml;
 
-    sput-object v0, Lcl0;->a:Lcl0;
-
-    new-instance v1, Lcl0;
-
-    const-string v2, "SMALL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcl0;->b:Lcl0;
-
-    new-instance v2, Lcl0;
-
-    const-string v3, "MEDIUM"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lcl0;->c:Lcl0;
-
-    new-instance v3, Lcl0;
-
-    const-string v4, "BIG"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lcl0;->o:Lcl0;
-
-    new-instance v4, Lcl0;
-
-    const-string v5, "MAX"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lcl0;->X:Lcl0;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lcl0;
-
-    move-result-object v0
-
-    sput-object v0, Lcl0;->Y:[Lcl0;
+    iput-object p4, p0, Lcl0;->d:Lpl7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcl0;
+
+# virtual methods
+.method public final getOkParser()Lpl7;
     .locals 1
 
-    const-class v0, Lcl0;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lcl0;
-
-    return-object p0
-.end method
-
-.method public static values()[Lcl0;
-    .locals 1
-
-    sget-object v0, Lcl0;->Y:[Lcl0;
-
-    invoke-virtual {v0}, [Lcl0;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcl0;
+    iget-object v0, p0, Lcl0;->d:Lpl7;
 
     return-object v0
+.end method
+
+.method public final getPriority()I
+    .locals 1
+
+    const/16 v0, 0x10
+
+    return v0
+.end method
+
+.method public final getScope()Ltl;
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->b:Ltl;
+
+    return-object v0
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->a:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final shouldPost()Z
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->c:Lml;
+
+    iget-boolean v0, v0, Lml;->c:Z
+
+    return v0
+.end method
+
+.method public final willWriteParams()Z
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->c:Lml;
+
+    iget-boolean v0, v0, Lml;->d:Z
+
+    return v0
+.end method
+
+.method public final willWriteSupplyParams()Z
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->c:Lml;
+
+    iget-boolean v0, v0, Lml;->e:Z
+
+    return v0
+.end method
+
+.method public final writeParams(Lcm7;)V
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->c:Lml;
+
+    invoke-virtual {v0, p1}, Lml;->c(Lcm7;)V
+
+    return-void
+.end method
+
+.method public final writeSupplyParams(Lcm7;)V
+    .locals 1
+
+    iget-object v0, p0, Lcl0;->c:Lml;
+
+    invoke-virtual {v0, p1}, Lml;->d(Lcm7;)V
+
+    return-void
 .end method

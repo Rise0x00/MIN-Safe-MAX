@@ -1,19 +1,17 @@
-.class public final Lxda;
+.class public interface abstract Lxda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# virtual methods
+.method public abstract b()V
+.end method
 
+.method public abstract c(Lss4;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public abstract f(Ljava/lang/Object;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxda;->a:Landroid/content/Context;
-
-    return-void
+.method public abstract onError(Ljava/lang/Throwable;)V
 .end method

@@ -1,43 +1,56 @@
 .class public final Lj13;
-.super Landroidx/appcompat/widget/AppCompatCheckBox;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lww7;
 
-# instance fields
-.field public n0:I
+
+# static fields
+.field public static final a:Lj13;
+
+.field public static final b:I
+
+.field public static final c:J
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj13;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lj13;->a:Lj13;
+
+    sget v0, Lbec;->oneme_chat_list_loading_view_type:I
+
+    sput v0, Lj13;->b:I
+
+    sget v0, Lbec;->oneme_chat_list_loading_id:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lj13;->c:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public getCompoundPaddingLeft()I
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lj13;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    invoke-super {p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
-
-    move-result v0
-
-    iget p0, p0, Lj13;->n0:I
-
-    add-int/2addr v0, p0
+    sget v0, Lj13;->b:I
 
     return v0
-.end method
-
-.method public final getPaddingBetweenCheckbox()I
-    .locals 0
-
-    iget p0, p0, Lj13;->n0:I
-
-    return p0
-.end method
-
-.method public final setPaddingBetweenCheckbox(I)V
-    .locals 0
-
-    iput p1, p0, Lj13;->n0:I
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    return-void
 .end method

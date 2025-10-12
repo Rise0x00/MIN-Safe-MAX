@@ -1,60 +1,103 @@
-.class public final Ls85;
+.class public interface abstract Ls85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Enumeration;
 
-
-# instance fields
-.field public final a:Ljava/util/Enumeration;
+# static fields
+.field public static final p:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lt85;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iget-object p1, p1, Lt85;->a:Ljava/util/ArrayList;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {p1}, Ljava/util/Collections;->enumeration(Ljava/util/Collection;)Ljava/util/Enumeration;
+    move-result-object v1
 
-    move-result-object p1
+    const/16 v0, 0xa
 
-    iput-object p1, p0, Ls85;->a:Ljava/util/Enumeration;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/16 v0, 0x8
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/16 v0, 0xb
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v0, 0x6
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const/4 v0, 0x5
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const/16 v0, 0x9
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    filled-new-array/range {v1 .. v11}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Ls85;->p:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasMoreElements()Z
-    .locals 0
-
-    iget-object p0, p0, Ls85;->a:Ljava/util/Enumeration;
-
-    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
-
-    move-result p0
-
-    return p0
+.method public abstract n(I)Z
 .end method
 
-.method public final nextElement()Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    iget-object p0, p0, Ls85;->a:Ljava/util/Enumeration;
-
-    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Map;
-
-    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    return-object v0
+.method public abstract s(I)Lt85;
 .end method

@@ -1,130 +1,339 @@
-.class public final synthetic Lgie;
+.class public final Lgie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmu;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic X:Lyb0;
+.field public A0:I
 
-.field public final synthetic a:Liie;
+.field public X:F
 
-.field public final synthetic b:Lhie;
+.field public Y:Z
 
-.field public final synthetic c:I
+.field public final Z:[F
 
-.field public final synthetic o:Lyb0;
+.field public a:Z
+
+.field public b:I
+
+.field public c:I
+
+.field public o:I
+
+.field public final w0:[F
+
+.field public x0:[Lfs;
+
+.field public y0:I
+
+.field public z0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Liie;Lhie;ILyb0;Lyb0;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgie;->a:Liie;
+    const/4 v0, -0x1
 
-    iput-object p2, p0, Lgie;->b:Lhie;
+    iput v0, p0, Lgie;->b:I
 
-    iput p3, p0, Lgie;->c:I
+    iput v0, p0, Lgie;->c:I
 
-    iput-object p4, p0, Lgie;->o:Lyb0;
+    const/4 v0, 0x0
 
-    iput-object p5, p0, Lgie;->X:Lyb0;
+    iput v0, p0, Lgie;->o:I
+
+    iput-boolean v0, p0, Lgie;->Y:Z
+
+    const/16 v1, 0x9
+
+    new-array v2, v1, [F
+
+    iput-object v2, p0, Lgie;->Z:[F
+
+    new-array v1, v1, [F
+
+    iput-object v1, p0, Lgie;->w0:[F
+
+    const/16 v1, 0x10
+
+    new-array v1, v1, [Lfs;
+
+    iput-object v1, p0, Lgie;->x0:[Lfs;
+
+    iput v0, p0, Lgie;->y0:I
+
+    iput v0, p0, Lgie;->z0:I
+
+    iput p1, p0, Lgie;->A0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lyp7;
-    .locals 7
+.method public final a(Lfs;)V
+    .locals 3
 
-    iget-object v0, p0, Lgie;->b:Lhie;
+    const/4 v0, 0x0
 
-    move-object v2, p1
+    :goto_0
+    iget v1, p0, Lgie;->y0:I
 
-    check-cast v2, Landroid/view/Surface;
+    if-ge v0, v1, :cond_1
 
-    iget-object p1, p0, Lgie;->a:Liie;
+    iget-object v1, p0, Lgie;->x0:[Lfs;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    aget-object v1, v1, v0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne v1, p1, :cond_0
 
-    :try_start_0
-    invoke-virtual {v0}, Lnj4;->d()V
-    :try_end_0
-    .catch Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
 
-    new-instance v1, Lkie;
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
 
-    iget-object p1, p1, Liie;->g:Lvb0;
+    goto :goto_0
 
-    iget-object v4, p1, Lvb0;->a:Landroid/util/Size;
+    :cond_1
+    iget-object v0, p0, Lgie;->x0:[Lfs;
 
-    iget v3, p0, Lgie;->c:I
+    array-length v2, v0
 
-    iget-object v5, p0, Lgie;->o:Lyb0;
+    if-lt v1, v2, :cond_2
 
-    iget-object v6, p0, Lgie;->X:Lyb0;
+    array-length v1, v0
 
-    invoke-direct/range {v1 .. v6}, Lkie;-><init>(Landroid/view/Surface;ILandroid/util/Size;Lyb0;Lyb0;)V
+    mul-int/lit8 v1, v1, 0x2
 
-    new-instance p0, Lfie;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    move-result-object v0
 
-    invoke-direct {p0, v0, p1}, Lfie;-><init>(Lhie;I)V
+    check-cast v0, [Lfs;
 
-    invoke-static {}, Lgog;->i()Lbo4;
+    iput-object v0, p0, Lgie;->x0:[Lfs;
 
-    move-result-object p1
+    :cond_2
+    iget-object v0, p0, Lgie;->x0:[Lfs;
 
-    iget-object v2, v1, Lkie;->p0:Lms1;
+    iget v1, p0, Lgie;->y0:I
 
-    iget-object v2, v2, Lms1;->c:Lyp7;
+    aput-object p1, v0, v1
 
-    check-cast v2, Lls1;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v2, p0, p1}, Ll3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    iput v1, p0, Lgie;->y0:I
 
-    iget-object p0, v0, Lhie;->q:Lkie;
+    return-void
+.end method
 
-    if-nez p0, :cond_0
+.method public final b(Lfs;)V
+    .locals 4
 
-    const/4 p0, 0x1
+    iget v0, p0, Lgie;->y0:I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    iget-object v2, p0, Lgie;->x0:[Lfs;
+
+    aget-object v2, v2, v1
+
+    if-ne v2, p1, :cond_1
+
+    :goto_1
+    add-int/lit8 p1, v0, -0x1
+
+    if-ge v1, p1, :cond_0
+
+    iget-object p1, p0, Lgie;->x0:[Lfs;
+
+    add-int/lit8 v2, v1, 0x1
+
+    aget-object v3, p1, v2
+
+    aput-object v3, p1, v1
+
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_0
+    iget p1, p0, Lgie;->y0:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lgie;->y0:I
+
+    return-void
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final c()V
+    .locals 6
+
+    const/4 v0, 0x5
+
+    iput v0, p0, Lgie;->A0:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgie;->o:I
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lgie;->b:I
+
+    iput v1, p0, Lgie;->c:I
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lgie;->X:F
+
+    iput-boolean v0, p0, Lgie;->Y:Z
+
+    iget v2, p0, Lgie;->y0:I
+
+    move v3, v0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    iget-object v4, p0, Lgie;->x0:[Lfs;
+
+    const/4 v5, 0x0
+
+    aput-object v5, v4, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iput v0, p0, Lgie;->y0:I
+
+    iput v0, p0, Lgie;->z0:I
+
+    iput-boolean v0, p0, Lgie;->a:Z
+
+    iget-object v0, p0, Lgie;->w0:[F
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([FF)V
+
+    return-void
+.end method
+
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
+
+    check-cast p1, Lgie;
+
+    iget v0, p0, Lgie;->b:I
+
+    iget p1, p1, Lgie;->b:I
+
+    sub-int/2addr v0, p1
+
+    return v0
+.end method
+
+.method public final d(Lxs7;F)V
+    .locals 3
+
+    iput p2, p0, Lgie;->X:F
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p0, Lgie;->Y:Z
+
+    iget p2, p0, Lgie;->y0:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lgie;->c:I
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :goto_0
-    const-string p1, "Consumer can only be linked once."
+    if-ge v1, p2, :cond_0
 
-    invoke-static {p1, p0}, Lcr0;->j(Ljava/lang/String;Z)V
+    iget-object v2, p0, Lgie;->x0:[Lfs;
 
-    iput-object v1, v0, Lhie;->q:Lkie;
+    aget-object v2, v2, v1
 
-    invoke-static {v1}, Lcp;->C(Ljava/lang/Object;)Llz6;
+    invoke-virtual {v2, p1, p0, v0}, Lfs;->h(Lxs7;Lgie;Z)V
 
-    move-result-object p0
+    add-int/lit8 v1, v1, 0x1
 
-    return-object p0
+    goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    iput v0, p0, Lgie;->y0:I
 
-    move-object p0, v0
+    return-void
+.end method
 
-    new-instance p1, Llz6;
+.method public final e(Lxs7;Lfs;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgie;->y0:I
 
-    invoke-direct {p1, v0, p0}, Llz6;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x0
 
-    return-object p1
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_0
+
+    iget-object v3, p0, Lgie;->x0:[Lfs;
+
+    aget-object v3, v3, v2
+
+    invoke-virtual {v3, p1, p2, v1}, Lfs;->i(Lxs7;Lfs;Z)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, p0, Lgie;->y0:I
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lgie;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

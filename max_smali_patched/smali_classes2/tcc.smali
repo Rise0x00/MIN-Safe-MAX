@@ -1,23 +1,14 @@
 .class public abstract Ltcc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lfdc;
+# static fields
+.field public static oneme_settings_privacy_big_lock:I = 0x7f080903
 
-.field public final b:J
+.field public static oneme_settings_privacy_cloud_2fa_end_icon:I = 0x7f080904
 
+.field public static oneme_settings_privacy_cloud_2fa_start_icon:I = 0x7f080905
 
-# direct methods
-.method public constructor <init>(Lfdc;J)V
-    .locals 0
+.field public static oneme_settings_privacy_ic_remove_16:I = 0x7f080906
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltcc;->a:Lfdc;
-
-    iput-wide p2, p0, Ltcc;->b:J
-
-    return-void
-.end method
+.field public static oneme_settings_privacy_ic_success_28:I = 0x7f080907

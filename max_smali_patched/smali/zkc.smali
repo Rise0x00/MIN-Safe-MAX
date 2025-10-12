@@ -1,88 +1,60 @@
 .class public abstract Lzkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final X:Ly7c;
+# static fields
+.field public static abc_action_bar_home_description:I = 0x7f130002
 
-.field public final a:Lp26;
+.field public static abc_action_bar_up_description:I = 0x7f130003
 
-.field public final b:Lg07;
+.field public static abc_action_menu_overflow_description:I = 0x7f130004
 
-.field public final c:J
+.field public static abc_action_mode_done:I = 0x7f130005
 
-.field public final o:Ljava/util/List;
+.field public static abc_activity_chooser_view_see_all:I = 0x7f130006
 
+.field public static abc_activitychooserview_choose_application:I = 0x7f130007
 
-# direct methods
-.method public constructor <init>(Lp26;Ljava/util/List;Lr6d;Ljava/util/List;)V
-    .locals 7
+.field public static abc_capital_off:I = 0x7f130008
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static abc_capital_on:I = 0x7f130009
 
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+.field public static abc_menu_alt_shortcut_label:I = 0x7f13000a
 
-    move-result v0
+.field public static abc_menu_ctrl_shortcut_label:I = 0x7f13000b
 
-    xor-int/lit8 v0, v0, 0x1
+.field public static abc_menu_delete_shortcut_label:I = 0x7f13000c
 
-    invoke-static {v0}, Ln76;->j(Z)V
+.field public static abc_menu_enter_shortcut_label:I = 0x7f13000d
 
-    iput-object p1, p0, Lzkc;->a:Lp26;
+.field public static abc_menu_function_shortcut_label:I = 0x7f13000e
 
-    invoke-static {p2}, Lg07;->j(Ljava/util/Collection;)Lg07;
+.field public static abc_menu_meta_shortcut_label:I = 0x7f13000f
 
-    move-result-object p1
+.field public static abc_menu_shift_shortcut_label:I = 0x7f130010
 
-    iput-object p1, p0, Lzkc;->b:Lg07;
+.field public static abc_menu_space_shortcut_label:I = 0x7f130011
 
-    if-nez p4, :cond_0
+.field public static abc_menu_sym_shortcut_label:I = 0x7f130012
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+.field public static abc_prepend_shortcut_label:I = 0x7f130013
 
-    goto :goto_0
+.field public static abc_search_hint:I = 0x7f130014
 
-    :cond_0
-    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+.field public static abc_searchview_description_clear:I = 0x7f130015
 
-    move-result-object p1
+.field public static abc_searchview_description_query:I = 0x7f130016
 
-    :goto_0
-    iput-object p1, p0, Lzkc;->o:Ljava/util/List;
+.field public static abc_searchview_description_search:I = 0x7f130017
 
-    invoke-virtual {p3, p0}, Lr6d;->b(Lzkc;)Ly7c;
+.field public static abc_searchview_description_submit:I = 0x7f130018
 
-    move-result-object p1
+.field public static abc_searchview_description_voice:I = 0x7f130019
 
-    iput-object p1, p0, Lzkc;->X:Ly7c;
+.field public static abc_shareactionprovider_share_with:I = 0x7f13001a
 
-    iget-wide v0, p3, Lr6d;->b:J
+.field public static abc_shareactionprovider_share_with_application:I = 0x7f13001b
 
-    iget-wide v4, p3, Lr6d;->a:J
+.field public static abc_toolbar_collapse_description:I = 0x7f13001c
 
-    sget p1, Lfif;->a:I
-
-    sget-object v6, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
-
-    const-wide/32 v2, 0xf4240
-
-    invoke-static/range {v0 .. v6}, Lfif;->Y(JJJLjava/math/RoundingMode;)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lzkc;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public abstract c()Lw54;
-.end method
-
-.method public abstract d()Ly7c;
-.end method
+.field public static search_menu_title:I = 0x7f130c98

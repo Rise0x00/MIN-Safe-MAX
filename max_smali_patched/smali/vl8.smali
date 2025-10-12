@@ -4,63 +4,96 @@
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field public a:J
 
-.field public b:Landroid/content/ContentResolver;
+.field public b:J
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    sget-boolean v0, Lyl8;->b:Z
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Lvl8;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lul8;Ljava/lang/String;)Z
+.method public a()Lyl8;
     .locals 1
 
-    iget v0, p1, Lul8;->b:I
+    new-instance v0, Lyl8;
 
-    if-gez v0, :cond_0
+    invoke-direct {v0, p0}, Lwl8;-><init>(Lvl8;)V
 
-    iget-object p0, p0, Lvl8;->a:Landroid/content/Context;
+    return-object v0
+.end method
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+.method public b(J)V
+    .locals 2
 
-    move-result-object p0
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iget-object p1, p1, Lul8;->a:Ljava/lang/String;
+    cmp-long v0, p1, v0
 
-    invoke-virtual {p0, p2, p1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v0, :cond_1
 
-    move-result p0
+    const-wide/16 v0, 0x0
 
-    if-nez p0, :cond_1
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lvl8;->a:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    iget p1, p1, Lul8;->c:I
-
-    invoke-virtual {p0, p2, v0, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    goto :goto_1
 
     :cond_1
-    const/4 p0, 0x0
+    :goto_0
+    const/4 v0, 0x1
 
-    return p0
+    :goto_1
+    invoke-static {v0}, Lpih;->i(Z)V
+
+    iput-wide p1, p0, Lvl8;->b:J
+
+    return-void
+.end method
+
+.method public c(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lpih;->i(Z)V
+
+    iput-wide p1, p0, Lvl8;->a:J
+
+    return-void
 .end method

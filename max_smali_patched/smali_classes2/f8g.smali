@@ -1,160 +1,144 @@
 .class public final Lf8g;
-.super Li8g;
+.super Li9f;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Lw07;
-
-.field public final e:Z
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lw07;Z)V
+.method public constructor <init>(I)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lf8g;->o:I
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, v0}, Li9f;-><init>(Ln0b;)V
+
+    .line 3
+    const-string v0, "type"
+
+    .line 4
+    invoke-static {p1}, Lqw1;->u(I)I
+
+    move-result p1
+
+    .line 5
+    invoke-virtual {p0, p1, v0}, Li9f;->f(ILjava/lang/String;)V
+
+    .line 6
+    const-string p1, "count"
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0, p1}, Li9f;->f(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;JJJ)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lf8g;->o:I
+
+    const/4 v0, 0x0
+
+    .line 7
+    invoke-direct {p0, v0}, Li9f;-><init>(Ln0b;)V
+
+    .line 8
+    const-string v0, "videoId"
+
+    invoke-virtual {p0, p2, p3, v0}, Li9f;->j(JLjava/lang/String;)V
+
+    const-wide/16 p2, 0x0
+
+    cmp-long v0, p4, p2
+
+    if-eqz v0, :cond_0
+
+    .line 9
+    const-string v0, "chatId"
+
+    invoke-virtual {p0, p4, p5, v0}, Li9f;->j(JLjava/lang/String;)V
+
+    :cond_0
+    cmp-long p2, p6, p2
+
+    if-lez p2, :cond_1
+
+    .line 10
+    const-string p2, "messageId"
+
+    invoke-virtual {p0, p6, p7, p2}, Li9f;->j(JLjava/lang/String;)V
+
+    .line 11
+    :cond_1
+    invoke-static {p1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    .line 12
+    const-string p2, "token"
+
+    invoke-virtual {p0, p2, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ln0b;I)V
     .locals 0
 
-    invoke-direct {p0}, Lfd7;-><init>()V
+    .line 1
+    iput p2, p0, Lf8g;->o:I
 
-    iput-object p1, p0, Lf8g;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lf8g;->d:Lw07;
-
-    iput-boolean p3, p0, Lf8g;->e:Z
+    invoke-direct {p0, p1}, Li9f;-><init>(Ln0b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public K()S
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf8g;->o:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lf8g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lf8g;
-
-    iget-object v1, p0, Lf8g;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lf8g;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lf8g;->d:Lw07;
-
-    iget-object v3, p1, Lf8g;->d:Lw07;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean p0, p0, Lf8g;->e:Z
-
-    iget-boolean p1, p1, Lf8g;->e:Z
-
-    if-eq p0, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lf8g;->e:Z
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lf8g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-super {p0}, Li9f;->K()S
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    return v0
 
-    iget-object v1, p0, Lf8g;->d:Lw07;
+    :pswitch_0
+    sget-object v0, Ln0b;->c:Lt7a;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/16 v0, 0x52
 
-    move-result v1
+    return v0
 
-    add-int/2addr v1, v0
+    :pswitch_1
+    sget-object v0, Ln0b;->c:Lt7a;
 
-    mul-int/lit8 v1, v1, 0x1f
+    const/16 v0, 0x53
 
-    iget-boolean p0, p0, Lf8g;->e:Z
+    return v0
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Impact(queryId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lf8g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", impactStyle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf8g;->d:Lw07;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lf8g;->e:Z
-
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

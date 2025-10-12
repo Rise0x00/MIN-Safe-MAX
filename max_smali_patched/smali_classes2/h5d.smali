@@ -1,363 +1,61 @@
 .class public final Lh5d;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Li5d;
 
 
 # instance fields
-.field public final X:Ldue;
+.field public A0:I
 
-.field public final Y:Lzid;
+.field public X:Ljava/util/Collection;
 
-.field public final Z:I
+.field public Y:Ljava/lang/Object;
 
-.field public final a:I
+.field public Z:Lud2;
 
-.field public final b:Lyte;
+.field public o:Lq5d;
 
-.field public final c:I
+.field public w0:Ljava/util/Iterator;
 
-.field public final o:J
+.field public x0:I
+
+.field public synthetic y0:Ljava/lang/Object;
+
+.field public final synthetic z0:Lq5d;
 
 
 # direct methods
-.method public constructor <init>(ILyte;IJLyte;Lzid;I)V
+.method public constructor <init>(Lq5d;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    and-int/lit8 p8, p8, 0x20
+    iput-object p1, p0, Lh5d;->z0:Lq5d;
 
-    if-eqz p8, :cond_0
-
-    const/4 p6, 0x0
-
-    :cond_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lh5d;->a:I
-
-    iput-object p2, p0, Lh5d;->b:Lyte;
-
-    iput p3, p0, Lh5d;->c:I
-
-    iput-wide p4, p0, Lh5d;->o:J
-
-    iput-object p6, p0, Lh5d;->X:Ldue;
-
-    iput-object p7, p0, Lh5d;->Y:Lzid;
-
-    sget p1, Lqja;->H:I
-
-    iput p1, p0, Lh5d;->Z:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p0, p0, Lh5d;->a:I
+    iput-object p1, p0, Lh5d;->y0:Ljava/lang/Object;
 
-    return p0
-.end method
+    iget p1, p0, Lh5d;->A0:I
 
-.method public final b()Ldue;
-    .locals 0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lh5d;->X:Ldue;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lh5d;->A0:I
 
-.method public final e()Lejd;
-    .locals 0
-
-    iget-object p0, p0, Lh5d;->Y:Lzid;
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lh5d;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh5d;
-
-    iget v0, p0, Lh5d;->a:I
-
-    iget v1, p1, Lh5d;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lh5d;->b:Lyte;
-
-    iget-object v1, p1, Lh5d;->b:Lyte;
-
-    invoke-virtual {v0, v1}, Lyte;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lh5d;->c:I
-
-    iget v1, p1, Lh5d;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-wide v0, p0, Lh5d;->o:J
-
-    iget-wide v2, p1, Lh5d;->o:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lh5d;->X:Ldue;
-
-    iget-object v1, p1, Lh5d;->X:Ldue;
-
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object p0, p0, Lh5d;->Y:Lzid;
-
-    iget-object p1, p1, Lh5d;->Y:Lzid;
-
-    invoke-virtual {p0, p1}, Lzid;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_7
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_7
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lh5d;->o:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Ldue;
-    .locals 0
-
-    iget-object p0, p0, Lh5d;->b:Lyte;
-
-    return-object p0
-.end method
-
-.method public final getType()Lgjd;
-    .locals 0
-
-    sget-object p0, Lgjd;->b:Lgjd;
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lh5d;->a:I
-
-    invoke-static {v0}, Ldw1;->t(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lh5d;->b:Lyte;
-
-    iget v2, v2, Lyte;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh5d;->c:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lh5d;->o:J
-
-    invoke-static {v0, v1, v2, v3}, Lt2g;->a(IIJ)I
-
-    move-result v0
-
-    sget-object v2, Lgjd;->b:Lgjd;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lh5d;->X:Ldue;
-
-    if-nez v0, :cond_0
+    iget-object p1, p0, Lh5d;->z0:Lq5d;
 
     const/4 v0, 0x0
 
-    goto :goto_0
+    invoke-static {p1, v0, v0, p0}, Lq5d;->h(Lq5d;Ljava/util/List;Ljava/util/Set;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object p1
 
-    move-result v0
-
-    :goto_0
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object p0, p0, Lh5d;->Y:Lzid;
-
-    invoke-virtual {p0}, Lzid;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v2
-
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lh5d;->Z:I
-
-    return p0
-.end method
-
-.method public final t()I
-    .locals 0
-
-    iget p0, p0, Lh5d;->c:I
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SettingStorageItem(sectionItemType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lh5d;->a:I
-
-    invoke-static {v1}, Lgkc;->s(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh5d;->b:Lyte;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sectionId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lh5d;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", itemId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lh5d;->o:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lgjd;->b:Lgjd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", descriptionRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh5d;->X:Ldue;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", endView="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lh5d;->Y:Lzid;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

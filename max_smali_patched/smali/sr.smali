@@ -1,64 +1,56 @@
-.class public final synthetic Lsr;
+.class public final Lsr;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Lox4;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lti5;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lti5;I)V
     .locals 0
-
-    iput p1, p0, Lsr;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lsr;->b:Lti5;
 
-.method private final a(Ljava/lang/Runnable;)V
-    .locals 0
+    iput p2, p0, Lsr;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+.method public final f(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iget p0, p0, Lsr;->a:I
+    iget-object v0, p0, Lsr;->b:Lti5;
 
-    packed-switch p0, :pswitch_data_0
+    iget v1, p0, Lsr;->a:I
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-virtual {v0, p1, v1}, Lti5;->e(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
-    :pswitch_0
-    return-void
+    move-result-object p1
 
-    :pswitch_1
-    invoke-static {}, Ltr;->D()Ltr;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public final j()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iget-object p0, p0, Ltr;->h:Luh4;
+    iget-object v0, p0, Lsr;->b:Lti5;
 
-    iget-object p0, p0, Luh4;->i:Ljava/util/concurrent/ExecutorService;
+    iget v1, p0, Lsr;->a:I
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lti5;->c(I)Landroid/graphics/drawable/Drawable;
 
-    return-void
+    move-result-object v0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,78 +1,94 @@
 .class public final Lwk1;
-.super Ljava/lang/Object;
+.super Lgl1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Laa1;
-
-.field public final b:Ljt1;
+.field public final D:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 0
 
-    sget-object v0, Lxj1;->a:Lxj1;
+    invoke-direct {p0}, Lgl1;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v1, Laa1;
-
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Laa1;
-
-    sget-object v1, Ld41;->a:Ld41;
-
-    invoke-virtual {v1}, Ld41;->d()Ljt1;
-
-    move-result-object v1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lwk1;->a:Laa1;
-
-    iput-object v1, p0, Lwk1;->b:Ljt1;
+    iput-object p1, p0, Lwk1;->D:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwk1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwk1;
+
+    iget-object v1, p0, Lwk1;->D:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lwk1;->D:Ljava/lang/CharSequence;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget-object p0, p0, Lwk1;->b:Ljt1;
+    iget-object v0, p0, Lwk1;->D:Ljava/lang/CharSequence;
 
-    move-object v0, p0
-
-    check-cast v0, Lwt1;
-
-    invoke-virtual {v0}, Lwt1;->p()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    check-cast p0, Lwt1;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p0}, Lwt1;->y()Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v1, "RecordStart(name="
 
-    if-eqz p0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 p0, 0x1
+    iget-object v1, p0, Lwk1;->D:Ljava/lang/CharSequence;
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p0, 0x0
+    const-string v1, ")"
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

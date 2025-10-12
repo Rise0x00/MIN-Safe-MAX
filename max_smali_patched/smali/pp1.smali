@@ -1,48 +1,25 @@
 .class public final Lpp1;
-.super Lax3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/LinkedHashSet;
 
-.field public final synthetic Y:Lxl1;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public b:Lnp1;
 
 
 # direct methods
-.method public constructor <init>(Lxl1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lpp1;->Y:Lxl1;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, Lpp1;->o:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lpp1;->X:I
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    or-int/2addr p1, v0
+    iput-object v0, p0, Lpp1;->a:Ljava/util/LinkedHashSet;
 
-    iput p1, p0, Lpp1;->X:I
-
-    iget-object p1, p0, Lpp1;->Y:Lxl1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lxl1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

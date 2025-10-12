@@ -1,51 +1,63 @@
-.class public abstract synthetic Lipd;
+.class public abstract Lipd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final d:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final e:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    const-string v1, "STATE_REG"
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    array-length v1, v1
+    sput-object v0, Lipd;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    new-array v1, v1, [I
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    const/4 v2, 0x1
+    const-string v1, "STATE_COMPLETED"
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lipd;->b:Lkotlinx/coroutines/internal/Symbol;
 
-    :catch_0
-    const/4 v3, 0x2
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v1, "STATE_CANCELLED"
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    :catch_2
-    sput-object v1, Lipd;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lipd;->c:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "NO_RESULT"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lipd;->d:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "PARAM_CLAUSE_0"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lipd;->e:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method

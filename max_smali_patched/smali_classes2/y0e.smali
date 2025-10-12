@@ -3,188 +3,118 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx0e;
+.implements Lz0e;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Lz0e;
-
-.field public final d:Lauf;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v0, Ly0e;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "(DEF_SSL)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ly0e;->a:Ljava/lang/String;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ly0e;->b:Landroid/content/Context;
-
-    new-instance p1, Lz0e;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ly0e;->c:Lz0e;
-
-    new-instance v0, Lauf;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1, p1}, Lauf;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ly0e;->d:Lauf;
+    iput p1, p0, Ly0e;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljyd;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lhw7;->o:Lhw7;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ly0e;->a:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    sget-object v2, Lz76;->f:Lvea;
+    return v0
 
-    const/4 v3, 0x0
+    :cond_0
+    instance-of v1, p1, Ly0e;
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2, v0}, Lvea;->a(Lhw7;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "createSocketFactory, host="
-
-    const-string v5, " ->"
-
-    invoke-static {v4, p1, v5}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v0, v1, v4, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_1
+    check-cast p1, Ly0e;
+
+    iget v1, p0, Ly0e;->a:I
+
+    iget p1, p1, Ly0e;->a:I
+
+    if-eq v1, p1, :cond_2
+
     :goto_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 p1, 0x0
 
-    move-result-wide v1
-
-    :try_start_0
-    new-instance v4, Ljyd;
-
-    iget-object v5, p0, Ly0e;->b:Landroid/content/Context;
-
-    invoke-direct {v4, v5, p1}, Ljyd;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    sub-long/2addr v5, v1
-
-    iget-object p1, p0, Ly0e;->c:Lz0e;
-
-    const-wide/16 v1, 0x0
-
-    cmp-long v1, v5, v1
-
-    if-ltz v1, :cond_2
-
-    iput-wide v5, p1, Lz0e;->a:J
-
-    iget-wide v1, p1, Lz0e;->b:J
-
-    add-long/2addr v1, v5
-
-    iput-wide v1, p1, Lz0e;->b:J
-
-    iget v1, p1, Lz0e;->c:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p1, Lz0e;->c:I
-
-    goto :goto_1
+    return p1
 
     :cond_2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
+.end method
 
-    :goto_1
-    iget-object p0, p0, Ly0e;->a:Ljava/lang/String;
+.method public final hashCode()I
+    .locals 3
 
-    sget-object p1, Lz76;->f:Lvea;
+    iget v0, p0, Ly0e;->a:I
 
-    if-nez p1, :cond_3
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    goto :goto_2
+    move-result v0
 
-    :cond_3
-    invoke-virtual {p1, v0}, Lvea;->a(Lhw7;)Z
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    sget-object v1, Lxla;->a:Lxla;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    add-int/2addr v1, v0
 
-    const-string v1, "<- createSocketFactory, took="
+    return v1
+.end method
 
-    const-string v2, "ms"
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v5, v6, v1, v2}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, "Count(count="
 
-    invoke-virtual {p1, v0, p0, v1, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_4
-    :goto_2
-    return-object v4
+    iget v1, p0, Ly0e;->a:I
 
-    :catchall_0
-    move-exception p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance p1, Ljavax/net/ssl/SSLException;
+    const-string v1, ", animated=false, appearance="
 
-    const-string v0, "Failed to create socket factory"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0, p0}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    sget-object v1, Lxla;->a:Lxla;
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :catch_0
-    move-exception p0
+    const-string v1, ")"
 
-    throw p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

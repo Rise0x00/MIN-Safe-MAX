@@ -1,14 +1,8 @@
-.class public interface abstract Lkic;
+.class public abstract Lkic;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# static fields
+.field public static about_app_settings_toolbar_title:I = 0x7f13001d
 
-.method public abstract b(Ljic;)V
-.end method
-
-.method public abstract c()V
-.end method
+.field public static about_app_settings_version:I = 0x7f13001e

@@ -3,49 +3,37 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+# instance fields
+.field public final a:Lo49;
 
-    const/4 v0, 0x1
+.field public final b:Ldob;
 
-    if-ne p0, p1, :cond_0
+.field public final c:Lub2;
 
-    return v0
+.field public final d:Lov0;
 
-    :cond_0
-    instance-of p0, p1, Lrbd;
+.field public final e:Lxob;
 
-    if-nez p0, :cond_1
+.field public final f:Ldy;
 
-    const/4 p0, 0x0
 
-    return p0
-
-    :cond_1
-    check-cast p1, Lrbd;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method public constructor <init>(Lo49;Ldob;Lub2;Lov0;Lxob;Ldy;)V
     .locals 0
 
-    const/4 p0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iput-object p1, p0, Lrbd;->a:Lo49;
 
-    move-result p0
+    iput-object p2, p0, Lrbd;->b:Ldob;
 
-    return p0
-.end method
+    iput-object p3, p0, Lrbd;->c:Lub2;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    iput-object p4, p0, Lrbd;->d:Lov0;
 
-    const-string p0, "Options(isDebugMode=false)"
+    iput-object p5, p0, Lrbd;->e:Lxob;
 
-    return-object p0
+    iput-object p6, p0, Lrbd;->f:Ldy;
+
+    return-void
 .end method

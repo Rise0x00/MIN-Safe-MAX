@@ -23,21 +23,21 @@
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;",
         "params",
         "Lkotlin/Function0;",
-        "Ltcf;",
+        "Loyf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "startRecord",
-        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Ld96;Lf96;)V",
+        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lve6;Lxe6;)V",
         "Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;",
         "stopRecord",
-        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Ld96;Lf96;)V",
+        "(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lve6;Lxe6;)V",
         "Lru/ok/android/externcalls/sdk/record/RecordDescription;",
         "getRecordDescription",
         "()Lru/ok/android/externcalls/sdk/record/RecordDescription;",
         "",
-        "Lsed;",
+        "Lnwd;",
         "Lru/ok/android/externcalls/sdk/record/RecordDescriptionHistory;",
         "getRecordDescriptionHistory",
         "()Ljava/util/Map;",
@@ -63,7 +63,7 @@
 
 
 # direct methods
-.method public static synthetic startRecord$default(Lru/ok/android/externcalls/sdk/record/RecordManager;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic startRecord$default(Lru/ok/android/externcalls/sdk/record/RecordManager;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -84,7 +84,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/RecordManager;->startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/RecordManager;->startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lve6;Lxe6;)V
 
     return-void
 
@@ -98,7 +98,7 @@
     throw p0
 .end method
 
-.method public static synthetic stopRecord$default(Lru/ok/android/externcalls/sdk/record/RecordManager;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic stopRecord$default(Lru/ok/android/externcalls/sdk/record/RecordManager;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -119,7 +119,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/RecordManager;->stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/record/RecordManager;->stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lve6;Lxe6;)V
 
     return-void
 
@@ -146,7 +146,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lsed;",
+            "Lnwd;",
             "Lru/ok/android/externcalls/sdk/record/RecordDescriptionHistory;",
             ">;"
         }
@@ -156,25 +156,25 @@
 .method public abstract removeRecordListener(Lru/ok/android/externcalls/sdk/events/RecordEventListener;)V
 .end method
 
-.method public abstract startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Ld96;Lf96;)V
+.method public abstract startRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Ld96;Lf96;)V
+.method public abstract stopRecord(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation

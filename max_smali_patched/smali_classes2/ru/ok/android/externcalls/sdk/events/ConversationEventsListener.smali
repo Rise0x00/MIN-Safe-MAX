@@ -153,9 +153,9 @@
 .method public onExternalByInternalResolution(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public onJoinLinkUpdated(Ljava/lang/String;)V
@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method public onMuteChanged(Ldl9;)V
+.method public onMuteChanged(Lbu9;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method public onMuteStateInitialized(Ldl9;)V
+.method public onMuteStateInitialized(Lbu9;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -330,7 +330,7 @@
     return-void
 .end method
 
-.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lyg1;)V
+.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lzg1;)V
     .locals 0
 
     return-void

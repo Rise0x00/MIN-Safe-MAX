@@ -1,155 +1,180 @@
-.class public final Lt81;
-.super Leud;
+.class public final synthetic Lt81;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final A0:Llud;
+.field public final synthetic a:I
 
-.field public final B0:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
 
 # direct methods
-.method public constructor <init>(Lvm3;Llud;)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Luhc;-><init>(Landroid/view/View;)V
+    iput p2, p0, Lt81;->a:I
 
-    iput-object p2, p0, Lt81;->A0:Llud;
+    iput-object p1, p0, Lt81;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    new-instance p1, Lt5;
-
-    const/16 p2, 0x1a
-
-    invoke-direct {p1, p2, p0}, Lt5;-><init>(ILjava/lang/Object;)V
-
-    const/4 p2, 0x3
-
-    invoke-static {p2, p1}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lt81;->B0:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lep6;)V
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p1, Lep6;->p0:I
+    iget v0, p0, Lt81;->a:I
 
-    iget-wide v1, p1, Lep6;->b:J
+    const/4 v1, 0x0
 
-    iget-object v3, p0, Luhc;->a:Landroid/view/View;
+    iget-object v2, p0, Lt81;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    check-cast v3, Lvm3;
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v4, p1, Lep6;->r0:J
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v2}, Lb04;->getRouter()Li8d;
 
-    move-result v4
+    move-result-object v0
 
-    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    return-object v0
 
-    iget-object v4, p1, Lep6;->Y:Ljava/lang/String;
+    :pswitch_0
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
 
-    invoke-virtual {v3, v4}, Lvm3;->setTitle(Ljava/lang/CharSequence;)V
+    new-instance v0, Lr81;
 
-    iget-object v4, p1, Lep6;->q0:Lwo6;
+    new-instance v1, Lrxd;
 
-    instance-of v4, v4, Lto6;
+    const/4 v3, 0x5
 
-    const/4 v5, 0x0
+    invoke-direct {v1, v3, v2}, Lrxd;-><init>(ILjava/lang/Object;)V
 
-    if-eqz v4, :cond_0
+    sget-object v2, Lzid;->a:Lzid;
 
-    invoke-virtual {v3, v1, v2, v5, v5}, Lvm3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    invoke-virtual {v2}, Lzid;->p()Ljna;
 
-    iget-object v1, p0, Lt81;->B0:Ljava/lang/Object;
+    move-result-object v2
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljna;->c()Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lee0;
+    invoke-direct {v0, v1, v2}, Lr81;-><init>(Lrxd;Ljava/util/concurrent/ExecutorService;)V
 
-    invoke-virtual {v3, v1}, Lvm3;->setAvatarOverlay(Lee0;)V
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
+
+    invoke-virtual {v2}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Li91;
+
+    move-result-object v0
+
+    sget-object v3, Li91;->c:Li91;
+
+    if-ne v0, v3, :cond_0
+
+    new-instance v0, Lbna;
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2, v1}, Lbna;-><init>(Landroid/content/Context;I)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lbna;->setVisibility(I)V
+
+    sget v1, Lvdc;->call_history_page_empty:I
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    sget v1, Lg9d;->g0:I
+
+    invoke-virtual {v0, v1}, Lbna;->setIcon(I)V
+
+    sget v1, Lpic;->call_history_missed_calls_empty_state_title:I
+
+    new-instance v2, Ljef;
+
+    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lbna;->setTitle(Loef;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3, v5}, Lvm3;->setAvatarOverlay(Lee0;)V
-
-    iget-object v4, p1, Lep6;->c:Ljava/lang/CharSequence;
-
-    iget-object v5, p1, Lep6;->o:Ljava/lang/String;
-
-    if-nez v5, :cond_1
-
-    const-string v5, ""
-
-    :cond_1
-    invoke-virtual {v3, v1, v2, v4, v5}, Lvm3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p1, Lep6;->o0:Ljava/lang/CharSequence;
+    return-object v0
 
-    invoke-virtual {v3, v1}, Lvm3;->setDescription(Ljava/lang/CharSequence;)V
+    :pswitch_2
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
 
-    iget-object v1, p1, Lep6;->Z:Ljava/lang/String;
+    new-instance v0, Lmh1;
 
-    invoke-virtual {v3, v1}, Lvm3;->setTime(Ljava/lang/CharSequence;)V
+    new-instance v3, Lt81;
 
-    iget-boolean v1, p1, Lep6;->n0:Z
+    const/4 v4, 0x4
 
-    invoke-virtual {v3, v1}, Lvm3;->B(Z)V
+    invoke-direct {v3, v2, v4}, Lt81;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
-    const/4 v1, 0x0
+    new-instance v4, Ls5f;
 
-    const/4 v2, 0x1
+    invoke-direct {v4, v3}, Ls5f;-><init>(Lve6;)V
 
-    if-ne v0, v2, :cond_2
+    new-instance v3, Ld7h;
 
-    move v4, v2
+    invoke-direct {v3, v2, v1}, Ld7h;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    goto :goto_1
+    invoke-direct {v0, v4, v3}, Lmh1;-><init>(Ls5f;Ld7h;)V
 
-    :cond_2
-    move v4, v1
+    return-object v0
 
-    :goto_1
-    invoke-virtual {v3, v4}, Lvm3;->x(Z)V
+    :pswitch_3
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
 
-    const/4 v4, 0x2
+    new-instance v0, Lz81;
 
-    if-ne v0, v4, :cond_3
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->requireActivity()Lqm;
 
-    move v1, v2
+    move-result-object v1
 
-    :cond_3
-    invoke-virtual {v3, v1}, Lvm3;->y(Z)V
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iget-wide v0, p1, Lep6;->a:J
+    move-result-object v1
 
-    iput-wide v0, v3, Lvm3;->M0:J
+    invoke-virtual {v2}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->B0()Li91;
 
-    iget-object p0, p0, Lt81;->A0:Llud;
+    move-result-object v3
 
-    iput-object p0, v3, Lvm3;->K0:Llud;
+    iget-object v2, v2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
 
-    return-void
-.end method
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-.method public final bridge synthetic x(Llp7;)V
-    .locals 0
+    move-result-object v2
 
-    check-cast p1, Lep6;
+    check-cast v2, Lmh1;
 
-    invoke-virtual {p0, p1}, Lt81;->F(Lep6;)V
+    invoke-direct {v0, v1, v3, v2}, Lz81;-><init>(Landroid/content/Context;Li91;Lmh1;)V
 
-    return-void
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -17,7 +17,6 @@
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#ff000000</color>
     <color name="black_50">#88000000</color>
-    <color name="black_70">#af000000</color>
     <color name="blue">#ff697cff</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>

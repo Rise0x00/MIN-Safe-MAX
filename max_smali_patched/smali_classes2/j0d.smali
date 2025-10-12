@@ -1,85 +1,44 @@
-.class public final enum Lj0d;
-.super Ljava/lang/Enum;
+.class public final Lj0d;
+.super Landroid/os/Handler;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lj0d;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Lj0d;
-
-.field public static final enum c:Lj0d;
-
-.field public static final synthetic o:[Lj0d;
+.field public final synthetic b:Lk0d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lk0d;Landroid/os/Looper;)V
+    .locals 0
 
-    new-instance v0, Lj0d;
+    iput-object p1, p0, Lj0d;->b:Lk0d;
 
-    const-string v1, "UNREAD"
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    const/4 v2, 0x0
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lj0d;->a:Lj0d;
-
-    new-instance v1, Lj0d;
-
-    const-string v2, "MENTION"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lj0d;->b:Lj0d;
-
-    new-instance v2, Lj0d;
-
-    const-string v3, "REACTION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lj0d;->c:Lj0d;
-
-    filled-new-array {v0, v1, v2}, [Lj0d;
-
-    move-result-object v0
-
-    sput-object v0, Lj0d;->o:[Lj0d;
+    iput p1, p0, Lj0d;->a:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lj0d;
+
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    const-class v0, Lj0d;
+    iget p1, p1, Landroid/os/Message;->what:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lj0d;->a:I
 
-    move-result-object p0
+    if-ne p1, v0, :cond_0
 
-    check-cast p0, Lj0d;
+    iget-object p1, p0, Lj0d;->b:Lk0d;
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Lk0d;->b()V
 
-.method public static values()[Lj0d;
-    .locals 1
-
-    sget-object v0, Lj0d;->o:[Lj0d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lj0d;
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

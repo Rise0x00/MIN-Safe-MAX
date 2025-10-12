@@ -1,202 +1,137 @@
-.class public final synthetic Lfld;
+.class public final Lfld;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lgld;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+.field public final b:Lub2;
+
+.field public final c:Llld;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
+.method public constructor <init>([Ljava/lang/String;Lub2;Llld;)V
     .locals 0
 
-    iput p2, p0, Lfld;->a:I
-
-    iput-object p1, p0, Lfld;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfld;->a:[Ljava/lang/String;
+
+    iput-object p2, p0, Lfld;->b:Lub2;
+
+    iput-object p3, p0, Lfld;->c:Llld;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final a(Ljava/lang/String;)Ljava/util/List;
+    .locals 8
 
-    iget v0, p0, Lfld;->a:I
+    iget-object v0, p0, Lfld;->c:Llld;
 
-    iget-object p0, p0, Lfld;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    iget-object v1, p0, Lfld;->b:Lub2;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Lof7;
+    new-instance v2, Leb2;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 v3, 0x2
 
-    move-result-object p0
+    invoke-direct {v2, v1, v3}, Leb2;-><init>(Lub2;I)V
 
-    return-object p0
+    const/4 v3, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Lof7;
-
-    new-instance v2, Lohd;
-
-    sget-object v0, Lald;->a:Lald;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v1, v3, v2}, Lub2;->d0(Ljava/lang/String;Lt1f;)Ljava/lang/Object;
 
     move-result-object v1
 
-    const-class v3, Lrv0;
+    check-cast v1, Lm82;
 
-    invoke-virtual {v1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    sget-object v2, Lb75;->a:Lb75;
 
-    move-result-object v1
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lald;->b()Lth7;
+    goto :goto_1
 
-    move-result-object v3
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0, v1, p1}, Llld;->g(Lm82;Ljava/lang/String;)Z
 
-    check-cast v3, Lkle;
+    move-result v3
 
-    invoke-virtual {v3}, Lkle;->getValue()Ljava/lang/Object;
+    if-eqz v3, :cond_1
 
-    move-result-object v3
+    invoke-virtual {v0, v1, p1}, Llld;->a(Lm82;Ljava/lang/String;)Lrkd;
 
-    check-cast v3, Lhoe;
+    move-result-object p1
 
-    invoke-direct {v2, v1, v3}, Lohd;-><init>(Lth7;Lhoe;)V
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual {v0}, Lald;->b()Lth7;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
 
-    check-cast v1, Lkle;
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v1}, Lkle;->getValue()Ljava/lang/Object;
+    goto :goto_2
 
-    move-result-object v1
+    :cond_1
+    iget-object v3, p0, Lfld;->a:[Ljava/lang/String;
 
-    move-object v4, v1
+    array-length v4, v3
 
-    check-cast v4, Lhoe;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    :goto_0
+    if-ge v5, v4, :cond_3
 
-    move-result-object v1
+    aget-object v6, v3, v5
 
-    const-class v3, Lh1d;
+    invoke-virtual {v0, v6, p1}, Llld;->i(Ljava/lang/String;Ljava/lang/String;)Z
 
-    invoke-virtual {v1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    move-result v7
 
-    move-result-object v5
+    if-eqz v7, :cond_2
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0, v1, v6}, Llld;->a(Lm82;Ljava/lang/String;)Lrkd;
 
-    move-result-object v1
+    move-result-object p1
 
-    const-class v3, Ljk;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual {v1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v9
+    return-object p1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    :cond_2
+    add-int/lit8 v5, v5, 0x1
 
-    move-result-object v1
+    goto :goto_0
 
-    const-class v3, Lvme;
+    :cond_3
+    :goto_1
+    return-object v2
 
-    invoke-virtual {v1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    :goto_2
+    const-class v0, Lfld;
 
-    move-result-object v10
-
-    new-instance v3, Lknc;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v6, Lz43;
-
-    invoke-virtual {v1, v6}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    new-instance v7, Lfld;
-
-    const/4 v8, 0x1
-
-    invoke-direct {v7, p0, v8}, Lfld;-><init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
-
-    const/4 p0, 0x7
-
-    const/4 v8, 0x0
-
-    invoke-direct {v3, v1, v7, v8, p0}, Lknc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v1, Lvbd;
-
-    invoke-virtual {p0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p0
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v6}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v6, Llh5;
-
-    invoke-virtual {v1, v6}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Lyg3;
+    const-string v1, "fail to search saved messages chat"
 
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v1, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    move-object v11, v0
-
-    check-cast v11, Lyg3;
-
-    new-instance v1, Lbmd;
-
-    move-object v6, p0
-
-    invoke-direct/range {v1 .. v11}, Lbmd;-><init>(Lohd;Lknc;Lhoe;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lyg3;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v2
 .end method

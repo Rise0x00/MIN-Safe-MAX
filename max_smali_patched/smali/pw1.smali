@@ -1,132 +1,164 @@
-.class public final Lpw1;
+.class public final synthetic Lpw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luw1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Luv1;
+.field public final synthetic a:I
 
-.field public b:Z
+.field public final synthetic b:Lv5d;
 
 
 # direct methods
-.method public constructor <init>(Luv1;)V
-    .locals 1
+.method public synthetic constructor <init>(Lv5d;I)V
+    .locals 0
+
+    iput p2, p0, Lpw1;->a:I
+
+    iput-object p1, p0, Lpw1;->b:Lv5d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lpw1;->b:Z
-
-    iput-object p1, p0, Lpw1;->a:Luv1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lyp7;
+.method public final run()V
     .locals 4
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iget v0, p0, Lpw1;->a:I
 
-    invoke-static {v0}, Lcp;->C(Ljava/lang/Object;)Llz6;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lpw1;->b:Lv5d;
 
-    if-nez p1, :cond_0
+    iget-object v1, v0, Lv5d;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v1, Lgx0;
 
-    :cond_0
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
+    iget-object v1, v1, Lgx0;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    check-cast v1, Luw1;
+
+    iget v1, v1, Luw1;->W0:I
+
+    const/16 v2, 0x8
+
+    const/4 v3, 0x0
+
+    if-eq v1, v2, :cond_0
+
+    iget-object v0, v0, Lv5d;->c:Ljava/lang/Object;
+
+    check-cast v0, Lgx0;
+
+    iget-object v0, v0, Lgx0;->c:Ljava/lang/Object;
+
+    check-cast v0, Luw1;
+
+    iget v1, v0, Luw1;->W0:I
+
+    invoke-static {v1}, Lqe0;->s(I)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Integer;
+    const-string v2, "Camera skip reopen at state: "
 
-    if-nez v1, :cond_1
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v3}, Luw1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    :cond_0
+    iget-object v1, v0, Lv5d;->c:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v1, Lgx0;
+
+    iget-object v1, v1, Lgx0;->c:Ljava/lang/Object;
+
+    check-cast v1, Luw1;
+
+    const-string v2, "Camera onError timeout, reopen it."
+
+    invoke-virtual {v1, v2, v3}, Luw1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lv5d;->c:Ljava/lang/Object;
+
+    check-cast v1, Lgx0;
+
+    iget-object v1, v1, Lgx0;->c:Ljava/lang/Object;
+
+    check-cast v1, Luw1;
+
+    const/4 v2, 0x7
+
+    invoke-virtual {v1, v2}, Luw1;->F(I)V
+
+    iget-object v0, v0, Lv5d;->c:Ljava/lang/Object;
+
+    check-cast v0, Lgx0;
+
+    iget-object v0, v0, Lgx0;->c:Ljava/lang/Object;
+
+    check-cast v0, Luw1;
+
+    iget-object v0, v0, Luw1;->w0:Ltw1;
+
+    invoke-virtual {v0}, Ltw1;->b()V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpw1;->b:Lv5d;
+
+    iget-object v1, v0, Lv5d;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
 
-    if-eq v1, v2, :cond_2
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    const/4 v3, 0x2
+    move-result v1
 
-    if-eq v1, v3, :cond_2
+    if-eqz v1, :cond_1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+    :cond_1
+    iget-object v1, v0, Lv5d;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    check-cast v1, Lgx0;
 
-    move-result-object p1
+    iget-object v1, v1, Lgx0;->c:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast v1, Luw1;
 
-    if-eqz p1, :cond_3
+    iget-object v1, v1, Luw1;->c:Lcsd;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    new-instance v2, Lpw1;
 
-    move-result p1
+    const/4 v3, 0x1
 
-    if-nez p1, :cond_3
+    invoke-direct {v2, v0, v3}, Lpw1;-><init>(Lv5d;I)V
 
-    iput-boolean v2, p0, Lpw1;->b:Z
+    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
 
-    iget-object p0, p0, Lpw1;->a:Luv1;
-
-    iget-object p0, p0, Luv1;->h:Ljv5;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Ljv5;->e(Z)V
-
-    :cond_3
-    :goto_0
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-boolean v0, p0, Lpw1;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lpw1;->a:Luv1;
-
-    iget-object p0, p0, Luv1;->h:Ljv5;
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ljv5;->a(ZZ)V
-
-    :cond_0
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

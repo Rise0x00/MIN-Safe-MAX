@@ -1,157 +1,105 @@
-.class public final enum Lgrb;
-.super Ljava/lang/Enum;
+.class public final Lgrb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lgrb;
-
-.field public static final enum Y:Lgrb;
-
-.field public static final enum Z:Lgrb;
-
-.field public static final enum b:Lgrb;
-
-.field public static final enum c:Lgrb;
-
-.field public static final synthetic n0:[Lgrb;
-
-.field public static final enum o:Lgrb;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:Landroid/graphics/Rect;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Landroid/graphics/Matrix;
+
+.field public final f:Lc2d;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Ljava/util/ArrayList;
+
+.field public final i:Ljx7;
+
+.field public j:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lgrb;
-
-    const/4 v1, 0x0
-
-    const-string v2, "http/1.0"
-
-    const-string v3, "HTTP_1_0"
-
-    invoke-direct {v0, v3, v1, v2}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lgrb;->b:Lgrb;
-
-    new-instance v1, Lgrb;
-
-    const/4 v2, 0x1
-
-    const-string v3, "http/1.1"
-
-    const-string v4, "HTTP_1_1"
-
-    invoke-direct {v1, v4, v2, v3}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lgrb;->c:Lgrb;
-
-    new-instance v2, Lgrb;
-
-    const/4 v3, 0x2
-
-    const-string v4, "spdy/3.1"
-
-    const-string v5, "SPDY_3"
-
-    invoke-direct {v2, v5, v3, v4}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lgrb;->o:Lgrb;
-
-    new-instance v3, Lgrb;
-
-    const/4 v4, 0x3
-
-    const-string v5, "h2"
-
-    const-string v6, "HTTP_2"
-
-    invoke-direct {v3, v6, v4, v5}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lgrb;->X:Lgrb;
-
-    new-instance v4, Lgrb;
-
-    const/4 v5, 0x4
-
-    const-string v6, "h2_prior_knowledge"
-
-    const-string v7, "H2_PRIOR_KNOWLEDGE"
-
-    invoke-direct {v4, v7, v5, v6}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lgrb;->Y:Lgrb;
-
-    new-instance v5, Lgrb;
-
-    const/4 v6, 0x5
-
-    const-string v7, "quic"
-
-    const-string v8, "QUIC"
-
-    invoke-direct {v5, v8, v6, v7}, Lgrb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lgrb;->Z:Lgrb;
-
-    filled-new-array/range {v0 .. v5}, [Lgrb;
-
-    move-result-object v0
-
-    sput-object v0, Lgrb;->n0:[Lgrb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lgrb;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lgrb;
+.method public constructor <init>(Lo22;Landroid/graphics/Rect;IILandroid/graphics/Matrix;Lc2d;Ljx7;I)V
     .locals 1
 
-    const-class v0, Lgrb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, -0x1
 
-    move-result-object p0
+    iput v0, p0, Lgrb;->j:I
 
-    check-cast p0, Lgrb;
+    iput p8, p0, Lgrb;->a:I
 
-    return-object p0
-.end method
+    iput p4, p0, Lgrb;->d:I
 
-.method public static values()[Lgrb;
-    .locals 1
+    iput p3, p0, Lgrb;->c:I
 
-    sget-object v0, Lgrb;->n0:[Lgrb;
+    iput-object p2, p0, Lgrb;->b:Landroid/graphics/Rect;
 
-    invoke-virtual {v0}, [Lgrb;->clone()Ljava/lang/Object;
+    iput-object p5, p0, Lgrb;->e:Landroid/graphics/Matrix;
 
-    move-result-object v0
+    iput-object p6, p0, Lgrb;->f:Lc2d;
 
-    check-cast v0, [Lgrb;
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    return-object v0
-.end method
+    move-result p2
 
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-result-object p2
 
-    iget-object p0, p0, Lgrb;->a:Ljava/lang/String;
+    iput-object p2, p0, Lgrb;->g:Ljava/lang/String;
 
-    return-object p0
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p2, p0, Lgrb;->h:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lo22;->a:Ljava/util/List;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ly22;
+
+    iget-object p3, p0, Lgrb;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p2, 0x0
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p7, p0, Lgrb;->i:Ljx7;
+
+    return-void
 .end method

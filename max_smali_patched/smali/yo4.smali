@@ -1,94 +1,39 @@
 .class public final Lyo4;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Lyhh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
-# instance fields
-.field private volatile synthetic _decision$volatile:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-class v0, Lyo4;
-
-    const-string v1, "_decision$volatile"
-
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lyo4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final afterCompletion(Ljava/lang/Object;)V
-    .locals 0
+.method public final K(Ljava/lang/Object;F)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lyo4;->afterResume(Ljava/lang/Object;)V
+    check-cast p1, Lzo4;
+
+    const v0, 0x461c4000    # 10000.0f
+
+    div-float/2addr p2, v0
+
+    iget-object v0, p1, Lzo4;->D0:Lky4;
+
+    iput p2, v0, Lky4;->b:F
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
 
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 3
+.method public final t(Ljava/lang/Object;)F
+    .locals 1
 
-    :cond_0
-    sget-object v0, Lyo4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    check-cast p1, Lzo4;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    iget-object p1, p1, Lzo4;->D0:Lky4;
 
-    move-result v1
+    iget p1, p1, Lky4;->b:F
 
-    const/4 v2, 0x2
+    const v0, 0x461c4000    # 10000.0f
 
-    if-eqz v1, :cond_2
+    mul-float/2addr p1, v0
 
-    const/4 v0, 0x1
-
-    if-ne v1, v0, :cond_1
-
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
-
-    invoke-static {p0}, Lu77;->F(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    invoke-static {p1}, Lj5e;->r(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0, v2, v0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lf96;ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Already resumed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
+    return p1
 .end method

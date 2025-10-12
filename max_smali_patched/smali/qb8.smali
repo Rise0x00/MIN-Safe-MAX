@@ -1,283 +1,281 @@
-.class public final Lqb8;
-.super Ljava/lang/Object;
+.class public Lqb8;
+.super Lq3;
 .source "SourceFile"
 
-# interfaces
-.implements Lob8;
-.implements Lpb8;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqb8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A0:F
 
-.field public final b:I
+.field public B0:F
 
-.field public c:[Landroid/media/MediaCodecInfo;
+.field public C0:F
+
+.field public D0:I
+
+.field public E0:Landroid/view/View;
+
+.field public F0:I
+
+.field public G0:Ljava/lang/String;
+
+.field public H0:F
+
+.field public X:F
+
+.field public Y:F
+
+.field public Z:Z
+
+.field public a:Lcom/google/android/gms/maps/model/LatLng;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public o:Ldo0;
+
+.field public w0:Z
+
+.field public x0:Z
+
+.field public y0:F
+
+.field public z0:F
 
 
 # direct methods
-.method public constructor <init>(IZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lqb8;->a:I
+    new-instance v0, Lbhh;
 
-    packed-switch p1, :pswitch_data_0
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
+
+    sput-object v0, Lqb8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p2, :cond_1
+    const/high16 v0, 0x3f000000    # 0.5f
 
-    if-eqz p3, :cond_0
+    iput v0, p0, Lqb8;->X:F
 
-    goto :goto_0
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    :cond_0
-    const/4 p1, 0x0
+    iput v1, p0, Lqb8;->Y:F
 
-    goto :goto_1
+    const/4 v2, 0x1
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    iput-boolean v2, p0, Lqb8;->w0:Z
 
-    :goto_1
-    iput p1, p0, Lqb8;->b:I
+    const/4 v2, 0x0
 
-    return-void
+    iput-boolean v2, p0, Lqb8;->x0:Z
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x0
 
-    if-nez p2, :cond_3
+    iput v3, p0, Lqb8;->y0:F
 
-    if-eqz p3, :cond_2
+    iput v0, p0, Lqb8;->z0:F
 
-    goto :goto_2
+    iput v3, p0, Lqb8;->A0:F
 
-    :cond_2
-    const/4 p1, 0x0
+    iput v1, p0, Lqb8;->B0:F
 
-    goto :goto_3
-
-    :cond_3
-    :goto_2
-    const/4 p1, 0x1
-
-    :goto_3
-    iput p1, p0, Lqb8;->b:I
+    iput v2, p0, Lqb8;->D0:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(I)Landroid/media/MediaCodecInfo;
-    .locals 2
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget v0, p0, Lqb8;->a:I
+    const/16 v0, 0x4f45
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0}, Lz84;->K(Landroid/os/Parcel;I)I
 
-    iget-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    move-result v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x2
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    iget-object v2, p0, Lqb8;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    iget v1, p0, Lqb8;->b:I
+    invoke-static {p1, v1, v2, p2}, Lz84;->G(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    const/4 p2, 0x3
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    iget-object v1, p0, Lqb8;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {p1, p2, v1}, Lz84;->H(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    iput-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    iget-object p2, p0, Lqb8;->c:Ljava/lang/String;
 
-    :cond_0
-    iget-object p0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    const/4 v1, 0x4
 
-    aget-object p0, p0, p1
+    invoke-static {p1, v1, p2}, Lz84;->H(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    return-object p0
+    iget-object p2, p0, Lqb8;->o:Ldo0;
 
-    :pswitch_0
-    iget-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    if-nez p2, :cond_0
 
-    if-nez v0, :cond_1
+    const/4 p2, 0x0
 
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lqb8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
-
-    :cond_1
-    iget-object p0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
-
-    aget-object p0, p0, p1
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 0
-
-    iget p0, p0, Lqb8;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-    .locals 0
-
-    iget p0, p0, Lqb8;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d()I
-    .locals 2
-
-    iget v0, p0, Lqb8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/media/MediaCodecList;
-
-    iget v1, p0, Lqb8;->b:I
-
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
-
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    iget-object p2, p2, Ldo0;->a:Lh27;
 
-    array-length p0, p0
+    invoke-interface {p2}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    return p0
+    move-result-object p2
 
-    :pswitch_0
-    iget-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    :goto_0
+    const/4 v2, 0x5
 
-    if-nez v0, :cond_1
+    invoke-static {p1, v2, p2}, Lz84;->F(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    new-instance v0, Landroid/media/MediaCodecList;
+    iget p2, p0, Lqb8;->X:F
 
-    iget v1, p0, Lqb8;->b:I
+    const/4 v2, 0x6
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    move-result-object v0
+    iget p2, p0, Lqb8;->Y:F
 
-    iput-object v0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    const/4 v2, 0x7
 
-    :cond_1
-    iget-object p0, p0, Lqb8;->c:[Landroid/media/MediaCodecInfo;
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-    array-length p0, p0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    return p0
+    iget-boolean p2, p0, Lqb8;->Z:Z
 
-    nop
+    const/16 v2, 0x8
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-.method public final e()Z
-    .locals 0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p0, p0, Lqb8;->a:I
+    iget-boolean p2, p0, Lqb8;->w0:Z
 
-    packed-switch p0, :pswitch_data_0
+    const/16 v2, 0x9
 
-    const/4 p0, 0x1
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-    return p0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :pswitch_0
-    const/4 p0, 0x1
+    iget-boolean p2, p0, Lqb8;->x0:Z
 
-    return p0
+    const/16 v2, 0xa
 
-    nop
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lqb8;->y0:F
+
+    const/16 v2, 0xb
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lqb8;->z0:F
+
+    const/16 v2, 0xc
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lqb8;->A0:F
+
+    const/16 v2, 0xd
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lqb8;->B0:F
+
+    const/16 v2, 0xe
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lqb8;->C0:F
+
+    const/16 v2, 0xf
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lqb8;->D0:I
+
+    const/16 v2, 0x11
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lqb8;->E0:Landroid/view/View;
+
+    new-instance v2, Lpaa;
+
+    invoke-direct {v2, p2}, Lpaa;-><init>(Ljava/lang/Object;)V
+
+    const/16 p2, 0x12
+
+    invoke-static {p1, p2, v2}, Lz84;->F(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget p2, p0, Lqb8;->F0:I
+
+    const/16 v2, 0x13
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/16 p2, 0x14
+
+    iget-object v2, p0, Lqb8;->G0:Ljava/lang/String;
+
+    invoke-static {p1, p2, v2}, Lz84;->H(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    iget p2, p0, Lqb8;->H0:F
+
+    const/16 v2, 0x15
+
+    invoke-static {p1, v2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static {p1, v0}, Lz84;->L(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

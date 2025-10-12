@@ -1,130 +1,148 @@
 .class public final Lrt5;
-.super Lkt5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
 
-.field public final c:Ljava/lang/Object;
+.field public b:Z
 
-.field public final o:Lu96;
+.field public c:J
+
+.field public d:I
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lu96;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lrt5;->b:I
-
-    iput-object p1, p0, Lrt5;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lrt5;->o:Lu96;
+    .line 1
+    iput p1, p0, Lrt5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public constructor <init>(IJLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lrt5;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p4, p0, Lrt5;->e:Ljava/lang/Object;
+
+    .line 4
+    iput p1, p0, Lrt5;->d:I
+
+    .line 5
+    iput-wide p2, p0, Lrt5;->c:J
+
+    .line 6
+    iput-boolean p6, p0, Lrt5;->b:Z
+
+    .line 7
+    iput-object p5, p0, Lrt5;->f:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/graphics/Bitmap;JLandroid/graphics/Point;IZ)V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    iput v0, p0, Lrt5;->a:I
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Lrt5;->e:Ljava/lang/Object;
+
+    .line 10
+    iput-wide p2, p0, Lrt5;->c:J
+
+    .line 11
+    iput-object p4, p0, Lrt5;->f:Ljava/lang/Object;
+
+    .line 12
+    iput p5, p0, Lrt5;->d:I
+
+    .line 13
+    iput-boolean p6, p0, Lrt5;->b:Z
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final g(Luu5;)V
-    .locals 2
+.method public toString()Ljava/lang/String;
+    .locals 8
 
-    iget v0, p0, Lrt5;->b:I
+    iget v0, p0, Lrt5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-object v0, p0, Lrt5;->o:Lu96;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    check-cast v0, Lwpe;
+    move-result-object v0
 
-    iget-object p0, p0, Lrt5;->c:Ljava/lang/Object;
-
-    invoke-virtual {v0, p0}, Lwpe;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmsb;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    instance-of v0, p0, Ljhe;
-
-    if-eqz v0, :cond_1
-
-    :try_start_1
-    check-cast p0, Ljhe;
-
-    invoke-interface {p0}, Ljhe;->get()Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez p0, :cond_0
-
-    invoke-static {p1}, Lg35;->a(Lwee;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ldwc;
-
-    invoke-direct {v0, p1, p0}, Ldwc;-><init>(Lwee;Ljava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Lwee;->e(Lyee;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lg35;->b(Ljava/lang/Throwable;Lwee;)V
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p0, Lkt5;
-
-    invoke-virtual {p0, p1}, Lkt5;->f(Lwee;)V
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lg35;->b(Ljava/lang/Throwable;Lwee;)V
-
-    :goto_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lrt5;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lrt5;->e:Ljava/lang/Object;
 
-    check-cast v0, Lt58;
+    check-cast v0, Ljava/lang/String;
 
-    new-instance v1, Lqt5;
+    iget v1, p0, Lrt5;->d:I
 
-    iget-object p0, p0, Lrt5;->o:Lu96;
+    iget-wide v2, p0, Lrt5;->c:J
 
-    check-cast p0, Lw7e;
+    iget-boolean v4, p0, Lrt5;->b:Z
 
-    invoke-direct {v1, p1, p0}, Lqt5;-><init>(Lwee;Lw7e;)V
+    const-string v5, "\', bytesSent="
 
-    invoke-virtual {v0, v1}, Lkt5;->c(Luu5;)V
+    const-string v6, ", bytesReceived=0, responseTime="
 
-    return-void
+    const-string v7, "SessionLogEvent{opcode=\'"
+
+    invoke-static {v1, v7, v0, v5, v6}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", retry=false, error="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x2
         :pswitch_0
     .end packed-switch
 .end method

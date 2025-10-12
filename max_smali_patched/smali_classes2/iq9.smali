@@ -1,106 +1,182 @@
 .class public final Liq9;
-.super Ljava/lang/Object;
+.super Ll9f;
 .source "SourceFile"
-
-# interfaces
-.implements Lfsc;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public X:I
+
+.field public c:Ljava/util/List;
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/HashMap;)V
+.method public constructor <init>(Ls89;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
 
-    iput-object p1, p0, Liq9;->a:Ljava/util/HashMap;
+    iget-object p1, p0, Liq9;->c:Ljava/util/List;
 
+    if-nez p1, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p1, p0, Liq9;->c:Ljava/util/List;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c(Ls89;Ljava/lang/String;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p0, 0x1
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    return p0
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "total"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_2
+    const/4 v1, 0x2
 
-    const-class v0, Liq9;
+    goto :goto_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :sswitch_1
+    const-string v0, "result"
 
-    move-result-object v1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eq v0, v1, :cond_1
+    move-result p2
+
+    if-nez p2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Liq9;
+    const/4 v1, 0x1
 
-    iget-object p0, p0, Liq9;->a:Ljava/util/HashMap;
+    goto :goto_0
 
-    iget-object p1, p1, Liq9;->a:Ljava/util/HashMap;
+    :sswitch_2
+    const-string v0, "marker"
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p2
 
-    return p0
+    if-nez p2, :cond_2
+
+    goto :goto_0
 
     :cond_2
+    const/4 v1, 0x0
+
     :goto_0
-    const/4 p0, 0x0
+    packed-switch v1, :pswitch_data_0
 
-    return p0
-.end method
+    invoke-virtual {p1}, Ls89;->B()V
 
-.method public final hashCode()I
-    .locals 0
+    return-void
 
-    iget-object p0, p0, Liq9;->a:Ljava/util/HashMap;
+    :pswitch_0
+    invoke-static {p1}, Lvb4;->V(Ls89;)I
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p0
+    iput p1, p0, Liq9;->X:I
 
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    return-void
 
-    move-result p0
+    :pswitch_1
+    invoke-static {p1}, Lbz;->f(Ls89;)Lbz;
 
-    return p0
+    move-result-object p1
+
+    iput-object p1, p0, Liq9;->c:Ljava/util/List;
+
+    return-void
+
+    :pswitch_2
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lvb4;->X(Ls89;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Liq9;->o:J
+
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x40736bc6 -> :sswitch_2
+        -0x37b237e3 -> :sswitch_1
+        0x696db44 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Liq9;->c:Ljava/util/List;
 
-    const-string v1, "NetworkStatusNotification{networkStatus="
+    invoke-static {v0}, Lkmc;->e(Ljava/util/Collection;)I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    iget-object p0, p0, Liq9;->a:Ljava/util/HashMap;
+    iget-wide v1, p0, Liq9;->o:J
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v3, p0, Liq9;->X:I
 
-    const/16 p0, 0x7d
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const-string v5, "{result="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v0, ", marker="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", total="
+
+    const-string v1, "}"
+
+    invoke-static {v4, v0, v3, v1}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

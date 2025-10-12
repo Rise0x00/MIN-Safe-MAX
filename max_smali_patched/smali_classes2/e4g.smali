@@ -1,53 +1,51 @@
 .class public final Le4g;
-.super Lax3;
+.super Ltde;
 .source "SourceFile"
+
+# interfaces
+.implements Luh7;
 
 
 # instance fields
-.field public X:Lzn0;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ls4g;
-
-.field public n0:I
-
-.field public o:Ls4g;
+.field public J0:Lzde;
 
 
-# direct methods
-.method public constructor <init>(Ls4g;Lax3;)V
-    .locals 0
+# virtual methods
+.method public final D()V
+    .locals 1
 
-    iput-object p1, p0, Le4g;->Z:Ls4g;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Le4g;->J0:Lzde;
 
     return-void
 .end method
 
+.method public final x(Lww7;)V
+    .locals 2
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast p1, Lc4g;
 
-    iput-object p1, p0, Le4g;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-    iget p1, p0, Le4g;->n0:I
+    check-cast v0, Ld4g;
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p1, Lc4g;->b:Lb4g;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Ld4g;->setType(Lb4g;)V
 
-    iput p1, p0, Le4g;->n0:I
+    iget-object p1, p1, Lc4g;->c:Loef;
 
-    iget-object p1, p0, Le4g;->Z:Ls4g;
+    invoke-virtual {p1, p0}, Loef;->a(Ltde;)Ljava/lang/CharSequence;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-static {p1, v0, p0}, Ls4g;->b(Ls4g;Lzn0;Lax3;)Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    move-result-object p0
+    const-string p1, ""
 
-    return-object p0
+    :cond_0
+    invoke-virtual {v0, p1}, Ld4g;->setTitle(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

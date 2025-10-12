@@ -1,201 +1,255 @@
-.class public final Lqt8;
+.class public Lqt8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
-.implements Landroid/content/DialogInterface$OnClickListener;
-.implements Landroid/content/DialogInterface$OnDismissListener;
-.implements Lfu8;
+.implements Lpt8;
+
+
+# static fields
+.field public static final c:Z
 
 
 # instance fields
-.field public a:Lree;
+.field public a:Landroid/content/Context;
 
-.field public b:Lmc;
+.field public b:Landroid/content/ContentResolver;
 
-.field public c:Lnp7;
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-boolean v0, Lwt8;->b:Z
+
+    sput-boolean v0, Lqt8;->c:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqt8;->a:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lqt8;->b:Landroid/content/ContentResolver;
+
+    iput-object p1, p0, Lqt8;->a:Landroid/content/Context;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final S(Lpt8;)Z
-    .locals 0
+.method public a(Ltt8;)Z
+    .locals 5
 
-    const/4 p0, 0x0
+    iget v0, p1, Ltt8;->b:I
 
-    return p0
-.end method
+    iget v1, p1, Ltt8;->c:I
 
-.method public final g(Lpt8;Z)V
-    .locals 0
+    iget-object v2, p0, Lqt8;->a:Landroid/content/Context;
 
-    if-nez p2, :cond_0
+    const-string v3, "android.permission.MEDIA_CONTENT_CONTROL"
 
-    iget-object p2, p0, Lqt8;->a:Lree;
+    invoke-virtual {v2, v3, v0, v1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
-    if-ne p1, p2, :cond_1
-
-    :cond_0
-    iget-object p0, p0, Lqt8;->b:Lmc;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Lym;->dismiss()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
-
-    iget-object p1, p0, Lqt8;->a:Lree;
-
-    iget-object p0, p0, Lqt8;->c:Lnp7;
-
-    iget-object v0, p0, Lnp7;->Z:Lmp7;
+    move-result v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lmp7;
-
-    invoke-direct {v0, p0}, Lmp7;-><init>(Lnp7;)V
-
-    iput-object v0, p0, Lnp7;->Z:Lmp7;
+    goto/16 :goto_3
 
     :cond_0
-    iget-object p0, p0, Lnp7;->Z:Lmp7;
-
-    invoke-virtual {p0, p2}, Lmp7;->b(I)Ltt8;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p0, v0, p2}, Lpt8;->q(Landroid/view/MenuItem;Lgu8;I)Z
+    :try_start_0
+    iget-object v1, p0, Lqt8;->a:Landroid/content/Context;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
+    move-result-object v1
 
-    iget-object p1, p0, Lqt8;->c:Lnp7;
+    iget-object v2, p1, Ltt8;->a:Ljava/lang/String;
 
-    iget-object p0, p0, Lqt8;->a:Lree;
+    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, p0, v0}, Lnp7;->g(Lpt8;Z)V
-
-    return-void
-.end method
-
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 3
-
-    iget-object v0, p0, Lqt8;->a:Lree;
-
-    const/16 v1, 0x52
-
-    if-eq p2, v1, :cond_0
-
-    const/4 v1, 0x4
-
-    if-ne p2, v1, :cond_2
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    const/4 v2, 0x1
+    move-result-object v1
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getRepeatCount()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object p1, p0, Lqt8;->b:Lmc;
-
-    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p3, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
-
-    return v2
+    goto :goto_2
 
     :cond_1
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    const-string v1, "android.permission.STATUS_BAR_SERVICE"
+
+    invoke-virtual {p0, p1, v1}, Lqt8;->b(Ltt8;Ljava/lang/String;)Z
 
     move-result v1
 
-    if-ne v1, v2, :cond_2
+    if-nez v1, :cond_3
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->isCanceled()Z
+    const-string v1, "android.permission.MEDIA_CONTENT_CONTROL"
+
+    invoke-virtual {p0, p1, v1}, Lqt8;->b(Ltt8;Ljava/lang/String;)Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    iget-object p0, p0, Lqt8;->b:Lmc;
+    iget v1, p1, Ltt8;->c:I
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    const/16 v2, 0x3e8
 
-    move-result-object p0
+    if-eq v1, v2, :cond_3
 
-    if-eqz p0, :cond_2
+    iget-object v1, p0, Lqt8;->b:Landroid/content/ContentResolver;
 
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    const-string v2, "enabled_notification_listeners"
 
-    move-result-object p0
+    invoke-static {v1, v2}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz p0, :cond_2
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
+    if-eqz v1, :cond_4
 
-    move-result-object p0
+    const-string v2, ":"
 
-    if-eqz p0, :cond_2
+    invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    invoke-virtual {p0, p3}, Landroid/view/KeyEvent$DispatcherState;->isTracking(Landroid/view/KeyEvent;)Z
+    move-result-object v1
 
-    move-result p0
+    move v2, v0
 
-    if-eqz p0, :cond_2
+    :goto_0
+    array-length v3, v1
 
-    invoke-virtual {v0, v2}, Lpt8;->c(Z)V
+    if-ge v2, v3, :cond_4
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    aget-object v3, v1, v2
 
-    return v2
+    invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p1, Ltt8;->a:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    const/4 p0, 0x0
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v0, p2, p3, p0}, Lpt8;->performShortcut(ILandroid/view/KeyEvent;I)Z
+    goto :goto_0
 
-    move-result p0
+    :cond_3
+    :goto_1
+    const/4 v0, 0x1
 
-    return p0
+    goto :goto_2
+
+    :catch_0
+    sget-boolean v1, Lqt8;->c:Z
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Package "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p1, p1, Ltt8;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " doesn\'t exist"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "MediaSessionManager"
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    :goto_2
+    if-eqz v0, :cond_5
+
+    :goto_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_5
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final b(Ltt8;Ljava/lang/String;)Z
+    .locals 2
+
+    iget v0, p1, Ltt8;->b:I
+
+    if-gez v0, :cond_0
+
+    iget-object v0, p0, Lqt8;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    iget-object p1, p1, Ltt8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p2, p1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lqt8;->a:Landroid/content/Context;
+
+    iget p1, p1, Ltt8;->c:I
+
+    invoke-virtual {v1, p2, v0, p1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

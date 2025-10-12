@@ -1,24 +1,23 @@
 .class public final Lpu2;
-.super Ljava/lang/Object;
+.super Ldd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lqu2;
 
 
 # static fields
-.field public static final a:Lpu2;
+.field public static final b:Lpu2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lpu2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x4
 
-    sput-object v0, Lpu2;->a:Lpu2;
+    invoke-direct {v0, v1}, Ldd0;-><init>(I)V
+
+    sput-object v0, Lpu2;->b:Lpu2;
 
     return-void
 .end method
@@ -35,30 +34,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lpu2;
+    instance-of p1, p1, Lpu2;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x59c2e32f
+    const v0, 0x74a363af
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "InvalidateAll"
+    const-string v0, "RequestCameraPermission"
 
-    return-object p0
+    return-object v0
 .end method

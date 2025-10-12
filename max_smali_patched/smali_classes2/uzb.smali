@@ -1,272 +1,184 @@
-.class public abstract Luzb;
-.super Ljava/lang/Object;
+.class public final Luzb;
+.super Lm0c;
+.source "SourceFile"
 
 
-# static fields
-.field public static profile_add_admins_empty_search_view:I = 0x7f0a08fe
+# instance fields
+.field public final a:I
 
-.field public static profile_add_admins_from_contacts_list:I = 0x7f0a08ff
+.field public final b:Luia;
 
-.field public static profile_add_admins_tab_chat_members:I = 0x7f0a0900
 
-.field public static profile_add_admins_tab_contacts:I = 0x7f0a0901
+# direct methods
+.method public constructor <init>(ILuia;I)V
+    .locals 0
 
-.field public static profile_add_admins_tabs:I = 0x7f0a0902
+    and-int/lit8 p3, p3, 0x8
 
-.field public static profile_add_admins_toolbar:I = 0x7f0a0903
+    if-eqz p3, :cond_0
 
-.field public static profile_add_admins_view_pager:I = 0x7f0a0904
+    sget-object p2, Luia;->o:Luia;
 
-.field public static profile_add_chat_member_action:I = 0x7f0a0905
+    :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static profile_add_members_show_history_cancel_action:I = 0x7f0a0906
+    iput p1, p0, Luzb;->a:I
 
-.field public static profile_add_members_show_history_negative_action:I = 0x7f0a0907
+    iput-object p2, p0, Luzb;->b:Luia;
 
-.field public static profile_add_members_show_history_positive_action:I = 0x7f0a0908
+    return-void
+.end method
 
-.field public static profile_add_members_toolbar:I = 0x7f0a0909
 
-.field public static profile_audio_button:I = 0x7f0a090a
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static profile_block_user_confirmation_sheet_confirm:I = 0x7f0a090c
+    if-ne p0, p1, :cond_0
 
-.field public static profile_change_avatar_upload_from_camera:I = 0x7f0a090d
+    goto :goto_1
 
-.field public static profile_change_avatar_upload_from_gallery:I = 0x7f0a090e
+    :cond_0
+    instance-of v0, p1, Luzb;
 
-.field public static profile_change_owner_cancel_action:I = 0x7f0a0912
+    if-nez v0, :cond_1
 
-.field public static profile_change_owner_change_action:I = 0x7f0a0913
+    goto :goto_0
 
-.field public static profile_change_owner_chat_confirmation_sheet_confirm:I = 0x7f0a0914
+    :cond_1
+    check-cast p1, Luzb;
 
-.field public static profile_change_owner_members_list_container:I = 0x7f0a0915
+    iget v0, p0, Luzb;->a:I
 
-.field public static profile_change_owner_toolbar:I = 0x7f0a0916
+    iget v1, p1, Luzb;->a:I
 
-.field public static profile_channel_link_view_hint:I = 0x7f0a0917
+    if-eq v0, v1, :cond_2
 
-.field public static profile_channel_link_view_link:I = 0x7f0a0918
+    goto :goto_0
 
-.field public static profile_channel_link_view_share_icon:I = 0x7f0a0919
+    :cond_2
+    iget-object v0, p0, Luzb;->b:Luia;
 
-.field public static profile_channel_link_view_share_qr_code:I = 0x7f0a091a
+    iget-object p1, p1, Luzb;->b:Luia;
 
-.field public static profile_clear_history_confirmation_sheet_confirm:I = 0x7f0a091b
+    if-eq v0, p1, :cond_3
 
-.field public static profile_confirmation_sheet_cancel:I = 0x7f0a091c
+    :goto_0
+    const/4 p1, 0x0
 
-.field public static profile_contact_avatars_image_view:I = 0x7f0a091d
+    return p1
 
-.field public static profile_contact_avatars_progress_indicator:I = 0x7f0a091e
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-.field public static profile_contact_avatars_toolbar:I = 0x7f0a091f
+    return p1
+.end method
 
-.field public static profile_contact_avatars_viewpager:I = 0x7f0a0920
+.method public final getItemId()J
+    .locals 2
 
-.field public static profile_debug_info_action_copy:I = 0x7f0a0921
+    const/4 v0, 0x2
 
-.field public static profile_debug_info_button:I = 0x7f0a0922
+    int-to-long v0, v0
 
-.field public static profile_debug_profile_info_btn:I = 0x7f0a0923
+    return-wide v0
+.end method
 
-.field public static profile_debug_profile_new_media_list_btn:I = 0x7f0a0924
+.method public final hashCode()I
+    .locals 2
 
-.field public static profile_delete_channel_confirmation_sheet_confirm:I = 0x7f0a0925
+    iget v0, p0, Luzb;->a:I
 
-.field public static profile_delete_chat_confirmation_sheet_confirm:I = 0x7f0a0926
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-.field public static profile_delete_chat_with_bot_confirm_with_suspend:I = 0x7f0a0927
+    move-result v0
 
-.field public static profile_delete_chat_with_bot_confirm_without_suspend:I = 0x7f0a0928
+    mul-int/lit8 v0, v0, 0x1f
 
-.field public static profile_dot_divider_view:I = 0x7f0a092a
+    sget-object v1, Lxia;->c:Lxia;
 
-.field public static profile_invite_by_link_action:I = 0x7f0a097d
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-.field public static profile_invite_chatlinkview_avatar_view:I = 0x7f0a097e
+    move-result v1
 
-.field public static profile_invite_chatlinkview_confirm_update:I = 0x7f0a097f
+    add-int/2addr v1, v0
 
-.field public static profile_invite_chatlinkview_copy_iv:I = 0x7f0a0980
+    mul-int/lit8 v1, v1, 0x1f
 
-.field public static profile_invite_chatlinkview_link_tv:I = 0x7f0a0981
+    sget-object v0, Lwia;->a:Lwia;
 
-.field public static profile_invite_chatlinkview_more_actions_button:I = 0x7f0a0982
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static profile_invite_chatlinkview_refresh_button:I = 0x7f0a0983
+    move-result v0
 
-.field public static profile_invite_chatlinkview_title_tv:I = 0x7f0a0984
+    add-int/2addr v0, v1
 
-.field public static profile_invite_configure_type:I = 0x7f0a0985
+    mul-int/lit8 v0, v0, 0x1f
 
-.field public static profile_invite_create_link_error_confirm:I = 0x7f0a0986
+    iget-object v1, p0, Luzb;->b:Luia;
 
-.field public static profile_invite_qr_code:I = 0x7f0a0987
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-.field public static profile_invite_send_link:I = 0x7f0a0988
+    move-result v1
 
-.field public static profile_invite_share_link:I = 0x7f0a0989
+    add-int/2addr v1, v0
 
-.field public static profile_leave_chat_and_move_rights_confirmation_sheet_confirm:I = 0x7f0a098a
+    return v1
+.end method
 
-.field public static profile_leave_chat_confirmation_sheet_confirm:I = 0x7f0a098b
+.method public final m()I
+    .locals 1
 
-.field public static profile_link_action_copy:I = 0x7f0a098c
+    const/4 v0, 0x2
 
-.field public static profile_link_button:I = 0x7f0a098d
+    return v0
+.end method
 
-.field public static profile_link_view:I = 0x7f0a098e
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static profile_media_action_copy_link:I = 0x7f0a0990
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static profile_media_action_delete_all:I = 0x7f0a0991
+    const-string v1, "MainButtonAction(title="
 
-.field public static profile_media_action_delete_self:I = 0x7f0a0992
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static profile_media_action_forward:I = 0x7f0a0993
+    iget v1, p0, Luzb;->a:I
 
-.field public static profile_media_action_goto_message:I = 0x7f0a0994
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.field public static profile_media_action_open_link:I = 0x7f0a0995
+    const-string v1, ", size="
 
-.field public static profile_media_action_save:I = 0x7f0a0996
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_action_share_link:I = 0x7f0a0997
+    sget-object v1, Lxia;->c:Lxia;
 
-.field public static profile_media_action_show_delete_confirmation:I = 0x7f0a0998
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_file_content_ll:I = 0x7f0a0999
+    const-string v1, ", mode="
 
-.field public static profile_media_file_download_state_icon:I = 0x7f0a099a
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_file_icon:I = 0x7f0a099b
+    sget-object v1, Lwia;->a:Lwia;
 
-.field public static profile_media_file_preview:I = 0x7f0a099c
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_link_content_ll:I = 0x7f0a099d
+    const-string v1, ", appearance="
 
-.field public static profile_media_link_preview:I = 0x7f0a099e
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_list_empty_view:I = 0x7f0a099f
+    iget-object v1, p0, Luzb;->b:Luia;
 
-.field public static profile_media_list_rv:I = 0x7f0a09a0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_tabs:I = 0x7f0a09a1
+    const-string v1, ")"
 
-.field public static profile_media_tabs_linearlayout:I = 0x7f0a09a2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static profile_media_tabs_pager:I = 0x7f0a09a3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static profile_media_tabs_pinbars_container:I = 0x7f0a09a4
+    move-result-object v0
 
-.field public static profile_media_toolbar:I = 0x7f0a09a5
-
-.field public static profile_members_list_action_delete_from_admin:I = 0x7f0a09a6
-
-.field public static profile_members_list_action_delete_from_channel:I = 0x7f0a09a7
-
-.field public static profile_members_list_action_delete_from_chat:I = 0x7f0a09a8
-
-.field public static profile_members_list_action_select:I = 0x7f0a09a9
-
-.field public static profile_members_list_add_admin_to_chat_action:I = 0x7f0a09aa
-
-.field public static profile_members_list_add_to_channel_action:I = 0x7f0a09ab
-
-.field public static profile_members_list_add_to_chat_action:I = 0x7f0a09ac
-
-.field public static profile_members_list_container:I = 0x7f0a09ad
-
-.field public static profile_members_list_container_admin:I = 0x7f0a09ae
-
-.field public static profile_members_list_delete_from_admin_btn:I = 0x7f0a09af
-
-.field public static profile_members_list_delete_from_admin_btn_cancel:I = 0x7f0a09b0
-
-.field public static profile_members_list_delete_from_channel_btn:I = 0x7f0a09b1
-
-.field public static profile_members_list_delete_from_chat_btn:I = 0x7f0a09b2
-
-.field public static profile_members_list_delete_from_chat_btn_cancel:I = 0x7f0a09b3
-
-.field public static profile_members_list_delete_from_chat_btn_with_clean:I = 0x7f0a09b4
-
-.field public static profile_members_list_invite_by_link_action:I = 0x7f0a09b5
-
-.field public static profile_members_list_toolbar:I = 0x7f0a09b6
-
-.field public static profile_members_list_toolbar_admin:I = 0x7f0a09b7
-
-.field public static profile_more_action_add_to_folder:I = 0x7f0a09b8
-
-.field public static profile_more_action_block:I = 0x7f0a09b9
-
-.field public static profile_more_action_clear_history:I = 0x7f0a09ba
-
-.field public static profile_more_action_delete_channel:I = 0x7f0a09bb
-
-.field public static profile_more_action_delete_chat:I = 0x7f0a09bc
-
-.field public static profile_more_action_delete_chat_and_suspend_bot:I = 0x7f0a09bd
-
-.field public static profile_more_action_leave_channel:I = 0x7f0a09be
-
-.field public static profile_more_action_leave_chat:I = 0x7f0a09bf
-
-.field public static profile_more_action_report:I = 0x7f0a09c0
-
-.field public static profile_more_action_suspend_bot:I = 0x7f0a09c1
-
-.field public static profile_notifications_confirmation_sheet_1_day:I = 0x7f0a09c2
-
-.field public static profile_notifications_confirmation_sheet_1_hour:I = 0x7f0a09c3
-
-.field public static profile_notifications_confirmation_sheet_4_hour:I = 0x7f0a09c4
-
-.field public static profile_notifications_confirmation_sheet_forever:I = 0x7f0a09c5
-
-.field public static profile_notifs_disabled_button:I = 0x7f0a09c6
-
-.field public static profile_notifs_enabled_button:I = 0x7f0a09c7
-
-.field public static profile_open_all_chat_members_action:I = 0x7f0a09c9
-
-.field public static profile_phone_number_action_copy:I = 0x7f0a09ca
-
-.field public static profile_phone_number_action_tt_video_call:I = 0x7f0a09cb
-
-.field public static profile_phone_number_action_tt_voice_call:I = 0x7f0a09cc
-
-.field public static profile_phone_number_action_voice_call:I = 0x7f0a09cd
-
-.field public static profile_phone_number_button:I = 0x7f0a09ce
-
-.field public static profile_screen_appbarlayout:I = 0x7f0a09cf
-
-.field public static profile_screen_avatar_view:I = 0x7f0a09d0
-
-.field public static profile_screen_collapsiblecontainerlinearlayout:I = 0x7f0a09d1
-
-.field public static profile_screen_coordinator_layout:I = 0x7f0a09d2
-
-.field public static profile_screen_expandedsubtitle_view:I = 0x7f0a09d3
-
-.field public static profile_screen_expandedtitle_view:I = 0x7f0a09d4
-
-.field public static profile_screen_memberlist_container:I = 0x7f0a09d5
-
-.field public static profile_screen_onemetoolbar:I = 0x7f0a09d6
-
-.field public static profile_screen_recyclerview:I = 0x7f0a09d7
-
-.field public static profile_search_button:I = 0x7f0a09d8
-
-.field public static profile_start_bot_button:I = 0x7f0a09da
-
-.field public static profile_start_chat_button:I = 0x7f0a09db
-
-.field public static profile_unblock_button:I = 0x7f0a09dc
-
-.field public static profile_video_button:I = 0x7f0a09dd
+    return-object v0
+.end method

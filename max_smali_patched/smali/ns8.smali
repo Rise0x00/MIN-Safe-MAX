@@ -1,86 +1,124 @@
-.class public final Lns8;
-.super Leje;
+.class public Lns8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# static fields
+.field public static final b:Ljava/lang/Object;
+
+.field public static final c:Ljava/util/HashMap;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lb1b;
+.field public final a:Lft8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lb1b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lns8;->X:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p3, p0, Lns8;->Y:Lb1b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lns8;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lns8;->c:Ljava/util/HashMap;
 
     return-void
 .end method
 
+.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
+    .locals 11
+
+    const-string v0, ""
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Lns8;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    sget-object v3, Lns8;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v0, Lft8;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-object/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    move-object/from16 v10, p9
+
+    invoke-direct/range {v0 .. v10}, Lft8;-><init>(Lns8;Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
+
+    iput-object v0, p0, Lns8;->a:Lft8;
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v3, "Session ID must be unique. ID="
+
+    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :goto_0
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lns8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lns8;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lns8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Lxkb;
     .locals 1
 
-    new-instance p1, Lns8;
+    iget-object v0, p0, Lns8;->a:Lft8;
 
-    iget-object v0, p0, Lns8;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lft8;->t:Lgmb;
 
-    iget-object p0, p0, Lns8;->Y:Lb1b;
+    iget-object v0, v0, Lgmb;->a:Lif5;
 
-    invoke-direct {p1, v0, p2, p0}, Lns8;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lb1b;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lns8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkm3;
-
-    iget-object p0, p0, Lns8;->Y:Lb1b;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lb1b;->a(Lkm3;Z)Lwza;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

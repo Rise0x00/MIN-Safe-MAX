@@ -1,6 +1,7 @@
-.class public abstract Loze;
-.super Ljava/lang/Object;
+.class public Loze;
+.super Ljc4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# instance fields
+.field public x0:J

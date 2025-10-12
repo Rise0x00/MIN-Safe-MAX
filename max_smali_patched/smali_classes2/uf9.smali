@@ -1,224 +1,72 @@
 .class public final Luf9;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ler1;
-
-.field public final b:F
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/Long;
-
-.field public final e:Z
+.field public final synthetic X:Lng9;
 
 
 # direct methods
-.method public constructor <init>(Ler1;FZLjava/lang/Long;Z)V
+.method public constructor <init>(Lng9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luf9;->X:Lng9;
 
-    iput-object p1, p0, Luf9;->a:Ler1;
+    const/4 p1, 0x2
 
-    iput p2, p0, Luf9;->b:F
-
-    iput-boolean p3, p0, Luf9;->c:Z
-
-    iput-object p4, p0, Luf9;->d:Ljava/lang/Long;
-
-    iput-boolean p5, p0, Luf9;->e:Z
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Le34;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Luf9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Luf9;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Luf9;
 
-    iget-object v1, p0, Luf9;->a:Ler1;
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v3, p1, Luf9;->a:Ler1;
+    invoke-virtual {p1, p2}, Luf9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Luf9;->b:F
-
-    iget v3, p1, Luf9;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Luf9;->c:Z
-
-    iget-boolean v3, p1, Luf9;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Luf9;->d:Ljava/lang/Long;
-
-    iget-object v3, p1, Luf9;->d:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean p0, p0, Luf9;->e:Z
-
-    iget-boolean p1, p1, Luf9;->e:Z
-
-    if-eq p0, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Luf9;->a:Ler1;
+    new-instance p1, Luf9;
 
-    invoke-virtual {v0}, Ler1;->hashCode()I
+    iget-object v0, p0, Luf9;->X:Lng9;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Luf9;-><init>(Lng9;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Luf9;->b:F
-
-    invoke-static {v0, v2, v1}, Lcx3;->c(IFI)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Luf9;->c:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Luf9;->d:Ljava/lang/Long;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean p0, p0, Luf9;->e:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const-string v1, "MovieStateUpdate(trackKey="
+    iget-object p1, p0, Luf9;->X:Lng9;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Lng9;->u(Lng9;)V
 
-    iget-object v1, p0, Luf9;->a:Ler1;
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", volume="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Luf9;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isPaused="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Luf9;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", position="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luf9;->d:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMuted="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Luf9;->e:Z
-
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

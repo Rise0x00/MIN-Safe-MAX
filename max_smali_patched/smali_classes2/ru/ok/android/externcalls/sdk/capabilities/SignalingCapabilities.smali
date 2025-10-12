@@ -50,15 +50,15 @@
 
 # virtual methods
 .method public getSignalingCapabilitiesValue()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lru/ok/android/externcalls/sdk/capabilities/SignalingCapabilities;->value:I
+    iget v0, p0, Lru/ok/android/externcalls/sdk/capabilities/SignalingCapabilities;->value:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public setAnimojiEnabled(Z)V

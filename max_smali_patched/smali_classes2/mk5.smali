@@ -3,78 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Le6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:J
 
-.field public final synthetic b:Lpk5;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpk5;I)V
+.method public synthetic constructor <init>(JJ)V
     .locals 0
 
-    iput p2, p0, Lmk5;->a:I
-
-    iput-object p1, p0, Lmk5;->b:Lpk5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lmk5;->a:J
+
+    iput-wide p3, p0, Lmk5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget v0, p0, Lmk5;->a:I
+    iget-wide v0, p0, Lmk5;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object p0, p0, Lmk5;->b:Lpk5;
+    move-result-object v0
 
-    invoke-static {p0}, Lpk5;->w(Lpk5;)Landroid/graphics/drawable/Drawable;
+    iget-wide v1, p0, Lmk5;->b:J
 
-    move-result-object p0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-object p0
+    move-result-object v1
 
-    :pswitch_0
-    sget v0, Losc;->I1:I
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    iget-object p0, p0, Lmk5;->b:Lpk5;
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v1, "ok5"
 
-    move-result-object p0
+    const-string v2, "setFavoriteStickerSetMoved: success move stickerSetId=%d, to position of stickerSetId=%d"
 
-    invoke-static {p0, v0}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    sget v0, Losc;->u0:I
-
-    iget-object p0, p0, Lmk5;->b:Lpk5;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-static {p0, v0}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

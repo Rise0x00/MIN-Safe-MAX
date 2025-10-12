@@ -2,26 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhnf;
 
-# static fields
-.field public static final a:Ljava/util/Map;
+
+# instance fields
+.field public final a:Ljava/util/LinkedList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lo58;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x3e8
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {v0, v1}, Lo58;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v0
-
-    sput-object v0, Lfnf;->a:Ljava/util/Map;
+    iput-object v0, p0, Lfnf;->a:Ljava/util/LinkedList;
 
     return-void
 .end method

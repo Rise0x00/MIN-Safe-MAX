@@ -1,293 +1,269 @@
 .class public final Leo5;
-.super Lajb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final A0:Landroidx/appcompat/widget/AppCompatEditText;
+.field public final a:Lcq5;
 
-.field public final B0:Ljava/lang/Object;
+.field public b:Ljava/io/File;
+
+.field public c:Ljava/io/File;
+
+.field public d:Ljava/io/File;
+
+.field public e:Ljava/io/File;
+
+.field public f:Ljava/io/File;
+
+.field public g:Ljava/io/File;
+
+.field public h:Ljava/io/File;
+
+.field public i:Ljava/io/File;
+
+.field public j:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 11
+.method public constructor <init>(Lcq5;)V
+    .locals 0
 
-    new-instance v0, Landroid/widget/LinearLayout;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, v0}, Luhc;-><init>(Landroid/view/View;)V
-
-    new-instance v1, Landroidx/appcompat/widget/AppCompatEditText;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Landroidx/appcompat/widget/AppCompatEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v3, Lwzb;->profile_edit_first_name_field:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v4, -0x1
-
-    const/4 v5, -0x2
-
-    invoke-direct {v3, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v3, 0xc
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v3
-
-    invoke-static {v6}, Litg;->z(F)I
-
-    move-result v6
-
-    const/16 v7, 0x10
-
-    int-to-float v8, v7
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v9, v8
-
-    invoke-static {v9}, Litg;->z(F)I
-
-    move-result v9
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v10
-
-    invoke-static {v3}, Litg;->z(F)I
-
-    move-result v3
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v8
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v10
-
-    invoke-virtual {v1, v6, v9, v3, v10}, Landroid/view/View;->setPaddingRelative(IIII)V
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setSingleLine(Z)V
-
-    sget-object v6, Lxbf;->m:Leue;
-
-    invoke-static {v6, v1}, Leue;->d(Leue;Landroid/widget/TextView;)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    sget v9, Lyga;->b0:I
-
-    invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v6
-
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v6, Le04;
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    invoke-direct {v6, v8}, Le04;-><init>(F)V
-
-    invoke-virtual {v1, v6}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getInputType()I
-
-    move-result v6
-
-    or-int/lit16 v6, v6, 0x4000
-
-    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setInputType(I)V
-
-    iput-object v1, p0, Leo5;->A0:Landroidx/appcompat/widget/AppCompatEditText;
-
-    new-instance v6, Lvi3;
-
-    const/16 v8, 0x8
-
-    invoke-direct {v6, p1, v8}, Lvi3;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x3
-
-    invoke-static {p1, v6}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Leo5;->B0:Ljava/lang/Object;
-
-    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
-
-    invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {p1, v4, v5}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    new-instance p1, Lsd0;
-
-    const/16 v1, 0xd
-
-    invoke-direct {p1, p0, v2, v1}, Lsd0;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, v0}, Lu77;->J(Lv96;Landroid/view/View;)V
+    iput-object p1, p0, Leo5;->a:Lcq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lj83;)V
-    .locals 3
+.method public final a(Lux0;)Ljava/io/File;
+    .locals 1
 
-    iget-object v0, p0, Leo5;->B0:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-interface {v0}, Lth7;->a()Z
+    move-result p1
 
-    move-result v1
+    iget-object v0, p0, Leo5;->a:Lcq5;
 
-    if-nez v1, :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p0, Leo5;->i:Ljava/io/File;
 
     if-nez p1, :cond_0
 
-    return-void
+    check-cast v0, Lpr5;
 
-    :cond_0
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    iget-object p1, v0, Lpr5;->c:Landroid/content/Context;
 
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v1, 0x8
-
-    :goto_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Lj83;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
-    goto :goto_1
+    const-string v0, "videoCache"
 
-    :cond_2
-    move-object p1, v1
+    invoke-static {p1, v0}, Lpr5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
-    :goto_1
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result-object p1
 
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    invoke-static {p0, v0, v1}, Liwd;->d(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public final x(Llp7;)V
-    .locals 2
-
-    check-cast p1, Ldo5;
-
-    iget-object v0, p1, Ldo5;->a:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Leo5;->A0:Landroidx/appcompat/widget/AppCompatEditText;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iput-object p1, p0, Leo5;->i:Ljava/io/File;
 
     :cond_0
-    iget-object p1, p1, Ldo5;->b:Lj83;
+    iget-object p1, p0, Leo5;->i:Ljava/io/File;
 
-    invoke-virtual {p0, p1}, Leo5;->F(Lj83;)V
+    return-object p1
 
-    return-void
+    :pswitch_1
+    iget-object p1, p0, Leo5;->h:Ljava/io/File;
+
+    if-nez p1, :cond_1
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Lpr5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "exo_files_cache"
+
+    invoke-static {p1, v0}, Lpr5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->h:Ljava/io/File;
+
+    :cond_1
+    iget-object p1, p0, Leo5;->h:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_2
+    iget-object p1, p0, Leo5;->c:Ljava/io/File;
+
+    if-nez p1, :cond_2
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Lpr5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "upload"
+
+    invoke-static {p1, v0}, Lpr5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->c:Ljava/io/File;
+
+    :cond_2
+    iget-object p1, p0, Leo5;->c:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_3
+    iget-object p1, p0, Leo5;->f:Ljava/io/File;
+
+    if-nez p1, :cond_3
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Lpr5;->p()Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->f:Ljava/io/File;
+
+    :cond_3
+    iget-object p1, p0, Leo5;->f:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_4
+    iget-object p1, p0, Leo5;->g:Ljava/io/File;
+
+    if-nez p1, :cond_4
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Lpr5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "gifCache"
+
+    invoke-static {p1, v0}, Lpr5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->g:Ljava/io/File;
+
+    :cond_4
+    iget-object p1, p0, Leo5;->g:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_5
+    iget-object p1, p0, Leo5;->e:Ljava/io/File;
+
+    if-nez p1, :cond_5
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Lpr5;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "audioCache"
+
+    invoke-static {p1, v0}, Lpr5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->e:Ljava/io/File;
+
+    :cond_5
+    iget-object p1, p0, Leo5;->e:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_6
+    iget-object p1, p0, Leo5;->d:Ljava/io/File;
+
+    if-nez p1, :cond_6
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0}, Lpr5;->m()Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leo5;->d:Ljava/io/File;
+
+    :cond_6
+    iget-object p1, p0, Leo5;->d:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_7
+    iget-object p1, p0, Leo5;->b:Ljava/io/File;
+
+    if-nez p1, :cond_7
+
+    new-instance p1, Ljava/io/File;
+
+    check-cast v0, Lpr5;
+
+    iget-object v0, v0, Lpr5;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Lpr5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Leo5;->b:Ljava/io/File;
+
+    :cond_7
+    iget-object p1, p0, Leo5;->b:Ljava/io/File;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

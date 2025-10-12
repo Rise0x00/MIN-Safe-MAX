@@ -1,85 +1,129 @@
-.class public abstract Lhla;
+.class public final synthetic Lhla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Llla;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public final synthetic c:Lka8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Llla;Lja8;I)V
+    .locals 0
 
-    sget v0, Lu0c;->oneme_stickers_preview_action_favorite:I
+    iput p3, p0, Lhla;->a:I
 
-    sput v0, Lhla;->a:I
+    iput-object p1, p0, Lhla;->b:Llla;
 
-    sget v0, Lu0c;->oneme_stickers_preview_action_forward:I
+    iput-object p2, p0, Lhla;->c:Lka8;
 
-    sput v0, Lhla;->b:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_action_send:I
-
-    sput v0, Lhla;->c:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_content_container:I
-
-    sput v0, Lhla;->d:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_lottie_cell:I
-
-    sput v0, Lhla;->e:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_static_cell:I
-
-    sput v0, Lhla;->f:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_sticker_container:I
-
-    sput v0, Lhla;->g:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_stickers_set_container:I
-
-    sput v0, Lhla;->h:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_stickers_set_content:I
-
-    sput v0, Lhla;->i:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_stickers_set_header:I
-
-    sput v0, Lhla;->j:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_toolbar:I
-
-    sput v0, Lhla;->k:I
-
-    sget v0, Lu0c;->oneme_stickers_preview_webm_cell:I
-
-    sput v0, Lhla;->l:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lhla;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhla;->c:Lka8;
+
+    move-object v1, v0
+
+    check-cast v1, Lja8;
+
+    invoke-virtual {v1}, Lja8;->c()Ljava/util/List;
+
+    move-result-object v2
+
+    iget v3, v1, Lja8;->c:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lone/me/messages/list/loader/MessageModel;
+
+    invoke-virtual {v1}, Lja8;->c()Ljava/util/List;
+
+    move-result-object v1
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+
+    iget-object v3, p0, Lhla;->b:Llla;
+
+    invoke-virtual {v3, v0, v2, v1}, Llla;->c(Lka8;Lone/me/messages/list/loader/MessageModel;Lone/me/messages/list/loader/MessageModel;)Z
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lhla;->c:Lka8;
+
+    move-object v1, v0
+
+    check-cast v1, Lja8;
+
+    invoke-virtual {v1}, Lja8;->c()Ljava/util/List;
+
+    move-result-object v2
+
+    iget v3, v1, Lja8;->c:I
+
+    invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lone/me/messages/list/loader/MessageModel;
+
+    invoke-virtual {v1}, Lja8;->c()Ljava/util/List;
+
+    move-result-object v1
+
+    add-int/lit8 v3, v3, -0x1
+
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
+
+    iget-object v3, p0, Lhla;->b:Llla;
+
+    invoke-virtual {v3, v0, v2, v1}, Llla;->c(Lka8;Lone/me/messages/list/loader/MessageModel;Lone/me/messages/list/loader/MessageModel;)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

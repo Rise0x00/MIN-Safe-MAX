@@ -165,315 +165,315 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Loyb;->action_bar:I
+    sget v0, Ltdc;->action_bar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar:I
 
-    sget v0, Loyb;->action_bar_activity_content:I
+    sget v0, Ltdc;->action_bar_activity_content:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_activity_content:I
 
-    sget v0, Loyb;->action_bar_container:I
+    sget v0, Ltdc;->action_bar_container:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_container:I
 
-    sget v0, Loyb;->action_bar_root:I
+    sget v0, Ltdc;->action_bar_root:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_root:I
 
-    sget v0, Loyb;->action_bar_spinner:I
+    sget v0, Ltdc;->action_bar_spinner:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_spinner:I
 
-    sget v0, Loyb;->action_bar_subtitle:I
+    sget v0, Ltdc;->action_bar_subtitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_subtitle:I
 
-    sget v0, Loyb;->action_bar_title:I
+    sget v0, Ltdc;->action_bar_title:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_bar_title:I
 
-    sget v0, Loyb;->action_context_bar:I
+    sget v0, Ltdc;->action_context_bar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_context_bar:I
 
-    sget v0, Loyb;->action_menu_divider:I
+    sget v0, Ltdc;->action_menu_divider:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_menu_divider:I
 
-    sget v0, Loyb;->action_menu_presenter:I
+    sget v0, Ltdc;->action_menu_presenter:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_menu_presenter:I
 
-    sget v0, Loyb;->action_mode_bar:I
+    sget v0, Ltdc;->action_mode_bar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_mode_bar:I
 
-    sget v0, Loyb;->action_mode_bar_stub:I
+    sget v0, Ltdc;->action_mode_bar_stub:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_mode_bar_stub:I
 
-    sget v0, Loyb;->action_mode_close_button:I
+    sget v0, Ltdc;->action_mode_close_button:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->action_mode_close_button:I
 
-    sget v0, Loyb;->activity_chooser_view_content:I
+    sget v0, Ltdc;->activity_chooser_view_content:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->activity_chooser_view_content:I
 
-    sget v0, Loyb;->add:I
+    sget v0, Ltdc;->add:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->add:I
 
-    sget v0, Loyb;->alertTitle:I
+    sget v0, Ltdc;->alertTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->alertTitle:I
 
-    sget v0, Loyb;->buttonPanel:I
+    sget v0, Ltdc;->buttonPanel:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->buttonPanel:I
 
-    sget v0, Loyb;->checkbox:I
+    sget v0, Ltdc;->checkbox:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->checkbox:I
 
-    sget v0, Loyb;->checked:I
+    sget v0, Ltdc;->checked:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->checked:I
 
-    sget v0, Loyb;->content:I
+    sget v0, Ltdc;->content:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->content:I
 
-    sget v0, Loyb;->contentPanel:I
+    sget v0, Ltdc;->contentPanel:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->contentPanel:I
 
-    sget v0, Loyb;->custom:I
+    sget v0, Ltdc;->custom:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->custom:I
 
-    sget v0, Loyb;->customPanel:I
+    sget v0, Ltdc;->customPanel:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->customPanel:I
 
-    sget v0, Loyb;->decor_content_parent:I
+    sget v0, Ltdc;->decor_content_parent:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->decor_content_parent:I
 
-    sget v0, Loyb;->default_activity_button:I
+    sget v0, Ltdc;->default_activity_button:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->default_activity_button:I
 
-    sget v0, Loyb;->edit_query:I
+    sget v0, Ltdc;->edit_query:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->edit_query:I
 
-    sget v0, Loyb;->expand_activities_button:I
+    sget v0, Ltdc;->expand_activities_button:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->expand_activities_button:I
 
-    sget v0, Loyb;->expanded_menu:I
+    sget v0, Ltdc;->expanded_menu:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->expanded_menu:I
 
-    sget v0, Loyb;->group_divider:I
+    sget v0, Ltdc;->group_divider:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->group_divider:I
 
-    sget v0, Loyb;->home:I
+    sget v0, Ltdc;->home:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->home:I
 
-    sget v0, Loyb;->icon:I
+    sget v0, Ltdc;->icon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->icon:I
 
-    sget v0, Loyb;->image:I
+    sget v0, Ltdc;->image:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->image:I
 
-    sget v0, Loyb;->listMode:I
+    sget v0, Ltdc;->listMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->listMode:I
 
-    sget v0, Loyb;->list_item:I
+    sget v0, Ltdc;->list_item:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->list_item:I
 
-    sget v0, Loyb;->message:I
+    sget v0, Ltdc;->message:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->message:I
 
-    sget v0, Loyb;->multiply:I
+    sget v0, Ltdc;->multiply:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->multiply:I
 
-    sget v0, Loyb;->none:I
+    sget v0, Ltdc;->none:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->none:I
 
-    sget v0, Loyb;->normal:I
+    sget v0, Ltdc;->normal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->normal:I
 
-    sget v0, Loyb;->off:I
+    sget v0, Ltdc;->off:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->off:I
 
-    sget v0, Loyb;->on:I
+    sget v0, Ltdc;->on:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->on:I
 
-    sget v0, Loyb;->parentPanel:I
+    sget v0, Ltdc;->parentPanel:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->parentPanel:I
 
-    sget v0, Loyb;->progress_circular:I
+    sget v0, Ltdc;->progress_circular:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->progress_circular:I
 
-    sget v0, Loyb;->progress_horizontal:I
+    sget v0, Ltdc;->progress_horizontal:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->progress_horizontal:I
 
-    sget v0, Loyb;->radio:I
+    sget v0, Ltdc;->radio:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->radio:I
 
-    sget v0, Loyb;->screen:I
+    sget v0, Ltdc;->screen:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->screen:I
 
-    sget v0, Loyb;->scrollIndicatorDown:I
+    sget v0, Ltdc;->scrollIndicatorDown:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->scrollIndicatorDown:I
 
-    sget v0, Loyb;->scrollIndicatorUp:I
+    sget v0, Ltdc;->scrollIndicatorUp:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->scrollIndicatorUp:I
 
-    sget v0, Loyb;->scrollView:I
+    sget v0, Ltdc;->scrollView:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->scrollView:I
 
-    sget v0, Loyb;->search_badge:I
+    sget v0, Ltdc;->search_badge:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_badge:I
 
-    sget v0, Loyb;->search_bar:I
+    sget v0, Ltdc;->search_bar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_bar:I
 
-    sget v0, Loyb;->search_button:I
+    sget v0, Ltdc;->search_button:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_button:I
 
-    sget v0, Loyb;->search_close_btn:I
+    sget v0, Ltdc;->search_close_btn:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_close_btn:I
 
-    sget v0, Loyb;->search_edit_frame:I
+    sget v0, Ltdc;->search_edit_frame:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_edit_frame:I
 
-    sget v0, Loyb;->search_go_btn:I
+    sget v0, Ltdc;->search_go_btn:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_go_btn:I
 
-    sget v0, Loyb;->search_mag_icon:I
+    sget v0, Ltdc;->search_mag_icon:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_mag_icon:I
 
-    sget v0, Loyb;->search_plate:I
+    sget v0, Ltdc;->search_plate:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_plate:I
 
-    sget v0, Loyb;->search_src_text:I
+    sget v0, Ltdc;->search_src_text:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_src_text:I
 
-    sget v0, Loyb;->search_voice_btn:I
+    sget v0, Ltdc;->search_voice_btn:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->search_voice_btn:I
 
-    sget v0, Loyb;->select_dialog_listview:I
+    sget v0, Ltdc;->select_dialog_listview:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->select_dialog_listview:I
 
-    sget v0, Loyb;->shortcut:I
+    sget v0, Ltdc;->shortcut:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->shortcut:I
 
-    sget v0, Loyb;->spacer:I
+    sget v0, Ltdc;->spacer:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->spacer:I
 
-    sget v0, Loyb;->split_action_bar:I
+    sget v0, Ltdc;->split_action_bar:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->split_action_bar:I
 
-    sget v0, Loyb;->src_atop:I
+    sget v0, Ltdc;->src_atop:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->src_atop:I
 
-    sget v0, Loyb;->src_in:I
+    sget v0, Ltdc;->src_in:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->src_in:I
 
-    sget v0, Loyb;->src_over:I
+    sget v0, Ltdc;->src_over:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->src_over:I
 
-    sget v0, Loyb;->submenuarrow:I
+    sget v0, Ltdc;->submenuarrow:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->submenuarrow:I
 
-    sget v0, Loyb;->submit_area:I
+    sget v0, Ltdc;->submit_area:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->submit_area:I
 
-    sget v0, Loyb;->tabMode:I
+    sget v0, Ltdc;->tabMode:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->tabMode:I
 
-    sget v0, Loyb;->textSpacerNoButtons:I
+    sget v0, Ltdc;->textSpacerNoButtons:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->textSpacerNoButtons:I
 
-    sget v0, Loyb;->textSpacerNoTitle:I
+    sget v0, Ltdc;->textSpacerNoTitle:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->textSpacerNoTitle:I
 
-    sget v0, Loyb;->title:I
+    sget v0, Ltdc;->title:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->title:I
 
-    sget v0, Loyb;->titleDividerNoCustom:I
+    sget v0, Ltdc;->titleDividerNoCustom:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->titleDividerNoCustom:I
 
-    sget v0, Loyb;->title_template:I
+    sget v0, Ltdc;->title_template:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->title_template:I
 
-    sget v0, Loyb;->topPanel:I
+    sget v0, Ltdc;->topPanel:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->topPanel:I
 
-    sget v0, Loyb;->unchecked:I
+    sget v0, Ltdc;->unchecked:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->unchecked:I
 
-    sget v0, Loyb;->uniform:I
+    sget v0, Ltdc;->uniform:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->uniform:I
 
-    sget v0, Loyb;->up:I
+    sget v0, Ltdc;->up:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->up:I
 
-    sget v0, Loyb;->wrap_content:I
+    sget v0, Ltdc;->wrap_content:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$id;->wrap_content:I
 

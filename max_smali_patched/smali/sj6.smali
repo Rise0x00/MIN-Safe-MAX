@@ -1,14 +1,3 @@
-.class public final Lsj6;
+.class public interface abstract Lsj6;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/util/Printer;
-
-
-# virtual methods
-.method public final println(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method

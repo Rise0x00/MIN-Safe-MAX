@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lob1;
+.implements Lmb1;
 
 
 # static fields
@@ -35,30 +35,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lib1;
+    instance-of p1, p1, Lib1;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x3669a369
+    const v0, -0x734dfe3f
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "FinishedCall"
+    const-string v0, "OpenCall"
 
-    return-object p0
+    return-object v0
 .end method

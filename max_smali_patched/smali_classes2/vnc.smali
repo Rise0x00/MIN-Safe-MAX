@@ -1,55 +1,29 @@
-.class public abstract Lvnc;
-.super Ljava/lang/Object;
+.class public final Lvnc;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lf67;
 
 
 # instance fields
-.field public a:Ljava/lang/ref/SoftReference;
+.field public K0:I
+
+.field public L0:Lunc;
 
 
 # virtual methods
-.method public final a(Ls4;)Ljava/lang/Object;
-    .locals 2
+.method public final getSelected()I
+    .locals 1
 
-    iget-object v0, p0, Lvnc;->a:Ljava/lang/ref/SoftReference;
+    iget v0, p0, Lvnc;->K0:I
 
-    const/4 v1, 0x0
+    add-int/lit8 v0, v0, 0x1
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {p0, p1}, Lvnc;->b(Ls4;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    new-instance v1, Ljava/lang/ref/SoftReference;
-
-    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
-
-    :cond_2
-    iput-object v1, p0, Lvnc;->a:Ljava/lang/ref/SoftReference;
-
-    return-object p1
+    return v0
 .end method
 
-.method public abstract b(Ls4;)Ljava/lang/Object;
+.method public final setOnSelectListener(Lunc;)V
+    .locals 0
+
+    iput-object p1, p0, Lvnc;->L0:Lunc;
+
+    return-void
 .end method

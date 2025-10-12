@@ -3,84 +3,282 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnx4;
+.implements Lmhf;
 
 
-# static fields
-.field public static final a:Lsh6;
+# instance fields
+.field public a:I
 
-.field public static final b:Ljava/util/Set;
+.field public b:I
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lsh6;
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lpx4;
+    const/4 v0, -0x1
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    .line 6
+    iput v0, p0, Lpx4;->a:I
 
-    const/16 v2, 0xd
+    .line 7
+    iput v0, p0, Lpx4;->b:I
 
-    invoke-direct {v0, v2, v1}, Lsh6;-><init>(ILjava/lang/Object;)V
+    .line 8
+    iput v0, p0, Lpx4;->c:I
 
-    sput-object v0, Lpx4;->a:Lsh6;
+    return-void
+.end method
 
-    sget-object v0, Ljx4;->d:Ljx4;
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 1
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    mul-int/lit16 v0, p2, 0x100
 
-    move-result-object v0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lpx4;->b:Ljava/util/Set;
+    iput v0, p0, Lpx4;->a:I
+
+    iput v0, p0, Lpx4;->b:I
+
+    .line 2
+    iput p2, p0, Lpx4;->c:I
+
+    .line 3
+    iput-boolean p3, p0, Lpx4;->d:Z
+
+    .line 4
+    iput-object p1, p0, Lpx4;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Set;
-    .locals 0
+.method public a(III)Ljhf;
+    .locals 5
 
-    sget-object p0, Lpx4;->b:Ljava/util/Set;
+    iget v0, p0, Lpx4;->c:I
 
-    return-object p0
-.end method
+    iget-boolean v1, p0, Lpx4;->d:Z
 
-.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-    .locals 0
+    iget-object v2, p0, Lpx4;->e:Ljava/lang/Object;
 
-    const/4 p0, 0x0
+    check-cast v2, Ljava/lang/String;
 
-    return-object p0
-.end method
+    sget-object v3, Lnhf;->a:Ls5f;
 
-.method public final c(Ljx4;)Ljava/util/Set;
-    .locals 2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    sget-object p0, Ljx4;->d:Ljx4;
+    const-string v4, "https://tiles.api-maps.yandex.ru/v1/tiles/?lang=ru_RU&l=map&projection=web_mercator&maptype=future_map&"
 
-    invoke-virtual {p0, p1}, Ljx4;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p0
+    const/4 v4, 0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eq v0, v4, :cond_0
 
-    const-string v1, "DynamicRange is not supported: "
+    const-string v4, "scale="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v0, 0x26
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_0
+    if-nez v1, :cond_1
+
+    const-string v0, "theme=dark&"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    const-string v0, "x="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&y="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&z="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&apikey="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1, p0}, Lcr0;->e(Ljava/lang/String;Z)V
+    :try_start_0
+    new-instance p2, Ljava/net/URL;
 
-    sget-object p0, Lpx4;->b:Ljava/util/Set;
+    invoke-direct {p2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
 
-    return-object p0
+    :try_start_1
+    new-instance p1, Ljhf;
+
+    iget p3, p0, Lpx4;->a:I
+
+    iget v0, p0, Lpx4;->b:I
+
+    invoke-virtual {p2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object p2
+
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    const-string v2, "from must not be null."
+
+    invoke-static {p2, v2}, Lhv0;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/16 v2, 0x1000
+
+    new-array v2, v2, [B
+
+    :goto_0
+    invoke-virtual {p2, v2}, Ljava/io/InputStream;->read([B)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-ne v3, v4, :cond_2
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p2
+
+    invoke-direct {p1, p3, p2, v0}, Ljhf;-><init>(I[BI)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v4, v3}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    throw p1
+
+    :catch_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catch_1
+    move-exception p1
+
+    new-instance p2, Ljava/lang/AssertionError;
+
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p2
+.end method
+
+.method public b(Landroid/graphics/drawable/Drawable;)V
+    .locals 4
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget v0, p0, Lpx4;->a:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    :cond_1
+    iget-boolean v0, p0, Lpx4;->d:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lpx4;->e:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :cond_2
+    iget v0, p0, Lpx4;->b:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_4
+
+    if-eqz v0, :cond_3
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v2
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+
+    :cond_4
+    iget v0, p0, Lpx4;->c:I
+
+    if-eq v0, v1, :cond_6
+
+    if-eqz v0, :cond_5
+
+    move v2, v3
+
+    :cond_5
+    invoke-virtual {p1, v2}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
+
+    :cond_6
+    :goto_1
+    return-void
 .end method

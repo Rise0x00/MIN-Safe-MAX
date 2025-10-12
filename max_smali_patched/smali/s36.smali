@@ -1,102 +1,65 @@
 .class public final Ls36;
-.super Ljava/lang/Object;
+.super Lbna;
 .source "SourceFile"
-
-# interfaces
-.implements Lig7;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
-
-    iput p2, p0, Ls36;->a:I
-
-    iput-object p1, p0, Ls36;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final l()V
-    .locals 2
+.method public final onMeasure(II)V
+    .locals 3
 
-    iget v0, p0, Ls36;->a:I
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    const/4 v1, 0x0
+    move-result p2
 
-    iget-object p0, p0, Ls36;->b:Lone/me/sdk/arch/Widget;
+    const/16 v0, 0x8
 
-    packed-switch v0, :pswitch_data_0
+    int-to-float v0, v0
 
-    check-cast p0, Lone/me/sharedata/ShareDataPickerScreen;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    iget-object p0, p0, Lone/me/sharedata/ShareDataPickerScreen;->t0:Lin0;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lin0;->a()Z
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {p0}, Lin0;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    invoke-static {v0, v1, v2, p2}, Lgy1;->d(FFII)I
 
-    check-cast p0, Lhy8;
+    move-result p2
 
-    invoke-virtual {p0, v1}, Lhy8;->e(Z)V
+    const/16 v0, 0x80
 
-    :cond_0
-    return-void
+    int-to-float v0, v0
 
-    :pswitch_0
-    check-cast p0, Lone/me/chatscreen/mediabar/MediaBarWidget;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->Y0:[Lof7;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->H0()Lhy8;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {p0, v1}, Lhy8;->e(Z)V
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    return-void
+    mul-float/2addr v0, v1
 
-    :pswitch_1
-    check-cast p0, Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object p0, p0, Lone/me/chats/forward/ForwardPickerScreen;->w0:Lin0;
-
-    invoke-virtual {p0}, Lin0;->a()Z
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    sub-int/2addr p2, v0
 
-    invoke-virtual {p0}, Lin0;->getValue()Ljava/lang/Object;
+    const/high16 v0, 0x40000000    # 2.0f
 
-    move-result-object p0
+    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    check-cast p0, Lhy8;
+    move-result p2
 
-    invoke-virtual {p0, v1}, Lhy8;->e(Z)V
+    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
 
-    :cond_1
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

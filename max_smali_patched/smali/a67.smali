@@ -1,292 +1,109 @@
-.class public final La67;
-.super Ljava/lang/Object;
+.class public final enum La67;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final e:La67;
+.field public static final synthetic X:[La67;
+
+.field public static final enum b:La67;
+
+.field public static final enum c:La67;
+
+.field public static final enum o:La67;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
     new-instance v0, La67;
 
-    const/4 v1, 0x0
+    const-string v1, "FULL_FETCH"
 
-    invoke-direct {v0, v1, v1, v1, v1}, La67;-><init>(IIII)V
+    const/4 v2, 0x0
 
-    sput-object v0, La67;->e:La67;
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, La67;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, La67;->b:La67;
+
+    new-instance v1, La67;
+
+    const-string v2, "DISK_CACHE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, La67;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, La67;->c:La67;
+
+    new-instance v2, La67;
+
+    const-string v3, "ENCODED_MEMORY_CACHE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, La67;-><init>(Ljava/lang/String;II)V
+
+    new-instance v3, La67;
+
+    const-string v4, "BITMAP_MEMORY_CACHE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v3, v4, v5, v6}, La67;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, La67;->o:La67;
+
+    filled-new-array {v0, v1, v2, v3}, [La67;
+
+    move-result-object v0
+
+    sput-object v0, La67;->X:[La67;
 
     return-void
 .end method
 
-.method public constructor <init>(IIII)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p1, p0, La67;->a:I
-
-    iput p2, p0, La67;->b:I
-
-    iput p3, p0, La67;->c:I
-
-    iput p4, p0, La67;->d:I
+    iput p3, p0, La67;->a:I
 
     return-void
 .end method
 
-.method public static a(La67;La67;)La67;
-    .locals 4
-
-    iget v0, p0, La67;->a:I
-
-    iget v1, p1, La67;->a:I
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    iget v1, p0, La67;->b:I
-
-    iget v2, p1, La67;->b:I
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    iget v2, p0, La67;->c:I
-
-    iget v3, p1, La67;->c:I
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    iget p0, p0, La67;->d:I
-
-    iget p1, p1, La67;->d:I
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    invoke-static {v0, v1, v2, p0}, La67;->b(IIII)La67;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(IIII)La67;
+.method public static valueOf(Ljava/lang/String;)La67;
     .locals 1
 
-    if-nez p0, :cond_0
+    const-class v0, La67;
 
-    if-nez p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-nez p2, :cond_0
+    move-result-object p0
 
-    if-nez p3, :cond_0
-
-    sget-object p0, La67;->e:La67;
+    check-cast p0, La67;
 
     return-object p0
+.end method
 
-    :cond_0
-    new-instance v0, La67;
+.method public static values()[La67;
+    .locals 1
 
-    invoke-direct {v0, p0, p1, p2, p3}, La67;-><init>(IIII)V
+    sget-object v0, La67;->X:[La67;
+
+    invoke-virtual {v0}, [La67;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [La67;
 
     return-object v0
-.end method
-
-.method public static c(Landroid/graphics/Insets;)La67;
-    .locals 3
-
-    iget v0, p0, Landroid/graphics/Insets;->left:I
-
-    iget v1, p0, Landroid/graphics/Insets;->top:I
-
-    iget v2, p0, Landroid/graphics/Insets;->right:I
-
-    iget p0, p0, Landroid/graphics/Insets;->bottom:I
-
-    invoke-static {v0, v1, v2, p0}, La67;->b(IIII)La67;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final d()Landroid/graphics/Insets;
-    .locals 3
-
-    iget v0, p0, La67;->c:I
-
-    iget v1, p0, La67;->d:I
-
-    iget v2, p0, La67;->a:I
-
-    iget p0, p0, La67;->b:I
-
-    invoke-static {v2, p0, v0, v1}, Lz57;->a(IIII)Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_6
-
-    const-class v2, La67;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, La67;
-
-    iget v2, p0, La67;->d:I
-
-    iget v3, p1, La67;->d:I
-
-    if-eq v2, v3, :cond_2
-
-    return v1
-
-    :cond_2
-    iget v2, p0, La67;->a:I
-
-    iget v3, p1, La67;->a:I
-
-    if-eq v2, v3, :cond_3
-
-    return v1
-
-    :cond_3
-    iget v2, p0, La67;->c:I
-
-    iget v3, p1, La67;->c:I
-
-    if-eq v2, v3, :cond_4
-
-    return v1
-
-    :cond_4
-    iget p0, p0, La67;->b:I
-
-    iget p1, p1, La67;->b:I
-
-    if-eq p0, p1, :cond_5
-
-    return v1
-
-    :cond_5
-    return v0
-
-    :cond_6
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, La67;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, La67;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, La67;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, La67;->d:I
-
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Insets{left="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, La67;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", top="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, La67;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", right="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, La67;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, La67;->d:I
-
-    const/16 v1, 0x7d
-
-    invoke-static {v0, p0, v1}, Ldw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

@@ -1,208 +1,201 @@
-.class public final synthetic Lffg;
+.class public final Lffg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lae6;
-
 
 # static fields
-.field public static final a:Lffg;
+.field public static final e:Lffg;
 
-.field private static final descriptor:Lpad;
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
     new-instance v0, Lffg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v4, 0x1e
 
-    sput-object v0, Lffg;->a:Lffg;
+    const/16 v5, 0x1e
 
-    new-instance v1, Lo7b;
+    const-wide/16 v1, 0x3c
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageGetKeyResponse"
+    const-string v3, "480"
 
-    const/4 v3, 0x3
+    invoke-direct/range {v0 .. v5}, Lffg;-><init>(JLjava/lang/String;II)V
 
-    invoke-direct {v1, v2, v0, v3}, Lo7b;-><init>(Ljava/lang/String;Lae6;I)V
+    sput-object v0, Lffg;->e:Lffg;
 
-    const-string v0, "requestId"
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method public constructor <init>(JLjava/lang/String;II)V
+    .locals 0
 
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "key"
+    iput-wide p1, p0, Lffg;->a:J
 
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
+    iput-object p3, p0, Lffg;->b:Ljava/lang/String;
 
-    const-string v0, "value"
+    iput p4, p0, Lffg;->c:I
 
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lffg;->descriptor:Lpad;
+    iput p5, p0, Lffg;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq8;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object p0, Lffg;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lq8;->j(Lpad;)Lq8;
-
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lffg;
 
     const/4 v2, 0x0
 
-    move v5, v0
+    if-nez v1, :cond_1
 
-    move v6, v1
-
-    move-object v3, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_4
-
-    invoke-virtual {p1, p0}, Lq8;->p(Lpad;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_3
-
-    if-eqz v7, :cond_2
-
-    if-eq v7, v0, :cond_1
-
-    const/4 v4, 0x2
-
-    if-ne v7, v4, :cond_0
-
-    invoke-virtual {p1, p0, v4}, Lq8;->v(Lpad;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
+    return v2
 
     :cond_1
-    invoke-virtual {p1, p0, v0}, Lq8;->v(Lpad;I)Ljava/lang/String;
+    check-cast p1, Lffg;
 
-    move-result-object v3
+    iget-wide v3, p0, Lffg;->a:J
 
-    or-int/lit8 v6, v6, 0x2
+    iget-wide v5, p1, Lffg;->a:J
 
-    goto :goto_0
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {p1, p0, v1}, Lq8;->v(Lpad;I)Ljava/lang/String;
+    iget-object v1, p0, Lffg;->b:Ljava/lang/String;
 
-    move-result-object v2
+    iget-object v3, p1, Lffg;->b:Ljava/lang/String;
 
-    or-int/lit8 v6, v6, 0x1
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    move v5, v1
+    iget v1, p0, Lffg;->c:I
 
-    goto :goto_0
+    iget v3, p1, Lffg;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
 
     :cond_4
-    invoke-virtual {p1, p0}, Lq8;->y(Lpad;)V
+    iget v1, p0, Lffg;->d:I
 
-    new-instance p0, Lhfg;
+    iget p1, p1, Lffg;->d:I
 
-    invoke-direct {p0, v2, v6, v3, v4}, Lhfg;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    if-eq v1, p1, :cond_5
 
-    return-object p0
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public final b(Lrx3;Ljava/lang/Object;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    check-cast p2, Lhfg;
+    iget-wide v0, p0, Lffg;->a:J
 
-    sget-object p0, Lffg;->descriptor:Lpad;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {p1, p0}, Lrx3;->b(Lpad;)Lrx3;
+    move-result v0
 
-    move-result-object p1
+    const/16 v1, 0x1f
 
-    iget-object v0, p2, Lhfg;->a:Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    const/4 v1, 0x0
+    iget-object v2, p0, Lffg;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p0, v1, v0}, Lrx3;->l(Lpad;ILjava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
 
-    const/4 v0, 0x1
+    move-result v0
 
-    iget-object v1, p2, Lhfg;->b:Ljava/lang/String;
+    iget v2, p0, Lffg;->c:I
 
-    invoke-virtual {p1, p0, v0, v1}, Lrx3;->l(Lpad;ILjava/lang/String;)V
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    const/4 v0, 0x2
+    move-result v0
 
-    iget-object p2, p2, Lhfg;->c:Ljava/lang/String;
+    iget v1, p0, Lffg;->d:I
 
-    invoke-virtual {p1, p0, v0, p2}, Lrx3;->l(Lpad;ILjava/lang/String;)V
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {p1}, Lrx3;->m()V
+    move-result v1
 
-    return-void
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final c()[Lpf7;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 p0, 0x3
+    const-string v0, "VideoMessageServerConfig(maxDuration="
 
-    new-array p0, p0, [Lpf7;
+    const-string v1, ", quality="
 
-    sget-object v0, Lsde;->a:Lsde;
+    iget-wide v2, p0, Lffg;->a:J
 
-    const/4 v1, 0x0
+    iget-object v4, p0, Lffg;->b:Ljava/lang/String;
 
-    aput-object v0, p0, v1
+    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    aput-object v0, p0, v1
+    const-string v1, ", minFrameRate="
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput-object v0, p0, v1
+    iget v1, p0, Lffg;->c:I
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final d()Lpad;
-    .locals 0
+    const-string v1, ", maxFrameRate="
 
-    sget-object p0, Lffg;->descriptor:Lpad;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
+    iget v1, p0, Lffg;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,76 +1,119 @@
-.class public abstract Lh0c;
-.super Ljava/lang/Object;
+.class public final Lh0c;
+.super Ll0c;
+.source "SourceFile"
 
 
-# static fields
-.field public static audio_record__action_view:I = 0x7f0a00e7
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
 
-.field public static audio_record__action_view_background:I = 0x7f0a00e8
 
-.field public static audio_record__action_view_bg_container:I = 0x7f0a00e9
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 0
 
-.field public static audio_record__action_view_container:I = 0x7f0a00ea
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static audio_record__audio_hand_free_record_view:I = 0x7f0a00eb
+    iput-object p1, p0, Lh0c;->a:Ljava/lang/CharSequence;
 
-.field public static audio_record__audio_record_root:I = 0x7f0a00ec
+    return-void
+.end method
 
-.field public static audio_record__cancel_view:I = 0x7f0a00ed
 
-.field public static audio_record__dot_view:I = 0x7f0a00ee
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static audio_record__duration_view:I = 0x7f0a00ef
+    const/4 v0, 0x1
 
-.field public static audio_record__hand_free_dot_view:I = 0x7f0a00f0
+    if-ne p0, p1, :cond_0
 
-.field public static audio_record__hand_free_duration_view:I = 0x7f0a00f1
+    return v0
 
-.field public static audio_record__lock_view:I = 0x7f0a00f2
+    :cond_0
+    instance-of v1, p1, Lh0c;
 
-.field public static audio_record__pause_recording_button:I = 0x7f0a00f3
+    const/4 v2, 0x0
 
-.field public static audio_record__play_pause_listening_button:I = 0x7f0a00f4
+    if-nez v1, :cond_1
 
-.field public static audio_record__play_recording_button:I = 0x7f0a00f5
+    return v2
 
-.field public static audio_record__recording_panel:I = 0x7f0a00f6
+    :cond_1
+    check-cast p1, Lh0c;
 
-.field public static audio_record__remove_button:I = 0x7f0a00f7
+    iget-object v1, p0, Lh0c;->a:Ljava/lang/CharSequence;
 
-.field public static audio_record__swipe_remove_button:I = 0x7f0a00f8
+    iget-object p1, p1, Lh0c;->a:Ljava/lang/CharSequence;
 
-.field public static audio_record__wave_container:I = 0x7f0a00f9
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static audio_record__wave_view:I = 0x7f0a00fa
+    move-result p1
 
-.field public static writebar__add_link_bottom_sheet_button_add:I = 0x7f0a0d7b
+    if-nez p1, :cond_2
 
-.field public static writebar__add_link_bottom_sheet_input:I = 0x7f0a0d7c
+    return v2
 
-.field public static writebar__container:I = 0x7f0a0d7d
+    :cond_2
+    return v0
+.end method
 
-.field public static writebar__record_controls:I = 0x7f0a0d7e
+.method public final getItemId()J
+    .locals 2
 
-.field public static writebar__root:I = 0x7f0a0d7f
+    const v0, 0x8000
 
-.field public static writebar__suggestion_close_button:I = 0x7f0a0d80
+    int-to-long v0, v0
 
-.field public static writebar__suggestion_close_panel:I = 0x7f0a0d81
+    return-wide v0
+.end method
 
-.field public static writebar__suggestion_container:I = 0x7f0a0d82
+.method public final hashCode()I
+    .locals 1
 
-.field public static writebar__suggestion_item:I = 0x7f0a0d83
+    iget-object v0, p0, Lh0c;->a:Ljava/lang/CharSequence;
 
-.field public static writebar__suggestion_not_found:I = 0x7f0a0d84
+    if-nez v0, :cond_0
 
-.field public static writebar__suggestion_panel:I = 0x7f0a0d85
+    const/4 v0, 0x0
 
-.field public static writebar__suggestion_popup_drag_layout:I = 0x7f0a0d86
+    return v0
 
-.field public static writebar__suggestion_popup_layout:I = 0x7f0a0d87
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static writebar__suggestion_popup_layout_content:I = 0x7f0a0d88
+    move-result v0
 
-.field public static writebar__suggestion_popup_layout_list:I = 0x7f0a0d89
+    return v0
+.end method
 
-.field public static writebar__suggestion_title:I = 0x7f0a0d8a
+.method public final m()I
+    .locals 1
+
+    const v0, 0x8000
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LinkWithQrCodeItem(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lh0c;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

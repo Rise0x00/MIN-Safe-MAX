@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyve;
+.implements Ljgf;
 
 
 # annotations
@@ -14,7 +14,7 @@
     d2 = {
         "Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;",
         "Landroid/widget/LinearLayout;",
-        "Lyve;",
+        "Ljgf;",
         "Landroid/content/Context;",
         "context",
         "Landroid/util/AttributeSet;",
@@ -23,13 +23,13 @@
         "(Landroid/content/Context;Landroid/util/AttributeSet;)V",
         "",
         "enabled",
-        "Ltcf;",
+        "Loyf;",
         "setEnabled",
         "(Z)V",
-        "Lh38;",
+        "Lgb8;",
         "listener",
         "setListener",
-        "(Lh38;)V",
+        "(Lgb8;)V",
         "markdown-ui_release"
     }
     k = 0x1
@@ -43,7 +43,7 @@
 
 
 # static fields
-.field public static final synthetic p0:I
+.field public static final synthetic y0:I
 
 
 # instance fields
@@ -53,11 +53,11 @@
 
 .field public c:I
 
-.field public n0:Landroid/animation/AnimatorSet;
-
 .field public final o:Landroid/graphics/Paint;
 
-.field public final o0:F
+.field public w0:Landroid/animation/AnimatorSet;
+
+.field public final x0:F
 
 
 # direct methods
@@ -102,17 +102,17 @@
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setWillNotDraw(Z)V
 
-    sget-object v1, Le38;->c:Lus9;
+    sget-object v1, Ldb8;->c:Lxt6;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Le38;->o:Ljava/util/LinkedHashSet;
+    sget-object v1, Ldb8;->o:Ljava/util/LinkedHashSet;
 
     new-instance v2, Ljava/util/ArrayList;
 
     const/16 v3, 0xa
 
-    invoke-static {v1, v3}, Li73;->Y(Ljava/lang/Iterable;I)I
+    invoke-static {v1, v3}, Lg93;->V(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -139,29 +139,29 @@
 
     if-ltz v3, :cond_2
 
-    check-cast v4, Le38;
+    check-cast v4, Ldb8;
 
-    new-instance v6, Lf38;
+    new-instance v6, Leb8;
 
-    invoke-direct {v6, p1}, Lf38;-><init>(Landroid/content/Context;)V
+    invoke-direct {v6, p1}, Leb8;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {v6, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    iget v7, v4, Le38;->b:I
+    iget v7, v4, Ldb8;->b:I
 
-    invoke-virtual {v6, v7}, Lf38;->setTitle(I)V
+    invoke-virtual {v6, v7}, Leb8;->setTitle(I)V
 
-    new-instance v7, Lrz4;
+    new-instance v7, La45;
 
     const/16 v8, 0xe
 
-    invoke-direct {v7, p0, v8, v4}, Lrz4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v7, p0, v8, v4}, La45;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v6, v7}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v6, v7}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
-    sget v7, Ljwb;->markdown_button_size:I
+    sget v7, Lnbc;->markdown_button_size:I
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -183,7 +183,7 @@
 
     iput v7, v4, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    invoke-static {}, Le38;->values()[Le38;
+    invoke-static {}, Ldb8;->values()[Ldb8;
 
     move-result-object v7
 
@@ -202,7 +202,7 @@
 
     int-to-float v7, v7
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -214,7 +214,7 @@
 
     mul-float/2addr v7, v8
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
@@ -235,7 +235,7 @@
     move v3, p2
 
     :goto_2
-    invoke-virtual {v6, v3, p2}, Lf38;->a(ZZ)V
+    invoke-virtual {v6, v3, p2}, Leb8;->a(ZZ)V
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -244,18 +244,18 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lh73;->X()V
+    invoke-static {}, Lf93;->U()V
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    throw p0
+    throw p1
 
     :cond_3
     iput-object v2, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->e()V
+    invoke-virtual {p0}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->c()V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -269,7 +269,7 @@
 
     mul-float/2addr p1, p2
 
-    iput p1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->o0:F
+    iput p1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->x0:F
 
     return-void
 .end method
@@ -285,7 +285,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lf38;
+    check-cast v0, Leb8;
 
     invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
 
@@ -297,11 +297,11 @@
 
     if-eqz p2, :cond_3
 
-    invoke-static {p0}, Lgog;->n(Landroid/view/View;)Lng;
+    invoke-static {p0}, Lox9;->p(Landroid/view/View;)Log;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lng;->a()Z
+    invoke-virtual {p2}, Log;->a()Z
 
     move-result p2
 
@@ -310,11 +310,11 @@
     goto/16 :goto_0
 
     :cond_0
-    invoke-static {p0}, Lgog;->n(Landroid/view/View;)Lng;
+    invoke-static {p0}, Lox9;->p(Landroid/view/View;)Log;
 
     move-result-object p2
 
-    iget-object v1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->n0:Landroid/animation/AnimatorSet;
+    iget-object v1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->w0:Landroid/animation/AnimatorSet;
 
     const/4 v3, 0x1
 
@@ -326,7 +326,7 @@
 
     if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->n0:Landroid/animation/AnimatorSet;
+    iget-object v1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->w0:Landroid/animation/AnimatorSet;
 
     if-eqz v1, :cond_1
 
@@ -355,9 +355,9 @@
 
     move-result-object v1
 
-    new-instance v4, Lg38;
+    new-instance v4, Lfb8;
 
-    invoke-direct {v4, p0, v7}, Lg38;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
+    invoke-direct {v4, p0, v7}, Lfb8;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
 
     invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -379,9 +379,9 @@
 
     move-result-object v4
 
-    new-instance v6, Lg38;
+    new-instance v6, Lfb8;
 
-    invoke-direct {v6, p0, v3}, Lg38;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
+    invoke-direct {v6, p0, v3}, Lfb8;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
 
     invoke-virtual {v4, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -403,9 +403,9 @@
 
     move-result-object v6
 
-    new-instance v8, Lg38;
+    new-instance v8, Lfb8;
 
-    invoke-direct {v8, p0, v5}, Lg38;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
+    invoke-direct {v8, p0, v5}, Lfb8;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
 
     invoke-virtual {v6, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -427,11 +427,11 @@
 
     move-result-object v0
 
-    new-instance v2, Lg38;
+    new-instance v2, Lfb8;
 
     const/4 v8, 0x3
 
-    invoke-direct {v2, p0, v8}, Lg38;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
+    invoke-direct {v2, p0, v8}, Lfb8;-><init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -439,17 +439,17 @@
 
     invoke-direct {v2}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object v2, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->n0:Landroid/animation/AnimatorSet;
+    iput-object v2, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->w0:Landroid/animation/AnimatorSet;
 
-    iget-object v9, p2, Lng;->a:Lrj4;
+    iget-object v9, p2, Log;->a:Ld16;
 
     const-wide/16 v9, 0xc8
 
     invoke-virtual {v2, v9, v10}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    iget-object p2, p2, Lng;->a:Lrj4;
+    iget-object p2, p2, Log;->a:Ld16;
 
-    iget-object v9, p2, Lrj4;->a:Ljava/lang/Object;
+    iget-object v9, p2, Ld16;->b:Ljava/lang/Object;
 
     check-cast v9, Landroid/view/animation/LinearInterpolator;
 
@@ -459,10 +459,10 @@
 
     invoke-direct {v9}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    iput-object v9, p2, Lrj4;->a:Ljava/lang/Object;
+    iput-object v9, p2, Ld16;->b:Ljava/lang/Object;
 
     :cond_2
-    iget-object p2, p2, Lrj4;->a:Ljava/lang/Object;
+    iget-object p2, p2, Ld16;->b:Ljava/lang/Object;
 
     check-cast p2, Landroid/view/animation/LinearInterpolator;
 
@@ -482,9 +482,9 @@
 
     invoke-virtual {v2, p2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    new-instance p2, Lkg;
+    new-instance p2, Ljg;
 
-    invoke-direct {p2, p1, v5, p0}, Lkg;-><init>(IILjava/lang/Object;)V
+    invoke-direct {p2, p0, p1, v5}, Ljg;-><init>(Ljava/lang/Object;II)V
 
     invoke-virtual {v2, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -531,8 +531,8 @@
     return-void
 .end method
 
-.method public final e()V
-    .locals 1
+.method public final c()V
+    .locals 2
 
     invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
 
@@ -543,26 +543,26 @@
     goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lf38;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Lf38;->e()V
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leb8;
+
+    invoke-virtual {v1}, Leb8;->c()V
 
     goto :goto_0
 
@@ -572,15 +572,15 @@
 .end method
 
 .method public final onDetachedFromWindow()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object p0, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->n0:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->w0:Landroid/animation/AnimatorSet;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
     :cond_0
     return-void
@@ -599,7 +599,7 @@
 
     iget v5, v0, Landroid/graphics/RectF;->bottom:F
 
-    iget v6, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->o0:F
+    iget v6, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->x0:F
 
     iget-object v8, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->o:Landroid/graphics/Paint;
 
@@ -619,17 +619,19 @@
 
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    iget-object p1, p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
+    move-object p1, p0
 
-    invoke-virtual {p1}, Landroid/graphics/RectF;->isEmpty()Z
+    iget-object p2, p1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
 
-    move-result p1
+    invoke-virtual {p2}, Landroid/graphics/RectF;->isEmpty()Z
 
-    if-eqz p1, :cond_0
+    move-result p2
 
-    const/4 p1, 0x0
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p0, p1, p1}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a(IZ)V
+    const/4 p2, 0x0
+
+    invoke-virtual {p0, p2, p2}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a(IZ)V
 
     :cond_0
     return-void
@@ -648,7 +650,7 @@
     return-void
 .end method
 
-.method public final setListener(Lh38;)V
+.method public final setListener(Lgb8;)V
     .locals 0
 
     return-void

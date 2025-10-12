@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqe;
+.implements Lzaf;
 .implements Landroid/widget/Checkable;
 
 
@@ -15,7 +15,7 @@
     d2 = {
         "Lru/ok/tamtam/calls/ui/IconSwitch;",
         "Landroid/widget/LinearLayout;",
-        "Lpqe;",
+        "Lzaf;",
         "Landroid/widget/Checkable;",
         "Landroid/content/Context;",
         "context",
@@ -25,7 +25,7 @@
         "(Landroid/content/Context;Landroid/util/AttributeSet;)V",
         "",
         "text",
-        "Ltcf;",
+        "Loyf;",
         "setText",
         "(I)V",
         "",
@@ -34,10 +34,10 @@
         "setIconDrawable",
         "orientation",
         "setOrientation",
-        "Lzv6;",
+        "Lx27;",
         "listener",
         "setListener",
-        "(Lzv6;)V",
+        "(Lx27;)V",
         "",
         "checked",
         "setChecked",
@@ -104,7 +104,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -116,7 +116,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v3
 
@@ -152,7 +152,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -164,7 +164,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v3
 
@@ -181,7 +181,7 @@
 
     invoke-virtual {p0, v1, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Lyv6;
+    new-instance v2, Lw27;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
@@ -189,13 +189,13 @@
 
     if-eqz p2, :cond_1
 
-    sget-object v1, Lm6c;->IconSwitch:[I
+    sget-object v1, Ltlc;->IconSwitch:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lm6c;->IconSwitch_icon_switch_start_drawable:I
+    sget p2, Ltlc;->IconSwitch_icon_switch_start_drawable:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -212,7 +212,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lvh4;->e0:Lvh4;
+    sget-object p1, Ltk4;->e0:Ltk4;
 
     goto :goto_0
 
@@ -221,14 +221,14 @@
 
     move-result-object p1
 
-    sget-object p2, Llqe;->a0:Lkle;
+    sget-object p2, Lvaf;->a0:Ls5f;
 
-    invoke-static {p1}, Le64;->v(Landroid/content/Context;)Llqe;
+    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/calls/ui/IconSwitch;->z(Llqe;)V
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/calls/ui/IconSwitch;->y(Lvaf;)V
 
     return-void
 .end method
@@ -236,39 +236,39 @@
 
 # virtual methods
 .method public final getIcon()Landroidx/appcompat/widget/AppCompatImageView;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final getSwitch()Landroidx/appcompat/widget/SwitchCompat;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final isChecked()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public setChecked(Z)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
     return-void
 .end method
@@ -280,18 +280,18 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method public final setListener(Lzv6;)V
+.method public final setListener(Lx27;)V
     .locals 0
 
     return-void
@@ -308,109 +308,109 @@
 .end method
 
 .method public final setText(I)V
-    .locals 0
+    .locals 1
 
     .line 1
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
     return-void
 .end method
 
 .method public final setText(Ljava/lang/CharSequence;)V
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
 .method public final toggle()V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/SwitchCompat;->toggle()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->toggle()V
 
     return-void
 .end method
 
-.method public final z(Llqe;)V
-    .locals 6
+.method public final y(Lvaf;)V
+    .locals 7
 
-    iget v0, p1, Llqe;->w:I
+    iget v0, p1, Lvaf;->w:I
 
     iget-object v1, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->a:Landroidx/appcompat/widget/AppCompatImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
 
-    iget-object p0, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
+    iget-object v1, p0, Lru/ok/tamtam/calls/ui/IconSwitch;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance v0, Landroid/content/res/ColorStateList;
-
-    const v1, 0x10100a0
-
-    filled-new-array {v1}, [I
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [I
-
-    filled-new-array {v2, v4}, [[I
-
-    move-result-object v2
-
-    iget v4, p1, Llqe;->k:I
-
-    iget v5, p1, Llqe;->l:I
-
-    filled-new-array {v4, v5}, [I
-
-    move-result-object v5
-
-    invoke-direct {v0, v2, v5}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SwitchCompat;->setThumbTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
     new-instance v0, Landroid/content/res/ColorStateList;
 
-    filled-new-array {v1}, [I
+    const v2, 0x10100a0
 
-    move-result-object v1
+    filled-new-array {v2}, [I
 
-    new-array v2, v3, [I
+    move-result-object v3
 
-    filled-new-array {v1, v2}, [[I
+    const/4 v4, 0x0
 
-    move-result-object v1
+    new-array v5, v4, [I
 
-    const v2, 0x3e99999a    # 0.3f
+    filled-new-array {v3, v5}, [[I
 
-    invoke-static {v4, v2}, Lpo9;->X(IF)I
+    move-result-object v3
 
-    move-result v3
+    iget v5, p1, Lvaf;->k:I
 
-    iget p1, p1, Llqe;->M:I
+    iget v6, p1, Lvaf;->l:I
 
-    invoke-static {p1, v2}, Lpo9;->X(IF)I
+    filled-new-array {v5, v6}, [I
+
+    move-result-object v6
+
+    invoke-direct {v0, v3, v6}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    invoke-virtual {v1, v0}, Landroidx/appcompat/widget/SwitchCompat;->setThumbTintList(Landroid/content/res/ColorStateList;)V
+
+    new-instance v0, Landroid/content/res/ColorStateList;
+
+    filled-new-array {v2}, [I
+
+    move-result-object v2
+
+    new-array v3, v4, [I
+
+    filled-new-array {v2, v3}, [[I
+
+    move-result-object v2
+
+    const v3, 0x3e99999a    # 0.3f
+
+    invoke-static {v5, v3}, Lyhh;->R(IF)I
+
+    move-result v4
+
+    iget p1, p1, Lvaf;->M:I
+
+    invoke-static {p1, v3}, Lyhh;->R(IF)I
 
     move-result p1
 
-    filled-new-array {v3, p1}, [I
+    filled-new-array {v4, p1}, [I
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+    invoke-direct {v0, v2, p1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
-    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/SwitchCompat;->setTrackTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {v1, v0}, Landroidx/appcompat/widget/SwitchCompat;->setTrackTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method

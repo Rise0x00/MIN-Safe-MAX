@@ -1,23 +1,45 @@
-.class public abstract Ljd8;
+.class public interface abstract Ljd8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lan6;
 
-# direct methods
-.method public static a(Landroid/media/MediaDescription;)Landroid/net/Uri;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaUri()Landroid/net/Uri;
+# virtual methods
+.method public a(Landroid/content/Context;Z)Lhn6;
+    .locals 2
 
-    move-result-object p0
+    invoke-static {p0}, Le77;->m(Ljava/lang/Object;)Lxyc;
 
-    return-object p0
+    move-result-object v0
+
+    sget-object v1, Lxyc;->X:Lxyc;
+
+    invoke-static {p1, v0, v1, p2}, Lzj4;->h(Landroid/content/Context;Lxyc;Lxyc;Z)Lzj4;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static b(Landroid/media/MediaDescription$Builder;Landroid/net/Uri;)V
-    .locals 0
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaDescription$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
+.method public c()I
+    .locals 1
 
-    return-void
+    const/16 v0, 0x2601
+
+    return v0
+.end method
+
+.method public e(II)Lvfe;
+    .locals 1
+
+    new-instance v0, Lvfe;
+
+    invoke-direct {v0, p1, p2}, Lvfe;-><init>(II)V
+
+    return-object v0
 .end method

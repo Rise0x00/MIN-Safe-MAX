@@ -1,99 +1,111 @@
-.class public final enum Ll91;
-.super Ljava/lang/Enum;
+.class public final Ll91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:Ly55;
-
-.field public static final enum b:Ll91;
-
-.field public static final enum c:Ll91;
-
-.field public static final synthetic o:[Ll91;
+# interfaces
+.implements Lsq1;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Ll91;
-
-    const/4 v1, 0x0
-
-    sget v2, Lk3c;->call_history_call_tab_all:I
-
-    const-string v3, "ALL"
-
-    invoke-direct {v0, v3, v1, v2}, Ll91;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Ll91;->b:Ll91;
-
-    new-instance v1, Ll91;
-
-    const/4 v2, 0x1
-
-    sget v3, Lk3c;->call_history_call_tab_missing:I
-
-    const-string v4, "MISSING"
-
-    invoke-direct {v1, v4, v2, v3}, Ll91;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Ll91;->c:Ll91;
-
-    filled-new-array {v0, v1}, [Ll91;
-
-    move-result-object v0
-
-    sput-object v0, Ll91;->o:[Ll91;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ll91;->X:Ly55;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ll91;->a:I
+    iput-object p1, p0, Ll91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ll91;
-    .locals 1
 
-    const-class v0, Ll91;
+# virtual methods
+.method public final v()V
+    .locals 9
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Ll91;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    move-result-object p0
+    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Ln9b;
 
-    check-cast p0, Ll91;
+    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-.method public static values()[Ll91;
-    .locals 1
+    move-result-object v2
 
-    sget-object v0, Ll91;->o:[Ll91;
+    move-object v4, v2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    check-cast v4, Ld7h;
+
+    invoke-virtual {v1}, Ln9b;->b()Lz9b;
+
+    move-result-object v2
+
+    sget-object v5, Lz9b;->m:[Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Lz9b;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Ln9b;->b()Lz9b;
+
+    move-result-object v3
+
+    sget v8, Lzjc;->permissions_video_message_request_only_camera_title:I
+
+    sget v7, Lzjc;->permissions_calls_video_preview_request:I
+
+    const/16 v6, 0xb7
+
+    invoke-virtual/range {v3 .. v8}, Lz9b;->k(Ld7h;[Ljava/lang/String;III)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->D0()Lt91;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->D0()Lt91;
 
     move-result-object v0
 
-    check-cast v0, [Ll91;
+    iget-object v0, v0, Lt91;->y0:Lmoe;
 
-    return-object v0
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v2, v0, Lo91;
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Lo91;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, v0, Lo91;->b:Z
+
+    :goto_1
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1, v0}, Lt91;->r(Z)V
+
+    return-void
 .end method

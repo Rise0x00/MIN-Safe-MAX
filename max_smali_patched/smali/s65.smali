@@ -3,103 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxee;
-.implements Lnsb;
+.implements Lt97;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
-
-.field public b:Ljava/util/ArrayDeque;
-
-.field public final c:Lhcf;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    sget-object v0, Lhcf;->a:Lhcf;
+.method public constructor <init>(Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v1, p0, Ls65;->a:Ljava/util/HashMap;
-
-    new-instance v1, Ljava/util/ArrayDeque;
-
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v1, p0, Ls65;->b:Ljava/util/ArrayDeque;
-
-    iput-object v0, p0, Ls65;->c:Lhcf;
+    iput-boolean p1, p0, Ls65;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbj5;)V
-    .locals 4
+.method public final b()Lm2a;
+    .locals 1
 
-    const-class v0, Le64;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Ls65;->c:Lhcf;
+    return-object v0
+.end method
 
-    monitor-enter p0
+.method public final isActive()Z
+    .locals 1
 
-    :try_start_0
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-boolean v0, p0, Ls65;->a:Z
 
-    iget-object v2, p0, Ls65;->a:Ljava/util/HashMap;
+    return v0
+.end method
 
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result v2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v2, :cond_0
+    const-string v1, "Empty{"
 
-    iget-object v2, p0, Ls65;->a:Ljava/util/HashMap;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
+    iget-boolean v1, p0, Ls65;->a:Z
 
-    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "Active"
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
-    :goto_0
-    iget-object v2, p0, Ls65;->a:Ljava/util/HashMap;
+    const-string v1, "New"
 
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

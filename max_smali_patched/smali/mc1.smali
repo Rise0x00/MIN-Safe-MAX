@@ -1,48 +1,103 @@
-.class public final Lmc1;
-.super Lax3;
+.class public final synthetic Lmc1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ldw;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Ldw;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lmc1;->Y:Ldw;
+    iput p2, p0, Lmc1;->a:I
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 8
 
-    iput-object p1, p0, Lmc1;->o:Ljava/lang/Object;
+    iget p1, p0, Lmc1;->a:I
 
-    iget p1, p0, Lmc1;->X:I
+    iget-object v0, p0, Lmc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    const/high16 v0, -0x80000000
+    packed-switch p1, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0:[Ltm7;
 
-    iput p1, p0, Lmc1;->X:I
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Ljc1;
 
-    iget-object p1, p0, Lmc1;->Y:Ldw;
+    move-result-object p1
 
-    const/4 v0, 0x0
+    iget-object v0, p1, Ljc1;->B0:Lmoe;
 
-    invoke-virtual {p1, v0, p0}, Ldw;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    check-cast v0, Lcc1;
+
+    iget-object v1, p1, Ljc1;->E0:Ljb5;
+
+    new-instance v2, Lwa1;
+
+    iget-object p1, p1, Ljc1;->b:Ljava/lang/String;
+
+    iget-object v3, v0, Lcc1;->c:Lve8;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    sget-object v6, Lve8;->b:Lve8;
+
+    if-ne v3, v6, :cond_0
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v4
+
+    :goto_0
+    iget-object v7, v0, Lcc1;->b:Lve8;
+
+    if-ne v7, v6, :cond_1
+
+    move v4, v5
+
+    :cond_1
+    iget-boolean v0, v0, Lcc1;->d:Z
+
+    invoke-direct {v2, p1, v3, v4, v0}, Lwa1;-><init>(Ljava/lang/String;ZZZ)V
+
+    invoke-static {v1, v2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0:[Ltm7;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

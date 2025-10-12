@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpqe;
+.implements Lzaf;
 
 
 # annotations
@@ -14,10 +14,10 @@
     d2 = {
         "Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;",
         "Landroidx/appcompat/widget/AppCompatButton;",
-        "Lpqe;",
+        "Lzaf;",
         "",
         "title",
-        "Ltcf;",
+        "Loyf;",
         "setTitle",
         "(Ljava/lang/CharSequence;)V",
         "subtitle",
@@ -35,13 +35,13 @@
 
 
 # instance fields
-.field public n0:Ljava/lang/CharSequence;
-
 .field public o:Ljava/lang/CharSequence;
 
-.field public final o0:Landroid/text/style/TextAppearanceSpan;
+.field public w0:Ljava/lang/CharSequence;
 
-.field public final p0:Landroid/text/style/TextAppearanceSpan;
+.field public final x0:Landroid/text/style/TextAppearanceSpan;
+
+.field public final y0:Landroid/text/style/TextAppearanceSpan;
 
 
 # direct methods
@@ -54,33 +54,33 @@
 
     new-instance v0, Landroid/text/style/TextAppearanceSpan;
 
-    sget v1, Lb6c;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I
+    sget v1, Lilc;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Title:I
 
     invoke-direct {v0, p1, v1}, Landroid/text/style/TextAppearanceSpan;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->o0:Landroid/text/style/TextAppearanceSpan;
+    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->x0:Landroid/text/style/TextAppearanceSpan;
 
     new-instance v0, Landroid/text/style/TextAppearanceSpan;
 
-    sget v1, Lb6c;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I
+    sget v1, Lilc;->UiUtils_TextAppearance_LongRoundedTitleSubtitleButton_Subtitle:I
 
     invoke-direct {v0, p1, v1}, Landroid/text/style/TextAppearanceSpan;-><init>(Landroid/content/Context;I)V
 
-    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->p0:Landroid/text/style/TextAppearanceSpan;
+    iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->y0:Landroid/text/style/TextAppearanceSpan;
 
-    sget-object v0, Lq6c;->LongRoundedTitleSubtitleButton:[I
+    sget-object v0, Lxlc;->LongRoundedTitleSubtitleButton:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lq6c;->LongRoundedTitleSubtitleButton_lrts_title:I
+    sget p2, Lxlc;->LongRoundedTitleSubtitleButton_lrts_title:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    sget v0, Lq6c;->LongRoundedTitleSubtitleButton_lrts_subtitle:I
+    sget v0, Lxlc;->LongRoundedTitleSubtitleButton_lrts_subtitle:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -112,7 +112,7 @@
 
     if-eqz p1, :cond_2
 
-    sget-object p1, Lvh4;->e0:Lvh4;
+    sget-object p1, Ltk4;->e0:Ltk4;
 
     goto :goto_0
 
@@ -121,14 +121,14 @@
 
     move-result-object p1
 
-    sget-object p2, Llqe;->a0:Lkle;
+    sget-object p2, Lvaf;->a0:Ls5f;
 
-    invoke-static {p1}, Le64;->v(Landroid/content/Context;)Llqe;
+    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
 
     move-result-object p1
 
     :goto_0
-    invoke-virtual {p0, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->z(Llqe;)V
+    invoke-virtual {p0, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->y(Lvaf;)V
 
     return-void
 .end method
@@ -163,7 +163,7 @@
 
     move-result p1
 
-    iget-object v4, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->o0:Landroid/text/style/TextAppearanceSpan;
+    iget-object v4, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->x0:Landroid/text/style/TextAppearanceSpan;
 
     invoke-interface {v0, v4, v3, p1, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
@@ -175,7 +175,7 @@
     :goto_0
     iput-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->o:Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->n0:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->w0:Ljava/lang/CharSequence;
 
     if-ne p2, p1, :cond_2
 
@@ -194,7 +194,7 @@
 
     move-result p2
 
-    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->p0:Landroid/text/style/TextAppearanceSpan;
+    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->y0:Landroid/text/style/TextAppearanceSpan;
 
     invoke-interface {p1, v0, v3, p2, v2}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
@@ -204,7 +204,7 @@
     move-object p1, v1
 
     :goto_1
-    iput-object p1, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->n0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->w0:Ljava/lang/CharSequence;
 
     new-instance p1, Landroid/text/SpannableStringBuilder;
 
@@ -221,7 +221,7 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->n0:Ljava/lang/CharSequence;
+    iget-object p2, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->w0:Ljava/lang/CharSequence;
 
     if-eqz p2, :cond_5
 
@@ -252,21 +252,21 @@
 .method public final setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->n0:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->w0:Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, v0}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public final z(Llqe;)V
+.method public final y(Lvaf;)V
     .locals 2
 
     const/16 v0, 0x2a
 
     int-to-float v0, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -278,11 +278,11 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
-    invoke-static {p1, p0, v0}, Lz8c;->d(Llqe;Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;I)V
+    invoke-static {p1, p0, v0}, Lv4b;->b(Lvaf;Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;I)V
 
     return-void
 .end method

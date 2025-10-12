@@ -1,99 +1,296 @@
-.class public final Lxl8;
+.class public Lxl8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final h:Lxl8;
+
+.field public static final i:Ljava/lang/String;
+
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
+
+
 # instance fields
-.field public a:Lzl8;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lvl8;
+
+    invoke-direct {v0}, Lvl8;-><init>()V
+
+    new-instance v1, Lxl8;
+
+    invoke-direct {v1, v0}, Lxl8;-><init>(Lvl8;)V
+
+    sput-object v1, Lxl8;->h:Lxl8;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->i:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->j:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->k:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->l:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->m:Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->n:Ljava/lang/String;
+
+    const/4 v0, 0x6
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lxl8;->o:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lvl8;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iget-wide v0, p1, Lvl8;->a:J
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v0, v1}, Lt4g;->j0(J)J
 
-    move-result v0
+    move-result-wide v0
 
-    if-nez v0, :cond_0
+    iput-wide v0, p0, Lxl8;->a:J
 
-    new-instance v0, Lzl8;
+    iget-wide v0, p1, Lvl8;->b:J
 
-    invoke-direct {v0, p1, p2, p3}, Lzl8;-><init>(Ljava/lang/String;II)V
+    invoke-static {v0, v1}, Lt4g;->j0(J)J
 
-    new-instance v1, Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+    move-result-wide v0
 
-    invoke-direct {v1, p1, p2, p3}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
+    iput-wide v0, p0, Lxl8;->c:J
 
-    iput-object v0, p0, Lxl8;->a:Lzl8;
+    iget-wide v0, p1, Lvl8;->a:J
+
+    iput-wide v0, p0, Lxl8;->b:J
+
+    iget-wide v0, p1, Lvl8;->b:J
+
+    iput-wide v0, p0, Lxl8;->d:J
+
+    iget-boolean v0, p1, Lvl8;->c:Z
+
+    iput-boolean v0, p0, Lxl8;->e:Z
+
+    iget-boolean v0, p1, Lvl8;->d:Z
+
+    iput-boolean v0, p0, Lxl8;->f:Z
+
+    iget-boolean p1, p1, Lvl8;->e:Z
+
+    iput-boolean p1, p0, Lxl8;->g:Z
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "packageName should be nonempty"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "package shouldn\'t be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
+.method public final a()Lvl8;
+    .locals 3
+
+    new-instance v0, Lvl8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v1, p0, Lxl8;->b:J
+
+    iput-wide v1, v0, Lvl8;->a:J
+
+    iget-wide v1, p0, Lxl8;->d:J
+
+    iput-wide v1, v0, Lvl8;->b:J
+
+    iget-boolean v1, p0, Lxl8;->e:Z
+
+    iput-boolean v1, v0, Lvl8;->c:Z
+
+    iget-boolean v1, p0, Lxl8;->f:Z
+
+    iput-boolean v1, v0, Lvl8;->d:Z
+
+    iget-boolean v1, p0, Lxl8;->g:Z
+
+    iput-boolean v1, v0, Lvl8;->e:Z
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 7
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lxl8;
+    instance-of v1, p1, Lxl8;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p0, 0x0
+    if-nez v1, :cond_1
 
-    return p0
+    return v2
 
     :cond_1
-    iget-object p0, p0, Lxl8;->a:Lzl8;
-
     check-cast p1, Lxl8;
 
-    iget-object p1, p1, Lxl8;->a:Lzl8;
+    iget-wide v3, p0, Lxl8;->b:J
 
-    invoke-virtual {p0, p1}, Lzl8;->equals(Ljava/lang/Object;)Z
+    iget-wide v5, p1, Lxl8;->b:J
 
-    move-result p0
+    cmp-long v1, v3, v5
 
-    return p0
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lxl8;->d:J
+
+    iget-wide v5, p1, Lxl8;->d:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Lxl8;->e:Z
+
+    iget-boolean v3, p1, Lxl8;->e:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lxl8;->f:Z
+
+    iget-boolean v3, p1, Lxl8;->f:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lxl8;->g:Z
+
+    iget-boolean p1, p1, Lxl8;->g:Z
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 5
 
-    iget-object p0, p0, Lxl8;->a:Lzl8;
+    iget-wide v0, p0, Lxl8;->b:J
 
-    invoke-virtual {p0}, Lzl8;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result p0
+    ushr-long v3, v0, v2
 
-    return p0
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Lxl8;->d:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxl8;->e:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxl8;->f:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxl8;->g:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

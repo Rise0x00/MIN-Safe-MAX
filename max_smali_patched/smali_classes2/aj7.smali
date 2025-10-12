@@ -1,85 +1,131 @@
 .class public final Laj7;
-.super Lfa4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Laj7;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final c:Laa4;
-
-.field public static final d:Laa4;
-
-.field public static final e:Laa4;
+.field public final b:Lqle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Lqle;)V
+    .locals 0
 
-    new-instance v0, Laj7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    iput-object p1, p0, Laj7;->a:Ljava/lang/String;
 
-    sput-object v0, Laj7;->b:Laj7;
+    iput-object p2, p0, Laj7;->b:Lqle;
 
-    const-string v1, "lat"
+    return-void
+.end method
 
-    const-string v2, "lon"
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    move-result-object v2
+    if-ne p0, p1, :cond_0
 
-    const/16 v5, 0xe
+    goto :goto_1
 
-    const/4 v4, 0x0
+    :cond_0
+    instance-of v0, p1, Laj7;
 
-    const-string v1, ":location/show"
+    if-nez v0, :cond_1
 
-    const/4 v3, 0x0
+    goto :goto_0
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    :cond_1
+    check-cast p1, Laj7;
 
-    move-result-object v1
+    iget-object v0, p0, Laj7;->a:Ljava/lang/String;
 
-    sput-object v1, Laj7;->c:Laa4;
+    iget-object v1, p1, Laj7;->a:Ljava/lang/String;
 
-    const-string v1, "request_code"
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    if-nez v0, :cond_2
 
-    const-string v1, ":location/pick"
+    goto :goto_0
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    :cond_2
+    iget-object v0, p0, Laj7;->b:Lqle;
 
-    move-result-object v1
+    iget-object p1, p1, Laj7;->b:Lqle;
 
-    sput-object v1, Laj7;->d:Laa4;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const-string v1, "attachment_id"
+    move-result p1
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    if-nez p1, :cond_3
 
-    move-result-object v2
+    :goto_0
+    const/4 p1, 0x0
 
-    const-string v1, "message"
+    return p1
 
-    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object v3
+    return p1
+.end method
 
-    const/16 v5, 0xc
+.method public final hashCode()I
+    .locals 2
 
-    const-string v1, ":attach/fullscreen"
+    iget-object v0, p0, Laj7;->a:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Laj7;->b:Lqle;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "JobWrapper(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Laj7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", job="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Laj7;->b:Lqle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Laj7;->e:Laa4;
-
-    return-void
+    return-object v0
 .end method

@@ -1,24 +1,28 @@
-.class public final Li02;
+.class public final synthetic Li02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj02;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic b:Lj02;
+
+.field public final synthetic c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lj02;Ljava/lang/String;I)V
     .locals 0
 
-    iput p1, p0, Li02;->a:I
+    iput p3, p0, Li02;->a:I
 
-    iput-object p2, p0, Li02;->b:Ljava/lang/Object;
+    iput-object p1, p0, Li02;->b:Lj02;
+
+    iput-object p2, p0, Li02;->c:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,149 +31,38 @@
 
 
 # virtual methods
-.method public final b(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Li02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Li02;->b:Ljava/lang/Object;
-
-    check-cast p0, Lnp4;
-
-    invoke-interface {p0}, Lnp4;->dispose()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Li02;->b:Ljava/lang/Object;
-
-    check-cast p0, Lf96;
-
-    invoke-interface {p0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Li02;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 p1, 0x0
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
     iget v0, p0, Li02;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li02;->c:Ljava/lang/String;
 
-    const-string v1, "DisposeOnCancel["
+    iget-object v1, p0, Li02;->b:Lj02;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, v1, Lj02;->b:Low1;
 
-    iget-object p0, p0, Li02;->b:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Low1;->onCameraUnavailable(Ljava/lang/String;)V
 
-    check-cast p0, Lnp4;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li02;->c:Ljava/lang/String;
 
-    const-string v1, "CancelHandler.UserSupplied["
+    iget-object v1, p0, Li02;->b:Lj02;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, v1, Lj02;->b:Low1;
 
-    iget-object v1, p0, Li02;->b:Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Low1;->onCameraAvailable(Ljava/lang/String;)V
 
-    check-cast v1, Lf96;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Ly84;->u(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelFutureOnCancel["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Li02;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/ScheduledFuture;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

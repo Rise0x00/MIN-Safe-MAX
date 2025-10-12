@@ -1,186 +1,168 @@
 .class public final Lv6;
-.super Lau8;
+.super Landroidx/appcompat/widget/AppCompatImageView;
 .source "SourceFile"
+
+# interfaces
+.implements Lx6;
 
 
 # instance fields
-.field public final synthetic l:I
-
-.field public final synthetic m:Ly6;
+.field public final synthetic o:Lw6;
 
 
 # direct methods
-.method public constructor <init>(Ly6;Landroid/content/Context;Lpt8;Landroid/view/View;)V
-    .locals 8
+.method public constructor <init>(Lw6;Landroid/content/Context;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lv6;->o:Lw6;
 
-    iput v0, p0, Lv6;->l:I
+    const/4 p1, 0x0
 
-    .line 1
-    iput-object p1, p0, Lv6;->m:Ly6;
+    sget v0, Lxac;->actionOverflowButtonStyle:I
 
-    .line 2
-    sget v6, Luvb;->actionOverflowMenuStyle:I
+    invoke-direct {p0, p2, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 v7, 0x0
+    const/4 p1, 0x1
 
-    const/4 v5, 0x1
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
 
-    move-object v1, p0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
 
-    move-object v2, p2
+    const/4 p2, 0x0
 
-    move-object v3, p3
+    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
 
-    move-object v4, p4
+    invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 3
-    invoke-direct/range {v1 .. v7}, Lau8;-><init>(Landroid/content/Context;Lpt8;Landroid/view/View;ZII)V
+    invoke-virtual {p0}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
 
-    const p0, 0x800005
+    move-result-object p1
 
-    .line 4
-    iput p0, v1, Lau8;->f:I
+    invoke-static {p0, p1}, Lqkf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
-    .line 5
-    iget-object p0, p1, Ly6;->C0:Lp1e;
+    new-instance p1, Lr6;
 
-    .line 6
-    iput-object p0, v1, Lau8;->h:Lfu8;
+    invoke-direct {p1, p0, p0}, Lr6;-><init>(Lv6;Lv6;)V
 
-    .line 7
-    iget-object p1, v1, Lau8;->i:Lyt8;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    if-eqz p1, :cond_0
-
-    .line 8
-    invoke-interface {p1, p0}, Lgu8;->e(Lfu8;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public constructor <init>(Ly6;Landroid/content/Context;Lree;Landroid/view/View;)V
-    .locals 8
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lv6;->l:I
-
-    .line 9
-    iput-object p1, p0, Lv6;->m:Ly6;
-
-    .line 10
-    sget v6, Luvb;->actionOverflowMenuStyle:I
-
-    const/4 v7, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v1, p0
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    .line 11
-    invoke-direct/range {v1 .. v7}, Lau8;-><init>(Landroid/content/Context;Lpt8;Landroid/view/View;ZII)V
-
-    .line 12
-    iget-object p0, v3, Lree;->G0:Ltt8;
-
-    .line 13
-    iget p0, p0, Ltt8;->D0:I
-
-    const/16 p2, 0x20
-
-    and-int/2addr p0, p2
-
-    if-ne p0, p2, :cond_0
-
-    goto :goto_0
-
-    .line 14
-    :cond_0
-    iget-object p0, p1, Ly6;->o0:Lx6;
-
-    if-nez p0, :cond_1
-
-    .line 15
-    iget-object p0, p1, Ly6;->n0:Liu8;
-
-    .line 16
-    check-cast p0, Landroid/view/View;
-
-    .line 17
-    :cond_1
-    iput-object p0, v1, Lau8;->e:Landroid/view/View;
-
-    .line 18
-    :goto_0
-    iget-object p0, p1, Ly6;->C0:Lp1e;
-
-    .line 19
-    iput-object p0, v1, Lau8;->h:Lfu8;
-
-    .line 20
-    iget-object p1, v1, Lau8;->i:Lyt8;
-
-    if-eqz p1, :cond_2
-
-    .line 21
-    invoke-interface {p1, p0}, Lgu8;->e(Lfu8;)V
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final b()Z
+    .locals 1
 
-    iget v0, p0, Lv6;->l:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lv6;->m:Ly6;
-
-    iget-object v1, v0, Ly6;->c:Lpt8;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Lpt8;->c(Z)V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Ly6;->y0:Lv6;
-
-    invoke-super {p0}, Lau8;->c()V
-
-    return-void
-
-    :pswitch_0
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lv6;->m:Ly6;
+    return v0
+.end method
 
-    iput-object v0, v1, Ly6;->z0:Lv6;
+.method public final e()Z
+    .locals 1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    invoke-super {p0}, Lau8;->c()V
+    return v0
+.end method
 
-    return-void
+.method public final performClick()Z
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-super {p0}, Landroid/view/View;->performClick()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->playSoundEffect(I)V
+
+    iget-object v0, p0, Lv6;->o:Lw6;
+
+    invoke-virtual {v0}, Lw6;->k()Z
+
+    return v1
+.end method
+
+.method public final setFrame(IIII)Z
+    .locals 4
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->setFrame(IIII)Z
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p3
+
+    if-eqz p2, :cond_0
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p4
+
+    invoke-static {p2, p4}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    add-int/2addr p2, v1
+
+    div-int/lit8 p2, p2, 0x2
+
+    add-int/2addr p4, v2
+
+    div-int/lit8 p4, p4, 0x2
+
+    sub-int v1, p2, v0
+
+    sub-int v2, p4, v0
+
+    add-int/2addr p2, v0
+
+    add-int/2addr p4, v0
+
+    invoke-static {p3, v1, v2, p2, p4}, Llx4;->f(Landroid/graphics/drawable/Drawable;IIII)V
+
+    :cond_0
+    return p1
 .end method

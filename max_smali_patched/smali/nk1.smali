@@ -1,21 +1,19 @@
 .class public final Lnk1;
-.super Lvk1;
+.super Lgl1;
 .source "SourceFile"
 
 
-# static fields
-.field public static final D:Lnk1;
+# instance fields
+.field public final D:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lnk1;
+    invoke-direct {p0}, Lgl1;-><init>()V
 
-    invoke-direct {v0}, Lvk1;-><init>()V
-
-    sput-object v0, Lnk1;->D:Lnk1;
+    iput-object p1, p0, Lnk1;->D:Ljava/lang/String;
 
     return-void
 .end method
@@ -23,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -32,30 +30,57 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lnk1;
+    instance-of v1, p1, Lnk1;
 
-    if-nez p0, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p0, 0x0
+    if-nez v1, :cond_1
 
-    return p0
+    return v2
 
     :cond_1
+    check-cast p1, Lnk1;
+
+    iget-object v1, p0, Lnk1;->D:Ljava/lang/String;
+
+    iget-object p1, p1, Lnk1;->D:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x6cfea200
+    iget-object v0, p0, Lnk1;->D:Ljava/lang/String;
 
-    return p0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 3
 
-    const-string p0, "RecordStateScreen"
+    const-string v0, "CopyCallLink(link="
 
-    return-object p0
+    const-string v1, ")"
+
+    iget-object v2, p0, Lnk1;->D:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

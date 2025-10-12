@@ -3,21 +3,49 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lsed;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public final b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
 
-# direct methods
-.method public constructor <init>(Lsed;Ljava/util/List;)V
-    .locals 0
+    return v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    instance-of v1, p1, Lgtd;
 
-    iput-object p1, p0, Lgtd;->a:Lsed;
+    if-nez v1, :cond_1
 
-    iput-object p2, p0, Lgtd;->b:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+
+    :cond_1
+    check-cast p1, Lgtd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Options(isDebugMode=false)"
+
+    return-object v0
 .end method

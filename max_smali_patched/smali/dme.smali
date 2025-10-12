@@ -1,25 +1,34 @@
-.class public abstract Ldme;
+.class public final Ldme;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfme;
+
+
+# instance fields
+.field public final a:Lkp1;
+
 
 # direct methods
-.method public static a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
+.method public constructor <init>(Lkp1;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/job/JobParameters;->getTriggeredContentAuthorities()[Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Ldme;->a:Lkp1;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/job/JobParameters;->getTriggeredContentUris()[Landroid/net/Uri;
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    move-result-object p0
+    iget-object v0, p0, Ldme;->a:Lkp1;
 
-    return-object p0
+    iget-boolean v0, v0, Lkp1;->o:Z
+
+    return v0
 .end method

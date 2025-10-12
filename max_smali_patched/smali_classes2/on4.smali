@@ -2,944 +2,268 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile J:Lon4;
+# interfaces
+.implements Ltg5;
 
 
 # instance fields
-.field public A:I
+.field public final a:Ljava/lang/Object;
 
-.field public B:I
+.field public final b:Ljava/lang/Object;
 
-.field public C:I
+.field public volatile c:Ljava/lang/Object;
 
-.field public D:I
+.field public d:Ljava/lang/Object;
 
-.field public E:F
-
-.field public F:F
-
-.field public G:F
-
-.field public H:F
-
-.field public I:F
-
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:I
-
-.field public l:I
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:I
-
-.field public u:I
-
-.field public v:I
-
-.field public w:I
-
-.field public x:I
-
-.field public y:I
-
-.field public z:I
+.field public final e:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(F)I
-    .locals 0
+.method public constructor <init>(Lpmc;)V
+    .locals 3
 
-    invoke-static {}, Lon4;->b()Lon4;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    float-to-int p0, p0
+    .line 2
+    iput-object p1, p0, Lon4;->a:Ljava/lang/Object;
 
-    invoke-static {p0}, Lsn4;->b(I)I
+    .line 3
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result p0
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    return p0
+    iput-object p1, p0, Lon4;->b:Ljava/lang/Object;
+
+    .line 4
+    new-instance p1, Lxe8;
+
+    .line 5
+    new-instance v0, Lye8;
+
+    const-wide/16 v1, 0x0
+
+    invoke-direct {v0, v1, v2, v1, v2}, Lye8;-><init>(DD)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    .line 6
+    invoke-direct {p1, v2, v0, v1, v2}, Lxe8;-><init>(ILye8;Ly7b;Z)V
+
+    .line 7
+    iput-object p1, p0, Lon4;->d:Ljava/lang/Object;
+
+    .line 8
+    new-instance p1, Lnn4;
+
+    invoke-direct {p1, p0}, Lnn4;-><init>(Lon4;)V
+
+    iput-object p1, p0, Lon4;->e:Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public static b()Lon4;
-    .locals 2
+.method public constructor <init>(Lwl;Lzk;)V
+    .locals 0
 
-    sget-object v0, Lon4;->J:Lon4;
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_1
+    .line 10
+    iput-object p1, p0, Lon4;->a:Ljava/lang/Object;
 
-    const-class v1, Lon4;
+    .line 11
+    iput-object p2, p0, Lon4;->b:Ljava/lang/Object;
 
-    monitor-enter v1
+    .line 12
+    new-instance p1, Lbg3;
 
-    :try_start_0
-    sget-object v0, Lon4;->J:Lon4;
+    .line 13
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    .line 14
+    iput-object p1, p0, Lon4;->d:Ljava/lang/Object;
 
-    new-instance v0, Lon4;
+    .line 15
+    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    invoke-virtual {v0}, Lon4;->c()V
+    iput-object p1, p0, Lon4;->e:Ljava/lang/Object;
 
-    sput-object v0, Lon4;->J:Lon4;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    return-object v0
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 22
+.method public a()Lyhd;
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lon4;->c:Ljava/lang/Object;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    check-cast v0, Lyhd;
 
-    float-to-int v2, v1
+    if-nez v0, :cond_4
 
-    invoke-static {v2}, Lsn4;->b(I)I
+    iget-object v0, p0, Lon4;->a:Ljava/lang/Object;
 
-    move-result v2
+    check-cast v0, Lwl;
 
-    iput v2, v0, Lon4;->a:I
+    invoke-interface {v0}, Lwl;->getSessionInfo()Lvl;
 
-    const/high16 v2, 0x40000000    # 2.0f
+    move-result-object v0
 
-    float-to-int v3, v2
+    sget-object v1, Lyhd;->c:Lyhd;
 
-    invoke-static {v3}, Lsn4;->b(I)I
+    iget-object v2, p0, Lon4;->b:Ljava/lang/Object;
 
-    move-result v3
+    check-cast v2, Lzk;
 
-    iput v3, v0, Lon4;->b:I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/high16 v3, 0x40400000    # 3.0f
+    const-string v2, "CGPGAGLGDIHBABABA"
 
-    float-to-int v4, v3
+    invoke-virtual {v1, v2}, Lyhd;->b(Ljava/lang/String;)Lyhd;
 
-    invoke-static {v4}, Lsn4;->b(I)I
+    move-result-object v1
 
-    move-result v4
+    const/4 v2, 0x0
 
-    iput v4, v0, Lon4;->c:I
+    if-eqz v0, :cond_0
 
-    const/high16 v4, 0x40800000    # 4.0f
+    iget-object v3, v0, Lvl;->c:Ljava/lang/String;
 
-    float-to-int v5, v4
+    goto :goto_0
 
-    invoke-static {v5}, Lsn4;->b(I)I
+    :cond_0
+    move-object v3, v2
 
-    move-result v5
+    :goto_0
+    if-eqz v3, :cond_1
 
-    iput v5, v0, Lon4;->d:I
+    iget-object v3, v0, Lvl;->c:Ljava/lang/String;
 
-    const/high16 v5, 0x40a00000    # 5.0f
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    float-to-int v6, v5
+    move-result-object v3
 
-    invoke-static {v6}, Lsn4;->b(I)I
+    invoke-virtual {v1, v3}, Lyhd;->d(Landroid/net/Uri;)Lyhd;
 
-    move-result v6
+    move-result-object v1
 
-    iput v6, v0, Lon4;->e:I
+    :cond_1
+    if-eqz v0, :cond_2
 
-    const/high16 v6, 0x40c00000    # 6.0f
+    iget-object v2, v0, Lvl;->a:Ljava/lang/String;
 
-    float-to-int v7, v6
+    :cond_2
+    if-eqz v2, :cond_3
 
-    invoke-static {v7}, Lsn4;->b(I)I
+    iget-object v2, v0, Lvl;->b:Ljava/lang/String;
 
-    move-result v7
+    if-eqz v2, :cond_3
 
-    iput v7, v0, Lon4;->f:I
+    iget-object v0, v0, Lvl;->a:Ljava/lang/String;
 
-    const/high16 v7, 0x40e00000    # 7.0f
+    invoke-virtual {v1, v0, v2}, Lyhd;->c(Ljava/lang/String;Ljava/lang/String;)Lyhd;
 
-    float-to-int v8, v7
+    move-result-object v0
 
-    invoke-static {v8}, Lsn4;->b(I)I
+    goto :goto_1
 
-    move-result v8
+    :cond_3
+    move-object v0, v1
 
-    iput v8, v0, Lon4;->g:I
+    :cond_4
+    :goto_1
+    iput-object v0, p0, Lon4;->c:Ljava/lang/Object;
 
-    const/high16 v8, 0x41000000    # 8.0f
+    return-object v0
+.end method
 
-    float-to-int v9, v8
+.method public b(Lwe8;)V
+    .locals 2
 
-    invoke-static {v9}, Lsn4;->b(I)I
+    iget-object v0, p0, Lon4;->b:Ljava/lang/Object;
 
-    move-result v9
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iput v9, v0, Lon4;->h:I
-
-    const/high16 v9, 0x41100000    # 9.0f
-
-    float-to-int v10, v9
-
-    invoke-static {v10}, Lsn4;->b(I)I
-
-    const/high16 v10, 0x41200000    # 10.0f
-
-    float-to-int v11, v10
-
-    invoke-static {v11}, Lsn4;->b(I)I
-
-    move-result v11
-
-    iput v11, v0, Lon4;->i:I
-
-    const/high16 v11, 0x41300000    # 11.0f
-
-    float-to-int v12, v11
-
-    invoke-static {v12}, Lsn4;->b(I)I
-
-    const/high16 v12, 0x41400000    # 12.0f
-
-    float-to-int v13, v12
-
-    invoke-static {v13}, Lsn4;->b(I)I
-
-    move-result v13
-
-    iput v13, v0, Lon4;->j:I
-
-    const/high16 v13, 0x41500000    # 13.0f
-
-    float-to-int v14, v13
-
-    invoke-static {v14}, Lsn4;->b(I)I
-
-    const/high16 v14, 0x41600000    # 14.0f
-
-    float-to-int v15, v14
-
-    invoke-static {v15}, Lsn4;->b(I)I
-
-    const/high16 v15, 0x41700000    # 15.0f
-
-    move/from16 v16, v1
-
-    float-to-int v1, v15
-
-    invoke-static {v1}, Lsn4;->b(I)I
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
-    iput v1, v0, Lon4;->k:I
+    if-eqz v1, :cond_0
 
-    const/high16 v1, 0x41800000    # 16.0f
+    return-void
 
-    move/from16 v17, v2
+    :cond_0
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    float-to-int v2, v1
+    iget-object v0, p0, Lon4;->d:Ljava/lang/Object;
 
-    invoke-static {v2}, Lsn4;->b(I)I
+    check-cast v0, Lxe8;
 
-    move-result v2
+    invoke-interface {p1, v0}, Lwe8;->o(Lxe8;)V
 
-    iput v2, v0, Lon4;->l:I
+    return-void
+.end method
 
-    const/high16 v2, 0x41880000    # 17.0f
+.method public c(Lwe8;)V
+    .locals 1
 
-    move/from16 v18, v1
+    iget-object v0, p0, Lon4;->b:Ljava/lang/Object;
 
-    float-to-int v1, v2
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-static {v1}, Lsn4;->b(I)I
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    const/high16 v1, 0x41900000    # 18.0f
+    return-void
+.end method
 
-    move/from16 v19, v2
+.method public d(Lyhd;)V
+    .locals 2
 
-    float-to-int v2, v1
+    iput-object p1, p0, Lon4;->c:Ljava/lang/Object;
 
-    invoke-static {v2}, Lsn4;->b(I)I
+    new-instance v0, Lug5;
 
-    move-result v2
+    const/4 v1, 0x0
 
-    iput v2, v0, Lon4;->m:I
+    invoke-direct {v0, p0, v1, p1}, Lug5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/high16 v2, 0x41980000    # 19.0f
+    new-instance p1, Lu14;
 
-    move/from16 v20, v1
+    invoke-direct {p1, p0, v0}, Lu14;-><init>(Lon4;Lve6;)V
 
-    float-to-int v1, v2
+    new-instance v0, Loe3;
 
-    invoke-static {v1}, Lsn4;->b(I)I
+    const/4 v1, 0x2
 
-    const/high16 v1, 0x41a00000    # 20.0f
+    invoke-direct {v0, v1, p1}, Loe3;-><init>(ILjava/lang/Object;)V
 
-    move/from16 v21, v2
+    invoke-static {}, Lxed;->b()Lked;
 
-    float-to-int v2, v1
+    move-result-object p1
 
-    invoke-static {v2}, Lsn4;->b(I)I
+    invoke-virtual {v0, p1}, Lle3;->j(Lked;)Lue3;
 
-    move-result v2
+    move-result-object p1
 
-    iput v2, v0, Lon4;->n:I
+    new-instance v0, Lb22;
 
-    const/high16 v2, 0x41a80000    # 21.0f
+    const/4 v1, 0x1
 
-    float-to-int v2, v2
+    invoke-direct {v0, v1}, Lb22;-><init>(I)V
 
-    invoke-static {v2}, Lsn4;->b(I)I
+    invoke-virtual {p1, v0}, Lle3;->h(Lve3;)V
 
-    const/high16 v2, 0x41b00000    # 22.0f
+    iget-object p1, p0, Lon4;->d:Ljava/lang/Object;
 
-    float-to-int v2, v2
+    check-cast p1, Lbg3;
 
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x41b80000    # 23.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x41c00000    # 24.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->o:I
-
-    const/high16 v2, 0x41c80000    # 25.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->p:I
-
-    const/high16 v2, 0x41d00000    # 26.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->q:I
-
-    const/high16 v2, 0x41d80000    # 27.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x41e00000    # 28.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->r:I
-
-    const/high16 v2, 0x41e80000    # 29.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x41f00000    # 30.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x41f80000    # 31.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42000000    # 32.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->s:I
-
-    const/high16 v2, 0x42040000    # 33.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42080000    # 34.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x420c0000    # 35.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42100000    # 36.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->t:I
-
-    const/high16 v2, 0x42140000    # 37.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42180000    # 38.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x421c0000    # 39.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42200000    # 40.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->u:I
-
-    const/high16 v2, 0x42240000    # 41.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42280000    # 42.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x422c0000    # 43.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42300000    # 44.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42340000    # 45.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42380000    # 46.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->v:I
-
-    const/high16 v2, 0x423c0000    # 47.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42400000    # 48.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->w:I
-
-    const/high16 v2, 0x42440000    # 49.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42480000    # 50.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->x:I
-
-    const/high16 v2, 0x424c0000    # 51.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42500000    # 52.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42540000    # 53.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42580000    # 54.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x425c0000    # 55.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42600000    # 56.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->y:I
-
-    const/high16 v2, 0x42640000    # 57.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42680000    # 58.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x426c0000    # 59.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42700000    # 60.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->z:I
-
-    const/high16 v2, 0x42740000    # 61.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42780000    # 62.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x427c0000    # 63.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42800000    # 64.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->A:I
-
-    const/high16 v2, 0x42820000    # 65.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42840000    # 66.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42860000    # 67.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42880000    # 68.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x428a0000    # 69.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x428c0000    # 70.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->B:I
-
-    const/high16 v2, 0x428e0000    # 71.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42900000    # 72.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42920000    # 73.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42940000    # 74.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42960000    # 75.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42980000    # 76.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x429a0000    # 77.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x429c0000    # 78.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x429e0000    # 79.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42a00000    # 80.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->C:I
-
-    const/high16 v2, 0x42a20000    # 81.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42a40000    # 82.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42a60000    # 83.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42a80000    # 84.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42aa0000    # 85.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42ac0000    # 86.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42ae0000    # 87.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42b00000    # 88.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42b20000    # 89.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42b40000    # 90.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42b60000    # 91.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42b80000    # 92.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42ba0000    # 93.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42bc0000    # 94.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42be0000    # 95.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42c00000    # 96.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42c20000    # 97.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42c40000    # 98.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42c60000    # 99.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    float-to-int v2, v2
-
-    invoke-static {v2}, Lsn4;->b(I)I
-
-    move-result v2
-
-    iput v2, v0, Lon4;->D:I
-
-    invoke-static/range {v16 .. v16}, Lsn4;->e(F)F
-
-    invoke-static/range {v17 .. v17}, Lsn4;->e(F)F
-
-    invoke-static {v3}, Lsn4;->e(F)F
-
-    invoke-static {v4}, Lsn4;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lon4;->E:F
-
-    invoke-static {v5}, Lsn4;->e(F)F
-
-    invoke-static {v6}, Lsn4;->e(F)F
-
-    invoke-static {v7}, Lsn4;->e(F)F
-
-    invoke-static {v8}, Lsn4;->e(F)F
-
-    invoke-static {v9}, Lsn4;->e(F)F
-
-    invoke-static {v10}, Lsn4;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lon4;->F:F
-
-    invoke-static {v11}, Lsn4;->e(F)F
-
-    invoke-static {v12}, Lsn4;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lon4;->G:F
-
-    invoke-static {v13}, Lsn4;->e(F)F
-
-    invoke-static {v14}, Lsn4;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lon4;->H:F
-
-    invoke-static {v15}, Lsn4;->e(F)F
-
-    invoke-static/range {v18 .. v18}, Lsn4;->e(F)F
-
-    move-result v2
-
-    iput v2, v0, Lon4;->I:F
-
-    invoke-static/range {v19 .. v19}, Lsn4;->e(F)F
-
-    invoke-static/range {v20 .. v20}, Lsn4;->e(F)F
-
-    invoke-static/range {v21 .. v21}, Lsn4;->e(F)F
-
-    invoke-static {v1}, Lsn4;->e(F)F
+    invoke-virtual {p1, v0}, Lbg3;->a(Lss4;)Z
 
     return-void
 .end method

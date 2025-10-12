@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lxe6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lo01;
+.field public final synthetic b:Lp01;
+
+.field public final synthetic c:Lch1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo01;I)V
+.method public synthetic constructor <init>(Lp01;Lch1;I)V
     .locals 0
 
-    iput p2, p0, La01;->a:I
+    iput p3, p0, La01;->a:I
 
-    iput-object p1, p0, La01;->b:Lo01;
+    iput-object p1, p0, La01;->b:Lp01;
+
+    iput-object p2, p0, La01;->c:Lch1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,155 +32,205 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 6
 
     iget v0, p0, La01;->a:I
 
-    iget-object p0, p0, La01;->b:Lo01;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, La01;->b:Lp01;
+
+    iget-object v1, p0, La01;->c:Lch1;
 
     check-cast p1, Ljava/lang/Throwable;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v2, Lox9;->j:Lqpa;
 
-    sget-object v0, Lz76;->f:Lvea;
-
-    if-nez v0, :cond_0
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v3, Ly38;->o:Ly38;
 
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v2, "Disable microphone for all once failed due to: "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v2, p1}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v5, "Disable camera for "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " failed due to: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    const-string v3, "CallAdminSettingsController"
+    const-string v5, "CallAdminSettingsController"
 
-    invoke-virtual {v0, v1, v3, p1, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v5, p1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lo01;->x0:Lkpd;
+    iget-object p1, v0, Lp01;->H0:Le8e;
 
-    new-instance p1, Lua;
+    new-instance v0, Lva;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Lua;-><init>(Z)V
+    invoke-direct {v0, v1, v2}, Lva;-><init>(Lch1;Z)V
 
-    invoke-virtual {p0, p1}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Le8e;->h(Ljava/lang/Object;)Z
 
     :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
 
     :pswitch_0
-    sget-object v0, Lz76;->f:Lvea;
+    iget-object v0, p0, La01;->b:Lp01;
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, La01;->c:Lch1;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    sget-object v2, Lox9;->j:Lqpa;
+
+    if-nez v2, :cond_2
 
     goto :goto_2
 
     :cond_2
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v3, Ly38;->o:Ly38;
 
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_3
+    if-eqz v4, :cond_3
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v2, "Disable cameras for all once failed due to: "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v2, p1}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v5, "Disable microphone for "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " failed due to: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    const-string v3, "CallAdminSettingsController"
+    const-string v5, "CallAdminSettingsController"
 
-    invoke-virtual {v0, v1, v3, p1, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v5, p1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
     :goto_2
-    iget-object p0, p0, Lo01;->x0:Lkpd;
+    iget-object p1, v0, Lp01;->H0:Le8e;
 
-    new-instance p1, Lsa;
+    new-instance v0, Lwa;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Lsa;-><init>(Z)V
+    invoke-direct {v0, v1, v2}, Lwa;-><init>(Lch1;Z)V
 
-    invoke-virtual {p0, p1}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Le8e;->h(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :pswitch_1
-    sget-object v0, Lz76;->f:Lvea;
+    iget-object v0, p0, La01;->b:Lp01;
 
-    if-nez v0, :cond_4
+    iget-object v1, p0, La01;->c:Lch1;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    sget-object v2, Lox9;->j:Lqpa;
+
+    if-nez v2, :cond_4
 
     goto :goto_3
 
     :cond_4
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v3, Ly38;->o:Ly38;
 
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_5
+    if-eqz v4, :cond_5
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v2, "Low hands for all failed due to: "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v2, p1}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v5, "Disable screen sharing for "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " failed due to: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    const-string v3, "CallAdminSettingsController"
+    const-string v5, "CallAdminSettingsController"
 
-    invoke-virtual {v0, v1, v3, p1, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v5, p1, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_5
     :goto_3
-    iget-object p0, p0, Lo01;->x0:Lkpd;
+    iget-object p1, v0, Lp01;->H0:Le8e;
 
-    new-instance p1, Lva;
+    new-instance v0, Lza;
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1}, Lza;-><init>(Lch1;)V
 
-    invoke-direct {p1, v0}, Lva;-><init>(Z)V
-
-    invoke-virtual {p0, p1}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Le8e;->h(Ljava/lang/Object;)Z
 
     goto :goto_1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

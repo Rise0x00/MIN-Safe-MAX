@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Lwo3;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Ld96;Lhm3;Ljava/lang/Runnable;)Lkp4;
+    value = Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread(Lve6;Lxo3;Ljava/lang/Runnable;)Lss4;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,27 +28,27 @@
 
 
 # instance fields
-.field final synthetic $tmp0:Lhm3;
+.field final synthetic $tmp0:Lxo3;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lhm3;"
+            "Lxo3;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lhm3;)V
+.method public constructor <init>(Lxo3;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lhm3;",
+            "Lxo3;",
             ")V"
         }
     .end annotation
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;->$tmp0:Lhm3;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;->$tmp0:Lxo3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,16 +58,16 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;->$tmp0:Lhm3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;->$tmp0:Lxo3;
 
-    invoke-interface {p0, p1}, Lhm3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lxo3;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

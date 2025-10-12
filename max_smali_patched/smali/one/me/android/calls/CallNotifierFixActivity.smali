@@ -41,25 +41,41 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const/4 p1, 0x1
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setShowWhenLocked(Z)V
+    const/16 v0, 0x1b
 
-    invoke-virtual {p0, p1}, Landroid/app/Activity;->setTurnScreenOn(Z)V
+    if-lt p1, v0, :cond_0
 
-    sget-object p1, Loaa;->a:Loaa;
+    invoke-static {p0}, Lns;->j(Lone/me/android/calls/CallNotifierFixActivity;)V
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Ls4;
+    invoke-static {p0}, Lns;->m(Lone/me/android/calls/CallNotifierFixActivity;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object p1
 
-    const-class v0, Liz0;
+    const/high16 v0, 0x280000
 
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
+
+    :goto_0
+    sget-object p1, Lyka;->a:Lyka;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
 
     move-result-object p1
 
-    check-cast p1, Liz0;
+    const-class v0, Ljz0;
+
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljz0;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -67,7 +83,7 @@
 
     const-string v1, "CallNotifierFixActivity"
 
-    invoke-virtual {p1, p0, v0, v1}, Liz0;->a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {p1, p0, v0, v1}, Ljz0;->b(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

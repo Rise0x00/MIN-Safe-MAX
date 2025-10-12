@@ -1,109 +1,154 @@
-.class public abstract Luda;
-.super Ljava/lang/Object;
+.class public final Luda;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Lss4;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lhzb;->oneme_folders_chats_picker_toolbar:I
+    iput p1, p0, Luda;->a:I
 
-    sput v0, Luda;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sget v0, Lhzb;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
-
-    sput v0, Luda;->b:I
-
-    sget v0, Lhzb;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
-
-    sput v0, Luda;->c:I
-
-    sget v0, Lhzb;->oneme_folders_edit_create_button:I
-
-    sput v0, Luda;->d:I
-
-    sget v0, Lhzb;->oneme_folders_edit_members_list:I
-
-    sput v0, Luda;->e:I
-
-    sget v0, Lhzb;->oneme_folders_edit_screen:I
-
-    sput v0, Luda;->f:I
-
-    sget v0, Lhzb;->oneme_folders_edit_toolbar:I
-
-    sput v0, Luda;->g:I
-
-    sget v0, Lhzb;->oneme_folders_list_all_folder_view_type:I
-
-    sput v0, Luda;->h:I
-
-    sget v0, Lhzb;->oneme_folders_list_create_folder_view_type:I
-
-    sput v0, Luda;->i:I
-
-    sget v0, Lhzb;->oneme_folders_list_menu_action_change:I
-
-    sput v0, Luda;->j:I
-
-    sget v0, Lhzb;->oneme_folders_list_menu_action_delete_folder:I
-
-    sput v0, Luda;->k:I
-
-    sget v0, Lhzb;->oneme_folders_list_recommended_folder_view_type:I
-
-    sput v0, Luda;->l:I
-
-    sget v0, Lhzb;->oneme_folders_list_recycler_view:I
-
-    sput v0, Luda;->m:I
-
-    sget v0, Lhzb;->oneme_folders_list_screen:I
-
-    sput v0, Luda;->n:I
-
-    sget v0, Lhzb;->oneme_folders_list_toolbar:I
-
-    sput v0, Luda;->o:I
-
-    sget v0, Lhzb;->oneme_folders_list_user_folder_view_type:I
-
-    sput v0, Luda;->p:I
+    iput-object p2, p0, Luda;->b:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final g()V
+    .locals 1
+
+    iget v0, p0, Luda;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h()Z
+    .locals 2
+
+    iget v0, p0, Luda;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lss4;
+
+    invoke-static {v0}, Lws4;->b(Lss4;)Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lws4;->a:Lws4;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Luda;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Luda;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnee;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Luda;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxda;
+
+    invoke-virtual {p0}, Luda;->h()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lxda;->f(Ljava/lang/Object;)V
+
+    sget-object v1, Lw65;->a:Lw65;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lxda;->b()V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

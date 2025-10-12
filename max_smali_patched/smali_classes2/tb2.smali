@@ -1,15 +1,11 @@
-.class public final Ltb2;
+.class public interface abstract Ltb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
+# virtual methods
+.method public abstract C(Ljava/util/Collection;)V
+.end method
 
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/util/ArrayList;
-
-.field public d:J
-
-.field public e:Z
+.method public abstract x(Ljava/util/Collection;)V
+.end method

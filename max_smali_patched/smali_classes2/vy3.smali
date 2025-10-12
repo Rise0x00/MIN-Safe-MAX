@@ -1,58 +1,53 @@
-.class public final synthetic Lvy3;
+.class public interface abstract Lvy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhm3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;I)V
-    .locals 0
-
-    iput p2, p0, Lvy3;->a:I
-
-    iput-object p1, p0, Lvy3;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract a()Lvy3;
+.end method
 
-    iget v0, p0, Lvy3;->a:I
+.method public abstract b()Lvy3;
+.end method
 
-    iget-object p0, p0, Lvy3;->b:Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
+.method public abstract build()Lwy3;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract c(Landroid/graphics/Rect;F)Lvy3;
+.end method
 
-    check-cast p1, Ljava/lang/Throwable;
+.method public d()Lvy3;
+    .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->e(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Ljava/lang/Throwable;)V
+    return-object p0
+.end method
 
-    return-void
+.method public abstract e(Ljava/util/Collection;)Lvy3;
+.end method
 
-    :pswitch_0
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+.method public f(FF)Lvy3;
+    .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->q(Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    return-object p0
+.end method
 
-    return-void
+.method public abstract g(F)Lvy3;
+.end method
 
-    nop
+.method public abstract h(Landroid/os/Bundle;)Lvy3;
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public i()Lvy3;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public abstract j(Landroid/view/View;)Lvy3;
+.end method
+
+.method public abstract k()Lvy3;
+.end method
+
+.method public abstract l(Loef;)Lvy3;
 .end method

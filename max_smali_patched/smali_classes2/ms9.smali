@@ -1,193 +1,118 @@
 .class public final Lms9;
-.super Llqe;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final e0:Lms9;
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lws9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 47
+.method public constructor <init>(Lws9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lms9;
+    iput-object p1, p0, Lms9;->Y:Lws9;
 
-    const-wide v1, 0xff697cffL
+    const/4 p1, 0x2
 
-    long-to-int v4, v1
-
-    const-wide v1, 0xffffffffL
-
-    long-to-int v5, v1
-
-    const-wide v1, 0xff191921L
-
-    long-to-int v6, v1
-
-    const-wide v1, 0xff474757L
-
-    long-to-int v9, v1
-
-    const-wide v1, 0xff84848eL
-
-    long-to-int v10, v1
-
-    const-wide v1, 0xff000000L
-
-    long-to-int v14, v1
-
-    const-wide v1, 0xffd6d6d9L
-
-    long-to-int v1, v1
-
-    const-wide v2, 0xff111117L
-
-    long-to-int v2, v2
-
-    const-wide v7, 0xffff3f3fL
-
-    long-to-int v3, v7
-
-    const-wide v7, 0xfffbc03dL
-
-    long-to-int v7, v7
-
-    const-wide v11, 0xff23232fL
-
-    long-to-int v8, v11
-
-    const-wide v11, 0xff333344L
-
-    long-to-int v11, v11
-
-    const-wide v12, 0xff2d2d3dL
-
-    long-to-int v12, v12
-
-    move-object/from16 v46, v0
-
-    move/from16 v16, v1
-
-    const-wide v0, 0xff5b5b69L
-
-    long-to-int v0, v0
-
-    move v13, v0
-
-    const-wide v0, 0xff75757bL
-
-    long-to-int v0, v0
-
-    move/from16 v32, v0
-
-    const-wide v0, 0xff28972bL
-
-    long-to-int v0, v0
-
-    move/from16 v18, v3
-
-    new-instance v3, Lc83;
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v41
-
-    invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v42
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v43
-
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v44
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v45
-
-    move/from16 v19, v7
-
-    move v7, v5
-
-    move/from16 v20, v8
-
-    move v8, v4
-
-    move/from16 v22, v11
-
-    move v11, v5
-
-    move/from16 v31, v12
-
-    move v12, v6
-
-    move v13, v5
-
-    move v15, v10
-
-    move/from16 v21, v20
-
-    move/from16 v23, v22
-
-    move/from16 v24, v9
-
-    move/from16 v25, v16
-
-    move/from16 v26, v2
-
-    move/from16 v27, v2
-
-    move/from16 v28, v20
-
-    move/from16 v29, v10
-
-    move/from16 v30, v14
-
-    move/from16 v33, v6
-
-    move/from16 v35, v10
-
-    move/from16 v36, v5
-
-    move/from16 v37, v5
-
-    move/from16 v38, v6
-
-    move/from16 v39, v9
-
-    move/from16 v40, v22
-
-    move/from16 v34, v0
-
-    move/from16 v17, v2
-
-    invoke-direct/range {v3 .. v45}, Lc83;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    sget-object v7, Lb18;->X:Lzs0;
-
-    sget-object v8, Lb18;->o:Lzs0;
-
-    const/4 v4, 0x1
-
-    const-string v5, "NIGHT"
-
-    const-string v1, "TamTam Dark"
-
-    const-string v2, "TamTam Team"
-
-    move-object v6, v3
-
-    const/4 v3, 0x1
-
-    move-object/from16 v0, v46
-
-    invoke-direct/range {v0 .. v8}, Llqe;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lc83;Lzs0;Lzs0;)V
-
-    sput-object v0, Lms9;->e0:Lms9;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lms9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lms9;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lms9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lms9;
+
+    iget-object v0, p0, Lms9;->Y:Lws9;
+
+    invoke-direct {p1, v0, p2}, Lms9;-><init>(Lws9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lms9;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    sget-wide v2, Lws9;->J:J
+
+    iput v1, p0, Lms9;->X:I
+
+    invoke-static {v2, v3, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget p1, Lws9;->K:I
+
+    iget-object p1, p0, Lms9;->Y:Lws9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lws9;->j(Z)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

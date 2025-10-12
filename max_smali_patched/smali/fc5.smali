@@ -1,24 +1,11 @@
 .class public final Lfc5;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
-# interfaces
-.implements Lgc5;
 
+# virtual methods
+.method public final fillInStackTrace()Ljava/lang/Throwable;
+    .locals 0
 
-# static fields
-.field public static final a:Lfc5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lfc5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfc5;->a:Lfc5;
-
-    return-void
+    return-object p0
 .end method

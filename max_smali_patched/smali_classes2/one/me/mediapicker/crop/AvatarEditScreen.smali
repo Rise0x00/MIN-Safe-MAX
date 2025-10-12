@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgd0;
-.implements Lwzc;
+.implements Luc0;
+.implements Lmgd;
 
 
 # annotations
@@ -21,8 +21,8 @@
     d2 = {
         "Lone/me/mediapicker/crop/AvatarEditScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lgd0;",
-        "Lwzc;",
+        "Luc0;",
+        "Lmgd;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -44,34 +44,34 @@
 
 
 # static fields
-.field public static final synthetic p0:[Lof7;
+.field public static final synthetic y0:[Ltm7;
 
 
 # instance fields
-.field public final X:Lc67;
+.field public final X:Led7;
 
-.field public final Y:Lhs7;
+.field public final Y:Lfub;
 
-.field public final Z:Ldbc;
+.field public final Z:Lmqc;
 
-.field public final a:Lvr;
+.field public final a:Lpr;
 
 .field public final b:Ljava/lang/Object;
 
-.field public final c:Lvr;
+.field public final c:Lpr;
 
-.field public final n0:Ldbc;
+.field public final o:Lbp7;
 
-.field public final o:Lth7;
+.field public final w0:Lmqc;
 
-.field public final o0:Landroid/graphics/RectF;
+.field public final x0:Landroid/graphics/RectF;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Lvqb;
+    new-instance v0, Lt5c;
 
     const-class v1, Lone/me/mediapicker/crop/AvatarEditScreen;
 
@@ -81,37 +81,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ldic;->a:Leic;
+    sget-object v2, Lxxc;->a:Lyxc;
 
     const-string v3, "filePath"
 
     const-string v5, "getFilePath()Ljava/lang/String;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Ldl5;->g(Leic;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lvqb;
+    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
 
     move-result-object v2
 
-    new-instance v3, Lvqb;
+    new-instance v3, Lt5c;
 
     const-string v5, "avatarCropView"
 
     const-string v6, "getAvatarCropView()Lru/ok/messages/views/widgets/AvatarCropView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lvqb;
+    new-instance v5, Lt5c;
 
     const-string v6, "resetButton"
 
     const-string v7, "getResetButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lof7;
+    new-array v1, v1, [Ltm7;
 
     aput-object v0, v1, v4
 
@@ -127,7 +127,7 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->p0:[Lof7;
+    sput-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->y0:[Ltm7;
 
     return-void
 .end method
@@ -142,31 +142,31 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     .line 7
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
 
     const-class v1, Ljava/lang/String;
 
     const-string v3, "uri"
 
-    invoke-direct {p1, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 8
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->a:Lvr;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->a:Lpr;
 
     .line 9
-    new-instance p1, Lt5;
+    new-instance p1, Lz5;
 
-    const/16 v3, 0x11
+    const/16 v3, 0xf
 
-    invoke-direct {p1, v3, p0}, Lt5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v3, p0}, Lz5;-><init>(ILjava/lang/Object;)V
 
     const/4 v3, 0x3
 
     .line 10
-    invoke-static {v3, p1}, Lltg;->s(ILd96;)Lth7;
+    invoke-static {v3, p1}, Lvr0;->r(ILve6;)Lbp7;
 
     move-result-object p1
 
@@ -174,90 +174,90 @@
     iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->b:Ljava/lang/Object;
 
     .line 12
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
 
     const-string v3, "file_path"
 
-    invoke-direct {p1, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 13
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->c:Lvr;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->c:Lpr;
 
     .line 14
     new-instance p1, Ll;
 
-    const/16 v1, 0x13
+    const/16 v1, 0x10
 
     invoke-direct {p1, v1}, Ll;-><init>(I)V
 
     .line 15
-    new-instance v1, Lr;
+    new-instance v1, Lq;
 
-    const/16 v3, 0x8
+    const/4 v3, 0x7
 
-    invoke-direct {v1, v3, p1}, Lr;-><init>(ILd96;)V
+    invoke-direct {v1, v3, p1}, Lq;-><init>(ILve6;)V
 
-    const-class p1, Lbe0;
+    const-class p1, Lpd0;
 
-    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ld96;)Lth7;
+    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->o:Lth7;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->o:Lbp7;
 
     .line 17
-    sget-object p1, Lc67;->d:Lc67;
+    sget-object p1, Led7;->d:Led7;
 
-    iget-object p1, p1, Lc67;->b:Lqr0;
+    iget-object p1, p1, Led7;->b:Ljr0;
 
     .line 18
-    new-instance v1, Lc67;
+    new-instance v1, Led7;
 
-    invoke-direct {v1, v0, p1}, Lc67;-><init>(ILqr0;)V
+    invoke-direct {v1, v0, p1}, Led7;-><init>(ILjr0;)V
 
     .line 19
-    iput-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->X:Lc67;
+    iput-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->X:Led7;
 
     .line 20
-    new-instance p1, Lhs7;
+    new-instance p1, Lfub;
 
     new-instance v0, Ll;
 
-    const/16 v1, 0x14
+    const/16 v1, 0x11
 
     invoke-direct {v0, v1}, Ll;-><init>(I)V
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, v0, v2, v1}, Lhs7;-><init>(Ld96;Ld96;I)V
+    invoke-direct {p1, v0, v2, v1}, Lfub;-><init>(Lve6;Lve6;I)V
 
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Y:Lhs7;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Y:Lfub;
 
     .line 21
-    sget p1, Lgfa;->d:I
+    sget p1, Lcqa;->d:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ldbc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Ldbc;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Lmqc;
 
     .line 22
-    sget p1, Lgfa;->g:I
+    sget p1, Lcqa;->g:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ldbc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->n0:Ldbc;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->w0:Lmqc;
 
     .line 23
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->o0:Landroid/graphics/RectF;
+    iput-object p1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->x0:Landroid/graphics/RectF;
 
     return-void
 .end method
@@ -266,26 +266,26 @@
     .locals 2
 
     .line 1
-    new-instance v0, Ltra;
+    new-instance v0, Ln4b;
 
     const-string v1, "uri"
 
-    invoke-direct {v0, v1, p1}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    new-instance p1, Ltra;
+    new-instance p1, Ln4b;
 
     const-string v1, "file_path"
 
-    invoke-direct {p1, v1, p2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {v0, p1}, [Ltra;
+    filled-new-array {v0, p1}, [Ln4b;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Ly84;->c([Ltra;)Landroid/os/Bundle;
+    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -297,52 +297,86 @@
 
 
 # virtual methods
-.method public final R()Ljava/lang/Integer;
+.method public final B0()Lru/ok/messages/views/widgets/AvatarCropView;
+    .locals 2
+
+    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->y0:[Ltm7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Lmqc;
+
+    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/messages/views/widgets/AvatarCropView;
+
+    return-object v0
+.end method
+
+.method public final C0()Lpd0;
     .locals 1
 
-    sget-object v0, Lzs4;->p0:Lqs9;
+    iget-object v0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->o:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpd0;
+
+    return-object v0
+.end method
+
+.method public final S()Ljava/lang/Integer;
+    .locals 2
+
+    sget-object v0, Lbx4;->y0:Lsed;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Lqs9;->c(Landroid/content/Context;)Lzs4;
+    invoke-virtual {v0, v1}, Lsed;->k(Landroid/content/Context;)Lbx4;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lzs4;->k()Lnma;
+    invoke-virtual {v0}, Lbx4;->h()Luxa;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-interface {p0}, Lnma;->b()Ldf0;
+    invoke-interface {v0}, Luxa;->b()Lue0;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p0, p0, Ldf0;->a:Lcf0;
+    iget-object v0, v0, Lue0;->a:Lte0;
 
-    iget p0, p0, Lcf0;->k:I
+    iget v0, v0, Lte0;->k:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getInsetsConfig()Lc67;
-    .locals 0
+.method public final getInsetsConfig()Led7;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->X:Lc67;
+    iget-object v0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->X:Led7;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final getScreenDelegate()Lxyc;
-    .locals 0
+.method public final getScreenDelegate()Lmfd;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Y:Lhs7;
+    iget-object v0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Y:Lfub;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
@@ -356,7 +390,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lgfa;->c:I
+    sget p2, Lcqa;->c:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -368,15 +402,15 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p2, Lb3;
+    new-instance p2, Lf3;
 
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, p0, v1, v0}, Lb3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, p0, v1, v0}, Lf3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p2, p1}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p2, p1}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     new-instance p2, Lru/ok/messages/views/widgets/AvatarCropView;
 
@@ -384,15 +418,15 @@
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, Lone/me/sdk/zoom/ZoomableDraweeView;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, v0}, Llch;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    iput v0, p2, Lru/ok/messages/views/widgets/AvatarCropView;->J0:I
+    iput v0, p2, Lru/ok/messages/views/widgets/AvatarCropView;->R0:I
 
     invoke-virtual {p2}, Lru/ok/messages/views/widgets/AvatarCropView;->s()V
 
-    sget v2, Lgfa;->d:I
+    sget v2, Lcqa;->d:I
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setId(I)V
 
@@ -402,7 +436,7 @@
 
     int-to-float v3, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -414,11 +448,11 @@
 
     mul-float/2addr v4, v3
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -430,11 +464,11 @@
 
     mul-float/2addr v5, v3
 
-    invoke-static {v5}, Litg;->z(F)I
+    invoke-static {v5}, Lv63;->r0(F)I
 
     move-result v5
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -446,7 +480,7 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
@@ -454,7 +488,7 @@
 
     int-to-float v7, v7
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -466,7 +500,7 @@
 
     mul-float/2addr v8, v7
 
-    invoke-static {v8}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v8
 
@@ -474,73 +508,73 @@
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v2, Lsd0;
+    new-instance v2, Lgd0;
 
     const/4 v4, 0x0
 
     const/4 v5, 0x3
 
-    invoke-direct {v2, v5, v1, v4}, Lsd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v2, v5, v1, v4}, Lgd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v2, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {v2, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     invoke-virtual {p2, v0}, Lru/ok/messages/views/widgets/AvatarCropView;->setMode(I)V
 
     const/4 v2, 0x1
 
-    invoke-virtual {p2, v2}, Lone/me/sdk/zoom/ZoomableDraweeView;->setZoomEnabled(Z)V
+    invoke-virtual {p2, v2}, Llch;->setZoomEnabled(Z)V
 
-    new-instance v2, Lge6;
+    new-instance v2, Lzj6;
 
     invoke-virtual {p2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-direct {v2, v4}, Lge6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {v2, v4}, Lzj6;-><init>(Landroid/content/res/Resources;)V
 
-    sget-object v4, Lkwc;->o:Lkwc;
+    sget-object v4, Lzcd;->h:Lzcd;
 
-    iput-object v4, v2, Lge6;->l:Ljwc;
+    iput-object v4, v2, Lzj6;->l:Lycd;
 
-    iput v0, v2, Lge6;->b:I
+    iput v0, v2, Lzj6;->b:I
 
-    invoke-virtual {v2}, Lge6;->a()Lfe6;
+    invoke-virtual {v2}, Lzj6;->a()Lyj6;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Ldu4;->setHierarchy(Lau4;)V
+    invoke-virtual {p2, v0}, Ljy4;->setHierarchy(Lgy4;)V
 
-    invoke-virtual {p2, p0}, Lru/ok/messages/views/widgets/AvatarCropView;->setTransformChangeListener(Lgd0;)V
+    invoke-virtual {p2, p0}, Lru/ok/messages/views/widgets/AvatarCropView;->setTransformChangeListener(Luc0;)V
 
-    sget-object v0, Ln76;->a:Lqy6;
+    sget-object v0, Lhd6;->a:Ln57;
 
-    invoke-virtual {v0}, Lqy6;->a()Lp4b;
+    invoke-virtual {v0}, Ln57;->a()Lhjb;
 
     move-result-object v0
 
     iget-object v2, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->b:Ljava/lang/Object;
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/net/Uri;
 
-    invoke-virtual {v0, v2}, Lp4b;->c(Landroid/net/Uri;)V
+    invoke-virtual {v0, v2}, Lhjb;->c(Landroid/net/Uri;)V
 
-    new-instance v2, Lj5;
+    new-instance v2, Lr5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v2, v4, p0}, Lj5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v4, p0}, Lr5;-><init>(ILjava/lang/Object;)V
 
-    iput-object v2, v0, Lm0;->e:Lyx3;
+    iput-object v2, v0, Ln0;->e:Ln04;
 
-    invoke-virtual {v0}, Lm0;->a()Lo4b;
+    invoke-virtual {v0}, Ln0;->a()Lgjb;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lone/me/sdk/zoom/ZoomableDraweeView;->setController(Lvt4;)V
+    invoke-virtual {p2, v0}, Llch;->setController(Lby4;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -552,13 +586,13 @@
 
     invoke-direct {p2, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    sget v0, Lgfa;->a:I
+    sget v0, Lcqa;->a:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
 
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -570,7 +604,7 @@
 
     mul-float/2addr v7, v2
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v2
 
@@ -582,13 +616,13 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p3, Lz2;
+    new-instance p3, Ld3;
 
     const/4 v0, 0x1
 
-    invoke-direct {p3, v5, v1, v0}, Lz2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, v5, v1, v0}, Ld3;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p3, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -600,7 +634,7 @@
 
     invoke-direct {p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lgfa;->h:I
+    sget p3, Lcqa;->h:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -610,7 +644,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -622,11 +656,11 @@
 
     mul-float/2addr v2, v0
 
-    invoke-static {v2}, Litg;->z(F)I
+    invoke-static {v2}, Lv63;->r0(F)I
 
     move-result v2
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -638,7 +672,7 @@
 
     mul-float/2addr v4, v0
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
@@ -648,7 +682,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -660,11 +694,11 @@
 
     mul-float/2addr v4, v2
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -676,11 +710,11 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -692,7 +726,7 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
@@ -700,7 +734,7 @@
 
     int-to-float v8, v8
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -712,7 +746,7 @@
 
     mul-float/2addr v9, v8
 
-    invoke-static {v9}, Litg;->z(F)I
+    invoke-static {v9}, Lv63;->r0(F)I
 
     move-result v9
 
@@ -724,25 +758,25 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Lysc;->c1:I
+    sget p3, Lq9d;->E1:I
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    new-instance p3, Ltd0;
+    new-instance p3, Lhd0;
 
     const/4 v6, 0x3
 
-    invoke-direct {p3, v5, v1, v6}, Ltd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, v5, v1, v6}, Lhd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p3, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
-    new-instance p3, Lrd0;
+    new-instance p3, Lfd0;
 
     const/4 v6, 0x2
 
-    invoke-direct {p3, p0, v6}, Lrd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+    invoke-direct {p3, p0, v6}, Lfd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
 
-    invoke-static {p2, p3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -754,13 +788,13 @@
 
     invoke-direct {p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lgfa;->f:I
+    sget p3, Lcqa;->f:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -772,11 +806,11 @@
 
     mul-float/2addr v6, v0
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -788,13 +822,13 @@
 
     mul-float/2addr v7, v0
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
     invoke-direct {p3, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -806,11 +840,11 @@
 
     mul-float/2addr v6, v3
 
-    invoke-static {v6}, Litg;->z(F)I
+    invoke-static {v6}, Lv63;->r0(F)I
 
     move-result v6
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -822,11 +856,11 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -838,11 +872,11 @@
 
     mul-float/2addr v9, v2
 
-    invoke-static {v9}, Litg;->z(F)I
+    invoke-static {v9}, Lv63;->r0(F)I
 
     move-result v9
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -854,7 +888,7 @@
 
     mul-float/2addr v8, v10
 
-    invoke-static {v8}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v8
 
@@ -866,25 +900,25 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Lysc;->G0:I
+    sget p3, Lq9d;->g1:I
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    new-instance p3, Ltd0;
+    new-instance p3, Lhd0;
 
     const/4 v7, 0x2
 
-    invoke-direct {p3, v5, v1, v7}, Ltd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, v5, v1, v7}, Lhd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p3, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
-    new-instance p3, Lrd0;
+    new-instance p3, Lfd0;
 
     const/4 v7, 0x1
 
-    invoke-direct {p3, p0, v7}, Lrd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+    invoke-direct {p3, p0, v7}, Lfd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
 
-    invoke-static {p2, p3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -896,13 +930,13 @@
 
     invoke-direct {p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lgfa;->b:I
+    sget p3, Lcqa;->b:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -914,11 +948,11 @@
 
     mul-float/2addr v7, v0
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -930,13 +964,13 @@
 
     mul-float/2addr v8, v0
 
-    invoke-static {v8}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v8
 
     invoke-direct {p3, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -948,11 +982,11 @@
 
     mul-float/2addr v7, v2
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -964,11 +998,11 @@
 
     mul-float/2addr v8, v3
 
-    invoke-static {v8}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v8
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -980,7 +1014,7 @@
 
     mul-float/2addr v9, v3
 
-    invoke-static {v9}, Litg;->z(F)I
+    invoke-static {v9}, Lv63;->r0(F)I
 
     move-result v9
 
@@ -988,7 +1022,7 @@
 
     int-to-float v10, v10
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -1000,7 +1034,7 @@
 
     mul-float/2addr v11, v10
 
-    invoke-static {v11}, Litg;->z(F)I
+    invoke-static {v11}, Lv63;->r0(F)I
 
     move-result v11
 
@@ -1010,25 +1044,25 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Lysc;->e:I
+    sget p3, Lq9d;->i:I
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    new-instance p3, Ltd0;
+    new-instance p3, Lhd0;
 
     const/4 v4, 0x0
 
-    invoke-direct {p3, v5, v1, v4}, Ltd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, v5, v1, v4}, Lhd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p3, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
-    new-instance p3, Lrd0;
+    new-instance p3, Lfd0;
 
     const/4 v4, 0x4
 
-    invoke-direct {p3, p0, v4}, Lrd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+    invoke-direct {p3, p0, v4}, Lfd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
 
-    invoke-static {p2, p3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1040,13 +1074,13 @@
 
     invoke-direct {p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lgfa;->e:I
+    sget p3, Lcqa;->e:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1058,11 +1092,11 @@
 
     mul-float/2addr v4, v0
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1074,13 +1108,13 @@
 
     mul-float/2addr v0, v7
 
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
     invoke-direct {p3, v4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1092,11 +1126,11 @@
 
     mul-float/2addr v0, v3
 
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1108,11 +1142,11 @@
 
     mul-float/2addr v4, v3
 
-    invoke-static {v4}, Litg;->z(F)I
+    invoke-static {v4}, Lv63;->r0(F)I
 
     move-result v4
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1124,11 +1158,11 @@
 
     mul-float/2addr v2, v7
 
-    invoke-static {v2}, Litg;->z(F)I
+    invoke-static {v2}, Lv63;->r0(F)I
 
     move-result v2
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -1140,7 +1174,7 @@
 
     mul-float/2addr v10, v7
 
-    invoke-static {v10}, Litg;->z(F)I
+    invoke-static {v10}, Lv63;->r0(F)I
 
     move-result v7
 
@@ -1150,25 +1184,25 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Lysc;->c:I
+    sget p3, Lq9d;->f:I
 
     invoke-virtual {p2, p3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    new-instance p3, Ltd0;
+    new-instance p3, Lhd0;
 
     const/4 v0, 0x1
 
-    invoke-direct {p3, v5, v1, v0}, Ltd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p3, v5, v1, v0}, Lhd0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p3, p2}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p3, p2}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
-    new-instance p3, Lrd0;
+    new-instance p3, Lfd0;
 
     const/4 v0, 0x3
 
-    invoke-direct {p3, p0, v0}, Lrd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+    invoke-direct {p3, p0, v0}, Lfd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
 
-    invoke-static {p2, p3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1180,7 +1214,7 @@
 
     invoke-direct {p2, p3, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p3, Lgfa;->g:I
+    sget p3, Lcqa;->g:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -1190,7 +1224,7 @@
 
     invoke-direct {p3, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1202,11 +1236,11 @@
 
     mul-float/2addr v0, v3
 
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -1218,11 +1252,11 @@
 
     mul-float/2addr v1, v3
 
-    invoke-static {v1}, Litg;->z(F)I
+    invoke-static {v1}, Lv63;->r0(F)I
 
     move-result v1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1234,7 +1268,7 @@
 
     mul-float/2addr v3, v2
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v2
 
@@ -1242,7 +1276,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -1254,7 +1288,7 @@
 
     mul-float/2addr v3, v4
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v3
 
@@ -1266,33 +1300,33 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Lqsc;->g:I
+    sget p3, Li9d;->h:I
 
     invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    sget-object p3, Lo8a;->a:Lo8a;
+    sget-object p3, Lxia;->a:Lxia;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lo8a;)V
+    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
 
-    sget-object p3, Ln8a;->o:Ln8a;
+    sget-object p3, Lwia;->o:Lwia;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ln8a;)V
+    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
 
-    sget-object p3, Ll8a;->X:Ll8a;
+    sget-object p3, Luia;->X:Luia;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ll8a;)V
+    invoke-virtual {p2, p3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
 
     const/16 p3, 0x8
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance p3, Lrd0;
+    new-instance p3, Lfd0;
 
     const/4 v0, 0x0
 
-    invoke-direct {p3, p0, v0}, Lrd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+    invoke-direct {p3, p0, v0}, Lfd0;-><init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
 
-    invoke-static {p2, p3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {p2, p3}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1304,101 +1338,67 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/mediapicker/crop/AvatarEditScreen;->y0()Lbe0;
+    invoke-virtual {p0}, Lone/me/mediapicker/crop/AvatarEditScreen;->C0()Lpd0;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbe0;->o:Lt65;
+    iget-object p1, p1, Lpd0;->o:Ljb5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lsk7;->L()Luk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
     move-result-object v0
 
-    sget-object v1, Lvj7;->o:Lvj7;
+    invoke-interface {v0}, Lcs7;->L()Les7;
 
-    invoke-static {p1, v0, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    move-result-object v0
+
+    sget-object v1, Ler7;->o:Ler7;
+
+    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
 
     move-result-object p1
 
-    new-instance v0, Lud0;
+    new-instance v0, Lid0;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lud0;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/crop/AvatarEditScreen;)V
+    invoke-direct {v0, v1, p0}, Lid0;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/crop/AvatarEditScreen;)V
 
-    new-instance v1, Lgs5;
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method
 
-.method public final s()V
+.method public final t()V
     .locals 2
 
-    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->p0:[Lof7;
+    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->y0:[Ltm7;
 
     const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->n0:Ldbc;
+    iget-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->w0:Lmqc;
 
-    invoke-interface {v1, p0, v0}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
-.end method
-
-.method public final x0()Lru/ok/messages/views/widgets/AvatarCropView;
-    .locals 2
-
-    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->p0:[Lof7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->Z:Ldbc;
-
-    invoke-interface {v1, p0, v0}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lru/ok/messages/views/widgets/AvatarCropView;
-
-    return-object p0
-.end method
-
-.method public final y0()Lbe0;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/mediapicker/crop/AvatarEditScreen;->o:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbe0;
-
-    return-object p0
 .end method

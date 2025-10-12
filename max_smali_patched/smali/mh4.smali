@@ -2,32 +2,45 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li45;
+
 
 # static fields
-.field public static final a:Lmh4;
+.field public static final b:Ljava/lang/ThreadLocal;
+
+
+# instance fields
+.field public final a:Landroid/text/TextPaint;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lmh4;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    sput-object v0, Lmh4;->a:Lmh4;
+    sput-object v0, Lmh4;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 2
 
-# virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)J
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
+    new-instance v0, Landroid/text/TextPaint;
 
-    move-result-wide p0
+    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    return-wide p0
+    iput-object v0, p0, Lmh4;->a:Landroid/text/TextPaint;
+
+    const/high16 v1, 0x41200000    # 10.0f
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    return-void
 .end method

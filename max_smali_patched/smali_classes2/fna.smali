@@ -2,103 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgna;
-
 
 # instance fields
-.field public final a:Ldja;
+.field public final a:Lc45;
 
 
 # direct methods
-.method public constructor <init>(Ldja;)V
+.method public constructor <init>(Lc45;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfna;->a:Ldja;
+    iput-object p1, p0, Lfna;->a:Lc45;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(ILjava/lang/String;)Lzr5;
+    .locals 9
 
-    const/4 v0, 0x1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ne p0, p1, :cond_0
+    const/16 v1, 0x23
 
-    return v0
+    if-lt v0, v1, :cond_0
 
-    :cond_0
-    instance-of v1, p1, Lfna;
+    new-instance v0, Ldna;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;-><init>()V
 
-    if-nez v1, :cond_1
+    :goto_0
+    move-object v7, v0
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lfna;
-
-    iget-object p0, p0, Lfna;->a:Ldja;
-
-    iget-object p1, p1, Lfna;->a:Ldja;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lfna;->a:Ldja;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    new-instance v0, Lena;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
 
-    return p0
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    :goto_1
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lfna;->a:Lc45;
 
-    const-string v1, "Search(listener="
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iget-object p0, p0, Lfna;->a:Ldja;
+    invoke-virtual {v0, p2, p1}, Lc45;->p(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    const-string p0, ")"
+    new-instance v1, Lzr5;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v3, 0x1
 
-    move-result-object p0
+    const-wide/16 v4, 0x0
 
-    return-object p0
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    new-instance p1, Luz1;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Luz1;-><init>(I)V
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    return-object v1
 .end method

@@ -1,87 +1,114 @@
-.class public final Lfb2;
+.class public final synthetic Lfb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lub2;
 
-.field public final c:J
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Leb2;)V
-    .locals 2
+.method public synthetic constructor <init>(Lub2;JI)V
+    .locals 0
+
+    iput p4, p0, Lfb2;->a:I
+
+    iput-object p1, p0, Lfb2;->b:Lub2;
+
+    iput-wide p2, p0, Lfb2;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Leb2;->b:J
-
-    iput-wide v0, p0, Lfb2;->a:J
-
-    iget v0, p1, Leb2;->a:I
-
-    iput v0, p0, Lfb2;->b:I
-
-    iget-wide v0, p1, Leb2;->c:J
-
-    iput-wide v0, p0, Lfb2;->c:J
-
-    iget-object p1, p1, Leb2;->d:Ljava/io/Serializable;
-
-    check-cast p1, Ljava/lang/String;
-
-    iput-object p1, p0, Lfb2;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lfb2;->a:I
 
-    const-string v1, "AdminParticipant{id="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lfb2;->b:Lub2;
 
-    iget-wide v1, p0, Lfb2;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", permissions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfb2;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inviterId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lub2;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-wide v1, p0, Lfb2;->c:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v1, ", alias=\'"
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lfb2;->d:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v1, "\'}"
+    check-cast v0, Lm82;
 
-    invoke-static {v0, p0, v1}, Lw68;->o(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    return-object v0
 
-    return-object p0
+    :cond_0
+    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+
+    const-string v3, "chat not found: "
+
+    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lfb2;->b:Lub2;
+
+    iget-object v0, v0, Lub2;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-wide v1, p0, Lfb2;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm82;
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+
+    const-string v3, "chat not found: "
+
+    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

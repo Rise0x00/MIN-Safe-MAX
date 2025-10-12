@@ -2,68 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lww7;
 
-# instance fields
-.field public final a:[Ld75;
 
-.field public final b:[J
+# static fields
+.field public static final a:Lj75;
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Ld75;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lj75;
 
-    iput-object p1, p0, Lj75;->c:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lj75;->d:Ljava/lang/String;
+    sput-object v0, Lj75;->a:Lj75;
 
-    iput-object p3, p0, Lj75;->b:[J
+    sget v0, Loka;->n:I
 
-    iput-object p4, p0, Lj75;->a:[Ld75;
+    sput v0, Lj75;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x0
 
-    iget-object v1, p0, Lj75;->c:Ljava/lang/String;
+    return-wide v0
+.end method
 
-    invoke-static {v0, v1}, Lcx3;->f(ILjava/lang/String;)I
+.method public final m()I
+    .locals 1
 
-    move-result v0
+    sget v0, Lj75;->b:I
 
-    iget-object p0, p0, Lj75;->d:Ljava/lang/String;
-
-    invoke-static {v0, p0}, Lcx3;->f(ILjava/lang/String;)I
-
-    move-result v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "/"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method

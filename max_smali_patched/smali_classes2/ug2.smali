@@ -1,430 +1,240 @@
 .class public final Lug2;
-.super Lmtd;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final X:Lone/me/profile/screens/media/ChatMediaListWidget;
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lc10;
+
+.field public final synthetic w0:Lzg2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lone/me/profile/screens/media/ChatMediaListWidget;)V
+.method public constructor <init>(Lc10;Lzg2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmtd;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p1, p0, Lug2;->Z:Lc10;
 
-    iput-object p2, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
+    iput-object p2, p0, Lug2;->w0:Lzg2;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Leud;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lvg2;
+    check-cast p1, Le34;
 
-    invoke-virtual {p0, p1, p2}, Lug2;->J(Lvg2;I)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lug2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lug2;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lug2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final J(Lvg2;I)V
-    .locals 10
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {p0, p2}, Ldp7;->C(I)Ljava/lang/Object;
+    new-instance v0, Lug2;
 
-    move-result-object p2
+    iget-object v1, p0, Lug2;->Z:Lc10;
 
-    check-cast p2, Llp7;
+    iget-object v2, p0, Lug2;->w0:Lzg2;
 
-    check-cast p2, Lup8;
+    invoke-direct {v0, v1, v2, p2}, Lug2;-><init>(Lc10;Lzg2;Lkotlin/coroutines/Continuation;)V
 
-    instance-of v0, p2, Lrp8;
+    iput-object p1, v0, Lug2;->Y:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    new-instance v1, Laq;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v7, 0x0
+    iget-object v0, p0, Lug2;->Z:Lc10;
 
-    const/16 v8, 0x8
+    iget-boolean v1, v0, Lc10;->X:Z
 
-    const/4 v2, 0x1
+    iget-object v2, p0, Lug2;->w0:Lzg2;
 
-    iget-object v3, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
+    iget-object v3, v2, Lzg2;->z0:Le8e;
 
-    const-class v4, Ltg2;
+    iget v4, p0, Lug2;->X:I
 
-    const-string v5, "onAttachClick"
+    const/4 v5, 0x1
 
-    const-string v6, "onAttachClick(Lone/me/profile/screens/media/model/MediaUiMessage;)V"
+    if-eqz v4, :cond_1
 
-    invoke-direct/range {v1 .. v8}, Laq;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    if-ne v4, v5, :cond_0
 
-    new-instance v2, Ljw;
+    iget-object v0, p0, Lug2;->Y:Ljava/lang/Object;
 
-    const/4 v8, 0x0
+    check-cast v0, Le34;
 
-    const/4 v9, 0x3
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v5, Ltg2;
-
-    const-string v6, "onAttachLongClick"
-
-    const-string v7, "onAttachLongClick(Lone/me/profile/screens/media/model/MediaUiMessage;Landroid/view/View;)V"
-
-    invoke-direct/range {v2 .. v9}, Ljw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {p1, p2, v1, v2}, Lvg2;->F(Lup8;Lf96;Lt96;)V
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    instance-of v0, p2, Lsp8;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz v0, :cond_3
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    instance-of v0, p1, Lje2;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lje2;
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    const/4 p1, 0x0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    :goto_0
-    if-eqz p1, :cond_2
+    iget-object p1, p0, Lug2;->Y:Ljava/lang/Object;
 
-    check-cast p2, Lsp8;
+    check-cast p1, Le34;
 
-    new-instance v0, Laq;
+    if-eqz v1, :cond_3
+
+    iget-object v0, v0, Lc10;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result v4
 
     const/4 v6, 0x0
 
-    const/16 v7, 0x9
+    if-nez v4, :cond_4
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
 
-    iget-object v2, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
+    move-result v4
 
-    const-class v3, Ltg2;
+    if-eqz v4, :cond_2
 
-    const-string v4, "onAttachClick"
-
-    const-string v5, "onAttachClick(Lone/me/profile/screens/media/model/MediaUiMessage;)V"
-
-    invoke-direct/range {v0 .. v7}, Laq;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v1, Ljw;
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x4
-
-    const/4 v2, 0x2
-
-    iget-object v3, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v4, Ltg2;
-
-    const-string v5, "onAttachLongClick"
-
-    const-string v6, "onAttachLongClick(Lone/me/profile/screens/media/model/MediaUiMessage;Landroid/view/View;)V"
-
-    invoke-direct/range {v1 .. v8}, Ljw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Laq;
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0xa
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v5, Ltg2;
-
-    const-string v6, "onLinkLongClick"
-
-    const-string v7, "onLinkLongClick(Lone/me/profile/screens/media/model/MediaUiMessage$Link;)V"
-
-    invoke-direct/range {v2 .. v9}, Laq;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    iget-object p0, p1, Luhc;->a:Landroid/view/View;
-
-    check-cast p0, Lsg2;
-
-    invoke-virtual {p1, p2}, Lje2;->G(Lsp8;)V
-
-    new-instance v3, Lmb;
-
-    const/16 v4, 0xe
-
-    invoke-direct {v3, v0, v4, p2}, Lmb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p0, v3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    new-instance v0, Lh82;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v0, v1, p2, p1, v3}, Lh82;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    new-instance p1, Lj32;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v2, v0, p2}, Lj32;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lsg2;->setLinkOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    new-instance p1, Lmb;
-
-    const/16 v0, 0xf
-
-    invoke-direct {p1, v2, v0, p2}, Lmb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lsg2;->setOnLinkClickListener(Landroid/view/View$OnClickListener;)V
+    goto :goto_0
 
     :cond_2
-    return-void
+    const-string v4, "&fn=legacy_44"
+
+    invoke-static {v0, v4}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_0
 
     :cond_3
-    instance-of v0, p2, Ltp8;
+    invoke-virtual {v0}, Lc10;->a()Ljava/lang/String;
 
-    if-eqz v0, :cond_4
-
-    new-instance v1, Laq;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0xb
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v4, Ltg2;
-
-    const-string v5, "onAttachClick"
-
-    const-string v6, "onAttachClick(Lone/me/profile/screens/media/model/MediaUiMessage;)V"
-
-    invoke-direct/range {v1 .. v8}, Laq;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Ljw;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x5
-
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v5, Ltg2;
-
-    const-string v6, "onAttachLongClick"
-
-    const-string v7, "onAttachLongClick(Lone/me/profile/screens/media/model/MediaUiMessage;Landroid/view/View;)V"
-
-    invoke-direct/range {v2 .. v9}, Ljw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {p1, p2, v1, v2}, Lvg2;->F(Lup8;Lf96;Lt96;)V
-
-    return-void
+    move-result-object v6
 
     :cond_4
-    instance-of v0, p2, Lnp8;
+    :goto_0
+    iget-object v0, v2, Lzg2;->o:Lybd;
 
-    if-eqz v0, :cond_5
+    iput-object p1, p0, Lug2;->Y:Ljava/lang/Object;
 
-    new-instance v1, Laq;
+    iput v5, p0, Lug2;->X:I
 
-    const/4 v7, 0x0
+    invoke-static {v0, v6, v1, p0}, Lybd;->c(Lybd;Ljava/lang/String;ZLnz3;)Ljava/lang/Object;
 
-    const/16 v8, 0xc
+    move-result-object v0
 
-    const/4 v2, 0x1
+    sget-object v1, Lf34;->a:Lf34;
 
-    iget-object v3, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
+    if-ne v0, v1, :cond_5
 
-    const-class v4, Ltg2;
-
-    const-string v5, "onAttachClick"
-
-    const-string v6, "onAttachClick(Lone/me/profile/screens/media/model/MediaUiMessage;)V"
-
-    invoke-direct/range {v1 .. v8}, Laq;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Ljw;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x6
-
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Lug2;->X:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    const-class v5, Ltg2;
-
-    const-string v6, "onAttachLongClick"
-
-    const-string v7, "onAttachLongClick(Lone/me/profile/screens/media/model/MediaUiMessage;Landroid/view/View;)V"
-
-    invoke-direct/range {v2 .. v9}, Ljw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {p1, p2, v1, v2}, Lvg2;->F(Lup8;Lf96;Lt96;)V
-
-    return-void
+    return-object v1
 
     :cond_5
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    move-object v7, v0
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-object v0, p1
 
-    throw p0
-.end method
+    move-object p1, v7
 
-.method public final l(I)I
-    .locals 0
+    :goto_1
+    check-cast p1, Landroid/net/Uri;
 
-    iget-object p0, p0, Ldp7;->o:Lwu;
+    iget-object v1, v2, Lzg2;->E0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object p0, p0, Lwu;->f:Ljava/util/List;
+    new-instance v2, Log2;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object p0
+    invoke-direct {v2, v4}, Log2;-><init>(I)V
 
-    check-cast p0, Lup8;
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndUpdate(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
 
-    invoke-interface {p0}, Llp7;->m()I
+    move-result-object v1
 
-    move-result p0
+    check-cast v1, Lmg2;
 
-    return p0
-.end method
+    invoke-static {v0}, Lipe;->r(Le34;)Z
 
-.method public final bridge synthetic r(Luhc;I)V
-    .locals 0
+    move-result v0
 
-    check-cast p1, Lvg2;
+    sget-object v2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1, p2}, Lug2;->J(Lvg2;I)V
+    if-nez v0, :cond_6
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public final t(Landroid/view/ViewGroup;I)Luhc;
-    .locals 0
+    :cond_6
+    if-eqz p1, :cond_7
 
-    sget-object p0, Lqi2;->o:Ly55;
+    if-eqz v1, :cond_7
 
-    invoke-virtual {p0, p2}, Ly55;->get(I)Ljava/lang/Object;
+    new-instance v0, Lpu4;
 
-    move-result-object p0
+    iget-object v1, v1, Lmg2;->d:Lku4;
 
-    check-cast p0, Lqi2;
+    invoke-direct {v0, p1, v1}, Lpu4;-><init>(Landroid/net/Uri;Lku4;)V
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v3, v0}, Le8e;->h(Ljava/lang/Object;)Z
 
-    move-result p0
+    return-object v2
 
-    if-eqz p0, :cond_3
+    :cond_7
+    if-nez p1, :cond_8
 
-    const/4 p2, 0x1
+    if-eqz v1, :cond_8
 
-    if-eq p0, p2, :cond_2
+    iget-object p1, v1, Lmg2;->d:Lku4;
 
-    const/4 p2, 0x2
+    const/4 v0, 0x0
 
-    if-eq p0, p2, :cond_1
+    invoke-static {p1, v0}, Lzg2;->v(Lku4;Z)I
 
-    const/4 p2, 0x3
+    move-result p1
 
-    if-ne p0, p2, :cond_0
+    new-instance v0, Lou4;
 
-    new-instance p0, Li82;
+    invoke-direct {v0, p1}, Lou4;-><init>(I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v3, v0}, Le8e;->h(Ljava/lang/Object;)Z
 
-    move-result-object p1
-
-    new-instance p2, Laf2;
-
-    invoke-direct {p2, p1}, Laf2;-><init>(Landroid/content/Context;)V
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p2, p1}, Li82;-><init>(Landroid/view/View;I)V
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Lje2;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance p2, Lsg2;
-
-    invoke-direct {p2, p1}, Lsg2;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p2}, Luhc;-><init>(Landroid/view/View;)V
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Lzc2;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance p2, Lrg2;
-
-    invoke-direct {p2, p1}, Lrg2;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p0, p2}, Luhc;-><init>(Landroid/view/View;)V
-
-    return-object p0
-
-    :cond_3
-    new-instance p0, Li82;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance p2, Lzh2;
-
-    invoke-direct {p2, p1}, Lzh2;-><init>(Landroid/content/Context;)V
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p2, p1}, Li82;-><init>(Landroid/view/View;I)V
-
-    return-object p0
+    :cond_8
+    :goto_2
+    return-object v2
 .end method

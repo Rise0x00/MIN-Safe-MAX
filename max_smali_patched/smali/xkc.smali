@@ -1,107 +1,38 @@
-.class public final Lxkc;
-.super Lzkc;
-.source "SourceFile"
+.class public abstract Lxkc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final Y:Ly7c;
+# static fields
+.field public static common_google_play_services_enable_button:I = 0x7f1303d3
 
-.field public final Z:Lf02;
+.field public static common_google_play_services_enable_text:I = 0x7f1303d4
 
+.field public static common_google_play_services_enable_title:I = 0x7f1303d5
 
-# direct methods
-.method public constructor <init>(Lp26;Lg07;Lq6d;Ljava/util/ArrayList;)V
-    .locals 6
+.field public static common_google_play_services_install_button:I = 0x7f1303d6
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lzkc;-><init>(Lp26;Ljava/util/List;Lr6d;Ljava/util/List;)V
+.field public static common_google_play_services_install_text:I = 0x7f1303d7
 
-    const/4 p1, 0x0
+.field public static common_google_play_services_install_title:I = 0x7f1303d8
 
-    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+.field public static common_google_play_services_notification_channel_name:I = 0x7f1303d9
 
-    move-result-object p1
+.field public static common_google_play_services_notification_ticker:I = 0x7f1303da
 
-    check-cast p1, Lel0;
+.field public static common_google_play_services_unsupported_text:I = 0x7f1303dc
 
-    iget-object p1, p1, Lel0;->a:Ljava/lang/String;
+.field public static common_google_play_services_update_button:I = 0x7f1303dd
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+.field public static common_google_play_services_update_text:I = 0x7f1303de
 
-    iget-wide v4, p3, Lq6d;->e:J
+.field public static common_google_play_services_update_title:I = 0x7f1303df
 
-    const-wide/16 p1, 0x0
+.field public static common_google_play_services_updating_text:I = 0x7f1303e0
 
-    cmp-long p1, v4, p1
+.field public static common_google_play_services_wear_update_text:I = 0x7f1303e1
 
-    const/4 p2, 0x0
+.field public static common_open_on_phone:I = 0x7f1303e6
 
-    if-gtz p1, :cond_0
+.field public static common_signin_button_text:I = 0x7f1303e8
 
-    move-object v0, p2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ly7c;
-
-    const/4 v3, 0x0
-
-    iget-wide v1, p3, Lq6d;->d:J
-
-    invoke-direct/range {v0 .. v5}, Ly7c;-><init>(JLjava/lang/String;J)V
-
-    :goto_0
-    iput-object v0, p0, Lxkc;->Y:Ly7c;
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p2, Lf02;
-
-    new-instance v0, Ly7c;
-
-    const/4 v3, 0x0
-
-    const-wide/16 v1, 0x0
-
-    const-wide/16 v4, -0x1
-
-    invoke-direct/range {v0 .. v5}, Ly7c;-><init>(JLjava/lang/String;J)V
-
-    const/16 p1, 0x19
-
-    invoke-direct {p2, p1, v0}, Lf02;-><init>(ILjava/lang/Object;)V
-
-    :goto_1
-    iput-object p2, p0, Lxkc;->Z:Lf02;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final c()Lw54;
-    .locals 0
-
-    iget-object p0, p0, Lxkc;->Z:Lf02;
-
-    return-object p0
-.end method
-
-.method public final d()Ly7c;
-    .locals 0
-
-    iget-object p0, p0, Lxkc;->Y:Ly7c;
-
-    return-object p0
-.end method
+.field public static common_signin_button_text_long:I = 0x7f1303e9

@@ -1,66 +1,86 @@
-.class public final synthetic Ltie;
-.super Ljava/lang/Object;
+.class public final Ltie;
+.super Lxie;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    iput p2, p0, Ltie;->a:I
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Ltie;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-direct {p0, p1, p2, v0}, Lxie;-><init>(JI)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Ltie;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Ltie;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Ltie;->b:Lorg/webrtc/SurfaceTextureHelper;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    invoke-static {p0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    :cond_0
+    instance-of v1, p1, Ltie;
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    invoke-static {p0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_1
-    invoke-static {p0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
+    :cond_1
+    check-cast p1, Ltie;
 
-    return-void
+    iget-wide v3, p0, Ltie;->c:J
 
-    :pswitch_2
-    invoke-static {p0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
+    iget-wide v5, p1, Ltie;->c:J
 
-    return-void
+    cmp-long p1, v3, v5
 
-    nop
+    if-eqz p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ltie;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatId(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ltie;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

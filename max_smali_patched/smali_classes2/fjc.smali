@@ -1,73 +1,36 @@
-.class public final Lfjc;
-.super Lpi0;
-.source "SourceFile"
+.class public abstract Lfjc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic a:Lu58;
+# static fields
+.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f130826
 
+.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f130827
 
-# direct methods
-.method public constructor <init>(Lu58;)V
-    .locals 0
+.field public static oneme_folder_list_toolbar_title:I = 0x7f130828
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f130829
 
-    iput-object p1, p0, Lfjc;->a:Lu58;
+.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f13082a
 
-    return-void
-.end method
+.field public static oneme_folders_edit_add_chats_button:I = 0x7f13082b
 
+.field public static oneme_folders_edit_create_button:I = 0x7f13082c
 
-# virtual methods
-.method public final e(Lf0;)V
-    .locals 1
+.field public static oneme_folders_edit_delete_button:I = 0x7f13082d
 
-    iget-object p0, p0, Lfjc;->a:Lu58;
+.field public static oneme_folders_edit_name_hint:I = 0x7f13082e
 
-    invoke-virtual {p0}, Lu58;->g()Z
+.field public static oneme_folders_edit_toolbar_title_creation:I = 0x7f13082f
 
-    move-result v0
+.field public static oneme_folders_edit_toolbar_title_edit:I = 0x7f130830
 
-    if-nez v0, :cond_0
+.field public static oneme_folders_list_create_folder:I = 0x7f130831
 
-    invoke-virtual {p1}, Lf0;->c()Ljava/lang/Throwable;
+.field public static oneme_folders_list_menu_action_change:I = 0x7f130832
 
-    move-result-object p1
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f130833
 
-    invoke-virtual {p0, p1}, Lu58;->onError(Ljava/lang/Throwable;)V
+.field public static oneme_folders_picker_empty_title:I = 0x7f130834
 
-    :cond_0
-    return-void
-.end method
-
-.method public final g(Landroid/graphics/Bitmap;)V
-    .locals 1
-
-    iget-object p0, p0, Lfjc;->a:Lu58;
-
-    invoke-virtual {p0}, Lu58;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    if-nez p1, :cond_2
-
-    invoke-virtual {p0}, Lu58;->b()V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0, p1}, Lu58;->a(Ljava/lang/Object;)V
-
-    return-void
-.end method
+.field public static oneme_folders_picker_toolbar_title:I = 0x7f130835

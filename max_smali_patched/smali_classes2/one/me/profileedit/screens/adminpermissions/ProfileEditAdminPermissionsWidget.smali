@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldgb;
-.implements Lfj3;
+.implements Lavb;
+.implements Lul3;
 
 
 # annotations
@@ -21,8 +21,8 @@
     d2 = {
         "Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Ldgb;",
-        "Lfj3;",
+        "Lavb;",
+        "Lul3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -30,9 +30,9 @@
         "",
         "chatId",
         "contactId",
-        "Ligb;",
+        "Levb;",
         "type",
-        "(JJLigb;)V",
+        "(JJLevb;)V",
         "profile-edit_release"
     }
     k = 0x1
@@ -46,40 +46,38 @@
 
 
 # static fields
-.field public static final synthetic s0:[Lof7;
+.field public static final synthetic A0:[Ltm7;
 
 
 # instance fields
-.field public final X:Lkle;
+.field public final X:Lbp7;
 
-.field public final Y:Lth7;
+.field public final Y:Lr36;
 
-.field public final Z:Lqy5;
+.field public final Z:Lmqc;
 
-.field public final a:Lc67;
+.field public final a:Led7;
 
-.field public final b:Lvr;
+.field public final b:Lpr;
 
-.field public final c:Lvr;
+.field public final c:Lpr;
 
-.field public final n0:Ldbc;
+.field public final o:Lpr;
 
-.field public final o:Lvr;
+.field public final w0:Lmqc;
 
-.field public final o0:Ldbc;
+.field public final x0:Ll2d;
 
-.field public final p0:Lwlc;
+.field public final y0:I
 
-.field public final q0:I
-
-.field public r0:Lyja;
+.field public z0:Lzua;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    new-instance v0, Lvqb;
+    new-instance v0, Lt5c;
 
     const-class v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
@@ -89,45 +87,45 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Ldic;->a:Leic;
+    sget-object v2, Lxxc;->a:Lyxc;
 
     const-string v3, "contactId"
 
     const-string v5, "getContactId()J"
 
-    invoke-static {v2, v1, v3, v5, v4}, Ldl5;->g(Leic;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lvqb;
+    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
 
     move-result-object v2
 
-    new-instance v3, Lvqb;
+    new-instance v3, Lt5c;
 
     const-string v5, "type"
 
     const-string v6, "getType()Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsType;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lvqb;
+    new-instance v5, Lt5c;
 
     const-string v6, "toolbar"
 
     const-string v7, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lvqb;
+    new-instance v6, Lt5c;
 
     const-string v7, "recycler"
 
     const-string v8, "getRecycler()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lof7;
+    new-array v1, v1, [Ltm7;
 
     aput-object v0, v1, v4
 
@@ -147,56 +145,56 @@
 
     aput-object v6, v1, v0
 
-    sput-object v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:[Lof7;
+    sput-object v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
 
     return-void
 .end method
 
-.method public constructor <init>(JJLigb;)V
+.method public constructor <init>(JJLevb;)V
     .locals 1
 
-    .line 26
+    .line 23
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 27
-    new-instance p2, Ltra;
+    .line 24
+    new-instance p2, Ln4b;
 
     const-string v0, "chat_id"
 
-    invoke-direct {p2, v0, p1}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 28
+    .line 25
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 29
-    new-instance p3, Ltra;
+    .line 26
+    new-instance p3, Ln4b;
 
     const-string p4, "contact_id"
 
-    invoke-direct {p3, p4, p1}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p4, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 30
-    new-instance p1, Ltra;
+    .line 27
+    new-instance p1, Ln4b;
 
     const-string p4, "permissions_type"
 
-    invoke-direct {p1, p4, p5}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, p4, p5}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 31
-    filled-new-array {p2, p3, p1}, [Ltra;
-
-    move-result-object p1
-
-    .line 32
-    invoke-static {p1}, Ly84;->c([Ltra;)Landroid/os/Bundle;
+    .line 28
+    filled-new-array {p2, p3, p1}, [Ln4b;
 
     move-result-object p1
 
-    .line 33
+    .line 29
+    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 30
     invoke-direct {p0, p1}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -212,154 +210,139 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     .line 2
-    sget-object p1, Lc67;->d:Lc67;
+    sget-object p1, Led7;->d:Led7;
 
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->a:Lc67;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->a:Led7;
 
     .line 3
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
 
     const-class v0, Ljava/lang/Long;
 
     const-string v1, "chat_id"
 
-    invoke-direct {p1, v0, v1}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 4
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->b:Lvr;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->b:Lpr;
 
     .line 5
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
 
     const-string v1, "contact_id"
 
-    invoke-direct {p1, v0, v1}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 6
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->c:Lvr;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->c:Lpr;
 
     .line 7
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
 
-    const-class v0, Ligb;
+    const-class v0, Levb;
 
     const-string v1, "permissions_type"
 
-    invoke-direct {p1, v0, v1}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 8
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o:Lvr;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o:Lpr;
 
     .line 9
-    new-instance p1, Lgfb;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, v0}, Lgfb;-><init>(I)V
-
-    .line 10
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
-
-    .line 11
-    iput-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lkle;
-
-    .line 12
-    new-instance p1, Lxgb;
+    new-instance p1, Lpvb;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lxgb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpvb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
+
+    .line 10
+    new-instance v0, Lth8;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1, p1}, Lth8;-><init>(ILjava/lang/Object;)V
+
+    const-class p1, Lovb;
+
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
+
+    move-result-object p1
+
+    .line 11
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lbp7;
+
+    .line 12
+    new-instance p1, Lr36;
 
     .line 13
-    new-instance v0, Lr98;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1, p1}, Lr98;-><init>(ILjava/lang/Object;)V
-
-    const-class p1, Lwgb;
-
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ld96;)Lth7;
-
-    move-result-object p1
+    sget-object v0, Lvvb;->a:Lvvb;
 
     .line 14
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Y:Lth7;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v0
 
     .line 15
-    new-instance p1, Lqy5;
+    const-class v1, Ljna;
+
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
 
     .line 16
-    sget-object v0, Lehb;->a:Lehb;
+    invoke-virtual {v0}, Ljna;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    const/4 v1, 0x7
 
     .line 17
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-direct {p1, v0, p0, v1}, Lr36;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
 
-    move-result-object v0
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Y:Lr36;
 
     .line 18
-    const-class v1, Lyca;
+    sget p1, Lsra;->S:I
 
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lyca;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Z:Lmqc;
 
     .line 19
-    invoke-virtual {v0}, Lyca;->a()Ljava/util/concurrent/ExecutorService;
+    sget p1, Lsra;->Q:I
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
 
-    const/16 v1, 0xa
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->w0:Lmqc;
 
     .line 20
-    invoke-direct {p1, v0, p0, v1}, Lqy5;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
-
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Z:Lqy5;
-
-    .line 21
-    sget p1, Lvga;->T:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ldbc;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->n0:Ldbc;
-
-    .line 22
-    sget p1, Lvga;->Q:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ldbc;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o0:Ldbc;
-
-    .line 23
-    new-instance p1, Lxgb;
+    new-instance p1, Lpvb;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lxgb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lpvb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
 
-    invoke-static {p1}, Lgog;->H(Ld96;)Lwlc;
+    invoke-static {p1}, Lo7;->A(Lve6;)Ll2d;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->p0:Lwlc;
+    iput-object p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0:Ll2d;
 
     const/16 p1, 0x18
 
     int-to-float p1, p1
 
-    .line 24
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    .line 21
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -371,30 +354,64 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Litg;->z(F)I
+    invoke-static {p1}, Lv63;->r0(F)I
 
     move-result p1
 
-    .line 25
-    iput p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0:I
+    .line 22
+    iput p1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->y0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0()V
-    .locals 4
+.method public final B0()Levb;
+    .locals 2
 
-    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->p0:Lwlc;
+    sget-object v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
 
-    invoke-virtual {v0}, Lwlc;->a()Z
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o:Lpr;
+
+    invoke-virtual {v0, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Levb;
+
+    return-object v0
+.end method
+
+.method public final C0()Lovb;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lovb;
+
+    return-object v0
+.end method
+
+.method public final D0()V
+    .locals 5
+
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0:Ll2d;
+
+    invoke-virtual {v0}, Ll2d;->a()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lwlc;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ll2d;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -406,26 +423,26 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lmc3;
+    new-instance v1, Ldo3;
 
-    const/4 v2, 0x6
+    const/4 v2, 0x5
 
-    invoke-direct {v1, v0, p0, v0, v2}, Lmc3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v1, v0, p0, v0, v2}, Ldo3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-static {v0, v1}, Lyna;->a(Landroid/view/View;Ljava/lang/Runnable;)Lyna;
+    invoke-static {v0, v1}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
 
     return-void
 
     :cond_0
-    sget-object v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:[Lof7;
+    sget-object v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o0:Ldbc;
+    iget-object v1, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->w0:Lmqc;
 
-    invoke-interface {v1, p0, v0}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -443,186 +460,186 @@
 
     move-result v3
 
-    iget p0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0:I
+    iget v4, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->y0:I
 
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPadding(IIII)V
 
     :cond_1
     return-void
 .end method
 
-.method public final getInsetsConfig()Lc67;
-    .locals 0
+.method public final getInsetsConfig()Led7;
+    .locals 1
 
-    iget-object p0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->a:Lc67;
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->a:Led7;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final i(ILandroid/os/Bundle;)V
-    .locals 10
+    .locals 11
 
-    sget p2, Lvga;->d0:I
+    sget p2, Lsra;->c0:I
 
     if-ne p1, p2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p0}, Lwgb;->r()V
+    invoke-virtual {p1}, Lovb;->r()V
 
     return-void
 
     :cond_0
-    sget p2, Lvga;->c0:I
+    sget p2, Lsra;->b0:I
 
     if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget-object p0, p0, Lwgb;->w0:Lt65;
+    iget-object p1, p1, Lovb;->E0:Ljb5;
 
-    sget-object p1, Lp53;->b:Lp53;
+    sget-object p2, Lj73;->b:Lj73;
 
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
     return-void
 
     :cond_1
-    sget p2, Lvga;->H:I
+    sget p2, Lsra;->H:I
 
     if-ne p1, p2, :cond_2
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lwgb;->s()Ll72;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
-
-    iget-object p2, p0, Lwgb;->p0:Lth7;
-
-    invoke-interface {p2}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lovb;->s()Lm82;
 
     move-result-object p2
 
-    check-cast p2, Ljk;
+    if-eqz p2, :cond_3
 
-    iget-wide v1, p0, Lwgb;->b:J
+    iget-object v0, p1, Lovb;->x0:Lbp7;
 
-    iget-object p1, p1, Ll72;->b:Lxb2;
-
-    iget-wide v3, p1, Lxb2;->a:J
-
-    iget-wide v5, p0, Lwgb;->c:J
-
-    move-object v0, p2
-
-    check-cast v0, Lw5a;
-
-    invoke-virtual/range {v0 .. v6}, Lw5a;->g(JJJ)J
-
-    iget-object p1, p0, Lwgb;->x0:Lt65;
-
-    new-instance p2, Lbgb;
-
-    sget v0, Lyga;->L0:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, v0}, Lyte;-><init>(I)V
-
-    sget v0, Losc;->z:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p2, v1, v0}, Lbgb;-><init>(Ldue;Ljava/lang/Integer;)V
+    check-cast v0, Ltk;
 
-    invoke-static {p1, p2}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    iget-wide v2, p1, Lovb;->b:J
 
-    iget-object p1, p0, Lwgb;->w0:Lt65;
+    iget-object p2, p2, Lm82;->b:Lpc2;
 
-    new-instance p2, Lhgb;
+    iget-wide v4, p2, Lpc2;->a:J
 
-    iget-wide v0, p0, Lwgb;->b:J
+    iget-wide v6, p1, Lovb;->c:J
 
-    invoke-direct {p2, v0, v1}, Lhgb;-><init>(J)V
+    move-object v1, v0
 
-    invoke-static {p1, p2}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    check-cast v1, Lbga;
+
+    invoke-virtual/range {v1 .. v7}, Lbga;->g(JJJ)J
+
+    iget-object p2, p1, Lovb;->F0:Ljb5;
+
+    new-instance v0, Lyub;
+
+    sget v1, Lvra;->J0:I
+
+    new-instance v2, Ljef;
+
+    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+
+    sget v1, Lg9d;->z:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lyub;-><init>(Loef;Ljava/lang/Integer;)V
+
+    invoke-static {p2, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    iget-object p2, p1, Lovb;->E0:Ljb5;
+
+    new-instance v0, Ldvb;
+
+    iget-wide v1, p1, Lovb;->b:J
+
+    invoke-direct {v0, v1, v2}, Ldvb;-><init>(J)V
+
+    invoke-static {p2, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
     return-void
 
     :cond_2
-    sget p2, Lvga;->K:I
+    sget p2, Lsra;->K:I
 
     if-ne p1, p2, :cond_3
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
-    move-result-object p0
+    move-result-object p1
 
-    iget-wide p1, p0, Lwgb;->c:J
+    iget-wide v0, p1, Lovb;->c:J
 
-    invoke-virtual {p0}, Lwgb;->s()Ll72;
+    invoke-virtual {p1}, Lovb;->s()Lm82;
 
-    move-result-object v0
+    move-result-object p2
 
-    if-eqz v0, :cond_3
+    if-eqz p2, :cond_3
 
-    iget-object v1, p0, Lwgb;->p0:Lth7;
+    iget-object v2, p1, Lovb;->x0:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljk;
-
-    iget-wide v3, v0, Ll72;->a:J
-
-    iget-object v2, v0, Ll72;->b:Lxb2;
-
-    iget-wide v5, v2, Lxb2;->a:J
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    check-cast v2, Ltk;
 
-    move-result-object v7
+    iget-wide v4, p2, Lm82;->a:J
 
-    invoke-virtual {v0, p1, p2}, Ll72;->e(J)I
+    iget-object v3, p2, Lm82;->b:Lpc2;
 
-    move-result v9
+    iget-wide v6, v3, Lpc2;->a:J
 
-    move-object v2, v1
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v2, Lw5a;
+    move-result-object v3
 
-    const/4 v8, 0x0
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual/range {v2 .. v9}, Lw5a;->H(JJLjava/util/List;ZI)J
+    move-result-object v8
 
-    iget-object p0, p0, Lwgb;->w0:Lt65;
+    invoke-virtual {p2, v0, v1}, Lm82;->e(J)I
 
-    sget-object p1, Lp53;->b:Lp53;
+    move-result v10
 
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    move-object v3, v2
+
+    check-cast v3, Lbga;
+
+    const/4 v9, 0x0
+
+    invoke-virtual/range {v3 .. v10}, Lbga;->H(JJLjava/util/List;ZI)J
+
+    iget-object p1, p1, Lovb;->E0:Ljb5;
+
+    sget-object p2, Lj73;->b:Lj73;
+
+    invoke-static {p1, p2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
     :cond_3
     return-void
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 21
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -648,7 +665,7 @@
 
     invoke-virtual {v4, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance v1, Lxp2;
+    new-instance v1, Lkr2;
 
     const/4 v2, 0x5
 
@@ -656,9 +673,9 @@
 
     const/4 v6, 0x0
 
-    invoke-direct {v1, v5, v6, v2}, Lxp2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v5, v6, v2}, Lkr2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v1, v4}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {v1, v4}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -668,7 +685,7 @@
 
     invoke-direct {v1, v2, v6}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v2, Lvga;->Q:I
+    sget v2, Lsra;->Q:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -680,7 +697,7 @@
 
     int-to-float v3, v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -692,7 +709,7 @@
 
     mul-float/2addr v7, v3
 
-    invoke-static {v7}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v7
 
@@ -704,7 +721,7 @@
 
     move-result v9
 
-    iget v10, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0:I
+    iget v10, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->y0:I
 
     invoke-virtual {v1, v8, v7, v9, v10}, Landroid/view/View;->setPadding(IIII)V
 
@@ -724,202 +741,79 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    iget-object v7, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Z:Lqy5;
+    iget-object v7, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Y:Lr36;
 
-    invoke-virtual {v1, v7}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lygc;)V
+    invoke-virtual {v1, v7}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
 
-    invoke-virtual {v1, v6}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Ldhc;)V
+    invoke-virtual {v1, v6}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luwc;)V
 
     const/4 v7, 0x1
 
     invoke-virtual {v1, v7}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    sget-object v8, Lp67;->a:Lfk9;
+    sget-object v7, Lrd7;->a:Ldt9;
 
-    new-instance v8, Lfk9;
+    new-instance v7, Ldt9;
 
-    invoke-direct {v8, v5}, Lfk9;-><init>(I)V
+    invoke-direct {v7, v5}, Ldt9;-><init>(I)V
 
-    const/16 v9, 0x800
+    const/16 v8, 0x800
 
-    invoke-virtual {v8, v9}, Lfk9;->g(I)V
+    invoke-virtual {v7, v8}, Ldt9;->h(I)V
 
-    const/16 v9, 0x1000
+    const/16 v8, 0x1000
 
-    invoke-virtual {v8, v9}, Lfk9;->g(I)V
+    invoke-virtual {v7, v8}, Ldt9;->h(I)V
 
-    const/16 v9, 0x80
+    const/16 v8, 0x80
 
-    invoke-virtual {v8, v9}, Lfk9;->g(I)V
+    invoke-virtual {v7, v8}, Ldt9;->h(I)V
 
-    new-instance v12, Lnl8;
+    new-instance v11, Lbv8;
 
-    const/16 v9, 0x13
+    const/16 v8, 0x10
 
-    invoke-direct {v12, v0, v9, v8}, Lnl8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v11, v0, v8, v7}, Lbv8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance v10, Ln5d;
+    new-instance v9, Lzmd;
 
-    sget-object v8, Lzs4;->p0:Lqs9;
+    sget-object v7, Lbx4;->y0:Lsed;
 
-    invoke-virtual {v8, v1}, Lqs9;->e(Landroid/view/View;)Lnma;
+    invoke-virtual {v7, v1}, Lsed;->l(Landroid/view/View;)Luxa;
 
-    move-result-object v11
-
-    const/4 v14, 0x0
-
-    const/16 v15, 0x1c
+    move-result-object v10
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v10 .. v15}, Ln5d;-><init>(Lnma;Ll5d;Lk;Looc;I)V
+    const/16 v14, 0x1c
 
-    invoke-virtual {v1, v10}, Landroidx/recyclerview/widget/RecyclerView;->j(Lehc;)V
+    const/4 v12, 0x0
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0()Z
+    invoke-direct/range {v9 .. v14}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
 
-    move-result v8
+    invoke-virtual {v1, v9}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
 
-    const/4 v9, 0x6
+    const/16 v7, 0x8
 
-    const/16 v10, 0x14
+    int-to-float v7, v7
 
-    const/16 v11, 0x8
-
-    if-eqz v8, :cond_0
-
-    int-to-float v8, v11
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v8
-
-    invoke-static {v12}, Litg;->z(F)I
-
-    move-result v13
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v3
-
-    invoke-static {v12}, Litg;->z(F)I
-
-    move-result v16
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v12
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v18
-
-    int-to-float v8, v10
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v12
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v19
-
-    const/4 v14, 0x0
-
-    const v15, 0x8000
-
-    const/16 v17, 0x1000
-
-    invoke-static/range {v13 .. v19}, Li67;->b(IIIIIII)Lck9;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
-    goto :goto_0
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_0
-    int-to-float v8, v9
+    move-result-object v8
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    move-result-object v12
+    mul-float/2addr v8, v7
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v8}, Lv63;->r0(F)I
 
-    move-result-object v12
+    move-result v9
 
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v8
-
-    invoke-static {v12}, Litg;->z(F)I
-
-    move-result v14
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v3
-
-    invoke-static {v12}, Litg;->z(F)I
-
-    move-result v16
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v12
-
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v18
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -931,66 +825,31 @@
 
     mul-float/2addr v8, v3
 
-    invoke-static {v8}, Litg;->z(F)I
-
-    move-result v19
-
-    const/4 v13, 0x0
-
-    const v15, 0x8000
-
-    const/16 v17, 0x1000
-
-    invoke-static/range {v13 .. v19}, Li67;->b(IIIIIII)Lck9;
-
-    move-result-object v8
-
-    :goto_0
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0()Z
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v12
 
-    const/16 v13, 0xc
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    if-eqz v12, :cond_1
+    move-result-object v8
 
-    int-to-float v11, v11
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    move-result-object v8
 
-    move-result-object v12
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    mul-float/2addr v8, v7
 
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v11
-
-    invoke-static {v12}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v14
 
-    int-to-float v10, v10
+    const/16 v8, 0x14
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    int-to-float v8, v8
 
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v12
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v17
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -1000,193 +859,99 @@
 
     iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v11, v10
+    mul-float/2addr v10, v8
 
-    invoke-static {v11}, Litg;->z(F)I
-
-    move-result v19
-
-    int-to-float v10, v13
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v11
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v20
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x1000
-
-    const v18, 0x8000
-
-    invoke-static/range {v14 .. v20}, Li67;->b(IIIIIII)Lck9;
-
-    move-result-object v10
-
-    goto :goto_1
-
-    :cond_1
-    int-to-float v10, v9
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v11
-
-    invoke-static {v10}, Litg;->z(F)I
+    invoke-static {v10}, Lv63;->r0(F)I
 
     move-result v15
 
-    const/16 v10, 0x1e
+    const/4 v10, 0x0
 
-    int-to-float v10, v10
+    const v11, 0x8000
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    const/16 v13, 0x1000
 
-    move-result-object v11
+    invoke-static/range {v9 .. v15}, Lkd7;->b(IIIIIII)Lat9;
 
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object v9
 
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v11
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v17
-
-    int-to-float v10, v13
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v11, v10
-
-    invoke-static {v11}, Litg;->z(F)I
-
-    move-result v19
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v11
-
-    invoke-static {v10}, Litg;->z(F)I
-
-    move-result v20
-
-    const/4 v14, 0x0
-
-    const/16 v16, 0x1000
-
-    const v18, 0x8000
-
-    invoke-static/range {v14 .. v20}, Li67;->b(IIIIIII)Lck9;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
-    :goto_1
-    int-to-float v11, v13
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    move-result-object v10
 
-    move-result-object v12
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    mul-float/2addr v10, v7
 
-    move-result-object v12
+    invoke-static {v10}, Lv63;->r0(F)I
 
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
+    move-result v11
 
-    mul-float/2addr v12, v11
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    invoke-static {v12}, Litg;->z(F)I
+    move-result-object v10
 
-    move-result v13
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    move-result-object v10
 
-    move-result-object v12
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    mul-float/2addr v8, v10
 
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v3
-
-    invoke-static {v12}, Litg;->z(F)I
+    invoke-static {v8}, Lv63;->r0(F)I
 
     move-result v14
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object v12
+    move-result-object v8
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v12
+    move-result-object v8
 
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v12, v3
+    mul-float/2addr v7, v8
 
-    invoke-static {v12}, Litg;->z(F)I
+    invoke-static {v7}, Lv63;->r0(F)I
 
     move-result v16
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    const/16 v7, 0xc
 
-    move-result-object v12
+    int-to-float v8, v7
 
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object v12
+    move-result-object v10
 
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    mul-float/2addr v11, v12
+    move-result-object v10
 
-    invoke-static {v11}, Litg;->z(F)I
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    move-result v18
+    mul-float/2addr v10, v8
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {v10}, Lv63;->r0(F)I
+
+    move-result v17
+
+    const/4 v12, 0x0
+
+    const v15, 0x8000
+
+    invoke-static/range {v11 .. v17}, Lkd7;->b(IIIIIII)Lat9;
+
+    move-result-object v10
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -1196,125 +961,155 @@
 
     iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v3, v11
+    mul-float/2addr v11, v8
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v11}, Lv63;->r0(F)I
 
-    move-result v19
+    move-result v12
 
-    const/16 v15, 0x1000
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    const v17, 0x8000
+    move-result-object v11
 
-    invoke-static/range {v13 .. v19}, Li67;->b(IIIIIII)Lck9;
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v11, v3
+
+    invoke-static {v11}, Lv63;->r0(F)I
+
+    move-result v13
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v11, v3
+
+    invoke-static {v11}, Lv63;->r0(F)I
+
+    move-result v15
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v11
+
+    invoke-static {v8}, Lv63;->r0(F)I
+
+    move-result v17
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v8
+
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v8
+
+    invoke-static {v3}, Lv63;->r0(F)I
+
+    move-result v18
+
+    const/16 v14, 0x1000
+
+    const v16, 0x8000
+
+    invoke-static/range {v12 .. v18}, Lkd7;->b(IIIIIII)Lat9;
 
     move-result-object v3
 
-    new-instance v11, Lz28;
+    new-instance v8, Lya8;
 
-    invoke-direct {v11, v3, v8, v10, v2}, Lz28;-><init>(Lck9;Lck9;Lck9;I)V
+    invoke-direct {v8, v3, v9, v10, v2}, Lya8;-><init>(Lat9;Lat9;Lat9;I)V
 
-    invoke-virtual {v1, v11}, Landroidx/recyclerview/widget/RecyclerView;->j(Lehc;)V
+    invoke-virtual {v1, v8}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
 
     invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance v1, Lkna;
+    new-instance v1, Ltya;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v1, v3, v9}, Lkna;-><init>(Landroid/content/Context;I)V
+    const/4 v8, 0x6
 
-    sget v3, Lvga;->T:I
+    invoke-direct {v1, v3, v8}, Ltya;-><init>(Landroid/content/Context;I)V
+
+    sget v3, Lsra;->S:I
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0()Z
+    sget v3, Lvra;->E0:I
 
-    move-result v3
+    invoke-virtual {v1, v3}, Ltya;->setTitle(I)V
 
-    if-eqz v3, :cond_2
+    sget-object v3, Llya;->a:Llya;
 
-    sget v3, Lyga;->E0:I
+    invoke-virtual {v1, v3}, Ltya;->setForm(Llya;)V
 
-    goto :goto_2
+    new-instance v3, Lcya;
 
-    :cond_2
-    sget v3, Lyga;->f1:I
+    new-instance v8, Lt01;
 
-    :goto_2
-    invoke-virtual {v1, v3}, Lkna;->setTitle(I)V
+    invoke-direct {v8, v7, v0}, Lt01;-><init>(ILjava/lang/Object;)V
 
-    sget-object v3, Lcna;->a:Lcna;
+    invoke-direct {v3, v8}, Lcya;-><init>(Lxe6;)V
 
-    invoke-virtual {v1, v3}, Lkna;->setForm(Lcna;)V
+    invoke-virtual {v1, v3}, Ltya;->setLeftActions(Lhya;)V
 
-    new-instance v3, Ltma;
+    new-instance v3, Lqvb;
 
-    new-instance v8, Lygb;
+    invoke-direct {v3, v5, v6, v2}, Lqvb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-direct {v8, v0, v2}, Lygb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
-
-    invoke-direct {v3, v8}, Ltma;-><init>(Lf96;)V
-
-    invoke-virtual {v1, v3}, Lkna;->setLeftActions(Lyma;)V
-
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0()Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    new-instance v3, Luma;
-
-    new-instance v8, Lygb;
-
-    invoke-direct {v8, v0, v7}, Lygb;-><init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
-
-    invoke-direct {v3, v8}, Luma;-><init>(Lf96;)V
-
-    invoke-virtual {v1, v3}, Lkna;->setRightActions(Lana;)V
-
-    :cond_3
-    new-instance v3, Lzgb;
-
-    invoke-direct {v3, v5, v6, v2}, Lzgb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v3, v1}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {v3, v1}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0()Z
+    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0:Ll2d;
 
-    move-result v1
+    invoke-virtual {v1}, Ll2d;->getValue()Ljava/lang/Object;
 
-    if-eqz v1, :cond_4
+    move-result-object v1
 
-    iget-object v0, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->p0:Lwlc;
+    check-cast v1, Landroid/view/View;
 
-    invoke-virtual {v0}, Lwlc;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-virtual {v4, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    :cond_4
     return-object v4
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->p0:Lwlc;
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->x0:Ll2d;
 
-    sget-object v1, Lv76;->n0:Lv76;
+    sget-object v1, Lw88;->z0:Lw88;
 
-    iput-object v1, v0, Lwlc;->b:Ljava/lang/Object;
+    iput-object v1, v0, Ll2d;->b:Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Lox3;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lb04;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1322,218 +1117,168 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    sget-object p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:[Lof7;
+    sget-object p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
 
     const/4 v0, 0x3
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->n0:Ldbc;
+    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Z:Lmqc;
 
-    invoke-interface {v0, p0, p1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkna;
-
-    new-instance v0, Lbb6;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p1, v1, p0}, Lbb6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Lyna;->a(Landroid/view/View;Ljava/lang/Runnable;)Lyna;
-
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0()V
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
+    invoke-interface {v0, p0, p1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lqrc;->h()Lb5a;
+    check-cast p1, Ltya;
+
+    new-instance v0, Lsg6;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1, p0}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
+
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->D0()V
+
+    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Li8d;->h()Lgfa;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lox3;->lifecycleOwner:Lsk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
-    new-instance v1, Llx3;
+    move-result-object v0
 
-    const/16 v2, 0x8
+    new-instance v1, Lyz3;
 
-    invoke-direct {v1, p0, v2}, Llx3;-><init>(Lone/me/sdk/arch/Widget;I)V
+    const/16 v2, 0x9
 
-    invoke-virtual {p1, v0, v1}, Lb5a;->a(Lsk7;Lt4a;)V
+    invoke-direct {v1, p0, v2}, Lyz3;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {p1, v0, v1}, Lgfa;->a(Lcs7;Lyea;)V
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwgb;->w0:Lt65;
+    iget-object p1, p1, Lovb;->E0:Ljb5;
 
-    new-instance v0, Luv2;
+    new-instance v0, Lg13;
 
-    const/16 v1, 0xb
+    const/16 v1, 0x9
 
-    invoke-direct {v0, p1, v1}, Luv2;-><init>(Lbq5;I)V
+    invoke-direct {v0, p1, v1}, Lg13;-><init>(Lev5;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lsk7;->L()Luk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
     move-result-object p1
 
-    sget-object v1, Lvj7;->o:Lvj7;
-
-    invoke-static {v0, p1, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-interface {p1}, Lcs7;->L()Les7;
 
     move-result-object p1
 
-    new-instance v0, Lahb;
+    sget-object v1, Ler7;->o:Ler7;
+
+    invoke-static {v0, p1, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+
+    move-result-object p1
+
+    new-instance v0, Lrvb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lahb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+    invoke-direct {v0, v2, p0}, Lrvb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    new-instance v3, Lgs5;
+    new-instance v3, Ljx5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v3, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
-
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwgb;->x0:Lt65;
+    invoke-static {v3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
-    new-instance v0, Luv2;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v0, p1, v3}, Luv2;-><init>(Lbq5;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lsk7;->L()Luk7;
+    iget-object p1, p1, Lovb;->F0:Ljb5;
+
+    new-instance v0, Lg13;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v0, p1, v3}, Lg13;-><init>(Lev5;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
     move-result-object p1
 
-    invoke-static {v0, p1, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-interface {p1}, Lcs7;->L()Les7;
 
     move-result-object p1
 
-    new-instance v0, Lbhb;
-
-    invoke-direct {v0, v2, p0}, Lbhb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-
-    new-instance v3, Lgs5;
-
-    invoke-direct {v3, p1, v0, v4}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-static {v0, p1, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    new-instance v0, Lsvb;
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->z0()Lwgb;
+    invoke-direct {v0, v2, p0}, Lsvb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+
+    new-instance v3, Ljx5;
+
+    invoke-direct {v3, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwgb;->A0:Ljbc;
+    invoke-static {v3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->C0()Lovb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lovb;->I0:Lsqc;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lsk7;->L()Luk7;
+    invoke-interface {v0}, Lcs7;->L()Les7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
 
     move-result-object p1
 
-    new-instance v0, Lchb;
+    new-instance v0, Ltvb;
 
-    invoke-direct {v0, v2, p0}, Lchb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+    invoke-direct {v0, v2, p0}, Ltvb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
 
-    new-instance v1, Lgs5;
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
-.end method
-
-.method public final x0()Z
-    .locals 0
-
-    iget-object p0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->X:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final y0()Ligb;
-    .locals 2
-
-    sget-object v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->s0:[Lof7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->o:Lvr;
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ligb;
-
-    return-object p0
-.end method
-
-.method public final z0()Lwgb;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->Y:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lwgb;
-
-    return-object p0
 .end method

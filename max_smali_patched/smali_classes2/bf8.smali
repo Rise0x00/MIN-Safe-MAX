@@ -4,58 +4,134 @@
 
 
 # instance fields
-.field public final a:Lcf8;
+.field public final a:Lze8;
 
-.field public final b:Lhy8;
+.field public final b:Laf8;
 
 
 # direct methods
-.method public constructor <init>(Lcf8;Lhy8;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
+
+    new-instance v0, Lze8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Laf8;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbf8;->a:Lcf8;
+    iput-object v0, p0, Lbf8;->a:Lze8;
 
-    iput-object p2, p0, Lbf8;->b:Lhy8;
+    iput-object v1, p0, Lbf8;->b:Laf8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfk7;)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lbf8;->a:Lcf8;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lcf8;->X:Lt65;
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Ldr0;
+    return v0
 
-    const/4 v7, 0x4
+    :cond_0
+    instance-of v1, p1, Lbf8;
 
-    const/16 v8, 0x14
+    const/4 v2, 0x0
 
-    const/4 v2, 0x2
+    if-nez v1, :cond_1
 
-    const-class v4, Lbf8;
+    return v2
 
-    const-string v5, "handleMediaKeyboardEvents"
+    :cond_1
+    check-cast p1, Lbf8;
 
-    const-string v6, "handleMediaKeyboardEvents(Lone/me/sdk/arch/event/Event;)V"
+    iget-object v1, p0, Lbf8;->a:Lze8;
 
-    move-object v3, p0
+    iget-object v3, p1, Lbf8;->a:Lze8;
 
-    invoke-direct/range {v1 .. v8}, Ldr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance p0, Lgs5;
+    move-result v1
 
-    const/4 v2, 0x1
+    if-nez v1, :cond_2
 
-    invoke-direct {p0, v0, v1, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    return v2
 
-    invoke-static {p0, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    :cond_2
+    iget-object v1, p0, Lbf8;->b:Laf8;
 
-    return-void
+    iget-object p1, p1, Lbf8;->b:Laf8;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lbf8;->a:Lze8;
+
+    invoke-virtual {v0}, Lze8;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbf8;->b:Laf8;
+
+    invoke-virtual {v1}, Laf8;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MediaAdaptationConfig(badNetwork="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbf8;->a:Lze8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", goodNetwork="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbf8;->b:Laf8;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

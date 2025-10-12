@@ -1,48 +1,90 @@
-.class public final Lwy7;
-.super Lax3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lwq7;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lwq7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lwy7;->Y:Lwq7;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Lwy7;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a(Lvy7;[Leg5;)V
+.end method
 
-    iput-object p1, p0, Lwy7;->o:Ljava/lang/Object;
+.method public abstract b()Z
+.end method
 
-    iget p1, p0, Lwy7;->X:I
+.method public c()Z
+    .locals 2
 
-    const/high16 v0, -0x80000000
+    const-string v0, "LoadControl"
 
-    or-int/2addr p1, v0
+    const-string v1, "shouldContinuePreloading needs to be implemented when playlist preloading is enabled"
 
-    iput p1, p0, Lwy7;->X:I
-
-    iget-object p1, p0, Lwy7;->Y:Lwq7;
+    invoke-static {v0, v1}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lwq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p0
+.method public d(J)Z
+    .locals 0
 
-    return-object p0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "shouldContinueLoading not implemented"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public abstract e(Lslb;)V
+.end method
+
+.method public abstract f(Lslb;)V
+.end method
+
+.method public g(JZ)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "shouldStartPlayback not implemented"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public abstract h()J
+.end method
+
+.method public abstract i(Lslb;)V
+.end method
+
+.method public j(Lvy7;)Z
+    .locals 2
+
+    iget-wide v0, p1, Lvy7;->b:J
+
+    invoke-interface {p0, v0, v1}, Lwy7;->d(J)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public abstract k()Lmd4;
+.end method
+
+.method public l(Lvy7;)Z
+    .locals 2
+
+    iget-wide v0, p1, Lvy7;->b:J
+
+    iget-boolean p1, p1, Lvy7;->d:Z
+
+    invoke-interface {p0, v0, v1, p1}, Lwy7;->g(JZ)Z
+
+    move-result p1
+
+    return p1
 .end method

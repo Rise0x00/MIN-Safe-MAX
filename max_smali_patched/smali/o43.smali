@@ -1,82 +1,64 @@
-.class public final synthetic Lo43;
+.class public abstract Lo43;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lqz7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final synthetic b:Lq43;
+.field public final Y:Ljava/lang/Object;
+
+.field public final Z:J
+
+.field public final a:J
+
+.field public final b:Lr94;
+
+.field public final c:I
+
+.field public final o:Lt76;
+
+.field public final w0:J
+
+.field public final x0:Lspe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq43;I)V
-    .locals 0
-
-    iput p2, p0, Lo43;->a:I
-
-    iput-object p1, p0, Lo43;->b:Lq43;
+.method public constructor <init>(Lk94;Lr94;ILt76;ILjava/lang/Object;JJ)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Lspe;
 
+    invoke-direct {v0, p1}, Lspe;-><init>(Lk94;)V
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+    iput-object v0, p0, Lo43;->x0:Lspe;
 
-    iget v0, p0, Lo43;->a:I
+    iput-object p2, p0, Lo43;->b:Lr94;
 
-    iget-object p0, p0, Lo43;->b:Lq43;
+    iput p3, p0, Lo43;->c:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p4, p0, Lo43;->o:Lt76;
 
-    packed-switch v0, :pswitch_data_0
+    iput p5, p0, Lo43;->X:I
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iput-object p6, p0, Lo43;->Y:Ljava/lang/Object;
 
-    move-result-object p1
+    iput-wide p7, p0, Lo43;->Z:J
 
-    check-cast p1, Ljava/lang/Float;
+    iput-wide p9, p0, Lo43;->w0:J
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    sget-object p1, Lhz7;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    move-result p1
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
-    iget-object p0, p0, Lr45;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    move-result-wide p1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScaleY(F)V
+    iput-wide p1, p0, Lo43;->a:J
 
     return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object p0, p0, Lr45;->d:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

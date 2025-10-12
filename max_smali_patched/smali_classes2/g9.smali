@@ -1,104 +1,61 @@
 .class public final Lg9;
-.super Leje;
+.super Lss3;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+# static fields
+.field public static final a:Lg9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lg9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance v0, Lg9;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lg9;->a:Lg9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lg9;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lg9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance v0, Lg9;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lg9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p2}, Lg9;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lg9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg9;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    iget-object p0, p0, Lg9;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lg9;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+    if-nez p1, :cond_1
 
-    new-instance v0, Ljava/lang/Integer;
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
+    return p1
 
-    const/4 p1, 0x1
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
+.method public final hashCode()I
+    .locals 1
 
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    const v0, -0x5c189f88
 
-    return-object p0
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "AddContactButtonClicked"
+
+    return-object v0
 .end method

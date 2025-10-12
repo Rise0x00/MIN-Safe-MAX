@@ -1,49 +1,39 @@
-.class public final Loig;
-.super Lax3;
+.class public final synthetic Loig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ltz4;
-
-.field public Z:I
-
-.field public o:Ltz4;
-
-
-# direct methods
-.method public constructor <init>(Ltz4;Lax3;)V
-    .locals 0
-
-    iput-object p1, p0, Loig;->Y:Ltz4;
-
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lmf6;
+.implements Lki5;
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Loig;->X:Ljava/lang/Object;
+    check-cast p1, Lvk0;
 
-    iget p1, p0, Loig;->Z:I
+    invoke-virtual {p1}, Lvk0;->a()Lude;
 
-    const/high16 v0, -0x80000000
+    move-result-object p1
 
-    or-int/2addr p1, v0
+    return-object p1
+.end method
 
-    iput p1, p0, Loig;->Z:I
+.method public b()[Lfi5;
+    .locals 3
 
-    iget-object p1, p0, Loig;->Y:Ltz4;
+    new-instance v0, Ltpg;
 
-    invoke-virtual {p1, p0}, Ltz4;->h(Lax3;)Ljava/lang/Object;
+    invoke-direct {v0}, Ltpg;-><init>()V
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    return-object p0
+    new-array v1, v1, [Lfi5;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    return-object v1
 .end method

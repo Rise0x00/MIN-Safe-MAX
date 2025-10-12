@@ -1,75 +1,39 @@
-.class public abstract Lcx9;
+.class public final Lcx9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:[I
+
+.field public final f:I
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Notification$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/app/Notification$Builder;
-
-    invoke-direct {v0, p0, p1}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+.method public constructor <init>(IZII[II)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setBadgeIconType(I)Landroid/app/Notification$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput p1, p0, Lcx9;->a:I
 
-    return-object p0
-.end method
+    iput-boolean p2, p0, Lcx9;->b:Z
 
-.method public static c(Landroid/app/Notification$Builder;Z)Landroid/app/Notification$Builder;
-    .locals 0
+    iput p3, p0, Lcx9;->c:I
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColorized(Z)Landroid/app/Notification$Builder;
+    iput p4, p0, Lcx9;->d:I
 
-    move-result-object p0
+    iput-object p5, p0, Lcx9;->e:[I
 
-    return-object p0
-.end method
+    iput p6, p0, Lcx9;->f:I
 
-.method public static d(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setGroupAlertBehavior(I)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/app/Notification$Builder;Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setSettingsText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setShortcutId(Ljava/lang/String;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/app/Notification$Builder;J)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setTimeoutAfter(J)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

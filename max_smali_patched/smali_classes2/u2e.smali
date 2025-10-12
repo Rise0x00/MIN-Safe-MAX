@@ -1,151 +1,96 @@
-.class public final synthetic Lu2e;
-.super Ljava/lang/Object;
+.class public final Lu2e;
+.super Ldd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lf96;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    iput p2, p0, Lu2e;->a:I
+    const/16 v0, 0x12
 
-    iput-object p1, p0, Lu2e;->b:Lone/me/startconversation/StartConversationScreen;
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu2e;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lu2e;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lu2e;->b:Lone/me/startconversation/StartConversationScreen;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    check-cast p1, Ljava/lang/Integer;
+    :cond_0
+    instance-of v1, p1, Lu2e;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lu2e;
+
+    iget-object v1, p0, Lu2e;->b:Landroid/content/Intent;
+
+    iget-object p1, p1, Lu2e;->b:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->t0:Lrgg;
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0}, Ldp7;->j()I
-
-    move-result v0
-
-    iget-object v1, p0, Lone/me/startconversation/StartConversationScreen;->y0:Ldi0;
-
-    invoke-virtual {v1}, Ldp7;->j()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->u0:Ldi0;
-
-    invoke-virtual {v0}, Ldp7;->j()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v2, p0, Lone/me/startconversation/StartConversationScreen;->v0:Lrgg;
-
-    invoke-virtual {v2}, Ldp7;->j()I
-
-    move-result v3
-
-    add-int/2addr v3, v0
-
-    iget-object v4, p0, Lone/me/startconversation/StartConversationScreen;->z0:Lqy5;
-
-    invoke-virtual {v4}, Ldp7;->j()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    :cond_0
-    if-ge p1, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    if-lt p1, v0, :cond_3
-
-    if-ge p1, v4, :cond_2
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    if-ge p1, v3, :cond_3
+    return v0
+.end method
 
-    sub-int/2addr p1, v0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v2, p1}, Ldp7;->C(I)Ljava/lang/Object;
+    iget-object v0, p0, Lu2e;->b:Landroid/content/Intent;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p0, Llp7;
+    move-result v0
 
-    check-cast p0, Leq3;
+    return v0
+.end method
 
-    iget-object p0, p0, Leq3;->b:Ljava/lang/CharSequence;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_3
-    :goto_0
-    const/4 p0, 0x0
+    const-string v1, "CropAvatarOld(intent="
 
-    :goto_1
-    return-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-object v1, p0, Lu2e;->b:Landroid/content/Intent;
 
-    sget-object p1, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lox3;->getOnBackPressedDispatcher()Lb5a;
+    const-string v1, ")"
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_4
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0}, Lb5a;->d()V
+    move-result-object v0
 
-    :cond_4
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

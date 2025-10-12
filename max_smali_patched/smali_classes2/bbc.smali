@@ -1,16 +1,6 @@
-.class public final synthetic Lbbc;
+.class public abstract Lbbc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lim3;
 
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Lgb2;
-
-    return-void
-.end method
+# static fields
+.field public static small_time_offset:I = 0x7f05000c

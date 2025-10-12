@@ -1,761 +1,362 @@
 .class public final Lkwc;
-.super Lkc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final k:Lkwc;
-
-.field public static final l:Lkwc;
-
-.field public static final m:Lkwc;
-
-.field public static final n:Lkwc;
-
-.field public static final o:Lkwc;
-
-.field public static final p:Lkwc;
-
-.field public static final q:Lkwc;
-
-.field public static final r:Lkwc;
-
-.field public static final s:Lkwc;
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final synthetic j:I
+.field public final X:Lgma;
+
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final b:Liwc;
+
+.field public final c:J
+
+.field public final o:Ljp5;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Liwc;JLjp5;Z)V
+    .locals 4
 
-    new-instance v0, Lkwc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    sput-object v0, Lkwc;->k:Lkwc;
+    iput-object v0, p0, Lkwc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v0, Lkwc;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x1
+    const/16 v2, 0x1e
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    if-lt v1, v2, :cond_0
 
-    sput-object v0, Lkwc;->l:Lkwc;
+    new-instance v1, Lgma;
 
-    new-instance v0, Lkwc;
+    new-instance v2, Ll73;
 
-    const/4 v1, 0x2
+    invoke-direct {v2}, Ll73;-><init>()V
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    const/16 v3, 0xa
 
-    sput-object v0, Lkwc;->m:Lkwc;
+    invoke-direct {v1, v3, v2}, Lgma;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Lkwc;
+    goto :goto_0
 
-    const/4 v1, 0x3
+    :cond_0
+    new-instance v1, Lgma;
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    new-instance v2, Lqd6;
 
-    sput-object v0, Lkwc;->n:Lkwc;
+    const/16 v3, 0xa
 
-    new-instance v0, Lkwc;
+    invoke-direct {v2, v3}, Lqd6;-><init>(I)V
 
-    const/4 v1, 0x4
+    invoke-direct {v1, v3, v2}, Lgma;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    :goto_0
+    iput-object v1, p0, Lkwc;->X:Lgma;
 
-    sput-object v0, Lkwc;->o:Lkwc;
+    iput-object p1, p0, Lkwc;->b:Liwc;
 
-    new-instance v0, Lkwc;
+    iput-wide p2, p0, Lkwc;->c:J
 
-    const/4 v1, 0x5
+    iput-object p4, p0, Lkwc;->o:Ljp5;
 
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
+    if-eqz p5, :cond_1
 
-    sput-object v0, Lkwc;->p:Lkwc;
+    const/4 p1, 0x1
 
-    new-instance v0, Lkwc;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
-
-    sput-object v0, Lkwc;->q:Lkwc;
-
-    new-instance v0, Lkwc;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
-
-    sput-object v0, Lkwc;->r:Lkwc;
-
-    new-instance v0, Lkwc;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lkwc;-><init>(I)V
-
-    sput-object v0, Lkwc;->s:Lkwc;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     return-void
-.end method
 
-.method public synthetic constructor <init>(I)V
-    .locals 0
+    :cond_1
+    iget-object p1, v1, Lgma;->b:Ljava/lang/Object;
 
-    iput p1, p0, Lkwc;->j:I
+    check-cast p1, Lm73;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p2, "stop"
+
+    invoke-interface {p1, p2}, Lm73;->c(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
-    .locals 2
+.method public final c(ILjava/lang/RuntimeException;)V
+    .locals 10
 
-    iget p0, p0, Lkwc;->j:I
+    iget-object v0, p0, Lkwc;->X:Lgma;
 
-    packed-switch p0, :pswitch_data_0
+    iget-object v0, v0, Lgma;->b:Ljava/lang/Object;
 
-    cmpl-float p0, p8, p7
+    check-cast v0, Lm73;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Lm73;->close()V
 
-    const/high16 v1, 0x3f000000    # 0.5f
+    iget-object v0, p0, Lkwc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    if-lez p0, :cond_0
+    const/4 v1, 0x1
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    move-result p0
+    move-result v0
 
-    int-to-float p0, p0
+    if-eqz v0, :cond_0
 
-    mul-float/2addr p0, v1
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p8
-
-    mul-float/2addr p5, p3
-
-    sub-float/2addr p0, p5
-
-    iget p4, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p4, p4
-
-    invoke-static {p0, v0}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p5
-
-    int-to-float p5, p5
-
-    sub-float/2addr p5, p3
-
-    invoke-static {p0, p5}, Ljava/lang/Math;->max(FF)F
-
-    move-result p0
-
-    add-float/2addr p0, p4
-
-    iget p2, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p2, p2
-
-    move p7, p8
-
-    goto :goto_0
+    goto/16 :goto_2
 
     :cond_0
-    iget p0, p2, Landroid/graphics/Rect;->left:I
+    iget-object v2, p0, Lkwc;->b:Liwc;
 
-    int-to-float p0, p0
+    const-string v0, "stop() called on a recording that is no longer active: "
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+    iget-object v8, v2, Liwc;->h:Ljava/lang/Object;
 
-    move-result p3
+    monitor-enter v8
 
-    int-to-float p3, p3
+    :try_start_0
+    iget-object v1, v2, Liwc;->n:Lbb0;
 
-    mul-float/2addr p3, v1
+    invoke-static {p0, v1}, Liwc;->p(Lkwc;Lbb0;)Z
 
-    int-to-float p4, p4
+    move-result v1
 
-    mul-float/2addr p4, p7
+    if-nez v1, :cond_1
 
-    mul-float/2addr p6, p4
+    iget-object v1, v2, Liwc;->m:Lbb0;
 
-    sub-float/2addr p3, p6
+    invoke-static {p0, v1}, Liwc;->p(Lkwc;Lbb0;)Z
 
-    iget p5, p2, Landroid/graphics/Rect;->top:I
+    move-result v1
 
-    int-to-float p5, p5
+    if-nez v1, :cond_1
 
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(FF)F
+    const-string p1, "Recorder"
 
-    move-result p3
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p2
+    iget-object v0, p0, Lkwc;->o:Ljp5;
 
-    int-to-float p2, p2
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sub-float/2addr p2, p4
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {p3, p2}, Ljava/lang/Math;->max(FF)F
+    move-result-object p2
 
-    move-result p2
+    invoke-static {p1, p2}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    add-float/2addr p2, p5
+    monitor-exit v8
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto/16 :goto_3
+
+    :cond_1
+    iget-object v0, v2, Liwc;->j:Lhwc;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    const/4 v9, 0x0
+
+    packed-switch v0, :pswitch_data_0
 
     :goto_0
-    invoke-virtual {p1, p7, p7}, Landroid/graphics/Matrix;->setScale(FF)V
+    move v6, p1
 
-    add-float/2addr p0, v1
-
-    float-to-int p0, p0
-
-    int-to-float p0, p0
-
-    add-float/2addr p2, v1
-
-    float-to-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_0
-    iget p0, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p0, p0
-
-    iget p2, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p7, p8}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    const/high16 p3, 0x3f000000    # 0.5f
-
-    add-float/2addr p0, p3
-
-    float-to-int p0, p0
-
-    int-to-float p0, p0
-
-    add-float/2addr p2, p3
-
-    float-to-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p7, p8}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    iget p3, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p3, p3
-
-    iget p2, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p0}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    add-float/2addr p3, p0
-
-    float-to-int p3, p3
-
-    int-to-float p3, p3
-
-    add-float/2addr p2, p0
-
-    float-to-int p0, p2
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1, p3, p0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p7, p8}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    iget p5, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p6
-
-    int-to-float p6, p6
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p0
-
-    sub-float/2addr p6, p3
-
-    add-float/2addr p6, p5
-
-    iget p3, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p3, p3
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p4, p4
-
-    mul-float/2addr p4, p0
-
-    sub-float/2addr p2, p4
-
-    add-float/2addr p2, p3
-
-    invoke-virtual {p1, p0, p0}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    add-float/2addr p6, p0
-
-    float-to-int p3, p6
-
-    int-to-float p3, p3
-
-    add-float/2addr p2, p0
-
-    float-to-int p0, p2
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1, p3, p0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p7, p8}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    iget p5, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p6
-
-    int-to-float p6, p6
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p0
-
-    sub-float/2addr p6, p3
-
-    const/high16 p3, 0x3f000000    # 0.5f
-
-    mul-float/2addr p6, p3
-
-    add-float/2addr p6, p5
-
-    iget p5, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p4, p4
-
-    mul-float/2addr p4, p0
-
-    sub-float/2addr p2, p4
-
-    mul-float/2addr p2, p3
-
-    add-float/2addr p2, p5
-
-    invoke-virtual {p1, p0, p0}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    add-float/2addr p6, p3
-
-    float-to-int p0, p6
-
-    int-to-float p0, p0
-
-    add-float/2addr p2, p3
-
-    float-to-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_4
-    invoke-static {p7, p8}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    iget p3, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p3, p3
-
-    iget p5, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p4, p4
-
-    mul-float/2addr p4, p0
-
-    sub-float/2addr p2, p4
-
-    add-float/2addr p2, p5
-
-    invoke-virtual {p1, p0, p0}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    const/high16 p0, 0x3f000000    # 0.5f
-
-    add-float/2addr p3, p0
-
-    float-to-int p3, p3
-
-    int-to-float p3, p3
-
-    add-float/2addr p2, p0
-
-    float-to-int p0, p2
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1, p3, p0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_5
-    invoke-static {p7, p8}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    const/high16 p5, 0x3f800000    # 1.0f
-
-    invoke-static {p0, p5}, Ljava/lang/Math;->min(FF)F
-
-    move-result p0
-
-    iget p5, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p6
-
-    int-to-float p6, p6
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p0
-
-    sub-float/2addr p6, p3
-
-    const/high16 p3, 0x3f000000    # 0.5f
-
-    mul-float/2addr p6, p3
-
-    add-float/2addr p6, p5
-
-    iget p5, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p5, p5
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p4, p4
-
-    mul-float/2addr p4, p0
-
-    sub-float/2addr p2, p4
-
-    mul-float/2addr p2, p3
-
-    add-float/2addr p2, p5
-
-    invoke-virtual {p1, p0, p0}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    add-float/2addr p6, p3
-
-    float-to-int p0, p6
-
-    int-to-float p0, p0
-
-    add-float/2addr p2, p3
-
-    float-to-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    return-void
-
-    :pswitch_6
-    cmpl-float p0, p8, p7
-
-    const/high16 p5, 0x3f000000    # 0.5f
-
-    if-lez p0, :cond_1
-
-    iget p0, p2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p0, p0
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    int-to-float p3, p3
-
-    mul-float/2addr p3, p8
-
-    sub-float/2addr p4, p3
-
-    mul-float/2addr p4, p5
-
-    add-float/2addr p4, p0
-
-    iget p0, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p0, p0
-
-    move p7, p8
+    move-object v7, p2
 
     goto :goto_1
 
-    :cond_1
-    iget p0, p2, Landroid/graphics/Rect;->left:I
+    :pswitch_0
+    iget-object v0, v2, Liwc;->m:Lbb0;
 
-    int-to-float p0, p0
+    invoke-static {p0, v0}, Liwc;->p(Lkwc;Lbb0;)Z
 
-    iget p3, p2, Landroid/graphics/Rect;->top:I
+    move-result v0
 
-    int-to-float p3, p3
+    invoke-static {v9, v0}, Ll74;->m(Ljava/lang/String;Z)V
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+    goto :goto_0
 
-    move-result p2
+    :pswitch_1
+    sget-object v0, Lhwc;->Z:Lhwc;
 
-    int-to-float p2, p2
+    invoke-virtual {v2, v0}, Liwc;->D(Lhwc;)V
 
-    int-to-float p4, p4
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    mul-float/2addr p4, p7
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    sub-float/2addr p2, p4
+    move-result-wide v3
 
-    mul-float/2addr p2, p5
+    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
 
-    add-float/2addr p2, p3
+    move-result-wide v4
 
-    move p4, p0
+    iget-object v3, v2, Liwc;->m:Lbb0;
 
-    move p0, p2
+    iget-object v0, v2, Liwc;->e:Lcsd;
+
+    new-instance v1, Lbwc;
+
+    move v6, p1
+
+    move-object v7, p2
+
+    invoke-direct/range {v1 .. v7}, Lbwc;-><init>(Liwc;Lbb0;JILjava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1}, Lcsd;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_1
+
+    :pswitch_2
+    move v6, p1
+
+    move-object v7, p2
+
+    iget-object p1, v2, Liwc;->n:Lbb0;
+
+    invoke-static {p0, p1}, Liwc;->p(Lkwc;Lbb0;)Z
+
+    move-result p1
+
+    invoke-static {v9, p1}, Ll74;->m(Ljava/lang/String;Z)V
+
+    iget-object p1, v2, Liwc;->n:Lbb0;
+
+    iput-object v9, v2, Liwc;->n:Lbb0;
+
+    invoke-virtual {v2}, Liwc;->y()V
+
+    move-object v9, p1
 
     :goto_1
-    invoke-virtual {p1, p7, p7}, Landroid/graphics/Matrix;->setScale(FF)V
+    monitor-exit v8
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-float/2addr p4, p5
+    if-eqz v9, :cond_3
 
-    float-to-int p2, p4
+    const/16 p1, 0xa
 
-    int-to-float p2, p2
+    if-ne v6, p1, :cond_2
 
-    add-float/2addr p0, p5
+    const-string p1, "Recorder"
 
-    float-to-int p0, p0
+    const-string p2, "Recording was stopped due to recording being garbage collected before any valid data has been produced."
 
-    int-to-float p0, p0
+    invoke-static {p1, p2}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2, p0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+    :cond_2
+    new-instance p1, Ljava/lang/RuntimeException;
 
+    const-string p2, "Recording was stopped before any data could be produced."
+
+    invoke-direct {p1, p2, v7}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/16 p2, 0x8
+
+    invoke-virtual {v2, v9, p2, p1}, Liwc;->j(Lbb0;ILjava/lang/Throwable;)V
+
+    :cond_3
+    :goto_2
     return-void
 
-    :pswitch_7
-    iget p0, p2, Landroid/graphics/Rect;->left:I
+    :pswitch_3
+    :try_start_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    int-to-float p0, p0
+    const-string p2, "Calling stop() while idling or initializing is invalid."
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result p5
+    throw p1
 
-    sub-int/2addr p5, p3
+    :goto_3
+    monitor-exit v8
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    int-to-float p3, p5
-
-    const/high16 p5, 0x3f000000    # 0.5f
-
-    mul-float/2addr p3, p5
-
-    add-float/2addr p3, p0
-
-    iget p0, p2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p0, p0
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p2
-
-    sub-int/2addr p2, p4
-
-    int-to-float p2, p2
-
-    mul-float/2addr p2, p5
-
-    add-float/2addr p2, p0
-
-    add-float/2addr p3, p5
-
-    float-to-int p0, p3
-
-    int-to-float p0, p0
-
-    add-float/2addr p2, p5
-
-    float-to-int p2, p2
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1, p0, p2}, Landroid/graphics/Matrix;->setTranslate(FF)V
-
-    return-void
+    throw p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
+        :pswitch_2
+        :pswitch_3
         :pswitch_1
+        :pswitch_1
+        :pswitch_0
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+.method public final close()V
+    .locals 2
 
-    iget p0, p0, Lkwc;->j:I
+    const/4 v0, 0x0
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    const-string p0, "focus_crop"
+    invoke-virtual {p0, v0, v1}, Lkwc;->c(ILjava/lang/RuntimeException;)V
 
-    return-object p0
+    return-void
+.end method
 
-    :pswitch_0
-    const-string p0, "fit_xy"
+.method public final finalize()V
+    .locals 2
 
-    return-object p0
+    :try_start_0
+    iget-object v0, p0, Lkwc;->X:Lgma;
 
-    :pswitch_1
-    const-string p0, "fit_start"
+    iget-object v0, v0, Lgma;->b:Ljava/lang/Object;
 
-    return-object p0
+    check-cast v0, Lm73;
 
-    :pswitch_2
-    const-string p0, "fit_end"
+    invoke-interface {v0}, Lm73;->a()V
 
-    return-object p0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    :pswitch_3
-    const-string p0, "fit_center"
+    const-string v1, "Recording stopped due to being garbage collected."
 
-    return-object p0
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_4
-    const-string p0, "fit_bottom_start"
+    const/16 v1, 0xa
 
-    return-object p0
+    invoke-virtual {p0, v1, v0}, Lkwc;->c(ILjava/lang/RuntimeException;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :pswitch_5
-    const-string p0, "center_inside"
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    return-object p0
+    return-void
 
-    :pswitch_6
-    const-string p0, "center_crop"
+    :catchall_0
+    move-exception v0
 
-    return-object p0
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    :pswitch_7
-    const-string p0, "center"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

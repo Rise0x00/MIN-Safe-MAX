@@ -1,64 +1,41 @@
-.class public final Lhs9;
+.class public interface abstract Lhs9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lls9;
-
-
-# static fields
-.field public static final b:Lhs9;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lhs9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lhs9;->b:Lhs9;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lhs9;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
+.method public abstract a(JLsm8;)V
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x3fe4569e
-
-    return p0
+.method public abstract b(JLsm8;)V
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public abstract c(JLsm8;JLsm8;)V
+.end method
+
+.method public abstract d(JLsm8;)V
+.end method
+
+.method public abstract e(JLsm8;J)V
+.end method
+
+.method public abstract f(JLsm8;)V
+.end method
+
+.method public abstract g(JLsm8;)V
+.end method
+
+.method public abstract h(JLsm8;)V
+.end method
+
+.method public abstract i(JLsm8;)V
+.end method
+
+.method public abstract j(JLsm8;)V
+.end method
+
+.method public s()V
     .locals 0
 
-    const-string p0, "Disabled"
-
-    return-object p0
+    return-void
 .end method

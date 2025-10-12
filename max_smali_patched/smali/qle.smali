@@ -1,37 +1,19 @@
-.class public final Lqle;
-.super Ljava/lang/Object;
+.class public Lqle;
+.super Ld0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqle;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lqle;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqle;->a:Lqle;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a(Landroid/os/Looper;Landroid/os/Handler$Callback;)Lyle;
+.method public final handleJobException(Ljava/lang/Throwable;)Z
     .locals 1
 
-    new-instance p0, Lyle;
+    invoke-virtual {p0}, Ld0;->getContext()Lw24;
 
-    new-instance v0, Landroid/os/Handler;
+    move-result-object v0
 
-    invoke-direct {v0, p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+    invoke-static {v0, p1}, Lq9e;->l(Lw24;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0, v0}, Lyle;-><init>(Landroid/os/Handler;)V
+    const/4 p1, 0x1
 
-    return-object p0
+    return p1
 .end method

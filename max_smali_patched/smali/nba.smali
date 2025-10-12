@@ -1,138 +1,206 @@
-.class public final synthetic Lnba;
+.class public final Lnba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lxda;
+.implements Lss4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lss4;
 
-.field public final synthetic b:Loba;
+.field public Y:Z
+
+.field public final a:Lxda;
+
+.field public final b:Lwo3;
+
+.field public final c:Lwo3;
+
+.field public final o:Le6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Loba;I)V
+.method public constructor <init>(Lxda;Lwo3;Lwo3;Le6;)V
     .locals 0
 
-    iput p2, p0, Lnba;->a:I
-
-    iput-object p1, p0, Lnba;->b:Loba;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnba;->a:Lxda;
+
+    iput-object p2, p0, Lnba;->b:Lwo3;
+
+    iput-object p3, p0, Lnba;->c:Lwo3;
+
+    iput-object p4, p0, Lnba;->o:Le6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final b()V
+    .locals 1
 
-    iget v0, p0, Lnba;->a:I
+    iget-boolean v0, p0, Lnba;->Y:Z
 
-    iget-object p0, p0, Lnba;->b:Loba;
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return-void
 
-    invoke-virtual {p0}, Loba;->d()Lyca;
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lnba;->o:Le6;
 
-    move-result-object p0
+    invoke-interface {v0}, Le6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lyca;->i:Lx75;
+    const/4 v0, 0x1
 
-    sget-object v1, Lyca;->p:[Lof7;
+    iput-boolean v0, p0, Lnba;->Y:Z
 
-    const/4 v2, 0x3
+    iget-object v0, p0, Lnba;->a:Lxda;
 
-    aget-object v1, v1, v2
+    invoke-interface {v0}, Lxda;->b()V
 
-    invoke-virtual {p0, v0}, Lyca;->e(Lx75;)Ljava/util/concurrent/ExecutorService;
+    return-void
 
-    move-result-object p0
+    :catchall_0
+    move-exception v0
 
-    new-instance v0, Lz75;
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, p0}, Lz75;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-virtual {p0, v0}, Lnba;->onError(Ljava/lang/Throwable;)V
 
-    return-object v0
+    return-void
+.end method
 
-    :pswitch_0
-    invoke-virtual {p0}, Loba;->d()Lyca;
+.method public final c(Lss4;)V
+    .locals 1
 
-    move-result-object p0
+    iget-object v0, p0, Lnba;->X:Lss4;
 
-    invoke-virtual {p0}, Lyca;->d()Ljava/util/concurrent/ExecutorService;
+    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
 
-    move-result-object p0
+    move-result v0
 
-    new-instance v0, Lz75;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, p0}, Lz75;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p1, p0, Lnba;->X:Lss4;
 
-    return-object v0
+    iget-object p1, p0, Lnba;->a:Lxda;
 
-    :pswitch_1
-    invoke-virtual {p0}, Loba;->d()Lyca;
+    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
 
-    move-result-object p0
+    :cond_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lyca;->j:Lx75;
+.method public final f(Ljava/lang/Object;)V
+    .locals 1
 
-    sget-object v1, Lyca;->p:[Lof7;
+    iget-boolean v0, p0, Lnba;->Y:Z
 
-    const/4 v2, 0x4
+    if-eqz v0, :cond_0
 
-    aget-object v1, v1, v2
+    return-void
 
-    invoke-virtual {p0, v0}, Lyca;->e(Lx75;)Ljava/util/concurrent/ExecutorService;
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lnba;->b:Lwo3;
 
-    move-result-object p0
+    invoke-interface {v0, p1}, Lwo3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v0, Lz75;
+    iget-object v0, p0, Lnba;->a:Lxda;
 
-    invoke-direct {v0, p0}, Lz75;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
 
-    return-object v0
+    return-void
 
-    :pswitch_2
-    invoke-virtual {p0}, Loba;->d()Lyca;
+    :catchall_0
+    move-exception p1
 
-    move-result-object p0
+    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0}, Lyca;->c()Ljava/util/concurrent/ExecutorService;
+    iget-object v0, p0, Lnba;->X:Lss4;
 
-    move-result-object p0
+    invoke-interface {v0}, Lss4;->g()V
 
-    new-instance v0, Lz75;
+    invoke-virtual {p0, p1}, Lnba;->onError(Ljava/lang/Throwable;)V
 
-    invoke-direct {v0, p0}, Lz75;-><init>(Ljava/util/concurrent/Executor;)V
+    return-void
+.end method
 
-    return-object v0
+.method public final g()V
+    .locals 1
 
-    :pswitch_3
-    invoke-virtual {p0}, Loba;->d()Lyca;
+    iget-object v0, p0, Lnba;->X:Lss4;
 
-    move-result-object p0
+    invoke-interface {v0}, Lss4;->g()V
 
-    invoke-virtual {p0}, Lyca;->a()Ljava/util/concurrent/ExecutorService;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final h()Z
+    .locals 1
 
-    new-instance v0, Lz75;
+    iget-object v0, p0, Lnba;->X:Lss4;
 
-    invoke-direct {v0, p0}, Lz75;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-interface {v0}, Lss4;->h()Z
 
-    return-object v0
+    move-result v0
 
-    nop
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lnba;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lnba;->Y:Z
+
+    :try_start_0
+    iget-object v0, p0, Lnba;->c:Lwo3;
+
+    invoke-interface {v0, p1}, Lwo3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    move-object p1, v1
+
+    :goto_0
+    iget-object v0, p0, Lnba;->a:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

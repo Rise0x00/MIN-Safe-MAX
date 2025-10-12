@@ -1,50 +1,158 @@
-.class public abstract Ll7c;
+.class public final Ll7c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static COLLECTOR_VIDEO:Ljava/lang/String; = "ok.mobile.apps.video"
-
-.field public static COLLECTOR_WEBRTC:Ljava/lang/String; = "webrtc.aggregation"
-
-
 # instance fields
-.field public conversationId:Ljava/lang/String;
+.field public volatile a:Z
+
+.field public final b:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final log(Le4e;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-    .line 1
-    iget-object v1, p1, Le4e;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ll7c;->time()J
+    const/4 v0, 0x0
 
-    move-result-wide v2
+    iput-boolean v0, p0, Ll7c;->a:Z
 
-    move-object v0, p0
+    new-instance v0, Ljava/lang/Object;
 
-    move-object v4, p2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-object v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Ll7c;->log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
+    iput-object v0, p0, Ll7c;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public abstract log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget-object v0, p0, Ll7c;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Ll7c;->a:Z
+
+    iget-object v1, p0, Ll7c;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
 .end method
 
-.method public abstract log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-.end method
+.method public final b(J)V
+    .locals 5
 
-.method public abstract logSimple(Le4e;Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.method public abstract time()J
+    move-result-wide v0
+
+    add-long/2addr p1, v0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_1
+
+    iget-object p1, p0, Ll7c;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :goto_0
+    :try_start_0
+    iget-boolean p2, p0, Ll7c;->a:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Ll7c;->b:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_1
+
+    :cond_0
+    iput-boolean v3, p0, Ll7c;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+
+    throw p2
+
+    :cond_1
+    iget-object v2, p0, Ll7c;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_2
+    :try_start_1
+    iget-boolean v4, p0, Ll7c;->a:Z
+
+    if-nez v4, :cond_2
+
+    cmp-long v4, v0, p1
+
+    if-gez v4, :cond_2
+
+    iget-object v4, p0, Ll7c;->b:Ljava/lang/Object;
+
+    sub-long v0, p1, v0
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_2
+    iput-boolean v3, p0, Ll7c;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v2
+
+    return-void
+
+    :goto_3
+    monitor-exit v2
+
+    throw p1
 .end method

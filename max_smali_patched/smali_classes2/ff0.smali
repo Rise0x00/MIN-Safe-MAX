@@ -1,136 +1,84 @@
 .class public final Lff0;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lgf0;
-
-.field public final synthetic Y:Landroid/content/Context;
-
-.field public final synthetic Z:Lyif;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lgf0;Landroid/content/Context;Lyif;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lff0;->X:Lgf0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lff0;->Y:Landroid/content/Context;
-
-    iput-object p3, p0, Lff0;->Z:Lyif;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lff0;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lp04;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lff0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lff0;
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    check-cast p0, Lff0;
+    goto :goto_0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    :cond_1
+    check-cast p1, Lff0;
 
-    invoke-virtual {p0, p1}, Lff0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lff0;->a:I
 
-    move-result-object p0
+    iget p1, p1, Lff0;->a:I
 
-    return-object p0
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance p1, Lff0;
+    iget v0, p0, Lff0;->a:I
 
-    iget-object v0, p0, Lff0;->Y:Landroid/content/Context;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v1, p0, Lff0;->Z:Lyif;
+    move-result v0
 
-    iget-object p0, p0, Lff0;->X:Lgf0;
-
-    invoke-direct {p1, p0, v0, v1, p2}, Lff0;-><init>(Lgf0;Landroid/content/Context;Lyif;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const-string v0, "BackgroundLocalTabBarColors(primary="
 
-    iget-object p1, p0, Lff0;->X:Lgf0;
+    const-string v1, ")"
 
-    iget-object v0, p0, Lff0;->Y:Landroid/content/Context;
+    iget v2, p0, Lff0;->a:I
 
-    iget-object p0, p0, Lff0;->Z:Lyif;
-
-    iget-object v1, p0, Lyif;->a:Ljava/lang/String;
-
-    :try_start_0
-    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    move-result v1
-
-    new-array v1, v1, [B
-
-    invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    invoke-static {p1, v1, p0}, Lgf0;->a(Lgf0;[BLyif;)Lkke;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "load assets failed: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "BackgroundDataLoader"
-
-    invoke-static {p1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v0
 .end method

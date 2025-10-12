@@ -1,129 +1,109 @@
-.class public final Ljoa;
-.super Lloa;
+.class public abstract Ljoa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Intent;
+# static fields
+.field public static final a:I
 
-.field public final b:Landroid/net/Uri;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Landroid/net/Uri;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljoa;->a:Landroid/content/Intent;
-
-    iput-object p2, p0, Ljoa;->b:Landroid/net/Uri;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljoa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljoa;
-
-    iget-object v1, p0, Ljoa;->a:Landroid/content/Intent;
-
-    iget-object v3, p1, Ljoa;->a:Landroid/content/Intent;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Ljoa;->b:Landroid/net/Uri;
-
-    iget-object p1, p1, Ljoa;->b:Landroid/net/Uri;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Ljoa;->a:Landroid/content/Intent;
+    sget v0, Lfjc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    sput v0, Ljoa;->a:I
 
-    move-result v0
+    sget v0, Lfjc;->oneme_folder_list_recommended_folders_section_title:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    sput v0, Ljoa;->b:I
 
-    iget-object p0, p0, Ljoa;->b:Landroid/net/Uri;
+    sget v0, Lfjc;->oneme_folder_list_toolbar_title:I
 
-    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
+    sput v0, Ljoa;->c:I
 
-    move-result p0
+    sget v0, Lfjc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    add-int/2addr p0, v0
+    sput v0, Ljoa;->d:I
 
-    return p0
-.end method
+    sget v0, Lfjc;->oneme_folders_delete_folder_bottom_sheet_description:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    sput v0, Ljoa;->e:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget v0, Lfjc;->oneme_folders_edit_add_chats_button:I
 
-    const-string v1, "OpenFile(intent="
+    sput v0, Ljoa;->f:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget v0, Lfjc;->oneme_folders_edit_create_button:I
 
-    iget-object v1, p0, Ljoa;->a:Landroid/content/Intent;
+    sput v0, Ljoa;->g:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget v0, Lfjc;->oneme_folders_edit_delete_button:I
 
-    const-string v1, ", uri="
+    sput v0, Ljoa;->h:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lfjc;->oneme_folders_edit_name_hint:I
 
-    iget-object p0, p0, Ljoa;->b:Landroid/net/Uri;
+    sput v0, Ljoa;->i:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget v0, Lfjc;->oneme_folders_edit_toolbar_title_creation:I
 
-    const-string p0, ")"
+    sput v0, Ljoa;->j:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lfjc;->oneme_folders_edit_toolbar_title_edit:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sput v0, Ljoa;->k:I
 
-    move-result-object p0
+    sget v0, Lfjc;->oneme_folders_list_create_folder:I
 
-    return-object p0
+    sput v0, Ljoa;->l:I
+
+    sget v0, Lfjc;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Ljoa;->m:I
+
+    sget v0, Lfjc;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Ljoa;->n:I
+
+    sget v0, Lfjc;->oneme_folders_picker_empty_title:I
+
+    sput v0, Ljoa;->o:I
+
+    sget v0, Lfjc;->oneme_folders_picker_toolbar_title:I
+
+    sput v0, Ljoa;->p:I
+
+    return-void
 .end method

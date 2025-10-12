@@ -18,19 +18,19 @@
         "",
         "",
         "newState",
-        "Losd;",
+        "Lcce;",
         "listener",
         "errorListener",
-        "Ltcf;",
+        "Loyf;",
         "changeMyState",
-        "(Ljava/util/Map;Losd;Losd;)V",
-        "Lwg1;",
+        "(Ljava/util/Map;Lcce;Lcce;)V",
+        "Lxg1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "participantId",
         "changeParticipantState",
-        "(Lwg1;Ljava/util/Map;Losd;Losd;)V",
+        "(Lxg1;Ljava/util/Map;Lcce;Lcce;)V",
         "lowerHandForAll",
-        "(Losd;Losd;)V",
+        "(Lcce;Lcce;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "calls-sdk_release"
     }
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public static synthetic changeMyState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Ljava/util/Map;Losd;Losd;ILjava/lang/Object;)V
+.method public static synthetic changeMyState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Ljava/util/Map;Lcce;Lcce;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -69,12 +69,12 @@
     const/4 p3, 0x0
 
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState(Ljava/util/Map;Losd;Losd;)V
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState(Ljava/util/Map;Lcce;Lcce;)V
 
     return-void
 .end method
 
-.method public static synthetic changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lwg1;Ljava/util/Map;Losd;Losd;ILjava/lang/Object;)V
+.method public static synthetic changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lxg1;Ljava/util/Map;Lcce;Lcce;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -84,12 +84,12 @@
     const/4 p4, 0x0
 
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState(Lwg1;Ljava/util/Map;Losd;Losd;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState(Lxg1;Ljava/util/Map;Lcce;Lcce;)V
 
     return-void
 .end method
 
-.method public static synthetic lowerHandForAll$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Losd;Losd;ILjava/lang/Object;)V
+.method public static synthetic lowerHandForAll$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lcce;Lcce;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -99,14 +99,14 @@
     const/4 p2, 0x0
 
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->lowerHandForAll(Losd;Losd;)V
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->lowerHandForAll(Lcce;Lcce;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final changeMyState(Ljava/util/Map;Losd;)V
+.method public final changeMyState(Ljava/util/Map;Lcce;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -115,7 +115,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Losd;",
+            "Lcce;",
             ")V"
         }
     .end annotation
@@ -133,13 +133,13 @@
     move-object v2, p2
 
     .line 1
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Ljava/util/Map;Losd;Losd;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeMyState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Ljava/util/Map;Lcce;Lcce;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final changeMyState(Ljava/util/Map;Losd;Losd;)V
-    .locals 1
+.method public final changeMyState(Ljava/util/Map;Lcce;Lcce;)V
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -147,50 +147,50 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Losd;",
-            "Losd;",
+            "Lcce;",
+            "Lcce;",
             ")V"
         }
     .end annotation
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 3
-    invoke-static {p1, v0}, Lds0;->j(Ljava/util/Map;Lwg1;)Lee6;
+    invoke-static {p1, v1}, Lv63;->l(Ljava/util/Map;Lxg1;)Lxj6;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 4
-    invoke-virtual {p0, p1, v0, p2, p3}, Lpsd;->d(Lssd;ZLosd;Losd;)V
+    invoke-virtual {v0, p1, v1, p2, p3}, Ldce;->d(Lgce;ZLcce;Lcce;)V
 
     return-void
 .end method
 
-.method public final changeParticipantState(Lwg1;Ljava/util/Map;Losd;)V
+.method public final changeParticipantState(Lxg1;Ljava/util/Map;Lcce;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwg1;",
+            "Lxg1;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Losd;",
+            "Lcce;",
             ")V"
         }
     .end annotation
@@ -210,77 +210,77 @@
     move-object v3, p3
 
     .line 1
-    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lwg1;Ljava/util/Map;Losd;Losd;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->changeParticipantState$default(Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;Lxg1;Ljava/util/Map;Lcce;Lcce;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final changeParticipantState(Lwg1;Ljava/util/Map;Losd;Losd;)V
-    .locals 0
+.method public final changeParticipantState(Lxg1;Ljava/util/Map;Lcce;Lcce;)V
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lwg1;",
+            "Lxg1;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Losd;",
-            "Losd;",
+            "Lcce;",
+            "Lcce;",
             ")V"
         }
     .end annotation
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     .line 3
     :cond_0
-    invoke-static {p2, p1}, Lds0;->j(Ljava/util/Map;Lwg1;)Lee6;
+    invoke-static {p2, p1}, Lv63;->l(Ljava/util/Map;Lxg1;)Lxj6;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
     .line 4
-    invoke-virtual {p0, p1, p2, p3, p4}, Lpsd;->d(Lssd;ZLosd;Losd;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Ldce;->d(Lgce;ZLcce;Lcce;)V
 
     return-void
 .end method
 
-.method public final lowerHandForAll(Losd;Losd;)V
-    .locals 2
+.method public final lowerHandForAll(Lcce;Lcce;)V
+    .locals 3
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStateChanger;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Lpsd;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;->getSignaling()Ldce;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    const-string v0, "put-hands-down"
+    const-string v1, "put-hands-down"
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {v1, v0}, Lds0;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lee6;
+    invoke-static {v2, v1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v0, v1, p1, p2}, Lpsd;->d(Lssd;ZLosd;Losd;)V
+    invoke-virtual {v0, v1, v2, p1, p2}, Ldce;->d(Lgce;ZLcce;Lcce;)V
 
     return-void
 .end method

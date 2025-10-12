@@ -1,201 +1,146 @@
-.class public final Lmr9;
-.super Leje;
+.class public final synthetic Lmr9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lxe6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final synthetic b:Lor9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public synthetic constructor <init>(Lor9;I)V
     .locals 0
 
-    iput-object p2, p0, Lmr9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput p2, p0, Lmr9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lmr9;->b:Lor9;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lmr9;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lmr9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lmr9;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result p1
 
-    invoke-virtual {p0, p1}, Lmr9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lmr9;->b:Lor9;
 
-    return-object p1
-.end method
+    iget-object v1, v0, Lor9;->b:Ln4h;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v1}, Lpw7;->j()I
 
-    new-instance v0, Lmr9;
+    move-result v2
 
-    iget-object p0, p0, Lmr9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    if-lt v2, p1, :cond_0
 
-    invoke-direct {v0, p2, p0}, Lmr9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+    if-ltz p1, :cond_0
 
-    iput-object p1, v0, Lmr9;->X:Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lpw7;->C(I)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    check-cast p1, Lww7;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    check-cast p1, Lzqe;
 
-    iget-object p1, p0, Lmr9;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lor9;->c:Lir9;
 
-    check-cast p1, Ljava/util/List;
+    iget-wide v1, p1, Lzqe;->a:J
 
-    iget-object p0, p0, Lmr9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iget-object p1, v0, Lir9;->e:Lsqc;
 
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->s0:Ldbc;
+    iget-object p1, p1, Lsqc;->a:Lfoe;
 
-    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->H0:[Lof7;
+    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
 
-    const/16 v2, 0x8
+    move-result-object p1
 
-    aget-object v1, v1, v2
+    check-cast p1, Lzq9;
 
-    invoke-interface {v0, p0, v1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    iget-object p1, p1, Lzq9;->b:Ljava/util/Set;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    check-cast v0, Lvr9;
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    move v1, v3
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    move v1, v2
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Lvr9;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lcma;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->F0:Lrs9;
-
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lcma;
-
-    move-result-object p0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout;->k()V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    return-object p1
 
-    move-result v0
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v0, :cond_4
+    iget-object v0, p0, Lmr9;->b:Lor9;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v0, Lor9;->c:Lir9;
 
-    move-result-object v0
+    iget-object v1, v0, Lir9;->d:Lmoe;
 
-    add-int/lit8 v1, v3, 0x1
+    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
 
-    if-ltz v3, :cond_3
+    move-result-object v1
 
-    check-cast v0, Lj7a;
+    check-cast v1, Lzq9;
 
-    new-instance v2, Lbma;
+    iget-object v1, v1, Lzq9;->b:Ljava/util/Set;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {v1}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-direct {v2, v3}, Lbma;-><init>(Landroid/content/Context;)V
-
-    invoke-virtual {v2, v0}, Lbma;->setTabItem(Lj7a;)V
-
-    invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout;->i()Lcne;
-
-    move-result-object v0
-
-    iput-object v2, v0, Lcne;->b:Landroid/view/View;
-
-    iget-object v2, v0, Lcne;->d:Lene;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lene;->d()V
-
-    :cond_2
-    iget-object v2, p0, Lcom/google/android/material/tabs/TabLayout;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v3
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v2
 
-    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/material/tabs/TabLayout;->b(Lcne;IZ)V
+    if-eqz v2, :cond_1
 
-    move v3, v1
+    invoke-virtual {v0}, Lir9;->a()V
 
     goto :goto_1
 
-    :cond_3
-    invoke-static {}, Lh73;->X()V
+    :cond_1
+    iget-object v0, v0, Lir9;->c:Lfk;
 
-    const/4 p0, 0x0
+    invoke-virtual {v0, v1, p1}, Lfk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw p0
+    :goto_1
+    sget-object p1, Loyf;->a:Loyf;
 
-    :cond_4
-    sget-object p0, Ltcf;->a:Ltcf;
+    return-object p1
 
-    return-object p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

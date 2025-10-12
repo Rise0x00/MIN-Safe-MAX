@@ -1,108 +1,110 @@
-.class public final synthetic Lvec;
+.class public abstract Lvec;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a0289
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a028a
 
+.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a028b
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static messages_contact_attach_chat_action:I = 0x7f0a0564
 
-    iput p2, p0, Lvec;->a:I
+.field public static messages_contact_attach_profile_action:I = 0x7f0a0565
 
-    iput-object p1, p0, Lvec;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static messages_list_chat_description_view_id:I = 0x7f0a0566
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static messages_list_chat_description_view_type:I = 0x7f0a0567
 
-    return-void
-.end method
+.field public static messages_list_confirm_cancel:I = 0x7f0a0568
 
+.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a0569
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.field public static messages_list_confirm_complaint_fake:I = 0x7f0a056a
 
-    iget p1, p0, Lvec;->a:I
+.field public static messages_list_confirm_complaint_other:I = 0x7f0a056b
 
-    iget-object p0, p0, Lvec;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static messages_list_confirm_complaint_porno:I = 0x7f0a056c
 
-    packed-switch p1, :pswitch_data_0
+.field public static messages_list_confirm_complaint_spam:I = 0x7f0a056d
 
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static messages_list_confirm_complaint_threat:I = 0x7f0a056e
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
+.field public static messages_list_confirm_delete:I = 0x7f0a056f
 
-    move-result-object p0
+.field public static messages_list_confirm_delete_for_all:I = 0x7f0a0570
 
-    sget-object p1, Lsec;->C0:[Lof7;
+.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a0571
 
-    const/4 p1, 0x1
+.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a0572
 
-    invoke-virtual {p0, p1}, Lsec;->E(Z)V
+.field public static messages_list_context_action_copy:I = 0x7f0a0573
 
-    return-void
+.field public static messages_list_context_action_copy_photo:I = 0x7f0a0574
 
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static messages_list_context_action_delete:I = 0x7f0a0575
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
+.field public static messages_list_context_action_delete_for_all:I = 0x7f0a0576
 
-    move-result-object p0
+.field public static messages_list_context_action_edit:I = 0x7f0a0577
 
-    invoke-virtual {p0}, Lsec;->C()V
+.field public static messages_list_context_action_forward:I = 0x7f0a0578
 
-    return-void
+.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a0579
 
-    :pswitch_1
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static messages_list_context_action_pin:I = 0x7f0a057a
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
+.field public static messages_list_context_action_reply:I = 0x7f0a057b
 
-    move-result-object p0
+.field public static messages_list_context_action_report:I = 0x7f0a057c
 
-    invoke-virtual {p0}, Lsec;->s()V
+.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a057d
 
-    iget-object p1, p0, Lsec;->r0:Lq4e;
+.field public static messages_list_context_action_select:I = 0x7f0a057e
 
-    new-instance v0, Lkec;
+.field public static messages_list_context_action_share_externally:I = 0x7f0a057f
 
-    invoke-virtual {p0}, Lsec;->z()Z
+.field public static messages_list_context_action_share_post:I = 0x7f0a0580
 
-    move-result p0
+.field public static messages_list_context_action_unpin:I = 0x7f0a0581
 
-    const/4 v1, 0x2
+.field public static messages_list_context_actions_view_type:I = 0x7f0a0582
 
-    invoke-direct {v0, p0, v1}, Lkec;-><init>(ZI)V
+.field public static messages_list_context_content_container:I = 0x7f0a0583
 
-    const/4 p0, 0x0
+.field public static messages_list_context_member_view_type:I = 0x7f0a0584
 
-    invoke-virtual {p1, p0, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static messages_list_context_members_member_cell:I = 0x7f0a0585
 
-    return-void
+.field public static messages_list_context_members_member_reaction:I = 0x7f0a0586
 
-    :pswitch_2
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static messages_list_context_reactions_container:I = 0x7f0a0587
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Lsec;
+.field public static messages_list_item_alias:I = 0x7f0a0588
 
-    move-result-object p0
+.field public static messages_list_item_date:I = 0x7f0a0589
 
-    invoke-virtual {p0}, Lsec;->D()V
+.field public static messages_list_item_keyboard_buttons:I = 0x7f0a058a
 
-    return-void
+.field public static messages_list_item_single_image:I = 0x7f0a058b
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static messages_list_item_text:I = 0x7f0a058c
+
+.field public static messages_list_item_title:I = 0x7f0a058d
+
+.field public static messages_list_item_video_duration:I = 0x7f0a058e
+
+.field public static messages_list_reactions_badge:I = 0x7f0a058f
+
+.field public static messages_list_recycler_view:I = 0x7f0a0590
+
+.field public static messages_list_scroll_btn:I = 0x7f0a0591
+
+.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a0592
+
+.field public static messages_list_vh_message_subtitle:I = 0x7f0a0593
+
+.field public static messages_list_vh_message_title:I = 0x7f0a0594
+
+.field public static messages_share_attach_open_url_action:I = 0x7f0a0595

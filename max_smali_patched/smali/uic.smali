@@ -1,265 +1,542 @@
-.class public final Luic;
-.super Lrz6;
-.source "SourceFile"
+.class public abstract Luic;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final o0:Luic;
+.field public static call_add_members_accessibility:I = 0x7f1300cd
 
+.field public static call_admin_settings_disable_all_cameras_once:I = 0x7f1300cf
 
-# instance fields
-.field public final transient X:[Ljava/lang/Object;
+.field public static call_admin_settings_disable_all_hands_once:I = 0x7f1300d0
 
-.field public final transient Y:I
+.field public static call_admin_settings_disable_all_mic_once:I = 0x7f1300d1
 
-.field public final transient Z:I
+.field public static call_admins_settings_camera_disabled_in_call:I = 0x7f1300d2
 
-.field public final transient n0:Luic;
+.field public static call_admins_settings_camera_failed_in_call:I = 0x7f1300d3
 
-.field public final transient o:Ljava/lang/Object;
+.field public static call_admins_settings_camera_in_call:I = 0x7f1300d4
 
+.field public static call_admins_settings_mic_failed_in_call:I = 0x7f1300d5
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static call_admins_settings_mic_in_call:I = 0x7f1300d6
 
-    new-instance v0, Luic;
+.field public static call_admins_settings_min_disabled_in_call:I = 0x7f1300d7
 
-    invoke-direct {v0}, Luic;-><init>()V
+.field public static call_admins_settings_screen_connection_header:I = 0x7f1300d8
 
-    sput-object v0, Luic;->o0:Luic;
+.field public static call_admins_settings_screen_disable_camera_for_user:I = 0x7f1300d9
 
-    return-void
-.end method
+.field public static call_admins_settings_screen_disable_camera_once:I = 0x7f1300da
 
-.method public constructor <init>()V
-    .locals 2
+.field public static call_admins_settings_screen_disable_mic_for_user:I = 0x7f1300db
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_admins_settings_screen_disable_mic_once:I = 0x7f1300dc
 
-    const/4 v0, 0x0
+.field public static call_admins_settings_screen_disable_race_for_user:I = 0x7f1300dd
 
-    .line 2
-    iput-object v0, p0, Luic;->o:Ljava/lang/Object;
+.field public static call_admins_settings_screen_disable_race_once:I = 0x7f1300de
 
-    const/4 v0, 0x0
+.field public static call_admins_settings_screen_disable_record:I = 0x7f1300df
 
-    .line 3
-    new-array v1, v0, [Ljava/lang/Object;
+.field public static call_admins_settings_screen_disable_sharing_for_user:I = 0x7f1300e0
 
-    iput-object v1, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_admins_settings_screen_failed_enabled_in_call:I = 0x7f1300e1
 
-    .line 4
-    iput v0, p0, Luic;->Y:I
+.field public static call_admins_settings_screen_media_header:I = 0x7f1300e2
 
-    .line 5
-    iput v0, p0, Luic;->Z:I
+.field public static call_admins_settings_screen_media_header_bottom:I = 0x7f1300e3
 
-    .line 6
-    iput-object p0, p0, Luic;->n0:Luic;
+.field public static call_admins_settings_screen_record_disabled_in_call:I = 0x7f1300e4
 
-    return-void
-.end method
+.field public static call_admins_settings_screen_record_failed_in_call:I = 0x7f1300e5
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 4
+.field public static call_admins_settings_screen_record_in_call:I = 0x7f1300e6
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_admins_settings_screen_sharing_disabled_in_call:I = 0x7f1300e7
 
-    .line 8
-    iput-object p2, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_admins_settings_screen_sharing_in_call:I = 0x7f1300e8
 
-    .line 9
-    iput p1, p0, Luic;->Z:I
+.field public static call_admins_settings_title:I = 0x7f1300e9
 
-    const/4 v0, 0x0
+.field public static call_admins_settings_waiting_room:I = 0x7f1300ea
 
-    .line 10
-    iput v0, p0, Luic;->Y:I
+.field public static call_admins_settings_waiting_room_desc:I = 0x7f1300eb
 
-    const/4 v1, 0x2
+.field public static call_ask_permission_audio_video_denied_description:I = 0x7f1300ed
 
-    if-lt p1, v1, :cond_0
+.field public static call_ask_permission_audio_video_denied_title:I = 0x7f1300ee
 
-    .line 11
-    invoke-static {p1}, Lq07;->h(I)I
+.field public static call_ask_permission_denied_description:I = 0x7f1300ef
 
-    move-result v2
+.field public static call_ask_permission_denied_title:I = 0x7f1300f0
 
-    goto :goto_0
+.field public static call_ask_permission_description:I = 0x7f1300f1
 
-    :cond_0
-    move v2, v0
+.field public static call_back_accessibility:I = 0x7f1300f4
 
-    .line 12
-    :goto_0
-    invoke-static {p2, p1, v2, v0}, Lajc;->i([Ljava/lang/Object;III)Ljava/lang/Object;
+.field public static call_cancel:I = 0x7f1300f6
 
-    move-result-object v0
+.field public static call_cancel_accessibility:I = 0x7f1300f7
 
-    .line 13
-    instance-of v3, v0, [Ljava/lang/Object;
+.field public static call_change_mode_text_hint:I = 0x7f1300f8
 
-    if-nez v3, :cond_2
+.field public static call_close_dialog_accessibility:I = 0x7f1300f9
 
-    .line 14
-    iput-object v0, p0, Luic;->o:Ljava/lang/Object;
+.field public static call_collapsing_accessibility:I = 0x7f1300fa
 
-    const/4 v0, 0x1
+.field public static call_connecting:I = 0x7f1300fb
 
-    .line 15
-    invoke-static {p2, p1, v2, v0}, Lajc;->i([Ljava/lang/Object;III)Ljava/lang/Object;
+.field public static call_context_action_chat:I = 0x7f1300fd
 
-    move-result-object v0
+.field public static call_context_dialog_bluetooth:I = 0x7f1300fe
 
-    .line 16
-    instance-of v2, v0, [Ljava/lang/Object;
+.field public static call_context_dialog_default_mode:I = 0x7f1300ff
 
-    if-nez v2, :cond_1
+.field public static call_context_dialog_grid_mode:I = 0x7f130100
 
-    .line 17
-    new-instance v1, Luic;
+.field public static call_context_dialog_invite_user_to_p2p:I = 0x7f130101
 
-    invoke-direct {v1, v0, p2, p1, p0}, Luic;-><init>(Ljava/lang/Object;[Ljava/lang/Object;ILuic;)V
+.field public static call_context_dialog_more_title:I = 0x7f130102
 
-    iput-object v1, p0, Luic;->n0:Luic;
+.field public static call_context_dialog_open_chat:I = 0x7f130103
 
-    return-void
+.field public static call_context_dialog_open_profile:I = 0x7f130104
 
-    .line 18
-    :cond_1
-    check-cast v0, [Ljava/lang/Object;
+.field public static call_context_dialog_record_screen:I = 0x7f130105
 
-    .line 19
-    aget-object p0, v0, v1
+.field public static call_context_dialog_record_screen_in_progress:I = 0x7f130106
 
-    check-cast p0, Li07;
+.field public static call_context_dialog_record_screen_unavailable_desc:I = 0x7f130107
 
-    .line 20
-    invoke-virtual {p0}, Li07;->a()Ljava/lang/IllegalArgumentException;
+.field public static call_context_dialog_settings:I = 0x7f130108
 
-    move-result-object p0
+.field public static call_context_dialog_share_screen:I = 0x7f130109
 
-    throw p0
+.field public static call_context_dialog_share_screen_unavailable_desc:I = 0x7f13010a
 
-    .line 21
-    :cond_2
-    check-cast v0, [Ljava/lang/Object;
+.field public static call_context_dialog_share_sound:I = 0x7f13010b
 
-    .line 22
-    aget-object p0, v0, v1
+.field public static call_context_dialog_speakerphone:I = 0x7f13010c
 
-    check-cast p0, Li07;
+.field public static call_context_dialog_stop_record_screen:I = 0x7f13010d
 
-    .line 23
-    invoke-virtual {p0}, Li07;->a()Ljava/lang/IllegalArgumentException;
+.field public static call_context_dialog_stop_share_screen:I = 0x7f13010e
 
-    move-result-object p0
+.field public static call_context_volume_phone:I = 0x7f13010f
 
-    throw p0
-.end method
+.field public static call_dynamic_disabled_accessibility:I = 0x7f130114
 
-.method public constructor <init>(Ljava/lang/Object;[Ljava/lang/Object;ILuic;)V
-    .locals 0
+.field public static call_dynamic_enabled_accessibility:I = 0x7f130115
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_group_user_not_in_chat:I = 0x7f130119
 
-    .line 25
-    iput-object p1, p0, Luic;->o:Ljava/lang/Object;
+.field public static call_group_wait_admin:I = 0x7f13011a
 
-    .line 26
-    iput-object p2, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_group_was_removed_from_call:I = 0x7f13011b
 
-    const/4 p1, 0x1
+.field public static call_group_was_removed_from_waiting_room:I = 0x7f13011c
 
-    .line 27
-    iput p1, p0, Luic;->Y:I
+.field public static call_incoming_accept_accessibility:I = 0x7f13016b
 
-    .line 28
-    iput p3, p0, Luic;->Z:I
+.field public static call_incoming_accept_with_audio_accessibility:I = 0x7f13016c
 
-    .line 29
-    iput-object p4, p0, Luic;->n0:Luic;
+.field public static call_incoming_accept_with_video_accessibility:I = 0x7f13016d
 
-    return-void
-.end method
+.field public static call_incoming_app_title:I = 0x7f13016e
 
+.field public static call_incoming_apply_audio_call_description:I = 0x7f13016f
 
-# virtual methods
-.method public final b()Lq07;
-    .locals 4
+.field public static call_incoming_apply_video_call_description:I = 0x7f130170
 
-    new-instance v0, Lxic;
+.field public static call_incoming_audio_call:I = 0x7f130171
 
-    iget v1, p0, Luic;->Y:I
+.field public static call_incoming_call_video_disable:I = 0x7f130172
 
-    iget v2, p0, Luic;->Z:I
+.field public static call_incoming_call_video_enable:I = 0x7f130173
 
-    iget-object v3, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_incoming_cancel_call_description:I = 0x7f130174
 
-    invoke-direct {v0, p0, v3, v1, v2}, Lxic;-><init>(Lj07;[Ljava/lang/Object;II)V
+.field public static call_incoming_decline_accessibility:I = 0x7f130175
 
-    return-object v0
-.end method
+.field public static call_incoming_description:I = 0x7f130176
 
-.method public final c()Lq07;
-    .locals 4
+.field public static call_incoming_open_chat_accessibility:I = 0x7f130177
 
-    new-instance v0, Lzic;
+.field public static call_incoming_video_call:I = 0x7f130178
 
-    iget v1, p0, Luic;->Y:I
+.field public static call_item_invite_opponent_preview_button_share:I = 0x7f130179
 
-    iget v2, p0, Luic;->Z:I
+.field public static call_item_invite_opponent_preview_description:I = 0x7f13017a
 
-    iget-object v3, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_item_invite_opponent_preview_title:I = 0x7f13017b
 
-    invoke-direct {v0, v1, v2, v3}, Lzic;-><init>(II[Ljava/lang/Object;)V
+.field public static call_item_join_by_link_preview_copy:I = 0x7f13017c
 
-    new-instance v1, Lyic;
+.field public static call_item_join_by_link_preview_send:I = 0x7f13017d
 
-    invoke-direct {v1, p0, v0}, Lyic;-><init>(Lj07;Lzic;)V
+.field public static call_item_join_by_link_preview_share:I = 0x7f13017e
 
-    return-object v1
-.end method
+.field public static call_item_join_by_link_preview_title:I = 0x7f13017f
 
-.method public final f()Z
-    .locals 0
+.field public static call_item_join_waiting_room_title:I = 0x7f130180
 
-    const/4 p0, 0x0
+.field public static call_item_share_screen_mode_button_share_stop:I = 0x7f130181
 
-    return p0
-.end method
+.field public static call_item_share_screen_mode_description:I = 0x7f130182
 
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static call_item_share_screen_mode_title:I = 0x7f130183
 
-    iget v0, p0, Luic;->Z:I
+.field public static call_join_by_link_ask_microphone:I = 0x7f130184
 
-    iget v1, p0, Luic;->Y:I
+.field public static call_join_by_link_ask_start_call:I = 0x7f130185
 
-    iget-object v2, p0, Luic;->o:Ljava/lang/Object;
+.field public static call_join_by_link_ask_start_title:I = 0x7f130186
 
-    iget-object p0, p0, Luic;->X:[Ljava/lang/Object;
+.field public static call_join_by_link_ask_video:I = 0x7f130187
 
-    invoke-static {v2, p0, v0, v1, p1}, Lajc;->j(Ljava/lang/Object;[Ljava/lang/Object;IILjava/lang/Object;)Ljava/lang/Object;
+.field public static call_join_by_link_call_join_call:I = 0x7f130188
 
-    move-result-object p0
+.field public static call_join_by_link_call_share:I = 0x7f130189
 
-    if-nez p0, :cond_0
+.field public static call_join_by_link_call_subtitle:I = 0x7f13018a
 
-    const/4 p0, 0x0
+.field public static call_join_by_link_call_title:I = 0x7f13018b
 
-    :cond_0
-    return-object p0
-.end method
+.field public static call_leave_dialog_action_exit:I = 0x7f13018c
 
-.method public final size()I
-    .locals 0
+.field public static call_leave_dialog_subtitle:I = 0x7f13018d
 
-    iget p0, p0, Luic;->Z:I
+.field public static call_leave_dialog_title:I = 0x7f13018e
 
-    return p0
-.end method
+.field public static call_link_share_dialog_description:I = 0x7f13018f
+
+.field public static call_link_share_dialog_share_buttom:I = 0x7f130190
+
+.field public static call_link_share_dialog_share_link_copy:I = 0x7f130191
+
+.field public static call_link_share_dialog_share_link_copy_failed:I = 0x7f130192
+
+.field public static call_link_share_dialog_share_link_description:I = 0x7f130193
+
+.field public static call_link_share_dialog_share_link_dialog_intent_title:I = 0x7f130194
+
+.field public static call_link_share_dialog_title:I = 0x7f130195
+
+.field public static call_main_speaker_phone_disabled:I = 0x7f130196
+
+.field public static call_main_speaker_share_screen:I = 0x7f130197
+
+.field public static call_me_in_waiting_room:I = 0x7f130198
+
+.field public static call_me_member:I = 0x7f130199
+
+.field public static call_me_talking_member:I = 0x7f13019a
+
+.field public static call_member_add_accessibility:I = 0x7f13019c
+
+.field public static call_member_add_more_accessibility:I = 0x7f13019e
+
+.field public static call_microphone_disabled_accessibility:I = 0x7f1301a5
+
+.field public static call_microphone_enabled_accessibility:I = 0x7f1301a6
+
+.field public static call_more_accessibility:I = 0x7f1301a8
+
+.field public static call_opponent_failed:I = 0x7f1301c0
+
+.field public static call_opponent_failed_timout:I = 0x7f1301c1
+
+.field public static call_opponent_million_size:I = 0x7f1301c2
+
+.field public static call_opponent_thousend_size:I = 0x7f1301c3
+
+.field public static call_opponent_unavailable:I = 0x7f1301c4
+
+.field public static call_opponent_unavailable_busy:I = 0x7f1301c5
+
+.field public static call_opponent_unavailable_privacy:I = 0x7f1301c6
+
+.field public static call_opponents_scroll_to_start:I = 0x7f1301c7
+
+.field public static call_raise_hand_disabled_accessibility:I = 0x7f1301cf
+
+.field public static call_raise_hand_enabled_accessibility:I = 0x7f1301d0
+
+.field public static call_rate_custom_reason_hint_text:I = 0x7f1301d1
+
+.field public static call_rate_initial_title_text:I = 0x7f1301d4
+
+.field public static call_rate_negative_title_text:I = 0x7f1301e3
+
+.field public static call_rate_reason_audio_call_interuption_title:I = 0x7f1301e4
+
+.field public static call_rate_reason_audio_echo_title:I = 0x7f1301e5
+
+.field public static call_rate_reason_audio_freezes_title:I = 0x7f1301e6
+
+.field public static call_rate_reason_audio_quality_title:I = 0x7f1301e7
+
+.field public static call_rate_reason_users_freezes_title:I = 0x7f1301e8
+
+.field public static call_rate_reason_video_call_interuption_title:I = 0x7f1301e9
+
+.field public static call_rate_reason_video_freezes_title:I = 0x7f1301ea
+
+.field public static call_rate_reason_video_quality_title:I = 0x7f1301eb
+
+.field public static call_rate_reason_video_sync_title:I = 0x7f1301ec
+
+.field public static call_rate_reason_voice_communication_problem_title:I = 0x7f1301ed
+
+.field public static call_rate_send_button_text:I = 0x7f1301ef
+
+.field public static call_rate_success_snackbar_subtitle:I = 0x7f1301f1
+
+.field public static call_rate_success_snackbar_title:I = 0x7f1301f2
+
+.field public static call_recall:I = 0x7f1301f4
+
+.field public static call_reconnecting:I = 0x7f1301f5
+
+.field public static call_record_me_stop_record:I = 0x7f1301f6
+
+.field public static call_record_me_stop_record_and_remove:I = 0x7f1301f7
+
+.field public static call_record_review_name:I = 0x7f1301f8
+
+.field public static call_screen_admin_confirm_add_users_check:I = 0x7f1301fa
+
+.field public static call_screen_admin_confirm_add_users_neutral:I = 0x7f1301fb
+
+.field public static call_screen_admin_confirm_add_users_positive:I = 0x7f1301fc
+
+.field public static call_screen_admin_confirm_add_users_subtitle:I = 0x7f1301fd
+
+.field public static call_screen_admin_confirm_add_users_title:I = 0x7f1301fe
+
+.field public static call_screen_admin_confirm_remove_user_neutral:I = 0x7f1301ff
+
+.field public static call_screen_admin_confirm_remove_user_positive:I = 0x7f130200
+
+.field public static call_screen_admin_confirm_remove_user_subtitle:I = 0x7f130201
+
+.field public static call_screen_admin_confirm_remove_user_title:I = 0x7f130202
+
+.field public static call_screen_admin_remove_user_title:I = 0x7f130203
+
+.field public static call_screen_admin_user_in_wait_room_apply_all:I = 0x7f130204
+
+.field public static call_screen_admin_user_in_wait_room_empty_button:I = 0x7f130205
+
+.field public static call_screen_admin_user_in_wait_room_empty_subtitle:I = 0x7f130206
+
+.field public static call_screen_admin_user_in_wait_room_empty_title:I = 0x7f130207
+
+.field public static call_screen_admin_user_in_wait_room_reject_all:I = 0x7f130208
+
+.field public static call_screen_admin_user_in_wait_room_title:I = 0x7f130209
+
+.field public static call_screen_bad_connection:I = 0x7f13020a
+
+.field public static call_screen_camera_admin_low_hand:I = 0x7f13020b
+
+.field public static call_screen_camera_admin_remove_user:I = 0x7f13020c
+
+.field public static call_screen_camera_admin_stop_camera_user:I = 0x7f13020d
+
+.field public static call_screen_camera_admin_stop_mic_user:I = 0x7f13020e
+
+.field public static call_screen_camera_admin_stop_sharing_user:I = 0x7f13020f
+
+.field public static call_screen_camera_and_mic_unavailable_in_call:I = 0x7f130210
+
+.field public static call_screen_camera_disabled_by_admin:I = 0x7f130211
+
+.field public static call_screen_camera_unavailable_in_call:I = 0x7f130212
+
+.field public static call_screen_connection_restored:I = 0x7f130213
+
+.field public static call_screen_connection_restoring:I = 0x7f130214
+
+.field public static call_screen_invite_to_p2p_title:I = 0x7f130215
+
+.field public static call_screen_menu_grid_mode_title:I = 0x7f130216
+
+.field public static call_screen_menu_speaker_mode_subtitle:I = 0x7f130217
+
+.field public static call_screen_menu_speaker_mode_title:I = 0x7f130218
+
+.field public static call_screen_mic_disabled_by_admin:I = 0x7f130219
+
+.field public static call_screen_mic_unavailable_in_call:I = 0x7f13021a
+
+.field public static call_screen_opponents_list_add_users:I = 0x7f13021b
+
+.field public static call_screen_opponents_list_empty_subtitle:I = 0x7f13021c
+
+.field public static call_screen_opponents_list_empty_title:I = 0x7f13021d
+
+.field public static call_screen_opponents_list_link:I = 0x7f13021e
+
+.field public static call_screen_opponents_list_more:I = 0x7f13021f
+
+.field public static call_screen_opponents_list_users_title:I = 0x7f130220
+
+.field public static call_screen_raise_hand_disabled_by_admin:I = 0x7f130221
+
+.field public static call_screen_raisehand_manage_negative_btn:I = 0x7f130222
+
+.field public static call_screen_raisehand_manage_positive_btn:I = 0x7f130223
+
+.field public static call_screen_raisehand_manage_subtitle_admin:I = 0x7f130224
+
+.field public static call_screen_raisehand_manage_title_admin:I = 0x7f130225
+
+.field public static call_screen_raisehand_manage_title_me:I = 0x7f130226
+
+.field public static call_screen_record_admin_exit_need_remove:I = 0x7f130227
+
+.field public static call_screen_record_admin_exit_negative_btn:I = 0x7f130228
+
+.field public static call_screen_record_admin_exit_positive_btn:I = 0x7f130229
+
+.field public static call_screen_record_admin_exit_title:I = 0x7f13022a
+
+.field public static call_screen_record_me_owner_exit_negative_btn:I = 0x7f13022b
+
+.field public static call_screen_record_me_owner_exit_positive_btn:I = 0x7f13022c
+
+.field public static call_screen_record_me_owner_exit_subtitle:I = 0x7f13022d
+
+.field public static call_screen_record_me_owner_exit_title:I = 0x7f13022e
+
+.field public static call_screen_record_start_chat_subtitle:I = 0x7f13022f
+
+.field public static call_screen_record_start_chat_title:I = 0x7f130230
+
+.field public static call_screen_record_start_failed:I = 0x7f130231
+
+.field public static call_screen_record_start_name_error:I = 0x7f130232
+
+.field public static call_screen_record_start_start_btn:I = 0x7f130233
+
+.field public static call_screen_record_start_title:I = 0x7f130234
+
+.field public static call_screen_record_start_tooltip_admin:I = 0x7f130235
+
+.field public static call_screen_record_start_tooltip_user:I = 0x7f130236
+
+.field public static call_screen_record_unavailable_in_call:I = 0x7f130237
+
+.field public static call_screen_record_user_description:I = 0x7f130238
+
+.field public static call_screen_record_user_description_with_duration:I = 0x7f130239
+
+.field public static call_screen_share_link_title:I = 0x7f13023a
+
+.field public static call_screen_sharing_unavailable_in_call:I = 0x7f13023b
+
+.field public static call_screen_snackbar_button_text:I = 0x7f13023c
+
+.field public static call_screen_snackbar_caption:I = 0x7f13023d
+
+.field public static call_screen_snackbar_title:I = 0x7f13023e
+
+.field public static call_screen_waiting_room_more_users_waitting_title:I = 0x7f13023f
+
+.field public static call_screen_waiting_room_two_users_waitting_title:I = 0x7f130240
+
+.field public static call_screen_waiting_room_user_waitting_approuve:I = 0x7f130241
+
+.field public static call_screen_waiting_room_users_waitting_approuve:I = 0x7f130242
+
+.field public static call_settings_accessibility:I = 0x7f130243
+
+.field public static call_start_screen_sharing_error:I = 0x7f130256
+
+.field public static call_tooltip_mic_disabled:I = 0x7f13026d
+
+.field public static call_tooltip_raise_hand:I = 0x7f13026e
+
+.field public static call_user_bad_network_accessibility:I = 0x7f13026f
+
+.field public static call_user_connection_accessibility:I = 0x7f130270
+
+.field public static call_user_info_disable_microphone:I = 0x7f130271
+
+.field public static call_user_info_disable_video:I = 0x7f130272
+
+.field public static call_user_info_open_chat:I = 0x7f130273
+
+.field public static call_user_info_pin:I = 0x7f130274
+
+.field public static call_user_info_pinned:I = 0x7f130275
+
+.field public static call_user_info_profile:I = 0x7f130276
+
+.field public static call_user_info_remove_from_call:I = 0x7f130277
+
+.field public static call_user_info_reset_admin_call:I = 0x7f130278
+
+.field public static call_user_info_set_admin_call:I = 0x7f130279
+
+.field public static call_user_info_unpin:I = 0x7f13027a
+
+.field public static call_user_item_more:I = 0x7f13027b
+
+.field public static call_user_item_rotate:I = 0x7f13027c
+
+.field public static call_user_microphone_disabled_accessibility:I = 0x7f13027d
+
+.field public static call_user_talking_accessibility:I = 0x7f13027e
+
+.field public static call_users_in_call_add:I = 0x7f13027f
+
+.field public static call_users_in_call_search:I = 0x7f130280
+
+.field public static call_users_in_call_share_link:I = 0x7f130281
+
+.field public static call_users_in_call_share_link_error:I = 0x7f130282
+
+.field public static call_users_in_wait_room_count_no_users:I = 0x7f130283
+
+.field public static call_users_in_wait_room_count_show_all:I = 0x7f130284
+
+.field public static call_users_info_admin:I = 0x7f130285
+
+.field public static call_users_info_count_no_users:I = 0x7f130286
+
+.field public static call_users_info_creator:I = 0x7f130287
+
+.field public static call_users_info_me:I = 0x7f130288
+
+.field public static call_users_info_me_admin:I = 0x7f130289
+
+.field public static call_users_info_open_chat_error:I = 0x7f13028a
+
+.field public static call_users_info_participant:I = 0x7f13028b
+
+.field public static call_video_disabled_accessibility:I = 0x7f13028e
+
+.field public static call_video_enabled_accessibility:I = 0x7f13028f
+
+.field public static call_video_mode_accessibility:I = 0x7f130290
+
+.field public static call_volume_bluetooth:I = 0x7f130292
+
+.field public static call_volume_default:I = 0x7f130293
+
+.field public static call_volume_earpiece:I = 0x7f130294
+
+.field public static call_volume_speakerphone:I = 0x7f130295
+
+.field public static call_volume_wired_headphones:I = 0x7f130296
+
+.field public static call_volume_wired_unknown:I = 0x7f130297
+
+.field public static call_volume_wired_usb_headset:I = 0x7f130298
+
+.field public static call_volume_wired_wired_headset:I = 0x7f130299
+
+.field public static call_waiting:I = 0x7f13029a

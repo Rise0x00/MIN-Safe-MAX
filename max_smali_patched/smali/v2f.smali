@@ -1,59 +1,64 @@
-.class public final Lv2f;
+.class public final synthetic Lv2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lz2f;
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:Ln26;
-
-.field public final g:I
-
-.field public final h:[J
-
-.field public final i:[J
-
-.field public final j:I
-
-.field public final k:[Lz2f;
+.field public final synthetic c:Lqb0;
 
 
 # direct methods
-.method public constructor <init>(IIJJJLn26;I[Lz2f;I[J[J)V
+.method public synthetic constructor <init>(Lz2f;Lqb0;I)V
     .locals 0
+
+    iput p3, p0, Lv2f;->a:I
+
+    iput-object p1, p0, Lv2f;->b:Lz2f;
+
+    iput-object p2, p0, Lv2f;->c:Lqb0;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lv2f;->a:I
+    return-void
+.end method
 
-    iput p2, p0, Lv2f;->b:I
 
-    iput-wide p3, p0, Lv2f;->c:J
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-wide p5, p0, Lv2f;->d:J
+    iget v0, p0, Lv2f;->a:I
 
-    iput-wide p7, p0, Lv2f;->e:J
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p9, p0, Lv2f;->f:Ln26;
+    iget-object v0, p0, Lv2f;->b:Lz2f;
 
-    iput p10, p0, Lv2f;->g:I
+    iget-object v1, p0, Lv2f;->c:Lqb0;
 
-    iput-object p11, p0, Lv2f;->k:[Lz2f;
-
-    iput p12, p0, Lv2f;->j:I
-
-    iput-object p13, p0, Lv2f;->h:[J
-
-    iput-object p14, p0, Lv2f;->i:[J
+    invoke-interface {v0, v1}, Lz2f;->d(Lqb0;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lv2f;->b:Lz2f;
+
+    iget-object v1, p0, Lv2f;->c:Lqb0;
+
+    invoke-interface {v0, v1}, Lz2f;->d(Lqb0;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

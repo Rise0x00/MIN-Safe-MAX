@@ -1,139 +1,139 @@
 .class public final Lz2e;
-.super Ljava/lang/Object;
+.super Ldd0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldja;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/startconversation/StartConversationScreen;
+.field public final b:Loef;
+
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/startconversation/StartConversationScreen;)V
-    .locals 0
+.method public constructor <init>(Loef;Ljava/lang/Integer;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x12
 
-    iput-object p1, p0, Lz2e;->a:Lone/me/startconversation/StartConversationScreen;
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
+
+    iput-object p1, p0, Lz2e;->b:Loef;
+
+    iput-object p2, p0, Lz2e;->c:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final N(Ljava/lang/CharSequence;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lz2e;->a:Lone/me/startconversation/StartConversationScreen;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->c:Lvr;
+    return v0
 
-    sget-object v1, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
+    :cond_0
+    instance-of v1, p1, Lz2e;
 
     const/4 v2, 0x0
 
-    aget-object v2, v1, v2
+    if-nez v1, :cond_1
 
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    return v2
 
-    invoke-virtual {v0, p0, v2}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    :cond_1
+    check-cast p1, Lz2e;
 
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->o:Lvr;
+    iget-object v1, p0, Lz2e;->b:Loef;
 
-    const/4 v2, 0x1
+    iget-object v3, p1, Lz2e;->b:Loef;
 
-    aget-object v1, v1, v2
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p0, p1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    move-result v1
 
-    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->y0()Lk3e;
+    if-nez v1, :cond_2
 
-    move-result-object p0
+    return v2
 
-    if-eqz p1, :cond_0
+    :cond_2
+    iget-object v1, p0, Lz2e;->c:Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object p1, p1, Lz2e;->c:Ljava/lang/Integer;
 
-    move-result-object p1
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lz2e;->b:Loef;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lz2e;->c:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    if-nez p1, :cond_1
+    add-int/2addr v0, v1
 
-    const-string p1, ""
-
-    :cond_1
-    iget-object p0, p0, Lk3e;->r0:Lbv3;
-
-    iget-object p0, p0, Lbv3;->g:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lal9;
-
-    invoke-interface {p0, p1}, Lal9;->setValue(Ljava/lang/Object;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final e0()V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object p0, p0, Lz2e;->a:Lone/me/startconversation/StartConversationScreen;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->X:Lvr;
+    const-string v1, "ShowSnackbar(title="
 
-    sget-object v1, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x2
+    iget-object v1, p0, Lz2e;->b:Loef;
 
-    aget-object v1, v1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    const-string v1, ", icon="
 
-    invoke-virtual {v0, p0, v1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->C0:Llx3;
+    iget-object v1, p0, Lz2e;->c:Ljava/lang/Integer;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0}, Lt4a;->f(Z)V
+    const-string v1, ")"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final n()V
-    .locals 3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p0, p0, Lz2e;->a:Lone/me/startconversation/StartConversationScreen;
+    move-result-object v0
 
-    iget-object v0, p0, Lone/me/startconversation/StartConversationScreen;->X:Lvr;
-
-    sget-object v1, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
-
-    const/4 v2, 0x2
-
-    aget-object v1, v1, v2
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p0, v1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->C0:Llx3;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lt4a;->f(Z)V
-
-    return-void
+    return-object v0
 .end method

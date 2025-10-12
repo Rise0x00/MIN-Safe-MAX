@@ -1,47 +1,31 @@
 .class public final Law4;
-.super Ljava/util/HashMap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lvt4;
+
+.field public final b:Z
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/lang/Exception;
+
+
 # direct methods
-.method public static a(Lq09;)Law4;
-    .locals 6
+.method public constructor <init>(Lvt4;ZLjava/util/ArrayList;Ljava/lang/Exception;)V
+    .locals 0
 
-    invoke-static {p0}, Lxu7;->k0(Lq09;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-object p1, p0, Law4;->a:Lvt4;
 
-    new-instance v1, Law4;
+    iput-boolean p2, p0, Law4;->b:Z
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    iput-object p3, p0, Law4;->c:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    iput-object p4, p0, Law4;->d:Ljava/lang/Exception;
 
-    :goto_0
-    if-ge v2, v0, :cond_0
-
-    invoke-virtual {p0}, Lq09;->A0()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lq09;->A0()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
+    return-void
 .end method

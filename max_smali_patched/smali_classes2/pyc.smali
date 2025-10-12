@@ -1,67 +1,140 @@
 .class public final Lpyc;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final synthetic a:Lpyc;
 
-.field public static final b:Ljava/lang/String;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final c:[Ljava/lang/String;
+.field public final synthetic Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lpyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpyc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lpyc;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lpyc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lpyc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v1, p0, Lpyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    sput-object v0, Lpyc;->a:Lpyc;
+    invoke-direct {v0, p2, v1}, Lpyc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
 
-    const-class v0, Lqyc;
+    iput-object p1, v0, Lpyc;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    sput-object v0, Lpyc;->b:Ljava/lang/String;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p1, p0, Lpyc;->X:Ljava/lang/Object;
 
-    const/16 v1, 0x21
+    check-cast p1, Lrpd;
 
-    const/4 v2, 0x1
+    iget-object p1, p1, Lrpd;->a:Lqpd;
 
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    if-lt v0, v1, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Ljava/lang/String;
-
-    const-string v1, "android.permission.READ_MEDIA_IMAGES"
-
-    aput-object v1, v0, v3
-
-    const-string v1, "android.permission.READ_MEDIA_VIDEO"
-
-    aput-object v1, v0, v2
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    new-array v0, v2, [Ljava/lang/String;
-
-    const-string v1, "android.permission.READ_EXTERNAL_STORAGE"
-
-    aput-object v1, v0, v3
+    const/4 v1, 0x0
 
     :goto_0
-    sput-object v0, Lpyc;->c:[Ljava/lang/String;
+    instance-of p1, p1, Lopd;
 
-    return-void
+    iget-object v2, p0, Lpyc;->Y:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    iget-object v3, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0:Lmqc;
+
+    sget-object v4, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->I0:[Ltm7;
+
+    const/4 v5, 0x6
+
+    aget-object v5, v4, v5
+
+    invoke-interface {v3, v2, v5}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    if-eqz v1, :cond_2
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget p1, Lkjc;->oneme_registration_neuro_avatars_change_photo:I
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    sget p1, Lkjc;->oneme_registration_neuro_avatars_choose_photo:I
+
+    :goto_2
+    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object p1, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->x0:Lmqc;
+
+    const/4 v3, 0x3
+
+    aget-object v3, v4, v3
+
+    invoke-interface {p1, v2, v3}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldf;
+
+    iput-boolean v0, p1, Ldf;->c:Z
+
+    invoke-virtual {p1, v1}, Ldf;->setEnabled(Z)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

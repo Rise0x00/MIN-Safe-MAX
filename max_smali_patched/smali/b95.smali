@@ -1,90 +1,181 @@
-.class public final Lb95;
-.super Lx85;
+.class public abstract Lb95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lcom/google/android/material/textfield/TextInputLayout;
+
+.field public final b:La95;
+
+.field public final c:Landroid/content/Context;
+
+.field public final d:Lcom/google/android/material/internal/CheckableImageButton;
+
+
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 0
+.method public constructor <init>(La95;)V
+    .locals 1
 
-    .line 3
-    invoke-direct {p0, p1}, Lx85;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
+    iget-object v0, p1, La95;->a:Lcom/google/android/material/textfield/TextInputLayout;
 
-    move-result p1
+    iput-object v0, p0, Lb95;->a:Lcom/google/android/material/textfield/TextInputLayout;
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lb95;->b:La95;
 
-    .line 5
-    iget-object p0, p0, Lx85;->a:Ljava/io/DataInputStream;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const p1, 0x7fffffff
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Ljava/io/InputStream;->mark(I)V
+    iput-object v0, p0, Lb95;->c:Landroid/content/Context;
 
-    return-void
+    iget-object p1, p1, La95;->y0:Lcom/google/android/material/internal/CheckableImageButton;
 
-    .line 6
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public constructor <init>([B)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0, p1}, Lx85;-><init>([B)V
-
-    .line 2
-    iget-object p0, p0, Lx85;->a:Ljava/io/DataInputStream;
-
-    const p1, 0x7fffffff
-
-    invoke-virtual {p0, p1}, Ljava/io/InputStream;->mark(I)V
+    iput-object p1, p0, Lb95;->d:Lcom/google/android/material/internal/CheckableImageButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(J)V
-    .locals 3
+.method public a()V
+    .locals 0
 
-    iget v0, p0, Lx85;->c:I
+    return-void
+.end method
 
-    int-to-long v1, v0
+.method public b()V
+    .locals 0
 
-    cmp-long v1, v1, p1
+    return-void
+.end method
 
-    if-lez v1, :cond_0
+.method public c()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lx85;->c:I
+    return v0
+.end method
 
-    iget-object v0, p0, Lx85;->a:Ljava/io/DataInputStream;
+.method public d()I
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
+    const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
+.end method
 
-    :cond_0
-    int-to-long v0, v0
+.method public e()Landroid/view/View$OnFocusChangeListener;
+    .locals 1
 
-    sub-long/2addr p1, v0
+    const/4 v0, 0x0
 
-    :goto_0
-    long-to-int p1, p1
+    return-object v0
+.end method
 
-    invoke-virtual {p0, p1}, Lx85;->c(I)V
+.method public f()Landroid/view/View$OnClickListener;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public g()Landroid/view/View$OnFocusChangeListener;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public h()Lrz3;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public i(I)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public j()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public k()Z
+    .locals 1
+
+    instance-of v0, p0, Lxz4;
+
+    return v0
+.end method
+
+.method public l()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public m(Landroid/widget/EditText;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public n(Lp4;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public o(Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public p(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final q()V
+    .locals 2
+
+    iget-object v0, p0, Lb95;->b:La95;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, La95;->f(Z)V
+
+    return-void
+.end method
+
+.method public r()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public s()V
+    .locals 0
 
     return-void
 .end method

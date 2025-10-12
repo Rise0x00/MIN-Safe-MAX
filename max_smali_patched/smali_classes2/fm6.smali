@@ -1,153 +1,101 @@
-.class public final enum Lfm6;
-.super Ljava/lang/Enum;
+.class public final synthetic Lfm6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcce;
 
-# static fields
-.field public static final enum X:Lfm6;
 
-.field public static final enum Y:Lfm6;
+# instance fields
+.field public final synthetic a:Lgx0;
 
-.field public static final synthetic Z:[Lfm6;
+.field public final synthetic b:Lf7d;
 
-.field public static final enum a:Lfm6;
+.field public final synthetic c:Lrn7;
 
-.field public static final enum b:Lfm6;
-
-.field public static final enum c:Lfm6;
-
-.field public static final enum o:Lfm6;
+.field public final synthetic d:Lq34;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public synthetic constructor <init>(Lgx0;Lf7d;Lrn7;Lq34;)V
+    .locals 0
 
-    new-instance v0, Lfm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TIMEOUT"
+    iput-object p1, p0, Lfm6;->a:Lgx0;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lfm6;->b:Lf7d;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lfm6;->c:Lrn7;
 
-    sput-object v0, Lfm6;->a:Lfm6;
-
-    new-instance v1, Lfm6;
-
-    const-string v2, "BUSY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfm6;->b:Lfm6;
-
-    new-instance v2, Lfm6;
-
-    const-string v3, "MISSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lfm6;
-
-    const-string v4, "REJECTED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lfm6;->c:Lfm6;
-
-    new-instance v4, Lfm6;
-
-    const-string v5, "FAILED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lfm6;
-
-    const-string v6, "HUNGUP"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lfm6;->o:Lfm6;
-
-    new-instance v6, Lfm6;
-
-    const-string v7, "CANCELED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lfm6;->X:Lfm6;
-
-    new-instance v7, Lfm6;
-
-    const-string v8, "CALL_TIMEOUT"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v8, Lfm6;
-
-    const-string v9, "REMOVED"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v9, Lfm6;
-
-    const-string v10, "OBSOLETE_CLIENT"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lfm6;->Y:Lfm6;
-
-    filled-new-array/range {v0 .. v9}, [Lfm6;
-
-    move-result-object v0
-
-    sput-object v0, Lfm6;->Z:[Lfm6;
+    iput-object p4, p0, Lfm6;->d:Lq34;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfm6;
-    .locals 1
 
-    const-class v0, Lfm6;
+# virtual methods
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lfm6;->b:Lf7d;
 
-    move-result-object p0
+    iget-object v0, v0, Lf7d;->b:Ljava/lang/Object;
 
-    check-cast p0, Lfm6;
+    check-cast v0, Lnwd;
 
-    return-object p0
-.end method
+    const-string v1, "chunk"
 
-.method public static values()[Lfm6;
-    .locals 1
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    sget-object v0, Lfm6;->Z:[Lfm6;
+    move-result-object v1
 
-    invoke-virtual {v0}, [Lfm6;->clone()Ljava/lang/Object;
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lfm6;->a:Lgx0;
+
+    iget-object v2, v2, Lgx0;->b:Ljava/lang/Object;
+
+    check-cast v2, Lgx0;
+
+    invoke-virtual {v2, v1, v0}, Lgx0;->A(Lorg/json/JSONObject;Lnwd;)Lrce;
 
     move-result-object v0
 
-    check-cast v0, [Lfm6;
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Can\'t parse chunk "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    iget-object p1, p0, Lfm6;->c:Lrn7;
+
+    invoke-virtual {p1, v0}, Lrn7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lfm6;->d:Lq34;
+
+    invoke-virtual {p1, v0}, Lq34;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

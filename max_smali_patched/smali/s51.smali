@@ -2,22 +2,15 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld61;
+
 
 # virtual methods
-.method public abstract a()I
-.end method
+.method public getPriority()I
+    .locals 1
 
-.method public abstract b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-.end method
+    const/4 v0, 0x1
 
-.method public abstract getContentDescription()Ldue;
-.end method
-
-.method public abstract getIcon()I
-.end method
-
-.method public abstract getId()I
-.end method
-
-.method public abstract getTitle()Ldue;
+    return v0
 .end method

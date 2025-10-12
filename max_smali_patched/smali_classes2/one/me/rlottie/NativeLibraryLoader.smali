@@ -17,7 +17,7 @@
     d2 = {
         "Lone/me/rlottie/NativeLibraryLoader;",
         "",
-        "Ltcf;",
+        "Loyf;",
         "load",
         "()V",
         "",
@@ -56,7 +56,7 @@
 
 # virtual methods
 .method public load()V
-    .locals 1
+    .locals 2
 
     .line 1
     :try_start_0
@@ -69,14 +69,14 @@
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     .line 2
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v0, p0}, Lto9;->j(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lwx9;->q(Ljava/lang/Throwable;)V
 
     return-void
 .end method

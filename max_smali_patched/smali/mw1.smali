@@ -1,194 +1,161 @@
-.class public Lmw1;
+.class public final synthetic Lmw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lus1;
 
-# static fields
-.field public static final a:Lmw1;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Luw1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Luw1;I)V
+    .locals 0
 
-    new-instance v0, Lmw1;
+    iput p2, p0, Lmw1;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmw1;->b:Luw1;
 
-    sput-object v0, Lmw1;->a:Lmw1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lehf;Lh40;)V
-    .locals 17
+.method public o(Lts1;)Ljava/lang/String;
+    .locals 5
 
-    move-object/from16 v0, p1
+    iget v0, p0, Lmw1;->a:I
 
-    move-object/from16 v1, p2
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lmw1;->b:Luw1;
 
-    sget-object v3, Lehf;->c0:Lz90;
+    :try_start_0
+    iget-object v1, v0, Luw1;->c:Lcsd;
 
-    invoke-interface {v0, v3, v2}, Lgbc;->c(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Luu1;
 
-    move-result-object v2
+    const/4 v3, 0x6
 
-    check-cast v2, Ll12;
+    invoke-direct {v2, v0, v3, p1}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sget-object v3, Lgpa;->c:Lgpa;
-
-    sget-object v4, Ll12;->i:Lz90;
-
-    new-instance v4, Ljava/util/HashSet;
-
-    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
-
-    invoke-static {}, Ltk9;->d()Ltk9;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/util/ArrayList;
-
-    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {}, Lcl9;->a()Lcl9;
-
-    move-result-object v7
-
-    new-instance v8, Ll12;
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v5}, Lgpa;->a(Lpf3;)Lgpa;
-
-    move-result-object v10
-
-    new-instance v13, Ljava/util/ArrayList;
-
-    invoke-direct {v13, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    sget-object v4, Llne;->b:Llne;
-
-    new-instance v4, Landroid/util/ArrayMap;
-
-    invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
-
-    iget-object v5, v7, Llne;->a:Landroid/util/ArrayMap;
-
-    invoke-virtual {v5}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
-
-    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v11
-
-    invoke-virtual {v4, v7, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance v15, Llne;
+    :catch_0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-direct {v15, v4}, Llne;-><init>(Landroid/util/ArrayMap;)V
+    const-string v1, "Unable to check if MeteringRepeating is attached. Camera executor shut down."
 
-    const/4 v11, -0x1
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    const/4 v12, 0x0
+    invoke-virtual {p1, v0}, Lts1;->d(Ljava/lang/Throwable;)Z
 
-    const/16 v16, 0x0
+    :goto_0
+    const-string p1, "isMeteringRepeatingAttached"
 
-    move v14, v12
+    return-object p1
 
-    invoke-direct/range {v8 .. v16}, Ll12;-><init>(Ljava/util/ArrayList;Lgpa;IZLjava/util/ArrayList;ZLlne;Lrx1;)V
+    :pswitch_0
+    iget-object v0, p0, Lmw1;->b:Luw1;
 
-    if-eqz v2, :cond_1
+    :try_start_1
+    iget-object v1, v0, Luw1;->a:Ls3g;
 
-    iget v11, v2, Ll12;->c:I
+    invoke-virtual {v1}, Ls3g;->b()Lqvd;
 
-    iget-object v3, v2, Ll12;->e:Ljava/util/List;
+    move-result-object v1
 
-    invoke-virtual {v1, v3}, Lh40;->a(Ljava/util/Collection;)V
+    invoke-virtual {v1}, Lqvd;->b()Lrvd;
 
-    iget-object v3, v2, Ll12;->b:Lgpa;
+    move-result-object v1
 
-    :cond_1
-    invoke-static {v3}, Ltk9;->f(Lpf3;)Ltk9;
+    new-instance v2, Ljava/util/ArrayList;
+
+    iget-object v1, v1, Lrvd;->c:Ljava/util/List;
+
+    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iget-object v1, v0, Luw1;->M0:Lstg;
+
+    iget-object v1, v1, Lstg;->f:Ljava/lang/Object;
+
+    check-cast v1, Lsz1;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lnw1;
+
+    invoke-direct {v1, v0, p1}, Lnw1;-><init>(Luw1;Lts1;)V
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v1, v0, Luw1;->b:Lk02;
+
+    iget-object v3, v0, Luw1;->x0:Lxw1;
+
+    iget-object v3, v3, Lxw1;->a:Ljava/lang/String;
+
+    iget-object v4, v0, Luw1;->c:Lcsd;
+
+    invoke-static {v2}, Lhv0;->v(Ljava/util/ArrayList;)Landroid/hardware/camera2/CameraDevice$StateCallback;
 
     move-result-object v2
 
-    iput-object v2, v1, Lh40;->f:Ljava/lang/Object;
+    iget-object v1, v1, Lk02;->a:Llo4;
 
-    new-instance v2, Lex1;
+    invoke-virtual {v1, v3, v4, v2}, Llo4;->w(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
+    :try_end_1
+    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    sget-object v2, Lex1;->c:Lz90;
+    goto :goto_2
 
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v1
+
+    :goto_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unable to open camera for configAndClose: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0, v2, v3}, Lpf3;->c(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Integer;
+    invoke-virtual {v0, v2, v1}, Luw1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p1, v1}, Lts1;->d(Ljava/lang/Throwable;)Z
 
-    move-result v2
+    :goto_2
+    const-string p1, "configAndCloseTask"
 
-    iput v2, v1, Lh40;->c:I
+    return-object p1
 
-    new-instance v2, Llw1;
-
-    invoke-direct {v2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
-
-    sget-object v3, Lex1;->Z:Lz90;
-
-    invoke-interface {v0, v3, v2}, Lpf3;->c(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    new-instance v3, Lk12;
-
-    invoke-direct {v3, v2}, Lk12;-><init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
-
-    invoke-virtual {v1, v3}, Lh40;->b(Lkx1;)V
-
-    invoke-static {v0}, Llm;->n(Lpf3;)Llm;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Llm;->l()Lr8;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lh40;->c(Lpf3;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

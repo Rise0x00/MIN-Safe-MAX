@@ -1,101 +1,68 @@
-.class public final synthetic Luzc;
-.super Ljava/lang/Object;
+.class public final Luzc;
+.super Ll9f;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Integer;
-
-.field public final synthetic b:Landroid/view/ViewGroup;
-
-.field public final synthetic c:Ljava/lang/Integer;
+.field public c:Lurb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Integer;Landroid/view/ViewGroup;Ljava/lang/Integer;Lwzc;)V
+.method public constructor <init>(Ls89;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Luzc;->a:Ljava/lang/Integer;
-
-    iput-object p2, p0, Luzc;->b:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Luzc;->c:Ljava/lang/Integer;
+    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+.method public final c(Ls89;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object p1, p0, Luzc;->a:Ljava/lang/Integer;
+    const-string v0, "profile"
 
-    iget-object v0, p0, Luzc;->b:Landroid/view/ViewGroup;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v1, "statusBarOverlay"
+    move-result p2
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-static {p1}, Lud6;->w(Ls89;)Lurb;
 
-    move-result p1
+    move-result-object p1
 
-    const/4 v2, 0x1
+    iput-object p1, p0, Luzc;->c:Lurb;
 
-    invoke-static {v0, v1, p2, v2}, Lwzc;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+    invoke-virtual {p1}, Ls89;->B()V
 
-    move-result-object p1
+    return-void
+.end method
 
-    if-eqz p1, :cond_1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    iget-object v0, p0, Luzc;->c:Lurb;
 
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Luzc;->c:Ljava/lang/Integer;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string p1, "navBarOverlay"
+    const-string v2, "{profile="
 
-    if-eqz p0, :cond_2
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v0, "}"
 
-    const/4 v1, 0x2
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p1, p2, v1}, Lwzc;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    return-object p2
-
-    :cond_2
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_3
-    return-object p2
+    return-object v0
 .end method

@@ -1,256 +1,178 @@
-.class public final synthetic Lsc8;
-.super Ljava/lang/Object;
+.class public final Lsc8;
+.super Lcxc;
 .source "SourceFile"
-
-# interfaces
-.implements Lhq7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lcom/google/android/material/datepicker/c;
 
-.field public final synthetic b:Lw6b;
+.field public final synthetic b:Lcom/google/android/material/button/MaterialButton;
+
+.field public final synthetic c:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw6b;I)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;Lcom/google/android/material/datepicker/c;Lcom/google/android/material/button/MaterialButton;)V
     .locals 0
 
-    iput p2, p0, Lsc8;->a:I
-
-    iput-object p1, p0, Lsc8;->b:Lw6b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsc8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    iput-object p2, p0, Lsc8;->a:Lcom/google/android/material/datepicker/c;
+
+    iput-object p3, p0, Lsc8;->b:Lcom/google/android/material/button/MaterialButton;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    iget v0, p0, Lsc8;->a:I
+    if-nez p2, :cond_0
 
-    check-cast p1, Lu5b;
+    iget-object p2, p0, Lsc8;->b:Lcom/google/android/material/button/MaterialButton;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    iget-object p0, p0, Lsc8;->b:Lw6b;
+    move-result-object p2
 
-    iget p0, p0, Lw6b;->y:I
+    invoke-virtual {p1, p2}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    invoke-interface {p1, p0}, Lu5b;->g(I)V
+    :cond_0
+    return-void
+.end method
+
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 3
+
+    iget-object p1, p0, Lsc8;->a:Lcom/google/android/material/datepicker/c;
+
+    iget-object p1, p1, Lcom/google/android/material/datepicker/c;->o:Lhy0;
+
+    iget-object p3, p0, Lsc8;->c:Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    if-gez p2, :cond_0
+
+    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p2
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p2
+
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
+
+    move-result p2
+
+    :goto_0
+    iget-object v0, p1, Lhy0;->a:Ljn9;
+
+    iget-object v0, v0, Ljn9;->a:Ljava/util/Calendar;
+
+    invoke-static {v0}, Lp4g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p2}, Ljava/util/Calendar;->add(II)V
+
+    new-instance v2, Ljn9;
+
+    invoke-direct {v2, v0}, Ljn9;-><init>(Ljava/util/Calendar;)V
+
+    iput-object v2, p3, Lcom/google/android/material/datepicker/MaterialCalendar;->s1:Ljn9;
+
+    iget-object p1, p1, Lhy0;->a:Ljn9;
+
+    iget-object p1, p1, Ljn9;->a:Ljava/util/Calendar;
+
+    invoke-static {p1}, Lp4g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1, p2}, Ljava/util/Calendar;->add(II)V
+
+    const/4 p2, 0x5
+
+    const/4 p3, 0x1
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/Calendar;->set(II)V
+
+    invoke-static {p1}, Lp4g;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Ljava/util/Calendar;->get(I)I
+
+    invoke-virtual {p1, p3}, Ljava/util/Calendar;->get(I)I
+
+    const/4 p3, 0x7
+
+    invoke-virtual {p1, p3}, Ljava/util/Calendar;->getMaximum(I)I
+
+    invoke-virtual {p1, p2}, Ljava/util/Calendar;->getActualMaximum(I)I
+
+    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    invoke-virtual {p1}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide p1
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object p3
+
+    sget-object v0, Lp4g;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const-string v0, "yMMMM"
+
+    invoke-static {v0, p3}, Landroid/icu/text/DateFormat;->getInstanceForSkeleton(Ljava/lang/String;Ljava/util/Locale;)Landroid/icu/text/DateFormat;
+
+    move-result-object p3
+
+    const-string v0, "UTC"
+
+    invoke-static {v0}, Landroid/icu/util/TimeZone;->getTimeZone(Ljava/lang/String;)Landroid/icu/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setTimeZone(Landroid/icu/util/TimeZone;)V
+
+    sget-object v0, Landroid/icu/text/DisplayContext;->CAPITALIZATION_FOR_STANDALONE:Landroid/icu/text/DisplayContext;
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->setContext(Landroid/icu/text/DisplayContext;)V
+
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {p3, v0}, Landroid/icu/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lsc8;->b:Lcom/google/android/material/button/MaterialButton;
+
+    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-boolean p0, p0, Lw6b;->w:Z
-
-    invoke-interface {p1, p0}, Lu5b;->d(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->z:Lhg8;
-
-    invoke-interface {p1, p0}, Lu5b;->a0(Lhg8;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->D:La4f;
-
-    invoke-interface {p1, p0}, Lu5b;->W(La4f;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->E:Lv3f;
-
-    invoke-interface {p1, p0}, Lu5b;->y(Lv3f;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-wide v0, p0, Lw6b;->C:J
-
-    invoke-interface {p1, v0, v1}, Lu5b;->s0(J)V
-
-    return-void
-
-    :pswitch_5
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-wide v0, p0, Lw6b;->B:J
-
-    invoke-interface {p1, v0, v1}, Lu5b;->c0(J)V
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-wide v0, p0, Lw6b;->A:J
-
-    invoke-interface {p1, v0, v1}, Lu5b;->Z(J)V
-
-    return-void
-
-    :pswitch_7
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->l:Lqvf;
-
-    invoke-interface {p1, p0}, Lu5b;->w(Lqvf;)V
-
-    return-void
-
-    :pswitch_8
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget v0, p0, Lw6b;->r:I
-
-    iget-boolean p0, p0, Lw6b;->s:Z
-
-    invoke-interface {p1, v0, p0}, Lu5b;->h(IZ)V
-
-    return-void
-
-    :pswitch_9
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->q:Lim4;
-
-    invoke-interface {p1, p0}, Lu5b;->r0(Lim4;)V
-
-    return-void
-
-    :pswitch_a
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->p:Lx34;
-
-    invoke-interface {p1, p0}, Lu5b;->R(Lx34;)V
-
-    return-void
-
-    :pswitch_b
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->p:Lx34;
-
-    iget-object p0, p0, Lx34;->a:Lg07;
-
-    invoke-interface {p1, p0}, Lu5b;->j(Ljava/util/List;)V
-
-    return-void
-
-    :pswitch_c
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->o:Lt20;
-
-    invoke-interface {p1, p0}, Lu5b;->v(Lt20;)V
-
-    return-void
-
-    :pswitch_d
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget p0, p0, Lw6b;->n:F
-
-    invoke-interface {p1, p0}, Lu5b;->f(F)V
-
-    return-void
-
-    :pswitch_e
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->m:Lhg8;
-
-    invoke-interface {p1, p0}, Lu5b;->b0(Lhg8;)V
-
-    return-void
-
-    :pswitch_f
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-boolean p0, p0, Lw6b;->i:Z
-
-    invoke-interface {p1, p0}, Lu5b;->N(Z)V
-
-    return-void
-
-    :pswitch_10
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget p0, p0, Lw6b;->h:I
-
-    invoke-interface {p1, p0}, Lu5b;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_11
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-object p0, p0, Lw6b;->g:Lk5b;
-
-    invoke-interface {p1, p0}, Lu5b;->n0(Lk5b;)V
-
-    return-void
-
-    :pswitch_12
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget-boolean p0, p0, Lw6b;->v:Z
-
-    invoke-interface {p1, p0}, Lu5b;->m(Z)V
-
-    return-void
-
-    :pswitch_13
-    iget-object p0, p0, Lsc8;->b:Lw6b;
-
-    iget p0, p0, Lw6b;->x:I
-
-    invoke-interface {p1, p0}, Lu5b;->b(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

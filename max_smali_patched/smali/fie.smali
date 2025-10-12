@@ -1,76 +1,137 @@
-.class public final synthetic Lfie;
-.super Ljava/lang/Object;
+.class public final Lfie;
+.super Lzzc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhie;
+.field public c:Landroid/view/View;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lhie;I)V
-    .locals 0
+# virtual methods
+.method public final o()V
+    .locals 6
 
-    iput p2, p0, Lfie;->a:I
+    iget-object v0, p0, Lfie;->c:Landroid/view/View;
 
-    iput-object p1, p0, Lfie;->b:Lhie;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lv3b;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_2
+
+    new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    new-instance v4, Leie;
+
+    invoke-direct {v4, v2}, Leie;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
+
+    invoke-static {v1, v4}, Lv3b;->y(Landroid/view/WindowInsetsController;Leie;)V
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-string v5, "input_method"
+
+    invoke-virtual {v2, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    :cond_1
+    invoke-static {v1, v4}, Lv3b;->D(Landroid/view/WindowInsetsController;Leie;)V
+
+    invoke-static {}, Lv3b;->b()I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lv3b;->C(Landroid/view/WindowInsetsController;I)V
+
+    return-void
+
+    :cond_2
+    invoke-super {p0}, Lzzc;->o()V
 
     return-void
 .end method
 
+.method public final r()V
+    .locals 3
 
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lfie;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lfie;->b:Lhie;
-
-    iget-object v0, p0, Lhie;->q:Lkie;
+    iget-object v0, p0, Lfie;->c:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lkie;->m()V
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x21
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "input_method"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v1}, Landroid/view/inputmethod/InputMethodManager;->isActive()Z
 
     :cond_0
-    iget-object v0, p0, Lhie;->p:Lnj4;
+    if-eqz v0, :cond_1
 
-    if-nez v0, :cond_1
+    invoke-static {v0}, Lv3b;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
 
-    iget-object p0, p0, Lhie;->o:Ljs1;
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljs1;->c()V
+    goto :goto_0
 
     :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lv3b;->b()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lv3b;->x(Landroid/view/WindowInsetsController;I)V
+
+    :cond_2
+    invoke-super {p0}, Lzzc;->r()V
+
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lfie;->b:Lhie;
-
-    invoke-virtual {p0}, Lnj4;->b()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lfie;->b:Lhie;
-
-    invoke-virtual {p0}, Lhie;->a()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,48 +1,51 @@
 .class public final Lyq4;
-.super Lax3;
+.super La5;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lhy2;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lhy2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lcfd;I)V
     .locals 0
 
-    iput-object p1, p0, Lyq4;->Y:Lhy2;
+    iput p2, p0, Lyq4;->b:I
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, La5;-><init>(Lcfd;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a(Ljava/lang/Class;)Ljava/util/ArrayList;
     .locals 1
 
-    iput-object p1, p0, Lyq4;->o:Ljava/lang/Object;
+    iget v0, p0, Lyq4;->b:I
 
-    iget p1, p0, Lyq4;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-super {p0, p1}, La5;->a(Ljava/lang/Class;)Ljava/util/ArrayList;
 
-    or-int/2addr p1, v0
+    move-result-object p1
 
-    iput p1, p0, Lyq4;->X:I
+    return-object p1
 
-    iget-object p1, p0, Lyq4;->Y:Lhy2;
+    :pswitch_0
+    iget-object v0, p0, La5;->a:Lcfd;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p1}, Lcfd;->b(Ljava/lang/Class;)Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0, p0}, Lhy2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    return-object p1
 
-    return-object p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

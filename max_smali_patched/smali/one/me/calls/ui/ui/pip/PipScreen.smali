@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lns9;
-.implements Lwzc;
+.implements Lb2a;
+.implements Lmgd;
 
 
 # annotations
@@ -15,8 +15,8 @@
     d2 = {
         "Lone/me/calls/ui/ui/pip/PipScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lns9;",
-        "Lwzc;",
+        "Lb2a;",
+        "Lmgd;",
         "<init>",
         "()V",
         "calls-ui_release"
@@ -32,13 +32,13 @@
 
 
 # static fields
-.field public static final synthetic X:[Lof7;
+.field public static final synthetic X:[Ltm7;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:Lin0;
+.field public final b:Lan0;
 
 .field public final c:Ljava/lang/Object;
 
@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Lvqb;
+    new-instance v0, Lt5c;
 
     const-class v1, Lone/me/calls/ui/ui/pip/PipScreen;
 
@@ -59,19 +59,19 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v1, Ldic;->a:Leic;
+    sget-object v1, Lxxc;->a:Lyxc;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Lof7;
+    new-array v1, v1, [Ltm7;
 
     aput-object v0, v1, v4
 
-    sput-object v1, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
+    sput-object v1, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Ltm7;
 
     return-void
 .end method
@@ -85,39 +85,39 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     iput v2, p0, Lone/me/calls/ui/ui/pip/PipScreen;->a:I
 
-    new-instance v0, Lk4b;
+    new-instance v0, Lcjb;
 
-    invoke-direct {v0, p0, v1}, Lk4b;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
+    invoke-direct {v0, p0, v1}, Lcjb;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Ld96;)Lin0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lve6;)Lan0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lin0;
+    iput-object v0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lan0;
 
-    new-instance v0, Lk4b;
+    new-instance v0, Lcjb;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lk4b;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
+    invoke-direct {v0, p0, v1}, Lcjb;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;I)V
 
-    invoke-static {v2, v0}, Lltg;->s(ILd96;)Lth7;
+    invoke-static {v2, v0}, Lvr0;->r(ILve6;)Lbp7;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
 
-    new-instance v0, Llna;
+    new-instance v0, Lleb;
 
-    const/16 v1, 0xf
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Llna;-><init>(I)V
+    invoke-direct {v0, v1}, Lleb;-><init>(I)V
 
-    invoke-static {v2, v0}, Lltg;->s(ILd96;)Lth7;
+    invoke-static {v2, v0}, Lvr0;->r(ILve6;)Lbp7;
 
     move-result-object v0
 
@@ -133,15 +133,15 @@
 
     iget-object p1, p0, Lone/me/calls/ui/ui/pip/PipScreen;->o:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lsrd;
+    check-cast p1, Lfbe;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lsrd;->a()V
+    invoke-static {}, Lfbe;->a()V
 
     new-instance p1, Landroid/widget/FrameLayout;
 
@@ -151,25 +151,25 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Ln9a;->s0:I
+    sget p2, Lxja;->q0:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    sget-object p2, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
+    sget-object p2, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Ltm7;
 
     const/4 p3, 0x0
 
     aget-object p2, p2, p3
 
-    iget-object p0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lin0;
+    iget-object p2, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lan0;
 
-    invoke-virtual {p0}, Lin0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lan0;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p2
 
-    check-cast p0, Lsh1;
+    check-cast p2, Lsh1;
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -177,35 +177,35 @@
 .end method
 
 .method public final onDestroy()V
-    .locals 1
+    .locals 2
 
-    invoke-super {p0}, Lox3;->onDestroy()V
+    invoke-super {p0}, Lb04;->onDestroy()V
 
-    iget-object p0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Le4b;
+    check-cast v0, Lvib;
 
-    iget-object v0, p0, Le4b;->a:Lou1;
+    iget-object v1, v0, Lvib;->a:Lav1;
 
-    invoke-virtual {v0, p0}, Lou1;->c(Lso1;)V
+    invoke-virtual {v1, v0}, Lav1;->c(Lfp1;)V
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Le4b;->c:Lsh1;
+    iput-object v1, v0, Lvib;->c:Lsh1;
 
-    iget-object p0, p0, Le4b;->Y:Ljava/lang/Object;
+    iget-object v0, v0, Lvib;->Y:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lmof;
+    check-cast v0, Lhbg;
 
-    invoke-virtual {p0}, Lmof;->b()V
+    invoke-virtual {v0}, Lhbg;->b()V
 
     return-void
 .end method
@@ -217,61 +217,61 @@
 
     iget-object p1, p0, Lone/me/calls/ui/ui/pip/PipScreen;->c:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Le4b;
+    check-cast v0, Lvib;
 
-    sget-object v1, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Lof7;
+    sget-object v1, Lone/me/calls/ui/ui/pip/PipScreen;->X:[Ltm7;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    iget-object v1, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lin0;
+    iget-object v1, p0, Lone/me/calls/ui/ui/pip/PipScreen;->b:Lan0;
 
-    invoke-virtual {v1}, Lin0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lan0;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lsh1;
 
-    iput-object v1, v0, Le4b;->c:Lsh1;
+    iput-object v1, v0, Lvib;->c:Lsh1;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Le4b;
+    check-cast p1, Lvib;
 
-    iget-object p1, p1, Le4b;->X:Ljbc;
+    iget-object p1, p1, Lvib;->X:Lsqc;
 
-    new-instance v0, Ll4b;
+    new-instance v0, Ldjb;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Ll4b;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v1}, Ldjb;-><init>(Lone/me/calls/ui/ui/pip/PipScreen;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Lgs5;
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method
 
-.method public final v()I
-    .locals 0
+.method public final w()I
+    .locals 1
 
-    iget p0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->a:I
+    iget v0, p0, Lone/me/calls/ui/ui/pip/PipScreen;->a:I
 
-    return p0
+    return v0
 .end method

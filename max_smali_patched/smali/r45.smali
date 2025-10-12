@@ -1,181 +1,71 @@
-.class public abstract Lr45;
+.class public final Lr45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lcom/google/android/material/textfield/TextInputLayout;
+.field public final a:Lbb8;
 
-.field public final b:Lq45;
+.field public b:I
 
-.field public final c:Landroid/content/Context;
-
-.field public final d:Lcom/google/android/material/internal/CheckableImageButton;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lq45;)V
+.method public constructor <init>(Landroid/widget/EditText;Z)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lq45;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    const v0, 0x7fffffff
 
-    iput-object v0, p0, Lr45;->a:Lcom/google/android/material/textfield/TextInputLayout;
+    iput v0, p0, Lr45;->b:I
 
-    iput-object p1, p0, Lr45;->b:Lq45;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput v0, p0, Lr45;->c:I
 
-    move-result-object v0
+    new-instance v0, Lbb8;
 
-    iput-object v0, p0, Lr45;->c:Landroid/content/Context;
+    invoke-direct {v0, p1, p2}, Lbb8;-><init>(Landroid/widget/EditText;Z)V
 
-    iget-object p1, p1, Lq45;->p0:Lcom/google/android/material/internal/CheckableImageButton;
-
-    iput-object p1, p0, Lr45;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    iput-object v0, p0, Lr45;->a:Lbb8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lz45;
+    .locals 2
 
-    return-void
-.end method
+    if-nez p1, :cond_0
 
-.method public b()V
-    .locals 0
+    const/4 p1, 0x0
 
-    return-void
-.end method
+    return-object p1
 
-.method public c()I
-    .locals 0
+    :cond_0
+    iget-object v0, p0, Lr45;->a:Lbb8;
 
-    const/4 p0, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p0
-.end method
+    instance-of v1, p1, Lz45;
 
-.method public d()I
-    .locals 0
+    if-eqz v1, :cond_1
 
-    const/4 p0, 0x0
+    check-cast p1, Lz45;
 
-    return p0
-.end method
+    return-object p1
 
-.method public e()Landroid/view/View$OnFocusChangeListener;
-    .locals 0
+    :cond_1
+    new-instance v1, Lz45;
 
-    const/4 p0, 0x0
+    iget-object v0, v0, Lbb8;->b:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    check-cast v0, Landroid/widget/EditText;
 
-.method public f()Landroid/view/View$OnClickListener;
-    .locals 0
+    invoke-direct {v1, v0, p1, p2}, Lz45;-><init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
 
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public g()Landroid/view/View$OnFocusChangeListener;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public h()Lfz3;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public i(I)Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public j()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public k()Z
-    .locals 0
-
-    instance-of p0, p0, Lsv4;
-
-    return p0
-.end method
-
-.method public l()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public m(Landroid/widget/EditText;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Li4;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 1
-
-    iget-object p0, p0, Lr45;->b:Lq45;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lq45;->f(Z)V
-
-    return-void
-.end method
-
-.method public r()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s()V
-    .locals 0
-
-    return-void
+    return-object v1
 .end method

@@ -1,53 +1,90 @@
 .class public final Lzie;
-.super Lax3;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Laje;
-
-.field public n0:I
-
-.field public o:Laje;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Laje;Lax3;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lzie;->Z:Laje;
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lzie;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzie;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzie;
+
+    iget p1, p1, Lzie;->a:I
+
+    iget v1, p0, Lzie;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    iget p1, p0, Lzie;->a:I
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iput-object p1, p0, Lzie;->Y:Ljava/lang/Object;
+    const-class v0, Lzie;
 
-    iget p1, p0, Lzie;->n0:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    iget v1, p0, Lzie;->a:I
 
-    iput p1, p0, Lzie;->n0:I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object p1, p0, Lzie;->Z:Laje;
+    move-result v1
 
-    const-wide/16 v0, 0x0
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-virtual {p1, v0, v1, p0}, Laje;->a(JLax3;)Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    move-result-object p0
-
-    return-object p0
+    return v1
 .end method

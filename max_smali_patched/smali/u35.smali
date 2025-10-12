@@ -2,13 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/nio/channels/ByteChannel;
+
 
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
-
-.method public abstract b()Landroid/media/MediaFormat;
-.end method
-
-.method public abstract c()Llxe;
+.method public abstract a(JLjava/nio/ByteBuffer;)I
 .end method

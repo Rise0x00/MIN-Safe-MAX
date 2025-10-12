@@ -1,21 +1,19 @@
 .class public final Lbq;
-.super Lko;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbq;
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lbq;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lko;-><init>()V
-
-    sput-object v0, Lbq;->a:Lbq;
+    iput p1, p0, Lbq;->a:I
 
     return-void
 .end method

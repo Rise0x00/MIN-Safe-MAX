@@ -1,170 +1,120 @@
 .class public final Lha3;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lv96;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Lbn3;
-
-.field public synthetic Z:Lnma;
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    iput p3, p0, Lha3;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lha3;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 6
 
-    iget p0, p0, Lha3;->X:I
+    new-instance v4, Lrd0;
 
-    check-cast p1, Lbn3;
+    const/4 v0, 0x2
 
-    check-cast p2, Lnma;
+    invoke-direct {v4, p1, v0}, Lrd0;-><init>(Landroid/content/Context;I)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/16 v5, 0x1e
 
-    packed-switch p0, :pswitch_data_0
+    iget-object v0, p0, Lha3;->a:Ljava/util/List;
 
-    new-instance p0, Lha3;
+    const-string v1, "\n"
 
-    const/4 v0, 0x3
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, p3, v1}, Lha3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-static/range {v0 .. v5}, Le93;->s0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxe6;I)Ljava/lang/String;
 
-    iput-object p1, p0, Lha3;->Y:Lbn3;
-
-    iput-object p2, p0, Lha3;->Z:Lnma;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lha3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    new-instance p0, Lha3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p3, v1}, Lha3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lha3;->Y:Lbn3;
-
-    iput-object p2, p0, Lha3;->Z:Lnma;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lha3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lha3;->X:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return v0
 
-    iget-object p1, p0, Lha3;->Y:Lbn3;
-
-    iget-object p0, p0, Lha3;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->b()Ldf0;
-
-    move-result-object p0
-
-    iget p0, p0, Ldf0;->l:I
-
-    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
-
-    const/high16 v1, -0x10000
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lha3;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    return v2
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :cond_1
+    check-cast p1, Lha3;
 
-    return-object p0
+    iget-object v1, p0, Lha3;->a:Ljava/util/List;
 
-    :pswitch_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object p1, p1, Lha3;->a:Ljava/util/List;
 
-    iget-object p1, p0, Lha3;->Y:Lbn3;
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lha3;->Z:Lnma;
+    move-result p1
 
-    invoke-interface {p0}, Lnma;->b()Ldf0;
+    if-nez p1, :cond_2
 
-    move-result-object p0
+    return v2
 
-    iget p0, p0, Ldf0;->l:I
+    :cond_2
+    return v0
+.end method
 
-    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+.method public final hashCode()I
+    .locals 1
 
-    const/high16 v1, -0x10000
+    iget-object v0, p0, Lha3;->a:Ljava/util/List;
 
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
+    move-result v0
 
-    invoke-static {p0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v2, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, p0, v2, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    const-string v1, "CombinedError(errors="
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v1, p0, Lha3;->a:Ljava/util/List;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,45 +1,114 @@
 .class public final synthetic Lkpg;
-.super Lvqb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcce;
 
-# static fields
-.field public static final a:Lkpg;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+.field public final synthetic c:Lxe6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;I)V
+    .locals 0
 
-    new-instance v0, Lkpg;
+    iput p3, p0, Lkpg;->a:I
 
-    const-string v1, "getFramesDropped()J"
+    iput-object p1, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lkpg;->c:Lxe6;
 
-    const-class v3, Lf1e;
-
-    const-string v4, "framesDropped"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lkpg;->a:Lkpg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 2
 
-    check-cast p1, Lf1e;
+    iget v0, p0, Lkpg;->a:I
 
-    iget-wide p0, p1, Lf1e;->s:J
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
 
-    move-result-object p0
+    iget-object v1, p0, Lkpg;->c:Lxe6;
 
-    return-object p0
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->h(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->e(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->n(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lkpg;->b:Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;
+
+    iget-object v1, p0, Lkpg;->c:Lxe6;
+
+    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->j(Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;Lxe6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

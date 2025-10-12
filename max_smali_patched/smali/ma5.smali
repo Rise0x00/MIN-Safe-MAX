@@ -3,146 +3,244 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnnf;
-.implements Ljz1;
-.implements La7b;
+.implements Lum7;
 
 
 # instance fields
-.field public a:Lnnf;
+.field public final a:[Ljava/lang/Enum;
 
-.field public b:Ljz1;
+.field public final b:Lja5;
 
-.field public c:Lnnf;
+.field public final c:Ls5f;
 
-.field public o:Ljz1;
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/Enum;Lja5;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lma5;->a:[Ljava/lang/Enum;
+
+    new-instance p2, Lu55;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p2, p0, v0, p1}, Lu55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ls5f;
+
+    invoke-direct {p1, p2}, Ls5f;-><init>(Lve6;)V
+
+    iput-object p1, p0, Lma5;->c:Ls5f;
+
+    iput-object p3, p0, Lma5;->b:Lja5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final a(Lp8;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x7
+    invoke-virtual {p0}, Lma5;->d()Ldsd;
 
-    if-eq p1, v0, :cond_3
+    move-result-object v0
 
-    const/16 v0, 0x8
+    iget-object v1, p1, Lp8;->b:Ljava/lang/Object;
 
-    if-eq p1, v0, :cond_2
+    check-cast v1, Lwk7;
 
-    const/16 v0, 0x2710
+    invoke-virtual {p1}, Lp8;->v()Ljava/lang/String;
 
-    if-eq p1, v0, :cond_0
+    move-result-object v2
 
-    return-void
+    iget-object p1, p1, Lp8;->d:Ljava/lang/Object;
 
-    :cond_0
-    check-cast p2, Lqzd;
+    check-cast p1, Lqof;
 
-    if-nez p2, :cond_1
+    iget-object p1, p1, Lqof;->o:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    check-cast p1, Lvc6;
 
-    iput-object p1, p0, Lma5;->c:Lnnf;
-
-    iput-object p1, p0, Lma5;->o:Ljz1;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p2}, Lqzd;->getVideoFrameMetadataListener()Lnnf;
+    invoke-virtual {p1}, Lvc6;->K()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lma5;->c:Lnnf;
+    const-string v3, " at path "
 
-    invoke-virtual {p2}, Lqzd;->getCameraMotionListener()Ljz1;
+    invoke-virtual {v3, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lma5;->o:Ljz1;
+    invoke-static {v0, v1, v2, p1}, Lo7;->k(Ldsd;Lwk7;Ljava/lang/String;Ljava/lang/String;)I
 
-    return-void
+    move-result p1
 
-    :cond_2
-    check-cast p2, Ljz1;
+    iget-object v0, p0, Lma5;->a:[Ljava/lang/Enum;
 
-    iput-object p2, p0, Lma5;->b:Ljz1;
+    if-ltz p1, :cond_0
 
-    return-void
+    array-length v1, v0
 
-    :cond_3
-    check-cast p2, Lnnf;
+    if-ge p1, v1, :cond_0
 
-    iput-object p2, p0, Lma5;->a:Lnnf;
+    aget-object p1, v0, p1
 
-    return-void
+    return-object p1
+
+    :cond_0
+    new-instance v1, Lkotlinx/serialization/SerializationException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not among valid "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lma5;->d()Ldsd;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ldsd;->a()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " enum values, values size is "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    array-length p1, v0
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
-.method public final b(J[F)V
+.method public final b(Le04;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p2, Ljava/lang/Enum;
+
+    iget-object v0, p0, Lma5;->a:[Ljava/lang/Enum;
+
+    invoke-static {v0, p2}, Lhs;->k0([Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {p0}, Lma5;->d()Ldsd;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p2, v1}, Ldsd;->g(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Le04;->k(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/SerializationException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, " is not a valid enum "
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lma5;->d()Ldsd;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ldsd;->a()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, ", must be one of "
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()Ldsd;
     .locals 1
 
-    iget-object v0, p0, Lma5;->o:Ljz1;
+    iget-object v0, p0, Lma5;->c:Ls5f;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v0, p1, p2, p3}, Ljz1;->b(J[F)V
+    move-result-object v0
 
-    :cond_0
-    iget-object p0, p0, Lma5;->b:Ljz1;
+    check-cast v0, Ldsd;
 
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p1, p2, p3}, Ljz1;->b(J[F)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method
 
-.method public final c()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-object v0, p0, Lma5;->o:Ljz1;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, "kotlinx.serialization.internal.EnumSerializer<"
 
-    invoke-interface {v0}, Ljz1;->c()V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    iget-object p0, p0, Lma5;->b:Ljz1;
+    invoke-virtual {p0}, Lma5;->d()Ldsd;
 
-    if-eqz p0, :cond_1
+    move-result-object v1
 
-    invoke-interface {p0}, Ljz1;->c()V
+    invoke-interface {v1}, Ldsd;->a()Ljava/lang/String;
 
-    :cond_1
-    return-void
-.end method
+    move-result-object v1
 
-.method public final d(JJLn26;Landroid/media/MediaFormat;)V
-    .locals 7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lma5;->c:Lnnf;
+    const/16 v1, 0x3e
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-wide v1, p1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-wide v3, p3
+    move-result-object v0
 
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Lnnf;->d(JJLn26;Landroid/media/MediaFormat;)V
-
-    :cond_0
-    iget-object p0, p0, Lma5;->a:Lnnf;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface/range {p0 .. p6}, Lnnf;->d(JJLn26;Landroid/media/MediaFormat;)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

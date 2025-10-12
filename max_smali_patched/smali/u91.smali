@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lve6;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lu91;->a:I
 
@@ -36,18 +36,18 @@
 
     new-instance v0, Lw91;
 
-    iget-object p0, p0, Lu91;->b:Laa1;
+    iget-object v1, p0, Lu91;->b:Laa1;
 
-    invoke-direct {v0, p0}, Lw91;-><init>(Laa1;)V
+    invoke-direct {v0, v1}, Lw91;-><init>(Laa1;)V
 
     return-object v0
 
     :pswitch_0
     new-instance v0, Lv91;
 
-    iget-object p0, p0, Lu91;->b:Laa1;
+    iget-object v1, p0, Lu91;->b:Laa1;
 
-    invoke-direct {v0, p0}, Lv91;-><init>(Laa1;)V
+    invoke-direct {v0, v1}, Lv91;-><init>(Laa1;)V
 
     return-object v0
 

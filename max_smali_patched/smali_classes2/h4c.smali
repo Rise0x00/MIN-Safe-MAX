@@ -1,206 +1,200 @@
-.class public abstract Lh4c;
-.super Ljava/lang/Object;
+.class public final Lh4c;
+.super Lm3f;
+.source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static chat_screen__bot_cleared_history__subtitle:I = 0x7f130344
 
-.field public static chat_screen__bot_cleared_history_state__title:I = 0x7f130345
+# instance fields
+.field public X:I
 
-.field public static chat_screen__bot_empty_state__subtitle:I = 0x7f130346
+.field public final synthetic Y:Lp4c;
 
-.field public static chat_screen__bot_empty_state__title:I = 0x7f130347
 
-.field public static chat_screen_action_copy:I = 0x7f130351
+# direct methods
+.method public constructor <init>(Lp4c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static chat_screen_action_copy_photo:I = 0x7f130352
+    iput-object p1, p0, Lh4c;->Y:Lp4c;
 
-.field public static chat_screen_action_copy_photo_failed:I = 0x7f130353
+    const/4 p1, 0x2
 
-.field public static chat_screen_action_copy_photo_success:I = 0x7f130354
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static chat_screen_action_delete:I = 0x7f130355
+    return-void
+.end method
 
-.field public static chat_screen_action_delete_for_all:I = 0x7f130356
 
-.field public static chat_screen_action_delete_for_me:I = 0x7f130357
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static chat_screen_action_edit:I = 0x7f130358
+    check-cast p1, Le34;
 
-.field public static chat_screen_action_forward:I = 0x7f130359
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static chat_screen_action_mark_as_unread:I = 0x7f13035a
+    invoke-virtual {p0, p1, p2}, Lh4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static chat_screen_action_pin:I = 0x7f13035b
+    move-result-object p1
 
-.field public static chat_screen_action_reply:I = 0x7f13035c
+    check-cast p1, Lh4c;
 
-.field public static chat_screen_action_report:I = 0x7f13035d
+    sget-object p2, Loyf;->a:Loyf;
 
-.field public static chat_screen_action_save_to_gallery:I = 0x7f13035e
+    invoke-virtual {p1, p2}, Lh4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static chat_screen_action_select:I = 0x7f13035f
+    move-result-object p1
 
-.field public static chat_screen_action_share_externally:I = 0x7f130360
+    return-object p1
+.end method
 
-.field public static chat_screen_action_share_post:I = 0x7f130361
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static chat_screen_action_share_post_success_copied:I = 0x7f130362
+    new-instance p1, Lh4c;
 
-.field public static chat_screen_action_unpin:I = 0x7f130363
+    iget-object v0, p0, Lh4c;->Y:Lp4c;
 
-.field public static chat_screen_attach_file_deleted:I = 0x7f130364
+    invoke-direct {p1, v0, p2}, Lh4c;-><init>(Lp4c;Lkotlin/coroutines/Continuation;)V
 
-.field public static chat_screen_attach_file_downloading_status:I = 0x7f130365
+    return-object p1
+.end method
 
-.field public static chat_screen_bot:I = 0x7f130366
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-.field public static chat_screen_confirmation_complain_body:I = 0x7f130368
+    iget-object v0, p0, Lh4c;->Y:Lp4c;
 
-.field public static chat_screen_confirmation_complain_title:I = 0x7f130369
+    iget-wide v1, v0, Lp4c;->b:J
 
-.field public static chat_screen_confirmation_delete_for_all:I = 0x7f13036a
+    iget v3, p0, Lh4c;->X:I
 
-.field public static chat_screen_confirmation_delete_for_me:I = 0x7f13036b
+    const/4 v4, 0x1
 
-.field public static chat_screen_confirmation_pin_title:I = 0x7f13036c
+    if-eqz v3, :cond_1
 
-.field public static chat_screen_confirmation_pin_with_notify_button:I = 0x7f13036d
+    if-ne v3, v4, :cond_0
 
-.field public static chat_screen_confirmation_pin_without_notify_button:I = 0x7f13036e
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-.field public static chat_screen_confirmation_replace_pin:I = 0x7f13036f
+    goto :goto_0
 
-.field public static chat_screen_confirmation_replace_pin_title:I = 0x7f130370
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static chat_screen_context_menu_toolbar_title:I = 0x7f130371
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static chat_screen_empty_dialog_state_subtitle:I = 0x7f130372
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static chat_screen_empty_dialog_state_title:I = 0x7f130373
+    throw p1
 
-.field public static chat_screen_folder_link_error_caption:I = 0x7f130376
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-.field public static chat_screen_folder_link_error_title:I = 0x7f130377
+    iget-object p1, v0, Lp4c;->Y:Lbp7;
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_1:I = 0x7f130378
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_2:I = 0x7f130379
+    move-result-object p1
 
-.field public static chat_screen_group_link_call_empty_state_subtitle_3:I = 0x7f13037a
+    check-cast p1, Lmm6;
 
-.field public static chat_screen_group_link_call_empty_state_title:I = 0x7f13037b
+    new-instance v3, Lx7c;
 
-.field public static chat_screen_message_audio_sender_self:I = 0x7f13037f
+    iget-object v5, v0, Lp4c;->X0:Lbp7;
 
-.field public static chat_screen_message_audio_title:I = 0x7f130380
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
 
-.field public static chat_screen_message_call_subtitle_audio:I = 0x7f130381
+    move-result-object v5
 
-.field public static chat_screen_message_call_subtitle_video:I = 0x7f130382
+    check-cast v5, Landroid/content/Context;
 
-.field public static chat_screen_message_call_title_incoming:I = 0x7f130383
+    sget-object v6, Lbx4;->y0:Lsed;
 
-.field public static chat_screen_message_call_title_missed:I = 0x7f130384
+    invoke-virtual {v6, v5}, Lsed;->k(Landroid/content/Context;)Lbx4;
 
-.field public static chat_screen_message_call_title_outgoing:I = 0x7f130385
+    move-result-object v5
 
-.field public static chat_screen_message_call_title_reject:I = 0x7f130386
+    invoke-virtual {v5}, Lbx4;->h()Luxa;
 
-.field public static chat_screen_message_contact_subtitle_added:I = 0x7f130387
+    move-result-object v5
 
-.field public static chat_screen_message_contact_subtitle_new:I = 0x7f130388
+    invoke-interface {v5}, Luxa;->getName()Ljava/lang/String;
 
-.field public static chat_screen_message_contact_subtitle_phone_book:I = 0x7f130389
+    move-result-object v5
 
-.field public static chat_screen_message_contact_subtitle_you:I = 0x7f13038a
+    invoke-direct {v3, v1, v2, v5}, Lz7c;-><init>(JLjava/lang/String;)V
 
-.field public static chat_screen_message_geo_subtitle:I = 0x7f13038b
+    iput v4, p0, Lh4c;->X:I
 
-.field public static chat_screen_message_geo_title:I = 0x7f13038c
+    invoke-virtual {p1, v3, v4, p0}, Lmm6;->a(Lz7c;ZLm3f;)Ljava/lang/Object;
 
-.field public static chat_screen_message_group_call:I = 0x7f13038d
+    move-result-object p1
 
-.field public static chat_screen_message_group_call_title:I = 0x7f13038e
+    sget-object v3, Lf34;->a:Lf34;
 
-.field public static chat_screen_message_resend_media_permission_error:I = 0x7f13038f
+    if-ne p1, v3, :cond_2
 
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f130390
+    return-object v3
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f130391
+    :cond_2
+    :goto_0
+    check-cast p1, Lt7c;
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f130392
+    sget-object v3, Loyf;->a:Loyf;
 
-.field public static chat_screen_message_send_error_title:I = 0x7f130393
+    if-eqz p1, :cond_5
 
-.field public static chat_screen_message_unpinned_snackbar:I = 0x7f130394
+    iget-object p1, p1, Lt7c;->b:Landroid/graphics/Bitmap;
 
-.field public static chat_screen_new_messages_decor_title:I = 0x7f130395
+    if-eqz p1, :cond_5
 
-.field public static chat_screen_read_participants_not_read_header:I = 0x7f130396
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-.field public static chat_screen_read_participants_read_header:I = 0x7f130397
+    move-result p1
 
-.field public static chat_screen_save_to_gallery_completed_gif_title:I = 0x7f130399
+    iget-object v5, v0, Lp4c;->c:Llub;
 
-.field public static chat_screen_save_to_gallery_completed_photo_title:I = 0x7f13039a
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-.field public static chat_screen_save_to_gallery_completed_video_title:I = 0x7f13039b
+    move-result v5
 
-.field public static chat_screen_save_to_gallery_failed_title:I = 0x7f13039c
+    if-eqz v5, :cond_4
 
-.field public static chat_screen_saved_messages_empty_state_subtitle:I = 0x7f13039d
+    if-eq v5, v4, :cond_4
 
-.field public static chat_screen_saved_messages_empty_state_title:I = 0x7f13039e
+    const/4 v4, 0x2
 
-.field public static chat_screen_service_notifications:I = 0x7f1303a0
+    if-ne v5, v4, :cond_3
 
-.field public static chat_screen_snackbar_report_success:I = 0x7f1303a1
+    const-string v4, "contact"
 
-.field public static chat_screen_toolbar_saved_messages_description:I = 0x7f1303a5
+    goto :goto_1
 
-.field public static message_link_forwarded:I = 0x7f1306a5
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-.field public static message_link_reply_audio:I = 0x7f1306a6
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.field public static message_link_reply_audio_call:I = 0x7f1306a7
+    throw p1
 
-.field public static message_link_reply_contact:I = 0x7f1306a8
+    :cond_4
+    const-string v4, "chat"
 
-.field public static message_link_reply_location:I = 0x7f1306a9
+    :goto_1
+    iget-object v0, v0, Lp4c;->H0:Ljb5;
 
-.field public static message_link_reply_video_call:I = 0x7f1306aa
+    sget-object v5, Ll1c;->c:Ll1c;
 
-.field public static messages_list_bot_button_request_contact_confirm_action:I = 0x7f1306b1
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static messages_list_bot_button_request_contact_confirm_description:I = 0x7f1306b2
+    invoke-static {v1, v2, v4, p1}, Ll1c;->i1(JLjava/lang/String;I)Lzc4;
 
-.field public static messages_list_bot_button_request_contact_confirm_title:I = 0x7f1306b3
+    move-result-object p1
 
-.field public static messages_list_channel_description_admin_subtitle:I = 0x7f1306b4
+    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
-.field public static messages_list_channel_description_admin_title:I = 0x7f1306b5
-
-.field public static messages_list_channel_description_private_subscriber_subtitle:I = 0x7f1306b6
-
-.field public static messages_list_channel_description_public_subscriber_subtitle:I = 0x7f1306b7
-
-.field public static messages_list_chat_description_view_owner_subtitle:I = 0x7f1306b8
-
-.field public static messages_list_chat_description_view_owner_title:I = 0x7f1306b9
-
-.field public static messages_list_chat_description_view_subtitle:I = 0x7f1306ba
-
-.field public static messages_list_contact_removed:I = 0x7f1306bb
-
-.field public static messages_list_date_status_edit:I = 0x7f1306bc
-
-.field public static messages_list_message_copy_with_sender_name:I = 0x7f1306bd
-
-.field public static messages_list_message_error_open_channel_private:I = 0x7f1306be
-
-.field public static messages_list_message_error_open_channel_removed:I = 0x7f1306bf
-
-.field public static messages_list_message_error_open_channel_unavailable:I = 0x7f1306c0
-
-.field public static messages_list_message_error_post_not_founded:I = 0x7f1306c1
+    :cond_5
+    return-object v3
+.end method

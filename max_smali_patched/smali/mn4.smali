@@ -1,39 +1,51 @@
-.class public final Lmn4;
-.super Ljava/lang/Object;
+.class public abstract Lmn4;
+.super Lqi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final b:Lqi0;
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method public constructor <init>(Lqi0;)V
+    .locals 0
 
-.field public d:I
+    invoke-direct {p0}, Lqi0;-><init>()V
 
-.field public e:Z
+    iput-object p1, p0, Lmn4;->b:Lqi0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 2
+.method public d()V
+    .locals 1
 
-    iget v0, p0, Lmn4;->c:I
+    iget-object v0, p0, Lmn4;->b:Lqi0;
 
-    iget v1, p0, Lmn4;->a:I
+    invoke-virtual {v0}, Lqi0;->c()V
 
-    sub-int/2addr v0, v1
+    return-void
+.end method
 
-    iget v1, p0, Lmn4;->d:I
+.method public f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget p0, p0, Lmn4;->b:I
+    iget-object v0, p0, Lmn4;->b:Lqi0;
 
-    sub-int/2addr v1, p0
+    invoke-virtual {v0, p1}, Lqi0;->e(Ljava/lang/Throwable;)V
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    return-void
+.end method
 
-    move-result p0
+.method public j(F)V
+    .locals 1
 
-    return p0
+    iget-object v0, p0, Lmn4;->b:Lqi0;
+
+    invoke-virtual {v0, p1}, Lqi0;->i(F)V
+
+    return-void
 .end method

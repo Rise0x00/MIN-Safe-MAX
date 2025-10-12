@@ -1,72 +1,94 @@
 .class public final Ltw3;
-.super Landroid/widget/TextView;
+.super Ltde;
 .source "SourceFile"
 
-# interfaces
-.implements Lfve;
 
+# virtual methods
+.method public final F(Lsw3;)V
+    .locals 3
 
-# instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
+    check-cast v0, Lbna;
 
-# direct methods
-.method public constructor <init>(Ldue;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p0, Ltw3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    sget v1, Lg9d;->I0:I
 
-    invoke-direct {p0, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lbna;->setIcon(I)V
 
-    sget-object p3, Lxbf;->m:Leue;
+    sget v1, Lala;->p:I
 
-    invoke-static {p3, p0}, Leue;->d(Leue;Landroid/widget/TextView;)V
+    new-instance v2, Ljef;
 
-    const/4 p3, 0x1
+    invoke-direct {v2, v1}, Ljef;-><init>(I)V
 
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setMaxLines(I)V
+    invoke-virtual {v0, v2}, Lbna;->setTitle(Loef;)V
 
-    sget-object p3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+    iget p1, p1, Lsw3;->a:I
 
-    invoke-virtual {p0, p3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+    new-instance v1, Ljef;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-direct {v1, p1}, Ljef;-><init>(I)V
 
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-static {p2}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->x0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lnma;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ltw3;->onThemeChanged(Lnma;)V
+    invoke-virtual {v0, v1}, Lbna;->setSubtitle(Loef;)V
 
     return-void
 .end method
 
+.method public final G(Ljava/lang/Integer;Lve6;)V
+    .locals 2
 
-# virtual methods
-.method public final onThemeChanged(Lnma;)V
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+
+    if-eqz p1, :cond_0
+
+    check-cast v0, Lbna;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Lh5;
+
+    invoke-direct {v1, p2}, Lh5;-><init>(Lve6;)V
+
+    invoke-virtual {v0, p1, v1}, Lbna;->v(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_0
+    check-cast v0, Lbna;
+
+    iget-object p1, v0, Lbna;->N0:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic x(Lww7;)V
     .locals 0
 
-    iget-object p1, p0, Ltw3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    check-cast p1, Lsw3;
 
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->x0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lnma;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lnma;->getText()Lqse;
-
-    move-result-object p1
-
-    iget p1, p1, Lqse;->h:I
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {p0, p1}, Ltw3;->F(Lsw3;)V
 
     return-void
 .end method

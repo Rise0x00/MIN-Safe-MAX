@@ -1,66 +1,56 @@
-.class public final Llfd;
-.super Lape;
+.class public final synthetic Llfd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/ScreenCapturerAndroid;
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
+.method public synthetic constructor <init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    iput p2, p0, Llfd;->a:I
+
+    iput-object p1, p0, Llfd;->b:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
+.method public final run()V
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Llfd;->a:I
 
-    const-string v0, "token"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Llfd;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lq09;->B()V
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->b(Lorg/webrtc/ScreenCapturerAndroid;)V
 
     return-void
 
-    :cond_0
-    invoke-virtual {p1}, Lq09;->D0()Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Llfd;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move-result-object p1
-
-    iput-object p1, p0, Llfd;->c:Ljava/lang/String;
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->a(Lorg/webrtc/ScreenCapturerAndroid;)V
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    nop
 
-    iget-object p0, p0, Llfd;->c:Ljava/lang/String;
-
-    invoke-static {p0}, Lno9;->v(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "{token=\'"
-
-    const-string v1, "\'}"
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

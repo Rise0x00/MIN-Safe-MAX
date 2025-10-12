@@ -1,112 +1,65 @@
-.class public final Les;
-.super Ljava/util/AbstractSet;
+.class public abstract Les;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljs;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    :try_start_0
+    const-string v0, "kotlinx.serialization.json.pool.size"
+
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lfye;->R(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lv3d;
+
+    invoke-direct {v1, v0}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_0
+    nop
+
+    instance-of v1, v0, Lv3d;
+
+    if-eqz v1, :cond_0
 
     const/4 v0, 0x0
 
-    iput v0, p0, Les;->a:I
+    :cond_0
+    check-cast v0, Ljava/lang/Integer;
 
-    .line 3
-    iput-object p1, p0, Les;->b:Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    return-void
-.end method
+    move-result v0
 
-.method public constructor <init>([Llif;)V
-    .locals 1
+    goto :goto_1
 
-    const/4 v0, 0x1
+    :cond_1
+    const/high16 v0, 0x200000
 
-    iput v0, p0, Les;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Les;->b:Ljava/lang/Object;
+    :goto_1
+    sput v0, Les;->a:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
-
-    iget v0, p0, Les;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Loz6;
-
-    iget-object p0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast p0, [Llif;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Loz6;-><init>([Llif;I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lhs;
-
-    iget-object p0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljs;
-
-    invoke-direct {v0, p0}, Lhs;-><init>(Ljs;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Les;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast p0, [Llif;
-
-    array-length p0, p0
-
-    div-int/lit8 p0, p0, 0x2
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Les;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljs;
-
-    iget p0, p0, Lntd;->c:I
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,54 +1,82 @@
-.class public abstract Lkxb;
-.super Ljava/lang/Object;
+.class public final Lkxb;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f0802eb
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static emoji_sprite_1:I = 0x7f0802ec
+.field public final synthetic Y:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static emoji_sprite_10:I = 0x7f0802ed
 
-.field public static emoji_sprite_11:I = 0x7f0802ee
+# direct methods
+.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static emoji_sprite_12:I = 0x7f0802ef
+    iput-object p1, p0, Lkxb;->Y:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static emoji_sprite_13:I = 0x7f0802f0
+    const/4 p1, 0x2
 
-.field public static emoji_sprite_14:I = 0x7f0802f1
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static emoji_sprite_15:I = 0x7f0802f2
+    return-void
+.end method
 
-.field public static emoji_sprite_16:I = 0x7f0802f3
 
-.field public static emoji_sprite_17:I = 0x7f0802f4
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static emoji_sprite_18:I = 0x7f0802f5
+    check-cast p1, Ljava/util/List;
 
-.field public static emoji_sprite_19:I = 0x7f0802f6
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static emoji_sprite_2:I = 0x7f0802f7
+    invoke-virtual {p0, p1, p2}, Lkxb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static emoji_sprite_20:I = 0x7f0802f8
+    move-result-object p1
 
-.field public static emoji_sprite_21:I = 0x7f0802f9
+    check-cast p1, Lkxb;
 
-.field public static emoji_sprite_22:I = 0x7f0802fa
+    sget-object p2, Loyf;->a:Loyf;
 
-.field public static emoji_sprite_23:I = 0x7f0802fb
+    invoke-virtual {p1, p2}, Lkxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static emoji_sprite_24:I = 0x7f0802fc
+    return-object p2
+.end method
 
-.field public static emoji_sprite_3:I = 0x7f0802fd
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static emoji_sprite_4:I = 0x7f0802fe
+    new-instance v0, Lkxb;
 
-.field public static emoji_sprite_5:I = 0x7f0802ff
+    iget-object v1, p0, Lkxb;->Y:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static emoji_sprite_6:I = 0x7f080300
+    invoke-direct {v0, v1, p2}, Lkxb;-><init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
 
-.field public static emoji_sprite_7:I = 0x7f080301
+    iput-object p1, v0, Lkxb;->X:Ljava/lang/Object;
 
-.field public static emoji_sprite_8:I = 0x7f080302
+    return-object v0
+.end method
 
-.field public static emoji_sprite_9:I = 0x7f080303
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkxb;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lkxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+
+    iget-object v0, v0, Lone/me/profileedit/ProfileEditScreen;->X:Ln4h;
+
+    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+.end method

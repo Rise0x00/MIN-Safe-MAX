@@ -1,326 +1,251 @@
 .class public final Lu69;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lu69;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/List;
-
-.field public final synthetic Y:Ly79;
+.field public final a:Lr69;
 
 
 # direct methods
-.method public constructor <init>(Ly79;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ltc8;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
+
+    sput-object v0, Lu69;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 14
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-static {p1}, Lhxf;->N(Landroid/os/Parcel;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 5
+    const-class v0, Ln79;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Ln79;
+
+    .line 6
+    iget-object v5, v0, Ln79;->a:Lw29;
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    move v9, v0
+
+    goto :goto_1
+
+    .line 13
+    :cond_0
+    const-string v1, "PUBLIC"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 14
+    :goto_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v10
+
+    .line 15
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v12
+
+    .line 16
+    new-instance v1, Lr69;
+
+    invoke-direct/range {v1 .. v13}, Lr69;-><init>(IJLw29;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJ)V
+
+    iput-object v1, p0, Lu69;->a:Lr69;
+
+    return-void
+
+    :cond_2
+    const/4 p1, 0x0
+
+    .line 17
+    iput-object p1, p0, Lu69;->a:Lr69;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr69;)V
     .locals 0
 
-    iput-object p2, p0, Lu69;->X:Ljava/util/List;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu69;->Y:Ly79;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 2
+    iput-object p1, p0, Lu69;->a:Lr69;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lu69;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lu69;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lu69;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final describeContents()I
     .locals 1
 
-    new-instance p1, Lu69;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lu69;->X:Ljava/util/List;
-
-    iget-object p0, p0, Lu69;->Y:Ly79;
-
-    invoke-direct {p1, p0, v0, p2}, Lu69;-><init>(Ly79;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v0, p0, Lu69;->a:Lr69;
 
-    iget-object p1, p0, Lu69;->X:Ljava/util/List;
+    if-nez v0, :cond_0
 
-    invoke-static {p1}, Lg73;->q0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    sget-object v0, Ltcf;->a:Ltcf;
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    iget-object p0, p0, Lu69;->Y:Ly79;
-
-    iget-object p1, p0, Ly79;->p1:Ljbc;
-
-    iget-object p1, p1, Ljbc;->a:Lj4e;
-
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lu49;
-
-    invoke-interface {p1, v1, v2}, Lz49;->e(J)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    iget-object v1, p0, Ly79;->n1:Ljbc;
-
-    iget-object v1, v1, Ljbc;->a:Lj4e;
-
-    invoke-interface {v1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll72;
-
-    if-nez v1, :cond_1
-
-    goto/16 :goto_2
-
-    :cond_1
-    iget-object v2, v1, Ll72;->b:Lxb2;
-
-    invoke-virtual {v1}, Ll72;->H()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    goto/16 :goto_2
-
-    :cond_2
-    iget-object v3, p0, Ly79;->P0:Lth7;
-
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Luk;
-
-    iget-object v4, v2, Lxb2;->H:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ll72;->Y()Z
-
-    move-result v1
-
-    iget-wide v5, v2, Lxb2;->a:J
-
-    iget-wide v7, p1, Lone/me/messages/list/loader/MessageModel;->b:J
-
-    check-cast v3, Lbp7;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    const-string v2, ""
-
-    if-eqz p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    if-eqz v1, :cond_4
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object p1
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v3, "c/%d"
-
-    invoke-static {p1, v3, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
+    const/4 v1, 0x1
 
     goto :goto_0
 
-    :cond_4
-    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
-
-    move-result-object p1
+    :cond_0
+    const/4 v1, 0x0
 
     :goto_0
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
-    move-result v1
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_5
+    new-instance v1, Ln79;
+
+    iget-object v2, v0, Lr69;->c:Lw29;
+
+    invoke-direct {v1, v2}, Ln79;-><init>(Lw29;)V
+
+    invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget p2, v0, Lr69;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-wide v1, v0, Lr69;->b:J
+
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, v0, Lr69;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, v0, Lr69;->e:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, v0, Lr69;->f:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget p2, v0, Lr69;->g:I
+
+    if-eqz p2, :cond_1
+
+    invoke-static {p2}, Lgy1;->q(I)Ljava/lang/String;
+
+    move-result-object p2
 
     goto :goto_1
 
-    :cond_5
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "https://max.ru/"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "/"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/16 v1, 0x8
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v7, v8}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    :try_start_0
-    new-instance v2, Ljava/lang/String;
-
-    const/16 v3, 0xb
-
-    invoke-static {v3, v1}, Lfog;->r(I[B)[B
-
-    move-result-object v1
-
-    const-string v3, "US-ASCII"
-
-    invoke-direct {v2, v1, v3}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
+    :cond_1
+    const/4 p2, 0x0
 
     :goto_1
-    iget-object p1, p0, Ly79;->z0:Lth7;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    iget-wide v1, v0, Lr69;->h:J
 
-    move-result-object p1
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeLong(J)V
 
-    check-cast p1, Landroid/app/Application;
+    iget-wide v0, v0, Lr69;->i:J
 
-    invoke-static {p1, v2}, Lxu7;->k(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-static {}, Lxu7;->y()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    iget-object p0, p0, Ly79;->t1:Lt65;
-
-    new-instance p1, Lord;
-
-    sget v1, Lh4c;->chat_screen_action_share_post_success_copied:I
-
-    new-instance v2, Lyte;
-
-    invoke-direct {v2, v1}, Lyte;-><init>(I)V
-
-    sget v1, Losc;->z:I
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x4
-
-    invoke-direct {p1, v2, v1, v3, v4}, Lord;-><init>(Ldue;ILyte;I)V
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    return-object v0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :cond_6
-    :goto_2
-    return-object v0
+    :cond_2
+    return-void
 .end method

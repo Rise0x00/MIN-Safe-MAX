@@ -1,6 +1,8 @@
-.class public abstract Lgce;
-.super Lehc;
+.class public interface abstract Lgce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpqe;
+
+# virtual methods
+.method public abstract a()Lorg/json/JSONObject;
+.end method

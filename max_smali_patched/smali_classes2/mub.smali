@@ -1,128 +1,145 @@
-.class public final synthetic Lmub;
-.super Ljava/lang/Object;
+.class public final Lmub;
+.super Lgd4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
+# static fields
+.field public static final b:Lmub;
 
-# instance fields
-.field public final synthetic X:F
+.field public static final c:Lbd4;
 
-.field public final synthetic Y:Landroid/view/View;
+.field public static final d:Lbd4;
 
-.field public final synthetic a:I
+.field public static final e:Lbd4;
 
-.field public final synthetic b:F
+.field public static final f:Lbd4;
 
-.field public final synthetic c:F
+.field public static final g:Lbd4;
 
-.field public final synthetic o:F
+.field public static final h:Lbd4;
+
+.field public static final i:Lbd4;
+
+.field public static final j:Lbd4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
-    .locals 0
-
-    iput p6, p0, Lmub;->a:I
-
-    iput-object p1, p0, Lmub;->Y:Landroid/view/View;
-
-    iput p2, p0, Lmub;->b:F
-
-    iput p3, p0, Lmub;->c:F
-
-    iput p4, p0, Lmub;->o:F
-
-    iput p5, p0, Lmub;->X:F
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method static constructor <clinit>()V
     .locals 7
 
-    iget v0, p0, Lmub;->a:I
+    new-instance v0, Lmub;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lgd4;-><init>()V
 
-    iget-object v0, p0, Lmub;->Y:Landroid/view/View;
+    sput-object v0, Lmub;->b:Lmub;
 
-    check-cast v0, Lqpf;
+    const-string v1, "id"
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    const-string v2, "type"
 
-    move-result p1
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    iget v1, p0, Lmub;->c:F
+    move-result-object v3
 
-    iget v2, p0, Lmub;->b:F
+    const-string v4, ":profile/avatars"
 
-    invoke-static {v1, v2, p1, v2}, Ljq9;->e(FFFF)F
+    const/4 v5, 0x0
 
-    move-result v1
+    const/16 v6, 0xe
 
-    iput v1, v0, Lqpf;->B0:F
+    invoke-static {v0, v4, v3, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
 
-    iget v1, p0, Lmub;->X:F
+    move-result-object v3
 
-    iget p0, p0, Lmub;->o:F
+    sput-object v3, Lmub;->c:Lbd4;
 
-    invoke-static {v1, p0, p1, p0}, Ljq9;->e(FFFF)F
+    const-string v3, ":profile"
 
-    move-result p0
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
-    iput p0, v0, Lqpf;->A0:F
+    move-result-object v4
 
-    iget-object p1, v0, Lqpf;->q0:Landroid/graphics/Paint;
+    invoke-static {v0, v3, v4, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    move-result-object v3
 
-    iget-object p0, v0, Lqpf;->o:Landroid/graphics/Paint;
+    sput-object v3, Lmub;->d:Lbd4;
 
-    iget p1, v0, Lqpf;->A0:F
+    const-string v3, ":profile/attaches"
 
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    move-result-object v4
+
+    invoke-static {v0, v3, v4, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v3
+
+    sput-object v3, Lmub;->e:Lbd4;
+
+    const-string v3, ":profile/members"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v3, v2, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v2
+
+    sput-object v2, Lmub;->f:Lbd4;
+
+    const-string v2, ":profile/invite"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v1
+
+    sput-object v1, Lmub;->g:Lbd4;
+
+    const-string v1, "chat_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":profile/add-admins"
+
+    invoke-static {v0, v3, v2, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v2
+
+    sput-object v2, Lmub;->h:Lbd4;
+
+    const-string v2, "is_chat"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":profile/add-members"
+
+    invoke-static {v0, v3, v2, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v2
+
+    sput-object v2, Lmub;->i:Lbd4;
+
+    const-string v2, ":profile/change-owner"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+
+    move-result-object v0
+
+    sput-object v0, Lmub;->j:Lbd4;
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmub;->Y:Landroid/view/View;
-
-    move-object v1, v0
-
-    check-cast v1, Lqub;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v6
-
-    iget v2, p0, Lmub;->b:F
-
-    iget v3, p0, Lmub;->c:F
-
-    iget v4, p0, Lmub;->o:F
-
-    iget v5, p0, Lmub;->X:F
-
-    invoke-static/range {v1 .. v6}, Lqub;->b(Lqub;FFFFF)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

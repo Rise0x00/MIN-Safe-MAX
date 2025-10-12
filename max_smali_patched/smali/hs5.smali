@@ -1,49 +1,73 @@
 .class public final Lhs5;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lhy2;
+.field public final a:Ljava/security/Signature;
 
-.field public Y:I
+.field public final b:Ljavax/crypto/Cipher;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljavax/crypto/Mac;
 
 
 # direct methods
-.method public constructor <init>(Lhy2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/security/Signature;)V
     .locals 0
 
-    iput-object p1, p0, Lhs5;->X:Lhy2;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 2
+    iput-object p1, p0, Lhs5;->a:Ljava/security/Signature;
+
+    const/4 p1, 0x0
+
+    .line 3
+    iput-object p1, p0, Lhs5;->b:Ljavax/crypto/Cipher;
+
+    .line 4
+    iput-object p1, p0, Lhs5;->c:Ljavax/crypto/Mac;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljavax/crypto/Cipher;)V
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhs5;->o:Ljava/lang/Object;
+    .line 6
+    iput-object p1, p0, Lhs5;->b:Ljavax/crypto/Cipher;
 
-    iget p1, p0, Lhs5;->Y:I
+    const/4 p1, 0x0
 
-    const/high16 v0, -0x80000000
+    .line 7
+    iput-object p1, p0, Lhs5;->a:Ljava/security/Signature;
 
-    or-int/2addr p1, v0
+    .line 8
+    iput-object p1, p0, Lhs5;->c:Ljavax/crypto/Mac;
 
-    iput p1, p0, Lhs5;->Y:I
+    return-void
+.end method
 
-    iget-object p1, p0, Lhs5;->X:Lhy2;
+.method public constructor <init>(Ljavax/crypto/Mac;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, v0, p0}, Lhy2;->b(Lbq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .line 10
+    iput-object p1, p0, Lhs5;->c:Ljavax/crypto/Mac;
 
-    move-result-object p0
+    const/4 p1, 0x0
 
-    return-object p0
+    .line 11
+    iput-object p1, p0, Lhs5;->b:Ljavax/crypto/Cipher;
+
+    .line 12
+    iput-object p1, p0, Lhs5;->a:Ljava/security/Signature;
+
+    return-void
 .end method

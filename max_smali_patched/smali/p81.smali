@@ -1,130 +1,83 @@
-.class public final Lp81;
-.super Lt2;
+.class public final synthetic Lp81;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxe6;
 
-# static fields
-.field public static final c:Lp81;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lq81;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lq81;I)V
+    .locals 0
 
-    new-instance v0, Lp81;
+    iput p2, p0, Lp81;->a:I
 
-    const/4 v1, 0x7
+    iput-object p1, p0, Lp81;->b:Lq81;
 
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
-
-    sput-object v0, Lp81;->c:Lp81;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w0(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/CharSequence;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lp81;->a:I
 
-    const-string v1, ":call-history-info?is_link_call=true"
+    check-cast p1, Luxa;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Lp81;->c:Lp81;
+    sget-object p1, Lbx4;->y0:Lsed;
 
-    if-eqz p2, :cond_0
+    iget-object v0, p0, Lp81;->b:Lq81;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
 
-    const-string v2, "&call_link="
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    if-eqz p3, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v2, "&call_title="
-
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string p3, "&call_chat_id="
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Luxa;->b()Lue0;
 
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 p1, 0x0
 
-    move-result-object p1
-
-    invoke-virtual {p0}, Lt2;->o0()Lca4;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Lca4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-.end method
-
-.method public final x0(JJ)V
-    .locals 2
-
-    const-string v0, ":chats?id="
-
-    const-string v1, "&type=local&message_id="
-
-    invoke-static {p1, p2, v0, v1}, Ldw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    const-string p2, "&highlight_message=true"
+    return-object p1
 
-    invoke-static {p1, p3, p4, p2}, Lw68;->n(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    sget-object p1, Lbx4;->y0:Lsed;
+
+    iget-object v0, p0, Lp81;->b:Lq81;
+
+    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
+
+    invoke-virtual {p1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lt2;->o0()Lca4;
+    invoke-interface {p1}, Luxa;->getIcon()Lk27;
 
-    move-result-object p0
+    const/4 p1, -0x1
 
-    const/4 p2, 0x0
+    goto :goto_0
 
-    invoke-virtual {p0, p1, p2}, Lca4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    nop
 
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

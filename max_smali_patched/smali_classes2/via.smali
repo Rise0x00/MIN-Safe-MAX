@@ -1,85 +1,85 @@
-.class public abstract Lvia;
-.super Ljava/lang/Object;
+.class public final enum Lvia;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Lvia;
 
-.field public static final b:I
+.field public static final enum b:Lvia;
 
-.field public static final c:I
+.field public static final enum c:Lvia;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public static final synthetic o:[Lvia;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    sget v0, Ll0c;->oneme_stickers_sticker_first_frame:I
+    new-instance v0, Lvia;
 
-    sput v0, Lvia;->a:I
+    const-string v1, "STANDARD"
 
-    sget v0, Ll0c;->oneme_stickers_sticker_lottie:I
+    const/4 v2, 0x0
 
-    sput v0, Lvia;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Ll0c;->oneme_stickers_sticker_set_header_button:I
+    sput-object v0, Lvia;->a:Lvia;
 
-    sput v0, Lvia;->c:I
+    new-instance v1, Lvia;
 
-    sget v0, Ll0c;->oneme_stickers_sticker_set_header_subtitle:I
+    const-string v2, "ICON"
 
-    sput v0, Lvia;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Ll0c;->oneme_stickers_sticker_set_header_title:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lvia;->e:I
+    sput-object v1, Lvia;->b:Lvia;
 
-    sget v0, Ll0c;->oneme_stickers_sticker_set_list:I
+    new-instance v2, Lvia;
 
-    sput v0, Lvia;->f:I
+    const-string v3, "PROGRESS_BAR"
 
-    sget v0, Ll0c;->oneme_stickers_sticker_webm:I
+    const/4 v4, 0x2
 
-    sput v0, Lvia;->g:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Ll0c;->oneme_stickers_view_type_sticker:I
+    sput-object v2, Lvia;->c:Lvia;
 
-    sput v0, Lvia;->h:I
+    filled-new-array {v0, v1, v2}, [Lvia;
 
-    sget v0, Ll0c;->oneme_stickers_view_type_sticker_lottie:I
+    move-result-object v0
 
-    sput v0, Lvia;->i:I
-
-    sget v0, Ll0c;->oneme_stickers_view_type_sticker_webm:I
-
-    sput v0, Lvia;->j:I
-
-    sget v0, Ll0c;->oneme_stickers_view_type_stickers_set:I
-
-    sput v0, Lvia;->k:I
-
-    sget v0, Ll0c;->oneme_stickers_view_type_stickers_set_showcase:I
-
-    sput v0, Lvia;->l:I
+    sput-object v0, Lvia;->o:[Lvia;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lvia;
+    .locals 1
+
+    const-class v0, Lvia;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lvia;
+
+    return-object p0
+.end method
+
+.method public static values()[Lvia;
+    .locals 1
+
+    sget-object v0, Lvia;->o:[Lvia;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lvia;
+
+    return-object v0
 .end method

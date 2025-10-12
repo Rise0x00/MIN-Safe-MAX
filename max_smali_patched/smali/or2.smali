@@ -1,48 +1,57 @@
 .class public final Lor2;
-.super Lax3;
+.super Lv2;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lxl1;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final c:Lor2;
 
 
 # direct methods
-.method public constructor <init>(Lxl1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lor2;->Y:Lxl1;
+    new-instance v0, Lor2;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+
+    sput-object v0, Lor2;->c:Lor2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final c1(JZ)V
+    .locals 3
 
-    iput-object p1, p0, Lor2;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Lv2;->K0()Ldd4;
 
-    iget p1, p0, Lor2;->X:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    or-int/2addr p1, v0
+    const-string v2, ":call-user?opponent_id="
 
-    iput p1, p0, Lor2;->X:I
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lor2;->Y:Lxl1;
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string p1, "&video_enabled="
 
-    invoke-virtual {p1, v0, p0}, Lxl1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-object p0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {v0, p1, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
 .end method

@@ -1,6 +1,13 @@
-.class public abstract Lide;
-.super Ljava/lang/Object;
+.class public final Lide;
+.super Lg0;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# virtual methods
+.method public final l(Ljava/lang/Object;ZLjava/util/Map;)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method

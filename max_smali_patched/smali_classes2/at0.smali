@@ -6,239 +6,159 @@
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:I
-
 
 # direct methods
-.method public constructor <init>(IIIIIIIIIIIIIII)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lat0;->a:I
 
-    iput p2, p0, Lat0;->b:I
-
-    iput p3, p0, Lat0;->c:I
-
-    iput p4, p0, Lat0;->d:I
-
-    iput p5, p0, Lat0;->e:I
-
-    iput p6, p0, Lat0;->f:I
-
-    iput p7, p0, Lat0;->g:I
-
-    iput p8, p0, Lat0;->h:I
-
-    iput p9, p0, Lat0;->i:I
-
-    iput p10, p0, Lat0;->j:I
-
-    iput p11, p0, Lat0;->k:I
-
-    iput p12, p0, Lat0;->l:I
-
-    iput p13, p0, Lat0;->m:I
-
-    iput p14, p0, Lat0;->n:I
-
-    iput p15, p0, Lat0;->o:I
-
     return-void
+.end method
+
+.method public static final a(I)Z
+    .locals 1
+
+    const/high16 v0, 0x4000000
+
+    and-int/2addr p0, v0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static b(I)Ljava/lang/String;
+    .locals 3
+
+    const/high16 v0, 0x10000000
+
+    and-int/2addr v0, p0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "First"
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x20000000
+
+    and-int/2addr v0, p0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "Middle"
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v0, 0x40000000    # 2.0f
+
+    and-int/2addr v0, p0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "Last"
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 v0, 0x8000000
+
+    and-int/2addr v0, p0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "Single"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v0, "unknown!"
+
+    :goto_0
+    invoke-static {p0}, Lat0;->a(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    const/16 p0, 0x2193
+
+    goto :goto_1
+
+    :cond_4
+    const/16 p0, 0x2191
+
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "BubbleType("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
-    if-ne p0, p1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
     instance-of v0, p1, Lat0;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     check-cast p1, Lat0;
+
+    iget p1, p1, Lat0;->a:I
 
     iget v0, p0, Lat0;->a:I
 
-    iget v1, p1, Lat0;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget v0, p0, Lat0;->b:I
-
-    iget v1, p1, Lat0;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget v0, p0, Lat0;->c:I
-
-    iget v1, p1, Lat0;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lat0;->d:I
-
-    iget v1, p1, Lat0;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lat0;->e:I
-
-    iget v1, p1, Lat0;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lat0;->f:I
-
-    iget v1, p1, Lat0;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lat0;->g:I
-
-    iget v1, p1, Lat0;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Lat0;->h:I
-
-    iget v1, p1, Lat0;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget v0, p0, Lat0;->i:I
-
-    iget v1, p1, Lat0;->i:I
-
-    if-eq v0, v1, :cond_a
-
-    goto :goto_0
-
-    :cond_a
-    iget v0, p0, Lat0;->j:I
-
-    iget v1, p1, Lat0;->j:I
-
-    if-eq v0, v1, :cond_b
-
-    goto :goto_0
-
-    :cond_b
-    iget v0, p0, Lat0;->k:I
-
-    iget v1, p1, Lat0;->k:I
-
-    if-eq v0, v1, :cond_c
-
-    goto :goto_0
-
-    :cond_c
-    iget v0, p0, Lat0;->l:I
-
-    iget v1, p1, Lat0;->l:I
-
-    if-eq v0, v1, :cond_d
-
-    goto :goto_0
-
-    :cond_d
-    iget v0, p0, Lat0;->m:I
-
-    iget v1, p1, Lat0;->m:I
-
-    if-eq v0, v1, :cond_e
-
-    goto :goto_0
-
-    :cond_e
-    iget v0, p0, Lat0;->n:I
-
-    iget v1, p1, Lat0;->n:I
-
-    if-eq v0, v1, :cond_f
-
-    goto :goto_0
-
-    :cond_f
-    iget p0, p0, Lat0;->o:I
-
-    iget p1, p1, Lat0;->o:I
-
-    if-eq p0, p1, :cond_10
+    if-eq v0, p1, :cond_1
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
-    :cond_10
-    :goto_1
-    const/4 p0, 0x1
+    :cond_1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
     iget v0, p0, Lat0;->a:I
 
@@ -246,183 +166,17 @@
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lat0;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->c:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->d:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->e:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->f:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->g:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->h:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->i:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->j:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->k:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->l:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->m:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lat0;->n:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Lat0;->o:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    const-string v0, ", actionSecondary="
+    iget v0, p0, Lat0;->a:I
 
-    const-string v1, ", alert="
-
-    const-string v2, "BubbleIconColors(action="
-
-    iget v3, p0, Lat0;->a:I
-
-    iget v4, p0, Lat0;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lat0;->b(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", callNegative="
-
-    const-string v2, ", callNeutral="
-
-    iget v3, p0, Lat0;->c:I
-
-    iget v4, p0, Lat0;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", iconItem="
-
-    const-string v2, ", readStatus="
-
-    iget v3, p0, Lat0;->e:I
-
-    iget v4, p0, Lat0;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", readStatusCapsule="
-
-    const-string v2, ", reply="
-
-    iget v3, p0, Lat0;->g:I
-
-    iget v4, p0, Lat0;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", replyForwarded="
-
-    const-string v2, ", verificationAuthor="
-
-    iget v3, p0, Lat0;->i:I
-
-    iget v4, p0, Lat0;->j:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", verificationBody="
-
-    const-string v2, ", verificationForwardName="
-
-    iget v3, p0, Lat0;->k:I
-
-    iget v4, p0, Lat0;->l:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", verificationReplyBody="
-
-    const-string v2, ", verificationReplyName="
-
-    iget v3, p0, Lat0;->m:I
-
-    iget v4, p0, Lat0;->n:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget p0, p0, Lat0;->o:I
-
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -1,126 +1,80 @@
-.class public final Ljcg;
-.super Leje;
+.class public final synthetic Ljcg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lqcg;
+.field public final synthetic b:Lmcg;
 
 
 # direct methods
-.method public constructor <init>(Lqcg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lmcg;I)V
     .locals 0
 
-    iput-object p1, p0, Ljcg;->Y:Lqcg;
+    iput p2, p0, Ljcg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ljcg;->b:Lmcg;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    check-cast p1, Lp04;
+    iget v0, p0, Ljcg;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ljcg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljcg;
+    check-cast p1, Ljava/lang/Float;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p0, p1}, Ljcg;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p0
+    iget-object v0, p0, Ljcg;->b:Lmcg;
 
-    return-object p0
-.end method
+    iput p1, v0, Lmcg;->F0:F
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    new-instance p1, Ljcg;
+    return-void
 
-    iget-object p0, p0, Ljcg;->Y:Lqcg;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-direct {p1, p0, p2}, Ljcg;-><init>(Lqcg;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Ljava/lang/Float;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    iget v0, p0, Ljcg;->X:I
+    move-result p1
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Ljcg;->b:Lmcg;
 
-    if-eqz v0, :cond_1
+    iput p1, v0, Lmcg;->D0:F
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return-void
 
-    goto :goto_0
+    nop
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljcg;->Y:Lqcg;
-
-    iget-object v0, p1, Lqcg;->C0:Lic9;
-
-    iget-object v0, v0, Lic9;->f:Ljava/lang/Object;
-
-    check-cast v0, Lou0;
-
-    new-instance v2, Lm52;
-
-    invoke-direct {v2, v0}, Lm52;-><init>(Ldcc;)V
-
-    new-instance v0, Llw;
-
-    const/16 v3, 0xd
-
-    invoke-direct {v0, v3, p1}, Llw;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Ljcg;->X:I
-
-    invoke-virtual {v2, v0, p0}, Lm52;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

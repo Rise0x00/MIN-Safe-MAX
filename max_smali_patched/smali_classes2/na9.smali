@@ -1,156 +1,217 @@
-.class public final Lna9;
-.super Leje;
+.class public final synthetic Lna9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lva9;
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lva9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lna9;->Y:Lva9;
+    iput p2, p0, Lna9;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lna9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Lp04;
+    iget v0, p0, Lna9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lna9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v2, Lbx4;->y0:Lsed;
 
-    move-result-object p0
+    iget-object v3, p0, Lna9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    check-cast p0, Lna9;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
 
-    invoke-virtual {p0, p1}, Lna9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    invoke-virtual {v2, v0}, Lsed;->m(Landroid/content/Context;)Lloa;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    move-result-object v0
 
-    new-instance p1, Lna9;
-
-    iget-object p0, p0, Lna9;->Y:Lva9;
-
-    invoke-direct {p1, p0, p2}, Lna9;-><init>(Lva9;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    sget-object v0, Ltcf;->a:Ltcf;
-
-    sget-object v1, Lq04;->a:Lq04;
-
-    iget v2, p0, Lna9;->X:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v0, v0, Lloa;->c:Luxa;
 
     return-object v0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
+    invoke-virtual {v2, v0}, Lsed;->m(Landroid/content/Context;)Lloa;
 
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p1, p0, Lna9;->Y:Lva9;
+    iget-object v0, v0, Lloa;->c:Luxa;
 
-    iget-object p1, p1, Lva9;->i:Ljava/lang/String;
+    return-object v0
 
-    sget-object v2, Lz76;->f:Lvea;
+    :pswitch_1
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
 
-    if-nez v2, :cond_2
+    new-instance v0, Leac;
+
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Leac;-><init>(Landroid/content/Context;)V
+
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+
+    const/16 v4, 0x34
+
+    int-to-float v4, v4
+
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Lv63;->r0(F)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    invoke-direct {v2, v5, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v2, Lg9d;->v:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4, v2}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Leac;->setEndIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v2, Loa9;
+
+    invoke-direct {v2, v3, v1}, Loa9;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    invoke-virtual {v0, v2}, Leac;->setEndIconClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v1, Lqq;
+
+    const/4 v2, 0x3
+
+    const/4 v4, 0x7
+
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v2, v5, v4}, Lqq;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v1, v0}, Lk74;->K(Lnf6;Landroid/view/View;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Leac;->getTitleView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lyef;->c(Landroid/widget/TextView;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->P0(Leac;Z)V
 
     goto :goto_0
 
-    :cond_2
-    sget-object v4, Lhw7;->o:Lhw7;
+    :cond_0
+    new-instance v1, Lbr0;
 
-    invoke-virtual {v2, v4}, Lvea;->a(Lhw7;)Z
+    invoke-direct {v1, v0, v3}, Lbr0;-><init>(Leac;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    move-result v5
+    invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    if-eqz v5, :cond_3
-
-    const-string v5, "Scrolling to first reacted message"
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v2, v4, p1, v5, v6}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
+    :cond_1
     :goto_0
-    iget-object p1, p0, Lna9;->Y:Lva9;
-
-    iget-object p1, p1, Lva9;->n:Lq4e;
-
-    invoke-virtual {p1}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lz0d;
-
-    iget-object p1, p1, Lz0d;->d:Ly0d;
-
-    if-eqz p1, :cond_4
-
-    iget-wide v5, p1, Ly0d;->b:J
-
-    iget-object v4, p0, Lna9;->Y:Lva9;
-
-    iput v3, p0, Lna9;->X:I
-
-    const/4 v9, 0x0
-
-    const-wide/16 v7, 0x0
-
-    const/16 v10, 0xe
-
-    invoke-static/range {v4 .. v10}, Lva9;->d(Lva9;JJII)V
-
-    if-ne v0, v1, :cond_4
-
-    return-object v1
-
-    :cond_4
     return-object v0
+
+    :pswitch_2
+    iget-object v0, v3, Lone/me/sdk/messagewrite/MessageWriteWidget;->Y:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqp;
+
+    check-cast v0, Lsp;
+
+    const-string v2, "app.messages.send.by.enter"
+
+    iget-object v0, v0, Lh3;->g:Lep7;
+
+    invoke-virtual {v0, v2, v1}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

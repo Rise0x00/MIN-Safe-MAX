@@ -1,210 +1,176 @@
 .class public final Llf4;
-.super Ljava/lang/Object;
+.super Lt73;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/ArrayList;
-
-.field public final synthetic c:Lrf4;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lrf4;Ljava/util/ArrayList;I)V
-    .locals 0
-
-    iput p3, p0, Llf4;->a:I
-
-    iput-object p1, p0, Llf4;->c:Lrf4;
-
-    iput-object p2, p0, Llf4;->b:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Llf4;->a:I
+    invoke-virtual {p0}, Llf4;->m()Lt73;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Llf4;->b:Ljava/util/ArrayList;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+.method public final finalize()V
+    .locals 5
 
-    move-result-object v1
+    :try_start_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-boolean v0, p0, Lt73;->a:Z
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    iget-object v0, p0, Lt73;->b:Ln8e;
+
+    invoke-virtual {v0}, Ln8e;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "DefaultCloseableReference"
+
+    const-string v2, "Finalized without closing: %x %x (type = %s)"
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lt73;->b:Ln8e;
+
+    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v0
 
-    iget-object v3, p0, Llf4;->c:Lrf4;
+    invoke-static {v1, v2, v0}, Lni5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eqz v2, :cond_0
+    iget-object v0, p0, Lt73;->c:Ls73;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object v2
+    iget-object v1, p0, Lt73;->b:Ln8e;
 
-    check-cast v2, Luhc;
+    iget-object v2, p0, Lt73;->o:Ljava/lang/Throwable;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, v1, v2}, Ls73;->h(Ln8e;Ljava/lang/Throwable;)V
 
-    iget-object v4, v2, Luhc;->a:Landroid/view/View;
+    goto :goto_1
 
-    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    :catchall_1
+    move-exception v0
 
-    move-result-object v5
+    goto :goto_3
 
-    iget-object v6, v3, Lrf4;->o:Ljava/util/ArrayList;
+    :cond_2
+    :goto_1
+    invoke-virtual {p0}, Lt73;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    return-void
 
-    invoke-virtual {v5, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+    :goto_2
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    move-result-object v6
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    iget-wide v7, v3, Ldhc;->c:J
+    :goto_3
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    invoke-virtual {v6, v7, v8}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    throw v0
+.end method
 
-    move-result-object v6
+.method public final m()Lt73;
+    .locals 4
 
-    new-instance v7, Lmf4;
+    invoke-virtual {p0}, Lt73;->q0()Z
 
-    invoke-direct {v7, v3, v2, v4, v5}, Lmf4;-><init>(Lrf4;Luhc;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
+    move-result v0
 
-    invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    invoke-static {v0}, Lbv0;->r(Z)V
 
-    move-result-object v2
+    new-instance v0, Llf4;
 
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
+    iget-object v1, p0, Lt73;->o:Ljava/lang/Throwable;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/Throwable;
+
+    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    const/4 v1, 0x0
 
-    iget-object p0, v3, Lrf4;->l:Ljava/util/ArrayList;
+    :goto_0
+    iget-object v2, p0, Lt73;->b:Ln8e;
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    iget-object v3, p0, Lt73;->c:Ls73;
 
-    return-void
+    invoke-direct {v0, v2, v3, v1}, Lt73;-><init>(Ln8e;Ls73;Ljava/lang/Throwable;)V
 
-    :pswitch_0
-    iget-object v0, p0, Llf4;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    iget-object v4, p0, Llf4;->c:Lrf4;
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqf4;
-
-    iget-object v5, v2, Lqf4;->a:Luhc;
-
-    iget v3, v2, Lqf4;->b:I
-
-    iget v6, v2, Lqf4;->c:I
-
-    iget v7, v2, Lqf4;->d:I
-
-    iget v2, v2, Lqf4;->e:I
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move v8, v7
-
-    iget-object v7, v5, Luhc;->a:Landroid/view/View;
-
-    sub-int v3, v8, v3
-
-    sub-int v8, v2, v6
-
-    const/4 v2, 0x0
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_1
-    if-eqz v8, :cond_2
-
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_2
-    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v9
-
-    iget-object v2, v4, Lrf4;->p:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-wide v10, v4, Ldhc;->e:J
-
-    invoke-virtual {v9, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    move v6, v3
-
-    new-instance v3, Lnf4;
-
-    invoke-direct/range {v3 .. v9}, Lnf4;-><init>(Lrf4;Luhc;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
-
-    invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object p0, v4, Lrf4;->m:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

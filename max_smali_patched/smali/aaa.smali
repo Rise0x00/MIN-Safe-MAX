@@ -1,115 +1,138 @@
-.class public abstract Laaa;
+.class public final Laaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lum7;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
+# instance fields
+.field public final a:Lesd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    sget v0, Lvyb;->oneme_chatmedia_viewer_info_panel_author_view:I
+    sget-object v0, Luxe;->a:Luxe;
 
-    sput v0, Laaa;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lvyb;->oneme_chatmedia_viewer_info_panel_date_view:I
+    new-instance v0, Lesd;
 
-    sput v0, Laaa;->b:I
+    sget-object v1, Luxe;->b:Ljqb;
 
-    sget v0, Lvyb;->oneme_chatmedia_viewer_info_panel_forward_message_view:I
+    invoke-direct {v0, v1}, Lesd;-><init>(Ldsd;)V
 
-    sput v0, Laaa;->c:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_info_panel_view:I
-
-    sput v0, Laaa;->d:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_pager:I
-
-    sput v0, Laaa;->e:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_photo_gif_view:I
-
-    sput v0, Laaa;->f:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_photo_item_view_type:I
-
-    sput v0, Laaa;->g:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_photo_view:I
-
-    sput v0, Laaa;->h:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_toolbar:I
-
-    sput v0, Laaa;->i:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_toolbar_action_forward_attach:I
-
-    sput v0, Laaa;->j:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
-
-    sput v0, Laaa;->k:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_toolbar_action_save_gallery:I
-
-    sput v0, Laaa;->l:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_toolbar_action_share:I
-
-    sput v0, Laaa;->m:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_video_item_view_type:I
-
-    sput v0, Laaa;->n:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_video_preview_view:I
-
-    sput v0, Laaa;->o:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_video_view:I
-
-    sput v0, Laaa;->p:I
-
-    sget v0, Lvyb;->oneme_chatmedia_viewer_video_zoom_view:I
-
-    sput v0, Laaa;->q:I
+    iput-object v0, p0, Laaa;->a:Lesd;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lp8;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p1}, Lp8;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Luxe;->a:Luxe;
+
+    invoke-virtual {p1, v0}, Lp8;->u(Lum7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final b(Le04;Ljava/lang/Object;)V
+    .locals 1
+
+    if-eqz p2, :cond_0
+
+    sget-object v0, Luxe;->a:Luxe;
+
+    invoke-virtual {p1, v0, p2}, Le04;->j(Lum7;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Le04;->g()V
+
+    return-void
+.end method
+
+.method public final d()Ldsd;
+    .locals 1
+
+    iget-object v0, p0, Laaa;->a:Lesd;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_3
+
+    const-class v0, Laaa;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Laaa;
+
+    sget-object p1, Luxe;->a:Luxe;
+
+    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    sget-object v0, Luxe;->a:Luxe;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

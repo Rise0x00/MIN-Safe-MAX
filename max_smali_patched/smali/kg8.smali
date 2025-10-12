@@ -1,279 +1,169 @@
-.class public abstract synthetic Lkg8;
+.class public final Lkg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llg8;
+
+
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
+
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:Z
+
 
 # direct methods
-.method public static bridge synthetic A(Landroid/telephony/TelephonyManager;Ljava/util/concurrent/Executor;Lkq9;)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/util/ArrayList;Z)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/telephony/TelephonyManager;->registerTelephonyCallback(Ljava/util/concurrent/Executor;Landroid/telephony/TelephonyCallback;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkg8;->a:Ljava/lang/CharSequence;
+
+    iput-object p2, p0, Lkg8;->b:Ljava/util/ArrayList;
+
+    iput-boolean p3, p0, Lkg8;->c:Z
 
     return-void
 .end method
 
-.method public static bridge synthetic B(Landroid/view/WindowInsets;)Landroid/view/RoundedCorner;
-    .locals 1
 
-    const/4 v0, 0x2
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getRoundedCorner(I)Landroid/view/RoundedCorner;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    goto :goto_1
 
-    return-object p0
+    :cond_0
+    instance-of v0, p1, Lkg8;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lkg8;
+
+    iget-object v0, p0, Lkg8;->a:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Lkg8;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lkg8;->b:Ljava/util/ArrayList;
+
+    iget-object v1, p1, Lkg8;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lkg8;->c:Z
+
+    iget-boolean p1, p1, Lkg8;->c:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public static bridge synthetic C(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setPlaybackType(I)Landroid/media/metrics/PlaybackMetrics$Builder;
+    iget-object v0, p0, Lkg8;->a:Ljava/lang/CharSequence;
 
-    return-void
-.end method
-
-.method public static bridge synthetic D(Landroid/media/metrics/TrackChangeEvent$Builder;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setLanguageRegion(Ljava/lang/String;)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic a(Landroid/content/pm/ApplicationInfo;)I
-    .locals 0
-
-    iget p0, p0, Landroid/content/pm/ApplicationInfo;->compileSdkVersion:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/content/res/Configuration;)I
-    .locals 0
-
-    iget p0, p0, Landroid/content/res/Configuration;->fontWeightAdjustment:I
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/util/SparseArray;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/util/SparseArray;->contentHashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic d(FF)Landroid/graphics/RenderEffect;
-    .locals 1
-
-    sget-object v0, Landroid/graphics/Shader$TileMode;->MIRROR:Landroid/graphics/Shader$TileMode;
-
-    invoke-static {p0, p1, v0}, Landroid/graphics/RenderEffect;->createBlurEffect(FFLandroid/graphics/Shader$TileMode;)Landroid/graphics/RenderEffect;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic f(Landroid/media/metrics/PlaybackSession;)Landroid/media/metrics/LogSessionId;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/PlaybackSession;->getSessionId()Landroid/media/metrics/LogSessionId;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic g()Landroid/media/metrics/NetworkEvent$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/metrics/NetworkEvent$Builder;
-
-    invoke-direct {v0}, Landroid/media/metrics/NetworkEvent$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic h()Landroid/media/metrics/PlaybackErrorEvent$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/metrics/PlaybackErrorEvent$Builder;
-
-    invoke-direct {v0}, Landroid/media/metrics/PlaybackErrorEvent$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic i()Landroid/media/metrics/PlaybackMetrics$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    invoke-direct {v0}, Landroid/media/metrics/PlaybackMetrics$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic j()Landroid/media/metrics/PlaybackStateEvent$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/metrics/PlaybackStateEvent$Builder;
-
-    invoke-direct {v0}, Landroid/media/metrics/PlaybackStateEvent$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic k(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    invoke-direct {v0, p0}, Landroid/media/metrics/TrackChangeEvent$Builder;-><init>(I)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic l(Landroid/media/metrics/TrackChangeEvent$Builder;)Landroid/media/metrics/TrackChangeEvent;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/TrackChangeEvent$Builder;->build()Landroid/media/metrics/TrackChangeEvent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/view/WindowInsets;)Landroid/view/RoundedCorner;
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getRoundedCorner(I)Landroid/view/RoundedCorner;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n(Landroid/content/pm/ApplicationInfo;)Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->compileSdkVersionCodename:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic o(Landroid/app/Notification$CallStyle;Landroid/app/Notification$Builder;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$CallStyle;->setBuilder(Landroid/app/Notification$Builder;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic p(Landroid/app/job/JobInfo$Builder;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/app/job/JobInfo$Builder;->setExpedited(Z)Landroid/app/job/JobInfo$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic q(Landroid/graphics/RenderNode;Landroid/graphics/RenderEffect;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/graphics/RenderNode;->setRenderEffect(Landroid/graphics/RenderEffect;)Z
-
-    return-void
-.end method
-
-.method public static bridge synthetic r(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setStreamType(I)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/media/metrics/PlaybackMetrics$Builder;J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/PlaybackMetrics$Builder;->setMediaDurationMillis(J)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/media/metrics/PlaybackSession;Landroid/media/metrics/TrackChangeEvent;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackSession;->reportTrackChangeEvent(Landroid/media/metrics/TrackChangeEvent;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/media/metrics/TrackChangeEvent$Builder;)V
-    .locals 1
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/media/metrics/TrackChangeEvent$Builder;->setTrackState(I)Landroid/media/metrics/TrackChangeEvent$Builder;
+    goto :goto_0
 
-    return-void
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lkg8;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lkg8;->c:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public static bridge synthetic v(Landroid/media/metrics/TrackChangeEvent$Builder;F)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setVideoFrameRate(F)Landroid/media/metrics/TrackChangeEvent$Builder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "SendMedia(caption="
 
-.method public static bridge synthetic w(Landroid/media/metrics/TrackChangeEvent$Builder;Ljava/lang/String;)V
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setLanguage(Ljava/lang/String;)Landroid/media/metrics/TrackChangeEvent$Builder;
+    iget-object v1, p0, Lkg8;->a:Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public static bridge synthetic x(Landroid/media/session/MediaSession;Landroid/content/ComponentName;)V
-    .locals 0
+    const-string v1, ", media="
 
-    invoke-virtual {p0, p1}, Landroid/media/session/MediaSession;->setMediaButtonBroadcastReceiver(Landroid/content/ComponentName;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-object v1, p0, Lkg8;->b:Ljava/util/ArrayList;
 
-.method public static bridge synthetic y(Landroid/net/NetworkRequest$Builder;)V
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    const-string v1, ", sendAsFile="
 
-    invoke-virtual {p0, v0}, Landroid/net/NetworkRequest$Builder;->setIncludeOtherUidNetworks(Z)Landroid/net/NetworkRequest$Builder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, ")"
 
-.method public static bridge synthetic z(Landroid/telephony/TelephonyManager;Lkq9;)V
-    .locals 0
+    iget-boolean v2, p0, Lkg8;->c:Z
 
-    invoke-virtual {p0, p1}, Landroid/telephony/TelephonyManager;->unregisterTelephonyCallback(Landroid/telephony/TelephonyCallback;)V
+    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,107 +1,188 @@
-.class public final enum Lr84;
-.super Ljava/lang/Enum;
+.class public final Lr84;
+.super Luk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lr84;
-
-.field public static final c:[Lr84;
-
-.field public static final synthetic o:[Lr84;
-
-
 # instance fields
-.field public final a:I
+.field public final j:Ljava/lang/String;
+
+.field public final k:I
+
+.field public final l:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJJZLvx;ZIIII)V
+    .locals 13
 
-    new-instance v0, Lr84;
+    move-object v0, p0
 
-    const-string v1, "DISABLED"
+    move-object v10, p1
 
-    const/4 v2, 0x0
+    move-wide/from16 v5, p3
 
-    invoke-direct {v0, v1, v2, v2}, Lr84;-><init>(Ljava/lang/String;II)V
+    move-wide/from16 v3, p5
 
-    sput-object v0, Lr84;->b:Lr84;
+    move-wide/from16 v7, p7
 
-    new-instance v1, Lr84;
+    move/from16 v11, p9
 
-    const-string v2, "LOGS"
+    move-object/from16 v9, p10
 
-    const/4 v3, 0x1
+    move/from16 v12, p11
 
-    invoke-direct {v1, v2, v3, v3}, Lr84;-><init>(Ljava/lang/String;II)V
+    move/from16 v1, p12
 
-    new-instance v2, Lr84;
+    move/from16 v2, p13
 
-    const-string v3, "FILE_LOGS"
+    invoke-direct/range {v0 .. v12}, Luk0;-><init>(IIJJJLvx;Ljava/lang/String;ZZ)V
 
-    const/4 v4, 0x2
+    iput-object p2, p0, Lr84;->j:Ljava/lang/String;
 
-    invoke-direct {v2, v3, v4, v4}, Lr84;-><init>(Ljava/lang/String;II)V
+    move/from16 p1, p14
 
-    new-instance v3, Lr84;
+    iput p1, p0, Lr84;->k:I
 
-    const-string v4, "DEV_OPTIONS_MENU"
+    move/from16 p1, p15
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lr84;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lr84;
-
-    move-result-object v0
-
-    sput-object v0, Lr84;->o:[Lr84;
-
-    invoke-static {}, Lr84;->values()[Lr84;
-
-    move-result-object v0
-
-    sput-object v0, Lr84;->c:[Lr84;
+    iput p1, p0, Lr84;->l:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput p3, p0, Lr84;->a:I
+    if-ne p0, p1, :cond_0
 
-    return-void
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_5
+
+    const-class v1, Lr84;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Luk0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    check-cast p1, Lr84;
+
+    iget v1, p0, Lr84;->k:I
+
+    iget v2, p1, Lr84;->k:I
+
+    if-eq v1, v2, :cond_3
+
+    return v0
+
+    :cond_3
+    iget v1, p0, Lr84;->l:I
+
+    iget v2, p1, Lr84;->l:I
+
+    if-eq v1, v2, :cond_4
+
+    return v0
+
+    :cond_4
+    iget-object v0, p0, Lr84;->j:Ljava/lang/String;
+
+    iget-object p1, p1, Lr84;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    :goto_0
+    return v0
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lr84;
+.method public final g()I
     .locals 1
 
-    const-class v0, Lr84;
+    const/4 v0, 0x2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lr84;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static values()[Lr84;
+.method public final getHeight()I
     .locals 1
 
-    sget-object v0, Lr84;->o:[Lr84;
+    iget v0, p0, Lr84;->l:I
 
-    invoke-virtual {v0}, [Lr84;->clone()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lr84;->k:I
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    invoke-super {p0}, Luk0;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lr84;->j:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lr84;->k:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lr84;->l:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final i()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lr84;->j:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
-
-    check-cast v0, [Lr84;
 
     return-object v0
 .end method

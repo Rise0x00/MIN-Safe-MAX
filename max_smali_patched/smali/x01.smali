@@ -7,22 +7,22 @@
 
 
 # instance fields
-.field public final a:Lyte;
+.field public final a:Ljef;
 
 .field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lyte;)V
+.method public constructor <init>(Ljef;)V
     .locals 1
 
-    sget v0, Lo9a;->c:I
+    sget v0, Lyja;->q:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx01;->a:Lyte;
+    iput-object p1, p0, Lx01;->a:Ljef;
 
-    sget p1, Ln9a;->e:I
+    sget p1, Lxja;->e:I
 
     iput p1, p0, Lx01;->b:I
 
@@ -31,24 +31,16 @@
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final a()Loef;
+    .locals 1
 
-    const/4 p0, 0x4
+    const/4 v0, 0x0
 
-    return p0
-.end method
-
-.method public final b()Ldue;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
@@ -64,117 +56,125 @@
     :cond_1
     check-cast p1, Lx01;
 
-    iget-object p0, p0, Lx01;->a:Lyte;
+    iget-object v0, p0, Lx01;->a:Ljef;
 
-    iget-object p1, p1, Lx01;->a:Lyte;
+    iget-object p1, p1, Lx01;->a:Ljef;
 
-    invoke-virtual {p0, p1}, Lyte;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    sget-wide p0, Lo9a;->a:J
+    sget-wide v0, Lyja;->a:J
 
-    cmp-long p0, p0, p0
+    cmp-long p1, v0, v0
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_3
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_3
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
+.end method
+
+.method public final f()I
+    .locals 1
+
+    const/4 v0, 0x4
+
+    return v0
 .end method
 
 .method public final g()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final getItemId()J
     .locals 2
 
-    sget-wide v0, Lo9a;->a:J
+    sget-wide v0, Lyja;->a:J
 
     return-wide v0
 .end method
 
-.method public final getTitle()Ldue;
-    .locals 0
+.method public final getTitle()Loef;
+    .locals 1
 
-    iget-object p0, p0, Lx01;->a:Lyte;
+    iget-object v0, p0, Lx01;->a:Ljef;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
-    iget-object p0, p0, Lx01;->a:Lyte;
+    iget-object v0, p0, Lx01;->a:Ljef;
 
-    iget p0, p0, Lyte;->b:I
+    iget v0, v0, Ljef;->b:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result p0
+    move-result v0
 
-    const/16 v0, 0x1f
+    const/16 v1, 0x1f
 
-    mul-int/2addr p0, v0
+    mul-int/2addr v0, v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-static {v1, p0, v0}, Llge;->m(III)I
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    move-result p0
+    move-result v0
 
-    sget-wide v1, Lo9a;->a:J
+    sget-wide v2, Lyja;->a:J
 
-    invoke-static {p0, v0, v1, v2}, Lt2g;->a(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
 
-    move-result p0
+    move-result v0
 
-    const/4 v1, 0x4
+    const/4 v2, 0x4
 
-    invoke-static {v1, p0, v0}, Ljq9;->f(III)I
+    invoke-static {v2, v0, v1}, Lq89;->h(III)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final m()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lx01;->b:I
+    iget v0, p0, Lx01;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public final t()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    sget-wide v0, Lo9a;->a:J
+    sget-wide v0, Lyja;->a:J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -182,35 +182,35 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lx01;->a:Lyte;
+    iget-object v3, p0, Lx01;->a:Ljef;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ", sectionId=0, itemId="
+    const-string v3, ", sectionId=0, itemId="
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string p0, ", sectionItemType="
+    const-string v0, ", sectionItemType="
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x4
+    const/4 v0, 0x4
 
-    invoke-static {p0}, Lgkc;->s(I)Ljava/lang/String;
+    invoke-static {v0}, Lvpb;->o(I)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p0, ", descriptionRes=null)"
+    const-string v0, ", descriptionRes=null)"
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

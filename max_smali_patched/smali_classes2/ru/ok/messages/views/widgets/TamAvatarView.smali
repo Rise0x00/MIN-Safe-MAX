@@ -1,9 +1,9 @@
 .class public final Lru/ok/messages/views/widgets/TamAvatarView;
-.super Lie0;
+.super Lwd0;
 .source "SourceFile"
 
 # interfaces
-.implements Lpqe;
+.implements Lzaf;
 
 
 # annotations
@@ -13,9 +13,9 @@
     }
     d2 = {
         "Lru/ok/messages/views/widgets/TamAvatarView;",
-        "Lie0;",
+        "Lwd0;",
         "",
-        "Lpqe;",
+        "Lzaf;",
         "tamtam-app_release"
     }
     k = 0x1
@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field public t0:Llqe;
+.field public C0:Lvaf;
 
 
 # direct methods
@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, p2, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    new-instance p2, Lge6;
+    new-instance p2, Lzj6;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -65,103 +65,103 @@
 
     move-result-object v0
 
-    invoke-direct {p2, v0}, Lge6;-><init>(Landroid/content/res/Resources;)V
+    invoke-direct {p2, v0}, Lzj6;-><init>(Landroid/content/res/Resources;)V
 
-    invoke-virtual {p2}, Lge6;->a()Lfe6;
+    invoke-virtual {p2}, Lzj6;->a()Lyj6;
 
     move-result-object p2
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    new-instance v0, Lbu4;
+    new-instance v0, Lhy4;
 
-    invoke-direct {v0, p2}, Lbu4;-><init>(Lfe6;)V
+    invoke-direct {v0, p2}, Lhy4;-><init>(Lyj6;)V
 
-    iput-object v0, p0, Lie0;->a:Lbu4;
+    iput-object v0, p0, Lwd0;->a:Lhy4;
 
-    invoke-virtual {v0}, Lbu4;->d()Lkqc;
+    invoke-virtual {v0}, Lhy4;->d()Ld7d;
 
     move-result-object p2
 
     invoke-virtual {p2, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    invoke-static {p1}, Lv44;->z(Landroid/content/Context;)Lg2d;
+    invoke-static {p1}, Lbv0;->K(Landroid/content/Context;)Lzid;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lg2d;->o()Lmfa;
+    invoke-virtual {p2}, Lzid;->o()Liqa;
 
     move-result-object v0
 
-    iput-object v0, p0, Lie0;->o:Lmfa;
+    iput-object v0, p0, Lwd0;->o:Liqa;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v1, Lfe0;
-
-    invoke-virtual {v0, v1}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()La5;
 
     move-result-object v0
 
-    check-cast v0, Lfe0;
+    const-class v1, Ltd0;
 
-    iput-object v0, p0, Lie0;->o0:Lfe0;
-
-    invoke-virtual {p2}, Lg2d;->q()Lx9b;
+    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Laab;
+    check-cast v0, Ltd0;
 
-    iget-object v0, v0, Laab;->a:Lb53;
+    iput-object v0, p0, Lwd0;->x0:Ltd0;
 
-    iput-object v0, p0, Lie0;->p0:Lb53;
-
-    invoke-virtual {p2}, Lg2d;->f()Lbb2;
+    invoke-virtual {p2}, Lzid;->q()Lxob;
 
     move-result-object v0
 
-    iput-object v0, p0, Lie0;->n0:Lbb2;
+    check-cast v0, Lzob;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Ls4;
+    iget-object v0, v0, Lzob;->a:Lt63;
+
+    iput-object v0, p0, Lwd0;->y0:Lt63;
+
+    invoke-virtual {p2}, Lzid;->f()Lub2;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwd0;->w0:Lub2;
+
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()La5;
 
     move-result-object p2
 
-    const-class v0, Lfab;
+    const-class v0, Lepb;
 
-    invoke-virtual {p2, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p2, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lfab;
+    check-cast p2, Lepb;
 
-    iput-object p2, p0, Lie0;->q0:Lfab;
+    iput-object p2, p0, Lwd0;->z0:Lepb;
 
     :goto_0
-    sget-object p2, Llqe;->d0:Ljbc;
+    sget-object p2, Lvaf;->d0:Lsqc;
 
-    iget-object p2, p2, Ljbc;->a:Lj4e;
+    iget-object p2, p2, Lsqc;->a:Lfoe;
 
-    invoke-interface {p2}, Lj4e;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lfoe;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Llqe;
+    check-cast p2, Lvaf;
 
     if-nez p2, :cond_1
 
-    sget-object p2, Lvh4;->e0:Lvh4;
+    sget-object p2, Ltk4;->e0:Ltk4;
 
     :cond_1
-    iput-object p2, p0, Lru/ok/messages/views/widgets/TamAvatarView;->t0:Llqe;
+    iput-object p2, p0, Lru/ok/messages/views/widgets/TamAvatarView;->C0:Lvaf;
 
-    invoke-static {p1}, Le64;->v(Landroid/content/Context;)Llqe;
+    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->t0:Llqe;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->C0:Lvaf;
 
     return-void
 .end method
@@ -180,7 +180,7 @@
     :cond_0
     check-cast p1, Landroid/graphics/drawable/LayerDrawable;
 
-    sget v0, Lzsc;->c:I
+    sget v0, Lr9d;->c:I
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
@@ -188,14 +188,14 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->t0:Llqe;
+    iget-object v1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->C0:Lvaf;
 
-    iget v1, v1, Llqe;->m:I
+    iget v1, v1, Lvaf;->m:I
 
-    invoke-static {v0, v1}, Lz8c;->M(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_1
-    sget v0, Lzsc;->b:I
+    sget v0, Lr9d;->b:I
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
@@ -203,23 +203,23 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p0, p0, Lru/ok/messages/views/widgets/TamAvatarView;->t0:Llqe;
+    iget-object v0, p0, Lru/ok/messages/views/widgets/TamAvatarView;->C0:Lvaf;
 
-    iget p0, p0, Llqe;->k:I
+    iget v0, v0, Lvaf;->k:I
 
-    invoke-static {p1, p0}, Lz8c;->M(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public final z(Llqe;)V
+.method public final y(Lvaf;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->t0:Llqe;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/TamAvatarView;->C0:Lvaf;
 
-    iget-object p1, p0, Lie0;->b:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lwd0;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lru/ok/messages/views/widgets/TamAvatarView;->b(Landroid/graphics/drawable/Drawable;)V
 

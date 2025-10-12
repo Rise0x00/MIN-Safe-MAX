@@ -1,106 +1,146 @@
 .class public final Lw9a;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Loo6;
+.implements Llf6;
 
 
 # instance fields
-.field public final b:J
+.field public X:I
 
-.field public final c:Lth7;
+.field public final synthetic Y:Lx9a;
 
 
 # direct methods
-.method public constructor <init>(Lth7;J)V
+.method public constructor <init>(Lx9a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw9a;->Y:Lx9a;
 
-    iput-wide p2, p0, Lw9a;->b:J
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Lw9a;->c:Lth7;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()J
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lv9a;
+    check-cast p1, Le34;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, v1}, Lv9a;-><init>(Lw9a;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1, p2}, Lw9a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object p0, Ll25;->a:Ll25;
+    move-result-object p1
 
-    invoke-static {p0, v0}, Lyr3;->m0(Lh04;Lt96;)Ljava/lang/Object;
+    check-cast p1, Lw9a;
 
-    move-result-object p0
+    sget-object p2, Loyf;->a:Loyf;
 
-    check-cast p0, Ll72;
+    invoke-virtual {p1, p2}, Lw9a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Ll72;->b:Lxb2;
+    move-result-object p1
 
-    iget-wide v0, p0, Lxb2;->w:J
-
-    return-wide v0
+    return-object p1
 .end method
 
-.method public final h()J
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Lv9a;
+    new-instance p1, Lw9a;
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lw9a;->Y:Lx9a;
 
-    invoke-direct {v0, p0, v1}, Lv9a;-><init>(Lw9a;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lw9a;-><init>(Lx9a;Lkotlin/coroutines/Continuation;)V
 
-    sget-object p0, Ll25;->a:Ll25;
-
-    invoke-static {p0, v0}, Lyr3;->m0(Lh04;Lt96;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ll72;
-
-    iget-object p0, p0, Ll72;->b:Lxb2;
-
-    iget-wide v0, p0, Lxb2;->j:J
-
-    return-wide v0
+    return-object p1
 .end method
 
-.method public final i()Ljava/util/List;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    new-instance v0, Lv9a;
+    iget v0, p0, Lw9a;->X:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lv9a;-><init>(Lw9a;Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_1
 
-    sget-object p0, Ll25;->a:Ll25;
+    if-ne v0, v1, :cond_0
 
-    invoke-static {p0, v0}, Lyr3;->m0(Lh04;Lt96;)Ljava/lang/Object;
+    :try_start_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p0
+    goto :goto_1
 
-    check-cast p0, Ll72;
+    :catchall_0
+    move-exception p1
 
-    iget-object p0, p0, Ll72;->b:Lxb2;
+    goto :goto_0
 
-    iget-object p0, p0, Lxb2;->n:Lqb2;
+    :catch_0
+    move-exception p1
 
-    sget-object v0, Lck4;->X:Lck4;
+    goto :goto_2
 
-    invoke-virtual {p0, v0}, Lqb2;->d(Lck4;)Ljava/util/ArrayList;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object p0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-object p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw9a;->Y:Lx9a;
+
+    :try_start_1
+    iput v1, p0, Lw9a;->X:I
+
+    iget-object v0, p1, Lx9a;->a:Lx5d;
+
+    new-instance v1, Lwg4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2, p1}, Lwg4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :goto_0
+    const-string v0, "NotificationsTrackerMessagesDao"
+
+    const-string v1, "onLogout: failed"
+
+    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

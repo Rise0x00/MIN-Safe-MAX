@@ -1,59 +1,53 @@
 .class public final Ltzf;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
-.field public final synthetic a:Ld96;
+.field public X:Lup9;
 
-.field public final synthetic b:Landroid/view/ViewTreeObserver;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/view/View;
+.field public final synthetic Z:Luzf;
+
+.field public o:Luzf;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Ld96;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+.method public constructor <init>(Luzf;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltzf;->Z:Luzf;
 
-    iput-object p1, p0, Ltzf;->a:Ld96;
-
-    iput-object p2, p0, Ltzf;->b:Landroid/view/ViewTreeObserver;
-
-    iput-object p3, p0, Ltzf;->c:Landroid/view/View;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ltzf;->a:Ld96;
+    iput-object p1, p0, Ltzf;->Y:Ljava/lang/Object;
 
-    invoke-interface {v0}, Ld96;->invoke()Ljava/lang/Object;
+    iget p1, p0, Ltzf;->w0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Ljava/lang/Boolean;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iput p1, p0, Ltzf;->w0:I
 
-    move-result v0
+    iget-object p1, p0, Ltzf;->Z:Luzf;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Ltzf;->b:Landroid/view/ViewTreeObserver;
+    invoke-virtual {p1, v0, p0}, Luzf;->f(Lup9;Lnz3;)Ljava/lang/Object;
 
-    iget-object v1, p0, Ltzf;->c:Landroid/view/View;
+    move-result-object p1
 
-    invoke-static {p0, v0, v1}, Luzf;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

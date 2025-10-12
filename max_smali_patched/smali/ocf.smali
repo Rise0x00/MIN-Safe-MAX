@@ -1,222 +1,403 @@
 .class public final Locf;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Li94;
 
 
 # instance fields
-.field public final a:Ljava/lang/ThreadLocal;
+.field public final a:Li94;
 
-.field private volatile threadLocalIsSet:Z
+.field public final b:Lyw0;
+
+.field public c:Z
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lh04;Lkotlin/coroutines/Continuation;)V
-    .locals 2
+.method public constructor <init>(Li94;Lyw0;)V
+    .locals 0
 
-    sget-object v0, Lpcf;->a:Lpcf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, v0}, Lh04;->get(Lg04;)Lf04;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    iput-object p1, p0, Locf;->a:Li94;
 
-    if-nez v1, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1, v0}, Lh04;->plus(Lh04;)Lh04;
+    iput-object p2, p0, Locf;->b:Lyw0;
 
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, p1
-
-    :goto_0
-    invoke-direct {p0, v0, p2}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lh04;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    iput-object v0, p0, Locf;->a:Ljava/lang/ThreadLocal;
-
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lh04;
-
-    move-result-object p2
-
-    sget-object v0, Lkz9;->c:Lkz9;
-
-    invoke-interface {p2, v0}, Lh04;->get(Lg04;)Lf04;
-
-    move-result-object p2
-
-    instance-of p2, p2, Lj04;
-
-    if-nez p2, :cond_1
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lh04;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lh04;Ljava/lang/Object;)V
-
-    invoke-virtual {p0, p1, p2}, Locf;->E(Lh04;Ljava/lang/Object;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final D()Z
-    .locals 2
+.method public final P(Lq94;)J
+    .locals 8
 
-    iget-boolean v0, p0, Locf;->threadLocalIsSet:Z
+    iget-object v0, p0, Locf;->a:Li94;
 
-    const/4 v1, 0x1
+    invoke-interface {v0, p1}, Li94;->P(Lq94;)J
 
-    if-eqz v0, :cond_0
+    move-result-wide v0
 
-    iget-object v0, p0, Locf;->a:Ljava/lang/ThreadLocal;
+    iput-wide v0, p0, Locf;->o:J
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    const-wide/16 v2, 0x0
 
-    move-result-object v0
+    cmp-long v4, v0, v2
 
-    if-nez v0, :cond_0
+    if-nez v4, :cond_0
 
-    move v0, v1
-
-    goto :goto_0
+    return-wide v2
 
     :cond_0
-    const/4 v0, 0x0
+    iget-wide v4, p1, Lq94;->g:J
 
-    :goto_0
-    iget-object p0, p0, Locf;->a:Ljava/lang/ThreadLocal;
+    const-wide/16 v6, -0x1
 
-    invoke-virtual {p0}, Ljava/lang/ThreadLocal;->remove()V
+    cmp-long v4, v4, v6
 
-    xor-int/lit8 p0, v0, 0x1
+    if-nez v4, :cond_1
 
-    return p0
-.end method
+    cmp-long v4, v0, v6
 
-.method public final E(Lh04;Ljava/lang/Object;)V
-    .locals 1
+    if-eqz v4, :cond_1
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Locf;->threadLocalIsSet:Z
-
-    iget-object p0, p0, Locf;->a:Ljava/lang/ThreadLocal;
-
-    new-instance v0, Ltra;
-
-    invoke-direct {v0, p1, p2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 5
-
-    iget-boolean v0, p0, Locf;->threadLocalIsSet:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Locf;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltra;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Ltra;->a:Ljava/lang/Object;
-
-    check-cast v1, Lh04;
-
-    iget-object v0, v0, Ltra;->b:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lh04;Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Locf;->a:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->remove()V
-
-    :cond_1
-    invoke-static {p1}, Lj5e;->r(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v2, v3, v0, v1}, Lq94;->c(JJ)Lq94;
 
     move-result-object p1
 
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    :cond_1
+    iget v0, p1, Lq94;->i:I
 
-    invoke-interface {v0}, Lkotlin/coroutines/Continuation;->getContext()Lh04;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    iput-boolean v1, p0, Locf;->c:Z
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Locf;->b:Lyw0;
 
-    invoke-static {v1, v2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Lh04;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    iget-object v4, p1, Lq94;->h:Ljava/lang/String;
 
-    sget-object v4, Lkotlinx/coroutines/internal/ThreadContextKt;->NO_THREAD_ELEMENTS:Lkotlinx/coroutines/internal/Symbol;
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eq v3, v4, :cond_2
+    iget-wide v4, p1, Lq94;->g:J
 
-    invoke-static {v0, v1, v3}, Lxu7;->w0(Lkotlin/coroutines/Continuation;Lh04;Ljava/lang/Object;)Locf;
+    cmp-long v4, v4, v6
 
-    move-result-object v2
+    if-nez v4, :cond_2
+
+    and-int/lit8 v4, v0, 0x2
+
+    const/4 v5, 0x2
+
+    if-ne v4, v5, :cond_2
+
+    const/4 p1, 0x0
+
+    iput-object p1, v1, Lyw0;->j:Ljava/lang/Object;
+
+    goto :goto_1
 
     :cond_2
-    :try_start_0
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    iput-object p1, v1, Lyw0;->j:Ljava/lang/Object;
 
-    invoke-interface {p0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v4, 0x4
 
-    if-eqz v2, :cond_4
+    and-int/2addr v0, v4
 
-    invoke-virtual {v2}, Locf;->D()Z
+    if-ne v0, v4, :cond_3
 
-    move-result p0
-
-    if-eqz p0, :cond_3
+    iget-wide v4, v1, Lyw0;->b:J
 
     goto :goto_0
 
     :cond_3
+    const-wide v4, 0x7fffffffffffffffL
+
+    :goto_0
+    iput-wide v4, v1, Lyw0;->d:J
+
+    iput-wide v2, v1, Lyw0;->h:J
+
+    :try_start_0
+    invoke-virtual {v1, p1}, Lyw0;->b(Lq94;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    iget-wide v0, p0, Locf;->o:J
+
+    return-wide v0
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final Q(Lhpf;)V
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Locf;->a:Li94;
+
+    invoke-interface {v0, p1}, Li94;->Q(Lhpf;)V
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 4
+
+    iget-object v0, p0, Locf;->b:Lyw0;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iget-object v2, p0, Locf;->a:Li94;
+
+    invoke-interface {v2}, Li94;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-boolean v2, p0, Locf;->c:Z
+
+    if-eqz v2, :cond_1
+
+    iput-boolean v1, p0, Locf;->c:Z
+
+    iget-object v1, v0, Lyw0;->j:Ljava/lang/Object;
+
+    check-cast v1, Lq94;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {v0}, Lyw0;->a()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
     return-void
 
-    :cond_4
-    :goto_0
-    invoke-static {v1, v3}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lh04;Ljava/lang/Object;)V
+    :catch_0
+    move-exception v0
 
+    new-instance v1, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_1
+    :goto_0
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception v2
 
-    if-eqz v2, :cond_5
+    iget-boolean v3, p0, Locf;->c:Z
 
-    invoke-virtual {v2}, Locf;->D()Z
+    if-eqz v3, :cond_3
 
-    move-result p1
+    iput-boolean v1, p0, Locf;->c:Z
 
-    if-eqz p1, :cond_6
+    iget-object v1, v0, Lyw0;->j:Ljava/lang/Object;
 
-    :cond_5
-    invoke-static {v1, v3}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Lh04;Ljava/lang/Object;)V
+    check-cast v1, Lq94;
 
-    :cond_6
-    throw p0
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_2
+    invoke-virtual {v0}, Lyw0;->a()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_3
+    :goto_1
+    throw v2
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Locf;->a:Li94;
+
+    invoke-interface {v0}, Li94;->getUri()Landroid/net/Uri;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 9
+
+    iget-wide v0, p0, Locf;->o:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    iget-object v0, p0, Locf;->a:Li94;
+
+    invoke-interface {v0, p1, p2, p3}, Lc94;->read([BII)I
+
+    move-result p3
+
+    if-lez p3, :cond_4
+
+    iget-object v0, p0, Locf;->b:Lyw0;
+
+    iget-object v1, v0, Lyw0;->j:Ljava/lang/Object;
+
+    check-cast v1, Lq94;
+
+    if-nez v1, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, p3, :cond_3
+
+    :try_start_0
+    iget-wide v3, v0, Lyw0;->g:J
+
+    iget-wide v5, v0, Lyw0;->d:J
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_2
+
+    invoke-virtual {v0}, Lyw0;->a()V
+
+    invoke-virtual {v0, v1}, Lyw0;->b(Lq94;)V
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    sub-int v3, p3, v2
+
+    int-to-long v3, v3
+
+    iget-wide v5, v0, Lyw0;->d:J
+
+    iget-wide v7, v0, Lyw0;->g:J
+
+    sub-long/2addr v5, v7
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v3
+
+    long-to-int v3, v3
+
+    iget-object v4, v0, Lyw0;->f:Ljava/io/OutputStream;
+
+    sget v5, Lr4g;->a:I
+
+    add-int v5, p2, v2
+
+    invoke-virtual {v4, p1, v5, v3}, Ljava/io/OutputStream;->write([BII)V
+
+    add-int/2addr v2, v3
+
+    iget-wide v4, v0, Lyw0;->g:J
+
+    int-to-long v6, v3
+
+    add-long/2addr v4, v6
+
+    iput-wide v4, v0, Lyw0;->g:J
+
+    iget-wide v3, v0, Lyw0;->h:J
+
+    add-long/2addr v3, v6
+
+    iput-wide v3, v0, Lyw0;->h:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :goto_2
+    new-instance p2, Lcom/google/android/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
+
+    invoke-direct {p2, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :cond_3
+    :goto_3
+    iget-wide p1, p0, Locf;->o:J
+
+    const-wide/16 v0, -0x1
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_4
+
+    int-to-long v0, p3
+
+    sub-long/2addr p1, v0
+
+    iput-wide p1, p0, Locf;->o:J
+
+    :cond_4
+    return p3
+.end method
+
+.method public final w()Ljava/util/Map;
+    .locals 1
+
+    iget-object v0, p0, Locf;->a:Li94;
+
+    invoke-interface {v0}, Li94;->w()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
 .end method

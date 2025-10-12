@@ -1,88 +1,34 @@
-.class public final Legc;
+.class public abstract Legc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lni1;
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+# static fields
+.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d6a
 
+.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d6b
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d6c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d6d
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static webapp_root_content_container:I = 0x7f0a0d6e
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+.field public static webapp_root_error_container:I = 0x7f0a0d6f
 
-    iput-object v0, p0, Legc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static webapp_root_frame:I = 0x7f0a0d70
 
-    return-void
-.end method
+.field public static webapp_root_progressbar:I = 0x7f0a0d71
 
+.field public static webapp_root_settings_header:I = 0x7f0a0d72
 
-# virtual methods
-.method public final onRecordStarted(Lli1;)V
-    .locals 1
+.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d73
 
-    iget-object p0, p0, Legc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static webapp_root_settings_switcher:I = 0x7f0a0d74
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+.field public static webapp_root_settings_toolbar:I = 0x7f0a0d75
 
-    move-result-object p0
+.field public static webapp_root_settings_transition:I = 0x7f0a0d76
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+.field public static webapp_root_toolbar:I = 0x7f0a0d77
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lni1;
-
-    invoke-interface {v0, p1}, Lni1;->onRecordStarted(Lli1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRecordStopped(Lmi1;)V
-    .locals 1
-
-    iget-object p0, p0, Legc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lni1;
-
-    invoke-interface {v0, p1}, Lni1;->onRecordStopped(Lmi1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
+.field public static webapp_root_webview:I = 0x7f0a0d78

@@ -1,106 +1,55 @@
 .class public final Lp79;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Ly79;
+.field public final a:Z
 
-.field public final synthetic Y:Lrw8;
+.field public final b:Z
 
-.field public final synthetic Z:Z
+.field public final c:Z
 
-.field public final synthetic n0:Lx10;
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
 
 
 # direct methods
-.method public constructor <init>(Ly79;Lrw8;ZLx10;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZZZZZZZZZ)V
     .locals 0
 
-    iput-object p1, p0, Lp79;->X:Ly79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lp79;->Y:Lrw8;
+    iput-boolean p1, p0, Lp79;->a:Z
 
-    iput-boolean p3, p0, Lp79;->Z:Z
+    iput-boolean p2, p0, Lp79;->b:Z
 
-    iput-object p4, p0, Lp79;->n0:Lx10;
+    iput-boolean p3, p0, Lp79;->c:Z
 
-    const/4 p1, 0x2
+    iput-boolean p4, p0, Lp79;->d:Z
 
-    invoke-direct {p0, p1, p5}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p5, p0, Lp79;->e:Z
+
+    iput-boolean p6, p0, Lp79;->f:Z
+
+    iput-boolean p7, p0, Lp79;->g:Z
+
+    iput-boolean p8, p0, Lp79;->h:Z
+
+    iput-boolean p9, p0, Lp79;->i:Z
+
+    iput-boolean p10, p0, Lp79;->j:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lp79;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lp79;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lp79;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lp79;
-
-    iget-boolean v3, p0, Lp79;->Z:Z
-
-    iget-object v4, p0, Lp79;->n0:Lx10;
-
-    iget-object v1, p0, Lp79;->X:Ly79;
-
-    iget-object v2, p0, Lp79;->Y:Lrw8;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lp79;-><init>(Ly79;Lrw8;ZLx10;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp79;->Y:Lrw8;
-
-    iget-wide v1, p1, Lej0;->a:J
-
-    iget-object p1, p0, Lp79;->n0:Lx10;
-
-    invoke-virtual {p1}, Lx10;->d()Z
-
-    move-result v5
-
-    iget-object v0, p0, Lp79;->X:Ly79;
-
-    iget-boolean v3, p0, Lp79;->Z:Z
-
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Ly79;->J(JZZZ)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

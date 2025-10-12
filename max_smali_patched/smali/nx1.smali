@@ -1,121 +1,98 @@
-.class public final enum Lnx1;
-.super Ljava/lang/Enum;
+.class public final synthetic Lnx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lnx1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum Y:Lnx1;
-
-.field public static final synthetic Z:[Lnx1;
-
-.field public static final enum a:Lnx1;
-
-.field public static final enum b:Lnx1;
-
-.field public static final enum c:Lnx1;
-
-.field public static final enum o:Lnx1;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lnx1;
+    iput p1, p0, Lnx1;->a:I
 
-    const-string v1, "UNKNOWN"
+    iput-object p2, p0, Lnx1;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnx1;->a:Lnx1;
-
-    new-instance v1, Lnx1;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnx1;->b:Lnx1;
-
-    new-instance v2, Lnx1;
-
-    const-string v3, "SEARCHING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnx1;->c:Lnx1;
-
-    new-instance v3, Lnx1;
-
-    const-string v4, "FLASH_REQUIRED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lnx1;->o:Lnx1;
-
-    new-instance v4, Lnx1;
-
-    const-string v5, "CONVERGED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lnx1;->X:Lnx1;
-
-    new-instance v5, Lnx1;
-
-    const-string v6, "LOCKED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lnx1;->Y:Lnx1;
-
-    filled-new-array/range {v0 .. v5}, [Lnx1;
-
-    move-result-object v0
-
-    sput-object v0, Lnx1;->Z:[Lnx1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnx1;
-    .locals 1
 
-    const-class v0, Lnx1;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lnx1;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lnx1;
+    iget-object v0, p0, Lnx1;->b:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    check-cast v0, Lrfd;
 
-.method public static values()[Lnx1;
-    .locals 1
+    iget-object v1, v0, Lrfd;->b:Ljava/lang/Object;
 
-    sget-object v0, Lnx1;->Z:[Lnx1;
+    monitor-enter v1
 
-    invoke-virtual {v0}, [Lnx1;->clone()Ljava/lang/Object;
+    :try_start_0
+    iget-object v2, v0, Lrfd;->d:Lnx1;
 
-    move-result-object v0
+    if-nez v2, :cond_0
 
-    check-cast v0, [Lnx1;
+    const-string v2, "ScreenFlashWrapper"
 
-    return-object v0
+    const-string v3, "apply: pendingListener is null!"
+
+    invoke-static {v2, v3}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Lrfd;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lnx1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lts1;
+
+    const-string v1, "Camera2CapturePipeline"
+
+    const-string v2, "ScreenFlashTask#preCapture: UI change applied"
+
+    invoke-static {v1, v2}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lts1;->b(Ljava/lang/Object;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

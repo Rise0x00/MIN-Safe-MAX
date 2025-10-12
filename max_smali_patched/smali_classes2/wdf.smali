@@ -1,73 +1,40 @@
-.class public final enum Lwdf;
-.super Ljava/lang/Enum;
+.class public final Lwdf;
+.super Lm3f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum a:Lwdf;
-
-.field public static final enum b:Lwdf;
-
-.field public static final synthetic c:[Lwdf;
+# interfaces
+.implements Lnf6;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lwdf;
+    check-cast p1, Luxa;
 
-    const-string v1, "UNKNOWN"
+    check-cast p2, Lo15;
 
-    const/4 v2, 0x0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance p1, Lwdf;
 
-    sput-object v0, Lwdf;->a:Lwdf;
+    const/4 p2, 0x3
 
-    new-instance v1, Lwdf;
+    invoke-direct {p1, p2, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-string v2, "NOT_ENOUGH_VIDEO_TRACKS"
+    sget-object p2, Loyf;->a:Loyf;
 
-    const/4 v3, 0x1
+    invoke-virtual {p1, p2}, Lwdf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lwdf;->b:Lwdf;
-
-    filled-new-array {v0, v1}, [Lwdf;
-
-    move-result-object v0
-
-    sput-object v0, Lwdf;->c:[Lwdf;
-
-    return-void
+    return-object p2
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwdf;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-class v0, Lwdf;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    sget-object p1, Loyf;->a:Loyf;
 
-    move-result-object p0
-
-    check-cast p0, Lwdf;
-
-    return-object p0
-.end method
-
-.method public static values()[Lwdf;
-    .locals 1
-
-    sget-object v0, Lwdf;->c:[Lwdf;
-
-    invoke-virtual {v0}, [Lwdf;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwdf;
-
-    return-object v0
+    return-object p1
 .end method

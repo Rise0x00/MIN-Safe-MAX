@@ -4,48 +4,90 @@
 
 
 # instance fields
-.field public a:J
+.field public a:F
 
-.field public b:J
+.field public b:F
 
-.field public c:J
+.field public c:Ld8c;
 
-.field public d:J
-
-.field public e:I
-
-.field public f:Ljava/lang/String;
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Lm10;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
+    packed-switch p1, :pswitch_data_0
+
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lm10;->a:J
+    .line 7
+    sget-object p1, Ld8c;->Y:Ld8c;
 
-    iput-wide v0, p0, Lm10;->a:J
+    iput-object p1, p0, Lm10;->c:Ld8c;
 
-    iget-wide v0, p1, Lm10;->b:J
+    return-void
 
-    iput-wide v0, p0, Lm10;->b:J
+    .line 8
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lm10;->c:J
+    .line 9
+    sget-object p1, Ld8c;->Y:Ld8c;
 
-    iput-wide v0, p0, Lm10;->c:J
+    iput-object p1, p0, Lm10;->c:Ld8c;
 
-    iget-wide v0, p1, Lm10;->d:J
+    const/4 p1, 0x0
 
-    iput-wide v0, p0, Lm10;->d:J
+    .line 10
+    iput p1, p0, Lm10;->a:F
 
-    iget v0, p1, Lm10;->e:I
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lm10;->e:I
+    .line 11
+    iput p1, p0, Lm10;->b:F
 
-    iget-object p1, p1, Lm10;->f:Ljava/lang/String;
+    const/4 p1, 0x0
 
-    iput-object p1, p0, Lm10;->f:Ljava/lang/String;
+    .line 12
+    iput-boolean p1, p0, Lm10;->d:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Lm10;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget v0, p1, Lm10;->a:F
+
+    iput v0, p0, Lm10;->a:F
+
+    .line 3
+    iget v0, p1, Lm10;->b:F
+
+    iput v0, p0, Lm10;->b:F
+
+    .line 4
+    iget-object v0, p1, Lm10;->c:Ld8c;
+
+    iput-object v0, p0, Lm10;->c:Ld8c;
+
+    .line 5
+    iget-boolean p1, p1, Lm10;->d:Z
+
+    iput-boolean p1, p0, Lm10;->d:Z
 
     return-void
 .end method

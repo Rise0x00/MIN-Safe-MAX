@@ -1,90 +1,101 @@
-.class public final synthetic Laz1;
+.class public interface abstract Laz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvy1;
+.implements Lpqc;
 
 
-# instance fields
-.field public final synthetic b:Lbz1;
+# static fields
+.field public static final g:Ln90;
+
+.field public static final h:Ln90;
+
+.field public static final i:Ln90;
+
+.field public static final j:Ln90;
+
+.field public static final k:Ln90;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbz1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ln90;
 
-    iput-object p1, p0, Laz1;->b:Lbz1;
+    const-string v1, "camerax.core.camera.useCaseConfigFactory"
+
+    const-class v2, Lx3g;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Laz1;->g:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camerax.core.camera.useCaseCombinationRequiredRule"
+
+    const-class v2, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Laz1;->h:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camerax.core.camera.SessionProcessor"
+
+    const-class v2, Lfwd;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Laz1;->i:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camerax.core.camera.isPostviewSupported"
+
+    const-class v2, Ljava/lang/Boolean;
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Laz1;->j:Ln90;
+
+    new-instance v0, Ln90;
+
+    const-string v1, "camerax.core.camera.isCaptureProcessProgressSupported"
+
+    invoke-direct {v0, v1, v2, v3}, Ln90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Laz1;->k:Ln90;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Ljava/util/List;
+.method public C()V
     .locals 2
 
-    iget-object p0, p0, Laz1;->b:Lbz1;
+    const/4 v0, 0x0
 
-    invoke-interface {p0}, Lbz1;->d()Ljava/lang/String;
+    sget-object v1, Laz1;->i:Ln90;
 
-    move-result-object p0
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0, v1, v0}, Lpqc;->e(Ln90;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lbz1;
+    if-nez v0, :cond_0
 
-    instance-of v1, v0, Lbz1;
+    return-void
 
-    invoke-static {v1}, Lcr0;->f(Z)V
+    :cond_0
+    new-instance v0, Ljava/lang/ClassCastException;
 
-    move-object v1, v0
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
 
-    check-cast v1, Lbz1;
-
-    invoke-interface {v1}, Lbz1;->d()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Unable to find camera with id "
-
-    const-string v1, " from list of available cameras."
-
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    throw v0
 .end method

@@ -1,124 +1,204 @@
 .class public final Llhd;
-.super Leje;
+.super Lv2;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lohd;
-
-.field public final synthetic Z:Lofd;
+.field public final c:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public constructor <init>(Lohd;Lofd;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
 
-    iput-object p1, p0, Llhd;->Y:Lohd;
+    const/16 v0, 0xa
 
-    iput-object p2, p0, Llhd;->Z:Lofd;
+    invoke-direct {p0, v0, p1}, Lv2;-><init>(ILjava/lang/Object;)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Llhd;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final G0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 6
 
-    check-cast p1, Lp04;
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Llhd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    move-result-object p0
+    move-result v1
 
-    check-cast p0, Llhd;
+    if-le v0, v1, :cond_0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    invoke-virtual {p0, p1}, Llhd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p2, "Can\'t fit view into desired rect!"
 
-    move-result-object p0
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object p0
-.end method
+    return-void
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_0
+    iget v0, p1, Landroid/graphics/Rect;->top:I
 
-    new-instance p1, Llhd;
+    iget v1, p2, Landroid/graphics/Rect;->top:I
 
-    iget-object v0, p0, Llhd;->Y:Lohd;
+    const/4 v2, 0x0
 
-    iget-object p0, p0, Llhd;->Z:Lofd;
+    iget-object v3, p0, Llhd;->c:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p1, v0, p0, p2}, Llhd;-><init>(Lohd;Lofd;Lkotlin/coroutines/Continuation;)V
+    if-ge v0, v1, :cond_3
 
-    return-object p1
-.end method
+    sub-int/2addr v0, v1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    iget v0, p0, Llhd;->X:I
+    move-result p2
 
-    const/4 v1, 0x1
+    add-int v1, p2, v0
 
-    if-eqz v0, :cond_1
+    if-lez p2, :cond_1
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v3, v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    :cond_1
+    if-gez v1, :cond_2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result p2
+
+    invoke-virtual {v3, p2}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->X()V
+
+    :cond_2
+    neg-int p2, v0
+
+    invoke-virtual {p1, v2, p2}, Landroid/graphics/Rect;->offset(II)V
+
+    return-void
+
+    :cond_3
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
+
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
+
+    if-le p1, p2, :cond_b
+
+    sub-int/2addr p1, p2
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
+
+    move-result p2
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
+
+    move-result v0
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
+
+    move-result v1
+
+    add-int/2addr v1, p2
+
+    sub-int/2addr v0, v1
+
+    if-gez v0, :cond_4
+
+    move v0, v2
+
+    :cond_4
+    if-lez v0, :cond_5
+
+    invoke-virtual {v3, v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
+
+    :cond_5
+    sub-int/2addr v0, p1
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p2
+
+    instance-of v1, p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    if-eqz v1, :cond_6
+
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
     goto :goto_0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :cond_6
+    const/4 p2, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llhd;->Y:Lohd;
-
-    iget-object p1, p1, Lohd;->b:Lkpd;
-
-    new-instance v0, Lshd;
-
-    iget-object v2, p0, Llhd;->Z:Lofd;
-
-    invoke-direct {v0, v2}, Lshd;-><init>(Lofd;)V
-
-    iput v1, p0, Llhd;->X:I
-
-    invoke-virtual {p1, v0, p0}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
-    return-object p0
+    move-result-object v1
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Lpwc;->j()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_7
+    move v1, v4
+
+    :goto_1
+    sub-int/2addr v1, v4
+
+    if-eqz p2, :cond_8
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    move v5, v4
+
+    goto :goto_2
+
+    :cond_8
+    move v5, v2
+
+    :goto_2
+    if-eqz p2, :cond_9
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
+
+    move-result p2
+
+    if-ne p2, v1, :cond_9
+
+    move v2, v4
+
+    :cond_9
+    if-eqz v5, :cond_a
+
+    if-eqz v2, :cond_a
+
+    neg-int p1, p1
+
+    invoke-virtual {v3, p1}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
+
+    return-void
+
+    :cond_a
+    if-gez v0, :cond_b
+
+    invoke-virtual {v3, v0}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
+
+    :cond_b
+    return-void
 .end method

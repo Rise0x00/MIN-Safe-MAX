@@ -3,193 +3,445 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpkg;
-
-.field public b:[La67;
-
-
 # direct methods
-.method public constructor <init>()V
+.method public static a(Landroid/view/WindowInsets;Landroid/view/View;)V
     .locals 1
 
-    .line 1
-    new-instance v0, Lpkg;
+    sget v0, Lafc;->tag_window_insets_animation_callback:I
 
-    invoke-direct {v0}, Lpkg;-><init>()V
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    invoke-direct {p0, v0}, Lgkg;-><init>(Lpkg;)V
+    move-result-object v0
 
+    check-cast v0, Landroid/view/View$OnApplyWindowInsetsListener;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p0}, Landroid/view/View$OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    :cond_0
     return-void
 .end method
 
-.method public constructor <init>(Lpkg;)V
+.method public static b(Landroid/view/View;Lq8h;Landroid/graphics/Rect;)Lq8h;
+    .locals 1
+
+    invoke-virtual {p1}, Lq8h;->g()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, v0, p2}, Landroid/view/View;->computeSystemWindowInsets(Landroid/view/WindowInsets;Landroid/graphics/Rect;)Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lq8h;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lq8h;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->setEmpty()V
+
+    return-object p1
+.end method
+
+.method public static c(Landroid/view/View;FFZ)Z
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1, p2, p3}, Landroid/view/View;->dispatchNestedFling(FFZ)Z
 
-    .line 3
-    iput-object p1, p0, Lgkg;->a:Lpkg;
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
+.method public static d(Landroid/view/View;FF)Z
+    .locals 0
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->dispatchNestedPreFling(FF)Z
 
-    iget-object v0, p0, Lgkg;->b:[La67;
+    move-result p0
 
-    if-eqz v0, :cond_4
+    return p0
+.end method
+
+.method public static e(Landroid/view/View;II[I[I)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->dispatchNestedPreScroll(II[I[I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static f(Landroid/view/View;IIII[I)Z
+    .locals 0
+
+    invoke-virtual/range {p0 .. p5}, Landroid/view/View;->dispatchNestedScroll(IIII[I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static g(Landroid/view/View;)Landroid/content/res/ColorStateList;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getBackgroundTintList()Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/view/View;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(Landroid/view/View;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getElevation()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static j(Landroid/view/View;)Lq8h;
+    .locals 7
+
+    sget-boolean v0, Ld8h;->d:Z
 
     const/4 v1, 0x0
 
-    aget-object v1, v0, v1
+    if-eqz v0, :cond_3
 
-    const/4 v2, 0x1
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    aget-object v0, v0, v2
-
-    iget-object v3, p0, Lgkg;->a:Lpkg;
+    move-result v0
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x2
-
-    iget-object v4, v3, Lpkg;->a:Lnkg;
-
-    invoke-virtual {v4, v0}, Lnkg;->f(I)La67;
-
-    move-result-object v0
+    goto/16 :goto_1
 
     :cond_0
-    if-nez v1, :cond_1
-
-    iget-object v1, v3, Lpkg;->a:Lnkg;
-
-    invoke-virtual {v1, v2}, Lnkg;->f(I)La67;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-static {v1, v0}, La67;->a(La67;La67;)La67;
+    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lgkg;->f(La67;)V
+    :try_start_0
+    sget-object v2, Ld8h;->a:Ljava/lang/reflect/Field;
 
-    iget-object v0, p0, Lgkg;->b:[La67;
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v1, 0x10
-
-    invoke-static {v1}, Lj5e;->n(I)I
-
-    move-result v1
-
-    aget-object v0, v0, v1
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0, v0}, Lgkg;->e(La67;)V
-
-    :cond_2
-    iget-object v0, p0, Lgkg;->b:[La67;
-
-    const/16 v1, 0x20
-
-    invoke-static {v1}, Lj5e;->n(I)I
-
-    move-result v1
-
-    aget-object v0, v0, v1
+    move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0, v0}, Lgkg;->d(La67;)V
+    sget-object v2, Ld8h;->b:Ljava/lang/reflect/Field;
 
-    :cond_3
-    iget-object v0, p0, Lgkg;->b:[La67;
+    invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v1, 0x40
+    move-result-object v2
 
-    invoke-static {v1}, Lj5e;->n(I)I
+    check-cast v2, Landroid/graphics/Rect;
 
-    move-result v1
+    sget-object v3, Ld8h;->c:Ljava/lang/reflect/Field;
 
-    aget-object v0, v0, v1
+    invoke-virtual {v3, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_4
+    move-result-object v0
 
-    invoke-virtual {p0, v0}, Lgkg;->g(La67;)V
+    check-cast v0, Landroid/graphics/Rect;
 
-    :cond_4
-    return-void
-.end method
+    if-eqz v2, :cond_3
 
-.method public abstract b()Lpkg;
-.end method
+    if-eqz v0, :cond_3
 
-.method public c(ILa67;)V
-    .locals 3
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v0, p0, Lgkg;->b:[La67;
+    const/16 v4, 0x1e
 
-    if-nez v0, :cond_0
+    if-lt v3, v4, :cond_1
 
-    const/16 v0, 0x9
+    new-instance v3, Lg8h;
 
-    new-array v0, v0, [La67;
+    invoke-direct {v3}, Lg8h;-><init>()V
 
-    iput-object v0, p0, Lgkg;->b:[La67;
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    const/16 v1, 0x100
-
-    if-gt v0, v1, :cond_2
-
-    and-int v1, p1, v0
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lgkg;->b:[La67;
+    const/16 v4, 0x1d
 
-    invoke-static {v0}, Lj5e;->n(I)I
+    if-lt v3, v4, :cond_2
 
-    move-result v2
+    new-instance v3, Lf8h;
 
-    aput-object p2, v1, v2
-
-    :goto_1
-    shl-int/lit8 v0, v0, 0x1
+    invoke-direct {v3}, Lf8h;-><init>()V
 
     goto :goto_0
 
     :cond_2
+    new-instance v3, Le8h;
+
+    invoke-direct {v3}, Le8h;-><init>()V
+
+    :goto_0
+    iget v4, v2, Landroid/graphics/Rect;->left:I
+
+    iget v5, v2, Landroid/graphics/Rect;->top:I
+
+    iget v6, v2, Landroid/graphics/Rect;->right:I
+
+    iget v2, v2, Landroid/graphics/Rect;->bottom:I
+
+    invoke-static {v4, v5, v6, v2}, Lcd7;->b(IIII)Lcd7;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Lh8h;->e(Lcd7;)V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    iget v4, v0, Landroid/graphics/Rect;->top:I
+
+    iget v5, v0, Landroid/graphics/Rect;->right:I
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-static {v2, v4, v5, v0}, Lcd7;->b(IIII)Lcd7;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lh8h;->g(Lcd7;)V
+
+    invoke-virtual {v3}, Lh8h;->b()Lq8h;
+
+    move-result-object v0
+
+    iget-object v2, v0, Lq8h;->a:Lo8h;
+
+    invoke-virtual {v2, v0}, Lo8h;->q(Lq8h;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object p0
+
+    iget-object v2, v0, Lq8h;->a:Lo8h;
+
+    invoke-virtual {v2, p0}, Lo8h;->d(Landroid/view/View;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to get insets from AttachInfo. "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "WindowInsetsCompat"
+
+    invoke-static {v2, v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_3
+    :goto_1
+    return-object v1
+.end method
+
+.method public static k(Landroid/view/View;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getTransitionName()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static l(Landroid/view/View;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getTranslationZ()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static m(Landroid/view/View;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getZ()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static n(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->hasNestedScrollingParent()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static o(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->isImportantForAccessibility()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static p(Landroid/view/View;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->isNestedScrollingEnabled()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static q(Landroid/view/View;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+
     return-void
 .end method
 
-.method public abstract d(La67;)V
-.end method
-
-.method public abstract e(La67;)V
-.end method
-
-.method public abstract f(La67;)V
-.end method
-
-.method public abstract g(La67;)V
-.end method
-
-.method public h(IZ)V
+.method public static r(Landroid/view/View;Landroid/graphics/PorterDuff$Mode;)V
     .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    return-void
+.end method
+
+.method public static s(Landroid/view/View;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setElevation(F)V
+
+    return-void
+.end method
+
+.method public static t(Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setNestedScrollingEnabled(Z)V
+
+    return-void
+.end method
+
+.method public static u(Landroid/view/View;Lwea;)V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-ge v0, v1, :cond_0
+
+    sget v0, Lafc;->tag_on_apply_window_listener:I
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    sget p1, Lafc;->tag_window_insets_animation_callback:I
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View$OnApplyWindowInsetsListener;
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+
+    return-void
+
+    :cond_1
+    new-instance v0, Lfkg;
+
+    invoke-direct {v0, p0, p1}, Lfkg;-><init>(Landroid/view/View;Lwea;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
+
+    return-void
+.end method
+
+.method public static v(Landroid/view/View;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTransitionName(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static w(Landroid/view/View;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTranslationZ(F)V
+
+    return-void
+.end method
+
+.method public static x(Landroid/view/View;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setZ(F)V
+
+    return-void
+.end method
+
+.method public static y(Landroid/view/View;I)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->startNestedScroll(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static z(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->stopNestedScroll()V
 
     return-void
 .end method

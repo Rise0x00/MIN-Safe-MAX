@@ -1,169 +1,128 @@
 .class public final Lajd;
-.super Lejd;
+.super Lm3f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lajd;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Z
+.field public X:Lvi7;
 
-.field public final b:Z
+.field public Y:I
+
+.field public final synthetic Z:Lvi7;
+
+.field public final synthetic w0:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz1b;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lz1b;-><init>(I)V
-
-    sput-object v0, Lajd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZ)V
+.method public constructor <init>(Lvi7;Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lajd;->Z:Lvi7;
 
-    iput-boolean p1, p0, Lajd;->a:Z
+    iput-object p2, p0, Lajd;->w0:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
-    iput-boolean p2, p0, Lajd;->b:Z
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p1, Le34;
 
-    return p0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-virtual {p0, p1, p2}, Lajd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lajd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lajd;
 
-    iget-boolean v1, p0, Lajd;->a:Z
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-boolean v3, p1, Lajd;->a:Z
+    invoke-virtual {p1, p2}, Lajd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    move-result-object p1
 
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lajd;->b:Z
-
-    iget-boolean p1, p1, Lajd;->b:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lajd;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lajd;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lajd;
 
-    const-string v1, "Radio(isChecked="
+    iget-object v0, p0, Lajd;->Z:Lvi7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lajd;->w0:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
-    iget-boolean v1, p0, Lajd;->a:Z
+    invoke-direct {p1, v0, v1, p2}, Lajd;-><init>(Lvi7;Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lajd;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-boolean p2, p0, Lajd;->a:Z
+    iget v0, p0, Lajd;->Y:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v1, 0x1
 
-    iget-boolean p0, p0, Lajd;->b:Z
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    if-ne v0, v1, :cond_0
 
-    return-void
+    iget-object v0, p0, Lajd;->X:Lvi7;
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lajd;->Z:Lvi7;
+
+    iput-object v0, p0, Lajd;->X:Lvi7;
+
+    iput v1, p0, Lajd;->Y:I
+
+    iget-object p1, p0, Lajd;->w0:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lf34;->a:Lf34;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    iget-object v0, v0, Lvi7;->a:Ltxd;
+
+    invoke-virtual {v0, p1}, Ltxd;->i(Ljava/lang/Object;)Z
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

@@ -2,222 +2,315 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/ListAdapter;
-.implements Landroid/widget/SpinnerAdapter;
+
+# static fields
+.field public static final b:Landroid/graphics/PorterDuff$Mode;
+
+.field public static c:Lnn;
 
 
 # instance fields
-.field public a:Landroid/widget/SpinnerAdapter;
+.field public a:Lt2d;
 
-.field public b:Landroid/widget/ListAdapter;
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    sput-object v0, Lnn;->b:Landroid/graphics/PorterDuff$Mode;
+
+    return-void
+.end method
+
+.method public static declared-synchronized a()Lnn;
+    .locals 2
+
+    const-class v0, Lnn;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lnn;->c:Lnn;
+
+    if-nez v1, :cond_0
+
+    invoke-static {}, Lnn;->d()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lnn;->c:Lnn;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method public static declared-synchronized c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    .locals 1
+
+    const-class v0, Lnn;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-static {p0, p1}, Lt2d;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public static declared-synchronized d()V
+    .locals 3
+
+    const-class v0, Lnn;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lnn;->c:Lnn;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lnn;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Lnn;->c:Lnn;
+
+    invoke-static {}, Lt2d;->b()Lt2d;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lnn;->a:Lt2d;
+
+    sget-object v1, Lnn;->c:Lnn;
+
+    iget-object v1, v1, Lnn;->a:Lt2d;
+
+    new-instance v2, La63;
+
+    invoke-direct {v2}, La63;-><init>()V
+
+    monitor-enter v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iput-object v2, v1, Lt2d;->e:La63;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    :try_start_5
+    monitor-exit v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    throw v1
+.end method
+
+.method public static e(Landroid/graphics/drawable/Drawable;Lc11;[I)V
+    .locals 4
+
+    sget-object v0, Lt2d;->f:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getState()[I
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-ne v1, p0, :cond_7
+
+    instance-of v1, p0, Landroid/graphics/drawable/LayerDrawable;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-array v1, v2, [I
+
+    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    :cond_0
+    iget-boolean v0, p1, Lc11;->c:Z
+
+    if-nez v0, :cond_2
+
+    iget-boolean v1, p1, Lc11;->b:Z
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p1, Lc11;->d:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/res/ColorStateList;
+
+    goto :goto_1
+
+    :cond_3
+    move-object v0, v1
+
+    :goto_1
+    iget-boolean v3, p1, Lc11;->b:Z
+
+    if-eqz v3, :cond_4
+
+    iget-object p1, p1, Lc11;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/graphics/PorterDuff$Mode;
+
+    goto :goto_2
+
+    :cond_4
+    sget-object p1, Lt2d;->f:Landroid/graphics/PorterDuff$Mode;
+
+    :goto_2
+    if-eqz v0, :cond_6
+
+    if-nez p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v0, p2, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p2
+
+    invoke-static {p2, p1}, Lt2d;->e(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+
+    move-result-object v1
+
+    :cond_6
+    :goto_3
+    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-void
+
+    :cond_7
+    const-string p0, "ResourceManagerInternal"
+
+    const-string p1, "Mutated drawable is not the same instance as the input."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final areAllItemsEnabled()Z
-    .locals 0
+.method public final declared-synchronized b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    iget-object p0, p0, Lnn;->b:Landroid/widget/ListAdapter;
+    monitor-enter p0
 
-    if-eqz p0, :cond_0
+    :try_start_0
+    iget-object v0, p0, Lnn;->a:Lt2d;
 
-    invoke-interface {p0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
+    invoke-virtual {v0, p1, p2}, Lt2d;->d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result p0
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p0
+    monitor-exit p0
 
-    :cond_0
-    const/4 p0, 0x1
+    return-object p1
 
-    return p0
-.end method
+    :catchall_0
+    move-exception p1
 
-.method public final getCount()I
-    .locals 0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-interface {p0}, Landroid/widget/Adapter;->getCount()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0, p1, p2, p3}, Landroid/widget/SpinnerAdapter;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p0, p1}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getItemId(I)J
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-nez p0, :cond_0
-
-    const-wide/16 p0, -0x1
-
-    return-wide p0
-
-    :cond_0
-    invoke-interface {p0, p1}, Landroid/widget/Adapter;->getItemId(I)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final getItemViewType(I)I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Lnn;->getDropDownView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getViewTypeCount()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hasStableIds()Z
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Landroid/widget/Adapter;->hasStableIds()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    invoke-virtual {p0}, Lnn;->getCount()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final isEnabled(I)Z
-    .locals 0
-
-    iget-object p0, p0, Lnn;->b:Landroid/widget/ListAdapter;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final registerDataSetObserver(Landroid/database/DataSetObserver;)V
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p1}, Landroid/widget/Adapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
-    .locals 0
-
-    iget-object p0, p0, Lnn;->a:Landroid/widget/SpinnerAdapter;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p1}, Landroid/widget/Adapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
-
-    :cond_0
-    return-void
+    throw p1
 .end method

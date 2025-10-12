@@ -1,231 +1,122 @@
 .class public final Llcg;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lqcg;
+.field public final synthetic b:Lmcg;
 
 
 # direct methods
-.method public constructor <init>(Lqcg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lmcg;I)V
     .locals 0
 
-    iput-object p1, p0, Llcg;->Y:Lqcg;
+    iput p2, p0, Llcg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Llcg;->b:Lmcg;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    check-cast p1, Lp04;
+    iget p1, p0, Llcg;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Llcg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Llcg;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Llcg;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    new-instance v0, Llcg;
+    iget p1, p0, Llcg;->a:I
 
-    iget-object p0, p0, Llcg;->Y:Lqcg;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0, p2}, Llcg;-><init>(Lqcg;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Llcg;->b:Lmcg;
 
-    iput-object p1, v0, Llcg;->X:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object v0
-.end method
+    iput-object v0, p1, Lmcg;->I0:Landroid/animation/ValueAnimator;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    return-void
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    :pswitch_0
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Llcg;->X:Ljava/lang/Object;
+    iget-object v0, p0, Llcg;->b:Lmcg;
 
-    check-cast p1, Lp04;
-
-    iget-object v0, p0, Llcg;->Y:Lqcg;
-
-    :try_start_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ".jpg"
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lqcg;->L0:Ljava/lang/String;
-
-    iget-object v1, v0, Lqcg;->w0:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxm5;
-
-    iget-object v2, v0, Lqcg;->L0:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lxm5;->r(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget v3, Lufd;->e:I
-
-    const-string v3, "content://"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, v0, Lqcg;->w0:Lth7;
-
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lxm5;
-
-    iget-object v0, v0, Lqcg;->x0:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-static {v1}, Lj5e;->E(Landroid/net/Uri;)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v0, v1}, Lxm5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    :goto_0
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v2, "android.media.action.IMAGE_CAPTURE"
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "output"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string v1, "outputFormat"
-
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lfnc;
-
-    invoke-direct {v1, v0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_1
-    iget-object v1, p0, Llcg;->Y:Lqcg;
-
-    invoke-static {v0}, Lhnc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, v0, Lmcg;->L0:Landroid/animation/ValueAnimator;
 
     const/4 p1, 0x0
 
-    iput-object p1, v1, Lqcg;->L0:Ljava/lang/String;
+    iput-boolean p1, v0, Lmcg;->M0:Z
 
-    iget-object p1, v1, Lqcg;->N0:Lt65;
+    return-void
 
-    sget-object v1, Ldbg;->a:Ldbg;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-static {p1, v1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    :cond_1
-    iget-object p0, p0, Llcg;->Y:Lqcg;
+    iget p1, p0, Llcg;->a:I
 
-    instance-of p1, v0, Lfnc;
+    return-void
+.end method
 
-    if-nez p1, :cond_2
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    check-cast v0, Landroid/content/Intent;
+    iget p1, p0, Llcg;->a:I
 
-    iget-object p0, p0, Lqcg;->N0:Lt65;
-
-    new-instance p1, Lfbg;
-
-    invoke-direct {p1, v0}, Lfbg;-><init>(Landroid/content/Intent;)V
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    :cond_2
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-void
 .end method

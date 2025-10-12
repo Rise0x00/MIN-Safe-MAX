@@ -1,9 +1,9 @@
 .class public final Lo;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,47 +34,76 @@
 
     invoke-virtual {p0, p1, p2}, Lo;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lo;
+    check-cast p1, Lo;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lo;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lo;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lo;
 
-    iget-object p0, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
+    iget-object v1, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    invoke-direct {v0, p2, p0}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
+    invoke-direct {v0, p2, v1}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
 
     iput-object p1, v0, Lo;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lo;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Lhy9;
 
-    iget-object p0, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
+    sget-object v0, Lj73;->b:Lj73;
 
-    iget-object p0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lqy5;
+    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
+    move-result v0
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v1, p0, Lo;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    return-object p0
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Li8d;->C()Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ls;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast p1, Ls;
+
+    iget-object p1, p1, Ls;->b:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lx63;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

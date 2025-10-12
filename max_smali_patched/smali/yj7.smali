@@ -1,208 +1,126 @@
 .class public final Lyj7;
-.super Loy1;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public E:Lsk7;
+.field public final synthetic X:Lak7;
+
+
+# direct methods
+.method public constructor <init>(Lak7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lyj7;->X:Lak7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final o()Lxj7;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyj7;->E:Lsk7;
+    check-cast p1, Le34;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lyj7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto/16 :goto_5
+    move-result-object p1
 
-    :cond_0
-    iget-object v0, p0, Loy1;->n:Ltbb;
+    check-cast p1, Lyj7;
 
-    if-nez v0, :cond_1
+    sget-object p2, Loyf;->a:Loyf;
 
-    goto/16 :goto_5
+    invoke-virtual {p1, p2}, Lyj7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    invoke-virtual {p0}, Loy1;->i()Z
+    return-object p2
+.end method
 
-    move-result v0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    if-nez v0, :cond_3
+    new-instance p1, Lyj7;
 
-    :cond_2
-    move-object v0, v1
+    iget-object v0, p0, Lyj7;->X:Lak7;
 
-    goto/16 :goto_4
+    invoke-direct {p1, v0, p2}, Lyj7;-><init>(Lak7;Lkotlin/coroutines/Continuation;)V
 
-    :cond_3
-    iget-object v0, p0, Loy1;->p:Lqab;
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Loy1;->o:Ldzf;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_2
+    iget-object p1, p0, Lyj7;->X:Lak7;
 
-    new-instance v0, Lihf;
+    iget-object v0, p1, Lak7;->c:Lbp7;
 
-    invoke-direct {v0}, Lihf;-><init>()V
-
-    iget-object v2, p0, Loy1;->c:Lrab;
-
-    invoke-virtual {v0, v2}, Lihf;->a(Lbhf;)V
-
-    invoke-static {}, Lxwe;->f()V
-
-    iget v2, p0, Loy1;->b:I
-
-    const/4 v3, 0x1
-
-    and-int/2addr v2, v3
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_4
-
-    iget-object v2, p0, Loy1;->d:Lqx6;
-
-    invoke-virtual {v0, v2}, Lihf;->a(Lbhf;)V
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v2, p0, Loy1;->n:Ltbb;
-
-    iget-object v5, p0, Loy1;->d:Lqx6;
-
-    new-array v6, v3, [Lbhf;
-
-    aput-object v5, v6, v4
-
-    invoke-virtual {v2, v6}, Ltbb;->a([Lbhf;)V
-
-    :goto_0
-    invoke-static {}, Lxwe;->f()V
-
-    iget v2, p0, Loy1;->b:I
-
-    and-int/lit8 v2, v2, 0x2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Loy1;->e:Lax6;
-
-    invoke-virtual {v0, v2}, Lihf;->a(Lbhf;)V
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v2, p0, Loy1;->n:Ltbb;
-
-    iget-object v5, p0, Loy1;->e:Lax6;
-
-    new-array v6, v3, [Lbhf;
-
-    aput-object v5, v6, v4
-
-    invoke-virtual {v2, v6}, Ltbb;->a([Lbhf;)V
-
-    :goto_1
-    invoke-static {}, Lxwe;->f()V
-
-    iget v2, p0, Loy1;->b:I
-
-    and-int/lit8 v2, v2, 0x4
-
-    if-eqz v2, :cond_6
-
-    iget-object v2, p0, Loy1;->f:Lllf;
-
-    invoke-virtual {v0, v2}, Lihf;->a(Lbhf;)V
-
-    goto :goto_2
-
-    :cond_6
-    iget-object v2, p0, Loy1;->n:Ltbb;
-
-    iget-object v5, p0, Loy1;->f:Lllf;
-
-    new-array v3, v3, [Lbhf;
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v2, v3}, Ltbb;->a([Lbhf;)V
-
-    :goto_2
-    iget-object v2, p0, Loy1;->o:Ldzf;
-
-    iput-object v2, v0, Lihf;->a:Ldzf;
-
-    iget-object v2, p0, Loy1;->A:Ljava/util/HashSet;
-
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_3
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lwof;
-
-    iget-object v4, v0, Lihf;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_7
-    invoke-virtual {v0}, Lihf;->b()Lmo8;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_4
-    if-nez v0, :cond_8
+    check-cast v0, Ltk;
 
-    :goto_5
-    return-object v1
+    iget-object v1, p1, Lak7;->b:Ljava/lang/String;
 
-    :cond_8
-    :try_start_0
-    iget-object v1, p0, Loy1;->n:Ltbb;
+    check-cast v0, Lbga;
 
-    iget-object v2, p0, Lyj7;->E:Lsk7;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Loy1;->a:Lrz1;
+    if-eqz v1, :cond_1
 
-    iget-object v1, v1, Ltbb;->a:Lsbb;
+    invoke-static {v1}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v1, v2, p0, v0}, Lsbb;->c(Lsk7;Lrz1;Lmo8;)Lxj7;
+    move-result v2
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v2, :cond_0
 
-    return-object p0
+    goto :goto_0
 
-    :catch_0
-    move-exception p0
+    :cond_0
+    new-instance v2, Lzo1;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0}, Lbga;->x()Lxob;
 
-    const-string v1, "The selected camera does not support the enabled use cases. Please disable use case and/or select a different camera. e.g. #setVideoCaptureEnabled(false)"
+    move-result-object v3
 
-    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v3, Lzob;
 
-    throw v0
+    iget-object v3, v3, Lzob;->a:Lt63;
+
+    invoke-virtual {v3}, Lxid;->l()J
+
+    move-result-wide v3
+
+    const/4 v5, 0x1
+
+    invoke-direct {v2, v3, v4, v1, v5}, Lzo1;-><init>(JLjava/lang/String;I)V
+
+    invoke-static {v0, v2}, Lbga;->u(Lbga;Lxl;)J
+
+    move-result-wide v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const-wide/16 v0, 0x0
+
+    :goto_1
+    iput-wide v0, p1, Lak7;->o:J
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

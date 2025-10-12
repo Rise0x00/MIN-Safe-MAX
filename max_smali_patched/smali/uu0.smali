@@ -1,57 +1,47 @@
-.class public interface abstract Luu0;
+.class public abstract Luu0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lryd;
-.implements Ljava/nio/channels/ReadableByteChannel;
+
+# static fields
+.field public static final synthetic a:I
 
 
-# virtual methods
-.method public abstract N(Ljx;)J
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.method public abstract S(Ljava/nio/charset/Charset;)Ljava/lang/String;
-.end method
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-.method public abstract V(Lrt0;J)V
-.end method
+    sget-object v1, Ltu0;->a:Ltu0;
 
-.method public abstract a0()Ljava/lang/String;
-.end method
+    const/16 v2, 0x1e
 
-.method public abstract e(J)Lqw0;
-.end method
+    if-lt v0, v2, :cond_0
 
-.method public abstract h0(Lfpa;)I
-.end method
+    invoke-virtual {v1, v2}, Ltu0;->a(I)I
 
-.method public abstract j(J)Ljava/lang/String;
-.end method
+    :cond_0
+    if-lt v0, v2, :cond_1
 
-.method public abstract l0(J)V
-.end method
+    const/16 v3, 0x1f
 
-.method public abstract o0()J
-.end method
+    invoke-virtual {v1, v3}, Ltu0;->a(I)I
 
-.method public abstract p0()Ljava/io/InputStream;
-.end method
+    :cond_1
+    if-lt v0, v2, :cond_2
 
-.method public abstract readByte()B
-.end method
+    const/16 v3, 0x21
 
-.method public abstract readFully([B)V
-.end method
+    invoke-virtual {v1, v3}, Ltu0;->a(I)I
 
-.method public abstract readInt()I
-.end method
+    :cond_2
+    if-lt v0, v2, :cond_3
 
-.method public abstract readLong()J
-.end method
+    const v0, 0xf4240
 
-.method public abstract readShort()S
-.end method
+    invoke-virtual {v1, v0}, Ltu0;->a(I)I
 
-.method public abstract skip(J)V
+    :cond_3
+    return-void
 .end method

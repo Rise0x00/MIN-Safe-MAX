@@ -1,199 +1,92 @@
-.class public Lch8;
-.super Ljava/lang/Object;
+.class public final Lch8;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public final synthetic Y:Lgz1;
 
 
 # direct methods
-.method public constructor <init>(Lch8;)V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iget-object v0, p1, Lch8;->a:Ljava/lang/Object;
-
-    iput-object v0, p0, Lch8;->a:Ljava/lang/Object;
-
-    .line 3
-    iget v0, p1, Lch8;->b:I
-
-    iput v0, p0, Lch8;->b:I
-
-    .line 4
-    iget v0, p1, Lch8;->c:I
-
-    iput v0, p0, Lch8;->c:I
-
-    .line 5
-    iget-wide v0, p1, Lch8;->d:J
-
-    iput-wide v0, p0, Lch8;->d:J
-
-    .line 6
-    iget p1, p1, Lch8;->e:I
-
-    iput p1, p0, Lch8;->e:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;IIJI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lgz1;)V
     .locals 0
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lch8;->Y:Lgz1;
 
-    .line 8
-    iput-object p1, p0, Lch8;->a:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    .line 9
-    iput p2, p0, Lch8;->b:I
-
-    .line 10
-    iput p3, p0, Lch8;->c:I
-
-    .line 11
-    iput-wide p4, p0, Lch8;->d:J
-
-    .line 12
-    iput p6, p0, Lch8;->e:I
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p0, p0, Lch8;->b:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, -0x1
+    invoke-virtual {p0, p1, p2}, Lch8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eq p0, v0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lch8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lch8;
 
-    iget-object v1, p0, Lch8;->a:Ljava/lang/Object;
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v3, p1, Lch8;->a:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lch8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lch8;->b:I
-
-    iget v3, p1, Lch8;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lch8;->c:I
-
-    iget v3, p1, Lch8;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-wide v3, p0, Lch8;->d:J
-
-    iget-wide v5, p1, Lch8;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget p0, p0, Lch8;->e:I
-
-    iget p1, p1, Lch8;->e:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lch8;->a:Ljava/lang/Object;
+    new-instance v0, Lch8;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v1, p0, Lch8;->Y:Lgz1;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lch8;-><init>(Lkotlin/coroutines/Continuation;Lgz1;)V
 
-    add-int/lit16 v0, v0, 0x20f
+    iput-object p1, v0, Lch8;->X:Ljava/lang/Object;
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object v0
+.end method
 
-    iget v1, p0, Lch8;->b:I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    add-int/2addr v0, v1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lch8;->X:Ljava/lang/Object;
 
-    iget v1, p0, Lch8;->c:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    add-int/2addr v0, v1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result p1
 
-    iget-wide v1, p0, Lch8;->d:J
+    if-eqz p1, :cond_0
 
-    long-to-int v1, v1
+    const/4 p1, 0x0
 
-    add-int/2addr v0, v1
+    goto :goto_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    :cond_0
+    const/16 p1, 0x8
 
-    iget p0, p0, Lch8;->e:I
+    :goto_0
+    iget-object v0, p0, Lch8;->Y:Lgz1;
 
-    add-int/2addr v0, p0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    return v0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

@@ -1,284 +1,84 @@
 .class public final Lb8b;
-.super Ljava/io/InputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lb8b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljt8;
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:[Ljava/lang/String;
 
-.field public c:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljt8;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+    new-instance v0, Lqva;
 
-    monitor-enter p1
+    const/16 v1, 0x8
 
-    :try_start_0
-    iget-object v0, p1, Ljt8;->b:Lx53;
+    invoke-direct {v0, v1}, Lqva;-><init>(I)V
 
-    invoke-static {v0}, Lx53;->r0(Lx53;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lb8b;->a:Ljt8;
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lb8b;->b:I
-
-    iput p1, p0, Lb8b;->c:I
+    sput-object v0, Lb8b;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Ljava/lang/String;[Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    throw p0
+    iput-object p1, p0, Lb8b;->a:Ljava/lang/String;
 
-    :catchall_0
-    move-exception p0
+    iput-object p2, p0, Lb8b;->b:[Ljava/lang/String;
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iput p3, p0, Lb8b;->c:I
 
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final available()I
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lb8b;->a:Ljt8;
-
-    invoke-virtual {v0}, Ljt8;->X()I
-
-    move-result v0
-
-    iget p0, p0, Lb8b;->b:I
-
-    sub-int/2addr v0, p0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final mark(I)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    iget p1, p0, Lb8b;->b:I
+    iget-object p2, p0, Lb8b;->a:Ljava/lang/String;
 
-    iput p1, p0, Lb8b;->c:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lb8b;->b:[Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
+
+    iget p2, p0, Lb8b;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-.end method
-
-.method public final markSupported()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final read()I
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lb8b;->available()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    .line 2
-    :cond_0
-    iget v0, p0, Lb8b;->b:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lb8b;->b:I
-
-    iget-object p0, p0, Lb8b;->a:Ljt8;
-
-    invoke-virtual {p0, v0}, Ljt8;->o(I)B
-
-    move-result p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    return p0
-.end method
-
-.method public final read([B)I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 3
-    array-length v1, p1
-
-    invoke-virtual {p0, p1, v0, v1}, Lb8b;->read([BII)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final read([BII)I
-    .locals 3
-
-    if-ltz p2, :cond_2
-
-    if-ltz p3, :cond_2
-
-    add-int v0, p2, p3
-
-    .line 4
-    array-length v1, p1
-
-    if-gt v0, v1, :cond_2
-
-    .line 5
-    invoke-virtual {p0}, Lb8b;->available()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    if-gtz p3, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 6
-    :cond_1
-    invoke-static {v0, p3}, Ljava/lang/Math;->min(II)I
-
-    move-result p3
-
-    .line 7
-    iget-object v0, p0, Lb8b;->a:Ljt8;
-
-    iget v1, p0, Lb8b;->b:I
-
-    invoke-virtual {v0, v1, p2, p3, p1}, Ljt8;->W(III[B)V
-
-    .line 8
-    iget p1, p0, Lb8b;->b:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lb8b;->b:I
-
-    return p3
-
-    .line 9
-    :cond_2
-    new-instance p0, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "length="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    array-length p1, p1
-
-    const-string v1, "; regionStart="
-
-    const-string v2, "; regionLength="
-
-    .line 10
-    invoke-static {v0, p1, v1, p2, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    .line 11
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final reset()V
-    .locals 1
-
-    iget v0, p0, Lb8b;->c:I
-
-    iput v0, p0, Lb8b;->b:I
-
-    return-void
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lltg;->e(Ljava/lang/Boolean;)V
-
-    long-to-int p1, p1
-
-    invoke-virtual {p0}, Lb8b;->available()I
-
-    move-result p2
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    iget p2, p0, Lb8b;->b:I
-
-    add-int/2addr p2, p1
-
-    iput p2, p0, Lb8b;->b:I
-
-    int-to-long p0, p1
-
-    return-wide p0
 .end method

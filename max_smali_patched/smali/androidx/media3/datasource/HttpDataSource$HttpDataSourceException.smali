@@ -97,7 +97,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Ly84;->O(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lvhh;->J(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

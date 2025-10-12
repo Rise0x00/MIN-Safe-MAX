@@ -1,93 +1,78 @@
 .class public final Lgwf;
-.super Lt2;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic o:Lhwf;
+.field public final synthetic Y:Lbxf;
 
 
 # direct methods
-.method public constructor <init>(Lhwf;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lbxf;)V
     .locals 0
 
-    iput p2, p0, Lgwf;->c:I
+    iput-object p2, p0, Lgwf;->Y:Lbxf;
 
-    iput-object p1, p0, Lgwf;->o:Lhwf;
+    const/4 p2, 0x2
 
-    const/16 p1, 0x8
-
-    packed-switch p2, :pswitch_data_0
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Lbwf;->a:Lbwf;
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lgwf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgwf;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lgwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lgwf;
+
+    iget-object v1, p0, Lgwf;->Y:Lbxf;
+
+    invoke-direct {v0, p2, v1}, Lgwf;-><init>(Lkotlin/coroutines/Continuation;Lbxf;)V
+
+    iput-object p1, v0, Lgwf;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lgwf;->c:I
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lgwf;->X:Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Lxwf;
 
-    move-result v0
+    iget-object v0, p0, Lgwf;->Y:Lbxf;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, p1}, Lbxf;->f(Lxwf;)V
 
-    check-cast p2, Lbwf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    check-cast p1, Lbwf;
-
-    iget-object p0, p0, Lgwf;->o:Lhwf;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, Lewf;
-
-    check-cast p1, Lewf;
-
-    iget-object p0, p0, Lgwf;->o:Lhwf;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

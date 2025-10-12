@@ -1,35 +1,71 @@
-.class public abstract Ldw3;
-.super Ljava/lang/Object;
+.class public final Ldw3;
+.super Lhh0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lc00;
+
+.field public final b:Lt03;
+
+.field public final c:Lik3;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;)Ljava/io/File;
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getCodeCacheDir()Ljava/io/File;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    new-instance v0, Lc00;
 
-    return-object p0
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lc00;-><init>(I)V
+
+    iput-object v0, p0, Ldw3;->a:Lc00;
+
+    new-instance v0, Lt03;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lt03;-><init>(I)V
+
+    iput-object v0, p0, Ldw3;->b:Lt03;
+
+    new-instance v0, Lik3;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lik3;-><init>(I)V
+
+    iput-object v0, p0, Ldw3;->c:Lik3;
+
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+# virtual methods
+.method public final a()Ljava/util/Comparator;
+    .locals 1
 
-    move-result-object p0
+    iget-object v0, p0, Ldw3;->a:Lc00;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public static c(Landroid/content/Context;)Ljava/io/File;
-    .locals 0
+.method public final b()Lxe6;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
+    iget-object v0, p0, Ldw3;->b:Lt03;
 
-    move-result-object p0
+    return-object v0
+.end method
 
-    return-object p0
+.method public final c()Lve6;
+    .locals 1
+
+    iget-object v0, p0, Ldw3;->c:Lik3;
+
+    return-object v0
 .end method

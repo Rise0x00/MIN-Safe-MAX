@@ -1,97 +1,147 @@
-.class public final enum Lkhf;
-.super Ljava/lang/Enum;
+.class public final Lkhf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lkhf;
-
-.field public static final enum a:Lkhf;
-
-.field public static final enum b:Lkhf;
-
-.field public static final enum c:Lkhf;
-
-.field public static final enum o:Lkhf;
+# instance fields
+.field public final a:Lqhh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lqhh;)V
+    .locals 0
 
-    new-instance v0, Lkhf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ENABLED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkhf;->a:Lkhf;
-
-    new-instance v1, Lkhf;
-
-    const-string v2, "DISABLED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkhf;->b:Lkhf;
-
-    new-instance v2, Lkhf;
-
-    const-string v3, "USER_IGNORED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lkhf;->c:Lkhf;
-
-    new-instance v3, Lkhf;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lkhf;->o:Lkhf;
-
-    filled-new-array {v0, v1, v2, v3}, [Lkhf;
-
-    move-result-object v0
-
-    sput-object v0, Lkhf;->X:[Lkhf;
+    iput-object p1, p0, Lkhf;->a:Lqhh;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkhf;
-    .locals 1
 
-    const-class v0, Lkhf;
+# virtual methods
+.method public final a()V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :try_start_0
+    iget-object v0, p0, Lkhf;->a:Lqhh;
 
-    move-result-object p0
+    check-cast v0, Lnhh;
 
-    check-cast p0, Lkhf;
+    invoke-virtual {v0}, Lweh;->Z()Landroid/os/Parcel;
 
-    return-object p0
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lweh;->a0(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public static values()[Lkhf;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    sget-object v0, Lkhf;->X:[Lkhf;
+    instance-of v0, p1, Lkhf;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lkhf;->a:Lqhh;
+
+    check-cast p1, Lkhf;
+
+    iget-object p1, p1, Lkhf;->a:Lqhh;
+
+    check-cast v0, Lnhh;
+
+    invoke-virtual {v0}, Lweh;->Z()Landroid/os/Parcel;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Ldih;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x8
+
+    invoke-virtual {v0, v2, p1}, Lweh;->A(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    :try_start_0
+    iget-object v0, p0, Lkhf;->a:Lqhh;
+
+    check-cast v0, Lnhh;
+
+    invoke-virtual {v0}, Lweh;->Z()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v0, v1, v2}, Lweh;->A(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object v0
 
-    check-cast v0, [Lkhf;
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
 
-    return-object v0
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

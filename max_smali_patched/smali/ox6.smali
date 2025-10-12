@@ -1,75 +1,34 @@
-.class public final Lox6;
+.class public abstract Lox6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltr5;
 
-# static fields
-.field public static final a:Lrx6;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
+    .locals 0
 
-    sget-object v0, Lso5;->c:Lso5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lox6;->a:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object p1
 
-    sget-object v2, Lbmc;->c:Lbmc;
+    iput-object p1, p0, Lox6;->b:Ljava/util/List;
 
-    new-instance v3, Lamc;
-
-    invoke-direct {v3, v0, v2}, Lamc;-><init>(Lso5;Lbmc;)V
-
-    new-instance v0, Lxw6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2}, Lxw6;-><init>(I)V
-
-    sget-object v2, Lehf;->f0:Lz90;
-
-    const/4 v4, 0x4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    iget-object v0, v0, Lxw6;->b:Ltk9;
-
-    invoke-virtual {v0, v2, v4}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    sget-object v2, Lpy6;->y:Lz90;
-
-    invoke-virtual {v0, v2, v1}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    sget-object v2, Lpy6;->G:Lz90;
-
-    invoke-virtual {v0, v2, v3}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    sget-object v2, Lrx6;->Y:Lz90;
-
-    invoke-virtual {v0, v2, v1}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    sget-object v1, Lfy6;->x:Lz90;
-
-    sget-object v2, Ljx4;->d:Ljx4;
-
-    invoke-virtual {v0, v1, v2}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
-
-    new-instance v1, Lrx6;
-
-    invoke-static {v0}, Lgpa;->a(Lpf3;)Lgpa;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lrx6;-><init>(Lgpa;)V
-
-    sput-object v1, Lox6;->a:Lrx6;
+    iput-boolean p3, p0, Lox6;->c:Z
 
     return-void
 .end method

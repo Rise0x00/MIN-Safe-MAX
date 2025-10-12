@@ -1,348 +1,137 @@
-.class public final Loaa;
-.super Lko;
+.class public abstract Loaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lke3;
 
 
 # static fields
-.field public static final a:Loaa;
+.field public static final a:[Ljava/lang/Object;
+
+.field public static final b:Lrt9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Loaa;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lko;-><init>()V
+    new-array v1, v0, [Ljava/lang/Object;
 
-    sput-object v0, Loaa;->a:Loaa;
+    sput-object v1, Loaa;->a:[Ljava/lang/Object;
+
+    new-instance v1, Lrt9;
+
+    invoke-direct {v1, v0}, Lrt9;-><init>(I)V
+
+    sput-object v1, Loaa;->b:Lrt9;
 
     return-void
 .end method
 
+.method public static final a(ILjava/util/List;)V
+    .locals 4
 
-# virtual methods
-.method public final b()Ltc;
-    .locals 1
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    move-result p1
+
+    if-ltz p0, :cond_0
+
+    if-ge p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, " is out of bounds. The list has "
+
+    const-string v2, " elements."
+
+    const-string v3, "Index "
+
+    invoke-static {v3, p0, v1, p1, v2}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    const-class v0, Ltc;
+    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ltc;
-
-    return-object p0
+    throw v0
 .end method
 
-.method public final c()Lng;
-    .locals 1
+.method public static final b(Ljava/util/List;II)V
+    .locals 3
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result-object p0
+    move-result p0
 
-    const-class v0, Lng;
+    if-gt p1, p2, :cond_2
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-ltz p1, :cond_1
 
-    move-result-object p0
+    if-gt p2, p0, :cond_0
 
-    check-cast p0, Lng;
+    return-void
 
-    return-object p0
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-.method public final d()La20;
-    .locals 1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    const-string v1, "toIndex ("
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-class v0, La20;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string p2, ") is more than than the list size ("
 
-    move-result-object p0
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p0, La20;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    const/16 p0, 0x29
 
-.method public final e()Lbb2;
-    .locals 1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-class v0, Lbb2;
+    invoke-direct {p1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    throw p1
 
-    move-result-object p0
+    :cond_1
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
-    check-cast p0, Lbb2;
+    const-string p2, "fromIndex ("
 
-    return-object p0
-.end method
+    const-string v0, ") is less than 0."
 
-.method public final f()Lhm4;
-    .locals 1
+    invoke-static {p1, p2, v0}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    const-class v0, Lhm4;
+    throw p0
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p0
+    const-string v0, ") is greater than toIndex ("
 
-    check-cast p0, Lhm4;
+    const-string v1, ")."
 
-    return-object p0
-.end method
+    const-string v2, "Indices are out of order. fromIndex ("
 
-.method public final g()Lo75;
-    .locals 1
+    invoke-static {v2, p1, v0, p2, v1}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-class v0, Lo75;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lo75;
-
-    return-object p0
-.end method
-
-.method public final h()Lxm5;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lxm5;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lxm5;
-
-    return-object p0
-.end method
-
-.method public final i()Lb17;
-    .locals 0
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ls4;->e()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lb17;
-
-    return-object p0
-.end method
-
-.method public final j()Ltt7;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Ltt7;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ltt7;
-
-    return-object p0
-.end method
-
-.method public final k()Lai8;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lai8;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lai8;
-
-    return-object p0
-.end method
-
-.method public final l()Lpw8;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lpw8;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lpw8;
-
-    return-object p0
-.end method
-
-.method public final m()Ljp9;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Ljp9;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljp9;
-
-    return-object p0
-.end method
-
-.method public final n()Laab;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Laab;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Laab;
-
-    return-object p0
-.end method
-
-.method public final o()Lzba;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lzba;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzba;
-
-    return-object p0
-.end method
-
-.method public final p()Lgoe;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lgoe;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgoe;
-
-    return-object p0
-.end method
-
-.method public final q()Lbpe;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lbpe;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbpe;
-
-    return-object p0
-.end method
-
-.method public final r()Ln18;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Ln18;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ln18;
-
-    return-object p0
-.end method
-
-.method public final s()Lkvf;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lkvf;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkvf;
-
-    return-object p0
+    throw p0
 .end method

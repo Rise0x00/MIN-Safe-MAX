@@ -1,257 +1,147 @@
 .class public final Lwp;
-.super Ljava/lang/Object;
+.super Lg44;
 .source "SourceFile"
 
-# interfaces
-.implements Llp7;
 
+# static fields
+.field public static final a:Lwp;
 
-# instance fields
-.field public final a:Lsp;
+.field public static b:Lbp7;
 
-.field public final b:Ljava/lang/Boolean;
+.field public static final c:Ls5f;
 
-.field public final c:Lyte;
+.field public static final d:Ls5f;
 
 
 # direct methods
-.method public constructor <init>(Lsp;Ljava/lang/Boolean;Lyte;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwp;
 
-    iput-object p1, p0, Lwp;->a:Lsp;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwp;->b:Ljava/lang/Boolean;
+    sput-object v0, Lwp;->a:Lwp;
 
-    iput-object p3, p0, Lwp;->c:Lyte;
+    new-instance v0, Ll;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Ll;-><init>(I)V
+
+    new-instance v1, Ls5f;
+
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+
+    sput-object v1, Lwp;->c:Ls5f;
+
+    new-instance v0, Ll;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ll;-><init>(I)V
+
+    new-instance v1, Ls5f;
+
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+
+    sput-object v1, Lwp;->d:Ls5f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lwp;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwp;
-
-    iget-object v0, p0, Lwp;->a:Lsp;
-
-    iget-object v1, p1, Lwp;->a:Lsp;
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lwp;->b:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwp;->b:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p0, p0, Lwp;->c:Lyte;
-
-    iget-object p1, p1, Lwp;->c:Lyte;
-
-    invoke-virtual {p0, p1}, Lyte;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-object p0, p0, Lwp;->a:Lsp;
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
-    return-wide v0
-.end method
-
-.method public final h(Llp7;)Z
-    .locals 2
-
-    invoke-virtual {p0}, Lwp;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Llp7;->getItemId()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lwp;->a:Lsp;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lwp;->b:Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Lwp;->c:Lyte;
-
-    iget p0, p0, Lyte;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final k(Llp7;)Ljava/lang/Object;
-    .locals 2
-
-    instance-of v0, p1, Lwp;
+    sget-object v0, Lwp;->d:Ls5f;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_1
 
-    check-cast p1, Lwp;
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    :goto_0
-    if-nez p1, :cond_1
+    move-result-object v0
 
-    goto :goto_1
+    check-cast v0, Ltmf;
+
+    if-eqz v0, :cond_3
+
+    invoke-static {v1, p2, p1}, Ltmf;->b(Lp5e;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    return-void
 
     :cond_1
-    iget-object p1, p1, Lwp;->b:Ljava/lang/Boolean;
+    :goto_0
+    instance-of p1, p2, Ljava/lang/Error;
 
-    iget-object p0, p0, Lwp;->b:Ljava/lang/Boolean;
+    if-nez p1, :cond_2
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget-object p1, Lwp;->b:Lbp7;
 
-    move-result p0
+    if-eqz p1, :cond_3
 
-    if-nez p0, :cond_2
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    new-instance p0, Lup;
+    move-result-object p1
 
-    invoke-direct {p0, p1}, Lup;-><init>(Ljava/lang/Boolean;)V
+    check-cast p1, Lltd;
 
-    return-object p0
+    if-eqz p1, :cond_3
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->tracer-non-fatal-crashed-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Lgjd;->k(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    const/4 v2, 0x1
+
+    if-ne p1, v2, :cond_3
 
     :cond_2
-    :goto_1
-    return-object v1
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltmf;
+
+    if-eqz p1, :cond_3
+
+    invoke-static {v1, p2, v1}, Ltmf;->b(Lp5e;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    :cond_3
+    return-void
 .end method
 
-.method public final m()I
-    .locals 0
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    const/4 p0, 0x0
+    sget-object v0, Lwp;->c:Ls5f;
 
-    return p0
-.end method
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Lomf;
 
-    const-string v1, "AppearanceModeItem(mode="
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lomf;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lwp;->a:Lsp;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isSelected="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwp;->b:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lwp;->c:Lyte;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

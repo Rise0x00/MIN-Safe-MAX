@@ -1,97 +1,178 @@
-.class public final enum Leja;
-.super Ljava/lang/Enum;
+.class public final Leja;
+.super Lv2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Leja;
+# instance fields
+.field public final synthetic c:I
 
-.field public static final enum a:Leja;
-
-.field public static final enum b:Leja;
-
-.field public static final enum c:Leja;
-
-.field public static final enum o:Leja;
+.field public final synthetic o:Lfja;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lfja;I)V
+    .locals 0
 
-    new-instance v0, Leja;
+    iput p2, p0, Leja;->c:I
 
-    const-string v1, "COLLAPSED"
+    iput-object p1, p0, Leja;->o:Lfja;
 
-    const/4 v2, 0x0
+    const/16 p1, 0x9
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    packed-switch p2, :pswitch_data_0
 
-    sput-object v0, Leja;->a:Leja;
+    const/4 p2, 0x0
 
-    new-instance v1, Leja;
-
-    const-string v2, "ANIMATING_COLLAPSE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Leja;->b:Leja;
-
-    new-instance v2, Leja;
-
-    const-string v3, "EXPANDED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Leja;->c:Leja;
-
-    new-instance v3, Leja;
-
-    const-string v4, "ANIMATING_EXPAND"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Leja;->o:Leja;
-
-    filled-new-array {v0, v1, v2, v3}, [Leja;
-
-    move-result-object v0
-
-    sput-object v0, Leja;->X:[Leja;
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lbja;->a:Lbja;
+
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p2, Lcja;->a:Lcja;
+
+    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Leja;
+
+# virtual methods
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    const-class v0, Leja;
+    iget v0, p0, Leja;->c:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    check-cast p2, Lbja;
 
-    check-cast p0, Leja;
+    check-cast p1, Lbja;
 
-    return-object p0
-.end method
+    if-eq p1, p2, :cond_0
 
-.method public static values()[Leja;
-    .locals 1
+    iget-object p1, p0, Leja;->o:Lfja;
 
-    sget-object v0, Leja;->X:[Leja;
+    invoke-virtual {p1, p1, p2}, Lfja;->c(Landroid/view/View;Lbja;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :cond_0
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    check-cast p2, Lcja;
 
-    check-cast v0, [Leja;
+    check-cast p1, Lcja;
 
-    return-object v0
+    if-eq p1, p2, :cond_3
+
+    sget-object p1, Ldja;->$EnumSwitchMapping$0:[I
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    aget p1, p1, p2
+
+    const/4 p2, 0x1
+
+    iget-object v0, p0, Leja;->o:Lfja;
+
+    if-eq p1, p2, :cond_2
+
+    const/4 p2, 0x2
+
+    if-ne p1, p2, :cond_1
+
+    invoke-static {v0}, Lfja;->a(Lfja;)Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    invoke-static {v0}, Lfja;->a(Lfja;)Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    invoke-static {v0}, Lfja;->a(Lfja;)Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-static {v0}, Lfja;->a(Lfja;)Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_3
+    :goto_0
+    return-void
+
+    :pswitch_1
+    check-cast p2, Luxa;
+
+    check-cast p1, Luxa;
+
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    iget-object p1, p0, Leja;->o:Lfja;
+
+    if-nez p2, :cond_4
+
+    sget-object p2, Lbx4;->y0:Lsed;
+
+    invoke-virtual {p2, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+
+    move-result-object p2
+
+    :cond_4
+    invoke-virtual {p1, p2}, Lfja;->onThemeChanged(Luxa;)V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

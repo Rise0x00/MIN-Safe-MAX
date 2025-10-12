@@ -1,79 +1,37 @@
-.class public final Lup4;
-.super Lq1;
+.class public abstract Lup4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/util/HashSet;
-
-.field public final c:Ljava/util/Iterator;
-
-.field public final o:Ldf3;
+# static fields
+.field public static volatile a:Lot6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;Ldf3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lw9c;->c:Lw9c;
 
-    iput-object p1, p0, Lup4;->c:Ljava/util/Iterator;
-
-    iput-object p2, p0, Lup4;->o:Ldf3;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Lup4;->X:Ljava/util/HashSet;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 3
-
-    :cond_0
-    iget-object v0, p0, Lup4;->c:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lup4;->o:Ldf3;
-
-    invoke-virtual {v1, v0}, Ldf3;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Lvb4;->j()Lgr4;
 
     move-result-object v1
 
-    iget-object v2, p0, Lup4;->X:Ljava/util/HashSet;
+    new-instance v2, Lmj0;
 
-    invoke-virtual {v2, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    const/16 v3, 0xd
 
-    move-result v1
+    invoke-direct {v2, v3}, Lmj0;-><init>(I)V
 
-    if-eqz v1, :cond_0
+    iget-object v0, v0, Lw9c;->a:Lhx;
 
-    iput-object v0, p0, Lq1;->b:Ljava/lang/Object;
+    new-instance v3, Lv9c;
 
-    const/4 v0, 0x1
+    const/4 v4, 0x0
 
-    iput v0, p0, Lq1;->a:I
+    invoke-direct {v3, v4, v2}, Lv9c;-><init>(ILjava/lang/Object;)V
 
-    return-void
-
-    :cond_1
-    const/4 v0, 0x2
-
-    iput v0, p0, Lq1;->a:I
+    invoke-virtual {v0, v1, v3}, Lhx;->f(Ljava/util/concurrent/Executor;Lqaa;)V
 
     return-void
 .end method

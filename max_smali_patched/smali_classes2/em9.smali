@@ -1,36 +1,49 @@
-.class public final synthetic Lem9;
-.super Ljava/lang/Object;
+.class public final Lem9;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lea6;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lum4;
+
+.field public Z:I
+
+.field public o:Lum4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Z)V
+.method public constructor <init>(Lum4;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lem9;->Y:Lum4;
 
-    iput-boolean p1, p0, Lem9;->a:Z
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lku7;
+    iput-object p1, p0, Lem9;->X:Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lem9;->a:Z
+    iget p1, p0, Lem9;->Z:I
 
-    iput-boolean p0, p1, Lku7;->n:Z
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lem9;->Z:I
+
+    iget-object p1, p0, Lem9;->Y:Lum4;
+
+    invoke-virtual {p1, p0}, Lum4;->f(Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method

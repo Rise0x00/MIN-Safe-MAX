@@ -1,76 +1,151 @@
-.class public abstract Le0c;
-.super Ljava/lang/Object;
+.class public final Le0c;
+.super Ll0c;
+.source "SourceFile"
 
 
-# static fields
-.field public static check_button:I = 0x7f0a02a3
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
 
-.field public static check_button_parent:I = 0x7f0a02a4
+.field public final b:Ljef;
 
-.field public static check_button_view_stub:I = 0x7f0a02a5
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a04c4
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;Ljef;)V
+    .locals 0
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a04c5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a04c6
+    iput-object p1, p0, Le0c;->a:Ljava/lang/CharSequence;
 
-.field public static media_bar_view__iv_file:I = 0x7f0a04c7
+    iput-object p2, p0, Le0c;->b:Ljef;
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a04c8
+    return-void
+.end method
 
-.field public static media_bar_view__iv_location:I = 0x7f0a04ca
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a04cb
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static media_bar_view__iv_video:I = 0x7f0a04ce
+    if-ne p0, p1, :cond_0
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a04cf
+    goto :goto_1
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a04d0
+    :cond_0
+    instance-of v0, p1, Le0c;
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a04d1
+    if-nez v0, :cond_1
 
-.field public static media_bar_view__ll_file:I = 0x7f0a04d2
+    goto :goto_0
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a04d3
+    :cond_1
+    check-cast p1, Le0c;
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a04d4
+    iget-object v0, p0, Le0c;->a:Ljava/lang/CharSequence;
 
-.field public static media_bar_view__ll_location:I = 0x7f0a04d5
+    iget-object v1, p1, Le0c;->a:Ljava/lang/CharSequence;
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a04d6
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static media_bar_view__ll_video:I = 0x7f0a04d7
+    move-result v0
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a04d8
+    if-nez v0, :cond_2
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a04d9
+    goto :goto_0
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04da
+    :cond_2
+    iget-object v0, p0, Le0c;->b:Ljef;
 
-.field public static media_bar_view__tv_file:I = 0x7f0a04db
+    iget-object p1, p1, Le0c;->b:Ljef;
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04dc
+    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-.field public static media_bar_view__tv_location:I = 0x7f0a04de
+    move-result p1
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a04df
+    if-nez p1, :cond_3
 
-.field public static media_bar_view__tv_video:I = 0x7f0a04e1
+    :goto_0
+    const/4 p1, 0x0
 
-.field public static media_permissions_view_button:I = 0x7f0a04eb
+    return p1
 
-.field public static media_permissions_view_title:I = 0x7f0a04ec
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09e2
+    return p1
+.end method
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a8f
+.method public final getItemId()J
+    .locals 2
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a90
+    const/high16 v0, 0x10000
 
-.field public static select_album_content_container:I = 0x7f0a0b39
+    int-to-long v0, v0
 
-.field public static simple_drawee_view:I = 0x7f0a0bb9
+    return-wide v0
+.end method
 
-.field public static video_info:I = 0x7f0a0c5d
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Le0c;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Le0c;->b:Ljef;
+
+    iget v1, v1, Ljef;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/high16 v0, 0x10000
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactDescription(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Le0c;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Le0c;->b:Ljef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

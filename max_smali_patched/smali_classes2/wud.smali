@@ -1,72 +1,63 @@
-.class public abstract Lwud;
-.super Ljava/lang/Object;
+.class public final Lwud;
+.super Lsud;
 .source "SourceFile"
-
-# interfaces
-.implements Lf67;
 
 
 # instance fields
-.field public volatile a:Ljava/lang/Object;
+.field public final A0:Ljava/util/List;
+
+.field public final y0:Ljava/lang/String;
+
+.field public final z0:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Luud;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lsud;-><init>(Lrud;)V
 
-    sget-object v0, Lltg;->d:Ljava/lang/Object;
+    iget-object v0, p1, Luud;->h:Ljava/lang/String;
 
-    iput-object v0, p0, Lwud;->a:Ljava/lang/Object;
+    iput-object v0, p0, Lwud;->y0:Ljava/lang/String;
+
+    iget-boolean v0, p1, Luud;->i:Z
+
+    iput-boolean v0, p0, Lwud;->z0:Z
+
+    iget-object p1, p1, Luud;->j:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iput-object p1, p0, Lwud;->A0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ls4;)Ljava/lang/Object;
+.method public final x()Lp49;
     .locals 2
 
-    iget-object v0, p0, Lwud;->a:Ljava/lang/Object;
+    new-instance v0, Lp49;
 
-    sget-object v1, Lltg;->d:Ljava/lang/Object;
+    invoke-direct {v0}, Lp49;-><init>()V
 
-    if-eq v0, v1, :cond_0
+    iget-object v1, p0, Lwud;->y0:Ljava/lang/String;
 
-    return-object v0
+    iput-object v1, v0, Lp49;->g:Ljava/lang/String;
 
-    :cond_0
-    monitor-enter p0
+    iget-boolean v1, p0, Lwud;->z0:Z
 
-    :try_start_0
-    iget-object v0, p0, Lwud;->a:Ljava/lang/Object;
+    iput-boolean v1, v0, Lp49;->v:Z
 
-    if-eq v0, v1, :cond_1
+    iget-object v1, p0, Lwud;->A0:Ljava/util/List;
 
-    goto :goto_0
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lwud;->b(Ls4;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v0
-
-    iput-object v0, p0, Lwud;->a:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
+    iput-object v1, v0, Lp49;->E:Ljava/util/List;
 
     return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public abstract b(Ls4;)Ljava/lang/Object;
 .end method

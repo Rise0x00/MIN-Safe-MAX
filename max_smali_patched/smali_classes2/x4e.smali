@@ -6,42 +6,22 @@
 # instance fields
 .field public final a:I
 
-.field public final b:I
+.field public final b:Ljef;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(IIIIIIII)V
+.method public constructor <init>(ILjef;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lx4e;->a:I
 
-    iput p2, p0, Lx4e;->b:I
+    iput-object p2, p0, Lx4e;->b:Ljef;
 
-    iput p3, p0, Lx4e;->c:I
-
-    iput p4, p0, Lx4e;->d:I
-
-    iput p5, p0, Lx4e;->e:I
-
-    iput p6, p0, Lx4e;->f:I
-
-    iput p7, p0, Lx4e;->g:I
-
-    iput p8, p0, Lx4e;->h:I
+    iput-boolean p3, p0, Lx4e;->c:Z
 
     return-void
 .end method
@@ -49,100 +29,60 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lx4e;
+    instance-of v0, p1, Lx4e;
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Lx4e;
 
-    iget v1, p0, Lx4e;->a:I
+    iget v0, p0, Lx4e;->a:I
 
-    iget v2, p1, Lx4e;->a:I
+    iget v1, p1, Lx4e;->a:I
 
-    if-eq v1, v2, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget v1, p0, Lx4e;->b:I
+    iget-object v0, p0, Lx4e;->b:Ljef;
 
-    iget v2, p1, Lx4e;->b:I
+    iget-object v1, p1, Lx4e;->b:Ljef;
 
-    if-eq v1, v2, :cond_3
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
 
     goto :goto_0
 
     :cond_3
-    iget v1, p0, Lx4e;->c:I
+    iget-boolean v0, p0, Lx4e;->c:Z
 
-    iget v2, p1, Lx4e;->c:I
+    iget-boolean p1, p1, Lx4e;->c:Z
 
-    if-eq v1, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v1, p0, Lx4e;->d:I
-
-    iget v2, p1, Lx4e;->d:I
-
-    if-eq v1, v2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v1, p0, Lx4e;->e:I
-
-    iget v2, p1, Lx4e;->e:I
-
-    if-eq v1, v2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v1, p0, Lx4e;->f:I
-
-    iget v2, p1, Lx4e;->f:I
-
-    if-eq v1, v2, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v1, p0, Lx4e;->g:I
-
-    iget v2, p1, Lx4e;->g:I
-
-    if-eq v1, v2, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget p0, p0, Lx4e;->h:I
-
-    iget p1, p1, Lx4e;->h:I
-
-    if-eq p0, p1, :cond_9
+    if-eq v0, p1, :cond_4
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
-    :cond_9
-    return v0
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
@@ -158,113 +98,57 @@
 
     mul-int/2addr v0, v1
 
-    const v2, -0x1d1d1e
+    iget-object v2, p0, Lx4e;->b:Ljef;
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    iget v2, v2, Ljef;->b:I
 
-    move-result v0
-
-    iget v2, p0, Lx4e;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
     move-result v0
 
-    iget v2, p0, Lx4e;->c:I
+    iget-boolean v1, p0, Lx4e;->c:Z
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result v0
+    move-result v1
 
-    iget v2, p0, Lx4e;->d:I
+    add-int/2addr v1, v0
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lx4e;->e:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lx4e;->f:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lx4e;->g:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Lx4e;->h:I
-
-    invoke-static {p0, v0, v1}, Llge;->m(III)I
-
-    move-result p0
-
-    const v0, 0x4dffffff    # 5.3687088E8f
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, p0
-
-    return v0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", contrastStatic=-1907998, negative="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", neutral="
+    const-string v1, "Button(id="
 
-    const-string v2, "StatesBackgroundActiveColors(card="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lx4e;->a:I
+    iget v1, p0, Lx4e;->a:I
 
-    iget v4, p0, Lx4e;->b:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lx4e;->b:Ljef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isNegative="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lx4e;->c:Z
+
+    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", neutralFade="
-
-    const-string v2, ", neutralThemed="
-
-    iget v3, p0, Lx4e;->c:I
-
-    iget v4, p0, Lx4e;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", overlayStatic="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Lx4e;->e:I
-
-    iget v4, p0, Lx4e;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", transparent="
-
-    const-string v2, ", transparentSecondaryStatic=1308622847)"
-
-    iget v3, p0, Lx4e;->g:I
-
-    iget p0, p0, Lx4e;->h:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lmh0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

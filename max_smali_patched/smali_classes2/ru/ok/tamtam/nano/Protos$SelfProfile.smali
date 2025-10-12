@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$SelfProfile;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -39,7 +39,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$SelfProfile;->clear()Lru/ok/tamtam/nano/Protos$SelfProfile;
 
@@ -53,7 +53,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -95,7 +95,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Protos$SelfProfile;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$SelfProfile;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -108,7 +108,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$SelfProfile;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$SelfProfile;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$SelfProfile;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$SelfProfile;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$SelfProfile;
 
     move-result-object p0
 
@@ -128,7 +128,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$SelfProfile;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -150,13 +150,13 @@
 
     iput-object v0, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->restrictions:Ljava/util/Map;
 
-    sget-object v0, Lv44;->c:[I
+    sget-object v0, Lo7;->e:[I
 
     iput-object v0, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
@@ -176,7 +176,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v2, v0, v1}, Lh63;->h(IJ)I
+    invoke-static {v2, v0, v1}, Le83;->h(IJ)I
 
     move-result v0
 
@@ -196,7 +196,7 @@
 
     const/4 v5, 0x2
 
-    invoke-static {v1, v5, v2, v4}, Ld77;->a(Ljava/util/Map;III)I
+    invoke-static {v1, v5, v2, v4}, Lfe7;->a(Ljava/util/Map;III)I
 
     move-result v1
 
@@ -222,7 +222,7 @@
 
     aget v2, v2, v3
 
-    invoke-static {v2}, Lh63;->g(I)I
+    invoke-static {v2}, Le83;->g(I)I
 
     move-result v2
 
@@ -235,15 +235,15 @@
     :cond_2
     add-int/2addr v0, v1
 
-    array-length p0, v2
+    array-length v1, v2
 
-    add-int/2addr v0, p0
+    add-int/2addr v0, v1
 
     :cond_3
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -252,14 +252,14 @@
     .end annotation
 
     .line 30
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$SelfProfile;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$SelfProfile;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$SelfProfile;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$SelfProfile;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$SelfProfile;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$SelfProfile;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -268,11 +268,11 @@
     .end annotation
 
     .line 1
-    sget-object v2, Le64;->b:Lb28;
+    sget-object v2, Lvu0;->g:Lx98;
 
     .line 2
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
@@ -297,7 +297,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -313,17 +313,17 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
     .line 5
-    invoke-virtual {p1, v0}, Lg63;->e(I)I
+    invoke-virtual {p1, v0}, Ld83;->e(I)I
 
     move-result v0
 
     .line 6
-    invoke-virtual {p1}, Lg63;->c()I
+    invoke-virtual {p1}, Ld83;->c()I
 
     move-result v1
 
@@ -331,14 +331,14 @@
 
     .line 7
     :goto_2
-    invoke-virtual {p1}, Lg63;->b()I
+    invoke-virtual {p1}, Ld83;->b()I
 
     move-result v5
 
     if-lez v5, :cond_2
 
     .line 8
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     add-int/lit8 v4, v4, 0x1
 
@@ -346,7 +346,7 @@
 
     .line 9
     :cond_2
-    invoke-virtual {p1, v1}, Lg63;->t(I)V
+    invoke-virtual {p1, v1}, Ld83;->t(I)V
 
     .line 10
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
@@ -376,7 +376,7 @@
     if-ge v5, v4, :cond_5
 
     .line 13
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v1
 
@@ -392,13 +392,13 @@
     iput-object v6, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
 
     .line 16
-    invoke-virtual {p1, v0}, Lg63;->d(I)V
+    invoke-virtual {p1, v0}, Ld83;->d(I)V
 
     goto :goto_1
 
     .line 17
     :cond_6
-    invoke-static {p1, v1}, Lv44;->p(Lg63;I)I
+    invoke-static {p1, v1}, Lo7;->m(Ld83;I)I
 
     move-result v0
 
@@ -432,7 +432,7 @@
     if-ge v4, v1, :cond_9
 
     .line 21
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v1
 
@@ -440,7 +440,7 @@
     aput v1, v5, v4
 
     .line 23
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     add-int/lit8 v4, v4, 0x1
 
@@ -448,7 +448,7 @@
 
     .line 24
     :cond_9
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
@@ -478,7 +478,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Ld77;->b(Lg63;Ljava/util/Map;Lb28;IILgz8;II)Ljava/util/Map;
+    invoke-static/range {v0 .. v7}, Lfe7;->b(Ld83;Ljava/util/Map;Lx98;IILg79;II)Ljava/util/Map;
 
     move-result-object p1
 
@@ -490,7 +490,7 @@
     move-object v0, p1
 
     .line 28
-    invoke-virtual {v0}, Lg63;->q()J
+    invoke-virtual {v0}, Ld83;->q()J
 
     move-result-wide v3
 
@@ -507,7 +507,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lh63;)V
+.method public writeTo(Le83;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -525,7 +525,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p1, v2, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Le83;->x(IJ)V
 
     :cond_0
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->restrictions:Ljava/util/Map;
@@ -538,7 +538,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {p1, v0, v3, v1, v2}, Ld77;->d(Lh63;Ljava/util/Map;III)V
+    invoke-static {p1, v0, v3, v1, v2}, Lfe7;->d(Le83;Ljava/util/Map;III)V
 
     :cond_1
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$SelfProfile;->profileOptions:[I
@@ -562,7 +562,7 @@
 
     aget v1, v1, v0
 
-    invoke-virtual {p1, v2, v1}, Lh63;->w(II)V
+    invoke-virtual {p1, v2, v1}, Le83;->w(II)V
 
     add-int/lit8 v0, v0, 0x1
 

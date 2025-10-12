@@ -19,7 +19,7 @@
         "",
         "",
         "chatId",
-        "Ltcf;",
+        "Loyf;",
         "onChatCreated",
         "(J)V",
         "onChatUpdated",

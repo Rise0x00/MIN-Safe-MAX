@@ -1,132 +1,132 @@
 .class public final Lq2a;
-.super Lv2;
+.super Le0;
 .source "SourceFile"
 
+# interfaces
+.implements Lji7;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lq2a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo3a;Ljava/lang/Object;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lq2a;->b:I
+    new-instance v0, Lq2a;
 
-    invoke-direct {p0, p1}, Lv2;-><init>(Lo3a;)V
+    sget-object v1, Ll62;->Y:Ll62;
 
-    iput-object p2, p0, Lq2a;->c:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Le0;-><init>(Lv24;)V
+
+    sput-object v0, Lq2a;->a:Lq2a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ly3a;)V
-    .locals 3
+.method public final attachChild(Ln33;)Lk33;
+    .locals 0
 
-    iget v0, p0, Lq2a;->b:I
+    sget-object p1, Lx2a;->a:Lx2a;
 
-    iget-object v1, p0, Lq2a;->c:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    iget-object p0, p0, Lv2;->a:Lo3a;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lx3a;
-
-    check-cast v1, Lf85;
-
-    invoke-direct {v0, p1, v1}, Lx3a;-><init>(Ly3a;Lf85;)V
-
-    invoke-interface {p0, v0}, Lo3a;->a(Ly3a;)V
+.method public final cancel(Ljava/util/concurrent/CancellationException;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_0
-    :try_start_0
-    check-cast v1, Lja6;
+.method public final getCancellationException()Ljava/util/concurrent/CancellationException;
+    .locals 2
 
-    invoke-virtual {v1}, Lja6;->get()Ljava/lang/Object;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v1, "This job is always active"
 
-    sget-object v1, Lq75;->a:Lp75;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Ljava/util/Collection;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    throw v0
+.end method
 
-    new-instance v1, Lic3;
+.method public final getChildren()Lord;
+    .locals 1
 
-    const/4 v2, 0x5
+    sget-object v0, Lk75;->a:Lk75;
 
-    invoke-direct {v1, p1, v2, v0}, Lic3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    return-object v0
+.end method
 
-    invoke-interface {p0, v1}, Lo3a;->a(Ly3a;)V
+.method public final invokeOnCompletion(Lxe6;)Lvs4;
+    .locals 0
 
-    goto :goto_0
+    .line 1
+    sget-object p1, Lx2a;->a:Lx2a;
 
-    :catchall_0
-    move-exception p0
+    return-object p1
+.end method
 
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
+.method public final invokeOnCompletion(ZZLxe6;)Lvs4;
+    .locals 0
 
-    invoke-static {p0, p1}, Lm25;->b(Ljava/lang/Throwable;Ly3a;)V
+    .line 2
+    sget-object p1, Lx2a;->a:Lx2a;
 
-    :goto_0
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_1
-    new-instance v0, Lv0a;
+.method public final isActive()Z
+    .locals 1
 
-    check-cast v1, Lwre;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x4
+    return v0
+.end method
 
-    invoke-direct {v0, p1, v1, v2}, Lv0a;-><init>(Ljava/lang/Object;Ll9b;I)V
+.method public final isCancelled()Z
+    .locals 1
 
-    invoke-interface {p0, v0}, Lo3a;->a(Ly3a;)V
+    const/4 v0, 0x0
 
-    return-void
+    return v0
+.end method
 
-    :pswitch_2
-    new-instance v0, Lv0a;
+.method public final isCompleted()Z
+    .locals 1
 
-    check-cast v1, Ltre;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x3
+    return v0
+.end method
 
-    invoke-direct {v0, p1, v1, v2}, Lv0a;-><init>(Ljava/lang/Object;Ll9b;I)V
+.method public final join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {p0, v0}, Lo3a;->a(Ly3a;)V
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    return-void
+    const-string v0, "This job is always active"
 
-    :pswitch_3
-    new-instance v0, Lm13;
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    check-cast v1, Lfa2;
+    throw p1
+.end method
 
-    invoke-direct {v0, p1, v1}, Lm13;-><init>(Ly3a;Lfa2;)V
+.method public final start()Z
+    .locals 1
 
-    iget-object v1, v0, Lm13;->X:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v1, Lx02;
+    return v0
+.end method
 
-    invoke-interface {p1, v1}, Ly3a;->c(Lkp4;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {p0, v0}, Lo3a;->a(Ly3a;)V
+    const-string v0, "NonCancellable"
 
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

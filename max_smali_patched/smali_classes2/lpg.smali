@@ -1,144 +1,99 @@
 .class public final Llpg;
-.super Leh7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lx8d;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbic;
-
-.field public final synthetic c:Lbic;
+.field public final a:Lko9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbic;Lbic;I)V
+.method public constructor <init>(Lko9;)V
     .locals 0
 
-    iput p3, p0, Llpg;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llpg;->b:Lbic;
-
-    iput-object p2, p0, Llpg;->c:Lbic;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1}, Leh7;-><init>(I)V
+    iput-object p1, p0, Llpg;->a:Lko9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Llpg;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Le1e;
-
-    iget-object v0, p0, Llpg;->b:Lbic;
-
-    iget-wide v1, v0, Lbic;->a:J
-
-    iget-object v3, p1, Le1e;->h:Ljava/math/BigInteger;
-
-    const-wide/16 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide v6
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-wide v6, v4
+    instance-of v1, p1, Llpg;
 
-    :goto_0
-    add-long/2addr v1, v6
+    const/4 v2, 0x0
 
-    iput-wide v1, v0, Lbic;->a:J
+    if-nez v1, :cond_1
 
-    iget-object p0, p0, Llpg;->c:Lbic;
-
-    iget-wide v0, p0, Lbic;->a:J
-
-    iget-object p1, p1, Le1e;->i:Ljava/math/BigInteger;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide v4
+    return v2
 
     :cond_1
-    add-long/2addr v0, v4
+    check-cast p1, Llpg;
 
-    iput-wide v0, p0, Lbic;->a:J
+    iget-object v1, p0, Llpg;->a:Lko9;
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object p1, p1, Llpg;->a:Lko9;
 
-    return-object p0
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_0
-    check-cast p1, Ld1e;
+    move-result p1
 
-    iget-object v0, p0, Llpg;->b:Lbic;
+    if-nez p1, :cond_2
 
-    iget-wide v1, v0, Lbic;->a:J
-
-    iget-object v3, p1, Ld1e;->h:Ljava/math/BigInteger;
-
-    const-wide/16 v4, 0x0
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide v6
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    move-wide v6, v4
+    return v0
+.end method
 
-    :goto_1
-    add-long/2addr v1, v6
+.method public final hashCode()I
+    .locals 1
 
-    iput-wide v1, v0, Lbic;->a:J
+    iget-object v0, p0, Llpg;->a:Lko9;
 
-    iget-object p0, p0, Llpg;->c:Lbic;
+    iget-object v0, v0, Lko9;->a:Ljava/util/ArrayList;
 
-    iget-wide v0, p0, Lbic;->a:J
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object p1, p1, Ld1e;->i:Ljava/math/BigInteger;
+    move-result v0
 
-    if-eqz p1, :cond_3
+    return v0
+.end method
 
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-wide v4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_3
-    add-long/2addr v0, v4
+    const-string v1, "WatchTogetherUpdateNotification(updates="
 
-    iput-wide v0, p0, Lbic;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v1, p0, Llpg;->a:Lko9;
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

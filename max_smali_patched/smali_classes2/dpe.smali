@@ -2,139 +2,235 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbpe;
-
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:I
 
-.field public final b:Lkle;
+.field public final b:I
 
-.field public final c:Lkle;
+.field public final c:I
 
-.field public final d:Lkle;
+.field public final d:I
 
-.field public final e:Lkle;
+.field public final e:I
 
-.field public final f:Lkle;
+.field public final f:I
 
-.field public final g:Lkle;
-
-.field public final h:Lkle;
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lkle;)V
-    .locals 1
+.method public constructor <init>(IIIIIII)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldpe;->a:Lth7;
+    iput p1, p0, Ldpe;->a:I
 
-    iput-object p2, p0, Ldpe;->f:Lkle;
+    iput p2, p0, Ldpe;->b:I
 
-    new-instance p2, Ll30;
+    iput p3, p0, Ldpe;->c:I
 
-    const/16 v0, 0x1d
+    iput p4, p0, Ldpe;->d:I
 
-    invoke-direct {p2, p1, v0}, Ll30;-><init>(Lth7;I)V
+    iput p5, p0, Ldpe;->e:I
 
-    new-instance v0, Lkle;
+    iput p6, p0, Ldpe;->f:I
 
-    invoke-direct {v0, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object v0, p0, Ldpe;->c:Lkle;
-
-    new-instance p2, Lcpe;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p1, v0}, Lcpe;-><init>(Lth7;I)V
-
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object v0, p0, Ldpe;->d:Lkle;
-
-    new-instance p2, Lcpe;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p2, p1, v0}, Lcpe;-><init>(Lth7;I)V
-
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object v0, p0, Ldpe;->b:Lkle;
-
-    new-instance p2, Lcpe;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, p1, v0}, Lcpe;-><init>(Lth7;I)V
-
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object v0, p0, Ldpe;->e:Lkle;
-
-    new-instance p2, Lcpe;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p2, p1, v0}, Lcpe;-><init>(Lth7;I)V
-
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object v0, p0, Ldpe;->g:Lkle;
-
-    new-instance p2, Lcpe;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p2, p1, v0}, Lcpe;-><init>(Lth7;I)V
-
-    new-instance p1, Lkle;
-
-    invoke-direct {p1, p2}, Lkle;-><init>(Ld96;)V
-
-    iput-object p1, p0, Ldpe;->h:Lkle;
+    iput p7, p0, Ldpe;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lvxc;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p0, p0, Ldpe;->b:Lkle;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_0
+    instance-of v0, p1, Ldpe;
 
-    check-cast p0, Lvxc;
+    if-nez v0, :cond_1
 
-    return-object p0
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ldpe;
+
+    iget v0, p0, Ldpe;->a:I
+
+    iget v1, p1, Ldpe;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Ldpe;->b:I
+
+    iget v1, p1, Ldpe;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Ldpe;->c:I
+
+    iget v1, p1, Ldpe;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Ldpe;->d:I
+
+    iget v1, p1, Ldpe;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Ldpe;->e:I
+
+    iget v1, p1, Ldpe;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Ldpe;->f:I
+
+    iget v1, p1, Ldpe;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Ldpe;->g:I
+
+    iget p1, p1, Ldpe;->g:I
+
+    if-eq v0, p1, :cond_8
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final b()Lvxc;
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    iget-object p0, p0, Ldpe;->f:Lkle;
+    iget v0, p0, Ldpe;->a:I
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lvxc;
+    const/16 v1, 0x1f
 
-    return-object p0
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ldpe;->b:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Ldpe;->c:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Ldpe;->d:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Ldpe;->e:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Ldpe;->f:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v1, p0, Ldpe;->g:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", contrastStatic="
+
+    const-string v1, ", negative="
+
+    const-string v2, "StatesTextDisabledColors(contrast="
+
+    iget v3, p0, Ldpe;->a:I
+
+    iget v4, p0, Ldpe;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", neutralThemed="
+
+    const-string v2, ", primary="
+
+    iget v3, p0, Ldpe;->c:I
+
+    iget v4, p0, Ldpe;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", primaryStatic="
+
+    const-string v2, ", themed="
+
+    iget v3, p0, Ldpe;->e:I
+
+    iget v4, p0, Ldpe;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget v2, p0, Ldpe;->g:I
+
+    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,140 +1,166 @@
 .class public final Lq0f;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lm3b;
 
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic Y:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Lm3b;Ljava/util/LinkedHashSet;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lq0f;->X:Lm3b;
 
-    iput p1, p0, Lq0f;->a:I
+    iput-object p2, p0, Lq0f;->Y:Ljava/util/LinkedHashSet;
 
-    iput p2, p0, Lq0f;->b:I
+    const/4 p1, 0x2
 
-    iput p3, p0, Lq0f;->c:I
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lq0f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lq0f;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lq0f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance p1, Lq0f;
+
+    iget-object v0, p0, Lq0f;->X:Lm3b;
+
+    iget-object v1, p0, Lq0f;->Y:Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1, v0, v1, p2}, Lq0f;-><init>(Lm3b;Ljava/util/LinkedHashSet;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lq0f;->X:Lm3b;
+
+    iget-object v0, p1, Lm3b;->a:Ljava/lang/Object;
+
+    check-cast v0, Loc2;
+
+    sget-object v1, Loc2;->b:Loc2;
+
+    const/4 v2, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lq0f;->Y:Ljava/util/LinkedHashSet;
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lm3b;->c:Ljava/lang/Object;
+
+    check-cast p1, Lm1f;
+
+    iget-object v3, p1, Lm1f;->e:Lzzc;
+
+    invoke-virtual {p1}, Lm1f;->a()Lm0f;
+
+    move-result-object p1
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {p1, v1}, Lm0f;->l(Ljava/util/LinkedHashSet;)Ljava/util/List;
+
+    move-result-object p1
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lq0f;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
     :cond_1
-    check-cast p1, Lq0f;
+    iget-object p1, p1, Lm3b;->o:Ljava/lang/Object;
 
-    iget v0, p0, Lq0f;->a:I
+    check-cast p1, Lpx3;
 
-    iget v1, p1, Lq0f;->a:I
+    iget-object p1, p1, Lpx3;->e:Lp30;
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {p1, v1}, Lp30;->l(Ljava/util/LinkedHashSet;)Ljava/util/List;
 
-    goto :goto_0
+    move-result-object p1
+
+    :goto_1
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v3, 0xa
+
+    invoke-static {p1, v3}, Lg93;->V(Ljava/lang/Iterable;I)I
+
+    move-result v3
+
+    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lh0f;
+
+    new-instance v4, Ln1f;
+
+    xor-int/lit8 v5, v0, 0x1
+
+    invoke-direct {v4, v3, v5}, Ln1f;-><init>(Lh0f;Z)V
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
 
     :cond_2
-    iget v0, p0, Lq0f;->b:I
-
-    iget v1, p1, Lq0f;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget p0, p0, Lq0f;->c:I
-
-    iget p1, p1, Lq0f;->c:I
-
-    if-eq p0, p1, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lq0f;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lq0f;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Lq0f;->c:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", neutralFade="
-
-    const-string v1, ", themed="
-
-    const-string v2, "TopbarBackgroundDisabledColors(neutral="
-
-    iget v3, p0, Lq0f;->a:I
-
-    iget v4, p0, Lq0f;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget p0, p0, Lq0f;->c:I
-
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

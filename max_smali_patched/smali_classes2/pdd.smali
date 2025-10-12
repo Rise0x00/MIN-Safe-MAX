@@ -1,66 +1,118 @@
-.class public final Lpdd;
+.class public final synthetic Lpdd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lve6;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic a:I
 
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
     .locals 0
 
+    iput p2, p0, Lpdd;->a:I
+
+    iput-object p1, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lpdd;->a:J
-
-    iput-object p3, p0, Lpdd;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lpdd;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lpdd;->o:Ljava/lang/String;
-
-    iput-boolean p6, p0, Lpdd;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const-string v0, "Session{="
+    iget v0, p0, Lpdd;->a:I
 
-    const-string v1, ", current="
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v2, p0, Lpdd;->a:J
+    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-boolean p0, p0, Lpdd;->X:Z
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
 
-    invoke-static {v2, v3, v0, v1, p0}, Lmh0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object p0
+    const-string v1, "ScheduledSendPickerDialogFragment:arg_input"
 
-    const-string v0, "}"
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_0
+    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    return-object p0
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "ScheduledSendPickerDialogFragment:who"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "ScheduledSendPickerViewModel:delayed_attrs"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lin4;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Lin4;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    iget-boolean v0, v1, Lin4;->b:Z
+
+    goto :goto_1
+
+    :cond_1
+    const-string v1, "ScheduledSendPickerDialogFragment:send_with_notification"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

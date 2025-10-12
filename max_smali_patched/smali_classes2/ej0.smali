@@ -1,30 +1,35 @@
 .class public abstract Lej0;
-.super Ljava/lang/Object;
+.super Lbj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lbj0;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 2
+    iput-object v0, p0, Lej0;->b:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(J)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 3
-    iput-wide p1, p0, Lej0;->a:J
+    invoke-direct {p0}, Lbj0;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lej0;->b:Ljava/lang/String;
 
     return-void
 .end method

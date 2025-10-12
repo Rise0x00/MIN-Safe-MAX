@@ -1,95 +1,156 @@
 .class public final Lki2;
-.super Lyxf;
+.super Lti2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lq4e;
+.field public final b:Ln79;
 
-.field public final c:Ljbc;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 5
+.method public constructor <init>(Ln79;Ljava/lang/String;Z)V
+    .locals 0
 
-    sget-object v0, Lefb;->a:Lefb;
+    invoke-direct {p0}, Lti2;-><init>()V
 
-    invoke-virtual {v0}, Lefb;->c()Lth7;
+    iput-object p1, p0, Lki2;->b:Ln79;
 
-    move-result-object v1
+    iput-object p2, p0, Lki2;->c:Ljava/lang/String;
 
-    check-cast v1, Lkle;
-
-    invoke-virtual {v1}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsz2;
-
-    invoke-virtual {v0}, Lefb;->f()Lth7;
-
-    move-result-object v0
-
-    check-cast v0, Lkle;
-
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhoe;
-
-    invoke-direct {p0}, Lyxf;-><init>()V
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lki2;->b:Lq4e;
-
-    new-instance v4, Ljbc;
-
-    invoke-direct {v4, v3}, Ljbc;-><init>(Lal9;)V
-
-    iput-object v4, p0, Lki2;->c:Ljbc;
-
-    check-cast v1, Ls03;
-
-    invoke-virtual {v1, p1, p2}, Ls03;->N(J)Ljbc;
-
-    move-result-object p1
-
-    new-instance p2, Luv2;
-
-    const/16 v1, 0xb
-
-    invoke-direct {p2, p1, v1}, Luv2;-><init>(Lbq5;I)V
-
-    new-instance p1, Lii2;
-
-    invoke-direct {p1, p0, v2}, Lii2;-><init>(Lki2;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lgs5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p2, p1, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->a()Lj04;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lfog;->y(Lbq5;Lh04;)Lbq5;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    iput-boolean p3, p0, Lki2;->d:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lki2;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lki2;
+
+    iget-object v0, p0, Lki2;->b:Ln79;
+
+    iget-object v1, p1, Lki2;->b:Ln79;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lki2;->c:Ljava/lang/String;
+
+    iget-object v1, p1, Lki2;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lki2;->d:Z
+
+    iget-boolean p1, p1, Lki2;->d:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lki2;->b:Ln79;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lki2;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lki2;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenImageLegacy(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lki2;->b:Ln79;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachLocalId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lki2;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSingleAttach="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lki2;->d:Z
+
+    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

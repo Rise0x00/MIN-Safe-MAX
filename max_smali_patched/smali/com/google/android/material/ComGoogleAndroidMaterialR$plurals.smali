@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lx2c;->mtrl_badge_content_description:I
+    sget v0, Lbic;->mtrl_badge_content_description:I
 
     sput v0, Lcom/google/android/material/ComGoogleAndroidMaterialR$plurals;->mtrl_badge_content_description:I
 

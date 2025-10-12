@@ -4,121 +4,75 @@
 
 
 # direct methods
-.method public static a(I)I
-    .locals 4
+.method public static a(Landroid/view/View;)[Ljava/lang/String;
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Landroid/view/View;->getReceiveContentMimeTypes()[Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object p0
 
-    move v2, v1
+    return-object p0
+.end method
 
-    :goto_0
-    const/16 v3, 0x100
+.method public static b(Landroid/view/View;Ldy3;)Ldy3;
+    .locals 1
 
-    if-gt v2, v3, :cond_9
+    iget-object v0, p1, Ldy3;->a:Lcy3;
 
-    and-int v3, p0, v2
+    invoke-interface {v0}, Lcy3;->h()Landroid/view/ContentInfo;
 
-    if-eqz v3, :cond_8
+    move-result-object v0
 
-    if-eq v2, v1, :cond_7
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x2
+    invoke-static {v0}, Lo20;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
 
-    if-eq v2, v3, :cond_6
+    move-result-object v0
 
-    const/4 v3, 0x4
+    invoke-virtual {p0, v0}, Landroid/view/View;->performReceiveContent(Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
 
-    if-eq v2, v3, :cond_5
+    move-result-object p0
 
-    const/16 v3, 0x8
+    if-nez p0, :cond_0
 
-    if-eq v2, v3, :cond_4
+    const/4 p0, 0x0
 
-    const/16 v3, 0x10
-
-    if-eq v2, v3, :cond_3
-
-    const/16 v3, 0x20
-
-    if-eq v2, v3, :cond_2
-
-    const/16 v3, 0x40
-
-    if-eq v2, v3, :cond_1
-
-    const/16 v3, 0x80
-
-    if-eq v2, v3, :cond_0
-
-    goto :goto_2
+    return-object p0
 
     :cond_0
-    invoke-static {}, Llkg;->q()I
+    if-ne p0, v0, :cond_1
 
-    move-result v3
-
-    :goto_1
-    or-int/2addr v0, v3
-
-    goto :goto_2
+    return-object p1
 
     :cond_1
-    invoke-static {}, Llkg;->o()I
+    new-instance p1, Ldy3;
 
-    move-result v3
+    new-instance v0, Lkbh;
 
-    goto :goto_1
+    invoke-direct {v0, p0}, Lkbh;-><init>(Landroid/view/ContentInfo;)V
 
-    :cond_2
-    invoke-static {}, Llkg;->m()I
+    invoke-direct {p1, v0}, Ldy3;-><init>(Lcy3;)V
 
-    move-result v3
+    return-object p1
+.end method
 
-    goto :goto_1
+.method public static c(Landroid/view/View;[Ljava/lang/String;Lqfa;)V
+    .locals 1
 
-    :cond_3
-    invoke-static {}, Llkg;->k()I
+    if-nez p2, :cond_0
 
-    move-result v3
+    const/4 p2, 0x0
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
 
-    :cond_4
-    invoke-static {}, Ldra;->b()I
+    return-void
 
-    move-result v3
+    :cond_0
+    new-instance v0, Lpkg;
 
-    goto :goto_1
+    invoke-direct {v0, p2}, Lpkg;-><init>(Lqfa;)V
 
-    :cond_5
-    invoke-static {}, Llkg;->i()I
+    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setOnReceiveContentListener([Ljava/lang/String;Landroid/view/OnReceiveContentListener;)V
 
-    move-result v3
-
-    goto :goto_1
-
-    :cond_6
-    invoke-static {}, Llkg;->g()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_7
-    invoke-static {}, Llkg;->a()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_8
-    :goto_2
-    shl-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_9
-    return v0
+    return-void
 .end method

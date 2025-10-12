@@ -1,60 +1,97 @@
-.class public abstract Lq0c;
+.class public final Lq0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls0c;
 
 
-# static fields
-.field public static oneme_settings_twofa_action:I = 0x7f0a083b
+# instance fields
+.field public final a:Loef;
 
-.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a083c
 
-.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a083d
+# direct methods
+.method public constructor <init>(Loef;)V
+    .locals 0
 
-.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a083e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a083f
+    iput-object p1, p0, Lq0c;->a:Loef;
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a0840
+    return-void
+.end method
 
-.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a0841
 
-.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a0842
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a0843
+    const/4 v0, 0x1
 
-.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a0844
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a0845
+    return v0
 
-.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a0846
+    :cond_0
+    instance-of v1, p1, Lq0c;
 
-.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a0847
+    const/4 v2, 0x0
 
-.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a0848
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a0849
+    return v2
 
-.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a084a
+    :cond_1
+    check-cast p1, Lq0c;
 
-.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a084b
+    iget-object v1, p0, Lq0c;->a:Loef;
 
-.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a084c
+    iget-object p1, p1, Lq0c;->a:Loef;
 
-.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a084d
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a084e
+    move-result p1
 
-.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a084f
+    if-nez p1, :cond_2
 
-.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a0850
+    return v2
 
-.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a0851
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a0852
+.method public final hashCode()I
+    .locals 1
 
-.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a0853
+    iget-object v0, p0, Lq0c;->a:Loef;
 
-.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a0854
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a0855
+    move-result v0
 
-.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a0856
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowRestoreMembersSnackbar(caption="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq0c;->a:Loef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,84 +1,53 @@
 .class public final Lv08;
-.super Leje;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lx08;
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lx08;
+
+.field public o:Lx08;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Lx08;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lx08;Lnz3;)V
     .locals 0
 
-    iput-object p1, p0, Lv08;->X:Lx08;
+    iput-object p1, p0, Lv08;->Z:Lx08;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lp04;
+    iput-object p1, p0, Lv08;->Y:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lv08;->w0:I
 
-    invoke-virtual {p0, p1, p2}, Lv08;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    check-cast p0, Lv08;
+    iput p1, p0, Lv08;->w0:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object p1, p0, Lv08;->Z:Lx08;
 
-    invoke-virtual {p0, p1}, Lv08;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    return-object p1
-.end method
+    invoke-virtual {p1, v0, v1, p0}, Lx08;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lv08;
-
-    iget-object p0, p0, Lv08;->X:Lx08;
-
-    invoke-direct {p1, p0, p2}, Lv08;-><init>(Lx08;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
     return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lv08;->X:Lx08;
-
-    iget-object p0, p0, Lx08;->c:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lpva;
-
-    const/4 p1, 0x2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lpva;->e(II)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

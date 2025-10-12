@@ -1,435 +1,242 @@
-.class public final synthetic Lmae;
-.super Ljava/lang/Object;
+.class public final Lmae;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/stickerssettings/StickersSettingsScreen;
+.field public final synthetic Y:Lone/me/location/map/show/ShowLocationScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerssettings/StickersSettingsScreen;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
     .locals 0
 
-    iput p2, p0, Lmae;->a:I
+    iput-object p2, p0, Lmae;->Y:Lone/me/location/map/show/ShowLocationScreen;
 
-    iput-object p1, p0, Lmae;->b:Lone/me/stickerssettings/StickersSettingsScreen;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lmae;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lmae;->b:Lone/me/stickerssettings/StickersSettingsScreen;
+    invoke-virtual {p0, p1, p2}, Lmae;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    check-cast p1, Luhc;
+    check-cast p1, Lmae;
 
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-object v0, p1, Luhc;->a:Landroid/view/View;
+    invoke-virtual {p1, p2}, Lmae;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Ljm6;->b:Ljm6;
+    return-object p2
+.end method
 
-    invoke-static {v0, v1}, Lnoa;->G(Landroid/view/View;Lkm6;)Z
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object p0, p0, Lone/me/stickerssettings/StickersSettingsScreen;->o:Lpa7;
+    new-instance v0, Lmae;
 
-    if-eqz p0, :cond_0
+    iget-object v1, p0, Lmae;->Y:Lone/me/location/map/show/ShowLocationScreen;
 
-    invoke-virtual {p0, p1}, Lpa7;->t(Luhc;)V
+    invoke-direct {v0, p2, v1}, Lmae;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
+
+    iput-object p1, v0, Lmae;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmae;->X:Ljava/lang/Object;
+
+    check-cast p1, Lrae;
+
+    iget-object v0, p1, Lrae;->a:Lqae;
+
+    iget-object v1, p0, Lmae;->Y:Lone/me/location/map/show/ShowLocationScreen;
+
+    iget-object v2, v1, Lone/me/location/map/show/ShowLocationScreen;->y0:Llb8;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_1
+
+    if-eqz v0, :cond_1
+
+    iget-object v2, v0, Lqae;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v4, v1, Lone/me/location/map/show/ShowLocationScreen;->B0:Lvo6;
+
+    if-eqz v4, :cond_0
+
+    new-instance v5, Lqb8;
+
+    invoke-direct {v5}, Lqb8;-><init>()V
+
+    iput-object v2, v5, Lqb8;->a:Lcom/google/android/gms/maps/model/LatLng;
+
+    const/high16 v6, 0x3f000000    # 0.5f
+
+    iput v6, v5, Lqb8;->X:F
+
+    const v6, 0x3f733333    # 0.95f
+
+    iput v6, v5, Lqb8;->Y:F
+
+    const/4 v6, 0x1
+
+    iput-boolean v6, v5, Lqb8;->w0:Z
+
+    iget-object v0, v0, Lqae;->c:Landroid/graphics/Bitmap;
+
+    invoke-static {v0}, Lsx9;->p(Landroid/graphics/Bitmap;)Ldo0;
+
+    move-result-object v0
+
+    iput-object v0, v5, Lqb8;->o:Ldo0;
+
+    invoke-virtual {v4, v5}, Lvo6;->a(Lqb8;)Llb8;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Lv4d;
-
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/stickerssettings/StickersSettingsScreen;->x0()Lwae;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v0, p1, Lt4d;
-
-    if-nez v0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    invoke-static {}, Lno9;->f()Lgp7;
-
-    move-result-object v0
-
-    new-instance v1, Lmw3;
-
-    sget v2, Lmla;->k:I
-
-    sget v3, Lnla;->n:I
-
-    move v4, v3
-
-    new-instance v3, Lyte;
-
-    invoke-direct {v3, v4}, Lyte;-><init>(I)V
-
-    sget v4, Losc;->X1:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    sget v7, Lyha;->T:I
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const/4 v6, 0x4
-
-    invoke-direct/range {v1 .. v6}, Lmw3;-><init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v0, v1}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    new-instance v8, Lmw3;
-
-    sget v9, Lmla;->l:I
-
-    sget v1, Lnla;->o:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v1}, Lyte;-><init>(I)V
-
-    sget v1, Laia;->y:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    const/4 v13, 0x4
-
-    invoke-direct/range {v8 .. v13}, Lmw3;-><init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v0, v8}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lmw3;
-
-    sget v2, Lmla;->i:I
-
-    sget v3, Lnla;->f:I
-
-    move v4, v3
-
-    new-instance v3, Lyte;
-
-    invoke-direct {v3, v4}, Lyte;-><init>(I)V
-
-    sget v4, Losc;->t:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-direct/range {v1 .. v6}, Lmw3;-><init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v0, v1}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lmw3;
-
-    sget v3, Lmla;->j:I
-
-    sget v1, Lnla;->m:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, v1}, Lyte;-><init>(I)V
-
-    sget v1, Losc;->w:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget v1, Lyha;->Q:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const/4 v7, 0x4
-
-    invoke-direct/range {v2 .. v7}, Lmw3;-><init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    invoke-virtual {v0, v2}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Lno9;->b(Ljava/util/List;)Lgp7;
-
-    move-result-object v0
-
-    check-cast p1, Lt4d;
-
-    iget-wide v1, p1, Lt4d;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwae;->s0:Ljava/lang/Long;
-
-    iget-object p0, p0, Lwae;->Z:Lt65;
-
-    new-instance p1, Lqid;
-
-    invoke-direct {p1, v0}, Lqid;-><init>(Lgp7;)V
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    move-object v0, v3
 
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    iput-object v0, v1, Lone/me/location/map/show/ShowLocationScreen;->y0:Llb8;
 
-    return-object p0
+    iget-object v0, p1, Lrae;->a:Lqae;
 
-    :pswitch_1
-    check-cast p1, Lv4d;
+    iget v0, v0, Lqae;->b:F
 
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
+    iget-object v4, v1, Lone/me/location/map/show/ShowLocationScreen;->B0:Lvo6;
 
-    invoke-virtual {p0}, Lone/me/stickerssettings/StickersSettingsScreen;->x0()Lwae;
+    if-eqz v4, :cond_1
 
-    move-result-object p0
+    invoke-static {v2, v0}, Lz84;->l(Lcom/google/android/gms/maps/model/LatLng;F)Lyn6;
 
-    iget-object p0, p0, Lwae;->n0:Lt65;
+    move-result-object v0
 
-    instance-of v0, p1, Lt4d;
+    invoke-virtual {v4, v0}, Lvo6;->c(Lyn6;)V
 
-    if-eqz v0, :cond_2
+    :cond_1
+    iget-object v0, v1, Lone/me/location/map/show/ShowLocationScreen;->A0:Lmqc;
 
-    sget-object v0, Llae;->c:Llae;
+    sget-object v2, Lone/me/location/map/show/ShowLocationScreen;->F0:[Ltm7;
 
-    check-cast p1, Lt4d;
+    const/16 v4, 0x8
 
-    iget-wide v1, p1, Lt4d;->a:J
+    aget-object v2, v2, v4
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0, v1, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v0, ":stickers/set?set_id="
+    check-cast v0, Ln28;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, p1, Lrae;->f:Ljava/lang/String;
 
-    invoke-virtual {p1, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v4, v0, Ln28;->x0:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object p1
+    iget-object v2, p1, Lrae;->b:Loef;
 
-    invoke-static {p1, p0}, Lmh0;->l(Ljava/lang/String;Lt65;)V
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v0}, Loef;->d(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v2
 
     goto :goto_1
 
     :cond_2
-    instance-of v0, p1, Lu4d;
+    move-object v2, v3
 
-    if-eqz v0, :cond_3
-
-    check-cast p1, Lu4d;
-
-    iget-object p1, p1, Lu4d;->b:Ly94;
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    :cond_3
     :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v4, v0, Ln28;->o:Landroid/widget/TextView;
 
-    return-object p0
+    invoke-virtual {v4, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :pswitch_2
-    check-cast p1, Luhc;
+    iget-object v2, p1, Lrae;->c:Ljava/lang/String;
 
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
+    new-instance v4, Lpae;
 
-    invoke-virtual {p0}, Lone/me/stickerssettings/StickersSettingsScreen;->x0()Lwae;
+    const/4 v5, 0x0
 
-    move-result-object p0
+    invoke-direct {v4, v1, v5}, Lpae;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
 
-    invoke-virtual {p1}, Luhc;->g()I
+    iget-object v5, v0, Ln28;->w0:Landroid/widget/TextView;
 
-    move-result p1
+    invoke-virtual {v5, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const-class v0, Lwae;
+    invoke-virtual {v0, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-object v2, p1, Lrae;->d:Loef;
 
-    move-result-object v0
+    if-eqz v2, :cond_4
 
-    sget-object v1, Lz76;->f:Lvea;
+    iget-object p1, p1, Lrae;->e:Ljava/lang/String;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_4
+    if-nez p1, :cond_3
 
     goto :goto_2
 
+    :cond_3
+    invoke-virtual {v2, v0}, Loef;->d(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
     :cond_4
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v3, Lhw7;->o:Lhw7;
-
-    invoke-virtual {v1, v3}, Lvea;->a(Lhw7;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    iget-object v4, p0, Lwae;->o0:Ljava/lang/Long;
-
-    iget-object v5, p0, Lwae;->q0:Ljava/lang/Long;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "Move finish. moved:"
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", target:"
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v3, v0, v4, v2}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
     :goto_2
-    iget-object v0, p0, Lwae;->o0:Ljava/lang/Long;
+    new-instance p1, Lpae;
 
-    iget-object v1, p0, Lwae;->q0:Ljava/lang/Long;
+    const/4 v2, 0x1
 
-    const/4 v3, -0x1
+    invoke-direct {p1, v1, v2}, Lpae;-><init>(Lone/me/location/map/show/ShowLocationScreen;I)V
 
-    if-eqz v0, :cond_7
+    iget-object v0, v0, Ln28;->y0:Landroid/widget/TextView;
 
-    if-eqz v1, :cond_7
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget v4, p0, Lwae;->p0:I
+    invoke-static {v0, p1}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    if-eq v4, v3, :cond_7
+    sget-object p1, Loyf;->a:Loyf;
 
-    iget v4, p0, Lwae;->p0:I
-
-    if-ne v4, p1, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    iput v3, p0, Lwae;->p0:I
-
-    iput-object v2, p0, Lwae;->o0:Ljava/lang/Long;
-
-    iput-object v2, p0, Lwae;->q0:Ljava/lang/Long;
-
-    iget-object p1, p0, Lwae;->c:Lhoe;
-
-    check-cast p1, Loba;
-
-    invoke-virtual {p1}, Loba;->b()Lj04;
-
-    move-result-object p1
-
-    sget-object v3, Ls04;->b:Ls04;
-
-    new-instance v4, Luae;
-
-    invoke-direct {v4, p0, v0, v1, v2}, Luae;-><init>(Lwae;Ljava/lang/Long;Ljava/lang/Long;Lkotlin/coroutines/Continuation;)V
-
-    iget-object v0, p0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v0, p1, v3, v4}, Lyr3;->X(Lp04;Lh04;Ls04;Lt96;)Lt1e;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lwae;->r0:Lvfd;
-
-    sget-object v1, Lwae;->w0:[Lof7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, p0, v1, p1}, Lvfd;->N(Ljava/lang/Object;Lof7;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_7
-    :goto_3
-    iput v3, p0, Lwae;->p0:I
-
-    iput-object v2, p0, Lwae;->o0:Ljava/lang/Long;
-
-    iput-object v2, p0, Lwae;->q0:Ljava/lang/Long;
-
-    :goto_4
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqrc;->C()Z
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

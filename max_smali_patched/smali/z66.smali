@@ -1,54 +1,37 @@
-.class public final synthetic Lz66;
+.class public final Lz66;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/MediaDrm$OnEventListener;
-
 
 # instance fields
-.field public final synthetic a:Lb76;
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic b:Llm;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Z
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb76;Llm;)V
+.method public constructor <init>(Landroid/net/Uri;IIZI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz66;->a:Lb76;
-
-    iput-object p2, p0, Lz66;->b:Llm;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onEvent(Landroid/media/MediaDrm;[BII[B)V
-    .locals 0
-
-    iget-object p1, p0, Lz66;->a:Lb76;
-
-    iget-object p0, p0, Lz66;->b:Llm;
-
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Llm;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lz66;->a:Landroid/net/Uri;
 
-    check-cast p0, Lvd4;
+    iput p2, p0, Lz66;->b:I
 
-    iget-object p0, p0, Lvd4;->x:Lrx;
+    iput p3, p0, Lz66;->c:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-boolean p4, p0, Lz66;->d:Z
 
-    invoke-virtual {p0, p3, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+    iput p5, p0, Lz66;->e:I
 
     return-void
 .end method

@@ -1,12 +1,27 @@
-.class public interface abstract annotation Lww6;
+.class public final Lww6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
+
+# instance fields
+.field public final a:Landroid/net/Uri;
+
+.field public final b:J
+
+.field public final c:I
 
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;JI)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lww6;->a:Landroid/net/Uri;
+
+    iput-wide p2, p0, Lww6;->b:J
+
+    iput p4, p0, Lww6;->c:I
+
+    return-void
+.end method

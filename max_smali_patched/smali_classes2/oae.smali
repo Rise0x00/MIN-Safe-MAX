@@ -1,26 +1,26 @@
 .class public final Loae;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/stickerssettings/StickersSettingsScreen;
+.field public final synthetic Y:Lone/me/location/map/show/ShowLocationScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
     .locals 0
 
-    iput-object p2, p0, Loae;->Y:Lone/me/stickerssettings/StickersSettingsScreen;
+    iput-object p2, p0, Loae;->Y:Lone/me/location/map/show/ShowLocationScreen;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,311 +34,306 @@
 
     invoke-virtual {p0, p1, p2}, Loae;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Loae;
+    check-cast p1, Loae;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Loae;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Loae;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance v0, Loae;
 
-    iget-object p0, p0, Loae;->Y:Lone/me/stickerssettings/StickersSettingsScreen;
+    iget-object v1, p0, Loae;->Y:Lone/me/location/map/show/ShowLocationScreen;
 
-    invoke-direct {v0, p2, p0}, Loae;-><init>(Lkotlin/coroutines/Continuation;Lone/me/stickerssettings/StickersSettingsScreen;)V
+    invoke-direct {v0, p2, v1}, Loae;-><init>(Lkotlin/coroutines/Continuation;Lone/me/location/map/show/ShowLocationScreen;)V
 
     iput-object p1, v0, Loae;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     iget-object p1, p0, Loae;->X:Ljava/lang/Object;
 
-    check-cast p1, Lsid;
+    check-cast p1, Lhy9;
 
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lof7;
+    instance-of v0, p1, Ljae;
 
-    instance-of v0, p1, Lqid;
+    if-eqz v0, :cond_9
 
-    iget-object p0, p0, Loae;->Y:Lone/me/stickerssettings/StickersSettingsScreen;
+    check-cast p1, Ljae;
 
-    if-eqz v0, :cond_0
+    iget-object p1, p1, Ljae;->b:Ljava/util/ArrayList;
 
-    check-cast p1, Lqid;
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->F0:[Ltm7;
 
-    iget-object p1, p1, Lqid;->a:Ljava/util/List;
+    sget v0, Ljjc;->oneme_location_map_open_in:I
 
-    const/4 v0, 0x2
+    const/4 v1, 0x6
 
-    invoke-static {v0}, Ly84;->a(I)Ljw3;
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2, v2, v1}, Lqe0;->c(ILandroid/os/Bundle;Lhfd;I)Lsl3;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Ljw3;->p(Ljava/util/Collection;)Ljw3;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
-
-    invoke-interface {p1}, Ljw3;->G()Ljw3;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljw3;->build()Lkw3;
-
-    move-result-object p1
-
-    invoke-interface {p1, p0}, Lkw3;->u(Lone/me/sdk/arch/Widget;)V
-
-    goto/16 :goto_2
 
     :cond_0
-    instance-of v0, p1, Lnid;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    const-string v2, "android.intent.action.SEND"
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    check-cast p1, Lnid;
-
-    iget-object p1, p1, Lnid;->a:Ljava/lang/String;
-
-    const-string v2, "android.intent.extra.TEXT"
-
-    invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p1, "text/plain"
-
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqrc;->e()Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lg73;->y0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ltrc;
-
-    if-eqz p0, :cond_1
-
-    iget-object v1, p0, Ltrc;->b:Ljava/lang/String;
-
-    :cond_1
-    sget-object p0, Llae;->c:Llae;
-
-    invoke-virtual {p0, v0, v1}, Llae;->w0(Landroid/content/Intent;Ljava/lang/String;)V
-
-    goto/16 :goto_2
-
-    :cond_2
-    instance-of v0, p1, Loid;
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Lt67;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    check-cast p1, Loid;
-
-    iget-object p1, p1, Loid;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1, v1}, Lt67;->d(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
-
-    goto/16 :goto_2
-
-    :cond_3
-    instance-of v0, p1, Lpid;
-
-    if-eqz v0, :cond_7
-
-    check-cast p1, Lpid;
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->u0:[Lof7;
-
-    iget-object v0, p1, Lpid;->a:Lyte;
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v1, v1, v2}, Laug;->a(Ldue;Landroid/os/Bundle;Lsyc;I)Lcj3;
-
-    move-result-object v5
-
-    iget-object v0, p1, Lpid;->b:Ldue;
-
-    invoke-virtual {v5, v0}, Lcj3;->f(Ldue;)V
-
-    iget-object p1, p1, Lpid;->c:Ljava/util/List;
-
-    new-instance v3, Lql2;
-
-    const/16 v9, 0x8
-
-    const/16 v10, 0xd
-
-    const/4 v4, 0x1
-
-    const-class v6, Lcj3;
-
-    const-string v7, "addButton"
-
-    const-string v8, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
-
-    invoke-direct/range {v3 .. v10}, Lql2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v0, Lol2;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v0, v3, v2}, Lol2;-><init>(Lo8;I)V
-
-    invoke-interface {p1, v0}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {v5}, Lcj3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v7
-
-    invoke-virtual {v7, p0}, Lox3;->setTargetController(Lox3;)V
-
-    move-object p1, p0
-
     :goto_0
-    invoke-virtual {p1}, Lox3;->getParentController()Lox3;
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v0
+    move-result v1
 
-    if-eqz v0, :cond_4
+    const/4 v3, 0x1
 
-    invoke-virtual {p1}, Lox3;->getParentController()Lox3;
+    iget-object v4, p0, Loae;->Y:Lone/me/location/map/show/ShowLocationScreen;
 
-    move-result-object p1
+    if-eqz v1, :cond_5
 
-    goto :goto_0
-
-    :cond_4
-    instance-of v0, p1, Lwrc;
-
-    if-eqz v0, :cond_5
-
-    check-cast p1, Lwrc;
-
-    goto :goto_1
-
-    :cond_5
-    move-object p1, v1
-
-    :goto_1
-    if-eqz p1, :cond_6
-
-    invoke-interface {p1}, Lwrc;->d0()Lqrc;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
+    check-cast v1, Lhr4;
+
+    iget-object v5, v1, Lhr4;->b:Ljava/lang/String;
+
+    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    const/4 v7, 0x2
+
+    const/16 v8, 0x30
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v3, "2gis"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget v3, Ljjc;->oneme_location_map_open_in_tg_maps:I
+
+    new-instance v5, Ljef;
+
+    invoke-direct {v5, v3}, Ljef;-><init>(I)V
+
+    new-instance v3, Ltl3;
+
+    const/4 v6, 0x3
+
+    invoke-direct {v3, v6, v5, v7, v8}, Ltl3;-><init>(ILoef;II)V
+
+    goto :goto_2
+
+    :sswitch_1
+    const-string v3, "google_maps"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sget v3, Ljjc;->oneme_location_map_open_in_g_maps:I
+
+    new-instance v5, Ljef;
+
+    invoke-direct {v5, v3}, Ljef;-><init>(I)V
+
+    new-instance v3, Ltl3;
+
+    const/4 v6, 0x4
+
+    invoke-direct {v3, v6, v5, v7, v8}, Ltl3;-><init>(ILoef;II)V
+
+    goto :goto_2
+
+    :sswitch_2
+    const-string v6, "yandex_maps"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget v5, Ljjc;->oneme_location_map_open_in_ya_maps:I
+
+    new-instance v6, Ljef;
+
+    invoke-direct {v6, v5}, Ljef;-><init>(I)V
+
+    new-instance v5, Ltl3;
+
+    invoke-direct {v5, v3, v6, v7, v8}, Ltl3;-><init>(ILoef;II)V
+
+    move-object v3, v5
+
+    goto :goto_2
+
+    :sswitch_3
+    const-string v3, "yandex_navigator"
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    :goto_1
+    move-object v3, v2
+
+    goto :goto_2
+
+    :cond_4
+    sget v3, Ljjc;->oneme_location_map_open_in_ya_nav:I
+
+    new-instance v5, Ljef;
+
+    invoke-direct {v5, v3}, Ljef;-><init>(I)V
+
+    new-instance v3, Ltl3;
+
+    invoke-direct {v3, v7, v5, v7, v8}, Ltl3;-><init>(ILoef;II)V
+
+    :goto_2
+    if-eqz v3, :cond_0
+
+    filled-new-array {v3}, [Ltl3;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Lsl3;->a([Ltl3;)V
+
+    iget-object v4, v4, Lone/me/location/map/show/ShowLocationScreen;->C0:Ljava/util/LinkedHashMap;
+
+    iget v3, v3, Ltl3;->a:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v1, v1, Lhr4;->a:Landroid/content/Intent;
+
+    invoke-interface {v4, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto/16 :goto_0
+
+    :cond_5
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
+
+    invoke-virtual {v0}, Lsl3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Lb04;->setTargetController(Lb04;)V
+
+    invoke-virtual {v6, v4}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+
+    move-object p1, v4
+
+    :goto_3
+    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+
+    move-result-object p1
+
+    goto :goto_3
+
     :cond_6
-    invoke-virtual {v7, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->L0(Lone/me/sdk/arch/Widget;)V
+    instance-of v0, p1, Lo8d;
 
-    if-eqz v1, :cond_9
+    if-eqz v0, :cond_7
 
-    new-instance v6, Ltrc;
+    check-cast p1, Lo8d;
 
-    const/4 v11, 0x0
+    goto :goto_4
 
-    const/4 v12, -0x1
+    :cond_7
+    move-object p1, v2
+
+    :goto_4
+    if-eqz p1, :cond_8
+
+    invoke-interface {p1}, Lo8d;->f0()Li8d;
+
+    move-result-object v2
+
+    :cond_8
+    invoke-virtual {v6, v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v2, :cond_9
+
+    new-instance v5, Ll8d;
+
+    const/4 v10, 0x0
+
+    const/4 v11, -0x1
+
+    const/4 v7, 0x0
 
     const/4 v8, 0x0
 
     const/4 v9, 0x0
 
-    const/4 v10, 0x0
+    invoke-direct/range {v5 .. v11}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
 
-    invoke-direct/range {v6 .. v12}, Ltrc;-><init>(Lox3;Ljava/lang/String;Ltx3;Ltx3;ZI)V
-
-    const/4 p0, 0x0
-
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     const-string v0, "BottomSheetWidget"
 
-    invoke-static {p0, v6, p1, v0}, Lmh0;->m(ZLtrc;ZLjava/lang/String;)V
+    invoke-static {p1, v5, v3, v0}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
 
-    invoke-virtual {v1, v6}, Lqrc;->H(Ltrc;)V
-
-    goto :goto_2
-
-    :cond_7
-    instance-of v0, p1, Lrid;
-
-    if-eqz v0, :cond_a
-
-    new-instance v0, Lzja;
-
-    invoke-direct {v0, p0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    new-instance v1, Loka;
-
-    check-cast p1, Lrid;
-
-    iget v2, p1, Lrid;->a:I
-
-    invoke-direct {v1, v2}, Loka;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lzja;->e(Lska;)V
-
-    iget-object p1, p1, Lrid;->b:Ldue;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ldue;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    if-nez p0, :cond_8
-
-    const-string p0, ""
-
-    :cond_8
-    invoke-virtual {v0, p0}, Lzja;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Lzja;->i()Lyja;
+    invoke-virtual {v2, v5}, Li8d;->H(Ll8d;)V
 
     :cond_9
-    :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object p1, Loyf;->a:Loyf;
 
-    return-object p0
+    return-object p1
 
-    :cond_a
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    nop
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    :sswitch_data_0
+    .sparse-switch
+        -0x75058477 -> :sswitch_3
+        -0x15adc1db -> :sswitch_2
+        -0x13f6a323 -> :sswitch_1
+        0x184a5f -> :sswitch_0
+    .end sparse-switch
 .end method

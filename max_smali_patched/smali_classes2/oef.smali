@@ -1,171 +1,213 @@
-.class public final Loef;
+.class public abstract Loef;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
 
-# instance fields
-.field public final a:J
 
-.field public final b:J
-
-.field public c:J
+# static fields
+.field public static final a:Lnef;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJ)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-wide/16 v5, 0x0
+    new-instance v0, Lnef;
 
-    move-object v0, p0
+    const-string v1, ""
 
-    move-wide v1, p1
+    invoke-direct {v0, v1}, Lnef;-><init>(Ljava/lang/CharSequence;)V
 
-    move-wide v3, p3
-
-    .line 1
-    invoke-direct/range {v0 .. v6}, Loef;-><init>(JJJ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JJJ)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-wide p1, p0, Loef;->a:J
-
-    .line 4
-    iput-wide p3, p0, Loef;->b:J
-
-    .line 5
-    iput-wide p5, p0, Loef;->c:J
+    sput-object v0, Loef;->a:Lnef;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Ltde;)Ljava/lang/CharSequence;
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return v0
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
+    .locals 3
+
+    instance-of v0, p0, Ljef;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Ljef;
+
+    iget v0, v0, Ljef;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    instance-of v1, p1, Loef;
+    instance-of v0, p0, Llef;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz v0, :cond_1
 
-    return v2
+    move-object v0, p0
+
+    check-cast v0, Llef;
+
+    iget-object v2, v0, Llef;->c:Ljava/util/List;
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-interface {v2, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget v0, v0, Llef;->b:I
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_1
-    check-cast p1, Loef;
+    instance-of v0, p0, Lfef;
 
-    iget-wide v3, p0, Loef;->a:J
+    if-eqz v0, :cond_2
 
-    iget-wide v5, p1, Loef;->a:J
+    move-object v0, p0
 
-    cmp-long v1, v3, v5
+    check-cast v0, Lfef;
 
-    if-eqz v1, :cond_2
+    iget v1, v0, Lfef;->c:I
 
-    return v2
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget v0, v0, Lfef;->b:I
+
+    invoke-virtual {p1, v0, v1, v2}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_2
-    iget-wide v3, p0, Loef;->b:J
+    instance-of v0, p0, Lnef;
 
-    iget-wide v5, p1, Loef;->b:J
+    if-eqz v0, :cond_3
 
-    cmp-long v1, v3, v5
+    move-object p1, p0
 
-    if-eqz v1, :cond_3
+    check-cast p1, Lnef;
 
-    return v2
+    iget-object p1, p1, Lnef;->b:Ljava/lang/CharSequence;
+
+    return-object p1
 
     :cond_3
-    iget-wide v3, p0, Loef;->c:J
+    instance-of v0, p0, Lhef;
 
-    iget-wide p0, p1, Loef;->c:J
+    if-eqz v0, :cond_4
 
-    cmp-long p0, v3, p0
+    move-object v0, p0
 
-    if-eqz p0, :cond_4
+    check-cast v0, Lhef;
 
-    return v2
+    iget-object v2, v0, Lhef;->o:Ljava/util/List;
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-interface {v2, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget v2, v0, Lhef;->b:I
+
+    iget v0, v0, Lhef;->c:I
+
+    invoke-virtual {p1, v2, v0, v1}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_4
-    return v0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final d(Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget-wide v0, p0, Loef;->a:J
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object p1
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/16 v1, 0x1f
+    move-result-object p1
 
-    mul-int/2addr v0, v1
+    invoke-virtual {p0, p1}, Loef;->c(Landroid/content/res/Resources;)Ljava/lang/CharSequence;
 
-    iget-wide v2, p0, Loef;->b:J
+    move-result-object p1
 
-    invoke-static {v0, v1, v2, v3}, Lt2g;->a(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Loef;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-wide v0, p0, Loef;->b:J
-
-    iget-wide v2, p0, Loef;->a:J
-
-    add-long/2addr v0, v2
-
-    iget-wide v4, p0, Loef;->c:J
-
-    add-long/2addr v4, v2
-
-    const-string p0, "Chunk["
-
-    const-string v6, " -> "
-
-    invoke-static {v2, v3, p0, v6}, Ldw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " (position: "
-
-    const-string v1, ")]"
-
-    invoke-static {v4, v5, v0, v1, p0}, Lcx3;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

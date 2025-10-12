@@ -1,64 +1,68 @@
-.class public final Liub;
+.class public final synthetic Liub;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkub;
+.implements Lid4;
 
 
-# static fields
-.field public static final a:Liub;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IJZ)V
+    .locals 0
 
-    new-instance v0, Liub;
+    iput p1, p0, Liub;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Liub;->b:J
 
-    sput-object v0, Liub;->a:Liub;
+    iput-boolean p4, p0, Liub;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Liub;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
-    :cond_0
-    instance-of p0, p1, Liub;
+    iget-wide v1, p0, Liub;->b:J
 
-    if-nez p0, :cond_1
+    iget-boolean v3, p0, Liub;->c:Z
 
-    const/4 p0, 0x0
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
 
-    return p0
+    return-object v0
 
-    :cond_1
-    return v0
-.end method
+    :pswitch_0
+    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-.method public final hashCode()I
-    .locals 0
+    iget-wide v1, p0, Liub;->b:J
 
-    const p0, 0x7e743d90
+    iget-boolean v3, p0, Liub;->c:Z
 
-    return p0
-.end method
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    return-object v0
 
-    const-string p0, "RequestAudioPermission"
+    nop
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

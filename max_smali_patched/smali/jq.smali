@@ -1,151 +1,109 @@
-.class public final Ljq;
-.super Ljava/lang/Object;
+.class public final enum Ljq;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Ljq;
+
+.field public static final synthetic Y:Lla5;
+
+.field public static final enum b:Ljq;
+
+.field public static final enum c:Ljq;
+
+.field public static final enum o:Ljq;
+
+
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/widget/TextView;
-
-.field public final synthetic c:Lone/me/sdk/arch/Widget;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/TextView;Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Ljq;->a:I
+    new-instance v0, Ljq;
 
-    iput-object p1, p0, Ljq;->b:Landroid/widget/TextView;
+    const-string v1, "SYSTEM"
 
-    iput-object p2, p0, Ljq;->c:Lone/me/sdk/arch/Widget;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Ljq;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Ljq;->b:Ljq;
+
+    new-instance v1, Ljq;
+
+    const-string v2, "LIGHT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Ljq;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Ljq;->c:Ljq;
+
+    new-instance v2, Ljq;
+
+    const-string v3, "DARK"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Ljq;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Ljq;->o:Ljq;
+
+    filled-new-array {v0, v1, v2}, [Ljq;
+
+    move-result-object v0
+
+    sput-object v0, Ljq;->X:[Ljq;
+
+    new-instance v1, Lla5;
+
+    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ljq;->Y:Lla5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final a(F)V
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Ljq;->a:I
+    iput p3, p0, Ljq;->a:I
 
-    const-string v1, "app.extra.text.size.mode"
+    return-void
+.end method
 
-    const/4 v2, 0x5
+.method public static valueOf(Ljava/lang/String;)Ljq;
+    .locals 1
 
-    iget-object v3, p0, Ljq;->c:Lone/me/sdk/arch/Widget;
+    const-class v0, Ljq;
 
-    const/16 v4, 0x8
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    iget-object p0, p0, Ljq;->b:Landroid/widget/TextView;
-
-    const/4 v6, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    cmpg-float v0, p1, v5
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v4, v6
-
-    :goto_0
-    invoke-virtual {p0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    check-cast v3, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;
-
-    sget-object p0, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;->Z:[Lof7;
-
-    iget-object p0, v3, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;->Y:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Lzo;
+    check-cast p0, Ljq;
 
-    invoke-static {p1}, Litg;->z(F)I
+    return-object p0
+.end method
 
-    move-result p1
+.method public static values()[Ljq;
+    .locals 1
 
-    invoke-static {p1, v6, v2}, Lis8;->j(III)I
+    sget-object v0, Ljq;->X:[Ljq;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    check-cast p0, Lh1d;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, v1}, Ld3;->h(ILjava/lang/String;)V
+    check-cast v0, [Ljq;
 
-    iget-object p0, p0, Lh1d;->i:Lem0;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lem0;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    cmpg-float v0, p1, v5
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v4, v6
-
-    :goto_1
-    invoke-virtual {p0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    check-cast v3, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    sget-object p0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->n0:[Lof7;
-
-    iget-object p0, v3, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzo;
-
-    invoke-static {p1}, Litg;->z(F)I
-
-    move-result p1
-
-    invoke-static {p1, v6, v2}, Lis8;->j(III)I
-
-    move-result p1
-
-    check-cast p0, Lh1d;
-
-    invoke-virtual {p0, p1, v1}, Ld3;->h(ILjava/lang/String;)V
-
-    iget-object p0, p0, Lh1d;->i:Lem0;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lem0;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,15 +1,48 @@
-.class public abstract Lww9;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lww9;
+.super Lnz3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lwe9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
+    iput-object p1, p0, Lww9;->Y:Lwe9;
 
-    move-result-object p0
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lww9;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lww9;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lww9;->X:I
+
+    iget-object p1, p0, Lww9;->Y:Lwe9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lwe9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

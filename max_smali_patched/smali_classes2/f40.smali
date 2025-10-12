@@ -1,34 +1,61 @@
-.class public final synthetic Lf40;
-.super Ljava/lang/Object;
+.class public final Lf40;
+.super Lh40;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
-
-# instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+# static fields
+.field public static final a:Lf40;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf40;
 
-    iput-object p1, p0, Lf40;->a:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lf40;->a:Lf40;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioFocusChange(I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lf40;->a:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+    const/4 v0, 0x1
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->a(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lf40;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x41fc9265
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CloseTooltip"
+
+    return-object v0
 .end method

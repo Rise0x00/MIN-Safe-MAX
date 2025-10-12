@@ -1,22 +1,19 @@
 .class public final Lk9f;
-.super Ljava/lang/Object;
+.super Ll9f;
 .source "SourceFile"
 
-# interfaces
-.implements Ll9f;
 
-
-# instance fields
-.field public final a:Z
-
-
-# direct methods
-.method public constructor <init>(Z)V
+# virtual methods
+.method public final c(Ls89;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lk9f;->a:Z
-
     return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "empty"
+
+    return-object v0
 .end method

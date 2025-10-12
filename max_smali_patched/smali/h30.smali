@@ -1,88 +1,133 @@
-.class public final Lh30;
-.super Landroid/media/AudioDeviceCallback;
+.class public final synthetic Lh30;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
 
 # instance fields
-.field public final synthetic a:Lj30;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lj30;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lh30;->a:Lj30;
+    iput p1, p0, Lh30;->a:I
 
-    invoke-direct {p0}, Landroid/media/AudioDeviceCallback;-><init>()V
+    iput-object p2, p0, Lh30;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAudioDevicesAdded([Landroid/media/AudioDeviceInfo;)V
-    .locals 2
+.method public final onAudioFocusChange(I)V
+    .locals 4
 
-    iget-object p0, p0, Lh30;->a:Lj30;
+    iget v0, p0, Lh30;->a:I
 
-    iget-object p1, p0, Lj30;->b:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/content/Context;
+    iget-object v0, p0, Lh30;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lj30;->j:Ljava/lang/Object;
+    check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
 
-    check-cast v0, Lt20;
-
-    iget-object v1, p0, Lj30;->i:Ljava/lang/Object;
-
-    check-cast v1, Ls30;
-
-    invoke-static {p1, v0, v1}, Lf30;->b(Landroid/content/Context;Lt20;Ls30;)Lf30;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lj30;->a(Lf30;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->a(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
 
     return-void
-.end method
 
-.method public final onAudioDevicesRemoved([Landroid/media/AudioDeviceInfo;)V
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lh30;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lh30;->a:Lj30;
+    check-cast v0, Lm30;
 
-    iget-object v0, p0, Lj30;->i:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Ls30;
+    const/4 v1, -0x3
 
-    invoke-static {p1, v0}, Lfif;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, -0x2
 
-    move-result p1
+    const/4 v3, 0x1
 
-    if-eqz p1, :cond_0
+    if-eq p1, v1, :cond_2
 
-    const/4 p1, 0x0
+    if-eq p1, v2, :cond_2
 
-    iput-object p1, p0, Lj30;->i:Ljava/lang/Object;
+    const/4 v1, -0x1
+
+    if-eq p1, v1, :cond_1
+
+    if-eq p1, v3, :cond_0
+
+    const-string v0, "AudioFocusManager"
+
+    const-string v1, "Unknown focus change type: "
+
+    invoke-static {p1, v1, v0}, Lgy1;->k(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
 
     :cond_0
-    iget-object p1, p0, Lj30;->b:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    check-cast p1, Landroid/content/Context;
+    invoke-virtual {v0, p1}, Lm30;->c(I)V
 
-    iget-object v0, p0, Lj30;->j:Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lm30;->b(I)V
 
-    check-cast v0, Lt20;
+    goto :goto_1
 
-    iget-object v1, p0, Lj30;->i:Ljava/lang/Object;
+    :cond_1
+    invoke-virtual {v0, v1}, Lm30;->b(I)V
 
-    check-cast v1, Ls30;
+    invoke-virtual {v0}, Lm30;->a()V
 
-    invoke-static {p1, v0, v1}, Lf30;->b(Landroid/content/Context;Lt20;Ls30;)Lf30;
+    invoke-virtual {v0, v3}, Lm30;->c(I)V
 
-    move-result-object p1
+    goto :goto_1
 
-    invoke-virtual {p0, p1}, Lj30;->a(Lf30;)V
+    :cond_2
+    if-eq p1, v2, :cond_4
 
+    iget-object p1, v0, Lm30;->d:Li20;
+
+    if-eqz p1, :cond_3
+
+    iget p1, p1, Li20;->a:I
+
+    if-ne p1, v3, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p1, 0x4
+
+    invoke-virtual {v0, p1}, Lm30;->c(I)V
+
+    goto :goto_1
+
+    :cond_4
+    :goto_0
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lm30;->b(I)V
+
+    const/4 p1, 0x3
+
+    invoke-virtual {v0, p1}, Lm30;->c(I)V
+
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

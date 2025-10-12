@@ -1,93 +1,127 @@
-.class public abstract synthetic Ligf;
-.super Ljava/lang/Object;
+.class public final Ligf;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/style/UpdateAppearance;
+.implements Lrff;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Lxe6;
+
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Luxa;Lxe6;)V
+    .locals 0
 
-    const/16 v0, 0x9
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    iput-object p2, p0, Ligf;->a:Lxe6;
 
-    move-result-object v0
+    invoke-interface {p2, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    array-length v0, v0
+    move-result-object p1
 
-    new-array v0, v0, [I
+    check-cast p1, Ljava/lang/Number;
 
-    const/4 v1, 0x1
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Ligf;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ligf;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v2
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    iget v1, p0, Ligf;->b:I
 
-    :catch_1
-    const/4 v1, 0x3
+    check-cast p1, Ligf;
 
-    const/16 v3, 0x8
+    iget p1, p1, Ligf;->b:I
 
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    if-eq v1, p1, :cond_2
 
-    :catch_2
-    const/4 v1, 0x4
+    return v2
 
-    const/4 v4, 0x6
+    :cond_2
+    return v0
+.end method
 
-    :try_start_3
-    aput v1, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+.method public final hashCode()I
+    .locals 2
 
-    :catch_3
-    const/4 v5, 0x5
+    const-class v0, Ligf;
 
-    :try_start_4
-    aput v5, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :catch_4
-    :try_start_5
-    aput v4, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    move-result v0
 
-    :catch_5
-    const/4 v1, 0x7
+    iget v1, p0, Ligf;->b:I
 
-    :try_start_6
-    aput v1, v0, v5
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    move-result v1
 
-    :catch_7
-    sput-object v0, Ligf;->$EnumSwitchMapping$0:[I
+    mul-int/lit8 v1, v1, 0x1f
 
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final onThemeChanged(Luxa;)V
+    .locals 1
+
+    iget-object v0, p0, Ligf;->a:Lxe6;
+
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Ligf;->b:I
+
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Ligf;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_0
     return-void
 .end method

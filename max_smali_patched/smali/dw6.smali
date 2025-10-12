@@ -1,251 +1,117 @@
 .class public final Ldw6;
-.super Lkv0;
+.super Lm43;
 .source "SourceFile"
 
 
-# static fields
-.field public static final z0:Ljava/util/regex/Pattern;
-
-
 # instance fields
-.field public final x0:Ljava/nio/charset/CharsetDecoder;
+.field public A0:[B
 
-.field public final y0:Ljava/nio/charset/CharsetDecoder;
+.field public y0:[B
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "(.+?)=\'(.*?)\';"
-
-    const/16 v1, 0x20
-
-    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Ldw6;->z0:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    const/16 v0, 0x11
-
-    invoke-direct {p0, v0}, Lkv0;-><init>(I)V
-
-    sget-object v0, Li72;->c:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldw6;->x0:Ljava/nio/charset/CharsetDecoder;
-
-    sget-object v0, Li72;->b:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldw6;->y0:Ljava/nio/charset/CharsetDecoder;
-
-    return-void
-.end method
+.field public volatile z0:Z
 
 
 # virtual methods
-.method public final k(Lvb9;Ljava/nio/ByteBuffer;)Lqb9;
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ldw6;->z0:Z
+
+    return-void
+.end method
+
+.method public final load()V
     .locals 6
 
-    iget-object p1, p0, Ldw6;->y0:Ljava/nio/charset/CharsetDecoder;
+    :try_start_0
+    iget-object v0, p0, Lm43;->x0:Lrpe;
 
-    iget-object p0, p0, Ldw6;->x0:Ljava/nio/charset/CharsetDecoder;
+    iget-object v1, p0, Lm43;->b:Lq94;
+
+    invoke-virtual {v0, v1}, Lrpe;->P(Lq94;)J
 
     const/4 v0, 0x0
 
-    :try_start_0
-    invoke-virtual {p0, p2}, Ljava/nio/charset/CharsetDecoder;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+    move v1, v0
 
-    move-result-object v1
+    :cond_0
+    :goto_0
+    const/4 v2, -0x1
 
-    invoke-virtual {v1}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+    if-eq v0, v2, :cond_2
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/nio/charset/CharacterCodingException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-boolean v0, p0, Ldw6;->z0:Z
 
-    invoke-virtual {p0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
+    if-nez v0, :cond_2
 
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+    iget-object v0, p0, Ldw6;->y0:[B
+
+    array-length v3, v0
+
+    add-int/lit16 v4, v1, 0x4000
+
+    const/16 v5, 0x4000
+
+    if-ge v3, v4, :cond_1
+
+    array-length v3, v0
+
+    add-int/2addr v3, v5
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Ldw6;->y0:[B
+
+    :cond_1
+    iget-object v0, p0, Lm43;->x0:Lrpe;
+
+    iget-object v3, p0, Ldw6;->y0:[B
+
+    invoke-virtual {v0, v3, v1, v5}, Lrpe;->read([BII)I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_0
+
+    add-int/2addr v1, v0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p1
-
-    invoke-virtual {p0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    throw p1
-
-    :catch_0
-    invoke-virtual {p0}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    :try_start_1
-    invoke-virtual {p1, p2}, Ljava/nio/charset/CharsetDecoder;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/nio/charset/CharacterCodingException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    move-object p1, p0
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception p0
-
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    throw p0
-
-    :catch_1
-    invoke-virtual {p1}, Ljava/nio/charset/CharsetDecoder;->reset()Ljava/nio/charset/CharsetDecoder;
-
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    move-object p1, v0
-
-    :goto_0
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
-
-    move-result p0
-
-    new-array p0, p0, [B
-
-    invoke-virtual {p2, p0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    const/4 p2, 0x0
-
-    const/4 v1, 0x1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lqb9;
-
-    new-instance v2, Lhw6;
-
-    invoke-direct {v2, v0, v0, p0}, Lhw6;-><init>(Ljava/lang/String;Ljava/lang/String;[B)V
-
-    new-array p0, v1, [Lob9;
-
-    aput-object v2, p0, p2
-
-    invoke-direct {p1, p0}, Lqb9;-><init>([Lob9;)V
-
-    return-object p1
-
-    :cond_0
-    sget-object v2, Ldw6;->z0:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    move v3, p2
-
-    move-object v2, v0
-
-    :goto_1
-    invoke-virtual {p1, v3}, Ljava/util/regex/Matcher;->find(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x2
-
-    invoke-virtual {p1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v3}, Ly84;->O(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "streamurl"
-
-    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    const-string v5, "streamtitle"
-
-    invoke-virtual {v3, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    move-object v0, v4
-
-    goto :goto_2
-
-    :cond_2
-    move-object v2, v4
-
-    :cond_3
-    :goto_2
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
+    move-exception v0
 
     goto :goto_1
 
-    :cond_4
-    new-instance p1, Lqb9;
+    :cond_2
+    iget-boolean v0, p0, Ldw6;->z0:Z
 
-    new-instance v3, Lhw6;
+    if-nez v0, :cond_3
 
-    invoke-direct {v3, v0, v2, p0}, Lhw6;-><init>(Ljava/lang/String;Ljava/lang/String;[B)V
+    iget-object v0, p0, Ldw6;->y0:[B
 
-    new-array p0, v1, [Lob9;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    aput-object v3, p0, p2
+    move-result-object v0
 
-    invoke-direct {p1, p0}, Lqb9;-><init>([Lob9;)V
+    iput-object v0, p0, Ldw6;->A0:[B
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p1
+    :cond_3
+    iget-object v0, p0, Lm43;->x0:Lrpe;
+
+    invoke-static {v0}, Lps;->d(Li94;)V
+
+    return-void
+
+    :goto_1
+    iget-object v1, p0, Lm43;->x0:Lrpe;
+
+    invoke-static {v1}, Lps;->d(Li94;)V
+
+    throw v0
 .end method

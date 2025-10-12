@@ -1,21 +1,73 @@
-.class public abstract Lfyc;
+.class public final Lfyc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfa7;
+# instance fields
+.field public final synthetic a:Lgyc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lgyc;)V
+    .locals 0
 
-    new-instance v0, Lfa7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lfa7;-><init>()V
+    iput-object p1, p0, Lfyc;->a:Lgyc;
 
-    sput-object v0, Lfyc;->a:Lfa7;
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Error: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", data: "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "MediaRouteProviderProxy"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Landroid/os/Bundle;)V
+    .locals 2
+
+    const-string v0, "groupableTitle"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lfyc;->a:Lgyc;
+
+    iput-object v0, v1, Lgyc;->g:Ljava/lang/String;
+
+    const-string v0, "transferableTitle"
+
+    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lgyc;->h:Ljava/lang/String;
 
     return-void
 .end method

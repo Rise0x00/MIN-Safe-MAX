@@ -1,109 +1,82 @@
 .class public final Li4d;
-.super Ly;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Li4d;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final d:Li4d;
+
+.field public static final e:Li4d;
+
+.field public static final f:Li4d;
 
 
 # instance fields
-.field public c:Z
+.field public final a:J
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
-    new-instance v0, Lx;
+    new-instance v0, Li4d;
 
-    const/4 v1, 0x7
+    const-wide/16 v1, 0x0
 
-    invoke-direct {v0, v1}, Lx;-><init>(I)V
+    const/4 v3, 0x0
 
-    sput-object v0, Li4d;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v0, v1, v2, v3, v3}, Li4d;-><init>(JZZ)V
+
+    sput-object v0, Li4d;->d:Li4d;
+
+    new-instance v0, Li4d;
+
+    const-wide/16 v4, 0x1f4
+
+    const/4 v6, 0x1
+
+    invoke-direct {v0, v4, v5, v6, v3}, Li4d;-><init>(JZZ)V
+
+    sput-object v0, Li4d;->e:Li4d;
+
+    new-instance v0, Li4d;
+
+    const-wide/16 v4, 0x64
+
+    invoke-direct {v0, v4, v5, v6, v3}, Li4d;-><init>(JZZ)V
+
+    new-instance v0, Li4d;
+
+    invoke-direct {v0, v1, v2, v3, v6}, Li4d;-><init>(JZZ)V
+
+    sput-object v0, Li4d;->f:Li4d;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(JZZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ly;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x0
+    iput-boolean p3, p0, Li4d;->b:Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    iput-wide p1, p0, Li4d;->a:J
 
-    move-result-object p1
+    if-eqz p4, :cond_0
 
-    check-cast p1, Ljava/lang/Boolean;
+    xor-int/lit8 p1, p3, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const-string p2, "shouldRetry must be false when completeWithoutFailure is set to true"
 
-    move-result p1
+    invoke-static {p2, p1}, Ll74;->h(Ljava/lang/String;Z)V
 
-    iput-boolean p1, p0, Li4d;->c:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SearchView.SavedState{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " isIconified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Li4d;->c:Z
-
-    const-string v1, "}"
-
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Ly;->writeToParcel(Landroid/os/Parcel;I)V
-
-    iget-boolean p0, p0, Li4d;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+    :cond_0
+    iput-boolean p4, p0, Li4d;->c:Z
 
     return-void
 .end method

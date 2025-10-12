@@ -4,35 +4,35 @@
 
 
 # static fields
-.field public static final synthetic w0:I
+.field public static final synthetic F0:I
 
 
 # instance fields
-.field public final a:Lv45;
+.field public A0:I
+
+.field public B0:I
+
+.field public C0:I
+
+.field public D0:Z
+
+.field public E0:Lvhd;
+
+.field public final a:Lf95;
 
 .field public b:Landroidx/recyclerview/widget/RecyclerView;
 
 .field public c:Landroid/view/View;
 
-.field public n0:Landroid/widget/TextView;
-
 .field public o:Landroid/view/View;
 
-.field public o0:I
+.field public w0:Landroid/widget/TextView;
 
-.field public p0:I
+.field public x0:I
 
-.field public q0:I
+.field public y0:I
 
-.field public r0:I
-
-.field public s0:I
-
-.field public t0:I
-
-.field public u0:Z
-
-.field public v0:Ld1d;
+.field public z0:I
 
 
 # direct methods
@@ -43,24 +43,24 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v1, Lv45;
+    new-instance v1, Lf95;
 
-    invoke-direct {v1, p0}, Lv45;-><init>(Lcom/futuremind/recyclerviewfastscroll/FastScroller;)V
+    invoke-direct {v1, p0}, Lf95;-><init>(Lcom/futuremind/recyclerviewfastscroll/FastScroller;)V
 
-    iput-object v1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lv45;
+    iput-object v1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lf95;
 
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    sget-object v1, Lk6c;->fastscroll__fastScroller:[I
+    sget-object v1, Lrlc;->fastscroll__fastScroller:[I
 
-    sget v2, Ltvb;->fastscroll__style:I
+    sget v2, Lwac;->fastscroll__style:I
 
     invoke-virtual {p1, p2, v1, v2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     :try_start_0
-    sget p2, Lk6c;->fastscroll__fastScroller_fastscroll__bubbleColor:I
+    sget p2, Lrlc;->fastscroll__fastScroller_fastscroll__bubbleColor:I
 
     const/4 v0, -0x1
 
@@ -68,23 +68,23 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->q0:I
+    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->z0:I
 
-    sget p2, Lk6c;->fastscroll__fastScroller_fastscroll__handleColor:I
+    sget p2, Lrlc;->fastscroll__fastScroller_fastscroll__handleColor:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getColor(II)I
 
     move-result p2
 
-    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->p0:I
+    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:I
 
-    sget p2, Lk6c;->fastscroll__fastScroller_fastscroll__bubbleTextAppearance:I
+    sget p2, Lrlc;->fastscroll__fastScroller_fastscroll__bubbleTextAppearance:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p2
 
-    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->r0:I
+    iput p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -94,22 +94,22 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->t0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->C0:I
 
-    new-instance p1, Lch4;
+    new-instance p1, Lwj4;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setViewProvider(Ld1d;)V
+    invoke-virtual {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setViewProvider(Lvhd;)V
 
     return-void
 
     :catchall_0
-    move-exception p0
+    move-exception p2
 
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    throw p0
+    throw p2
 .end method
 
 .method public static synthetic a(Lcom/futuremind/recyclerviewfastscroll/FastScroller;F)V
@@ -130,11 +130,11 @@
     return-void
 
     :cond_0
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lygc;->j()I
+    invoke-virtual {v0}, Lpwc;->j()I
 
     move-result v0
 
@@ -162,9 +162,9 @@
 
     float-to-int p1, p1
 
-    iget-object p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->w0(I)V
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->w0(I)V
 
     return-void
 .end method
@@ -176,7 +176,7 @@
 
     iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v0
 
@@ -184,11 +184,11 @@
 
     iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lygc;->j()I
+    invoke-virtual {v0}, Lpwc;->j()I
 
     move-result v0
 
@@ -222,11 +222,11 @@
 
     iget-object v2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lygc;->j()I
+    invoke-virtual {v2}, Lpwc;->j()I
 
     move-result v2
 
@@ -255,11 +255,11 @@
 
     iget-object v2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lygc;->j()I
+    invoke-virtual {v2}, Lpwc;->j()I
 
     move-result v2
 
@@ -276,7 +276,7 @@
     goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->t0:I
+    iget v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->C0:I
 
     if-eqz v0, :cond_2
 
@@ -297,178 +297,180 @@
 .end method
 
 .method public final c()Z
-    .locals 1
+    .locals 2
 
-    iget p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->s0:I
+    iget v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->B0:I
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    if-ne p0, v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    return v0
+    return v1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
-.method public getViewProvider()Ld1d;
-    .locals 0
+.method public getViewProvider()Lvhd;
+    .locals 1
 
-    iget-object p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->v0:Ld1d;
+    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->E0:Lvhd;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onLayout(ZIIII)V
-    .locals 0
+    .locals 1
 
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    iget-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    move-object p1, p0
 
-    new-instance p2, Lwe5;
+    iget-object p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
 
-    const/4 p3, 0x0
+    new-instance p3, Lvj5;
 
-    invoke-direct {p2, p3, p0}, Lwe5;-><init>(ILjava/lang/Object;)V
+    const/4 p4, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-direct {p3, p4, p0}, Lvj5;-><init>(ILjava/lang/Object;)V
 
-    iget-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->v0:Ld1d;
+    invoke-virtual {p2, p3}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    check-cast p1, Lch4;
+    iget-object p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->E0:Lvhd;
 
-    iget-object p2, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    check-cast p2, Lwj4;
 
-    invoke-virtual {p2}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
+    iget-object p3, p2, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
-    move-result p2
+    invoke-virtual {p3}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
 
-    const/high16 p3, 0x40000000    # 2.0f
+    move-result p3
 
-    if-eqz p2, :cond_0
+    const/high16 p4, 0x40000000    # 2.0f
 
-    iget-object p2, p1, Lch4;->d:Landroid/view/View;
+    if-eqz p3, :cond_0
+
+    iget-object p3, p2, Lwj4;->d:Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/View;->getHeight()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p3, p4
+
+    iget-object p2, p2, Lwj4;->c:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
     move-result p2
 
+    :goto_0
     int-to-float p2, p2
 
-    div-float/2addr p2, p3
-
-    iget-object p1, p1, Lch4;->c:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    :goto_0
-    int-to-float p1, p1
-
-    sub-float/2addr p2, p1
+    sub-float/2addr p3, p2
 
     goto :goto_1
 
     :cond_0
-    iget-object p2, p1, Lch4;->d:Landroid/view/View;
+    iget-object p3, p2, Lwj4;->d:Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p3, p4
+
+    iget-object p2, p2, Lwj4;->c:Landroid/view/View;
 
     invoke-virtual {p2}, Landroid/view/View;->getWidth()I
 
     move-result p2
 
-    int-to-float p2, p2
-
-    div-float/2addr p2, p3
-
-    iget-object p1, p1, Lch4;->c:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
     goto :goto_0
 
     :goto_1
-    float-to-int p1, p2
+    float-to-int p2, p3
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o0:I
+    iput p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->x0:I
 
-    iget p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->q0:I
+    iget p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->z0:I
 
-    const/4 p2, -0x1
+    const/4 p3, -0x1
 
-    if-eq p1, p2, :cond_2
+    if-eq p2, p3, :cond_2
 
-    iget-object p3, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->n0:Landroid/widget/TextView;
+    iget-object p4, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->w0:Landroid/widget/TextView;
 
-    invoke-virtual {p3}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p4}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p4
+    move-result-object p5
 
-    if-nez p4, :cond_1
+    if-nez p5, :cond_1
 
     goto :goto_2
 
     :cond_1
-    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p5
+    move-result-object v0
 
-    invoke-static {p5, p1}, Ljt4;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, p2}, Llx4;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-virtual {p3, p4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p4, p5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_2
     :goto_2
-    iget p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->p0:I
+    iget p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:I
 
-    if-eq p1, p2, :cond_4
+    if-eq p2, p3, :cond_4
 
-    iget-object p3, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    iget-object p4, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
 
-    invoke-virtual {p3}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p4}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p4
+    move-result-object p5
 
-    if-nez p4, :cond_3
+    if-nez p5, :cond_3
 
     goto :goto_3
 
     :cond_3
-    invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p5
+    move-result-object v0
 
-    invoke-static {p5, p1}, Ljt4;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {v0, p2}, Llx4;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-virtual {p3, p4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p4, p5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     :cond_4
     :goto_3
-    iget p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->r0:I
+    iget p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
 
-    if-eq p1, p2, :cond_5
+    if-eq p2, p3, :cond_5
 
-    iget-object p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->n0:Landroid/widget/TextView;
+    iget-object p3, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->w0:Landroid/widget/TextView;
 
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setTextAppearance(I)V
+    invoke-virtual {p3, p2}, Landroid/widget/TextView;->setTextAppearance(I)V
 
     :cond_5
     invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
 
-    move-result p1
+    move-result p2
 
-    if-nez p1, :cond_6
+    if-nez p2, :cond_6
 
-    iget-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lv45;
+    iget-object p2, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lf95;
 
-    iget-object p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p3, p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, p0}, Lv45;->c(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p2, p3}, Lf95;->c(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_6
     return-void
@@ -477,7 +479,7 @@
 .method public setBubbleColor(I)V
     .locals 0
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->q0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->z0:I
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -487,7 +489,7 @@
 .method public setBubbleTextAppearance(I)V
     .locals 0
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->r0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -497,7 +499,7 @@
 .method public setHandleColor(I)V
     .locals 0
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->p0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:I
 
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
@@ -507,7 +509,7 @@
 .method public setOrientation(I)V
     .locals 0
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->s0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->B0:I
 
     if-nez p1, :cond_0
 
@@ -529,19 +531,19 @@
 
     iput-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lpwc;
 
-    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lv45;
+    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a:Lf95;
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lkhc;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lcxc;)V
 
     invoke-virtual {p0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
 
-    new-instance v0, Lmz3;
+    new-instance v0, Lb24;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lmz3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lb24;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
@@ -591,7 +593,7 @@
 
     mul-float/2addr v3, p1
 
-    iget v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o0:I
+    iget v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->x0:I
 
     int-to-float v4, v4
 
@@ -627,27 +629,27 @@
 
     move-result v3
 
-    iget-object p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    iget-object v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v4}, Landroid/view/View;->getHeight()I
 
-    move-result p0
+    move-result v4
 
-    sub-int/2addr v3, p0
+    sub-int/2addr v3, v4
 
-    int-to-float p0, v3
+    int-to-float v3, v3
 
-    mul-float/2addr p1, p0
+    mul-float/2addr p1, v3
 
     invoke-static {v1, p1}, Ljava/lang/Math;->max(FF)F
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0, v2}, Ljava/lang/Math;->min(FF)F
+    invoke-static {p1, v2}, Ljava/lang/Math;->min(FF)F
 
-    move-result p0
+    move-result p1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setY(F)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setY(F)V
 
     return-void
 
@@ -684,7 +686,7 @@
 
     mul-float/2addr v3, p1
 
-    iget v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o0:I
+    iget v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->x0:I
 
     int-to-float v4, v4
 
@@ -720,43 +722,43 @@
 
     move-result v3
 
-    iget-object p0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    iget-object v4, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v4}, Landroid/view/View;->getWidth()I
 
-    move-result p0
+    move-result v4
 
-    sub-int/2addr v3, p0
+    sub-int/2addr v3, v4
 
-    int-to-float p0, v3
+    int-to-float v3, v3
 
-    mul-float/2addr p1, p0
+    mul-float/2addr p1, v3
 
     invoke-static {v1, p1}, Ljava/lang/Math;->max(FF)F
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0, v2}, Ljava/lang/Math;->min(FF)F
+    invoke-static {p1, v2}, Ljava/lang/Math;->min(FF)F
 
-    move-result p0
+    move-result p1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setX(F)V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setX(F)V
 
     return-void
 .end method
 
-.method public setViewProvider(Ld1d;)V
+.method public setViewProvider(Lvhd;)V
     .locals 9
 
     invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iput-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->v0:Ld1d;
+    iput-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->E0:Lvhd;
 
-    iput-object p0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iput-object p0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
-    check-cast p1, Lch4;
+    check-cast p1, Lwj4;
 
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -766,7 +768,7 @@
 
     move-result-object v0
 
-    sget v1, Lb2c;->fastscroll__default_bubble:I
+    sget v1, Lehc;->fastscroll__default_bubble:I
 
     const/4 v2, 0x0
 
@@ -774,13 +776,13 @@
 
     move-result-object v0
 
-    iput-object v0, p1, Lch4;->c:Landroid/view/View;
+    iput-object v0, p1, Lwj4;->c:Landroid/view/View;
 
     iput-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c:Landroid/view/View;
 
     new-instance v0, Landroid/view/View;
 
-    iget-object v1, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v1, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -788,9 +790,9 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p1, Lch4;->d:Landroid/view/View;
+    iput-object v0, p1, Lwj4;->d:Landroid/view/View;
 
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
 
@@ -803,7 +805,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -813,7 +815,7 @@
 
     move-result-object v0
 
-    sget v1, Lswb;->fastscroll__handle_inset:I
+    sget v1, Lxbc;->fastscroll__handle_inset:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -822,7 +824,7 @@
     move v6, v0
 
     :goto_0
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
 
@@ -836,7 +838,7 @@
     goto :goto_2
 
     :cond_1
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -846,7 +848,7 @@
 
     move-result-object v0
 
-    sget v1, Lswb;->fastscroll__handle_inset:I
+    sget v1, Lxbc;->fastscroll__handle_inset:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -857,15 +859,15 @@
     :goto_2
     new-instance v3, Landroid/graphics/drawable/InsetDrawable;
 
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lbyb;->fastscroll__default_handle:I
+    sget v1, Lgdc;->fastscroll__default_handle:I
 
-    invoke-static {v0, v1}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -875,11 +877,11 @@
 
     invoke-direct/range {v3 .. v8}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
 
-    iget-object v0, p1, Lch4;->d:Landroid/view/View;
+    iget-object v0, p1, Lwj4;->d:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    iget-object v0, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v0, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -889,7 +891,7 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v1, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
 
@@ -897,19 +899,19 @@
 
     if-eqz v1, :cond_2
 
-    sget v1, Lswb;->fastscroll__handle_clickable_width:I
+    sget v1, Lxbc;->fastscroll__handle_clickable_width:I
 
     goto :goto_3
 
     :cond_2
-    sget v1, Lswb;->fastscroll__handle_height:I
+    sget v1, Lxbc;->fastscroll__handle_height:I
 
     :goto_3
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iget-object v1, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v1, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -919,7 +921,7 @@
 
     move-result-object v1
 
-    iget-object v2, p1, Ld1d;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    iget-object v2, p1, Lvhd;->a:Lcom/futuremind/recyclerviewfastscroll/FastScroller;
 
     invoke-virtual {v2}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
 
@@ -927,12 +929,12 @@
 
     if-eqz v2, :cond_3
 
-    sget v2, Lswb;->fastscroll__handle_height:I
+    sget v2, Lxbc;->fastscroll__handle_height:I
 
     goto :goto_4
 
     :cond_3
-    sget v2, Lswb;->fastscroll__handle_clickable_width:I
+    sget v2, Lxbc;->fastscroll__handle_clickable_width:I
 
     :goto_4
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -943,19 +945,19 @@
 
     invoke-direct {v2, v0, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    iget-object v0, p1, Lch4;->d:Landroid/view/View;
+    iget-object v0, p1, Lwj4;->d:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p1, Lch4;->d:Landroid/view/View;
+    iget-object v0, p1, Lwj4;->d:Landroid/view/View;
 
     iput-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
 
-    iget-object p1, p1, Lch4;->c:Landroid/view/View;
+    iget-object p1, p1, Lwj4;->c:Landroid/view/View;
 
     check-cast p1, Landroid/widget/TextView;
 
-    iput-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->n0:Landroid/widget/TextView;
+    iput-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->w0:Landroid/widget/TextView;
 
     iget-object p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c:Landroid/view/View;
 
@@ -971,7 +973,7 @@
 .method public setVisibility(I)V
     .locals 0
 
-    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->t0:I
+    iput p1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->C0:I
 
     invoke-virtual {p0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->b()V
 

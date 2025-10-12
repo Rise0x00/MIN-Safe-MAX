@@ -1,145 +1,137 @@
-.class public abstract Lwx4;
-.super Ljava/lang/Object;
+.class public final Lwx4;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:I
+.field public final synthetic b:Lxx4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lxx4;I)V
+    .locals 0
 
-    const/16 v0, 0xe6
+    iput p2, p0, Lwx4;->a:I
 
-    const/16 v1, 0xff
+    iput-object p1, p0, Lwx4;->b:Lxx4;
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result v0
-
-    sput v0, Lwx4;->a:I
-
-    const/16 v0, 0x80
-
-    const/16 v1, 0x1b
-
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result v0
-
-    sput v0, Lwx4;->b:I
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Lm5;)V
-    .locals 8
 
-    new-instance v1, Lole;
+# virtual methods
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget v0, p0, Lwx4;->a:I
 
-    invoke-direct {v1, v0, v0}, Lole;-><init>(II)V
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v2, Lole;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    sget v3, Lwx4;->a:I
+    return-void
 
-    sget v4, Lwx4;->b:I
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    invoke-direct {v2, v3, v4}, Lole;-><init>(II)V
+    iget-object p1, p0, Lwx4;->b:Lxx4;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    invoke-static {p1}, Lxx4;->a(Lxx4;)V
 
-    move-result-object v3
+    iget-object v0, p1, Lxx4;->Y:Ljava/util/ArrayList;
 
-    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    if-eqz v0, :cond_0
 
-    move-result-object v4
+    iget-boolean v1, p1, Lxx4;->Z:Z
 
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    if-nez v1, :cond_0
 
-    move-result-object v3
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    move-result-object v0
 
-    move-result-object v3
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+    move-result v1
 
-    and-int/lit8 v3, v3, 0x30
+    if-eqz v1, :cond_0
 
-    const/4 v5, 0x1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/16 v6, 0x20
+    move-result-object v1
 
-    if-ne v3, v6, :cond_0
+    check-cast v1, Lae;
 
-    move v3, v5
+    invoke-virtual {v1, p1}, Lae;->a(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
     :cond_0
-    move v3, v5
+    return-void
 
-    move v5, v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :goto_0
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    move-result-object v7
+    iget v0, p0, Lwx4;->a:I
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v7
-
-    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
-
-    and-int/lit8 v7, v7, 0x30
-
-    if-ne v7, v6, :cond_1
-
-    move v6, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v6, v0
-
-    :goto_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1e
-
-    if-lt v0, v3, :cond_2
-
-    new-instance v0, Lay4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v0, Lzx4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_2
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v3
-
-    invoke-virtual/range {v0 .. v6}, Lzx4;->a(Lole;Lole;Landroid/view/Window;Landroid/view/View;ZZ)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lyx4;->b(Landroid/view/Window;)V
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
     return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Lwx4;->b:Lxx4;
+
+    iget-object v0, p1, Lxx4;->Y:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p1, Lxx4;->Z:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lae;
+
+    invoke-virtual {v1, p1}, Lae;->b(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

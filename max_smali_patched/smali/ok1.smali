@@ -1,5 +1,5 @@
 .class public final Lok1;
-.super Lvk1;
+.super Lgl1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lok1;
 
-    invoke-direct {v0}, Lvk1;-><init>()V
+    invoke-direct {v0}, Lgl1;-><init>()V
 
     sput-object v0, Lok1;->D:Lok1;
 
@@ -32,30 +32,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lok1;
+    instance-of p1, p1, Lok1;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, 0x7f1049e7
+    const v0, 0x619f7241
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "RecordStopDialog"
+    const-string v0, "ExitWithRecord"
 
-    return-object p0
+    return-object v0
 .end method

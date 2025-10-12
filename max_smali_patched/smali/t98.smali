@@ -1,257 +1,409 @@
 .class public final Lt98;
-.super Landroid/os/Handler;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Collection;
+.implements Ljm7;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lil8;Landroid/os/Looper;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p1, p0, Lt98;->a:I
 
-    iput v0, p0, Lt98;->a:I
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    .line 1
-    iput-object p1, p0, Lt98;->c:Ljava/lang/Object;
-
-    .line 2
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lv98;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lt98;->a:I
-
-    .line 3
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lt98;->b:Ljava/lang/Object;
+    iput-object p2, p0, Lt98;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 6
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    iget p1, p0, Lt98;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public addAll(Ljava/util/Collection;)Z
+    .locals 1
 
     iget v0, p0, Lt98;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget v0, p0, Lt98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhab;
+
+    invoke-virtual {v0}, Lhab;->clear()V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lt98;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    check-cast v0, Ljava/lang/ref/WeakReference;
+    check-cast v0, Lr98;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Lr98;->clear()V
 
-    goto/16 :goto_3
+    return-void
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    nop
 
-    move-result-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    check-cast v0, Landroid/os/Messenger;
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lt98;->b:Ljava/lang/Object;
+    iget v0, p0, Lt98;->a:I
 
-    check-cast p0, Ljava/lang/ref/WeakReference;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Lhab;
 
-    check-cast p0, Lv98;
+    invoke-virtual {v0, p1}, Ljava/util/AbstractMap;->containsValue(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_9
+    move-result p1
 
-    if-nez p0, :cond_1
+    return p1
 
-    goto/16 :goto_3
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    check-cast v0, Lr98;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lr98;->containsValue(Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Lbl8;->a(Landroid/os/Bundle;)V
+    move-result p1
 
-    :try_start_0
-    iget v2, p1, Landroid/os/Message;->what:I
-    :try_end_0
-    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
+    return p1
 
-    const/4 v3, 0x1
+    nop
 
-    const-string v4, "data_media_item_id"
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-eq v2, v3, :cond_8
+.method public isEmpty()Z
+    .locals 1
 
-    const/4 v3, 0x2
+    iget v0, p0, Lt98;->a:I
 
-    if-eq v2, v3, :cond_9
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v3, 0x3
+    invoke-super {p0}, Ljava/util/AbstractCollection;->isEmpty()Z
 
-    if-eq v2, v3, :cond_2
+    move-result v0
 
-    :try_start_1
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    return v0
 
-    goto/16 :goto_3
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    :cond_2
-    const-string p1, "data_options"
+    check-cast v0, Lr98;
 
-    invoke-virtual {v1, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-virtual {v0}, Lr98;->isEmpty()Z
 
-    move-result-object p1
+    move-result v0
 
-    invoke-static {p1}, Lbl8;->a(Landroid/os/Bundle;)V
+    return v0
 
-    const-string p1, "data_notify_children_changed_options"
+    nop
 
-    invoke-virtual {v1, p1}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 7
 
-    invoke-static {p1}, Lbl8;->a(Landroid/os/Bundle;)V
+    iget v0, p0, Lt98;->a:I
 
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    new-instance v0, Llab;
 
-    const-string v2, "data_media_item_list"
+    iget-object v1, p0, Lt98;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+    check-cast v1, Lhab;
 
-    move-result-object v1
+    const/16 v2, 0x8
 
-    sget-object v2, Lw98;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    if-nez v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    new-array v3, v2, [Lirf;
 
     const/4 v4, 0x0
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    if-ge v4, v2, :cond_0
 
-    move-result v5
+    new-instance v5, Ljrf;
 
-    if-ge v4, v5, :cond_4
+    const/4 v6, 0x2
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v5, v6}, Ljrf;-><init>(I)V
 
-    move-result-object v5
-
-    check-cast v5, Landroid/os/Parcelable;
-
-    invoke-static {v5, v2}, Lbj7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    aput-object v5, v3, v4
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    :cond_4
-    :goto_1
-    iget-object v1, p0, Lv98;->g:Landroid/os/Messenger;
+    :cond_0
+    invoke-direct {v0, v1, v3}, Liab;-><init>(Lhab;[Lirf;)V
 
-    if-eq v1, v0, :cond_5
+    return-object v0
 
-    goto :goto_3
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    :cond_5
-    if-nez p1, :cond_6
+    check-cast v0, Lr98;
 
-    goto :goto_2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_6
-    iget-object p0, p0, Lv98;->e:Ljs;
+    new-instance v1, Lo98;
 
-    invoke-virtual {p0, p1}, Lntd;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    invoke-direct {v1, v2, v0}, Lo98;-><init>(ILr98;)V
 
-    if-nez p0, :cond_7
+    return-object v1
 
-    :goto_2
-    sget p0, Lx98;->b:I
+    nop
 
-    goto :goto_3
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :cond_7
-    new-instance p0, Ljava/lang/ClassCastException;
+.method public remove(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    iget v0, p0, Lt98;->a:I
 
-    throw p0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_8
-    const-string p0, "data_root_hints"
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1, p0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    move-result p1
 
-    move-result-object p0
+    return p1
 
-    invoke-static {p0}, Lbl8;->a(Landroid/os/Bundle;)V
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    check-cast v0, Lr98;
 
-    const-string p0, "data_media_session_token"
+    invoke-virtual {v0}, Lr98;->c()V
 
-    invoke-virtual {v1, p0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    iget v1, v0, Lr98;->Y:I
 
-    move-result-object p0
+    :cond_0
+    const/4 v2, -0x1
 
-    sget-object p1, Lal8;->CREATOR:Landroid/os/Parcelable$Creator;
+    add-int/2addr v1, v2
 
-    invoke-static {p0, p1}, Lbj7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    if-ltz v1, :cond_1
 
-    move-result-object p0
+    iget-object v2, v0, Lr98;->c:[I
 
-    check-cast p0, Lal8;
-    :try_end_1
-    .catch Landroid/os/BadParcelableException; {:try_start_1 .. :try_end_1} :catch_0
+    aget v2, v2, v1
 
-    :catch_0
-    :cond_9
-    :goto_3
-    return-void
+    if-ltz v2, :cond_0
+
+    iget-object v2, v0, Lr98;->b:[Ljava/lang/Object;
+
+    aget-object v2, v2, v1
+
+    invoke-static {v2, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v2, v1
+
+    :cond_1
+    if-gez v2, :cond_2
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0, v2}, Lr98;->h(I)V
+
+    const/4 p1, 0x1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget v0, p0, Lt98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
+
+    check-cast v0, Lr98;
+
+    invoke-virtual {v0}, Lr98;->c()V
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    iget v0, p0, Lt98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
+
+    check-cast v0, Lr98;
+
+    invoke-virtual {v0}, Lr98;->c()V
+
+    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lt98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhab;
+
+    invoke-virtual {v0}, Lhab;->getSize()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :pswitch_0
+    iget-object v0, p0, Lt98;->b:Ljava/lang/Object;
+
+    check-cast v0, Lr98;
+
+    iget v0, v0, Lr98;->x0:I
+
+    :goto_0
+    return v0
 
     nop
 

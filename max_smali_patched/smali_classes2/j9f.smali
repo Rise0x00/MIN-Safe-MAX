@@ -1,41 +1,62 @@
-.class public final Lj9f;
+.class public interface abstract Lj9f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll9f;
 
+# static fields
+.field public static final a0:Ljava/util/List;
 
-# instance fields
-.field public final a:Ldue;
-
-.field public final b:I
+.field public static final b0:Lh2a;
 
 
 # direct methods
-.method public constructor <init>(ILdue;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v9, "login.flood"
 
-    .line 2
-    iput-object p2, p0, Lj9f;->a:Ldue;
+    const-string v10, "login.blocked"
 
-    .line 3
-    iput p1, p0, Lj9f;->b:I
+    const-string v0, "session.state"
+
+    const-string v1, "proto.state"
+
+    const-string v2, "proto.payload"
+
+    const-string v3, "internal"
+
+    const-string v4, "service.unavailable"
+
+    const-string v5, "service.timeout"
+
+    const-string v6, "proto.ver"
+
+    const-string v7, "error.call.history.inconsistency"
+
+    const-string v8, "errors.event.unavailable"
+
+    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lj9f;->a0:Ljava/util/List;
+
+    new-instance v0, Lh2a;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lh2a;-><init>(I)V
+
+    sput-object v0, Lj9f;->b0:Lh2a;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ldue;)V
-    .locals 1
 
-    .line 4
-    sget v0, Lysc;->A0:I
-
-    .line 5
-    invoke-direct {p0, v0, p1}, Lj9f;-><init>(ILdue;)V
-
-    return-void
+# virtual methods
+.method public abstract c(IJF)J
 .end method

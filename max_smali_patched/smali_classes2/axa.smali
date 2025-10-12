@@ -1,224 +1,67 @@
 .class public final Laxa;
-.super Lape;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Long;
+.field public X:Ljava/io/IOException;
 
-.field public Y:I
+.field public Y:Lwwa;
 
-.field public c:Ljava/lang/String;
+.field public Z:Ljava/io/File;
 
-.field public o:Lmp3;
+.field public o:Ldxa;
+
+.field public w0:Ljava/util/Iterator;
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Ldxa;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
+.method public constructor <init>(Ldxa;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    iput-object p1, p0, Laxa;->y0:Ldxa;
+
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Laxa;->x0:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    iget p1, p0, Laxa;->z0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    const/4 v1, -0x1
+    or-int/2addr p1, v0
 
-    sparse-switch v0, :sswitch_data_0
+    iput p1, p0, Laxa;->z0:I
 
-    goto :goto_0
+    const/4 v3, 0x0
 
-    :sswitch_0
-    const-string v0, "tokenType"
+    const/4 v4, 0x0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Laxa;->y0:Ldxa;
 
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "token"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "phone"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "profile"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
     const/4 v1, 0x0
 
-    :goto_0
-    packed-switch v1, :pswitch_data_0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Lq09;->B()V
+    move-object v5, p0
 
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Lxu7;->m0(Lq09;)Ljava/lang/String;
+    invoke-virtual/range {v0 .. v5}, Ldxa;->g(Ljava/io/IOException;Lq1d;Lwwa;Ljava/io/File;Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Ljq9;->p(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Laxa;->Y:I
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lxu7;->m0(Lq09;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Laxa;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_2
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lxu7;->j0(Lq09;J)J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Laxa;->X:Ljava/lang/Long;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Lmp3;->e(Lq09;)Lmp3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Laxa;->o:Lmp3;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x12717657 -> :sswitch_3
-        0x65b3d6e -> :sswitch_2
-        0x696b9f9 -> :sswitch_1
-        0x86f18d3 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Laxa;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Laxa;->o:Lmp3;
-
-    iget-object v2, p0, Laxa;->X:Ljava/lang/Long;
-
-    iget p0, p0, Laxa;->Y:I
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{token=\'"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', profile="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", phone="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", tokenType="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Ljq9;->n(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

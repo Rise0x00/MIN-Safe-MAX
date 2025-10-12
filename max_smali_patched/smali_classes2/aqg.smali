@@ -1,620 +1,194 @@
-.class public abstract Laqg;
-.super Ljava/lang/Object;
+.class public final Laqg;
+.super Lm3f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final FRAGMENT_SHADER_UNI_COLOR_MATRIX:Ljava/lang/String; = "colorMatrix"
-
-.field public static final FRAGMENT_SHADER_UNI_TEXTURE_ALPHA:Ljava/lang/String; = "texAlpha"
-
-.field public static final FRAGMENT_SHADER_UNI_TEXTURE_SAMPLER:Ljava/lang/String; = "sTexture"
-
-.field private static final LOG_TAG:Ljava/lang/String; = "GLProgram"
-
-.field public static final SHADER_VAR_TEXTURE_COORDINATES:Ljava/lang/String; = "vTextureCoord"
-
-.field public static final VERTEX_SHADER_ATTR_TEXTURE_COORDINATES:Ljava/lang/String; = "aTextureCoord"
-
-.field public static final VERTEX_SHADER_ATTR_VERTEXT_COORDINATES:Ljava/lang/String; = "aVertexCoord"
-
-.field public static final VERTEX_SHADER_UNI_MVP_MATRIX:Ljava/lang/String; = "mvpMatrix"
-
-.field public static final VERTEX_SHADER_UNI_TEXTURE_MATRIX:Ljava/lang/String; = "texMatrix"
+# interfaces
+.implements Lnf6;
 
 
 # instance fields
-.field private final aTextureCoordLoc:I
+.field public final synthetic X:I
 
-.field private final aVertexCoordLoc:I
-
-.field private alpha:F
-
-.field private final alphaLocation:I
-
-.field private customParams:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private firstFreeTexture:I
-
-.field private frame:Lppg;
-
-.field private mvpMat:[F
-
-.field private final mvpMatrixLoc:I
-
-.field protected final programId:I
-
-.field private texMat:[F
-
-.field private final texMatrixLoc:I
-
-.field private textureId:I
-
-.field private final textureLocation:I
+.field public synthetic Y:Leqg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 5
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p0, Laqg;->alpha:F
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Laqg;->customParams:Ljava/util/HashMap;
-
-    const-string v0, "precision mediump float;\nuniform mat4 mvpMatrix;\nuniform mat4 texMatrix;\nattribute vec4 aVertexCoord;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = mvpMatrix * aVertexCoord;\n   vTextureCoord = (texMatrix * aTextureCoord).xy;\n}\n"
-
-    const v1, 0x8b31
-
-    invoke-static {v1, v0}, Lve2;->f(ILjava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const v1, 0x8b30
-
-    invoke-static {v1, p1}, Lve2;->f(ILjava/lang/String;)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v1
-
-    iput v1, p0, Laqg;->programId:I
-
-    const-string v2, "glCreateProgram"
-
-    invoke-static {v2}, Lve2;->c(Ljava/lang/String;)V
-
-    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    const-string v2, "glAttachShader"
-
-    invoke-static {v2}, Lve2;->c(Ljava/lang/String;)V
-
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
-
-    const-string v0, "glDeleteShader"
-
-    invoke-static {v0}, Lve2;->c(Ljava/lang/String;)V
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v2}, Lve2;->c(Ljava/lang/String;)V
-
-    invoke-static {p1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
-
-    invoke-static {v0}, Lve2;->c(Ljava/lang/String;)V
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
-
-    const/4 p1, 0x1
-
-    new-array v0, p1, [I
-
-    const v2, 0x8b82
-
-    const/4 v3, 0x0
-
-    invoke-static {v1, v2, v0, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
-
-    aget v0, v0, v3
-
-    if-ne v0, p1, :cond_0
-
-    const-string p1, "aVertexCoord"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Laqg;->aVertexCoordLoc:I
-
-    invoke-static {v0, p1}, Lve2;->b(ILjava/lang/String;)V
-
-    const-string p1, "aTextureCoord"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v2
-
-    iput v2, p0, Laqg;->aTextureCoordLoc:I
-
-    invoke-static {v2, p1}, Lve2;->b(ILjava/lang/String;)V
-
-    const-string p1, "mvpMatrix"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Laqg;->mvpMatrixLoc:I
-
-    invoke-static {v3, p1}, Lve2;->b(ILjava/lang/String;)V
-
-    const-string p1, "texMatrix"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Laqg;->texMatrixLoc:I
-
-    invoke-static {v3, p1}, Lve2;->b(ILjava/lang/String;)V
-
-    const-string p1, "sTexture"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Laqg;->textureLocation:I
-
-    const-string v4, "texAlpha"
-
-    invoke-static {v1, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, p0, Laqg;->alphaLocation:I
-
-    invoke-static {v3, p1}, Lve2;->b(ILjava/lang/String;)V
-
-    new-instance p1, Lppg;
-
-    invoke-direct {p1, v0, v2}, Lppg;-><init>(II)V
-
-    iput-object p1, p0, Laqg;->frame:Lppg;
-
-    return-void
-
-    :cond_0
-    const-string p0, "Could not link program: "
-
-    const-string p1, "GLProgram"
-
+    .line 1
     const/4 v0, 0x0
 
-    invoke-static {p1, p0, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput v0, p0, Laqg;->X:I
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    invoke-static {p1, p0, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public constructor <init>(Leqg;Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+    const/4 v0, 0x1
 
-    new-instance p0, Ljava/lang/RuntimeException;
+    iput v0, p0, Laqg;->X:I
 
-    const-string p1, "create program failed"
+    .line 2
+    iput-object p1, p0, Laqg;->Y:Leqg;
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x3
 
-    throw p0
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :cond_1
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "Failed to load fragment shader"
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "Failed to load vertex shader"
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public abstract getTarget()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Laqg;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/widget/TextView;
+
+    check-cast p2, Luxa;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p1, Laqg;
+
+    iget-object p2, p0, Laqg;->Y:Leqg;
+
+    invoke-direct {p1, p2, p3}, Laqg;-><init>(Leqg;Lkotlin/coroutines/Continuation;)V
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Laqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :pswitch_0
+    check-cast p1, Leqg;
+
+    check-cast p2, Luxa;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    new-instance p2, Laqg;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p2, v0, p3}, Laqg;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, p2, Laqg;->Y:Leqg;
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-virtual {p2, p1}, Laqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public getTextureCoordLoc()I
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget p0, p0, Laqg;->aTextureCoordLoc:I
+    iget v0, p0, Laqg;->X:I
 
-    return p0
-.end method
+    sget-object v1, Loyf;->a:Loyf;
 
-.method public getVertexCoordLoc()I
-    .locals 0
+    const/4 v2, 0x0
 
-    iget p0, p0, Laqg;->aVertexCoordLoc:I
+    packed-switch v0, :pswitch_data_0
 
-    return p0
-.end method
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-.method public registerTexture(IILjava/lang/String;)I
-    .locals 2
+    iget-object p1, p0, Laqg;->Y:Leqg;
 
-    iget v0, p0, Laqg;->firstFreeTexture:I
+    iget-object v0, p1, Leqg;->c:Lbqg;
 
-    const v1, 0x84c0
+    if-eqz v0, :cond_0
 
-    add-int/2addr v0, v1
+    check-cast v0, Lgma;
 
-    invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
+    iget-object v0, v0, Lgma;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    const-string v1, "glActiveTexture "
+    sget-object v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lkuc;
 
     move-result-object v0
 
-    invoke-static {v0}, Lve2;->c(Ljava/lang/String;)V
+    iget-object v0, v0, Lkuc;->C0:Lsqc;
 
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    iget-object v0, v0, Lsqc;->a:Lfoe;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
 
-    const-string p2, "glBindTexture "
+    move-result-object v0
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-object v2, v0
 
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lve2;->c(Ljava/lang/String;)V
-
-    iget p1, p0, Laqg;->firstFreeTexture:I
-
-    add-int/lit8 p2, p1, 0x1
-
-    iput p2, p0, Laqg;->firstFreeTexture:I
-
-    return p1
-.end method
-
-.method public release()V
-    .locals 1
-
-    iget-object v0, p0, Laqg;->frame:Lppg;
-
-    iget-object v0, v0, Lppg;->a:Lxpg;
-
-    invoke-interface {v0}, Lxpg;->a()V
-
-    iget p0, p0, Laqg;->programId:I
-
-    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    return-void
-.end method
-
-.method public render()V
-    .locals 1
-
-    invoke-virtual {p0}, Laqg;->use()V
-
-    iget-object v0, p0, Laqg;->frame:Lppg;
-
-    iget-object v0, v0, Lppg;->a:Lxpg;
-
-    invoke-interface {v0}, Lxpg;->b()V
-
-    invoke-virtual {p0}, Laqg;->unUse()V
-
-    return-void
-.end method
-
-.method public setCustomParameter(Ljava/lang/String;F)V
-    .locals 1
-
-    .line 1
-    iget v0, p0, Laqg;->programId:I
-
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    .line 2
-    iget-object p0, p0, Laqg;->customParams:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public setCustomParameter(Ljava/lang/String;I)V
-    .locals 1
-
-    .line 3
-    iget v0, p0, Laqg;->programId:I
-
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    .line 4
-    iget-object p0, p0, Laqg;->customParams:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public setMVPMat([F)V
-    .locals 0
-
-    iput-object p1, p0, Laqg;->mvpMat:[F
-
-    return-void
-.end method
-
-.method public setTexMat([F)V
-    .locals 0
-
-    iput-object p1, p0, Laqg;->texMat:[F
-
-    return-void
-.end method
-
-.method public setTextureAlpha(F)V
-    .locals 0
-
-    iput p1, p0, Laqg;->alpha:F
-
-    return-void
-.end method
-
-.method public setTextureId(I)V
-    .locals 0
-
-    iput p1, p0, Laqg;->textureId:I
-
-    return-void
-.end method
-
-.method public unUse()V
-    .locals 0
-
-    const/4 p0, 0x0
-
-    invoke-static {p0}, Landroid/opengl/GLES20;->glUseProgram(I)V
-
-    const-string p0, "glUseProgram"
-
-    invoke-static {p0}, Lve2;->c(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public use()V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Laqg;->firstFreeTexture:I
-
-    iget-object v1, p0, Laqg;->mvpMat:[F
-
-    const/16 v2, 0x10
-
-    if-nez v1, :cond_0
-
-    new-array v1, v2, [F
-
-    iput-object v1, p0, Laqg;->mvpMat:[F
-
-    invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    check-cast v2, Lcuc;
 
     :cond_0
-    iget-object v1, p0, Laqg;->texMat:[F
+    instance-of v0, v2, Lytc;
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, v0}, Leqg;->setDurationColor(Z)V
 
-    new-array v1, v2, [F
+    return-object v1
 
-    iput-object v1, p0, Laqg;->texMat:[F
+    :pswitch_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    iget-object p1, p0, Laqg;->Y:Leqg;
+
+    iget-object v0, p1, Leqg;->c:Lbqg;
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, Lgma;
+
+    iget-object v0, v0, Lgma;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    sget-object v2, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->j1:[Ltm7;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Lkuc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lkuc;->C0:Lsqc;
+
+    iget-object v0, v0, Lsqc;->a:Lfoe;
+
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v2, v0
+
+    check-cast v2, Lcuc;
 
     :cond_1
-    iget v1, p0, Laqg;->programId:I
+    instance-of v0, v2, Lytc;
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
+    invoke-virtual {p1, v0}, Leqg;->setBackgroundColor(Z)V
 
-    const-string v1, "glUseProgram"
+    return-object v1
 
-    invoke-static {v1}, Lve2;->c(Ljava/lang/String;)V
-
-    iget v1, p0, Laqg;->mvpMatrixLoc:I
-
-    iget-object v2, p0, Laqg;->mvpMat:[F
-
-    const/4 v3, 0x1
-
-    invoke-static {v1, v3, v0, v2, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    const-string v1, "glUniformMatrix4fv"
-
-    invoke-static {v1}, Lve2;->c(Ljava/lang/String;)V
-
-    iget v2, p0, Laqg;->texMatrixLoc:I
-
-    iget-object v4, p0, Laqg;->texMat:[F
-
-    invoke-static {v2, v3, v0, v4, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    invoke-static {v1}, Lve2;->c(Ljava/lang/String;)V
-
-    iget v0, p0, Laqg;->textureLocation:I
-
-    invoke-virtual {p0}, Laqg;->getTarget()I
-
-    move-result v1
-
-    iget v2, p0, Laqg;->textureId:I
-
-    const-string v3, "textureId"
-
-    invoke-virtual {p0, v1, v2, v3}, Laqg;->registerTexture(IILjava/lang/String;)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
-
-    const-string v0, "glUniform1i"
-
-    invoke-static {v0}, Lve2;->c(Ljava/lang/String;)V
-
-    iget v0, p0, Laqg;->alphaLocation:I
-
-    iget v1, p0, Laqg;->alpha:F
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    const-string v0, "glUniform1f"
-
-    invoke-static {v0}, Lve2;->c(Ljava/lang/String;)V
-
-    iget-object v0, p0, Laqg;->customParams:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_2
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v3, p0, Laqg;->customParams:Ljava/util/HashMap;
-
-    const/4 v4, 0x0
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v1, v4}, Ljava/util/HashMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v3, v1, Ljava/lang/Float;
-
-    if-eqz v3, :cond_3
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    goto :goto_0
-
-    :cond_3
-    instance-of v3, v1, Ljava/lang/Integer;
-
-    if-eqz v3, :cond_2
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
-
-    goto :goto_0
-
-    :cond_4
-    const-string p0, "set custom"
-
-    invoke-static {p0}, Lve2;->c(Ljava/lang/String;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

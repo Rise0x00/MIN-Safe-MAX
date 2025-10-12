@@ -1,73 +1,92 @@
-.class public final enum Lel5;
-.super Ljava/lang/Enum;
+.class public final synthetic Lel5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwo3;
 
-# static fields
-.field public static final enum a:Lel5;
 
-.field public static final enum b:Lel5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lel5;
+.field public final synthetic b:Lil5;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lil5;Ljava/util/List;I)V
+    .locals 0
 
-    new-instance v0, Lel5;
+    iput p3, p0, Lel5;->a:I
 
-    const-string v1, "Arrow"
+    iput-object p1, p0, Lel5;->b:Lil5;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lel5;->c:Ljava/util/List;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lel5;->a:Lel5;
-
-    new-instance v1, Lel5;
-
-    const-string v2, "Progress"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lel5;->b:Lel5;
-
-    filled-new-array {v0, v1}, [Lel5;
-
-    move-result-object v0
-
-    sput-object v0, Lel5;->c:[Lel5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lel5;
-    .locals 1
 
-    const-class v0, Lel5;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lel5;->a:I
 
-    move-result-object p0
+    const-string v1, "il5"
 
-    check-cast p0, Lel5;
+    iget-object v2, p0, Lel5;->c:Ljava/util/List;
 
-    return-object p0
-.end method
+    iget-object v3, p0, Lel5;->b:Lil5;
 
-.method public static values()[Lel5;
-    .locals 1
+    check-cast p1, Ljava/lang/Throwable;
 
-    sget-object v0, Lel5;->c:[Lel5;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onListUpdated: failed to store stickers %s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lel5;
+    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object v0
+    invoke-virtual {v3}, Lil5;->I()V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lil5;->I()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

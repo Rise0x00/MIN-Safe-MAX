@@ -1,115 +1,96 @@
 .class public final Lx2e;
-.super Leje;
+.super Ldd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/startconversation/StartConversationScreen;
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    iput-object p2, p0, Lx2e;->Y:Lone/me/startconversation/StartConversationScreen;
+    const/16 v0, 0x12
 
-    const/4 p2, 0x2
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lx2e;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lx2e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lx2e;
 
-    check-cast p0, Lx2e;
+    const/4 v2, 0x0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lx2e;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lx2e;
 
-    return-object p0
+    iget-object v1, p0, Lx2e;->b:Landroid/content/Intent;
+
+    iget-object p1, p1, Lx2e;->b:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 1
 
-    new-instance v0, Lx2e;
+    iget-object v0, p0, Lx2e;->b:Landroid/content/Intent;
 
-    iget-object p0, p0, Lx2e;->Y:Lone/me/startconversation/StartConversationScreen;
-
-    invoke-direct {v0, p2, p0}, Lx2e;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
-
-    iput-object p1, v0, Lx2e;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lx2e;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
-
-    iget-object p0, p0, Lx2e;->Y:Lone/me/startconversation/StartConversationScreen;
-
-    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_0
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, "SelectPhotoFromCamera(intent="
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    sget-object v1, Ltcf;->a:Ltcf;
+    iget-object v1, p0, Lx2e;->b:Landroid/content/Intent;
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v1
+    const-string v1, ")"
 
-    :cond_2
-    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->t0:Lrgg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v1
+    move-result-object v0
+
+    return-object v0
 .end method

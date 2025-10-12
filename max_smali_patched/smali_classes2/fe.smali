@@ -1,85 +1,185 @@
 .class public final Lfe;
-.super Landroid/view/View;
+.super Lu95;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final X:Ljava/lang/Object;
+
+.field public final Y:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    sget v1, Lg9d;->Y:I
+
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Lu95;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    new-instance p1, Lee;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p1, v0, v1}, Lee;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
 
-    new-instance p1, Landroid/graphics/Paint;
+    const/4 v1, 0x3
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    invoke-static {v1, p1}, Lvr0;->r(ILve6;)Lbp7;
 
-    iput-object p1, p0, Lfe;->a:Landroid/graphics/Paint;
+    move-result-object p1
+
+    iput-object p1, p0, Lfe;->o:Ljava/lang/Object;
+
+    new-instance p1, Lee;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v2}, Lee;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfe;->X:Ljava/lang/Object;
+
+    new-instance p1, Lee;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v2}, Lee;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfe;->Y:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
+.method public final c(I)V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    iget-object v0, p0, Lfe;->o:Ljava/lang/Object;
 
-    move-result v0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    int-to-float v0, v0
+    move-result-object v0
 
-    const/high16 v1, 0x40000000    # 2.0f
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
 
-    div-float/2addr v0, v1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
-    move-result v2
+    :cond_0
+    iget-object v0, p0, Lfe;->X:Ljava/lang/Object;
 
-    int-to-float v2, v2
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    div-float/2addr v2, v1
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
 
-    move-result v3
+    if-eqz v0, :cond_1
 
-    int-to-float v3, v3
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
-    div-float/2addr v3, v1
+    :cond_1
+    iget-object v0, p0, Lfe;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Lfe;->a:Landroid/graphics/Paint;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v2, v3, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    move-result-object v0
 
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_2
+    iget-object p1, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
 
     return-void
 .end method
 
-.method public final onMeasure(II)V
+.method public final d(II)V
     .locals 2
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0}, Lpih;->a0(IF)I
 
     move-result v0
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    shr-int/lit8 p1, p1, 0x18
 
-    move-result v1
+    and-int/lit16 p1, p1, 0xff
 
-    invoke-virtual {p0, v0, v1}, Landroid/view/View;->setMeasuredDimension(II)V
+    int-to-float p1, p1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    div-float/2addr p1, v1
+
+    invoke-static {p2, p1, v0}, Lz93;->c(IFI)I
+
+    move-result p1
+
+    iget-object p2, p0, Lfe;->o:Ljava/lang/Object;
+
+    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_0
+    iget-object p2, p0, Lfe;->X:Ljava/lang/Object;
+
+    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_1
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_1
+    iget-object p2, p0, Lfe;->Y:Ljava/lang/Object;
+
+    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_2
+    iget-object p1, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
 
     return-void
 .end method

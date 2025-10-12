@@ -1,151 +1,104 @@
-.class public final synthetic Lya6;
+.class public final Lya6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lks1;
-.implements Lmu;
+.implements Lur7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ljava/lang/String;
 
-.field public final synthetic b:Lyp7;
+.field public final synthetic b:Lib6;
+
+.field public final synthetic c:Les7;
+
+.field public final synthetic o:Landroidx/fragment/app/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyp7;I)V
+.method public constructor <init>(Landroidx/fragment/app/c;Ljava/lang/String;Lib6;Les7;)V
     .locals 0
 
-    iput p2, p0, Lya6;->a:I
-
-    iput-object p1, p0, Lya6;->b:Lyp7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lya6;->o:Landroidx/fragment/app/c;
+
+    iput-object p2, p0, Lya6;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lya6;->b:Lib6;
+
+    iput-object p4, p0, Lya6;->c:Les7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public N(Ljs1;)Ljava/lang/String;
-    .locals 2
+.method public final d(Lcs7;Ldr7;)V
+    .locals 4
 
-    iget v0, p0, Lya6;->a:I
+    iget-object p1, p0, Lya6;->o:Landroidx/fragment/app/c;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p1, Landroidx/fragment/app/c;->l:Ljava/util/Map;
 
-    const/4 v0, 0x0
+    sget-object v1, Ldr7;->ON_START:Ldr7;
 
-    invoke-static {}, Lgog;->i()Lbo4;
+    iget-object v2, p0, Lya6;->a:Ljava/lang/String;
+
+    if-ne p2, v1, :cond_0
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object p0, p0, Lya6;->b:Lyp7;
+    check-cast v1, Landroid/os/Bundle;
 
-    invoke-static {v0, p0, p1, v1}, Lcp;->S(ZLyp7;Ljs1;Lbo4;)V
+    if-eqz v1, :cond_0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lya6;->b:Lib6;
 
-    const-string v0, "nonCancellationPropagating["
+    invoke-interface {v3, v2, v1}, Lib6;->b(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x2
 
-    const-string p0, "]"
+    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p0
+    const-string v1, "Clearing fragment result with key "
 
-    :pswitch_0
-    new-instance v0, Lqh4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1}, Lqh4;-><init>(Ljs1;I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {}, Lgog;->i()Lbo4;
+    move-result-object v0
 
-    move-result-object p1
+    const-string v1, "FragmentManager"
 
-    iget-object p0, p0, Lya6;->b:Lyp7;
+    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {p0, v0, p1}, Lyp7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    :cond_0
+    sget-object v0, Ldr7;->ON_DESTROY:Ldr7;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-ne p2, v0, :cond_1
 
-    const-string v0, "transformVoidFuture ["
+    iget-object p2, p0, Lya6;->c:Les7;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, p0}, Les7;->f(Lyr7;)V
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Landroidx/fragment/app/c;->m:Ljava/util/Map;
 
-    const-string p0, "]"
+    invoke-interface {p1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Lyp7;
-    .locals 1
-
-    iget v0, p0, Lya6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Void;
-
-    iget-object p0, p0, Lya6;->b:Lyp7;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqx1;
-
-    invoke-interface {p0}, Lqx1;->b()Lyp7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Lqx1;
-
-    iget-object p0, p0, Lya6;->b:Lyp7;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqx1;
-
-    invoke-interface {p0}, Lqx1;->a()Lyp7;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

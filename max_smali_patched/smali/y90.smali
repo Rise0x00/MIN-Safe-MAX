@@ -1,80 +1,105 @@
 .class public final Ly90;
-.super Lx43;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ly90;
+
+
 # instance fields
-.field public final a:Lj90;
+.field public final a:Lab0;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lj90;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Ly90;
+
+    sget-object v1, Lab0;->j:Lab0;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ly90;-><init>(Lab0;I)V
+
+    sput-object v0, Ly90;->c:Ly90;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lab0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly90;->a:Lj90;
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Ly90;->a:Lab0;
+
+    iput p2, p0, Ly90;->b:I
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null fallbackQuality"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lx43;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lx43;
-
-    move-object v0, p1
-
-    check-cast v0, Ly90;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lw43;->a:Lw43;
-
-    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    instance-of v0, p1, Ly90;
 
     if-eqz v0, :cond_1
 
     check-cast p1, Ly90;
 
-    iget-object p1, p1, Ly90;->a:Lj90;
+    iget-object v0, p0, Ly90;->a:Lab0;
 
-    iget-object p0, p0, Ly90;->a:Lj90;
+    iget-object v1, p1, Ly90;->a:Lab0;
 
-    invoke-virtual {p0, p1}, Lj90;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
+
+    iget v0, p0, Ly90;->b:I
+
+    iget p1, p1, Ly90;->b:I
+
+    if-ne v0, p1, :cond_1
 
     :goto_0
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    sget-object v0, Lw43;->a:Lw43;
+    iget-object v0, p0, Ly90;->a:Lab0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
@@ -86,45 +111,37 @@
 
     mul-int/2addr v0, v1
 
-    iget-object p0, p0, Ly90;->a:Lj90;
+    iget v1, p0, Ly90;->b:I
 
-    invoke-virtual {p0}, Lj90;->hashCode()I
+    xor-int/2addr v0, v1
 
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ClientInfo{clientType="
+    const-string v1, "RuleStrategy{fallbackQuality="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lw43;->a:Lw43;
+    iget-object v1, p0, Ly90;->a:Lab0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", androidClientInfo="
+    const-string v1, ", fallbackRule="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Ly90;->a:Lj90;
+    iget v1, p0, Ly90;->b:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "}"
 
-    const-string p0, "}"
+    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

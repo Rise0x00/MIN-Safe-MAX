@@ -1,329 +1,140 @@
-.class public final Ltgc;
+.class public abstract Ltgc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
 
+# static fields
+.field public static abc_config_activityDefaultDur:I = 0x7f0b0000
 
-# instance fields
-.field public final X:Lp1e;
+.field public static abc_config_activityShortDur:I = 0x7f0b0001
 
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static app_bar_elevation_anim_duration:I = 0x7f0b0002
 
-.field public final b:Lrgc;
+.field public static bottom_sheet_slide_duration:I = 0x7f0b0003
 
-.field public final c:J
+.field public static cancel_button_image_alpha:I = 0x7f0b0004
 
-.field public final o:Lqk5;
+.field public static config_tooltipAnimTime:I = 0x7f0b0005
 
+.field public static design_snackbar_text_max_lines:I = 0x7f0b0007
 
-# direct methods
-.method public constructor <init>(Lrgc;JLqk5;Z)V
-    .locals 3
+.field public static design_tab_indicator_anim_duration_ms:I = 0x7f0b0008
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static hide_password_duration:I = 0x7f0b0011
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static m3_badge_max_number:I = 0x7f0b0012
 
-    const/4 v1, 0x0
+.field public static m3_btn_anim_delay_ms:I = 0x7f0b0013
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+.field public static m3_btn_anim_duration_ms:I = 0x7f0b0014
 
-    iput-object v0, p0, Ltgc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static m3_card_anim_delay_ms:I = 0x7f0b0015
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+.field public static m3_card_anim_duration_ms:I = 0x7f0b0016
 
-    const/16 v2, 0x1e
+.field public static m3_chip_anim_duration:I = 0x7f0b0017
 
-    if-lt v1, v2, :cond_0
+.field public static m3_sys_motion_duration_extra_long1:I = 0x7f0b0018
 
-    new-instance v1, Lp1e;
+.field public static m3_sys_motion_duration_extra_long2:I = 0x7f0b0019
 
-    new-instance v2, Lq53;
+.field public static m3_sys_motion_duration_extra_long3:I = 0x7f0b001a
 
-    invoke-direct {v2}, Lq53;-><init>()V
+.field public static m3_sys_motion_duration_extra_long4:I = 0x7f0b001b
 
-    invoke-direct {v1, v2}, Lp1e;-><init>(Ljava/lang/Object;)V
+.field public static m3_sys_motion_duration_long1:I = 0x7f0b001c
 
-    goto :goto_0
+.field public static m3_sys_motion_duration_long2:I = 0x7f0b001d
 
-    :cond_0
-    new-instance v1, Lp1e;
+.field public static m3_sys_motion_duration_long3:I = 0x7f0b001e
 
-    new-instance v2, Lts9;
+.field public static m3_sys_motion_duration_long4:I = 0x7f0b001f
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+.field public static m3_sys_motion_duration_medium1:I = 0x7f0b0020
 
-    invoke-direct {v1, v2}, Lp1e;-><init>(Ljava/lang/Object;)V
+.field public static m3_sys_motion_duration_medium2:I = 0x7f0b0021
 
-    :goto_0
-    iput-object v1, p0, Ltgc;->X:Lp1e;
+.field public static m3_sys_motion_duration_medium3:I = 0x7f0b0022
 
-    iput-object p1, p0, Ltgc;->b:Lrgc;
+.field public static m3_sys_motion_duration_medium4:I = 0x7f0b0023
 
-    iput-wide p2, p0, Ltgc;->c:J
+.field public static m3_sys_motion_duration_short1:I = 0x7f0b0024
 
-    iput-object p4, p0, Ltgc;->o:Lqk5;
+.field public static m3_sys_motion_duration_short2:I = 0x7f0b0025
 
-    if-eqz p5, :cond_1
+.field public static m3_sys_motion_duration_short3:I = 0x7f0b0026
 
-    const/4 p0, 0x1
+.field public static m3_sys_motion_duration_short4:I = 0x7f0b0027
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+.field public static m3_sys_motion_path:I = 0x7f0b0028
 
-    return-void
+.field public static m3_sys_shape_corner_extra_large_corner_family:I = 0x7f0b0029
 
-    :cond_1
-    iget-object p0, v1, Lp1e;->a:Ljava/lang/Object;
+.field public static m3_sys_shape_corner_extra_small_corner_family:I = 0x7f0b002a
 
-    check-cast p0, Lr53;
+.field public static m3_sys_shape_corner_full_corner_family:I = 0x7f0b002b
 
-    const-string p1, "stop"
+.field public static m3_sys_shape_corner_large_corner_family:I = 0x7f0b002c
 
-    invoke-interface {p0, p1}, Lr53;->c(Ljava/lang/String;)V
+.field public static m3_sys_shape_corner_medium_corner_family:I = 0x7f0b002d
 
-    return-void
-.end method
+.field public static m3_sys_shape_corner_small_corner_family:I = 0x7f0b002e
 
+.field public static material_motion_duration_long_1:I = 0x7f0b002f
 
-# virtual methods
-.method public final c(ILjava/lang/RuntimeException;)V
-    .locals 10
+.field public static material_motion_duration_long_2:I = 0x7f0b0030
 
-    iget-object v0, p0, Ltgc;->X:Lp1e;
+.field public static material_motion_duration_medium_1:I = 0x7f0b0031
 
-    iget-object v0, v0, Lp1e;->a:Ljava/lang/Object;
+.field public static material_motion_duration_medium_2:I = 0x7f0b0032
 
-    check-cast v0, Lr53;
+.field public static material_motion_duration_short_1:I = 0x7f0b0033
 
-    invoke-interface {v0}, Lr53;->close()V
+.field public static material_motion_duration_short_2:I = 0x7f0b0034
 
-    iget-object v0, p0, Ltgc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public static material_motion_path:I = 0x7f0b0035
 
-    const/4 v1, 0x1
+.field public static mtrl_badge_max_character_count:I = 0x7f0b003d
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+.field public static mtrl_btn_anim_delay_ms:I = 0x7f0b003e
 
-    move-result v0
+.field public static mtrl_btn_anim_duration_ms:I = 0x7f0b003f
 
-    if-eqz v0, :cond_0
+.field public static mtrl_calendar_header_orientation:I = 0x7f0b0040
 
-    goto/16 :goto_2
+.field public static mtrl_calendar_selection_text_lines:I = 0x7f0b0041
 
-    :cond_0
-    iget-object v2, p0, Ltgc;->b:Lrgc;
+.field public static mtrl_calendar_year_selector_span:I = 0x7f0b0042
 
-    iget-object v8, v2, Lrgc;->h:Ljava/lang/Object;
+.field public static mtrl_card_anim_delay_ms:I = 0x7f0b0043
 
-    monitor-enter v8
+.field public static mtrl_card_anim_duration_ms:I = 0x7f0b0044
 
-    :try_start_0
-    iget-object v0, v2, Lrgc;->n:Lnb0;
+.field public static mtrl_chip_anim_duration:I = 0x7f0b0045
 
-    invoke-static {p0, v0}, Lrgc;->p(Ltgc;Lnb0;)Z
+.field public static mtrl_switch_thumb_motion_duration:I = 0x7f0b0046
 
-    move-result v0
+.field public static mtrl_switch_thumb_post_morphing_duration:I = 0x7f0b0047
 
-    if-nez v0, :cond_1
+.field public static mtrl_switch_thumb_pre_morphing_duration:I = 0x7f0b0048
 
-    iget-object v0, v2, Lrgc;->m:Lnb0;
+.field public static mtrl_switch_thumb_pressed_duration:I = 0x7f0b0049
 
-    invoke-static {p0, v0}, Lrgc;->p(Ltgc;Lnb0;)Z
+.field public static mtrl_switch_thumb_viewport_center_coordinate:I = 0x7f0b004a
 
-    move-result v0
+.field public static mtrl_switch_thumb_viewport_size:I = 0x7f0b004b
 
-    if-nez v0, :cond_1
+.field public static mtrl_switch_track_viewport_height:I = 0x7f0b004c
 
-    iget-object p0, p0, Ltgc;->o:Lqk5;
+.field public static mtrl_switch_track_viewport_width:I = 0x7f0b004d
 
-    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+.field public static mtrl_tab_indicator_anim_duration_ms:I = 0x7f0b004e
 
-    monitor-exit v8
+.field public static mtrl_view_gone:I = 0x7f0b004f
 
-    return-void
+.field public static mtrl_view_invisible:I = 0x7f0b0050
 
-    :catchall_0
-    move-exception v0
+.field public static mtrl_view_visible:I = 0x7f0b0051
 
-    move-object p0, v0
+.field public static show_password_duration:I = 0x7f0b005e
 
-    goto :goto_3
-
-    :cond_1
-    iget-object v0, v2, Lrgc;->j:Lqgc;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    const/4 v9, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    move-object v7, p2
-
-    goto :goto_1
-
-    :pswitch_0
-    iget-object p1, v2, Lrgc;->m:Lnb0;
-
-    invoke-static {p0, p1}, Lrgc;->p(Ltgc;Lnb0;)Z
-
-    move-result p0
-
-    invoke-static {v9, p0}, Lcr0;->j(Ljava/lang/String;Z)V
-
-    goto :goto_0
-
-    :pswitch_1
-    sget-object p0, Lqgc;->Z:Lqgc;
-
-    invoke-virtual {v2, p0}, Lrgc;->B(Lqgc;)V
-
-    sget-object p0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMicros(J)J
-
-    move-result-wide v4
-
-    iget-object v3, v2, Lrgc;->m:Lnb0;
-
-    iget-object p0, v2, Lrgc;->e:Load;
-
-    new-instance v1, Lkgc;
-
-    move v6, p1
-
-    move-object v7, p2
-
-    invoke-direct/range {v1 .. v7}, Lkgc;-><init>(Lrgc;Lnb0;JILjava/lang/Throwable;)V
-
-    invoke-virtual {p0, v1}, Load;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_1
-
-    :pswitch_2
-    move-object v7, p2
-
-    iget-object p1, v2, Lrgc;->n:Lnb0;
-
-    invoke-static {p0, p1}, Lrgc;->p(Ltgc;Lnb0;)Z
-
-    move-result p0
-
-    invoke-static {v9, p0}, Lcr0;->j(Ljava/lang/String;Z)V
-
-    iget-object p0, v2, Lrgc;->n:Lnb0;
-
-    iput-object v9, v2, Lrgc;->n:Lnb0;
-
-    invoke-virtual {v2}, Lrgc;->y()V
-
-    move-object v9, p0
-
-    :goto_1
-    monitor-exit v8
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v9, :cond_2
-
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string p1, "Recording was stopped before any data could be produced."
-
-    invoke-direct {p0, p1, v7}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v2, v9, p1, p0}, Lrgc;->i(Lnb0;ILjava/lang/Throwable;)V
-
-    :cond_2
-    :goto_2
-    return-void
-
-    :pswitch_3
-    :try_start_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Calling stop() while idling or initializing is invalid."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :goto_3
-    monitor-exit v8
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_3
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final close()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ltgc;->c(ILjava/lang/RuntimeException;)V
-
-    return-void
-.end method
-
-.method public final finalize()V
-    .locals 2
-
-    :try_start_0
-    iget-object v0, p0, Ltgc;->X:Lp1e;
-
-    iget-object v0, v0, Lp1e;->a:Ljava/lang/Object;
-
-    check-cast v0, Lr53;
-
-    invoke-interface {v0}, Lr53;->a()V
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Recording stopped due to being garbage collected."
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {p0, v1, v0}, Ltgc;->c(ILjava/lang/RuntimeException;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    throw v0
-.end method
+.field public static status_bar_notification_info_maxnum:I = 0x7f0b005f

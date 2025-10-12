@@ -1,236 +1,191 @@
-.class public final Lonc;
-.super Lf0;
+.class public final enum Lonc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic A0:[Lonc;
+
+.field public static final synthetic B0:Lla5;
+
+.field public static final enum X:Lonc;
+
+.field public static final enum Y:Lonc;
+
+.field public static final enum Z:Lonc;
+
+.field public static final enum b:Lonc;
+
+.field public static final enum c:Lonc;
+
+.field public static final enum o:Lonc;
+
+.field public static final enum w0:Lonc;
+
+.field public static final enum x0:Lonc;
+
+.field public static final enum y0:Lonc;
+
+.field public static final enum z0:Lonc;
+
+
 # instance fields
-.field public h:Lf0;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public static o(Lf0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    if-eqz p0, :cond_0
+    new-instance v0, Lonc;
 
-    invoke-virtual {p0}, Lf0;->a()Z
+    const-string v1, "AUDIO_FREEZES"
 
-    :cond_0
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    invoke-direct {v0, v1, v2, v1}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-# virtual methods
-.method public final a()Z
-    .locals 2
+    sput-object v0, Lonc;->b:Lonc;
 
-    monitor-enter p0
+    new-instance v1, Lonc;
 
-    :try_start_0
-    invoke-super {p0}, Lf0;->a()Z
+    const-string v2, "AUDIO_CALL_INTERRUPTION"
 
-    move-result v0
+    const/4 v3, 0x1
 
-    if-nez v0, :cond_0
+    invoke-direct {v1, v2, v3, v2}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const/4 v0, 0x0
+    sput-object v1, Lonc;->c:Lonc;
 
-    monitor-exit p0
+    new-instance v2, Lonc;
 
-    return v0
+    const-string v3, "VOICE_COMMUNICATION_PROBLEM"
 
-    :catchall_0
-    move-exception v0
+    const/4 v4, 0x2
 
-    goto :goto_0
+    invoke-direct {v2, v3, v4, v3}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    :cond_0
-    iget-object v0, p0, Lonc;->h:Lf0;
+    sput-object v2, Lonc;->o:Lonc;
 
-    const/4 v1, 0x0
+    new-instance v3, Lonc;
 
-    iput-object v1, p0, Lonc;->h:Lf0;
+    const-string v4, "AUDIO_QUALITY"
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v5, 0x3
 
-    invoke-static {v0}, Lonc;->o(Lf0;)V
+    invoke-direct {v3, v4, v5, v4}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const/4 p0, 0x1
+    sput-object v3, Lonc;->X:Lonc;
 
-    return p0
+    new-instance v4, Lonc;
 
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string v5, "AUDIO_ECHO"
 
-    throw v0
-.end method
+    const/4 v6, 0x4
 
-.method public final declared-synchronized e()Ljava/lang/Object;
-    .locals 1
+    invoke-direct {v4, v5, v6, v5}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    monitor-enter p0
+    sput-object v4, Lonc;->Y:Lonc;
 
-    :try_start_0
-    iget-object v0, p0, Lonc;->h:Lf0;
+    new-instance v5, Lonc;
 
-    if-eqz v0, :cond_0
+    const-string v6, "VIDEO_FREEZES"
 
-    invoke-virtual {v0}, Lf0;->e()Ljava/lang/Object;
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lonc;->Z:Lonc;
+
+    new-instance v6, Lonc;
+
+    const-string v7, "VIDEO_QUALITY"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v7}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lonc;->w0:Lonc;
+
+    new-instance v7, Lonc;
+
+    const-string v8, "VIDEO_SYNC"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v8}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lonc;->x0:Lonc;
+
+    new-instance v8, Lonc;
+
+    const-string v9, "VIDEO_CALL_INTERRUPTION"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10, v9}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v8, Lonc;->y0:Lonc;
+
+    new-instance v9, Lonc;
+
+    const-string v10, "USERS_FREEZES"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11, v10}, Lonc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v9, Lonc;->z0:Lonc;
+
+    filled-new-array/range {v0 .. v9}, [Lonc;
 
     move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    sput-object v0, Lonc;->A0:[Lonc;
 
-    :catchall_0
-    move-exception v0
+    new-instance v1, Lla5;
 
-    goto :goto_1
+    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
 
-    :cond_0
-    const/4 v0, 0x0
+    sput-object v1, Lonc;->B0:Lla5;
 
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-void
 .end method
 
-.method public final declared-synchronized f()Z
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lonc;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lonc;
     .locals 1
 
-    monitor-enter p0
+    const-class v0, Lonc;
 
-    :try_start_0
-    iget-object v0, p0, Lonc;->h:Lf0;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    invoke-virtual {v0}, Lf0;->f()Z
+    check-cast p0, Lonc;
 
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-object p0
 .end method
 
-.method public final p(Lhhe;)V
-    .locals 3
+.method public static values()[Lonc;
+    .locals 1
 
-    invoke-virtual {p0}, Lf0;->g()Z
+    sget-object v0, Lonc;->A0:[Lonc;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    return-void
+    check-cast v0, [Lonc;
 
-    :cond_0
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lhhe;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lf0;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_0
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p0}, Lf0;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1}, Lonc;->o(Lf0;)V
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, p0, Lonc;->h:Lf0;
-
-    iput-object p1, p0, Lonc;->h:Lf0;
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz p1, :cond_3
-
-    new-instance v1, Lwh5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, p0}, Lwh5;-><init>(ILjava/lang/Object;)V
-
-    sget-object p0, Los1;->a:Los1;
-
-    invoke-virtual {p1, v1, p0}, Lf0;->m(Lx64;Ljava/util/concurrent/Executor;)V
-
-    :cond_3
-    invoke-static {v0}, Lonc;->o(Lf0;)V
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

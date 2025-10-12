@@ -1,19 +1,19 @@
-.class public final Lpm5;
-.super Ljava/io/IOException;
+.class public interface abstract Lpm5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lst6;
+# static fields
+.field public static final a:Ll62;
 
 
 # direct methods
-.method public constructor <init>(Lst6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/io/IOException;-><init>()V
+    sget-object v0, Ll62;->o:Ll62;
 
-    iput-object p1, p0, Lpm5;->a:Lst6;
+    sput-object v0, Lpm5;->a:Ll62;
 
     return-void
 .end method

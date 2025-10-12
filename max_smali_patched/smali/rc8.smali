@@ -1,96 +1,98 @@
-.class public final synthetic Lrc8;
-.super Ljava/lang/Object;
+.class public final Lrc8;
+.super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source "SourceFile"
-
-# interfaces
-.implements Lhq7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic E:I
 
-.field public final synthetic b:Lw6b;
-
-.field public final synthetic c:Ljava/lang/Integer;
+.field public final synthetic F:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw6b;Ljava/lang/Integer;I)V
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
     .locals 0
 
-    iput p3, p0, Lrc8;->a:I
+    iput-object p1, p0, Lrc8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
 
-    iput-object p1, p0, Lrc8;->b:Lw6b;
+    iput p3, p0, Lrc8;->E:I
 
-    iput-object p2, p0, Lrc8;->c:Ljava/lang/Integer;
+    const/4 p1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final H0(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 2
 
-    iget v0, p0, Lrc8;->a:I
+    new-instance v0, La32;
 
-    check-cast p1, Lu5b;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lrc8;->b:Lw6b;
+    const/4 v1, 0x3
 
-    iget-boolean v0, v0, Lw6b;->t:Z
+    invoke-direct {v0, p1, v1}, La32;-><init>(Landroid/content/Context;I)V
 
-    iget-object p0, p0, Lrc8;->c:Ljava/lang/Integer;
+    iput p2, v0, Lws7;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->I0(Lws7;)V
 
-    move-result p0
+    return-void
+.end method
 
-    invoke-interface {p1, p0, v0}, Lu5b;->e(IZ)V
+.method public final K0(Ljxc;[I)V
+    .locals 3
+
+    iget p1, p0, Lrc8;->E:I
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lrc8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    if-nez p1, :cond_0
+
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    aput p1, p2, v1
+
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    aput p1, p2, v0
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lrc8;->b:Lw6b;
+    :cond_0
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, v0, Lw6b;->d:Lw5b;
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    iget-object v0, v0, Lw6b;->e:Lw5b;
+    move-result p1
 
-    iget-object p0, p0, Lrc8;->c:Ljava/lang/Integer;
+    aput p1, p2, v1
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->w1:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result p0
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    invoke-interface {p1, v1, v0, p0}, Lu5b;->r(Lw5b;Lw5b;I)V
+    move-result p1
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lrc8;->b:Lw6b;
-
-    iget-object v0, v0, Lw6b;->j:Lwxe;
-
-    iget-object p0, p0, Lrc8;->c:Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    invoke-interface {p1, v0, p0}, Lu5b;->e0(Lwxe;I)V
+    aput p1, p2, v0
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

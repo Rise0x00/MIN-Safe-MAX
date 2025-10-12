@@ -2,70 +2,127 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lrj8;
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrj8;I)V
+.method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
-    iput p2, p0, Ljj8;->a:I
-
-    iput-object p1, p0, Ljj8;->b:Lrj8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljj8;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Ljj8;->b:Z
+
+    iput-boolean p3, p0, Ljj8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Ljj8;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Ljj8;->b:Lrj8;
+    return v0
 
-    iget-object p1, p0, Lrj8;->o0:Lek8;
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Lek8;->g()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lrj8;->Y:Lfk8;
+    if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x2
+    move-result-object v2
 
-    invoke-static {p1}, Lfk8;->g(I)V
+    const-class v3, Ljj8;
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljj8;
+
+    iget-object v2, p0, Ljj8;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ljj8;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-boolean v2, p0, Ljj8;->b:Z
+
+    iget-boolean v3, p1, Ljj8;->b:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Ljj8;->c:Z
+
+    iget-boolean p1, p1, Ljj8;->c:Z
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Ljj8;->a:Ljava/lang/String;
+
+    const/16 v1, 0x1f
+
+    invoke-static {v1, v1, v0}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ljj8;->b:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lym;->dismiss()V
+    move v2, v3
 
-    return-void
+    :goto_0
+    add-int/2addr v0, v2
 
-    :pswitch_0
-    iget-object p0, p0, Ljj8;->b:Lrj8;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {p0}, Lym;->dismiss()V
+    iget-boolean v1, p0, Ljj8;->c:Z
 
-    return-void
+    if-eqz v1, :cond_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move v3, v4
+
+    :cond_1
+    add-int/2addr v0, v3
+
+    return v0
 .end method

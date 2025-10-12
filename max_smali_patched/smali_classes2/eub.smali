@@ -2,86 +2,180 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgub;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lbp7;
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Ljava/lang/Object;
+
+.field public final g:Ljava/lang/Object;
+
+.field public final h:Ljava/lang/Object;
+
+.field public final i:Ljava/lang/Object;
+
+.field public final j:Ljava/lang/Object;
+
+.field public final k:Ljava/lang/Object;
+
+.field public final l:Ls5f;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Leub;->a:J
+    sget-object v0, Lcub;->a:Lcub;
+
+    invoke-virtual {v0}, Lcub;->g()Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->a:Lbp7;
+
+    new-instance v0, Lleb;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lleb;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->b:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->c:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x12
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->d:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->e:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->f:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->g:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->h:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->i:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->j:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2}, Lleb;-><init>(I)V
+
+    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leub;->k:Ljava/lang/Object;
+
+    new-instance v0, Lleb;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lleb;-><init>(I)V
+
+    new-instance v1, Ls5f;
+
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+
+    iput-object v1, p0, Leub;->l:Ls5f;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Leub;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Leub;
-
-    iget-wide v3, p0, Leub;->a:J
-
-    iget-wide p0, p1, Leub;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Leub;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ModeRecordingVideo(startTimeMs="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Leub;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

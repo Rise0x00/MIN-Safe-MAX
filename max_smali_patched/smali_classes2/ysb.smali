@@ -1,81 +1,112 @@
 .class public final Lysb;
-.super Lax3;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public X:Lxm5;
+.field public X:I
 
-.field public Y:Lctb;
-
-.field public Z:Ljava/lang/String;
-
-.field public n0:Landroid/graphics/Bitmap;
-
-.field public o:Lone/me/sdk/uikit/qr/QrCodeGenerator;
-
-.field public o0:Landroid/graphics/Bitmap;
-
-.field public synthetic p0:Ljava/lang/Object;
-
-.field public final synthetic q0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
-
-.field public r0:I
+.field public final synthetic Y:Lhtb;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Lax3;)V
+.method public constructor <init>(Lhtb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lysb;->q0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    iput-object p1, p0, Lysb;->Y:Lhtb;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lysb;->p0:Ljava/lang/Object;
+    check-cast p1, Le34;
 
-    iget p1, p0, Lysb;->r0:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0, p1, p2}, Lysb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    or-int/2addr p1, v0
+    move-result-object p1
 
-    iput p1, p0, Lysb;->r0:I
+    check-cast p1, Lysb;
 
-    const/4 v9, 0x0
+    sget-object p2, Loyf;->a:Loyf;
 
-    const/4 v10, 0x0
+    invoke-virtual {p1, p2}, Lysb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lysb;->q0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    return-object p1
+.end method
 
-    const/4 v2, 0x0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 v3, 0x0
+    new-instance p1, Lysb;
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lysb;->Y:Lhtb;
 
-    const/4 v5, 0x0
+    invoke-direct {p1, v0, p2}, Lysb;-><init>(Lhtb;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v6, 0x0
+    return-object p1
+.end method
 
-    const/4 v7, 0x0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v8, 0x0
+    iget v0, p0, Lysb;->X:I
 
-    move-object v11, p0
+    const/4 v1, 0x1
 
-    invoke-virtual/range {v0 .. v11}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->e(Landroid/content/Context;Lxm5;Lhoe;Lctb;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lax3;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object p0
+    if-ne v0, v1, :cond_0
 
-    return-object p0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lysb;->Y:Lhtb;
+
+    iget-object p1, p1, Lhtb;->b:Llsb;
+
+    iput v1, p0, Lysb;->X:I
+
+    invoke-interface {p1, p0}, Llsb;->a(Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

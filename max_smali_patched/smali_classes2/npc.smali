@@ -1,57 +1,136 @@
 .class public final Lnpc;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final synthetic X:Lkoc;
 
-.field public Y:Lqw8;
+.field public final synthetic Y:J
 
-.field public Z:Lqw8;
+.field public final synthetic a:Landroid/view/View;
 
-.field public synthetic n0:Ljava/lang/Object;
+.field public final synthetic b:Lqpc;
 
-.field public o:Ljava/lang/Object;
+.field public final synthetic c:Landroid/view/View;
 
-.field public final synthetic o0:Ltpc;
-
-.field public p0:I
+.field public final synthetic o:Lmpc;
 
 
 # direct methods
-.method public constructor <init>(Ltpc;Lax3;)V
+.method public constructor <init>(Landroid/view/View;Lqpc;Landroid/view/View;Lmpc;Lkoc;J)V
     .locals 0
 
-    iput-object p1, p0, Lnpc;->o0:Ltpc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnpc;->a:Landroid/view/View;
+
+    iput-object p2, p0, Lnpc;->b:Lqpc;
+
+    iput-object p3, p0, Lnpc;->c:Landroid/view/View;
+
+    iput-object p4, p0, Lnpc;->o:Lmpc;
+
+    iput-object p5, p0, Lnpc;->X:Lkoc;
+
+    iput-wide p6, p0, Lnpc;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 10
 
-    iput-object p1, p0, Lnpc;->n0:Ljava/lang/Object;
+    iget-object v0, p0, Lnpc;->b:Lqpc;
 
-    iget p1, p0, Lnpc;->p0:I
+    iget-object v1, p0, Lnpc;->c:Landroid/view/View;
 
-    const/high16 v0, -0x80000000
+    iget-object v0, v0, Lqpc;->c:Lzf7;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lzf7;->b:Ljava/lang/Object;
 
-    iput p1, p0, Lnpc;->p0:I
+    check-cast v0, Landroid/view/View;
 
-    iget-object p1, p0, Lnpc;->o0:Ltpc;
+    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ltpc;->h(Lgx8;Lax3;)Ljava/lang/Object;
+    if-nez v1, :cond_0
 
-    move-result-object p0
+    move-object v0, v2
 
-    return-object p0
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v1, v0}, Lcng;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v1, p0, Lnpc;->b:Lqpc;
+
+    iget-object v1, v1, Lqpc;->d:Ljava/lang/String;
+
+    sget-object v3, Lox9;->j:Lqpa;
+
+    if-nez v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sget-object v4, Ly38;->o:Ly38;
+
+    invoke-virtual {v3, v4}, Lqpa;->b(Ly38;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lnpc;->X:Lkoc;
+
+    iget-wide v6, p0, Lnpc;->Y:J
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v9, "Play reaction effect without pending, reaction:"
+
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", l:"
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v4, v1, v5, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Lnpc;->b:Lqpc;
+
+    iget-object v2, p0, Lnpc;->o:Lmpc;
+
+    iget-object v3, v2, Lmpc;->b:Ljava/lang/String;
+
+    iget-wide v4, v2, Lmpc;->a:J
+
+    invoke-static {v1, v3, v4, v5, v0}, Lqpc;->c(Lqpc;Ljava/lang/String;JLandroid/graphics/Rect;)V
+
+    return-void
 .end method

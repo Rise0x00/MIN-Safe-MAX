@@ -1,75 +1,121 @@
-.class public final Lkf3;
-.super Ls2;
+.class public final synthetic Lkf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lur7;
 
 
 # instance fields
-.field public final a:Lt96;
+.field public final synthetic a:I
 
-.field public final synthetic b:Llf3;
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public constructor <init>(Llf3;Lt96;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
     .locals 0
 
-    iput-object p1, p0, Lkf3;->b:Llf3;
+    iput p2, p0, Lkf3;->a:I
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    iput-object p1, p0, Lkf3;->b:Landroidx/fragment/app/b;
 
-    iput-object p2, p0, Lkf3;->a:Lt96;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
+.method public final d(Lcs7;Ldr7;)V
+    .locals 1
 
-    sget-object p0, Lmf3;->a:Lkotlinx/coroutines/internal/Symbol;
+    iget p1, p0, Lkf3;->a:I
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    packed-switch p1, :pswitch_data_0
 
-    const-string p1, "not implemented"
+    iget-object p1, p0, Lkf3;->b:Landroidx/fragment/app/b;
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    sget-object v0, Ldr7;->ON_DESTROY:Ldr7;
 
-    throw p0
-.end method
+    if-ne p2, v0, :cond_1
 
-.method public final getSize()I
-    .locals 0
+    iget-object p2, p1, Ltf3;->b:Loy3;
 
-    iget-object p0, p0, Lkf3;->b:Llf3;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lr2;->size()I
+    iput-object v0, p2, Loy3;->b:Ljava/lang/Object;
 
-    move-result p0
+    invoke-virtual {p1}, Landroid/app/Activity;->isChangingConfigurations()Z
 
-    return p0
-.end method
+    move-result p2
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 2
+    if-nez p2, :cond_0
 
-    sget-object v0, Llf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {p1}, Ltf3;->u()Lqlg;
 
-    iget-object v1, p0, Lkf3;->b:Llf3;
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Lqlg;->a()V
+
+    :cond_0
+    iget-object p1, p1, Ltf3;->Y:Lqf3;
+
+    iget-object p2, p1, Lqf3;->o:Landroidx/fragment/app/b;
+
+    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    check-cast v0, Lif3;
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    new-instance v1, Lhf3;
+    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    iget-object p0, p0, Lkf3;->a:Lt96;
+    invoke-virtual {p2}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    invoke-direct {v1, v0, p0}, Lhf3;-><init>(Lif3;Lt96;)V
+    move-result-object p2
 
-    return-object v1
+    invoke-virtual {p2}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lkf3;->b:Landroidx/fragment/app/b;
+
+    sget-object v0, Ldr7;->ON_STOP:Ldr7;
+
+    if-ne p2, v0, :cond_2
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Landroid/view/View;->cancelPendingInputEvents()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

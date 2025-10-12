@@ -1,1242 +1,276 @@
 .class public final Lmz8;
-.super Ljava/lang/Object;
+.super Lilg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Closeable;
-.implements Ljava/io/Flushable;
-
-
-# static fields
-.field public static final n0:Z
 
 
 # instance fields
-.field public X:Lorg/msgpack/core/buffer/MessageBuffer;
+.field public final X:Ljb5;
 
-.field public Y:I
+.field public final Y:Ljb5;
 
-.field public Z:Ljava/nio/charset/CharsetEncoder;
+.field public final Z:Lmoe;
 
-.field public final a:I
+.field public final b:Lxe6;
 
-.field public final b:I
+.field public final c:Laj4;
 
-.field public final c:Z
+.field public final o:Lve6;
 
-.field public final o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
+.field public final w0:Lsqc;
+
+.field public final x0:Lmoe;
+
+.field public final y0:Lsqc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lxe6;Laj4;Lve6;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 5
+    invoke-direct {p0}, Lilg;-><init>()V
 
-    :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    .line 6
+    iput-object p1, p0, Lmz8;->b:Lxe6;
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    .line 7
+    iput-object p2, p0, Lmz8;->c:Laj4;
 
-    move-result-object v1
+    .line 8
+    iput-object p3, p0, Lmz8;->o:Lve6;
 
-    const/4 v2, 0x0
+    .line 9
+    new-instance p1, Ljb5;
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    const/4 p2, 0x0
 
-    move-result-object v3
+    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    .line 10
+    iput-object p1, p0, Lmz8;->X:Ljb5;
 
-    move-result-object v2
+    .line 11
+    new-instance p1, Ljb5;
 
-    const-string v3, "SDK_INT"
+    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
 
-    invoke-virtual {v1, v3}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    .line 12
+    iput-object p1, p0, Lmz8;->Y:Ljb5;
 
-    move-result-object v1
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+    .line 13
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_5
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_4
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p2
 
-    const/16 v2, 0xe
+    iput-object p2, p0, Lmz8;->Z:Lmoe;
 
-    if-lt v1, v2, :cond_0
+    .line 14
+    new-instance p3, Lsqc;
 
-    const/16 v2, 0x15
+    invoke-direct {p3, p2}, Lsqc;-><init>(Lzt9;)V
 
-    if-ge v1, v2, :cond_0
+    .line 15
+    iput-object p3, p0, Lmz8;->w0:Lsqc;
 
-    const/4 v0, 0x1
+    .line 16
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
-    goto :goto_5
+    move-result-object p1
 
-    :catch_0
-    move-exception v1
+    iput-object p1, p0, Lmz8;->x0:Lmoe;
 
-    goto :goto_0
+    .line 17
+    new-instance p2, Lsqc;
 
-    :catch_1
-    move-exception v1
+    invoke-direct {p2, p1}, Lsqc;-><init>(Lzt9;)V
 
-    goto :goto_1
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_4
-    move-exception v1
-
-    goto :goto_4
-
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_5
-
-    :goto_1
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_5
-
-    :goto_2
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_5
-
-    :goto_3
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_5
-
-    :goto_4
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :catch_5
-    :cond_0
-    :goto_5
-    sput-boolean v0, Lmz8;->n0:Z
+    .line 18
+    iput-object p2, p0, Lmz8;->y0:Lsqc;
 
     return-void
 .end method
 
-.method public constructor <init>(Lorg/msgpack/core/buffer/OutputStreamBufferOutput;Ljz8;)V
-    .locals 0
+.method public constructor <init>(Lxe6;Lv8;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    and-int/lit8 p3, p3, 0x2
 
-    iput-object p1, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
+    if-eqz p3, :cond_0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    sget-object p2, Lfz8;->a:Lfz8;
 
-    const/16 p1, 0x200
+    .line 2
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()La5;
 
-    iput p1, p0, Lmz8;->a:I
+    move-result-object p2
 
-    const/16 p1, 0x2000
+    const-class p3, Laj4;
 
-    iput p1, p0, Lmz8;->b:I
+    invoke-virtual {p2, p3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    move-result-object p2
 
-    iput-boolean p1, p0, Lmz8;->c:Z
+    check-cast p2, Laj4;
 
-    const/4 p1, 0x0
+    .line 3
+    :cond_0
+    new-instance p3, Lbh8;
 
-    iput p1, p0, Lmz8;->Y:I
+    const/16 v0, 0x9
+
+    invoke-direct {p3, v0}, Lbh8;-><init>(I)V
+
+    .line 4
+    invoke-direct {p0, p1, p2, p3}, Lmz8;-><init>(Lxe6;Laj4;Lve6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final W(I)V
+.method public final q()V
+    .locals 2
+
+    iget-object v0, p0, Lmz8;->Z:Lmoe;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lmoe;->setValue(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final r()Z
     .locals 1
 
-    const/16 v0, 0x20
+    iget-object v0, p0, Lmz8;->w0:Lsqc;
 
-    if-ge p1, v0, :cond_0
+    iget-object v0, v0, Lsqc;->a:Lfoe;
 
-    or-int/lit8 p1, p1, -0x60
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
 
-    int-to-byte p1, p1
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lmz8;->q0(B)V
+    if-eqz v0, :cond_0
 
-    return-void
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    iget-boolean v0, p0, Lmz8;->c:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    const/16 v0, 0x100
+.method public final s(Ljava/util/List;)V
+    .locals 1
 
-    if-ge p1, v0, :cond_1
+    new-instance v0, Lcz8;
 
-    const/16 v0, -0x27
+    invoke-direct {v0, p1}, Lcz8;-><init>(Ljava/util/List;)V
 
-    int-to-byte p1, p1
+    iget-object p1, p0, Lmz8;->Y:Ljb5;
 
-    invoke-virtual {p0, v0, p1}, Lmz8;->r0(BB)V
-
-    return-void
-
-    :cond_1
-    const/high16 v0, 0x10000
-
-    if-ge p1, v0, :cond_2
-
-    const/16 v0, -0x26
-
-    int-to-short p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_2
-    const/16 v0, -0x25
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
+    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final X(Ljava/lang/String;)V
-    .locals 7
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lmz8;->W(I)V
-
-    return-void
-
-    :cond_0
-    sget-boolean v0, Lmz8;->n0:Z
-
-    if-nez v0, :cond_8
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    iget v1, p0, Lmz8;->a:I
-
-    if-ge v0, v1, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const/16 v1, -0x26
-
-    const-string v2, "Unexpected UTF-8 encoder state"
-
-    const/16 v3, 0x100
-
-    const/high16 v4, 0x10000
-
-    if-ge v0, v3, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x6
-
-    add-int/lit8 v0, v0, 0x3
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget v0, p0, Lmz8;->Y:I
-
-    add-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->c(ILjava/lang/String;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_7
-
-    iget-boolean p1, p0, Lmz8;->c:Z
-
-    if-eqz p1, :cond_2
-
-    if-ge v0, v3, :cond_2
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    const/16 v2, -0x27
-
-    invoke-virtual {p1, v1, v2}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    int-to-byte v2, v0
-
-    invoke-virtual {p1, v1, v2}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-
-    :cond_2
-    if-ge v0, v4, :cond_3
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v2, p0, Lmz8;->Y:I
-
-    add-int/lit8 v3, v2, 0x3
-
-    add-int/lit8 v2, v2, 0x2
-
-    invoke-virtual {p1, v3, p1, v2, v0}, Lorg/msgpack/core/buffer/MessageBuffer;->putMessageBuffer(ILorg/msgpack/core/buffer/MessageBuffer;II)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v2, p0, Lmz8;->Y:I
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, Lmz8;->Y:I
-
-    invoke-virtual {p1, v2, v1}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    int-to-short v2, v0
-
-    invoke-virtual {p1, v1, v2}, Lorg/msgpack/core/buffer/MessageBuffer;->putShort(IS)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x2
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-ge v0, v4, :cond_7
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x6
-
-    add-int/lit8 v0, v0, 0x5
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget v0, p0, Lmz8;->Y:I
-
-    add-int/lit8 v0, v0, 0x3
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->c(ILjava/lang/String;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_7
-
-    if-ge v0, v4, :cond_5
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v2, p0, Lmz8;->Y:I
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, Lmz8;->Y:I
-
-    invoke-virtual {p1, v2, v1}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    int-to-short v2, v0
-
-    invoke-virtual {p1, v1, v2}, Lorg/msgpack/core/buffer/MessageBuffer;->putShort(IS)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x2
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-
-    :cond_5
-    int-to-long v3, v0
-
-    const-wide v5, 0x100000000L
-
-    cmp-long p1, v3, v5
-
-    if-gez p1, :cond_6
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x5
-
-    add-int/lit8 v1, v1, 0x3
-
-    invoke-virtual {p1, v2, p1, v1, v0}, Lorg/msgpack/core/buffer/MessageBuffer;->putMessageBuffer(ILorg/msgpack/core/buffer/MessageBuffer;II)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    const/16 v2, -0x25
-
-    invoke-virtual {p1, v1, v2}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    invoke-virtual {p1, v1, v0}, Lorg/msgpack/core/buffer/MessageBuffer;->putInt(II)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x4
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_7
-    invoke-virtual {p0, p1}, Lmz8;->i0(Ljava/lang/String;)V
-
-    return-void
-
-    :cond_8
-    :goto_0
-    invoke-virtual {p0, p1}, Lmz8;->i0(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final c(ILjava/lang/String;)I
+.method public final t(JZ)V
     .locals 3
 
-    iget-object v0, p0, Lmz8;->Z:Ljava/nio/charset/CharsetEncoder;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Llz8;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v0}, Ljava/nio/charset/Charset;->newEncoder()Ljava/nio/charset/CharsetEncoder;
-
-    move-result-object v0
-
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
-
-    invoke-virtual {v0, v1}, Ljava/nio/charset/CharsetEncoder;->onMalformedInput(Ljava/nio/charset/CodingErrorAction;)Ljava/nio/charset/CharsetEncoder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/nio/charset/CharsetEncoder;->onUnmappableCharacter(Ljava/nio/charset/CodingErrorAction;)Ljava/nio/charset/CharsetEncoder;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lmz8;->Z:Ljava/nio/charset/CharsetEncoder;
-
-    :cond_0
-    iget-object v0, p0, Lmz8;->Z:Ljava/nio/charset/CharsetEncoder;
-
-    invoke-virtual {v0}, Ljava/nio/charset/CharsetEncoder;->reset()Ljava/nio/charset/CharsetEncoder;
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    invoke-virtual {v0}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
-
-    move-result v1
-
-    sub-int/2addr v1, p1
-
-    invoke-virtual {v0, p1, v1}, Lorg/msgpack/core/buffer/MessageBuffer;->sliceAsByteBuffer(II)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    invoke-virtual {p0}, Lmz8;->r()Z
 
     move-result v0
 
-    invoke-static {p2}, Ljava/nio/CharBuffer;->wrap(Ljava/lang/CharSequence;)Ljava/nio/CharBuffer;
+    if-eqz v0, :cond_3
 
-    move-result-object p2
+    if-nez p3, :cond_0
 
-    iget-object v1, p0, Lmz8;->Z:Ljava/nio/charset/CharsetEncoder;
+    goto :goto_2
 
-    const/4 v2, 0x1
+    :cond_0
+    iget-object p3, p0, Lmz8;->Z:Lmoe;
 
-    invoke-virtual {v1, p2, p1, v2}, Ljava/nio/charset/CharsetEncoder;->encode(Ljava/nio/CharBuffer;Ljava/nio/ByteBuffer;Z)Ljava/nio/charset/CoderResult;
+    invoke-virtual {p3}, Lmoe;->getValue()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-virtual {p2}, Ljava/nio/charset/CoderResult;->isError()Z
+    move-object v1, v0
 
-    move-result v1
+    check-cast v1, Ljava/util/Set;
 
     if-eqz v1, :cond_1
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/nio/charset/CoderResult;->throwException()V
-    :try_end_0
-    .catch Ljava/nio/charset/CharacterCodingException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v1}, Le93;->L0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Lorg/msgpack/core/MessageStringCodingException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
     :cond_1
+    new-instance v1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
+
     :goto_0
-    invoke-virtual {p2}, Ljava/nio/charset/CoderResult;->isUnderflow()Z
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result v1
+    move-result-object v2
 
-    const/4 v2, -0x1
+    invoke-interface {v1, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_4
+    move-result v2
 
-    invoke-virtual {p2}, Ljava/nio/charset/CoderResult;->isOverflow()Z
+    if-eqz v2, :cond_2
 
-    move-result p2
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz p2, :cond_2
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :cond_2
-    iget-object p0, p0, Lmz8;->Z:Ljava/nio/charset/CharsetEncoder;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p0, p1}, Ljava/nio/charset/CharsetEncoder;->flush(Ljava/nio/ByteBuffer;)Ljava/nio/charset/CoderResult;
+    move-result-object v2
 
-    move-result-object p0
+    invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Ljava/nio/charset/CoderResult;->isUnderflow()Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result p0
-
-    sub-int/2addr p0, v0
-
-    return p0
-
-    :cond_4
     :goto_1
-    return v2
-.end method
+    invoke-virtual {p3, v0, v1}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final close()V
-    .locals 1
+    move-result p3
 
-    iget-object v0, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
+    if-eqz p3, :cond_0
 
-    :try_start_0
-    invoke-virtual {p0}, Lmz8;->flush()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    throw p0
-.end method
-
-.method public final d(I)V
-    .locals 3
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget-object v1, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
-
-    if-nez v0, :cond_0
-
-    invoke-interface {v1, p1}, Lorg/msgpack/core/buffer/MessageBufferOutput;->next(I)Lorg/msgpack/core/buffer/MessageBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    return-void
-
-    :cond_0
-    iget v2, p0, Lmz8;->Y:I
-
-    add-int/2addr v2, p1
-
-    invoke-virtual {v0}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
-
-    move-result v0
-
-    if-lt v2, v0, :cond_1
-
-    iget-object v0, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
-
-    iget v2, p0, Lmz8;->Y:I
-
-    invoke-interface {v0, v2}, Lorg/msgpack/core/buffer/MessageBufferOutput;->writeBuffer(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmz8;->Y:I
-
-    invoke-interface {v1, p1}, Lorg/msgpack/core/buffer/MessageBufferOutput;->next(I)Lorg/msgpack/core/buffer/MessageBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    :cond_1
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 2
-
-    iget v0, p0, Lmz8;->Y:I
-
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
-
-    invoke-interface {v1, v0}, Lorg/msgpack/core/buffer/MessageBufferOutput;->writeBuffer(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmz8;->Y:I
-
-    :cond_0
-    iget-object p0, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
-
-    invoke-interface {p0}, Ljava/io/Flushable;->flush()V
-
-    return-void
-.end method
-
-.method public final i(I)V
-    .locals 1
-
-    if-ltz p1, :cond_2
-
-    const/16 v0, 0x10
-
-    if-ge p1, v0, :cond_0
-
-    or-int/lit8 p1, p1, -0x70
-
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, p1}, Lmz8;->q0(B)V
-
-    return-void
-
-    :cond_0
-    const/high16 v0, 0x10000
-
-    if-ge p1, v0, :cond_1
-
-    const/16 v0, -0x24
-
-    int-to-short p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_1
-    const/16 v0, -0x23
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
-
-    return-void
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "array size must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final i0(Ljava/lang/String;)V
-    .locals 4
-
-    sget-object v0, Llz8;->a:Ljava/nio/charset/Charset;
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p1
-
-    array-length v0, p1
-
-    invoke-virtual {p0, v0}, Lmz8;->W(I)V
-
-    array-length v0, p1
-
-    iget-object v1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lorg/msgpack/core/buffer/MessageBuffer;->size()I
-
-    move-result v1
-
-    iget v3, p0, Lmz8;->Y:I
-
-    sub-int/2addr v1, v3
-
-    if-lt v1, v0, :cond_1
-
-    iget v1, p0, Lmz8;->b:I
-
-    if-le v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    invoke-virtual {v1, v3, p1, v2, v0}, Lorg/msgpack/core/buffer/MessageBuffer;->putBytes(I[BII)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lmz8;->flush()V
-
-    iget-object p0, p0, Lmz8;->o:Lorg/msgpack/core/buffer/OutputStreamBufferOutput;
-
-    invoke-interface {p0, p1, v2, v0}, Lorg/msgpack/core/buffer/MessageBufferOutput;->add([BII)V
-
-    return-void
-.end method
-
-.method public final m(I)V
-    .locals 1
-
-    const/16 v0, -0x20
-
-    if-ge p1, v0, :cond_2
-
-    const/16 v0, -0x8000
-
-    if-ge p1, v0, :cond_0
-
-    const/16 v0, -0x2e
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
-
-    return-void
-
-    :cond_0
-    const/16 v0, -0x80
-
-    if-ge p1, v0, :cond_1
-
-    const/16 v0, -0x2f
-
-    int-to-short p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_1
-    const/16 v0, -0x30
-
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->r0(BB)V
-
-    return-void
-
-    :cond_2
-    const/16 v0, 0x80
-
-    if-ge p1, v0, :cond_3
-
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, p1}, Lmz8;->q0(B)V
-
+    :goto_2
     return-void
 
     :cond_3
-    const/16 v0, 0x100
+    new-instance p3, Lhz8;
 
-    if-ge p1, v0, :cond_4
+    invoke-direct {p3, p1, p2}, Lhz8;-><init>(J)V
 
-    const/16 v0, -0x34
+    iget-object p1, p0, Lmz8;->X:Ljb5;
 
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->r0(BB)V
-
-    return-void
-
-    :cond_4
-    const/high16 v0, 0x10000
-
-    if-ge p1, v0, :cond_5
-
-    const/16 v0, -0x33
-
-    int-to-short p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_5
-    const/16 v0, -0x32
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
+    invoke-static {p1, p3}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final n(J)V
-    .locals 2
-
-    const-wide/16 v0, -0x20
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_3
-
-    const-wide/16 v0, -0x8000
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_1
-
-    const-wide/32 v0, -0x80000000
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_0
-
-    const/16 v0, -0x2d
-
-    invoke-virtual {p0, p1, p2, v0}, Lmz8;->t0(JB)V
-
-    return-void
-
-    :cond_0
-    const/16 v0, -0x2e
-
-    long-to-int p1, p1
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
-
-    return-void
-
-    :cond_1
-    const-wide/16 v0, -0x80
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_2
-
-    long-to-int p1, p1
-
-    int-to-short p1, p1
-
-    const/16 p2, -0x2f
-
-    invoke-virtual {p0, p2, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_2
-    long-to-int p1, p1
-
-    int-to-byte p1, p1
-
-    const/16 p2, -0x30
-
-    invoke-virtual {p0, p2, p1}, Lmz8;->r0(BB)V
-
-    return-void
-
-    :cond_3
-    const-wide/16 v0, 0x80
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_4
-
-    long-to-int p1, p1
-
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, p1}, Lmz8;->q0(B)V
-
-    return-void
-
-    :cond_4
-    const-wide/32 v0, 0x10000
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_6
-
-    const-wide/16 v0, 0x100
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_5
-
-    long-to-int p1, p1
-
-    int-to-byte p1, p1
-
-    const/16 p2, -0x34
-
-    invoke-virtual {p0, p2, p1}, Lmz8;->r0(BB)V
-
-    return-void
-
-    :cond_5
-    long-to-int p1, p1
-
-    int-to-short p1, p1
-
-    const/16 p2, -0x33
-
-    invoke-virtual {p0, p2, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_6
-    const-wide v0, 0x100000000L
-
-    cmp-long v0, p1, v0
-
-    if-gez v0, :cond_7
-
-    const/16 v0, -0x32
-
-    long-to-int p1, p1
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
-
-    return-void
-
-    :cond_7
-    const/16 v0, -0x31
-
-    invoke-virtual {p0, p1, p2, v0}, Lmz8;->t0(JB)V
-
-    return-void
-.end method
-
-.method public final o(I)V
+.method public final u(Ljava/lang/String;)V
     .locals 1
 
-    if-ltz p1, :cond_2
+    iget-object v0, p0, Lmz8;->x0:Lmoe;
 
-    const/16 v0, 0x10
-
-    if-ge p1, v0, :cond_0
-
-    or-int/lit8 p1, p1, -0x80
-
-    int-to-byte p1, p1
-
-    invoke-virtual {p0, p1}, Lmz8;->q0(B)V
-
-    return-void
-
-    :cond_0
-    const/high16 v0, 0x10000
-
-    if-ge p1, v0, :cond_1
-
-    const/16 v0, -0x22
-
-    int-to-short p1, p1
-
-    invoke-virtual {p0, v0, p1}, Lmz8;->u0(BS)V
-
-    return-void
-
-    :cond_1
-    const/16 v0, -0x21
-
-    invoke-virtual {p0, p1, v0}, Lmz8;->s0(IB)V
-
-    return-void
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "map size must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final q0(B)V
-    .locals 3
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    invoke-virtual {v0, v1, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    return-void
-.end method
-
-.method public final r0(BB)V
-    .locals 3
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    invoke-virtual {v0, v1, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v0, p0, Lmz8;->Y:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lmz8;->Y:I
-
-    invoke-virtual {p1, v0, p2}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    return-void
-.end method
-
-.method public final s0(IB)V
-    .locals 3
-
-    const/4 v0, 0x5
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    invoke-virtual {v0, v1, p2}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p2, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v0, p0, Lmz8;->Y:I
-
-    invoke-virtual {p2, v0, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->putInt(II)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x4
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-.end method
-
-.method public final t0(JB)V
-    .locals 3
-
-    const/16 v0, 0x9
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    invoke-virtual {v0, v1, p3}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p3, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v0, p0, Lmz8;->Y:I
-
-    invoke-virtual {p3, v0, p1, p2}, Lorg/msgpack/core/buffer/MessageBuffer;->putLong(IJ)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x8
-
-    iput p1, p0, Lmz8;->Y:I
-
-    return-void
-.end method
-
-.method public final u0(BS)V
-    .locals 3
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p0, v0}, Lmz8;->d(I)V
-
-    iget-object v0, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v1, p0, Lmz8;->Y:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Lmz8;->Y:I
-
-    invoke-virtual {v0, v1, p1}, Lorg/msgpack/core/buffer/MessageBuffer;->putByte(IB)V
-
-    iget-object p1, p0, Lmz8;->X:Lorg/msgpack/core/buffer/MessageBuffer;
-
-    iget v0, p0, Lmz8;->Y:I
-
-    invoke-virtual {p1, v0, p2}, Lorg/msgpack/core/buffer/MessageBuffer;->putShort(IS)V
-
-    iget p1, p0, Lmz8;->Y:I
-
-    add-int/lit8 p1, p1, 0x2
-
-    iput p1, p0, Lmz8;->Y:I
+    invoke-virtual {v0, p1}, Lmoe;->setValue(Ljava/lang/Object;)V
 
     return-void
 .end method

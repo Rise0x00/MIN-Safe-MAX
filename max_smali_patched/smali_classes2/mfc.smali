@@ -1,87 +1,76 @@
-.class public final Lmfc;
+.class public abstract Lmfc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lnfc;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static audio_record__action_view:I = 0x7f0a00e5
 
+.field public static audio_record__action_view_background:I = 0x7f0a00e6
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static audio_record__action_view_bg_container:I = 0x7f0a00e7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static audio_record__action_view_container:I = 0x7f0a00e8
 
-    iput-wide p1, p0, Lmfc;->a:J
+.field public static audio_record__audio_hand_free_record_view:I = 0x7f0a00e9
 
-    return-void
-.end method
+.field public static audio_record__audio_record_root:I = 0x7f0a00ea
 
+.field public static audio_record__cancel_view:I = 0x7f0a00eb
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.field public static audio_record__dot_view:I = 0x7f0a00ec
 
-    const/4 v0, 0x1
+.field public static audio_record__duration_view:I = 0x7f0a00ed
 
-    if-ne p0, p1, :cond_0
+.field public static audio_record__hand_free_dot_view:I = 0x7f0a00ee
 
-    return v0
+.field public static audio_record__hand_free_duration_view:I = 0x7f0a00ef
 
-    :cond_0
-    instance-of v1, p1, Lmfc;
+.field public static audio_record__lock_view:I = 0x7f0a00f0
 
-    const/4 v2, 0x0
+.field public static audio_record__pause_recording_button:I = 0x7f0a00f1
 
-    if-nez v1, :cond_1
+.field public static audio_record__play_pause_listening_button:I = 0x7f0a00f2
 
-    return v2
+.field public static audio_record__play_recording_button:I = 0x7f0a00f3
 
-    :cond_1
-    check-cast p1, Lmfc;
+.field public static audio_record__recording_panel:I = 0x7f0a00f4
 
-    iget-wide v3, p0, Lmfc;->a:J
+.field public static audio_record__remove_button:I = 0x7f0a00f5
 
-    iget-wide p0, p1, Lmfc;->a:J
+.field public static audio_record__swipe_remove_button:I = 0x7f0a00f6
 
-    cmp-long p0, v3, p0
+.field public static audio_record__wave_container:I = 0x7f0a00f7
 
-    if-eqz p0, :cond_2
+.field public static audio_record__wave_view:I = 0x7f0a00f8
 
-    return v2
+.field public static writebar__add_link_bottom_sheet_button_add:I = 0x7f0a0d85
 
-    :cond_2
-    return v0
-.end method
+.field public static writebar__add_link_bottom_sheet_input:I = 0x7f0a0d86
 
-.method public final hashCode()I
-    .locals 2
+.field public static writebar__container:I = 0x7f0a0d87
 
-    iget-wide v0, p0, Lmfc;->a:J
+.field public static writebar__record_controls:I = 0x7f0a0d88
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.field public static writebar__root:I = 0x7f0a0d89
 
-    move-result p0
+.field public static writebar__suggestion_close_button:I = 0x7f0a0d8a
 
-    return p0
-.end method
+.field public static writebar__suggestion_close_panel:I = 0x7f0a0d8b
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.field public static writebar__suggestion_container:I = 0x7f0a0d8c
 
-    const-string v0, "VideoMsg(duration="
+.field public static writebar__suggestion_item:I = 0x7f0a0d8d
 
-    const-string v1, ")"
+.field public static writebar__suggestion_not_found:I = 0x7f0a0d8e
 
-    iget-wide v2, p0, Lmfc;->a:J
+.field public static writebar__suggestion_panel:I = 0x7f0a0d8f
 
-    invoke-static {v2, v3, v0, v1}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.field public static writebar__suggestion_popup_drag_layout:I = 0x7f0a0d90
 
-    move-result-object p0
+.field public static writebar__suggestion_popup_layout:I = 0x7f0a0d91
 
-    return-object p0
-.end method
+.field public static writebar__suggestion_popup_layout_content:I = 0x7f0a0d92
+
+.field public static writebar__suggestion_popup_layout_list:I = 0x7f0a0d93
+
+.field public static writebar__suggestion_title:I = 0x7f0a0d94

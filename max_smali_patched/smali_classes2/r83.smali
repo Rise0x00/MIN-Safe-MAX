@@ -1,148 +1,345 @@
 .class public final Lr83;
-.super Ljava/lang/Object;
+.super Lz39;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X0:I
 
-.field public final b:I
-
-.field public final c:I
+.field public final Y0:Lxe6;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Landroid/content/Context;Lrn7;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lr83;->X0:I
 
-    iput p1, p0, Lr83;->a:I
+    packed-switch p3, :pswitch_data_0
 
-    iput p2, p0, Lr83;->b:I
+    new-instance p3, Lq83;
 
-    iput p3, p0, Lr83;->c:I
+    invoke-direct {p3, p1}, Lq83;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    iput-object p2, p0, Lr83;->Y0:Lxe6;
 
     return-void
+
+    :pswitch_0
+    new-instance p3, Liee;
+
+    invoke-direct {p3, p1}, Liee;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    iput-object p2, p0, Lr83;->Y0:Lxe6;
+
+    return-void
+
+    :pswitch_1
+    new-instance p3, Lgee;
+
+    invoke-direct {p3, p1}, Lgee;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    iput-object p2, p0, Lr83;->Y0:Lxe6;
+
+    return-void
+
+    :pswitch_2
+    new-instance p3, Lw83;
+
+    invoke-direct {p3, p1}, Lw83;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, p1, p3}, Lz39;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    iput-object p2, p0, Lr83;->Y0:Lxe6;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final M(Lone/me/messages/list/loader/MessageModel;)V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lr83;->X0:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+
+    iget-object v0, v0, Luy;->b:Lvz;
+
+    instance-of v1, v0, Leee;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Leee;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lr83;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
     :cond_1
-    check-cast p1, Lr83;
+    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v1, Liee;
 
-    iget v0, p0, Lr83;->a:I
+    invoke-virtual {v1, v0}, Lxv8;->setModel(Lgf8;)V
 
-    iget v1, p1, Lr83;->a:I
+    new-instance v2, Lar;
 
-    if-eq v0, v1, :cond_2
+    const/16 v3, 0xc
 
-    goto :goto_0
+    invoke-direct {v2, p0, v0, p1, v3}, Lar;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, v1, Liee;->H0:Lff8;
+
+    invoke-virtual {p1, v2}, Lff8;->setOnFinalImageSetCallback(Lve6;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+
+    iget-object v0, v0, Luy;->b:Lvz;
+
+    instance-of v1, v0, Leee;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Leee;
+
+    goto :goto_2
 
     :cond_2
-    iget v0, p0, Lr83;->b:I
+    const/4 v0, 0x0
 
-    iget v1, p1, Lr83;->b:I
+    :goto_2
+    if-nez v0, :cond_3
 
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
+    goto :goto_3
 
     :cond_3
-    iget p0, p0, Lr83;->c:I
+    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    iget p1, p1, Lr83;->c:I
+    check-cast v1, Lgee;
 
-    if-eq p0, p1, :cond_4
+    invoke-virtual {v1, v0}, Lzn8;->setModel(Lgf8;)V
 
-    :goto_0
-    const/4 p0, 0x0
+    new-instance v2, Lar;
 
-    return p0
+    const/16 v3, 0xb
+
+    invoke-direct {v2, p0, v0, p1, v3}, Lar;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-object p1, v1, Lgee;->B0:Lff8;
+
+    invoke-virtual {p1, v2}, Lff8;->setOnFinalImageSetCallback(Lve6;)V
+
+    :goto_3
+    return-void
+
+    :pswitch_1
+    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+
+    iget-object v0, v0, Luy;->b:Lvz;
+
+    instance-of v1, v0, Ll83;
+
+    if-eqz v1, :cond_4
+
+    check-cast v0, Ll83;
+
+    goto :goto_4
 
     :cond_4
-    :goto_1
-    const/4 p0, 0x1
+    const/4 v0, 0x0
 
-    return p0
+    :goto_4
+    if-nez v0, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
+
+    check-cast v1, Lw83;
+
+    invoke-virtual {v1, v0}, Lxv8;->setModel(Lgf8;)V
+
+    new-instance v2, Ltt1;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p0, v0, p1, v3}, Ltt1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v1, v2}, Lw83;->setOnFinalImageSetCallback(Lxe6;)V
+
+    :goto_5
+    return-void
+
+    :pswitch_2
+    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Luy;
+
+    iget-object v0, v0, Luy;->b:Lvz;
+
+    instance-of v1, v0, Ll83;
+
+    if-eqz v1, :cond_6
+
+    check-cast v0, Ll83;
+
+    goto :goto_6
+
+    :cond_6
+    const/4 v0, 0x0
+
+    :goto_6
+    if-nez v0, :cond_7
+
+    goto :goto_7
+
+    :cond_7
+    iget-object v1, p0, Lz39;->M0:Landroid/view/ViewGroup;
+
+    check-cast v1, Lq83;
+
+    invoke-virtual {v1, v0}, Lzn8;->setModel(Lgf8;)V
+
+    new-instance v2, Ltt1;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, p0, v0, p1, v3}, Ltt1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v1, v2}, Lq83;->setOnFinalImageSetCallback(Lxe6;)V
+
+    :goto_7
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public N(Lvs0;)V
+    .locals 1
 
-    const/4 v0, -0x1
+    iget v0, p0, Lr83;->X0:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    :pswitch_0
+    return-void
 
-    const/16 v1, 0x1f
+    :pswitch_1
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    mul-int/2addr v0, v1
+    check-cast v0, Liee;
 
-    iget v2, p0, Lr83;->a:I
+    invoke-virtual {v0, p1}, Lxv8;->x(Lvs0;)V
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    return-void
 
-    move-result v0
+    :pswitch_2
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    iget v2, p0, Lr83;->b:I
+    check-cast v0, Lw83;
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    invoke-virtual {v0, p1}, Lxv8;->x(Lvs0;)V
 
-    move-result v0
+    return-void
 
-    iget p0, p0, Lr83;->c:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final O(Lbc3;)V
+    .locals 1
 
-    const-string v0, ", neutralSecondary="
+    iget v0, p0, Lr83;->X0:I
 
-    const-string v1, ", themedFade="
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "CommonActionIconColors(contrastStatic=-1, neutral="
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    iget v3, p0, Lr83;->a:I
+    check-cast v0, Liee;
 
-    iget v4, p0, Lr83;->b:I
+    invoke-virtual {v0, p1}, Lxv8;->y(Lbc3;)V
 
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    const-string v1, ")"
+    check-cast v0, Lgee;
 
-    iget p0, p0, Lr83;->c:I
+    invoke-virtual {v0, p1}, Lzn8;->f(Lbc3;)V
 
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    :pswitch_1
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
 
-    return-object p0
+    check-cast v0, Lw83;
+
+    invoke-virtual {v0, p1}, Lxv8;->y(Lbc3;)V
+
+    iget-object p1, v0, Lw83;->G0:Lk83;
+
+    invoke-virtual {p1}, Lk83;->f()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lz39;->M0:Landroid/view/ViewGroup;
+
+    check-cast v0, Lq83;
+
+    invoke-virtual {v0, p1}, Lzn8;->f(Lbc3;)V
+
+    iget-object p1, v0, Lq83;->A0:Lk83;
+
+    invoke-virtual {p1}, Lk83;->f()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

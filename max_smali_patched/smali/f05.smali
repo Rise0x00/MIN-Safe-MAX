@@ -1,73 +1,47 @@
 .class public final Lf05;
-.super Lltg;
+.super Ljava/util/HashMap;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic e:Lltg;
-
-.field public final synthetic f:Ljava/util/concurrent/ThreadPoolExecutor;
-
-
 # direct methods
-.method public constructor <init>(Lltg;Ljava/util/concurrent/ThreadPoolExecutor;)V
-    .locals 0
+.method public static a(Ls89;)Lf05;
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0}, Lvb4;->Y(Ls89;)I
 
-    iput-object p1, p0, Lf05;->e:Lltg;
+    move-result v0
 
-    iput-object p2, p0, Lf05;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v1, Lf05;
 
-    return-void
-.end method
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
+    const/4 v2, 0x0
 
-# virtual methods
-.method public final v(Ljava/lang/Throwable;)V
-    .locals 1
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    iget-object v0, p0, Lf05;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-virtual {p0}, Ls89;->A0()J
 
-    :try_start_0
-    iget-object p0, p0, Lf05;->e:Lltg;
+    move-result-wide v3
 
-    invoke-virtual {p0, p1}, Lltg;->v(Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+    move-result-object v3
 
-    return-void
+    invoke-virtual {p0}, Ls89;->A0()J
 
-    :catchall_0
-    move-exception p0
+    move-result-wide v4
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    throw p0
-.end method
+    move-result-object v4
 
-.method public final w(Lec9;)V
-    .locals 1
+    invoke-virtual {v1, v3, v4}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lf05;->f:Ljava/util/concurrent/ThreadPoolExecutor;
+    add-int/lit8 v2, v2, 0x1
 
-    :try_start_0
-    iget-object p0, p0, Lf05;->e:Lltg;
+    goto :goto_0
 
-    invoke-virtual {p0, p1}, Lltg;->w(Lec9;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
-
-    throw p0
+    :cond_0
+    return-object v1
 .end method

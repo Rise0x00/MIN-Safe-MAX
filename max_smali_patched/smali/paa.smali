@@ -1,133 +1,188 @@
-.class public abstract Lpaa;
-.super Ljava/lang/Object;
+.class public final Lpaa;
+.super Lcfh;
 .source "SourceFile"
 
+# interfaces
+.implements Lh27;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+# instance fields
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 2
 
-    sget v0, Lazb;->oneme_contactlist_action_audio_call:I
+    const-string v0, "com.google.android.gms.dynamic.IObjectWrapper"
 
-    sput v0, Lpaa;->a:I
+    const/4 v1, 0x4
 
-    sget v0, Lazb;->oneme_contactlist_action_block:I
+    invoke-direct {p0, v0, v1}, Lcfh;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lpaa;->b:I
-
-    sget v0, Lazb;->oneme_contactlist_action_delete:I
-
-    sput v0, Lpaa;->c:I
-
-    sget v0, Lazb;->oneme_contactlist_action_open_profile:I
-
-    sput v0, Lpaa;->d:I
-
-    sget v0, Lazb;->oneme_contactlist_action_select:I
-
-    sput v0, Lpaa;->e:I
-
-    sget v0, Lazb;->oneme_contactlist_action_share_contact:I
-
-    sput v0, Lpaa;->f:I
-
-    sget v0, Lazb;->oneme_contactlist_action_suspend_bot:I
-
-    sput v0, Lpaa;->g:I
-
-    sget v0, Lazb;->oneme_contactlist_action_video_call:I
-
-    sput v0, Lpaa;->h:I
-
-    sget v0, Lazb;->oneme_contactlist_action_write:I
-
-    sput v0, Lpaa;->i:I
-
-    sget v0, Lazb;->oneme_contactlist_confirm_block:I
-
-    sput v0, Lpaa;->j:I
-
-    sget v0, Lazb;->oneme_contactlist_confirm_cancel:I
-
-    sput v0, Lpaa;->k:I
-
-    sget v0, Lazb;->oneme_contactlist_confirm_delete:I
-
-    sput v0, Lpaa;->l:I
-
-    sget v0, Lazb;->oneme_contactlist_contact_view_type:I
-
-    sput v0, Lpaa;->m:I
-
-    sget v0, Lazb;->oneme_contactlist_container:I
-
-    sput v0, Lpaa;->n:I
-
-    sget v0, Lazb;->oneme_contactlist_empty_search_result_view_type:I
-
-    sput v0, Lpaa;->o:I
-
-    sget v0, Lazb;->oneme_contactlist_global_contact_view_type:I
-
-    sput v0, Lpaa;->p:I
-
-    sget v0, Lazb;->oneme_contactlist_menu_item_add_contact:I
-
-    sput v0, Lpaa;->q:I
-
-    sget v0, Lazb;->oneme_contactlist_menu_item_create_chat:I
-
-    sput v0, Lpaa;->r:I
-
-    sget v0, Lazb;->oneme_contactlist_phonebook_contact_view_type:I
-
-    sput v0, Lpaa;->s:I
-
-    sget v0, Lazb;->oneme_contactlist_toolbar:I
-
-    sput v0, Lpaa;->t:I
+    iput-object p1, p0, Lpaa;->d:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static d0(Landroid/os/IBinder;)Lh27;
+    .locals 3
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const-string v0, "com.google.android.gms.dynamic.IObjectWrapper"
+
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lh27;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lh27;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lxhh;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v0, v2}, Lweh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public static e0(Lh27;)Ljava/lang/Object;
+    .locals 7
+
+    instance-of v0, p0, Lpaa;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lpaa;
+
+    iget-object p0, p0, Lpaa;->d:Ljava/lang/Object;
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v4, v3
+
+    move v3, v2
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v5, v0, v2
+
+    invoke-virtual {v5}, Ljava/lang/reflect/Field;->isSynthetic()Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    add-int/lit8 v3, v3, 0x1
+
+    move-object v4, v5
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x1
+
+    if-ne v3, v1, :cond_4
+
+    invoke-static {v4}, Lhv0;->n(Ljava/lang/Object;)V
+
+    invoke-virtual {v4}, Ljava/lang/reflect/AccessibleObject;->isAccessible()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {v4, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    :try_start_0
+    invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Could not access the field in remoteBinder."
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Binder object is null."
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "IObjectWrapper declared field not private!"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    array-length v0, v0
+
+    const-string v1, "Unexpected number of IObjectWrapper declared fields: "
+
+    invoke-static {v0, v1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

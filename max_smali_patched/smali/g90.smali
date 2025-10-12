@@ -1,126 +1,364 @@
 .class public final Lg90;
-.super Lf46;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public Y:Z
+.field public final b:Ljava/lang/Class;
 
-.field public Z:F
+.field public final c:Lrvd;
 
-.field public n0:Z
+.field public final d:Lu3g;
+
+.field public final e:Landroid/util/Size;
+
+.field public final f:Ljb0;
+
+.field public final g:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Class;Lrvd;Lu3g;Landroid/util/Size;Ljb0;Ljava/util/ArrayList;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_2
+
+    iput-object p1, p0, Lg90;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lg90;->b:Ljava/lang/Class;
+
+    if-eqz p3, :cond_1
+
+    iput-object p3, p0, Lg90;->c:Lrvd;
+
+    if-eqz p4, :cond_0
+
+    iput-object p4, p0, Lg90;->d:Lu3g;
+
+    iput-object p5, p0, Lg90;->e:Landroid/util/Size;
+
+    iput-object p6, p0, Lg90;->f:Ljb0;
+
+    iput-object p7, p0, Lg90;->g:Ljava/util/List;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null useCaseConfig"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null sessionConfig"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null useCaseId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    const/4 v0, 0x1
 
-    move-result v0
+    if-ne p1, p0, :cond_0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    iget v2, v1, Landroid/graphics/Rect;->right:I
-
-    iget v3, v1, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v2, v3
-
-    iget v4, v1, Landroid/graphics/Rect;->bottom:I
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v4, v1
-
-    iget v5, p0, Lg90;->Z:F
-
-    iget-boolean v6, p0, Lg90;->Y:Z
-
-    if-nez v6, :cond_0
-
-    const/high16 v6, 0x43b40000    # 360.0f
-
-    sub-float v5, v6, v5
+    return v0
 
     :cond_0
-    div-int/lit8 v2, v2, 0x2
+    instance-of v1, p1, Lg90;
 
-    add-int/2addr v2, v3
+    const/4 v2, 0x0
 
-    int-to-float v2, v2
+    if-eqz v1, :cond_4
 
-    div-int/lit8 v4, v4, 0x2
+    check-cast p1, Lg90;
 
-    add-int/2addr v4, v1
+    iget-object v1, p1, Lg90;->a:Ljava/lang/String;
 
-    int-to-float v1, v4
+    iget-object v3, p1, Lg90;->g:Ljava/util/List;
 
-    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
+    iget-object v4, p1, Lg90;->f:Ljb0;
 
-    invoke-super {p0, p1}, Lf46;->draw(Landroid/graphics/Canvas;)V
+    iget-object v5, p1, Lg90;->e:Landroid/util/Size;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    iget-object v6, p0, Lg90;->a:Ljava/lang/String;
 
-    iget-boolean p1, p0, Lg90;->n0:Z
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lg90;->b:Ljava/lang/Class;
+
+    iget-object v6, p1, Lg90;->b:Ljava/lang/Class;
+
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lg90;->c:Lrvd;
+
+    iget-object v6, p1, Lg90;->c:Lrvd;
+
+    invoke-virtual {v1, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, p0, Lg90;->d:Lu3g;
+
+    iget-object p1, p1, Lg90;->d:Lu3g;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lg90;->e:Landroid/util/Size;
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x1
+    if-nez v5, :cond_4
 
-    iput-boolean p1, p0, Lg90;->n0:Z
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x14
-
-    add-long/2addr v0, v2
-
-    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+    goto :goto_0
 
     :cond_1
-    return-void
+    invoke-virtual {p1, v5}, Landroid/util/Size;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :goto_0
+    iget-object p1, p0, Lg90;->f:Ljb0;
+
+    if-nez p1, :cond_2
+
+    if-nez v4, :cond_4
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1, v4}, Ljb0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :goto_1
+    iget-object p1, p0, Lg90;->g:Ljava/util/List;
+
+    if-nez p1, :cond_3
+
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_3
+    invoke-interface {p1, v3}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :goto_2
+    return v0
+
+    :cond_4
+    return v2
 .end method
 
-.method public final run()V
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lg90;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lg90;->b:Ljava/lang/Class;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lg90;->c:Lrvd;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lg90;->d:Lu3g;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lg90;->e:Landroid/util/Size;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Landroid/util/Size;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lg90;->f:Ljb0;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljb0;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lg90;->g:Ljava/util/List;
+
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    xor-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-boolean v0, p0, Lg90;->n0:Z
+    const-string v1, "UseCaseInfo{useCaseId="
 
-    iget v0, p0, Lg90;->Z:F
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lg90;->X:I
+    iget-object v1, p0, Lg90;->a:Ljava/lang/String;
 
-    int-to-float v1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v2, 0x41a00000    # 20.0f
+    const-string v1, ", useCaseType="
 
-    div-float/2addr v2, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v1, 0x43b40000    # 360.0f
+    iget-object v1, p0, Lg90;->b:Ljava/lang/Class;
 
-    mul-float/2addr v2, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    float-to-int v1, v2
+    const-string v1, ", sessionConfig="
 
-    int-to-float v1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-float/2addr v0, v1
+    iget-object v1, p0, Lg90;->c:Lrvd;
 
-    iput v0, p0, Lg90;->Z:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    const-string v1, ", useCaseConfig="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg90;->d:Lu3g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", surfaceResolution="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg90;->e:Landroid/util/Size;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", streamSpec="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg90;->f:Ljb0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", captureTypes="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg90;->g:Ljava/util/List;
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lqw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

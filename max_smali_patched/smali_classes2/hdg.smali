@@ -1,152 +1,125 @@
-.class public final synthetic Lhdg;
+.class public final Lhdg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lae6;
 
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-# static fields
-.field public static final a:Lhdg;
-
-.field private static final descriptor:Lpad;
+.field public b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/net/Uri;Z)V
+    .locals 0
 
-    new-instance v0, Lhdg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhdg;->a:Landroid/net/Uri;
 
-    sput-object v0, Lhdg;->a:Lhdg;
-
-    new-instance v1, Lo7b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupBackButtonRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lo7b;-><init>(Ljava/lang/String;Lae6;I)V
-
-    const-string v0, "isVisible"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lo7b;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lhdg;->descriptor:Lpad;
+    iput-boolean p2, p0, Lhdg;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lq8;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object p0, Lhdg;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lq8;->j(Lpad;)Lq8;
-
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    move v2, v0
-
-    move v3, v1
-
-    move v4, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p1, p0}, Lq8;->p(Lpad;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-eq v5, v6, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p1, p0, v1}, Lq8;->o(Lpad;I)Z
-
-    move-result v4
-
-    move v3, v0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    instance-of v1, p1, Lhdg;
 
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const/4 v2, 0x0
 
-    throw p0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    move v2, v1
+    check-cast p1, Lhdg;
 
-    goto :goto_0
+    iget-object v1, p0, Lhdg;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Lhdg;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {p1, p0}, Lq8;->y(Lpad;)V
+    iget-boolean v1, p0, Lhdg;->b:Z
 
-    new-instance p0, Ljdg;
+    iget-boolean p1, p1, Lhdg;->b:Z
 
-    invoke-direct {p0, v3, v4}, Ljdg;-><init>(IZ)V
+    if-eq v1, p1, :cond_3
 
-    return-object p0
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final b(Lrx3;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p2, Ljdg;
-
-    sget-object p0, Lhdg;->descriptor:Lpad;
-
-    invoke-virtual {p1, p0}, Lrx3;->b(Lpad;)Lrx3;
-
-    move-result-object p1
-
-    iget-boolean p2, p2, Ljdg;->a:Z
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p0, v0, p2}, Lrx3;->e(Lpad;IZ)V
-
-    invoke-virtual {p1}, Lrx3;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lpf7;
+.method public final hashCode()I
     .locals 2
 
-    const/4 p0, 0x1
+    iget-object v0, p0, Lhdg;->a:Landroid/net/Uri;
 
-    new-array p0, p0, [Lpf7;
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    sget-object v0, Lrq0;->a:Lrq0;
+    move-result v0
 
-    const/4 v1, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    aput-object v0, p0, v1
+    iget-boolean v1, p0, Lhdg;->b:Z
 
-    return-object p0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final d()Lpad;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object p0, Lhdg;->descriptor:Lpad;
+    iget-boolean v0, p0, Lhdg;->b:Z
 
-    return-object p0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "PendingFragment(uri="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lhdg;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", finalized="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

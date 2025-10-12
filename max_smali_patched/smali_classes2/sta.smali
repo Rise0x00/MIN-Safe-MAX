@@ -1,37 +1,85 @@
-.class public abstract synthetic Lsta;
+.class public abstract Lsta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x3
+    sget v0, Lqfc;->oneme_stickers_sticker_first_frame:I
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    sput v0, Lsta;->a:I
 
-    move-result-object v0
+    sget v0, Lqfc;->oneme_stickers_sticker_lottie:I
 
-    array-length v0, v0
+    sput v0, Lsta;->b:I
 
-    new-array v0, v0, [I
+    sget v0, Lqfc;->oneme_stickers_sticker_set_header_button:I
 
-    const/4 v1, 0x1
+    sput v0, Lsta;->c:I
 
-    const/4 v2, 0x0
+    sget v0, Lqfc;->oneme_stickers_sticker_set_header_subtitle:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sput v0, Lsta;->d:I
 
-    :catch_0
-    sput-object v0, Lsta;->$EnumSwitchMapping$0:[I
+    sget v0, Lqfc;->oneme_stickers_sticker_set_header_title:I
+
+    sput v0, Lsta;->e:I
+
+    sget v0, Lqfc;->oneme_stickers_sticker_set_list:I
+
+    sput v0, Lsta;->f:I
+
+    sget v0, Lqfc;->oneme_stickers_sticker_webm:I
+
+    sput v0, Lsta;->g:I
+
+    sget v0, Lqfc;->oneme_stickers_view_type_sticker:I
+
+    sput v0, Lsta;->h:I
+
+    sget v0, Lqfc;->oneme_stickers_view_type_sticker_lottie:I
+
+    sput v0, Lsta;->i:I
+
+    sget v0, Lqfc;->oneme_stickers_view_type_sticker_webm:I
+
+    sput v0, Lsta;->j:I
+
+    sget v0, Lqfc;->oneme_stickers_view_type_stickers_set:I
+
+    sput v0, Lsta;->k:I
+
+    sget v0, Lqfc;->oneme_stickers_view_type_stickers_set_showcase:I
+
+    sput v0, Lsta;->l:I
 
     return-void
 .end method

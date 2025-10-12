@@ -1,142 +1,151 @@
 .class public final Lk2d;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lj2d;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lve6;
 
-.field public final synthetic Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+.field public volatile b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lve6;)V
     .locals 0
 
-    iput-object p1, p0, Lk2d;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lk2d;->a:Lve6;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object p1, Lxt6;->z0:Lxt6;
+
+    iput-object p1, p0, Lk2d;->b:Ljava/lang/Object;
+
+    iput-object p0, p0, Lk2d;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Z
+    .locals 2
 
-    check-cast p1, Lp04;
+    iget-object v0, p0, Lk2d;->b:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lxt6;->z0:Lxt6;
 
-    invoke-virtual {p0, p1, p2}, Lk2d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eq v0, v1, :cond_0
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    check-cast p0, Lk2d;
+    return v0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lk2d;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lk2d;
-
-    iget-object p0, p0, Lk2d;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
-
-    invoke-direct {p1, p0, p2}, Lk2d;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getValue()Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lk2d;->X:I
+    iget-object v0, p0, Lk2d;->b:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    sget-object v1, Lxt6;->z0:Lxt6;
 
-    iget-object v2, p0, Lk2d;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+    if-eq v0, v1, :cond_0
 
-    if-eqz v0, :cond_1
+    return-object v0
 
-    if-ne v0, v1, :cond_0
+    :cond_0
+    iget-object v0, p0, Lk2d;->c:Ljava/lang/Object;
+
+    monitor-enter v0
 
     :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v2, p0, Lk2d;->b:Ljava/lang/Object;
+
+    if-eq v2, v1, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_1
+    iget-object v1, p0, Lk2d;->a:Lve6;
 
-    goto :goto_1
+    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lk2d;->b:Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final reset()V
+    .locals 2
+
+    iget-object v0, p0, Lk2d;->c:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lxt6;->z0:Lxt6;
+
+    iput-object v1, p0, Lk2d;->b:Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lk2d;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lk2d;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-string v0, "Lazy value not initialized yet."
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    :try_start_1
-    iput v1, p0, Lk2d;->X:I
-
-    invoke-virtual {v2, p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object p0, Lq04;->a:Lq04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lcq7;
-
-    invoke-static {v2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Lxfd;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lxfd;->i(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
-    :goto_1
-    invoke-static {v2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Lxfd;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lxfd;->j(Ljava/lang/Throwable;)Z
-
-    :goto_2
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

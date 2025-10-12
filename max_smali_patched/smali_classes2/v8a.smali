@@ -1,172 +1,304 @@
-.class public final Lv8a;
-.super Lt2;
+.class public final synthetic Lv8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Lw8a;
+.field public final synthetic b:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lw8a;I)V
+.method public synthetic constructor <init>(Lone/me/notifications/settings/NotificationsSettingsScreen;I)V
     .locals 0
 
-    iput p2, p0, Lv8a;->c:I
+    iput p2, p0, Lv8a;->a:I
 
-    iput-object p1, p0, Lv8a;->o:Lw8a;
+    iput-object p1, p0, Lv8a;->b:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    const/16 p1, 0x8
-
-    packed-switch p2, :pswitch_data_0
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Ls8a;->a:Ls8a;
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    sget-object p2, Lt8a;->a:Lt8a;
-
-    invoke-direct {p0, p1, p2}, Lt2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-    iget v0, p0, Lv8a;->c:I
+    iget v0, p0, Lv8a;->a:I
+
+    const/4 v1, 0x6
+
+    const/4 v2, -0x2
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x0
+
+    iget-object v5, p0, Lv8a;->b:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Ls8a;
+    sget-object v0, Lone/me/notifications/settings/NotificationsSettingsScreen;->z0:[Ltm7;
 
-    check-cast p1, Ls8a;
+    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    if-eq p1, p2, :cond_0
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object p0, p0, Lv8a;->o:Lw8a;
+    move-result-object v1
 
-    invoke-virtual {p0, p0, p2}, Lw8a;->c(Landroid/view/View;Ls8a;)V
+    invoke-direct {v0, v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    :cond_0
-    return-void
+    sget v1, Lbra;->z:I
 
-    :pswitch_0
-    check-cast p2, Lt8a;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    check-cast p1, Lt8a;
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    if-eq p1, p2, :cond_3
+    invoke-direct {v1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    sget-object p1, Lu8a;->$EnumSwitchMapping$0:[I
+    const/16 v2, 0xc
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    int-to-float v2, v2
 
-    move-result p2
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    aget p1, p1, p2
+    move-result-object v3
 
-    const/4 p2, 0x1
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object p0, p0, Lv8a;->o:Lw8a;
+    move-result-object v3
 
-    if-eq p1, p2, :cond_2
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 p2, 0x2
+    mul-float/2addr v3, v2
 
-    if-ne p1, p2, :cond_1
+    invoke-static {v3}, Lv63;->r0(F)I
 
-    invoke-static {p0}, Lw8a;->a(Lw8a;)Landroidx/appcompat/widget/AppCompatTextView;
+    move-result v3
 
-    move-result-object p1
+    invoke-virtual {v1, v3}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object p1
+    move-result-object v3
 
-    if-nez p1, :cond_3
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {p0}, Lw8a;->a(Lw8a;)Landroidx/appcompat/widget/AppCompatTextView;
+    move-result-object v3
 
-    move-result-object p1
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lv63;->r0(F)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v1, Luia;->b:Luia;
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
+
+    sget-object v1, Lxia;->b:Lxia;
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
+
+    sget-object v1, Lwia;->c:Lwia;
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
+
+    invoke-virtual {v5}, Lone/me/notifications/settings/NotificationsSettingsScreen;->B0()Lg9a;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lg9a;->F0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget v1, Ldra;->v:I
 
     goto :goto_0
 
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    :cond_0
+    sget v1, Ldra;->u:I
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p0}, Lw8a;->a(Lw8a;)Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-static {p0}, Lw8a;->a(Lw8a;)Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_3
     :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+
+    new-instance v1, Lt16;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v1, v2, v5}, Lt16;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/notifications/settings/NotificationsSettingsScreen;->z0:[Ltm7;
+
+    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-direct {v0, v6, v4, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    sget v1, Lbra;->y:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    new-instance v1, Lbh3;
+
+    iget-object v2, v5, Lone/me/notifications/settings/NotificationsSettingsScreen;->Z:Lxh0;
+
+    iget-object v3, v5, Lone/me/notifications/settings/NotificationsSettingsScreen;->X:Lr8a;
+
+    const/4 v4, 0x2
+
+    new-array v6, v4, [Lpwc;
+
+    const/4 v7, 0x0
+
+    aput-object v2, v6, v7
+
+    const/4 v2, 0x1
+
+    aput-object v3, v6, v2
+
+    invoke-direct {v1, v6}, Lbh3;-><init>([Lpwc;)V
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lpwc;)V
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setOverScrollMode(I)V
+
+    new-instance v9, Lbv8;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v9, v0, v1, v5}, Lbv8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v7, Lzmd;
+
+    sget-object v1, Lbx4;->y0:Lsed;
+
+    invoke-virtual {v1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
+
+    move-result-object v8
+
+    const/4 v11, 0x0
+
+    const/16 v12, 0x1c
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v7 .. v12}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
+
+    invoke-virtual {v0, v7}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
+
+    new-instance v1, Lm7a;
+
+    invoke-direct {v1}, Lm7a;-><init>()V
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
+
+    return-object v0
 
     :pswitch_1
-    check-cast p2, Lnma;
+    sget-object v0, Lone/me/notifications/settings/NotificationsSettingsScreen;->z0:[Ltm7;
 
-    check-cast p1, Lnma;
+    new-instance v0, Ltya;
 
-    invoke-static {p1, p2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result p1
+    move-result-object v2
 
-    if-nez p1, :cond_5
+    invoke-direct {v0, v2, v1}, Ltya;-><init>(Landroid/content/Context;I)V
 
-    iget-object p0, p0, Lv8a;->o:Lw8a;
+    sget v1, Lbra;->B:I
 
-    if-nez p2, :cond_4
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    sget-object v1, Llya;->a:Llya;
 
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
+    invoke-virtual {v0, v1}, Ltya;->setForm(Llya;)V
 
-    move-result-object p2
+    invoke-virtual {v5}, Lone/me/notifications/settings/NotificationsSettingsScreen;->B0()Lg9a;
 
-    :cond_4
-    invoke-virtual {p0, p2}, Lw8a;->onThemeChanged(Lnma;)V
+    move-result-object v1
 
-    :cond_5
-    return-void
+    iget-object v1, v1, Lg9a;->F0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget v1, Ldra;->a:I
+
+    goto :goto_1
+
+    :cond_1
+    sget v1, Ldra;->x:I
+
+    :goto_1
+    invoke-virtual {v0, v1}, Ltya;->setTitle(I)V
+
+    new-instance v1, Lbya;
+
+    new-instance v2, Ld1a;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3}, Ld1a;-><init>(I)V
+
+    invoke-direct {v1, v2}, Lbya;-><init>(Lxe6;)V
+
+    invoke-virtual {v0, v1}, Ltya;->setLeftActions(Lhya;)V
+
+    return-object v0
 
     nop
 

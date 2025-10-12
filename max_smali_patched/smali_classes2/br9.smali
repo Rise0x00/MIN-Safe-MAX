@@ -1,49 +1,55 @@
 .class public final Lbr9;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Loab;
+.field public X:Lsw7;
 
-.field public final b:Lth7;
+.field public Y:Lsw7;
 
-.field public final c:Lth7;
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Ljr9;
+
+.field public final synthetic w0:Ljr9;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(Loab;)V
-    .locals 3
+.method public constructor <init>(Ljr9;Lnz3;)V
+    .locals 0
 
-    sget-object v0, Lyw7;->a:Lyw7;
+    iput-object p1, p0, Lbr9;->w0:Ljr9;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lo6a;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v2, Lhoe;
-
-    invoke-virtual {v0, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbr9;->a:Loab;
-
-    iput-object v1, p0, Lbr9;->b:Lth7;
-
-    iput-object v0, p0, Lbr9;->c:Lth7;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lbr9;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lbr9;->x0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lbr9;->x0:I
+
+    iget-object p1, p0, Lbr9;->w0:Ljr9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ljr9;->d(Ljava/util/Set;Lnz3;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,112 +1,128 @@
-.class public final synthetic Lmn8;
+.class public final Lmn8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/os/Bundle;
 
-.field public final synthetic b:Lypc;
+.field public final b:Z
 
-.field public final synthetic c:Landroid/util/Pair;
+.field public final c:Z
 
-.field public final synthetic o:Lqf8;
+.field public final d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lypc;Landroid/util/Pair;Lqf8;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p4, p0, Lmn8;->a:I
+    sget v0, Lt4g;->a:I
 
-    iput-object p1, p0, Lmn8;->b:Lypc;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lmn8;->c:Landroid/util/Pair;
+    const/16 v1, 0x24
 
-    iput-object p3, p0, Lmn8;->o:Lqf8;
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    sput-object v0, Lmn8;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lmn8;->f:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lmn8;->g:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lmn8;->h:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/os/Bundle;ZZZ)V
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lmn8;->a:I
+    new-instance v0, Landroid/os/Bundle;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lmn8;->b:Lypc;
+    iput-object v0, p0, Lmn8;->a:Landroid/os/Bundle;
 
-    iget-object v0, v0, Lypc;->c:Ljava/lang/Object;
+    iput-boolean p2, p0, Lmn8;->b:Z
 
-    check-cast v0, Ltn8;
+    iput-boolean p3, p0, Lmn8;->c:Z
 
-    iget-object v0, v0, Ltn8;->j:Ljava/lang/Object;
-
-    check-cast v0, Leb4;
-
-    iget-object v1, p0, Lmn8;->c:Landroid/util/Pair;
-
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v1, Lxm8;
-
-    iget-object p0, p0, Lmn8;->o:Lqf8;
-
-    invoke-virtual {v0, v2, v1, p0}, Leb4;->H(ILxm8;Lqf8;)V
+    iput-boolean p4, p0, Lmn8;->d:Z
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lmn8;->b:Lypc;
+.method public static a(Landroid/os/Bundle;)Lmn8;
+    .locals 5
 
-    iget-object v0, v0, Lypc;->c:Ljava/lang/Object;
+    sget-object v0, Lmn8;->e:Ljava/lang/String;
 
-    check-cast v0, Ltn8;
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
-    iget-object v0, v0, Ltn8;->j:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Leb4;
+    sget-object v1, Lmn8;->f:Ljava/lang/String;
 
-    iget-object v1, p0, Lmn8;->c:Landroid/util/Pair;
+    const/4 v2, 0x0
 
-    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+    invoke-virtual {p0, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    check-cast v2, Ljava/lang/Integer;
+    move-result v1
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    sget-object v3, Lmn8;->g:Ljava/lang/String;
 
-    move-result v2
+    invoke-virtual {p0, v3, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+    move-result v3
 
-    check-cast v1, Lxm8;
+    sget-object v4, Lmn8;->h:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, v4, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    iget-object p0, p0, Lmn8;->o:Lqf8;
+    move-result p0
 
-    invoke-virtual {v0, v2, v1, p0}, Leb4;->B(ILxm8;Lqf8;)V
+    new-instance v2, Lmn8;
 
-    return-void
+    if-nez v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    :cond_0
+    invoke-direct {v2, v0, v1, v3, p0}, Lmn8;-><init>(Landroid/os/Bundle;ZZZ)V
+
+    return-object v2
 .end method

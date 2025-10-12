@@ -1,695 +1,800 @@
 .class public final Lil5;
-.super Landroid/graphics/drawable/Drawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lx58;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final X:Ljt4;
 
-.field public b:Lel5;
+.field public final Y:Ljt4;
 
-.field public c:Lel5;
+.field public final Z:Ljt4;
 
-.field public d:F
+.field public final a:Ljt4;
 
-.field public e:F
+.field public final b:Ljt4;
 
-.field public f:F
+.field public final c:Ljt4;
 
-.field public final g:F
+.field public final o:Ljt4;
 
-.field public final h:Lgl5;
+.field public final w0:Lbg3;
 
-.field public final i:Lhl5;
-
-.field public j:J
+.field public final x0:Lwl0;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljt4;Ljt4;Ljt4;Ljt4;Ljt4;Ljt4;Ljt4;)V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/graphics/Paint;
+    new-instance v0, Lbg3;
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+    iput-object v0, p0, Lil5;->w0:Lbg3;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+    invoke-static {v0}, Lwl0;->y(Ljava/lang/Object;)Lwl0;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lil5;->a:Landroid/graphics/Paint;
+    iput-object v0, p0, Lil5;->x0:Lwl0;
 
-    sget-object v0, Lel5;->a:Lel5;
+    iput-object p1, p0, Lil5;->a:Ljt4;
 
-    iput-object v0, p0, Lil5;->b:Lel5;
+    iput-object p2, p0, Lil5;->b:Ljt4;
 
-    iput-object v0, p0, Lil5;->c:Lel5;
+    iput-object p3, p0, Lil5;->c:Ljt4;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iput-object p4, p0, Lil5;->o:Ljt4;
 
-    iput v0, p0, Lil5;->d:F
+    iput-object p5, p0, Lil5;->X:Ljt4;
 
-    iput v0, p0, Lil5;->g:F
+    iput-object p6, p0, Lil5;->Y:Ljt4;
 
-    new-instance v0, Lgl5;
-
-    invoke-direct {v0, p0}, Lgl5;-><init>(Lil5;)V
-
-    iput-object v0, p0, Lil5;->h:Lgl5;
-
-    new-instance v0, Lhl5;
-
-    invoke-direct {v0, p0}, Lhl5;-><init>(Lil5;)V
-
-    iput-object v0, p0, Lil5;->i:Lhl5;
+    iput-object p7, p0, Lil5;->Z:Ljt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfl5;
-    .locals 2
+.method public final C(JZ)Lye3;
+    .locals 9
 
-    iget-object v0, p0, Lil5;->b:Lel5;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object p0, p0, Lil5;->c:Lel5;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_3
-
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    if-ne p0, v1, :cond_0
-
-    sget-object p0, Lfl5;->o:Lfl5;
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    sget-object p0, Lfl5;->c:Lfl5;
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_3
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    if-ne p0, v1, :cond_4
-
-    sget-object p0, Lfl5;->b:Lfl5;
-
-    return-object p0
-
-    :cond_4
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_5
-    sget-object p0, Lfl5;->a:Lfl5;
-
-    return-object p0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget v0, p0, Lil5;->f:F
-
-    const v1, 0x3c23d70a    # 0.01f
-
-    cmpl-float v0, v0, v1
-
-    if-gtz v0, :cond_1
-
-    iget p0, p0, Lil5;->e:F
-
-    cmpl-float p0, p0, v1
-
-    if-lez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final c(II)V
-    .locals 6
-
-    iget-object v0, p0, Lil5;->h:Lgl5;
-
-    iget-wide v1, v0, Lgl5;->f:J
-
-    const/16 v3, 0x20
-
-    shr-long v4, v1, v3
-
-    long-to-int v4, v4
-
-    iget-object v5, p0, Lil5;->i:Lhl5;
-
-    if-ne v4, p1, :cond_0
-
-    shr-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    if-ne v1, p2, :cond_0
-
-    iget v1, v5, Lhl5;->j:I
-
-    if-eq v1, p2, :cond_1
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_1
-    invoke-static {p1, p2}, Lj67;->a(II)J
-
-    move-result-wide p0
-
-    iput-wide p0, v0, Lgl5;->f:J
-
-    iput p2, v5, Lhl5;->j:I
-
-    return-void
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 21
-
-    move-object/from16 v0, p0
-
-    invoke-virtual {v0}, Lil5;->b()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object v1, v0, Lil5;->h:Lgl5;
-
-    iget-object v2, v1, Lgl5;->k:Lil5;
-
-    iget-object v8, v2, Lil5;->a:Landroid/graphics/Paint;
-
-    iget v3, v1, Lgl5;->h:F
-
-    const v9, 0x3c23d70a    # 0.01f
-
-    cmpg-float v3, v3, v9
-
-    const/4 v10, 0x2
-
-    if-ltz v3, :cond_2
-
-    iget v3, v1, Lgl5;->i:F
-
-    const v4, 0x3f7d70a4    # 0.99f
-
-    cmpl-float v4, v3, v4
-
-    if-ltz v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v4, v1, Lgl5;->g:Landroid/view/animation/AccelerateInterpolator;
-
-    invoke-virtual {v4, v3}, Landroid/view/animation/AccelerateInterpolator;->getInterpolation(F)F
-
-    move-result v3
-
-    iget-wide v4, v1, Lgl5;->d:J
-
-    invoke-static {v3, v4, v5}, Lah7;->b(FJ)F
-
-    move-result v4
-
-    iget-wide v5, v1, Lgl5;->c:J
-
-    invoke-static {v3, v5, v6}, Lah7;->b(FJ)F
-
-    move-result v5
-
-    int-to-float v6, v10
-
-    div-float v11, v5, v6
-
-    iget-wide v5, v1, Lgl5;->a:J
-
-    invoke-static {v3, v5, v6}, Lah7;->b(FJ)F
-
-    move-result v5
-
-    iget-wide v6, v1, Lgl5;->b:J
-
-    invoke-static {v3, v6, v7}, Lah7;->b(FJ)F
-
-    move-result v6
-
-    iget-wide v12, v1, Lgl5;->f:J
-
-    const/16 v7, 0x20
-
-    shr-long v14, v12, v7
-
-    long-to-int v7, v14
-
-    const-wide v14, 0xffffffffL
-
-    and-long/2addr v12, v14
-
-    long-to-int v12, v12
-
-    invoke-static {v7, v3, v12}, Lb83;->c(IFI)I
-
-    move-result v3
-
-    iget v7, v1, Lgl5;->h:F
-
-    iget v12, v2, Lil5;->e:F
-
-    mul-float/2addr v7, v12
-
-    iget v2, v2, Lil5;->d:F
-
-    mul-float/2addr v7, v2
-
-    invoke-static {v3, v7}, Lnoa;->Q(IF)I
-
-    move-result v2
-
-    invoke-virtual {v8, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v1, v1, Lgl5;->e:F
-
-    invoke-virtual {v8, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    sub-float v7, v6, v4
-
-    move v4, v5
-
-    move v5, v6
-
-    move v6, v4
-
-    move-object/from16 v3, p1
-
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    sub-float v6, v4, v11
-
-    sub-float v7, v5, v11
-
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    add-float v6, v4, v11
-
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    :cond_2
-    :goto_0
-    iget-object v0, v0, Lil5;->i:Lhl5;
-
-    iget-object v1, v0, Lhl5;->m:Lil5;
-
-    iget v2, v0, Lhl5;->i:F
-
-    cmpg-float v2, v2, v9
-
-    if-gez v2, :cond_3
-
-    goto/16 :goto_1
-
-    :cond_3
-    iget v15, v0, Lhl5;->c:F
-
-    iget v2, v0, Lhl5;->d:F
-
-    iget v3, v0, Lhl5;->f:F
-
-    const/high16 v4, 0x43b40000    # 360.0f
-
-    mul-float/2addr v3, v4
-
-    const/high16 v5, 0x42b40000    # 90.0f
-
-    add-float/2addr v3, v5
-
-    rem-float v17, v3, v4
-
-    iget v3, v0, Lhl5;->g:F
-
-    mul-float/2addr v3, v4
-
-    const/high16 v5, 0x40400000    # 3.0f
-
-    invoke-static {v3, v5, v4}, Lis8;->i(FFF)F
-
-    move-result v18
-
-    iget-object v3, v1, Lil5;->a:Landroid/graphics/Paint;
-
-    iget v4, v0, Lhl5;->j:I
-
-    iget v5, v0, Lhl5;->i:F
-
-    iget v6, v1, Lil5;->e:F
-
-    mul-float/2addr v5, v6
-
-    iget v6, v1, Lil5;->d:F
-
-    mul-float/2addr v5, v6
-
-    invoke-static {v4, v5}, Lnoa;->Q(IF)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget v4, v0, Lhl5;->e:F
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    const/4 v14, 0x0
-
-    const/16 v19, 0x0
-
-    const/4 v13, 0x0
-
-    move-object/from16 v12, p1
-
-    move/from16 v16, v2
-
-    move-object/from16 v20, v3
-
-    invoke-virtual/range {v12 .. v20}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
-
-    move-object/from16 v2, v20
-
-    iget v3, v0, Lhl5;->k:F
-
-    cmpl-float v4, v3, v9
-
-    if-lez v4, :cond_4
-
-    iget-object v4, v0, Lhl5;->l:Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-    invoke-virtual {v4, v3}, Landroid/view/animation/AccelerateDecelerateInterpolator;->getInterpolation(F)F
-
-    move-result v3
-
-    const v4, -0x40b6f025
-
-    const v5, 0x3fc90fdb
-
-    mul-float v6, v3, v5
-
-    add-float/2addr v6, v4
-
-    int-to-float v4, v10
-
-    div-float v7, v15, v4
-
-    div-float v4, v16, v4
-
-    iget v8, v0, Lhl5;->a:F
-
-    mul-float v9, v7, v8
-
-    iget v10, v0, Lhl5;->b:I
-
-    int-to-float v10, v10
-
-    sub-float/2addr v9, v10
-
-    mul-float/2addr v8, v4
-
-    sub-float/2addr v8, v10
-
-    float-to-double v10, v6
-
-    invoke-static {v10, v11}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v12
-
-    double-to-float v12, v12
-
-    invoke-static {v10, v11}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v10
-
-    double-to-float v10, v10
-
-    add-float/2addr v6, v5
-
-    float-to-double v5, v6
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v13
-
-    double-to-float v11, v13
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v5
-
-    double-to-float v5, v5
-
-    invoke-virtual {v2}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v6
-
-    iget v0, v0, Lhl5;->i:F
-
-    mul-float/2addr v0, v3
-
-    iget v3, v1, Lil5;->e:F
-
-    mul-float/2addr v0, v3
-
-    iget v1, v1, Lil5;->d:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v6, v0}, Lnoa;->Q(IF)I
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    mul-float/2addr v12, v9
-
-    sub-float v13, v7, v12
-
-    mul-float/2addr v10, v8
-
-    sub-float v14, v4, v10
-
-    add-float v15, v7, v12
-
-    add-float v16, v4, v10
-
-    move-object/from16 v12, p1
-
-    move-object/from16 v17, v2
-
-    invoke-virtual/range {v12 .. v17}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    mul-float/2addr v9, v11
-
-    sub-float v13, v7, v9
-
-    mul-float/2addr v8, v5
-
-    sub-float v14, v4, v8
-
-    add-float v15, v7, v9
-
-    add-float v16, v4, v8
-
-    invoke-virtual/range {v12 .. v17}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    :cond_4
-    :goto_1
-    return-void
-.end method
-
-.method public final getOpacity()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 1
-
-    int-to-float p1, p1
-
-    const/high16 v0, 0x437f0000    # 255.0f
-
-    div-float/2addr p1, v0
-
-    iput p1, p0, Lil5;->d:F
-
-    return-void
-.end method
-
-.method public final setBounds(IIII)V
-    .locals 7
-
-    sub-int v0, p3, p1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    sub-int v1, p4, p2
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    int-to-float v0, v0
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float v2, v0, v2
-
-    invoke-static {v2, v2}, Lrp5;->a(FF)J
-
-    move-result-wide v2
-
-    iget-object v4, p0, Lil5;->h:Lgl5;
-
-    iput-wide v2, v4, Lgl5;->a:J
-
-    iget-wide v2, v4, Lgl5;->b:J
-
-    int-to-float v1, v1
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    invoke-static {v2, v3, v6, v1, v5}, Lah7;->p(JFFI)J
-
-    move-result-wide v2
-
-    iput-wide v2, v4, Lgl5;->b:J
-
-    iget-object v2, p0, Lil5;->i:Lhl5;
-
-    iput v0, v2, Lhl5;->c:F
-
-    iput v1, v2, Lhl5;->d:F
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lil5;->b:Lel5;
-
-    invoke-virtual {p0}, Lil5;->a()Lfl5;
+    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    iget v2, p0, Lil5;->e:F
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result-object v0
 
-    move-result-object v2
+    const-string v1, "il5"
 
-    iget v3, p0, Lil5;->f:F
+    const-string v2, "markAsFavorite: stickerId=%d, favorite=%b"
 
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v3
+    const/4 v0, 0x2
 
-    iget-object v4, p0, Lil5;->h:Lgl5;
+    const/4 v2, 0x0
 
-    invoke-virtual {v4}, Lgl5;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lil5;->a:Ljt4;
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {v3}, Ljt4;->get()Ljava/lang/Object;
 
     move-result-object v4
 
-    iget-object p0, p0, Lil5;->i:Lhl5;
+    check-cast v4, Lek5;
 
-    invoke-virtual {p0}, Lhl5;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Lek5;->a()Ldee;
+
+    move-result-object v4
+
+    new-instance v5, Lcz4;
+
+    const/16 v6, 0x10
+
+    invoke-direct {v5, v6}, Lcz4;-><init>(I)V
+
+    new-instance v6, Ldee;
+
+    invoke-direct {v6, v4, v5, v2}, Ldee;-><init>(Lude;Lmf6;I)V
+
+    new-instance v4, Lgl5;
+
+    const/4 v5, 0x3
+
+    invoke-direct {v4, p0, v5}, Lgl5;-><init>(Lil5;I)V
+
+    new-instance v5, Lme3;
+
+    invoke-direct {v5, v6, v0, v4}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v5, Lre3;->a:Lre3;
+
+    :goto_0
+    invoke-virtual {v3}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lek5;
+
+    invoke-virtual {v3}, Lek5;->a()Ldee;
+
+    move-result-object v3
+
+    new-instance v4, Lyj5;
+
+    invoke-direct {v4, v2, p1, p2, p3}, Lyj5;-><init>(IJZ)V
+
+    new-instance v6, Lme3;
+
+    invoke-direct {v6, v3, v0, v4}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v3, Lme3;
+
+    invoke-direct {v3, v5, v2, v6}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 v4, 0x1
+
+    if-eqz p3, :cond_1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/Object;
+    filled-new-array {v5}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v5
 
-    const-string v0, "(%s(%s), %.1f -> %.1f, %s, %s)"
+    const-string v6, "addToFavorites: stickerId=%d"
 
-    invoke-static {v0, p0}, Leif;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v6, v5}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object p0
+    iget-object v1, p0, Lil5;->Z:Ljt4;
 
-    return-object p0
+    invoke-virtual {v1}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldl5;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v5, Lwk5;
+
+    invoke-direct {v5, v1, p1, p2, v4}, Lwk5;-><init>(Ljava/lang/Object;JI)V
+
+    new-instance v6, Lmda;
+
+    invoke-direct {v6, v0, v5}, Lmda;-><init>(ILjava/lang/Object;)V
+
+    new-instance v5, Lkk2;
+
+    const/16 v7, 0xa
+
+    const-class v8, Lnt;
+
+    invoke-direct {v5, v7, v8}, Lkk2;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v6, v5}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object v5
+
+    new-instance v6, Lqk5;
+
+    const/16 v7, 0xb
+
+    invoke-direct {v6, v7}, Lqk5;-><init>(I)V
+
+    new-instance v7, Lme3;
+
+    invoke-direct {v7, v5, v0, v6}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v0, v1, Ldl5;->d:Lked;
+
+    invoke-virtual {v7, v0}, Lle3;->j(Lked;)Lue3;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    new-array v0, v4, [J
+
+    aput-wide p1, v0, v2
+
+    invoke-virtual {p0, v0}, Lil5;->K([J)Lue3;
+
+    move-result-object v0
+
+    :goto_1
+    new-instance v1, Lme3;
+
+    invoke-direct {v1, v3, v2, v0}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Llk5;
+
+    invoke-direct {v0, v4, p1, p2, p3}, Llk5;-><init>(IJZ)V
+
+    invoke-virtual {v1, v0}, Lle3;->f(Le6;)Lye3;
+
+    move-result-object v0
+
+    new-instance v1, Lyj5;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, p1, p2, p3}, Lyj5;-><init>(IJZ)V
+
+    invoke-virtual {v0, v1}, Lle3;->g(Lwo3;)Lye3;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final H(Ljava/util/List;)V
+    .locals 4
+
+    iget-object v0, p0, Lil5;->b:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Loqe;
+
+    invoke-virtual {v0, p1}, Loqe;->b(Ljava/util/List;)Ldee;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lil5;->c:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lked;
+
+    invoke-virtual {p1, v1}, Lude;->i(Lked;)Lmee;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lked;
+
+    invoke-virtual {p1, v0}, Lude;->m(Lked;)Lmee;
+
+    move-result-object p1
+
+    new-instance v0, Lgl5;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, v1}, Lgl5;-><init>(Lil5;I)V
+
+    new-instance v1, Lqk5;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2}, Lqk5;-><init>(I)V
+
+    new-instance v2, Lqs1;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v3, v1}, Lqs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v2}, Lude;->k(Lnee;)V
+
+    return-void
+.end method
+
+.method public final I()V
+    .locals 6
+
+    const-string v0, "il5"
+
+    const-string v1, "reloadFavoritesFromServer: "
+
+    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lil5;->X:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr63;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    check-cast v0, Lxid;
+
+    const-string v2, "user.favoritesLastSync"
+
+    invoke-virtual {v0, v2, v1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
+
+    iget-object v0, p0, Lil5;->Z:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldl5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "assetsUpdate: request, sync=%d"
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v3, "dl5"
+
+    invoke-static {v3, v2, v1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v1, v0, Ldl5;->e:Licf;
+
+    sget-object v2, Ldab;->Y0:Ldab;
+
+    sget-object v3, Ldab;->W0:Ldab;
+
+    sget-object v4, Ldab;->V0:Ldab;
+
+    sget-object v5, Ldab;->X0:Ldab;
+
+    filled-new-array {v4, v5, v2, v3}, [Ldab;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Licf;->a(Ljava/util/List;)Lye3;
+
+    move-result-object v1
+
+    new-instance v2, Lj5;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v2, v3, v0}, Lj5;-><init>(ILjava/lang/Object;)V
+
+    new-instance v3, Loe3;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v4, v2}, Loe3;-><init>(ILjava/lang/Object;)V
+
+    new-instance v2, Lme3;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v1, v4, v3}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, v0, Ldl5;->c:Lked;
+
+    invoke-virtual {v2, v1}, Lle3;->j(Lked;)Lue3;
+
+    move-result-object v1
+
+    new-instance v2, Ltg4;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v3}, Ltg4;-><init>(I)V
+
+    new-instance v3, Lqk5;
+
+    const/16 v5, 0xc
+
+    invoke-direct {v3, v5}, Lqk5;-><init>(I)V
+
+    new-instance v5, Lqs1;
+
+    invoke-direct {v5, v3, v4, v2}, Lqs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v5}, Lle3;->h(Lve3;)V
+
+    iget-object v0, v0, Ldl5;->g:Lbg3;
+
+    invoke-virtual {v0, v5}, Lbg3;->a(Lss4;)Z
+
+    return-void
+.end method
+
+.method public final J(Ljava/util/List;)Lye3;
+    .locals 4
+
+    const-string v0, "removeFromFavorites: ids=%s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "il5"
+
+    invoke-static {v2, v0, v1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lil5;->a:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lek5;
+
+    invoke-virtual {v0}, Lek5;->a()Ldee;
+
+    move-result-object v0
+
+    new-instance v1, Lcb2;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v1, v2, p1}, Lcb2;-><init>(ILjava/util/List;)V
+
+    new-instance v2, Lme3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v3, v1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lid7;->j(Ljava/util/List;)[J
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lil5;->K([J)Lue3;
+
+    move-result-object v0
+
+    new-instance v1, Lme3;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, v0}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lgk5;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, p1}, Lgk5;-><init>(ILjava/util/List;)V
+
+    invoke-virtual {v1, v0}, Lle3;->f(Le6;)Lye3;
+
+    move-result-object v0
+
+    new-instance v1, Lcb2;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v1, v2, p1}, Lcb2;-><init>(ILjava/util/List;)V
+
+    invoke-virtual {v0, v1}, Lle3;->g(Lwo3;)Lye3;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final K([J)Lue3;
+    .locals 5
+
+    const-string v0, "removeFromFavorites: stickerIds=%s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "il5"
+
+    invoke-static {v2, v0, v1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lil5;->Z:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldl5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lyk5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Lyk5;-><init>(Ljava/lang/Object;Ljava/io/Serializable;I)V
+
+    new-instance p1, Lmda;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v2, v1}, Lmda;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lkk2;
+
+    const/16 v3, 0xa
+
+    const-class v4, Lau;
+
+    invoke-direct {v1, v3, v4}, Lkk2;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance v1, Lqk5;
+
+    invoke-direct {v1, v3}, Lqk5;-><init>(I)V
+
+    new-instance v3, Lme3;
+
+    invoke-direct {v3, p1, v2, v1}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, v0, Ldl5;->d:Lked;
+
+    invoke-virtual {v3, p1}, Lle3;->j(Lked;)Lue3;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final L(J)V
+    .locals 3
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "il5"
+
+    const-string v2, "setSectionUpdateTime: %d"
+
+    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lil5;->X:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr63;
+
+    check-cast v0, Lxid;
+
+    const-string v1, "user.favorites.stickers.updateTime"
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lil5;->w0:Lbg3;
+
+    invoke-virtual {v0}, Lbg3;->g()V
+
+    return-void
+.end method
+
+.method public final p()Lkba;
+    .locals 4
+
+    iget-object v0, p0, Lil5;->x0:Lwl0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lmba;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Lmba;-><init>(Lnda;I)V
+
+    new-instance v0, Lqk5;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2}, Lqk5;-><init>(I)V
+
+    new-instance v2, Lkba;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v1, v0, v3}, Lkba;-><init>(Lraa;Lmf6;I)V
+
+    return-object v2
+.end method
+
+.method public final x(J)V
+    .locals 9
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "il5"
+
+    const-string v2, "loadFromMarker: marker=%d"
+
+    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lil5;->Z:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldl5;
+
+    iget-object v1, v0, Ldl5;->a:Ltk;
+
+    new-instance v2, Llt;
+
+    const/4 v8, 0x0
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0x32
+
+    const-string v7, "FAVORITE_STICKERS"
+
+    move-wide v5, p1
+
+    invoke-direct/range {v2 .. v8}, Llt;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Ldl5;->c:Lked;
+
+    check-cast v1, Lbga;
+
+    invoke-virtual {v1, v2, p1}, Lbga;->J(Li9f;Lked;)Lmee;
+
+    move-result-object p1
+
+    iget-object p2, v0, Ldl5;->b:Liaf;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lfaf;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p2, v1, v2}, Lfaf;-><init>(Liaf;II)V
+
+    invoke-virtual {p1, v0}, Lude;->j(Lfaf;)Luz5;
+
+    move-result-object p1
+
+    new-instance p2, Lkk2;
+
+    const/16 v0, 0xa
+
+    const-class v1, Lrt;
+
+    invoke-direct {p2, v0, v1}, Lkk2;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p2}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance p2, Lqk5;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p2, v0}, Lqk5;-><init>(I)V
+
+    invoke-virtual {p1, p2}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance p2, Lgl5;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p2, p0, v0}, Lgl5;-><init>(Lil5;I)V
+
+    new-instance v1, Laee;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, p1, p2, v3}, Laee;-><init>(Lude;Lwo3;I)V
+
+    new-instance p1, Lqk5;
+
+    const/16 p2, 0x11
+
+    invoke-direct {p1, p2}, Lqk5;-><init>(I)V
+
+    invoke-virtual {v1, p1}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance p2, Lgl5;
+
+    const/4 v1, 0x5
+
+    invoke-direct {p2, p0, v1}, Lgl5;-><init>(Lil5;I)V
+
+    new-instance v1, Lme3;
+
+    invoke-direct {v1, p1, v3, p2}, Lme3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lil5;->o:Ljt4;
+
+    invoke-virtual {p1}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lked;
+
+    invoke-virtual {v1, p1}, Lle3;->j(Lked;)Lue3;
+
+    move-result-object p1
+
+    new-instance p2, Lkk5;
+
+    invoke-direct {p2, v5, v6, v0}, Lkk5;-><init>(JI)V
+
+    new-instance v0, Lj00;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v5, v6, v1}, Lj00;-><init>(JI)V
+
+    new-instance v1, Lqs1;
+
+    invoke-direct {v1, v0, v2, p2}, Lqs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Lle3;->h(Lve3;)V
+
+    iget-object p1, p0, Lil5;->w0:Lbg3;
+
+    invoke-virtual {p1, v1}, Lbg3;->a(Lss4;)Z
+
+    return-void
 .end method

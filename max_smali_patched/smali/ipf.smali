@@ -1,32 +1,17 @@
-.class public final Lipf;
+.class public interface abstract Lipf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llpf;
 
+# virtual methods
+.method public abstract c(Lk94;Lr94;Z)V
+.end method
 
-# static fields
-.field public static final a:Lipf;
+.method public abstract d(Lk94;Lr94;ZI)V
+.end method
 
-.field public static final b:Lipf;
+.method public abstract h(Lk94;Lr94;Z)V
+.end method
 
-
-# direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lipf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lipf;->a:Lipf;
-
-    new-instance v0, Lipf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lipf;->b:Lipf;
-
-    return-void
+.method public abstract i(Lk94;Lr94;Z)V
 .end method

@@ -1,133 +1,106 @@
 .class public final Lnd0;
-.super Lpd0;
+.super Luj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Landroid/graphics/Rect;
-
-.field public final c:J
+.field public final synthetic c:Lpd0;
 
 
 # direct methods
-.method public constructor <init>(JLandroid/graphics/Rect;)V
-    .locals 1
+.method public constructor <init>(Lpd0;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
-
-    iput-object p3, p0, Lnd0;->b:Landroid/graphics/Rect;
-
-    iput-wide p1, p0, Lnd0;->c:J
+    iput-object p1, p0, Lnd0;->c:Lpd0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final c(Landroid/graphics/Bitmap;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lnd0;->c:Lpd0;
 
-    if-ne p0, p1, :cond_0
+    iget-boolean v0, v0, Lpd0;->x0:Z
 
-    return v0
+    if-eqz v0, :cond_0
 
-    :cond_0
-    instance-of v1, p1, Lnd0;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnd0;
-
-    iget-object v1, p0, Lnd0;->b:Landroid/graphics/Rect;
-
-    iget-object v3, p1, Lnd0;->b:Landroid/graphics/Rect;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lnd0;->c:J
-
-    iget-wide p0, p1, Lnd0;->c:J
-
-    cmp-long p0, v3, p0
-
-    if-nez p0, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lnd0;->b:Landroid/graphics/Rect;
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->hashCode()I
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    int-to-float v0, v0
 
-    iget-wide v1, p0, Lnd0;->c:J
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    move-result v1
 
-    move-result p0
+    int-to-float v1, v1
 
-    add-int/2addr p0, v0
+    sub-float/2addr v0, v1
 
-    return p0
-.end method
+    const/4 v1, 0x2
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    int-to-float v1, v1
 
-    iget-wide v0, p0, Lnd0;->c:J
+    div-float/2addr v0, v1
 
-    invoke-static {v0, v1}, Lrp5;->b(J)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    sub-float/2addr v2, v3
+
+    div-float/2addr v2, v1
+
+    iget-object v1, p0, Lnd0;->c:Lpd0;
+
+    iget-object v1, v1, Lpd0;->Y:Landroid/graphics/Matrix;
+
+    invoke-virtual {v1, v0, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    :cond_0
+    iget-object v0, p0, Lnd0;->c:Lpd0;
+
+    iget-object v0, v0, Lpd0;->Z:Ls5f;
+
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v0, Landroid/graphics/Canvas;
 
-    const-string v2, "OnCropSuccess(croppedBounds="
+    invoke-virtual {v0, p1}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lnd0;->c:Lpd0;
 
-    iget-object p0, p0, Lnd0;->b:Landroid/graphics/Rect;
+    iget-object v0, v0, Lpd0;->Z:Ls5f;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    const-string p0, ", size="
+    move-result-object v0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Landroid/graphics/Canvas;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lnd0;->c:Lpd0;
 
-    const-string p0, ")"
+    iget-object v1, v1, Lpd0;->Y:Landroid/graphics/Matrix;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

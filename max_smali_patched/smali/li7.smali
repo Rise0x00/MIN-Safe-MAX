@@ -2,471 +2,391 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf67;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lyb5;
+
+.field public final c:Ldb0;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroid/content/Context;Lyb5;Ldb0;)V
     .locals 0
 
-    iput p1, p0, Lli7;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lli7;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lli7;->b:Lyb5;
+
+    iput-object p3, p0, Lli7;->c:Ldb0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ls4;)Ljava/lang/Object;
-    .locals 20
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iget v0, v0, Lli7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const-class v0, Lzba;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzba;
-
-    invoke-virtual {v0}, Lzba;->f()Lwrc;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lwrc;->y()Lox3;
-
-    move-result-object v0
-
-    new-instance v1, Lzja;
-
-    check-cast v0, Lone/me/sdk/arch/Widget;
-
-    invoke-direct {v1, v0}, Lzja;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    return-object v1
-
-    :pswitch_0
-    sget-object v0, Lgp;->a:Lgp;
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lfp;->a:Lfp;
-
-    const-class v2, Lwbd;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    sput-object v1, Lfp;->b:Lth7;
-
-    return-object v0
-
-    :pswitch_2
-    const-class v0, Lbp7;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luk;
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lq7a;
-
-    invoke-direct {v0, v1}, Lq7a;-><init>(Ls4;)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lw7a;
-
-    invoke-direct {v0, v1}, Lw7a;-><init>(Ls4;)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lt7a;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lt7a;-><init>(Ls4;I)V
-
-    return-object v0
-
-    :pswitch_6
-    const-class v0, Lgj7;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ley7;
-
-    return-object v0
-
-    :pswitch_7
-    const-class v0, Lqg0;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ley7;
-
-    return-object v0
-
-    :pswitch_8
-    const-class v0, Lzqd;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ley7;
-
-    return-object v0
-
-    :pswitch_9
-    sget-object v0, Llc5;->a:Llc5;
-
-    return-object v0
-
-    :pswitch_a
-    sget-object v0, Lzl7;->a:Lzl7;
-
-    return-object v0
-
-    :pswitch_b
-    sget-object v0, Lqc7;->a:Lqc7;
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Lv11;
-
-    const-class v2, Lfm0;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lv11;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_d
-    const-class v0, Llh5;
-
-    invoke-virtual {v1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v0
-
-    new-instance v1, Lb8a;
-
-    invoke-direct {v1, v0}, Lb8a;-><init>(Lth7;)V
-
-    return-object v1
-
-    :pswitch_e
-    new-instance v0, Lcbd;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-session-logic:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-direct {v0, v1}, Lcbd;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
-
-    return-object v0
-
-    :pswitch_f
-    const-class v0, Lvmc;
-
-    invoke-virtual {v1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ley7;
-
-    return-object v0
-
-    :pswitch_10
-    new-instance v0, Lcbd;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->analytics-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x1
-
-    const-string v3, "\u0410\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430"
-
-    invoke-direct {v0, v3, v1, v2}, Lcbd;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object v0
-
-    :pswitch_11
-    new-instance v0, Lcbd;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->webm-stickers-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x1
-
-    const-string v3, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c Webm \u0441\u0442\u0438\u043a\u0435\u0440\u044b"
-
-    invoke-direct {v0, v3, v1, v2}, Lcbd;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object v0
-
-    :pswitch_12
-    sget-object v0, Lco9;->a:Lco9;
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v0, Lih8;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lih8;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_14
-    sget-object v0, Lab9;->a:Lab9;
-
-    return-object v0
-
-    :pswitch_15
-    new-instance v0, Lcbd;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->new-crop-screen-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    const-string v3, "\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u044d\u043a\u0440\u0430\u043d \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0444\u043e\u0442\u043e"
-
-    invoke-direct {v0, v3, v1, v2}, Lcbd;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object v0
-
-    :pswitch_16
-    new-instance v0, Lih8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lih8;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_17
-    new-instance v0, Lcu3;
-
-    const-class v2, Ljqc;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lcu3;-><init>(Lth7;I)V
-
-    return-object v0
-
-    :pswitch_18
-    new-instance v0, Lih8;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lih8;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_19
-    sget-object v0, Lzw7;->a:Lzw7;
-
-    return-object v0
-
-    :pswitch_1a
-    new-instance v0, Lrn7;
-
-    const-class v2, Lun3;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v2
-
-    const-class v3, Lbb2;
-
-    invoke-virtual {v1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v3
-
-    const-class v4, Lsz2;
-
-    invoke-virtual {v1, v4}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v4
-
-    const-class v5, Lbp7;
-
-    invoke-virtual {v1, v5}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v5
-
-    const-class v6, Ljk;
-
-    invoke-virtual {v1, v6}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v6
-
-    const-class v7, Lpw8;
-
-    invoke-virtual {v1, v7}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v7
-
-    const-class v8, Lhoe;
-
-    invoke-virtual {v1, v8}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v8
-
-    const-class v9, Lsd2;
-
-    invoke-virtual {v1, v9}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v9
-
-    const-class v10, Lrd2;
-
-    invoke-virtual {v1, v10}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v10
-
-    const-class v11, Lyl7;
-
-    invoke-virtual {v1, v11}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v11
-
-    const-class v12, Lz43;
-
-    invoke-virtual {v1, v12}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v12
-
-    const-class v13, Llh5;
-
-    invoke-virtual {v1, v13}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v13
-
-    const-class v14, Lz7a;
-
-    invoke-virtual {v1, v14}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v14
-
-    const-class v15, Lca4;
-
-    invoke-virtual {v1, v15}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v15
-
-    move-object/from16 p0, v0
-
-    const-class v0, Lse6;
-
-    invoke-virtual {v1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v16
-
-    const-class v0, Lx06;
-
-    invoke-virtual {v1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v17
-
-    const-class v0, Lp6a;
-
-    invoke-virtual {v1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v18
-
-    const-class v0, Lcg6;
-
-    invoke-virtual {v1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v19
+.method public final a(Lvb0;IZ)V
+    .locals 16
 
     move-object/from16 v1, p0
 
-    invoke-direct/range {v1 .. v19}, Lrn7;-><init>(Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;)V
+    move-object/from16 v0, p1
 
-    return-object v1
+    move/from16 v2, p2
 
-    :pswitch_1b
-    new-instance v0, Lsi7;
+    new-instance v3, Landroid/content/ComponentName;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-class v4, Lcom/google/android/datatransport/runtime/scheduling/jobscheduling/JobInfoSchedulerService;
 
-    return-object v0
+    iget-object v5, v1, Lli7;->a:Landroid/content/Context;
 
-    :pswitch_1c
-    new-instance v0, Lih8;
+    invoke-direct {v3, v5, v4}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/4 v1, 0x7
+    const-string v4, "jobscheduler"
 
-    invoke-direct {v0, v1}, Lih8;-><init>(I)V
+    invoke-virtual {v5, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v4
 
-    nop
+    check-cast v4, Landroid/app/job/JobScheduler;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance v6, Ljava/util/zip/Adler32;
+
+    invoke-direct {v6}, Ljava/util/zip/Adler32;-><init>()V
+
+    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v7, "UTF-8"
+
+    invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v8}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
+
+    iget-object v5, v0, Lvb0;->a:Ljava/lang/String;
+
+    iget-object v8, v0, Lvb0;->a:Ljava/lang/String;
+
+    invoke-static {v7}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v7
+
+    invoke-virtual {v5, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
+
+    const/4 v5, 0x4
+
+    invoke-static {v5}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v5
+
+    iget-object v7, v0, Lvb0;->c:Lkqb;
+
+    invoke-static {v7}, Lnqb;->a(Lkqb;)I
+
+    move-result v9
+
+    invoke-virtual {v5, v9}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v5
+
+    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
+
+    iget-object v5, v0, Lvb0;->b:[B
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v6, v5}, Ljava/util/zip/Adler32;->update([B)V
+
+    :cond_0
+    invoke-virtual {v6}, Ljava/util/zip/Adler32;->getValue()J
+
+    move-result-wide v9
+
+    long-to-int v6, v9
+
+    const-string v9, "JobInfoScheduler"
+
+    const-string v10, "attemptNumber"
+
+    if-nez p3, :cond_2
+
+    invoke-virtual {v4}, Landroid/app/job/JobScheduler;->getAllPendingJobs()Ljava/util/List;
+
+    move-result-object v11
+
+    invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v11
+
+    :cond_1
+    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v12
+
+    if-eqz v12, :cond_2
+
+    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Landroid/app/job/JobInfo;
+
+    invoke-virtual {v12}, Landroid/app/job/JobInfo;->getExtras()Landroid/os/PersistableBundle;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v10}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result v13
+
+    invoke-virtual {v12}, Landroid/app/job/JobInfo;->getId()I
+
+    move-result v12
+
+    if-ne v12, v6, :cond_1
+
+    if-lt v13, v2, :cond_2
+
+    const-string v2, "Upload for context %s is already scheduled. Returning..."
+
+    invoke-static {v9, v2, v0}, Lkjd;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    iget-object v11, v1, Lli7;->b:Lyb5;
+
+    check-cast v11, Lmad;
+
+    invoke-virtual {v11}, Lmad;->m()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v11
+
+    invoke-static {v7}, Lnqb;->a(Lkqb;)I
+
+    move-result v12
+
+    invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    filled-new-array {v8, v12}, [Ljava/lang/String;
+
+    move-result-object v12
+
+    const-string v13, "SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?"
+
+    invoke-virtual {v11, v13, v12}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v11
+
+    :try_start_0
+    invoke-interface {v11}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v12
+
+    const/4 v13, 0x0
+
+    if-eqz v12, :cond_3
+
+    invoke-interface {v11, v13}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v14
+
+    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v12
+
+    goto :goto_0
+
+    :cond_3
+    const-wide/16 v14, 0x0
+
+    invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v12
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-interface {v11}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v12}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v14
+
+    new-instance v11, Landroid/app/job/JobInfo$Builder;
+
+    invoke-direct {v11, v6, v3}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
+
+    iget-object v3, v1, Lli7;->c:Ldb0;
+
+    invoke-virtual {v3, v7, v14, v15, v2}, Ldb0;->a(Lkqb;JI)J
+
+    move-result-wide v0
+
+    invoke-virtual {v11, v0, v1}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
+
+    iget-object v0, v3, Ldb0;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leb0;
+
+    iget-object v0, v0, Leb0;->c:Ljava/util/Set;
+
+    sget-object v1, Lned;->a:Lned;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v13, 0x1
+
+    if-eqz v1, :cond_4
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v11, v1}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
+
+    :goto_1
+    sget-object v1, Lned;->c:Lned;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
+
+    :cond_5
+    sget-object v1, Lned;->b:Lned;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v11, v13}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
+
+    :cond_6
+    new-instance v0, Landroid/os/PersistableBundle;
+
+    invoke-direct {v0}, Landroid/os/PersistableBundle;-><init>()V
+
+    invoke-virtual {v0, v10, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v1, "backendName"
+
+    invoke-virtual {v0, v1, v8}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "priority"
+
+    invoke-static {v7}, Lnqb;->a(Lkqb;)I
+
+    move-result v8
+
+    invoke-virtual {v0, v1, v8}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    if-eqz v5, :cond_7
+
+    const-string v1, "extras"
+
+    const/4 v8, 0x0
+
+    invoke-static {v5, v8}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v1, v5}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_7
+    invoke-virtual {v11, v0}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v7, v14, v15, v2}, Ldb0;->a(Lkqb;JI)J
+
+    move-result-wide v5
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    move-object/from16 v3, p1
+
+    filled-new-array {v3, v0, v1, v12, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "TRuntime."
+
+    invoke-virtual {v1, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    const-string v2, "Scheduling upload for context %s with jobId=%d in %dms(Backend next call timestamp %d). Attempt %d"
+
+    invoke-static {v2, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    invoke-virtual {v11}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/app/job/JobScheduler;->schedule(Landroid/app/job/JobInfo;)I
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-interface {v11}, Landroid/database/Cursor;->close()V
+
+    throw v0
 .end method

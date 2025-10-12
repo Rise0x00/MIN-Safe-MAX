@@ -1,111 +1,110 @@
-.class public final Ljb2;
+.class public final synthetic Ljb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final f:Ljb2;
-
-.field public static final g:Ljb2;
+# interfaces
+.implements Lwo3;
 
 
 # instance fields
-.field public final a:Lpb2;
+.field public final synthetic a:Lub2;
 
-.field public final b:I
+.field public final synthetic b:Lq49;
 
-.field public final c:J
+.field public final synthetic c:Z
 
-.field public final d:J
-
-.field public final e:Ljava/util/List;
+.field public final synthetic o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    new-instance v0, Ljb2;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const-wide/16 v3, 0x0
-
-    const-wide/16 v5, 0x0
-
-    invoke-direct/range {v0 .. v7}, Ljb2;-><init>(Lpb2;IJJLjava/util/List;)V
-
-    sput-object v0, Ljb2;->f:Ljb2;
-
-    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    new-instance v1, Ljb2;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v6, 0x0
-
-    invoke-direct/range {v1 .. v8}, Ljb2;-><init>(Lpb2;IJJLjava/util/List;)V
-
-    sput-object v1, Ljb2;->g:Ljb2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpb2;IJJLjava/util/List;)V
+.method public synthetic constructor <init>(Lub2;Lq49;ZJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljb2;->a:Lpb2;
+    iput-object p1, p0, Ljb2;->a:Lub2;
 
-    iput p2, p0, Ljb2;->b:I
+    iput-object p2, p0, Ljb2;->b:Lq49;
 
-    iput-wide p3, p0, Ljb2;->c:J
+    iput-boolean p3, p0, Ljb2;->c:Z
 
-    iput-wide p5, p0, Ljb2;->d:J
-
-    iput-object p7, p0, Ljb2;->e:Ljava/util/List;
+    iput-wide p4, p0, Ljb2;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lib2;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 7
 
-    new-instance v0, Lib2;
+    check-cast p1, Lzb2;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Ljb2;->a:Lub2;
 
-    iget-object v1, p0, Ljb2;->a:Lpb2;
+    iget-object v1, p0, Ljb2;->b:Lq49;
 
-    iput-object v1, v0, Lib2;->o:Ljava/lang/Object;
+    if-nez v1, :cond_0
 
-    iget v1, p0, Ljb2;->b:I
+    const-wide/16 v1, 0x0
 
-    iput v1, v0, Lib2;->a:I
+    iput-wide v1, p1, Lzb2;->j:J
 
-    iget-wide v1, p0, Ljb2;->c:J
+    goto :goto_0
 
-    iput-wide v1, v0, Lib2;->b:J
+    :cond_0
+    iget-wide v2, p1, Lzb2;->j:J
 
-    iget-wide v1, p0, Ljb2;->d:J
+    iget-object v4, v0, Lub2;->s:Ljt4;
 
-    iput-wide v1, v0, Lib2;->c:J
+    invoke-virtual {v4}, Ljt4;->get()Ljava/lang/Object;
 
-    iget-object p0, p0, Ljb2;->e:Ljava/util/List;
+    move-result-object v4
 
-    iput-object p0, v0, Lib2;->X:Ljava/lang/Object;
+    check-cast v4, Lo49;
 
-    return-object v0
+    invoke-virtual {v4, v2, v3}, Lo49;->p(J)Lq49;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Ljb2;->c:Z
+
+    if-nez v3, :cond_1
+
+    if-eqz v2, :cond_1
+
+    iget-wide v3, v1, Lq49;->c:J
+
+    iget-wide v5, v2, Lq49;->c:J
+
+    cmp-long v2, v3, v5
+
+    if-lez v2, :cond_2
+
+    :cond_1
+    invoke-static {p1, v1}, Lub2;->k0(Lzb2;Lq49;)V
+
+    :cond_2
+    :goto_0
+    iget-object p1, v0, Lub2;->m:Lov0;
+
+    new-instance v0, La33;
+
+    iget-wide v1, p0, Ljb2;->o:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, La33;-><init>(Ljava/util/List;Z)V
+
+    invoke-virtual {p1, v0}, Lov0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

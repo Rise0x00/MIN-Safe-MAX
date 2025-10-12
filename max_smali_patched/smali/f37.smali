@@ -1,120 +1,129 @@
 .class public final Lf37;
-.super Landroid/view/View$AccessibilityDelegate;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lek9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[B
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[B)V
     .locals 0
 
-    iput p1, p0, Lf37;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lf37;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lf37;->a:[B
 
-    invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
+    iput-object p1, p0, Lf37;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lf37;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+.method public final a(Lco8;)V
     .locals 1
 
-    iget v0, p0, Lf37;->a:I
+    iget-object v0, p0, Lf37;->b:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
-
-    iget-object p0, p0, Lf37;->b:Ljava/lang/Object;
-
-    check-cast p0, Lg37;
-
-    iget-object p0, p0, Lg37;->h:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {p0}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p2, p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->setLabeledBy(Landroid/view/View;)V
+    iput-object v0, p1, Lco8;->a:Ljava/lang/CharSequence;
 
     :cond_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public sendAccessibilityEvent(Landroid/view/View;I)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lf37;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->sendAccessibilityEvent(Landroid/view/View;I)V
-
-    return-void
-
-    :pswitch_0
-    const/16 p1, 0x2000
-
-    if-ne p2, p1, :cond_1
-
-    iget-object p0, p0, Lf37;->b:Ljava/lang/Object;
-
-    check-cast p0, Lhy8;
-
-    iget-object p1, p0, Lhy8;->G0:Lq4e;
+    return p1
 
     :cond_0
-    invoke-virtual {p1}, Lq4e;->getValue()Ljava/lang/Object;
+    if-eqz p1, :cond_2
 
-    move-result-object p2
+    const-class v0, Lf37;
 
-    move-object v0, p2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Ljava/lang/Number;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    if-eq v0, v1, :cond_1
 
-    iget-object v0, p0, Lhy8;->c:Ley8;
+    goto :goto_0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getSelectionEnd()I
+    :cond_1
+    check-cast p1, Lf37;
+
+    iget-object v0, p0, Lf37;->a:[B
+
+    iget-object p1, p1, Lf37;->a:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lf37;->a:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lf37;->a:[B
+
+    array-length v0, v0
+
+    const-string v1, "\", url=\""
+
+    const-string v2, "\", rawMetadata.length=\""
+
+    const-string v3, "ICY: title=\""
+
+    iget-object v4, p0, Lf37;->b:Ljava/lang/String;
+
+    iget-object v5, p0, Lf37;->c:Ljava/lang/String;
+
+    invoke-static {v3, v4, v1, v5, v2}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\""
+
+    invoke-static {v1, v0, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v0}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

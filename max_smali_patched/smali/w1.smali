@@ -24,11 +24,11 @@
 
     iput p2, p0, Lw1;->b:I
 
-    invoke-virtual {p1}, Lx1;->getSize()I
+    invoke-virtual {p1}, Lb0;->getSize()I
 
     move-result p1
 
-    invoke-static {p2, p3, p1}, Lx28;->d(III)V
+    invoke-static {p2, p3, p1}, Lk74;->h(III)V
 
     sub-int/2addr p3, p2
 
@@ -40,7 +40,7 @@
 
 # virtual methods
 .method public final get(I)Ljava/lang/Object;
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lw1;->c:I
 
@@ -52,34 +52,34 @@
 
     add-int/2addr v0, p1
 
-    iget-object p0, p0, Lw1;->a:Lx1;
+    iget-object p1, p0, Lw1;->a:Lx1;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index: "
-
-    const-string v2, ", size: "
-
-    invoke-static {v1, p1, v0, v2}, Lcx3;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    return-object p1
 
-    throw p0
+    :cond_0
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v2, "index: "
+
+    const-string v3, ", size: "
+
+    invoke-static {v2, p1, v0, v3}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 .method public final getSize()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lw1;->c:I
+    iget v0, p0, Lw1;->c:I
 
-    return p0
+    return v0
 .end method

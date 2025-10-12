@@ -1,147 +1,113 @@
-.class public final enum Lld9;
-.super Ljava/lang/Enum;
+.class public interface abstract Lld9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lld9;
+# virtual methods
+.method public abstract b()Ljava/util/List;
+.end method
 
-.field public static final enum Y:Lld9;
+.method public d(J)Lone/me/messages/list/loader/MessageModel;
+    .locals 4
 
-.field public static final enum Z:Lld9;
+    invoke-interface {p0}, Lld9;->b()Ljava/util/List;
 
-.field public static final enum b:Lld9;
+    move-result-object v0
 
-.field public static final enum c:Lld9;
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-.field public static final synthetic n0:[Lld9;
+    move-result-object v0
 
-.field public static final enum o:Lld9;
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
+    move-result v1
 
-# instance fields
-.field public final a:I
+    if-eqz v1, :cond_1
 
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 9
+    move-result-object v1
 
-    new-instance v0, Lld9;
+    move-object v2, v1
 
+    check-cast v2, Lone/me/messages/list/loader/MessageModel;
+
+    iget-wide v2, v2, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    cmp-long v2, v2, p1
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_1
     const/4 v1, 0x0
 
-    sget v2, Lpsc;->e0:I
+    :goto_0
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
 
-    const-string v3, "PLAYBACK"
+    return-object v1
+.end method
 
-    invoke-direct {v0, v3, v1, v2}, Lld9;-><init>(Ljava/lang/String;II)V
+.method public g(J)I
+    .locals 6
 
-    sput-object v0, Lld9;->b:Lld9;
-
-    new-instance v1, Lld9;
-
-    const/4 v2, 0x1
-
-    sget v3, Lpsc;->i0:I
-
-    const-string v4, "TITLE"
-
-    invoke-direct {v1, v4, v2, v3}, Lld9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lld9;->c:Lld9;
-
-    new-instance v2, Lld9;
-
-    const/4 v3, 0x2
-
-    sget v4, Lpsc;->h0:I
-
-    const-string v5, "SUBTITLE"
-
-    invoke-direct {v2, v5, v3, v4}, Lld9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lld9;->o:Lld9;
-
-    new-instance v3, Lld9;
-
-    const/4 v4, 0x3
-
-    sget v5, Lpsc;->g0:I
-
-    const-string v6, "SPEED"
-
-    invoke-direct {v3, v6, v4, v5}, Lld9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lld9;->X:Lld9;
-
-    new-instance v4, Lld9;
-
-    const/4 v5, 0x4
-
-    sget v6, Lpsc;->d0:I
-
-    const-string v7, "CLOSE"
-
-    invoke-direct {v4, v7, v5, v6}, Lld9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lld9;->Y:Lld9;
-
-    new-instance v5, Lld9;
-
-    const/4 v6, 0x5
-
-    sget v7, Lpsc;->f0:I
-
-    const-string v8, "PROGRESS"
-
-    invoke-direct {v5, v8, v6, v7}, Lld9;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lld9;->Z:Lld9;
-
-    filled-new-array/range {v0 .. v5}, [Lld9;
+    invoke-interface {p0}, Lld9;->b()Ljava/util/List;
 
     move-result-object v0
 
-    sput-object v0, Lld9;->n0:[Lld9;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    return-void
-.end method
+    move-result v1
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result v2
 
-    iput p3, p0, Lld9;->a:I
+    invoke-static {v2, v1}, Lf93;->S(II)V
 
-    return-void
-.end method
+    add-int/lit8 v1, v1, -0x1
 
-.method public static valueOf(Ljava/lang/String;)Lld9;
-    .locals 1
+    const/4 v2, 0x0
 
-    const-class v0, Lld9;
+    :goto_0
+    if-gt v2, v1, :cond_1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    add-int v3, v2, v1
 
-    move-result-object p0
+    ushr-int/lit8 v3, v3, 0x1
 
-    check-cast p0, Lld9;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object v4
 
-.method public static values()[Lld9;
-    .locals 1
+    check-cast v4, Lone/me/messages/list/loader/MessageModel;
 
-    sget-object v0, Lld9;->n0:[Lld9;
+    iget-wide v4, v4, Lone/me/messages/list/loader/MessageModel;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v4, v5, p1, p2}, Lsx9;->l(JJ)I
 
-    move-result-object v0
+    move-result v4
 
-    check-cast v0, [Lld9;
+    if-gez v4, :cond_0
 
-    return-object v0
+    add-int/lit8 v2, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    if-lez v4, :cond_2
+
+    add-int/lit8 v1, v3, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    neg-int v3, v2
+
+    :cond_2
+    return v3
 .end method

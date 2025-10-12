@@ -1,5 +1,5 @@
 .class public final Lcha;
-.super Ljha;
+.super Lfha;
 .source "SourceFile"
 
 
@@ -32,30 +32,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lcha;
+    instance-of p1, p1, Lcha;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x9ef0dbd
+    const v0, 0x21b20048
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "Contrast"
+    const-string v0, "Circle"
 
-    return-object p0
+    return-object v0
 .end method

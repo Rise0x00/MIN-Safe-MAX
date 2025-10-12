@@ -1,5 +1,5 @@
 .class public final Lba1;
-.super Lpd0;
+.super Ldd0;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
+    invoke-direct {v0, v1}, Ldd0;-><init>(I)V
 
     sput-object v0, Lba1;->b:Lba1;
 
@@ -34,30 +34,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Lba1;
+    instance-of p1, p1, Lba1;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x5d3948c3
+    const v0, -0x5d3948c3
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "OpenActiveCall"
+    const-string v0, "OpenActiveCall"
 
-    return-object p0
+    return-object v0
 .end method

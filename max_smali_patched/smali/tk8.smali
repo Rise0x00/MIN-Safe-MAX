@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lwl8;)V
-.end method
-
-.method public abstract getCallback()Laa8;
+.method public abstract c(La27;I)V
 .end method

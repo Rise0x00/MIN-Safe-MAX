@@ -1,110 +1,122 @@
 .class public final Lk4e;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lyc4;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Lk4e;
 
-.field public final synthetic Y:J
+.field public static final b:Ll4e;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-wide p1, p0, Lk4e;->Y:J
+    new-instance v0, Lk4e;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lk4e;->a:Lk4e;
+
+    sget-object v0, Ll4e;->b:Ll4e;
+
+    sput-object v0, Lk4e;->b:Ll4e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lgd4;
+    .locals 1
 
-    check-cast p1, Lp04;
+    sget-object v0, Lk4e;->b:Ll4e;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk4e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lk4e;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lk4e;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
+    .locals 10
 
-    new-instance p1, Lk4e;
+    sget-object v0, Lk4e;->b:Ll4e;
 
-    iget-wide v0, p0, Lk4e;->Y:J
+    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
 
-    invoke-direct {p1, v0, v1, p2}, Lk4e;-><init>(JLkotlin/coroutines/Continuation;)V
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const/4 v1, 0x0
 
-    iget v0, p0, Lk4e;->X:I
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x1
+    return-object v1
+
+    :cond_0
+    sget-object v0, Ll4e;->b:Ll4e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Ll4e;->c:Lbd4;
+
+    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    new-instance v8, Lg;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const/16 v0, 0x1d
 
-    goto :goto_0
+    invoke-direct {v8, v0}, Lg;-><init>(I)V
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance v2, Ljd4;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const/16 v9, 0x18
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v6, 0x0
 
-    throw p0
+    const/4 v7, 0x0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v2 .. v9}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
+
+    return-object v2
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-object v4, p2
 
-    iput v1, p0, Lk4e;->X:I
+    const-class p1, Lk4e;
 
-    iget-wide v0, p0, Lk4e;->Y:J
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-static {v0, v1, p0}, Lyr3;->x(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    const-string p2, "invalid route "
 
-    sget-object p1, Lq04;->a:Lq04;
+    invoke-static {p2, v4}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
 
-    if-ne p0, p1, :cond_2
+    move-result-object p3
 
-    return-object p1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-static {p2, v4}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object p2
+
+    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1, p3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
 .end method

@@ -1,89 +1,164 @@
 .class public final Lnm5;
-.super Lqbf;
+.super Lejd;
 .source "SourceFile"
+
+# interfaces
+.implements Llm5;
+.implements Litd;
 
 
 # instance fields
-.field public final synthetic c:I
-
-
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lnm5;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final O(Ltu0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final P(Ltu0;)V
-    .locals 0
-
-    return-void
-.end method
+.field public i:Lbp7;
 
 
 # virtual methods
-.method public final N(Ltu0;)V
-    .locals 0
+.method public final a()V
+    .locals 2
 
-    iget p0, p0, Lnm5;->c:I
+    iget-object v0, p0, Lnm5;->i:Lbp7;
 
+    instance-of v1, v0, Lj2d;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lj2d;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lj2d;->reset()V
+
+    :cond_1
     return-void
 .end method
 
-.method public final h()J
+.method public final n()Z
     .locals 2
 
-    iget p0, p0, Lnm5;->c:I
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->new-crop-screen-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
 
-    return-wide v0
+    move-result v0
 
-    :pswitch_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final i()Loo8;
-    .locals 0
+.method public final o()Z
+    .locals 2
 
-    iget p0, p0, Lnm5;->c:I
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->one-video-player:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    packed-switch p0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    sget-object p0, Legf;->h:Loo8;
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
 
-    return-object p0
+    move-result v0
 
-    :pswitch_0
-    sget-object p0, Lrm5;->e:Loo8;
+    return v0
+.end method
 
-    return-object p0
+.method public final p()Z
+    .locals 2
 
-    nop
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->content-level-access:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gcas:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final r()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gce:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final s()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->search-loader-v2-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final t()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->chat-anim:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final u()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->video-msg-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v()Z
+    .locals 2
+
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->webm-stickers-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Lejd;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -4,11 +4,8 @@
 
 
 # virtual methods
-.method public abstract a()Ljava/util/Set;
+.method public abstract a(Lq73;)Landroid/graphics/drawable/Drawable;
 .end method
 
-.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-.end method
-
-.method public abstract c(Ljx4;)Ljava/util/Set;
+.method public abstract b(Lq73;)Z
 .end method

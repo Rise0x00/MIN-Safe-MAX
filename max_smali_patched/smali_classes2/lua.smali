@@ -1,212 +1,109 @@
-.class public final synthetic Llua;
+.class public abstract Llua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lwua;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    iput p2, p0, Llua;->a:I
+    sget v0, Lrfc;->oneme_settings_change_avatar_cancel:I
 
-    iput-object p1, p0, Llua;->b:Lwua;
+    sput v0, Llua;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_camera:I
 
-    return-void
-.end method
+    sput v0, Llua;->b:I
 
-.method public synthetic constructor <init>(Lwua;Ljava/lang/String;I)V
-    .locals 0
+    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_gallery:I
 
-    .line 2
-    iput p3, p0, Llua;->a:I
+    sput v0, Llua;->c:I
 
-    iput-object p1, p0, Llua;->b:Lwua;
+    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Llua;->d:I
 
-    return-void
-.end method
+    sget v0, Lrfc;->oneme_settings_collapsingstoolbar:I
 
+    sput v0, Llua;->e:I
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    sget v0, Lrfc;->oneme_settings_container:I
 
-    iget v0, p0, Llua;->a:I
+    sput v0, Llua;->f:I
 
-    iget-object p0, p0, Llua;->b:Lwua;
+    sget v0, Lrfc;->oneme_settings_list_screen_appbar:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Llua;->g:I
 
-    invoke-virtual {p0}, Lwua;->q()V
+    sget v0, Lrfc;->oneme_settings_list_screen_pinned_toolbar:I
 
-    return-void
+    sput v0, Llua;->h:I
 
-    :pswitch_0
-    invoke-virtual {p0}, Lwua;->q()V
+    sget v0, Lrfc;->oneme_settings_toolbar:I
 
-    iget-object v0, p0, Lwua;->i:Lej;
+    sput v0, Llua;->i:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lrfc;->oneme_settings_topbar:I
 
-    invoke-virtual {v0}, Lej;->a()V
+    sput v0, Llua;->j:I
 
-    :cond_0
-    iget-object v0, p0, Lwua;->k:Lhi;
+    sget v0, Lrfc;->oneme_settings_topbar_avatar:I
 
-    if-eqz v0, :cond_2
+    sput v0, Llua;->k:I
 
-    iget-object v1, v0, Lhi;->b:La64;
+    sget v0, Lrfc;->oneme_settings_topbar_container:I
 
-    if-eqz v1, :cond_1
+    sput v0, Llua;->l:I
 
-    invoke-virtual {v1, v0}, La64;->c(Lmsc;)V
+    sget v0, Lrfc;->oneme_settings_topbar_dotdivider:I
 
-    :cond_1
-    const/4 v1, 0x0
+    sput v0, Llua;->m:I
 
-    iput-object v1, v0, Lhi;->b:La64;
+    sget v0, Lrfc;->oneme_settings_topbar_name:I
 
-    :cond_2
-    iget-object v0, p0, Lwua;->y:Li7c;
+    sput v0, Llua;->n:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sget v0, Lrfc;->oneme_settings_topbar_nick:I
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    sput v0, Llua;->o:I
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget v0, Lrfc;->oneme_settings_topbar_phone:I
 
-    const-string v2, ": "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Lsd9;->c(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " was released"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "PCRTCClient"
-
-    invoke-interface {v0, v1, p0}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, Llua;->p:I
 
     return-void
-
-    :pswitch_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lwua;->K:Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lwua;->N:Lvua;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0, p0}, Lvua;->r(Lwua;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lwua;->N:Lvua;
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v0, p0}, Lvua;->b(Lwua;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lwua;->N:Lvua;
-
-    if-eqz p0, :cond_5
-
-    invoke-interface {p0}, Lvua;->f()V
-
-    :cond_5
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lwua;->y:Li7c;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "createPeerConnectionFactoryInternal, "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "PCRTCClient"
-
-    invoke-interface {v0, v2, v1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lwua;->K:Z
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lwua;->N:Lvua;
-
-    if-eqz p0, :cond_6
-
-    invoke-interface {p0}, Lvua;->d()V
-
-    :cond_6
-    return-void
-
-    :pswitch_7
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lwua;->X:Z
-
-    iget-object v0, p0, Lwua;->N:Lvua;
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {v0, p0}, Lvua;->c(Lwua;)V
-
-    :cond_7
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

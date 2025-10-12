@@ -1,55 +1,121 @@
-.class public final synthetic Lrj3;
+.class public final Lrj3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltj3;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final synthetic a:Lybd;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lok8;
+.field public final synthetic b:Z
+
+.field public final c:Ljava/io/Serializable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lybd;Lok8;Lr5b;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lrj3;->a:I
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrj3;->a:Lybd;
+    iput-object p1, p0, Lrj3;->c:Ljava/io/Serializable;
 
-    iput-object p2, p0, Lrj3;->b:Lok8;
+    iput-boolean p2, p0, Lrj3;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lrj3;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lrj3;->b:Z
+
+    .line 3
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Lrj3;->c:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()Lyp7;
-    .locals 1
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 3
 
-    iget-object v0, p0, Lrj3;->a:Lybd;
+    iget v0, p0, Lrj3;->a:I
 
-    iget-object v0, v0, Lybd;->o:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Ljava/lang/ref/WeakReference;
+    new-instance v0, Ljava/lang/Thread;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object v1, p0, Lrj3;->c:Ljava/io/Serializable;
 
-    move-result-object v0
+    check-cast v1, Ljava/lang/String;
 
-    check-cast v0, Lil8;
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    iget-boolean p1, p0, Lrj3;->b:Z
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Lrj3;->b:Z
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lrj3;->b:Lok8;
+    const-string v0, "WM.task-"
 
-    invoke-virtual {v0, p0}, Lil8;->o(Lok8;)V
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Lmz6;->b:Lmz6;
+    const-string v0, "androidx.work-"
 
-    return-object p0
+    :goto_0
+    new-instance v1, Ljava/lang/Thread;
+
+    invoke-static {v0}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lrj3;->c:Ljava/io/Serializable;
+
+    check-cast v2, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

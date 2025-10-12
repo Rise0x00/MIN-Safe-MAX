@@ -2,140 +2,267 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liva;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Ljva;
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:Ljava/util/List;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljva;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltc8;
 
-    iput-object p1, p0, Liva;->a:Ljva;
+    const/16 v1, 0x16
 
-    iput-wide p2, p0, Liva;->b:J
+    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
 
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Liva;->c:J
-
-    iput-wide p1, p0, Liva;->d:J
-
-    iput-wide p1, p0, Liva;->e:J
+    sput-object v0, Liva;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(III)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Liva;->a:I
+
+    .line 3
+    iput p2, p0, Liva;->b:I
+
+    .line 4
+    iput p3, p0, Liva;->c:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IIII)V
+    .locals 2
+
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x2
+
+    :cond_0
+    and-int/lit8 v0, p4, 0x2
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    move p2, v1
+
+    :cond_1
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_2
+
+    move p3, v1
+
+    .line 5
+    :cond_2
+    invoke-direct {p0, p1, p2, p3}, Liva;-><init>(III)V
+
+    return-void
+.end method
+
+.method public static a(Liva;IIII)Liva;
+    .locals 1
+
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Liva;->a:I
+
+    :cond_0
+    and-int/lit8 v0, p4, 0x2
+
+    if-eqz v0, :cond_1
+
+    iget p2, p0, Liva;->b:I
+
+    :cond_1
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_2
+
+    iget p3, p0, Liva;->c:I
+
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Liva;
+
+    invoke-direct {p0, p1, p2, p3}, Liva;-><init>(III)V
+
+    return-object p0
+.end method
+
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Liva;
+    instance-of v1, p1, Liva;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Liva;
 
-    iget-object v0, p0, Liva;->a:Ljva;
+    iget v1, p0, Liva;->a:I
 
-    iget-object v1, p1, Liva;->a:Ljva;
+    iget v3, p1, Liva;->a:I
 
-    if-eq v0, v1, :cond_2
+    if-ne v1, v3, :cond_4
 
-    goto :goto_0
+    iget v1, p0, Liva;->b:I
+
+    iget v3, p1, Liva;->b:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    iget-wide v0, p0, Liva;->b:J
+    iget v1, p0, Liva;->c:I
 
-    iget-wide p0, p1, Liva;->b:J
+    iget p1, p1, Liva;->c:I
 
-    cmp-long p0, v0, p0
+    if-eq v1, p1, :cond_3
 
-    if-eqz p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return v2
 
     :cond_3
-    :goto_1
-    const/4 p0, 0x1
+    return v0
 
-    return p0
+    :cond_4
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Liva;->a:Ljva;
+    iget v0, p0, Liva;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-wide v1, p0, Liva;->b:J
+    mul-int/2addr v0, v1
 
-    const/16 p0, 0x3c1
+    iget v2, p0, Liva;->b:I
 
-    invoke-static {v0, p0, v1, v2}, Lt2g;->a(IIJ)I
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    iget v1, p0, Liva;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Liva;->a:I
 
-    const-string v1, "PerfSpan(name="
+    const-string v1, "ContainerGravity(value="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, ")"
 
-    iget-object v1, p0, Liva;->a:Ljva;
+    invoke-static {v0, v1, v2}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", startTime="
+    const-string v1, ", topMargin="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v3, ", bottomMargin="
 
-    iget-wide v1, p0, Liva;->b:J
+    iget v4, p0, Liva;->b:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v5, "ContainerParams(gravity="
 
-    const-string p0, ", parentSpanName=null, prevSpanName=null)"
+    invoke-static {v4, v5, v0, v1, v3}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Liva;->c:I
 
-    move-result-object p0
+    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Liva;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Liva;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Liva;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

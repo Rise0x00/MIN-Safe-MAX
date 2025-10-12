@@ -28,13 +28,13 @@
 
 # virtual methods
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+    .locals 1
 
     iget-object p1, p0, Lna1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    iget-boolean p0, p0, Lna1;->b:Z
+    iget-boolean v0, p0, Lna1;->b:Z
 
-    invoke-static {p1, p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->y0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+    invoke-static {p1, v0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->C0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
 
     return-void
 .end method

@@ -1,94 +1,53 @@
 .class public final Lyw2;
-.super Lfpd;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public s0:Ljava/lang/String;
+.field public X:Lsxc;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lnx2;
+
+.field public o:Lnx2;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lnx2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Lfpd;-><init>()V
+    iput-object p1, p0, Lyw2;->Z:Lnx2;
 
-    const-string v0, ""
-
-    iput-object v0, p0, Lyw2;->s0:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Li5f;ZLv40;)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lhaa;->q:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lyw2;->s0:Ljava/lang/String;
-
-    if-eqz p3, :cond_0
-
-    if-nez p5, :cond_0
-
-    invoke-static {p3, v0}, Ly84;->l(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lkna;
-
-    invoke-virtual {v0}, Lkna;->getSearchView()Lgja;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    sget v1, Lgja;->D0:I
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lgja;->c(Z)V
-
-    :cond_0
-    invoke-super/range {p0 .. p6}, Lfpd;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Li5f;ZLv40;)V
-
-    return-void
-.end method
-
-.method public final o()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lyw2;->s0:Ljava/lang/String;
+    iput-object p1, p0, Lyw2;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Lfpd;->Z:Ljs;
+    iget p1, p0, Lyw2;->w0:I
 
-    invoke-virtual {p0, v0, v0}, Lntd;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    return-void
-.end method
+    or-int/2addr p1, v0
 
-.method public final p(Landroid/view/View;Z)Lq5f;
-    .locals 2
+    iput p1, p0, Lyw2;->w0:I
 
-    new-instance v0, Lq5f;
+    iget-object p1, p0, Lyw2;->Z:Lnx2;
 
-    invoke-direct {v0}, Lq5f;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v1, Lxw2;
+    invoke-static {p1, v0, p0}, Lnx2;->b(Lnx2;Ltr3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {v1, p1, p0, p2}, Lxw2;-><init>(Landroid/view/View;Lyw2;Z)V
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lq5f;->R(Lg5f;)V
-
-    return-object v0
+    return-object p1
 .end method

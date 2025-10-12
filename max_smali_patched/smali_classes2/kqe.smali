@@ -1,667 +1,258 @@
-.class public final enum Lkqe;
-.super Ljava/lang/Enum;
+.class public final synthetic Lkqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmf6;
+.implements Lwo3;
 
-# static fields
-.field public static final enum A0:Lkqe;
 
-.field public static final enum B0:Lkqe;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum C0:Lkqe;
-
-.field public static final enum D0:Lkqe;
-
-.field public static final enum E0:Lkqe;
-
-.field public static final enum F0:Lkqe;
-
-.field public static final enum G0:Lkqe;
-
-.field public static final enum H0:Lkqe;
-
-.field public static final enum I0:Lkqe;
-
-.field public static final enum J0:Lkqe;
-
-.field public static final enum K0:Lkqe;
-
-.field public static final enum L0:Lkqe;
-
-.field public static final enum M0:Lkqe;
-
-.field public static final enum N0:Lkqe;
-
-.field public static final enum O0:Lkqe;
-
-.field public static final enum P0:Lkqe;
-
-.field public static final enum Q0:Lkqe;
-
-.field public static final enum R0:Lkqe;
-
-.field public static final enum S0:Lkqe;
-
-.field public static final enum T0:Lkqe;
-
-.field public static final enum U0:Lkqe;
-
-.field public static final enum V0:Lkqe;
-
-.field public static final synthetic W0:[Lkqe;
-
-.field public static final enum X:Lkqe;
-
-.field public static final enum Y:Lkqe;
-
-.field public static final enum Z:Lkqe;
-
-.field public static final enum a:Lkqe;
-
-.field public static final enum b:Lkqe;
-
-.field public static final enum c:Lkqe;
-
-.field public static final enum n0:Lkqe;
-
-.field public static final enum o:Lkqe;
-
-.field public static final enum o0:Lkqe;
-
-.field public static final enum p0:Lkqe;
-
-.field public static final enum q0:Lkqe;
-
-.field public static final enum r0:Lkqe;
-
-.field public static final enum s0:Lkqe;
-
-.field public static final enum t0:Lkqe;
-
-.field public static final enum u0:Lkqe;
-
-.field public static final enum v0:Lkqe;
-
-.field public static final enum w0:Lkqe;
-
-.field public static final enum x0:Lkqe;
-
-.field public static final enum y0:Lkqe;
-
-.field public static final enum z0:Lkqe;
+.field public final synthetic b:Loqe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 44
+.method public synthetic constructor <init>(Loqe;I)V
+    .locals 0
 
-    new-instance v1, Lkqe;
+    iput p2, p0, Lkqe;->a:I
 
-    const-string v0, "accent"
+    iput-object p1, p0, Lkqe;->b:Loqe;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->a:Lkqe;
-
-    new-instance v2, Lkqe;
-
-    const-string v0, "accentText"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lkqe;->b:Lkqe;
-
-    new-instance v3, Lkqe;
-
-    const-string v0, "background"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lkqe;->c:Lkqe;
-
-    new-instance v4, Lkqe;
-
-    const-string v0, "bubbleBorderHighLight"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lkqe;->o:Lkqe;
-
-    new-instance v5, Lkqe;
-
-    const-string v0, "bubbleClickableBackground"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lkqe;->X:Lkqe;
-
-    new-instance v6, Lkqe;
-
-    const-string v0, "bubbleControlsText"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lkqe;->Y:Lkqe;
-
-    new-instance v7, Lkqe;
-
-    const-string v0, "bubbleDecoratorText"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lkqe;->Z:Lkqe;
-
-    new-instance v8, Lkqe;
-
-    const-string v0, "bubbleOuterBorder"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lkqe;->n0:Lkqe;
-
-    new-instance v9, Lkqe;
-
-    const-string v0, "bubbleSecondaryText"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lkqe;->o0:Lkqe;
-
-    new-instance v10, Lkqe;
-
-    const-string v0, "buttonTint"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Lkqe;->p0:Lkqe;
-
-    new-instance v11, Lkqe;
-
-    const-string v0, "chatBackground"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Lkqe;->q0:Lkqe;
-
-    new-instance v12, Lkqe;
-
-    const-string v0, "destructive"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Lkqe;->r0:Lkqe;
-
-    new-instance v13, Lkqe;
-
-    const-string v0, "lightBadgeBackground"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v13, Lkqe;->s0:Lkqe;
-
-    new-instance v14, Lkqe;
-
-    const-string v0, "highlightBackground"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v14, Lkqe;->t0:Lkqe;
-
-    new-instance v15, Lkqe;
-
-    const-string v0, "incomingBubbleBackground"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xe
-
-    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v15, Lkqe;->u0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v1, "incomingBubbleBackgroundHighlighted"
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->v0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "outgoingBubbleBackground"
-
-    move-object/from16 v18, v0
-
-    const/16 v0, 0x10
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->w0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "outgoingBubbleBackgroundHighlighted"
-
-    move-object/from16 v19, v1
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->x0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "primaryText"
-
-    move-object/from16 v20, v0
-
-    const/16 v0, 0x12
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->y0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "profileBackground"
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->z0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "secondaryBackground"
-
-    move-object/from16 v22, v0
-
-    const/16 v0, 0x14
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->A0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "secondaryButton"
-
-    move-object/from16 v23, v1
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->B0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "secondaryText"
-
-    move-object/from16 v24, v0
-
-    const/16 v0, 0x16
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->C0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "separatorBackground"
-
-    move-object/from16 v25, v1
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->D0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "statusBarBackground"
-
-    move-object/from16 v26, v0
-
-    const/16 v0, 0x18
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->E0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "tertiaryText"
-
-    move-object/from16 v27, v1
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->F0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "toolbarBackground"
-
-    move-object/from16 v28, v0
-
-    const/16 v0, 0x1a
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->G0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "unreadBackground"
-
-    move-object/from16 v29, v1
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->H0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "unreadBackgroundMuted"
-
-    move-object/from16 v30, v0
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->I0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "unreadText"
-
-    move-object/from16 v31, v1
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->J0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "callAccent"
-
-    move-object/from16 v32, v0
-
-    const/16 v0, 0x1e
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->K0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "callBackground"
-
-    move-object/from16 v33, v1
-
-    const/16 v1, 0x1f
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->L0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "callControl"
-
-    move-object/from16 v34, v0
-
-    const/16 v0, 0x20
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->M0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "groupCallBackground"
-
-    move-object/from16 v35, v1
-
-    const/16 v1, 0x21
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->N0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "switchThumb"
-
-    move-object/from16 v36, v0
-
-    const/16 v0, 0x22
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->O0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "switchThumbChecked"
-
-    move-object/from16 v37, v1
-
-    const/16 v1, 0x23
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->P0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "switchTrack"
-
-    move-object/from16 v38, v0
-
-    const/16 v0, 0x24
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->Q0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "switchTrackChecked"
-
-    move-object/from16 v39, v1
-
-    const/16 v1, 0x25
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->R0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "switchTint"
-
-    move-object/from16 v40, v0
-
-    const/16 v0, 0x26
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->S0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "bubbleBorder"
-
-    move-object/from16 v41, v1
-
-    const/16 v1, 0x27
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->T0:Lkqe;
-
-    new-instance v1, Lkqe;
-
-    const-string v2, "bubbleControlBackground"
-
-    move-object/from16 v42, v0
-
-    const/16 v0, 0x28
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lkqe;->U0:Lkqe;
-
-    new-instance v0, Lkqe;
-
-    const-string v2, "bubbleDecoratorBackground"
-
-    move-object/from16 v43, v1
-
-    const/16 v1, 0x29
-
-    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lkqe;->V0:Lkqe;
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v17, v19
-
-    move-object/from16 v18, v20
-
-    move-object/from16 v19, v21
-
-    move-object/from16 v20, v22
-
-    move-object/from16 v21, v23
-
-    move-object/from16 v22, v24
-
-    move-object/from16 v23, v25
-
-    move-object/from16 v24, v26
-
-    move-object/from16 v25, v27
-
-    move-object/from16 v26, v28
-
-    move-object/from16 v27, v29
-
-    move-object/from16 v28, v30
-
-    move-object/from16 v29, v31
-
-    move-object/from16 v30, v32
-
-    move-object/from16 v31, v33
-
-    move-object/from16 v32, v34
-
-    move-object/from16 v33, v35
-
-    move-object/from16 v34, v36
-
-    move-object/from16 v35, v37
-
-    move-object/from16 v36, v38
-
-    move-object/from16 v37, v39
-
-    move-object/from16 v38, v40
-
-    move-object/from16 v39, v41
-
-    move-object/from16 v40, v42
-
-    move-object/from16 v41, v43
-
-    move-object/from16 v42, v0
-
-    filled-new-array/range {v1 .. v42}, [Lkqe;
-
-    move-result-object v0
-
-    sput-object v0, Lkqe;->W0:[Lkqe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkqe;
+
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
     .locals 1
 
-    const-class v0, Lkqe;
+    iget-object v0, p0, Lkqe;->b:Loqe;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ljava/util/List;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Loqe;->e(Ljava/util/List;)V
 
-    check-cast p0, Lkqe;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lkqe;
-    .locals 1
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    sget-object v0, Lkqe;->W0:[Lkqe;
+    iget v0, p0, Lkqe;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lkqe;->b:Loqe;
+
+    check-cast p1, Ljava/util/List;
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "loadNetworkStickersSingle: ids=%s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "oqe"
+
+    invoke-static {v3, v0, v2}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, v1, Loqe;->f:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lkqe;
+    check-cast v0, Ltk;
 
-    return-object v0
+    new-instance v2, Llt;
+
+    invoke-static {p1}, Lid7;->j(Ljava/util/List;)[J
+
+    move-result-object p1
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p1}, Llt;-><init>(I[J)V
+
+    iget-object p1, v1, Loqe;->g:Lked;
+
+    check-cast v0, Lbga;
+
+    invoke-virtual {v0, v2, p1}, Lbga;->J(Li9f;Lked;)Lmee;
+
+    move-result-object p1
+
+    new-instance v0, Lkk2;
+
+    const/16 v2, 0xa
+
+    const-class v4, Lpt;
+
+    invoke-direct {v0, v2, v4}, Lkk2;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance v0, Lmqe;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lmqe;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    new-instance v0, Lmqe;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lmqe;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
+
+    move-result-object p1
+
+    iget-object v0, v1, Loqe;->i:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liaf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lfaf;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v0, v3, v4}, Lfaf;-><init>(Liaf;II)V
+
+    invoke-virtual {p1, v2}, Lude;->j(Lfaf;)Luz5;
+
+    move-result-object p1
+
+    new-instance v0, Lkqe;
+
+    invoke-direct {v0, v1, v3}, Lkqe;-><init>(Loqe;I)V
+
+    new-instance v1, Laee;
+
+    invoke-direct {v1, p1, v0, v3}, Laee;-><init>(Lude;Lwo3;I)V
+
+    return-object v1
+
+    :pswitch_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldsc;
+
+    instance-of v3, v2, Ljre;
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Ljre;
+
+    iget-wide v2, v2, Ljre;->c:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1, v0}, Loqe;->c(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {v1, p1}, Loqe;->d(Ljava/util/List;)Lmee;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lude;->e()Ljava/lang/Object;
+
+    :cond_2
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    invoke-direct {p1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_3
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v3, v1, Loqe;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcqe;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_4
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

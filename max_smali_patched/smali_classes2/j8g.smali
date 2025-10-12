@@ -1,65 +1,59 @@
 .class public final Lj8g;
-.super Lm8g;
+.super Ll8g;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lj8g;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lj8g;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lj8g;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     new-instance v0, Lj8g;
 
-    const-string v1, "invalid_impact_style"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x2
+    sput-object v0, Lj8g;->a:Lj8g;
 
-    invoke-direct {v0, v1, v2}, Lm8g;-><init>(Ljava/lang/String;I)V
+    new-instance v0, Lk3g;
 
-    sput-object v0, Lj8g;->c:Lj8g;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lk3g;-><init>(I)V
+
+    sput-object v0, Lj8g;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lj8g;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
     return v0
 .end method
 
-.method public final hashCode()I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    const p0, -0x277c48f0
+    const/4 p2, 0x1
 
-    return p0
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "InvalidImpactStyle"
-
-    return-object p0
+    return-void
 .end method

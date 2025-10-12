@@ -1,97 +1,139 @@
-.class public final enum Llhf;
-.super Ljava/lang/Enum;
+.class public final Llhf;
+.super Lq3;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Llhf;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llhf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum a:Llhf;
 
-.field public static final enum b:Llhf;
+# instance fields
+.field public X:F
 
-.field public static final enum c:Llhf;
+.field public a:Lshh;
 
-.field public static final enum o:Llhf;
+.field public b:Z
+
+.field public c:F
+
+.field public o:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Llhf;
+    new-instance v0, Lbhh;
 
-    const-string v1, "ALL"
+    const/4 v1, 0x3
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Llhf;->a:Llhf;
-
-    new-instance v1, Llhf;
-
-    const-string v2, "USER_FOLDER"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Llhf;->b:Llhf;
-
-    new-instance v2, Llhf;
-
-    const-string v3, "CREATE_FOLDER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Llhf;->c:Llhf;
-
-    new-instance v3, Llhf;
-
-    const-string v4, "RECOMMENDED_FOLDER"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Llhf;->o:Llhf;
-
-    filled-new-array {v0, v1, v2, v3}, [Llhf;
-
-    move-result-object v0
-
-    sput-object v0, Llhf;->X:[Llhf;
+    sput-object v0, Llhf;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llhf;
+.method public constructor <init>()V
     .locals 1
 
-    const-class v0, Llhf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    iput-boolean v0, p0, Llhf;->b:Z
 
-    check-cast p0, Llhf;
+    iput-boolean v0, p0, Llhf;->o:Z
 
-    return-object p0
+    const/4 v0, 0x0
+
+    iput v0, p0, Llhf;->X:F
+
+    return-void
 .end method
 
-.method public static values()[Llhf;
+
+# virtual methods
+.method public final b(Lmhf;)V
     .locals 1
 
-    sget-object v0, Llhf;->X:[Llhf;
+    new-instance v0, Lehh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-direct {v0, p1}, Lehh;-><init>(Lmhf;)V
+
+    iput-object v0, p0, Llhf;->a:Lshh;
+
+    return-void
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lz84;->K(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-object v0, p0, Llhf;->a:Lshh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    check-cast v0, [Llhf;
+    :goto_0
+    const/4 v1, 0x2
 
-    return-object v0
+    invoke-static {p1, v1, v0}, Lz84;->F(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget-boolean v0, p0, Llhf;->b:Z
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v1, v2}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Llhf;->c:F
+
+    invoke-static {p1, v2, v2}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-boolean v0, p0, Llhf;->o:Z
+
+    const/4 v1, 0x5
+
+    invoke-static {p1, v1, v2}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Llhf;->X:F
+
+    const/4 v1, 0x6
+
+    invoke-static {p1, v1, v2}, Lz84;->M(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static {p1, p2}, Lz84;->L(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

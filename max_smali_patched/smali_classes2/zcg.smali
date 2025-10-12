@@ -1,115 +1,67 @@
-.class public final Lzcg;
+.class public abstract synthetic Lzcg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Logg;
 
-
-# instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppSettingsScreen;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x5
 
-    iput-object p1, p0, Lzcg;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-static {v0}, Lqw1;->y(I)[I
 
-    return-void
-.end method
+    move-result-object v1
 
+    array-length v1, v1
 
-# virtual methods
-.method public final a(Lngg;)V
-    .locals 1
+    new-array v1, v1, [I
 
-    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->n0:[Lof7;
+    const/4 v2, 0x1
 
-    iget-object p0, p0, Lzcg;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
+    const/4 v3, 0x0
 
-    invoke-virtual {p0}, Lone/me/webapp/settings/WebAppSettingsScreen;->x0()Lgdg;
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p0
+    :catch_0
+    const/4 v3, 0x2
 
-    instance-of v0, p1, Lmgg;
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-eqz v0, :cond_0
+    :catch_1
+    const/4 v2, 0x3
 
-    iget-object p0, p0, Lgdg;->r0:Lt65;
+    :try_start_2
+    aput v2, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    new-instance v0, Lbdg;
+    :catch_2
+    const/4 v3, 0x4
 
-    check-cast p1, Lmgg;
+    :try_start_3
+    aput v3, v1, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iget-object p1, p1, Lmgg;->b:Ly94;
+    :catch_3
+    :try_start_4
+    aput v0, v1, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-direct {v0, p1}, Lbdg;-><init>(Ly94;)V
-
-    invoke-static {p0, v0}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final b(Llgg;Z)V
-    .locals 3
-
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->n0:[Lof7;
-
-    iget-object p0, p0, Lzcg;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-virtual {p0}, Lone/me/webapp/settings/WebAppSettingsScreen;->x0()Lgdg;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p0, Lyxf;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v0, p0, Lgdg;->n0:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhoe;
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->b()Lj04;
-
-    move-result-object v0
-
-    new-instance v1, Lfdg;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p2, p0, v2}, Lfdg;-><init>(ZLgdg;Lkotlin/coroutines/Continuation;)V
-
-    sget-object p2, Ls04;->b:Ls04;
-
-    invoke-static {p1, v0, p2, v1}, Lyr3;->X(Lp04;Lh04;Ls04;Lt96;)Lt1e;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lgdg;->s0:Lvfd;
-
-    sget-object v0, Lgdg;->u0:[Lof7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {p2, p0, v0, p1}, Lvfd;->N(Ljava/lang/Object;Lof7;Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lgdg;->q()V
+    :catch_4
+    sput-object v1, Lzcg;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

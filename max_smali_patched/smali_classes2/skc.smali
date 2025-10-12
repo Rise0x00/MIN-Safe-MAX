@@ -1,140 +1,208 @@
-.class public final Lskc;
+.class public abstract Lskc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lyrc;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static call_history_item_call_audio_button_accessibility:I = 0x7f13014c
 
-.field public final b:J
+.field public static call_history_item_call_video_button_accessibility:I = 0x7f13015c
 
+.field public static empty_view_subtitle_empty_search:I = 0x7f13048b
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.field public static empty_view_title_empty_search:I = 0x7f13048c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static messages_list_message_content_level_chat_reply_text:I = 0x7f1306c9
 
-    iput-wide p1, p0, Lskc;->a:J
+.field public static oneme_action_share:I = 0x7f1307a1
 
-    iput-wide p3, p0, Lskc;->b:J
+.field public static oneme_action_share_qr_code_error:I = 0x7f1307a2
 
-    return-void
-.end method
+.field public static oneme_avatar_crop_reset:I = 0x7f1307b8
 
+.field public static oneme_belarus_name:I = 0x7f1307b9
 
-# virtual methods
-.method public final a()Z
-    .locals 0
+.field public static oneme_bot_official_shortlink_action_share_link_text:I = 0x7f1307ba
 
-    const/4 p0, 0x0
+.field public static oneme_bot_shortlink_action_share_link_text:I = 0x7f1307bb
 
-    return p0
-.end method
+.field public static oneme_bottom_sheet_cancel:I = 0x7f1307bc
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.field public static oneme_button_stack_more:I = 0x7f1307bd
 
-    const/4 v0, 0x1
+.field public static oneme_channel_shortlink_action_share_link_text:I = 0x7f1307be
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_chat_modal_action_add_to_folder:I = 0x7f1307c2
 
-    return v0
+.field public static oneme_chat_modal_action_block_user:I = 0x7f1307c3
 
-    :cond_0
-    const/4 v1, 0x0
+.field public static oneme_chat_modal_action_clear_chat_history:I = 0x7f1307c4
 
-    if-eqz p1, :cond_2
+.field public static oneme_chat_modal_action_clear_saved_messages:I = 0x7f1307c5
 
-    const-class v2, Lskc;
+.field public static oneme_chat_modal_action_delete_channel:I = 0x7f1307c6
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_chat_modal_action_delete_chat:I = 0x7f1307c7
 
-    move-result-object v3
+.field public static oneme_chat_modal_action_delete_for_all:I = 0x7f1307c8
 
-    if-eq v2, v3, :cond_1
+.field public static oneme_chat_modal_action_leave_chanel:I = 0x7f1307c9
 
-    goto :goto_0
+.field public static oneme_chat_modal_action_leave_chat:I = 0x7f1307ca
 
-    :cond_1
-    check-cast p1, Lskc;
+.field public static oneme_chat_modal_action_mark_as_read:I = 0x7f1307cb
 
-    iget-wide v2, p0, Lskc;->a:J
+.field public static oneme_chat_modal_action_mark_as_unread:I = 0x7f1307cc
 
-    iget-wide v4, p1, Lskc;->a:J
+.field public static oneme_chat_modal_action_modal_pin:I = 0x7f1307cd
 
-    cmp-long v2, v2, v4
+.field public static oneme_chat_modal_action_modal_unpin:I = 0x7f1307ce
 
-    if-nez v2, :cond_2
+.field public static oneme_chat_modal_action_mute:I = 0x7f1307cf
 
-    iget-wide v2, p0, Lskc;->b:J
+.field public static oneme_chat_modal_action_remove_from_folder:I = 0x7f1307d0
 
-    iget-wide p0, p1, Lskc;->b:J
+.field public static oneme_chat_modal_action_report:I = 0x7f1307d1
 
-    cmp-long p0, v2, p0
+.field public static oneme_chat_modal_action_select:I = 0x7f1307d2
 
-    if-nez p0, :cond_2
+.field public static oneme_chat_modal_action_send_logs:I = 0x7f1307d3
 
-    return v0
+.field public static oneme_chat_modal_action_share_channel:I = 0x7f1307d4
 
-    :cond_2
-    :goto_0
-    return v1
-.end method
+.field public static oneme_chat_modal_action_suspend_and_delete_bot:I = 0x7f1307d5
 
-.method public final hashCode()I
-    .locals 3
+.field public static oneme_chat_modal_action_suspend_bot:I = 0x7f1307d6
 
-    iget-wide v0, p0, Lskc;->a:J
+.field public static oneme_chat_modal_action_unmute:I = 0x7f1307d7
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public static oneme_chat_modal_action_unsubscribe_chanel:I = 0x7f1307d8
 
-    move-result-object v0
+.field public static oneme_chat_notifications_bottom_sheet_title:I = 0x7f1307d9
 
-    iget-wide v1, p0, Lskc;->b:J
+.field public static oneme_chat_notifications_disable_1_day:I = 0x7f1307da
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public static oneme_chat_notifications_disable_1_hour:I = 0x7f1307db
 
-    move-result-object p0
+.field public static oneme_chat_notifications_disable_4_hour:I = 0x7f1307dc
 
-    filled-new-array {v0, p0}, [Ljava/lang/Object;
+.field public static oneme_chat_notifications_disable_forever:I = 0x7f1307dd
 
-    move-result-object p0
+.field public static oneme_chat_notifications_off_snackbar_title:I = 0x7f1307de
 
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+.field public static oneme_chat_notifications_on_snackbar_title:I = 0x7f1307df
 
-    move-result p0
+.field public static oneme_chat_shortlink_action_share_link_text:I = 0x7f1307e0
 
-    return p0
-.end method
+.field public static oneme_chat_toolbar_more_action_add_to_folder:I = 0x7f1307e1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.field public static oneme_chat_toolbar_more_action_notifications:I = 0x7f1307e2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static oneme_chat_toolbar_more_action_search:I = 0x7f1307e3
 
-    const-string v1, "ReportPerfStatCommand{framesReceived="
+.field public static oneme_chat_toolbar_more_action_video_call:I = 0x7f1307e4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static oneme_connection_server_error_description:I = 0x7f130807
 
-    iget-wide v1, p0, Lskc;->a:J
+.field public static oneme_connection_server_error_title:I = 0x7f130808
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.field public static oneme_contact_not_found_bottom_sheet_not_now_button:I = 0x7f13080a
 
-    const-string v1, ", framesDecoded="
+.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f13080b
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f13080c
 
-    iget-wide v1, p0, Lskc;->b:J
+.field public static oneme_contactlist_action_audio_call:I = 0x7f13080e
 
-    const/16 p0, 0x7d
+.field public static oneme_contactlist_action_block:I = 0x7f13080f
 
-    invoke-static {v0, v1, v2, p0}, Ljq9;->h(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+.field public static oneme_contactlist_action_delete:I = 0x7f130810
 
-    move-result-object p0
+.field public static oneme_contactlist_action_open_profile:I = 0x7f130811
 
-    return-object p0
-.end method
+.field public static oneme_contactlist_action_select:I = 0x7f130812
+
+.field public static oneme_contactlist_action_share_contact:I = 0x7f130813
+
+.field public static oneme_contactlist_action_suspend_bot:I = 0x7f130814
+
+.field public static oneme_contactlist_action_video_call:I = 0x7f130815
+
+.field public static oneme_contactlist_action_write:I = 0x7f130816
+
+.field public static oneme_countries_bottomsheet_selection_title:I = 0x7f130817
+
+.field public static oneme_create_channel_button_text:I = 0x7f130818
+
+.field public static oneme_create_channel_description_hint:I = 0x7f130819
+
+.field public static oneme_create_channel_name_hint:I = 0x7f13081a
+
+.field public static oneme_empty_search_subtitle:I = 0x7f13081b
+
+.field public static oneme_empty_search_title:I = 0x7f13081c
+
+.field public static oneme_empty_search_view_title:I = 0x7f13081d
+
+.field public static oneme_empty_view_no_one_here:I = 0x7f13081e
+
+.field public static oneme_error_phone_empty:I = 0x7f13081f
+
+.field public static oneme_error_phone_too_long:I = 0x7f130820
+
+.field public static oneme_forward_author_invisible:I = 0x7f130836
+
+.field public static oneme_forward_author_visibility_onboarding:I = 0x7f130837
+
+.field public static oneme_forward_author_visible:I = 0x7f130838
+
+.field public static oneme_forward_confirm_cancel:I = 0x7f130839
+
+.field public static oneme_forward_confirm_close:I = 0x7f13083a
+
+.field public static oneme_forward_confirmation_close_title:I = 0x7f13083b
+
+.field public static oneme_input_error_empty_name:I = 0x7f130842
+
+.field public static oneme_input_error_empty_title:I = 0x7f130843
+
+.field public static oneme_input_error_incorrect_symbols:I = 0x7f130844
+
+.field public static oneme_input_error_name_length:I = 0x7f130845
+
+.field public static oneme_input_error_name_only_spaces:I = 0x7f130846
+
+.field public static oneme_invite:I = 0x7f130847
+
+.field public static oneme_last_message_pinned:I = 0x7f130850
+
+.field public static oneme_pick_photo_bottom_dialog_camera_button_text:I = 0x7f1308c4
+
+.field public static oneme_pick_photo_bottom_dialog_delete_button_text:I = 0x7f1308c5
+
+.field public static oneme_pick_photo_bottom_dialog_gallery_button_text:I = 0x7f1308c6
+
+.field public static oneme_pick_photo_bottom_dialog_title:I = 0x7f1308c7
+
+.field public static oneme_pinned_message_title:I = 0x7f1308c8
+
+.field public static oneme_russia_name:I = 0x7f13094c
+
+.field public static oneme_search_view_default_hint:I = 0x7f13094d
+
+.field public static oneme_tabbar_item_calls:I = 0x7f130a6e
+
+.field public static oneme_tabbar_item_chats:I = 0x7f130a6f
+
+.field public static oneme_tabbar_item_contacts:I = 0x7f130a70
+
+.field public static oneme_tabbar_item_settings:I = 0x7f130a71
+
+.field public static oneme_wait_please:I = 0x7f130a78
+
+.field public static search_all_contacts_header:I = 0x7f130c8d
+
+.field public static search_contacts_header:I = 0x7f130c93
+
+.field public static search_global_contacts_header:I = 0x7f130c96
+
+.field public static search_phonebook_contacts_header:I = 0x7f130c9a

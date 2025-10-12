@@ -1,24 +1,236 @@
-.class public abstract Lm6c;
-.super Ljava/lang/Object;
+.class public final Lm6c;
+.super Lg79;
+.source "SourceFile"
 
 
-# static fields
-.field public static IconSwitch:[I
+# instance fields
+.field public a:F
 
-.field public static IconSwitch_icon_switch_start_drawable:I
+.field public b:F
+
+.field public c:I
+
+.field public d:Z
 
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-    const v0, 0x7f040548
+    iget v0, p0, Lm6c;->a:F
 
-    filled-new-array {v0}, [I
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    move-result-object v0
+    move-result v0
 
-    sput-object v0, Lm6c;->IconSwitch:[I
+    const/4 v1, 0x0
 
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Le83;->e(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v2, p0, Lm6c;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Le83;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget v1, p0, Lm6c;->c:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Le83;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-boolean v1, p0, Lm6c;->d:Z
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Le83;->a(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Ld83;)Lg79;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Ld83;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x18
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x20
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Ld83;->f()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lm6c;->d:Z
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Ld83;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lm6c;->c:I
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Ld83;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lm6c;->b:F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Ld83;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lm6c;->a:F
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Le83;)V
+    .locals 3
+
+    iget v0, p0, Lm6c;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Lm6c;->a:F
+
+    invoke-virtual {p1, v0, v2}, Le83;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Lm6c;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v1, p0, Lm6c;->b:F
+
+    invoke-virtual {p1, v0, v1}, Le83;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Lm6c;->c:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
+
+    :cond_2
+    iget-boolean v0, p0, Lm6c;->d:Z
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v1, v0}, Le83;->r(IZ)V
+
+    :cond_3
     return-void
 .end method

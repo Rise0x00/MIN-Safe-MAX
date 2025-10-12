@@ -1,48 +1,96 @@
 .class public final Lrne;
-.super Lax3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldnd;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Ldnd;
 
-.field public final synthetic Y:Lin7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lm33;
 
 
 # direct methods
-.method public constructor <init>(Lin7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lm33;Ldnd;)V
     .locals 0
 
-    iput-object p1, p0, Lrne;->Y:Lin7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrne;->b:Lm33;
+
+    iput-object p2, p0, Lrne;->a:Ldnd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Z
     .locals 1
 
-    iput-object p1, p0, Lrne;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lrne;->a:Ldnd;
 
-    iget p1, p0, Lrne;->X:I
+    invoke-interface {v0}, Ldnd;->b()Z
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Lrne;->X:I
+.method public final e(J)Lbnd;
+    .locals 8
 
-    iget-object p1, p0, Lrne;->Y:Lin7;
+    iget-object v0, p0, Lrne;->a:Ldnd;
 
-    const/4 v0, 0x0
+    invoke-interface {v0, p1, p2}, Ldnd;->e(J)Lbnd;
 
-    invoke-virtual {p1, v0, p0}, Lin7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object p0
+    new-instance p2, Lbnd;
 
-    return-object p0
+    new-instance v0, Lhnd;
+
+    iget-object v1, p1, Lbnd;->a:Lhnd;
+
+    iget-wide v2, v1, Lhnd;->a:J
+
+    iget-wide v4, v1, Lhnd;->b:J
+
+    iget-object v1, p0, Lrne;->b:Lm33;
+
+    iget-wide v6, v1, Lm33;->b:J
+
+    add-long/2addr v4, v6
+
+    invoke-direct {v0, v2, v3, v4, v5}, Lhnd;-><init>(JJ)V
+
+    new-instance v1, Lhnd;
+
+    iget-object p1, p1, Lbnd;->b:Lhnd;
+
+    iget-wide v2, p1, Lhnd;->a:J
+
+    iget-wide v4, p1, Lhnd;->b:J
+
+    add-long/2addr v4, v6
+
+    invoke-direct {v1, v2, v3, v4, v5}, Lhnd;-><init>(JJ)V
+
+    invoke-direct {p2, v0, v1}, Lbnd;-><init>(Lhnd;Lhnd;)V
+
+    return-object p2
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-object v0, p0, Lrne;->a:Ldnd;
+
+    invoke-interface {v0}, Ldnd;->f()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

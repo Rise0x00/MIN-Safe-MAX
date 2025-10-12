@@ -1,72 +1,118 @@
 .class public final La08;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/android/MainActivity;
+.field public final a:J
+
+.field public final b:F
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lzz7;)V
+    .locals 2
 
-    iput-object p1, p0, La08;->X:Lone/me/android/MainActivity;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iget-wide v0, p1, Lzz7;->a:J
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide v0, p0, La08;->a:J
+
+    iget v0, p1, Lzz7;->b:F
+
+    iput v0, p0, La08;->b:F
+
+    iget-wide v0, p1, Lzz7;->c:J
+
+    iput-wide v0, p0, La08;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, La08;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, La08;
 
-    check-cast p0, La08;
+    const/4 v2, 0x0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, La08;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    return-object p1
+    :cond_1
+    check-cast p1, La08;
+
+    iget-wide v3, p0, La08;->a:J
+
+    iget-wide v5, p1, La08;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, La08;->b:F
+
+    iget v3, p1, La08;->b:F
+
+    cmpl-float v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, La08;->c:J
+
+    iget-wide v5, p1, La08;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public final hashCode()I
+    .locals 4
 
-    new-instance p1, La08;
+    iget-wide v0, p0, La08;->a:J
 
-    iget-object p0, p0, La08;->X:Lone/me/android/MainActivity;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {p1, p0, p2}, La08;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    iget v1, p0, La08;->b:F
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v1
 
-    iget-object p0, p0, La08;->X:Lone/me/android/MainActivity;
+    iget-wide v2, p0, La08;->c:J
 
-    invoke-virtual {p0}, Lm5;->a0()V
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    move-result-object v2
 
-    return-object p0
+    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

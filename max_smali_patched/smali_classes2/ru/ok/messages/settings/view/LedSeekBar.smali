@@ -1,5 +1,5 @@
 .class public Lru/ok/messages/settings/view/LedSeekBar;
-.super Lhn;
+.super Lvn;
 .source "SourceFile"
 
 # interfaces
@@ -9,32 +9,32 @@
 # instance fields
 .field public final b:I
 
-.field public c:Lii7;
-
-.field public final n0:Landroid/graphics/drawable/ShapeDrawable;
+.field public c:Lqp7;
 
 .field public final o:[I
+
+.field public final w0:Landroid/graphics/drawable/ShapeDrawable;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    invoke-direct {p0, p1, p2}, Lhn;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lvn;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lpl;->b()Lke3;
-
-    move-result-object p1
-
-    check-cast p1, Loaa;
-
-    invoke-virtual {p1}, Loaa;->n()Laab;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object p1
 
-    iget-object p1, p1, Laab;->c:Lbp;
+    check-cast p1, Lyka;
 
-    invoke-virtual {p1}, Lbp;->u()[I
+    invoke-virtual {p1}, Lyka;->n()Lzob;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzob;->c:Lsp;
+
+    invoke-virtual {p1}, Lsp;->u()[I
 
     move-result-object p1
 
@@ -42,13 +42,13 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lon4;->b()Lon4;
+    invoke-static {}, Ltq4;->a()Ltq4;
 
     move-result-object p1
 
-    iget p2, p1, Lon4;->n:I
+    iget p2, p1, Ltq4;->n:I
 
-    iget p1, p1, Lon4;->b:I
+    iget p1, p1, Ltq4;->b:I
 
     iput p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->b:I
 
@@ -56,7 +56,7 @@
 
     move-result-object p1
 
-    sget v0, Lxsc;->d:I
+    sget v0, Lp9d;->d:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -68,9 +68,9 @@
 
     invoke-virtual {p0, p1, v0, p1, v0}, Landroid/view/View;->setPadding(IIII)V
 
-    new-instance p1, La6;
+    new-instance p1, Lf6;
 
-    invoke-direct {p1, p0}, La6;-><init>(Lru/ok/messages/settings/view/LedSeekBar;)V
+    invoke-direct {p1, p0}, Lf6;-><init>(Lru/ok/messages/settings/view/LedSeekBar;)V
 
     invoke-virtual {p0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -82,19 +82,19 @@
 
     invoke-direct {p1, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    iput-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->n0:Landroid/graphics/drawable/ShapeDrawable;
+    iput-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {p1, v0, v0, p2, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->n0:Landroid/graphics/drawable/ShapeDrawable;
+    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
 
-    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->n0:Landroid/graphics/drawable/ShapeDrawable;
+    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicWidth(I)V
 
-    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->n0:Landroid/graphics/drawable/ShapeDrawable;
+    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {p0, p1}, Landroid/widget/AbsSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
@@ -143,17 +143,17 @@
     add-int/lit8 p2, p1, -0x1
 
     :cond_0
-    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->n0:Landroid/graphics/drawable/ShapeDrawable;
+    iget-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->w0:Landroid/graphics/drawable/ShapeDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
     move-result-object p1
 
-    iget-object p0, p0, Lru/ok/messages/settings/view/LedSeekBar;->o:[I
+    iget-object p3, p0, Lru/ok/messages/settings/view/LedSeekBar;->o:[I
 
-    aget p0, p0, p2
+    aget p2, p3, p2
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
 
     return-void
 .end method
@@ -230,35 +230,35 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    iget-object v0, p0, Lru/ok/messages/settings/view/LedSeekBar;->c:Lii7;
+    iget-object v0, p0, Lru/ok/messages/settings/view/LedSeekBar;->c:Lqp7;
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lru/ok/messages/settings/view/LedSeekBar;->o:[I
+    iget-object v1, p0, Lru/ok/messages/settings/view/LedSeekBar;->o:[I
 
-    aget p0, p0, p1
+    aget p1, v1, p1
 
-    check-cast v0, Lza4;
+    check-cast v0, Llk4;
 
-    iget-object p1, v0, Lza4;->b:Ljava/lang/Object;
+    iget-object v1, v0, Llk4;->b:Ljava/lang/Object;
 
-    check-cast p1, Lji7;
+    check-cast v1, Lrp7;
 
-    iget-object v0, v0, Lza4;->c:Ljava/lang/Object;
+    iget-object v0, v0, Llk4;->c:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/messages/settings/FrgBaseSettings;
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p1, Lji7;->G0:Lagd;
+    iget-object v1, v1, Lrp7;->P0:Lwxd;
 
-    iget p1, p1, Lagd;->a:I
+    iget v1, v1, Lwxd;->a:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {v0, p1, p0}, Lru/ok/messages/settings/FrgBaseSettings;->i1(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lru/ok/messages/settings/FrgBaseSettings;->g1(ILjava/lang/Object;)V
 
     :cond_1
     return-void
@@ -324,10 +324,10 @@
     return-void
 .end method
 
-.method public setListener(Lii7;)V
+.method public setListener(Lqp7;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->c:Lii7;
+    iput-object p1, p0, Lru/ok/messages/settings/view/LedSeekBar;->c:Lqp7;
 
     return-void
 .end method

@@ -1,133 +1,112 @@
 .class public final Lnub;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lqub;
+.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lqub;)V
+.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Lnub;->Y:Lqub;
+    iput p2, p0, Lnub;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lnub;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lnub;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    check-cast p0, Lnub;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lnub;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lnub;
-
-    iget-object p0, p0, Lnub;->Y:Lqub;
-
-    invoke-direct {v0, p2, p0}, Lnub;-><init>(Lkotlin/coroutines/Continuation;Lqub;)V
-
-    iput-object p1, v0, Lnub;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnub;->X:Ljava/lang/Object;
-
-    check-cast p1, Laub;
-
-    sget v0, Lqub;->C0:F
-
-    instance-of v0, p1, Lztb;
-
-    iget-object p0, p0, Lnub;->Y:Lqub;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lqub;->getCameraApi()Ljx1;
+    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
 
     move-result-object p1
 
-    iget-object p0, p0, Lqub;->n0:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1}, Li8d;->C()Z
 
-    if-nez p0, :cond_0
+    return-void
 
-    const/4 p0, 0x0
+    :pswitch_0
+    iget-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+
+    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Ltm7;
+
+    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwub;
+
+    iget-object v0, p1, Lwub;->y0:Lqle;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ld0;->isActive()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    invoke-interface {p1, p0}, Ljx1;->d(Ljava/util/concurrent/ExecutorService;)V
+    iget-object v0, p1, Lwub;->X:Lbp7;
 
-    goto :goto_0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    instance-of v0, p1, Lxtb;
+    move-result-object v0
 
-    if-eqz v0, :cond_2
+    check-cast v0, Lr8f;
 
-    invoke-virtual {p0}, Lqub;->getCameraApi()Ljx1;
+    check-cast v0, Lwla;
 
-    move-result-object p0
+    invoke-virtual {v0}, Lwla;->b()Ly24;
 
-    check-cast p1, Lxtb;
+    move-result-object v0
 
-    iget-object p1, p1, Lxtb;->a:Ljava/io/File;
+    new-instance v1, Lvub;
 
-    invoke-interface {p0, p1}, Ljx1;->a(Ljava/io/File;)V
+    const/4 v2, 0x0
 
-    goto :goto_0
+    invoke-direct {v1, p1, v2}, Lvub;-><init>(Lwub;Lkotlin/coroutines/Continuation;)V
 
-    :cond_2
-    instance-of p1, p1, Lytb;
+    const/4 v2, 0x2
 
-    if-eqz p1, :cond_3
+    invoke-static {p1, v0, v1, v2}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
 
-    invoke-virtual {p0}, Lqub;->getCameraApi()Ljx1;
+    move-result-object v0
 
-    move-result-object p0
-
-    invoke-interface {p0}, Ljx1;->g()V
+    iput-object v0, p1, Lwub;->y0:Lqle;
 
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    return-void
 
-    return-object p0
+    nop
 
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

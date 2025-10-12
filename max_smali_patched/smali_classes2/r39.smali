@@ -1,44 +1,25 @@
 .class public final Lr39;
-.super Ljava/lang/Object;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
-
-# interfaces
-.implements Ly39;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Le00;
+.field public a:Z
 
 
 # direct methods
-.method public constructor <init>(JLe00;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lr39;->a:J
-
-    iput-object p3, p0, Lr39;->b:Le00;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final j()J
+.method public constructor <init>()V
     .locals 2
 
-    iget-wide v0, p0, Lr39;->a:J
+    const/4 v0, -0x1
 
-    return-wide v0
+    const/4 v1, -0x2
+
+    invoke-direct {p0, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lr39;->a:Z
+
+    return-void
 .end method

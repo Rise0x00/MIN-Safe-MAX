@@ -1,78 +1,154 @@
 .class public final Lo98;
-.super Leje;
+.super Lq98;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/util/Iterator;
+.implements Lim7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ls8d;
+.field public final synthetic X:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Ls8d;)V
+.method public constructor <init>(ILr98;)V
     .locals 0
 
-    iput-object p2, p0, Lo98;->Y:Ls8d;
+    iput p1, p0, Lo98;->X:I
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lq98;->o:Ljava/lang/Object;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lq98;->b:I
+
+    iget p1, p2, Lr98;->w0:I
+
+    iput p1, p0, Lq98;->c:I
+
+    invoke-virtual {p0}, Lq98;->e()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lo98;->X:I
 
-    invoke-virtual {p0, p1, p2}, Lo98;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    invoke-virtual {p0}, Lq98;->b()V
 
-    check-cast p0, Lo98;
+    iget v0, p0, Lq98;->a:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object v1, p0, Lq98;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lo98;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Lr98;
 
-    return-object p1
-.end method
+    iget v2, v1, Lr98;->Y:I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-ge v0, v2, :cond_0
 
-    new-instance v0, Lo98;
+    add-int/lit8 v2, v0, 0x1
 
-    iget-object p0, p0, Lo98;->Y:Ls8d;
+    iput v2, p0, Lq98;->a:I
 
-    invoke-direct {v0, p2, p0}, Lo98;-><init>(Lkotlin/coroutines/Continuation;Ls8d;)V
+    iput v0, p0, Lq98;->b:I
 
-    iput-object p1, v0, Lo98;->X:Ljava/lang/Object;
+    iget-object v1, v1, Lr98;->b:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    invoke-virtual {p0}, Lq98;->e()V
 
     return-object v0
-.end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    iget-object p1, p0, Lo98;->X:Ljava/lang/Object;
+    throw v0
 
-    check-cast p1, Ljava/util/List;
+    :pswitch_0
+    invoke-virtual {p0}, Lq98;->b()V
 
-    iget-object p0, p0, Lo98;->Y:Ls8d;
+    iget v0, p0, Lq98;->a:I
 
-    invoke-virtual {p0, p1}, Ldp7;->E(Ljava/util/List;)V
+    iget-object v1, p0, Lq98;->o:Ljava/lang/Object;
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    check-cast v1, Lr98;
 
-    return-object p0
+    iget v2, v1, Lr98;->Y:I
+
+    if-ge v0, v2, :cond_1
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lq98;->a:I
+
+    iput v0, p0, Lq98;->b:I
+
+    iget-object v1, v1, Lr98;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    invoke-virtual {p0}, Lq98;->e()V
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {p0}, Lq98;->b()V
+
+    iget v0, p0, Lq98;->a:I
+
+    iget-object v1, p0, Lq98;->o:Ljava/lang/Object;
+
+    check-cast v1, Lr98;
+
+    iget v2, v1, Lr98;->Y:I
+
+    if-ge v0, v2, :cond_2
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lq98;->a:I
+
+    iput v0, p0, Lq98;->b:I
+
+    new-instance v2, Lp98;
+
+    invoke-direct {v2, v0, v1}, Lp98;-><init>(ILr98;)V
+
+    invoke-virtual {p0}, Lq98;->e()V
+
+    return-object v2
+
+    :cond_2
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lawe;
+.implements Llgf;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lawe;"
+        "Llgf;"
     }
 .end annotation
 
@@ -24,36 +24,36 @@
     d2 = {
         "Lkotlinx/coroutines/internal/ThreadLocalElement;",
         "T",
-        "Lawe;",
+        "Llgf;",
         "value",
         "Ljava/lang/ThreadLocal;",
         "threadLocal",
         "<init>",
         "(Ljava/lang/Object;Ljava/lang/ThreadLocal;)V",
-        "Lh04;",
+        "Lw24;",
         "context",
         "updateThreadContext",
-        "(Lh04;)Ljava/lang/Object;",
+        "(Lw24;)Ljava/lang/Object;",
         "oldState",
-        "Ltcf;",
+        "Loyf;",
         "restoreThreadContext",
-        "(Lh04;Ljava/lang/Object;)V",
-        "Lg04;",
+        "(Lw24;Ljava/lang/Object;)V",
+        "Lv24;",
         "key",
         "minusKey",
-        "(Lg04;)Lh04;",
-        "Lf04;",
+        "(Lv24;)Lw24;",
+        "Lu24;",
         "E",
         "get",
-        "(Lg04;)Lf04;",
+        "(Lv24;)Lu24;",
         "",
         "toString",
         "()Ljava/lang/String;",
         "Ljava/lang/Object;",
         "Ljava/lang/ThreadLocal;",
-        "Lg04;",
+        "Lv24;",
         "getKey",
-        "()Lg04;",
+        "()Lv24;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -67,10 +67,10 @@
 
 
 # instance fields
-.field private final key:Lg04;
+.field private final key:Lv24;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lg04;"
+            "Lv24;"
         }
     .end annotation
 .end field
@@ -114,49 +114,49 @@
 
     invoke-direct {p1, p2}, Lkotlinx/coroutines/internal/ThreadLocalKey;-><init>(Ljava/lang/ThreadLocal;)V
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->key:Lg04;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->key:Lv24;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public fold(Ljava/lang/Object;Lt96;)Ljava/lang/Object;
+.method public fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(TR;",
-            "Lt96;",
+            "Llf6;",
             ")TR;"
         }
     .end annotation
 
-    invoke-interface {p2, p1, p0}, Lt96;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public get(Lg04;)Lf04;
+.method public get(Lv24;)Lu24;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<E::",
-            "Lf04;",
+            "Lu24;",
             ">(",
-            "Lg04;",
+            "Lv24;",
             ")TE;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadLocalElement;->getKey()Lg04;
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadLocalElement;->getKey()Lv24;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -165,75 +165,77 @@
     return-object p0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public getKey()Lg04;
-    .locals 0
+.method public getKey()Lv24;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lg04;"
+            "Lv24;"
         }
     .end annotation
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->key:Lg04;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->key:Lv24;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public minusKey(Lg04;)Lh04;
+.method public minusKey(Lv24;)Lw24;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lg04;",
+            "Lv24;",
             ")",
-            "Lh04;"
+            "Lw24;"
         }
     .end annotation
 
-    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadLocalElement;->getKey()Lg04;
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/ThreadLocalElement;->getKey()Lv24;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    sget-object p0, Ll25;->a:Ll25;
+    sget-object p1, Lv65;->a:Lv65;
+
+    return-object p1
 
     :cond_0
     return-object p0
 .end method
 
-.method public plus(Lh04;)Lh04;
+.method public plus(Lw24;)Lw24;
     .locals 0
 
-    invoke-static {p0, p1}, Lu77;->L(Lh04;Lh04;)Lh04;
+    invoke-static {p0, p1}, Lkmc;->t(Lw24;Lw24;)Lw24;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public restoreThreadContext(Lh04;Ljava/lang/Object;)V
+.method public restoreThreadContext(Lw24;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lh04;",
+            "Lw24;",
             "TT;)V"
         }
     .end annotation
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object p1, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->threadLocal:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {p0, p2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -255,27 +257,27 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->threadLocal:Ljava/lang/ThreadLocal;
+    iget-object v1, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->threadLocal:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x29
+    const/16 v1, 0x29
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public updateThreadContext(Lh04;)Ljava/lang/Object;
-    .locals 1
+.method public updateThreadContext(Lw24;)Ljava/lang/Object;
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lh04;",
+            "Lw24;",
             ")TT;"
         }
     .end annotation
@@ -288,9 +290,9 @@
 
     iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->threadLocal:Ljava/lang/ThreadLocal;
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->value:Ljava/lang/Object;
+    iget-object v1, p0, Lkotlinx/coroutines/internal/ThreadLocalElement;->value:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     return-object p1
 .end method

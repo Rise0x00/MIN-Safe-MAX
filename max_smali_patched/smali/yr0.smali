@@ -1,356 +1,135 @@
 .class public final Lyr0;
-.super Lur0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcie;
 
-# instance fields
-.field public final a:Ljava/lang/Boolean;
 
-.field public final b:Lpkg;
-
-.field public c:Landroid/view/Window;
-
-.field public d:Z
+# static fields
+.field public static final a:Lxr0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lpkg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxr0;
 
-    iput-object p2, p0, Lyr0;->b:Lpkg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->C(Landroid/view/View;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->i:La58;
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, La58;->a:Lz48;
-
-    iget-object p2, p2, Lz48;->c:Landroid/content/res/ColorStateList;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p2, Lixf;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p1}, Lxwf;->g(Landroid/view/View;)Landroid/content/res/ColorStateList;
-
-    move-result-object p2
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result p1
-
-    invoke-static {p1}, Ldjg;->y(I)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyr0;->a:Ljava/lang/Boolean;
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcsa;->j(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    move-object p1, p2
-
-    :goto_1
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p1}, Ldjg;->y(I)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyr0;->a:Ljava/lang/Boolean;
-
-    return-void
-
-    :cond_3
-    iput-object p2, p0, Lyr0;->a:Ljava/lang/Boolean;
+    sput-object v0, Lyr0;->a:Lxr0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;)V
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lyr0;->d(Landroid/view/View;)V
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 .end method
 
-.method public final b(Landroid/view/View;)V
-    .locals 0
+.method public final b()Z
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lyr0;->d(Landroid/view/View;)V
+    sget-boolean v0, Lwr0;->d:Z
 
-    return-void
+    sget-boolean v0, Lwr0;->d:Z
+
+    return v0
 .end method
 
-.method public final c(Landroid/view/View;I)V
-    .locals 0
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lyr0;->d(Landroid/view/View;)V
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
 
-    return-void
-.end method
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getApplicationProtocol()Ljava/lang/String;
 
-.method public final d(Landroid/view/View;)V
-    .locals 5
+    move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    iget-object v1, p0, Lyr0;->b:Lpkg;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Lpkg;->d()I
+    goto :goto_1
 
-    move-result v2
+    :cond_1
+    const-string v0, ""
 
-    const/16 v3, 0x1e
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-ge v0, v2, :cond_3
-
-    iget-object v0, p0, Lyr0;->c:Landroid/view/Window;
+    move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v2, p0, Lyr0;->a:Ljava/lang/Boolean;
-
-    if-nez v2, :cond_0
-
-    iget-boolean p0, p0, Lyr0;->d:Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
     :goto_0
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v2
-
-    new-instance v4, Lyba;
-
-    invoke-direct {v4, v2}, Lyba;-><init>(Landroid/view/View;)V
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v2, v3, :cond_1
-
-    new-instance v2, Lrkg;
-
-    invoke-static {v0}, Llkg;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3, v4}, Lrkg;-><init>(Landroid/view/WindowInsetsController;Lyba;)V
-
-    iput-object v0, v2, Lrkg;->e:Landroid/view/Window;
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v2, Lqkg;
-
-    invoke-direct {v2, v0, v4}, Lqkg;-><init>(Landroid/view/Window;Lyba;)V
-
-    :goto_1
-    invoke-virtual {v2, p0}, Lxwe;->A(Z)V
+    const/4 p1, 0x0
 
     :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result p0
-
-    invoke-virtual {v1}, Lpkg;->d()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v2
-
-    invoke-virtual {p1, p0, v0, v1, v2}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lyr0;->c:Landroid/view/Window;
-
-    if-eqz v0, :cond_5
-
-    iget-boolean p0, p0, Lyr0;->d:Z
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v1
-
-    new-instance v2, Lyba;
-
-    invoke-direct {v2, v1}, Lyba;-><init>(Landroid/view/View;)V
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v1, v3, :cond_4
-
-    new-instance v1, Lrkg;
-
-    invoke-static {v0}, Llkg;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-
-    move-result-object v3
-
-    invoke-direct {v1, v3, v2}, Lrkg;-><init>(Landroid/view/WindowInsetsController;Lyba;)V
-
-    iput-object v0, v1, Lrkg;->e:Landroid/view/Window;
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v1, Lqkg;
-
-    invoke-direct {v1, v0, v2}, Lqkg;-><init>(Landroid/view/Window;Lyba;)V
-
-    :goto_2
-    invoke-virtual {v1, p0}, Lxwe;->A(Z)V
-
-    :cond_5
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, p0, v2, v0, v1}, Landroid/view/View;->setPadding(IIII)V
-
-    :cond_6
-    return-void
+    :goto_1
+    return-object p1
 .end method
 
-.method public final e(Landroid/view/Window;)V
-    .locals 3
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    iget-object v0, p0, Lyr0;->c:Landroid/view/Window;
+    invoke-virtual {p0, p1}, Lyr0;->a(Ljavax/net/ssl/SSLSocket;)Z
 
-    if-ne v0, p1, :cond_0
+    move-result p2
 
-    goto :goto_1
+    if-eqz p2, :cond_1
+
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
+
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getParameters()Lorg/bouncycastle/jsse/BCSSLParameters;
+
+    move-result-object p2
+
+    sget-object v0, Lujb;->a:Lujb;
+
+    invoke-static {p3}, Ll62;->a(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_0
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-virtual {p2, p3}, Lorg/bouncycastle/jsse/BCSSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
+
+    invoke-interface {p1, p2}, Lorg/bouncycastle/jsse/BCSSLSocket;->setParameters(Lorg/bouncycastle/jsse/BCSSLParameters;)V
+
+    return-void
 
     :cond_0
-    iput-object p1, p0, Lyr0;->c:Landroid/view/Window;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    if-eqz p1, :cond_2
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
 
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
-
-    new-instance v1, Lyba;
-
-    invoke-direct {v1, v0}, Lyba;-><init>(Landroid/view/View;)V
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1e
-
-    if-lt v0, v2, :cond_1
-
-    new-instance v0, Lrkg;
-
-    invoke-static {p1}, Llkg;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Lrkg;-><init>(Landroid/view/WindowInsetsController;Lyba;)V
-
-    iput-object p1, v0, Lrkg;->e:Landroid/view/Window;
-
-    goto :goto_0
+    throw p1
 
     :cond_1
-    new-instance v0, Lqkg;
-
-    invoke-direct {v0, p1, v1}, Lqkg;-><init>(Landroid/view/Window;Lyba;)V
-
-    :goto_0
-    invoke-virtual {v0}, Lxwe;->p()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lyr0;->d:Z
-
-    :cond_2
-    :goto_1
     return-void
 .end method

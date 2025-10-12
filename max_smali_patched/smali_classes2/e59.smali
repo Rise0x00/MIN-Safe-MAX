@@ -1,71 +1,97 @@
 .class public final Le59;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Lhhc;
 
 
 # instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+.field public final a:Lb59;
 
-.field public final b:La89;
+.field public b:I
+
+.field public c:Lnv7;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;La89;)V
+.method public constructor <init>(Lb59;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p1, p0, Le59;->a:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object p1, p0, Le59;->a:Lb59;
 
-    iput-object p2, p0, Le59;->b:La89;
+    iput p2, p0, Le59;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 8
 
-    return-void
-.end method
+    iget-object v0, p0, Le59;->c:Lnv7;
 
-.method public final d(Landroid/view/View;)V
-    .locals 2
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Le59;->a:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, v0, Lnv7;->a:Lov7;
 
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->I(Landroid/view/View;)Landroid/view/View;
+    iget-object v1, v0, Lov7;->o:Lc7;
 
-    move-result-object v1
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-nez v1, :cond_0
+    move-result-wide v2
 
-    const/4 v0, 0x0
+    iget-wide v4, v1, Lc7;->a:J
+
+    sub-long v4, v2, v4
+
+    const-wide/16 v6, 0x12c
+
+    cmp-long v4, v4, v6
+
+    if-lez v4, :cond_2
+
+    iput-wide v2, v1, Lc7;->a:J
+
+    iget-object v0, v0, Lov7;->a:Llv7;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p1, Llv7;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Llv7;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Luhc;
-
-    move-result-object v0
-
-    :goto_0
-    instance-of v0, v0, La19;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lab6;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, p1, v1, p0}, Lab6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Lyna;->a(Landroid/view/View;Ljava/lang/Runnable;)Lyna;
+    const/4 v0, 0x0
 
     :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
+
+    iget-object p1, p0, Le59;->a:Lb59;
+
+    invoke-interface {v0, p1}, Llv7;->a(Lb59;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Le59;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
     return-void
 .end method

@@ -1,73 +1,271 @@
-.class public final enum Lcu0;
-.super Ljava/lang/Enum;
+.class public final synthetic Lcu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Lcu0;
 
-.field public static final enum b:Lcu0;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lcu0;
+.field public final synthetic b:Leu0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Leu0;I)V
+    .locals 0
 
-    new-instance v0, Lcu0;
+    iput p2, p0, Lcu0;->a:I
 
-    const-string v1, "ACTIVE"
+    iput-object p1, p0, Lcu0;->b:Leu0;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcu0;->a:Lcu0;
-
-    new-instance v1, Lcu0;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcu0;->b:Lcu0;
-
-    filled-new-array {v0, v1}, [Lcu0;
-
-    move-result-object v0
-
-    sput-object v0, Lcu0;->c:[Lcu0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcu0;
-    .locals 1
 
-    const-class v0, Lcu0;
+# virtual methods
+.method public final run()V
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lcu0;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lcu0;
+    iget-object v0, p0, Lcu0;->b:Leu0;
 
-    return-object p0
-.end method
+    iget-object v1, v0, Leu0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method public static values()[Lcu0;
-    .locals 1
+    const/4 v2, 0x0
 
-    sget-object v0, Lcu0;->c:[Lcu0;
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    invoke-virtual {v0}, [Lcu0;->clone()Ljava/lang/Object;
+    iget-object v1, v0, Leu0;->g:Lg60;
 
-    move-result-object v0
+    iget-object v2, v1, Lg60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    check-cast v0, [Lcu0;
+    const/4 v3, 0x1
 
-    return-object v0
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1d
+
+    if-lt v2, v3, :cond_1
+
+    iget-object v2, v1, Lg60;->k:Lf60;
+
+    if-eqz v2, :cond_1
+
+    iget-object v3, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-static {v3, v2}, Lwk;->g(Landroid/media/AudioRecord;Lf60;)V
+
+    :cond_1
+    iget-object v1, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v1}, Landroid/media/AudioRecord;->release()V
+
+    :goto_0
+    iget-object v1, v0, Leu0;->e:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    iput-object v2, v0, Leu0;->f:Ldu0;
+
+    iget-object v0, v0, Leu0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcu0;->b:Leu0;
+
+    invoke-virtual {v0}, Leu0;->b()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lcu0;->b:Leu0;
+
+    :try_start_1
+    iget-object v1, v0, Leu0;->g:Lg60;
+
+    invoke-virtual {v1}, Lg60;->d()V
+
+    iget-object v1, v0, Leu0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0}, Leu0;->b()V
+    :try_end_1
+    .catch Landroidx/camera/video/internal/audio/AudioStream$AudioStreamException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_2
+    iget-object v0, p0, Lcu0;->b:Leu0;
+
+    iget-object v1, v0, Leu0;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v1, v0, Leu0;->g:Lg60;
+
+    invoke-virtual {v1}, Lg60;->a()V
+
+    iget-object v3, v1, Lg60;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v2, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->stop()V
+
+    iget-object v2, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    move-result v2
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_4
+
+    const-string v2, "AudioStreamImpl"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Failed to stop AudioRecord with state: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v5, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v5}, Landroid/media/AudioRecord;->getRecordingState()I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_4
+    const-class v2, Landroidx/camera/video/internal/compat/quirk/AudioTimestampFramePositionIncorrectQuirk;
+
+    sget-object v4, Lsp4;->a:Lot6;
+
+    invoke-virtual {v4, v2}, Lot6;->e(Ljava/lang/Class;)Lt9c;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    invoke-virtual {v2}, Landroid/media/AudioRecord;->release()V
+
+    iget v2, v1, Lg60;->f:I
+
+    iget-object v4, v1, Lg60;->b:La90;
+
+    invoke-static {v2, v4, v3}, Lg60;->b(ILa90;Landroid/content/Context;)Landroid/media/AudioRecord;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lg60;->a:Landroid/media/AudioRecord;
+
+    :cond_5
+    :goto_2
+    iget-object v1, v0, Leu0;->e:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_2
+    iput-object v3, v0, Leu0;->f:Ldu0;
+
+    iget-object v0, v0, Leu0;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

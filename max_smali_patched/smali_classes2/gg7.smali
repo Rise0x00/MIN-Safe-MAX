@@ -1,23 +1,35 @@
 .class public final Lgg7;
-.super Lt2;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lgg7;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public Y:I
+
+.field public o:Ljava/lang/Long;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lgg7;
+    iput-object p1, p0, Lgg7;->X:Ljava/lang/Object;
 
-    const/4 v1, 0x7
+    iget p1, p0, Lgg7;->Y:I
 
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
+    const/high16 v0, -0x80000000
 
-    sput-object v0, Lgg7;->c:Lgg7;
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lgg7;->Y:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p0}, Log7;->r(Ljava/lang/String;Log7;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final PARSER:Lle7;
+.field public static final PARSER:Lpl7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lle7;"
+            "Lpl7;"
         }
     .end annotation
 .end field
@@ -51,13 +51,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lbj5;
+    new-instance v0, Los5;
 
-    const/16 v1, 0x1d
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lbj5;-><init>(I)V
+    invoke-direct {v0, v1}, Los5;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lle7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lpl7;
 
     return-void
 .end method
@@ -102,17 +102,17 @@
     return-void
 .end method
 
-.method public static synthetic a(Lqe7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+.method public static synthetic a(Lvl7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Lqe7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Lvl7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Lqe7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+.method private static synthetic lambda$static$0(Lvl7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
     .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -123,7 +123,7 @@
 
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-interface {p0}, Lqe7;->s()V
+    invoke-interface {p0}, Lvl7;->s()V
 
     const/4 v1, 0x0
 
@@ -146,13 +146,13 @@
     move v11, v10
 
     :goto_0
-    invoke-interface {p0}, Lqe7;->hasNext()Z
+    invoke-interface {p0}, Lvl7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    invoke-interface {p0}, Lqe7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lvl7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -297,68 +297,68 @@
     :goto_1
     packed-switch v3, :pswitch_data_0
 
-    invoke-interface {p0}, Lqe7;->B()V
+    invoke-interface {p0}, Lvl7;->B()V
 
     goto :goto_0
 
     :pswitch_0
-    invoke-interface {p0}, Lqe7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
 
     move-result-object v7
 
     goto :goto_0
 
     :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lqe7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvl7;)Ljava/util/List;
 
     move-result-object v6
 
     goto :goto_0
 
     :pswitch_2
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lqe7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvl7;)Ljava/util/List;
 
     move-result-object v5
 
     goto/16 :goto_0
 
     :pswitch_3
-    invoke-interface {p0}, Lqe7;->E()I
+    invoke-interface {p0}, Lvl7;->E()I
 
     move-result v11
 
     goto/16 :goto_0
 
     :pswitch_4
-    invoke-interface {p0}, Lqe7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
 
     move-result-object v8
 
     goto/16 :goto_0
 
     :pswitch_5
-    invoke-interface {p0}, Lqe7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
 
     move-result-object v4
 
     goto/16 :goto_0
 
     :pswitch_6
-    invoke-interface {p0}, Lqe7;->e0()Z
+    invoke-interface {p0}, Lvl7;->e0()Z
 
     move-result v10
 
     goto/16 :goto_0
 
     :pswitch_7
-    invoke-interface {p0}, Lqe7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
 
     move-result-object v9
 
     goto/16 :goto_0
 
     :cond_8
-    invoke-interface {p0}, Lqe7;->q()V
+    invoke-interface {p0}, Lvl7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
@@ -447,9 +447,9 @@
     iput-object v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
 
     .line 20
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->isP2PForbidden:Z
 
-    iput-boolean p0, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->isP2PForbidden:Z
+    iput-boolean v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->isP2PForbidden:Z
 
     return-object v0
 .end method
@@ -507,9 +507,9 @@
     iput p1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->deviceIndex:I
 
     .line 8
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
 
-    iput-object p0, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
+    iput-object p1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->token:Ljava/lang/String;
 
     .line 9
     iput-object v1, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
@@ -518,7 +518,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -558,13 +558,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->token:Ljava/lang/String;
 
-    const-string v1, "\'}"
+    const-string v2, "\'}"
 
-    invoke-static {v0, p0, v1}, Lw68;->o(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

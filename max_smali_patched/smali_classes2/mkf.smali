@@ -1,94 +1,78 @@
-.class public final Lmkf;
+.class public final synthetic Lmkf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:Lnkf;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lhya;
 
 
 # direct methods
-.method public constructor <init>(Lnkf;)V
+.method public synthetic constructor <init>(Lhya;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lmkf;->a:I
 
-    iput-object p1, p0, Lmkf;->a:Lnkf;
+    iput-object p1, p0, Lmkf;->b:Lhya;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lmkf;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lmkf;->b:Lhya;
 
-    :cond_0
-    instance-of v1, p1, Lmkf;
+    check-cast v0, Lfya;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lfya;->a:Lmya;
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Lmya;->b:Lxe6;
 
-    return v2
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lmkf;
+    return-void
 
-    iget-object p0, p0, Lmkf;->a:Lnkf;
+    :pswitch_0
+    iget-object v0, p0, Lmkf;->b:Lhya;
 
-    iget-object p1, p1, Lmkf;->a:Lnkf;
+    check-cast v0, Lcya;
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, v0, Lcya;->a:Lxe6;
 
-    move-result p0
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez p0, :cond_2
+    return-void
 
-    return v2
+    :pswitch_1
+    iget-object v0, p0, Lmkf;->b:Lhya;
 
-    :cond_2
-    return v0
-.end method
+    check-cast v0, Lbya;
 
-.method public final hashCode()I
-    .locals 0
+    iget-object v0, v0, Lbya;->a:Lxe6;
 
-    iget-object p0, p0, Lmkf;->a:Lnkf;
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lnkf;->hashCode()I
+    return-void
 
-    move-result p0
+    nop
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "VfxEmptyBlockColors(halo="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lmkf;->a:Lnkf;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

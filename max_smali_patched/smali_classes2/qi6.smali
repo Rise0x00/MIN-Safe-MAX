@@ -1,55 +1,51 @@
-.class public final Lqi6;
-.super Lax3;
+.class public final synthetic Lqi6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Ljava/io/Serializable;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic n0:Lti6;
-
-.field public o:Lti6;
-
-.field public o0:I
+.field public final synthetic a:Lmj6;
 
 
 # direct methods
-.method public constructor <init>(Lti6;Lax3;)V
+.method public synthetic constructor <init>(Lmj6;)V
     .locals 0
 
-    iput-object p1, p0, Lqi6;->n0:Lti6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqi6;->a:Lmj6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Lvpd;)V
+    .locals 2
 
-    iput-object p1, p0, Lqi6;->Z:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lqi6;->o0:I
+    const-string v1, "got toggle state "
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lqi6;->o0:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p1, p0, Lqi6;->n0:Lti6;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    const-string v1, "mj6"
 
-    invoke-static {p1, v0, p0}, Lti6;->a(Lti6;Ljava/lang/String;Lax3;)Ljava/lang/Object;
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v0, p0, Lqi6;->a:Lmj6;
 
-    return-object p0
+    iget-object v0, v0, Lmj6;->S0:Lmoe;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
 .end method

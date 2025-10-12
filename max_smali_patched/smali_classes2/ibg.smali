@@ -1,85 +1,23 @@
 .class public final Libg;
-.super Ljava/lang/Object;
+.super Llde;
 .source "SourceFile"
-
-# interfaces
-.implements Lacg;
 
 
 # instance fields
-.field public final a:I
+.field public final c:Lb9g;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(ILjava/lang/String;Lb9g;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Llde;-><init>(ILjava/lang/String;)V
 
-    iput p1, p0, Libg;->a:I
+    iput-object p3, p0, Libg;->c:Lb9g;
+
+    iput-object p4, p0, Libg;->o:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Libg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Libg;
-
-    iget p0, p0, Libg;->a:I
-
-    iget p1, p1, Libg;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Libg;->a:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "OpenFileManager(mode="
-
-    const-string v1, ")"
-
-    iget p0, p0, Libg;->a:I
-
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

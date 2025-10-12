@@ -1,63 +1,114 @@
 .class public final Lzr3;
-.super Luhc;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final A0:Landroid/widget/ImageView;
+.field public X:I
 
-.field public final B0:Lru/ok/messages/views/widgets/TamAvatarView;
-
-.field public final C0:Landroid/view/View;
-
-.field public D0:Lp38;
-
-.field public final synthetic E0:Las3;
+.field public final synthetic Y:Las3;
 
 
 # direct methods
-.method public constructor <init>(Las3;Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Las3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iput-object p1, p0, Lzr3;->E0:Las3;
+    iput-object p1, p0, Lzr3;->Y:Las3;
 
-    invoke-direct {p0, p2}, Luhc;-><init>(Landroid/view/View;)V
+    const/4 p1, 0x2
 
-    sget p1, Ld1c;->row_contact_location__static_image:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    iput-object p1, p0, Lzr3;->A0:Landroid/widget/ImageView;
-
-    sget p1, Ld1c;->row_contact_location__live_image:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
-
-    iput-object p1, p0, Lzr3;->B0:Lru/ok/messages/views/widgets/TamAvatarView;
-
-    sget p1, Ld1c;->row_contact_location__indicator:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzr3;->C0:Landroid/view/View;
-
-    new-instance p1, Lb5;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0, p0}, Lb5;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p2, p1}, Lve2;->k(Landroid/view/View;Lz5;)Lfh7;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lzr3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lzr3;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lzr3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lzr3;
+
+    iget-object v0, p0, Lzr3;->Y:Las3;
+
+    invoke-direct {p1, v0, p2}, Lzr3;-><init>(Las3;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lzr3;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzr3;->Y:Las3;
+
+    iget-object p1, p1, Las3;->a:Le8e;
+
+    iput v1, p0, Lzr3;->X:I
+
+    sget-object v0, Lsr3;->a:Lsr3;
+
+    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

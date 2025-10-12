@@ -1,410 +1,435 @@
 .class public final Luvc;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
-
-# static fields
-.field public static final f:[Ljava/lang/Class;
+# interfaces
+.implements Landroid/graphics/drawable/Animatable;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public final X:Landroid/animation/ObjectAnimator;
 
-.field public final b:Ljava/util/LinkedHashMap;
+.field public final Y:Ljava/lang/Object;
 
-.field public final c:Ljava/util/LinkedHashMap;
+.field public final Z:Ljava/lang/Object;
 
-.field public final d:Ljava/util/LinkedHashMap;
+.field public final a:Landroid/content/Context;
 
-.field public final e:Lzvc;
+.field public final b:Lag;
+
+.field public final c:Landroid/animation/ObjectAnimator;
+
+.field public final o:Lag;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 30
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 7
 
-    const-class v28, Landroid/util/Size;
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    const-class v29, Landroid/util/SizeF;
+    iput-object p1, p0, Luvc;->a:Landroid/content/Context;
 
-    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    new-instance p1, Lag;
 
-    const-class v2, [Z
+    const-string v0, "bgAlpha"
 
-    sget-object v3, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
+    const/16 v1, 0xff
 
-    const-class v4, [D
+    invoke-direct {p1, v0, v1}, Lag;-><init>(Ljava/lang/String;I)V
 
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput-object p1, p0, Luvc;->b:Lag;
 
-    const-class v6, [I
+    const/16 v0, 0x80
 
-    sget-object v7, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const-class v8, [J
-
-    const-class v9, Ljava/lang/String;
-
-    const-class v10, [Ljava/lang/String;
-
-    const-class v11, Landroid/os/Binder;
-
-    const-class v12, Landroid/os/Bundle;
-
-    sget-object v13, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
-
-    const-class v14, [B
-
-    sget-object v15, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
-
-    const-class v16, [C
-
-    const-class v17, Ljava/lang/CharSequence;
-
-    const-class v18, [Ljava/lang/CharSequence;
-
-    const-class v19, Ljava/util/ArrayList;
-
-    sget-object v20, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
-
-    const-class v21, [F
-
-    const-class v22, Landroid/os/Parcelable;
-
-    const-class v23, [Landroid/os/Parcelable;
-
-    const-class v24, Ljava/io/Serializable;
-
-    sget-object v25, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
-
-    const-class v26, [S
-
-    const-class v27, Landroid/util/SparseArray;
-
-    filled-new-array/range {v1 .. v29}, [Ljava/lang/Class;
+    filled-new-array {v1, v0, v1}, [I
 
     move-result-object v0
 
-    sput-object v0, Luvc;->f:[Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    invoke-static {v2, p1, v0}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
 
-.method public constructor <init>()V
-    .locals 2
+    move-result-object p1
 
-    .line 8
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v3, 0x7d0
 
-    .line 9
-    new-instance v0, Ljava/util/LinkedHashMap;
+    invoke-virtual {p1, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    const/4 v0, -0x1
 
-    iput-object v0, p0, Luvc;->a:Ljava/util/LinkedHashMap;
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    .line 10
-    new-instance v0, Ljava/util/LinkedHashMap;
+    new-instance v5, Landroid/view/animation/LinearInterpolator;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    invoke-direct {v5}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    iput-object v0, p0, Luvc;->b:Ljava/util/LinkedHashMap;
+    invoke-virtual {p1, v5}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 11
-    new-instance v0, Ljava/util/LinkedHashMap;
+    new-instance v5, Ltvc;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    const/4 v6, 0x0
 
-    iput-object v0, p0, Luvc;->c:Ljava/util/LinkedHashMap;
+    invoke-direct {v5, p0, v6}, Ltvc;-><init>(Luvc;I)V
 
-    .line 12
-    new-instance v0, Ljava/util/LinkedHashMap;
+    invoke-virtual {p1, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object p1, p0, Luvc;->c:Landroid/animation/ObjectAnimator;
 
-    iput-object v0, p0, Luvc;->d:Ljava/util/LinkedHashMap;
+    new-instance p1, Lag;
 
-    .line 13
-    new-instance v0, Lb56;
+    const-string v5, "indicatorAlpha"
+
+    invoke-direct {p1, v5, v1}, Lag;-><init>(Ljava/lang/String;I)V
+
+    iput-object p1, p0, Luvc;->o:Lag;
+
+    const/4 v5, 0x0
+
+    filled-new-array {v1, v5, v1}, [I
+
+    move-result-object v1
+
+    invoke-static {v2, p1, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
+
+    new-instance v0, Landroid/view/animation/LinearInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    new-instance v0, Ltvc;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p0}, Lb56;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1}, Ltvc;-><init>(Luvc;I)V
 
-    iput-object v0, p0, Luvc;->e:Lzvc;
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    return-void
-.end method
+    iput-object p1, p0, Luvc;->X:Landroid/animation/ObjectAnimator;
 
-.method public constructor <init>(Ljava/util/HashMap;)V
-    .locals 3
+    new-instance p1, Lm2c;
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xe
 
-    .line 2
-    new-instance v0, Ljava/util/LinkedHashMap;
+    invoke-direct {p1, v0}, Lm2c;-><init>(I)V
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object v0, p0, Luvc;->a:Ljava/util/LinkedHashMap;
+    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
 
-    .line 3
-    new-instance v1, Ljava/util/LinkedHashMap;
+    move-result-object p1
 
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object p1, p0, Luvc;->Y:Ljava/lang/Object;
 
-    iput-object v1, p0, Luvc;->b:Ljava/util/LinkedHashMap;
+    new-instance p1, Lhxa;
 
-    .line 4
-    new-instance v1, Ljava/util/LinkedHashMap;
+    const/16 v1, 0x18
 
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
+    invoke-direct {p1, v1, p0}, Lhxa;-><init>(ILjava/lang/Object;)V
 
-    iput-object v1, p0, Luvc;->c:Ljava/util/LinkedHashMap;
+    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
 
-    .line 5
-    new-instance v1, Ljava/util/LinkedHashMap;
+    move-result-object p1
 
-    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object v1, p0, Luvc;->d:Ljava/util/LinkedHashMap;
-
-    .line 6
-    new-instance v1, Lb56;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, p0}, Lb56;-><init>(ILjava/lang/Object;)V
-
-    iput-object v1, p0, Luvc;->e:Lzvc;
-
-    .line 7
-    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    iput-object p1, p0, Luvc;->Z:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a(Luvc;)Landroid/os/Bundle;
-    .locals 6
 
-    iget-object v0, p0, Luvc;->a:Ljava/util/LinkedHashMap;
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    iget-object v1, p0, Luvc;->b:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Luvc;->Y:Ljava/lang/Object;
 
-    invoke-static {v1}, Ly28;->X(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    check-cast v1, Landroid/graphics/drawable/ShapeDrawable;
 
-    move-result-object v1
+    iget-object v2, p0, Luvc;->b:Lag;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget v2, v2, Lag;->a:I
 
-    move-result v2
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/ShapeDrawable;->setAlpha(I)V
 
-    if-eqz v2, :cond_6
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzvc;
-
-    invoke-interface {v2}, Lzvc;->a()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v4, 0x0
-
-    :goto_1
-    const/16 v5, 0x1d
-
-    if-ge v4, v5, :cond_5
-
-    sget-object v5, Luvc;->f:[Ljava/lang/Class;
-
-    aget-object v5, v5, v4
-
-    invoke-virtual {v5, v2}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    :goto_2
-    iget-object v4, p0, Luvc;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v5, v4, Lgk9;
-
-    if-eqz v5, :cond_1
-
-    check-cast v4, Lgk9;
-
-    goto :goto_3
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_3
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4, v2}, Luq7;->k(Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_2
-    iget-object v4, p0, Luvc;->a:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v4, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_4
-    iget-object v4, p0, Luvc;->d:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lal9;
-
-    if-nez v3, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {v3, v2}, Lal9;->setValue(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_4
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Can\'t put value with type "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " into saved state"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    throw p0
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/ShapeDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    iget-object v1, p0, Luvc;->Z:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    div-int/lit8 v2, v2, 0x2
 
-    new-instance v2, Ljava/util/ArrayList;
+    sub-int/2addr v0, v2
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    int-to-float v0, v0
 
-    move-result v3
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+    move-result-object v2
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
 
-    move-result-object p0
+    move-result v2
 
-    :goto_5
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    div-int/lit8 v2, v2, 0x2
 
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    check-cast v3, Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
-    goto :goto_5
+    move-result v3
 
-    :cond_7
-    new-instance p0, Ltra;
+    div-int/lit8 v3, v3, 0x2
 
-    const-string v0, "keys"
+    sub-int/2addr v2, v3
 
-    invoke-direct {p0, v0, v1}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    int-to-float v2, v2
 
-    new-instance v0, Ltra;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    const-string v1, "values"
+    move-result v3
 
-    invoke-direct {v0, v1, v2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    filled-new-array {p0, v0}, [Ltra;
+    :try_start_0
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ly84;->c([Ltra;)Landroid/os/Bundle;
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    move-result-object p0
+    iget-object v2, p0, Luvc;->o:Lag;
 
-    return-object p0
+    iget v2, v2, Lag;->a:I
+
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/ShapeDrawable;->setAlpha(I)V
+
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/ShapeDrawable;->draw(Landroid/graphics/Canvas;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    throw v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final isRunning()Z
+    .locals 1
+
+    iget-object v0, p0, Luvc;->c:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Luvc;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 4
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Luvc;->Y:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x3
+
+    iget-object v0, p0, Luvc;->Z:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-virtual {v0, v3, v3, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final start()V
+    .locals 1
+
+    iget-object v0, p0, Luvc;->c:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    iget-object v0, p0, Luvc;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    iget-object v0, p0, Luvc;->c:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    iget-object v0, p0, Luvc;->X:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    return-void
 .end method

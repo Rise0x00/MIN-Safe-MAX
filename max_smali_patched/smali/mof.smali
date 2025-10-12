@@ -1,626 +1,359 @@
-.class public final Lmof;
+.class public Lmof;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/locks/ReentrantLock;
+.field public A:Z
 
-.field public final b:Ljava/util/LinkedHashMap;
+.field public B:Z
 
-.field public final c:Lkpd;
+.field public C:Z
 
-.field public final d:Lgs5;
+.field public D:Ljava/util/HashMap;
+
+.field public E:Ljava/util/HashSet;
+
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:Le77;
+
+.field public n:Le77;
+
+.field public o:I
+
+.field public p:Le77;
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:Le77;
+
+.field public u:Lkof;
+
+.field public v:Le77;
+
+.field public w:I
+
+.field public x:Z
+
+.field public y:I
+
+.field public z:Z
 
 
 # direct methods
-.method public constructor <init>(Lth7;)V
-    .locals 6
+.method public constructor <init>()V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    const v0, 0x7fffffff
 
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    iput v0, p0, Lmof;->a:I
 
-    iput-object v0, p0, Lmof;->a:Ljava/util/concurrent/locks/ReentrantLock;
+    iput v0, p0, Lmof;->b:I
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    iput v0, p0, Lmof;->c:I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    iput v0, p0, Lmof;->d:I
 
-    iput-object v0, p0, Lmof;->b:Ljava/util/LinkedHashMap;
+    iput v0, p0, Lmof;->i:I
 
-    const/4 v0, 0x1
+    iput v0, p0, Lmof;->j:I
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
-    invoke-static {v0, v0, v1}, Llpd;->a(III)Lkpd;
+    iput-boolean v1, p0, Lmof;->k:Z
+
+    iput-boolean v1, p0, Lmof;->l:Z
+
+    sget-object v2, Le77;->b:Ld06;
+
+    sget-object v2, Lxyc;->X:Lxyc;
+
+    iput-object v2, p0, Lmof;->m:Le77;
+
+    iput-object v2, p0, Lmof;->n:Le77;
+
+    const/4 v3, 0x0
+
+    iput v3, p0, Lmof;->o:I
+
+    iput-object v2, p0, Lmof;->p:Le77;
+
+    iput v3, p0, Lmof;->q:I
+
+    iput v0, p0, Lmof;->r:I
+
+    iput v0, p0, Lmof;->s:I
+
+    iput-object v2, p0, Lmof;->t:Le77;
+
+    sget-object v0, Lkof;->d:Lkof;
+
+    iput-object v0, p0, Lmof;->u:Lkof;
+
+    iput-object v2, p0, Lmof;->v:Le77;
+
+    iput v3, p0, Lmof;->w:I
+
+    iput-boolean v1, p0, Lmof;->x:Z
+
+    iput v3, p0, Lmof;->y:I
+
+    iput-boolean v3, p0, Lmof;->z:Z
+
+    iput-boolean v3, p0, Lmof;->A:Z
+
+    iput-boolean v3, p0, Lmof;->B:Z
+
+    iput-boolean v3, p0, Lmof;->C:Z
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lmof;->D:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lmof;->E:Ljava/util/HashSet;
+
+    return-void
+.end method
+
+.method public static e([Ljava/lang/String;)Lxyc;
+    .locals 4
+
+    invoke-static {}, Le77;->i()Lb77;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmof;->c:Lkpd;
+    array-length v1, p0
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    check-cast p1, Ljt1;
+    aget-object v3, p0, v2
 
-    check-cast p1, Lwt1;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lwt1;->K:Lq4e;
+    invoke-static {v3}, Lt4g;->V(Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance v2, Lagc;
+    move-result-object v3
 
-    const/4 v3, 0x4
+    invoke-virtual {v0, v3}, Lu67;->a(Ljava/lang/Object;)V
 
-    invoke-direct {v2, p1, v3}, Lagc;-><init>(Lbq5;I)V
+    add-int/lit8 v2, v2, 0x1
 
-    new-instance p1, Lvj1;
+    goto :goto_0
 
-    const/4 v3, 0x3
+    :cond_0
+    invoke-virtual {v0}, Lb77;->h()Lxyc;
 
-    const/4 v4, 0x5
+    move-result-object p0
 
-    const/4 v5, 0x0
-
-    invoke-direct {p1, v3, v5, v4}, Lvj1;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    new-instance v3, Ly31;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, v0, v2, p1, v4}, Ly31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance p1, Lf01;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p1, v0, v3}, Lf01;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Ljof;
-
-    invoke-direct {v0, v1, v5}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lgs5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    iput-object v1, p0, Lmof;->d:Lgs5;
-
-    return-void
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Lsvf;)V
-    .locals 9
-
-    iget-object v0, p0, Lmof;->a:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
-
-    :try_start_0
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p2, :cond_3
-
-    iget-boolean v1, p2, Lsvf;->a:Z
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v2, Lgp4;
-
-    iget-object p2, p2, Lsvf;->b:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v3
-
-    invoke-direct {v2, p2, v1, v3}, Lgp4;-><init>(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    :goto_0
-    const-string p2, " display layout "
-
-    const-string v1, "CallVideoDisplayLayoutUpdater"
-
-    iget-object v3, p0, Lmof;->b:Ljava/util/LinkedHashMap;
-
-    if-nez v2, :cond_4
-
-    :try_start_1
-    invoke-virtual {p0, p1}, Lmof;->c(Landroid/view/View;)Z
-
-    move-result v2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    invoke-interface {v3}, Ljava/util/Map;->size()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " is empty, skip. old value from cache was removed = "
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ". total = "
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    goto/16 :goto_2
-
-    :cond_4
-    :try_start_2
-    invoke-virtual {v3, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v4, v2}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    iget-object v5, p0, Lmof;->c:Lkpd;
-
-    if-eqz v4, :cond_5
-
-    :try_start_3
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    invoke-interface {v3}, Ljava/util/Map;->size()I
-
-    move-result v4
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", already added with params = "
-
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", simple update. total = "
-
-    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v5, v3}, Lkpd;->h(Ljava/lang/Object;)Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-
-    :cond_5
-    :try_start_4
-    new-instance p2, Lv18;
-
-    invoke-direct {p2}, Lv18;-><init>()V
-
-    new-instance v4, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v4}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_6
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_7
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/util/Map$Entry;
-
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-static {v8, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_6
-
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-interface {v4, v8, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {p2, v4}, Lv18;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {p2, p1, v2}, Lv18;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p2}, Lv18;->b()Lv18;
-
-    move-result-object p2
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->clear()V
-
-    invoke-interface {v3, p2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p1
-
-    invoke-interface {v3}, Ljava/util/Map;->size()I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " add display layout "
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", params = "
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", total = "
-
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v5, p2}, Lkpd;->h(Ljava/lang/Object;)Z
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    return-void
-
-    :goto_2
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p0
-.end method
-
-.method public final b()V
+.method public a(Lhof;)V
     .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lmof;->D:Ljava/util/HashMap;
 
-    move-result v0
+    iget-object v1, p1, Lhof;->a:Lvnf;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " clear cached states"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CallVideoDisplayLayoutUpdater"
-
-    invoke-static {v1, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lmof;->b:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
-
-    iget-object p0, p0, Lmof;->c:Lkpd;
-
-    sget-object v0, Ls25;->a:Ls25;
-
-    invoke-virtual {p0, v0}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final c(Landroid/view/View;)Z
-    .locals 8
+.method public b()Loof;
+    .locals 1
 
-    iget-object v0, p0, Lmof;->b:Ljava/util/LinkedHashMap;
+    new-instance v0, Loof;
 
-    iget-object v1, p0, Lmof;->a:Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-direct {v0, p0}, Loof;-><init>(Lmof;)V
 
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    return-object v0
+.end method
 
-    :try_start_0
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+.method public c()Lmof;
+    .locals 1
 
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, Lmof;->D:Ljava/util/HashMap;
 
-    if-nez v2, :cond_0
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    return-object p0
+.end method
 
-    const/4 p0, 0x0
+.method public final d(Loof;)V
+    .locals 2
 
-    return p0
+    iget v0, p1, Loof;->a:I
 
-    :cond_0
-    :try_start_1
-    new-instance v2, Lv18;
+    iput v0, p0, Lmof;->a:I
 
-    invoke-direct {v2}, Lv18;-><init>()V
+    iget v0, p1, Loof;->b:I
 
-    invoke-virtual {v2}, Lv18;->clear()V
+    iput v0, p0, Lmof;->b:I
 
-    new-instance v3, Ljava/util/LinkedHashMap;
+    iget v0, p1, Loof;->c:I
 
-    invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
+    iput v0, p0, Lmof;->c:I
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    iget v0, p1, Loof;->d:I
 
-    move-result-object v4
+    iput v0, p0, Lmof;->d:I
 
-    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget v0, p1, Loof;->e:I
 
-    move-result-object v4
+    iput v0, p0, Lmof;->e:I
 
-    const/4 v5, 0x0
+    iget v0, p1, Loof;->f:I
 
-    :cond_1
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    iput v0, p0, Lmof;->f:I
 
-    move-result v6
+    iget v0, p1, Loof;->g:I
 
-    if-eqz v6, :cond_3
+    iput v0, p0, Lmof;->g:I
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget v0, p1, Loof;->h:I
 
-    move-result-object v6
+    iput v0, p0, Lmof;->h:I
 
-    check-cast v6, Ljava/util/Map$Entry;
+    iget v0, p1, Loof;->i:I
 
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iput v0, p0, Lmof;->i:I
 
-    move-result-object v7
+    iget v0, p1, Loof;->j:I
 
-    invoke-static {v7, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput v0, p0, Lmof;->j:I
 
-    move-result v7
+    iget-boolean v0, p1, Loof;->k:Z
 
-    if-eqz v7, :cond_2
+    iput-boolean v0, p0, Lmof;->k:Z
 
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    iget-boolean v0, p1, Loof;->l:Z
 
-    move-result-object v5
+    iput-boolean v0, p0, Lmof;->l:Z
 
-    goto :goto_1
+    iget-object v0, p1, Loof;->m:Le77;
 
-    :catchall_0
-    move-exception p0
+    iput-object v0, p0, Lmof;->m:Le77;
 
-    goto :goto_2
+    iget-object v0, p1, Loof;->n:Le77;
 
-    :cond_2
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iput-object v0, p0, Lmof;->n:Le77;
 
-    move-result-object v7
+    iget v0, p1, Loof;->o:I
 
-    invoke-static {v7, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput v0, p0, Lmof;->o:I
 
-    move-result v7
+    iget-object v0, p1, Loof;->p:Le77;
 
-    if-nez v7, :cond_1
+    iput-object v0, p0, Lmof;->p:Le77;
 
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget v0, p1, Loof;->q:I
 
-    move-result-object v7
+    iput v0, p0, Lmof;->q:I
 
-    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    iget v0, p1, Loof;->r:I
 
-    move-result-object v6
+    iput v0, p0, Lmof;->r:I
 
-    invoke-interface {v3, v7, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p1, Loof;->s:I
 
-    goto :goto_0
+    iput v0, p0, Lmof;->s:I
 
-    :cond_3
-    invoke-virtual {v2, v3}, Lv18;->putAll(Ljava/util/Map;)V
+    iget-object v0, p1, Loof;->t:Le77;
 
-    invoke-virtual {v2}, Lv18;->b()Lv18;
+    iput-object v0, p0, Lmof;->t:Le77;
 
-    move-result-object v2
+    iget-object v0, p1, Loof;->u:Lkof;
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
+    iput-object v0, p0, Lmof;->u:Lkof;
 
-    invoke-interface {v0, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    iget-object v0, p1, Loof;->v:Le77;
 
-    iget-object v3, p0, Lmof;->c:Lkpd;
+    iput-object v0, p0, Lmof;->v:Le77;
 
-    invoke-virtual {v3, v2}, Lkpd;->h(Ljava/lang/Object;)Z
+    iget v0, p1, Loof;->w:I
 
-    const-string v2, "CallVideoDisplayLayoutUpdater"
+    iput v0, p0, Lmof;->w:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    iget-boolean v0, p1, Loof;->x:Z
 
-    move-result p0
+    iput-boolean v0, p0, Lmof;->x:Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    iget v0, p1, Loof;->y:I
 
-    move-result p1
+    iput v0, p0, Lmof;->y:I
 
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    iget-boolean v0, p1, Loof;->z:Z
 
-    move-result v0
+    iput-boolean v0, p0, Lmof;->z:Z
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-boolean v0, p1, Loof;->A:Z
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    iput-boolean v0, p0, Lmof;->A:Z
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-boolean v0, p1, Loof;->B:Z
 
-    const-string p0, " remove display layout participantId="
+    iput-boolean v0, p0, Lmof;->B:Z
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v0, p1, Loof;->C:Z
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-boolean v0, p0, Lmof;->C:Z
 
-    const-string p0, " for "
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Loof;->E:Lp77;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    const-string p0, ", total = "
+    iput-object v0, p0, Lmof;->E:Ljava/util/HashSet;
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Loof;->D:Li77;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    move-result-object p0
+    iput-object v0, p0, Lmof;->D:Ljava/util/HashMap;
 
-    invoke-static {v2, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :goto_2
-    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    throw p0
+    return-void
 .end method

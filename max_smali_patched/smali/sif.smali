@@ -2,148 +2,306 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements La6d;
-
 
 # instance fields
-.field public final X:I
+.field public a:J
 
-.field public final a:[J
+.field public b:J
 
-.field public final b:[J
+.field public c:J
 
-.field public final c:J
-
-.field public final o:J
+.field public final d:Ljava/lang/ThreadLocal;
 
 
 # direct methods
-.method public constructor <init>([J[JJJI)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsif;->a:[J
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    iput-object p2, p0, Lsif;->b:[J
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-wide p3, p0, Lsif;->c:J
+    iput-object v0, p0, Lsif;->d:Ljava/lang/ThreadLocal;
 
-    iput-wide p5, p0, Lsif;->o:J
-
-    iput p7, p0, Lsif;->X:I
+    invoke-virtual {p0, p1, p2}, Lsif;->d(J)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final declared-synchronized a(J)J
+    .locals 4
 
-    iget-wide v0, p0, Lsif;->o:J
+    monitor-enter p0
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, p1, v0
+
+    if-nez v2, :cond_0
+
+    monitor-exit p0
 
     return-wide v0
+
+    :cond_0
+    :try_start_0
+    iget-wide v2, p0, Lsif;->b:J
+
+    cmp-long v0, v2, v0
+
+    if-nez v0, :cond_2
+
+    iget-wide v0, p0, Lsif;->a:J
+
+    const-wide v2, 0x7ffffffffffffffeL
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_1
+
+    iget-object v0, p0, Lsif;->d:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    sub-long/2addr v0, p1
+
+    iput-wide v0, p0, Lsif;->b:J
+
+    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
+
+    :cond_2
+    iput-wide p1, p0, Lsif;->c:J
+
+    iget-wide v0, p0, Lsif;->b:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    add-long/2addr p1, v0
+
+    monitor-exit p0
+
+    return-wide p1
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public final b(J)J
-    .locals 2
+.method public final declared-synchronized b(J)J
+    .locals 12
 
-    iget-object v0, p0, Lsif;->b:[J
+    monitor-enter p0
 
-    const/4 v1, 0x1
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-static {v0, p1, p2, v1}, Lfif;->e([JJZ)I
+    cmp-long v2, p1, v0
 
-    move-result p1
+    if-nez v2, :cond_0
 
-    iget-object p0, p0, Lsif;->a:[J
+    monitor-exit p0
 
-    aget-wide p0, p0, p1
+    return-wide v0
 
-    return-wide p0
-.end method
+    :cond_0
+    :try_start_0
+    iget-wide v2, p0, Lsif;->c:J
 
-.method public final c()Z
-    .locals 0
+    cmp-long v0, v2, v0
 
-    const/4 p0, 0x1
+    const-wide/32 v4, 0xf4240
 
-    return p0
-.end method
+    const-wide/32 v6, 0x15f90
 
-.method public final e(J)Lq5d;
-    .locals 8
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lsif;->a:[J
+    mul-long/2addr v2, v6
 
-    const/4 v1, 0x1
+    div-long/2addr v2, v4
 
-    invoke-static {v0, p1, p2, v1}, Lfif;->e([JJZ)I
+    const-wide v0, 0x100000000L
 
-    move-result v2
+    add-long/2addr v0, v2
 
-    new-instance v3, Lw5d;
+    const-wide v8, 0x200000000L
 
-    aget-wide v4, v0, v2
+    div-long/2addr v0, v8
 
-    iget-object p0, p0, Lsif;->b:[J
+    const-wide/16 v10, 0x1
 
-    aget-wide v6, p0, v2
+    sub-long v10, v0, v10
 
-    invoke-direct {v3, v4, v5, v6, v7}, Lw5d;-><init>(JJ)V
+    mul-long/2addr v10, v8
 
-    cmp-long p1, v4, p1
+    add-long/2addr v10, p1
+
+    mul-long/2addr v0, v8
+
+    add-long/2addr v0, p1
+
+    sub-long p1, v10, v2
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide p1
+
+    sub-long v2, v0, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v2
+
+    cmp-long p1, p1, v2
 
     if-gez p1, :cond_1
 
-    array-length p1, v0
+    move-wide p1, v10
 
-    sub-int/2addr p1, v1
+    goto :goto_0
 
-    if-ne v2, p1, :cond_0
+    :cond_1
+    move-wide p1, v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    mul-long/2addr p1, v4
+
+    div-long/2addr p1, v6
+
+    invoke-virtual {p0, p1, p2}, Lsif;->a(J)J
+
+    move-result-wide p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-wide p1
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized c()J
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-wide v0, p0, Lsif;->a:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    const-wide v2, 0x7ffffffffffffffeL
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    :cond_1
+    monitor-exit p0
+
+    return-wide v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized d(J)V
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    iput-wide p1, p0, Lsif;->a:J
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p1, v0
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-nez p1, :cond_0
+
+    const-wide/16 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lw5d;
+    move-wide p1, v0
 
-    add-int/2addr v2, v1
-
-    aget-wide v0, v0, v2
-
-    aget-wide v4, p0, v2
-
-    invoke-direct {p1, v0, v1, v4, v5}, Lw5d;-><init>(JJ)V
-
-    new-instance p0, Lq5d;
-
-    invoke-direct {p0, v3, p1}, Lq5d;-><init>(Lw5d;Lw5d;)V
-
-    return-object p0
-
-    :cond_1
     :goto_0
-    new-instance p0, Lq5d;
+    iput-wide p1, p0, Lsif;->b:J
 
-    invoke-direct {p0, v3, v3}, Lq5d;-><init>(Lw5d;Lw5d;)V
+    iput-wide v0, p0, Lsif;->c:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
-.end method
+    monitor-exit p0
 
-.method public final f()J
-    .locals 2
+    return-void
 
-    iget-wide v0, p0, Lsif;->c:J
+    :catchall_0
+    move-exception p1
 
-    return-wide v0
-.end method
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.method public final g()I
-    .locals 0
-
-    iget p0, p0, Lsif;->X:I
-
-    return p0
+    throw p1
 .end method

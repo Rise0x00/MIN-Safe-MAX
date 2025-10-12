@@ -1,135 +1,116 @@
 .class public final Lgs0;
-.super Ljava/lang/Object;
+.super Lmn4;
 .source "SourceFile"
 
-# interfaces
-.implements Liyd;
 
+# instance fields
+.field public final c:Lmrb;
 
-# static fields
-.field public static final a:Lfs0;
+.field public final synthetic d:Lmgf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lmgf;Lqi0;Lmrb;)V
+    .locals 0
 
-    new-instance v0, Lfs0;
+    iput-object p1, p0, Lgs0;->d:Lmgf;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lmn4;-><init>(Lqi0;)V
 
-    sput-object v0, Lgs0;->a:Lfs0;
+    iput-object p3, p0, Lgs0;->c:Lmrb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 0
+.method public final f(Ljava/lang/Throwable;)V
+    .locals 2
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Lgs0;->d:Lmgf;
 
-    return p0
+    iget-object p1, p1, Lmgf;->c:Ljava/lang/Object;
+
+    check-cast p1, Lchf;
+
+    iget-object v0, p0, Lmn4;->b:Lqi0;
+
+    iget-object v1, p0, Lgs0;->c:Lmrb;
+
+    invoke-virtual {p1, v0, v1}, Lchf;->a(Lqi0;Lmrb;)V
+
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 0
+.method public final h(ILjava/lang/Object;)V
+    .locals 6
 
-    sget-boolean p0, Les0;->d:Z
+    check-cast p2, Lw75;
 
-    sget-boolean p0, Les0;->d:Z
+    iget-object v0, p0, Lgs0;->c:Lmrb;
 
-    return p0
-.end method
+    move-object v1, v0
 
-.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 0
+    check-cast v1, Lvj0;
 
-    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
+    iget-object v1, v1, Lvj0;->a:Lb67;
 
-    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getApplicationProtocol()Ljava/lang/String;
+    invoke-static {p1}, Lqi0;->a(I)Z
 
-    move-result-object p0
+    move-result v2
 
-    if-nez p0, :cond_0
+    iget-object v3, v1, Lb67;->h:Lo2d;
+
+    invoke-static {p2, v3}, Lihf;->t(Lw75;Lo2d;)Z
+
+    move-result v3
+
+    iget-object v4, p0, Lmn4;->b:Lqi0;
+
+    if-eqz p2, :cond_2
+
+    if-nez v3, :cond_0
+
+    iget-boolean v5, v1, Lb67;->e:Z
+
+    if-eqz v5, :cond_2
+
+    :cond_0
+    if-eqz v2, :cond_1
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v4, p1, p2}, Lqi0;->g(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    const-string p1, ""
+    and-int/lit8 p1, p1, -0x2
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {v4, p1, p2}, Lqi0;->g(ILjava/lang/Object;)V
 
     :cond_2
-    :goto_1
-    return-object p0
-.end method
+    :goto_0
+    if-eqz v2, :cond_3
 
-.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 0
+    if-nez v3, :cond_3
 
-    invoke-virtual {p0, p1}, Lgs0;->a(Ljavax/net/ssl/SSLSocket;)Z
+    invoke-virtual {v1}, Lb67;->c()Z
 
-    move-result p0
+    move-result p1
 
-    if-eqz p0, :cond_1
+    if-nez p1, :cond_3
 
-    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
+    invoke-static {p2}, Lw75;->d(Lw75;)V
 
-    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getParameters()Lorg/bouncycastle/jsse/BCSSLParameters;
+    iget-object p1, p0, Lgs0;->d:Lmgf;
 
-    move-result-object p0
+    iget-object p1, p1, Lmgf;->c:Ljava/lang/Object;
 
-    sget-object p2, La5b;->a:La5b;
+    check-cast p1, Lchf;
 
-    invoke-static {p3}, La38;->g(Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {p1, v4, v0}, Lchf;->a(Lqi0;Lmrb;)V
 
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    new-array p3, p3, [Ljava/lang/String;
-
-    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    check-cast p2, [Ljava/lang/String;
-
-    invoke-virtual {p0, p2}, Lorg/bouncycastle/jsse/BCSSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
-
-    invoke-interface {p1, p0}, Lorg/bouncycastle/jsse/BCSSLSocket;->setParameters(Lorg/bouncycastle/jsse/BCSSLParameters;)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "null cannot be cast to non-null type kotlin.Array<T>"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
+    :cond_3
     return-void
 .end method

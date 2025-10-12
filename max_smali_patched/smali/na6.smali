@@ -1,78 +1,27 @@
-.class public final enum Lna6;
-.super Ljava/lang/Enum;
+.class public final Lna6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
 
+# instance fields
+.field public a:Z
 
-# static fields
-.field public static final enum a:Lna6;
+.field public b:I
 
-.field public static final synthetic b:[Lna6;
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.field public e:I
 
-    new-instance v0, Lna6;
+.field public f:I
 
-    const-string v1, "INSTANCE"
+.field public g:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+.field public h:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public i:Ljava/lang/Object;
 
-    sput-object v0, Lna6;->a:Lna6;
+.field public j:F
 
-    filled-new-array {v0}, [Lna6;
-
-    move-result-object v0
-
-    sput-object v0, Lna6;->b:[Lna6;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lna6;
-    .locals 1
-
-    const-class v0, Lna6;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lna6;
-
-    return-object p0
-.end method
-
-.method public static values()[Lna6;
-    .locals 1
-
-    sget-object v0, Lna6;->b:[Lna6;
-
-    invoke-virtual {v0}, [Lna6;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lna6;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Ljava/lang/Comparable;
-
-    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
+.field public k:Landroid/view/View;

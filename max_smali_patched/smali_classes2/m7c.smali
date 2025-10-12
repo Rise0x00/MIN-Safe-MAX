@@ -1,513 +1,424 @@
-.class public abstract Lm7c;
+.class public final Lm7c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final synthetic a:[Lof7;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lm7c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Lya2;
 
-.field public static final c:Lya2;
+# instance fields
+.field public final X:J
 
-.field public static final d:Lya2;
+.field public final Y:Ljava/lang/String;
 
-.field public static final e:Lya2;
+.field public final Z:J
 
-.field public static final f:Liya;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
+
+.field public final o:Ljava/lang/Long;
+
+.field public final w0:Llo2;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 2
 
-    new-instance v0, Lvqb;
+    new-instance v0, Lqva;
 
-    const-class v1, Lm7c;
+    const/16 v1, 0x16
 
-    const-string v2, "mimeType"
+    invoke-direct {v0, v1}, Lqva;-><init>(I)V
 
-    const-string v3, "getMimeType(Lorg/webrtc/RTCStats;)Ljava/lang/String;"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v3, Ldic;->a:Leic;
-
-    const-string v5, "getDecoderImplementation(Lorg/webrtc/RTCStats;)Ljava/lang/String;"
-
-    const-string v6, "decoderImplementation"
-
-    invoke-static {v3, v1, v6, v5, v4}, Ldl5;->g(Leic;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lvqb;
-
-    move-result-object v3
-
-    new-instance v5, Lvqb;
-
-    const-string v7, "getEncoderImplementation(Lorg/webrtc/RTCStats;)Ljava/lang/String;"
-
-    const-string v8, "encoderImplementation"
-
-    invoke-direct {v5, v1, v8, v7, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v7, Lvqb;
-
-    const-string v9, "getSdpFmtpLine(Lorg/webrtc/RTCStats;)Ljava/lang/String;"
-
-    const-string v10, "sdpFmtpLine"
-
-    invoke-direct {v7, v1, v10, v9, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v9, Lvqb;
-
-    const-string v11, "payloadType"
-
-    const-string v12, "getPayloadType(Lorg/webrtc/RTCStats;)Ljava/lang/Long;"
-
-    invoke-direct {v9, v1, v11, v12, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v11, Lvqb;
-
-    const-string v12, "channels"
-
-    const-string v13, "getChannels(Lorg/webrtc/RTCStats;)Ljava/lang/Long;"
-
-    invoke-direct {v11, v1, v12, v13, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v1, 0x6
-
-    new-array v12, v1, [Lof7;
-
-    const/4 v13, 0x0
-
-    aput-object v0, v12, v13
-
-    aput-object v3, v12, v4
-
-    const/4 v0, 0x2
-
-    aput-object v5, v12, v0
-
-    const/4 v3, 0x3
-
-    aput-object v7, v12, v3
-
-    const/4 v3, 0x4
-
-    aput-object v9, v12, v3
-
-    const/4 v3, 0x5
-
-    aput-object v11, v12, v3
-
-    sput-object v12, Lm7c;->a:[Lof7;
-
-    new-instance v3, Lya2;
-
-    invoke-direct {v3, v2, v1}, Lya2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lm7c;->b:Lya2;
-
-    new-instance v2, Lya2;
-
-    invoke-direct {v2, v6, v1}, Lya2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lm7c;->c:Lya2;
-
-    new-instance v2, Lya2;
-
-    invoke-direct {v2, v8, v1}, Lya2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lm7c;->d:Lya2;
-
-    new-instance v2, Lya2;
-
-    invoke-direct {v2, v10, v1}, Lya2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lm7c;->e:Lya2;
-
-    new-instance v1, Liya;
-
-    invoke-direct {v1, v0}, Liya;-><init>(I)V
-
-    sput-object v1, Lm7c;->f:Liya;
+    sput-object v0, Lm7c;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Object;)Ljava/math/BigInteger;
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;JLjava/lang/Long;JLjava/lang/String;JLlo2;)V
+    .locals 0
 
-    instance-of v0, p0, Ljava/lang/Number;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-wide p1, p0, Lm7c;->a:J
 
-    if-eqz v0, :cond_0
+    iput-object p3, p0, Lm7c;->b:Ljava/lang/String;
 
-    check-cast p0, Ljava/lang/Number;
+    iput-wide p4, p0, Lm7c;->c:J
 
-    goto :goto_0
+    iput-object p6, p0, Lm7c;->o:Ljava/lang/Long;
+
+    iput-wide p7, p0, Lm7c;->X:J
+
+    iput-object p9, p0, Lm7c;->Y:Ljava/lang/String;
+
+    iput-wide p10, p0, Lm7c;->Z:J
+
+    iput-object p12, p0, Lm7c;->w0:Llo2;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    move-object p0, v1
+    instance-of v1, p1, Lm7c;
 
-    :goto_0
-    if-nez p0, :cond_1
+    const/4 v2, 0x0
 
-    return-object v1
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    instance-of v0, p0, Ljava/math/BigInteger;
+    check-cast p1, Lm7c;
 
-    if-eqz v0, :cond_2
+    iget-wide v3, p0, Lm7c;->a:J
 
-    check-cast p0, Ljava/math/BigInteger;
+    iget-wide v5, p1, Lm7c;->a:J
 
-    return-object p0
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    instance-of v0, p0, Ljava/lang/Long;
+    iget-object v1, p0, Lm7c;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    iget-object v3, p1, Lm7c;->b:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-wide v0
+    move-result v1
 
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    if-nez v1, :cond_3
 
-    move-result-object p0
-
-    return-object p0
+    return v2
 
     :cond_3
-    instance-of v0, p0, Ljava/lang/Integer;
+    iget-wide v3, p0, Lm7c;->c:J
 
-    if-eqz v0, :cond_4
+    iget-wide v5, p1, Lm7c;->c:J
 
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    cmp-long v1, v3, v5
 
-    move-result p0
+    if-eqz v1, :cond_4
 
-    int-to-long v0, p0
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p0
-
-    return-object p0
+    return v2
 
     :cond_4
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+    iget-object v1, p0, Lm7c;->o:Ljava/lang/Long;
 
-    move-result-wide v0
+    iget-object v3, p1, Lm7c;->o:Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v1
 
-    return-object p0
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-wide v3, p0, Lm7c;->X:J
+
+    iget-wide v5, p1, Lm7c;->X:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lm7c;->Y:Ljava/lang/String;
+
+    iget-object v3, p1, Lm7c;->Y:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-wide v3, p0, Lm7c;->Z:J
+
+    iget-wide v5, p1, Lm7c;->Z:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-object v1, p0, Lm7c;->w0:Llo2;
+
+    iget-object p1, p1, Lm7c;->w0:Llo2;
+
+    if-eq v1, p1, :cond_9
+
+    return v2
+
+    :cond_9
+    return v0
 .end method
 
-.method public static final b(Ljava/lang/Object;)Ljava/lang/Double;
-    .locals 2
+.method public final hashCode()I
+    .locals 5
 
-    instance-of v0, p0, Ljava/lang/Number;
+    iget-wide v0, p0, Lm7c;->a:J
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    check-cast p0, Ljava/lang/Number;
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lm7c;->b:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    move-object p0, v1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
 
     :goto_0
-    if-eqz p0, :cond_1
+    add-int/2addr v0, v3
 
-    invoke-virtual {p0}, Ljava/lang/Number;->doubleValue()D
+    mul-int/2addr v0, v1
 
-    move-result-wide v0
+    iget-wide v3, p0, Lm7c;->c:J
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v0, v1, v3, v4}, Lgxf;->m(IIJ)I
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
+    iget-object v3, p0, Lm7c;->o:Ljava/lang/Long;
 
-    :cond_1
-    return-object v1
-.end method
+    if-nez v3, :cond_1
 
-.method public static final c(Ljava/lang/Object;)Ljava/lang/Long;
-    .locals 2
-
-    instance-of v0, p0, Ljava/lang/Number;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ljava/lang/Number;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v1
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    return-object v1
-.end method
-
-.method public static final d(Lorg/webrtc/RTCStats;)Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "address"
-
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    const-string v2, "port"
-
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
-
-    move-result-object p0
-
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    instance-of v2, p0, Ljava/lang/Number;
-
-    if-eqz v2, :cond_2
-
-    check-cast p0, Ljava/lang/Number;
+    move v3, v2
 
     goto :goto_1
 
-    :cond_2
-    move-object p0, v1
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
 
     :goto_1
-    if-eqz p0, :cond_3
+    add-int/2addr v0, v3
 
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+    mul-int/2addr v0, v1
 
-    move-result p0
+    iget-wide v3, p0, Lm7c;->X:J
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0, v1, v3, v4}, Lgxf;->m(IIJ)I
 
-    move-result-object p0
+    move-result v0
+
+    iget-object v3, p0, Lm7c;->Y:Ljava/lang/String;
+
+    if-nez v3, :cond_2
 
     goto :goto_2
 
-    :cond_3
-    move-object p0, v1
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
 
     :goto_2
-    if-eqz p0, :cond_4
+    add-int/2addr v0, v2
 
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    mul-int/2addr v0, v1
 
-    move-result p0
+    iget-wide v2, p0, Lm7c;->Z:J
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lm7c;->w0:Llo2;
 
-    const-string v0, ":"
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    add-int/2addr v1, v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_4
-    :goto_3
-    return-object v1
+    return v1
 .end method
 
-.method public static final e(Lorg/webrtc/RTCStats;)Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const-string v0, "kind"
+    const-string v0, "PushInfo(pushId="
 
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
+    const-string v1, ", eventKey="
 
-    move-result-object p0
+    iget-wide v2, p0, Lm7c;->a:J
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v4, p0, Lm7c;->b:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, ", chatServerId="
 
-    move-result-object p0
+    const-string v2, ", chatId="
 
-    return-object p0
+    iget-wide v3, p0, Lm7c;->c:J
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-static {v3, v4, v1, v2, v0}, Lqw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    return-object p0
+    iget-object v1, p0, Lm7c;->o:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageServerId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lm7c;->X:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pushType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm7c;->Y:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", createdTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lm7c;->Z:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm7c;->w0:Llo2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public static final f(Lorg/webrtc/RTCStats;)Ljava/math/BigInteger;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    const-string v0, "packetsLost"
+    iget-wide v0, p0, Lm7c;->a:J
 
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result-object p0
+    iget-object v0, p0, Lm7c;->b:Ljava/lang/String;
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-wide v0, p0, Lm7c;->c:J
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-static {p0}, Lm7c;->a(Ljava/lang/Object;)Ljava/math/BigInteger;
+    iget-object v0, p0, Lm7c;->o:Ljava/lang/Long;
 
-    move-result-object p0
+    if-nez v0, :cond_0
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object p0
-.end method
-
-.method public static final g(Lorg/webrtc/RTCStats;)Ljava/lang/Long;
-    .locals 1
-
-    const-string v0, "ssrc"
-
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p0}, Lm7c;->c(Ljava/lang/Object;)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v1, 0x1
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public static final h(Lorg/webrtc/RTCStats;)Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    const-string v0, "trackIdentifier"
+    move-result-wide v0
 
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result-object p0
+    :goto_0
+    iget-wide v0, p0, Lm7c;->X:J
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result-object p0
+    iget-object v0, p0, Lm7c;->Y:Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-wide v0, p0, Lm7c;->Z:J
 
-    move-result-object p0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    return-object p0
+    iget-object v0, p0, Lm7c;->w0:Llo2;
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {v0, p1, p2}, Llo2;->writeToParcel(Landroid/os/Parcel;I)V
 
-    return-object p0
-.end method
-
-.method public static final i(Lorg/webrtc/RTCStats;)Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "transportId"
-
-    invoke-virtual {p0}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method

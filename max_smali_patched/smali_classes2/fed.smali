@@ -1,23 +1,37 @@
 .class public final Lfed;
-.super Lxoe;
+.super Lv2;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final K()S
-    .locals 0
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    sget-object p0, Lboa;->c:Lv1d;
+    check-cast p2, Ljava/lang/Boolean;
 
-    const/4 p0, 0x6
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return p0
-.end method
+    move-result p2
 
-.method public final S()Z
-    .locals 0
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 p0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "sendWithNotification = "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ScheduledSendPickerViewModel"
+
+    invoke-static {p2, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

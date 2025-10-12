@@ -1,137 +1,83 @@
-.class public final Lit3;
+.class public abstract synthetic Lit3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lth7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final d:Lth7;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;Lth7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lit3;->a:Lth7;
-
-    iput-object p2, p0, Lit3;->b:Lth7;
-
-    iput-object p3, p0, Lit3;->c:Lth7;
-
-    iput-object p4, p0, Lit3;->d:Lth7;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(J)V
-    .locals 11
-
-    const-class v0, Lit3;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {}, Lbu3;->values()[Lbu3;
 
     move-result-object v0
 
-    const-string v1, "unblock, id = "
+    array-length v0, v0
 
-    invoke-static {p1, p2, v1, v0}, Lc22;->l(JLjava/lang/String;Ljava/lang/String;)V
+    new-array v0, v0, [I
 
-    iget-object v0, p0, Lit3;->a:Lth7;
+    const/4 v1, 0x1
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    :catch_0
+    const/4 v2, 0x0
 
-    check-cast v0, Lun3;
+    const/4 v3, 0x2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_1
+    aput v3, v0, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v1, Lly1;
+    :catch_1
+    sput-object v0, Lit3;->$EnumSwitchMapping$0:[I
 
-    const/16 v2, 0x13
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Lly1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1, p2, v1}, Lun3;->c(JLgm3;)Lkm3;
-
-    iget-object v0, p0, Lit3;->c:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {}, Lcva;->values()[Lcva;
 
     move-result-object v0
 
-    check-cast v0, Ljk;
+    array-length v0, v0
 
-    check-cast v0, Lw5a;
+    new-array v0, v0, [I
 
-    new-instance v1, Lkt3;
+    const/4 v4, 0x4
 
-    invoke-virtual {v0}, Lw5a;->x()Lx9b;
+    :try_start_2
+    aput v1, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object v2
+    :catch_2
+    :try_start_3
+    aput v3, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    check-cast v2, Laab;
+    :catch_3
+    const/4 v2, 0x3
 
-    iget-object v2, v2, Laab;->a:Lb53;
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-virtual {v2}, Le2d;->l()J
+    :catch_4
+    :try_start_5
+    aput v4, v0, v3
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result-wide v3
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-wide v5, p1
-
-    invoke-direct/range {v1 .. v10}, Lkt3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, Lw5a;->v(Lw5a;Lil;)J
-
-    iget-object p1, p0, Lit3;->b:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfoe;
-
-    invoke-static {v5, v6}, Lc22;->i(J)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lfoe;->f(Ljava/util/Collection;)V
-
-    iget-object p0, p0, Lit3;->d:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lrv0;
-
-    new-instance p1, Lgv3;
-
-    invoke-direct {p1, v5, v6}, Lgv3;-><init>(J)V
-
-    invoke-virtual {p0, p1}, Lrv0;->c(Ljava/lang/Object;)V
+    :catch_5
+    sput-object v0, Lit3;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

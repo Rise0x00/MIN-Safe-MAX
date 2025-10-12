@@ -1,47 +1,60 @@
 .class public final Laca;
-.super Lea4;
+.super Lle3;
 .source "SourceFile"
+
+# interfaces
+.implements Lig6;
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:Lraa;
 
-.field public final b:Lth7;
-
-.field public final c:Ljava/util/List;
+.field public final b:Lmf6;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;)V
+.method public constructor <init>(Lraa;Lmf6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laca;->a:Lth7;
+    iput-object p1, p0, Laca;->a:Lraa;
 
-    iput-object p2, p0, Laca;->b:Lth7;
+    iput-object p2, p0, Laca;->b:Lmf6;
 
-    sget-object p1, Lax7;->b:Lax7;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Lax7;->c:Laa4;
+# virtual methods
+.method public final d()Lraa;
+    .locals 4
 
-    sget-object p2, Lf9f;->b:Lf9f;
+    new-instance v0, Lkba;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Laca;->b:Lmf6;
 
-    sget-object p2, Lf9f;->g:Laa4;
+    const/4 v2, 0x1
 
-    filled-new-array {p1, p2}, [Laa4;
+    iget-object v3, p0, Laca;->a:Lraa;
 
-    move-result-object p1
+    invoke-direct {v0, v3, v1, v2}, Lkba;-><init>(Lraa;Lmf6;I)V
 
-    invoke-static {p1}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final i(Lve3;)V
+    .locals 2
 
-    iput-object p1, p0, Laca;->c:Ljava/util/List;
+    new-instance v0, Lzba;
+
+    iget-object v1, p0, Laca;->b:Lmf6;
+
+    invoke-direct {v0, p1, v1}, Lzba;-><init>(Lve3;Lmf6;)V
+
+    iget-object p1, p0, Laca;->a:Lraa;
+
+    invoke-virtual {p1, v0}, Lraa;->a(Lxda;)V
 
     return-void
 .end method

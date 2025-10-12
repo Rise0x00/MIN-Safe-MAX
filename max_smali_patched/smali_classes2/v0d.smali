@@ -1,199 +1,370 @@
-.class public final Lv0d;
-.super Lt2;
+.class public final synthetic Lv0d;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final c:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
+.method public synthetic constructor <init>(Lbp7;I)V
+    .locals 0
 
-    const/16 v0, 0x9
+    iput p2, p0, Lv0d;->a:I
 
-    invoke-direct {p0, v0, p1}, Lt2;-><init>(ILjava/lang/Object;)V
+    iput-object p1, p0, Lv0d;->b:Lbp7;
 
-    iput-object p2, p0, Lv0d;->c:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+    iget v0, p0, Lv0d;->a:I
 
-    move-result v0
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    if-le v0, v1, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    iget v0, p1, Landroid/graphics/Rect;->top:I
-
-    iget v1, p2, Landroid/graphics/Rect;->top:I
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    iget-object p0, p0, Lv0d;->c:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v3, 0x5
 
-    if-ge v0, v1, :cond_3
+    const/4 v4, 0x1
 
-    sub-int/2addr v0, v1
+    iget-object v5, p0, Lv0d;->b:Lbp7;
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p2
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
 
-    add-int v1, p2, v0
+    move-result-object v0
 
-    if-lez p2, :cond_1
+    check-cast v0, Lqqg;
 
-    invoke-virtual {p0, v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
+    iget-object v0, v0, Lqqg;->a:La5;
 
-    :cond_1
-    if-gez v1, :cond_2
+    const-class v1, Lov0;
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->X()V
-
-    :cond_2
-    neg-int p0, v0
-
-    invoke-virtual {p1, v2, p0}, Landroid/graphics/Rect;->offset(II)V
-
-    return-void
-
-    :cond_3
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
-
-    if-le p1, p2, :cond_b
-
-    sub-int/2addr p1, p2
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
-
-    move-result v1
-
-    add-int/2addr v1, p2
-
-    sub-int/2addr v0, v1
-
-    if-gez v0, :cond_4
-
-    move v0, v2
-
-    :cond_4
-    if-lez v0, :cond_5
-
-    invoke-virtual {p0, v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
-
-    :cond_5
-    sub-int/2addr v0, p1
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p2
-
-    instance-of v1, p2, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v1, :cond_6
-
-    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    goto :goto_0
-
-    :cond_6
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
+    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v1
 
-    const/4 v3, 0x1
+    const-class v2, Lr8f;
 
-    if-eqz v1, :cond_7
+    invoke-virtual {v0, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-virtual {v1}, Lygc;->j()I
+    move-result-object v0
+
+    new-instance v2, Lrvg;
+
+    invoke-direct {v2, v1, v0}, Lrvg;-><init>(Lbp7;Lbp7;)V
+
+    return-object v2
+
+    :pswitch_0
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpt0;
+
+    const/16 v1, 0x4000
+
+    invoke-interface {v0, v1}, Lpt0;->a(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
+
+    invoke-virtual {v0}, Ljna;->g()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
+
+    invoke-virtual {v0}, Ljna;->b()Lfna;
+
+    move-result-object v1
+
+    const-string v2, "srvc-rqst"
+
+    invoke-virtual {v1, v3, v2}, Lfna;->a(ILjava/lang/String;)Lzr5;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Ljna;->i(Lzr5;Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lwc5;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljna;
+
+    const-string v6, "media-transform"
+
+    invoke-virtual {v5, v2, v6, v1, v3}, Ljna;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1, v6}, Ljna;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, v4}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lwc5;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljna;
+
+    const-string v6, "upload"
+
+    invoke-virtual {v5, v2, v6, v1, v3}, Ljna;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1, v6}, Ljna;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, v4}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lwc5;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljna;
+
+    iget-object v1, v1, Ljna;->m:Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-direct {v0, v1, v4}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lwc5;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljna;
+
+    iget-object v1, v1, Ljna;->l:Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-direct {v0, v1, v4}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    :pswitch_7
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
+
+    iget-object v1, v0, Ljna;->i:Loc5;
+
+    sget-object v3, Ljna;->p:[Ltm7;
+
+    const/4 v4, 0x3
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v0, v1}, Ljna;->e(Loc5;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sget-object v1, Lxed;->a:Lcfe;
+
+    new-instance v1, Lwc5;
+
+    invoke-direct {v1, v0, v2}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v1
+
+    :pswitch_8
+    new-instance v0, Lwc5;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljna;
+
+    iget-object v1, v1, Ljna;->n:Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-direct {v0, v1, v4}, Lwc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lbxd;
+
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbbf;
+
+    invoke-direct {v0, v1}, Lbxd;-><init>(Lbbf;)V
+
+    return-object v0
+
+    :pswitch_a
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
+
+    iget-object v0, v0, Ljna;->n:Ls5f;
+
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    return-object v0
+
+    :pswitch_b
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljna;
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Runtime;->availableProcessors()I
 
     move-result v1
 
-    goto :goto_1
+    const-string v2, "ONEME_FB_BLOCK"
 
-    :cond_7
-    move v1, v3
+    invoke-virtual {v0, v4, v2, v1, v4}, Ljna;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
 
-    :goto_1
-    sub-int/2addr v1, v3
+    move-result-object v1
 
-    if-eqz p2, :cond_8
+    invoke-virtual {v0, v1, v2}, Ljna;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    move-result-object v0
 
-    move-result v4
+    return-object v0
 
-    if-nez v4, :cond_8
+    :pswitch_c
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move v4, v3
+    move-result-object v0
 
-    goto :goto_2
+    check-cast v0, Ljna;
 
-    :cond_8
-    move v4, v2
+    iget-object v0, v0, Ljna;->l:Ls5f;
 
-    :goto_2
-    if-eqz p2, :cond_9
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
+    move-result-object v0
 
-    move-result p2
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    if-ne p2, v1, :cond_9
+    return-object v0
 
-    move v2, v3
+    :pswitch_d
+    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_9
-    if-eqz v4, :cond_a
+    move-result-object v0
 
-    if-eqz v2, :cond_a
+    check-cast v0, Ljna;
 
-    neg-int p1, p1
+    iget-object v0, v0, Ljna;->l:Ls5f;
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :cond_a
-    if-gez v0, :cond_b
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->b0(I)V
+    return-object v0
 
-    :cond_b
-    :goto_3
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

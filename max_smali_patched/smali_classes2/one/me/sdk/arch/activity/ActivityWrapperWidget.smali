@@ -21,9 +21,9 @@
         "activityName",
         "Lkotlin/Function1;",
         "Landroid/content/Context;",
-        "Ltcf;",
+        "Loyf;",
         "startActivity",
-        "(Ljava/lang/String;Lf96;)V",
+        "(Ljava/lang/String;Lxe6;)V",
         "arch_release"
     }
     k = 0x1
@@ -39,7 +39,7 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Lf96;
+.field public final b:Lxe6;
 
 
 # direct methods
@@ -53,18 +53,18 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lf96;)V
+.method public constructor <init>(Ljava/lang/String;Lxe6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lf96;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
@@ -76,7 +76,7 @@
     iput-object p1, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->a:Ljava/lang/String;
 
     .line 4
-    iput-object p2, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lf96;
+    iput-object p2, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lxe6;
 
     return-void
 .end method
@@ -96,27 +96,27 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Ldic;->a(Ljava/lang/Class;)Lq33;
+    invoke-static {p1}, Lxxc;->a(Ljava/lang/Class;)Ll53;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lq33;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Ll53;->b()Ljava/lang/String;
 
     move-result-object p1
 
     iget-object v0, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
+    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lqrc;->B(Lox3;)Z
+    invoke-virtual {p1, p0}, Li8d;->B(Lb04;)Z
 
     :cond_0
     return-void
@@ -167,30 +167,30 @@
 
     invoke-virtual {p1, p0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    iget-object p0, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lf96;
+    iget-object p1, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lxe6;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p3
 
-    invoke-interface {p0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p3}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance p0, Landroid/widget/FrameLayout;
+    new-instance p1, Landroid/widget/FrameLayout;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p1, Lxzb;->arch_activity_wrapper_view_id:I
+    sget p2, Lcfc;->arch_activity_wrapper_view_id:I
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, p0}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    invoke-super {p0, p1}, Lox3;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lb04;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method

@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lo01;
+.field public final synthetic b:Lp01;
 
-.field public final synthetic c:Z
+.field public final synthetic c:Lch1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo01;ZI)V
+.method public synthetic constructor <init>(Lp01;Lch1;I)V
     .locals 0
 
     iput p3, p0, Lvz0;->a:I
 
-    iput-object p1, p0, Lvz0;->b:Lo01;
+    iput-object p1, p0, Lvz0;->b:Lp01;
 
-    iput-boolean p2, p0, Lvz0;->c:Z
+    iput-object p2, p0, Lvz0;->c:Lch1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,258 +32,179 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 10
+    .locals 7
 
     iget v0, p0, Lvz0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvz0;->b:Lo01;
+    iget-object v0, p0, Lvz0;->b:Lp01;
 
-    iget-boolean v5, p0, Lvz0;->c:Z
+    iget-object v1, p0, Lvz0;->c:Lch1;
 
-    sget-object p0, Lz76;->f:Lvea;
+    sget-object v2, Lox9;->j:Lqpa;
 
-    if-nez p0, :cond_0
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v3, Ly38;->o:Ly38;
 
-    invoke-virtual {p0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_1
+    if-eqz v4, :cond_1
 
-    const-string v2, "Screen sharing in call was changed on "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v3, " success"
+    const-string v5, "Disable camera for "
 
-    invoke-static {v2, v3, v5}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const-string v5, " was success"
 
-    const-string v4, "CallAdminSettingsController"
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v1, v4, v2, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    :goto_0
-    iget-object v9, v0, Lo01;->z0:Lq4e;
-
-    :cond_2
-    invoke-virtual {v9}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v1, p0
-
-    check-cast v1, Lu9;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x77
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v1 .. v8}, Lu9;->a(Lu9;ZZZZZZI)Lu9;
-
-    move-result-object v1
-
-    invoke-virtual {v9, p0, v1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    iget-object p0, v0, Lo01;->x0:Lkpd;
-
-    new-instance v0, Lxa;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, v5}, Lxa;-><init>(ZZ)V
-
-    invoke-virtual {p0, v0}, Lkpd;->h(Ljava/lang/Object;)Z
-
-    :goto_1
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Lvz0;->b:Lo01;
-
-    iget-boolean v3, p0, Lvz0;->c:Z
-
-    sget-object p0, Lz76;->f:Lvea;
-
-    if-nez p0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    sget-object v1, Lhw7;->o:Lhw7;
-
-    invoke-virtual {p0, v1}, Lvea;->a(Lhw7;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    const-string v2, "Cameras in call was changed on "
-
-    const-string v4, " success"
-
-    invoke-static {v2, v4, v3}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v4, 0x0
-
-    const-string v5, "CallAdminSettingsController"
-
-    invoke-virtual {p0, v1, v5, v2, v4}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_2
-    iget-object v9, v0, Lo01;->z0:Lq4e;
-
-    :cond_5
-    invoke-virtual {v9}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v1, p0
-
-    check-cast v1, Lu9;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x7d
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
+    move-result-object v4
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const-string v6, "CallAdminSettingsController"
 
-    invoke-static/range {v1 .. v8}, Lu9;->a(Lu9;ZZZZZZI)Lu9;
+    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    :cond_1
+    :goto_0
+    iget-object v0, v0, Lp01;->H0:Le8e;
 
-    invoke-virtual {v9, p0, v1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Lva;
 
-    move-result p0
+    const/4 v3, 0x1
 
-    if-eqz p0, :cond_5
+    invoke-direct {v2, v1, v3}, Lva;-><init>(Lch1;Z)V
 
-    iget-object p0, v0, Lo01;->x0:Lkpd;
+    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
 
-    new-instance v0, Lra;
+    :goto_1
+    sget-object v0, Loyf;->a:Loyf;
 
-    const/4 v1, 0x1
+    return-object v0
 
-    invoke-direct {v0, v1, v3}, Lra;-><init>(ZZ)V
+    :pswitch_0
+    iget-object v0, p0, Lvz0;->b:Lp01;
 
-    invoke-virtual {p0, v0}, Lkpd;->h(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lvz0;->c:Lch1;
+
+    sget-object v2, Lox9;->j:Lqpa;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object v3, Ly38;->o:Ly38;
+
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Disable microphone for "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, " was success"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "CallAdminSettingsController"
+
+    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_2
+    iget-object v0, v0, Lp01;->H0:Le8e;
+
+    new-instance v2, Lwa;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v1, v3}, Lwa;-><init>(Lch1;Z)V
+
+    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
 
     goto :goto_1
 
     :pswitch_1
-    iget-object v0, p0, Lvz0;->b:Lo01;
+    iget-object v0, p0, Lvz0;->b:Lp01;
 
-    iget-boolean v4, p0, Lvz0;->c:Z
+    iget-object v1, p0, Lvz0;->c:Lch1;
 
-    sget-object p0, Lz76;->f:Lvea;
+    sget-object v2, Lox9;->j:Lqpa;
 
-    if-nez p0, :cond_6
+    if-nez v2, :cond_4
 
     goto :goto_3
 
-    :cond_6
-    sget-object v1, Lhw7;->o:Lhw7;
+    :cond_4
+    sget-object v3, Ly38;->o:Ly38;
 
-    invoke-virtual {p0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
 
-    move-result v2
+    move-result v4
 
-    if-eqz v2, :cond_7
+    if-eqz v4, :cond_5
 
-    const-string v2, "Microphone in call was changed on "
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v3, " success"
+    const-string v5, "Disable screen sharing for "
 
-    invoke-static {v2, v3, v4}, Llge;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const-string v5, " was success"
 
-    const-string v5, "CallAdminSettingsController"
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, v1, v5, v2, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_7
-    :goto_3
-    iget-object p0, v0, Lo01;->z0:Lq4e;
-
-    :cond_8
-    invoke-virtual {p0}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v9
-
-    move-object v1, v9
-
-    check-cast v1, Lu9;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x7b
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
+    move-result-object v4
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const-string v6, "CallAdminSettingsController"
 
-    invoke-static/range {v1 .. v8}, Lu9;->a(Lu9;ZZZZZZI)Lu9;
+    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    :cond_5
+    :goto_3
+    iget-object v0, v0, Lp01;->H0:Le8e;
 
-    invoke-virtual {p0, v9, v1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Lza;
 
-    move-result v1
+    invoke-direct {v2, v1}, Lza;-><init>(Lch1;)V
 
-    if-eqz v1, :cond_8
+    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
 
-    iget-object p0, v0, Lo01;->x0:Lkpd;
-
-    new-instance v0, Lta;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, v4}, Lta;-><init>(ZZ)V
-
-    invoke-virtual {p0, v0}, Lkpd;->h(Ljava/lang/Object;)Z
-
-    goto/16 :goto_1
-
-    nop
+    goto :goto_1
 
     :pswitch_data_0
     .packed-switch 0x0

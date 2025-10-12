@@ -200,11 +200,11 @@
     return-void
 
     :cond_1
-    new-instance v0, Lgm;
+    new-instance v0, Lvm;
 
-    const/16 v1, 0x8
+    const/16 v1, 0x9
 
-    invoke-direct {v0, p0, v1}, Lgm;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p0, v1}, Lvm;-><init>(Landroid/content/Context;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

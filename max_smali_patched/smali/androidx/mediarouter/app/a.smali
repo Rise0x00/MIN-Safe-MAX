@@ -38,7 +38,7 @@
 
     iget-object v1, v0, Landroidx/mediarouter/app/a;->c:Landroidx/mediarouter/app/d;
 
-    iget-object v2, v1, Landroidx/mediarouter/app/d;->J0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v2, v1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
     invoke-virtual {v2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -46,11 +46,11 @@
 
     invoke-virtual {v2, v0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    iget-object v2, v1, Landroidx/mediarouter/app/d;->M0:Ljava/util/HashSet;
+    iget-object v2, v1, Landroidx/mediarouter/app/d;->V0:Ljava/util/HashSet;
 
     if-eqz v2, :cond_6
 
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->N0:Ljava/util/HashSet;
+    iget-object v3, v1, Landroidx/mediarouter/app/d;->W0:Ljava/util/HashSet;
 
     if-nez v3, :cond_0
 
@@ -61,7 +61,7 @@
 
     move-result v2
 
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->N0:Ljava/util/HashSet;
+    iget-object v3, v1, Landroidx/mediarouter/app/d;->W0:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->size()I
 
@@ -73,7 +73,7 @@
 
     invoke-direct {v3, v1}, Landroidx/mediarouter/app/b;-><init>(Landroidx/mediarouter/app/d;)V
 
-    iget-object v4, v1, Landroidx/mediarouter/app/d;->J0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v4, v1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
     invoke-virtual {v4}, Landroid/widget/AdapterView;->getFirstVisiblePosition()I
 
@@ -84,7 +84,7 @@
     move v6, v5
 
     :goto_0
-    iget-object v7, v1, Landroidx/mediarouter/app/d;->J0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v7, v1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -98,7 +98,7 @@
 
     if-ge v5, v7, :cond_4
 
-    iget-object v7, v1, Landroidx/mediarouter/app/d;->J0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v7, v1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
     invoke-virtual {v7, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
@@ -106,13 +106,13 @@
 
     add-int v11, v4, v5
 
-    iget-object v12, v1, Landroidx/mediarouter/app/d;->K0:Landroidx/mediarouter/app/c;
+    iget-object v12, v1, Landroidx/mediarouter/app/d;->T0:Landroidx/mediarouter/app/c;
 
     invoke-virtual {v12, v11}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v11
 
-    check-cast v11, Lek8;
+    check-cast v11, Lbs8;
 
     invoke-interface {v8, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -131,7 +131,7 @@
     goto :goto_1
 
     :cond_1
-    iget v12, v1, Landroidx/mediarouter/app/d;->T0:I
+    iget v12, v1, Landroidx/mediarouter/app/d;->c1:I
 
     mul-int/2addr v12, v2
 
@@ -144,7 +144,7 @@
 
     invoke-direct {v14, v15}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    iget-object v15, v1, Landroidx/mediarouter/app/d;->M0:Ljava/util/HashSet;
+    iget-object v15, v1, Landroidx/mediarouter/app/d;->V0:Ljava/util/HashSet;
 
     if-eqz v15, :cond_2
 
@@ -158,7 +158,7 @@
 
     invoke-direct {v12, v10, v10}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    iget v15, v1, Landroidx/mediarouter/app/d;->n1:I
+    iget v15, v1, Landroidx/mediarouter/app/d;->w1:I
 
     move-object/from16 v16, v11
 
@@ -186,7 +186,7 @@
 
     invoke-direct {v10, v12, v12, v11, v12}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iget v11, v1, Landroidx/mediarouter/app/d;->m1:I
+    iget v11, v1, Landroidx/mediarouter/app/d;->v1:I
 
     int-to-long v11, v11
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v14, v10}, Landroid/view/animation/Animation;->setFillEnabled(Z)V
 
-    iget-object v11, v1, Landroidx/mediarouter/app/d;->p1:Landroid/view/animation/Interpolator;
+    iget-object v11, v1, Landroidx/mediarouter/app/d;->y1:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v14, v11}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
@@ -228,116 +228,116 @@
     :cond_4
     invoke-interface {v9}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    check-cast v3, Ljava/util/Map$Entry;
+    :goto_3
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lek8;
+    check-cast v4, Ljava/util/Map$Entry;
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/BitmapDrawable;
-
-    invoke-interface {v8, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Landroid/graphics/Rect;
+    check-cast v5, Lbs8;
 
-    iget-object v6, v1, Landroidx/mediarouter/app/d;->N0:Ljava/util/HashSet;
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v6, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    move-result-object v4
 
-    move-result v6
+    check-cast v4, Landroid/graphics/drawable/BitmapDrawable;
 
-    if-eqz v6, :cond_5
+    invoke-interface {v8, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v4, Llqa;
+    move-result-object v6
 
-    invoke-direct {v4, v3, v5}, Llqa;-><init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
+    check-cast v6, Landroid/graphics/Rect;
+
+    iget-object v7, v1, Landroidx/mediarouter/app/d;->W0:Ljava/util/HashSet;
+
+    invoke-virtual {v7, v5}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    new-instance v5, Lc3b;
+
+    invoke-direct {v5, v4, v6}, Lc3b;-><init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
 
     const/4 v12, 0x0
 
-    iput v12, v4, Llqa;->h:F
+    iput v12, v5, Lc3b;->h:F
 
-    iget v3, v1, Landroidx/mediarouter/app/d;->o1:I
+    iget v4, v1, Landroidx/mediarouter/app/d;->x1:I
 
-    int-to-long v5, v3
+    int-to-long v6, v4
 
-    iput-wide v5, v4, Llqa;->e:J
+    iput-wide v6, v5, Lc3b;->e:J
 
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->p1:Landroid/view/animation/Interpolator;
+    iget-object v4, v1, Landroidx/mediarouter/app/d;->y1:Landroid/view/animation/Interpolator;
 
-    iput-object v3, v4, Llqa;->d:Landroid/view/animation/Interpolator;
+    iput-object v4, v5, Lc3b;->d:Landroid/view/animation/Interpolator;
 
     goto :goto_4
 
     :cond_5
     const/4 v12, 0x0
 
-    iget v6, v1, Landroidx/mediarouter/app/d;->T0:I
+    iget v7, v1, Landroidx/mediarouter/app/d;->c1:I
 
-    mul-int/2addr v6, v2
+    mul-int/2addr v7, v2
 
-    new-instance v7, Llqa;
+    new-instance v9, Lc3b;
 
-    invoke-direct {v7, v3, v5}, Llqa;-><init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
+    invoke-direct {v9, v4, v6}, Lc3b;-><init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
 
-    iput v6, v7, Llqa;->g:I
+    iput v7, v9, Lc3b;->g:I
 
-    iget v3, v1, Landroidx/mediarouter/app/d;->m1:I
+    iget v4, v1, Landroidx/mediarouter/app/d;->v1:I
 
-    int-to-long v5, v3
+    int-to-long v6, v4
 
-    iput-wide v5, v7, Llqa;->e:J
+    iput-wide v6, v9, Lc3b;->e:J
 
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->p1:Landroid/view/animation/Interpolator;
+    iget-object v4, v1, Landroidx/mediarouter/app/d;->y1:Landroid/view/animation/Interpolator;
 
-    iput-object v3, v7, Llqa;->d:Landroid/view/animation/Interpolator;
+    iput-object v4, v9, Lc3b;->d:Landroid/view/animation/Interpolator;
 
-    new-instance v3, Lr9b;
+    new-instance v4, Llo4;
 
-    const/16 v5, 0x16
+    const/16 v6, 0x19
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    invoke-direct {v3, v1, v4, v6, v5}, Lr9b;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-direct {v4, v1, v5, v7, v6}, Llo4;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    iput-object v3, v7, Llqa;->l:Lr9b;
+    iput-object v4, v9, Lc3b;->l:Llo4;
 
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->O0:Ljava/util/HashSet;
+    iget-object v4, v1, Landroidx/mediarouter/app/d;->X0:Ljava/util/HashSet;
 
-    invoke-virtual {v3, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    move-object v4, v7
+    move-object v5, v9
 
     :goto_4
-    iget-object v3, v1, Landroidx/mediarouter/app/d;->J0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v4, v1, Landroidx/mediarouter/app/d;->S0:Landroidx/mediarouter/app/OverlayListView;
 
-    iget-object v3, v3, Landroidx/mediarouter/app/OverlayListView;->a:Ljava/util/ArrayList;
+    iget-object v4, v4, Landroidx/mediarouter/app/OverlayListView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 

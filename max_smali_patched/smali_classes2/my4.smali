@@ -1,256 +1,78 @@
-.class public abstract Lmy4;
+.class public final Lmy4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lc35;
+
 
 # instance fields
-.field public final a:Lp04;
+.field public final a:Ljava/util/ArrayList;
 
-.field public final b:Lq4e;
+.field public final b:Landroid/graphics/Path;
 
-.field public final c:Lq4e;
-
-.field public final d:Lkpd;
-
-.field public final e:Lkpd;
-
-.field public final f:Lbq5;
-
-.field public final g:Ljava/lang/Object;
-
-.field public final h:Ljava/lang/Object;
-
-.field public final i:Lq4e;
-
-.field public final j:Lq4e;
-
-.field public k:Lpy4;
-
-.field public final l:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final m:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final c:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>(Lp04;)V
-    .locals 8
+.method public constructor <init>(IF)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmy4;->a:Lp04;
+    new-instance v0, Ljava/util/ArrayList;
 
-    sget-object v0, Lehb;->a:Lehb;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v0}, Lehb;->d()Lth7;
+    iput-object v0, p0, Lmy4;->a:Ljava/util/ArrayList;
 
-    move-result-object v0
+    new-instance v0, Landroid/graphics/Path;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    invoke-static {v1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    iput-object v0, p0, Lmy4;->b:Landroid/graphics/Path;
 
-    move-result-object v2
+    new-instance v0, Landroid/graphics/Paint;
 
-    iput-object v2, p0, Lmy4;->b:Lq4e;
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    sget-object v3, Lr25;->a:Lr25;
+    iput-object v0, p0, Lmy4;->c:Landroid/graphics/Paint;
 
-    invoke-static {v3}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result-object v3
+    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iput-object v3, p0, Lmy4;->c:Lq4e;
+    const/4 p1, 0x1
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    const/4 v5, 0x7
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    invoke-static {v4, v4, v5}, Llpd;->b(III)Lkpd;
+    sget-object p1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
-    move-result-object v6
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iput-object v6, p0, Lmy4;->d:Lkpd;
+    sget-object p1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
-    invoke-static {v4, v4, v5}, Llpd;->b(III)Lkpd;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    move-result-object v4
+    sget-object p1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
-    iput-object v4, p0, Lmy4;->e:Lkpd;
-
-    new-instance v4, Luv2;
-
-    const/16 v5, 0xb
-
-    invoke-direct {v4, v2, v5}, Luv2;-><init>(Lbq5;I)V
-
-    new-instance v2, Lsd0;
-
-    const/4 v6, 0x3
-
-    invoke-direct {v2, v6, v1, v5}, Lsd0;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    new-instance v5, Ly31;
-
-    const/4 v7, 0x4
-
-    invoke-direct {v5, v4, v3, v2, v7}, Ly31;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhoe;
-
-    check-cast v2, Loba;
-
-    invoke-virtual {v2}, Loba;->a()Lj04;
-
-    move-result-object v2
-
-    invoke-static {v5, v2}, Lfog;->y(Lbq5;Lh04;)Lbq5;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lmy4;->f:Lbq5;
-
-    new-instance v2, Lqm4;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v3}, Lqm4;-><init>(I)V
-
-    invoke-static {v6, v2}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lmy4;->g:Ljava/lang/Object;
-
-    new-instance v2, Lqm4;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v2, v3}, Lqm4;-><init>(I)V
-
-    invoke-static {v6, v2}, Lltg;->s(ILd96;)Lth7;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lmy4;->h:Ljava/lang/Object;
-
-    invoke-static {v1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lmy4;->i:Lq4e;
-
-    invoke-static {v1}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lmy4;->j:Lq4e;
-
-    new-instance v3, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v3, p0, Lmy4;->l:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance v3, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v3, p0, Lmy4;->m:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance v3, Lky4;
-
-    invoke-direct {v3, p0, v1}, Lky4;-><init>(Lmy4;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lgs5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v2, v3, v1}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhoe;
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->a()Lj04;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lfog;->y(Lbq5;Lh04;)Lbq5;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(I)V
-.end method
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 2
 
-.method public abstract b()V
-.end method
+    iget-object v0, p0, Lmy4;->b:Landroid/graphics/Path;
 
-.method public final c()Loy4;
-    .locals 0
+    iget-object v1, p0, Lmy4;->c:Landroid/graphics/Paint;
 
-    iget-object p0, p0, Lmy4;->h:Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Loy4;
-
-    return-object p0
-.end method
-
-.method public abstract d()Z
-.end method
-
-.method public abstract e()J
-.end method
-
-.method public final f()Lfy4;
-    .locals 0
-
-    iget-object p0, p0, Lmy4;->g:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lfy4;
-
-    return-object p0
-.end method
-
-.method public abstract g(I)V
-.end method
-
-.method public abstract h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-.end method
-
-.method public abstract i()Ltcf;
-.end method
-
-.method public abstract j()V
-.end method
-
-.method public abstract k()V
-.end method
-
-.method public abstract l(Lax3;)Ljava/lang/Object;
-.end method
-
-.method public abstract m(ILjava/lang/String;)V
+    return-void
 .end method

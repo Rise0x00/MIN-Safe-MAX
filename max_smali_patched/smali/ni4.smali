@@ -1,43 +1,35 @@
-.class public abstract Lni4;
+.class public interface abstract Lni4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lc3f;
-
-.field public final c:I
-
-.field public final o:Ln26;
+# interfaces
+.implements Lyr7;
 
 
-# direct methods
-.method public constructor <init>(ILc3f;I)V
+# virtual methods
+.method public onDestroy(Lcs7;)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lni4;->a:I
-
-    iput-object p2, p0, Lni4;->b:Lc3f;
-
-    iput p3, p0, Lni4;->c:I
-
-    iget-object p1, p2, Lc3f;->c:[Ln26;
-
-    aget-object p1, p1, p3
-
-    iput-object p1, p0, Lni4;->o:Ln26;
 
     return-void
 .end method
 
+.method public onPause(Lcs7;)V
+    .locals 0
 
-# virtual methods
-.method public abstract a()I
+    return-void
 .end method
 
-.method public abstract b(Lni4;)Z
+.method public abstract onResume(Lcs7;)V
+.end method
+
+.method public onStart(Lcs7;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStop(Lcs7;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,127 +1,262 @@
-.class public final enum Lyab;
-.super Ljava/lang/Enum;
+.class public final Lyab;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lyab;
-
-.field public static final synthetic Y:[Lyab;
-
-.field public static final enum b:Lyab;
-
-.field public static final enum c:Lyab;
-
-.field public static final enum o:Lyab;
+# interfaces
+.implements Labg;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/Object;
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(I)V
+    .locals 2
 
-    new-instance v0, Lyab;
+    packed-switch p1, :pswitch_data_0
 
-    const-string v1, "FILL_START"
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    .line 11
+    new-instance p1, Lg5g;
 
-    invoke-direct {v0, v1, v2, v2}, Lyab;-><init>(Ljava/lang/String;II)V
+    const/4 v0, 0x2
 
-    new-instance v1, Lyab;
+    const/4 v1, 0x0
 
-    const-string v2, "FILL_CENTER"
+    invoke-direct {p1, v0, v1}, Lg5g;-><init>(IZ)V
 
-    const/4 v3, 0x1
+    iput-object p1, p0, Lyab;->i:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3, v3}, Lyab;-><init>(Ljava/lang/String;II)V
+    const/16 p1, 0x100
 
-    sput-object v1, Lyab;->b:Lyab;
+    .line 12
+    new-array p1, p1, [I
 
-    new-instance v2, Lyab;
-
-    const-string v3, "FILL_END"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lyab;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Lyab;
-
-    const-string v4, "FIT_START"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lyab;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lyab;->c:Lyab;
-
-    new-instance v4, Lyab;
-
-    const-string v5, "FIT_CENTER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Lyab;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lyab;->o:Lyab;
-
-    new-instance v5, Lyab;
-
-    const-string v6, "FIT_END"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v7}, Lyab;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lyab;->X:Lyab;
-
-    filled-new-array/range {v0 .. v5}, [Lyab;
-
-    move-result-object v0
-
-    sput-object v0, Lyab;->Y:[Lyab;
+    iput-object p1, p0, Lyab;->a:Ljava/lang/Object;
 
     return-void
+
+    .line 13
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 14
+    new-instance p1, Ly4b;
+
+    invoke-direct {p1}, Ly4b;-><init>()V
+
+    iput-object p1, p0, Lyab;->i:Ljava/lang/Object;
+
+    const/16 p1, 0x100
+
+    .line 15
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lyab;->a:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(IIIIIIZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lyab;->a:I
+    .line 2
+    iput p1, p0, Lyab;->c:I
+
+    .line 3
+    iput p2, p0, Lyab;->d:I
+
+    .line 4
+    iput p3, p0, Lyab;->e:I
+
+    .line 5
+    iput p4, p0, Lyab;->f:I
+
+    .line 6
+    iput p5, p0, Lyab;->g:I
+
+    .line 7
+    iput p6, p0, Lyab;->h:I
+
+    .line 8
+    iput-boolean p7, p0, Lyab;->b:Z
+
+    .line 9
+    new-instance p1, Landroid/graphics/Matrix;
+
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object p1, p0, Lyab;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyab;
-    .locals 1
 
-    const-class v0, Lyab;
+# virtual methods
+.method public a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+    .locals 12
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lyab;->e:I
 
-    move-result-object p0
+    iget v1, p0, Lyab;->c:I
 
-    check-cast p0, Lyab;
+    iget v2, p0, Lyab;->d:I
 
-    return-object p0
-.end method
+    iget v3, p0, Lyab;->f:I
 
-.method public static values()[Lyab;
-    .locals 1
+    iget-object v4, p0, Lyab;->i:Ljava/lang/Object;
 
-    sget-object v0, Lyab;->Y:[Lyab;
+    check-cast v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
 
-    invoke-virtual {v0}, [Lyab;->clone()Ljava/lang/Object;
+    iget-object v5, p0, Lyab;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v5, Landroid/graphics/Matrix;
 
-    check-cast v0, [Lyab;
+    if-eqz v4, :cond_0
 
-    return-object v0
+    iget v6, v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->width:I
+
+    if-ne v6, p2, :cond_0
+
+    iget v6, v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->height:I
+
+    if-ne v6, p3, :cond_0
+
+    invoke-static {v5, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    return-object v4
+
+    :cond_0
+    iget-boolean v4, p0, Lyab;->b:Z
+
+    if-eqz v4, :cond_1
+
+    new-instance v4, Landroid/graphics/Matrix;
+
+    invoke-direct {v4, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
+    add-int/2addr v2, v3
+
+    sub-int v2, p3, v2
+
+    int-to-float v1, v1
+
+    int-to-float v6, p2
+
+    div-float/2addr v1, v6
+
+    int-to-float v2, v2
+
+    int-to-float v7, p3
+
+    div-float/2addr v2, v7
+
+    invoke-virtual {v4, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v6
+
+    int-to-float v1, v3
+
+    div-float/2addr v1, v7
+
+    invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    move-object v11, v4
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v4, Landroid/graphics/Matrix;
+
+    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
+
+    add-int/2addr v2, v3
+
+    sub-int v2, p3, v2
+
+    int-to-float v1, v1
+
+    int-to-float v6, p2
+
+    div-float/2addr v1, v6
+
+    int-to-float v2, v2
+
+    int-to-float v7, p3
+
+    div-float/2addr v2, v7
+
+    invoke-virtual {v4, v1, v2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v6
+
+    int-to-float v1, v3
+
+    div-float/2addr v1, v7
+
+    invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v0, v4}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
+
+    move-object v11, v0
+
+    :goto_0
+    new-instance v6, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+
+    iget v9, p0, Lyab;->g:I
+
+    iget v10, p0, Lyab;->h:I
+
+    move v7, p2
+
+    move v8, p3
+
+    invoke-direct/range {v6 .. v11}, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;-><init>(IIIILandroid/graphics/Matrix;)V
+
+    invoke-virtual {v5, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    iput-object v6, p0, Lyab;->i:Ljava/lang/Object;
+
+    return-object v6
 .end method

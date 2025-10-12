@@ -1,140 +1,86 @@
 .class public final Lsy5;
-.super Ljava/lang/Object;
+.super Lude;
 .source "SourceFile"
+
+# interfaces
+.implements Lhg6;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Loy5;
 
-.field public final b:I
+.field public final b:Leg6;
 
-.field public final c:I
+.field public final c:Lyl0;
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(Loy5;Leg6;Lyl0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lsy5;->a:I
+    iput-object p1, p0, Lsy5;->a:Loy5;
 
-    iput p2, p0, Lsy5;->b:I
+    iput-object p2, p0, Lsy5;->b:Leg6;
 
-    iput p3, p0, Lsy5;->c:I
+    iput-object p3, p0, Lsy5;->c:Lyl0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lsy5;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lsy5;
-
-    iget v0, p0, Lsy5;->a:I
-
-    iget v1, p1, Lsy5;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lsy5;->b:I
-
-    iget v1, p1, Lsy5;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget p0, p0, Lsy5;->c:I
-
-    iget p1, p1, Lsy5;->c:I
-
-    if-eq p0, p1, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lsy5;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lsy5;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Lsy5;->c:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final b()Loy5;
     .locals 5
 
-    const-string v0, ", min="
+    new-instance v0, Lqy5;
 
-    const-string v1, ", max="
+    iget-object v1, p0, Lsy5;->c:Lyl0;
 
-    const-string v2, "WidthConstraints(scrollThresholdItemCount="
+    const/4 v2, 0x0
 
-    iget v3, p0, Lsy5;->a:I
+    iget-object v3, p0, Lsy5;->a:Loy5;
 
-    iget v4, p0, Lsy5;->b:I
+    iget-object v4, p0, Lsy5;->b:Leg6;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v3, v4, v1, v2}, Lqy5;-><init>(Loy5;Leg6;Ljava/lang/Object;I)V
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    const-string v1, ")"
+.method public final l(Lnee;)V
+    .locals 3
 
-    iget p0, p0, Lsy5;->c:I
+    :try_start_0
+    iget-object v0, p0, Lsy5;->b:Leg6;
 
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Leg6;->a:Ljava/lang/Object;
 
-    move-result-object p0
+    const-string v1, "The initialSupplier returned a null value"
 
-    return-object p0
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    new-instance v1, Lry5;
+
+    iget-object v2, p0, Lsy5;->c:Lyl0;
+
+    invoke-direct {v1, p1, v0, v2}, Lry5;-><init>(Lnee;Ljava/lang/Object;Lyl0;)V
+
+    iget-object p1, p0, Lsy5;->a:Loy5;
+
+    invoke-virtual {p1, v1}, Loy5;->c(Lyz5;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lw65;->c(Ljava/lang/Throwable;Lnee;)V
+
+    return-void
 .end method

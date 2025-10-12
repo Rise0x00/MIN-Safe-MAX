@@ -3,16 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Luub;
+.implements Lt9c;
 
 
 # direct methods
-.method public static d(Lu8d;)Z
+.method public static d(Lot6;)Z
     .locals 1
 
     const-class v0, Landroidx/camera/core/internal/compat/quirk/SurfaceProcessingQuirk;
 
-    invoke-virtual {p0, v0}, Lu8d;->n(Ljava/lang/Class;)Ljava/util/ArrayList;
+    invoke-virtual {p0, v0}, Lot6;->f(Ljava/lang/Class;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -52,9 +52,9 @@
 
 # virtual methods
 .method public b()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method

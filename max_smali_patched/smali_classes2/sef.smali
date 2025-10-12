@@ -1,390 +1,474 @@
-.class public final synthetic Lsef;
+.class public final Lsef;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgm3;
-.implements Lu96;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:F
 
-.field public final synthetic b:Lnef;
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:I
+
+.field public final f:Landroid/text/TextUtils$TruncateAt;
+
+.field public final g:Lw29;
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnef;I)V
+.method public synthetic constructor <init>(FLjava/lang/CharSequence;ZI)V
+    .locals 10
+
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_0
+
+    const/4 p4, 0x0
+
+    :goto_0
+    move v4, p4
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p4, 0x1
+
+    goto :goto_0
+
+    :goto_1
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const v5, 0x7fffffff
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    .line 1
+    invoke-direct/range {v0 .. v9}, Lsef;-><init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lw29;II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lw29;II)V
     .locals 0
 
-    iput p2, p0, Lsef;->a:I
-
-    iput-object p1, p0, Lsef;->b:Lnef;
-
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 3
+    iput p1, p0, Lsef;->a:F
 
+    .line 4
+    iput-object p2, p0, Lsef;->b:Ljava/lang/CharSequence;
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+    .line 5
+    iput-boolean p3, p0, Lsef;->c:Z
 
-    iget v0, p0, Lsef;->a:I
+    .line 6
+    iput-boolean p4, p0, Lsef;->d:Z
 
-    iget-object p0, p0, Lsef;->b:Lnef;
+    .line 7
+    iput p5, p0, Lsef;->e:I
 
-    packed-switch v0, :pswitch_data_0
+    .line 8
+    iput-object p6, p0, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
 
-    check-cast p1, Ly00;
+    .line 9
+    iput-object p7, p0, Lsef;->g:Lw29;
 
-    sget-object v0, Lq10;->X:Lq10;
+    .line 10
+    iput p8, p0, Lsef;->h:I
 
-    iput-object v0, p1, Ly00;->i:Lq10;
+    .line 11
+    iput p9, p0, Lsef;->i:I
 
-    iget-object v0, p0, Lnef;->a:Lvef;
+    const p1, 0x7fffffff
 
-    iget-object v1, v0, Lvef;->a:Ljava/lang/String;
+    if-eq p5, p1, :cond_0
 
-    iput-object v1, p1, Ly00;->m:Ljava/lang/String;
-
-    iget-wide v0, v0, Lvef;->b:J
-
-    iput-wide v0, p1, Ly00;->u:J
-
-    iget v0, p0, Lnef;->e:F
-
-    iput v0, p1, Ly00;->k:F
-
-    iget-wide v0, p0, Lnef;->f:J
-
-    iput-wide v0, p1, Ly00;->o:J
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "putUploadInRepository: failed, upload=%s"
-
-    filled-new-array {p0, p1}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "uef"
-
-    invoke-static {p1, v0, p0}, Lz76;->q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lsef;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    check-cast p1, Lngf;
-
-    new-instance v0, Lwef;
-
-    invoke-direct {v0}, Lwef;-><init>()V
-
-    iget-object p0, p0, Lsef;->b:Lnef;
-
-    iget-object v1, p0, Lnef;->a:Lvef;
-
-    iget-object v2, v1, Lvef;->d:Ljava/lang/String;
-
-    iput-object v2, v0, Lwef;->b:Ljava/lang/String;
-
-    new-instance v2, Loz1;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iget-object v3, v1, Lvef;->a:Ljava/lang/String;
-
-    iput-object v3, v2, Loz1;->c:Ljava/lang/Object;
-
-    iget v3, v1, Lvef;->c:I
-
-    iput v3, v2, Loz1;->a:I
-
-    iget-wide v3, v1, Lvef;->b:J
-
-    iput-wide v3, v2, Loz1;->b:J
-
-    iput-object v2, v0, Lwef;->a:Loz1;
-
-    iget-object v1, p0, Lnef;->b:Ljava/lang/String;
-
-    iput-object v1, v0, Lwef;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Lnef;->c:Ljava/lang/String;
-
-    iput-object v1, v0, Lwef;->d:Ljava/lang/String;
-
-    iget-object v1, p0, Lnef;->d:Ljava/lang/String;
-
-    iput-object v1, v0, Lwef;->e:Ljava/lang/String;
-
-    iget v1, p0, Lnef;->e:F
-
-    iput v1, v0, Lwef;->f:F
-
-    iget-wide v1, p0, Lnef;->f:J
-
-    iput-wide v1, v0, Lwef;->g:J
-
-    iget-object v1, p0, Lnef;->g:Lhgf;
-
-    iput-object v1, v0, Lwef;->h:Lhgf;
-
-    iget-object v1, p0, Lnef;->h:Lggf;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v2, Lfgf;
+    const/4 p1, 0x0
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v3, v1, Lggf;->b:J
-
-    iput-wide v3, v2, Lfgf;->b:J
-
-    iget-object v1, v1, Lggf;->a:Ljava/lang/String;
-
-    iput-object v1, v2, Lfgf;->a:Ljava/lang/String;
-
-    move-object v1, v2
-
+    .line 12
     :goto_0
-    iput-object v1, v0, Lwef;->i:Lfgf;
+    iput-boolean p1, p0, Lsef;->j:Z
 
-    iget-wide v1, p0, Lnef;->i:J
+    return-void
+.end method
 
-    iput-wide v1, v0, Lwef;->j:J
+.method public static a(Lsef;Ljava/lang/CharSequence;I)Lsef;
+    .locals 10
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v1, p0, Lsef;->a:F
 
-    new-instance p0, Lroc;
+    and-int/lit8 v0, p2, 0x2
 
-    const/16 v1, 0xa
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1, v1, v0}, Lroc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object p1, p0, Lsef;->b:Ljava/lang/CharSequence;
 
-    new-instance p1, Lyb3;
+    :cond_0
+    move-object v2, p1
 
-    const/4 v0, 0x2
+    iget-boolean v3, p0, Lsef;->c:Z
 
-    invoke-direct {p1, v0, p0}, Lyb3;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lb6e;
-
-    new-instance v0, Lv09;
-
-    iget-object p0, p0, Lsef;->b:Lnef;
-
-    invoke-direct {v0, p0, p1}, Lv09;-><init>(Lnef;Lb6e;)V
-
-    return-object v0
-
-    :pswitch_2
-    check-cast p1, Lape;
-
-    instance-of v0, p1, Lwvf;
-
-    iget-object p0, p0, Lsef;->b:Lnef;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lwvf;
-
-    iget-object p1, p1, Lwvf;->c:Ljava/util/ArrayList;
+    and-int/lit8 p1, p2, 0x8
 
     if-eqz p1, :cond_1
 
-    invoke-static {p1}, Lg73;->L0(Ljava/lang/Iterable;)Ljava/util/List;
+    iget-boolean p1, p0, Lsef;->d:Z
 
-    move-result-object p1
+    :goto_0
+    move v4, p1
 
     goto :goto_1
 
     :cond_1
-    sget-object p1, Lr25;->a:Lr25;
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :goto_1
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    and-int/lit8 p1, p2, 0x10
 
-    move-result-object p1
+    if-eqz p1, :cond_2
 
-    check-cast p1, Lxvf;
-
-    invoke-virtual {p0}, Lnef;->b()Lmef;
-
-    move-result-object p0
-
-    iget-object v0, p1, Lxvf;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Lmef;->d:Ljava/lang/String;
-
-    new-instance v0, Lfgf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p1, Lxvf;->c:Ljava/lang/String;
-
-    iput-object v1, v0, Lfgf;->a:Ljava/lang/String;
-
-    iget-wide v1, p1, Lxvf;->b:J
-
-    iput-wide v1, v0, Lfgf;->b:J
-
-    new-instance p1, Lggf;
-
-    invoke-direct {p1, v0}, Lggf;-><init>(Lfgf;)V
-
-    iput-object p1, p0, Lmef;->h:Lggf;
-
-    new-instance p1, Lnef;
-
-    invoke-direct {p1, p0}, Lnef;-><init>(Lmef;)V
-
-    goto :goto_2
-
-    :cond_2
-    instance-of v0, p1, Lzl5;
-
-    if-eqz v0, :cond_3
-
-    check-cast p1, Lzl5;
-
-    iget-object p1, p1, Lzl5;->c:Ljava/util/List;
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lam5;
-
-    invoke-virtual {p0}, Lnef;->b()Lmef;
-
-    move-result-object p0
-
-    iget-object v0, p1, Lam5;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Lmef;->d:Ljava/lang/String;
-
-    new-instance v0, Lfgf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p1, Lam5;->b:Ljava/lang/String;
-
-    iput-object v1, v0, Lfgf;->a:Ljava/lang/String;
-
-    iget-wide v1, p1, Lam5;->a:J
-
-    iput-wide v1, v0, Lfgf;->b:J
-
-    new-instance p1, Lggf;
-
-    invoke-direct {p1, v0}, Lggf;-><init>(Lfgf;)V
-
-    iput-object p1, p0, Lmef;->h:Lggf;
-
-    new-instance p1, Lnef;
-
-    invoke-direct {p1, p0}, Lnef;-><init>(Lmef;)V
-
-    goto :goto_2
-
-    :cond_3
-    instance-of v0, p1, Loya;
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0}, Lnef;->b()Lmef;
-
-    move-result-object p0
-
-    check-cast p1, Loya;
-
-    iget-object p1, p1, Loya;->c:Ljava/lang/String;
-
-    iput-object p1, p0, Lmef;->d:Ljava/lang/String;
-
-    new-instance p1, Lnef;
-
-    invoke-direct {p1, p0}, Lnef;-><init>(Lmef;)V
-
-    goto :goto_2
-
-    :cond_4
-    instance-of v0, p1, Li8e;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {p0}, Lnef;->b()Lmef;
-
-    move-result-object p0
-
-    check-cast p1, Li8e;
-
-    iget-object p1, p1, Li8e;->c:Ljava/lang/String;
-
-    iput-object p1, p0, Lmef;->d:Ljava/lang/String;
-
-    new-instance p1, Lnef;
-
-    invoke-direct {p1, p0}, Lnef;-><init>(Lmef;)V
+    iget p1, p0, Lsef;->e:I
 
     :goto_2
-    return-object p1
+    move v5, p1
+
+    goto :goto_3
+
+    :cond_2
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :goto_3
+    iget-object v6, p0, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
+
+    iget-object v7, p0, Lsef;->g:Lw29;
+
+    iget v8, p0, Lsef;->h:I
+
+    iget v9, p0, Lsef;->i:I
+
+    new-instance v0, Lsef;
+
+    invoke-direct/range {v0 .. v9}, Lsef;-><init>(FLjava/lang/CharSequence;ZZILandroid/text/TextUtils$TruncateAt;Lw29;II)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lsef;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lsef;
+
+    iget v1, p0, Lsef;->a:F
+
+    iget v3, p1, Lsef;->a:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lsef;->b:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lsef;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lsef;->c:Z
+
+    iget-boolean v3, p1, Lsef;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lsef;->d:Z
+
+    iget-boolean v3, p1, Lsef;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
 
     :cond_5
-    new-instance p1, Lone/me/sdk/transfer/domain/UploadException;
+    iget v1, p0, Lsef;->e:I
 
-    iget-object p0, p0, Lnef;->a:Lvef;
+    iget v3, p1, Lsef;->e:I
 
-    iget p0, p0, Lvef;->c:I
+    if-eq v1, v3, :cond_6
 
-    invoke-static {p0}, Llge;->C(I)Ljava/lang/String;
+    return v2
 
-    move-result-object p0
+    :cond_6
+    iget-object v1, p0, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
 
-    const-string v0, "requestUrlSingle, can\'t request url for unknown media type= "
+    iget-object v3, p1, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    if-eq v1, v3, :cond_7
 
-    move-result-object p0
+    return v2
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    :cond_7
+    iget-object v1, p0, Lsef;->g:Lw29;
 
-    throw p1
+    iget-object v3, p1, Lsef;->g:Lw29;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget v1, p0, Lsef;->h:I
+
+    iget v3, p1, Lsef;->h:I
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget v1, p0, Lsef;->i:I
+
+    iget p1, p1, Lsef;->i:I
+
+    if-eq v1, p1, :cond_a
+
+    return v2
+
+    :cond_a
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lsef;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lsef;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v2, v0, v1}, Lnd5;->e(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lsef;->c:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lsef;->d:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget v2, p0, Lsef;->e:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lsef;->g:Lw29;
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lsef;->h:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v1, p0, Lsef;->i:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PreprocessTextResult(textSize="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lsef;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsef;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", includeFontPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", postProcessing="
+
+    const-string v2, ", maxLines="
+
+    iget-boolean v3, p0, Lsef;->c:Z
+
+    iget-boolean v4, p0, Lsef;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lqw1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    iget v1, p0, Lsef;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", truncateAt="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsef;->f:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", replied="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lsef;->g:Lw29;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lsef;->h:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", endPadding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lsef;->i:I
+
+    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

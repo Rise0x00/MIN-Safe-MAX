@@ -1,17 +1,14 @@
-.class public interface abstract Lj45;
+.class public abstract Lj45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a()I
+.method public h(Ljava/lang/Throwable;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract b()I
-.end method
-
-.method public abstract c()Ljava/util/List;
-.end method
-
-.method public abstract d()Ljava/util/List;
+.method public abstract i()V
 .end method

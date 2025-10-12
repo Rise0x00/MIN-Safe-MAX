@@ -1,384 +1,188 @@
-.class public final Lc3g;
+.class public final synthetic Lc3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf67;
+.implements Lne8;
+.implements Lwe3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Le3g;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Le3g;I)V
     .locals 0
 
-    iput p1, p0, Lc3g;->a:I
+    packed-switch p2, :pswitch_data_0
 
+    sget-object p2, Lu2g;->b:Lu2g;
+
+    :pswitch_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p1, p0, Lc3g;->a:Le3g;
+
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Ls4;)Ljava/lang/Object;
-    .locals 11
+.method public d(Lne3;)V
+    .locals 3
 
-    iget p0, p0, Lc3g;->a:I
+    iget-object v0, p0, Lc3g;->a:Le3g;
 
-    packed-switch p0, :pswitch_data_0
+    const-string v1, "e3g"
 
-    sget-object p0, Lhhg;->a:Lhhg;
+    const-string v2, "clear: "
 
-    return-object p0
+    invoke-static {v1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    :pswitch_0
-    const-class p0, Ltd7;
+    monitor-enter v0
 
-    invoke-virtual {p1, p0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :try_start_0
+    iget-object v1, v0, Le3g;->a:Lg3g;
 
-    move-result-object p0
-
-    check-cast p0, Ltd7;
-
-    sget-object v0, Lg8;->Y:Lg8;
-
-    invoke-static {p0, v0}, Lz8c;->b(Ltd7;Lf96;)Lge7;
-
-    move-result-object p0
-
-    new-instance v0, Lhgg;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    invoke-direct {v0, p0, p1}, Lhgg;-><init>(Lge7;Lth7;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance p0, Lcbd;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->js-download-delegate:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v0, 0x0
-
-    const-string v1, "\u0421\u043a\u0430\u0447\u0438\u0432\u0430\u043d\u0438\u0435 \u0444\u0430\u0439\u043b\u0430 \u0438\u0437 \u043c\u0438\u043d\u0438-\u0430\u043f\u043f\u0430"
-
-    invoke-direct {p0, v1, p1, v0}, Lcbd;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p0
-
-    :pswitch_2
-    new-instance p0, Lt6g;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    invoke-direct {p0, v0, p1}, Lt6g;-><init>(Ltd7;Lth7;)V
-
-    return-object p0
-
-    :pswitch_3
-    new-instance p0, Lr7g;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v1}, Lg3g;->clear()Lle3;
 
     move-result-object v1
 
-    const-class v2, Lfa3;
+    iget-object v2, v0, Le3g;->b:Ls5f;
 
-    invoke-virtual {p1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    const-class v3, Lvbd;
+    check-cast v2, Lb3g;
 
-    invoke-virtual {p1, v3}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-interface {v2}, Lb3g;->clear()Lle3;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-direct {p0, v0, v1, v2, p1}, Lr7g;-><init>(Ltd7;Lth7;Lth7;Lth7;)V
-
-    return-object p0
-
-    :pswitch_4
-    new-instance p0, Lsfg;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v1, v2}, Lle3;->e(Lle3;)Lme3;
 
     move-result-object v1
 
-    const-class v2, Lfa3;
+    invoke-virtual {v1}, Lle3;->a()V
 
-    invoke-virtual {p1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p1
+    invoke-virtual {p1}, Lne3;->h()Z
 
-    invoke-direct {p0, v0, v1, p1}, Lsfg;-><init>(Ltd7;Lth7;Lth7;)V
+    move-result v0
 
-    return-object p0
+    if-nez v0, :cond_0
 
-    :pswitch_5
-    new-instance p0, Ls9g;
+    invoke-virtual {p1}, Lne3;->b()V
 
-    const-class v0, Ltd7;
+    :cond_0
+    return-void
 
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :catchall_0
+    move-exception p1
 
-    move-result-object v0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast v0, Ltd7;
+    throw p1
+.end method
 
-    const-class v1, Lm6g;
+.method public e(Lvd8;)V
+    .locals 5
 
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    iget-object v0, p0, Lc3g;->a:Le3g;
 
-    move-result-object p1
+    sget-object v1, Lu2g;->c:Lu2g;
 
-    invoke-direct {p0, v0, p1}, Ls9g;-><init>(Ltd7;Lth7;)V
+    const-string v2, "e3g"
 
-    return-object p0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    :pswitch_6
-    new-instance p0, Lfgg;
+    const-string v4, "getUploadsWithStatus: uploadStatus="
 
-    const-class v0, Ltd7;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    invoke-direct {p0, v0, p1}, Lfgg;-><init>(Ltd7;Lth7;)V
-
-    return-object p0
-
-    :pswitch_7
-    new-instance p0, Lnag;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lm6g;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    const-class v2, Lfa3;
+    invoke-static {v2, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    monitor-enter v0
 
-    move-result-object p1
+    :try_start_0
+    iget-object v1, v0, Le3g;->b:Ls5f;
 
-    invoke-direct {p0, v0, v1, p1}, Lnag;-><init>(Ltd7;Lth7;Lth7;)V
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v1
 
-    :pswitch_8
-    const-class p0, Lz43;
+    check-cast v1, Lb3g;
 
-    invoke-virtual {p1, p0}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-interface {v1}, Lb3g;->g()Lrd8;
 
-    move-result-object p0
+    move-result-object v1
 
-    new-instance v0, Let7;
+    invoke-virtual {v1}, Lrd8;->b()Ljava/lang/Object;
 
-    new-instance v1, Lcue;
+    move-result-object v1
 
-    const-string p1, "\u041f\u043e\u043b\u043d\u043e\u044d\u043a\u0440\u0430\u043d\u043d\u044b\u0439 \u0440\u0435\u0436\u0438\u043c \u0432\u0435\u0431-\u0430\u043f\u043f\u043e\u0432"
+    check-cast v1, Ljava/util/List;
 
-    invoke-direct {v1, p1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance v2, Lmf8;
+    invoke-virtual {p1}, Lvd8;->h()Z
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_2
 
-    move-object v4, p1
+    if-eqz v1, :cond_1
 
-    check-cast v4, Lz43;
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
-    const/4 v8, 0x0
+    move-result v0
 
-    const/16 v9, 0x14
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x0
+    goto :goto_0
 
-    const-class v5, Lz43;
+    :cond_0
+    invoke-virtual {p1, v1}, Lvd8;->a(Ljava/lang/Object;)V
 
-    const-string v6, "isWebAppFullscreen"
+    return-void
 
-    const-string v7, "isWebAppFullscreen()Z"
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, Lvd8;->b()V
 
-    invoke-direct/range {v2 .. v9}, Lmf8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    :cond_2
+    return-void
 
-    new-instance v3, Leq8;
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p0
-
-    move-object v5, p0
-
-    check-cast v5, Lz43;
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0x13
-
-    const/4 v4, 0x1
-
-    const-class v6, Lz43;
-
-    const-string v7, "setWebAppFullscreen"
-
-    const-string v8, "setWebAppFullscreen(Z)V"
-
-    invoke-direct/range {v3 .. v10}, Leq8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    sget v4, Losc;->S1:I
-
-    const/16 v5, 0x10
-
-    invoke-direct/range {v0 .. v5}, Let7;-><init>(Ldue;Ld96;Lf96;II)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance p0, Lhmd;
-
-    const-class v0, Lz43;
-
-    invoke-virtual {p1, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, v0}, Lhmd;-><init>(Lth7;I)V
-
-    return-object p0
-
-    :pswitch_a
-    new-instance p0, Lcbd;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-biometry-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v0, 0x0
-
-    const-string v1, "WebApp biometry"
-
-    invoke-direct {p0, v1, p1, v0}, Lcbd;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-
-    return-object p0
-
-    :pswitch_b
-    new-instance p0, Ll9g;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lfa3;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    invoke-direct {p0, v0, p1}, Ll9g;-><init>(Ltd7;Lth7;)V
-
-    return-object p0
-
-    :pswitch_c
-    new-instance p0, Lheg;
-
-    const-class v0, Ltd7;
-
-    invoke-virtual {p1, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltd7;
-
-    const-class v1, Lfa3;
-
-    invoke-virtual {p1, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p1
-
-    invoke-direct {p0, v0, p1}, Lheg;-><init>(Ltd7;Lth7;)V
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

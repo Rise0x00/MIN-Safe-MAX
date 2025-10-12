@@ -1,114 +1,137 @@
-.class public final synthetic Lnie;
+.class public final Lnie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lks1;
+.implements Lpie;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;I)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput p3, p0, Lnie;->a:I
-
-    iput-object p1, p0, Lnie;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p2, p0, Lnie;->c:Ljava/lang/String;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnie;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final N(Ljs1;)Ljava/lang/String;
+.method public final a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lnie;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lnie;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_0
+    instance-of v0, p1, Lnie;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    :cond_1
+    check-cast p1, Lnie;
 
-    iget-object p0, p0, Lnie;->c:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lnie;->a:Landroid/net/Uri;
 
-    const-string p0, "-Surface"
+    iget-object p1, p1, Lnie;->a:Landroid/net/Uri;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result p1
 
-    move-result-object p0
+    if-nez p1, :cond_2
 
-    return-object p0
+    :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lnie;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    return p1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+.method public final hashCode()I
+    .locals 2
 
-    iget-object p0, p0, Lnie;->c:Ljava/lang/String;
+    const/4 v0, 0x2
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lqw1;->u(I)I
 
-    const-string p0, "-status"
+    move-result v0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lnie;->a:Landroid/net/Uri;
 
-    move-result-object p0
+    if-nez v1, :cond_0
 
-    return-object p0
+    const/4 v1, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Lnie;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    :goto_0
+    add-int/2addr v0, v1
 
-    iget-object p0, p0, Lnie;->c:Ljava/lang/String;
+    return v0
+.end method
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const-string p0, "-cancellation"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Custom(type="
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    const/4 v1, 0x2
 
-    return-object p0
+    invoke-static {v1}, Lhqd;->r(I)Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", path="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnie;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

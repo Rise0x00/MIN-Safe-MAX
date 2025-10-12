@@ -1,20 +1,23 @@
-.class public interface abstract Liz4;
+.class public abstract Liz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
+# direct methods
+.method public static a(Landroid/widget/AbsListView;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/AbsListView;->isSelectedChildViewEnabled()Z
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public abstract h(Lqif;)V
-.end method
+.method public static b(Landroid/widget/AbsListView;Z)V
+    .locals 0
 
-.method public abstract i(IJ)V
-.end method
+    invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setSelectedChildViewEnabled(Z)V
 
-.method public abstract j()V
-.end method
-
-.method public abstract l(Lmd5;Lt6f;)V
+    return-void
 .end method

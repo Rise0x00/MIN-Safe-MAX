@@ -1,279 +1,436 @@
 .class public final Lbe1;
-.super Ljava/lang/Object;
+.super Lfmg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:Landroidx/viewpager2/widget/ViewPager2;
+
+.field public final b:Landroid/view/ViewStub;
+
+.field public final c:Lc31;
+
+.field public final d:Lje1;
+
+.field public final e:Lk;
+
+.field public final f:Lnl1;
+
+.field public g:Z
+
+.field public h:I
+
+.field public i:Z
 
 
 # direct methods
-.method public constructor <init>(Lth7;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Landroid/view/ViewStub;Lc31;Lje1;Lk;Lnl1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbe1;->a:Lth7;
+    iput-object p1, p0, Lbe1;->a:Landroidx/viewpager2/widget/ViewPager2;
+
+    iput-object p2, p0, Lbe1;->b:Landroid/view/ViewStub;
+
+    iput-object p3, p0, Lbe1;->c:Lc31;
+
+    iput-object p4, p0, Lbe1;->d:Lje1;
+
+    iput-object p5, p0, Lbe1;->e:Lk;
+
+    iput-object p6, p0, Lbe1;->f:Lnl1;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lbe1;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lru/ok/android/externcalls/sdk/Conversation;Lru/ok/android/externcalls/sdk/ConversationParticipant;ZZ)Lch1;
-    .locals 24
+.method public final a(I)V
+    .locals 0
 
-    move/from16 v0, p3
+    if-nez p1, :cond_0
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lusa;->b(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lbh1;
-
-    move-result-object v1
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAudioOptionState()Lrg8;
-
-    move-result-object v2
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getVideoOptionState()Lrg8;
-
-    move-result-object v3
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getScreenshareOptionState()Lrg8;
-
-    move-result-object v4
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAudioEnabled()Z
-
-    move-result v5
-
-    const/4 v6, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    move-object/from16 v7, p0
-
-    iget-object v7, v7, Lbe1;->a:Lth7;
-
-    invoke-interface {v7}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ltyc;
-
-    iget-object v7, v7, Ltyc;->b:Lq4e;
-
-    invoke-virtual {v7}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v7
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v7, v6
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isVideoEnabled()Z
+    iput-boolean p1, p0, Lbe1;->g:Z
 
-    move-result v8
+    return-void
+.end method
 
-    move v9, v7
+.method public final b(IFI)V
+    .locals 13
 
-    new-instance v7, Lsvf;
+    const/4 v0, 0x0
 
-    new-instance v10, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    cmpg-float v0, p2, v0
 
-    invoke-direct {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
+    if-nez v0, :cond_0
 
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    iput p1, p0, Lbe1;->h:I
 
-    move-result-object v11
+    :cond_0
+    iget-object v0, p0, Lbe1;->d:Lje1;
 
-    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
+    invoke-virtual {v0}, Lpw7;->j()I
 
-    move-result-object v10
-
-    sget-object v11, Lvvf;->a:Lvvf;
-
-    invoke-virtual {v10, v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Lvvf;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    move-result-object v10
-
-    invoke-direct {v7, v8, v10, v0}, Lsvf;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isScreenCaptureEnabled()Z
-
-    move-result v8
-
-    new-instance v10, Lsvf;
-
-    new-instance v11, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    invoke-direct {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;-><init>()V
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v12
-
-    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setParticipantId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    move-result-object v11
-
-    sget-object v12, Lvvf;->b:Lvvf;
-
-    invoke-virtual {v11, v12}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->setType(Lvvf;)Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey$Builder;->build()Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    move-result-object v11
-
-    invoke-direct {v10, v8, v11, v6}, Lsvf;-><init>(ZLru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Z)V
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCallAccepted()Z
-
-    move-result v13
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getAcceptCallEpochMs()J
-
-    move-result-wide v14
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isConnected()Z
-
-    move-result v12
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isPrimarySpeaker()Z
-
-    move-result v17
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isTalking()Z
-
-    move-result v18
-
-    invoke-interface/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantStatesManager()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
-
-    move-result-object v8
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v11
-
-    invoke-interface {v8, v11}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->isHandRaised(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Z
-
-    move-result v19
-
-    move v8, v6
-
-    move v6, v9
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCreator()Z
-
-    move-result v9
-
-    move v11, v8
-
-    move-object v8, v10
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isAdmin()Z
-
-    move-result v10
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getMovies()Ljava/util/List;
-
-    move-result-object v22
-
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->hasRegisteredPeers()Z
-
-    move-result v20
-
-    invoke-interface/range {p1 .. p2}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipantMediaStat(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lun8;
-
-    move-result-object v16
-
-    if-eqz v16, :cond_1
-
-    const/16 v21, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v21, 0x0
-
-    :goto_1
-    invoke-virtual/range {p2 .. p2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getNetworkStatus()Lgq9;
-
-    move-result-object v16
-
-    invoke-virtual/range {v16 .. v16}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v11
-
-    if-eqz v11, :cond_4
-
-    const/4 v0, 0x2
-
-    move-object/from16 v16, v1
+    move-result v0
 
     const/4 v1, 0x1
 
-    if-eq v11, v1, :cond_3
+    sub-int/2addr v0, v1
 
-    if-ne v11, v0, :cond_2
+    iget v2, p0, Lbe1;->h:I
 
-    const/4 v11, 0x3
+    const/16 v3, 0x8
 
-    move/from16 v23, v11
+    const/4 v4, 0x0
 
-    goto :goto_2
+    iget-object v5, p0, Lbe1;->b:Landroid/view/ViewStub;
+
+    iget-object v6, p0, Lbe1;->c:Lc31;
+
+    if-ne v0, v2, :cond_c
+
+    invoke-static {v5}, Lj40;->H(Landroid/view/ViewStub;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-static {v5, v6, v0}, Lj40;->F(Landroid/view/ViewStub;Landroid/view/View;Lve6;)V
+
+    :cond_1
+    iget v0, p0, Lbe1;->h:I
+
+    if-le v0, p1, :cond_2
+
+    move v4, v1
 
     :cond_2
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    if-eqz v4, :cond_3
 
-    throw v0
+    sub-float v0, p1, p2
+
+    goto :goto_0
 
     :cond_3
-    move/from16 v23, v0
+    move v0, p2
+
+    :goto_0
+    float-to-double v7, v0
+
+    const-wide v9, 0x3fb999999999999aL    # 0.1
+
+    cmpg-double v2, v9, v7
+
+    const-wide v9, 0x3fe3333333333333L    # 0.6
+
+    if-gtz v2, :cond_5
+
+    cmpg-double v2, v7, v9
+
+    if-gtz v2, :cond_5
+
+    invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_4
 
     goto :goto_2
 
     :cond_4
-    move-object/from16 v16, v1
+    const/4 v11, 0x0
 
-    const/4 v1, 0x1
+    const/4 v12, 0x6
 
-    move/from16 v23, v1
+    iget-object v7, p0, Lbe1;->c:Lc31;
 
+    const/4 v8, 0x1
+
+    const-wide/16 v9, 0x0
+
+    invoke-static/range {v7 .. v12}, Lva8;->i(Landroid/view/View;ZJLxe6;I)V
+
+    goto :goto_2
+
+    :cond_5
+    cmpg-double v2, v9, v7
+
+    if-gtz v2, :cond_8
+
+    const-wide v9, 0x3fefae147ae147aeL    # 0.99
+
+    cmpg-double v2, v7, v9
+
+    if-gtz v2, :cond_8
+
+    iget-boolean v2, p0, Lbe1;->i:Z
+
+    if-nez v2, :cond_8
+
+    iput-boolean v1, p0, Lbe1;->i:Z
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1e
+
+    iget-object v5, p0, Lbe1;->a:Landroidx/viewpager2/widget/ViewPager2;
+
+    if-lt v2, v3, :cond_6
+
+    sget-object v2, Lws6;->X:Lws6;
+
+    invoke-static {v5, v2}, Lhxf;->K(Landroid/view/View;Lys6;)Z
+
+    :cond_6
+    iget v2, p0, Lbe1;->h:I
+
+    if-eqz v4, :cond_7
+
+    sub-int/2addr v2, v1
+
+    goto :goto_1
+
+    :cond_7
+    add-int/2addr v2, v1
+
+    :goto_1
+    invoke-virtual {v5, v2, v1}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+
+    goto :goto_2
+
+    :cond_8
+    invoke-static {v5}, Lj40;->H(Landroid/view/ViewStub;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {v6, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_9
     :goto_2
-    new-instance v0, Lch1;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move/from16 v11, p4
+    move-result-object v1
 
-    move-object/from16 v1, v16
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move/from16 v16, p3
+    move-result-object v1
 
-    invoke-direct/range {v0 .. v23}, Lch1;-><init>(Lbh1;Lrg8;Lrg8;Lrg8;ZZLsvf;Lsvf;ZZZZZJZZZZZZLjava/util/List;I)V
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    return-object v0
+    const/high16 v2, -0x3db80000    # -50.0f
+
+    mul-float/2addr v1, v2
+
+    iget-object v2, p0, Lbe1;->f:Lnl1;
+
+    invoke-virtual {v2}, Lnl1;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+
+    move-result v2
+
+    move/from16 v3, p3
+
+    int-to-float v3, v3
+
+    sub-float/2addr v2, v3
+
+    add-float/2addr v2, v1
+
+    invoke-virtual {v6, v2}, Landroid/view/View;->setTranslationY(F)V
+
+    iget v1, v6, Lc31;->c:I
+
+    int-to-float v2, v1
+
+    iget v3, v6, Lc31;->x0:I
+
+    sub-int/2addr v3, v1
+
+    int-to-float v1, v3
+
+    mul-float/2addr v1, v0
+
+    add-float/2addr v1, v2
+
+    iget v2, v6, Lc31;->a:I
+
+    int-to-float v3, v2
+
+    iget v4, v6, Lc31;->o:I
+
+    sub-int/2addr v4, v2
+
+    int-to-float v2, v4
+
+    mul-float/2addr v2, v0
+
+    add-float/2addr v2, v3
+
+    iget v3, v6, Lc31;->b:I
+
+    int-to-float v4, v3
+
+    iget v5, v6, Lc31;->w0:I
+
+    sub-int/2addr v5, v3
+
+    int-to-float v3, v5
+
+    mul-float/2addr v3, v0
+
+    add-float/2addr v3, v4
+
+    iget-object v4, v6, Lc31;->z0:Ld31;
+
+    invoke-static {v1}, Lv63;->r0(F)I
+
+    move-result v1
+
+    invoke-virtual {v4, v1, v1, v1, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_b
+
+    invoke-static {v2}, Lv63;->r0(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-static {v3}, Lv63;->r0(F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v4, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, v6, Lc31;->y0:Landroid/widget/TextView;
+
+    const/high16 v2, 0x40400000    # 3.0f
+
+    mul-float/2addr v0, v2
+
+    cmpl-float v2, v0, p1
+
+    if-lez v2, :cond_a
+
+    goto :goto_3
+
+    :cond_a
+    move p1, v0
+
+    :goto_3
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+
+    :cond_b
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_c
+    invoke-static {v5}, Lj40;->H(Landroid/view/ViewStub;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    invoke-virtual {v6, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_d
+    iput-boolean v4, p0, Lbe1;->i:Z
+
+    return-void
+.end method
+
+.method public final c(I)V
+    .locals 4
+
+    iget-object v0, p0, Lbe1;->a:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->J0:Z
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "viewpager position changed position="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " isUserInputEnabled="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "CallModeScrollTag"
+
+    invoke-static {v3, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lbe1;->d:Lje1;
+
+    invoke-virtual {v1, p1}, Lzce;->G(I)Lww7;
+
+    move-result-object p1
+
+    check-cast p1, Lie1;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lie1;->a:Lglg;
+
+    sget-object v1, Lglg;->b:Lglg;
+
+    if-eq p1, v1, :cond_0
+
+    iget-object v1, p0, Lbe1;->e:Lk;
+
+    invoke-virtual {v1, p1}, Lk;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroidx/viewpager2/widget/ViewPager2;->setUserInputEnabled(Z)V
+
+    return-void
 .end method

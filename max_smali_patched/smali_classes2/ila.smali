@@ -1,49 +1,51 @@
-.class public abstract Lila;
-.super Ljava/lang/Object;
+.class public final Lila;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:I
+.field public final synthetic Y:Llla;
 
-.field public static final c:I
+.field public Z:I
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+.field public o:Lja8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Llla;Lnz3;)V
+    .locals 0
 
-    sget v0, Ld5c;->oneme_stickers_preview_action_favorite_title:I
+    iput-object p1, p0, Lila;->Y:Llla;
 
-    sput v0, Lila;->a:I
-
-    sget v0, Ld5c;->oneme_stickers_preview_action_forward_title:I
-
-    sput v0, Lila;->b:I
-
-    sget v0, Ld5c;->oneme_stickers_preview_action_in_favorite_title:I
-
-    sput v0, Lila;->c:I
-
-    sget v0, Ld5c;->oneme_stickers_preview_action_send_title:I
-
-    sput v0, Lila;->d:I
-
-    sget v0, Ld5c;->oneme_stickers_preview_snackbar_favorite_added:I
-
-    sput v0, Lila;->e:I
-
-    sget v0, Ld5c;->oneme_stickers_preview_snackbar_favorite_removed:I
-
-    sput v0, Lila;->f:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lila;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lila;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lila;->Z:I
+
+    iget-object p1, p0, Lila;->Y:Llla;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Llla;->a(Lka8;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

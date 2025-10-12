@@ -1,138 +1,64 @@
-.class public final Lxec;
+.class public abstract Lxec;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f0a0763
 
-.field public final b:I
+.field public static oneme_notifications_settings_chat_linearlayout:I = 0x7f0a0764
 
-.field public final c:I
+.field public static oneme_notifications_settings_chat_recycler_view:I = 0x7f0a0765
 
+.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f0a0766
 
-# direct methods
-.method public constructor <init>(III)V
-    .locals 0
+.field public static oneme_notifications_settings_chat_toolbar:I = 0x7f0a0767
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f0a0768
 
-    iput p1, p0, Lxec;->a:I
+.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f0a0769
 
-    iput p2, p0, Lxec;->b:I
+.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f0a076a
 
-    iput p3, p0, Lxec;->c:I
+.field public static oneme_notifications_settings_dialog_linearlayout:I = 0x7f0a076b
 
-    return-void
-.end method
+.field public static oneme_notifications_settings_dialog_recycler_view:I = 0x7f0a076c
 
+.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f0a076d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public static oneme_notifications_settings_dialog_toolbar:I = 0x7f0a076e
 
-    const/4 v0, 0x1
+.field public static oneme_notifications_settings_enable_all_notifications_button:I = 0x7f0a076f
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_notifications_settings_header_vh:I = 0x7f0a0770
 
-    return v0
+.field public static oneme_notifications_settings_item_vh:I = 0x7f0a0771
 
-    :cond_0
-    instance-of v1, p1, Lxec;
+.field public static oneme_notifications_settings_linearlayout:I = 0x7f0a0772
 
-    const/4 v2, 0x0
+.field public static oneme_notifications_settings_open_settings_button:I = 0x7f0a0773
 
-    if-nez v1, :cond_1
+.field public static oneme_notifications_settings_open_settings_call_ringtone_title:I = 0x7f0a0774
 
-    return v2
+.field public static oneme_notifications_settings_open_settings_calls_ringtone:I = 0x7f0a0775
 
-    :cond_1
-    check-cast p1, Lxec;
+.field public static oneme_notifications_settings_open_settings_calls_vibration:I = 0x7f0a0776
 
-    iget v1, p0, Lxec;->a:I
+.field public static oneme_notifications_settings_other_in_app_push_button:I = 0x7f0a0777
 
-    iget v3, p1, Lxec;->a:I
+.field public static oneme_notifications_settings_other_linearlayout:I = 0x7f0a0778
 
-    if-eq v1, v3, :cond_2
+.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f0a0779
 
-    return v2
+.field public static oneme_notifications_settings_other_recycler_view:I = 0x7f0a077a
 
-    :cond_2
-    iget v1, p0, Lxec;->b:I
+.field public static oneme_notifications_settings_other_settings_button:I = 0x7f0a077b
 
-    iget v3, p1, Lxec;->b:I
+.field public static oneme_notifications_settings_other_toolbar:I = 0x7f0a077c
 
-    if-eq v1, v3, :cond_3
+.field public static oneme_notifications_settings_recycler_view:I = 0x7f0a077d
 
-    return v2
+.field public static oneme_notifications_settings_reset_default_button:I = 0x7f0a077e
 
-    :cond_3
-    iget p0, p0, Lxec;->c:I
+.field public static oneme_notifications_settings_show_content_button:I = 0x7f0a077f
 
-    iget p1, p1, Lxec;->c:I
-
-    if-eq p0, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lxec;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lxec;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget p0, p0, Lxec;->c:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", pauseRecordingIcon="
-
-    const-string v1, ", resumeRecodingIcon="
-
-    const-string v2, "Config(recordingButtonIcon="
-
-    iget v3, p0, Lxec;->a:I
-
-    iget v4, p0, Lxec;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget p0, p0, Lxec;->c:I
-
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_notifications_settings_toolbar:I = 0x7f0a0780

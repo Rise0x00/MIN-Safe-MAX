@@ -1,74 +1,50 @@
-.class public final synthetic Lpm;
+.class public final Lpm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/window/OnBackInvokedCallback;
+.implements Ljfa;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic a:Lqm;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lqm;)V
     .locals 0
 
-    iput p1, p0, Lpm;->a:I
-
-    iput-object p2, p0, Lpm;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpm;->a:Lqm;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBackInvoked()V
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget v0, p0, Lpm;->a:I
+    iget-object v0, p0, Lpm;->a:Lqm;
 
-    iget-object p0, p0, Lpm;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Lqm;->G()Lym;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v1
 
-    check-cast p0, Ljava/lang/Runnable;
+    invoke-virtual {v1}, Lym;->a()V
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    iget-object v0, v0, Ltf3;->o:Ljd;
 
-    return-void
+    iget-object v0, v0, Ljd;->o:Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast p0, Ld96;
+    check-cast v0, Lum;
 
-    invoke-interface {p0}, Ld96;->invoke()Ljava/lang/Object;
+    const-string v2, "androidx:appcompat"
 
-    return-void
+    invoke-virtual {v0, v2}, Lum;->c(Ljava/lang/String;)Landroid/os/Bundle;
 
-    :pswitch_1
-    check-cast p0, Lg48;
-
-    invoke-interface {p0}, Lg48;->a()V
+    invoke-virtual {v1}, Lym;->d()V
 
     return-void
-
-    :pswitch_2
-    check-cast p0, Lwm;
-
-    invoke-virtual {p0}, Lwm;->C()Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

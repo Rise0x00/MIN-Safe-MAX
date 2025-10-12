@@ -1,61 +1,105 @@
 .class public final Lfob;
-.super Lnob;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfob;
+# instance fields
+.field public final a:Lbp7;
+
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
+
+.field public final d:Lbp7;
+
+.field public final e:Lbp7;
+
+.field public final f:Lbp7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+    .locals 0
 
-    new-instance v0, Lfob;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfob;->a:Lbp7;
 
-    sput-object v0, Lfob;->a:Lfob;
+    iput-object p2, p0, Lfob;->b:Lbp7;
+
+    iput-object p3, p0, Lfob;->c:Lbp7;
+
+    iput-object p4, p0, Lfob;->d:Lbp7;
+
+    iput-object p5, p0, Lfob;->e:Lbp7;
+
+    iput-object p6, p0, Lfob;->f:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lm82;Lq49;)Leob;
+    .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Leob;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lfob;->a:Lbp7;
 
-    return v0
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of p0, p1, Lfob;
+    move-result-object v1
 
-    if-nez p0, :cond_1
+    check-cast v1, Liqa;
 
-    const/4 p0, 0x0
+    iget-object v2, p0, Lfob;->b:Lbp7;
 
-    return p0
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object v2
 
-.method public final hashCode()I
-    .locals 0
+    check-cast v2, Lkq3;
 
-    const p0, -0x399cc60
+    iget-object v3, p0, Lfob;->c:Lbp7;
 
-    return p0
-.end method
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    move-result-object v3
 
-    const-string p0, "OpenCameraPermission"
+    check-cast v3, Lxob;
 
-    return-object p0
+    iget-object v4, p0, Lfob;->d:Lbp7;
+
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Llp4;
+
+    iget-object v4, p0, Lfob;->e:Lbp7;
+
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lec5;
+
+    iget-object v4, p0, Lfob;->f:Lbp7;
+
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v6, v4
+
+    check-cast v6, Lvj;
+
+    move-object v5, p1
+
+    move-object v4, p2
+
+    invoke-direct/range {v0 .. v6}, Leob;-><init>(Liqa;Lkq3;Lxob;Lq49;Lm82;Lvj;)V
+
+    return-object v0
 .end method

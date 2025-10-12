@@ -1,114 +1,255 @@
-.class public final synthetic Ljg;
+.class public final Ljg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic b:I
 
-.field public final synthetic c:Lbg;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lbg;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
     iput p3, p0, Ljg;->a:I
 
-    iput-object p1, p0, Ljg;->b:Landroid/view/View;
+    iput-object p1, p0, Ljg;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Ljg;->c:Lbg;
+    iput p2, p0, Ljg;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 5
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
     iget p1, p0, Ljg;->a:I
 
-    iget-object v0, p0, Ljg;->c:Lbg;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Ljg;->b:Landroid/view/View;
+    iget-object p1, p0, Ljg;->c:Ljava/lang/Object;
+
+    check-cast p1, Lsb7;
+
+    check-cast p1, Ldhe;
+
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Ldhe;->A(Ljava/lang/String;)V
+
+    iget v0, p0, Ljg;->b:I
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-static {v0, v1}, Lpih;->a0(IF)I
+
+    move-result v0
+
+    iget-object p1, p1, Ldhe;->L0:Lll3;
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Ljg;->c:Ljava/lang/Object;
+
+    check-cast p1, Luq1;
+
+    invoke-virtual {p1}, Luq1;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Ljg;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget p1, p0, Ljg;->a:I
+
+    iget v0, p0, Ljg;->b:I
+
+    iget-object v1, p0, Ljg;->c:Ljava/lang/Object;
 
     packed-switch p1, :pswitch_data_0
 
-    sget p1, Lxn1;->r0:I
+    check-cast v1, Lsb7;
 
-    new-instance p1, Landroid/graphics/Rect;
+    check-cast v1, Ldhe;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    const-string p1, ""
 
-    move-result-object v1
+    invoke-virtual {v1, p1}, Ldhe;->A(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    move-result-object v1
+    invoke-static {v0, p1}, Lpih;->a0(IF)I
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    move-result p1
 
-    const/high16 v2, 0x41800000    # 16.0f
+    iget-object v0, v1, Ldhe;->L0:Lll3;
 
-    mul-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    neg-int v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    iget v0, v0, Lbg;->a:I
-
-    const/4 v4, 0x0
-
-    invoke-direct {p1, v4, v1, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {p0, p1, v0}, Lv44;->g(Landroid/view/View;Landroid/graphics/Rect;F)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
+
+    sget p1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->y0:I
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, v0, p1}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a(IZ)V
+
+    :pswitch_1
+    return-void
+
+    :pswitch_2
+    check-cast v1, Luq1;
+
+    invoke-virtual {v1}, Luq1;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+    if-eqz p1, :cond_0
 
-    iget v0, v0, Lbg;->a:I
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
+    :cond_0
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Ljg;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Ljg;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Ljg;->c:Ljava/lang/Object;
+
+    check-cast p1, Lf32;
+
+    iget v0, p0, Ljg;->b:I
+
+    invoke-static {p1, v0}, Lf32;->a(Lf32;I)V
+
+    :pswitch_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

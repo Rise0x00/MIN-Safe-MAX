@@ -20,17 +20,17 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;",
         "",
-        "Ll71;",
+        "Lh71;",
         "feature",
         "",
         "isEnabled",
-        "Ltcf;",
+        "Loyf;",
         "onFeatureEnabledChanged",
-        "(Ll71;Z)V",
+        "(Lh71;Z)V",
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "roles",
         "onFeatureRolesChanged",
-        "(Ll71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V",
+        "(Lh71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -44,13 +44,13 @@
 
 
 # virtual methods
-.method public onFeatureEnabledChanged(Ll71;Z)V
+.method public onFeatureEnabledChanged(Lh71;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public onFeatureRolesChanged(Ll71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+.method public onFeatureRolesChanged(Lh71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
     .locals 0
 
     return-void

@@ -3,67 +3,51 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:Lja0;
-
-
 # instance fields
-.field public final a:J
+.field public final a:Lcs7;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public final b:Lk90;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lja0;
-
-    const-wide/32 v5, 0x240c8400
-
-    const v7, 0x14000
-
-    const/16 v1, 0xc8
-
-    const/16 v2, 0x2710
-
-    const-wide/32 v3, 0xa00000
-
-    invoke-direct/range {v0 .. v7}, Lja0;-><init>(IIJJI)V
-
-    sput-object v0, Lja0;->f:Lja0;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIJJI)V
+.method public constructor <init>(Lcs7;Lk90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lja0;->a:J
+    if-eqz p1, :cond_1
 
-    iput p1, p0, Lja0;->b:I
+    iput-object p1, p0, Lja0;->a:Lcs7;
 
-    iput p2, p0, Lja0;->c:I
+    if-eqz p2, :cond_0
 
-    iput-wide p5, p0, Lja0;->d:J
-
-    iput p7, p0, Lja0;->e:I
+    iput-object p2, p0, Lja0;->b:Lk90;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null lifecycleOwner"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -80,39 +64,25 @@
 
     check-cast p1, Lja0;
 
-    iget-wide v3, p0, Lja0;->a:J
+    iget-object v1, p0, Lja0;->a:Lcs7;
 
-    iget-wide v5, p1, Lja0;->a:J
+    iget-object v3, p1, Lja0;->a:Lcs7;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v1
 
-    iget v1, p0, Lja0;->b:I
+    if-eqz v1, :cond_1
 
-    iget v3, p1, Lja0;->b:I
+    iget-object v1, p0, Lja0;->b:Lk90;
 
-    if-ne v1, v3, :cond_1
+    iget-object p1, p1, Lja0;->b:Lk90;
 
-    iget v1, p0, Lja0;->c:I
+    invoke-virtual {v1, p1}, Lk90;->equals(Ljava/lang/Object;)Z
 
-    iget v3, p1, Lja0;->c:I
+    move-result p1
 
-    if-ne v1, v3, :cond_1
-
-    iget-wide v3, p0, Lja0;->d:J
-
-    iget-wide v5, p1, Lja0;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_1
-
-    iget p0, p0, Lja0;->e:I
-
-    iget p1, p1, Lja0;->e:I
-
-    if-ne p0, p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -121,17 +91,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 2
 
-    iget-wide v0, p0, Lja0;->a:J
+    iget-object v0, p0, Lja0;->a:Lcs7;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -139,85 +105,45 @@
 
     mul-int/2addr v0, v1
 
-    iget v3, p0, Lja0;->b:I
+    iget-object v1, p0, Lja0;->b:Lk90;
 
-    xor-int/2addr v0, v3
+    invoke-virtual {v1}, Lk90;->hashCode()I
 
-    mul-int/2addr v0, v1
+    move-result v1
 
-    iget v3, p0, Lja0;->c:I
+    xor-int/2addr v0, v1
 
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Lja0;->d:J
-
-    ushr-long v5, v3, v2
-
-    xor-long v2, v5, v3
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget p0, p0, Lja0;->e:I
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "EventStoreConfig{maxStorageSizeInBytes="
+    const-string v1, "Key{lifecycleOwner="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lja0;->a:J
+    iget-object v1, p0, Lja0;->a:Lcs7;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", loadBatchSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lja0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", criticalSectionEnterTimeoutMs="
+    const-string v1, ", cameraId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lja0;->c:I
+    iget-object v1, p0, Lja0;->b:Lk90;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", eventCleanUpAge="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lja0;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxBlobByteSizePerRow="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lja0;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "}"
 
-    invoke-static {v0, p0, v1}, Lw68;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
 .end method

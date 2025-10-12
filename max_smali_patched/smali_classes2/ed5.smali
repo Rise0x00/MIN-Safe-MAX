@@ -1,176 +1,275 @@
-.class public final synthetic Led5;
+.class public final Led5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lww7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:I
 
-.field public final synthetic b:I
+.field public final Y:Z
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final Z:Z
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final o:I
+
+.field public final w0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Object;)V
+.method public constructor <init>(IIIJLjava/lang/String;ZZ)V
     .locals 0
 
-    iput p2, p0, Led5;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Led5;->c:Ljava/lang/Object;
+    iput-object p6, p0, Led5;->a:Ljava/lang/String;
 
     iput p1, p0, Led5;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p4, p0, Led5;->c:J
+
+    iput p2, p0, Led5;->o:I
+
+    iput p3, p0, Led5;->X:I
+
+    iput-boolean p7, p0, Led5;->Y:Z
+
+    iput-boolean p8, p0, Led5;->Z:Z
+
+    invoke-virtual {p6}, Ljava/lang/String;->hashCode()I
+
+    move-result p1
+
+    int-to-long p1, p1
+
+    iput-wide p1, p0, Led5;->w0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Led5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Led5;->c:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    iget p0, p0, Led5;->b:I
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->r(I)Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->F:Ljava/lang/String;
-
-    sget-object v3, Lz76;->f:Lvea;
-
-    if-nez v3, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    sget-object v4, Lhw7;->o:Lhw7;
+    instance-of v1, p1, Led5;
 
-    invoke-virtual {v3, v4}, Lvea;->a(Lhw7;)Z
+    const/4 v2, 0x0
 
-    move-result v5
+    if-nez v1, :cond_1
 
-    if-eqz v5, :cond_2
-
-    iget-object v5, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->I:Landroidx/recyclerview/widget/RecyclerView;
-
-    const/4 v6, 0x0
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Lygc;->j()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    move-object v5, v6
+    check-cast p1, Led5;
 
-    :goto_0
-    new-instance v7, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Led5;->a:Ljava/lang/String;
 
-    const-string v8, "LM scroll to inflated view after redraw by pos:"
+    iget-object v3, p1, Led5;->a:Ljava/lang/String;
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v7, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v8, ", curSize:"
+    if-nez v1, :cond_2
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v4, v2, v5, v6}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_2
-    :goto_1
-    invoke-virtual {v0, v1, p0}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->u1(Landroid/view/View;I)V
+    iget v1, p0, Led5;->b:I
+
+    iget v3, p1, Led5;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
 
     :cond_3
-    const/4 p0, 0x0
+    iget-wide v3, p0, Led5;->c:J
 
-    iput-boolean p0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->H:Z
+    iget-wide v5, p1, Led5;->c:J
 
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    cmp-long v1, v3, v5
 
-    return-object p0
+    if-eqz v1, :cond_4
 
-    :pswitch_0
-    iget-object v0, p0, Led5;->c:Ljava/lang/Object;
+    return v2
 
-    check-cast v0, Lms7;
+    :cond_4
+    iget v1, p0, Led5;->o:I
 
-    iget p0, p0, Led5;->b:I
+    iget v3, p1, Led5;->o:I
 
-    iget-object v1, v0, Lms7;->a:Landroid/content/Context;
+    if-eq v1, v3, :cond_5
 
-    invoke-virtual {v1, p0}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    return v2
 
-    move-result-object p0
+    :cond_5
+    iget v1, p0, Led5;->X:I
 
-    new-instance v1, Landroid/graphics/PorterDuffColorFilter;
+    iget v3, p1, Led5;->X:I
 
-    iget v0, v0, Lms7;->b:I
+    if-eq v1, v3, :cond_6
 
-    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    return v2
 
-    invoke-direct {v1, v0, v2}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+    :cond_6
+    iget-boolean v1, p0, Led5;->Y:Z
 
-    invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    iget-boolean v3, p1, Led5;->Y:Z
 
-    return-object p0
+    if-eq v1, v3, :cond_7
 
-    :pswitch_1
-    iget-object v0, p0, Led5;->c:Ljava/lang/Object;
+    return v2
 
-    check-cast v0, Lgd5;
+    :cond_7
+    iget-boolean v1, p0, Led5;->Z:Z
 
-    iget p0, p0, Led5;->b:I
+    iget-boolean p1, p1, Led5;->Z:Z
 
-    iget-object v0, v0, Lgd5;->a:Landroid/view/View;
+    if-eq v1, p1, :cond_8
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    return v2
 
-    move-result-object p0
+    :cond_8
+    return v0
+.end method
 
-    return-object p0
+.method public final getItemId()J
+    .locals 2
 
-    nop
+    iget-wide v0, p0, Led5;->w0:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Led5;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Led5;->b:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget-wide v2, p0, Led5;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget v2, p0, Led5;->o:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Led5;->X:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Led5;->Y:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Led5;->Z:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", numberOfIdleThreads="
+
+    const-string v1, ", completedTasksCount="
+
+    iget v2, p0, Led5;->b:I
+
+    const-string v3, "ExecutorState(name="
+
+    iget-object v4, p0, Led5;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", activeTasksCount="
+
+    iget-wide v2, p0, Led5;->c:J
+
+    iget v4, p0, Led5;->o:I
+
+    invoke-static {v0, v2, v3, v1, v4}, Lvl3;->n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+
+    const-string v1, ", tasksInQueue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Led5;->X:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", shutdown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Led5;->Y:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", terminated="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Led5;->Z:Z
+
+    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

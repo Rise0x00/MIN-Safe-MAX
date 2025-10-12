@@ -1,212 +1,296 @@
-.class public final synthetic Lzc8;
-.super Ljava/lang/Object;
+.class public Lzc8;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
-
-# interfaces
-.implements Lhq7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lu5e;
 
-.field public final synthetic b:Ld40;
+.field public b:Lt35;
+
+.field public c:Landroid/content/res/ColorStateList;
+
+.field public d:Landroid/content/res/ColorStateList;
+
+.field public e:Landroid/content/res/ColorStateList;
+
+.field public f:Landroid/graphics/PorterDuff$Mode;
+
+.field public g:Landroid/graphics/Rect;
+
+.field public final h:F
+
+.field public i:F
+
+.field public j:F
+
+.field public k:I
+
+.field public l:F
+
+.field public m:F
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public final q:Landroid/graphics/Paint$Style;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld40;I)V
-    .locals 0
+.method public constructor <init>(Lu5e;)V
+    .locals 2
 
-    iput p2, p0, Lzc8;->a:I
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    iput-object p1, p0, Lzc8;->b:Ld40;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
 
+    .line 3
+    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
+
+    .line 4
+    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
+
+    .line 5
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v1, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 6
+    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 7
+    iput v1, p0, Lzc8;->h:F
+
+    .line 8
+    iput v1, p0, Lzc8;->i:F
+
+    const/16 v1, 0xff
+
+    .line 9
+    iput v1, p0, Lzc8;->k:I
+
+    const/4 v1, 0x0
+
+    .line 10
+    iput v1, p0, Lzc8;->l:F
+
+    .line 11
+    iput v1, p0, Lzc8;->m:F
+
+    const/4 v1, 0x0
+
+    .line 12
+    iput v1, p0, Lzc8;->n:I
+
+    .line 13
+    iput v1, p0, Lzc8;->o:I
+
+    .line 14
+    iput v1, p0, Lzc8;->p:I
+
+    .line 15
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v1, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
+
+    .line 16
+    iput-object p1, p0, Lzc8;->a:Lu5e;
+
+    .line 17
+    iput-object v0, p0, Lzc8;->b:Lt35;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lzc8;)V
+    .locals 2
+
+    .line 18
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 19
+    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
+
+    .line 20
+    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
+
+    .line 21
+    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
+
+    .line 22
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v1, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 23
+    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 24
+    iput v0, p0, Lzc8;->h:F
+
+    .line 25
+    iput v0, p0, Lzc8;->i:F
+
+    const/16 v0, 0xff
+
+    .line 26
+    iput v0, p0, Lzc8;->k:I
+
+    const/4 v0, 0x0
+
+    .line 27
+    iput v0, p0, Lzc8;->l:F
+
+    .line 28
+    iput v0, p0, Lzc8;->m:F
+
+    const/4 v0, 0x0
+
+    .line 29
+    iput v0, p0, Lzc8;->n:I
+
+    .line 30
+    iput v0, p0, Lzc8;->o:I
+
+    .line 31
+    iput v0, p0, Lzc8;->p:I
+
+    .line 32
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
+
+    .line 33
+    iget-object v0, p1, Lzc8;->a:Lu5e;
+
+    iput-object v0, p0, Lzc8;->a:Lu5e;
+
+    .line 34
+    iget-object v0, p1, Lzc8;->b:Lt35;
+
+    iput-object v0, p0, Lzc8;->b:Lt35;
+
+    .line 35
+    iget v0, p1, Lzc8;->j:F
+
+    iput v0, p0, Lzc8;->j:F
+
+    .line 36
+    iget-object v0, p1, Lzc8;->c:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
+
+    .line 37
+    iget-object v0, p1, Lzc8;->d:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
+
+    .line 38
+    iget-object v0, p1, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v0, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 39
+    iget-object v0, p1, Lzc8;->e:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
+
+    .line 40
+    iget v0, p1, Lzc8;->k:I
+
+    iput v0, p0, Lzc8;->k:I
+
+    .line 41
+    iget v0, p1, Lzc8;->h:F
+
+    iput v0, p0, Lzc8;->h:F
+
+    .line 42
+    iget v0, p1, Lzc8;->p:I
+
+    iput v0, p0, Lzc8;->p:I
+
+    .line 43
+    iget v0, p1, Lzc8;->n:I
+
+    iput v0, p0, Lzc8;->n:I
+
+    .line 44
+    iget v0, p1, Lzc8;->i:F
+
+    iput v0, p0, Lzc8;->i:F
+
+    .line 45
+    iget v0, p1, Lzc8;->l:F
+
+    iput v0, p0, Lzc8;->l:F
+
+    .line 46
+    iget v0, p1, Lzc8;->m:F
+
+    iput v0, p0, Lzc8;->m:F
+
+    .line 47
+    iget v0, p1, Lzc8;->o:I
+
+    iput v0, p0, Lzc8;->o:I
+
+    .line 48
+    iget-object v0, p1, Lzc8;->q:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
+
+    .line 49
+    iget-object v0, p1, Lzc8;->g:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    .line 50
+    new-instance v0, Landroid/graphics/Rect;
+
+    iget-object p1, p1, Lzc8;->g:Landroid/graphics/Rect;
+
+    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final getChangingConfigurations()I
     .locals 1
 
-    iget v0, p0, Lzc8;->a:I
+    const/4 v0, 0x0
 
-    check-cast p1, Lu5b;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iget-object p0, p0, Lzc8;->b:Ld40;
+    new-instance v0, Lad8;
 
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lad8;-><init>(Lzc8;)V
 
-    check-cast p0, Lw6b;
+    const/4 v1, 0x1
 
-    iget-boolean p0, p0, Lw6b;->i:Z
+    iput-boolean v1, v0, Lad8;->X:Z
 
-    invoke-interface {p1, p0}, Lu5b;->N(Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget p0, p0, Lw6b;->h:I
-
-    invoke-interface {p1, p0}, Lu5b;->onRepeatModeChanged(I)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-object p0, p0, Lw6b;->g:Lk5b;
-
-    invoke-interface {p1, p0}, Lu5b;->n0(Lk5b;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-boolean p0, p0, Lw6b;->v:Z
-
-    invoke-interface {p1, p0}, Lu5b;->m(Z)V
-
-    return-void
-
-    :pswitch_3
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-boolean p0, p0, Lw6b;->t:Z
-
-    const/4 v0, 0x4
-
-    invoke-interface {p1, v0, p0}, Lu5b;->e(IZ)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget p0, p0, Lw6b;->y:I
-
-    invoke-interface {p1, p0}, Lu5b;->g(I)V
-
-    return-void
-
-    :pswitch_5
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-object p0, p0, Lw6b;->m:Lhg8;
-
-    invoke-interface {p1, p0}, Lu5b;->b0(Lhg8;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-object v0, p0, Lw6b;->j:Lwxe;
-
-    iget p0, p0, Lw6b;->k:I
-
-    invoke-interface {p1, v0, p0}, Lu5b;->e0(Lwxe;I)V
-
-    return-void
-
-    :pswitch_7
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->c:Ljava/lang/Object;
-
-    check-cast p0, Lr5b;
-
-    invoke-interface {p1, p0}, Lu5b;->o0(Lr5b;)V
-
-    return-void
-
-    :pswitch_8
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget v0, p0, Lw6b;->r:I
-
-    iget-boolean p0, p0, Lw6b;->s:Z
-
-    invoke-interface {p1, v0, p0}, Lu5b;->h(IZ)V
-
-    return-void
-
-    :pswitch_9
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-object p0, p0, Lw6b;->q:Lim4;
-
-    invoke-interface {p1, p0}, Lu5b;->r0(Lim4;)V
-
-    return-void
-
-    :pswitch_a
-    iget-object p0, p0, Lzc8;->b:Ld40;
-
-    iget-object p0, p0, Ld40;->a:Ljava/lang/Object;
-
-    check-cast p0, Lw6b;
-
-    iget-object p0, p0, Lw6b;->o:Lt20;
-
-    invoke-interface {p1, p0}, Lu5b;->v(Lt20;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

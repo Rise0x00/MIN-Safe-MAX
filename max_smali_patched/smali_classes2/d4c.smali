@@ -1,40 +1,121 @@
-.class public abstract Ld4c;
-.super Ljava/lang/Object;
+.class public final Ld4c;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f13085f
+# instance fields
+.field public X:I
 
-.field public static oneme_media_keyboard_emoji_classic:I = 0x7f130860
+.field public final synthetic Y:Lp4c;
 
-.field public static oneme_media_keyboard_emoji_flags:I = 0x7f130861
 
-.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f130862
+# direct methods
+.method public constructor <init>(Lp4c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f130863
+    iput-object p1, p0, Ld4c;->Y:Lp4c;
 
-.field public static oneme_media_keyboard_emoji_objects:I = 0x7f130864
+    const/4 p1, 0x2
 
-.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f130865
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f130866
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f130867
 
-.field public static oneme_media_keyboard_favorite:I = 0x7f130868
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_media_keyboard_popular:I = 0x7f130869
+    check-cast p1, Le34;
 
-.field public static oneme_media_keyboard_recent:I = 0x7f13086a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f13086b
+    invoke-virtual {p0, p1, p2}, Ld4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f13086c
+    move-result-object p1
 
-.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f13086d
+    check-cast p1, Ld4c;
 
-.field public static oneme_media_keyboard_tab_emoji:I = 0x7f13086e
+    sget-object p2, Loyf;->a:Loyf;
 
-.field public static oneme_media_keyboard_tab_gifs:I = 0x7f13086f
+    invoke-virtual {p1, p2}, Ld4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_tab_stickers:I = 0x7f130870
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ld4c;
+
+    iget-object v0, p0, Ld4c;->Y:Lp4c;
+
+    invoke-direct {p1, v0, p2}, Ld4c;-><init>(Lp4c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Ld4c;->X:I
+
+    iget-object v1, p0, Ld4c;->Y:Lp4c;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lp4c;->V0:Lwrb;
+
+    iput v2, p0, Ld4c;->X:I
+
+    invoke-virtual {p1, p0}, Lwrb;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ll3c;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v1, Lp4c;->G0:Ljb5;
+
+    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    :cond_3
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+.end method

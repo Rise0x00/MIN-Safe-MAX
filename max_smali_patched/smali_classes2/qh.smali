@@ -1,123 +1,213 @@
 .class public final Lqh;
-.super Ljava/lang/Object;
+.super Lw2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lfpc;
-
-.field public final b:Lmh;
-
-.field public final c:Lnh;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(Lx5d;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqh;->o:I
 
-    iput-object p1, p0, Lqh;->a:Lfpc;
-
-    new-instance v0, Lmh;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lmh;-><init>(Lfpc;I)V
-
-    iput-object v0, p0, Lqh;->b:Lmh;
-
-    new-instance v0, Lnh;
-
-    invoke-direct {v0, p1, v1}, Lnh;-><init>(Lfpc;I)V
-
-    iput-object v0, p0, Lqh;->c:Lnh;
+    invoke-direct {p0, p1}, Lw2;-><init>(Lx5d;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;Lax3;)Ljava/lang/Object;
-    .locals 4
+.method public final g()Ljava/lang/String;
+    .locals 1
 
-    const-string v0, "SELECT * FROM animoji WHERE id IN ("
+    iget v0, p0, Lqh;->o:I
 
-    invoke-static {v0}, Ldw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    const-string v0, "UPDATE messages SET update_time = ? WHERE id = ?"
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    return-object v0
 
-    move-result v1
+    :pswitch_0
+    const-string v0, "UPDATE messages SET localized_error = ? WHERE id = ?"
 
-    invoke-static {v0, v1}, Lltg;->d(Ljava/lang/StringBuilder;I)V
+    return-object v0
 
-    const-string v2, ")"
+    :pswitch_1
+    const-string v0, "UPDATE messages SET error = ? WHERE id = ?"
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_2
+    const-string v0, "DELETE FROM message_uploads"
 
-    move-result-object v0
+    return-object v0
 
-    invoke-static {v1, v0}, Lvpc;->c(ILjava/lang/String;)Lvpc;
+    :pswitch_3
+    const-string v0, "DELETE FROM message_uploads WHERE message_id=? AND chat_id=? AND attach_id=?"
 
-    move-result-object v0
+    return-object v0
 
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    :pswitch_4
+    const-string v0, "DELETE FROM fcm_notifications_history"
 
-    move-result-object p1
+    return-object v0
 
-    const/4 v1, 0x1
+    :pswitch_5
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE received_time<=?"
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
 
-    move-result v2
+    :pswitch_6
+    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
 
-    if-eqz v2, :cond_1
+    return-object v0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :pswitch_7
+    const-string v0, "DELETE FROM fcm_notifications_analytics"
 
-    move-result-object v2
+    return-object v0
 
-    check-cast v2, Ljava/lang/Long;
+    :pswitch_8
+    const-string v0, "DELETE FROM favorite_stickers"
 
-    if-nez v2, :cond_0
+    return-object v0
 
-    invoke-virtual {v0, v1}, Lvpc;->Z(I)V
+    :pswitch_9
+    const-string v0, "DELETE FROM favorite_sticker_sets"
 
-    goto :goto_1
+    return-object v0
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    :pswitch_a
+    const-string v0, "DELETE FROM draft_uploads"
 
-    move-result-wide v2
+    return-object v0
 
-    invoke-virtual {v0, v1, v2, v3}, Lvpc;->k(IJ)V
+    :pswitch_b
+    const-string v0, "DELETE FROM draft_uploads WHERE chat_id=? AND attach_id=?"
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    return-object v0
 
-    goto :goto_0
+    :pswitch_c
+    const-string v0, "DELETE FROM default_emoji"
 
-    :cond_1
-    new-instance p1, Landroid/os/CancellationSignal;
+    return-object v0
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    :pswitch_d
+    const-string v0, "DELETE FROM contact_title"
 
-    new-instance v1, Lph;
+    return-object v0
 
-    const/4 v2, 0x1
+    :pswitch_e
+    const-string v0, "DELETE FROM contact_title WHERE docid=?"
 
-    invoke-direct {v1, p0, v0, v2}, Lph;-><init>(Lqh;Lvpc;I)V
+    return-object v0
 
-    iget-object p0, p0, Lqh;->a:Lfpc;
+    :pswitch_f
+    const-string v0, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
 
-    invoke-static {p0, p1, v1, p2}, Lno9;->k(Lfpc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_10
+    const-string v0, "DELETE FROM contacts"
 
-    return-object p0
+    return-object v0
+
+    :pswitch_11
+    const-string v0, "UPDATE contacts SET presence = ?, presence_type = ? WHERE server_id = ?"
+
+    return-object v0
+
+    :pswitch_12
+    const-string v0, "UPDATE contacts SET server_id = ?, data = ? WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_13
+    const-string v0, "DELETE FROM complain_reasons"
+
+    return-object v0
+
+    :pswitch_14
+    const-string v0, "DELETE FROM chat_title"
+
+    return-object v0
+
+    :pswitch_15
+    const-string v0, "DELETE FROM chat_title WHERE docid=?"
+
+    return-object v0
+
+    :pswitch_16
+    const-string v0, "INSERT OR REPLACE INTO chat_title (docid, normalizedTitle, originalTitle, normalizedTitleWithoutEmoji, originalTitleWithoutEmoji, sortTime) VALUES(?, ?, ?, ?, ?, ?)"
+
+    return-object v0
+
+    :pswitch_17
+    const-string v0, "DELETE FROM chats"
+
+    return-object v0
+
+    :pswitch_18
+    const-string v0, "DELETE FROM chats WHERE id = ?"
+
+    return-object v0
+
+    :pswitch_19
+    const-string v0, "DELETE FROM call_links"
+
+    return-object v0
+
+    :pswitch_1a
+    const-string v0, "DELETE FROM call_links WHERE conversation_id=?"
+
+    return-object v0
+
+    :pswitch_1b
+    const-string v0, "DELETE FROM animoji_set"
+
+    return-object v0
+
+    :pswitch_1c
+    const-string v0, "DELETE FROM animoji"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

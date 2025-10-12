@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/maps/model/CameraPosition;
-.super Lm3;
+.super Lq3;
 .source "SourceFile"
 
 # interfaces
@@ -32,11 +32,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lslf;
+    new-instance v0, Lk3g;
 
     const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lslf;-><init>(I)V
+    invoke-direct {v0, v1}, Lk3g;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/maps/model/CameraPosition;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -50,7 +50,7 @@
 
     const-string v0, "camera target must not be null."
 
-    invoke-static {p1, v0}, Laug;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lhv0;->o(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -79,7 +79,7 @@
 
     const-string v3, "Tilt needs to be between 0 and 90 inclusive: %s"
 
-    invoke-static {v2, v3, v1}, Laug;->f(ZLjava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lhv0;->h(ZLjava/lang/String;[Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/google/android/gms/maps/model/CameraPosition;->a:Lcom/google/android/gms/maps/model/LatLng;
 
@@ -172,11 +172,11 @@
 
     if-ne v1, v3, :cond_2
 
-    iget p0, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
+    iget v1, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    move-result p0
+    move-result v1
 
     iget p1, p1, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
 
@@ -184,7 +184,7 @@
 
     move-result p1
 
-    if-ne p0, p1, :cond_2
+    if-ne v1, p1, :cond_2
 
     return v0
 
@@ -193,7 +193,7 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
     iget v0, p0, Lcom/google/android/gms/maps/model/CameraPosition;->b:F
 
@@ -213,31 +213,31 @@
 
     move-result-object v2
 
-    iget-object p0, p0, Lcom/google/android/gms/maps/model/CameraPosition;->a:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v3, p0, Lcom/google/android/gms/maps/model/CameraPosition;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    filled-new-array {p0, v0, v1, v2}, [Ljava/lang/Object;
+    filled-new-array {v3, v0, v1, v2}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Lc38;
+    new-instance v0, Llo4;
 
-    invoke-direct {v0, p0}, Lc38;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Llo4;-><init>(Ljava/lang/Object;)V
 
     const-string v1, "target"
 
     iget-object v2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-virtual {v0, v2, v1}, Lc38;->w(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "zoom"
 
@@ -247,7 +247,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lc38;->w(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "tilt"
 
@@ -257,23 +257,23 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lc38;->w(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "bearing"
 
-    iget p0, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
+    iget v2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
 
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {v0, p0, v1}, Lc38;->w(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lc38;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Llo4;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final writeToParcel(Landroid/os/Parcel;I)V
@@ -281,7 +281,7 @@
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Liwd;->P(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Lz84;->K(Landroid/os/Parcel;I)I
 
     move-result v0
 
@@ -289,19 +289,19 @@
 
     iget-object v2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->a:Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-static {p1, v1, v2, p2}, Liwd;->L(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, v2, p2}, Lz84;->G(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 p2, 0x3
 
     const/4 v1, 0x4
 
-    invoke-static {p1, p2, v1}, Liwd;->T(Landroid/os/Parcel;II)V
+    invoke-static {p1, p2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
     iget p2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->b:F
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-static {p1, v1, v1}, Liwd;->T(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
     iget p2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->c:F
 
@@ -309,13 +309,13 @@
 
     const/4 p2, 0x5
 
-    invoke-static {p1, p2, v1}, Liwd;->T(Landroid/os/Parcel;II)V
+    invoke-static {p1, p2, v1}, Lz84;->M(Landroid/os/Parcel;II)V
 
-    iget p0, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
+    iget p2, p0, Lcom/google/android/gms/maps/model/CameraPosition;->o:F
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-static {p1, v0}, Liwd;->S(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, Lz84;->L(Landroid/os/Parcel;I)V
 
     return-void
 .end method

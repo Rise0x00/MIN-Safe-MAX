@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
-.implements Ldf7;
+.implements Lim7;
 
 
 # instance fields
@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lw55;)V
+.method public constructor <init>(Lja5;)V
     .locals 1
 
     const/4 v0, 0x4
@@ -43,7 +43,7 @@
     iput-object p1, p0, Lu1;->c:Ljava/lang/Object;
 
     .line 4
-    iget p1, p1, Lo7b;->c:I
+    iget p1, p1, Lnmb;->c:I
 
     .line 5
     iput p1, p0, Lu1;->b:I
@@ -54,7 +54,7 @@
 
 # virtual methods
 .method public final hasNext()Z
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lu1;->a:I
 
@@ -62,128 +62,128 @@
 
     iget v0, p0, Lu1;->b:I
 
-    iget-object p0, p0, Lu1;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast p0, Landroid/view/ViewGroup;
+    check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result p0
+    move-result v1
 
-    if-ge v0, p0, :cond_0
+    if-ge v0, v1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    return p0
+    return v0
 
     :pswitch_0
-    iget p0, p0, Lu1;->b:I
+    iget v0, p0, Lu1;->b:I
 
-    if-lez p0, :cond_1
+    if-lez v0, :cond_1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_1
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_1
-    return p0
+    return v0
 
     :pswitch_1
     iget v0, p0, Lu1;->b:I
 
-    iget-object p0, p0, Lu1;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast p0, Landroid/view/Menu;
+    check-cast v1, Landroid/view/Menu;
 
-    invoke-interface {p0}, Landroid/view/Menu;->size()I
+    invoke-interface {v1}, Landroid/view/Menu;->size()I
 
-    move-result p0
+    move-result v1
 
-    if-ge v0, p0, :cond_2
+    if-ge v0, v1, :cond_2
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_2
 
     :cond_2
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_2
-    return p0
+    return v0
 
     :pswitch_2
     iget v0, p0, Lu1;->b:I
 
-    iget-object p0, p0, Lu1;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast p0, [Ljava/lang/Object;
+    check-cast v1, [Ljava/lang/Object;
 
-    array-length p0, p0
+    array-length v1, v1
 
-    if-ge v0, p0, :cond_3
+    if-ge v0, v1, :cond_3
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_3
 
     :cond_3
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_3
-    return p0
+    return v0
 
     :pswitch_3
     iget v0, p0, Lu1;->b:I
 
-    iget-object p0, p0, Lu1;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast p0, [F
+    check-cast v1, [F
 
-    array-length p0, p0
+    array-length v1, v1
 
-    if-ge v0, p0, :cond_4
+    if-ge v0, v1, :cond_4
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_4
 
     :cond_4
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_4
-    return p0
+    return v0
 
     :pswitch_4
     iget v0, p0, Lu1;->b:I
 
-    iget-object p0, p0, Lu1;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast p0, Lx1;
+    check-cast v1, Lx1;
 
-    invoke-virtual {p0}, Lx1;->getSize()I
+    invoke-virtual {v1}, Lb0;->getSize()I
 
-    move-result p0
+    move-result v1
 
-    if-ge v0, p0, :cond_5
+    if-ge v0, v1, :cond_5
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
     goto :goto_5
 
     :cond_5
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_5
-    return p0
+    return v0
 
     nop
 
@@ -216,25 +216,25 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw v0
 
     :pswitch_0
     iget-object v0, p0, Lu1;->c:Ljava/lang/Object;
 
-    check-cast v0, Lw55;
+    check-cast v0, Lja5;
 
-    iget v1, v0, Lo7b;->c:I
+    iget v1, v0, Lnmb;->c:I
 
     iget v2, p0, Lu1;->b:I
 
@@ -244,11 +244,11 @@
 
     sub-int/2addr v1, v2
 
-    iget-object p0, v0, Lo7b;->e:[Ljava/lang/String;
+    iget-object v0, v0, Lnmb;->e:[Ljava/lang/String;
 
-    aget-object p0, p0, v1
+    aget-object v0, v0, v1
 
-    return-object p0
+    return-object v0
 
     :pswitch_1
     iget-object v0, p0, Lu1;->c:Ljava/lang/Object;
@@ -263,18 +263,18 @@
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw v0
 
     :pswitch_2
     :try_start_0
@@ -288,11 +288,11 @@
 
     iput v2, p0, Lu1;->b:I
 
-    aget-object p0, v0, v1
+    aget-object v0, v0, v1
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    return-object v0
 
     :catch_0
     move-exception v0
@@ -303,15 +303,15 @@
 
     iput v1, p0, Lu1;->b:I
 
-    new-instance p0, Ljava/util/NoSuchElementException;
+    new-instance v1, Ljava/util/NoSuchElementException;
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
 
     :pswitch_3
     :try_start_1
@@ -325,15 +325,15 @@
 
     iput v2, p0, Lu1;->b:I
 
-    aget p0, v0, v1
+    aget v0, v0, v1
     :try_end_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :catch_1
     move-exception v0
@@ -344,15 +344,15 @@
 
     iput v1, p0, Lu1;->b:I
 
-    new-instance p0, Ljava/util/NoSuchElementException;
+    new-instance v1, Ljava/util/NoSuchElementException;
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v1
 
     :pswitch_4
     invoke-virtual {p0}, Lu1;->hasNext()Z
@@ -373,16 +373,16 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 
     :cond_2
-    new-instance p0, Ljava/util/NoSuchElementException;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    throw p0
+    throw v0
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -416,13 +416,13 @@
     return-void
 
     :pswitch_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :pswitch_1
     iget-object v0, p0, Lu1;->c:Ljava/lang/Object;
@@ -437,61 +437,61 @@
 
     invoke-interface {v0, v1}, Landroid/view/Menu;->getItem(I)Landroid/view/MenuItem;
 
-    move-result-object p0
+    move-result-object v1
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->getItemId()I
+    invoke-interface {v1}, Landroid/view/MenuItem;->getItemId()I
 
-    move-result p0
+    move-result v1
 
-    invoke-interface {v0, p0}, Landroid/view/Menu;->removeItem(I)V
+    invoke-interface {v0, v1}, Landroid/view/Menu;->removeItem(I)V
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    sget-object v0, Loyf;->a:Loyf;
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
     return-void
 
     :cond_1
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    throw p0
+    throw v0
 
     :pswitch_2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :pswitch_3
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     :pswitch_4
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
+    const-string v1, "Operation is not supported for read-only collection"
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw v0
 
     nop
 

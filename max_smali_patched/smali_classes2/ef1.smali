@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final a:Li7c;
+.field public final a:Lpmc;
 
 .field public final b:Lorg/webrtc/EglBase$Context;
 
-.field public final c:Lie;
+.field public final c:Lge;
 
 .field public final d:Ljava/lang/String;
 
@@ -24,12 +24,12 @@
 
 
 # direct methods
-.method public constructor <init>(Li7c;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
+.method public constructor <init>(Lpmc;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
     .locals 11
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lef1;->a:Li7c;
+    iput-object p1, p0, Lef1;->a:Lpmc;
 
     iput-object p2, p0, Lef1;->b:Lorg/webrtc/EglBase$Context;
 
@@ -37,7 +37,7 @@
 
     move-object v8, p4
 
-    invoke-static {v1, p4}, Lmh0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p4}, Lqe0;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -53,11 +53,11 @@
 
     move-result-object v10
 
-    new-instance v0, Leq8;
+    new-instance v0, Lc;
 
     const/4 v6, 0x0
 
-    const/16 v7, 0x1b
+    const/16 v7, 0x18
 
     const/4 v1, 0x1
 
@@ -69,7 +69,7 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Leq8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lc;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
     move-object v2, p1
 
@@ -83,7 +83,7 @@
 
     move-object v3, v10
 
-    invoke-direct/range {v1 .. v6}, Lcf1;-><init>(Li7c;Landroid/opengl/EGLContext;[ILeq8;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcf1;-><init>(Lpmc;Landroid/opengl/EGLContext;[ILc;Ljava/lang/String;)V
 
     iput-object v1, p0, Lef1;->e:Lcf1;
 
@@ -111,14 +111,14 @@
 
     iput-object v0, p0, Lef1;->i:Ljava/util/ArrayList;
 
-    new-instance v2, Lie;
+    new-instance v2, Lge;
 
     const/4 v0, 0x6
 
-    invoke-direct {v2, v0, p0}, Lie;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v0, p0}, Lge;-><init>(ILjava/lang/Object;)V
 
     :try_start_0
-    iget-object v0, v1, Lcf1;->k:Lapg;
+    iget-object v0, v1, Lcf1;->k:Lle0;
 
     const-wide/16 v3, 0x1388
 
@@ -135,12 +135,12 @@
 
     const-string v4, "OpenGL tread died, is it fine?"
 
-    iget-object v1, v1, Lcf1;->a:Li7c;
+    iget-object v1, v1, Lcf1;->a:Lpmc;
 
-    invoke-interface {v1, v3, v4, v0}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v3, v4, v0}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
-    iput-object v2, p0, Lef1;->c:Lie;
+    iput-object v2, p0, Lef1;->c:Lge;
 
     return-void
 .end method
@@ -148,94 +148,94 @@
 
 # virtual methods
 .method public final a()V
-    .locals 4
+    .locals 5
 
-    iget-object p0, p0, Lef1;->e:Lcf1;
+    iget-object v0, p0, Lef1;->e:Lcf1;
 
-    iget-object v0, p0, Lcf1;->a:Li7c;
+    iget-object v1, v0, Lcf1;->a:Lpmc;
 
-    iget-object v1, p0, Lcf1;->j:Ljava/lang/String;
+    iget-object v2, v0, Lcf1;->j:Ljava/lang/String;
 
-    const-string v2, "Release requested"
+    const-string v3, "Release requested"
 
-    invoke-interface {v0, v1, v2}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+    new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iget-object v1, p0, Lcf1;->h:Ljava/lang/Object;
+    iget-object v2, v0, Lcf1;->h:Ljava/lang/Object;
 
-    monitor-enter v1
+    monitor-enter v2
 
     :try_start_0
-    iget-boolean v2, p0, Lcf1;->i:Z
+    iget-boolean v3, v0, Lcf1;->i:Z
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_0
 
-    iget-object v2, p0, Lcf1;->a:Li7c;
+    iget-object v3, v0, Lcf1;->a:Lpmc;
 
-    iget-object p0, p0, Lcf1;->j:Ljava/lang/String;
+    iget-object v0, v0, Lcf1;->j:Ljava/lang/String;
 
-    const-string v3, "Already released, ignore"
+    const-string v4, "Already released, ignore"
 
-    invoke-interface {v2, p0, v3}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v0, v4}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {v1}, Ljava/util/concurrent/CountDownLatch;->countDown()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v1
+    monitor-exit v2
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v0
 
     goto :goto_1
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :try_start_1
-    iput-boolean v2, p0, Lcf1;->i:Z
+    iput-boolean v3, v0, Lcf1;->i:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    monitor-exit v1
+    monitor-exit v2
 
-    iget-object v1, p0, Lcf1;->k:Lapg;
+    iget-object v2, v0, Lcf1;->k:Lle0;
 
-    new-instance v2, Lc;
+    new-instance v3, Lid;
 
-    const/16 v3, 0xe
+    const/16 v4, 0x13
 
-    invoke-direct {v2, p0, v3, v0}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, v0, v4, v1}, Lid;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
-    iget-object v1, p0, Lcf1;->a:Li7c;
+    iget-object v2, v0, Lcf1;->a:Lpmc;
 
-    iget-object p0, p0, Lcf1;->j:Ljava/lang/String;
+    iget-object v0, v0, Lcf1;->j:Ljava/lang/String;
 
-    const-string v2, "Release action submitted"
+    const-string v3, "Release action submitted"
 
-    invoke-interface {v1, p0, v2}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v0, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    invoke-static {v0}, Lorg/webrtc/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;)V
+    invoke-static {v1}, Lorg/webrtc/ThreadUtils;->awaitUninterruptibly(Ljava/util/concurrent/CountDownLatch;)V
 
     return-void
 
     :goto_1
-    monitor-exit v1
+    monitor-exit v2
 
-    throw p0
+    throw v0
 .end method
 
-.method public final b(Lcf1;Lbr1;Lorg/webrtc/VideoFrame;Lpi1;)V
+.method public final b(Lcf1;Ljr1;Lorg/webrtc/VideoFrame;Lcj1;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -291,7 +291,7 @@
 
     invoke-virtual {v11, v7, v7}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    iget-boolean v7, v3, Lpi1;->c:Z
+    iget-boolean v7, v3, Lcj1;->c:Z
 
     const/high16 v8, 0x3f800000    # 1.0f
 
@@ -307,9 +307,9 @@
     :goto_1
     invoke-virtual {v11, v7, v8}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    iget v7, v3, Lpi1;->a:F
+    iget v7, v3, Lcj1;->a:F
 
-    iget v3, v3, Lpi1;->b:F
+    iget v3, v3, Lcj1;->b:F
 
     invoke-virtual {v11, v7, v3}, Landroid/graphics/Matrix;->preScale(FF)Z
 
@@ -317,7 +317,7 @@
 
     invoke-virtual {v11, v3, v3}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    iget-object v3, v2, Lbr1;->k:Lorg/webrtc/RendererCommon$GlDrawer;
+    iget-object v3, v2, Ljr1;->k:Lorg/webrtc/RendererCommon$GlDrawer;
 
     if-nez v3, :cond_3
 
@@ -364,68 +364,68 @@
 
     invoke-virtual/range {v8 .. v15}, Lorg/webrtc/VideoFrameDrawer;->drawFrame(Lorg/webrtc/VideoFrame;Lorg/webrtc/RendererCommon$GlDrawer;Landroid/graphics/Matrix;IIII)V
 
-    const-string v0, "drawFrame()"
+    const-string v3, "drawFrame()"
 
-    invoke-static {v0}, Lcf1;->a(Ljava/lang/String;)V
+    invoke-static {v3}, Lcf1;->a(Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v7
 
-    iget-object v0, v1, Lcf1;->e:Landroid/opengl/EGLDisplay;
+    iget-object v1, v1, Lcf1;->e:Landroid/opengl/EGLDisplay;
 
-    if-eqz v0, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-static {v0, v4}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
+    invoke-static {v1, v4}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
 
-    const-string v0, "swapBuffers()"
+    const-string v1, "swapBuffers()"
 
-    invoke-static {v0}, Lcf1;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcf1;->a(Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v3
 
-    iget-object v1, v2, Lbr1;->l:Lcr1;
+    iget-object v2, v2, Ljr1;->l:Lkr1;
 
     sub-long v5, v3, v5
 
     sub-long/2addr v3, v7
 
-    iget-wide v7, v1, Lcr1;->h:J
+    iget-wide v7, v2, Lkr1;->h:J
 
     add-long/2addr v7, v5
 
-    iput-wide v7, v1, Lcr1;->h:J
+    iput-wide v7, v2, Lkr1;->h:J
 
-    iget-wide v5, v1, Lcr1;->i:J
+    iget-wide v5, v2, Lkr1;->i:J
 
     add-long/2addr v5, v3
 
-    iput-wide v5, v1, Lcr1;->i:J
+    iput-wide v5, v2, Lkr1;->i:J
 
-    invoke-static {v0}, Lcf1;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcf1;->a(Ljava/lang/String;)V
 
     return-void
 
     :cond_4
-    new-instance v0, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
+    new-instance v1, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
 
-    invoke-direct {v0}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
+    invoke-direct {v1}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
 
-    throw v0
+    throw v1
 
     :cond_5
-    new-instance v0, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
+    new-instance v1, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
 
-    invoke-direct {v0}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
+    invoke-direct {v1}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
 
-    throw v0
+    throw v1
 
     :cond_6
-    new-instance v0, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
+    new-instance v1, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;
 
-    invoke-direct {v0}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
+    invoke-direct {v1}, Lru/ok/android/webrtc/opengl/CallOpenGLContext$CallOpenGLContextNotInitialized;-><init>()V
 
-    throw v0
+    throw v1
 .end method

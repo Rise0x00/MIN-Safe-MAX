@@ -1,97 +1,149 @@
-.class public final Ldd0;
-.super Ljava/lang/Object;
+.class public abstract Ldd0;
+.super Lhy9;
 .source "SourceFile"
-
-# interfaces
-.implements Led0;
-
-
-# instance fields
-.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    iput-object p1, p0, Ldd0;->a:Landroid/content/Intent;
+    :pswitch_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
     return-void
-.end method
 
+    :pswitch_1
+    sget-object p1, Loyf;->a:Loyf;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    const/4 v0, 0x1
+    return-void
 
-    if-ne p0, p1, :cond_0
+    :pswitch_2
+    sget-object p1, Loyf;->a:Loyf;
 
-    return v0
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    :cond_0
-    instance-of v1, p1, Ldd0;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_3
+    sget-object p1, Loyf;->a:Loyf;
 
-    if-nez v1, :cond_1
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    return v2
+    return-void
 
-    :cond_1
-    check-cast p1, Ldd0;
+    :pswitch_4
+    sget-object p1, Loyf;->a:Loyf;
 
-    iget-object p0, p0, Ldd0;->a:Landroid/content/Intent;
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Ldd0;->a:Landroid/content/Intent;
+    return-void
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_5
+    sget-object p1, Loyf;->a:Loyf;
 
-    move-result p0
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    if-nez p0, :cond_2
+    return-void
 
-    return v2
+    :pswitch_6
+    sget-object p1, Loyf;->a:Loyf;
 
-    :cond_2
-    return v0
-.end method
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 0
+    return-void
 
-    iget-object p0, p0, Ldd0;->a:Landroid/content/Intent;
+    :pswitch_7
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    move-result p0
+    return-void
 
-    return p0
-.end method
+    :pswitch_8
+    sget-object p1, Loyf;->a:Loyf;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "CropAvatarScreenIntentReadyOld(intent="
+    :pswitch_9
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ldd0;->a:Landroid/content/Intent;
+    return-void
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_a
+    sget-object p1, Loyf;->a:Loyf;
 
-    const-string p0, ")"
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_b
+    sget-object p1, Loyf;->a:Loyf;
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
 
-    return-object p0
+    return-void
+
+    :pswitch_c
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_d
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_e
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_f
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_f
+        :pswitch_e
+        :pswitch_0
+        :pswitch_d
+        :pswitch_0
+        :pswitch_c
+        :pswitch_0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_0
+        :pswitch_0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

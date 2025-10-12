@@ -1,270 +1,253 @@
 .class public final Lyng;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Lxng;
+.implements Lfqf;
 
 
 # instance fields
-.field public a:F
+.field public final a:Landroid/view/View;
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:F
+.field public final c:Landroid/view/ViewGroup;
 
-.field public d:F
+.field public final d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method public constructor <init>(FF)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    iput p1, p0, Lyng;->b:F
+    const/4 v0, 0x0
 
-    iput p2, p0, Lyng;->c:F
+    iput-boolean v0, p0, Lyng;->f:Z
+
+    iput-object p1, p0, Lyng;->a:Landroid/view/View;
+
+    iput p2, p0, Lyng;->b:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iput-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lyng;->d:Z
+
+    invoke-virtual {p0, p1}, Lyng;->g(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()F
+.method public final a(Liqf;)V
     .locals 0
 
-    iget p0, p0, Lyng;->b:F
-
-    return p0
+    return-void
 .end method
 
-.method public final b()F
+.method public final b()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lyng;->g(Z)V
+
+    iget-boolean v0, p0, Lyng;->f:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lyng;->a:Landroid/view/View;
+
+    iget v1, p0, Lyng;->b:I
+
+    invoke-static {v0, v1}, Lfng;->b(Landroid/view/View;I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Liqf;)V
     .locals 0
 
-    iget p0, p0, Lyng;->c:F
+    invoke-virtual {p1, p0}, Liqf;->D(Lfqf;)Liqf;
 
-    return p0
+    return-void
 .end method
 
-.method public final c()F
-    .locals 0
+.method public final f()V
+    .locals 2
 
-    iget p0, p0, Lyng;->a:F
+    const/4 v0, 0x1
 
-    return p0
-.end method
+    invoke-virtual {p0, v0}, Lyng;->g(Z)V
 
-.method public final d()F
-    .locals 0
+    iget-boolean v0, p0, Lyng;->f:Z
 
-    iget p0, p0, Lyng;->d:F
+    if-nez v0, :cond_0
 
-    return p0
-.end method
-
-.method public final e(F)V
-    .locals 8
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    cmpl-float v1, p1, v0
-
-    if-gtz v1, :cond_4
+    iget-object v0, p0, Lyng;->a:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    cmpg-float v2, p1, v1
-
-    if-ltz v2, :cond_4
-
-    iput p1, p0, Lyng;->d:F
-
-    cmpl-float v2, p1, v0
-
-    iget v3, p0, Lyng;->b:F
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
+    invoke-static {v0, v1}, Lfng;->b(Landroid/view/View;I)V
 
     :cond_0
-    cmpl-float v1, p1, v1
-
-    iget v2, p0, Lyng;->c:F
-
-    if-nez v1, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    div-float v1, v0, v3
-
-    float-to-double v4, v1
-
-    div-float/2addr v0, v2
-
-    float-to-double v0, v0
-
-    sub-double/2addr v4, v0
-
-    float-to-double v6, p1
-
-    mul-double/2addr v4, v6
-
-    add-double/2addr v4, v0
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    div-double/2addr v0, v4
-
-    float-to-double v4, v2
-
-    float-to-double v2, v3
-
-    cmpg-double p1, v0, v4
-
-    if-gez p1, :cond_2
-
-    move-wide v0, v4
-
-    goto :goto_0
-
-    :cond_2
-    cmpl-double p1, v0, v2
-
-    if-lez p1, :cond_3
-
-    move-wide v0, v2
-
-    :cond_3
-    :goto_0
-    double-to-float v3, v0
-
-    :goto_1
-    iput v3, p0, Lyng;->a:F
-
     return-void
-
-    :cond_4
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v0, "Requested linearZoom "
-
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string p1, " is not within valid range [0..1]"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public final f(F)V
-    .locals 5
+.method public final g(Z)V
+    .locals 1
 
-    iget v0, p0, Lyng;->b:F
+    iget-boolean v0, p0, Lyng;->d:Z
 
-    cmpl-float v1, p1, v0
+    if-eqz v0, :cond_0
 
-    iget v2, p0, Lyng;->c:F
+    iget-boolean v0, p0, Lyng;->e:Z
 
-    if-gtz v1, :cond_3
+    if-eq v0, p1, :cond_0
 
-    cmpg-float v1, p1, v2
+    iget-object v0, p0, Lyng;->c:Landroid/view/ViewGroup;
 
-    if-ltz v1, :cond_3
+    if-eqz v0, :cond_0
 
-    iput p1, p0, Lyng;->a:F
+    iput-boolean p1, p0, Lyng;->e:Z
 
-    cmpl-float v1, v0, v2
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    invoke-static {v0, p1}, Lv63;->x0(Landroid/view/ViewGroup;Z)V
 
     :cond_0
-    cmpl-float v1, p1, v0
+    return-void
+.end method
 
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    if-nez v1, :cond_1
-
-    move v3, v4
-
-    goto :goto_0
-
-    :cond_1
-    cmpl-float v1, p1, v2
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    div-float p1, v4, p1
-
-    div-float v0, v4, v0
-
-    div-float/2addr v4, v2
-
-    sub-float/2addr p1, v4
-
-    sub-float/2addr v0, v4
-
-    div-float v3, p1, v0
-
-    :goto_0
-    iput v3, p0, Lyng;->d:F
+.method public final h(Liqf;)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_3
-    new-instance p0, Ljava/lang/StringBuilder;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    const-string v1, "Requested zoomRatio "
+    const/4 p1, 0x1
 
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-boolean p1, p0, Lyng;->f:Z
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string p1, " is not within valid range ["
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1
+    iget-boolean p1, p0, Lyng;->f:Z
 
-    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    if-nez p1, :cond_0
 
-    const-string p1, " , "
+    .line 2
+    iget-object p1, p0, Lyng;->a:Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lyng;->b:I
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Lfng;->b(Landroid/view/View;I)V
 
-    const-string p1, "]"
+    .line 3
+    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    move-result-object p0
+    :cond_0
+    const/4 p1, 0x0
 
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    .line 5
+    invoke-virtual {p0, p1}, Lyng;->g(Z)V
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    throw p1
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-nez p2, :cond_1
+
+    .line 6
+    iget-boolean p1, p0, Lyng;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 7
+    iget-object p1, p0, Lyng;->a:Landroid/view/View;
+
+    iget p2, p0, Lyng;->b:I
+
+    invoke-static {p1, p2}, Lfng;->b(Landroid/view/View;I)V
+
+    .line 8
+    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 9
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 10
+    invoke-virtual {p0, p1}, Lyng;->g(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    iget-object p1, p0, Lyng;->a:Landroid/view/View;
+
+    const/4 p2, 0x0
+
+    invoke-static {p1, p2}, Lfng;->b(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
 .end method

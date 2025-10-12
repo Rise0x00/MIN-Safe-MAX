@@ -1,98 +1,82 @@
 .class public final Li26;
-.super Ljava/util/concurrent/ForkJoinTask;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Lsj3;
+.field public final synthetic X:Lo26;
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public volatile o:Ljava/lang/Throwable;
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lsj3;)V
-    .locals 1
+.method public constructor <init>(Lo26;JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/ForkJoinTask;-><init>()V
+    iput-object p1, p0, Li26;->X:Lo26;
 
-    iput-object p2, p0, Li26;->a:Lsj3;
+    iput-wide p2, p0, Li26;->Y:J
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 p1, 0x2
 
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p2, p0, Li26;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Li26;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final exec()Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Li26;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Li26;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Li26;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget-object v0, p0, Li26;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance p1, Li26;
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Li26;->X:Lo26;
 
-    const/4 v2, 0x1
+    iget-wide v1, p0, Li26;->Y:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {p1, v0, v1, v2, p2}, Li26;-><init>(Lo26;JLkotlin/coroutines/Continuation;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Li26;->a:Lsj3;
-
-    invoke-virtual {v0}, Lsj3;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return v2
-
-    :catchall_0
-    move-exception v0
-
-    iput-object v0, p0, Li26;->o:Ljava/lang/Throwable;
-
-    throw v0
-
-    :cond_0
-    return v1
+    return-object p1
 .end method
 
-.method public final getRawResult()Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object p0, p0, Li26;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    sget-object p1, Lo26;->L0:[Ltm7;
 
-    move-result-object p0
+    iget-object p1, p0, Li26;->X:Lo26;
 
-    return-object p0
-.end method
+    iget-wide v0, p0, Li26;->Y:J
 
-.method public final setRawResult(Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {p1, v0, v1}, Lo26;->s(J)V
 
-    iget-object p0, p0, Li26;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    return-void
+    return-object p1
 .end method

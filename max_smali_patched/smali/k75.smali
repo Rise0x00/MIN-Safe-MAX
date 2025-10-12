@@ -2,58 +2,50 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lord;
+.implements Lvz4;
 
-# instance fields
-.field public final a:[Le75;
 
-.field public final b:[J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+# static fields
+.field public static final a:Lk75;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Le75;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lk75;
 
-    iput-object p1, p0, Lk75;->c:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lk75;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Lk75;->b:[J
-
-    iput-object p4, p0, Lk75;->a:[Le75;
+    sput-object v0, Lk75;->a:Lk75;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+.method public final bridge synthetic a(I)Lord;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object p1, Lk75;->a:Lk75;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    return-object p1
+.end method
 
-    iget-object v1, p0, Lk75;->c:Ljava/lang/String;
+.method public final bridge synthetic b(I)Lord;
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object p1, Lk75;->a:Lk75;
 
-    const-string v1, "/"
+    return-object p1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    iget-object p0, p0, Lk75;->d:Ljava/lang/String;
+    sget-object v0, La75;->a:La75;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

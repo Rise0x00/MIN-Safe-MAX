@@ -1,255 +1,179 @@
 .class public final Lx92;
-.super Lil;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Leqe;
-.implements Lqwa;
+.implements Llf6;
 
 
 # instance fields
-.field public final X:Lib3;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/String;
+.field public final synthetic Y:Lma2;
 
-.field public final o:J
+.field public final synthetic Z:Z
 
 
 # direct methods
-.method public constructor <init>(JJLib3;)V
+.method public constructor <init>(Lma2;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lil;-><init>(J)V
+    iput-object p1, p0, Lx92;->Y:Lma2;
 
-    iput-wide p3, p0, Lx92;->o:J
+    iput-boolean p2, p0, Lx92;->Z:Z
 
-    iput-object p5, p0, Lx92;->X:Lib3;
+    const/4 p1, 0x2
 
-    const-class p1, Lx92;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lx92;->Y:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lil;->m()Lbb2;
+    check-cast p1, Le34;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, p0, Lx92;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lbb2;->C(J)Ll72;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    iget-object p0, p0, Ll72;->b:Lxb2;
-
-    iget-object p0, p0, Lxb2;->c:Lvb2;
-
-    sget-object v0, Lvb2;->o:Lvb2;
-
-    if-eq p0, v0, :cond_1
-
-    sget-object v0, Lvb2;->X:Lvb2;
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x3
-
-    return p0
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lil;->s()Lxre;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lil;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lxre;->d(J)V
-
-    return-void
-.end method
-
-.method public final e()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatComplain;-><init>()V
-
-    iget-wide v1, p0, Lil;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->requestId:J
-
-    iget-wide v1, p0, Lx92;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->chatId:J
-
-    iget-object p0, p0, Lx92;->X:Lib3;
-
-    if-nez p0, :cond_0
-
-    const-string p0, ""
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lib3;->a:Ljava/lang/String;
-
-    :goto_0
-    iput-object p0, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->complaint:Ljava/lang/String;
-
-    invoke-static {v0}, Lgz8;->toByteArray(Lgz8;)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final f(Lape;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lil;->l()Lrv0;
+    invoke-virtual {p0, p1, p2}, Lx92;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    new-instance v0, Ly92;
+    check-cast p1, Lx92;
 
-    iget-wide v1, p0, Lil;->a:J
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-wide v3, p0, Lx92;->o:J
+    invoke-virtual {p1, p2}, Lx92;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ly92;-><init>(JJ)V
-
-    invoke-virtual {p1, v0}, Lrv0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object p2
 .end method
 
-.method public final g()I
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const p0, 0xf4240
+    new-instance v0, Lx92;
 
-    return p0
+    iget-object v1, p0, Lx92;->Y:Lma2;
+
+    iget-boolean v2, p0, Lx92;->Z:Z
+
+    invoke-direct {v0, v1, v2, p2}, Lx92;-><init>(Lma2;ZLkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lx92;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final getId()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    iget-wide v0, p0, Lil;->a:J
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    return-wide v0
-.end method
+    iget-object p1, p0, Lx92;->X:Ljava/lang/Object;
 
-.method public final getType()Lrwa;
-    .locals 0
+    check-cast p1, Le34;
 
-    sget-object p0, Lrwa;->E0:Lrwa;
+    iget-object v0, p0, Lx92;->Y:Lma2;
 
-    return-object p0
-.end method
+    invoke-virtual {v0}, Lma2;->o()Lm82;
 
-.method public final h(Lloe;)V
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p1, Lloe;->b:Ljava/lang/String;
+    sget-object v2, Loyf;->a:Loyf;
 
-    invoke-static {v0}, Lkv0;->s(Ljava/lang/String;)Z
+    if-nez v1, :cond_0
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lx92;->d()V
-
-    invoke-virtual {p0}, Lil;->l()Lrv0;
-
-    move-result-object p0
-
-    new-instance v0, Lgj0;
-
-    invoke-direct {v0, p1}, Lgj0;-><init>(Lloe;)V
-
-    invoke-virtual {p0, v0}, Lrv0;->c(Ljava/lang/Object;)V
+    return-object v2
 
     :cond_0
-    return-void
-.end method
+    iget-object v3, v1, Lm82;->b:Lpc2;
 
-.method public final i()Lxoe;
-    .locals 5
+    iget-wide v4, v3, Lpc2;->a:J
 
-    invoke-virtual {p0}, Lil;->m()Lbb2;
+    const-wide/16 v6, 0x0
 
-    move-result-object v0
+    cmp-long v4, v4, v6
 
-    iget-wide v1, p0, Lx92;->o:J
+    if-nez v4, :cond_1
 
-    invoke-virtual {v0, v1, v2}, Lbb2;->C(J)Ll72;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object p1
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    iget-object p0, p0, Lx92;->Y:Ljava/lang/String;
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
 
-    const-string v0, "chat is null"
+    invoke-static {p1, v1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object p1, v0, Lma2;->r:Lbp7;
 
-    return-object v1
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    new-instance v2, Lqt;
+    move-result-object p1
 
-    iget-object v0, v0, Ll72;->b:Lxb2;
+    check-cast p1, Lg44;
 
-    iget-wide v3, v0, Lxb2;->a:J
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const/16 v0, 0x1b
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ChatChangeLink"
 
-    invoke-direct {v2, v1, v0}, Lqt;-><init>(Lboa;I)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "chatId"
+    const-string v1, "ONEME-18920"
 
-    invoke-virtual {v2, v3, v4, v0}, Lxoe;->i(JLjava/lang/String;)V
+    invoke-virtual {p1, v1, v0}, Lg44;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object p0, p0, Lx92;->X:Lib3;
-
-    if-eqz p0, :cond_1
-
-    const-string v0, "complaint"
-
-    iget-object p0, p0, Lib3;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v0, p0}, Lxoe;->p(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v2
 
     :cond_1
+    iget-object p1, v0, Lma2;->q:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltk;
+
+    iget-wide v5, v1, Lm82;->a:J
+
+    iget-wide v7, v3, Lpc2;->a:J
+
+    move-object v4, p1
+
+    check-cast v4, Lbga;
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    invoke-virtual/range {v4 .. v12}, Lbga;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v3
+
+    iget-boolean p1, p0, Lx92;->Z:Z
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, v0, Lma2;->x:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
+
+    :cond_2
+    iget-object p1, v0, Lma2;->y:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
     return-object v2
 .end method

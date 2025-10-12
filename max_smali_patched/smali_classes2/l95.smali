@@ -1,142 +1,56 @@
-.class public final synthetic Ll95;
-.super Ljava/lang/Object;
+.class public final Ll95;
+.super Lcxc;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lh95;
 
-.field public final synthetic b:Lth7;
+.field public b:I
 
-.field public final synthetic c:Lm95;
+.field public c:Lk95;
+
+.field public final synthetic d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lth7;Lm95;I)V
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lh95;)V
     .locals 0
 
-    iput p3, p0, Ll95;->a:I
-
-    iput-object p1, p0, Ll95;->b:Lth7;
-
-    iput-object p2, p0, Ll95;->c:Lm95;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll95;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    iput-object p2, p0, Ll95;->a:Lh95;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Ll95;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 1
 
-    iget v0, p0, Ll95;->a:I
+    iget-object p1, p0, Ll95;->c:Lk95;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Ll95;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    new-instance v0, Lbx0;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0}, Lbx0;-><init>()V
+    invoke-virtual {v0, p1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    iget-object v1, p0, Ll95;->b:Lth7;
+    :cond_0
+    new-instance p1, Lk95;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-direct {p1, p0, p2, p3}, Lk95;-><init>(Ll95;II)V
 
-    move-result-object v1
+    iput-object p1, p0, Ll95;->c:Lk95;
 
-    check-cast v1, Lxw0;
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    iput-object v1, v0, Lbx0;->a:Lxw0;
-
-    iget-object p0, p0, Ll95;->c:Lm95;
-
-    iget-object p0, p0, Lm95;->e:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ll64;
-
-    iput-object p0, v0, Lbx0;->c:Ll64;
-
-    const/4 p0, 0x2
-
-    iput p0, v0, Lbx0;->d:I
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lfd4;
-
-    iget-object v1, p0, Ll95;->b:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpoe;
-
-    invoke-virtual {v1}, Lpoe;->e()Ln4a;
-
-    move-result-object v1
-
-    iget-object p0, p0, Ll95;->c:Lm95;
-
-    iget-object p0, p0, Lm95;->b:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbc4;
-
-    invoke-direct {v0, v1, p0}, Lfd4;-><init>(Ln4a;Lbc4;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lbx0;
-
-    invoke-direct {v0}, Lbx0;-><init>()V
-
-    iget-object v1, p0, Ll95;->b:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxw0;
-
-    iput-object v1, v0, Lbx0;->a:Lxw0;
-
-    iget-object p0, p0, Ll95;->c:Lm95;
-
-    iget-object p0, p0, Lm95;->c:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ll64;
-
-    iput-object p0, v0, Lbx0;->c:Ll64;
-
-    const/4 p0, 0x2
-
-    iput p0, v0, Lbx0;->d:I
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

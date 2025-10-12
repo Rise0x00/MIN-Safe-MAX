@@ -1,127 +1,118 @@
 .class public final Lxve;
-.super Landroid/text/style/CharacterStyle;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Lfve;
+.implements Llf6;
 
 
 # instance fields
-.field public final a:Lf96;
+.field public X:I
 
-.field public b:I
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lpve;
 
 
 # direct methods
-.method public constructor <init>(Lnma;Lf96;)V
+.method public constructor <init>(Lpve;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    iput-object p1, p0, Lxve;->Z:Lpve;
 
-    iput-object p2, p0, Lxve;->a:Lf96;
+    const/4 p1, 0x2
 
-    invoke-interface {p2, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, p0, Lxve;->b:I
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lgv5;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxve;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    iget p0, p0, Lxve;->b:I
-
-    check-cast p1, Lxve;
-
-    iget p1, p1, Lxve;->b:I
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const-class v0, Lxve;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iget p0, p0, Lxve;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    mul-int/lit8 p0, p0, 0x1f
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final onThemeChanged(Lnma;)V
-    .locals 1
-
-    iget-object v0, p0, Lxve;->a:Lf96;
-
-    invoke-interface {v0, p1}, Lf96;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lxve;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast p1, Lxve;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    sget-object p2, Loyf;->a:Loyf;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lxve;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput p1, p0, Lxve;->b:I
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lxve;
 
-    iget p0, p0, Lxve;->b:I
+    iget-object v1, p0, Lxve;->Z:Lpve;
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-direct {v0, v1, p2}, Lxve;-><init>(Lpve;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lxve;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lxve;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxve;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lgv5;
+
+    iput v1, p0, Lxve;->X:I
+
+    iget-object v0, p0, Lxve;->Z:Lpve;
+
+    invoke-interface {p1, v0, p0}, Lgv5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

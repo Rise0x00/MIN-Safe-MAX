@@ -1,46 +1,55 @@
-.class public final Lre4;
+.class public final synthetic Lre4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzz4;
-
-
-# static fields
-.field public static final b:Ljava/lang/ThreadLocal;
+.implements Landroid/media/AudioRouting$OnRoutingChangedListener;
 
 
 # instance fields
-.field public final a:Landroid/text/TextPaint;
+.field public final synthetic a:Ltz7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ltz7;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lre4;->b:Ljava/lang/ThreadLocal;
+    iput-object p1, p0, Lre4;->a:Ltz7;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final onRoutingChanged(Landroid/media/AudioRouting;)V
+    .locals 2
 
-    new-instance v0, Landroid/text/TextPaint;
+    iget-object v0, p0, Lre4;->a:Ltz7;
 
-    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
+    iget-object v1, v0, Ltz7;->c:Ljava/lang/Object;
 
-    iput-object v0, p0, Lre4;->a:Landroid/text/TextPaint;
+    check-cast v1, Lre4;
 
-    const/high16 p0, 0x41200000    # 10.0f
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, p0}, Landroid/graphics/Paint;->setTextSize(F)V
+    goto :goto_0
 
+    :cond_0
+    invoke-interface {p1}, Landroid/media/AudioRouting;->getRoutedDevice()Landroid/media/AudioDeviceInfo;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    iget-object v0, v0, Ltz7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lv20;
+
+    invoke-virtual {v0, p1}, Lv20;->c(Landroid/media/AudioDeviceInfo;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

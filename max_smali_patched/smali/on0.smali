@@ -1,13 +1,3 @@
-.class public abstract Lon0;
-.super Ljava/lang/Object;
+.class public final Lon0;
+.super Lox9;
 .source "SourceFile"
-
-
-# direct methods
-.method public static a(Landroid/hardware/biometrics/BiometricPrompt$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/hardware/biometrics/BiometricPrompt$Builder;->setAllowedAuthenticators(I)Landroid/hardware/biometrics/BiometricPrompt$Builder;
-
-    return-void
-.end method

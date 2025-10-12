@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroid/graphics/drawable/Animatable;
-.implements Llp0;
-.implements Lvo9;
+.implements Lep0;
+.implements Lyx9;
 
 
 # annotations
@@ -19,83 +19,101 @@
 
 
 # static fields
-.field public static final C1:Landroid/os/Handler;
+.field public static final L1:Landroid/os/Handler;
 
-.field public static final D1:Ljava/lang/ThreadLocal;
+.field public static final M1:Ljava/lang/ThreadLocal;
 
-.field public static final E1:Ljava/lang/ThreadLocal;
+.field public static final N1:Ljava/lang/ThreadLocal;
 
-.field public static final F1:Lwo4;
+.field public static final O1:Les4;
 
-.field public static final G1:Landroid/graphics/Rect;
+.field public static final P1:Landroid/graphics/Rect;
 
 .field public static gson:Lcom/google/gson/Gson;
 
-.field public static lottieCacheGenerateQueue:Luo4;
+.field public static lottieCacheGenerateQueue:Lcs4;
 
 
 # instance fields
-.field public volatile A0:Z
+.field public A0:Z
 
-.field public final A1:Ljava/util/Set;
+.field public final A1:Ljmc;
 
-.field public B0:Ljava/lang/Runnable;
+.field public B0:Z
 
-.field public final B1:Ljava/util/Set;
+.field public B1:J
 
-.field public C0:Lc7c;
+.field public C0:Ljava/lang/ref/WeakReference;
 
-.field public volatile D0:Landroid/graphics/Bitmap;
+.field public C1:I
 
-.field public volatile E0:Landroid/graphics/Bitmap;
+.field public D0:Landroid/view/View;
 
-.field public volatile F0:Landroid/graphics/Bitmap;
+.field public D1:Landroid/graphics/Bitmap;
 
-.field public G0:Z
+.field public final E0:Landroid/util/ArraySet;
 
-.field public H0:Ljava/util/concurrent/CountDownLatch;
+.field public E1:Ljava/lang/String;
 
-.field public I0:Z
+.field public F0:I
 
-.field public J0:Z
+.field public volatile F1:Z
 
-.field public K0:Z
+.field public G0:I
 
-.field public L0:Z
+.field public volatile G1:Ljava/lang/Throwable;
 
-.field public M0:Z
+.field public H0:I
 
-.field public N0:I
+.field public H1:Ljava/lang/String;
 
-.field public O0:Z
+.field public I0:J
 
-.field public P0:F
+.field public final I1:Ljava/util/Set;
 
-.field public Q0:F
+.field public volatile J0:Z
+
+.field public final J1:Ljava/util/Set;
+
+.field public K0:Ljava/lang/Runnable;
+
+.field public final K1:Ljava/util/Set;
+
+.field public L0:Ljmc;
+
+.field public volatile M0:Landroid/graphics/Bitmap;
+
+.field public volatile N0:Landroid/graphics/Bitmap;
+
+.field public volatile O0:Landroid/graphics/Bitmap;
+
+.field public P0:Z
+
+.field public Q0:Ljava/util/concurrent/CountDownLatch;
 
 .field public R0:Z
 
 .field public S0:Z
 
-.field public final T0:Landroid/graphics/RectF;
+.field public T0:Z
 
-.field public final U0:[Landroid/graphics/RectF;
+.field public U0:Z
 
-.field public final V0:[Landroid/graphics/Paint;
+.field public V0:Z
 
-.field public volatile W0:Z
+.field public W0:I
 
 .field public X:I
 
-.field public volatile X0:Z
+.field public X0:Z
 
 .field public Y:Z
 
-.field public volatile Y0:J
+.field public Y0:F
 
 .field public Z:[I
 
-.field public Z0:Z
+.field public Z0:F
 
 .field public final a:I
 
@@ -107,53 +125,41 @@
 
 .field public final c:[I
 
-.field public c1:Ljava/io/File;
+.field public final c1:Landroid/graphics/RectF;
 
-.field public d1:Z
+.field public final d1:[Landroid/graphics/RectF;
 
-.field public e1:Ljava/lang/Runnable;
+.field public final e1:[Landroid/graphics/Paint;
 
-.field public f1:Ljava/lang/Runnable;
+.field public volatile f1:Z
 
-.field public g1:Landroid/view/View;
+.field public volatile g1:Z
 
-.field public h1:Lnq9;
+.field public volatile h1:J
 
-.field public final i1:Lc7c;
+.field public i1:Z
 
-.field public final j1:Lc7c;
+.field public j1:Z
 
 .field public k1:Z
 
-.field public final l1:Lc7c;
+.field public l1:Ljava/io/File;
 
-.field public final m1:Lc7c;
+.field public m1:Z
 
-.field public n0:[I
-
-.field public n1:Lnp0;
+.field public n1:Ljava/lang/Runnable;
 
 .field public o:I
 
-.field public final o0:Ljava/util/HashMap;
+.field public o1:Ljava/lang/Runnable;
 
-.field public o1:I
+.field public p1:Landroid/view/View;
 
-.field public volatile p0:Ljava/util/HashMap;
+.field public q1:Lomh;
 
-.field public p1:Z
+.field public final r1:Ljmc;
 
-.field public q0:Ljava/util/HashMap;
-
-.field public q1:Z
-
-.field public r0:Z
-
-.field public final r1:Lc7c;
-
-.field public s0:Z
-
-.field public s1:J
+.field public final s1:Ljmc;
 
 .field public scaleByCanvas:Z
 
@@ -161,35 +167,29 @@
 
 .field public srcRect:Landroid/graphics/Rect;
 
-.field public t0:Ljava/lang/ref/WeakReference;
+.field public t1:Z
 
-.field public t1:I
+.field public final u1:Ljmc;
 
-.field public u0:Landroid/view/View;
+.field public final v1:Ljmc;
 
-.field public u1:Landroid/graphics/Bitmap;
+.field public w0:[I
 
-.field public final v0:Landroid/util/ArraySet;
-
-.field public v1:Ljava/lang/String;
-
-.field public w0:I
-
-.field public volatile w1:Z
+.field public w1:Lgp0;
 
 .field public whenCacheDone:Ljava/lang/Runnable;
 
-.field public x0:I
+.field public final x0:Ljava/util/HashMap;
 
-.field public volatile x1:Ljava/lang/Throwable;
+.field public x1:I
 
-.field public y0:I
+.field public volatile y0:Ljava/util/HashMap;
 
-.field public y1:Ljava/lang/String;
+.field public y1:Z
 
-.field public z0:J
+.field public z0:Ljava/util/HashMap;
 
-.field public final z1:Ljava/util/Set;
+.field public z1:Z
 
 
 # direct methods
@@ -204,31 +204,31 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->C1:Landroid/os/Handler;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->L1:Landroid/os/Handler;
 
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->D1:Ljava/lang/ThreadLocal;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->M1:Ljava/lang/ThreadLocal;
 
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/ThreadLocal;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->N1:Ljava/lang/ThreadLocal;
 
-    new-instance v0, Lwo4;
+    new-instance v0, Les4;
 
-    invoke-direct {v0}, Lwo4;-><init>()V
+    invoke-direct {v0}, Les4;-><init>()V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->F1:Lwo4;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->O1:Les4;
 
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->G1:Landroid/graphics/Rect;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->P1:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -279,109 +279,109 @@
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     .line 62
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->p0:Ljava/util/HashMap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->y0:Ljava/util/HashMap;
 
     const/4 v1, 0x0
 
     .line 63
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->r0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
 
     const/4 v2, 0x1
 
     .line 64
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->s0:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->B0:Z
 
     .line 65
     new-instance v3, Landroid/util/ArraySet;
 
     invoke-direct {v3}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v3, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iput-object v3, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     .line 66
-    iput v2, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput v2, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     .line 67
-    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     const/high16 v3, 0x3f800000    # 1.0f
 
     .line 68
-    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
     .line 69
-    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
     .line 70
     new-instance v3, Landroid/graphics/RectF;
 
     invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v3, p0, Lone/me/rlottie/RLottieDrawable;->T0:Landroid/graphics/RectF;
+    iput-object v3, p0, Lone/me/rlottie/RLottieDrawable;->c1:Landroid/graphics/RectF;
 
     const/4 v3, 0x2
 
     .line 71
     new-array v4, v3, [Landroid/graphics/RectF;
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->U0:[Landroid/graphics/RectF;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->d1:[Landroid/graphics/RectF;
 
     .line 72
     new-array v4, v3, [Landroid/graphics/Paint;
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->V0:[Landroid/graphics/Paint;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->e1:[Landroid/graphics/Paint;
 
     .line 73
-    new-instance v4, Lc7c;
+    new-instance v4, Ljmc;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, p0, v5}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v4, p0, v5}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->i1:Lc7c;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->r1:Ljmc;
 
     .line 74
-    new-instance v4, Lc7c;
+    new-instance v4, Ljmc;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, p0, v5}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v4, p0, v5}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->j1:Lc7c;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->s1:Ljmc;
 
     .line 75
-    new-instance v4, Lc7c;
+    new-instance v4, Ljmc;
 
     const/4 v5, 0x2
 
-    invoke-direct {v4, p0, v5}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v4, p0, v5}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->l1:Lc7c;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->u1:Ljmc;
 
     .line 76
-    new-instance v4, Lc7c;
+    new-instance v4, Ljmc;
 
     const/4 v5, 0x3
 
-    invoke-direct {v4, p0, v5}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v4, p0, v5}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->m1:Lc7c;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljmc;
 
     .line 77
-    new-instance v4, Lc7c;
+    new-instance v4, Ljmc;
 
     const/4 v5, 0x4
 
-    invoke-direct {v4, p0, v5}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v4, p0, v5}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->r1:Lc7c;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljmc;
 
     .line 78
     new-instance v4, Landroid/graphics/Rect;
@@ -391,18 +391,18 @@
     iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->srcRect:Landroid/graphics/Rect;
 
     .line 79
-    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->t1:I
+    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->C1:I
 
     const/4 v0, 0x0
 
     .line 80
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
     .line 81
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     .line 82
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
     .line 83
     new-instance v4, Ljava/util/WeakHashMap;
@@ -417,7 +417,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
     .line 84
     new-instance v4, Ljava/util/WeakHashMap;
@@ -432,7 +432,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
     .line 85
     new-instance v4, Ljava/util/WeakHashMap;
@@ -447,7 +447,7 @@
 
     move-result-object v4
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
     .line 86
     iput p3, p0, Lone/me/rlottie/RLottieDrawable;->a:I
@@ -456,10 +456,10 @@
     iput p4, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
     .line 88
-    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     .line 89
-    sget-object p3, Lone/me/rlottie/RLottieDrawable;->D1:Ljava/lang/ThreadLocal;
+    sget-object p3, Lone/me/rlottie/RLottieDrawable;->M1:Ljava/lang/ThreadLocal;
 
     invoke-virtual {p3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -480,7 +480,7 @@
     .line 92
     :cond_0
     :try_start_0
-    sget-object v4, Lgog;->e:Lro9;
+    sget-object v4, Lv63;->Z:Lux9;
 
     if-eqz v4, :cond_1
 
@@ -491,7 +491,7 @@
 
     .line 93
     :goto_0
-    iget-object v4, v4, Lro9;->h:Landroid/content/res/Resources;
+    iget-object v4, v4, Lux9;->h:Landroid/content/res/Resources;
 
     invoke-virtual {v4, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -501,7 +501,7 @@
 
     .line 94
     :try_start_1
-    sget-object v4, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/ThreadLocal;
+    sget-object v4, Lone/me/rlottie/RLottieDrawable;->N1:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v4}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -621,7 +621,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     .line 109
     iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
@@ -654,7 +654,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/File;IILkp0;Z)V
+.method public constructor <init>(Ljava/io/File;IILdp0;Z)V
     .locals 8
 
     const/4 v6, 0x0
@@ -674,12 +674,12 @@
     move v5, p5
 
     .line 1
-    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieDrawable;-><init>(Ljava/io/File;IILkp0;Z[II)V
+    invoke-direct/range {v0 .. v7}, Lone/me/rlottie/RLottieDrawable;-><init>(Ljava/io/File;IILdp0;Z[II)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/File;IILkp0;Z[II)V
+.method public constructor <init>(Ljava/io/File;IILdp0;Z[II)V
     .locals 16
 
     move-object/from16 v2, p0
@@ -708,109 +708,109 @@
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     .line 6
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->p0:Ljava/util/HashMap;
+    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->y0:Ljava/util/HashMap;
 
     const/4 v13, 0x0
 
     .line 7
-    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->r0:Z
+    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->A0:Z
 
     const/4 v14, 0x1
 
     .line 8
-    iput-boolean v14, v2, Lone/me/rlottie/RLottieDrawable;->s0:Z
+    iput-boolean v14, v2, Lone/me/rlottie/RLottieDrawable;->B0:Z
 
     .line 9
     new-instance v4, Landroid/util/ArraySet;
 
     invoke-direct {v4}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     .line 10
-    iput v14, v2, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput v14, v2, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     .line 11
-    iput v3, v2, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iput v3, v2, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     const/high16 v4, 0x3f800000    # 1.0f
 
     .line 12
-    iput v4, v2, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iput v4, v2, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
     .line 13
-    iput v4, v2, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iput v4, v2, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
     .line 14
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->T0:Landroid/graphics/RectF;
+    iput-object v4, v2, Lone/me/rlottie/RLottieDrawable;->c1:Landroid/graphics/RectF;
 
     const/4 v4, 0x2
 
     .line 15
     new-array v5, v4, [Landroid/graphics/RectF;
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->U0:[Landroid/graphics/RectF;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->d1:[Landroid/graphics/RectF;
 
     .line 16
     new-array v5, v4, [Landroid/graphics/Paint;
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->V0:[Landroid/graphics/Paint;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->e1:[Landroid/graphics/Paint;
 
     .line 17
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, v2, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, v2, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->i1:Lc7c;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->r1:Ljmc;
 
     .line 18
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, v2, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, v2, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->j1:Lc7c;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->s1:Ljmc;
 
     .line 19
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x2
 
-    invoke-direct {v5, v2, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, v2, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->l1:Lc7c;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->u1:Ljmc;
 
     .line 20
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x3
 
-    invoke-direct {v5, v2, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, v2, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->m1:Lc7c;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->v1:Ljmc;
 
     .line 21
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x4
 
-    invoke-direct {v5, v2, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, v2, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->r1:Lc7c;
+    iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->A1:Ljmc;
 
     .line 22
     new-instance v5, Landroid/graphics/Rect;
@@ -820,18 +820,18 @@
     iput-object v5, v2, Lone/me/rlottie/RLottieDrawable;->srcRect:Landroid/graphics/Rect;
 
     .line 23
-    iput v3, v2, Lone/me/rlottie/RLottieDrawable;->t1:I
+    iput v3, v2, Lone/me/rlottie/RLottieDrawable;->C1:I
 
     const/4 v3, 0x0
 
     .line 24
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
     .line 25
-    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     .line 26
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
     .line 27
     new-instance v3, Ljava/util/WeakHashMap;
@@ -846,7 +846,7 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
     .line 28
     new-instance v3, Ljava/util/WeakHashMap;
@@ -861,7 +861,7 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
     .line 29
     new-instance v3, Ljava/util/WeakHashMap;
@@ -876,7 +876,7 @@
 
     move-result-object v3
 
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
     move/from16 v6, p2
 
@@ -889,14 +889,14 @@
     iput v5, v2, Lone/me/rlottie/RLottieDrawable;->b:I
 
     .line 32
-    iput-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iput-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     .line 33
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
     if-eqz p4, :cond_0
 
@@ -909,7 +909,7 @@
 
     .line 34
     :goto_0
-    iput-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iput-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     .line 35
     invoke-virtual {v2}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
@@ -919,14 +919,14 @@
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setFlags(I)V
 
     .line 36
-    iput-object v1, v2, Lone/me/rlottie/RLottieDrawable;->c1:Ljava/io/File;
+    iput-object v1, v2, Lone/me/rlottie/RLottieDrawable;->l1:Ljava/io/File;
 
     .line 37
-    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     if-eqz v3, :cond_1
 
-    sget-object v3, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v3, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
     if-nez v3, :cond_1
 
@@ -935,46 +935,46 @@
 
     .line 39
     :cond_1
-    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     const/16 v15, 0x3c
 
     if-eqz v3, :cond_3
 
     .line 40
-    new-instance v3, Lnq9;
+    new-instance v3, Lomh;
 
-    invoke-direct {v3, v2}, Lnq9;-><init>(Lone/me/rlottie/RLottieDrawable;)V
+    invoke-direct {v3, v2}, Lomh;-><init>(Lone/me/rlottie/RLottieDrawable;)V
 
-    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iput-object v3, v2, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     .line 41
     invoke-virtual {v1}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     move-result-object v4
 
-    iput-object v4, v3, Lnq9;->o:Ljava/lang/Object;
+    iput-object v4, v3, Lomh;->c:Ljava/lang/Object;
 
     .line 42
-    iget-object v3, v2, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v3, v2, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-object/from16 v10, p6
 
     .line 43
-    iput-object v10, v3, Lnq9;->c:Ljava/lang/Object;
+    iput-object v10, v3, Lomh;->b:Ljava/lang/Object;
 
     move/from16 v12, p7
 
     .line 44
-    iput v12, v3, Lnq9;->b:I
+    iput v12, v3, Lomh;->a:I
 
     .line 45
     invoke-virtual {v2, v1, v8}, Lone/me/rlottie/RLottieDrawable;->k(Ljava/io/File;[I)V
 
     .line 46
-    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v3, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v3, :cond_2
 
@@ -983,11 +983,11 @@
     if-ge v3, v15, :cond_2
 
     .line 47
-    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     .line 48
     :cond_2
-    new-instance v0, Lnp0;
+    new-instance v0, Lgp0;
 
     xor-int/lit8 v3, p5, 0x1
 
@@ -997,9 +997,9 @@
 
     move-object/from16 v3, p4
 
-    invoke-direct/range {v0 .. v6}, Lnp0;-><init>(Ljava/io/File;Llp0;Lkp0;IIZ)V
+    invoke-direct/range {v0 .. v6}, Lgp0;-><init>(Ljava/io/File;Lep0;Ldp0;IIZ)V
 
-    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     goto :goto_1
 
@@ -1013,9 +1013,9 @@
 
     move-result-object v4
 
-    iget-boolean v9, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v9, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
-    iget-boolean v11, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v11, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     const/4 v5, 0x0
 
@@ -1027,10 +1027,10 @@
 
     move-result-wide v0
 
-    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     .line 50
-    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     const-wide/16 v3, 0x0
 
@@ -1039,7 +1039,7 @@
     if-nez v0, :cond_4
 
     .line 51
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object v0
 
@@ -1063,14 +1063,14 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lwx9;->a(Ljava/lang/String;)V
 
     .line 52
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->delete()Z
 
     .line 53
     :cond_4
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v0, :cond_5
 
@@ -1079,12 +1079,12 @@
     if-ge v0, v15, :cond_5
 
     .line 54
-    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iput-boolean v13, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     .line 55
     :cond_5
     :goto_1
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v0, :cond_6
 
@@ -1141,109 +1141,109 @@
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     .line 115
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->p0:Ljava/util/HashMap;
+    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->y0:Ljava/util/HashMap;
 
     const/4 v2, 0x0
 
     .line 116
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->r0:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
 
     const/4 v3, 0x1
 
     .line 117
-    iput-boolean v3, p0, Lone/me/rlottie/RLottieDrawable;->s0:Z
+    iput-boolean v3, p0, Lone/me/rlottie/RLottieDrawable;->B0:Z
 
     .line 118
     new-instance v4, Landroid/util/ArraySet;
 
     invoke-direct {v4}, Landroid/util/ArraySet;-><init>()V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     .line 119
-    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput v3, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     .line 120
-    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     const/high16 v4, 0x3f800000    # 1.0f
 
     .line 121
-    iput v4, p0, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iput v4, p0, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
     .line 122
-    iput v4, p0, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iput v4, p0, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
     .line 123
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->T0:Landroid/graphics/RectF;
+    iput-object v4, p0, Lone/me/rlottie/RLottieDrawable;->c1:Landroid/graphics/RectF;
 
     const/4 v4, 0x2
 
     .line 124
     new-array v5, v4, [Landroid/graphics/RectF;
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->U0:[Landroid/graphics/RectF;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->d1:[Landroid/graphics/RectF;
 
     .line 125
     new-array v5, v4, [Landroid/graphics/Paint;
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->V0:[Landroid/graphics/Paint;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->e1:[Landroid/graphics/Paint;
 
     .line 126
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, p0, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, p0, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->i1:Lc7c;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->r1:Ljmc;
 
     .line 127
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x1
 
-    invoke-direct {v5, p0, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, p0, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->j1:Lc7c;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->s1:Ljmc;
 
     .line 128
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x2
 
-    invoke-direct {v5, p0, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, p0, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->l1:Lc7c;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->u1:Ljmc;
 
     .line 129
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x3
 
-    invoke-direct {v5, p0, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, p0, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->m1:Lc7c;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljmc;
 
     .line 130
-    new-instance v5, Lc7c;
+    new-instance v5, Ljmc;
 
     const/4 v6, 0x4
 
-    invoke-direct {v5, p0, v6}, Lc7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v5, p0, v6}, Ljmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->r1:Lc7c;
+    iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljmc;
 
     .line 131
     new-instance v5, Landroid/graphics/Rect;
@@ -1253,18 +1253,18 @@
     iput-object v5, p0, Lone/me/rlottie/RLottieDrawable;->srcRect:Landroid/graphics/Rect;
 
     .line 132
-    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->t1:I
+    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->C1:I
 
     const/4 v1, 0x0
 
     .line 133
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
     .line 134
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     .line 135
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
     .line 136
     new-instance v1, Ljava/util/WeakHashMap;
@@ -1279,7 +1279,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
     .line 137
     new-instance v1, Ljava/util/WeakHashMap;
@@ -1294,7 +1294,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
     .line 138
     new-instance v1, Ljava/util/WeakHashMap;
@@ -1309,7 +1309,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
     .line 139
     iput p3, p0, Lone/me/rlottie/RLottieDrawable;->a:I
@@ -1318,7 +1318,7 @@
     iput p4, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
     .line 141
-    iput-object p2, p0, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iput-object p2, p0, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
     .line 142
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1342,7 +1342,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     .line 145
     aget p1, v0, v3
@@ -1408,7 +1408,7 @@
 .method public static c(Lone/me/rlottie/RLottieDrawable;)V
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->e1:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
@@ -1416,7 +1416,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->e1:Ljava/lang/Runnable;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Ljava/lang/Runnable;
 
     :cond_0
     return-void
@@ -1428,13 +1428,13 @@
 .method public static createCacheGenQueue()V
     .locals 2
 
-    new-instance v0, Luo4;
+    new-instance v0, Lcs4;
 
     const-string v1, "rlottie-generator-queue"
 
-    invoke-direct {v0, v1}, Luo4;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcs4;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sput-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
     return-void
 .end method
@@ -1520,11 +1520,11 @@
 .method public addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     if-eqz v0, :cond_0
 
@@ -1533,49 +1533,49 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
-    invoke-interface {p1, p0}, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;->onError(Ljava/lang/Throwable;)V
 
     :cond_1
     return-void
 .end method
 
 .method public addOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public addOnNextFrameRenderedListener(Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public addParentView(Lone/me/rlottie/ImageReceiver;)V
-    .locals 0
+    .locals 1
 
     if-nez p1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
-    invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -1585,7 +1585,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->V0:Z
 
     return-void
 .end method
@@ -1593,11 +1593,11 @@
 .method public cacheFrame(I)V
     .locals 9
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->t1:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->C1:I
 
     if-ne v0, p1, :cond_1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
 
@@ -1608,7 +1608,7 @@
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_2
 
@@ -1622,14 +1622,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     :cond_2
-    iget-wide v1, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v1, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->t1:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->C1:I
 
-    iget-object v4, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     iget v5, p0, Lone/me/rlottie/RLottieDrawable;->a:I
 
@@ -1651,7 +1651,7 @@
 .method public canLoadFrames()Z
     .locals 7
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     const/4 v1, 0x1
 
@@ -1659,9 +1659,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
     return v2
 
@@ -1669,13 +1669,13 @@
     return v1
 
     :cond_1
-    iget-wide v3, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v3, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     const-wide/16 v5, 0x0
 
-    cmp-long p0, v3, v5
+    cmp-long v0, v3, v5
 
-    if-eqz p0, :cond_2
+    if-eqz v0, :cond_2
 
     return v1
 
@@ -1686,47 +1686,47 @@
 .method public checkCache(Ljava/lang/Runnable;)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     if-nez v0, :cond_0
 
-    invoke-static {p1}, Lyd;->d(Ljava/lang/Runnable;)V
+    invoke-static {p1}, Lwd;->d(Ljava/lang/Runnable;)V
 
     return-void
 
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->t1:Z
 
-    sget-object v1, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v1, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
     if-nez v1, :cond_1
 
     invoke-static {}, Lone/me/rlottie/RLottieDrawable;->createCacheGenQueue()V
 
     :cond_1
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     if-nez v1, :cond_2
 
-    sget v1, Lnp0;->B:I
+    sget v1, Lgp0;->B:I
 
     add-int/2addr v1, v0
 
-    sput v1, Lnp0;->B:I
+    sput v1, Lgp0;->B:I
 
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
-    new-instance v1, Lb7c;
+    new-instance v1, Limc;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, v2}, Lb7c;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+    invoke-direct {v1, p0, p1, v2}, Limc;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Luo4;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcs4;->b(Ljava/lang/Runnable;)V
 
     :cond_2
     return-void
@@ -1735,22 +1735,22 @@
 .method public checkCacheCancel()V
     .locals 2
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     if-eqz v0, :cond_3
 
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->isEmpty()Z
 
@@ -1764,7 +1764,7 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Landroid/view/View;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->p1:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
@@ -1775,26 +1775,26 @@
     if-nez v0, :cond_3
 
     :cond_1
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_2
 
-    sget-object v1, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v1, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
-    invoke-virtual {v1, v0}, Luo4;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v0}, Lcs4;->a(Ljava/lang/Runnable;)V
 
-    invoke-static {}, Lnp0;->c()V
+    invoke-static {}, Lgp0;->c()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     :cond_2
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->t1:Z
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->p1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->y1:Z
 
     :cond_3
     :goto_0
@@ -1804,7 +1804,7 @@
 .method public commitApplyLayerColors()V
     .locals 3
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->V0:Z
 
     if-nez v0, :cond_0
 
@@ -1813,28 +1813,28 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->V0:Z
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-nez v1, :cond_2
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
 
     if-eqz v1, :cond_2
 
-    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     const/4 v2, 0x2
 
     if-gt v1, v2, :cond_1
 
-    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     :cond_1
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->o()Z
 
@@ -1844,7 +1844,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
     :cond_2
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->invalidateInternal()V
@@ -1901,7 +1901,7 @@
 
     invoke-virtual {p0, p2}, Lone/me/rlottie/RLottieDrawable;->cacheFrame(I)V
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     if-eqz p2, :cond_0
 
@@ -1909,13 +1909,13 @@
 
     iget v0, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    sget-object v1, Lone/me/rlottie/RLottieDrawable;->G1:Landroid/graphics/Rect;
+    sget-object v1, Lone/me/rlottie/RLottieDrawable;->P1:Landroid/graphics/Rect;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v2, p2, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->u1:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->D1:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -1923,9 +1923,9 @@
 
     invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-virtual {p1, p2, v1, v0, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {p1, p2, v1, v0, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     :cond_0
     return-void
@@ -1934,11 +1934,11 @@
 .method public drawInBackground(Landroid/graphics/Canvas;FFFFILandroid/graphics/ColorFilter;I)V
     .locals 7
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->U0:[Landroid/graphics/RectF;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->d1:[Landroid/graphics/RectF;
 
     aget-object v1, v0, p8
 
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->V0:[Landroid/graphics/Paint;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->e1:[Landroid/graphics/Paint;
 
     if-nez v1, :cond_0
 
@@ -2003,7 +2003,7 @@
 
     if-eqz v0, :cond_13
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->I0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
 
     if-eqz v0, :cond_0
 
@@ -2044,19 +2044,19 @@
     :cond_3
     if-eqz p3, :cond_4
 
-    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->U0:[Landroid/graphics/RectF;
+    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->d1:[Landroid/graphics/RectF;
 
     aget-object p4, p4, p6
 
     goto :goto_1
 
     :cond_4
-    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->T0:Landroid/graphics/RectF;
+    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->c1:Landroid/graphics/RectF;
 
     :goto_1
     if-nez p4, :cond_5
 
-    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->T0:Landroid/graphics/RectF;
+    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->c1:Landroid/graphics/RectF;
 
     :cond_5
     if-eqz p2, :cond_6
@@ -2066,7 +2066,7 @@
     :cond_6
     if-eqz p3, :cond_7
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->V0:[Landroid/graphics/Paint;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->e1:[Landroid/graphics/Paint;
 
     aget-object p2, p2, p6
 
@@ -2093,7 +2093,7 @@
 
     if-nez p5, :cond_9
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object p5
 
@@ -2103,7 +2103,7 @@
 
     invoke-direct {p6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
     invoke-virtual {p6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2111,27 +2111,27 @@
 
     move-result-object p6
 
-    invoke-interface {p5, p6}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {p5, p6}, Lwx9;->a(Ljava/lang/String;)V
 
     :cond_9
-    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-nez p5, :cond_a
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object p5
 
     const-string p6, "rendering bitmap is null"
 
-    invoke-interface {p5, p6}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {p5, p6}, Lwx9;->a(Ljava/lang/String;)V
 
     :cond_a
-    iget-boolean p5, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iget-boolean p5, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
 
     if-nez p5, :cond_13
 
-    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-eqz p5, :cond_13
 
@@ -2145,7 +2145,7 @@
 
     invoke-virtual {p4, p6}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    iget-boolean p6, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
+    iget-boolean p6, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
 
     if-eqz p6, :cond_d
 
@@ -2159,7 +2159,7 @@
 
     div-float/2addr p6, v2
 
-    iput p6, p0, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iput p6, p0, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
     invoke-virtual {p4}, Landroid/graphics/RectF;->height()F
 
@@ -2171,9 +2171,9 @@
 
     div-float/2addr p6, v2
 
-    iput p6, p0, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iput p6, p0, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
 
     invoke-virtual {p4}, Landroid/graphics/RectF;->width()F
 
@@ -2189,7 +2189,7 @@
 
     move-result p6
 
-    invoke-static {p5}, Lyd;->a(F)I
+    invoke-static {p5}, Lwd;->a(F)I
 
     move-result v2
 
@@ -2213,7 +2213,7 @@
 
     move-result p6
 
-    invoke-static {p5}, Lyd;->a(F)I
+    invoke-static {p5}, Lwd;->a(F)I
 
     move-result p5
 
@@ -2230,14 +2230,14 @@
 
     :cond_c
     :goto_3
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
 
     :cond_d
-    iget p5, p0, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iget p5, p0, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
-    iget p6, p0, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iget p6, p0, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
 
     goto :goto_5
 
@@ -2276,7 +2276,7 @@
 
     move-result v3
 
-    invoke-static {p5}, Lyd;->a(F)I
+    invoke-static {p5}, Lwd;->a(F)I
 
     move-result v4
 
@@ -2300,7 +2300,7 @@
 
     move-result v3
 
-    invoke-static {p5}, Lyd;->a(F)I
+    invoke-static {p5}, Lwd;->a(F)I
 
     move-result p5
 
@@ -2325,7 +2325,7 @@
     if-nez v0, :cond_11
 
     :try_start_0
-    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     iget p6, p4, Landroid/graphics/RectF;->left:F
 
@@ -2347,13 +2347,13 @@
 
     iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->srcRect:Landroid/graphics/Rect;
 
-    iget-object p6, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p6, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     invoke-virtual {p6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p6
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -2361,7 +2361,7 @@
 
     invoke-virtual {p5, v1, v1, p6, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p5, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     iget-object p6, p0, Lone/me/rlottie/RLottieDrawable;->srcRect:Landroid/graphics/Rect;
 
@@ -2380,7 +2380,7 @@
 
     invoke-virtual {p1, p5, p6}, Landroid/graphics/Canvas;->scale(FF)V
 
-    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p4, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     const/4 p5, 0x0
 
@@ -2393,14 +2393,14 @@
     goto :goto_7
 
     :goto_6
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lto9;->j(Ljava/lang/Throwable;)V
+    invoke-interface {p2, p1}, Lwx9;->q(Ljava/lang/Throwable;)V
 
     :goto_7
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-eqz p1, :cond_13
 
@@ -2418,9 +2418,9 @@
 
     if-ne p0, p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_0
     instance-of v0, p1, Lone/me/rlottie/RLottieDrawable;
@@ -2452,24 +2452,24 @@
     return v1
 
     :cond_3
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
-    iget v2, p1, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v2, p1, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     if-eq v0, v2, :cond_4
 
     return v1
 
     :cond_4
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
-    iget-object p1, p1, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iget-object p1, p1, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final finalize()V
@@ -2497,84 +2497,84 @@
 .method public getAnimatedBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
-    return-object p0
+    return-object v0
 
     :cond_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    return-object p0
+    return-object v0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getBackgroundBitmap()Landroid/graphics/Bitmap;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->F0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->O0:Landroid/graphics/Bitmap;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCurrentFrame()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
-    return p0
+    return v0
 .end method
 
 .method public getCurrentUrl()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getCustomEndFrame()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->X:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->X:I
 
-    return p0
+    return v0
 .end method
 
 .method public getDuration()J
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x0
 
     .line 1
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
 
-    aget v0, p0, v0
+    aget v0, v1, v0
 
     int-to-float v0, v0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    aget p0, p0, v1
+    aget v1, v1, v2
 
-    int-to-float p0, p0
+    int-to-float v1, v1
 
-    div-float/2addr v0, p0
+    div-float/2addr v0, v1
 
-    const/high16 p0, 0x447a0000    # 1000.0f
+    const/high16 v1, 0x447a0000    # 1000.0f
 
-    mul-float/2addr v0, p0
+    mul-float/2addr v0, v1
 
     float-to-long v0, v0
 
@@ -2586,9 +2586,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v1, v0, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
-    iget-object v1, v1, Lnq9;->o:Ljava/lang/Object;
+    iget-object v1, v1, Lomh;->c:Ljava/lang/Object;
 
     check-cast v1, Ljava/io/File;
 
@@ -2596,7 +2596,7 @@
 
     move-result-object v2
 
-    iget-object v1, v0, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v1, v0, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2604,7 +2604,7 @@
 
     new-array v6, v3, [I
 
-    iget-object v3, v1, Lnq9;->c:Ljava/lang/Object;
+    iget-object v3, v1, Lomh;->b:Ljava/lang/Object;
 
     move-object v8, v3
 
@@ -2612,7 +2612,7 @@
 
     const/4 v9, 0x0
 
-    iget v10, v1, Lnq9;->b:I
+    iget v10, v1, Lomh;->a:I
 
     const/4 v3, 0x0
 
@@ -2645,11 +2645,11 @@
 
     iget v15, v0, Lone/me/rlottie/RLottieDrawable;->a:I
 
-    iget v0, v0, Lone/me/rlottie/RLottieDrawable;->b:I
+    iget v1, v0, Lone/me/rlottie/RLottieDrawable;->b:I
 
     move-object/from16 v14, p1
 
-    move/from16 v16, v0
+    move/from16 v16, v1
 
     invoke-static/range {v11 .. v18}, Lone/me/rlottie/RLottieDrawable;->getFrame(JILandroid/graphics/Bitmap;IIIZ)I
 
@@ -2659,22 +2659,22 @@
 .end method
 
 .method public getFramesCount()I
-    .locals 1
+    .locals 2
 
     .line 1
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    aget p0, p0, v0
+    aget v0, v0, v1
 
-    return p0
+    return v0
 .end method
 
 .method public getGeneratingCacheProgress()F
     .locals 4
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -2683,33 +2683,33 @@
     goto :goto_1
 
     :cond_0
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     const/4 v3, 0x0
 
     if-nez v2, :cond_2
 
-    iget-boolean v0, v0, Lnp0;->q:Z
+    iget-boolean v0, v0, Lgp0;->q:Z
 
     if-eqz v0, :cond_1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
-    invoke-virtual {p0}, Lnp0;->g()Z
+    invoke-virtual {v0}, Lgp0;->g()Z
 
-    move-result p0
+    move-result v0
 
-    if-eqz p0, :cond_4
+    if-eqz v0, :cond_4
 
     goto :goto_0
 
     :cond_1
-    const/high16 p0, -0x40000000    # -2.0f
+    const/high16 v0, -0x40000000    # -2.0f
 
-    return p0
+    return v0
 
     :cond_2
-    iget-object v0, v0, Lnp0;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, v0, Lgp0;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
@@ -2719,17 +2719,17 @@
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->getFramesCount()I
 
-    move-result p0
+    move-result v2
 
-    int-to-float p0, p0
+    int-to-float v2, v2
 
-    div-float/2addr v0, p0
+    div-float/2addr v0, v2
 
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
-    move-result p0
+    move-result v2
 
-    if-eqz p0, :cond_3
+    if-eqz v2, :cond_3
 
     :goto_0
     return v3
@@ -2737,9 +2737,9 @@
     :cond_3
     invoke-static {v0}, Ljava/lang/Float;->isInfinite(F)Z
 
-    move-result p0
+    move-result v2
 
-    if-eqz p0, :cond_5
+    if-eqz v2, :cond_5
 
     :cond_4
     :goto_1
@@ -2748,59 +2748,59 @@
     :cond_5
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
-    move-result p0
+    move-result v0
 
-    invoke-static {p0, v3}, Ljava/lang/Math;->max(FF)F
+    invoke-static {v0, v3}, Ljava/lang/Math;->max(FF)F
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getIntrinsicHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->b:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public getIntrinsicWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->a:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->a:I
 
-    return p0
+    return v0
 .end method
 
 .method public getLastFrameTime()J
     .locals 2
 
-    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->z0:J
+    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->I0:J
 
     return-wide v0
 .end method
 
 .method public getMinimumHeight()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->b:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    return p0
+    return v0
 .end method
 
 .method public getMinimumWidth()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->a:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->a:I
 
-    return p0
+    return v0
 .end method
 
 .method public getNextFrame(Landroid/graphics/Bitmap;)I
     .locals 10
 
-    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->s1:J
+    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->B1:J
 
     const-wide/16 v2, 0x0
 
@@ -2808,12 +2808,12 @@
 
     if-nez v2, :cond_0
 
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 
     :cond_0
-    iget-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     const/4 v8, 0x1
 
@@ -2829,7 +2829,7 @@
     move v9, v8
 
     :goto_0
-    iget v2, p0, Lone/me/rlottie/RLottieDrawable;->o1:I
+    iget v2, p0, Lone/me/rlottie/RLottieDrawable;->x1:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getRowBytes()I
 
@@ -2870,95 +2870,95 @@
     :goto_1
     invoke-virtual {p0, v3}, Lone/me/rlottie/RLottieDrawable;->getNextFrame(Landroid/graphics/Bitmap;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_2
-    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->o1:I
+    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->x1:I
 
     add-int/2addr p1, v9
 
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->o1:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->x1:I
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->c:[I
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    aget p0, p0, v0
+    aget v0, v0, v1
 
-    if-le p1, p0, :cond_3
+    if-le p1, v0, :cond_3
 
-    return v0
+    return v1
 
     :cond_3
     return v8
 .end method
 
 .method public getNextRenderingBitmap()Landroid/graphics/Bitmap;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getOpacity()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, -0x2
+    const/4 v0, -0x2
 
-    return p0
+    return v0
 .end method
 
 .method public getRenderingBitmap()Landroid/graphics/Bitmap;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getScaleX()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->P0:F
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->Y0:F
 
-    return p0
+    return v0
 .end method
 
 .method public getScaleY()F
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->Q0:F
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->Z0:F
 
-    return p0
+    return v0
 .end method
 
 .method public getTimeBetweenFrames()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->o:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->o:I
 
-    return p0
+    return v0
 .end method
 
 .method public final h()V
     .locals 3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    sget-object v2, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v2, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
-    invoke-virtual {v2, v0}, Luo4;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v0}, Lcs4;->a(Ljava/lang/Runnable;)V
 
-    invoke-static {}, Lnp0;->c()V
+    invoke-static {}, Lgp0;->c()V
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     :cond_0
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->hasParent()Z
@@ -2967,17 +2967,17 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     if-eqz v0, :cond_1
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     :cond_1
     return-void
@@ -2986,37 +2986,37 @@
 .method public hasBitmap()Z
     .locals 1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Z
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public hasParent()Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->isEmpty()Z
 
@@ -3024,59 +3024,59 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Landroid/view/View;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->p1:Landroid/view/View;
 
     if-nez v0, :cond_1
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 
     :cond_1
     :goto_0
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public hasParentViews()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
-    invoke-virtual {p0}, Landroid/util/ArraySet;->isEmpty()Z
+    invoke-virtual {v0}, Landroid/util/ArraySet;->isEmpty()Z
 
-    move-result p0
+    move-result v0
 
-    xor-int/lit8 p0, p0, 0x1
+    xor-int/lit8 v0, v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public hasVibrationPattern()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->q0:Ljava/util/HashMap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->z0:Ljava/util/HashMap;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public hashCode()I
@@ -3092,7 +3092,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -3110,21 +3110,21 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget p0, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 .end method
 
 .method public final i()V
     .locals 6
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->I0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
 
     const/4 v1, 0x1
 
@@ -3134,15 +3134,15 @@
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->h()V
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    iget-wide v4, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v4, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     cmp-long v0, v4, v2
 
@@ -3151,7 +3151,7 @@
     invoke-virtual {p0, v1}, Lone/me/rlottie/RLottieDrawable;->l(Z)V
 
     :cond_0
-    iget-wide v4, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v4, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     cmp-long v0, v4, v2
 
@@ -3160,7 +3160,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     if-nez v0, :cond_2
 
@@ -3170,7 +3170,7 @@
 
     :cond_2
     :goto_0
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->G0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->P0:Z
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->hasParent()Z
 
@@ -3178,7 +3178,7 @@
 
     if-nez v0, :cond_3
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object v0
 
@@ -3188,7 +3188,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->v1:Ljava/lang/String;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->E1:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3196,12 +3196,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lwx9;->a(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->stop()V
 
     :cond_3
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-eqz v0, :cond_4
 
@@ -3214,14 +3214,14 @@
 .method public invalidateInternal()V
     .locals 2
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Z
 
     if-eqz v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -3245,7 +3245,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Landroid/view/View;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->p1:Landroid/view/View;
 
     if-eqz v0, :cond_2
 
@@ -3266,128 +3266,128 @@
 .end method
 
 .method public isApplyTransformation()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isCacheFallbacked()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isForceFrameRedraw()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isGeneratingCache()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isHeavyDrawable()Z
-    .locals 0
+    .locals 1
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 .end method
 
 .method public isLastFrame()Z
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->getFramesCount()I
 
-    move-result p0
+    move-result v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    sub-int/2addr p0, v1
+    sub-int/2addr v1, v2
 
-    if-ne v0, p0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    return v1
+    return v2
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isLoadingFailed()Z
     .locals 1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p0, 0x1
+    const/4 v0, 0x1
 
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
 .method public isNeedScale()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isRecycled()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isRunning()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
-    return p0
+    return v0
 .end method
 
 .method public isWaitingForNextTask()Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lone/me/rlottie/RLottieDrawable;->G0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->P0:Z
 
-    return p0
+    return v0
 .end method
 
 .method public final j()V
@@ -3395,13 +3395,13 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
-    invoke-static {}, Lyd;->b()Z
+    invoke-static {}, Lwd;->b()Z
 
     move-result v0
 
@@ -3409,7 +3409,7 @@
 
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
@@ -3438,13 +3438,13 @@
     return-void
 
     :cond_1
-    new-instance v0, La7c;
+    new-instance v0, Lhmc;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, La7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v0, p0, v1}, Lhmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    invoke-static {v0}, Lyd;->d(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lwd;->d(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -3452,7 +3452,7 @@
 .method public final k(Ljava/io/File;[I)V
     .locals 11
 
-    const-class v0, Ld7c;
+    const-class v0, Lkmc;
 
     sget-object v1, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
@@ -3510,27 +3510,27 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     :goto_0
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lto9;->j(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Lwx9;->q(Ljava/lang/Throwable;)V
 
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
-    iget-object v0, p1, Lnq9;->c:Ljava/lang/Object;
+    iget-object v0, p1, Lomh;->b:Ljava/lang/Object;
 
     move-object v8, v0
 
     check-cast v8, [I
 
-    iget-boolean v9, p0, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v9, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
-    iget v10, p1, Lnq9;->b:I
+    iget v10, p1, Lomh;->a:I
 
     const/4 v3, 0x0
 
@@ -3544,15 +3544,15 @@
 
     invoke-static/range {v2 .. v10}, Lone/me/rlottie/RLottieDrawable;->create(Ljava/lang/String;Ljava/lang/String;II[IZ[IZI)J
 
-    move-result-wide p0
+    move-result-wide p1
 
     const-wide/16 v0, 0x0
 
-    cmp-long p2, p0, v0
+    cmp-long v0, p1, v0
 
-    if-eqz p2, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-static {p0, p1}, Lone/me/rlottie/RLottieDrawable;->destroy(J)V
+    invoke-static {p1, p2}, Lone/me/rlottie/RLottieDrawable;->destroy(J)V
 
     :cond_2
     return-void
@@ -3561,55 +3561,55 @@
 .method public final l(Z)V
     .locals 4
 
-    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     const-wide/16 v2, 0x0
 
-    iput-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->h1:J
 
-    cmp-long p0, v0, v2
+    cmp-long v2, v0, v2
 
-    if-nez p0, :cond_0
+    if-nez v2, :cond_0
 
     return-void
 
     :cond_0
     if-eqz p1, :cond_1
 
-    new-instance p0, Lum8;
+    new-instance p1, Lsu8;
 
-    const/4 p1, 0x1
+    const/4 v2, 0x1
 
-    invoke-direct {p0, v0, v1, p1}, Lum8;-><init>(JI)V
+    invoke-direct {p1, v0, v1, v2}, Lsu8;-><init>(JI)V
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {p0, p1}, Lxo4;->a(Ljava/lang/Runnable;Z)V
+    invoke-static {p1, v0}, Lfs4;->a(Ljava/lang/Runnable;Z)V
 
     return-void
 
     :cond_1
-    sget-object p0, Lgog;->e:Lro9;
+    sget-object p1, Lv63;->Z:Lux9;
 
-    iget-object p0, p0, Lro9;->f:Lsh6;
+    iget-object p1, p1, Lux9;->f:Lgma;
 
-    new-instance p1, Lum8;
+    new-instance v2, Lsu8;
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    invoke-direct {p1, v0, v1, v2}, Lum8;-><init>(JI)V
+    invoke-direct {v2, v0, v1, v3}, Lsu8;-><init>(JI)V
 
-    iget-object p0, p0, Lsh6;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lgma;->b:Ljava/lang/Object;
 
-    check-cast p0, Lkle;
+    check-cast p1, Ls5f;
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
+    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {p1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -3621,33 +3621,33 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->O0:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:Landroid/graphics/Bitmap;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->O0:Landroid/graphics/Bitmap;
 
-    invoke-static {v0}, Lyd;->c(Ljava/util/ArrayList;)V
+    invoke-static {v0}, Lwd;->c(Ljava/util/ArrayList;)V
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->e1:Ljava/lang/Runnable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n1:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->e1:Ljava/lang/Runnable;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->n1:Ljava/lang/Runnable;
 
     :cond_0
     return-void
@@ -3674,19 +3674,19 @@
 .method public final n()V
     .locals 3
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->V0:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     const/4 v1, 0x2
 
@@ -3694,12 +3694,12 @@
 
     if-gt v0, v1, :cond_0
 
-    iput v2, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iput v2, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     :cond_0
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
 
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->o()Z
 
@@ -3709,7 +3709,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
     :cond_1
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->invalidateInternal()V
@@ -3718,15 +3718,15 @@
 .end method
 
 .method public final o()Z
-    .locals 3
+    .locals 4
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
@@ -3739,37 +3739,37 @@
 
     if-eqz v0, :cond_7
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->I0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
 
     if-nez v0, :cond_7
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
 
     if-eqz v0, :cond_7
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
     if-eqz v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->t1:Z
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->q1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->z1:Z
 
     if-nez v0, :cond_2
 
     goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
@@ -3777,13 +3777,13 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->p0:Ljava/util/HashMap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->y0:Ljava/util/HashMap;
 
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -3792,60 +3792,60 @@
 
     if-eqz v0, :cond_4
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->n0:[I
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->w0:[I
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->Z:[I
 
     :cond_4
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->r1:Lc7c;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljmc;
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     const/4 v2, 0x1
 
     if-eqz v0, :cond_6
 
-    invoke-static {}, Lyd;->b()Z
+    invoke-static {}, Lwd;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->H0:Ljava/util/concurrent/CountDownLatch;
+    iget-object v3, p0, Lone/me/rlottie/RLottieDrawable;->Q0:Ljava/util/concurrent/CountDownLatch;
 
-    if-eqz p0, :cond_5
+    if-eqz v3, :cond_5
 
     move v1, v2
 
     :cond_5
-    invoke-static {v0, v1}, Lxo4;->a(Ljava/lang/Runnable;Z)V
+    invoke-static {v0, v1}, Lfs4;->a(Ljava/lang/Runnable;Z)V
 
     return v2
 
     :cond_6
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->F1:Lwo4;
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->O1:Les4;
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
-    invoke-virtual {v0, p0}, Lwo4;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Les4;->b(Ljava/lang/Runnable;)V
 
     return v2
 
     :cond_7
     :goto_0
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-string v0, "RLottieDrawable. Can\'t schedule next frame invalid state"
+    const-string v2, "RLottieDrawable. Can\'t schedule next frame invalid state"
 
-    invoke-interface {p0, v0}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v2}, Lwx9;->a(Ljava/lang/String;)V
 
     :cond_8
     :goto_1
@@ -3859,7 +3859,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
 
     return-void
 .end method
@@ -3867,25 +3867,25 @@
 .method public onFailed(Ljava/lang/Throwable;)V
     .locals 2
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lto9;->j(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lwx9;->q(Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->w1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->F1:Z
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->x1:Ljava/lang/Throwable;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->G1:Ljava/lang/Throwable;
 
-    new-instance v0, Lrua;
+    new-instance v0, Lwpb;
 
-    const/16 v1, 0x11
+    const/16 v1, 0x9
 
-    invoke-direct {v0, p0, v1, p1}, Lrua;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lwpb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v0}, Lyd;->d(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lwd;->d(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -3907,24 +3907,24 @@
 
     move-result-object v0
 
-    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->y1:Ljava/lang/String;
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->H1:Ljava/lang/String;
 
     move-object/from16 v1, p2
 
-    iput-object v1, v2, Lone/me/rlottie/RLottieDrawable;->c1:Ljava/io/File;
+    iput-object v1, v2, Lone/me/rlottie/RLottieDrawable;->l1:Ljava/io/File;
 
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Luo4;
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->lottieCacheGenerateQueue:Lcs4;
 
     if-nez v0, :cond_0
 
     invoke-static {}, Lone/me/rlottie/RLottieDrawable;->createCacheGenQueue()V
 
     :cond_0
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
     const-wide/16 v7, 0x0
 
@@ -3932,9 +3932,9 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lnp0;
+    new-instance v0, Lgp0;
 
-    new-instance v3, Lkp0;
+    new-instance v3, Ldp0;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
@@ -3942,27 +3942,27 @@
 
     iget v5, v2, Lone/me/rlottie/RLottieDrawable;->b:I
 
-    iget-boolean v6, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v6, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     xor-int/2addr v6, v9
 
-    invoke-direct/range {v0 .. v6}, Lnp0;-><init>(Ljava/io/File;Llp0;Lkp0;IIZ)V
+    invoke-direct/range {v0 .. v6}, Lgp0;-><init>(Ljava/io/File;Lep0;Ldp0;IIZ)V
 
-    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
-    new-instance v0, Lnq9;
+    new-instance v0, Lomh;
 
-    invoke-direct {v0, v2}, Lnq9;-><init>(Lone/me/rlottie/RLottieDrawable;)V
+    invoke-direct {v0, v2}, Lomh;-><init>(Lone/me/rlottie/RLottieDrawable;)V
 
-    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iput-object v0, v2, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/File;->getAbsoluteFile()Ljava/io/File;
 
     move-result-object v1
 
-    iput-object v1, v0, Lnq9;->o:Ljava/lang/Object;
+    iput-object v1, v0, Lomh;->c:Ljava/lang/Object;
 
-    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v0, v2, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -3976,9 +3976,9 @@
 
     iget-object v14, v2, Lone/me/rlottie/RLottieDrawable;->c:[I
 
-    iget-boolean v15, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v15, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     const/16 v18, 0x0
 
@@ -3992,13 +3992,13 @@
 
     move-result-wide v0
 
-    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
-    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     invoke-static {v0, v1}, Lone/me/rlottie/RLottieDrawable;->destroy(J)V
 
-    iput-wide v7, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide v7, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     goto :goto_0
 
@@ -4013,9 +4013,9 @@
 
     iget-object v14, v2, Lone/me/rlottie/RLottieDrawable;->c:[I
 
-    iget-boolean v15, v2, Lone/me/rlottie/RLottieDrawable;->d1:Z
+    iget-boolean v15, v2, Lone/me/rlottie/RLottieDrawable;->m1:Z
 
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     const/16 v18, 0x0
 
@@ -4029,9 +4029,9 @@
 
     move-result-wide v0
 
-    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iput-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
-    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->Y0:J
+    iget-wide v0, v2, Lone/me/rlottie/RLottieDrawable;->h1:J
 
     cmp-long v0, v0, v7
 
@@ -4041,7 +4041,7 @@
 
     :cond_2
     :goto_0
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v0, :cond_3
 
@@ -4055,10 +4055,10 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iput-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     :cond_3
-    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, v2, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v0, :cond_4
 
@@ -4090,13 +4090,13 @@
 
     invoke-virtual {v2}, Lone/me/rlottie/RLottieDrawable;->j()V
 
-    new-instance v0, La7c;
+    new-instance v0, Lhmc;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v2, v1}, La7c;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
+    invoke-direct {v0, v2, v1}, Lhmc;-><init>(Lone/me/rlottie/RLottieDrawable;I)V
 
-    invoke-static {v0}, Lyd;->d(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lwd;->d(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -4104,29 +4104,29 @@
 .method public final p(JJZJ)V
     .locals 5
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->O0:Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
 
     const/4 v2, 0x1
 
     if-nez v1, :cond_0
 
-    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     if-nez v1, :cond_1
 
-    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     if-ne v1, v2, :cond_1
 
@@ -4134,30 +4134,30 @@
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->stop()V
 
     :cond_1
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
 
     goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
 
     if-eqz v0, :cond_3
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
 
     :cond_3
     :goto_0
-    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iput-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->G0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->P0:Z
 
     sget-object v0, Lone/me/rlottie/RLottie;->config:Lone/me/rlottie/RLottie$Config;
 
@@ -4169,7 +4169,7 @@
 
     if-gtz v0, :cond_4
 
-    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->z0:J
+    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->I0:J
 
     goto :goto_1
 
@@ -4184,21 +4184,21 @@
 
     sub-long/2addr p1, p3
 
-    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->z0:J
+    iput-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->I0:J
 
     :goto_1
     if-eqz p5, :cond_5
 
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
     if-eqz p1, :cond_5
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
     :cond_5
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
 
@@ -4226,7 +4226,7 @@
 
     check-cast p2, Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;
 
-    iget p3, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget p3, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     invoke-interface {p2, p0, p3}, Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;->onNextFrameRendered(Lone/me/rlottie/RLottieDrawable;I)V
 
@@ -4242,7 +4242,7 @@
 
     if-eqz p1, :cond_c
 
-    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     const/4 p2, 0x3
 
@@ -4257,13 +4257,13 @@
     goto :goto_4
 
     :cond_8
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
 
     if-eqz p1, :cond_c
 
     :cond_9
     :goto_4
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -4282,7 +4282,7 @@
 
     check-cast p4, Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;
 
-    iget p5, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget p5, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     if-eq p5, p3, :cond_b
 
@@ -4315,48 +4315,48 @@
 .method public post(Ljava/lang/Runnable;)V
     .locals 2
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lyd;->b()Z
+    invoke-static {}, Lwd;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lu30;
+    new-instance v0, Le30;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, p1, v1}, Lu30;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v0, p1, v1}, Le30;-><init>(Ljava/lang/Runnable;I)V
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->H0:Ljava/util/concurrent/CountDownLatch;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->Q0:Ljava/util/concurrent/CountDownLatch;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-static {v0, p0}, Lxo4;->a(Ljava/lang/Runnable;Z)V
+    invoke-static {v0, p1}, Lfs4;->a(Ljava/lang/Runnable;Z)V
 
     return-void
 
     :cond_1
-    new-instance p0, Lu30;
+    new-instance v0, Le30;
 
-    const/4 v0, 0x5
+    const/4 v1, 0x5
 
-    invoke-direct {p0, p1, v0}, Lu30;-><init>(Ljava/lang/Runnable;I)V
+    invoke-direct {v0, p1, v1}, Le30;-><init>(Ljava/lang/Runnable;I)V
 
-    sget-object p1, Lone/me/rlottie/RLottieDrawable;->F1:Lwo4;
+    sget-object p1, Lone/me/rlottie/RLottieDrawable;->O1:Les4;
 
-    invoke-virtual {p1, p0}, Lwo4;->b(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Les4;->b(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -4364,9 +4364,9 @@
 .method public prepareForGenerateCache()V
     .locals 10
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
-    iget-object v0, v0, Lnq9;->o:Ljava/lang/Object;
+    iget-object v0, v0, Lomh;->c:Ljava/lang/Object;
 
     check-cast v0, Ljava/io/File;
 
@@ -4374,7 +4374,7 @@
 
     move-result-object v1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->h1:Lnq9;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->q1:Lomh;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -4382,7 +4382,7 @@
 
     new-array v5, v2, [I
 
-    iget-object v2, v0, Lnq9;->c:Ljava/lang/Object;
+    iget-object v2, v0, Lomh;->b:Ljava/lang/Object;
 
     move-object v7, v2
 
@@ -4390,7 +4390,7 @@
 
     const/4 v8, 0x0
 
-    iget v9, v0, Lnq9;->b:I
+    iget v9, v0, Lomh;->a:I
 
     const/4 v2, 0x0
 
@@ -4404,7 +4404,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->s1:J
+    iput-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->B1:J
 
     const-wide/16 v2, 0x0
 
@@ -4412,11 +4412,11 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->c1:Ljava/io/File;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->l1:Ljava/io/File;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_0
     return-void
@@ -4427,33 +4427,33 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->g1:Z
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->h()V
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->B0:Ljava/lang/Runnable;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Ljava/lang/Runnable;
 
     if-nez v1, :cond_2
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->t1:Z
 
     if-nez v1, :cond_2
 
     invoke-virtual {p0, p1}, Lone/me/rlottie/RLottieDrawable;->l(Z)V
 
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     if-eqz p1, :cond_1
 
-    iget-object v1, p1, Lnp0;->u:Ljava/io/RandomAccessFile;
+    iget-object v1, p1, Lgp0;->u:Ljava/io/RandomAccessFile;
 
     const/4 v2, 0x0
 
@@ -4472,12 +4472,12 @@
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     :goto_0
-    iput-object v2, p1, Lnp0;->u:Ljava/io/RandomAccessFile;
+    iput-object v2, p1, Lgp0;->u:Ljava/io/RandomAccessFile;
 
     :cond_0
-    iput-boolean v0, p1, Lnp0;->t:Z
+    iput-boolean v0, p1, Lgp0;->t:Z
 
-    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->n1:Lnp0;
+    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->w1:Lgp0;
 
     :cond_1
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->m()V
@@ -4485,7 +4485,7 @@
     return-void
 
     :cond_2
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->I0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->R0:Z
 
     return-void
 .end method
@@ -4493,7 +4493,7 @@
 .method public releaseForGenerateCache()V
     .locals 5
 
-    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->s1:J
+    iget-wide v0, p0, Lone/me/rlottie/RLottieDrawable;->B1:J
 
     const-wide/16 v2, 0x0
 
@@ -4503,38 +4503,38 @@
 
     invoke-static {v0, v1}, Lone/me/rlottie/RLottieDrawable;->destroy(J)V
 
-    iput-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->s1:J
+    iput-wide v2, p0, Lone/me/rlottie/RLottieDrawable;->B1:J
 
     :cond_0
     return-void
 .end method
 
 .method public removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->z1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->I1:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->B1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->K1:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public removeOnNextFrameRenderedListener(Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieDrawable;->A1:Ljava/util/Set;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->J1:Ljava/util/Set;
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -4547,7 +4547,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->v0:Landroid/util/ArraySet;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/util/ArraySet;
 
     invoke-virtual {v0, p1}, Landroid/util/ArraySet;->remove(Ljava/lang/Object;)Z
 
@@ -4571,7 +4571,7 @@
 .method public resetVibrationAfterRestart(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->r0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
 
     return-void
 .end method
@@ -4584,9 +4584,9 @@
     .line 1
     invoke-virtual {p0, v0}, Lone/me/rlottie/RLottieDrawable;->restart(Z)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public restart(Z)Z
@@ -4599,16 +4599,16 @@
     if-nez p1, :cond_1
 
     .line 2
-    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     if-lt p1, v1, :cond_0
 
-    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->y0:I
+    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->H0:I
 
     if-nez p1, :cond_1
 
     :cond_0
-    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iget p1, p0, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     if-gez p1, :cond_1
 
@@ -4616,23 +4616,23 @@
 
     .line 3
     :cond_1
-    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->y0:I
+    iput v0, p0, Lone/me/rlottie/RLottieDrawable;->H0:I
 
     .line 4
-    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput v1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     .line 5
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->start()V
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public setAllowDecodeSingleFrame(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->S0:Z
 
     if-eqz p1, :cond_0
 
@@ -4645,7 +4645,7 @@
 .method public setAllowDrawFramesWhileCacheGenerating(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->q1:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->z1:Z
 
     return-void
 .end method
@@ -4653,7 +4653,7 @@
 .method public setAllowVibration(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->s0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->B0:Z
 
     return-void
 .end method
@@ -4661,7 +4661,7 @@
 .method public setAutoRepeat(I)V
     .locals 2
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     const/4 v1, 0x2
 
@@ -4671,14 +4671,14 @@
 
     if-ne p1, v0, :cond_0
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     return-void
 .end method
@@ -4686,7 +4686,7 @@
 .method public setAutoRepeatCount(I)V
     .locals 0
 
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->x0:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->G0:I
 
     return-void
 .end method
@@ -4733,7 +4733,7 @@
 
     if-gt p1, v0, :cond_8
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     if-ne v0, p1, :cond_0
 
@@ -4743,31 +4743,31 @@
 
     .line 4
     :cond_0
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     .line 5
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->A0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->J0:Z
 
     .line 6
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->K0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->T0:Z
 
     .line 7
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->Z0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->i1:Z
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_1
 
     .line 8
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
 
     .line 9
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     if-eqz p1, :cond_1
 
     .line 10
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
 
     :cond_1
     const/4 p1, 0x0
@@ -4778,33 +4778,33 @@
 
     .line 11
     :cond_2
-    iget-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->G0:Z
+    iget-boolean v2, p0, Lone/me/rlottie/RLottieDrawable;->P0:Z
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_3
 
     .line 12
-    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->F0:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lone/me/rlottie/RLottieDrawable;->O0:Landroid/graphics/Bitmap;
 
     .line 13
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     .line 14
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     .line 15
-    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->G0:Z
+    iput-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->P0:Z
 
     :cond_3
     if-nez p2, :cond_4
 
     .line 16
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
 
     if-nez v1, :cond_4
 
@@ -4813,18 +4813,18 @@
 
     invoke-direct {v1, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->H0:Ljava/util/concurrent/CountDownLatch;
+    iput-object v1, p0, Lone/me/rlottie/RLottieDrawable;->Q0:Ljava/util/concurrent/CountDownLatch;
 
     :cond_4
     if-eqz p3, :cond_5
 
     .line 18
-    iget-boolean p3, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean p3, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-nez p3, :cond_5
 
     .line 19
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     .line 20
     :cond_5
@@ -4838,7 +4838,7 @@
 
     .line 21
     :try_start_0
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->H0:Ljava/util/concurrent/CountDownLatch;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->Q0:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {p2}, Ljava/util/concurrent/CountDownLatch;->await()V
     :try_end_0
@@ -4850,21 +4850,21 @@
     move-exception p2
 
     .line 22
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object p3
 
-    invoke-interface {p3, p2}, Lto9;->j(Ljava/lang/Throwable;)V
+    invoke-interface {p3, p2}, Lwx9;->q(Ljava/lang/Throwable;)V
 
     .line 23
     :goto_0
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->H0:Ljava/util/concurrent/CountDownLatch;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->Q0:Ljava/util/concurrent/CountDownLatch;
 
     goto :goto_1
 
     .line 24
     :cond_6
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
     .line 25
     :cond_7
@@ -4879,7 +4879,7 @@
 .method public setCurrentParentView(Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->u0:Landroid/view/View;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/view/View;
 
     return-void
 .end method
@@ -4904,9 +4904,9 @@
     :cond_0
     iput p1, p0, Lone/me/rlottie/RLottieDrawable;->X:I
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
@@ -4916,7 +4916,7 @@
 .method public setGeneratingFrame(I)V
     .locals 0
 
-    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->o1:I
+    iput p1, p0, Lone/me/rlottie/RLottieDrawable;->x1:I
 
     return-void
 .end method
@@ -4924,7 +4924,7 @@
 .method public setInvalidateOnProgressSet(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->Z0:Z
+    iput-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->i1:Z
 
     return-void
 .end method
@@ -4933,7 +4933,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->o0:Ljava/util/HashMap;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->x0:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4950,7 +4950,7 @@
 .method public setMasterParent(Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->g1:Landroid/view/View;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->p1:Landroid/view/View;
 
     return-void
 .end method
@@ -4958,7 +4958,7 @@
 .method public setOnAnimationEndListener(Ljava/lang/Runnable;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->e1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->n1:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -4972,18 +4972,18 @@
 
     invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p2, p0, Lone/me/rlottie/RLottieDrawable;->t0:Ljava/lang/ref/WeakReference;
+    iput-object p2, p0, Lone/me/rlottie/RLottieDrawable;->C0:Ljava/lang/ref/WeakReference;
 
     return-void
 
     :cond_0
-    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->t0:Ljava/lang/ref/WeakReference;
+    iget-object p1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Ljava/lang/ref/WeakReference;
 
     if-eqz p1, :cond_1
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->t0:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Ljava/lang/ref/WeakReference;
 
     :cond_1
     return-void
@@ -4992,7 +4992,7 @@
 .method public setOnFrameReadyRunnable(Ljava/lang/Runnable;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->f1:Ljava/lang/Runnable;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->o1:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -5105,7 +5105,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->q0:Ljava/util/HashMap;
+    iput-object p1, p0, Lone/me/rlottie/RLottieDrawable;->z0:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -5119,24 +5119,24 @@
 
     if-eqz v0, :cond_3
 
-    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     if-nez v0, :cond_3
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->w0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:I
 
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_0
 
-    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->y0:I
+    iget v0, p0, Lone/me/rlottie/RLottieDrawable;->H0:I
 
     if-nez v0, :cond_3
 
     :cond_0
     iget v0, p0, Lone/me/rlottie/RLottieDrawable;->X:I
 
-    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget v1, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     if-ne v0, v1, :cond_1
 
@@ -5145,19 +5145,19 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
-    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->Z0:Z
-
-    if-eqz v1, :cond_2
-
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->a1:Z
-
-    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->C0:Lc7c;
+    iget-boolean v1, p0, Lone/me/rlottie/RLottieDrawable;->i1:Z
 
     if-eqz v1, :cond_2
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->b1:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->j1:Z
+
+    iget-object v1, p0, Lone/me/rlottie/RLottieDrawable;->L0:Ljmc;
+
+    if-eqz v1, :cond_2
+
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->k1:Z
 
     :cond_2
     invoke-virtual {p0}, Lone/me/rlottie/RLottieDrawable;->o()Z
@@ -5172,7 +5172,7 @@
 .method public stop()V
     .locals 3
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lto9;
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lwx9;
 
     move-result-object v0
 
@@ -5202,11 +5202,11 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lto9;->b(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lwx9;->a(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iput-boolean v0, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
     return-void
 .end method
@@ -5227,13 +5227,13 @@
     :cond_0
     move-wide v1, p1
 
-    iget-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->z0:J
+    iget-wide p1, p0, Lone/me/rlottie/RLottieDrawable;->I0:J
 
     sub-long v3, v1, p1
 
     if-eqz p3, :cond_1
 
-    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->O0:Z
+    iget-boolean p1, p0, Lone/me/rlottie/RLottieDrawable;->X0:Z
 
     if-nez p1, :cond_1
 
@@ -5276,15 +5276,15 @@
     add-int/lit8 p1, p1, -0x6
 
     :goto_1
-    iget-boolean p2, p0, Lone/me/rlottie/RLottieDrawable;->W0:Z
+    iget-boolean p2, p0, Lone/me/rlottie/RLottieDrawable;->f1:Z
 
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_9
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-nez p2, :cond_4
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
     if-nez p2, :cond_4
 
@@ -5293,11 +5293,11 @@
     return-void
 
     :cond_4
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_8
 
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->M0:Landroid/graphics/Bitmap;
 
     if-eqz p2, :cond_5
 
@@ -5305,26 +5305,26 @@
 
     cmp-long p2, v3, p2
 
-    if-ltz p2, :cond_a
+    if-ltz p2, :cond_b
 
     iget-boolean p2, p0, Lone/me/rlottie/RLottieDrawable;->skipFrameUpdate:Z
 
-    if-nez p2, :cond_a
+    if-nez p2, :cond_b
 
     :cond_5
-    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->q0:Ljava/util/HashMap;
+    iget-object p2, p0, Lone/me/rlottie/RLottieDrawable;->z0:Ljava/util/HashMap;
 
     if-eqz p2, :cond_7
 
-    iget-object p3, p0, Lone/me/rlottie/RLottieDrawable;->u0:Landroid/view/View;
+    iget-object p3, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/view/View;
 
     if-eqz p3, :cond_7
 
-    iget-boolean p3, p0, Lone/me/rlottie/RLottieDrawable;->s0:Z
+    iget-boolean p3, p0, Lone/me/rlottie/RLottieDrawable;->B0:Z
 
     if-eqz p3, :cond_7
 
-    iget p3, p0, Lone/me/rlottie/RLottieDrawable;->N0:I
+    iget p3, p0, Lone/me/rlottie/RLottieDrawable;->W0:I
 
     const/4 v0, 0x1
 
@@ -5342,7 +5342,7 @@
 
     if-eqz p2, :cond_7
 
-    iget-object p3, p0, Lone/me/rlottie/RLottieDrawable;->u0:Landroid/view/View;
+    iget-object p3, p0, Lone/me/rlottie/RLottieDrawable;->D0:Landroid/view/View;
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
@@ -5376,24 +5376,29 @@
     :cond_8
     move-object v0, p0
 
-    iget-boolean p0, v0, Lone/me/rlottie/RLottieDrawable;->L0:Z
+    goto :goto_3
 
-    if-nez p0, :cond_9
+    :cond_9
+    move-object v0, p0
 
-    iget-boolean p0, v0, Lone/me/rlottie/RLottieDrawable;->J0:Z
+    iget-boolean p2, v0, Lone/me/rlottie/RLottieDrawable;->U0:Z
 
-    if-eqz p0, :cond_a
+    if-nez p2, :cond_a
+
+    iget-boolean p2, v0, Lone/me/rlottie/RLottieDrawable;->S0:Z
+
+    if-eqz p2, :cond_b
 
     int-to-long p2, p1
 
-    cmp-long p0, v3, p2
+    cmp-long p2, v3, p2
 
-    if-ltz p0, :cond_a
+    if-ltz p2, :cond_b
 
-    :cond_9
-    iget-object p0, v0, Lone/me/rlottie/RLottieDrawable;->E0:Landroid/graphics/Bitmap;
+    :cond_a
+    iget-object p2, v0, Lone/me/rlottie/RLottieDrawable;->N0:Landroid/graphics/Bitmap;
 
-    if-eqz p0, :cond_a
+    if-eqz p2, :cond_b
 
     int-to-long v6, p1
 
@@ -5401,6 +5406,7 @@
 
     invoke-virtual/range {v0 .. v7}, Lone/me/rlottie/RLottieDrawable;->p(JJZJ)V
 
-    :cond_a
+    :cond_b
+    :goto_3
     return-void
 .end method

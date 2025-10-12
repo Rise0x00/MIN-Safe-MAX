@@ -1,54 +1,37 @@
-.class public final Lvwc;
-.super Lg0;
+.class public abstract Lvwc;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 3
+.method public f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Ljxc;)V
+    .locals 0
 
-    sget-object v0, Lg0;->o:Ljava/util/concurrent/FutureTask;
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    move-result-object p2
 
-    move-result-object v1
+    check-cast p2, Lywc;
 
-    iput-object v1, p0, Lg0;->c:Ljava/lang/Thread;
+    iget-object p2, p2, Lywc;->a:Lnxc;
 
-    const/4 v1, 0x0
+    invoke-virtual {p2}, Lnxc;->i()I
 
-    :try_start_0
-    iget-object v2, p0, Lg0;->a:Ljava/lang/Runnable;
+    const/4 p2, 0x0
 
-    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, p2, p2, p2, p2}, Landroid/graphics/Rect;->set(IIII)V
 
-    :try_start_1
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iput-object v1, p0, Lg0;->c:Ljava/lang/Thread;
+.method public g(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Ljxc;)V
+    .locals 0
 
-    return-object v1
+    return-void
+.end method
 
-    :catchall_0
-    move-exception v2
+.method public h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    iput-object v1, p0, Lg0;->c:Ljava/lang/Thread;
-
-    throw v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {p0}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    throw p0
+    return-void
 .end method

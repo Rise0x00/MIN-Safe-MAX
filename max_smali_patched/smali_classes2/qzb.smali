@@ -1,110 +1,48 @@
-.class public abstract Lqzb;
-.super Ljava/lang/Object;
+.class public final Lqzb;
+.super Lnz3;
 
 
-# static fields
-.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a0281
+# instance fields
+.field public X:I
 
-.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a0282
+.field public final synthetic Y:Lfa2;
 
-.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a0283
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static messages_contact_attach_chat_action:I = 0x7f0a0571
 
-.field public static messages_contact_attach_profile_action:I = 0x7f0a0572
+# direct methods
+.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static messages_list_chat_description_view_id:I = 0x7f0a0573
+    iput-object p1, p0, Lqzb;->Y:Lfa2;
 
-.field public static messages_list_chat_description_view_type:I = 0x7f0a0574
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static messages_list_confirm_cancel:I = 0x7f0a0575
+    return-void
+.end method
 
-.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a0576
 
-.field public static messages_list_confirm_complaint_fake:I = 0x7f0a0577
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static messages_list_confirm_complaint_other:I = 0x7f0a0578
+    iput-object p1, p0, Lqzb;->o:Ljava/lang/Object;
 
-.field public static messages_list_confirm_complaint_porno:I = 0x7f0a0579
+    iget p1, p0, Lqzb;->X:I
 
-.field public static messages_list_confirm_complaint_spam:I = 0x7f0a057a
+    const/high16 v0, -0x80000000
 
-.field public static messages_list_confirm_complaint_threat:I = 0x7f0a057b
+    or-int/2addr p1, v0
 
-.field public static messages_list_confirm_delete:I = 0x7f0a057c
+    iput p1, p0, Lqzb;->X:I
 
-.field public static messages_list_confirm_delete_for_all:I = 0x7f0a057d
+    iget-object p1, p0, Lqzb;->Y:Lfa2;
 
-.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a057e
+    const/4 v0, 0x0
 
-.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a057f
+    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static messages_list_context_action_copy:I = 0x7f0a0580
+    move-result-object p1
 
-.field public static messages_list_context_action_copy_photo:I = 0x7f0a0581
-
-.field public static messages_list_context_action_delete:I = 0x7f0a0582
-
-.field public static messages_list_context_action_delete_for_all:I = 0x7f0a0583
-
-.field public static messages_list_context_action_edit:I = 0x7f0a0584
-
-.field public static messages_list_context_action_forward:I = 0x7f0a0585
-
-.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a0586
-
-.field public static messages_list_context_action_pin:I = 0x7f0a0587
-
-.field public static messages_list_context_action_reply:I = 0x7f0a0588
-
-.field public static messages_list_context_action_report:I = 0x7f0a0589
-
-.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a058a
-
-.field public static messages_list_context_action_select:I = 0x7f0a058b
-
-.field public static messages_list_context_action_share_externally:I = 0x7f0a058c
-
-.field public static messages_list_context_action_share_post:I = 0x7f0a058d
-
-.field public static messages_list_context_action_unpin:I = 0x7f0a058e
-
-.field public static messages_list_context_actions_view_type:I = 0x7f0a058f
-
-.field public static messages_list_context_content_container:I = 0x7f0a0590
-
-.field public static messages_list_context_member_view_type:I = 0x7f0a0591
-
-.field public static messages_list_context_members_member_cell:I = 0x7f0a0592
-
-.field public static messages_list_context_members_member_reaction:I = 0x7f0a0593
-
-.field public static messages_list_context_reactions_container:I = 0x7f0a0594
-
-.field public static messages_list_item_alias:I = 0x7f0a0595
-
-.field public static messages_list_item_date:I = 0x7f0a0596
-
-.field public static messages_list_item_keyboard_buttons:I = 0x7f0a0597
-
-.field public static messages_list_item_single_image:I = 0x7f0a0598
-
-.field public static messages_list_item_text:I = 0x7f0a0599
-
-.field public static messages_list_item_title:I = 0x7f0a059a
-
-.field public static messages_list_item_video_duration:I = 0x7f0a059b
-
-.field public static messages_list_reactions_badge:I = 0x7f0a059c
-
-.field public static messages_list_recycler_view:I = 0x7f0a059d
-
-.field public static messages_list_scroll_btn:I = 0x7f0a059e
-
-.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a059f
-
-.field public static messages_list_vh_message_subtitle:I = 0x7f0a05a0
-
-.field public static messages_list_vh_message_title:I = 0x7f0a05a1
-
-.field public static messages_share_attach_open_url_action:I = 0x7f0a05a2
+    return-object p1
+.end method

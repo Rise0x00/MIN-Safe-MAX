@@ -13,11 +13,11 @@
         "",
         "<init>",
         "()V",
-        "Li7c;",
+        "Lpmc;",
         "log",
-        "Ltcf;",
+        "Loyf;",
         "setLog",
-        "(Li7c;)V",
+        "(Lpmc;)V",
         "",
         "tag",
         "msg",
@@ -48,7 +48,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Li7c;",
+            "Lpmc;",
             ">;"
         }
     .end annotation
@@ -93,11 +93,11 @@
 
     move-result-object v0
 
-    check-cast v0, Li7c;
+    check-cast v0, Lpmc;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -112,11 +112,11 @@
 
     move-result-object v0
 
-    check-cast v0, Li7c;
+    check-cast v0, Lpmc;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Li7c;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -131,17 +131,17 @@
 
     move-result-object v0
 
-    check-cast v0, Li7c;
+    check-cast v0, Lpmc;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final setLog(Li7c;)V
+.method public static final setLog(Lpmc;)V
     .locals 1
 
     new-instance v0, Ljava/lang/ref/WeakReference;

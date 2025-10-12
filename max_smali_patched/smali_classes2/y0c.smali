@@ -1,34 +1,96 @@
-.class public abstract Ly0c;
-.super Ljava/lang/Object;
+.class public final Ly0c;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0d60
+# instance fields
+.field public final synthetic X:Li1c;
 
-.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0d61
 
-.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0d62
+# direct methods
+.method public constructor <init>(Li1c;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0d63
+    iput-object p1, p0, Ly0c;->X:Li1c;
 
-.field public static webapp_root_content_container:I = 0x7f0a0d64
+    const/4 p1, 0x2
 
-.field public static webapp_root_error_container:I = 0x7f0a0d65
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static webapp_root_frame:I = 0x7f0a0d66
+    return-void
+.end method
 
-.field public static webapp_root_progressbar:I = 0x7f0a0d67
 
-.field public static webapp_root_settings_header:I = 0x7f0a0d68
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d69
+    check-cast p1, Le34;
 
-.field public static webapp_root_settings_switcher:I = 0x7f0a0d6a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static webapp_root_settings_toolbar:I = 0x7f0a0d6b
+    invoke-virtual {p0, p1, p2}, Ly0c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static webapp_root_settings_transition:I = 0x7f0a0d6c
+    move-result-object p1
 
-.field public static webapp_root_toolbar:I = 0x7f0a0d6d
+    check-cast p1, Ly0c;
 
-.field public static webapp_root_webview:I = 0x7f0a0d6e
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Ly0c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ly0c;
+
+    iget-object v0, p0, Ly0c;->X:Li1c;
+
+    invoke-direct {p1, v0, p2}, Ly0c;-><init>(Li1c;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly0c;->X:Li1c;
+
+    iget-object p1, p1, Li1c;->Y:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lava;
+
+    sget v0, Lvra;->r1:I
+
+    new-instance v1, Ljef;
+
+    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lava;->g(Loef;)V
+
+    new-instance v0, Lova;
+
+    sget v1, Lg9d;->I:I
+
+    invoke-direct {v0, v1}, Lova;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lava;->e(Ltva;)V
+
+    invoke-virtual {p1}, Lava;->i()Lzua;
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+.end method

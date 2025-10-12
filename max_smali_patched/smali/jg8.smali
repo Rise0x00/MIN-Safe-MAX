@@ -1,281 +1,159 @@
-.class public abstract synthetic Ljg8;
+.class public final Ljg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llg8;
+
+
+# instance fields
+.field public final a:Ll28;
+
+.field public final b:F
+
+.field public final c:J
+
 
 # direct methods
-.method public static bridge synthetic A(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
+.method public constructor <init>(FJLl28;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setAudioSampleRate(I)Landroid/media/metrics/TrackChangeEvent$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p4, p0, Ljg8;->a:Ll28;
+
+    iput p1, p0, Ljg8;->b:F
+
+    iput-wide p2, p0, Ljg8;->c:J
 
     return-void
 .end method
 
-.method public static bridge synthetic B(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setVideoFramesDropped(I)Landroid/media/metrics/PlaybackMetrics$Builder;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljg8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljg8;
+
+    iget-object v1, p0, Ljg8;->a:Ll28;
+
+    iget-object v3, p1, Ljg8;->a:Ll28;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Ljg8;->b:F
+
+    iget v3, p1, Ljg8;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Ljg8;->c:J
+
+    iget-wide v5, p1, Ljg8;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public static bridge synthetic C(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setVideoFramesPlayed(I)Landroid/media/metrics/PlaybackMetrics$Builder;
+    iget-object v0, p0, Ljg8;->a:Ll28;
 
-    return-void
+    invoke-virtual {v0}, Ll28;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ljg8;->b:F
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    iget-wide v1, p0, Ljg8;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public static bridge synthetic D(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setStreamSource(I)Landroid/media/metrics/PlaybackMetrics$Builder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "SendLocation(locationData="
 
-.method public static bridge synthetic a(Landroid/media/metrics/NetworkEvent$Builder;I)Landroid/media/metrics/NetworkEvent$Builder;
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/NetworkEvent$Builder;->setNetworkType(I)Landroid/media/metrics/NetworkEvent$Builder;
+    iget-object v1, p0, Ljg8;->a:Ll28;
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    const-string v1, ", zoom="
 
-.method public static bridge synthetic b(Landroid/media/metrics/NetworkEvent$Builder;J)Landroid/media/metrics/NetworkEvent$Builder;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/NetworkEvent$Builder;->setTimeSinceCreatedMillis(J)Landroid/media/metrics/NetworkEvent$Builder;
+    iget v1, p0, Ljg8;->b:F
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    const-string v1, ", livePeriod="
 
-.method public static bridge synthetic c(Landroid/media/metrics/NetworkEvent$Builder;)Landroid/media/metrics/NetworkEvent;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/media/metrics/NetworkEvent$Builder;->build()Landroid/media/metrics/NetworkEvent;
+    const-string v1, ")"
 
-    move-result-object p0
+    iget-wide v2, p0, Ljg8;->c:J
 
-    return-object p0
-.end method
+    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-.method public static bridge synthetic d(Landroid/media/metrics/PlaybackErrorEvent$Builder;I)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackErrorEvent$Builder;->setErrorCode(I)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(Landroid/media/metrics/PlaybackErrorEvent$Builder;J)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/PlaybackErrorEvent$Builder;->setTimeSinceCreatedMillis(J)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(Landroid/media/metrics/PlaybackErrorEvent$Builder;Ljava/lang/Exception;)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackErrorEvent$Builder;->setException(Ljava/lang/Exception;)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g(Landroid/media/metrics/PlaybackErrorEvent$Builder;)Landroid/media/metrics/PlaybackErrorEvent;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/PlaybackErrorEvent$Builder;->build()Landroid/media/metrics/PlaybackErrorEvent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic h(Landroid/media/metrics/PlaybackMetrics$Builder;)Landroid/media/metrics/PlaybackMetrics$Builder;
-    .locals 1
-
-    const-string v0, "AndroidXMedia3"
-
-    invoke-virtual {p0, v0}, Landroid/media/metrics/PlaybackMetrics$Builder;->setPlayerName(Ljava/lang/String;)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Ljava/lang/Object;)Landroid/media/metrics/PlaybackMetrics$Builder;
-    .locals 0
-
-    check-cast p0, Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/media/metrics/PlaybackMetrics$Builder;)Landroid/media/metrics/PlaybackMetrics;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/PlaybackMetrics$Builder;->build()Landroid/media/metrics/PlaybackMetrics;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic k(Landroid/media/metrics/MediaMetricsManager;)Landroid/media/metrics/PlaybackSession;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/MediaMetricsManager;->createPlaybackSession()Landroid/media/metrics/PlaybackSession;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic l(Landroid/media/metrics/PlaybackStateEvent$Builder;I)Landroid/media/metrics/PlaybackStateEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackStateEvent$Builder;->setState(I)Landroid/media/metrics/PlaybackStateEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/media/metrics/PlaybackStateEvent$Builder;J)Landroid/media/metrics/PlaybackStateEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/PlaybackStateEvent$Builder;->setTimeSinceCreatedMillis(J)Landroid/media/metrics/PlaybackStateEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n(Landroid/media/metrics/PlaybackStateEvent$Builder;)Landroid/media/metrics/PlaybackStateEvent;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/PlaybackStateEvent$Builder;->build()Landroid/media/metrics/PlaybackStateEvent;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic o(Landroid/media/metrics/TrackChangeEvent$Builder;J)Landroid/media/metrics/TrackChangeEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/TrackChangeEvent$Builder;->setTimeSinceCreatedMillis(J)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic p(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setDrmType(I)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic q(Landroid/media/metrics/PlaybackMetrics$Builder;J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/PlaybackMetrics$Builder;->setNetworkTransferDurationMillis(J)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic r(Landroid/media/metrics/PlaybackSession;Landroid/media/metrics/NetworkEvent;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackSession;->reportNetworkEvent(Landroid/media/metrics/NetworkEvent;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/media/metrics/PlaybackSession;Landroid/media/metrics/PlaybackErrorEvent;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackSession;->reportPlaybackErrorEvent(Landroid/media/metrics/PlaybackErrorEvent;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/media/metrics/PlaybackSession;Landroid/media/metrics/PlaybackMetrics;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackSession;->reportPlaybackMetrics(Landroid/media/metrics/PlaybackMetrics;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/media/metrics/PlaybackSession;Landroid/media/metrics/PlaybackStateEvent;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackSession;->reportPlaybackStateEvent(Landroid/media/metrics/PlaybackStateEvent;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/media/metrics/TrackChangeEvent$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/TrackChangeEvent$Builder;->setChannelCount(I)Landroid/media/metrics/TrackChangeEvent$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic w(Landroid/media/metrics/PlaybackErrorEvent$Builder;I)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackErrorEvent$Builder;->setSubErrorCode(I)Landroid/media/metrics/PlaybackErrorEvent$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic x(Landroid/media/metrics/PlaybackMetrics$Builder;)Landroid/media/metrics/PlaybackMetrics$Builder;
-    .locals 1
-
-    const-string v0, "1.4.1"
-
-    invoke-virtual {p0, v0}, Landroid/media/metrics/PlaybackMetrics$Builder;->setPlayerVersion(Ljava/lang/String;)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic y(Landroid/media/metrics/PlaybackMetrics$Builder;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/metrics/PlaybackMetrics$Builder;->setAudioUnderrunCount(I)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic z(Landroid/media/metrics/PlaybackMetrics$Builder;J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/PlaybackMetrics$Builder;->setNetworkBytesRead(J)Landroid/media/metrics/PlaybackMetrics$Builder;
-
-    return-void
+    return-object v0
 .end method

@@ -1,39 +1,25 @@
-.class public final Lmwa;
-.super Lko;
+.class public abstract Lmwa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lmwa;
+.field public static final a:I
+
+.field public static final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lmwa;
+    sget v0, Lbgc;->oneme_stickers_search_stickers_list:I
 
-    invoke-direct {v0}, Lko;-><init>()V
+    sput v0, Lmwa;->a:I
 
-    sput-object v0, Lmwa;->a:Lmwa;
+    sget v0, Lbgc;->oneme_stickers_search_toolbar:I
+
+    sput v0, Lmwa;->b:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b()Lth7;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Llwa;
-
-    invoke-virtual {p0, v0}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object p0
-
-    return-object p0
 .end method

@@ -1,142 +1,45 @@
 .class public final Lxt5;
-.super Lo0;
+.super Lym0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:I
-
-.field public final c:Lwpe;
-
-.field public final o:I
-
-
 # direct methods
-.method public constructor <init>(Lkt5;Lwpe;II)V
-    .locals 0
+.method public static f(I[B)I
+    .locals 2
 
-    invoke-direct {p0, p1}, Lo0;-><init>(Lkt5;)V
+    aget-byte v0, p1, p0
 
-    iput-object p2, p0, Lxt5;->c:Lwpe;
+    and-int/lit16 v0, v0, 0xff
 
-    iput p3, p0, Lxt5;->o:I
+    shl-int/lit8 v0, v0, 0x18
 
-    iput p4, p0, Lxt5;->X:I
+    add-int/lit8 v1, p0, 0x1
 
-    return-void
-.end method
+    aget-byte v1, p1, v1
 
+    and-int/lit16 v1, v1, 0xff
 
-# virtual methods
-.method public final g(Luu5;)V
-    .locals 4
+    shl-int/lit8 v1, v1, 0x10
 
-    iget-object v0, p0, Lo0;->b:Lkt5;
+    or-int/2addr v0, v1
 
-    instance-of v1, v0, Ljhe;
+    add-int/lit8 v1, p0, 0x2
 
-    iget-object v2, p0, Lxt5;->c:Lwpe;
+    aget-byte v1, p1, v1
 
-    if-eqz v1, :cond_3
+    and-int/lit16 v1, v1, 0xff
 
-    :try_start_0
-    check-cast v0, Ljhe;
+    shl-int/lit8 v1, v1, 0x8
 
-    invoke-interface {v0}, Ljhe;->get()Ljava/lang/Object;
+    or-int/2addr v0, v1
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    add-int/lit8 p0, p0, 0x3
 
-    if-nez p0, :cond_0
+    aget-byte p0, p1, p0
 
-    invoke-static {p1}, Lg35;->a(Lwee;)V
+    and-int/lit16 p0, p0, 0xff
 
-    return-void
+    or-int/2addr p0, v0
 
-    :cond_0
-    :try_start_1
-    invoke-virtual {v2, p0}, Lwpe;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmsb;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    instance-of v0, p0, Ljhe;
-
-    if-eqz v0, :cond_2
-
-    :try_start_2
-    check-cast p0, Ljhe;
-
-    invoke-interface {p0}, Ljhe;->get()Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-nez p0, :cond_1
-
-    invoke-static {p1}, Lg35;->a(Lwee;)V
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ldwc;
-
-    invoke-direct {v0, p1, p0}, Ldwc;-><init>(Lwee;Ljava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Lwee;->e(Lyee;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lg35;->b(Ljava/lang/Throwable;Lwee;)V
-
-    goto :goto_0
-
-    :cond_2
-    check-cast p0, Lkt5;
-
-    invoke-virtual {p0, p1}, Lkt5;->f(Lwee;)V
-
-    return-void
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lg35;->b(Ljava/lang/Throwable;Lwee;)V
-
-    goto :goto_0
-
-    :catchall_2
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lg35;->b(Ljava/lang/Throwable;Lwee;)V
-
-    :goto_0
-    return-void
-
-    :cond_3
-    new-instance v1, Lwt5;
-
-    iget v3, p0, Lxt5;->o:I
-
-    iget p0, p0, Lxt5;->X:I
-
-    invoke-direct {v1, p1, v2, v3, p0}, Lwt5;-><init>(Lwee;Lwpe;II)V
-
-    invoke-virtual {v0, v1}, Lkt5;->c(Luu5;)V
-
-    return-void
+    return p0
 .end method

@@ -1,122 +1,52 @@
-.class public final Liw2;
+.class public final synthetic Liw2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/LongConsumer;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Ljw2;
+.field public final synthetic a:Lf7d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Ljw2;I)V
+.method public synthetic constructor <init>(Lf7d;)V
     .locals 0
 
-    iput p3, p0, Liw2;->a:I
-
-    iput-object p1, p0, Liw2;->b:Landroid/view/View;
-
-    iput-object p2, p0, Liw2;->c:Ljw2;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liw2;->a:Lf7d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final accept(J)V
+    .locals 10
 
-    iget v0, p0, Liw2;->a:I
+    iget-object v0, p0, Liw2;->a:Lf7d;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Liw2;->c:Ljw2;
+    sget-object v1, Ll13;->c:Ll13;
 
-    iget-object v0, p0, Ljw2;->b:Laz2;
+    const/4 v8, 0x0
 
-    invoke-virtual {v0}, Laz2;->invoke()Ljava/lang/Object;
+    const/16 v9, 0x7c
 
-    move-result-object v0
+    const-string v4, "local"
 
-    check-cast v0, Ljava/lang/Boolean;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    const/4 v6, 0x0
 
-    move-result v0
+    const/4 v7, 0x0
 
-    if-eqz v0, :cond_0
+    move-wide v2, p1
 
-    sget-object v0, Lgu2;->a:Lgu2;
+    invoke-static/range {v1 .. v9}, Ll13;->e1(Ll13;JLjava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Lgu2;->b()Lx08;
-
-    move-result-object v0
-
-    new-instance v1, Lkva;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Lkva;-><init>(I)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lx08;->b(Ljava/util/List;)V
-
-    iget-boolean v0, p0, Ljw2;->o:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ljw2;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lhhc;)V
-
-    :cond_0
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Liw2;->c:Ljw2;
-
-    iget-object v0, p0, Ljw2;->c:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lw97;
-
-    const-string v1, "main"
-
-    const-string v2, "invite_friends"
-
-    const-string v3, "show"
-
-    invoke-virtual {v0, v3, v1, v2}, Lw97;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Ljw2;->X:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ljw2;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lhhc;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

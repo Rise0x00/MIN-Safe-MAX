@@ -35,31 +35,31 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public onCreate()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    const-string p0, "CampaignService: onCreate"
+    const-string v0, "CampaignService: onCreate"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public onDestroy()V
-    .locals 0
+    .locals 1
 
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    const-string p0, "CampaignService: onDestroy"
+    const-string v0, "CampaignService: onDestroy"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     new-instance v0, Lzv1;
 
-    const/4 v1, 0x7
+    const/16 v1, 0xa
 
     invoke-direct {v0, v1, p0}, Lzv1;-><init>(ILjava/lang/Object;)V
 
@@ -87,11 +87,11 @@
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lc5;
+    new-instance v1, Lk5;
 
-    const/16 v2, 0xc
+    const/16 v2, 0x11
 
-    invoke-direct {v1, p0, p1, v0, v2}, Lc5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v1, p0, p1, v0, v2}, Lk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-static {v1}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
@@ -99,14 +99,14 @@
 
     invoke-super {p0, p1, p2, p3}, Landroid/app/Service;->onStartCommand(Landroid/content/Intent;II)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 
-    const/4 p0, 0x2
+    const/4 p1, 0x2
 
-    return p0
+    return p1
 .end method

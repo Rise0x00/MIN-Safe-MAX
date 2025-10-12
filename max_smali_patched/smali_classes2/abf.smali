@@ -1,48 +1,57 @@
 .class public final Labf;
-.super Lax3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lbbf;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lbbf;
 
-.field public final synthetic Y:Lvoa;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lvoa;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lbbf;)V
     .locals 0
 
-    iput-object p1, p0, Labf;->Y:Lvoa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Labf;->a:Lbbf;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Labf;->b:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    .locals 2
 
-    iput-object p1, p0, Labf;->o:Ljava/lang/Object;
+    iget-object v0, p0, Labf;->b:Ljava/util/HashMap;
 
-    iget p1, p0, Labf;->X:I
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v1
 
-    or-int/2addr p1, v0
+    check-cast v1, Ljava/util/concurrent/ThreadFactory;
 
-    iput p1, p0, Labf;->X:I
+    if-nez v1, :cond_0
 
-    iget-object p1, p0, Labf;->Y:Lvoa;
+    iget-object v1, p0, Labf;->a:Lbbf;
 
-    const/4 v0, 0x0
+    invoke-interface {v1, p1}, Lbbf;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
-    invoke-virtual {p1, v0, p0}, Lvoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p0
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    :cond_0
+    return-object v1
 .end method

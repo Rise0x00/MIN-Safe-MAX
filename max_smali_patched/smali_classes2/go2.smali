@@ -1,138 +1,68 @@
-.class public final Lgo2;
-.super Leje;
+.class public final synthetic Lgo2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Luv2;
-
-.field public final synthetic n0:Lp04;
-
-.field public final synthetic o0:Lho2;
+.field public final synthetic b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
 
 # direct methods
-.method public constructor <init>(Luv2;Lkotlin/coroutines/Continuation;Lp04;Lho2;)V
+.method public synthetic constructor <init>(Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;I)V
     .locals 0
 
-    iput-object p1, p0, Lgo2;->Z:Luv2;
+    iput p2, p0, Lgo2;->a:I
 
-    iput-object p3, p0, Lgo2;->n0:Lp04;
+    iput-object p1, p0, Lgo2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
-    iput-object p4, p0, Lgo2;->o0:Lho2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    check-cast p1, Ldq5;
+    iget p1, p0, Lgo2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v0, "ru.ok.messages.messages.widgets.ChatMsgSearchResultView"
 
-    invoke-virtual {p0, p1, p2}, Lgo2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lgo2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
-    move-result-object p0
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p0, Lgo2;
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->P0:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1}, Lgo2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p1, "Click bottom button"
 
-    move-result-object p0
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object p0
-.end method
+    return-void
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    :pswitch_0
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->P0:I
 
-    new-instance v0, Lgo2;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lgo2;->n0:Lp04;
+    const-string p1, "Click top button"
 
-    iget-object v2, p0, Lgo2;->o0:Lho2;
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lgo2;->Z:Luv2;
+    return-void
 
-    invoke-direct {v0, p0, p2, v1, v2}, Lgo2;-><init>(Luv2;Lkotlin/coroutines/Continuation;Lp04;Lho2;)V
+    nop
 
-    iput-object p1, v0, Lgo2;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lgo2;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgo2;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ldq5;
-
-    new-instance v0, Lfo2;
-
-    iget-object v2, p0, Lgo2;->n0:Lp04;
-
-    iget-object v3, p0, Lgo2;->o0:Lho2;
-
-    invoke-direct {v0, p1, v2, v3}, Lfo2;-><init>(Ldq5;Lp04;Lho2;)V
-
-    iput v1, p0, Lgo2;->X:I
-
-    iget-object p1, p0, Lgo2;->Z:Luv2;
-
-    invoke-virtual {p1, v0, p0}, Luv2;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

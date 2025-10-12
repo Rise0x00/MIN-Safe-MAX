@@ -2,63 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lysd;
 
+# instance fields
+.field public a:Z
 
-# static fields
-.field public static final a:Lwsd;
+.field public b:I
 
+.field public c:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lwsd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwsd;->a:Lwsd;
-
-    return-void
-.end method
+.field public d:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lwsd;->a:Z
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    const-string v0, "ss"
+
+    return-object v0
 
     :cond_0
-    instance-of p0, p1, Lwsd;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p0, :cond_1
+    const-string v1, "sz="
 
-    const/4 p0, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p0
+    iget v1, p0, Lwsd;->b:I
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final hashCode()I
-    .locals 0
+    const-string v1, "x"
 
-    const p0, 0x79e8661
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    iget v1, p0, Lwsd;->c:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string p0, "Reject"
+    const-string v1, ":fit="
 
-    return-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lwsd;->d:I
+
+    invoke-static {v1}, Lhqd;->b(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

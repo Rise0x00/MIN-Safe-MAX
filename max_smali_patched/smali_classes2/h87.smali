@@ -1,35 +1,23 @@
 .class public final Lh87;
-.super Ltob;
+.super Lv2;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final x(Llp7;)V
-    .locals 1
+# static fields
+.field public static final c:Lh87;
 
-    check-cast p1, Lmlb;
 
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    check-cast p0, Lrjd;
+    new-instance v0, Lh87;
 
-    iget-object v0, p1, Lmlb;->b:Lsjd;
+    const/16 v1, 0x8
 
-    invoke-virtual {p0, v0}, Lrjd;->setModelItem(Lhjd;)V
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
 
-    iget-boolean p1, p1, Lmlb;->c:Z
-
-    if-eqz p1, :cond_0
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    goto :goto_0
-
-    :cond_0
-    const p1, 0x3ecccccd    # 0.4f
-
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+    sput-object v0, Lh87;->c:Lh87;
 
     return-void
 .end method

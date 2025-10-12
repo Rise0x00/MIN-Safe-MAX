@@ -1,19 +1,23 @@
-.class public final Lv4g;
-.super Lb5g;
+.class public abstract Lv4g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Li5g;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Li5g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p1, p0, Lv4g;->a:Li5g;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lv4g;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method

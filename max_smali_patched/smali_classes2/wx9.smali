@@ -1,23 +1,14 @@
-.class public final Lwx9;
-.super Lt2;
+.class public interface abstract Lwx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lwx9;
+# virtual methods
+.method public abstract a(Ljava/lang/String;)V
+.end method
 
+.method public abstract g(Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwx9;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
-
-    sput-object v0, Lwx9;->c:Lwx9;
-
-    return-void
+.method public abstract q(Ljava/lang/Throwable;)V
 .end method

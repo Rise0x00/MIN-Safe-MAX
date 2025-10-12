@@ -7,84 +7,38 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic b:I
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:Lxe6;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZLxe6;)V
+    .locals 1
 
-    iput p2, p0, Lkg;->a:I
-
-    iput-object p3, p0, Lkg;->c:Ljava/lang/Object;
-
-    iput p1, p0, Lkg;->b:I
+    sget v0, Lxja;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lkg;->a:Landroid/view/View;
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    iput-object p2, p0, Lkg;->b:Ljava/lang/String;
 
-    return-void
-.end method
+    iput p3, p0, Lkg;->c:F
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    iput p4, p0, Lkg;->d:F
 
-    return-void
-.end method
+    iput-boolean p5, p0, Lkg;->e:Z
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
+    iput-object p6, p0, Lkg;->f:Lxe6;
 
     return-void
 .end method
@@ -92,164 +46,137 @@
 
 # virtual methods
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 3
 
-    iget p1, p0, Lkg;->a:I
+    iget p1, p0, Lkg;->d:F
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Lkg;->a:Landroid/view/View;
 
-    iget-object p1, p0, Lkg;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    check-cast p1, Lr47;
+    iget-boolean p1, p0, Lkg;->e:Z
 
-    check-cast p1, Lixd;
-
-    const-string v0, ""
-
-    invoke-virtual {p1, v0}, Lixd;->y(Ljava/lang/String;)V
-
-    iget p0, p0, Lkg;->b:I
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {p0, v0}, Lnoa;->Q(IF)I
-
-    move-result p0
-
-    iget-object p1, p1, Lixd;->C0:Lui3;
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lkg;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmq1;
-
-    invoke-virtual {p1}, Lmq1;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
+    const/4 v1, 0x0
 
     if-eqz p1, :cond_0
 
-    iget p0, p0, Lkg;->b:I
+    move p1, v1
 
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/16 p1, 0x8
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lkg;->f:Lxe6;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    sget p1, Lxja;->m:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 3
 
-    iget p1, p0, Lkg;->a:I
+    iget p1, p0, Lkg;->d:F
 
-    iget v0, p0, Lkg;->b:I
+    iget-object v0, p0, Lkg;->a:Landroid/view/View;
 
-    iget-object p0, p0, Lkg;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    packed-switch p1, :pswitch_data_0
+    iget-boolean p1, p0, Lkg;->e:Z
 
-    check-cast p0, Lr47;
+    const/4 v1, 0x0
 
-    check-cast p0, Lixd;
+    if-eqz p1, :cond_0
 
-    const-string p1, ""
+    move p1, v1
 
-    invoke-virtual {p0, p1}, Lixd;->y(Ljava/lang/String;)V
-
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-static {v0, p1}, Lnoa;->Q(IF)I
-
-    move-result p1
-
-    iget-object p0, p0, Lixd;->C0:Lui3;
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
-
-    sget p1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->p0:I
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->a(IZ)V
-
-    :pswitch_1
-    return-void
-
-    :pswitch_2
-    check-cast p0, Lmq1;
-
-    invoke-virtual {p0}, Lmq1;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+    goto :goto_0
 
     :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lkg;->f:Lxe6;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    sget p1, Lxja;->m:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 .method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    iget p0, p0, Lkg;->a:I
-
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 2
 
-    iget p1, p0, Lkg;->a:I
+    sget p1, Lxja;->m:I
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Lkg;->b:Ljava/lang/String;
 
-    :pswitch_0
+    iget-object v1, p0, Lkg;->a:Landroid/view/View;
+
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    iget p1, p0, Lkg;->c:F
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+
     return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lkg;->c:Ljava/lang/Object;
-
-    check-cast p1, Lb22;
-
-    iget p0, p0, Lkg;->b:I
-
-    invoke-static {p1, p0}, Lb22;->a(Lb22;I)V
-
-    :pswitch_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

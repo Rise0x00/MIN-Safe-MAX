@@ -1,242 +1,200 @@
-.class public final Li3e;
-.super Leje;
+.class public final synthetic Li3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lve6;
 
 
 # instance fields
-.field public X:Lk3e;
+.field public final synthetic a:I
 
-.field public Y:Lt65;
-
-.field public Z:I
-
-.field public final synthetic n0:Lk3e;
+.field public final synthetic b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
 
 # direct methods
-.method public constructor <init>(Lk3e;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Li3e;->n0:Lk3e;
+    iput p2, p0, Li3e;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Li3e;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-    check-cast p1, Lp04;
+    iget v0, p0, Li3e;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Li3e;->b:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    invoke-virtual {p0, p1, p2}, Li3e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Ltm7;
 
-    check-cast p0, Li3e;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Li3e;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_0
+    sget-object v0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;->Z:[Ltm7;
 
-    return-object p0
-.end method
+    new-instance v3, Ljzd;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    sget-object v0, Ld3e;->a:Ld3e;
 
-    new-instance p1, Li3e;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    iget-object p0, p0, Li3e;->n0:Lk3e;
+    move-result-object v2
 
-    invoke-direct {p1, p0, p2}, Li3e;-><init>(Lk3e;Lkotlin/coroutines/Continuation;)V
+    const-class v4, Lov0;
 
-    return-object p1
-.end method
+    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    move-result-object v2
 
-    iget v0, p0, Li3e;->Z:I
+    invoke-virtual {v0}, Ld3e;->b()Lbp7;
 
-    const/4 v1, 0x1
+    move-result-object v4
 
-    const/4 v2, 0x2
+    check-cast v4, Ls5f;
 
-    iget-object v3, p0, Li3e;->n0:Lk3e;
+    invoke-virtual {v4}, Ls5f;->getValue()Ljava/lang/Object;
 
-    sget-object v4, Lq04;->a:Lq04;
+    move-result-object v4
 
-    if-eqz v0, :cond_2
+    check-cast v4, Lr8f;
 
-    if-eq v0, v1, :cond_1
+    invoke-direct {v3, v2, v4}, Ljzd;-><init>(Lbp7;Lr8f;)V
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {v0}, Ld3e;->b()Lbp7;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v2
 
-    goto/16 :goto_3
+    check-cast v2, Ls5f;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v2
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-object v5, v2
 
-    throw p0
+    check-cast v5, Lr8f;
 
-    :cond_1
-    iget-object v0, p0, Li3e;->Y:Lt65;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    iget-object v1, p0, Li3e;->X:Lk3e;
+    move-result-object v2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const-class v4, Lzhd;
 
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object v0, v3, Lk3e;->v0:Lt65;
-
-    iget-object p1, v3, Lk3e;->n0:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lkg6;
-
-    new-instance v5, Lbtb;
-
-    iget-object v6, v3, Lk3e;->o:Lth7;
-
-    invoke-interface {v6}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v6
 
-    check-cast v6, Lz43;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    check-cast v6, Le2d;
+    move-result-object v2
 
-    invoke-virtual {v6}, Le2d;->p()J
+    const-class v4, Ltk;
 
-    move-result-wide v6
+    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget-object v8, v3, Lk3e;->b:Lth7;
+    move-result-object v10
 
-    invoke-interface {v8}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v4, Lg7f;
+
+    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v11
+
+    new-instance v4, Ln0c;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    const-class v7, Lr63;
+
+    invoke-virtual {v2, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    new-instance v8, Li3e;
+
+    const/4 v9, 0x1
+
+    invoke-direct {v8, v1, v9}, Li3e;-><init>(Lone/me/settings/privacy/ui/SettingsPrivacyScreen;I)V
+
+    const/16 v1, 0x9
+
+    const/4 v9, 0x0
+
+    invoke-direct {v4, v2, v8, v9, v1}, Ln0c;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v1
+
+    const-class v2, Lktd;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v8
 
-    check-cast v8, Landroid/content/Context;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    sget-object v9, Lzs4;->p0:Lqs9;
+    move-result-object v2
 
-    invoke-virtual {v9, v8}, Lqs9;->c(Landroid/content/Context;)Lzs4;
+    const-class v7, Llm5;
 
-    move-result-object v8
+    invoke-virtual {v2, v7}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-virtual {v8}, Lzs4;->k()Lnma;
+    move-result-object v9
 
-    move-result-object v8
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    invoke-interface {v8}, Lnma;->getName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v8
+    const-class v2, Lqj3;
 
-    invoke-direct {v5, v6, v7, v8}, Lctb;-><init>(JLjava/lang/String;)V
+    invoke-virtual {v0, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-object v3, p0, Li3e;->X:Lk3e;
+    move-result-object v0
 
-    iput-object v0, p0, Li3e;->Y:Lt65;
+    move-object v12, v0
 
-    iput v1, p0, Li3e;->Z:I
+    check-cast v12, Lqj3;
 
-    invoke-virtual {p1, v5, v1, p0}, Lkg6;->a(Lctb;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-instance v2, Lf4e;
 
-    move-result-object p1
+    move-object v7, v1
 
-    if-ne p1, v4, :cond_3
+    invoke-direct/range {v2 .. v12}, Lf4e;-><init>(Ljzd;Ln0c;Lr8f;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lqj3;)V
 
-    goto :goto_2
+    return-object v2
 
-    :cond_3
-    move-object v1, v3
-
-    :goto_0
-    check-cast p1, Lwsb;
-
-    const/4 v5, 0x0
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p1, Lwsb;->a:Landroid/net/Uri;
-
-    goto :goto_1
-
-    :cond_4
-    move-object p1, v5
-
-    :goto_1
-    new-instance v6, Lr2e;
-
-    invoke-direct {v6, p1}, Lr2e;-><init>(Landroid/net/Uri;)V
-
-    sget-object p1, Lk3e;->w0:[Lof7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v6}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    iget-object p1, v3, Lk3e;->X:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhoe;
-
-    check-cast p1, Loba;
-
-    invoke-virtual {p1}, Loba;->a()Lj04;
-
-    move-result-object p1
-
-    new-instance v0, Lh3e;
-
-    invoke-direct {v0, v2, v5}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object v5, p0, Li3e;->X:Lk3e;
-
-    iput-object v5, p0, Li3e;->Y:Lt65;
-
-    iput v2, p0, Li3e;->Z:I
-
-    invoke-static {p1, v0, p0}, Lyr3;->B0(Lh04;Lt96;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v4, :cond_5
-
-    :goto_2
-    return-object v4
-
-    :cond_5
-    :goto_3
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

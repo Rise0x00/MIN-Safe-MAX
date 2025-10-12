@@ -1,217 +1,262 @@
 .class public final Ljg7;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:Lok9;
+# instance fields
+.field public X:Ljava/lang/String;
 
-.field public static c:I
+.field public Y:I
 
-.field public static d:Landroid/content/SharedPreferences;
+.field public final synthetic Z:Ljava/lang/String;
 
-.field public static final e:Lq4e;
+.field public final synthetic w0:Ljava/lang/String;
 
-.field public static final f:Lq4e;
+.field public final synthetic x0:Log7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Log7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x64
+    iput-object p1, p0, Ljg7;->Z:Ljava/lang/String;
 
-    int-to-float v0, v0
+    iput-object p2, p0, Ljg7;->w0:Ljava/lang/String;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iput-object p3, p0, Ljg7;->x0:Log7;
 
-    move-result-object v1
+    const/4 p1, 0x2
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Litg;->z(F)I
-
-    move-result v0
-
-    sput v0, Ljg7;->a:I
-
-    new-instance v0, Lok9;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lok9;-><init>(I)V
-
-    sput-object v0, Ljg7;->b:Lok9;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v0}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
-
-    move-result-object v0
-
-    sput-object v0, Ljg7;->e:Lq4e;
-
-    sput-object v0, Ljg7;->f:Lq4e;
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)I
-    .locals 6
 
-    sget-object v0, Ljg7;->b:Lok9;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v1, v0, Lok9;->e:I
+    check-cast p1, Le34;
 
-    const-string v2, "pref_keyboard_height_landscape"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v3, "pref_keyboard_height_portrait"
+    invoke-virtual {p0, p1, p2}, Ljg7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v1, :cond_2
+    move-result-object p1
 
-    sget-object v1, Ljg7;->d:Landroid/content/SharedPreferences;
+    check-cast p1, Ljg7;
 
-    if-nez v1, :cond_0
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p1, p2}, Ljg7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    const-string v4, "keyboard_prefs"
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1, v4, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v1
-
-    :cond_0
-    sget-object v4, Ljg7;->d:Landroid/content/SharedPreferences;
-
-    if-nez v4, :cond_1
-
-    sput-object v1, Ljg7;->d:Landroid/content/SharedPreferences;
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    div-int/lit8 v4, v4, 0x3
-
-    invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v5
-
-    invoke-virtual {v0, v5, v3}, Lok9;->d(ILjava/lang/Object;)V
-
-    invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, v2}, Lok9;->d(ILjava/lang/Object;)V
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v4, 0x1
-
-    if-ne v4, v1, :cond_3
-
-    move-object v2, v3
-
-    :cond_3
-    invoke-virtual {v0, v2}, Lok9;->b(Ljava/lang/Object;)I
-
-    move-result v1
-
-    if-ltz v1, :cond_4
-
-    iget-object p0, v0, Lok9;->c:[I
-
-    aget p0, p0, v1
-
-    return p0
-
-    :cond_4
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    invoke-static {v0, p0}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    div-int/lit8 p0, p0, 0x3
-
-    return p0
+    return-object p1
 .end method
 
-.method public static b(I)Z
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    sget v0, Ljg7;->a:I
+    new-instance p1, Ljg7;
 
-    if-le p0, v0, :cond_0
+    iget-object v0, p0, Ljg7;->w0:Ljava/lang/String;
 
-    const/4 p0, 0x1
+    iget-object v1, p0, Ljg7;->x0:Log7;
 
-    return p0
+    iget-object v2, p0, Ljg7;->Z:Ljava/lang/String;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Ljg7;-><init>(Ljava/lang/String;Ljava/lang/String;Log7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Ljg7;->Y:I
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Loyf;->a:Loyf;
+
+    iget-object v5, p0, Ljg7;->x0:Log7;
+
+    sget-object v6, Lf34;->a:Lf34;
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v3, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_3
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return p0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Ljg7;->X:Ljava/lang/String;
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljg7;->Z:Ljava/lang/String;
+
+    const-string v0, " "
+
+    iget-object v7, p0, Ljg7;->w0:Ljava/lang/String;
+
+    invoke-static {p1, v0, v7}, Lvl3;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, v5, Log7;->H0:Layc;
+
+    const-string v8, ""
+
+    invoke-virtual {v0, p1, v8}, Layc;->b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljg7;->X:Ljava/lang/String;
+
+    iput v3, p0, Ljg7;->Y:I
+
+    invoke-static {v5, v0, v7, p0}, Log7;->q(Log7;Ljava/lang/String;Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    iget-object p1, v5, Log7;->c:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbl6;
+
+    const/4 v3, 0x0
+
+    iput-object v3, p0, Ljg7;->X:Ljava/lang/String;
+
+    iput v2, p0, Ljg7;->Y:I
+
+    invoke-virtual {p1, v0, p0}, Lbl6;->a(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    :goto_1
+    check-cast p1, Ljava/lang/Long;
+
+    if-eqz p1, :cond_8
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    iget-object p1, v5, Log7;->X:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lm13;
+
+    iput v1, p0, Ljg7;->Y:I
+
+    check-cast p1, Lm23;
+
+    invoke-virtual {p1, v2, v3, p0}, Lm23;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_7
+
+    :goto_2
+    return-object v6
+
+    :cond_7
+    :goto_3
+    check-cast p1, Lm82;
+
+    if-eqz p1, :cond_8
+
+    iget-object v0, v5, Log7;->z0:Ljb5;
+
+    sget-object v1, Lrf7;->c:Lrf7;
+
+    iget-wide v2, p1, Lm82;->a:J
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, ":chats?id="
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "&type=local"
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Lqe0;->m(Ljava/lang/String;Ljb5;)V
+
+    :cond_8
+    :goto_4
+    return-object v4
 .end method

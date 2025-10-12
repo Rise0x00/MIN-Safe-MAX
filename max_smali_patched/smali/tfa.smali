@@ -1,53 +1,83 @@
-.class public final Ltfa;
-.super Lax3;
+.class public final synthetic Ltfa;
+.super Lag6;
 .source "SourceFile"
 
+# interfaces
+.implements Lnf6;
 
-# instance fields
-.field public X:Ll72;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lxfa;
-
-.field public n0:I
-
-.field public o:Lxfa;
+# static fields
+.field public static final a:Ltfa;
 
 
 # direct methods
-.method public constructor <init>(Lxfa;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Ltfa;->Z:Lxfa;
+    new-instance v0, Ltfa;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Lufa;
+
+    const-string v3, "register"
+
+    invoke-direct/range {v0 .. v5}, Lag6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ltfa;->a:Ltfa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Ltfa;->Y:Ljava/lang/Object;
+    check-cast p1, Lufa;
 
-    iget p1, p0, Ltfa;->n0:I
+    check-cast p2, Lgpd;
 
-    const/high16 v0, -0x80000000
+    iget-wide v0, p1, Lufa;->a:J
 
-    or-int/2addr p1, v0
+    const-wide/16 v2, 0x0
 
-    iput p1, p0, Ltfa;->n0:I
+    cmp-long p3, v0, v2
 
-    iget-object p1, p0, Ltfa;->Z:Lxfa;
+    sget-object v2, Loyf;->a:Loyf;
 
-    const/4 v0, 0x0
+    if-gtz p3, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Lxfa;->b(Ll72;Lax3;)Ljava/lang/Object;
+    check-cast p2, Lfpd;
 
-    move-result-object p0
+    iput-object v2, p2, Lfpd;->X:Ljava/lang/Object;
 
-    return-object p0
+    return-object v2
+
+    :cond_0
+    new-instance p3, Lsg6;
+
+    const/16 v3, 0x13
+
+    invoke-direct {p3, p2, v3, p1}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    check-cast p2, Lfpd;
+
+    iget-object p1, p2, Lfpd;->a:Lw24;
+
+    invoke-static {p1}, Lid7;->q(Lw24;)Lcn4;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0, v1, p3, p1}, Lcn4;->invokeOnTimeout(JLjava/lang/Runnable;Lw24;)Lvs4;
+
+    move-result-object p1
+
+    iput-object p1, p2, Lfpd;->c:Ljava/lang/Object;
+
+    return-object v2
 .end method

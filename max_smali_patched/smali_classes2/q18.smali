@@ -1,82 +1,47 @@
-.class public final Lq18;
-.super Leje;
+.class public final synthetic Lq18;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lu18;
 
 
 # instance fields
-.field public final synthetic X:Liy5;
+.field public final synthetic a:Ls18;
 
 
 # direct methods
-.method public constructor <init>(Liy5;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ls18;)V
     .locals 0
 
-    iput-object p1, p0, Lq18;->X:Liy5;
+    iput-object p1, p0, Lq18;->a:Ls18;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(II)V
+    .locals 1
 
-    check-cast p1, Lp04;
+    iget-object v0, p0, Lq18;->a:Ls18;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Ls18;->t:Lkfd;
 
-    invoke-virtual {p0, p1, p2}, Lq18;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
+    invoke-static {p1, p2}, Lim9;->a(II)Landroid/graphics/Point;
 
-    check-cast p0, Lq18;
+    move-result-object p1
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget p2, p1, Landroid/graphics/Point;->x:I
 
-    invoke-virtual {p0, p1}, Lq18;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p1, Landroid/graphics/Point;->y:I
 
-    return-object p1
-.end method
+    invoke-virtual {v0, p2, p1}, Lkfd;->a(II)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lq18;
-
-    iget-object p0, p0, Lq18;->X:Liy5;
-
-    invoke-direct {p1, p0, p2}, Lq18;-><init>(Liy5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    sget-object p1, Lxbb;->n0:Lxbb;
-
-    iget-object p1, p1, Lxbb;->Y:Luk7;
-
-    new-instance v0, Lwgc;
-
-    iget-object p0, p0, Lq18;->X:Liy5;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p0}, Lwgc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Luk7;->a(Lok7;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

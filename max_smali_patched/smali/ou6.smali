@@ -1,33 +1,60 @@
-.class public abstract Lou6;
+.class public final Lou6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final b:Ljava/util/regex/Pattern;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    iput p1, p0, Lou6;->a:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lou6;->a:Ljava/util/regex/Pattern;
-
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lou6;->b:Ljava/util/regex/Pattern;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 1
+
+    iget v0, p0, Lou6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lt1d;
+
+    invoke-direct {v0, p1}, Lt1d;-><init>(Ljava/lang/Runnable;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    const-string p1, "CameraX-camerax_high_priority"
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

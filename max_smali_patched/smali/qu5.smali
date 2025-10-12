@@ -1,125 +1,92 @@
 .class public final Lqu5;
-.super Lfud;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpa6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqu5;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final b:Lo0;
+.field public b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lqu5;->a:I
+    new-instance v0, Lma4;
 
-    iput-object p1, p0, Lqu5;->b:Lo0;
+    const/16 v1, 0xe
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lma4;-><init>(I)V
+
+    sput-object v0, Lqu5;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lkt5;
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lqu5;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Llu5;
-
-    iget-object p0, p0, Lqu5;->b:Lo0;
-
-    check-cast p0, Lmt5;
-
-    invoke-direct {v0, p0}, Llu5;-><init>(Lmt5;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lou5;
-
-    iget-object p0, p0, Lqu5;->b:Lo0;
-
-    check-cast p0, Llu5;
-
-    invoke-direct {v0, p0}, Lou5;-><init>(Llu5;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final l(Lzud;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lqu5;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lqu5;->b:Lo0;
+    const-string v1, "SavedState{mAnchorPosition="
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    iget v1, p0, Lqu5;->a:I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lq75;->a:Lp75;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, ", mAnchorOffset="
 
-    check-cast p0, Lmt5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lyu5;
+    iget v1, p0, Lqu5;->b:I
 
-    invoke-direct {v1, p1, v0}, Lyu5;-><init>(Lzud;Ljava/util/ArrayList;)V
+    const/16 v2, 0x7d
 
-    invoke-virtual {p0, v1}, Lkt5;->c(Luu5;)V
+    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :catchall_0
-    move-exception p0
+    return-object v0
+.end method
 
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget-object v0, Lm25;->a:Lm25;
+    iget p2, p0, Lqu5;->a:I
 
-    invoke-interface {p1, v0}, Lzud;->c(Lkp4;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-interface {p1, p0}, Lzud;->onError(Ljava/lang/Throwable;)V
+    iget p2, p0, Lqu5;->b:I
 
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p0, Llu5;
-
-    new-instance v0, Lpu5;
-
-    invoke-direct {v0, p1}, Lpu5;-><init>(Lzud;)V
-
-    invoke-virtual {p0, v0}, Lkt5;->c(Luu5;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxqc;
+.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lz11;
+.field public final synthetic b:Ld21;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz11;I)V
+.method public synthetic constructor <init>(Ld21;I)V
     .locals 0
 
     iput p2, p0, Ly11;->a:I
 
-    iput-object p1, p0, Ly11;->b:Lz11;
+    iput-object p1, p0, Ly11;->b:Ld21;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,182 +27,111 @@
 
 
 # virtual methods
-.method public final b()V
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
 
     iget v0, p0, Ly11;->a:I
 
-    sget-object v1, Lu68;->b:Lu68;
+    sget-object v1, Loyf;->a:Loyf;
 
-    sget-object v2, Lu68;->a:Lu68;
+    const/4 v2, 0x0
 
-    sget-object v3, Lu68;->c:Lu68;
-
-    sget-object v4, Lu68;->o:Lu68;
-
-    sget-object v5, Lu68;->X:Lu68;
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x3
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x1
-
-    iget-object p0, p0, Ly11;->b:Lz11;
+    iget-object v3, p0, Ly11;->b:Ld21;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lz11;->H0:Ld21;
+    iput-object v2, v3, Ld21;->X0:Lxkf;
 
-    if-eqz p0, :cond_0
+    iget-object v0, v3, Ld21;->S0:Lc21;
 
-    check-cast p0, Lmqc;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lmqc;->L()V
+    check-cast v0, Lr4;
+
+    iget-object v0, v0, Lr4;->a:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v2, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->w0:[Ltm7;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->C0()Lp21;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lp21;->r()Lpt1;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lpt1;->n:Lmoe;
 
     :cond_0
-    return-void
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
-    :pswitch_0
-    invoke-static {p0}, Lz11;->u(Lz11;)V
+    move-result-object v2
 
-    return-void
+    move-object v3, v2
 
-    :pswitch_1
-    iget-object v0, p0, Lz11;->J0:Lu68;
+    check-cast v3, Lar1;
 
-    if-eqz v0, :cond_6
+    const-wide/16 v9, 0x0
 
-    iget-object p0, p0, Lz11;->H0:Ld21;
+    const/16 v11, 0xdf
 
-    if-eqz p0, :cond_6
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    const/4 v5, 0x0
 
-    move-result v0
+    const/4 v6, 0x0
 
-    if-eqz v0, :cond_5
+    const/4 v7, 0x0
 
-    if-eq v0, v9, :cond_4
+    const/4 v8, 0x0
 
-    if-eq v0, v8, :cond_3
+    invoke-static/range {v3 .. v11}, Lar1;->a(Lar1;Lch1;Lch1;Lch1;Lglg;La4g;JI)Lar1;
 
-    if-eq v0, v7, :cond_2
+    move-result-object v3
 
-    if-ne v0, v6, :cond_1
+    invoke-virtual {v0, v2, v3}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-object v1, v5
+    move-result v2
 
-    goto :goto_0
+    if-eqz v2, :cond_0
 
     :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    return-object v1
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :pswitch_0
+    iput-object v2, v3, Ld21;->W0:Lxkf;
 
-    throw p0
+    return-object v1
+
+    :pswitch_1
+    sget v0, Lydc;->call_bottom_control_container:I
+
+    invoke-static {v3, v0}, Lj40;->n(Landroid/view/View;I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    move-object v1, v4
+    move-object v3, v0
 
-    goto :goto_0
-
-    :cond_3
-    move-object v1, v3
-
-    goto :goto_0
-
-    :cond_4
-    move-object v1, v2
-
-    :cond_5
     :goto_0
-    check-cast p0, Lmqc;
-
-    iget-object p0, p0, Lmqc;->b:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->n0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lw21;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Lw21;->u(Lu68;)V
-
-    :cond_6
-    return-void
+    return-object v3
 
     :pswitch_2
-    iget-object v0, p0, Lz11;->I0:Lu68;
+    sget-object v0, Lbx4;->y0:Lsed;
 
-    if-eqz v0, :cond_c
+    invoke-virtual {v0, v3}, Lsed;->o(Landroid/view/View;)Lloa;
 
-    iget-object p0, p0, Lz11;->H0:Ld21;
+    move-result-object v0
 
-    if-eqz p0, :cond_c
+    iget-object v0, v0, Lloa;->c:Luxa;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    if-eq v0, v9, :cond_a
-
-    if-eq v0, v8, :cond_9
-
-    if-eq v0, v7, :cond_8
-
-    if-ne v0, v6, :cond_7
-
-    move-object v1, v5
-
-    goto :goto_1
-
-    :cond_7
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_8
-    move-object v1, v4
-
-    goto :goto_1
-
-    :cond_9
-    move-object v1, v3
-
-    goto :goto_1
-
-    :cond_a
-    move-object v1, v2
-
-    :cond_b
-    :goto_1
-    check-cast p0, Lmqc;
-
-    iget-object p0, p0, Lmqc;->b:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->n0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lw21;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Lw21;->s(Lu68;)V
-
-    :cond_c
-    return-void
-
-    nop
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

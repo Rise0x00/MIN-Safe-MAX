@@ -1,40 +1,57 @@
-.class public final Lti7;
+.class public abstract Lti7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkhe;
-
 
 # instance fields
-.field public final synthetic a:Ls4;
+.field public a:Z
 
-
-# direct methods
-.method public constructor <init>(Ls4;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lti7;->a:Ls4;
-
-    return-void
-.end method
+.field public b:I
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final a(I)V
+    .locals 3
 
-    iget-object p0, p0, Lti7;->a:Ls4;
+    iget-boolean v0, p0, Lti7;->a:Z
 
-    const-class v0, Ltc;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    iput-boolean v0, p0, Lti7;->a:Z
 
-    check-cast p0, Ltc;
+    iput p1, p0, Lti7;->b:I
 
-    return-object p0
+    return-void
+
+    :cond_0
+    iget v0, p0, Lti7;->b:I
+
+    if-ne v0, p1, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Given job ID "
+
+    const-string v2, " is different than previous "
+
+    invoke-static {p1, v1, v2}, Lfl7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    iget v1, p0, Lti7;->b:I
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

@@ -1,133 +1,96 @@
 .class public final Lbrd;
-.super Lev2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lyte;
+.field public final a:Lbp7;
 
-.field public final b:Lf96;
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
+
+.field public final d:Lbp7;
+
+.field public final e:Lbp7;
+
+.field public final f:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Lyte;Lf96;)V
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbrd;->a:Lyte;
+    iput-object p1, p0, Lbrd;->a:Lbp7;
 
-    iput-object p2, p0, Lbrd;->b:Lf96;
+    iput-object p2, p0, Lbrd;->b:Lbp7;
+
+    iput-object p3, p0, Lbrd;->c:Lbp7;
+
+    iput-object p4, p0, Lbrd;->d:Lbp7;
+
+    iput-object p5, p0, Lbrd;->e:Lbp7;
+
+    iput-object p6, p0, Lbrd;->f:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(JLjava/lang/CharSequence;Ljava/util/List;ZLjava/lang/Long;Lh86;Lm3f;)Ljava/lang/Object;
+    .locals 11
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lbrd;->a:Lbp7;
 
-    goto :goto_1
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr8f;
+
+    check-cast v0, Lwla;
+
+    invoke-virtual {v0}, Lwla;->b()Ly24;
+
+    move-result-object v0
+
+    new-instance v1, Lard;
+
+    const/4 v10, 0x0
+
+    move-object v5, p0
+
+    move-wide v6, p1
+
+    move-object v4, p3
+
+    move-object v2, p4
+
+    move/from16 v3, p5
+
+    move-object/from16 v8, p6
+
+    move-object/from16 v9, p7
+
+    invoke-direct/range {v1 .. v10}, Lard;-><init>(Ljava/util/List;ZLjava/lang/CharSequence;Lbrd;JLjava/lang/Long;Lh86;Lkotlin/coroutines/Continuation;)V
+
+    move-object/from16 p1, p8
+
+    invoke-static {v0, v1, p1}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lf34;->a:Lf34;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    instance-of v0, p1, Lbrd;
+    sget-object p1, Loyf;->a:Loyf;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lbrd;
-
-    iget-object v0, p0, Lbrd;->a:Lyte;
-
-    iget-object v1, p1, Lbrd;->a:Lyte;
-
-    invoke-virtual {v0, v1}, Lyte;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lbrd;->b:Lf96;
-
-    iget-object p1, p1, Lbrd;->b:Lf96;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lbrd;->a:Lyte;
-
-    iget v0, v0, Lyte;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lbrd;->b:Lf96;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancelableSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lbrd;->a:Lyte;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lbrd;->b:Lf96;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

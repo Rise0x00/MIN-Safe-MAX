@@ -4,336 +4,308 @@
 
 
 # instance fields
-.field public final A:Lth7;
+.field public final a:J
 
-.field public final B:Lth7;
+.field public final b:J
 
-.field public final C:Lth7;
+.field public final c:J
 
-.field public final D:Lth7;
+.field public final d:Ljava/lang/String;
 
-.field public final E:Lth7;
+.field public final e:Ljava/lang/String;
 
-.field public final F:Lth7;
-
-.field public final G:Lth7;
-
-.field public final H:Lth7;
-
-.field public final I:Lth7;
-
-.field public final J:Lth7;
-
-.field public final K:Lth7;
-
-.field public final L:Lth7;
-
-.field public final M:Lth7;
-
-.field public final N:Lth7;
-
-.field public final O:Lth7;
-
-.field public final P:Lth7;
-
-.field public final Q:Lth7;
-
-.field public final R:Lth7;
-
-.field public final S:Lth7;
-
-.field public final T:Lth7;
-
-.field public final U:Lth7;
-
-.field public final a:Lth7;
-
-.field public final b:Lth7;
-
-.field public final c:Lth7;
-
-.field public final d:Lth7;
-
-.field public final e:Lth7;
-
-.field public final f:Lth7;
-
-.field public final g:Lth7;
-
-.field public final h:Lth7;
-
-.field public final i:Lth7;
-
-.field public final j:Lth7;
-
-.field public final k:Lth7;
-
-.field public final l:Lth7;
-
-.field public final m:Lth7;
-
-.field public final n:Lth7;
-
-.field public final o:Lth7;
-
-.field public final p:Lth7;
-
-.field public final q:Lth7;
-
-.field public final r:Lth7;
-
-.field public final s:Lth7;
-
-.field public final t:Lth7;
-
-.field public final u:Lth7;
-
-.field public final v:Lth7;
-
-.field public final w:Lth7;
-
-.field public final x:Lth7;
-
-.field public final y:Lth7;
-
-.field public final z:Lth7;
+.field public final f:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;)V
+.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljl;->a:Lth7;
+    iput-wide p1, p0, Ljl;->a:J
 
-    iput-object p2, p0, Ljl;->b:Lth7;
+    iput-wide p3, p0, Ljl;->b:J
 
-    iput-object p3, p0, Ljl;->c:Lth7;
+    iput-wide p5, p0, Ljl;->c:J
 
-    iput-object p4, p0, Ljl;->d:Lth7;
+    iput-object p7, p0, Ljl;->d:Ljava/lang/String;
 
-    iput-object p5, p0, Ljl;->e:Lth7;
+    iput-object p8, p0, Ljl;->e:Ljava/lang/String;
 
-    iput-object p6, p0, Ljl;->f:Lth7;
+    iput-object p9, p0, Ljl;->f:Ljava/util/Map;
 
-    iput-object p7, p0, Ljl;->g:Lth7;
+    const/4 p1, 0x0
 
-    iput-object p8, p0, Ljl;->h:Lth7;
+    if-eqz p9, :cond_0
 
-    iput-object p9, p0, Ljl;->i:Lth7;
+    invoke-interface {p9}, Ljava/util/Map;->size()I
 
-    iput-object p10, p0, Ljl;->j:Lth7;
+    move-result p2
 
-    iput-object p11, p0, Ljl;->k:Lth7;
+    goto :goto_0
 
-    iput-object p12, p0, Ljl;->l:Lth7;
+    :cond_0
+    move p2, p1
 
-    iput-object p13, p0, Ljl;->m:Lth7;
+    :goto_0
+    const/16 p3, 0xa
 
-    iput-object p14, p0, Ljl;->n:Lth7;
+    if-gt p2, p3, :cond_1
 
-    iput-object p15, p0, Ljl;->o:Lth7;
+    const/4 p1, 0x1
 
-    move-object/from16 p1, p16
+    :cond_1
+    if-nez p1, :cond_3
 
-    iput-object p1, p0, Ljl;->p:Lth7;
+    if-eqz p9, :cond_2
 
-    move-object/from16 p1, p17
+    invoke-interface {p9}, Ljava/util/Map;->size()I
 
-    iput-object p1, p0, Ljl;->q:Lth7;
+    move-result p1
 
-    move-object/from16 p1, p18
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p1, p0, Ljl;->r:Lth7;
+    move-result-object p1
 
-    move-object/from16 p1, p19
+    goto :goto_1
 
-    iput-object p1, p0, Ljl;->s:Lth7;
+    :cond_2
+    const/4 p1, 0x0
 
-    move-object/from16 p1, p20
+    :goto_1
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Ljl;->t:Lth7;
+    const-string p3, "counters size can\'t be greater than limit = 10, current="
 
-    move-object/from16 p1, p21
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Ljl;->u:Lth7;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object/from16 p1, p22
+    const-string p1, ", event="
 
-    iput-object p1, p0, Ljl;->v:Lth7;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 p1, p23
+    invoke-virtual {p2, p8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Ljl;->w:Lth7;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-object/from16 p1, p24
+    move-result-object p1
 
-    iput-object p1, p0, Ljl;->x:Lth7;
+    new-instance p2, Ljava/lang/IllegalStateException;
 
-    move-object/from16 p1, p25
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iput-object p1, p0, Ljl;->y:Lth7;
+    move-result-object p1
 
-    move-object/from16 p1, p26
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Ljl;->z:Lth7;
+    throw p2
 
-    move-object/from16 p1, p27
-
-    iput-object p1, p0, Ljl;->A:Lth7;
-
-    move-object/from16 p1, p28
-
-    iput-object p1, p0, Ljl;->B:Lth7;
-
-    move-object/from16 p1, p29
-
-    iput-object p1, p0, Ljl;->C:Lth7;
-
-    move-object/from16 p1, p30
-
-    iput-object p1, p0, Ljl;->D:Lth7;
-
-    move-object/from16 p1, p31
-
-    iput-object p1, p0, Ljl;->E:Lth7;
-
-    move-object/from16 p1, p32
-
-    iput-object p1, p0, Ljl;->F:Lth7;
-
-    move-object/from16 p1, p33
-
-    iput-object p1, p0, Ljl;->G:Lth7;
-
-    move-object/from16 p1, p34
-
-    iput-object p1, p0, Ljl;->H:Lth7;
-
-    move-object/from16 p1, p35
-
-    iput-object p1, p0, Ljl;->I:Lth7;
-
-    move-object/from16 p1, p36
-
-    iput-object p1, p0, Ljl;->J:Lth7;
-
-    move-object/from16 p1, p37
-
-    iput-object p1, p0, Ljl;->K:Lth7;
-
-    move-object/from16 p1, p38
-
-    iput-object p1, p0, Ljl;->L:Lth7;
-
-    move-object/from16 p1, p39
-
-    iput-object p1, p0, Ljl;->M:Lth7;
-
-    move-object/from16 p1, p40
-
-    iput-object p1, p0, Ljl;->N:Lth7;
-
-    move-object/from16 p1, p41
-
-    iput-object p1, p0, Ljl;->O:Lth7;
-
-    move-object/from16 p1, p42
-
-    iput-object p1, p0, Ljl;->P:Lth7;
-
-    move-object/from16 p1, p43
-
-    iput-object p1, p0, Ljl;->Q:Lth7;
-
-    move-object/from16 p1, p44
-
-    iput-object p1, p0, Ljl;->R:Lth7;
-
-    move-object/from16 p1, p45
-
-    iput-object p1, p0, Ljl;->S:Lth7;
-
-    move-object/from16 p1, p46
-
-    iput-object p1, p0, Ljl;->T:Lth7;
-
-    move-object/from16 p1, p47
-
-    iput-object p1, p0, Ljl;->U:Lth7;
-
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljk;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object p0, p0, Ljl;->y:Lth7;
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Ljk;
+    :cond_0
+    instance-of v1, p1, Ljl;
 
-    return-object p0
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljl;
+
+    iget-wide v3, p0, Ljl;->a:J
+
+    iget-wide v5, p1, Ljl;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ljl;->b:J
+
+    iget-wide v5, p1, Ljl;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Ljl;->c:J
+
+    iget-wide v5, p1, Ljl;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ljl;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Ljl;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ljl;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Ljl;->e:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Ljl;->f:Ljava/util/Map;
+
+    iget-object p1, p1, Ljl;->f:Ljava/util/Map;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public final b()Lrv0;
-    .locals 0
+.method public final hashCode()I
+    .locals 4
 
-    iget-object p0, p0, Ljl;->a:Lth7;
+    iget-wide v0, p0, Ljl;->a:J
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lrv0;
+    const/16 v1, 0x1f
 
-    return-object p0
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Ljl;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ljl;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljl;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ljl;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Ljl;->f:Ljava/util/Map;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public final c()Lbb2;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p0, p0, Ljl;->r:Lth7;
+    const-string v0, "ApiLogEntry(time="
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    const-string v1, ", userId="
 
-    move-result-object p0
+    iget-wide v2, p0, Ljl;->a:J
 
-    check-cast p0, Lbb2;
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public final d()Lpw8;
-    .locals 0
+    iget-wide v1, p0, Ljl;->b:J
 
-    iget-object p0, p0, Ljl;->w:Lth7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    const-string v1, ", sessionId="
 
-    move-result-object p0
+    const-string v2, ", type="
 
-    check-cast p0, Lpw8;
+    iget-wide v3, p0, Ljl;->c:J
 
-    return-object p0
-.end method
+    invoke-static {v3, v4, v1, v2, v0}, Lqw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-.method public final e()Lxre;
-    .locals 0
+    const-string v1, ", event="
 
-    iget-object p0, p0, Ljl;->t:Lth7;
+    const-string v2, ", params="
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    iget-object v3, p0, Ljl;->d:Ljava/lang/String;
 
-    move-result-object p0
+    iget-object v4, p0, Ljl;->e:Ljava/lang/String;
 
-    check-cast p0, Lxre;
+    invoke-static {v0, v3, v1, v4, v2}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p0
+    iget-object v1, p0, Ljl;->f:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

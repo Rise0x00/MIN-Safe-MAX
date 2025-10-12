@@ -1,130 +1,90 @@
 .class public final Lco7;
-.super Landroid/text/style/URLSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lni4;
 
 
 # instance fields
-.field public a:Ldo7;
+.field public final a:Landroid/view/View;
 
-.field public b:I
+.field public final b:Lbo7;
 
-.field public final c:Z
-
-.field public final o:Le7;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IZ)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+    .locals 3
 
-    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lco7;->a:Ldo7;
+    iput v0, p0, Lco7;->c:I
 
-    iput p2, p0, Lco7;->b:I
+    iput-object p1, p0, Lco7;->a:Landroid/view/View;
 
-    iput-boolean p3, p0, Lco7;->c:Z
+    new-instance v0, Lbo7;
 
-    new-instance p1, Le7;
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lx5;
 
-    iput-object p1, p0, Lco7;->o:Le7;
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, p1}, Lx5;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, p2, v1}, Lbo7;-><init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Lx5;)V
+
+    iput-object v0, p0, Lco7;->b:Lbo7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final onPause(Lcs7;)V
+    .locals 1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const-string p1, "co7"
 
-    move-result-wide v0
+    const-string v0, "onPause: unregisterGlobalLayoutListener"
 
-    iget-object v2, p0, Lco7;->o:Le7;
+    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v3, v2, Le7;->a:J
+    iget-object p1, p0, Lco7;->a:Landroid/view/View;
 
-    sub-long v3, v0, v3
-
-    const-wide/16 v5, 0x12c
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_3
-
-    iput-wide v0, v2, Le7;->a:J
-
-    instance-of v0, p1, Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lco7;->a:Ldo7;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p1, Ldo7;
-
-    if-eqz v0, :cond_1
-
-    move-object v0, p1
-
-    check-cast v0, Ldo7;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
-    sget-object v1, Lho7;->a:Lho7;
+    iget-object v0, p0, Lco7;->b:Lbo7;
 
-    invoke-interface {v0, p1, v1, p0}, Ldo7;->b(Ljava/lang/String;Lho7;Landroid/text/style/ClickableSpan;)V
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    :cond_3
-    :goto_1
     return-void
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 2
+.method public final onResume(Lcs7;)V
+    .locals 1
 
-    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
+    const-string p1, "co7"
 
-    iget v1, p0, Lco7;->b:I
+    const-string v0, "onResume: registerGlobalLayoutListener"
 
-    if-eq v0, v1, :cond_0
+    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object p1, p0, Lco7;->a:Landroid/view/View;
 
-    :cond_0
-    iget-boolean p0, p0, Lco7;->c:Z
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    move-result-object p1
+
+    iget-object v0, p0, Lco7;->b:Lbo7;
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     return-void
 .end method

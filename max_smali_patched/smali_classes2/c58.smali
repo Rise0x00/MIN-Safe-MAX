@@ -1,162 +1,61 @@
-.class public final Lc58;
+.class public abstract synthetic Lc58;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:F
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;FI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lc58;->a:I
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lc58;->b:Landroid/view/View;
+    invoke-static {v0}, Lqw1;->y(I)[I
 
-    iput p2, p0, Lc58;->c:F
+    move-result-object v1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v1, v1
 
-    return-void
-.end method
+    new-array v1, v1, [I
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v2, 0x1
 
-    return-void
-.end method
+    :try_start_0
+    aput v2, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_0
+    sput-object v1, Lc58;->$EnumSwitchMapping$0:[I
 
-    return-void
-.end method
+    invoke-static {}, Lh89;->values()[Lh89;
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    array-length v1, v1
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    new-array v1, v1, [I
 
-    return-void
-.end method
+    :try_start_1
+    aput v2, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    :catch_1
+    :try_start_2
+    sget-object v2, Lh89;->a:Ljava/util/HashMap;
 
-    return-void
-.end method
+    aput v0, v1, v0
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lc58;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lc58;->b:Landroid/view/View;
-
-    iget p0, p0, Lc58;->c:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lc58;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lc58;->b:Landroid/view/View;
-
-    iget p0, p0, Lc58;->c:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationX(F)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lc58;->b:Landroid/view/View;
-
-    iget p0, p0, Lc58;->c:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setAlpha(F)V
-
-    :pswitch_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p0, p0, Lc58;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p0, p0, Lc58;->a:I
+    :catch_2
+    sput-object v1, Lc58;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

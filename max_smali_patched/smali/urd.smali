@@ -4,14 +4,17 @@
 
 
 # virtual methods
-.method public abstract a()Z
+.method public abstract d()J
 .end method
 
-.method public abstract dismiss()V
+.method public abstract i()Z
 .end method
 
-.method public abstract f()V
+.method public abstract o()J
 .end method
 
-.method public abstract j()Lgv4;
+.method public abstract p(J)V
+.end method
+
+.method public abstract x(J)Z
 .end method

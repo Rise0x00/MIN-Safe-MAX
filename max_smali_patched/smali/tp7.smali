@@ -1,924 +1,851 @@
-.class public Ltp7;
-.super Ljava/lang/Object;
+.class public final Ltp7;
+.super Ll4d;
 .source "SourceFile"
-
-# interfaces
-.implements Lurd;
 
 
 # instance fields
-.field public final A0:Lrp7;
-
-.field public final B0:Landroid/os/Handler;
-
-.field public final C0:Landroid/graphics/Rect;
-
-.field public D0:Landroid/graphics/Rect;
-
-.field public E0:Z
-
-.field public final F0:Ldn;
-
-.field public X:I
-
-.field public Y:I
-
-.field public Z:I
-
-.field public final a:Landroid/content/Context;
-
-.field public b:Landroid/widget/ListAdapter;
-
-.field public c:Lgv4;
-
-.field public final n0:I
-
-.field public final o:I
-
-.field public o0:Z
-
-.field public p0:Z
-
-.field public q0:Z
-
-.field public r0:I
-
-.field public final s0:I
-
-.field public t0:Le44;
-
-.field public u0:Landroid/view/View;
-
-.field public v0:Landroid/widget/AdapterView$OnItemClickListener;
-
-.field public w0:Landroid/widget/AdapterView$OnItemSelectedListener;
-
-.field public final x0:Lrp7;
-
-.field public final y0:Lwe5;
-
-.field public final z0:Lsp7;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Ltp7;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p4, -0x2
-
-    iput p4, p0, Ltp7;->o:I
-
-    iput p4, p0, Ltp7;->X:I
-
-    const/16 p4, 0x3ea
-
-    iput p4, p0, Ltp7;->n0:I
-
-    const/4 p4, 0x0
-
-    iput p4, p0, Ltp7;->r0:I
-
-    const v0, 0x7fffffff
-
-    iput v0, p0, Ltp7;->s0:I
-
-    new-instance v0, Lrp7;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lrp7;-><init>(Ltp7;I)V
-
-    iput-object v0, p0, Ltp7;->x0:Lrp7;
-
-    new-instance v0, Lwe5;
-
-    invoke-direct {v0, v1, p0}, Lwe5;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Ltp7;->y0:Lwe5;
-
-    new-instance v0, Lsp7;
-
-    invoke-direct {v0, p0}, Lsp7;-><init>(Ltp7;)V
-
-    iput-object v0, p0, Ltp7;->z0:Lsp7;
-
-    new-instance v0, Lrp7;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lrp7;-><init>(Ltp7;I)V
-
-    iput-object v0, p0, Ltp7;->A0:Lrp7;
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Ltp7;->C0:Landroid/graphics/Rect;
-
-    iput-object p1, p0, Ltp7;->a:Landroid/content/Context;
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Ltp7;->B0:Landroid/os/Handler;
-
-    sget-object v0, Lz6c;->ListPopupWindow:[I
-
-    invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    sget v1, Lz6c;->ListPopupWindow_android_dropDownHorizontalOffset:I
-
-    invoke-virtual {v0, v1, p4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v1
-
-    iput v1, p0, Ltp7;->Y:I
-
-    sget v1, Lz6c;->ListPopupWindow_android_dropDownVerticalOffset:I
-
-    invoke-virtual {v0, v1, p4}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
-
-    move-result v1
-
-    iput v1, p0, Ltp7;->Z:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
-
-    iput-boolean v2, p0, Ltp7;->o0:Z
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    new-instance v0, Ldn;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
-
-    sget-object v1, Lz6c;->PopupWindow:[I
-
-    invoke-virtual {p1, p2, v1, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p2
-
-    sget p3, Lz6c;->PopupWindow_overlapAnchor:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_1
-
-    sget p3, Lz6c;->PopupWindow_overlapAnchor:I
-
-    invoke-virtual {p2, p3, p4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p3
-
-    invoke-static {v0, p3}, Lt8b;->c(Landroid/widget/PopupWindow;Z)V
-
-    :cond_1
-    sget p3, Lz6c;->PopupWindow_android_popupBackground:I
-
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p2, p3, p4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p4
-
-    if-eqz p4, :cond_2
-
-    invoke-static {p1, p4}, Lyu0;->l(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p2, p3}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {v0, p1}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
-
-    iput-object v0, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {v0, v2}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 0
+.method public final b(La5;)Ljava/lang/Object;
+    .locals 12
 
-    iget-object p0, p0, Ltp7;->F0:Ldn;
+    iget v0, p0, Ltp7;->b:I
 
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->isShowing()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p0
+    new-instance v0, Lx76;
 
-    return p0
-.end method
+    const-class v1, Lnah;
 
-.method public final b()Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    iget-object p0, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c()I
-    .locals 0
-
-    iget p0, p0, Ltp7;->Y:I
-
-    return p0
-.end method
-
-.method public final d(I)V
-    .locals 0
-
-    iput p1, p0, Ltp7;->Y:I
-
-    return-void
-.end method
-
-.method public final dismiss()V
-    .locals 2
-
-    iget-object v0, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
-
-    iput-object v1, p0, Ltp7;->c:Lgv4;
-
-    iget-object v0, p0, Ltp7;->B0:Landroid/os/Handler;
-
-    iget-object p0, p0, Ltp7;->x0:Lrp7;
-
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 13
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    iget-object v1, p0, Ltp7;->a:Landroid/content/Context;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Ltp7;->F0:Ldn;
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Ltp7;->E0:Z
-
-    xor-int/2addr v0, v2
-
-    invoke-virtual {p0, v1, v0}, Ltp7;->p(Landroid/content/Context;Z)Lgv4;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ltp7;->c:Lgv4;
-
-    iget-object v4, p0, Ltp7;->b:Landroid/widget/ListAdapter;
-
-    invoke-virtual {v0, v4}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    iget-object v4, p0, Ltp7;->v0:Landroid/widget/AdapterView$OnItemClickListener;
-
-    invoke-virtual {v0, v4}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusable(Z)V
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setFocusableInTouchMode(Z)V
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    new-instance v4, Lop7;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v5, p0}, Lop7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v4}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    iget-object v4, p0, Ltp7;->z0:Lsp7;
-
-    invoke-virtual {v0, v4}, Landroid/widget/AbsListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
-
-    iget-object v0, p0, Ltp7;->w0:Landroid/widget/AdapterView$OnItemSelectedListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v4, p0, Ltp7;->c:Lgv4;
-
-    invoke-virtual {v4, v0}, Landroid/widget/AdapterView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
-    :cond_0
-    iget-object v0, p0, Ltp7;->c:Lgv4;
-
-    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getContentView()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    :goto_0
-    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iget-object v4, p0, Ltp7;->C0:Landroid/graphics/Rect;
-
-    const/4 v5, 0x0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
-
-    iget v0, v4, Landroid/graphics/Rect;->top:I
-
-    iget v6, v4, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr v6, v0
-
-    iget-boolean v7, p0, Ltp7;->o0:Z
-
-    if-nez v7, :cond_3
-
-    neg-int v0, v0
-
-    iput v0, p0, Ltp7;->Z:I
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v4}, Landroid/graphics/Rect;->setEmpty()V
-
-    move v6, v5
-
-    :cond_3
-    :goto_1
-    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getInputMethodMode()I
-
-    move-result v0
-
-    const/4 v7, 0x2
-
-    if-ne v0, v7, :cond_4
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_4
-    move v0, v5
-
-    :goto_2
-    iget-object v8, p0, Ltp7;->u0:Landroid/view/View;
-
-    iget v9, p0, Ltp7;->Z:I
-
-    invoke-static {v3, v8, v9, v0}, Lpp7;->a(Landroid/widget/PopupWindow;Landroid/view/View;IZ)I
-
-    move-result v0
-
-    iget v8, p0, Ltp7;->o:I
-
-    const/4 v9, -0x2
-
-    const/4 v10, -0x1
-
-    if-ne v8, v10, :cond_5
-
-    add-int/2addr v0, v6
-
-    goto :goto_5
-
-    :cond_5
-    iget v11, p0, Ltp7;->X:I
-
-    if-eq v11, v9, :cond_7
-
-    const/high16 v12, 0x40000000    # 2.0f
-
-    if-eq v11, v10, :cond_6
-
-    invoke-static {v11, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result v1
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-class v2, Lql6;
+
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    const-class v3, Lwl6;
+
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, p1}, Lx76;-><init>(Lbp7;Lbp7;Lbp7;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lq25;
+
+    const-class v1, Lwl6;
+
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+    const-class v2, Lsi9;
 
-    iget v11, v4, Landroid/graphics/Rect;->left:I
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget v4, v4, Landroid/graphics/Rect;->right:I
+    move-result-object v2
 
-    add-int/2addr v11, v4
+    const-class v3, Lr8f;
 
-    sub-int/2addr v1, v11
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-static {v1, v12}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    move-result-object v3
 
-    move-result v1
+    const-class v4, Lnah;
 
-    goto :goto_3
+    invoke-virtual {p1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    :cond_7
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, v3, p1}, Lq25;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lcka;
+
+    const-class v1, Lmid;
+
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcka;-><init>(Lbp7;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lhka;
+
+    const-class v1, Lr8f;
+
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v1, Lr8f;
+
+    const-class v2, Lkj;
+
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    const-class v3, Lz24;
+
+    invoke-virtual {p1, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lz24;
+
+    invoke-direct {v0, v1, v2, p1}, Lhka;-><init>(Lr8f;Lbp7;Lz24;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lwl6;
+
+    const-class v1, Liqa;
+
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v1
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+    const-class v2, Lm13;
 
-    iget v11, v4, Landroid/graphics/Rect;->left:I
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget v4, v4, Landroid/graphics/Rect;->right:I
+    move-result-object v2
 
-    add-int/2addr v11, v4
+    const-class v3, Lqc;
 
-    sub-int/2addr v1, v11
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    const/high16 v4, -0x80000000
+    move-result-object p1
 
-    invoke-static {v1, v4}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-direct {v0, v1, v2, p1}, Lwl6;-><init>(Lbp7;Lbp7;Lbp7;)V
 
-    move-result v1
+    return-object v0
 
-    :goto_3
-    iget-object v4, p0, Ltp7;->c:Lgv4;
+    :pswitch_4
+    const-class v0, Lf9f;
 
-    invoke-virtual {v4, v1, v0}, Lgv4;->a(II)I
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p1
 
-    if-lez v0, :cond_8
+    check-cast p1, Lck9;
 
-    iget-object v1, p0, Ltp7;->c:Lgv4;
+    return-object p1
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+    :pswitch_5
+    new-instance v0, Lfia;
 
-    move-result v1
+    invoke-direct {v0, p1}, Lfia;-><init>(La5;)V
 
-    iget-object v4, p0, Ltp7;->c:Lgv4;
+    return-object v0
 
-    invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
+    :pswitch_6
+    const-class v0, Loq7;
 
-    move-result v4
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    add-int/2addr v4, v1
+    move-result-object p1
 
-    add-int/2addr v4, v6
+    check-cast p1, Loxf;
 
-    goto :goto_4
+    return-object p1
 
-    :cond_8
-    move v4, v5
+    :pswitch_7
+    new-instance v0, Lfpa;
 
-    :goto_4
-    add-int/2addr v0, v4
+    const-class v1, Landroid/content/Context;
 
-    :goto_5
-    iget-object v1, p0, Ltp7;->F0:Ldn;
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/widget/PopupWindow;->getInputMethodMode()I
+    move-result-object v1
 
-    move-result v1
+    check-cast v1, Landroid/content/Context;
 
-    if-ne v1, v7, :cond_9
+    const-class v2, Lil;
 
-    move v1, v2
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    goto :goto_6
+    move-result-object p1
 
-    :cond_9
-    move v1, v5
+    invoke-direct {v0, v1, p1}, Lfpa;-><init>(Landroid/content/Context;Lbp7;)V
 
-    :goto_6
-    iget v4, p0, Ltp7;->n0:I
+    return-object v0
 
-    invoke-static {v3, v4}, Lt8b;->d(Landroid/widget/PopupWindow;I)V
+    :pswitch_8
+    new-instance p1, Laqa;
 
-    invoke-virtual {v3}, Landroid/widget/PopupWindow;->isShowing()Z
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    move-result v4
+    return-object p1
 
-    if-eqz v4, :cond_15
+    :pswitch_9
+    new-instance p1, Lnw7;
 
-    iget-object v4, p0, Ltp7;->u0:Landroid/view/View;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v4}, Landroid/view/View;->isAttachedToWindow()Z
+    return-object p1
 
-    move-result v4
+    :pswitch_a
+    new-instance v0, Lki;
 
-    if-nez v4, :cond_a
+    new-instance v1, Lei;
 
-    goto/16 :goto_e
+    invoke-direct {v1}, Lei;-><init>()V
 
-    :cond_a
-    iget v4, p0, Ltp7;->X:I
+    const-class v2, Landroid/content/Context;
 
-    if-ne v4, v10, :cond_b
+    invoke-virtual {p1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move v4, v10
+    move-result-object p1
 
-    goto :goto_7
+    check-cast p1, Landroid/content/Context;
 
-    :cond_b
-    if-ne v4, v9, :cond_c
+    invoke-direct {v0, v1, p1}, Lki;-><init>(Lei;Landroid/content/Context;)V
 
-    iget-object v4, p0, Ltp7;->u0:Landroid/view/View;
+    return-object v0
 
-    invoke-virtual {v4}, Landroid/view/View;->getWidth()I
+    :pswitch_b
+    new-instance v0, Lkma;
 
-    move-result v4
+    const-class v1, Landroid/content/Context;
 
-    :cond_c
-    :goto_7
-    if-ne v8, v10, :cond_11
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_d
+    move-result-object v1
 
-    move v8, v0
+    check-cast v1, Landroid/content/Context;
 
-    goto :goto_8
+    const-class v2, Lff4;
 
-    :cond_d
-    move v8, v10
+    invoke-virtual {p1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :goto_8
-    if-eqz v1, :cond_f
+    move-result-object p1
 
-    iget v0, p0, Ltp7;->X:I
+    check-cast p1, Lff4;
 
-    if-ne v0, v10, :cond_e
+    invoke-direct {v0, v1, p1}, Lkma;-><init>(Landroid/content/Context;Lff4;)V
 
-    move v0, v10
+    return-object v0
 
-    goto :goto_9
+    :pswitch_c
+    new-instance p1, Lff4;
 
-    :cond_e
-    move v0, v5
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    :goto_9
-    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
+    return-object p1
 
-    invoke-virtual {v3, v5}, Landroid/widget/PopupWindow;->setHeight(I)V
+    :pswitch_d
+    new-instance v0, Ltqa;
 
-    goto :goto_a
+    const-class v1, Landroid/content/Context;
 
-    :cond_f
-    iget v0, p0, Ltp7;->X:I
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-ne v0, v10, :cond_10
+    move-result-object v1
 
-    move v5, v10
+    move-object v5, v1
 
-    :cond_10
-    invoke-virtual {v3, v5}, Landroid/widget/PopupWindow;->setWidth(I)V
+    check-cast v5, Landroid/content/Context;
 
-    invoke-virtual {v3, v10}, Landroid/widget/PopupWindow;->setHeight(I)V
+    const-class v1, Lxob;
 
-    goto :goto_a
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    :cond_11
-    if-ne v8, v9, :cond_12
+    move-result-object v1
 
-    move v8, v0
+    const-class v2, Lpr5;
 
-    :cond_12
-    :goto_a
-    invoke-virtual {v3, v2}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move v0, v4
+    move-result-object v2
 
-    iget-object v4, p0, Ltp7;->u0:Landroid/view/View;
+    const-class v3, Lkma;
 
-    iget v5, p0, Ltp7;->Y:I
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget v6, p0, Ltp7;->Z:I
+    move-result-object v3
 
-    if-gez v0, :cond_13
+    const-class v4, La5a;
 
-    move v7, v10
+    invoke-virtual {p1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    goto :goto_b
+    move-result-object v4
 
-    :cond_13
-    move v7, v0
+    invoke-direct/range {v0 .. v5}, Ltqa;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Landroid/content/Context;)V
 
-    :goto_b
-    if-gez v8, :cond_14
+    return-object v0
 
-    move v8, v10
+    :pswitch_e
+    new-instance v1, Lpj9;
 
-    :cond_14
-    invoke-virtual/range {v3 .. v8}, Landroid/widget/PopupWindow;->update(Landroid/view/View;IIII)V
+    const-class v0, Lr8f;
 
-    return-void
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    :cond_15
-    iget v1, p0, Ltp7;->X:I
+    move-result-object v2
 
-    if-ne v1, v10, :cond_16
+    const-class v0, Lnah;
 
-    move v1, v10
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    goto :goto_c
+    move-result-object v3
 
-    :cond_16
-    if-ne v1, v9, :cond_17
+    const-class v0, Lql6;
 
-    iget-object v1, p0, Ltp7;->u0:Landroid/view/View;
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
+    move-result-object v4
 
-    move-result v1
+    const-class v0, Lsc9;
 
-    :cond_17
-    :goto_c
-    if-ne v8, v10, :cond_18
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move v8, v10
+    move-result-object v5
 
-    goto :goto_d
+    const-class v0, Lwl6;
 
-    :cond_18
-    if-ne v8, v9, :cond_19
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    move v8, v0
+    move-result-object v6
 
-    :cond_19
-    :goto_d
-    invoke-virtual {v3, v1}, Landroid/widget/PopupWindow;->setWidth(I)V
+    invoke-direct/range {v1 .. v6}, Lpj9;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
 
-    invoke-virtual {v3, v8}, Landroid/widget/PopupWindow;->setHeight(I)V
+    return-object v1
 
-    invoke-static {v3, v2}, Lqp7;->b(Landroid/widget/PopupWindow;Z)V
+    :pswitch_f
+    new-instance p1, Lhl6;
 
-    invoke-virtual {v3, v2}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Ltp7;->y0:Lwe5;
+    return-object p1
 
-    invoke-virtual {v3, v0}, Landroid/widget/PopupWindow;->setTouchInterceptor(Landroid/view/View$OnTouchListener;)V
+    :pswitch_10
+    new-instance v0, Ljd9;
 
-    iget-boolean v0, p0, Ltp7;->q0:Z
+    invoke-direct {v0, p1}, Ljd9;-><init>(La5;)V
 
-    if-eqz v0, :cond_1a
+    return-object v0
 
-    iget-boolean v0, p0, Ltp7;->p0:Z
+    :pswitch_11
+    new-instance v0, Laj4;
 
-    invoke-static {v3, v0}, Lt8b;->c(Landroid/widget/PopupWindow;Z)V
+    const-class v1, Lepb;
 
-    :cond_1a
-    iget-object v0, p0, Ltp7;->D0:Landroid/graphics/Rect;
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    invoke-static {v3, v0}, Lqp7;->a(Landroid/widget/PopupWindow;Landroid/graphics/Rect;)V
+    move-result-object v1
 
-    iget-object v0, p0, Ltp7;->u0:Landroid/view/View;
+    const-class v2, Lr63;
 
-    iget v1, p0, Ltp7;->Y:I
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget v4, p0, Ltp7;->Z:I
+    move-result-object v2
 
-    iget v5, p0, Ltp7;->r0:I
+    const-class v3, Lipb;
 
-    invoke-virtual {v3, v0, v1, v4, v5}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    iget-object v0, p0, Ltp7;->c:Lgv4;
+    move-result-object v3
 
-    invoke-virtual {v0, v10}, Landroid/widget/AdapterView;->setSelection(I)V
+    const-class v4, Llm5;
 
-    iget-boolean v0, p0, Ltp7;->E0:Z
+    invoke-virtual {p1, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    if-eqz v0, :cond_1b
+    move-result-object p1
 
-    iget-object v0, p0, Ltp7;->c:Lgv4;
+    invoke-direct {v0, v1, v2, v3, p1}, Laj4;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
 
-    invoke-virtual {v0}, Lgv4;->isInTouchMode()Z
+    return-object v0
 
-    move-result v0
+    :pswitch_12
+    new-instance v0, Lyy8;
 
-    if-eqz v0, :cond_1c
+    const-class v1, Lov0;
 
-    :cond_1b
-    iget-object v0, p0, Ltp7;->c:Lgv4;
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1c
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Lgv4;->setListSelectionHidden(Z)V
+    check-cast v1, Lov0;
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+    const-class v2, Lr8f;
 
-    :cond_1c
-    iget-boolean v0, p0, Ltp7;->E0:Z
+    invoke-virtual {p1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-nez v0, :cond_1d
+    move-result-object p1
 
-    iget-object v0, p0, Ltp7;->B0:Landroid/os/Handler;
+    check-cast p1, Lr8f;
 
-    iget-object p0, p0, Ltp7;->A0:Lrp7;
+    invoke-direct {v0, v1, p1}, Lyy8;-><init>(Lov0;Lr8f;)V
 
-    invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return-object v0
 
-    :cond_1d
-    :goto_e
-    return-void
-.end method
+    :pswitch_13
+    new-instance v0, Lcde;
 
-.method public final h(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    new-instance v1, Ljava/io/File;
 
-    iget-object p0, p0, Ltp7;->F0:Ldn;
+    const-class v2, Landroid/content/Context;
 
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public final j()Lgv4;
-    .locals 0
+    check-cast v2, Landroid/content/Context;
 
-    iget-object p0, p0, Ltp7;->c:Lgv4;
+    invoke-virtual {v2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    return-object p0
-.end method
+    move-result-object v2
 
-.method public final k(I)V
-    .locals 0
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    iput p1, p0, Ltp7;->Z:I
+    move-result-object v2
 
-    const/4 p1, 0x1
+    const-string v3, "/media"
 
-    iput-boolean p1, p0, Ltp7;->o0:Z
+    invoke-static {v2, v3}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public final n()I
-    .locals 1
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Ltp7;->o0:Z
+    new-instance v2, Lop7;
 
-    if-nez v0, :cond_0
+    sget-object v3, Lsm8;->o:Lsm8;
 
-    const/4 p0, 0x0
+    const-wide/32 v4, 0x1f400000
 
-    return p0
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_0
-    iget p0, p0, Ltp7;->Z:I
+    move-result-object v4
 
-    return p0
-.end method
+    new-instance v5, Ln4b;
 
-.method public o(Landroid/widget/ListAdapter;)V
-    .locals 2
+    invoke-direct {v5, v3, v4}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v0, p0, Ltp7;->t0:Le44;
+    sget-object v3, Lsm8;->b:Lsm8;
 
-    if-nez v0, :cond_0
+    const-wide/32 v6, 0x3200000
 
-    new-instance v0, Le44;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v1, 0x1
+    move-result-object v4
 
-    invoke-direct {v0, v1, p0}, Le44;-><init>(ILjava/lang/Object;)V
+    new-instance v6, Ln4b;
 
-    iput-object v0, p0, Ltp7;->t0:Le44;
+    invoke-direct {v6, v3, v4}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    goto :goto_0
+    filled-new-array {v5, v6}, [Ln4b;
 
-    :cond_0
-    iget-object v1, p0, Ltp7;->b:Landroid/widget/ListAdapter;
+    move-result-object v3
 
-    if-eqz v1, :cond_1
+    invoke-static {v3}, Lwa8;->W([Ln4b;)Ljava/util/Map;
 
-    invoke-interface {v1, v0}, Landroid/widget/Adapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+    move-result-object v3
 
-    :cond_1
-    :goto_0
-    iput-object p1, p0, Ltp7;->b:Landroid/widget/ListAdapter;
+    invoke-direct {v2, v3}, Lop7;-><init>(Ljava/util/Map;)V
 
-    if-eqz p1, :cond_2
+    const-class v3, Lrle;
 
-    iget-object v0, p0, Ltp7;->t0:Le44;
+    invoke-virtual {p1, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Landroid/widget/Adapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+    move-result-object p1
 
-    :cond_2
-    iget-object p1, p0, Ltp7;->c:Lgv4;
+    check-cast p1, Lw94;
 
-    if-eqz p1, :cond_3
+    const/4 v3, 0x0
 
-    iget-object p0, p0, Ltp7;->b:Landroid/widget/ListAdapter;
+    invoke-direct {v0, v1, v2, p1, v3}, Lcde;-><init>(Ljava/io/File;Lex0;Lw94;Z)V
 
-    invoke-virtual {p1, p0}, Landroid/widget/AbsListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    return-object v0
 
-    :cond_3
-    return-void
-.end method
+    :pswitch_14
+    new-instance v4, Lew4;
 
-.method public p(Landroid/content/Context;Z)Lgv4;
-    .locals 0
+    const-class v0, Landroid/content/Context;
 
-    new-instance p0, Lgv4;
-
-    invoke-direct {p0, p1, p2}, Lgv4;-><init>(Landroid/content/Context;Z)V
-
-    return-object p0
-.end method
-
-.method public final r(I)V
-    .locals 2
-
-    iget-object v0, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    move-object v5, v0
 
-    iget-object v1, p0, Ltp7;->C0:Landroid/graphics/Rect;
+    check-cast v5, Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+    const-class v0, Lrle;
 
-    iget v0, v1, Landroid/graphics/Rect;->left:I
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget v1, v1, Landroid/graphics/Rect;->right:I
+    move-result-object v0
 
-    add-int/2addr v0, v1
+    move-object v6, v0
 
-    add-int/2addr v0, p1
+    check-cast v6, Lw94;
 
-    iput v0, p0, Ltp7;->X:I
+    const-class v0, Lcde;
 
-    return-void
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    check-cast v7, Luw0;
+
+    const-class v0, Lxh4;
+
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v8, v0
+
+    check-cast v8, Lh94;
+
+    const-class v0, Ljna;
+
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljna;
+
+    invoke-virtual {p1}, Ljna;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v9
+
+    invoke-direct/range {v4 .. v9}, Lew4;-><init>(Landroid/content/Context;Lw94;Luw0;Lh94;Ljava/util/concurrent/ExecutorService;)V
+
+    return-object v4
+
+    :pswitch_15
+    new-instance p1, Lxh4;
+
+    invoke-direct {p1}, Lxh4;-><init>()V
+
+    return-object p1
+
+    :pswitch_16
+    new-instance v0, Lzi4;
+
+    const-class v1, Landroid/content/Context;
+
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    new-instance v2, Ljh4;
+
+    invoke-direct {v2}, Ljh4;-><init>()V
+
+    monitor-enter v2
+
+    const/4 v3, 0x1
+
+    :try_start_0
+    iput-boolean v3, v2, Ljh4;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v2
+
+    invoke-direct {v0, v1, v2}, Lzi4;-><init>(Landroid/content/Context;Ljh4;)V
+
+    new-instance v1, Lwi0;
+
+    invoke-direct {v1, p1}, Lwi0;-><init>(La5;)V
+
+    iput-object v1, v0, Lzi4;->b:Lh94;
+
+    iget-object p1, v0, Lzi4;->a:Lxi4;
+
+    iget-object v2, p1, Lxi4;->X:Ljava/lang/Object;
+
+    check-cast v2, Lh94;
+
+    if-eq v1, v2, :cond_0
+
+    iput-object v1, p1, Lxi4;->X:Ljava/lang/Object;
+
+    iget-object v1, p1, Lxi4;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
+
+    iget-object p1, p1, Lxi4;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->clear()V
 
     :cond_0
-    iput p1, p0, Ltp7;->X:I
+    return-object v0
 
-    return-void
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_17
+    new-instance v3, Lo58;
+
+    const-class v0, Lwga;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v4
+
+    const-class v0, Lr63;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v5
+
+    const-class v0, Lxga;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    const-class v0, Lwhb;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    const-class v0, Lg58;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    const-class v0, Lb58;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v9
+
+    const-class v0, Lhx3;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v10
+
+    invoke-direct/range {v3 .. v10}, Lo58;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v3
+
+    :pswitch_18
+    new-instance v0, Lk70;
+
+    const-class v1, Lqc;
+
+    invoke-virtual {p1, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v1
+
+    const-class v2, Lr63;
+
+    invoke-virtual {p1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v2
+
+    const-class v3, Lly9;
+
+    invoke-virtual {p1, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, v2, p1}, Lk70;-><init>(Lbp7;Lbp7;Lbp7;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v3, Lsm5;
+
+    const-class v0, Llp4;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v4
+
+    const-class v0, Lxga;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v5
+
+    const-class v0, Lhx3;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    const-class v0, Lr63;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    const-class v0, Lktd;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    const-class v0, Landroid/content/Context;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v9
+
+    invoke-direct/range {v3 .. v9}, Lsm5;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v3
+
+    :pswitch_1a
+    new-instance v4, Lwk6;
+
+    const-class v0, Ltk;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v5
+
+    const-class v0, Lm13;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v6
+
+    const-class v0, Lub2;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v7
+
+    const-class v0, Lsi9;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v8
+
+    const-class v0, Lwm9;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v9
+
+    const-class v0, Lqp;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v10
+
+    const-class v0, Llm5;
+
+    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+
+    move-result-object v11
+
+    invoke-direct/range {v4 .. v11}, Lwk6;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    return-object v4
+
+    :pswitch_1b
+    new-instance v0, Ltl6;
+
+    const-class v1, Landroid/content/res/Resources;
+
+    invoke-virtual {p1, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/res/Resources;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    return-object v0
+
+    :pswitch_1c
+    const-class v0, Lws9;
+
+    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfs9;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

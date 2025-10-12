@@ -1,115 +1,164 @@
-.class public final synthetic Ljm8;
+.class public final Ljm8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic Y:Lsm8;
-
-.field public final synthetic Z:Lil8;
-
-.field public final synthetic a:Ltm8;
-
-.field public final synthetic b:Lok8;
-
-.field public final synthetic c:Lrdd;
-
-.field public final synthetic o:I
+.field public final b:Le77;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltm8;Lok8;Lrdd;IILsm8;Lil8;)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;Lve7;Le77;)V
+    .locals 1
+
+    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljm8;->a:Ltm8;
+    iput-object p1, p0, Ljm8;->a:Landroid/net/Uri;
 
-    iput-object p2, p0, Ljm8;->b:Lok8;
+    iput-object p3, p0, Ljm8;->b:Le77;
 
-    iput-object p3, p0, Ljm8;->c:Lrdd;
+    invoke-static {}, Le77;->i()Lb77;
 
-    iput p4, p0, Ljm8;->o:I
+    move-result-object p1
 
-    iput p5, p0, Ljm8;->X:I
+    const/4 p2, 0x0
 
-    iput-object p6, p0, Ljm8;->Y:Lsm8;
+    :goto_0
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
 
-    iput-object p7, p0, Ljm8;->Z:Lil8;
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llm8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Llm8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1, v0}, Lu67;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lb77;->h()Lxyc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Ljm8;->a:Ltm8;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Ltm8;->e:Lybd;
-
-    iget-object v1, p0, Ljm8;->b:Lok8;
-
-    invoke-virtual {v0, v1}, Lybd;->w(Lok8;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Ljm8;->c:Lrdd;
+    instance-of v0, p1, Ljm8;
 
-    iget v3, p0, Ljm8;->o:I
+    if-nez v0, :cond_1
 
-    const/4 v4, -0x4
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v0, v1, v2}, Lybd;->z(Lok8;Lrdd;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    new-instance p0, Lled;
-
-    invoke-direct {p0, v4}, Lled;-><init>(I)V
-
-    invoke-static {v1, v3, p0}, Ltm8;->b0(Lok8;ILled;)V
-
-    return-void
+    goto :goto_1
 
     :cond_1
-    iget v2, p0, Ljm8;->X:I
+    check-cast p1, Ljm8;
 
-    invoke-virtual {v0, v1, v2}, Lybd;->y(Lok8;I)Z
+    iget-object v0, p0, Ljm8;->a:Landroid/net/Uri;
+
+    iget-object v1, p1, Ljm8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    new-instance p0, Lled;
+    sget v0, Lr4g;->a:I
 
-    invoke-direct {p0, v4}, Lled;-><init>(I)V
+    const/4 v0, 0x0
 
-    invoke-static {v1, v3, p0}, Ltm8;->b0(Lok8;ILled;)V
+    invoke-static {v0, v0}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {v0, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Ljm8;->b:Le77;
+
+    iget-object p1, p1, Ljm8;->b:Le77;
+
+    invoke-virtual {v0, p1}, Le77;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_2
-    iget-object v0, p0, Ljm8;->Y:Lsm8;
+    :goto_1
+    const/4 p1, 0x0
 
-    iget-object p0, p0, Ljm8;->Z:Lil8;
+    return p1
+.end method
 
-    invoke-interface {v0, p0, v1, v3}, Lsm8;->l(Lil8;Lok8;I)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Ljm8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xe1781
+
+    mul-int/2addr v0, v1
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit16 v1, v1, 0x3c1
+
+    iget-object v0, p0, Ljm8;->b:Le77;
+
+    invoke-virtual {v0}, Le77;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    return v0
 .end method

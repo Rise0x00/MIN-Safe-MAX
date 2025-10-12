@@ -1,44 +1,174 @@
-.class public abstract Llzb;
-.super Ljava/lang/Object;
+.class public final Llzb;
+.super Lm3f;
+.source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
-# static fields
-.field public static oneme_media_keyboard:I = 0x7f0a072c
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a072d
+.field public final synthetic Y:Lszb;
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a072e
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a072f
+# direct methods
+.method public constructor <init>(Lszb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0730
+    iput-object p1, p0, Llzb;->Y:Lszb;
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0731
+    const/4 p1, 0x2
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a0732
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0733
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a0734
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a0735
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a0736
+    check-cast p1, Le34;
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a0737
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a0738
+    invoke-virtual {p0, p1, p2}, Llzb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a0739
+    move-result-object p1
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a073a
+    check-cast p1, Llzb;
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a073b
+    sget-object p2, Loyf;->a:Loyf;
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a073c
+    invoke-virtual {p1, p2}, Llzb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a073d
+    return-object p2
+.end method
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a073e
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a073f
+    new-instance v0, Llzb;
+
+    iget-object v1, p0, Llzb;->Y:Lszb;
+
+    invoke-direct {v0, v1, p2}, Llzb;-><init>(Lszb;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Llzb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llzb;->X:Ljava/lang/Object;
+
+    check-cast p1, Le34;
+
+    sget-object v0, Lszb;->L0:[Ltm7;
+
+    iget-object v0, p0, Llzb;->Y:Lszb;
+
+    invoke-virtual {v0}, Lszb;->r()Lm82;
+
+    move-result-object v1
+
+    sget-object v2, Loyf;->a:Loyf;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, v1, Lm82;->b:Lpc2;
+
+    invoke-virtual {v1}, Lm82;->Z()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    :goto_0
+    return-object v2
+
+    :cond_1
+    iget-wide v4, v3, Lpc2;->a:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
+
+    invoke-static {p1, v1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, v0, Lszb;->A0:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lg44;
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ProfileInvite"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "ONEME-18920"
+
+    invoke-virtual {p1, v1, v0}, Lg44;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :cond_2
+    iget-object p1, v0, Lszb;->Y:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltk;
+
+    iget-wide v5, v1, Lm82;->a:J
+
+    iget-wide v7, v3, Lpc2;->a:J
+
+    move-object v4, p1
+
+    check-cast v4, Lbga;
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    invoke-virtual/range {v4 .. v12}, Lbga;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v3
+
+    iget-object p1, v0, Lszb;->D0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
+.end method

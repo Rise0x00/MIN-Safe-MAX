@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfve;
+.implements Lrff;
 
 
 # annotations
@@ -17,7 +17,7 @@
     d2 = {
         "Lone/me/common/drawable/SavedMessagesIconDrawable;",
         "Landroid/graphics/drawable/Drawable;",
-        "Lfve;",
+        "Lrff;",
         "<init>",
         "()V",
         "Landroid/content/res/Resources;",
@@ -28,7 +28,7 @@
         "attrs",
         "Landroid/content/res/Resources$Theme;",
         "theme",
-        "Ltcf;",
+        "Loyf;",
         "inflate",
         "(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V",
         "",
@@ -49,10 +49,10 @@
         "canvas",
         "draw",
         "(Landroid/graphics/Canvas;)V",
-        "Lnma;",
+        "Luxa;",
         "newAttrs",
         "onThemeChanged",
-        "(Lnma;)V",
+        "(Luxa;)V",
         "getIntrinsicWidth",
         "getIntrinsicHeight",
         "mutate",
@@ -63,7 +63,7 @@
         "iconDrawable",
         "Landroid/graphics/drawable/Drawable;",
         "Companion",
-        "tvc",
+        "jcd",
         "common_release"
     }
     k = 0x1
@@ -77,7 +77,7 @@
 
 
 # static fields
-.field private static final Companion:Ltvc;
+.field private static final Companion:Ljcd;
 
 .field public static final NORMAL_ICON_SIZE:I = 0x18
     .annotation runtime Ljava/lang/Deprecated;
@@ -105,11 +105,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ltvc;
+    new-instance v0, Ljcd;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/common/drawable/SavedMessagesIconDrawable;->Companion:Ltvc;
+    sput-object v0, Lone/me/common/drawable/SavedMessagesIconDrawable;->Companion:Ljcd;
 
     return-void
 .end method
@@ -188,18 +188,18 @@
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
     :try_start_0
-    iget-object p0, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception v1
 
     goto :goto_1
 
@@ -212,82 +212,82 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    throw p0
+    throw v1
 
     :cond_1
     return-void
 .end method
 
 .method public getIntrinsicHeight()I
-    .locals 1
+    .locals 2
 
-    const/16 p0, 0x28
+    const/16 v0, 0x28
 
-    int-to-float p0, p0
+    int-to-float v0, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr p0, v0
+    mul-float/2addr v0, v1
 
-    invoke-static {p0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getIntrinsicWidth()I
-    .locals 1
+    .locals 2
 
-    const/16 p0, 0x28
+    const/16 v0, 0x28
 
-    int-to-float p0, p0
+    int-to-float v0, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr p0, v0
+    mul-float/2addr v0, v1
 
-    invoke-static {p0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public getOpacity()I
-    .locals 0
+    .locals 1
 
-    const/4 p0, -0x3
+    const/4 v0, -0x3
 
-    return p0
+    return v0
 .end method
 
 .method public inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    sget p2, Lrxb;->favorites_fill_24:I
+    sget p2, Lxcc;->favorites_fill_24:I
 
-    sget-object p3, Llmc;->a:Ljava/lang/ThreadLocal;
+    sget-object p3, La3d;->a:Ljava/lang/ThreadLocal;
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p2, p3}, Lgmc;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, p3}, Lv2d;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -321,9 +321,9 @@
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     return-object v0
 .end method
@@ -343,7 +343,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -355,7 +355,7 @@
 
     mul-float/2addr v0, v1
 
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0}, Lv63;->r0(F)I
 
     move-result v0
 
@@ -365,7 +365,7 @@
 
     int-to-float p1, p1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -377,7 +377,7 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Litg;->z(F)I
+    invoke-static {p1}, Lv63;->r0(F)I
 
     move-result p1
 
@@ -388,7 +388,7 @@
 
     int-to-float p1, p1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -400,45 +400,45 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Litg;->z(F)I
+    invoke-static {p1}, Lv63;->r0(F)I
 
     move-result p1
 
     :goto_0
-    iget-object p0, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p0, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v0, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v1, v1, p1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     :cond_1
     return-void
 .end method
 
-.method public onThemeChanged(Lnma;)V
+.method public onThemeChanged(Luxa;)V
     .locals 1
 
     iget-object v0, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->backgroundDrawable:Landroid/graphics/drawable/ShapeDrawable;
 
-    invoke-interface {p1}, Lnma;->b()Ldf0;
+    invoke-interface {p1}, Luxa;->b()Lue0;
 
     move-result-object p1
 
-    iget-object p1, p1, Ldf0;->a:Lcf0;
+    iget-object p1, p1, Lue0;->a:Lte0;
 
-    iget p1, p1, Lcf0;->n:I
+    iget p1, p1, Lte0;->n:I
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    iget-object p0, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lone/me/common/drawable/SavedMessagesIconDrawable;->iconDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p1, -0x1
+    const/4 v0, -0x1
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     :cond_0
     return-void

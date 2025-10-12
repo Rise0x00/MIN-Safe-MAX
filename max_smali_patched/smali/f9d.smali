@@ -1,85 +1,128 @@
-.class public final enum Lf9d;
-.super Ljava/lang/Enum;
+.class public final Lf9d;
+.super Lvi0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lf9d;
+.field public static final synthetic Z:I
 
-.field public static final enum b:Lf9d;
 
-.field public static final enum c:Lf9d;
+# instance fields
+.field public X:Lio/antmedia/rtmp_client/RtmpClient;
 
-.field public static final synthetic o:[Lf9d;
+.field public Y:Landroid/net/Uri;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lf9d;
+    const-string v0, "media3.datasource.rtmp"
 
-    const-string v1, "HideKeyboard"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lf9d;->a:Lf9d;
-
-    new-instance v1, Lf9d;
-
-    const-string v2, "SendMessage"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf9d;->b:Lf9d;
-
-    new-instance v2, Lf9d;
-
-    const-string v3, "SendMessageWithDisabling"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lf9d;->c:Lf9d;
-
-    filled-new-array {v0, v1, v2}, [Lf9d;
-
-    move-result-object v0
-
-    sput-object v0, Lf9d;->o:[Lf9d;
+    invoke-static {v0}, Lln8;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf9d;
+.method public constructor <init>()V
     .locals 1
 
-    const-class v0, Lf9d;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {p0, v0}, Lvi0;-><init>(Z)V
 
-    move-result-object p0
-
-    check-cast p0, Lf9d;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lf9d;
+
+# virtual methods
+.method public final G(Lr94;)J
+    .locals 3
+
+    invoke-virtual {p0, p1}, Lvi0;->e(Lr94;)V
+
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+
+    iput-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    iget-object v1, p1, Lr94;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Lr94;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Lvi0;->f(Lr94;)V
+
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iput-object v1, p0, Lf9d;->Y:Landroid/net/Uri;
+
+    invoke-virtual {p0}, Lvi0;->c()V
+
+    :cond_0
+    iget-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
+
+    iput-object v1, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final getUri()Landroid/net/Uri;
     .locals 1
 
-    sget-object v0, Lf9d;->o:[Lf9d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lf9d;
+    iget-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
 
     return-object v0
+.end method
+
+.method public final read([BII)I
+    .locals 2
+
+    iget-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    sget v1, Lt4g;->a:I
+
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    return p2
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lvi0;->a(I)V
+
+    return p1
 .end method

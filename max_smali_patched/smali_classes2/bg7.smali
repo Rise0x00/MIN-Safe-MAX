@@ -1,190 +1,101 @@
 .class public final Lbg7;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lv96;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
     .locals 0
 
-    iput p3, p0, Lbg7;->X:I
+    iput-object p2, p0, Lbg7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p0, p0, Lbg7;->X:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0, p1, p2}, Lbg7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Lnma;
+    move-result-object p1
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lbg7;
 
-    packed-switch p0, :pswitch_data_0
+    sget-object p2, Loyf;->a:Loyf;
 
-    new-instance p0, Lbg7;
+    invoke-virtual {p1, p2}, Lbg7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p2, 0x3
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, p2, p3, v0}, Lbg7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lbg7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p0, Lbg7;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p2, p3, v0}, Lbg7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lbg7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p0, Lbg7;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p2, p3, v0}, Lbg7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lbg7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lbg7;->X:I
+    new-instance v0, Lbg7;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lbg7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-direct {v0, p2, v1}, Lbg7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
-    iget-object p0, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object p1, v0, Lbg7;->X:Ljava/lang/Object;
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    return-object v0
+.end method
 
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbg7;->X:Ljava/lang/Object;
+
+    check-cast p1, Lyf7;
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lbg7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    iget-object v1, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->A0:Ls5f;
+
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljs3;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lnma;->b()Ldf0;
+    iget-object p1, p1, Lyf7;->a:Landroid/net/Uri;
 
-    move-result-object v0
+    invoke-virtual {v1, v0, p1}, Ljs3;->a(Landroid/content/Context;Landroid/net/Uri;)V
 
-    iget v0, v0, Ldf0;->m:I
+    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    return-object p1
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v0
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {p1, v0}, Lqs9;->c(Landroid/content/Context;)Lzs4;
-
-    move-result-object p1
-
-    invoke-static {p1, p0}, Lzs4;->d(Lzs4;Landroid/view/ViewGroup;)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lzs4;->p0:Lqs9;
-
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lnma;->b()Ldf0;
-
-    move-result-object p1
-
-    iget p1, p1, Ldf0;->n:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lbg7;->Y:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lzs4;->p0:Lqs9;
-
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lnma;->b()Ldf0;
-
-    move-result-object p1
-
-    iget p1, p1, Ldf0;->m:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

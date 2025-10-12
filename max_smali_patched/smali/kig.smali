@@ -1,200 +1,122 @@
-.class public abstract Lkig;
+.class public final synthetic Lkig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Leab;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Leab;JI)V
+    .locals 0
 
-    const-string v0, "^NOTE([ \t].*)?$"
+    .line 1
+    const/4 p2, 0x1
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput p2, p0, Lkig;->a:I
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lkig;->a:Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lkig;->b:Leab;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)F
-    .locals 2
+.method public synthetic constructor <init>(Leab;Ljava/lang/Exception;)V
+    .locals 0
 
-    const-string v0, "%"
+    .line 2
+    const/4 p2, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    iput p2, p0, Lkig;->a:I
 
-    move-result v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lkig;->b:Leab;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result p0
-
-    const/high16 v0, 0x42c80000    # 100.0f
-
-    div-float/2addr p0, v0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/NumberFormatException;
-
-    const-string v0, "Percentages must end with %"
-
-    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;)J
-    .locals 9
 
-    sget v0, Ldif;->a:I
+# virtual methods
+.method public final run()V
+    .locals 4
 
-    const-string v0, "\\."
+    iget v0, p0, Lkig;->a:I
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lkig;->b:Leab;
 
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, v1, Leab;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Lcf5;
 
-    aget-object v2, p0, v0
+    sget v1, Lt4g;->a:I
 
-    const-string v3, ":"
+    iget-object v0, v0, Lcf5;->a:Lif5;
 
-    const/4 v4, -0x1
+    iget-object v0, v0, Lif5;->I0:Lie4;
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+    iget-object v1, v0, Lie4;->o:Lgn3;
 
-    move-result-object v2
+    iget-object v1, v1, Lgn3;->e:Ljava/lang/Object;
 
-    array-length v3, v2
+    check-cast v1, Lvu8;
 
-    const-wide/16 v4, 0x0
-
-    :goto_0
-    if-ge v0, v3, :cond_0
-
-    aget-object v6, v2, v0
-
-    const-wide/16 v7, 0x3c
-
-    mul-long/2addr v4, v7
-
-    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v6
-
-    add-long/2addr v4, v6
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v2, 0x3e8
-
-    mul-long/2addr v4, v2
-
-    array-length v0, p0
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    aget-object p0, p0, v0
-
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    add-long/2addr v4, v0
-
-    :cond_1
-    mul-long/2addr v4, v2
-
-    return-wide v4
-.end method
-
-.method public static c(Lqif;)V
-    .locals 3
-
-    iget v0, p0, Lqif;->b:I
-
-    invoke-virtual {p0}, Lqif;->g()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lie4;->E(Lvu8;)Lwc;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    new-instance v2, Lvd4;
 
-    const-string v2, "WEBVTT"
+    const/16 v3, 0x9
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-direct {v2, v3}, Lvd4;-><init>(I)V
 
-    move-result v1
+    const/16 v3, 0x3fd
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1, v3, v2}, Lie4;->I(Lwc;ILsx7;)V
 
     return-void
 
-    :cond_0
-    invoke-virtual {p0, v0}, Lqif;->E(I)V
+    :pswitch_0
+    iget-object v0, v1, Leab;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lqif;->g()Ljava/lang/String;
+    check-cast v0, Lcf5;
 
-    move-result-object p0
+    sget v1, Lt4g;->a:I
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v0, v0, Lcf5;->a:Lif5;
 
-    move-result-object p0
+    iget-object v0, v0, Lif5;->I0:Lie4;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Lie4;->H()Lwc;
 
-    move-result v0
+    move-result-object v1
 
-    const-string v1, "Expected WEBVTT. Got "
+    new-instance v2, Lce4;
 
-    if-eqz v0, :cond_1
+    const/16 v3, 0xd
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v2, v3}, Lce4;-><init>(I)V
 
-    move-result-object p0
+    const/16 v3, 0x406
 
-    goto :goto_0
+    invoke-virtual {v0, v1, v3, v2}, Lie4;->I(Lwc;ILsx7;)V
 
-    :cond_1
-    new-instance p0, Ljava/lang/String;
+    return-void
 
-    invoke-direct {p0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    nop
 
-    :goto_0
-    const/4 v0, 0x0
-
-    invoke-static {v0, p0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

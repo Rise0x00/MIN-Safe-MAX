@@ -1,73 +1,138 @@
-.class public final Lwj6;
-.super Ljava/lang/Object;
+.class public Lwj6;
+.super Ltj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lak6;
-
-.field public final b:Lck6;
-
-.field public c:Z
+.field public final y0:[I
 
 
 # direct methods
-.method public constructor <init>(Lak6;Lck6;)V
-    .locals 1
+.method public constructor <init>(Lj19;Lxmb;Lk2a;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Ltj0;-><init>(Lj19;Lxmb;Lymb;)V
 
-    const/4 v0, 0x1
+    iget-object p1, p2, Lxmb;->c:Landroid/util/SparseIntArray;
 
-    iput-boolean v0, p0, Lwj6;->c:Z
+    const/4 p2, 0x0
 
-    iput-object p1, p0, Lwj6;->a:Lak6;
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Lwj6;->b:Lck6;
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    new-array p3, p3, [I
+
+    iput-object p3, p0, Lwj6;->y0:[I
+
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    :goto_0
+    if-ge p2, p3, :cond_1
+
+    iget-object v0, p0, Lwj6;->y0:[I
+
+    invoke-virtual {p1, p2}, Landroid/util/SparseIntArray;->keyAt(I)I
+
+    move-result v1
+
+    aput v1, v0, p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-array p1, p2, [I
+
+    iput-object p1, p0, Lwj6;->y0:[I
+
+    :cond_1
+    iget-object p1, p0, Ltj0;->b:Lj19;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Ltj0;->x0:Lymb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a(I)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-array p1, p1, [B
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    return-object p1
+.end method
 
-    iget-object v1, p0, Lwj6;->a:Lak6;
+.method public final bridge synthetic c(Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p1, [B
 
-    const-string v1, " "
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final e(I)I
+    .locals 4
 
-    iget-boolean v2, p0, Lwj6;->c:Z
+    if-lez p1, :cond_2
 
-    if-nez v2, :cond_0
+    iget-object v0, p0, Lwj6;->y0:[I
 
-    const-string v2, "+>"
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget v3, v0, v2
+
+    if-lt v3, p1, :cond_0
+
+    return v3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const-string v2, "->"
+    :cond_1
+    return p1
 
-    :goto_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    new-instance v0, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p0, p0, Lwj6;->b:Lck6;
+    move-result-object p1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1}, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;-><init>(Ljava/lang/Integer;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw v0
+.end method
 
-    move-result-object p0
+.method public final f(Ljava/lang/Object;)I
+    .locals 0
 
-    return-object p0
+    check-cast p1, [B
+
+    array-length p1, p1
+
+    return p1
+.end method
+
+.method public final g(I)I
+    .locals 0
+
+    return p1
 .end method

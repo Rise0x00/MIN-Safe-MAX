@@ -1,64 +1,69 @@
-.class public abstract Lr23;
-.super Ljava/lang/Object;
+.class public final Lr23;
+.super Lhh0;
 .source "SourceFile"
-
-# interfaces
-.implements Lds7;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Ljava/lang/String;
 
-.field public final Y:Ljava/lang/Object;
+.field public final b:Lve6;
 
-.field public final Z:J
+.field public final c:Lc00;
 
-.field public final a:J
-
-.field public final b:Lv64;
-
-.field public final c:I
-
-.field public final n0:J
-
-.field public final o:Ln26;
-
-.field public final o0:Lq5e;
+.field public final d:Lan2;
 
 
 # direct methods
-.method public constructor <init>(Ln64;Lv64;ILn26;ILjava/lang/Object;JJ)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lve6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lq5e;
+    iput-object p1, p0, Lr23;->a:Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Lq5e;-><init>(Ln64;)V
+    iput-object p2, p0, Lr23;->b:Lve6;
 
-    iput-object v0, p0, Lr23;->o0:Lq5e;
+    new-instance p1, Lc00;
 
-    iput-object p2, p0, Lr23;->b:Lv64;
+    const/16 p2, 0xf
 
-    iput p3, p0, Lr23;->c:I
+    invoke-direct {p1, p2}, Lc00;-><init>(I)V
 
-    iput-object p4, p0, Lr23;->o:Ln26;
+    iput-object p1, p0, Lr23;->c:Lc00;
 
-    iput p5, p0, Lr23;->X:I
+    new-instance p1, Lan2;
 
-    iput-object p6, p0, Lr23;->Y:Ljava/lang/Object;
+    const/16 p2, 0x8
 
-    iput-wide p7, p0, Lr23;->Z:J
+    invoke-direct {p1, p2, p0}, Lan2;-><init>(ILjava/lang/Object;)V
 
-    iput-wide p9, p0, Lr23;->n0:J
-
-    sget-object p1, Lvr7;->h:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lr23;->a:J
+    iput-object p1, p0, Lr23;->d:Lan2;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/util/Comparator;
+    .locals 1
+
+    iget-object v0, p0, Lr23;->c:Lc00;
+
+    return-object v0
+.end method
+
+.method public final b()Lxe6;
+    .locals 1
+
+    iget-object v0, p0, Lr23;->d:Lan2;
+
+    return-object v0
+.end method
+
+.method public final c()Lve6;
+    .locals 1
+
+    iget-object v0, p0, Lr23;->b:Lve6;
+
+    return-object v0
 .end method

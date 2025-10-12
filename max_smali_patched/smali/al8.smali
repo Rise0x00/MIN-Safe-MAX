@@ -2,179 +2,156 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lal8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lgk8;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ljkb;
 
-.field public c:Lbv6;
+.field public final c:Lfo8;
 
-.field public o:Lekf;
+.field public final d:Ljava/util/List;
+
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
-    new-instance v0, Lpm7;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lpm7;-><init>(I)V
-
-    sput-object v0, Lal8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Lbv6;)V
-    .locals 1
-
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-object v0, p0, Lal8;->a:Lgk8;
 
-    iput-object v0, p0, Lal8;->a:Ljava/lang/Object;
+    .line 3
+    iput-object v0, p0, Lal8;->b:Ljkb;
 
-    iput-object p1, p0, Lal8;->b:Ljava/lang/Object;
+    .line 4
+    iput-object v0, p0, Lal8;->c:Lfo8;
 
-    iput-object p2, p0, Lal8;->c:Lbv6;
+    .line 5
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 p1, 0x0
+    iput-object v1, p0, Lal8;->d:Ljava/util/List;
 
-    iput-object p1, p0, Lal8;->o:Lekf;
+    .line 6
+    iput-object v0, p0, Lal8;->e:Ljava/lang/CharSequence;
+
+    const/4 v0, 0x0
+
+    .line 7
+    iput v0, p0, Lal8;->f:I
+
+    .line 8
+    iput v0, p0, Lal8;->g:I
+
+    .line 9
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    iput-object v0, p0, Lal8;->h:Landroid/os/Bundle;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Lbv6;
+.method public constructor <init>(Lal8;)V
     .locals 1
 
-    iget-object v0, p0, Lal8;->a:Ljava/lang/Object;
+    .line 20
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    monitor-enter v0
+    .line 21
+    iget-object v0, p1, Lal8;->a:Lgk8;
 
-    :try_start_0
-    iget-object p0, p0, Lal8;->c:Lbv6;
+    iput-object v0, p0, Lal8;->a:Lgk8;
 
-    monitor-exit v0
+    .line 22
+    iget-object v0, p1, Lal8;->b:Ljkb;
 
-    return-object p0
+    iput-object v0, p0, Lal8;->b:Ljkb;
 
-    :catchall_0
-    move-exception p0
+    .line 23
+    iget-object v0, p1, Lal8;->c:Lfo8;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object v0, p0, Lal8;->c:Lfo8;
 
-    throw p0
+    .line 24
+    iget-object v0, p1, Lal8;->d:Ljava/util/List;
+
+    iput-object v0, p0, Lal8;->d:Ljava/util/List;
+
+    .line 25
+    iget-object v0, p1, Lal8;->e:Ljava/lang/CharSequence;
+
+    iput-object v0, p0, Lal8;->e:Ljava/lang/CharSequence;
+
+    .line 26
+    iget v0, p1, Lal8;->f:I
+
+    iput v0, p0, Lal8;->f:I
+
+    .line 27
+    iget v0, p1, Lal8;->g:I
+
+    iput v0, p0, Lal8;->g:I
+
+    .line 28
+    iget-object p1, p1, Lal8;->h:Landroid/os/Bundle;
+
+    iput-object p1, p0, Lal8;->h:Landroid/os/Bundle;
+
+    return-void
 .end method
 
-.method public final describeContents()I
+.method public constructor <init>(Lgk8;Ljkb;Lfo8;Ljava/util/List;Ljava/lang/CharSequence;IILandroid/os/Bundle;)V
     .locals 0
 
-    const/4 p0, 0x0
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
-.end method
+    .line 11
+    iput-object p1, p0, Lal8;->a:Lgk8;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .line 12
+    iput-object p2, p0, Lal8;->b:Ljkb;
 
-    const/4 v0, 0x1
+    .line 13
+    iput-object p3, p0, Lal8;->c:Lfo8;
 
-    if-ne p0, p1, :cond_0
+    .line 14
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    .line 15
+    iput-object p4, p0, Lal8;->d:Ljava/util/List;
 
+    .line 16
+    iput-object p5, p0, Lal8;->e:Ljava/lang/CharSequence;
+
+    .line 17
+    iput p6, p0, Lal8;->f:I
+
+    .line 18
+    iput p7, p0, Lal8;->g:I
+
+    if-eqz p8, :cond_0
+
+    goto :goto_0
+
+    .line 19
     :cond_0
-    instance-of v1, p1, Lal8;
+    sget-object p8, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lal8;
-
-    iget-object p0, p0, Lal8;->b:Ljava/lang/Object;
-
-    if-nez p0, :cond_3
-
-    iget-object p0, p1, Lal8;->b:Ljava/lang/Object;
-
-    if-nez p0, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-
-    :cond_3
-    iget-object p1, p1, Lal8;->b:Ljava/lang/Object;
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lal8;->b:Ljava/lang/Object;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p0, p0, Lal8;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    :goto_0
+    iput-object p8, p0, Lal8;->h:Landroid/os/Bundle;
 
     return-void
 .end method

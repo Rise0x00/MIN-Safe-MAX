@@ -1,98 +1,139 @@
-.class public final Ll06;
-.super Leje;
+.class public final synthetic Ll06;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final synthetic b:Lm06;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+.method public synthetic constructor <init>(Lm06;JI)V
     .locals 0
 
-    iput-object p2, p0, Ll06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iput p4, p0, Ll06;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ll06;->b:Lm06;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Ll06;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Ll06;->a:I
 
-    invoke-virtual {p0, p1, p2}, Ll06;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-wide v0, p0, Ll06;->c:J
 
-    check-cast p0, Ll06;
+    iget-object v2, p0, Ll06;->b:Lm06;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-wide v3, v2, Lm06;->k:J
 
-    invoke-virtual {p0, p1}, Ll06;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    cmp-long v0, v0, v3
 
-    return-object p1
-.end method
+    if-nez v0, :cond_1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    const/4 v0, 0x0
 
-    new-instance v0, Ll06;
+    iput-boolean v0, v2, Lm06;->m:Z
 
-    iget-object p0, p0, Ll06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iget-object v1, v2, Lm06;->j:Ljava/util/concurrent/ScheduledFuture;
 
-    invoke-direct {v0, p2, p0}, Ll06;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    const/4 v3, 0x0
 
-    iput-object p1, v0, Ll06;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
+    const/4 v4, 0x1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iput-object v3, v2, Lm06;->j:Ljava/util/concurrent/ScheduledFuture;
 
-    iget-object p1, p0, Ll06;->X:Ljava/lang/Object;
+    :cond_0
+    iget-object v1, v2, Lm06;->s:Lts1;
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    new-instance v4, Ln06;
 
-    move-result p1
+    invoke-direct {v4, v0}, Ln06;-><init>(Z)V
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->n0:[Lof7;
+    invoke-virtual {v1, v4}, Lts1;->b(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Ll06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iput-object v3, v2, Lm06;->s:Lts1;
 
-    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Ldbc;
+    :cond_1
+    return-void
 
-    sget-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->n0:[Lof7;
+    :pswitch_0
+    iget-wide v0, p0, Ll06;->c:J
 
-    const/4 v2, 0x3
+    iget-object v2, p0, Ll06;->b:Lm06;
 
-    aget-object v1, v1, v2
+    iget-wide v3, v2, Lm06;->k:J
 
-    invoke-interface {v0, p0, v1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    cmp-long v0, v0, v3
 
-    move-result-object p0
+    if-nez v0, :cond_2
 
-    check-cast p0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v2}, Lm06;->b()V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    :cond_2
+    return-void
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :pswitch_1
+    iget-object v0, p0, Ll06;->b:Lm06;
 
-    return-object p0
+    iget-object v1, v0, Lm06;->b:Lcsd;
+
+    new-instance v2, Ll06;
+
+    const/4 v3, 0x2
+
+    iget-wide v4, p0, Ll06;->c:J
+
+    invoke-direct {v2, v0, v4, v5, v3}, Ll06;-><init>(Lm06;JI)V
+
+    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ll06;->b:Lm06;
+
+    iget-object v1, v0, Lm06;->b:Lcsd;
+
+    new-instance v2, Ll06;
+
+    const/4 v3, 0x3
+
+    iget-wide v4, p0, Ll06;->c:J
+
+    invoke-direct {v2, v0, v4, v5, v3}, Ll06;-><init>(Lm06;JI)V
+
+    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

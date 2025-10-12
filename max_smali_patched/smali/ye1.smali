@@ -1,5 +1,5 @@
 .class public final Lye1;
-.super Lt2;
+.super Lv2;
 .source "SourceFile"
 
 
@@ -13,16 +13,16 @@
 
     new-instance v0, Lye1;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Lt2;-><init>(I)V
+    invoke-direct {v0, v1}, Lv2;-><init>(I)V
 
     sput-object v0, Lye1;->c:Lye1;
 
     return-void
 .end method
 
-.method public static w0(Lye1;J)Ly94;
+.method public static c1(Lye1;J)Lzc4;
     .locals 1
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -47,17 +47,17 @@
 
     move-result-object p0
 
-    new-instance p1, Ly94;
+    new-instance p1, Lzc4;
 
-    invoke-direct {p1, p0}, Ly94;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0}, Lzc4;-><init>(Ljava/lang/String;)V
 
     return-object p1
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public final d1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
     new-instance v0, Landroid/content/Intent;
 
@@ -75,39 +75,39 @@
 
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lt2;->o0()Lca4;
-
-    move-result-object p0
-
-    new-instance p1, Ltra;
-
-    const-string v1, "oneme:share:data"
-
-    invoke-direct {p1, v1, v0}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v0, Ltra;
-
-    const-string v1, "oneme:share:title"
-
-    invoke-direct {v0, v1, p2}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance p2, Ltra;
-
-    const-string v1, "tag"
-
-    invoke-direct {p2, v1, p3}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {p1, v0, p2}, [Ltra;
+    invoke-virtual {p0}, Lv2;->K0()Ldd4;
 
     move-result-object p1
 
-    invoke-static {p1}, Ly84;->c([Ltra;)Landroid/os/Bundle;
+    new-instance v1, Ln4b;
 
-    move-result-object p1
+    const-string v2, "oneme:share:data"
 
-    const-string p2, ":chats/share"
+    invoke-direct {v1, v2, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p2, p1}, Lca4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    new-instance v0, Ln4b;
+
+    const-string v2, "oneme:share:title"
+
+    invoke-direct {v0, v2, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance p2, Ln4b;
+
+    const-string v2, "tag"
+
+    invoke-direct {p2, v2, p3}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v0, p2}, [Ln4b;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+
+    move-result-object p2
+
+    const-string p3, ":chats/share"
+
+    invoke-virtual {p1, p3, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 .end method

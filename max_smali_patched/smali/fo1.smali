@@ -1,104 +1,63 @@
-.class public final synthetic Lfo1;
-.super Ljava/lang/Object;
+.class public final Lfo1;
+.super Ldd0;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljo1;
+# static fields
+.field public static final b:Lfo1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljo1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lfo1;->a:I
+    new-instance v0, Lfo1;
 
-    iput-object p1, p0, Lfo1;->b:Ljo1;
+    sget-object v1, Loyf;->a:Loyf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lhy9;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lfo1;->b:Lfo1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lfo1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Lfo1;->b:Ljo1;
+    return v0
 
-    iget-object p0, p0, Ljo1;->M0:Lmof;
+    :cond_0
+    instance-of p1, p1, Lfo1;
 
-    return-object p0
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    iget-object p0, p0, Lfo1;->b:Ljo1;
+    const/4 p1, 0x0
 
-    iget-object p0, p0, Ljo1;->M0:Lmof;
+    return p1
 
-    return-object p0
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_1
-    new-instance v2, Lio1;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p0, p0, Lfo1;->b:Ljo1;
+    const v0, -0x34cc058a    # -1.1795062E7f
 
-    invoke-direct {v2, p0}, Lio1;-><init>(Ljo1;)V
+    return v0
+.end method
 
-    new-instance v0, Lqf1;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    new-instance v3, Lfo1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v3, p0, v1}, Lfo1;-><init>(Ljo1;I)V
-
-    new-instance v4, Lfo1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v4, p0, v1}, Lfo1;-><init>(Ljo1;I)V
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x22
-
-    sget-object v1, Lwxf;->a:Lwxf;
-
-    invoke-direct/range {v0 .. v6}, Lqf1;-><init>(Lwxf;Lof1;Ld96;Lfo1;Lz71;I)V
+    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
 
     return-object v0
-
-    :pswitch_2
-    iget-object p0, p0, Lfo1;->b:Ljo1;
-
-    iget-object p0, p0, Ljo1;->M0:Lmof;
-
-    return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Lfo1;->b:Ljo1;
-
-    iget-object p0, p0, Ljo1;->P0:Lco1;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

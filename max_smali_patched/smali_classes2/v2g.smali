@@ -1,102 +1,93 @@
-.class public final Lv2g;
-.super Lu62;
+.class public abstract synthetic Lv2g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:J
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x3
+    const/16 v0, 0x9
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0}, Lqw1;->y(I)[I
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {p0, v0, v1}, Lu62;-><init>(ILjava/lang/Long;)V
+    array-length v0, v0
 
-    iput-wide p1, p0, Lv2g;->c:J
+    new-array v0, v0, [I
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
-
-    iget-wide v0, p0, Lv2g;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lv2g;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return v2
+    :catch_0
+    const/4 v2, 0x2
 
-    :cond_1
-    check-cast p1, Lv2g;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-wide v3, p0, Lv2g;->c:J
+    :catch_1
+    const/4 v1, 0x3
 
-    iget-wide p0, p1, Lv2g;->c:J
+    const/16 v3, 0x8
 
-    cmp-long p0, v3, p0
+    :try_start_2
+    aput v1, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-eqz p0, :cond_2
+    :catch_2
+    const/4 v1, 0x4
 
-    return v2
+    const/4 v4, 0x6
 
-    :cond_2
-    return v0
-.end method
+    :try_start_3
+    aput v1, v0, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-.method public final hashCode()I
-    .locals 2
+    :catch_3
+    const/4 v5, 0x5
 
-    iget-wide v0, p0, Lv2g;->c:J
+    :try_start_4
+    aput v5, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    :catch_4
+    :try_start_5
+    aput v4, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result p0
+    :catch_5
+    const/4 v1, 0x7
 
-    return p0
-.end method
+    :try_start_6
+    aput v1, v0, v5
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :catch_6
+    :try_start_7
+    aput v3, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    const-string v0, "ChatId(sourceId="
+    :catch_7
+    sput-object v0, Lv2g;->$EnumSwitchMapping$0:[I
 
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lv2g;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

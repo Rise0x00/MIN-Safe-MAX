@@ -1,31 +1,102 @@
 .class public final Liz1;
-.super Lhz1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljz1;
 
 
 # virtual methods
-.method public final D()Ljava/util/Set;
+.method public final b(F)Ljx7;
+    .locals 0
+
+    sget-object p1, Li67;->c:Li67;
+
+    return-object p1
+.end method
+
+.method public final c(Lci3;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(F)Ljx7;
+    .locals 0
+
+    sget-object p1, Li67;->c:Li67;
+
+    return-object p1
+.end method
+
+.method public final e()Landroid/graphics/Rect;
     .locals 1
 
-    :try_start_0
-    iget-object p0, p0, Lxoe;->b:Ljava/lang/Object;
+    new-instance v0, Landroid/graphics/Rect;
 
-    check-cast p0, Landroid/hardware/camera2/CameraManager;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CameraManager;->getConcurrentCameraIds()Ljava/util/Set;
+    return-object v0
+.end method
 
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final f(I)V
+    .locals 0
 
-    return-object p0
+    return-void
+.end method
 
-    :catch_0
-    move-exception p0
+.method public final h(Lq35;)Ljx7;
+    .locals 1
 
-    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+    new-instance p1, Ln06;
 
-    invoke-direct {v0, p0}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+    const/4 v0, 0x0
 
-    throw v0
+    invoke-direct {p1, v0}, Ln06;-><init>(Z)V
+
+    invoke-static {p1}, Lpch;->A(Ljava/lang/Object;)Li67;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final i(Ljava/util/ArrayList;II)Ljx7;
+    .locals 0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-static {p1}, Lpch;->A(Ljava/lang/Object;)Li67;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final j(Lnvd;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final k(Z)Ljx7;
+    .locals 0
+
+    sget-object p1, Li67;->c:Li67;
+
+    return-object p1
+.end method
+
+.method public final m()Lci3;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 0
+
+    return-void
 .end method

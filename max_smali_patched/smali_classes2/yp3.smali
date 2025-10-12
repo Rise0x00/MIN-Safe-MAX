@@ -1,56 +1,48 @@
 .class public final Lyp3;
-.super Lape;
-.source "SourceFile"
+.super Lnz3;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public X:I
+
+.field public final synthetic Y:Lfa2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lyp3;->Y:Lfa2;
 
-    const-string v0, "contacts"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lq09;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lmz;->c(Lq09;)Lmz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyp3;->c:Ljava/util/List;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
 
-    iget-object p0, p0, Lyp3;->c:Ljava/util/List;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p0}, Lah7;->l(Ljava/util/Collection;)I
+    iput-object p1, p0, Lyp3;->o:Ljava/lang/Object;
 
-    move-result p0
+    iget p1, p0, Lyp3;->X:I
 
-    const-string v0, "{contactInfos="
+    const/high16 v0, -0x80000000
 
-    const-string v1, "}"
+    or-int/2addr p1, v0
 
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput p1, p0, Lyp3;->X:I
 
-    move-result-object p0
+    iget-object p1, p0, Lyp3;->Y:Lfa2;
 
-    return-object p0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

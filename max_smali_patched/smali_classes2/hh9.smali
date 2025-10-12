@@ -1,81 +1,98 @@
 .class public final Lhh9;
-.super Lhj0;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final o:Ljava/util/List;
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/ArrayList;Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lhj0;-><init>(J)V
+    iput-object p2, p0, Lhh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iput-wide p3, p0, Lhh9;->b:J
+    const/4 p2, 0x2
 
-    iput-object p5, p0, Lhh9;->c:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Lhh9;->o:Ljava/util/List;
-
-    iput-object p7, p0, Lhh9;->X:Ljava/util/List;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v1, "MsgGetEvent{serverChatId="
+    invoke-virtual {p0, p1, p2}, Lhh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iget-wide v1, p0, Lhh9;->b:J
+    check-cast p1, Lhh9;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    sget-object p2, Loyf;->a:Loyf;
 
-    const-string v1, ", serverMessageIds="
+    invoke-virtual {p1, p2}, Lhh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p2
+.end method
 
-    iget-object v1, p0, Lhh9;->c:Ljava/util/ArrayList;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v0, Lhh9;
 
-    const-string v1, ", messages="
+    iget-object v1, p0, Lhh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p2, v1}, Lhh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    iget-object v1, p0, Lhh9;->o:Ljava/util/List;
+    iput-object p1, v0, Lhh9;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    const-string v1, ", requestedMessageIds="
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lhh9;->X:Ljava/util/List;
+    iget-object p1, p0, Lhh9;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/16 p0, 0x7d
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    move-result-object p0
+    iget-object v0, p0, Lhh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    return-object p0
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->N0()Lehd;
+
+    move-result-object v0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

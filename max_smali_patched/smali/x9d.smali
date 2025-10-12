@@ -2,44 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldq5;
+
+# static fields
+.field public static final c:Ljava/lang/String;
+
+.field public static final d:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Lg9d;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lpcb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lt4g;->a:I
 
-    iput-object p1, p0, Lx9d;->a:Lg9d;
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lx9d;->c:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lx9d;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iget-object p0, p0, Lx9d;->a:Lg9d;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0, p1, p2}, Lg9d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-object p1, p0, Lx9d;->a:Ljava/lang/String;
 
-    move-result-object p0
+    iput p2, p0, Lx9d;->b:I
 
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-void
 .end method

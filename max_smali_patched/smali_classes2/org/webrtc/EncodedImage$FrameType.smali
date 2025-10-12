@@ -151,7 +151,7 @@
 
     const-string v1, "Unknown native frame type: "
 
-    invoke-static {p0, v1}, Lw68;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -191,9 +191,9 @@
 
 # virtual methods
 .method public getNative()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Lorg/webrtc/EncodedImage$FrameType;->nativeIndex:I
+    iget v0, p0, Lorg/webrtc/EncodedImage$FrameType;->nativeIndex:I
 
-    return p0
+    return v0
 .end method

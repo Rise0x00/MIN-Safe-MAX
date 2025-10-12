@@ -3,30 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo0a;
+.implements Lmaa;
 
 
 # static fields
 .field public static final a:Ls80;
 
-.field public static final b:Lfi5;
+.field public static final b:Lfn5;
 
-.field public static final c:Lfi5;
-
-.field public static final d:Lfi5;
-
-.field public static final e:Lfi5;
-
-.field public static final f:Lfi5;
-
-.field public static final g:Lfi5;
-
-.field public static final h:Lfi5;
+.field public static final c:Lfn5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Ls80;
 
@@ -34,61 +24,51 @@
 
     sput-object v0, Ls80;->a:Ls80;
 
-    const-string v0, "requestTimeMs"
+    new-instance v0, Lpx;
 
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lpx;-><init>(I)V
 
-    sput-object v0, Ls80;->b:Lfi5;
+    const-class v1, Lb6c;
 
-    const-string v0, "requestUptimeMs"
-
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->c:Lfi5;
+    new-instance v2, Lfn5;
 
-    const-string v0, "clientInfo"
-
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->d:Lfi5;
+    const-string v3, "currentCacheSizeBytes"
 
-    const-string v0, "logSource"
+    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    sput-object v2, Ls80;->b:Lfn5;
 
-    move-result-object v0
+    new-instance v0, Lpx;
 
-    sput-object v0, Ls80;->e:Lfi5;
+    const/4 v2, 0x2
 
-    const-string v0, "logSourceName"
+    invoke-direct {v0, v2}, Lpx;-><init>(I)V
 
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
-
-    move-result-object v0
-
-    sput-object v0, Ls80;->f:Lfi5;
-
-    const-string v0, "logEvent"
-
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->g:Lfi5;
+    new-instance v1, Lfn5;
 
-    const-string v0, "qosTier"
-
-    invoke-static {v0}, Lfi5;->a(Ljava/lang/String;)Lfi5;
+    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->h:Lfi5;
+    const-string v2, "maxCacheSizeBytes"
+
+    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ls80;->c:Lfn5;
 
     return-void
 .end method
@@ -96,55 +76,23 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
-    check-cast p1, Ljw7;
+    check-cast p1, Luwe;
 
-    check-cast p2, Lp0a;
+    check-cast p2, Lnaa;
 
-    check-cast p1, Lxa0;
+    sget-object v0, Ls80;->b:Lfn5;
 
-    iget-wide v0, p1, Lxa0;->a:J
+    iget-wide v1, p1, Luwe;->a:J
 
-    sget-object p0, Ls80;->b:Lfi5;
+    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
 
-    invoke-interface {p2, p0, v0, v1}, Lp0a;->e(Lfi5;J)Lp0a;
+    sget-object v0, Ls80;->c:Lfn5;
 
-    sget-object p0, Ls80;->c:Lfi5;
+    iget-wide v1, p1, Luwe;->b:J
 
-    iget-wide v0, p1, Lxa0;->b:J
-
-    invoke-interface {p2, p0, v0, v1}, Lp0a;->e(Lfi5;J)Lp0a;
-
-    sget-object p0, Ls80;->d:Lfi5;
-
-    iget-object v0, p1, Lxa0;->c:Ly90;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Ls80;->e:Lfi5;
-
-    iget-object v0, p1, Lxa0;->d:Ljava/lang/Integer;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Ls80;->f:Lfi5;
-
-    iget-object v0, p1, Lxa0;->e:Ljava/lang/String;
-
-    invoke-interface {p2, p0, v0}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Ls80;->g:Lfi5;
-
-    iget-object p1, p1, Lxa0;->f:Ljava/util/ArrayList;
-
-    invoke-interface {p2, p0, p1}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
-
-    sget-object p0, Ls80;->h:Lfi5;
-
-    sget-object p1, Lvsb;->a:Lvsb;
-
-    invoke-interface {p2, p0, p1}, Lp0a;->a(Lfi5;Ljava/lang/Object;)Lp0a;
+    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
 
     return-void
 .end method

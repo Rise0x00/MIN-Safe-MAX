@@ -3,141 +3,179 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lak3;
+.implements Lpi7;
 
 
 # instance fields
-.field public final a:Lfk3;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ls4;
+.field public final b:Landroid/app/job/JobWorkItem;
+
+.field public final synthetic c:Landroid/app/job/JobServiceEngine;
 
 
 # direct methods
-.method public constructor <init>(Ls4;Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Lp1e;Lkle;)V
+.method public synthetic constructor <init>(Landroid/app/job/JobServiceEngine;Landroid/app/job/JobWorkItem;I)V
     .locals 0
 
+    iput p3, p0, Lqi7;->a:I
+
+    iput-object p1, p0, Lqi7;->c:Landroid/app/job/JobServiceEngine;
+
+    iput-object p2, p0, Lqi7;->b:Landroid/app/job/JobWorkItem;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqi7;->b:Ls4;
-
-    new-instance p1, Lfk3;
-
-    invoke-direct {p1, p2, p3, p4, p5}, Lfk3;-><init>(Landroid/content/Context;Ljava/util/concurrent/ExecutorService;Lp1e;Lkle;)V
-
-    iput-object p1, p0, Lqi7;->a:Lfk3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 0
+.method public final a()V
+    .locals 3
 
-    iget-object p0, p0, Lqi7;->a:Lfk3;
+    iget v0, p0, Lqi7;->a:I
 
-    invoke-virtual {p0}, Lfk3;->a()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p0
+    iget-object v0, p0, Lqi7;->c:Landroid/app/job/JobServiceEngine;
 
-    return p0
-.end method
+    check-cast v0, Lri7;
 
-.method public final b()Lsk3;
-    .locals 0
+    iget-object v0, v0, Lri7;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lqi7;->a:Lfk3;
+    monitor-enter v0
 
-    invoke-virtual {p0}, Lfk3;->b()Lsk3;
+    :try_start_0
+    iget-object v1, p0, Lqi7;->c:Landroid/app/job/JobServiceEngine;
 
-    move-result-object p0
+    check-cast v1, Lri7;
 
-    return-object p0
-.end method
+    iget-object v1, v1, Lri7;->c:Landroid/app/job/JobParameters;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final c(Lzj3;)V
-    .locals 0
+    if-eqz v1, :cond_0
 
-    iget-object p0, p0, Lqi7;->a:Lfk3;
+    :try_start_1
+    iget-object v2, p0, Lqi7;->b:Landroid/app/job/JobWorkItem;
 
-    invoke-virtual {p0, p1}, Lfk3;->c(Lzj3;)V
+    invoke-virtual {v1, v2}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
+    :try_end_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public final d()Z
-    .locals 0
+    :catchall_0
+    move-exception v1
 
-    iget-object p0, p0, Lqi7;->a:Lfk3;
+    goto :goto_2
 
-    invoke-virtual {p0}, Lfk3;->d()Z
+    :catch_0
+    move-exception v1
 
-    move-result p0
+    goto :goto_0
 
-    return p0
-.end method
+    :catch_1
+    move-exception v1
 
-.method public final e(Lzj3;)V
-    .locals 0
-
-    iget-object p0, p0, Lqi7;->a:Lfk3;
-
-    invoke-virtual {p0, p1}, Lfk3;->e(Lzj3;)V
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    iget-object p0, p0, Lqi7;->a:Lfk3;
-
-    invoke-virtual {p0}, Lfk3;->f()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object v0, p0, Lqi7;->a:Lfk3;
-
-    invoke-virtual {v0}, Lfk3;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lqi7;->b:Ls4;
-
-    const-class v0, Lem4;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lem4;
-
-    invoke-virtual {p0}, Lem4;->e()V
-
-    const/4 p0, 0x0
-
-    return p0
+    :goto_0
+    :try_start_2
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final invalidate()V
-    .locals 0
-
-    iget-object p0, p0, Lqi7;->a:Lfk3;
-
-    invoke-virtual {p0}, Lfk3;->invalidate()V
+    :goto_1
+    monitor-exit v0
 
     return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, Lqi7;->c:Landroid/app/job/JobServiceEngine;
+
+    check-cast v0, Lri7;
+
+    iget-object v0, v0, Lri7;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_3
+    iget-object v1, p0, Lqi7;->c:Landroid/app/job/JobServiceEngine;
+
+    check-cast v1, Lri7;
+
+    iget-object v1, v1, Lri7;->c:Landroid/app/job/JobParameters;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, p0, Lqi7;->b:Landroid/app/job/JobWorkItem;
+
+    invoke-virtual {v1, v2}, Landroid/app/job/JobParameters;->completeWork(Landroid/app/job/JobWorkItem;)V
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_4
+
+    :cond_1
+    :goto_3
+    monitor-exit v0
+
+    return-void
+
+    :goto_4
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getIntent()Landroid/content/Intent;
+    .locals 1
+
+    iget v0, p0, Lqi7;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqi7;->b:Landroid/app/job/JobWorkItem;
+
+    invoke-virtual {v0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lqi7;->b:Landroid/app/job/JobWorkItem;
+
+    invoke-virtual {v0}, Landroid/app/job/JobWorkItem;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

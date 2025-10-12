@@ -1,124 +1,199 @@
 .class public final Lr64;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
-
-# interfaces
-.implements Lro0;
-
-
-# static fields
-.field public static final o:Lihe;
 
 
 # instance fields
-.field public final a:Lnq7;
+.field public final synthetic a:I
 
-.field public final b:Lcd4;
-
-.field public final c:Landroid/graphics/BitmapFactory$Options;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lk97;)V
+    .locals 1
 
-    new-instance v0, Lde3;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
+    iput v0, p0, Lr64;->a:I
 
-    invoke-direct {v0, v1}, Lde3;-><init>(I)V
-
-    invoke-static {v0}, Lcr0;->x(Lihe;)Lihe;
-
-    move-result-object v0
-
-    sput-object v0, Lr64;->o:Lihe;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    .line 1
-    sget-object v0, Lr64;->o:Lihe;
-
-    invoke-interface {v0}, Lihe;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnq7;
-
-    invoke-static {v0}, Ln76;->o(Ljava/lang/Object;)V
-
-    new-instance v1, Lcd4;
-
-    invoke-direct {v1, p1}, Lcd4;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
 
     const/4 p1, 0x0
 
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Lr64;-><init>(Lnq7;Lcd4;Landroid/graphics/BitmapFactory$Options;)V
+    .line 4
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lnq7;Lcd4;Landroid/graphics/BitmapFactory$Options;)V
-    .locals 0
+.method public constructor <init>(Lubb;Landroid/os/Handler;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lr64;->a:I
+
+    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
+
+    .line 1
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ly0f;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lr64;->a:I
+
+    .line 2
+    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
 
     .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Landroid/os/Handler;
 
-    .line 4
-    iput-object p1, p0, Lr64;->a:Lnq7;
+    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
-    .line 5
-    iput-object p2, p0, Lr64;->b:Lcd4;
-
-    .line 6
-    iput-object p3, p0, Lr64;->c:Landroid/graphics/BitmapFactory$Options;
+    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Landroid/net/Uri;)Lyp7;
-    .locals 2
+.method public deliverSelfNotifications()Z
+    .locals 1
 
-    new-instance v0, Lq64;
+    iget v0, p0, Lr64;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1, p1}, Lq64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :pswitch_0
+    invoke-super {p0}, Landroid/database/ContentObserver;->deliverSelfNotifications()Z
 
-    iget-object p0, p0, Lr64;->a:Lnq7;
+    move-result v0
 
-    check-cast p0, Lve9;
+    return v0
 
-    invoke-virtual {p0, v0}, Lve9;->a(Ljava/util/concurrent/Callable;)Lyp7;
+    :pswitch_1
+    const/4 v0, 0x0
 
-    move-result-object p0
+    return v0
 
-    return-object p0
+    :pswitch_2
+    const/4 v0, 0x1
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final j([B)Lyp7;
-    .locals 2
+.method public final onChange(Z)V
+    .locals 3
 
-    new-instance v0, Lq64;
+    iget p1, p0, Lr64;->a:I
 
-    const/4 v1, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0, v1, p1}, Lq64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const-string p1, "Phonebook"
 
-    iget-object p0, p0, Lr64;->a:Lnq7;
+    const-string v0, "contact observer onChange"
 
-    check-cast p0, Lve9;
+    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lve9;->a(Ljava/util/concurrent/Callable;)Lyp7;
+    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Lubb;
 
-    return-object p0
+    iget-object v0, p1, Lubb;->x0:Lmoe;
+
+    :cond_0
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+
+    iget-object v2, p1, Lubb;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lk97;->I0:Ljava/lang/String;
+
+    const-string v0, "ContentObserver: on content changed"
+
+    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
+
+    check-cast p1, Lk97;
+
+    invoke-virtual {p1}, Lk97;->d()V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly0f;
+
+    iget-boolean v0, p1, Lt64;->b:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lt64;->c:Landroid/database/Cursor;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lt64;->c:Landroid/database/Cursor;
+
+    invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
+
+    move-result v0
+
+    iput-boolean v0, p1, Lt64;->a:Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,467 +1,284 @@
 .class public final Lu8f;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lom3;
 
 
 # instance fields
-.field public final synthetic X:Lc9f;
+.field public A0:J
+
+.field public final X:Lbp7;
+
+.field public final Y:Lbp7;
+
+.field public final Z:Lbp7;
+
+.field public final a:Lbp7;
+
+.field public final b:Lbp7;
+
+.field public final c:Lbp7;
+
+.field public final o:Lbp7;
+
+.field public w0:Lqs1;
+
+.field public x0:Lno7;
+
+.field public y0:Lkbh;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Lc9f;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
-    iput-object p1, p0, Lu8f;->X:Lc9f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lu8f;->a:Lbp7;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lu8f;->b:Lbp7;
+
+    iput-object p3, p0, Lu8f;->c:Lbp7;
+
+    iput-object p4, p0, Lu8f;->o:Lbp7;
+
+    iput-object p5, p0, Lu8f;->X:Lbp7;
+
+    iput-object p6, p0, Lu8f;->Y:Lbp7;
+
+    iput-object p7, p0, Lu8f;->Z:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 0
 
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lu8f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lu8f;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lu8f;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public final b()V
+    .locals 5
 
-    new-instance p1, Lu8f;
+    iget-object v0, p0, Lu8f;->Z:Lbp7;
 
-    iget-object p0, p0, Lu8f;->X:Lc9f;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, p0, p2}, Lu8f;-><init>(Lc9f;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    check-cast v0, Lpm3;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+    invoke-interface {v0}, Lpm3;->b()Lfn3;
 
-    invoke-static/range {p1 .. p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v0
 
-    move-object/from16 v0, p0
+    sget-object v1, Lfn3;->b:Lfn3;
 
-    iget-object v0, v0, Lu8f;->X:Lc9f;
+    if-eq v0, v1, :cond_1
 
-    iget-object v1, v0, Lc9f;->b:Ll8f;
+    iget-object v0, p0, Lu8f;->x0:Lno7;
 
-    iget-object v2, v0, Lc9f;->Y:Lk77;
+    invoke-static {v0}, Liad;->b(Lss4;)V
 
-    iget-object v3, v0, Lc9f;->s0:Lq4e;
+    iget-object v0, p0, Lu8f;->y0:Lkbh;
 
-    iget-object v4, v0, Lc9f;->c:Lk8f;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    iget v1, p0, Lu8f;->z0:I
 
-    move-result v4
-
-    const v5, 0x7fffffff
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    if-eqz v4, :cond_b
-
-    if-eq v4, v7, :cond_9
-
-    const/4 v5, 0x2
-
-    if-eq v4, v5, :cond_5
-
-    const/4 v1, 0x3
-
-    if-ne v4, v1, :cond_4
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v2, Lk77;->c:Lj77;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v8
-
-    :goto_0
-    const-string v4, "Required value was null."
-
-    if-eqz v2, :cond_3
-
-    new-instance v5, Libf;
-
-    sget v6, Lysc;->a:I
-
-    sget v6, La5c;->oneme_settings_twofa_creation_email_verify_title:I
-
-    new-instance v7, Lyte;
-
-    invoke-direct {v7, v6}, Lyte;-><init>(I)V
-
-    sget v6, La5c;->oneme_settings_twofa_creation_email_verify_subtitle:I
-
-    iget-object v9, v2, Lj77;->a:Ljava/lang/String;
-
-    if-eqz v9, :cond_2
-
-    filled-new-array {v9}, [Ljava/lang/Object;
-
-    move-result-object v4
-
-    new-instance v9, Laue;
-
-    invoke-static {v4}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-direct {v9, v6, v4}, Laue;-><init>(ILjava/util/List;)V
-
-    iget v4, v2, Lj77;->c:I
-
-    invoke-direct {v5, v7, v9, v4}, Libf;-><init>(Lyte;Laue;I)V
-
-    invoke-virtual {v3, v8, v5}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iget-object v3, v0, Lc9f;->u0:Lq4e;
-
-    iget-wide v4, v2, Lj77;->o:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v3, v8, v2}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    iget-object v2, v0, Lc9f;->y0:Lt1e;
+    move-result-object v2
 
-    if-eqz v2, :cond_1
+    const-string v3, "LoadEmojiFontWorker"
 
-    invoke-virtual {v2, v8}, Ljc7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    const-string v4, "onDownloadEmojiFontProgressChange %d"
+
+    invoke-static {v3, v4, v2}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, v0, Lkbh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+    new-instance v2, Lbz7;
+
+    invoke-direct {v2, v1}, Lbz7;-><init>(I)V
+
+    invoke-static {v0, v2}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Ldz7;)V
+
+    :cond_0
+    return-void
 
     :cond_1
-    iput-object v8, v0, Lc9f;->y0:Lt1e;
+    iget-object v0, p0, Lu8f;->y0:Lkbh;
 
-    new-instance v2, Lb9f;
+    invoke-virtual {p0, v0}, Lu8f;->c(Lkbh;)V
 
-    invoke-direct {v2, v0, v8}, Lb9f;-><init>(Lc9f;Lkotlin/coroutines/Continuation;)V
+    return-void
+.end method
 
-    invoke-static {v0, v8, v2, v1}, Lyxf;->n(Lyxf;Lh04;Lt96;I)Lt1e;
+.method public final c(Lkbh;)V
+    .locals 4
 
-    move-result-object v1
+    const-string v0, "Load font"
 
-    iput-object v1, v0, Lc9f;->y0:Lt1e;
+    const-string v1, "u8f"
 
-    goto/16 :goto_5
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iput-object p1, p0, Lu8f;->y0:Lkbh;
 
-    invoke-direct {v0, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lu8f;->w0:Lqs1;
 
-    throw v0
+    invoke-static {v0}, Liad;->c(Lss4;)Z
 
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    move-result v0
 
-    invoke-direct {v0, v4}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    throw v0
+    const-string p1, "Font already loading"
 
-    :cond_4
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-static {v1, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    return-void
 
-    throw v0
+    :cond_0
+    new-instance v0, Lp5;
 
-    :cond_5
-    sget-object v4, Ll8f;->c:Ll8f;
+    const/16 v1, 0xf
 
-    if-ne v1, v4, :cond_6
+    invoke-direct {v0, v1, p0}, Lp5;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, v0, Lc9f;->Z:Ljava/lang/String;
+    new-instance v1, Lmda;
 
-    const-string v1, "Can\'t open email step for restore"
+    const/4 v2, 0x4
 
-    invoke-static {v0, v1, v8}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v1, v2, v0}, Lmda;-><init>(ILjava/lang/Object;)V
 
-    goto/16 :goto_5
+    iget-object v0, p0, Lu8f;->X:Lbp7;
 
-    :cond_6
-    if-eqz v2, :cond_7
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object v0, v2, Lk77;->c:Lj77;
+    move-result-object v0
 
-    if-eqz v0, :cond_7
+    check-cast v0, Lm9f;
 
-    iget-object v0, v0, Lj77;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_1
+    check-cast v0, Ln9f;
 
-    :cond_7
-    move-object v0, v8
+    invoke-virtual {v0}, Ln9f;->a()Lked;
 
-    :goto_1
-    sget-object v2, Ll8f;->b:Ll8f;
+    move-result-object v0
 
-    if-ne v1, v2, :cond_8
+    invoke-virtual {v1, v0}, Lude;->m(Lked;)Lmee;
 
-    if-eqz v0, :cond_8
+    move-result-object v0
 
-    sget v1, La5c;->oneme_settings_twofa_creation_new_email_title:I
+    sget-object v1, Lxed;->d:Lbpf;
 
-    new-instance v2, Lyte;
+    invoke-virtual {v0, v1}, Lude;->i(Lked;)Lmee;
 
-    invoke-direct {v2, v1}, Lyte;-><init>(I)V
+    move-result-object v0
 
-    sget v1, La5c;->oneme_settings_twofa_creation_new_email_description:I
+    new-instance v1, Ls8f;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, v2}, Ls8f;-><init>(Lu8f;Lkbh;I)V
+
+    new-instance v2, Ls8f;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, p1, v3}, Ls8f;-><init>(Lu8f;Lkbh;I)V
+
+    new-instance p1, Lqs1;
+
+    const/4 v3, 0x2
+
+    invoke-direct {p1, v1, v3, v2}, Lqs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lude;->k(Lnee;)V
+
+    iput-object p1, p0, Lu8f;->w0:Lqs1;
+
+    return-void
+.end method
+
+.method public final d(Ljava/io/File;Lkbh;)V
+    .locals 3
+
+    const-string v0, "u8f"
+
+    const-string v1, "Tam emoji font loaded"
+
+    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lq66;
+
+    new-instance v1, Lu9h;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v1, Lu9h;->a:Ljava/lang/Object;
+
+    iget-object p1, p0, Lu8f;->X:Lbp7;
+
+    iput-object p1, v1, Lu9h;->b:Ljava/lang/Object;
+
+    iget-object p1, p0, Lu8f;->Y:Lbp7;
+
+    iput-object p1, v1, Lu9h;->c:Ljava/lang/Object;
+
+    invoke-direct {v0, v1}, Lq66;-><init>(Lk45;)V
+
+    if-eqz p2, :cond_0
+
+    const-string p1, "onDownloadEmojiFontSuccess %s"
 
     filled-new-array {v0}, [Ljava/lang/Object;
 
-    move-result-object v0
-
-    invoke-static {v0, v7}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    new-instance v4, Laue;
-
-    invoke-static {v0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-direct {v4, v1, v0}, Laue;-><init>(ILjava/util/List;)V
-
-    move-object v11, v4
-
-    goto :goto_2
-
-    :cond_8
-    sget v0, La5c;->oneme_settings_twofa_creation_email_title:I
-
-    new-instance v2, Lyte;
-
-    invoke-direct {v2, v0}, Lyte;-><init>(I)V
-
-    move-object v11, v8
-
-    :goto_2
-    new-instance v0, Ldbf;
-
-    sget v1, Lysc;->F0:I
-
-    sget v4, La5c;->oneme_settings_twofa_creation_email_subtitle:I
-
-    new-instance v5, Lyte;
-
-    invoke-direct {v5, v4}, Lyte;-><init>(I)V
-
-    new-instance v9, Lhbf;
-
-    sget v4, La5c;->oneme_settings_twofa_creation_email_hint:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v4}, Lyte;-><init>(I)V
-
-    const/4 v13, 0x0
-
-    const/16 v14, 0x7c
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v9 .. v14}, Lhbf;-><init>(Lyte;Ldue;III)V
-
-    invoke-direct {v0, v1, v2, v5, v9}, Ldbf;-><init>(ILdue;Ldue;Lhbf;)V
-
-    invoke-virtual {v3, v8, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto/16 :goto_5
-
-    :cond_9
-    invoke-virtual {v0}, Lc9f;->s()Lb8f;
-
     move-result-object v1
 
-    iget v1, v1, Lb8f;->c:I
+    const-string v2, "LoadEmojiFontWorker"
 
-    if-eq v1, v5, :cond_a
+    invoke-static {v2, p1, v1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-lez v1, :cond_a
+    iget-object p1, p2, Lkbh;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lc9f;->s()Lb8f;
+    check-cast p1, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-    move-result-object v0
+    new-instance p2, Lcz7;
 
-    iget v6, v0, Lb8f;->c:I
+    invoke-direct {p2, v0}, Lcz7;-><init>(Lq66;)V
 
-    :cond_a
-    move v13, v6
+    invoke-static {p1, p2}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Ldz7;)V
 
-    new-instance v0, Lfbf;
+    :cond_0
+    iget-object p1, p0, Lu8f;->Z:Lbp7;
 
-    sget v1, Lysc;->C0:I
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    sget v2, La5c;->oneme_settings_twofa_creation_hint_title:I
+    move-result-object p1
 
-    new-instance v4, Lyte;
+    check-cast p1, Lpm3;
 
-    invoke-direct {v4, v2}, Lyte;-><init>(I)V
+    invoke-interface {p1, p0}, Lpm3;->e(Lom3;)V
 
-    sget v2, La5c;->oneme_settings_twofa_creation_hint_subtitle:I
+    const/4 p1, 0x0
 
-    new-instance v5, Lyte;
+    iput-object p1, p0, Lu8f;->y0:Lkbh;
 
-    invoke-direct {v5, v2}, Lyte;-><init>(I)V
-
-    new-instance v9, Lhbf;
-
-    sget v2, La5c;->oneme_settings_twofa_creation_hint_input_hint:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v2}, Lyte;-><init>(I)V
-
-    const/4 v12, 0x0
-
-    const/16 v14, 0x5e
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v9 .. v14}, Lhbf;-><init>(Lyte;Ldue;III)V
-
-    invoke-direct {v0, v1, v4, v5, v9}, Lfbf;-><init>(ILdue;Ldue;Lhbf;)V
-
-    invoke-virtual {v3, v8, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {v0}, Lc9f;->s()Lb8f;
-
-    move-result-object v2
-
-    iget v2, v2, Lb8f;->a:I
-
-    if-ge v2, v7, :cond_c
-
-    move v12, v7
-
-    goto :goto_3
-
-    :cond_c
-    move v12, v2
-
-    :goto_3
-    invoke-virtual {v0}, Lc9f;->s()Lb8f;
-
-    move-result-object v2
-
-    iget v2, v2, Lb8f;->b:I
-
-    if-eq v2, v5, :cond_d
-
-    if-lez v2, :cond_d
-
-    invoke-virtual {v0}, Lc9f;->s()Lb8f;
-
-    move-result-object v0
-
-    iget v6, v0, Lb8f;->b:I
-
-    :cond_d
-    move/from16 v17, v6
-
-    sget v0, Ll2c;->oneme_settings_twofa_creation_password_symbols_count:I
-
-    new-instance v11, Lute;
-
-    invoke-direct {v11, v0, v12}, Lute;-><init>(II)V
-
-    sget-object v0, Ll8f;->a:Ll8f;
-
-    if-ne v1, v0, :cond_e
-
-    sget v0, La5c;->oneme_settings_twofa_creation_password_title:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, v0}, Lyte;-><init>(I)V
-
-    goto :goto_4
-
-    :cond_e
-    sget v0, La5c;->oneme_settings_twofa_creation_new_password_title:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, v0}, Lyte;-><init>(I)V
-
-    :goto_4
-    new-instance v0, Lgbf;
-
-    sget v2, Lysc;->a:I
-
-    new-instance v9, Lhbf;
-
-    sget v2, La5c;->oneme_settings_twofa_creation_password_first_hint:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v2}, Lyte;-><init>(I)V
-
-    const/16 v14, 0xc
-
-    move/from16 v13, v17
-
-    invoke-direct/range {v9 .. v14}, Lhbf;-><init>(Lyte;Ldue;III)V
-
-    new-instance v13, Lhbf;
-
-    sget v2, La5c;->oneme_settings_twofa_creation_password_second_hint:I
-
-    new-instance v14, Lyte;
-
-    invoke-direct {v14, v2}, Lyte;-><init>(I)V
-
-    const/16 v16, 0x0
-
-    const/16 v18, 0x16
-
-    const/4 v15, 0x0
-
-    invoke-direct/range {v13 .. v18}, Lhbf;-><init>(Lyte;Ldue;III)V
-
-    invoke-direct {v0, v1, v9, v13}, Lgbf;-><init>(Lyte;Lhbf;Lhbf;)V
-
-    invoke-virtual {v3, v8, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_5
-    sget-object v0, Ltcf;->a:Ltcf;
-
-    return-object v0
+    return-void
 .end method

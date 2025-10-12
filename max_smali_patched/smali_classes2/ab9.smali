@@ -1,122 +1,133 @@
 .class public final Lab9;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lx94;
+.implements Llf6;
 
 
-# static fields
-.field public static final a:Lab9;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:Lbb9;
+.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    .locals 0
 
-    new-instance v0, Lab9;
+    iput-object p2, p0, Lab9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lab9;->a:Lab9;
-
-    sget-object v0, Lbb9;->b:Lbb9;
-
-    sput-object v0, Lab9;->b:Lbb9;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfa4;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    sget-object p0, Lab9;->b:Lbb9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;Laa4;Landroid/os/Bundle;)Lia4;
-    .locals 9
-
-    sget-object p0, Lab9;->b:Lbb9;
-
-    iget-object p0, p0, Lfa4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    sget-object p0, Lbb9;->b:Lbb9;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lbb9;->c:Laa4;
-
-    invoke-virtual {p2, p0}, Laa4;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance v7, Lh;
-
-    const/16 p0, 0x17
-
-    invoke-direct {v7, p0}, Lh;-><init>(I)V
-
-    new-instance v1, Lia4;
-
-    const/16 v8, 0x18
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lia4;-><init>(Ljava/lang/String;Laa4;Landroid/os/Bundle;ILga4;Lha4;I)V
-
-    return-object v1
-
-    :cond_1
-    move-object v3, p2
-
-    const-class p0, Lab9;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "invalid route "
-
-    invoke-static {p1, v3}, Lw68;->k(Ljava/lang/String;Laa4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance p3, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1, v3}, Lw68;->k(Ljava/lang/String;Laa4;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lab9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {p3, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lab9;
 
-    invoke-static {p0, p2, p3}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lab9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lab9;
+
+    iget-object v1, p0, Lab9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {v0, p2, v1}, Lab9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+
+    iput-object p1, v0, Lab9;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lab9;->X:Ljava/lang/Object;
+
+    check-cast p1, Lgb5;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Lgb5;->a:Ljava/lang/Object;
+
+    check-cast p1, Lh99;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Lh99;->a:Lw59;
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lw59;->a:Lw59;
+
+    :goto_1
+    iget-object v0, p0, Lab9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lh69;->setEmojiExpandableState(Lw59;)V
+
+    sget-object v1, Lw59;->b:Lw59;
+
+    if-ne p1, v1, :cond_2
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
+
+    move-result-object p1
+
+    new-instance v1, Lpa9;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v0, v2}, Lpa9;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    iget-object p1, p1, Lh69;->c:Le69;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
+
+    new-instance v0, Lf63;
+
+    invoke-direct {v0, v2, v1}, Lf63;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    :cond_2
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

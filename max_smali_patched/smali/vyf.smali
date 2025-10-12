@@ -1,45 +1,86 @@
 .class public final Lvyf;
-.super Ljava/lang/Object;
+.super Ly24;
 .source "SourceFile"
 
-# interfaces
-.implements Lhhc;
+
+# static fields
+.field public static final a:Lvyf;
 
 
-# virtual methods
-.method public final b(Landroid/view/View;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lvyf;
+
+    invoke-direct {v0}, Ly24;-><init>()V
+
+    sput-object v0, Lvyf;->a:Lvyf;
 
     return-void
 .end method
 
-.method public final d(Landroid/view/View;)V
-    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+# virtual methods
+.method public final dispatch(Lw24;Ljava/lang/Runnable;)V
+    .locals 2
 
-    move-result-object p0
+    sget-object p1, Luj4;->b:Luj4;
 
-    check-cast p0, Lghc;
+    sget-object v0, Lncf;->h:Lst5;
 
-    iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
+    const/4 v1, 0x0
 
-    const/4 v0, -0x1
+    iget-object p1, p1, Loed;->a:Ld34;
 
-    if-ne p1, v0, :cond_0
-
-    iget p0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    if-ne p0, v0, :cond_0
+    invoke-virtual {p1, p2, v0, v1}, Ld34;->n(Ljava/lang/Runnable;Lvbf;Z)V
 
     return-void
+.end method
+
+.method public final dispatchYield(Lw24;Ljava/lang/Runnable;)V
+    .locals 2
+
+    sget-object p1, Luj4;->b:Luj4;
+
+    sget-object v0, Lncf;->h:Lst5;
+
+    const/4 v1, 0x1
+
+    iget-object p1, p1, Loed;->a:Ld34;
+
+    invoke-virtual {p1, p2, v0, v1}, Ld34;->n(Ljava/lang/Runnable;Lvbf;Z)V
+
+    return-void
+.end method
+
+.method public final limitedParallelism(ILjava/lang/String;)Ly24;
+    .locals 1
+
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+
+    sget v0, Lncf;->d:I
+
+    if-lt p1, v0, :cond_0
+
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Ly24;Ljava/lang/String;)Ly24;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-super {p0, p1, p2}, Ly24;->limitedParallelism(ILjava/lang/String;)Ly24;
 
-    const-string p1, "Pages must fill the whole ViewPager2 (use match_parent)"
+    move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object p1
+.end method
 
-    throw p0
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dispatchers.IO"
+
+    return-object v0
 .end method

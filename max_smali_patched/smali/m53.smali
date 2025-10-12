@@ -1,400 +1,180 @@
 .class public final Lm53;
-.super Ltmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final l:J
+.field public final a:Ljava/util/HashMap;
 
-.field public final m:J
-
-.field public final n:Z
-
-.field public final o:Z
-
-.field public final p:Z
-
-.field public final q:Ljava/util/ArrayList;
-
-.field public final r:Luxe;
-
-.field public s:Lk53;
-
-.field public t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
-
-.field public u:J
-
-.field public v:J
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lwj0;JJZZZ)V
-    .locals 2
+.method public constructor <init>(Ljava/util/HashMap;)V
+    .locals 4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ltmg;-><init>(Lwj0;)V
+    iput-object p1, p0, Lm53;->b:Ljava/util/HashMap;
 
-    const-wide/16 v0, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    cmp-long p1, p2, v0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    if-ltz p1, :cond_0
+    iput-object v0, p0, Lm53;->a:Ljava/util/HashMap;
 
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Ln76;->j(Z)V
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iput-wide p2, p0, Lm53;->l:J
+    move-result v0
 
-    iput-wide p4, p0, Lm53;->m:J
+    if-eqz v0, :cond_1
 
-    iput-boolean p6, p0, Lm53;->n:Z
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-boolean p7, p0, Lm53;->o:Z
+    move-result-object v0
 
-    iput-boolean p8, p0, Lm53;->p:Z
+    check-cast v0, Ljava/util/Map$Entry;
 
-    new-instance p1, Ljava/util/ArrayList;
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v1
 
-    iput-object p1, p0, Lm53;->q:Ljava/util/ArrayList;
+    check-cast v1, Ldr7;
 
-    new-instance p1, Luxe;
+    iget-object v2, p0, Lm53;->a:Ljava/util/HashMap;
 
-    invoke-direct {p1}, Luxe;-><init>()V
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lm53;->r:Luxe;
+    move-result-object v2
 
-    return-void
-.end method
+    check-cast v2, Ljava/util/List;
 
+    if-nez v2, :cond_0
 
-# virtual methods
-.method public final A(Lwxe;)V
-    .locals 1
+    new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lm53;->t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz v0, :cond_0
+    iget-object v3, p0, Lm53;->a:Ljava/util/HashMap;
 
-    return-void
+    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    invoke-virtual {p0, p1}, Lm53;->C(Lwxe;)V
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final C(Lwxe;)V
-    .locals 16
+    check-cast v0, Ln53;
 
-    move-object/from16 v1, p0
-
-    const/4 v2, 0x0
-
-    iget-object v0, v1, Lm53;->r:Luxe;
-
-    move-object/from16 v4, p1
-
-    invoke-virtual {v4, v2, v0}, Lwxe;->n(ILuxe;)V
-
-    iget-wide v5, v0, Luxe;->p:J
-
-    iget-object v3, v1, Lm53;->s:Lk53;
-
-    iget-wide v7, v1, Lm53;->m:J
-
-    const-wide/high16 v9, -0x8000000000000000L
-
-    iget-object v11, v1, Lm53;->q:Ljava/util/ArrayList;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v11}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-boolean v3, v1, Lm53;->o:Z
-
-    if-eqz v3, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    iget-wide v12, v1, Lm53;->u:J
-
-    sub-long/2addr v12, v5
-
-    cmp-long v0, v7, v9
-
-    if-nez v0, :cond_1
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_1
-    iget-wide v7, v1, Lm53;->v:J
+    return-void
+.end method
 
-    sub-long v9, v7, v5
+.method public static a(Ljava/util/List;Lcs7;Ldr7;Ljava/lang/Object;)V
+    .locals 5
 
-    :goto_0
-    move-wide v7, v9
+    if-eqz p0, :cond_3
 
-    :goto_1
-    move-wide v5, v12
-
-    goto :goto_6
-
-    :cond_2
-    :goto_2
-    iget-boolean v3, v1, Lm53;->p:Z
-
-    iget-wide v12, v1, Lm53;->l:J
-
-    if-eqz v3, :cond_3
-
-    iget-wide v14, v0, Luxe;->l:J
-
-    add-long/2addr v12, v14
-
-    add-long/2addr v14, v7
-
-    goto :goto_3
-
-    :cond_3
-    move-wide v14, v7
-
-    :goto_3
-    add-long v2, v5, v12
-
-    iput-wide v2, v1, Lm53;->u:J
-
-    cmp-long v0, v7, v9
-
-    if-nez v0, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    add-long v9, v5, v14
-
-    :goto_4
-    iput-wide v9, v1, Lm53;->v:J
-
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    :goto_5
-    if-ge v2, v0, :cond_5
+    sub-int/2addr v0, v1
 
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :goto_0
+    if-ltz v0, :cond_3
 
-    move-result-object v3
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    check-cast v3, Li53;
+    move-result-object v2
 
-    iget-wide v5, v1, Lm53;->u:J
+    check-cast v2, Ln53;
 
-    iget-wide v7, v1, Lm53;->v:J
+    iget-object v3, v2, Ln53;->b:Ljava/lang/reflect/Method;
 
-    iput-wide v5, v3, Li53;->X:J
+    :try_start_0
+    iget v2, v2, Ln53;->a:I
 
-    iput-wide v7, v3, Li53;->Y:J
+    if-eqz v2, :cond_2
 
-    add-int/lit8 v2, v2, 0x1
+    if-eq v2, v1, :cond_1
 
-    goto :goto_5
+    const/4 v4, 0x2
 
-    :cond_5
-    move-wide v7, v14
+    if-eq v2, v4, :cond_0
 
     goto :goto_1
 
-    :goto_6
-    :try_start_0
-    new-instance v3, Lk53;
+    :cond_0
+    filled-new-array {p1, p2}, [Ljava/lang/Object;
 
-    invoke-direct/range {v3 .. v8}, Lk53;-><init>(Lwxe;JJ)V
+    move-result-object v2
 
-    iput-object v3, v1, Lm53;->s:Lk53;
-    :try_end_0
-    .catch Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v3}, Lwj0;->n(Lwxe;)V
+    goto :goto_1
 
-    return-void
+    :cond_1
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    :catch_0
-    move-exception v0
+    move-result-object v2
 
-    iput-object v0, v1, Lm53;->t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
+    goto :goto_1
+
+    :cond_2
     const/4 v2, 0x0
 
-    :goto_7
-    invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v0
+    :goto_1
+    add-int/lit8 v0, v0, -0x1
 
-    if-ge v2, v0, :cond_6
+    goto :goto_0
 
-    invoke-virtual {v11, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :catch_0
+    move-exception p0
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    check-cast v0, Li53;
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    iget-object v3, v1, Lm53;->t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+    throw p1
 
-    iput-object v3, v0, Li53;->Z:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
+    :catch_1
+    move-exception p0
 
-    add-int/lit8 v2, v2, 0x1
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    goto :goto_7
+    const-string p2, "Failed to call observer method"
 
-    :cond_6
-    return-void
-.end method
+    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
-.method public final a(Lte8;)Z
-    .locals 2
+    move-result-object p0
 
-    iget-object p0, p0, Ltmg;->k:Lwj0;
+    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0}, Lwj0;->i()Lte8;
+    throw p1
 
-    move-result-object v0
-
-    iget-object v0, v0, Lte8;->e:Lde8;
-
-    iget-object v1, p1, Lte8;->e:Lde8;
-
-    invoke-virtual {v0, v1}, Lbe8;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lwj0;->a(Lte8;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final c(Lxm8;Lka4;J)Lzg8;
-    .locals 7
-
-    new-instance v0, Li53;
-
-    iget-object v1, p0, Ltmg;->k:Lwj0;
-
-    invoke-virtual {v1, p1, p2, p3, p4}, Lwj0;->c(Lxm8;Lka4;J)Lzg8;
-
-    move-result-object v1
-
-    iget-wide v3, p0, Lm53;->u:J
-
-    iget-wide v5, p0, Lm53;->v:J
-
-    iget-boolean v2, p0, Lm53;->n:Z
-
-    invoke-direct/range {v0 .. v6}, Li53;-><init>(Lzg8;ZJJ)V
-
-    iget-object p0, p0, Lm53;->q:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-.end method
-
-.method public final k()V
-    .locals 1
-
-    iget-object v0, p0, Lm53;->t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Lvd3;->k()V
-
-    return-void
-
-    :cond_0
-    throw v0
-.end method
-
-.method public final o(Lzg8;)V
-    .locals 2
-
-    iget-object v0, p0, Lm53;->q:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    invoke-static {v1}, Ln76;->n(Z)V
-
-    check-cast p1, Li53;
-
-    iget-object p1, p1, Li53;->a:Lzg8;
-
-    iget-object v1, p0, Ltmg;->k:Lwj0;
-
-    invoke-virtual {v1, p1}, Lwj0;->o(Lzg8;)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-boolean p1, p0, Lm53;->o:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lm53;->s:Lk53;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lp46;->e:Lwxe;
-
-    invoke-virtual {p0, p1}, Lm53;->C(Lwxe;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final q()V
-    .locals 1
-
-    invoke-super {p0}, Lvd3;->q()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lm53;->t:Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;
-
-    iput-object v0, p0, Lm53;->s:Lk53;
-
+    :cond_3
     return-void
 .end method

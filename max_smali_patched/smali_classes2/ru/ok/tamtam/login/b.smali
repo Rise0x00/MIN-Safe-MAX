@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static final a(Lrv0;Lhoe;)Lix7;
+.method public static final a(Lov0;Lr8f;)Lz48;
     .locals 1
 
     new-instance v0, Lru/ok/tamtam/login/LoginEventsByBus;
 
-    invoke-direct {v0, p0, p1}, Lru/ok/tamtam/login/LoginEventsByBus;-><init>(Lrv0;Lhoe;)V
+    invoke-direct {v0, p0, p1}, Lru/ok/tamtam/login/LoginEventsByBus;-><init>(Lov0;Lr8f;)V
 
     return-object v0
 .end method

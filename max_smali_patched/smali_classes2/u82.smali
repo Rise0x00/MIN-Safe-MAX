@@ -1,125 +1,152 @@
-.class public abstract synthetic Lu82;
+.class public final synthetic Lu82;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatAdminsScreen;I)V
+    .locals 0
 
-    const/4 v0, 0x7
+    iput p2, p0, Lu82;->a:I
 
-    invoke-static {v0}, Ldw1;->w(I)[I
+    iput-object p1, p0, Lu82;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
+
+    iget v0, p0, Lu82;->a:I
+
+    iget-object v1, p0, Lu82;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->z0:[Ltm7;
+
+    new-instance v2, Lc;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->B0()Le92;
+
+    move-result-object v4
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x6
+
+    const/4 v3, 0x1
+
+    const-class v5, Le92;
+
+    const-string v6, "getContextMenuActions"
+
+    const-string v7, "getContextMenuActions(J)Ljava/util/List;"
+
+    invoke-direct/range {v2 .. v9}, Lc;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v3, Lw11;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->B0()Le92;
+
+    move-result-object v5
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x9
+
+    const/4 v4, 0x0
+
+    const-class v6, Le92;
+
+    const-string v7, "getButtonActions"
+
+    const-string v8, "getButtonActions()Lkotlinx/coroutines/flow/Flow;"
+
+    invoke-direct/range {v3 .. v10}, Lw11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v4, Lt82;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->C0()J
+
+    move-result-wide v5
+
+    sget-object v0, Lcub;->a:Lcub;
+
+    invoke-virtual {v0}, Lcub;->c()Lbp7;
+
+    move-result-object v7
+
+    invoke-virtual {v0}, Lcub;->e()Lbp7;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
     move-result-object v1
 
-    array-length v1, v1
+    const-class v9, Lepb;
 
-    new-array v1, v1, [I
+    invoke-virtual {v1, v9}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    const/4 v2, 0x1
+    move-result-object v9
 
-    const/4 v3, 0x2
+    invoke-virtual {v0}, Lcub;->d()Lbp7;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v10
 
-    :catch_0
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    :catch_1
-    const/4 v4, 0x3
+    move-result-object v1
 
-    :try_start_2
-    aput v4, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    const-class v11, Lipb;
 
-    :catch_2
-    const/4 v5, 0x4
+    invoke-virtual {v1, v11}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    :try_start_3
-    aput v5, v1, v5
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    move-result-object v11
 
-    :catch_3
-    const/4 v6, 0x0
+    invoke-virtual {v0}, Lcub;->g()Lbp7;
 
-    const/4 v7, 0x5
+    move-result-object v12
 
-    :try_start_4
-    aput v7, v1, v6
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-direct/range {v4 .. v12}, Lt82;-><init>(JLbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
 
-    :catch_4
-    const/4 v8, 0x6
+    new-instance v0, Lmz8;
 
-    :try_start_5
-    aput v8, v1, v7
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-direct {v0, v2, v4, v3}, Lmz8;-><init>(Lxe6;Laj4;Lve6;)V
 
-    :catch_5
-    :try_start_6
-    aput v0, v1, v8
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    return-object v0
 
-    :catch_6
-    sput-object v1, Lu82;->$EnumSwitchMapping$0:[I
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->z0:[Ltm7;
 
-    invoke-static {}, Lt82;->values()[Lt82;
+    new-instance v0, Le92;
 
-    move-result-object v0
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatAdminsScreen;->C0()J
 
-    array-length v0, v0
+    move-result-wide v1
 
-    new-array v0, v0, [I
+    invoke-direct {v0, v1, v2}, Le92;-><init>(J)V
 
-    :try_start_7
-    aput v2, v0, v6
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    return-object v0
 
-    :catch_7
-    :try_start_8
-    aput v3, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    nop
 
-    :catch_8
-    :try_start_9
-    aput v4, v0, v4
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    :try_start_a
-    aput v5, v0, v5
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    :try_start_b
-    aput v7, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    sput-object v0, Lu82;->$EnumSwitchMapping$1:[I
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

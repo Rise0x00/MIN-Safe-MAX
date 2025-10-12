@@ -1,23 +1,65 @@
-.class public final Lamc;
+.class public abstract Lamc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lso5;
+# static fields
+.field public static CoordinatorLayout:[I = null
 
-.field public final b:Lbmc;
+.field public static CoordinatorLayout_Layout:[I = null
+
+.field public static CoordinatorLayout_Layout_android_layout_gravity:I = 0x0
+
+.field public static CoordinatorLayout_Layout_layout_anchor:I = 0x1
+
+.field public static CoordinatorLayout_Layout_layout_anchorGravity:I = 0x2
+
+.field public static CoordinatorLayout_Layout_layout_behavior:I = 0x3
+
+.field public static CoordinatorLayout_Layout_layout_dodgeInsetEdges:I = 0x4
+
+.field public static CoordinatorLayout_Layout_layout_insetEdge:I = 0x5
+
+.field public static CoordinatorLayout_Layout_layout_keyline:I = 0x6
+
+.field public static CoordinatorLayout_keylines:I = 0x0
+
+.field public static CoordinatorLayout_statusBarBackground:I = 0x1
 
 
 # direct methods
-.method public constructor <init>(Lso5;Lbmc;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x7f040588
 
-    iput-object p1, p0, Lamc;->a:Lso5;
+    const v1, 0x7f0407e8
 
-    iput-object p2, p0, Lamc;->b:Lbmc;
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lamc;->CoordinatorLayout:[I
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lamc;->CoordinatorLayout_Layout:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x10100b3
+        0x7f040599
+        0x7f04059a
+        0x7f04059b
+        0x7f0405cf
+        0x7f0405dd
+        0x7f0405de
+    .end array-data
 .end method

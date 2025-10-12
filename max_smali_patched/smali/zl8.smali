@@ -1,128 +1,25 @@
 .class public final Lzl8;
-.super Ljava/lang/Object;
+.super Lxl8;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:I
+# static fields
+.field public static final p:Lzl8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvl8;
 
-    iput-object p1, p0, Lzl8;->a:Ljava/lang/String;
+    invoke-direct {v0}, Lvl8;-><init>()V
 
-    iput p2, p0, Lzl8;->b:I
+    new-instance v1, Lzl8;
 
-    iput p3, p0, Lzl8;->c:I
+    invoke-direct {v1, v0}, Lxl8;-><init>(Lvl8;)V
+
+    sput-object v1, Lzl8;->p:Lzl8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzl8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzl8;
-
-    iget v1, p0, Lzl8;->c:I
-
-    iget-object v3, p0, Lzl8;->a:Ljava/lang/String;
-
-    iget p0, p0, Lzl8;->b:I
-
-    if-ltz p0, :cond_4
-
-    iget v4, p1, Lzl8;->b:I
-
-    if-gez v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v4, p1, Lzl8;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget v3, p1, Lzl8;->b:I
-
-    if-ne p0, v3, :cond_3
-
-    iget p0, p1, Lzl8;->c:I
-
-    if-ne v1, p0, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-
-    :cond_4
-    :goto_0
-    iget-object p0, p1, Lzl8;->a:Ljava/lang/String;
-
-    invoke-static {v3, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    iget p0, p1, Lzl8;->c:I
-
-    if-ne v1, p0, :cond_5
-
-    return v0
-
-    :cond_5
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lzl8;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lzl8;->a:Ljava/lang/String;
-
-    filled-new-array {p0, v0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
 .end method

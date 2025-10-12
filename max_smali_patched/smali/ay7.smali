@@ -1,41 +1,133 @@
 .class public final Lay7;
-.super Lfa4;
+.super Ljava/util/AbstractList;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/RandomAccess;
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final b:Lay7;
 
-.field public static final c:Laa4;
+# instance fields
+.field public final a:Ljava/util/List;
+
+.field public final b:Lhf6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lhf6;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lay7;
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v0, Lay7;->b:Lay7;
+    iput-object p2, p0, Lay7;->a:Ljava/util/List;
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lay7;->b:Lhf6;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-void
+.end method
 
-    const/4 v4, 0x1
 
-    const/16 v5, 0xa
+# virtual methods
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    const-string v1, ":logout"
+    iget-object v0, p0, Lay7;->a:Ljava/util/List;
 
-    const/4 v3, 0x0
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    move-result-object p1
+
+    iget-object v0, p0, Lay7;->b:Lhf6;
+
+    invoke-interface {v0, p1}, Lhf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lay7;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    sput-object v0, Lay7;->c:Laa4;
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 2
+
+    new-instance v0, Lzx7;
+
+    iget-object v1, p0, Lay7;->a:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lzx7;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
+
+    return-object v0
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lay7;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lay7;->b:Lhf6;
+
+    invoke-interface {v0, p1}, Lhf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final removeRange(II)V
+    .locals 1
+
+    iget-object v0, p0, Lay7;->a:Ljava/util/List;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->clear()V
 
     return-void
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lay7;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
 .end method

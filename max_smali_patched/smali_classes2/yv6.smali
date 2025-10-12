@@ -3,16 +3,77 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Lxe6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/List;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/util/List;)V
+    .locals 0
+
+    iput p1, p0, Lyv6;->a:I
+
+    iput-object p2, p0, Lyv6;->b:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget p0, Lru/ok/tamtam/calls/ui/IconSwitch;->c:I
+    iget v0, p0, Lyv6;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
+    packed-switch v0, :pswitch_data_0
 
-    return-void
+    check-cast p1, Lfy8;
+
+    iget-wide v0, p1, Lfy8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lyv6;->b:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Liv6;
+
+    invoke-interface {p1}, Liv6;->l()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lyv6;->b:Ljava/util/List;
+
+    invoke-static {v0, v1, p1}, Lihf;->e(JLjava/util/List;)Z
+
+    move-result p1
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

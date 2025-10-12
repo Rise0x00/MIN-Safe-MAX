@@ -1,215 +1,94 @@
 .class public final Lb06;
-.super Lm44;
+.super Lym4;
 .source "SourceFile"
 
-
-# static fields
-.field public static final v0:Lcy9;
+# interfaces
+.implements Lyz5;
 
 
 # instance fields
-.field public final r0:Lox3;
-
-.field public final s0:Landroidx/recyclerview/widget/b;
-
-.field public final t0:La06;
-
-.field public u0:Ljava/util/List;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lcy9;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lcy9;-><init>(I)V
-
-    sput-object v0, Lb06;->v0:Lcy9;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lox3;Landroidx/recyclerview/widget/b;La06;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lm44;-><init>(Lox3;)V
-
-    iput-object p1, p0, Lb06;->r0:Lox3;
-
-    iput-object p2, p0, Lb06;->s0:Landroidx/recyclerview/widget/b;
-
-    iput-object p3, p0, Lb06;->t0:La06;
-
-    sget-object p1, Lr25;->a:Lr25;
-
-    iput-object p1, p0, Lb06;->u0:Ljava/util/List;
-
-    return-void
-.end method
+.field public c:Leze;
 
 
 # virtual methods
-.method public final E(Lqrc;I)V
-    .locals 9
+.method public final b()V
+    .locals 1
 
-    invoke-virtual {p1}, Lqrc;->n()Z
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lb06;->u0:Ljava/util/List;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lay5;
-
-    iget-object p2, p2, Lay5;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lb06;->t0:La06;
-
-    iget-object v1, p0, Lb06;->s0:Landroidx/recyclerview/widget/b;
-
-    invoke-interface {v0, p2, v1}, La06;->e(Ljava/lang/String;Landroidx/recyclerview/widget/b;)Lone/me/sdk/arch/Widget;
-
-    move-result-object v3
-
-    iget-object p0, p0, Lb06;->r0:Lox3;
-
-    invoke-virtual {v3, p0}, Lox3;->setTargetController(Lox3;)V
-
-    sget-object p0, Lnx3;->b:Lnx3;
-
-    invoke-virtual {v3, p0}, Lox3;->setRetainViewMode(Lnx3;)V
-
-    new-instance v2, Ltrc;
-
-    const/4 v7, 0x0
-
-    const/4 v8, -0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v8}, Ltrc;-><init>(Lox3;Ljava/lang/String;Ltx3;Ltx3;ZI)V
-
-    invoke-virtual {p1, v2}, Lqrc;->S(Ltrc;)V
+    invoke-virtual {p0, v0}, Lym4;->g(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final M(Ljava/util/List;)V
-    .locals 3
+.method public final cancel()V
+    .locals 1
 
-    iget-object v0, p0, Lb06;->u0:Ljava/util/List;
+    const/4 v0, 0x4
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lb06;->u0:Ljava/util/List;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
     const/4 v0, 0x0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iput-object v0, p0, Lym4;->b:Ljava/lang/Object;
 
-    move-result p1
+    iget-object v0, p0, Lb06;->c:Leze;
 
-    invoke-virtual {p0, v0, p1}, Lygc;->p(II)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lr81;
-
-    iget-object v1, p0, Lb06;->u0:Ljava/util/List;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, v1, p1}, Lr81;-><init>(ILjava/util/List;Ljava/util/List;)V
-
-    invoke-static {v0}, Lis8;->b(Lg67;)Ljn4;
-
-    move-result-object v0
-
-    iput-object p1, p0, Lb06;->u0:Ljava/util/List;
-
-    new-instance p1, Lr8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v1, p0}, Lr8;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Ljn4;->a(Lup7;)V
+    invoke-interface {v0}, Leze;->cancel()V
 
     return-void
 .end method
 
-.method public final j()I
-    .locals 0
+.method public final d(Leze;)V
+    .locals 2
 
-    iget-object p0, p0, Lb06;->u0:Ljava/util/List;
+    iget-object v0, p0, Lb06;->c:Leze;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
 
-    move-result p0
+    move-result v0
 
-    return p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final k(I)J
-    .locals 0
+    iput-object p1, p0, Lb06;->c:Leze;
 
-    iget-object p0, p0, Lb06;->u0:Ljava/util/List;
+    iget-object v0, p0, Lym4;->a:Lcze;
 
-    invoke-static {p1, p0}, Lg73;->r0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-interface {v0, p0}, Lcze;->d(Leze;)V
 
-    move-result-object p0
+    const-wide v0, 0x7fffffffffffffffL
 
-    check-cast p0, Lay5;
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lay5;->a:Ljava/lang/String;
-
-    goto :goto_0
+    invoke-interface {p1, v0, v1}, Leze;->i(J)V
 
     :cond_0
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    :goto_0
-    if-eqz p0, :cond_1
+.method public final f(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
 
-    move-result p0
+    check-cast v0, Ljava/util/Collection;
 
-    goto :goto_1
+    if-eqz v0, :cond_0
 
-    :cond_1
-    const/4 p0, 0x0
+    invoke-interface {v0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    :goto_1
-    int-to-long p0, p0
+    :cond_0
+    return-void
+.end method
 
-    return-wide p0
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lym4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lym4;->a:Lcze;
+
+    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

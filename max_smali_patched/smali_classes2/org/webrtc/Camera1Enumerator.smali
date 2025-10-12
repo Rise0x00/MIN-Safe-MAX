@@ -447,7 +447,7 @@
 
     const-string v3, ", have: "
 
-    invoke-static {v2, p0, v3, v1}, Ldl5;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0, v3, v1}, Lqe0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -721,39 +721,39 @@
 
 # virtual methods
 .method public createCapturer(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;)Lorg/webrtc/CameraVideoCapturer;
-    .locals 1
+    .locals 2
 
     .line 1
     new-instance v0, Lorg/webrtc/Camera1Capturer;
 
-    iget-boolean p0, p0, Lorg/webrtc/Camera1Enumerator;->captureToTexture:Z
+    iget-boolean v1, p0, Lorg/webrtc/Camera1Enumerator;->captureToTexture:Z
 
-    invoke-direct {v0, p1, p2, p0}, Lorg/webrtc/Camera1Capturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Z)V
+    invoke-direct {v0, p1, p2, v1}, Lorg/webrtc/Camera1Capturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Z)V
 
     return-object v0
 .end method
 
 .method public createCapturer(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)Lorg/webrtc/CameraVideoCapturer;
-    .locals 1
+    .locals 2
 
     .line 2
     new-instance v0, Lorg/webrtc/Camera1Capturer;
 
-    iget-boolean p0, p0, Lorg/webrtc/Camera1Enumerator;->captureToTexture:Z
+    iget-boolean v1, p0, Lorg/webrtc/Camera1Enumerator;->captureToTexture:Z
 
-    invoke-direct {v0, p1, p2, p3, p0}, Lorg/webrtc/Camera1Capturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;Z)V
+    invoke-direct {v0, p1, p2, p3, v1}, Lorg/webrtc/Camera1Capturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;Z)V
 
     return-object v0
 .end method
 
 .method public getDeviceNames()[Ljava/lang/String;
-    .locals 0
+    .locals 1
 
     invoke-static {}, Lorg/webrtc/Camera1Enumerator;->getDeviceNamesS()[Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getSupportedFormats(Ljava/lang/String;)Ljava/util/List;
@@ -772,13 +772,13 @@
     .line 1
     invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraIndex(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Lorg/webrtc/Camera1Enumerator;->getSupportedFormats(I)Ljava/util/List;
+    invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getSupportedFormats(I)Ljava/util/List;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
 .method public isBackFacing(Ljava/lang/String;)Z
@@ -786,51 +786,51 @@
 
     invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraIndex(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
-    invoke-static {p0}, Lorg/webrtc/Camera1Enumerator;->getCameraInfo(I)Landroid/hardware/Camera$CameraInfo;
+    invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraInfo(I)Landroid/hardware/Camera$CameraInfo;
 
-    move-result-object p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
+    if-eqz p1, :cond_0
 
-    iget p0, p0, Landroid/hardware/Camera$CameraInfo;->facing:I
+    iget p1, p1, Landroid/hardware/Camera$CameraInfo;->facing:I
 
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public isFrontFacing(Ljava/lang/String;)Z
-    .locals 0
-
-    invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraIndex(Ljava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0}, Lorg/webrtc/Camera1Enumerator;->getCameraInfo(I)Landroid/hardware/Camera$CameraInfo;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    iget p0, p0, Landroid/hardware/Camera$CameraInfo;->facing:I
+    if-nez p1, :cond_0
 
     const/4 p1, 0x1
-
-    if-ne p0, p1, :cond_0
 
     return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
+.end method
+
+.method public isFrontFacing(Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraIndex(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-static {p1}, Lorg/webrtc/Camera1Enumerator;->getCameraInfo(I)Landroid/hardware/Camera$CameraInfo;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget p1, p1, Landroid/hardware/Camera$CameraInfo;->facing:I
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

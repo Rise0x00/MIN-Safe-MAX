@@ -1,139 +1,95 @@
 .class public final Ldd9;
-.super Leje;
+.super Lt78;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lfd9;
+.field public final synthetic g:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Lfd9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lbp7;)V
     .locals 0
 
-    iput-object p1, p0, Ldd9;->Y:Lfd9;
+    iput-object p1, p0, Ldd9;->g:Lbp7;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x6
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lt78;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Lprf;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lprf;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ldd9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Ljava/lang/Number;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    check-cast p0, Ldd9;
+    move-result v0
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object p1, p1, Lprf;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Ldd9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Number;
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result p1
 
-    new-instance v0, Ldd9;
+    new-instance v1, Landroid/text/TextPaint;
 
-    iget-object p0, p0, Ldd9;->Y:Lfd9;
+    const/4 v2, 0x1
 
-    invoke-direct {v0, p0, p2}, Ldd9;-><init>(Lfd9;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
 
-    iput-object p1, v0, Ldd9;->X:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object p1, p0, Ldd9;->g:Lbp7;
 
-    iget-object p1, p0, Ldd9;->X:Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/List;
+    move-result-object p1
 
-    iget-object p0, p0, Ldd9;->Y:Lfd9;
+    check-cast p1, Lbt0;
 
-    iget-object p0, p0, Lfd9;->a:Ljea;
+    check-cast p1, Lria;
 
-    sget-object v0, Lz76;->f:Lvea;
+    sget-object v0, Lbx4;->y0:Lsed;
 
-    if-nez v0, :cond_0
+    iget-object p1, p1, Lria;->a:Landroid/content/Context;
 
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lsed;->k(Landroid/content/Context;)Lbx4;
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    sget-object v1, Lhw7;->o:Lhw7;
+    invoke-virtual {p1}, Lbx4;->h()Luxa;
 
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
+    move-result-object p1
 
-    move-result v2
+    invoke-interface {p1}, Luxa;->a()Liu2;
 
-    if-eqz v2, :cond_1
+    move-result-object p1
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-interface {p1}, Liu2;->j()Lvs0;
 
-    move-result v2
+    move-result-object p1
 
-    const-string v3, "updateMiniChats by count: "
+    iget-object p1, p1, Lvs0;->d:Lys0;
 
-    invoke-static {v2, v3}, Lw68;->h(ILjava/lang/String;)Ljava/lang/String;
+    iget p1, p1, Lys0;->b:I
 
-    move-result-object v2
+    iput p1, v1, Landroid/text/TextPaint;->linkColor:I
 
-    const/4 v3, 0x0
-
-    const-string v4, "OneMeInitialDataStorage"
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Ljea;->b:Lkle;
-
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyc9;
-
-    iget-object v0, v0, Laa8;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Ljea;->b:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyc9;
-
-    invoke-virtual {p0}, Laa8;->G()V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v1
 .end method

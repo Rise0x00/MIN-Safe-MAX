@@ -1,363 +1,107 @@
-.class public final Lplc;
+.class public abstract Lplc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lplc;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static MapAttrs:[I = null
 
+.field public static MapAttrs_ambientEnabled:I = 0x0
 
-# instance fields
-.field public final a:I
+.field public static MapAttrs_backgroundColor:I = 0x1
+
+.field public static MapAttrs_cameraBearing:I = 0x2
+
+.field public static MapAttrs_cameraMaxZoomPreference:I = 0x3
+
+.field public static MapAttrs_cameraMinZoomPreference:I = 0x4
+
+.field public static MapAttrs_cameraTargetLat:I = 0x5
+
+.field public static MapAttrs_cameraTargetLng:I = 0x6
+
+.field public static MapAttrs_cameraTilt:I = 0x7
+
+.field public static MapAttrs_cameraZoom:I = 0x8
+
+.field public static MapAttrs_latLngBoundsNorthEastLatitude:I = 0x9
+
+.field public static MapAttrs_latLngBoundsNorthEastLongitude:I = 0xa
+
+.field public static MapAttrs_latLngBoundsSouthWestLatitude:I = 0xb
+
+.field public static MapAttrs_latLngBoundsSouthWestLongitude:I = 0xc
+
+.field public static MapAttrs_liteMode:I = 0xd
+
+.field public static MapAttrs_mapColorScheme:I = 0xe
+
+.field public static MapAttrs_mapId:I = 0xf
+
+.field public static MapAttrs_mapType:I = 0x10
+
+.field public static MapAttrs_uiCompass:I = 0x11
+
+.field public static MapAttrs_uiMapToolbar:I = 0x12
+
+.field public static MapAttrs_uiRotateGestures:I = 0x13
+
+.field public static MapAttrs_uiScrollGestures:I = 0x14
+
+.field public static MapAttrs_uiScrollGesturesDuringRotateOrZoom:I = 0x15
+
+.field public static MapAttrs_uiTiltGestures:I = 0x16
+
+.field public static MapAttrs_uiZoomControls:I = 0x17
+
+.field public static MapAttrs_uiZoomGestures:I = 0x18
+
+.field public static MapAttrs_useViewLifecycle:I = 0x19
+
+.field public static MapAttrs_zOrderOnTop:I = 0x1a
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lz1b;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lz1b;-><init>(I)V
-
-    sput-object v0, Lplc;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x1b
 
-    and-int/lit8 v0, p1, 0x2
+    new-array v0, v0, [I
 
-    if-eqz v0, :cond_0
+    fill-array-data v0, :array_0
 
-    or-int/lit8 p1, p1, 0x1
-
-    :cond_0
-    iput p1, p0, Lplc;->a:I
+    sput-object v0, Lplc;->MapAttrs:[I
 
     return-void
-.end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;)I
-    .locals 8
-
-    iget p0, p0, Lplc;->a:I
-
-    and-int/lit8 v0, p0, 0x1
-
-    const/16 v1, 0x10
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "connectivity"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    sget v4, Lfif;->a:I
-
-    const/16 v5, 0x18
-
-    if-ge v4, v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
-
-    move-result-object v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_0
-    invoke-virtual {v0, v4}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v4, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
-
-    move-result v4
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz v4, :cond_3
-
-    :catch_0
-    :goto_0
-    and-int/lit8 v4, p0, 0x2
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    and-int/lit8 v0, p0, 0x3
-
-    :goto_2
-    and-int/lit8 v4, p0, 0x8
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_6
-
-    new-instance v4, Landroid/content/IntentFilter;
-
-    const-string v6, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-direct {v4, v6}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v5, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v4
-
-    if-nez v4, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    const-string v6, "status"
-
-    const/4 v7, -0x1
-
-    invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v4
-
-    if-eq v4, v2, :cond_6
-
-    const/4 v2, 0x5
-
-    if-ne v4, v2, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    or-int/lit8 v0, v0, 0x8
-
-    :cond_6
-    :goto_4
-    and-int/lit8 v2, p0, 0x4
-
-    const/4 v4, 0x1
-
-    if-eqz v2, :cond_a
-
-    const-string v2, "power"
-
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v2, Landroid/os/PowerManager;
-
-    sget v6, Lfif;->a:I
-
-    const/16 v7, 0x17
-
-    if-lt v6, v7, :cond_7
-
-    invoke-virtual {v2}, Landroid/os/PowerManager;->isDeviceIdleMode()Z
-
-    move-result v2
-
-    goto :goto_6
-
-    :cond_7
-    const/16 v7, 0x14
-
-    if-lt v6, v7, :cond_9
-
-    invoke-virtual {v2}, Landroid/os/PowerManager;->isInteractive()Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    :goto_5
-    move v2, v4
-
-    goto :goto_6
-
-    :cond_8
-    move v2, v3
-
-    goto :goto_6
-
-    :cond_9
-    invoke-virtual {v2}, Landroid/os/PowerManager;->isScreenOn()Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    goto :goto_5
-
-    :goto_6
-    if-nez v2, :cond_a
-
-    or-int/lit8 v0, v0, 0x4
-
-    :cond_a
-    and-int/2addr p0, v1
-
-    if-eqz p0, :cond_b
-
-    move p0, v4
-
-    goto :goto_7
-
-    :cond_b
-    move p0, v3
-
-    :goto_7
-    if-eqz p0, :cond_d
-
-    new-instance p0, Landroid/content/IntentFilter;
-
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-direct {p0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v5, p0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object p0
-
-    if-nez p0, :cond_c
-
-    move v3, v4
-
-    :cond_c
-    if-nez v3, :cond_d
-
-    or-int/lit8 v0, v0, 0x10
-
-    :cond_d
-    return v0
-.end method
-
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lplc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lplc;
-
-    iget p1, p1, Lplc;->a:I
-
-    iget p0, p0, Lplc;->a:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Lplc;->a:I
-
-    return p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p0, p0, Lplc;->a:I
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    :array_0
+    .array-data 4
+        0x7f040040
+        0x7f04005c
+        0x7f0400b5
+        0x7f0400b6
+        0x7f0400b7
+        0x7f0400b8
+        0x7f0400b9
+        0x7f0400ba
+        0x7f0400bb
+        0x7f040590
+        0x7f040591
+        0x7f040592
+        0x7f040593
+        0x7f040604
+        0x7f04060b
+        0x7f04060c
+        0x7f04060d
+        0x7f0408c2
+        0x7f0408c3
+        0x7f0408c4
+        0x7f0408c5
+        0x7f0408c6
+        0x7f0408c7
+        0x7f0408c8
+        0x7f0408c9
+        0x7f0408d2
+        0x7f0408fa
+    .end array-data
 .end method

@@ -1,126 +1,211 @@
 .class public final Lhd5;
-.super Lxoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
+
+# static fields
+.field public static final d:Ljava/nio/charset/Charset;
+
+.field public static final e:[Ljava/lang/String;
+
+.field public static final f:[I
 
 
 # instance fields
-.field public final X:I
+.field public final a:I
 
-.field public final o:Ljava/util/zip/ZipEntry;
+.field public final b:I
+
+.field public final c:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getCrc()J
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    move-result-wide v0
+    sput-object v0, Lhd5;->d:Ljava/nio/charset/Charset;
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    const-string v13, "DOUBLE"
+
+    const-string v14, "IFD"
+
+    const-string v1, ""
+
+    const-string v2, "BYTE"
+
+    const-string v3, "STRING"
+
+    const-string v4, "USHORT"
+
+    const-string v5, "ULONG"
+
+    const-string v6, "URATIONAL"
+
+    const-string v7, "SBYTE"
+
+    const-string v8, "UNDEFINED"
+
+    const-string v9, "SSHORT"
+
+    const-string v10, "SLONG"
+
+    const-string v11, "SRATIONAL"
+
+    const-string v12, "SINGLE"
+
+    filled-new-array/range {v1 .. v14}, [Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v1, 0xb
+    sput-object v0, Lhd5;->e:[Ljava/lang/String;
 
-    invoke-direct {p0, p1, v1, v0}, Lxoe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/16 v0, 0xe
 
-    iput-object p2, p0, Lhd5;->o:Ljava/util/zip/ZipEntry;
+    new-array v0, v0, [I
 
-    iput p3, p0, Lhd5;->X:I
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lhd5;->f:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x4
+        0x8
+        0x1
+    .end array-data
+.end method
+
+.method public constructor <init>(I[BI)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lhd5;->a:I
+
+    iput p3, p0, Lhd5;->b:I
+
+    iput-object p2, p0, Lhd5;->c:[B
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Lhd5;
-
-    iget-object p0, p0, Lxoe;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/String;
-
-    iget-object p1, p1, Lxoe;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public static a(JLjava/nio/ByteOrder;)Lhd5;
+    .locals 2
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    new-array v0, v0, [J
 
-    return v0
-
-    :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    aput-wide p0, v0, v1
 
-    const-class v2, Lhd5;
+    invoke-static {v0, p2}, Lhd5;->b([JLjava/nio/ByteOrder;)Lhd5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    move-result-object v3
+    return-object p0
+.end method
 
-    if-eq v2, v3, :cond_1
+.method public static b([JLjava/nio/ByteOrder;)Lhd5;
+    .locals 5
+
+    sget-object v0, Lhd5;->f:[I
+
+    const/4 v1, 0x4
+
+    aget v0, v0, v1
+
+    array-length v2, p0
+
+    mul-int/2addr v0, v2
+
+    new-array v0, v0, [B
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    array-length p1, p0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, p1, :cond_0
+
+    aget-wide v3, p0, v2
+
+    long-to-int v3, v3
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lhd5;
+    :cond_0
+    new-instance p1, Lhd5;
 
-    iget-object v2, p0, Lhd5;->o:Ljava/util/zip/ZipEntry;
+    array-length p0, p0
 
-    iget-object v3, p1, Lhd5;->o:Ljava/util/zip/ZipEntry;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v2
+    invoke-direct {p1, v1, v0, p0}, Lhd5;-><init>(I[BI)V
 
-    if-eqz v2, :cond_2
-
-    iget p0, p0, Lhd5;->X:I
-
-    iget p1, p1, Lhd5;->X:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
 
-    iget v0, p0, Lhd5;->X:I
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lhd5;->o:Ljava/util/zip/ZipEntry;
+    const-string v1, "("
 
-    invoke-virtual {p0}, Ljava/util/zip/ZipEntry;->hashCode()I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p0
+    sget-object v1, Lhd5;->e:[Ljava/lang/String;
 
-    add-int/2addr p0, v0
+    iget v2, p0, Lhd5;->a:I
 
-    return p0
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", data length:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhd5;->c:[B
+
+    array-length v1, v1
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,94 +1,209 @@
-.class public final synthetic Lnp;
-.super Ljava/lang/Object;
+.class public final Lnp;
+.super Lo9f;
 .source "SourceFile"
-
-# interfaces
-.implements Lf96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final k:Lbp7;
 
-.field public final synthetic b:Landroid/app/Activity;
+.field public final l:Lbp7;
+
+.field public final m:Ljava/lang/Object;
+
+.field public final n:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
+
+.field public final p:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/app/Activity;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lbp7;Lbp7;Lq9h;Lff4;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+    .locals 8
 
-    iput p2, p0, Lnp;->a:I
+    move-object v0, p0
 
-    iput-object p1, p0, Lnp;->b:Landroid/app/Activity;
+    move-object v1, p1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v3, p3
+
+    move-object v2, p5
+
+    move-object v4, p7
+
+    move-object/from16 v5, p8
+
+    move-object/from16 v6, p9
+
+    move-object/from16 v7, p10
+
+    invoke-direct/range {v0 .. v7}, Lo9f;-><init>(Landroid/content/Context;Lff4;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+
+    move-object/from16 p3, p11
+
+    iput-object p3, p0, Lnp;->k:Lbp7;
+
+    iput-object p2, p0, Lnp;->l:Lbp7;
+
+    new-instance p6, Ljp;
+
+    move-object/from16 p8, p0
+
+    move-object p7, p1
+
+    move-object/from16 p10, p4
+
+    move-object/from16 p9, p5
+
+    move-object/from16 p11, p12
+
+    invoke-direct/range {p6 .. p11}, Ljp;-><init>(Landroid/content/Context;Lnp;Lff4;Lq9h;Lbp7;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p2, p6}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lnp;->m:Ljava/lang/Object;
+
+    new-instance p3, Lkp;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p3, p1, p0, p5, p4}, Lkp;-><init>(Landroid/content/Context;Lnp;Lff4;I)V
+
+    invoke-static {p2, p3}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lnp;->n:Ljava/lang/Object;
+
+    new-instance p3, Lkp;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p3, p1, p0, p5, p4}, Lkp;-><init>(Landroid/content/Context;Lnp;Lff4;I)V
+
+    invoke-static {p2, p3}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lnp;->o:Ljava/lang/Object;
+
+    new-instance p3, Lkp;
+
+    invoke-direct {p3, p5, p0, p1}, Lkp;-><init>(Lff4;Lnp;Landroid/content/Context;)V
+
+    invoke-static {p2, p3}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lnp;->p:Ljava/lang/Object;
+
+    new-instance p3, Lkp;
+
+    const/4 p4, 0x3
+
+    invoke-direct {p3, p1, p0, p5, p4}, Lkp;-><init>(Landroid/content/Context;Lnp;Lff4;I)V
+
+    invoke-static {p2, p3}, Lvr0;->r(ILve6;)Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b()Z
+    .locals 7
 
-    iget v0, p0, Lnp;->a:I
+    invoke-virtual {p0}, Lo9f;->a()Lzqa;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    check-cast p1, Ljava/lang/ref/WeakReference;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lzqa;->i(Z)Li7a;
 
-    move-result-object p1
+    move-result-object v0
 
-    iget-object p0, p0, Lnp;->b:Landroid/app/Activity;
+    iget-object v0, v0, Li7a;->b:Landroid/app/NotificationManager;
 
-    if-ne p1, p0, :cond_0
+    invoke-static {v0}, Lc7a;->a(Landroid/app/NotificationManager;)Z
 
-    const/4 p0, 0x1
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object v0, p0, Lnp;->l:Lbp7;
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v2
 
-    return-object p0
+    check-cast v2, Lzob;
 
-    :pswitch_0
-    check-cast p1, Lkp;
+    iget-object v2, v2, Lzob;->b:Lltd;
 
-    iget p1, p1, Lkp;->a:I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x2
+    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->push-alert-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    if-ne p1, v0, :cond_1
+    const v4, 0x93a80
 
-    const-string p1, "https://play.google.com/store/apps/details?id=ru.oneme.app"
+    int-to-long v4, v4
 
-    goto :goto_1
+    invoke-virtual {v2, v3, v4, v5}, Lgjd;->n(Ljava/lang/Enum;J)J
+
+    move-result-wide v2
+
+    long-to-int v2, v2
+
+    if-gtz v2, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    sget-object p1, Lmp;->a:Llp;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    sget-object p1, Llp;->b:Ljava/lang/String;
+    check-cast v0, Lzob;
 
-    :goto_1
-    iget-object p0, p0, Lnp;->b:Landroid/app/Activity;
+    iget-object v0, v0, Lzob;->a:Lt63;
 
-    invoke-static {p0, p1}, Liwd;->w(Landroid/content/Context;Ljava/lang/String;)V
+    const-wide/16 v3, 0x0
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    iget-object v0, v0, Lh3;->g:Lep7;
 
-    return-object p0
+    const-string v5, "app.last.push.alert.time"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v5, v3, v4}, Lep7;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v3
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    sub-long/2addr v5, v3
+
+    mul-int/lit16 v2, v2, 0x3e8
+
+    int-to-long v2, v2
+
+    cmp-long v0, v5, v2
+
+    if-lez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method

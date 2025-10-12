@@ -1,41 +1,65 @@
-.class public abstract Lhz7;
+.class public final Lhz7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lkk9;
+.field public static final c:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public static final b:[J
+
+# instance fields
+.field public final a:Lr94;
+
+.field public final b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lkk9;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    invoke-direct {v0, v1}, Lkk9;-><init>(I)V
-
-    sput-object v0, Lhz7;->a:Lkk9;
-
-    new-array v0, v1, [J
-
-    sput-object v0, Lhz7;->b:[J
+    sput-object v0, Lhz7;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-void
 .end method
 
-.method public static final a()Lkk9;
-    .locals 2
+.method public constructor <init>(Lr94;)V
+    .locals 7
 
-    new-instance v0, Lkk9;
+    .line 1
+    iget-object v0, p1, Lr94;->a:Landroid/net/Uri;
 
-    const/4 v1, 0x0
+    .line 2
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    invoke-direct {v0, v1}, Lkk9;-><init>(Ljava/lang/Object;)V
+    const-wide/16 v3, 0x0
 
-    return-object v0
+    const-wide/16 v5, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    .line 3
+    invoke-direct/range {v1 .. v6}, Lhz7;-><init>(Lr94;JJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr94;JJ)V
+    .locals 0
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lhz7;->a:Lr94;
+
+    .line 6
+    iput-wide p2, p0, Lhz7;->b:J
+
+    return-void
 .end method

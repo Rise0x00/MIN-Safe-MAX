@@ -3,56 +3,104 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhl8;
+.implements Lel8;
+.implements Let8;
 
 
 # instance fields
-.field public final synthetic a:Ljed;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Lok8;
+.field public final synthetic a:Landroid/app/PendingIntent;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljed;ZZLok8;)V
+.method public synthetic constructor <init>(ILandroid/app/PendingIntent;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldl8;->a:Ljed;
+    iput-object p2, p0, Ldl8;->a:Landroid/app/PendingIntent;
 
-    iput-boolean p2, p0, Ldl8;->b:Z
+    return-void
+.end method
 
-    iput-boolean p3, p0, Ldl8;->c:Z
+.method public synthetic constructor <init>(Landroid/app/PendingIntent;)V
+    .locals 0
 
-    iput-object p4, p0, Ldl8;->o:Lok8;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldl8;->a:Landroid/app/PendingIntent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lnk8;I)V
-    .locals 7
+.method public a(Lks8;I)V
+    .locals 1
 
-    iget-object v0, p0, Ldl8;->o:Lok8;
+    iget-object v0, p0, Ldl8;->a:Landroid/app/PendingIntent;
 
-    iget v6, v0, Lok8;->c:I
+    invoke-interface {p1, p2, v0}, Lks8;->c(ILandroid/app/PendingIntent;)V
 
-    iget-object v3, p0, Ldl8;->a:Ljed;
+    return-void
+.end method
 
-    iget-boolean v4, p0, Ldl8;->b:Z
+.method public e(Lvk8;)V
+    .locals 2
 
-    iget-boolean v5, p0, Ldl8;->c:Z
+    invoke-virtual {p1}, Lvk8;->isConnected()Z
 
-    move-object v1, p1
+    move-result v0
 
-    move v2, p2
+    if-eqz v0, :cond_2
 
-    invoke-interface/range {v1 .. v6}, Lnk8;->k(ILjed;ZZI)V
+    iget-object v0, p1, Lvk8;->o:Landroid/app/PendingIntent;
 
+    iget-object v1, p0, Ldl8;->a:Landroid/app/PendingIntent;
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iput-object v1, p1, Lvk8;->o:Landroid/app/PendingIntent;
+
+    iget-object p1, p1, Lvk8;->a:Lak8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lak8;->X:Landroid/os/Handler;
+
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lpih;->o(Z)V
+
+    iget-object p1, p1, Lak8;->o:Lyj8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_2
+    :goto_1
     return-void
 .end method

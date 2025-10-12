@@ -1,74 +1,48 @@
 .class public final Li01;
-.super Leje;
-.source "SourceFile"
-
-# interfaces
-.implements Lt96;
+.super Lnz3;
 
 
 # instance fields
-.field public final synthetic X:Lo01;
+.field public X:I
+
+.field public final synthetic Y:Leg0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lo01;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Li01;->X:Lo01;
+    iput-object p1, p0, Li01;->Y:Leg0;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lcp3;
+    iput-object p1, p0, Li01;->o:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Li01;->X:I
 
-    invoke-virtual {p0, p1, p2}, Li01;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    check-cast p0, Li01;
+    iput p1, p0, Li01;->X:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object p1, p0, Li01;->Y:Leg0;
 
-    invoke-virtual {p0, p1}, Li01;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object p1
-.end method
+    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Li01;
-
-    iget-object p0, p0, Li01;->X:Lo01;
-
-    invoke-direct {p1, p0, p2}, Li01;-><init>(Lo01;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
     return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    sget-object p1, Lo01;->B0:[Lof7;
-
-    iget-object p0, p0, Li01;->X:Lo01;
-
-    invoke-virtual {p0}, Lo01;->l()V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

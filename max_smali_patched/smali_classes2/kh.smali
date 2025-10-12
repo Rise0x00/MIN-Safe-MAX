@@ -1,91 +1,236 @@
-.class public abstract Lkh;
+.class public final Lkh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lqs9;
+# instance fields
+.field public final a:J
 
-.field public static final b:Z
+.field public final b:Ljava/lang/String;
 
-.field public static final c:Lzi;
+.field public final c:Ljava/lang/String;
 
-.field public static final d:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object v0, Lhh;->a:Lqs9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lkh;->a:Lqs9;
+    iput-wide p1, p0, Lkh;->a:J
 
-    const-string v0, "animoji.debug"
+    iput-object p3, p0, Lkh;->b:Ljava/lang/String;
 
-    const-string v1, "false"
+    iput-object p4, p0, Lkh;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iput-object p5, p0, Lkh;->d:Ljava/lang/String;
 
-    move-result-object v0
+    iput-object p6, p0, Lkh;->e:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    invoke-static {v0}, Lwde;->Z0(Ljava/lang/String;)Ljava/lang/Boolean;
 
-    move-result-object v0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkh;
+
+    iget-wide v3, p0, Lkh;->a:J
+
+    iget-wide v5, p1, Lkh;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lkh;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lkh;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lkh;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lkh;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lkh;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lkh;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lkh;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lkh;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lkh;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lkh;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lkh;->c:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
 
     :goto_0
-    sput-boolean v0, Lkh;->b:Z
+    add-int/2addr v0, v3
 
-    new-instance v0, Lzi;
+    mul-int/2addr v0, v1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v3, p0, Lkh;->d:Ljava/lang/String;
 
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
+    if-nez v3, :cond_1
 
-    sget-object v2, Lu1d;->b:Lwh;
+    move v3, v2
 
-    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    goto :goto_1
 
-    iput-object v1, v0, Lzi;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
+    move-result v3
 
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    :goto_1
+    add-int/2addr v0, v3
 
-    new-instance v1, Ljava/util/concurrent/ConcurrentHashMap;
+    mul-int/2addr v0, v1
 
-    invoke-direct {v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    iget-object v1, p0, Lkh;->e:Ljava/lang/String;
 
-    new-instance v1, Ljava/util/HashMap;
+    if-nez v1, :cond_2
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    goto :goto_2
 
-    iput-object v1, v0, Lzi;->b:Ljava/util/HashMap;
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    sput-object v0, Lkh;->c:Lzi;
+    move-result v2
 
-    new-instance v0, Ll;
+    :goto_2
+    add-int/2addr v0, v2
 
-    const/4 v1, 0x5
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ll;-><init>(I)V
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v1, 0x3
+    const-string v0, "Animoji(id="
 
-    invoke-static {v1, v0}, Lltg;->s(ILd96;)Lth7;
+    const-string v1, ", emoji="
 
-    return-void
+    iget-wide v2, p0, Lkh;->a:J
+
+    iget-object v4, p0, Lkh;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", lottieUrl="
+
+    const-string v2, ", effectLottieUrl="
+
+    iget-object v3, p0, Lkh;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lkh;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", iconUrl="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Lkh;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lhqd;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

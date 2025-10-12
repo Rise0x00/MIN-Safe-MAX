@@ -1,27 +1,127 @@
 .class public final Lwz9;
-.super Lxz9;
+.super Lv8e;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic j:[Ltm7;
+
+
 # instance fields
-.field public final d:Z
+.field public final g:Landroid/graphics/Path;
+
+.field public final h:Landroid/graphics/RectF;
+
+.field public final i:Lck;
 
 
 # direct methods
-.method public constructor <init>(JJZJ)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 4
 
-    move-object v0, p0
+    new-instance v0, Lut9;
 
-    move-wide v1, p1
+    const-string v1, "cornerRadius"
 
-    move-wide v3, p3
+    const-string v2, "getCornerRadius()F"
 
-    move-wide v5, p6
+    const-class v3, Lwz9;
 
-    invoke-direct/range {v0 .. v6}, Lxz9;-><init>(JJJ)V
+    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean p5, v0, Lwz9;->d:Z
+    sget-object v1, Lxxc;->a:Lyxc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ltm7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lwz9;->j:[Ltm7;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lv8e;-><init>()V
+
+    new-instance v0, Landroid/graphics/Path;
+
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+
+    iput-object v0, p0, Lwz9;->g:Landroid/graphics/Path;
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lwz9;->h:Landroid/graphics/RectF;
+
+    new-instance v0, Lck;
+
+    invoke-direct {v0, p0}, Lck;-><init>(Lwz9;)V
+
+    iput-object v0, p0, Lwz9;->i:Lck;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 6
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lwz9;->h:Landroid/graphics/RectF;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, p0, Lwz9;->g:Landroid/graphics/Path;
+
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
+
+    sget-object v2, Lwz9;->j:[Ltm7;
+
+    const/4 v3, 0x0
+
+    aget-object v4, v2, v3
+
+    iget-object v4, p0, Lwz9;->i:Lck;
+
+    iget-object v5, v4, Lv2;->b:Ljava/lang/Object;
+
+    check-cast v5, Ljava/lang/Number;
+
+    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
+
+    move-result v5
+
+    aget-object v2, v2, v3
+
+    iget-object v2, v4, Lv2;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+
+    move-result v2
+
+    sget-object v3, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual {v0, v1, v5, v2, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+
+    invoke-super {p0, p1}, Lv8e;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method

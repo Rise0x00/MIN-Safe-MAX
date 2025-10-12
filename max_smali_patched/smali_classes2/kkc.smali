@@ -1,127 +1,52 @@
-.class public final Lkkc;
+.class public abstract Lkkc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
+# static fields
+.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f130a27
 
-.field public final b:Z
+.field public static oneme_startconversation_channel_create_error:I = 0x7f130a28
 
+.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f130a29
 
-# direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Z)V
-    .locals 0
+.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f130a2a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f130a2b
 
-    iput-object p1, p0, Lkkc;->a:Ljava/util/ArrayList;
+.field public static oneme_startconversation_title:I = 0x7f130a2c
 
-    iput-boolean p2, p0, Lkkc;->b:Z
+.field public static oneme_startconversations_chat_members:I = 0x7f130a2d
 
-    return-void
-.end method
+.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f130a2e
 
+.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f130a2f
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f130a30
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f130a31
 
-    goto :goto_1
+.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f130a32
 
-    :cond_0
-    instance-of v0, p1, Lkkc;
+.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f130a33
 
-    if-nez v0, :cond_1
+.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f130a34
 
-    goto :goto_0
+.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f130a35
 
-    :cond_1
-    check-cast p1, Lkkc;
+.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f130a36
 
-    iget-object v0, p0, Lkkc;->a:Ljava/util/ArrayList;
+.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f130a37
 
-    iget-object v1, p1, Lkkc;->a:Ljava/util/ArrayList;
+.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f130a38
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f130a39
 
-    move-result v0
+.field public static oneme_startconversations_continue_create_chat:I = 0x7f130a3a
 
-    if-nez v0, :cond_2
+.field public static oneme_startconversations_create_empty_chat:I = 0x7f130a3b
 
-    goto :goto_0
+.field public static oneme_startconversations_member_search_hint:I = 0x7f130a3c
 
-    :cond_2
-    iget-boolean p0, p0, Lkkc;->b:Z
+.field public static oneme_startconversations_phonebook_section_header:I = 0x7f130a3d
 
-    iget-boolean p1, p1, Lkkc;->b:Z
-
-    if-eq p0, p1, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkkc;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lkkc;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReplyKeyboard(buttons="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkkc;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", defaultInputDisabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lkkc;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_startconversations_search_hint:I = 0x7f130a3e

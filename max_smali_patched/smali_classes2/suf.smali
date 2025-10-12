@@ -1,59 +1,100 @@
-.class public final Lsuf;
-.super Luuf;
+.class public final synthetic Lsuf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lid4;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lsuf;",
-            ">;"
-        }
-    .end annotation
-.end field
 
-.field public static final a:Lsuf;
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic Y:I
+
+.field public final synthetic Z:I
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+    .locals 0
 
-    new-instance v0, Lsuf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsuf;->a:Ljava/lang/String;
 
-    sput-object v0, Lsuf;->a:Lsuf;
+    iput-object p2, p0, Lsuf;->b:Ljava/lang/String;
 
-    new-instance v0, Lslf;
+    iput-object p3, p0, Lsuf;->c:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    iput-object p4, p0, Lsuf;->o:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lslf;-><init>(I)V
+    iput p5, p0, Lsuf;->X:I
 
-    sput-object v0, Lsuf;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput p6, p0, Lsuf;->Y:I
+
+    iput p7, p0, Lsuf;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    const/4 p0, 0x0
+    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    return p0
-.end method
+    new-instance v1, Lne7;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    new-instance v2, Lme7;
 
-    const/4 p0, 0x1
+    const-wide/16 v5, 0x0
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    const/16 v4, 0xe
 
-    return-void
+    const/4 v3, 0x0
+
+    iget-object v7, p0, Lsuf;->c:Ljava/lang/String;
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v2 .. v8}, Lme7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+
+    new-instance v6, Lltf;
+
+    iget v3, p0, Lsuf;->X:I
+
+    iget v4, p0, Lsuf;->Y:I
+
+    iget v5, p0, Lsuf;->Z:I
+
+    invoke-direct {v6, v3, v4, v5}, Lltf;-><init>(III)V
+
+    const/4 v7, 0x1
+
+    move-object v4, v2
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lsuf;->b:Ljava/lang/String;
+
+    iget-object v5, p0, Lsuf;->o:Ljava/lang/String;
+
+    invoke-direct/range {v1 .. v7}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;I)V
+
+    const-string v2, "AUTH"
+
+    iget-object v3, p0, Lsuf;->a:Ljava/lang/String;
+
+    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lne7;)V
+
+    return-object v0
 .end method

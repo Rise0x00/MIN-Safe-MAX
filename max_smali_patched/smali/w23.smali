@@ -1,212 +1,192 @@
 .class public final Lw23;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Ls5d;
+.implements Llf6;
 
 
 # instance fields
-.field public final X:[J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:J
-
-.field public final a:I
-
-.field public final b:[I
-
-.field public final c:[J
-
-.field public final o:[J
+.field public final synthetic Y:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>([I[J[J[J)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lw23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    iput-object p1, p0, Lw23;->b:[I
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lw23;->c:[J
-
-    iput-object p3, p0, Lw23;->o:[J
-
-    iput-object p4, p0, Lw23;->X:[J
-
-    array-length p1, p1
-
-    iput p1, p0, Lw23;->a:I
-
-    if-lez p1, :cond_0
-
-    add-int/lit8 p2, p1, -0x1
-
-    aget-wide p2, p3, p2
-
-    add-int/lit8 p1, p1, -0x1
-
-    aget-wide v0, p4, p1
-
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Lw23;->Y:J
-
-    return-void
-
-    :cond_0
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Lw23;->Y:J
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x1
+    check-cast p1, Lnt6;
 
-    return p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lw23;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lw23;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lw23;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final e(J)Lq5d;
-    .locals 9
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lw23;->X:[J
+    new-instance v0, Lw23;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lw23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-static {v0, p1, p2, v1}, Lfif;->e([JJZ)I
+    invoke-direct {v0, p2, v1}, Lw23;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    move-result v2
+    iput-object p1, v0, Lw23;->X:Ljava/lang/Object;
 
-    new-instance v3, Lw5d;
+    return-object v0
+.end method
 
-    aget-wide v4, v0, v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v6, p0, Lw23;->c:[J
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    aget-wide v7, v6, v2
+    iget-object p1, p0, Lw23;->X:Ljava/lang/Object;
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lw5d;-><init>(JJ)V
+    check-cast p1, Lnt6;
 
-    cmp-long p1, v4, p1
+    iget-object v0, p0, Lw23;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    if-gez p1, :cond_1
+    sget-object v1, Lone/me/chats/tab/ChatsTabWidget;->H0:[Ltm7;
 
-    iget p0, p0, Lw23;->a:I
+    const-class v1, Lone/me/chats/tab/ChatsTabWidget;
 
-    sub-int/2addr p0, v1
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    if-ne v2, p0, :cond_0
+    move-result-object v1
+
+    sget-object v2, Lox9;->j:Lqpa;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lw5d;
+    sget-object v4, Ly38;->o:Ly38;
 
-    add-int/2addr v2, v1
+    invoke-virtual {v2, v4}, Lqpa;->b(Ly38;)Z
 
-    aget-wide p1, v0, v2
+    move-result v5
 
-    aget-wide v0, v6, v2
+    if-eqz v5, :cond_1
 
-    invoke-direct {p0, p1, p2, v0, v1}, Lw5d;-><init>(JJ)V
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    new-instance p1, Lq5d;
+    const-string v6, "handleHeaderStateUpdate: state="
 
-    invoke-direct {p1, v3, p0}, Lq5d;-><init>(Lw5d;Lw5d;)V
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v4, v1, v5, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    new-instance p0, Lq5d;
-
-    invoke-direct {p0, v3, v3}, Lq5d;-><init>(Lw5d;Lw5d;)V
-
-    return-object p0
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Lw23;->Y:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChunkIndex(length="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lw23;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sizes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw23;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->E0()Ltya;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Loqf;->b(Landroid/view/ViewGroup;)V
 
-    const-string v1, ", offsets="
+    new-instance v1, Lw80;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Lw80;-><init>()V
 
-    iget-object v1, p0, Lw23;->c:[J
+    const/4 v2, 0x0
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lqqf;->U(I)V
 
-    move-result-object v1
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->E0()Ltya;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    const-string v1, ", timeUs="
+    invoke-static {v4, v1}, Loqf;->a(Landroid/view/ViewGroup;Liqf;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw23;->X:[J
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->E0()Ltya;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p1, Lnt6;->a:Ljef;
 
-    const-string v1, ", durationsUs="
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v5
 
-    iget-object p0, p0, Lw23;->o:[J
+    invoke-virtual {v4, v5}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-static {p0}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
+    move-result-object v4
 
-    move-result-object p0
+    if-nez v4, :cond_2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, ""
 
-    const-string p0, ")"
+    :cond_2
+    invoke-virtual {v1, v4}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->E0()Ltya;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p0
+    iget-object v4, p1, Lnt6;->b:Loef;
 
-    return-object p0
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    :cond_3
+    invoke-virtual {v1, v3}, Ltya;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Lone/me/chats/tab/ChatsTabWidget;->E0()Ltya;
+
+    move-result-object v0
+
+    iget-object p1, p1, Lnt6;->b:Loef;
+
+    if-eqz p1, :cond_4
+
+    const/4 v2, 0x1
+
+    :cond_4
+    invoke-virtual {v0, v2}, Ltya;->setTextShimmerEnabled(Z)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

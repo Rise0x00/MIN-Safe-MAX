@@ -1,25 +1,46 @@
 .class public final Lde8;
-.super Lbe8;
+.super Lrd8;
 .source "SourceFile"
 
+# interfaces
+.implements Lucd;
 
-# static fields
-.field public static final p:Lde8;
+
+# instance fields
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lzd8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lzd8;-><init>()V
-
-    new-instance v1, Lde8;
-
-    invoke-direct {v1, v0}, Lbe8;-><init>(Lzd8;)V
-
-    sput-object v1, Lde8;->p:Lde8;
+    iput-object p1, p0, Lde8;->a:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final g(Lke8;)V
+    .locals 1
+
+    sget-object v0, Lw65;->a:Lw65;
+
+    invoke-interface {p1, v0}, Lke8;->c(Lss4;)V
+
+    iget-object v0, p0, Lde8;->a:Ljava/lang/Object;
+
+    invoke-interface {p1, v0}, Lke8;->a(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lde8;->a:Ljava/lang/Object;
+
+    return-object v0
 .end method

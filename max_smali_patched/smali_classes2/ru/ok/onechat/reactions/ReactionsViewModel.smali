@@ -1,5 +1,5 @@
 .class public final Lru/ok/onechat/reactions/ReactionsViewModel;
-.super Lzxf;
+.super Ljlg;
 .source "SourceFile"
 
 
@@ -10,19 +10,19 @@
     }
     d2 = {
         "Lru/ok/onechat/reactions/ReactionsViewModel;",
-        "Lzxf;",
-        "Lee2;",
+        "Ljlg;",
+        "Lwe2;",
         "event",
-        "Ltcf;",
+        "Loyf;",
         "onEvent",
-        "(Lee2;)V",
-        "Lcs9;",
+        "(Lwe2;)V",
+        "Lq1a;",
         "onNewReactionEvent",
-        "(Lcs9;)V",
-        "Lyg9;",
+        "(Lq1a;)V",
+        "Lop9;",
         "onMessageDeleteEvent",
-        "(Lyg9;)V",
-        "tac",
+        "(Lop9;)V",
+        "cqc",
         "reactions_release"
     }
     k = 0x1
@@ -38,291 +38,281 @@
 # instance fields
 .field public final b:J
 
-.field public final c:Lsz2;
+.field public final c:Lm13;
 
-.field public final d:Lvbd;
+.field public final d:Lktd;
 
-.field public final e:Lrv0;
+.field public final e:Lov0;
 
-.field public final f:Ls9c;
+.field public final f:Lbpc;
 
-.field public final g:Lth7;
+.field public final g:Lbp7;
 
-.field public final h:Lth7;
+.field public final h:Lbp7;
 
-.field public final i:Lth7;
+.field public final i:Lbp7;
 
-.field public final j:Lth7;
+.field public final j:Lbp7;
 
-.field public final k:Lth7;
+.field public final k:Lbp7;
 
-.field public final l:Lth7;
+.field public final l:Lbp7;
 
-.field public final m:Lkle;
+.field public final m:Ls5f;
 
-.field public final n:Lkle;
+.field public final n:Ls5f;
 
-.field public final o:Lkle;
+.field public final o:Ls5f;
 
-.field public final p:Lvlc;
+.field public final p:Lk2d;
 
-.field public final q:Lvlc;
+.field public final q:Lk2d;
 
 .field public final r:Ljava/util/HashSet;
 
-.field public final s:Lkle;
+.field public final s:Ls5f;
 
-.field public final t:Lkpd;
+.field public final t:Le8e;
 
-.field public final u:Libc;
+.field public final u:Lrqc;
 
-.field public final v:Lq4e;
+.field public final v:Lmoe;
 
 .field public final w:I
 
 
 # direct methods
-.method public constructor <init>(JLsz2;Lvbd;Lrv0;Ls9c;Lkle;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;Lth7;)V
-    .locals 6
+.method public constructor <init>(JLm13;Lktd;Lov0;Lbpc;Ls5f;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+    .locals 3
 
-    invoke-direct {p0}, Lzxf;-><init>()V
+    invoke-direct {p0}, Ljlg;-><init>()V
 
     iput-wide p1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
-    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lsz2;
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lm13;
 
-    iput-object p4, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->d:Lvbd;
+    iput-object p4, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->d:Lktd;
 
-    iput-object p5, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->e:Lrv0;
+    iput-object p5, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->e:Lov0;
 
-    iput-object p6, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->f:Ls9c;
+    iput-object p6, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->f:Lbpc;
 
-    move-object/from16 p1, p10
+    iput-object p10, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->g:Lbp7;
 
-    iput-object p1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->g:Lth7;
+    iput-object p11, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->h:Lbp7;
 
-    move-object/from16 p1, p11
+    iput-object p12, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lbp7;
 
-    iput-object p1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->h:Lth7;
-
-    move-object/from16 p1, p12
-
-    iput-object p1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lth7;
-
-    iput-object p8, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Lth7;
+    iput-object p8, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Lbp7;
 
     move-object/from16 p2, p14
 
-    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->k:Lth7;
+    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->k:Lbp7;
 
     move-object/from16 p2, p15
 
-    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lth7;
+    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lbp7;
 
     const/4 p2, 0x1
 
     iput p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->w:I
 
-    new-instance p3, Loac;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p0, v1}, Loac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
-
-    new-instance v2, Lkle;
-
-    invoke-direct {v2, p3}, Lkle;-><init>(Ld96;)V
-
-    iput-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->m:Lkle;
-
-    new-instance p3, Lw3b;
-
-    const/16 v2, 0xa
-
-    move-object/from16 v3, p13
-
-    invoke-direct {p3, v3, v2, p0}, Lw3b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v2, Lkle;
-
-    invoke-direct {v2, p3}, Lkle;-><init>(Ld96;)V
-
-    iput-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->n:Lkle;
-
-    new-instance p3, Loac;
-
-    invoke-direct {p3, p0, p2}, Loac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
-
-    new-instance v2, Lkle;
-
-    invoke-direct {v2, p3}, Lkle;-><init>(Ld96;)V
-
-    iput-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->o:Lkle;
-
-    new-instance p3, Ljava/util/HashMap;
-
-    invoke-direct {p3}, Ljava/util/HashMap;-><init>()V
-
-    new-instance p3, Loac;
-
-    const/4 v2, 0x2
-
-    invoke-direct {p3, p0, v2}, Loac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
-
-    new-instance v3, Lvlc;
-
-    invoke-direct {v3, p3}, Lvlc;-><init>(Ld96;)V
-
-    iput-object v3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lvlc;
-
-    new-instance p3, Lgfb;
-
-    const/16 v3, 0x10
-
-    invoke-direct {p3, v3}, Lgfb;-><init>(I)V
-
-    new-instance v3, Lvlc;
-
-    invoke-direct {v3, p3}, Lvlc;-><init>(Ld96;)V
-
-    iput-object v3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->q:Lvlc;
-
-    new-instance p3, Ljava/util/HashSet;
-
-    invoke-direct {p3}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->r:Ljava/util/HashSet;
-
-    new-instance p3, Lq81;
-
-    const/4 v3, 0x7
-
-    invoke-direct {p3, p0, p7, p9, v3}, Lq81;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance v3, Lkle;
-
-    invoke-direct {v3, p3}, Lkle;-><init>(Ld96;)V
-
-    iput-object v3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->s:Lkle;
-
-    const p3, 0x7fffffff
-
-    const/4 v3, 0x4
-
-    invoke-static {v1, p3, v3}, Llpd;->b(III)Lkpd;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Lkpd;
-
-    new-instance v1, Libc;
-
-    invoke-direct {v1, p3}, Libc;-><init>(Lzk9;)V
-
-    iput-object v1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->u:Libc;
+    new-instance p2, Lxpc;
 
     const/4 p3, 0x0
 
-    invoke-static {p3}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    invoke-direct {p2, p0, p3}, Lxpc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
 
-    move-result-object v1
+    new-instance p3, Ls5f;
 
-    iput-object v1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->v:Lq4e;
+    invoke-direct {p3, p2}, Ls5f;-><init>(Lve6;)V
 
-    invoke-static {p0}, Lve2;->C(Lzxf;)Lt53;
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->m:Ls5f;
 
-    move-result-object v3
+    new-instance p2, Lzxa;
 
-    invoke-interface {p8}, Lth7;->getValue()Ljava/lang/Object;
+    const/16 p3, 0xc
 
-    move-result-object v4
+    move-object/from16 p6, p13
 
-    check-cast v4, Lkd4;
+    invoke-direct {p2, p6, p3, p0}, Lzxa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v4, v4, Lkd4;->a:Lj04;
+    new-instance p3, Ls5f;
 
-    new-instance v5, Lrac;
+    invoke-direct {p3, p2}, Ls5f;-><init>(Lve6;)V
 
-    invoke-direct {v5, p0, p3}, Lrac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->n:Ls5f;
 
-    invoke-static {v3, v4, p3, v5, v2}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    new-instance p2, Lxpc;
 
-    invoke-virtual {p5, p0}, Lrv0;->d(Ljava/lang/Object;)V
+    const/4 p3, 0x1
 
-    new-instance v0, Luv2;
+    invoke-direct {p2, p0, p3}, Lxpc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
 
-    const/16 v2, 0xb
+    new-instance p3, Ls5f;
 
-    invoke-direct {v0, v1, v2}, Luv2;-><init>(Lbq5;I)V
+    invoke-direct {p3, p2}, Ls5f;-><init>(Lve6;)V
 
-    sget v1, Liw4;->o:I
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->o:Ls5f;
 
-    sget-object v1, Lnw4;->c:Lnw4;
+    new-instance p2, Ljava/util/HashMap;
 
-    const-wide/16 v2, 0x12c
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v2, v3, v1}, Lj5e;->D(JLnw4;)J
+    new-instance p2, Lxpc;
 
-    move-result-wide v1
+    const/4 p3, 0x2
 
-    invoke-static {v0, v1, v2}, Lis8;->N(Lbq5;J)Lbuc;
+    invoke-direct {p2, p0, p3}, Lxpc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;I)V
 
-    move-result-object v0
+    new-instance p3, Lk2d;
 
-    new-instance v1, Lf01;
+    invoke-direct {p3, p2}, Lk2d;-><init>(Lve6;)V
 
-    const/16 v2, 0x14
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lk2d;
 
-    invoke-direct {v1, v2, v0}, Lf01;-><init>(ILjava/lang/Object;)V
+    new-instance p2, Lm2c;
 
-    new-instance v0, Lsac;
+    const/4 p3, 0x6
 
-    invoke-direct {v0, p0, p3}, Lsac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p2, p3}, Lm2c;-><init>(I)V
 
-    new-instance p3, Lgs5;
+    new-instance p3, Lk2d;
 
-    invoke-direct {p3, v1, v0, p2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {p3, p2}, Lk2d;-><init>(Lve6;)V
 
-    invoke-interface {p8}, Lth7;->getValue()Ljava/lang/Object;
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->q:Lk2d;
 
-    move-result-object p1
+    new-instance p2, Ljava/util/HashSet;
 
-    check-cast p1, Lkd4;
+    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
 
-    iget-object p1, p1, Lkd4;->a:Lj04;
+    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->r:Ljava/util/HashSet;
 
-    invoke-static {p3, p1}, Lfog;->y(Lbq5;Lh04;)Lbq5;
+    new-instance p2, Lar;
 
-    move-result-object p1
+    invoke-direct {p2, p0, p7, p9}, Lar;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Ls5f;Lbp7;)V
 
-    invoke-static {p0}, Lve2;->C(Lzxf;)Lt53;
+    new-instance p3, Ls5f;
+
+    invoke-direct {p3, p2}, Ls5f;-><init>(Lve6;)V
+
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->s:Ls5f;
+
+    const p2, 0x7fffffff
+
+    const/4 p3, 0x4
+
+    const/4 p6, 0x0
+
+    invoke-static {p6, p2, p3}, Lf8e;->b(III)Le8e;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    iput-object p2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Le8e;
+
+    new-instance p3, Lrqc;
+
+    invoke-direct {p3, p2}, Lrqc;-><init>(Lyt9;)V
+
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->u:Lrqc;
+
+    const/4 p2, 0x0
+
+    invoke-static {p2}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object p3
+
+    iput-object p3, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->v:Lmoe;
+
+    invoke-static {p0}, Lvhh;->A(Ljlg;)Lp73;
+
+    move-result-object p6
+
+    invoke-interface {p8}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leg4;
+
+    iget-object v0, v0, Leg4;->a:Ly24;
+
+    new-instance v1, Laqc;
+
+    invoke-direct {v1, p0, p2}, Laqc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {p6, v0, p2, v1, v2}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+
+    invoke-virtual {p5, p0}, Lov0;->d(Ljava/lang/Object;)V
+
+    new-instance p5, Lg13;
+
+    const/16 p6, 0x9
+
+    invoke-direct {p5, p3, p6}, Lg13;-><init>(Lev5;I)V
+
+    invoke-static {p5}, Lva8;->y(Lev5;)Lrad;
+
+    move-result-object p3
+
+    new-instance p5, Lg01;
+
+    const/16 p6, 0x15
+
+    invoke-direct {p5, p6, p3}, Lg01;-><init>(ILjava/lang/Object;)V
+
+    new-instance p3, Lbqc;
+
+    invoke-direct {p3, p0, p2}, Lbqc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p2, Ljx5;
+
+    const/4 p6, 0x1
+
+    invoke-direct {p2, p5, p3, p6}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    invoke-interface {p8}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Leg4;
+
+    iget-object p1, p1, Leg4;->a:Ly24;
+
+    invoke-static {p2, p1}, Ltp;->G(Lev5;Lw24;)Lev5;
+
+    move-result-object p1
+
+    invoke-static {p0}, Lvhh;->A(Ljlg;)Lp73;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-instance p0, Lpac;
+    new-instance p2, Lypc;
 
-    invoke-direct {p0, p1}, Lpac;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {p2, p1}, Lypc;-><init>(Ljava/lang/ref/WeakReference;)V
 
-    check-cast p4, Ln2d;
+    check-cast p4, Lgjd;
 
-    iget-object p1, p4, Ln2d;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object p1, p4, Lgjd;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-static {p0}, Lr4e;->a(Ljava/lang/Object;)Lq4e;
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
     return-void
 .end method
 
-.method public static final e(Lru/ok/onechat/reactions/ReactionsViewModel;Ltac;Lax3;)Ljava/lang/Object;
+.method public static final e(Lru/ok/onechat/reactions/ReactionsViewModel;Lcqc;Lnz3;)Ljava/lang/Object;
     .locals 33
 
     move-object/from16 v0, p0
@@ -331,15 +321,15 @@
 
     move-object/from16 v2, p2
 
-    instance-of v3, v2, Lxac;
+    instance-of v3, v2, Lgqc;
 
     if-eqz v3, :cond_0
 
     move-object v3, v2
 
-    check-cast v3, Lxac;
+    check-cast v3, Lgqc;
 
-    iget v4, v3, Lxac;->q0:I
+    iget v4, v3, Lgqc;->z0:I
 
     const/high16 v5, -0x80000000
 
@@ -349,60 +339,49 @@
 
     sub-int/2addr v4, v5
 
-    iput v4, v3, Lxac;->q0:I
-
-    :goto_0
-    move-object v14, v3
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v3, Lxac;
-
-    invoke-direct {v3, v0, v2}, Lxac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lax3;)V
+    iput v4, v3, Lgqc;->z0:I
 
     goto :goto_0
 
-    :goto_1
-    iget-object v2, v14, Lxac;->o0:Ljava/lang/Object;
+    :cond_0
+    new-instance v3, Lgqc;
 
-    iget v3, v14, Lxac;->q0:I
+    invoke-direct {v3, v0, v2}, Lgqc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lnz3;)V
 
-    sget-object v16, Ltcf;->a:Ltcf;
+    :goto_0
+    iget-object v2, v3, Lgqc;->x0:Ljava/lang/Object;
 
-    const-string v15, "is_dialog="
+    iget v4, v3, Lgqc;->z0:I
 
-    const-string v4, "param1"
+    const-string v5, "is_dialog="
 
-    const-string v5, "value"
+    const-string v6, "param1"
 
-    const-string v6, "ACTION"
+    const-string v7, "value"
 
-    const/4 v7, 0x4
+    const-string v8, "ACTION"
 
-    const/4 v8, 0x3
+    sget-object v9, Loyf;->a:Loyf;
 
-    const/4 v9, 0x2
+    const/4 v10, 0x3
 
-    const/16 v17, 0x0
+    const/4 v11, 0x2
 
-    const/4 v10, 0x1
+    const/4 v12, 0x1
 
-    sget-object v12, Lq04;->a:Lq04;
+    sget-object v15, Lf34;->a:Lf34;
 
-    if-eqz v3, :cond_5
+    if-eqz v4, :cond_4
 
-    if-eq v3, v10, :cond_4
+    if-eq v4, v12, :cond_3
 
-    if-eq v3, v9, :cond_3
+    if-eq v4, v11, :cond_2
 
-    if-eq v3, v8, :cond_2
+    if-ne v4, v10, :cond_1
 
-    if-ne v3, v7, :cond_1
+    invoke-static {v2}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-static {v2}, Lltg;->C(Ljava/lang/Object;)V
-
-    return-object v16
+    goto/16 :goto_9
 
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -414,622 +393,828 @@
     throw v0
 
     :cond_2
-    iget-object v0, v14, Lxac;->Z:Lc9c;
+    iget-object v0, v3, Lgqc;->X:Ljava/lang/Object;
 
-    iget-object v1, v14, Lxac;->Y:Lyz8;
+    check-cast v0, Lsoc;
 
-    iget-object v3, v14, Lxac;->X:Ljava/lang/Object;
+    iget-object v1, v3, Lgqc;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    check-cast v3, Ltac;
+    invoke-static {v2}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v8, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
+    const/16 v16, 0x0
 
-    invoke-static {v2}, Lltg;->C(Ljava/lang/Object;)V
-
-    move-object v2, v4
-
-    move-object v4, v1
-
-    move-object v1, v2
-
-    move-object v13, v0
-
-    move-object v2, v5
-
-    move/from16 v21, v10
-
-    move-object v0, v12
-
-    move-object/from16 v20, v15
-
-    move-object v5, v3
-
-    move-object v3, v6
-
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :cond_3
-    iget-object v0, v14, Lxac;->X:Ljava/lang/Object;
+    iget-object v0, v3, Lgqc;->w0:Lsoc;
 
-    check-cast v0, Lj9c;
+    iget-object v1, v3, Lgqc;->Z:Lkoc;
 
-    iget-object v1, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
+    iget-object v4, v3, Lgqc;->Y:Ly79;
 
-    invoke-static {v2}, Lltg;->C(Ljava/lang/Object;)V
+    move/from16 p2, v10
 
-    move-object v2, v4
+    iget-object v10, v3, Lgqc;->X:Ljava/lang/Object;
 
-    move-object v4, v1
+    check-cast v10, Lcqc;
 
-    move-object v1, v2
+    const/16 v16, 0x0
 
-    move-object v2, v5
+    iget-object v13, v3, Lgqc;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    move-object v3, v6
+    invoke-static {v2}, Lps;->L(Ljava/lang/Object;)V
 
-    goto/16 :goto_5
+    move-object/from16 v17, v10
+
+    move-object v10, v0
+
+    move-object v0, v2
+
+    move-object v2, v1
+
+    move-object/from16 v1, v17
+
+    move/from16 v17, v12
+
+    goto :goto_3
 
     :cond_4
-    iget-object v0, v14, Lxac;->n0:Lj9c;
+    move/from16 p2, v10
 
-    iget-object v1, v14, Lxac;->Z:Lc9c;
+    const/16 v16, 0x0
 
-    iget-object v3, v14, Lxac;->Y:Lyz8;
+    invoke-static {v2}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v13, v14, Lxac;->X:Ljava/lang/Object;
+    iget-object v4, v1, Lcqc;->d:Ly79;
 
-    check-cast v13, Ltac;
+    iget-object v2, v1, Lcqc;->a:Lkoc;
 
-    iget-object v7, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
+    if-eqz v4, :cond_5
 
-    invoke-static {v2}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v10, v4, Ly79;->c:Lsoc;
 
-    move-object/from16 v31, v13
-
-    move-object v13, v0
-
-    move-object v0, v7
-
-    move-object v7, v2
-
-    move-object v2, v3
-
-    move-object v3, v1
-
-    move-object/from16 v1, v31
-
-    goto :goto_4
+    goto :goto_1
 
     :cond_5
-    invoke-static {v2}, Lltg;->C(Ljava/lang/Object;)V
+    const/4 v10, 0x0
 
-    iget-object v2, v1, Ltac;->d:Lyz8;
+    :goto_1
+    iput-object v0, v3, Lgqc;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    iget-object v3, v1, Ltac;->a:Lc9c;
+    iput-object v1, v3, Lgqc;->X:Ljava/lang/Object;
 
-    if-eqz v2, :cond_6
+    iput-object v4, v3, Lgqc;->Y:Ly79;
 
-    iget-object v7, v2, Lyz8;->c:Lj9c;
+    iput-object v2, v3, Lgqc;->Z:Lkoc;
+
+    iput-object v10, v3, Lgqc;->w0:Lsoc;
+
+    iput v12, v3, Lgqc;->z0:I
+
+    iget-object v13, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lm13;
+
+    move/from16 v17, v12
+
+    move-object/from16 v18, v13
+
+    iget-wide v12, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
+
+    move-object/from16 v11, v18
+
+    check-cast v11, Lm23;
+
+    invoke-virtual {v11, v12, v13}, Lm23;->N(J)Lsqc;
+
+    move-result-object v11
+
+    iget-object v11, v11, Lsqc;->a:Lfoe;
+
+    invoke-interface {v11}, Lfoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lm82;
+
+    if-eqz v11, :cond_6
+
+    iget-object v11, v11, Lm82;->b:Lpc2;
+
+    iget-wide v11, v11, Lpc2;->a:J
+
+    new-instance v13, Ljava/lang/Long;
+
+    invoke-direct {v13, v11, v12}, Ljava/lang/Long;-><init>(J)V
 
     goto :goto_2
 
     :cond_6
-    const/4 v7, 0x0
-
-    :goto_2
-    iput-object v0, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    iput-object v1, v14, Lxac;->X:Ljava/lang/Object;
-
-    iput-object v2, v14, Lxac;->Y:Lyz8;
-
-    iput-object v3, v14, Lxac;->Z:Lc9c;
-
-    iput-object v7, v14, Lxac;->n0:Lj9c;
-
-    iput v10, v14, Lxac;->q0:I
-
-    iget-object v13, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lsz2;
-
-    iget-wide v8, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
-
-    check-cast v13, Ls03;
-
-    invoke-virtual {v13, v8, v9}, Ls03;->N(J)Ljbc;
-
-    move-result-object v8
-
-    iget-object v8, v8, Ljbc;->a:Lj4e;
-
-    invoke-interface {v8}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ll72;
-
-    if-eqz v8, :cond_7
-
-    iget-object v8, v8, Ll72;->b:Lxb2;
-
-    iget-wide v8, v8, Lxb2;->a:J
-
-    new-instance v13, Ljava/lang/Long;
-
-    invoke-direct {v13, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    goto :goto_3
-
-    :cond_7
     const/4 v13, 0x0
 
+    :goto_2
+    if-ne v13, v15, :cond_7
+
+    move-object v11, v15
+
+    goto/16 :goto_11
+
+    :cond_7
+    move-object/from16 v32, v13
+
+    move-object v13, v0
+
+    move-object/from16 v0, v32
+
     :goto_3
-    if-ne v13, v12, :cond_8
+    check-cast v0, Ljava/lang/Long;
 
-    move-object v0, v12
+    if-eqz v0, :cond_15
 
-    goto/16 :goto_a
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    :cond_8
-    move-object/from16 v31, v13
+    move-result-wide v27
 
-    move-object v13, v7
+    if-eqz v4, :cond_d
 
-    move-object/from16 v7, v31
+    if-eqz v10, :cond_d
 
-    :goto_4
-    check-cast v7, Ljava/lang/Long;
+    iget-object v0, v10, Lsoc;->b:Lkoc;
 
-    if-eqz v7, :cond_10
+    invoke-static {v0, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v7}, Ljava/lang/Long;->longValue()J
+    move-result v0
 
-    move-result-wide v7
+    if-eqz v0, :cond_d
 
-    if-eqz v2, :cond_b
+    iget-object v0, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->g:Lbp7;
 
-    if-eqz v13, :cond_b
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object v9, v13, Lj9c;->b:Lc9c;
+    move-result-object v0
 
-    invoke-static {v9, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v2, v0
 
-    move-result v9
+    check-cast v2, Lp12;
 
-    if-eqz v9, :cond_b
+    iget-wide v11, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
-    iget-object v2, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->g:Lth7;
+    move-object/from16 v31, v15
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    iget-wide v14, v1, Lcqc;->b:J
 
-    move-result-object v2
+    iget-wide v0, v1, Lcqc;->c:J
 
-    check-cast v2, Ll02;
+    iput-object v13, v3, Lgqc;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    move-object v3, v5
+    iput-object v10, v3, Lgqc;->X:Ljava/lang/Object;
 
-    move-object v9, v6
+    const/4 v4, 0x0
 
-    iget-wide v5, v0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
+    iput-object v4, v3, Lgqc;->Y:Ly79;
 
-    move-object/from16 v18, v9
+    iput-object v4, v3, Lgqc;->Z:Lkoc;
 
-    move-wide v9, v7
+    iput-object v4, v3, Lgqc;->w0:Lsoc;
 
-    iget-wide v7, v1, Ltac;->b:J
+    const/4 v4, 0x2
 
-    move-object/from16 v20, v12
+    iput v4, v3, Lgqc;->z0:I
 
-    iget-wide v11, v1, Ltac;->c:J
+    sget-object v3, Lp12;->f:Ljava/lang/String;
 
-    iput-object v0, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
+    iget-object v4, v2, Lp12;->b:Ljt4;
 
-    iput-object v13, v14, Lxac;->X:Ljava/lang/Object;
+    sget-object v18, Lp12;->e:[Ltm7;
 
-    const/4 v1, 0x0
+    aget-object v17, v18, v17
 
-    iput-object v1, v14, Lxac;->Y:Lyz8;
-
-    iput-object v1, v14, Lxac;->Z:Lc9c;
-
-    iput-object v1, v14, Lxac;->n0:Lj9c;
-
-    const/4 v1, 0x2
-
-    iput v1, v14, Lxac;->q0:I
-
-    move-object/from16 v19, v0
-
-    move-object v1, v4
-
-    move-object/from16 v0, v20
-
-    move-object v4, v2
-
-    move-object v2, v3
-
-    move-object/from16 v3, v18
-
-    invoke-virtual/range {v4 .. v14}, Ll02;->a(JJJJLj9c;Lax3;)Ljava/lang/Object;
+    invoke-virtual {v4}, Ljt4;->get()Ljava/lang/Object;
 
     move-result-object v4
 
-    if-ne v4, v0, :cond_9
+    check-cast v4, Lktd;
 
-    goto/16 :goto_a
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v4, "reactions, msgCancelReaction"
+
+    invoke-static {v3, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v4, v2, Lp12;->c:Ljt4;
+
+    const/16 v19, 0x2
+
+    aget-object v17, v18, v19
+
+    invoke-virtual {v4}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object/from16 v20, v4
+
+    check-cast v20, Lb89;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object/from16 v25, v10
+
+    move-wide/from16 v21, v11
+
+    move-wide/from16 v23, v14
+
+    :try_start_1
+    invoke-virtual/range {v20 .. v25}, Lb89;->e(JJLsoc;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-wide/from16 v11, v21
+
+    move-wide/from16 v14, v23
+
+    move-object/from16 v10, v25
+
+    :try_start_2
+    iget-object v4, v2, Lp12;->a:Ljt4;
+
+    aget-object v17, v18, v16
+
+    invoke-virtual {v4}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ltk;
+
+    check-cast v4, Lbga;
+
+    invoke-virtual {v4, v11, v12}, Lbga;->n(J)Z
+
+    move-result v17
+
+    if-nez v17, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v4, v14, v15}, Lbga;->o(J)Z
+
+    move-result v17
+
+    if-nez v17, :cond_9
+
+    goto :goto_4
 
     :cond_9
-    move-object v0, v13
+    invoke-virtual {v4, v0, v1}, Lbga;->p(J)Z
 
-    move-object/from16 v4, v19
+    move-result v17
+
+    if-nez v17, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    new-instance v20, Ljp9;
+
+    invoke-virtual {v4}, Lbga;->x()Lxob;
+
+    move-result-object v17
+
+    move-wide/from16 v29, v0
+
+    move-object/from16 v0, v17
+
+    check-cast v0, Lzob;
+
+    iget-object v0, v0, Lzob;->a:Lt63;
+
+    invoke-virtual {v0}, Lxid;->l()J
+
+    move-result-wide v21
+
+    move-wide/from16 v23, v11
+
+    move-wide/from16 v25, v14
+
+    invoke-direct/range {v20 .. v30}, Ljp9;-><init>(JJJJJ)V
+
+    move-object/from16 v0, v20
+
+    invoke-static {v4, v0}, Lbga;->v(Lbga;Lxl;)J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_4
+    move-object/from16 v11, v31
+
+    goto :goto_6
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_5
+
+    :catchall_1
+    move-exception v0
+
+    move-object/from16 v10, v25
 
     :goto_5
-    iget-object v5, v4, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lth7;
+    const-string v1, "reactions, cancelReaction async query failed"
 
-    invoke-interface {v5}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v3, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v5
+    iget-object v1, v2, Lp12;->d:Ljt4;
 
-    check-cast v5, Lzpe;
+    aget-object v2, v18, p2
 
-    iget v6, v4, Lru/ok/onechat/reactions/ReactionsViewModel;->w:I
+    invoke-virtual {v1}, Ljt4;->get()Ljava/lang/Object;
 
-    iget-object v0, v0, Lj9c;->b:Lc9c;
+    move-result-object v1
 
-    iget-object v0, v0, Lc9c;->a:Ljava/lang/CharSequence;
+    check-cast v1, Lec5;
+
+    check-cast v1, Lcna;
+
+    invoke-virtual {v1, v0}, Lcna;->c(Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :goto_6
+    if-ne v9, v11, :cond_b
+
+    goto/16 :goto_11
+
+    :cond_b
+    move-object v0, v10
+
+    move-object v1, v13
+
+    :goto_7
+    iget-object v2, v1, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lbp7;
+
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljaf;
+
+    iget v3, v1, Lru/ok/onechat/reactions/ReactionsViewModel;->w:I
+
+    iget-object v0, v0, Lsoc;->b:Lkoc;
+
+    iget-object v0, v0, Lkoc;->a:Ljava/lang/CharSequence;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Ll72;
+    invoke-virtual {v1}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lm82;
 
-    move-result-object v4
+    move-result-object v1
 
-    if-eqz v4, :cond_a
+    if-eqz v1, :cond_c
 
-    invoke-virtual {v4}, Ll72;->L()Z
+    invoke-virtual {v1}, Lm82;->L()Z
 
-    move-result v17
+    move-result v13
 
-    :cond_a
-    move/from16 v4, v17
+    goto :goto_8
 
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_c
+    move/from16 v13, v16
 
-    new-instance v7, Lp77;
+    :goto_8
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lqe7;
 
-    iput-object v3, v7, Lp77;->c:Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    const-string v3, "reaction_canceled"
+    iput-object v8, v1, Lqe7;->c:Ljava/lang/String;
 
-    iput-object v3, v7, Lp77;->o:Ljava/lang/String;
+    const-string v4, "reaction_canceled"
 
-    invoke-static {v6}, Ljq9;->d(I)Ljava/lang/String;
+    iput-object v4, v1, Lqe7;->o:Ljava/lang/String;
+
+    invoke-static {v3}, Lvpb;->b(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v7, v3, v2}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v1, v3, v7}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7, v0, v1}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v6}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v7, v0, v1}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v6}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v7}, Lp77;->d()Lcw7;
+    invoke-virtual {v1}, Lqe7;->d()Lt38;
 
     move-result-object v0
 
-    iget-object v1, v5, Lzpe;->a:Lth7;
+    iget-object v1, v2, Ljaf;->a:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ltc;
+    check-cast v1, Lqc;
 
-    invoke-virtual {v1, v0}, Ltc;->j(Lcw7;)Z
+    invoke-virtual {v1, v0}, Lqc;->i(Lt38;)Z
 
-    return-object v16
+    :goto_9
+    move-object/from16 v30, v9
 
-    :cond_b
-    move-wide/from16 v31, v7
+    goto/16 :goto_12
 
-    move v7, v10
+    :cond_d
+    move-object v11, v15
 
-    move-wide/from16 v9, v31
+    move-wide/from16 v25, v27
+
+    iget-object v0, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->h:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v10, v0
+
+    check-cast v10, Lcrd;
+
+    iget-wide v14, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
+
+    move-wide/from16 v20, v14
+
+    iget-wide v14, v1, Lcqc;->b:J
+
+    move-wide/from16 v22, v14
+
+    iget-wide v14, v1, Lcqc;->c:J
+
+    iget-object v0, v10, Lcrd;->b:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lktd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "reactions, sendReaction"
+
+    const-string v12, "crd"
+
+    invoke-static {v12, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_3
+    iget-object v0, v10, Lcrd;->c:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
 
     move-object/from16 v19, v0
 
-    move-object v0, v12
+    check-cast v19, Lb89;
 
-    move-object/from16 v8, v19
+    new-instance v0, Lsoc;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    iget-object v11, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->h:Lth7;
+    move-object/from16 v30, v9
 
-    invoke-interface {v11}, Lth7;->getValue()Ljava/lang/Object;
+    :try_start_4
+    iget-object v9, v10, Lcrd;->e:Lbp7;
 
-    move-result-object v11
-
-    check-cast v11, Ln9d;
-
-    move-object v12, v5
-
-    move-object v13, v6
-
-    iget-wide v5, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
-
-    move-object/from16 p0, v4
-
-    move-wide/from16 v21, v5
-
-    iget-wide v4, v1, Ltac;->b:J
-
-    move-wide v5, v4
-
-    move-object v4, v11
-
-    move-object/from16 v19, v12
-
-    iget-wide v11, v1, Ltac;->c:J
-
-    iput-object v8, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    iput-object v1, v14, Lxac;->X:Ljava/lang/Object;
-
-    iput-object v2, v14, Lxac;->Y:Lyz8;
-
-    iput-object v3, v14, Lxac;->Z:Lc9c;
-
-    const/4 v7, 0x0
-
-    iput-object v7, v14, Lxac;->n0:Lj9c;
-
-    const/4 v7, 0x3
-
-    iput v7, v14, Lxac;->q0:I
-
-    move-object v7, v15
-
-    move-object v15, v14
-
-    sget-object v14, Lwz8;->b:Lwz8;
-
-    move-object/from16 v18, v13
-
-    move-object v13, v3
-
-    move-object/from16 v3, v18
-
-    move-object/from16 v18, v1
-
-    move-object/from16 v20, v7
-
-    move-object/from16 v1, p0
-
-    move-object/from16 p0, v2
-
-    move-object/from16 v2, v19
-
-    move-object/from16 v19, v8
-
-    move-wide v7, v5
-
-    move-wide/from16 v5, v21
-
-    const/16 v21, 0x1
-
-    invoke-virtual/range {v4 .. v15}, Ln9d;->a(JJJJLc9c;Lwz8;Lax3;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v14, v15
-
-    if-ne v4, v0, :cond_c
-
-    goto/16 :goto_a
-
-    :cond_c
-    move-object/from16 v4, p0
-
-    move-object/from16 v5, v18
-
-    move-object/from16 v8, v19
-
-    :goto_6
-    iget-object v6, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lth7;
-
-    invoke-interface {v6}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lzpe;
-
-    iget v7, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->w:I
-
-    iget-object v9, v13, Lc9c;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v9}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v9
 
-    invoke-virtual {v8}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Ll72;
+    check-cast v9, Lz79;
+
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v9, Ltoc;->o:Lla5;
+
+    move-wide/from16 v27, v14
+
+    new-instance v14, Lu1;
+
+    move/from16 v15, v16
+
+    invoke-direct {v14, v15, v9}, Lu1;-><init>(ILjava/lang/Object;)V
+
+    :goto_a
+    invoke-virtual {v14}, Lu1;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_f
+
+    invoke-virtual {v14}, Lu1;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    move-object v15, v9
+
+    check-cast v15, Ltoc;
+
+    iget v15, v15, Ltoc;->a:I
+
+    if-nez v15, :cond_e
+
+    goto :goto_b
+
+    :cond_e
+    const/4 v15, 0x0
+
+    goto :goto_a
+
+    :cond_f
+    const/4 v9, 0x0
+
+    :goto_b
+    check-cast v9, Ltoc;
+
+    if-eqz v9, :cond_10
+
+    invoke-direct {v0, v9, v2}, Lsoc;-><init>(Ltoc;Lkoc;)V
+
+    move-object/from16 v24, v0
+
+    invoke-virtual/range {v19 .. v24}, Lb89;->e(JJLsoc;)V
+
+    iget-object v0, v10, Lcrd;->a:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltk;
+
+    iget-object v9, v2, Lkoc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v29
+
+    check-cast v0, Lbga;
+
+    move-wide/from16 v23, v22
+
+    move-wide/from16 v21, v20
+
+    move-object/from16 v20, v0
+
+    invoke-virtual/range {v20 .. v29}, Lbga;->D(JJJJLjava/lang/String;)J
+
+    goto :goto_d
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_c
+
+    :cond_10
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v9, "Unknown reactionType = 0"
+
+    invoke-direct {v0, v9}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    :catchall_3
+    move-exception v0
+
+    move-object/from16 v30, v9
+
+    :goto_c
+    const-string v9, "reactions, sendReaction async query failed"
+
+    invoke-static {v12, v9, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v9, v10, Lcrd;->d:Lbp7;
+
+    invoke-interface {v9}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Lec5;
+
+    new-instance v10, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v10, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    check-cast v9, Lcna;
+
+    invoke-virtual {v9, v10}, Lcna;->c(Ljava/lang/Throwable;)V
+
+    :goto_d
+    iget-object v0, v2, Lkoc;->a:Ljava/lang/CharSequence;
+
+    iget-object v2, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->i:Lbp7;
+
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljaf;
+
+    iget v9, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->w:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v10
 
-    if-eqz v10, :cond_d
+    invoke-virtual {v13}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lm82;
 
-    invoke-virtual {v10}, Ll72;->L()Z
+    move-result-object v12
 
-    move-result v10
+    if-eqz v12, :cond_11
 
-    goto :goto_7
+    invoke-virtual {v12}, Lm82;->L()Z
 
-    :cond_d
-    move/from16 v10, v17
+    move-result v12
 
-    :goto_7
-    if-eqz v4, :cond_e
+    goto :goto_e
 
-    iget-object v11, v4, Lyz8;->c:Lj9c;
+    :cond_11
+    const/4 v12, 0x0
 
-    goto :goto_8
+    :goto_e
+    if-eqz v4, :cond_12
 
-    :cond_e
-    const/4 v11, 0x0
+    iget-object v4, v4, Ly79;->c:Lsoc;
 
-    :goto_8
-    if-eqz v11, :cond_f
+    goto :goto_f
 
-    move/from16 v4, v21
+    :cond_12
+    const/4 v4, 0x0
 
-    goto :goto_9
+    :goto_f
+    if-eqz v4, :cond_13
 
-    :cond_f
     move/from16 v4, v17
 
-    :goto_9
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    goto :goto_10
 
-    new-instance v11, Lp77;
+    :cond_13
+    const/4 v4, 0x0
 
-    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
+    :goto_10
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v3, v11, Lp77;->c:Ljava/lang/String;
+    new-instance v14, Lqe7;
 
-    const-string v3, "reaction_sent"
+    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
 
-    iput-object v3, v11, Lp77;->o:Ljava/lang/String;
+    iput-object v8, v14, Lqe7;->c:Ljava/lang/String;
 
-    invoke-static {v7}, Ljq9;->d(I)Ljava/lang/String;
+    const-string v8, "reaction_sent"
 
-    move-result-object v3
+    iput-object v8, v14, Lqe7;->o:Ljava/lang/String;
 
-    invoke-virtual {v11, v3, v2}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9}, Lvpb;->b(I)Ljava/lang/String;
 
-    invoke-virtual {v11, v9, v1}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v8
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v8, v7}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object/from16 v7, v20
+    invoke-virtual {v14, v10, v6}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v7, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v3, ";is_changed="
+    invoke-virtual {v7, v12}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v5, ";is_changed="
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v11, v2, v1}, Lp77;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v4
 
-    invoke-virtual {v11}, Lp77;->d()Lcw7;
+    invoke-virtual {v14, v4, v6}, Lqe7;->b(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {v14}, Lqe7;->d()Lt38;
 
-    iget-object v2, v6, Lzpe;->a:Lth7;
+    move-result-object v4
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    iget-object v2, v2, Ljaf;->a:Lbp7;
 
-    move-result-object v2
-
-    check-cast v2, Ltc;
-
-    invoke-virtual {v2, v1}, Ltc;->j(Lcw7;)Z
-
-    iget-object v1, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Laj;
-
-    iget-object v2, v13, Lc9c;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Laj;->g(Ljava/lang/String;)Ljh;
+    check-cast v2, Lqc;
 
-    move-result-object v1
+    invoke-virtual {v2, v4}, Lqc;->i(Lt38;)Z
 
-    if-eqz v1, :cond_10
+    iget-object v2, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lbp7;
 
-    iget-object v1, v1, Ljh;->d:Ljava/lang/String;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    if-eqz v1, :cond_10
+    move-result-object v2
 
-    iget-object v2, v8, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Lkpd;
+    check-cast v2, Lkj;
 
-    iget-object v3, v5, Ltac;->a:Lc9c;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-wide v4, v5, Ltac;->b:J
+    move-result-object v0
 
-    new-instance v23, Lz9c;
+    invoke-virtual {v2, v0}, Lkj;->g(Ljava/lang/String;)Lkh;
 
-    const-wide/16 v27, 0x0
+    move-result-object v0
 
-    const/16 v30, 0x0
+    if-eqz v0, :cond_14
 
-    move-object/from16 v29, v1
+    iget-object v0, v0, Lkh;->d:Ljava/lang/String;
 
-    move-object/from16 v24, v3
+    if-eqz v0, :cond_14
 
-    move-wide/from16 v25, v4
+    iget-object v2, v13, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Le8e;
 
-    invoke-direct/range {v23 .. v30}, Lz9c;-><init>(Lc9c;JJLjava/lang/String;Z)V
+    iget-object v4, v1, Lcqc;->a:Lkoc;
 
-    move-object/from16 v1, v23
+    iget-wide v5, v1, Lcqc;->b:J
 
-    const/4 v7, 0x0
+    new-instance v19, Lipc;
 
-    iput-object v7, v14, Lxac;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
+    const-wide/16 v23, 0x0
 
-    iput-object v7, v14, Lxac;->X:Ljava/lang/Object;
+    const/16 v26, 0x0
 
-    iput-object v7, v14, Lxac;->Y:Lyz8;
+    move-object/from16 v25, v0
 
-    iput-object v7, v14, Lxac;->Z:Lc9c;
+    move-object/from16 v20, v4
 
-    const/4 v3, 0x4
+    move-wide/from16 v21, v5
 
-    iput v3, v14, Lxac;->q0:I
+    invoke-direct/range {v19 .. v26}, Lipc;-><init>(Lkoc;JJLjava/lang/String;Z)V
 
-    invoke-virtual {v2, v1, v14}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-object/from16 v0, v19
 
-    move-result-object v1
+    const/4 v4, 0x0
 
-    if-ne v1, v0, :cond_10
+    iput-object v4, v3, Lgqc;->o:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    :goto_a
-    return-object v0
+    iput-object v4, v3, Lgqc;->X:Ljava/lang/Object;
 
-    :cond_10
-    return-object v16
+    iput-object v4, v3, Lgqc;->Y:Ly79;
+
+    iput-object v4, v3, Lgqc;->Z:Lkoc;
+
+    iput-object v4, v3, Lgqc;->w0:Lsoc;
+
+    move/from16 v1, p2
+
+    iput v1, v3, Lgqc;->z0:I
+
+    invoke-virtual {v2, v0, v3}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v11, :cond_14
+
+    :goto_11
+    move-object v9, v11
+
+    goto :goto_13
+
+    :cond_14
+    :goto_12
+    move-object/from16 v9, v30
+
+    :goto_13
+    return-object v9
+
+    :cond_15
+    move-object/from16 v30, v9
+
+    return-object v30
 .end method
 
-.method public static g(Lc9c;)Landroid/graphics/drawable/Drawable;
+.method public static g(Lkoc;)Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    iget-object p0, p0, Lc9c;->a:Ljava/lang/CharSequence;
+    iget-object p0, p0, Lkoc;->a:Ljava/lang/CharSequence;
 
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -1037,12 +1222,10 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
-
     :try_start_0
-    instance-of v3, p0, Landroid/text/Spanned;
+    instance-of v2, p0, Landroid/text/Spanned;
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
     check-cast p0, Landroid/text/Spanned;
 
@@ -1054,9 +1237,11 @@
     :goto_0
     if-eqz p0, :cond_1
 
-    const-class v3, Lczd;
+    const-class v2, Lbje;
 
-    invoke-interface {p0, v2, v0, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    const/4 v3, 0x0
+
+    invoke-interface {p0, v3, v0, v2}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p0
     :try_end_0
@@ -1069,29 +1254,23 @@
     move-object p0, v1
 
     :goto_1
-    check-cast p0, [Lczd;
+    check-cast p0, [Lbje;
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_2
 
-    array-length v0, p0
+    invoke-static {p0}, Lhs;->i0([Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    move-result-object p0
 
-    move-object p0, v1
+    check-cast p0, Lbje;
 
-    goto :goto_2
+    if-eqz p0, :cond_2
 
-    :cond_2
-    aget-object p0, p0, v2
-
-    :goto_2
-    if-eqz p0, :cond_3
-
-    invoke-interface {p0}, Lczd;->b()Landroid/graphics/drawable/Drawable;
+    invoke-interface {p0}, Lbje;->b()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    :cond_3
+    :cond_2
     return-object v1
 .end method
 
@@ -1104,12 +1283,12 @@
 
     const-string v1, "onCleared"
 
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->e:Lrv0;
+    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->e:Lov0;
 
-    invoke-virtual {v0, p0}, Lrv0;->f(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lov0;->f(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1120,103 +1299,319 @@
 .end method
 
 .method public final f()V
-    .locals 4
+    .locals 5
 
     const-string v0, "ru.ok.onechat.reactions.ReactionsViewModel"
 
     const-string v1, "cancelChatSubscribeNotifObserving"
 
-    invoke-static {v0, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Lve2;->C(Lzxf;)Lt53;
+    invoke-static {p0}, Lvhh;->A(Ljlg;)Lp73;
 
     move-result-object v0
 
-    sget-object v1, Lct9;->a:Lct9;
+    sget-object v1, Lq2a;->a:Lq2a;
 
-    iget-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Lth7;
+    iget-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->j:Lbp7;
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkd4;
+    check-cast v2, Leg4;
 
-    iget-object v2, v2, Lkd4;->a:Lj04;
+    iget-object v2, v2, Leg4;->a:Ly24;
 
-    invoke-virtual {v1, v2}, Ld0;->plus(Lh04;)Lh04;
+    invoke-virtual {v1, v2}, Le0;->plus(Lw24;)Lw24;
 
     move-result-object v1
 
-    new-instance v2, Luac;
+    new-instance v2, Ldqc;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, v3}, Luac;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, p0, v3}, Ldqc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
 
-    const/4 p0, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v0, v1, v3, v2, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    invoke-static {v0, v1, v3, v2, v4}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
     return-void
 .end method
 
 .method public final h()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->o:Lkle;
+    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->o:Ls5f;
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/lang/Boolean;
+    check-cast v0, Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
-.method public final i()Ll72;
-    .locals 2
+.method public final i()Lm82;
+    .locals 3
 
     iget-wide v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
-    iget-object p0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lsz2;
+    iget-object v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->c:Lm13;
 
-    check-cast p0, Ls03;
+    check-cast v2, Lm23;
 
-    invoke-virtual {p0, v0, v1}, Ls03;->N(J)Ljbc;
+    invoke-virtual {v2, v0, v1}, Lm23;->N(J)Lsqc;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p0, p0, Ljbc;->a:Lj4e;
+    iget-object v0, v0, Lsqc;->a:Lfoe;
 
-    invoke-interface {p0}, Lj4e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ll72;
+    check-cast v0, Lm82;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final j(Lyz8;Z)Lgp7;
-    .locals 19
+.method public final j(Ly79;Z)Lsw7;
+    .locals 20
 
     move-object/from16 v0, p1
 
-    invoke-static {}, Lno9;->f()Lgp7;
+    invoke-static {}, Lvhh;->p()Lsw7;
 
     move-result-object v1
 
     move-object/from16 v2, p0
 
-    iget-object v2, v2, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lvlc;
+    iget-object v3, v2, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lk2d;
 
-    invoke-virtual {v2}, Lvlc;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lk2d;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3}, Lk2d;->reset()V
+
+    :cond_0
+    const-class v4, Lsw7;
+
+    const-string v5, "Default reactions is empty"
+
+    const/4 v6, 0x0
+
+    const/16 v8, 0x8
+
+    if-eqz v0, :cond_9
+
+    iget-object v9, v0, Ly79;->a:Ljava/util/List;
+
+    invoke-interface {v9}, Ljava/util/List;->size()I
+
+    move-result v10
+
+    if-lt v10, v8, :cond_9
+
+    iget-object v0, v0, Ly79;->c:Lsoc;
+
+    invoke-interface {v9}, Ljava/util/Collection;->size()I
+
+    move-result v8
+
+    move v10, v6
+
+    :goto_0
+    if-ge v6, v8, :cond_f
+
+    invoke-interface {v9, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lx79;
+
+    invoke-virtual {v3}, Lk2d;->getValue()Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, Ljava/util/List;
+
+    invoke-interface {v12}, Ljava/util/List;->isEmpty()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_1
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-static {v13, v5}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    invoke-interface {v12}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v12
+
+    :cond_2
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v13
+
+    if-eqz v13, :cond_3
+
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v13
+
+    move-object v14, v13
+
+    check-cast v14, Lzoc;
+
+    iget-object v14, v14, Lzoc;->b:Lkoc;
+
+    iget-object v15, v11, Lx79;->a:Lsoc;
+
+    iget-object v15, v15, Lsoc;->b:Lkoc;
+
+    invoke-static {v14, v15}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_2
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v13, 0x0
+
+    :goto_1
+    check-cast v13, Lzoc;
+
+    if-nez v13, :cond_5
+
+    iget-object v11, v11, Lx79;->a:Lsoc;
+
+    iget-object v15, v11, Lsoc;->b:Lkoc;
+
+    new-instance v12, Lzoc;
+
+    const-wide/high16 v13, -0x8000000000000000L
+
+    move/from16 p1, v8
+
+    int-to-long v7, v10
+
+    add-long/2addr v13, v7
+
+    invoke-static {v15}, Lru/ok/onechat/reactions/ReactionsViewModel;->g(Lkoc;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v16
+
+    if-eqz v0, :cond_4
+
+    iget-object v7, v0, Lsoc;->b:Lkoc;
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v7, 0x0
+
+    :goto_2
+    invoke-virtual {v15, v7}, Lkoc;->equals(Ljava/lang/Object;)Z
+
+    move-result v17
+
+    invoke-direct/range {v12 .. v17}, Lzoc;-><init>(JLkoc;Landroid/graphics/drawable/Drawable;Z)V
+
+    invoke-virtual {v1, v12}, Lsw7;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_5
+
+    :cond_5
+    move/from16 p1, v8
+
+    iget-object v7, v13, Lzoc;->b:Lkoc;
+
+    if-eqz v0, :cond_6
+
+    iget-object v8, v0, Lsoc;->b:Lkoc;
+
+    goto :goto_3
+
+    :cond_6
+    const/4 v8, 0x0
+
+    :goto_3
+    invoke-static {v7, v8}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8
+
+    new-instance v14, Lzoc;
+
+    iget-wide v7, v13, Lzoc;->a:J
+
+    iget-object v12, v13, Lzoc;->b:Lkoc;
+
+    iget-object v13, v13, Lzoc;->c:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_7
+
+    iget-object v15, v0, Lsoc;->b:Lkoc;
+
+    goto :goto_4
+
+    :cond_7
+    const/4 v15, 0x0
+
+    :goto_4
+    invoke-static {v12, v15}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v19
+
+    move-wide v15, v7
+
+    move-object/from16 v17, v12
+
+    move-object/from16 v18, v13
+
+    invoke-direct/range {v14 .. v19}, Lzoc;-><init>(JLkoc;Landroid/graphics/drawable/Drawable;Z)V
+
+    invoke-virtual {v1, v14}, Lsw7;->add(Ljava/lang/Object;)Z
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v1, v13}, Lsw7;->add(Ljava/lang/Object;)Z
+
+    :goto_5
+    add-int/lit8 v6, v6, 0x1
+
+    move/from16 v8, p1
+
+    goto/16 :goto_0
+
+    :cond_9
+    invoke-virtual {v3}, Lk2d;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1224,328 +1619,116 @@
 
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v2}, Lvlc;->reset()V
-
-    :cond_0
-    const-class v3, Lgp7;
-
-    const-string v4, "Default reactions is empty"
-
-    const/4 v5, 0x0
-
-    const/16 v7, 0x8
-
-    if-eqz v0, :cond_9
-
-    iget-object v8, v0, Lyz8;->a:Ljava/util/List;
-
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v9
-
-    if-lt v9, v7, :cond_9
-
-    iget-object v0, v0, Lyz8;->c:Lj9c;
-
-    invoke-interface {v8}, Ljava/util/Collection;->size()I
-
     move-result v7
 
-    move v9, v5
+    if-eqz v7, :cond_a
 
-    :goto_0
-    if-ge v5, v7, :cond_f
-
-    invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lxz8;
-
-    invoke-virtual {v2}, Lvlc;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Ljava/util/List;
-
-    invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_1
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-static {v12, v4}, Lz76;->M(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    invoke-interface {v11}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v11
-
-    :cond_2
-    invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_3
-
-    invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v12
-
-    move-object v13, v12
-
-    check-cast v13, Lq9c;
-
-    iget-object v13, v13, Lq9c;->b:Lc9c;
-
-    iget-object v14, v10, Lxz8;->a:Lj9c;
-
-    iget-object v14, v14, Lj9c;->b:Lc9c;
-
-    invoke-static {v13, v14}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_2
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v12, 0x0
-
-    :goto_1
-    check-cast v12, Lq9c;
-
-    if-nez v12, :cond_5
-
-    iget-object v10, v10, Lxz8;->a:Lj9c;
-
-    iget-object v14, v10, Lj9c;->b:Lc9c;
-
-    new-instance v11, Lq9c;
-
-    const-wide/high16 v12, -0x8000000000000000L
-
-    move/from16 p1, v7
-
-    int-to-long v6, v9
-
-    add-long/2addr v12, v6
-
-    invoke-static {v14}, Lru/ok/onechat/reactions/ReactionsViewModel;->g(Lc9c;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v15
-
-    if-eqz v0, :cond_4
-
-    iget-object v6, v0, Lj9c;->b:Lc9c;
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v6, 0x0
-
-    :goto_2
-    invoke-virtual {v14, v6}, Lc9c;->equals(Ljava/lang/Object;)Z
-
-    move-result v16
-
-    invoke-direct/range {v11 .. v16}, Lq9c;-><init>(JLc9c;Landroid/graphics/drawable/Drawable;Z)V
-
-    invoke-virtual {v1, v11}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_5
-
-    :cond_5
-    move/from16 p1, v7
-
-    iget-object v6, v12, Lq9c;->b:Lc9c;
-
-    if-eqz v0, :cond_6
-
-    iget-object v7, v0, Lj9c;->b:Lc9c;
-
-    goto :goto_3
-
-    :cond_6
-    const/4 v7, 0x0
-
-    :goto_3
-    invoke-static {v6, v7}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_8
-
-    new-instance v13, Lq9c;
-
-    iget-wide v14, v12, Lq9c;->a:J
-
-    iget-object v6, v12, Lq9c;->b:Lc9c;
-
-    iget-object v7, v12, Lq9c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_7
-
-    iget-object v10, v0, Lj9c;->b:Lc9c;
-
-    goto :goto_4
-
-    :cond_7
-    const/4 v10, 0x0
-
-    :goto_4
-    invoke-static {v6, v10}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v18
-
-    move-object/from16 v16, v6
-
-    move-object/from16 v17, v7
-
-    invoke-direct/range {v13 .. v18}, Lq9c;-><init>(JLc9c;Landroid/graphics/drawable/Drawable;Z)V
-
-    invoke-virtual {v1, v13}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_8
-    invoke-virtual {v1, v12}, Lgp7;->add(Ljava/lang/Object;)Z
-
-    :goto_5
-    add-int/lit8 v5, v5, 0x1
-
-    move/from16 v7, p1
-
-    goto/16 :goto_0
-
-    :cond_9
-    invoke-virtual {v2}, Lvlc;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_a
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lz76;->M(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_a
 
     :cond_a
-    invoke-interface {v2}, Ljava/util/Collection;->size()I
+    invoke-interface {v3}, Ljava/util/Collection;->size()I
 
-    move-result v3
+    move-result v4
 
     :goto_6
-    if-ge v5, v3, :cond_f
+    if-ge v6, v4, :cond_f
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Lq9c;
+    check-cast v5, Lzoc;
 
-    const/4 v6, 0x7
+    const/4 v7, 0x7
 
-    if-ne v5, v6, :cond_b
+    if-ne v6, v7, :cond_b
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v6
+    move-result v7
 
-    if-le v6, v7, :cond_b
+    if-le v7, v8, :cond_b
 
     if-eqz p2, :cond_b
 
-    sget-object v0, Lp9c;->a:Lp9c;
+    sget-object v0, Lyoc;->a:Lyoc;
 
-    invoke-virtual {v1, v0}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lsw7;->add(Ljava/lang/Object;)Z
 
     goto :goto_a
 
     :cond_b
-    iget-object v6, v4, Lq9c;->b:Lc9c;
+    iget-object v7, v5, Lzoc;->b:Lkoc;
 
     if-eqz v0, :cond_c
 
-    iget-object v8, v0, Lyz8;->c:Lj9c;
+    iget-object v9, v0, Ly79;->c:Lsoc;
 
-    if-eqz v8, :cond_c
+    if-eqz v9, :cond_c
 
-    iget-object v8, v8, Lj9c;->b:Lc9c;
+    iget-object v9, v9, Lsoc;->b:Lkoc;
 
     goto :goto_7
 
     :cond_c
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     :goto_7
-    invoke-static {v6, v8}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v9}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v7
 
-    if-eqz v6, :cond_e
+    if-eqz v7, :cond_e
 
-    new-instance v8, Lq9c;
+    new-instance v12, Lzoc;
 
-    iget-wide v9, v4, Lq9c;->a:J
+    iget-wide v13, v5, Lzoc;->a:J
 
-    iget-object v11, v4, Lq9c;->b:Lc9c;
+    iget-object v15, v5, Lzoc;->b:Lkoc;
 
-    iget-object v12, v4, Lq9c;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v5, v5, Lzoc;->c:Landroid/graphics/drawable/Drawable;
 
-    iget-object v4, v0, Lyz8;->c:Lj9c;
+    iget-object v7, v0, Ly79;->c:Lsoc;
 
-    if-eqz v4, :cond_d
+    if-eqz v7, :cond_d
 
-    iget-object v4, v4, Lj9c;->b:Lc9c;
+    iget-object v7, v7, Lsoc;->b:Lkoc;
 
     goto :goto_8
 
     :cond_d
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
     :goto_8
-    invoke-static {v11, v4}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v15, v7}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v13
+    move-result v17
 
-    invoke-direct/range {v8 .. v13}, Lq9c;-><init>(JLc9c;Landroid/graphics/drawable/Drawable;Z)V
+    move-object/from16 v16, v5
 
-    invoke-virtual {v1, v8}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-direct/range {v12 .. v17}, Lzoc;-><init>(JLkoc;Landroid/graphics/drawable/Drawable;Z)V
+
+    invoke-virtual {v1, v12}, Lsw7;->add(Ljava/lang/Object;)Z
 
     goto :goto_9
 
     :cond_e
-    invoke-virtual {v1, v4}, Lgp7;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v5}, Lsw7;->add(Ljava/lang/Object;)Z
 
     :goto_9
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
     goto :goto_6
 
     :cond_f
     :goto_a
-    invoke-static {v1}, Lno9;->b(Ljava/util/List;)Lgp7;
+    invoke-static {v1}, Lvhh;->e(Ljava/util/List;)Lsw7;
 
     move-result-object v0
 
@@ -1553,7 +1736,7 @@
 .end method
 
 .method public final k()Z
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->h()Z
 
@@ -1566,52 +1749,52 @@
     return v1
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Ll72;
+    invoke-virtual {p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lm82;
 
-    move-result-object p0
+    move-result-object v0
 
-    if-nez p0, :cond_1
+    if-nez v0, :cond_1
 
     return v1
 
     :cond_1
-    invoke-virtual {p0}, Ll72;->B()Z
+    invoke-virtual {v0}, Lm82;->B()Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_2
+    if-nez v2, :cond_2
 
-    invoke-virtual {p0}, Ll72;->Q()Z
+    invoke-virtual {v0}, Lm82;->Q()Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_3
+    if-eqz v2, :cond_3
 
     :cond_2
-    invoke-virtual {p0}, Ll72;->E()Z
+    invoke-virtual {v0}, Lm82;->E()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v0}, Lm82;->P()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Ll72;->P()Z
+    const/4 v0, 0x1
 
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_3
     return v1
 .end method
 
-.method public final l(Ltac;)V
+.method public final l(Lcqc;)V
     .locals 5
 
-    iget-object v0, p1, Ltac;->a:Lc9c;
+    iget-object v0, p1, Lcqc;->a:Lkoc;
 
     invoke-virtual {p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->h()Z
 
@@ -1628,7 +1811,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lwde;->D0(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -1636,14 +1819,14 @@
 
     if-eqz v1, :cond_1
 
-    const-string p0, "updateSelfReaction: reaction is blank!"
+    const-string p1, "updateSelfReaction: reaction is blank!"
 
-    invoke-static {v2, p0}, Lz76;->M(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_1
-    iget-wide v3, p1, Ltac;->c:J
+    iget-wide v3, p1, Lcqc;->c:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1660,7 +1843,7 @@
     goto :goto_0
 
     :cond_2
-    iget-wide v3, p1, Ltac;->b:J
+    iget-wide v3, p1, Lcqc;->b:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1672,55 +1855,55 @@
 
     const-string v1, "updateSelfReaction: %s for %d"
 
-    invoke-static {v2, v1, v0}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    new-instance v0, Lq65;
+    new-instance v0, Lgb5;
 
-    invoke-direct {v0, p1}, Lq65;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, p1}, Lgb5;-><init>(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->v:Lq4e;
+    iget-object p1, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->v:Lmoe;
 
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lq4e;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1, v0}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_3
     :goto_0
     return-void
 .end method
 
-.method public final onEvent(Lee2;)V
+.method public final onEvent(Lwe2;)V
     .locals 2
-    .annotation runtime Lvee;
+    .annotation runtime Lxye;
     .end annotation
 
     iget-wide v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p1, p1, Lee2;->c:Ljava/lang/Long;
+    iget-object p1, p1, Lwe2;->c:Ljava/lang/Long;
 
-    filled-new-array {p0, p1}, [Ljava/lang/Object;
+    filled-new-array {v0, p1}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "ru.ok.onechat.reactions.ReactionsViewModel"
+    const-string v0, "ru.ok.onechat.reactions.ReactionsViewModel"
 
-    const-string v0, "onEvent: ChatLastReactionUpdatedEvent: chat.id = %d, event.lastReactedMessageId = %d"
+    const-string v1, "onEvent: ChatLastReactionUpdatedEvent: chat.id = %d, event.lastReactedMessageId = %d"
 
-    invoke-static {p1, v0, p0}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, p1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final onMessageDeleteEvent(Lyg9;)V
+.method public final onMessageDeleteEvent(Lop9;)V
     .locals 4
-    .annotation runtime Lvee;
+    .annotation runtime Lxye;
     .end annotation
 
-    iget-wide v0, p1, Lyg9;->b:J
+    iget-wide v0, p1, Lop9;->b:J
 
     iget-wide v2, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
@@ -1731,38 +1914,38 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->r:Ljava/util/HashSet;
+    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->r:Ljava/util/HashSet;
 
-    iget-object p1, p1, Lyg9;->X:Ljava/util/List;
+    iget-object p1, p1, Lop9;->X:Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
 
-.method public final onNewReactionEvent(Lcs9;)V
+.method public final onNewReactionEvent(Lq1a;)V
     .locals 9
-    .annotation runtime Lvee;
+    .annotation runtime Lxye;
     .end annotation
 
     iget-wide v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->b:J
 
-    iget-wide v2, p1, Lcs9;->b:J
+    iget-wide v2, p1, Lq1a;->b:J
 
     cmp-long v0, v0, v2
 
     if-nez v0, :cond_4
 
-    sget-object v0, Lz76;->f:Lvea;
+    sget-object v0, Lox9;->j:Lqpa;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v1, Ly38;->o:Ly38;
 
-    invoke-virtual {v0, v1}, Lvea;->a(Lhw7;)Z
+    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
 
     move-result v2
 
@@ -1784,40 +1967,40 @@
 
     const-string v4, "ru.ok.onechat.reactions.ReactionsViewModel"
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object v0, p1, Lcs9;->Y:Ljava/util/Set;
+    iget-object v0, p1, Lq1a;->Y:Ljava/util/Set;
 
-    invoke-static {v0}, Lg73;->p0(Ljava/lang/Iterable;)Ljava/lang/Object;
+    invoke-static {v0}, Le93;->m0(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object v0
 
     move-object v2, v0
 
-    check-cast v2, Lc9c;
+    check-cast v2, Lkoc;
 
     if-nez v2, :cond_2
 
     goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lth7;
+    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->l:Lbp7;
 
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Laj;
+    check-cast v0, Lkj;
 
-    iget-object v1, v2, Lc9c;->a:Ljava/lang/CharSequence;
+    iget-object v1, v2, Lkoc;->a:Ljava/lang/CharSequence;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Laj;->g(Ljava/lang/String;)Ljh;
+    invoke-virtual {v0, v1}, Lkj;->g(Ljava/lang/String;)Lkh;
 
     move-result-object v0
 
@@ -1826,25 +2009,25 @@
     goto :goto_1
 
     :cond_3
-    iget-object v7, v0, Ljh;->d:Ljava/lang/String;
+    iget-object v7, v0, Lkh;->d:Ljava/lang/String;
 
     if-eqz v7, :cond_4
 
-    iget-object p0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Lkpd;
+    iget-object v0, p0, Lru/ok/onechat/reactions/ReactionsViewModel;->t:Le8e;
 
-    iget-wide v5, p1, Lcs9;->X:J
+    iget-wide v5, p1, Lq1a;->X:J
 
-    iget-wide v3, p1, Lcs9;->o:J
+    iget-wide v3, p1, Lq1a;->o:J
 
-    iget-boolean p1, p1, Lcs9;->c:Z
+    iget-boolean p1, p1, Lq1a;->c:Z
 
     xor-int/lit8 v8, p1, 0x1
 
-    new-instance v1, Lz9c;
+    new-instance v1, Lipc;
 
-    invoke-direct/range {v1 .. v8}, Lz9c;-><init>(Lc9c;JJLjava/lang/String;Z)V
+    invoke-direct/range {v1 .. v8}, Lipc;-><init>(Lkoc;JJLjava/lang/String;Z)V
 
-    invoke-virtual {p0, v1}, Lkpd;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Le8e;->h(Ljava/lang/Object;)Z
 
     :cond_4
     :goto_1

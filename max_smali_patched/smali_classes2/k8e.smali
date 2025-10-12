@@ -1,79 +1,130 @@
-.class public final synthetic Lk8e;
+.class public final Lk8e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic b:Lru/ok/messages/stickers/widgets/StickerView;
+.field public final b:Lpmc;
+
+.field public volatile c:Ljava/lang/String;
+
+.field public volatile d:Lorg/webrtc/PeerConnectionFactory;
+
+.field public final e:Liaa;
+
+.field public f:Lg65;
+
+.field public g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+.field public h:Lorg/webrtc/EglBase;
+
+.field public final i:Lon4;
+
+.field public final j:Lo6b;
+
+.field public k:I
+
+.field public volatile l:Lno7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lorg/webrtc/EglBase;Lpmc;Lwg1;Lon4;Ly61;)V
+    .locals 12
 
-    iput p2, p0, Lk8e;->a:I
-
-    iput-object p1, p0, Lk8e;->b:Lru/ok/messages/stickers/widgets/StickerView;
+    move-object/from16 v0, p5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Lk8e;->a:I
-
     const/4 v1, 0x0
 
-    iget-object p0, p0, Lk8e;->b:Lru/ok/messages/stickers/widgets/StickerView;
+    iput v1, p0, Lk8e;->k:I
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p1, p0, Lk8e;->a:Ljava/util/concurrent/ExecutorService;
 
-    sget v0, Lru/ok/messages/stickers/widgets/StickerView;->s0:I
+    iput-object p3, p0, Lk8e;->b:Lpmc;
 
-    const-string v0, "ru.ok.messages.stickers.widgets.StickerView"
+    iput-object v0, p0, Lk8e;->i:Lon4;
 
-    const-string v2, "startAnimation"
+    new-instance v2, Liaa;
 
-    invoke-static {v0, v2}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
-    const/4 v0, 0x0
+    move-result-object v3
 
-    iput-boolean v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->n0:Z
+    invoke-direct {v2, v3, p3}, Liaa;-><init>(Lorg/webrtc/EglBase$Context;Lpmc;)V
 
-    throw v1
+    iput-object v2, p0, Lk8e;->e:Liaa;
 
-    :pswitch_0
-    iget-boolean p0, p0, Lru/ok/messages/stickers/widgets/StickerView;->n0:Z
+    new-instance v4, Lo6b;
 
-    if-nez p0, :cond_0
+    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
-    return-void
+    move-result-object v5
+
+    move-object/from16 v10, p4
+
+    iget-object v2, v10, Lwg1;->x:Lgx0;
+
+    iget-object v3, v2, Lgx0;->b:Ljava/lang/Object;
+
+    check-cast v3, Lke0;
+
+    iget-boolean v3, v3, Lke0;->a:Z
+
+    if-nez v3, :cond_1
+
+    iget-object v2, v2, Lgx0;->c:Ljava/lang/Object;
+
+    check-cast v2, Lke0;
+
+    iget-boolean v2, v2, Lke0;->a:Z
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    throw v1
+    :goto_0
+    move-object v9, p3
 
-    :pswitch_1
-    iget-object p0, p0, Lru/ok/messages/stickers/widgets/StickerView;->o:Lcom/facebook/drawee/view/SimpleDraweeView;
+    move-object/from16 v7, p6
 
-    const/4 v0, 0x1
+    move v6, v1
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
+    move-object v8, v10
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :goto_2
+    invoke-direct/range {v4 .. v9}, Lo6b;-><init>(Lorg/webrtc/EglBase$Context;ZLx61;Lwg1;Lpmc;)V
+
+    iput-object v4, p0, Lk8e;->j:Lo6b;
+
+    invoke-virtual {v0, v4}, Lon4;->b(Lwe8;)V
+
+    new-instance v6, Lly1;
+
+    const/16 v11, 0x10
+
+    move-object v7, p0
+
+    move-object v8, p2
+
+    move-object v9, p3
+
+    move-object/from16 v10, p4
+
+    invoke-direct/range {v6 .. v11}, Lly1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {p1, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

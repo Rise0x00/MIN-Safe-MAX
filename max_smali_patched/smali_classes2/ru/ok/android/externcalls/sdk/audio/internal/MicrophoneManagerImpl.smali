@@ -14,24 +14,24 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;",
         "Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;",
-        "Lez0;",
+        "Lfz0;",
         "call",
         "Lkotlin/Function0;",
         "",
         "isPrepared",
         "<init>",
-        "(Lez0;Ld96;)V",
+        "(Lfz0;Lve6;)V",
         "",
         "delay",
-        "Lkc9;",
+        "Lal9;",
         "callback",
-        "Ltcf;",
+        "Loyf;",
         "registerAudioSampleCallback",
-        "(JLkc9;)V",
+        "(JLal9;)V",
         "removeAudioSampleCallback",
-        "(Lkc9;)V",
-        "Lez0;",
-        "Ld96;",
+        "(Lal9;)V",
+        "Lfz0;",
+        "Lve6;",
         "value",
         "isMicEnabled",
         "()Z",
@@ -50,34 +50,34 @@
 
 
 # instance fields
-.field private final call:Lez0;
+.field private final call:Lfz0;
 
-.field private final isPrepared:Ld96;
+.field private final isPrepared:Lve6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ld96;"
+            "Lve6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lez0;Ld96;)V
+.method public constructor <init>(Lfz0;Lve6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lez0;",
-            "Ld96;",
+            "Lfz0;",
+            "Lve6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lez0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lfz0;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->isPrepared:Ld96;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->isPrepared:Lve6;
 
     return-void
 .end method
@@ -85,57 +85,57 @@
 
 # virtual methods
 .method public isMicEnabled()Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lez0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lfz0;
 
-    iget-object p0, p0, Lez0;->n0:Lnk9;
+    iget-object v0, v0, Lfz0;->p0:Lmt9;
 
-    iget-boolean p0, p0, Lnk9;->e:Z
+    iget-boolean v0, v0, Lmt9;->e:Z
 
-    return p0
+    return v0
 .end method
 
-.method public registerAudioSampleCallback(JLkc9;)V
-    .locals 6
+.method public registerAudioSampleCallback(JLal9;)V
+    .locals 7
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lez0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lfz0;
 
-    iget-object v1, p0, Lez0;->Z:Lqpd;
+    iget-object v2, v0, Lfz0;->b0:Lk8e;
 
-    iget-object p0, v1, Lqpd;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v0, v2, Lk8e;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v0, Ltd2;
+    new-instance v1, Lle2;
 
-    const/4 v5, 0x5
+    const/4 v6, 0x5
 
-    move-wide v3, p1
+    move-wide v4, p1
 
-    move-object v2, p3
+    move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Ltd2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+    invoke-direct/range {v1 .. v6}, Lle2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
 
-    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public removeAudioSampleCallback(Lkc9;)V
-    .locals 3
+.method public removeAudioSampleCallback(Lal9;)V
+    .locals 4
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lez0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lfz0;
 
-    iget-object p0, p0, Lez0;->Z:Lqpd;
+    iget-object v0, v0, Lfz0;->b0:Lk8e;
 
-    iget-object v0, p0, Lqpd;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, v0, Lk8e;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lhsc;
+    new-instance v2, Lowd;
 
-    const/16 v2, 0xb
+    const/4 v3, 0x3
 
-    invoke-direct {v1, p0, v2, p1}, Lhsc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v0, v3, p1}, Lowd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -143,9 +143,9 @@
 .method public setMicEnabled(Z)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->isPrepared:Ld96;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->isPrepared:Lve6;
 
-    invoke-interface {v0}, Ld96;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -157,11 +157,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lez0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/MicrophoneManagerImpl;->call:Lfz0;
 
     xor-int/lit8 p1, p1, 0x1
 
-    invoke-virtual {p0, p1}, Lez0;->E(Z)V
+    invoke-virtual {v0, p1}, Lfz0;->G(Z)V
 
     :cond_0
     return-void

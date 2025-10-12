@@ -1,288 +1,322 @@
 .class public final Lnad;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static final Y:Ljava/util/logging/Logger;
+.implements Lgv5;
 
 
 # instance fields
-.field public final X:Lab6;
+.field public final X:Lw24;
 
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final Y:I
 
-.field public final b:Ljava/util/ArrayDeque;
+.field public Z:Lw24;
 
-.field public c:I
+.field public final o:Lgv5;
 
-.field public o:J
+.field public w0:Lkotlin/coroutines/Continuation;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Lnad;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
-
-    move-result-object v0
-
-    sput-object v0, Lnad;->Y:Ljava/util/logging/Logger;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+.method public constructor <init>(Lgv5;Lw24;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lef3;->c:Lef3;
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    sget-object v1, Lv65;->a:Lv65;
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-direct {p0, v1, v0}, Lnz3;-><init>(Lw24;Lkotlin/coroutines/Continuation;)V
 
-    iput-object v0, p0, Lnad;->b:Ljava/util/ArrayDeque;
+    iput-object p1, p0, Lnad;->o:Lgv5;
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Lnad;->X:Lw24;
 
-    iput v0, p0, Lnad;->c:I
+    const/4 p1, 0x0
 
-    const-wide/16 v0, 0x0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-wide v0, p0, Lnad;->o:J
+    move-result-object p1
 
-    new-instance v0, Lab6;
+    new-instance v0, Lli0;
 
-    invoke-direct {v0, p0}, Lab6;-><init>(Lnad;)V
+    const/16 v1, 0x1b
 
-    iput-object v0, p0, Lnad;->X:Lab6;
+    invoke-direct {v0, v1}, Lli0;-><init>(I)V
 
-    invoke-static {p1}, Laug;->l(Ljava/lang/Object;)V
+    invoke-interface {p2, p1, v0}, Lw24;->fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lnad;->a:Ljava/util/concurrent/Executor;
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lnad;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 7
-
-    invoke-static {p1}, Laug;->l(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    monitor-enter v0
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
 
     :try_start_0
-    iget v1, p0, Lnad;->c:I
+    invoke-virtual {p0, p2, p1}, Lnad;->p(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v2, 0x4
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eq v1, v2, :cond_6
+    sget-object p2, Lf34;->a:Lf34;
 
-    const/4 v2, 0x3
+    if-ne p1, p2, :cond_0
 
-    if-ne v1, v2, :cond_0
-
-    goto :goto_5
+    return-object p1
 
     :cond_0
-    iget-wide v3, p0, Lnad;->o:J
+    sget-object p1, Loyf;->a:Loyf;
 
-    new-instance v1, Liuc;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v1, p1, v5}, Liuc;-><init>(Ljava/lang/Runnable;I)V
-
-    iget-object p1, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Lnad;->c:I
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    :try_start_1
-    iget-object v0, p0, Lnad;->a:Ljava/util/concurrent/Executor;
-
-    iget-object v5, p0, Lnad;->X:Lab6;
-
-    invoke-interface {v0, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_0
-
-    iget v0, p0, Lnad;->c:I
-
-    if-eq v0, p1, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    iget-object v0, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    monitor-enter v0
-
-    :try_start_2
-    iget-wide v5, p0, Lnad;->o:J
-
-    cmp-long v1, v5, v3
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Lnad;->c:I
-
-    if-ne v1, p1, :cond_2
-
-    iput v2, p0, Lnad;->c:I
-
-    goto :goto_0
+    return-object p1
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
-    goto :goto_1
+    new-instance v0, Lnw4;
 
-    :cond_2
-    :goto_0
-    monitor-exit v0
+    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Lw24;
 
-    return-void
+    move-result-object p2
 
-    :goto_1
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-direct {v0, p2, p1}, Lnw4;-><init>(Lw24;Ljava/lang/Throwable;)V
 
-    throw p0
+    iput-object v0, p0, Lnad;->Z:Lw24;
 
-    :catch_0
-    move-exception v0
-
-    iget-object v2, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    monitor-enter v2
-
-    :try_start_3
-    iget v3, p0, Lnad;->c:I
-
-    const/4 v4, 0x1
-
-    if-eq v3, v4, :cond_3
-
-    if-ne v3, p1, :cond_4
-
-    :cond_3
-    iget-object p0, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayDeque;->removeLastOccurrence(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v4, 0x0
-
-    :goto_2
-    instance-of p0, v0, Ljava/util/concurrent/RejectedExecutionException;
-
-    if-eqz p0, :cond_5
-
-    if-nez v4, :cond_5
-
-    monitor-exit v2
-
-    :goto_3
-    return-void
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_4
-
-    :cond_5
-    throw v0
-
-    :goto_4
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p0
-
-    :catchall_2
-    move-exception p0
-
-    goto :goto_6
-
-    :cond_6
-    :goto_5
-    :try_start_4
-    iget-object p0, p0, Lnad;->b:Ljava/util/ArrayDeque;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_6
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw p0
+    throw p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final getCallerFrame()Lg34;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lnad;->w0:Lkotlin/coroutines/Continuation;
 
-    const-string v1, "SequentialExecutor@"
+    instance-of v1, v0, Lg34;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    check-cast v0, Lg34;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getContext()Lw24;
+    .locals 1
+
+    iget-object v0, p0, Lnad;->Z:Lw24;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lv65;->a:Lv65;
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public final getStackTraceElement()Ljava/lang/StackTraceElement;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lnw4;
+
+    invoke-virtual {p0}, Lnad;->getContext()Lw24;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v0}, Lnw4;-><init>(Lw24;Ljava/lang/Throwable;)V
+
+    iput-object v1, p0, Lnad;->Z:Lw24;
+
+    :cond_0
+    iget-object v0, p0, Lnad;->w0:Lkotlin/coroutines/Continuation;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_1
+    sget-object p1, Lf34;->a:Lf34;
+
+    return-object p1
+.end method
+
+.method public final p(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lw24;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lhxf;->n(Lw24;)V
+
+    iget-object v1, p0, Lnad;->Z:Lw24;
+
+    if-eq v1, v0, :cond_2
+
+    instance-of v2, v1, Lnw4;
+
+    if-nez v2, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    new-instance v2, Lfk;
+
+    const/16 v3, 0xf
+
+    invoke-direct {v2, v3, p0}, Lfk;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1, v2}, Lw24;->fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v2, p0, Lnad;->Y:I
 
-    const-string v1, "{"
+    if-ne v1, v2, :cond_0
+
+    iput-object v0, p0, Lnad;->Z:Lw24;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v1, "Flow invariant is violated:\n\t\tFlow was collected in "
+
+    invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnad;->X:Lw24;
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\n\t\tbut emission happened in "
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ".\n\t\tPlease refer to \'flow\' documentation or use \'flowOn\' instead"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    check-cast v1, Lnw4;
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "\n            Flow exception transparency is violated:\n                Previous \'emit\' call has thrown exception "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, v1, Lnw4;->b:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", but then emission attempt of value \'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lnad;->a:Ljava/util/concurrent/Executor;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string p2, "\' has been detected.\n                Emissions from \'catch\' blocks are prohibited in order to avoid unspecified behaviour, \'Flow.catch\' operator can be used instead.\n                For a more detailed explanation, please refer to Flow documentation.\n            "
 
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    return-object p0
+    invoke-static {p2}, Lzxe;->N(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    :goto_0
+    iput-object p1, p0, Lnad;->w0:Lkotlin/coroutines/Continuation;
+
+    sget-object p1, Lpad;->a:Lnf6;
+
+    iget-object v0, p0, Lnad;->o:Lgv5;
+
+    invoke-interface {p1, v0, p2, p0}, Lnf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lf34;->a:Lf34;
+
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    const/4 p2, 0x0
+
+    iput-object p2, p0, Lnad;->w0:Lkotlin/coroutines/Continuation;
+
+    :cond_3
+    return-object p1
 .end method

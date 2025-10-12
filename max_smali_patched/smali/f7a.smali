@@ -1,67 +1,23 @@
-.class public abstract Lf7a;
+.class public final Lf7a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Landroid/content/ComponentName;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+.field public final b:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 0
 
-    sget v0, Lj3c;->banner_compact_permit_mic_subtitle:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lf7a;->a:I
+    iput-object p1, p0, Lf7a;->a:Landroid/content/ComponentName;
 
-    sget v0, Lj3c;->banner_compact_permit_mic_title:I
-
-    sput v0, Lf7a;->b:I
-
-    sget v0, Lj3c;->banner_compact_permit_notifications_title:I
-
-    sput v0, Lf7a;->c:I
-
-    sget v0, Lj3c;->banner_compact_permit_phone_book_contacts_subtitle:I
-
-    sput v0, Lf7a;->d:I
-
-    sget v0, Lj3c;->banner_compact_permit_phone_book_contacts_title:I
-
-    sput v0, Lf7a;->e:I
-
-    sget v0, Lj3c;->banner_middle_permit_notifications_title:I
-
-    sput v0, Lf7a;->f:I
-
-    sget v0, Lj3c;->banner_middle_permit_phone_book_contacts_subtitle:I
-
-    sput v0, Lf7a;->g:I
-
-    sget v0, Lj3c;->banner_middle_permit_phone_book_contacts_title:I
-
-    sput v0, Lf7a;->h:I
-
-    sget v0, Lj3c;->banner_permit_notifications_subtitle:I
-
-    sput v0, Lf7a;->i:I
+    iput-object p2, p0, Lf7a;->b:Landroid/os/IBinder;
 
     return-void
 .end method

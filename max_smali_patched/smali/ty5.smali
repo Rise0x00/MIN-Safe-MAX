@@ -1,104 +1,267 @@
-.class public abstract Lty5;
-.super Ljava/lang/Object;
+.class public final Lty5;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Lnee;
+.implements Lxda;
 
-# static fields
-.field public static final a:Lo67;
 
-.field public static final b:Lo67;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:Lo67;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lbca;)V
+    .locals 1
 
-    new-instance v0, Lo67;
+    const/4 v0, 0x2
 
-    const/4 v1, 0x0
+    iput v0, p0, Lty5;->a:I
 
-    const/16 v2, 0x13f
+    .line 2
+    iput-object p1, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lm67;-><init>(III)V
-
-    sput-object v0, Lty5;->a:Lo67;
-
-    new-instance v0, Lo67;
-
-    const/16 v1, 0x140
-
-    const/16 v2, 0x21b
-
-    invoke-direct {v0, v1, v2, v3}, Lm67;-><init>(III)V
-
-    sput-object v0, Lty5;->b:Lo67;
-
-    new-instance v0, Lo67;
-
-    const/16 v1, 0x21c
-
-    const v2, 0x7fffffff
-
-    invoke-direct {v0, v1, v2, v3}, Lm67;-><init>(III)V
-
-    sput-object v0, Lty5;->c:Lo67;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     return-void
 .end method
 
-.method public static a(I)I
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lty5;->a:I
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Object;)V
     .locals 1
 
-    sget v0, Lxyb;->oneme_big_folder_widget_view_type:I
+    iget v0, p0, Lty5;->a:I
 
-    if-ne p0, v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/16 p0, 0x5c
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    int-to-float p0, p0
+    check-cast v0, Ldba;
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iput-object p1, v0, Ldba;->z0:Ljava/lang/Object;
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput p1, v0, Ldba;->A0:I
 
-    move-result-object v0
+    invoke-virtual {v0}, Ldba;->a()V
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    return-void
 
-    mul-float/2addr p0, v0
+    :pswitch_0
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {p0}, Litg;->z(F)I
+    check-cast v0, Luy5;
 
-    move-result p0
+    iput-object p1, v0, Luy5;->D0:Ljava/lang/Object;
 
-    return p0
+    const/4 p1, 0x2
+
+    iput p1, v0, Luy5;->E0:I
+
+    invoke-virtual {v0}, Luy5;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b()V
+    .locals 3
+
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    check-cast v0, Lbca;
+
+    iget-object v1, v0, Lbca;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v1}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v1, v0, Lbca;->b:Lxda;
+
+    iget-object v2, v0, Lbca;->X:Lay;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v2, v1}, Lay;->d(Lxda;)V
 
     :cond_0
-    const/16 p0, 0x80
+    return-void
+.end method
 
-    int-to-float p0, p0
+.method public final c(Lss4;)V
+    .locals 1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iget v0, p0, Lty5;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {p0, p1}, Lws4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
 
-    move-result-object v0
+    return-void
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    :pswitch_0
+    invoke-static {p0, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
 
-    mul-float/2addr p0, v0
+    return-void
 
-    invoke-static {p0}, Litg;->z(F)I
+    :pswitch_1
+    invoke-static {p0, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
 
-    move-result p0
+    return-void
 
-    return p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p1, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    check-cast p1, Lbca;
+
+    invoke-virtual {p1}, Lbca;->d()V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 3
+
+    iget v0, p0, Lty5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    check-cast v0, Lbca;
+
+    iget-object v1, v0, Lbca;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v1}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v1, v0, Lbca;->b:Lxda;
+
+    iget-object v2, v0, Lbca;->X:Lay;
+
+    invoke-virtual {v2, p1}, Lay;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v2, v1}, Lay;->d(Lxda;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    check-cast v0, Ldba;
+
+    iget-object v1, v0, Ldba;->a:Lay;
+
+    invoke-virtual {v1, p1}, Lay;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget p1, v0, Ldba;->c:I
+
+    const/4 v1, 0x3
+
+    if-eq p1, v1, :cond_1
+
+    iget-object p1, v0, Ldba;->X:Lss4;
+
+    invoke-interface {p1}, Lss4;->g()V
+
+    :cond_1
+    const/4 p1, 0x0
+
+    iput p1, v0, Ldba;->A0:I
+
+    invoke-virtual {v0}, Ldba;->a()V
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lty5;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    check-cast v0, Luy5;
+
+    iget-object v1, v0, Luy5;->a:Lay;
+
+    invoke-virtual {v1, p1}, Lay;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget p1, v0, Luy5;->c:I
+
+    const/4 v1, 0x3
+
+    if-eq p1, v1, :cond_3
+
+    iget-object p1, v0, Luy5;->X:Leze;
+
+    invoke-interface {p1}, Leze;->cancel()V
+
+    :cond_3
+    const/4 p1, 0x0
+
+    iput p1, v0, Luy5;->E0:I
+
+    invoke-virtual {v0}, Luy5;->a()V
+
+    :cond_4
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

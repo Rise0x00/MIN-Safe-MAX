@@ -1,3 +1,3 @@
-.class public abstract Lbee;
-.super Laee;
+.class public interface abstract Lbee;
+.super Ljava/lang/Object;
 .source "SourceFile"

@@ -1,77 +1,58 @@
-.class public final synthetic Ltxa;
+.class public final Ltxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ltef;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic b:Luxa;
+.field public final b:Lzob;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lbp7;
+
+.field public final e:Lbp7;
+
+.field public final f:Ls5f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luxa;I)V
+.method public constructor <init>(Lbp7;Landroid/content/Context;Lzob;Lbp7;)V
     .locals 0
-
-    iput p2, p0, Ltxa;->a:I
-
-    iput-object p1, p0, Ltxa;->b:Luxa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p2, p0, Ltxa;->a:Landroid/content/Context;
 
+    iput-object p3, p0, Ltxa;->b:Lzob;
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    const-class p2, Ltxa;
 
-    iget v0, p0, Ltxa;->a:I
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    iget-object p0, p0, Ltxa;->b:Luxa;
+    move-result-object p2
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p2, p0, Ltxa;->c:Ljava/lang/String;
 
-    :try_start_0
-    invoke-virtual {p0}, Luxa;->d()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p4, p0, Ltxa;->d:Lbp7;
 
-    goto :goto_0
+    iput-object p1, p0, Ltxa;->e:Lbp7;
 
-    :catch_0
-    move-exception v0
+    new-instance p1, Ljga;
 
-    const-string v1, "uxa"
+    const/16 p2, 0x11
 
-    const-string v2, "syncInternal: exception"
+    invoke-direct {p1, p2}, Ljga;-><init>(I)V
 
-    invoke-static {v1, v2, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance p2, Ls5f;
 
-    iget-object p0, p0, Luxa;->h:Lo75;
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
 
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v1, v0}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    check-cast p0, Lsca;
-
-    invoke-virtual {p0, v1}, Lsca;->c(Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Luxa;->d()V
+    iput-object p2, p0, Ltxa;->f:Ls5f;
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,87 +1,100 @@
 .class public final Lkg2;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Log2;
+.implements Llf6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iput-wide p1, p0, Lkg2;->a:J
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lkg2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lkg2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lkg2;
 
-    iget-wide v3, p0, Lkg2;->a:J
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-wide p0, p1, Lkg2;->a:J
+    invoke-virtual {p1, p2}, Lkg2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lkg2;->a:J
+    new-instance v0, Lkg2;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    move-result p0
+    invoke-direct {v0, p2, v1}, Lkg2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
 
-    return p0
+    iput-object p1, v0, Lkg2;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "DownloadError(messageId="
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    iget-object p1, p0, Lkg2;->X:Ljava/lang/Object;
 
-    iget-wide v2, p0, Lkg2;->a:J
+    check-cast p1, Ljava/lang/Number;
 
-    invoke-static {v2, v3, v0, v1}, Lw68;->j(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    move-result-object p0
+    move-result p1
 
-    return-object p0
+    iget-object v0, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+
+    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lh00;
+
+    const/16 v1, 0x64
+
+    int-to-float v1, v1
+
+    mul-float/2addr p1, v1
+
+    invoke-static {p1}, Lv63;->r0(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

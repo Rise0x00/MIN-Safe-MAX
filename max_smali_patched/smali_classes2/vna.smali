@@ -1,103 +1,98 @@
-.class public abstract Lvna;
-.super Ljava/lang/Object;
+.class public final Lvna;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Lxe6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+# instance fields
+.field public final synthetic X:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    sget v0, Li5c;->web_app_root_biometry_open_settings_dialog_accept:I
+    iput p3, p0, Lvna;->X:I
 
-    sput v0, Lvna;->a:I
-
-    sget v0, Li5c;->web_app_root_biometry_open_settings_dialog_title:I
-
-    sput v0, Lvna;->b:I
-
-    sget v0, Li5c;->web_app_root_biometry_request_dialog_accept:I
-
-    sput v0, Lvna;->c:I
-
-    sget v0, Li5c;->web_app_root_biometry_request_dialog_decline:I
-
-    sput v0, Lvna;->d:I
-
-    sget v0, Li5c;->web_app_root_biometry_request_dialog_default_reason:I
-
-    sput v0, Lvna;->e:I
-
-    sget v0, Li5c;->web_app_root_biometry_request_dialog_title:I
-
-    sput v0, Lvna;->f:I
-
-    sget v0, Li5c;->web_app_root_biometry_setting:I
-
-    sput v0, Lvna;->g:I
-
-    sget v0, Li5c;->web_app_root_biometry_setting_description:I
-
-    sput v0, Lvna;->h:I
-
-    sget v0, Li5c;->web_app_root_choose_media_bottomsheet_gallery:I
-
-    sput v0, Lvna;->i:I
-
-    sget v0, Li5c;->web_app_root_choose_media_bottomsheet_title:I
-
-    sput v0, Lvna;->j:I
-
-    sget v0, Li5c;->web_app_root_max_share_quote_title:I
-
-    sput v0, Lvna;->k:I
-
-    sget v0, Li5c;->web_app_root_setting_open_webapp:I
-
-    sput v0, Lvna;->l:I
-
-    sget v0, Li5c;->web_app_root_settings_header_subtitle:I
-
-    sput v0, Lvna;->m:I
-
-    sget v0, Li5c;->web_app_root_settings_header_title:I
-
-    sput v0, Lvna;->n:I
-
-    sget v0, Li5c;->web_app_root_settings_webapps:I
-
-    sput v0, Lvna;->o:I
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lvna;->X:I
+
+    check-cast p1, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lvna;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p1, v2}, Lvna;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-virtual {v0, p1}, Lvna;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lvna;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p1, v2}, Lvna;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    invoke-virtual {v0, p1}, Lvna;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lvna;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

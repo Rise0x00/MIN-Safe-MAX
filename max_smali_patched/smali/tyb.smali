@@ -1,24 +1,23 @@
 .class public abstract Ltyb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_share_picker_confirm_p2p_invite_cancel:I = 0x7f0a01f5
+# direct methods
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 3
 
-.field public static call_share_picker_confirm_p2p_invite_retry:I = 0x7f0a01f6
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
-.field public static call_share_picker_quote_view_progress:I = 0x7f0a01f7
+    move-result-object v0
 
-.field public static call_share_picker_quote_view_title:I = 0x7f0a01f8
+    new-instance v1, Lyf;
 
-.field public static oneme_message_input_right_outer_icon:I = 0x7f0a0745
+    const/4 v2, 0x1
 
-.field public static oneme_picker_media_keyboard_container:I = 0x7f0a0781
+    invoke-direct {v1, v2, p0}, Lyf;-><init>(ILjava/lang/Object;)V
 
-.field public static oneme_picker_quote_view:I = 0x7f0a0783
+    invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-.field public static oneme_picker_toolbar:I = 0x7f0a0784
-
-.field public static oneme_picker_toolbar_action_cancel_selection:I = 0x7f0a0785
-
-.field public static oneme_picker_toolbar_action_select:I = 0x7f0a0786
+    return-void
+.end method

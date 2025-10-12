@@ -1,88 +1,54 @@
-.class public final synthetic Lyoc;
+.class public final Lyoc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Lww7;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lyoc;
 
-.field public final synthetic b:Lbpc;
+.field public static final b:I
+
+.field public static final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbpc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lyoc;->a:I
+    new-instance v0, Lyoc;
 
-    iput-object p1, p0, Lyoc;->b:Lbpc;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lyoc;->a:Lyoc;
+
+    sget v0, Lk9d;->a:I
+
+    sput v0, Lyoc;->b:I
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    sput-wide v0, Lyoc;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lyoc;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iget v0, p0, Lyoc;->a:I
+    sget v0, Lyoc;->b:I
 
-    iget-object p0, p0, Lyoc;->b:Lbpc;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lbpc;->a:Lgpc;
-
-    invoke-virtual {p0}, Lgpc;->m()Lfpc;
-
-    move-result-object p0
-
-    check-cast p0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->E()Le49;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lbpc;->a:Lgpc;
-
-    invoke-virtual {p0}, Lgpc;->m()Lfpc;
-
-    move-result-object p0
-
-    check-cast p0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->N()Lpvc;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lbpc;->a:Lgpc;
-
-    invoke-virtual {p0}, Lgpc;->m()Lfpc;
-
-    move-result-object p0
-
-    check-cast p0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->v()Llu2;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

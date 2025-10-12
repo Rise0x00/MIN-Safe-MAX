@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManager;
-.implements Lo31;
+.implements Li31;
 
 
 # annotations
@@ -15,21 +15,21 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;",
         "Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManager;",
-        "Lo31;",
+        "Li31;",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantStore",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)V",
         "Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;",
         "listener",
-        "Ltcf;",
+        "Loyf;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V",
         "removeListener",
-        "Lo27;",
+        "Lo97;",
         "message",
         "onNewMessage",
-        "(Lo27;)V",
+        "(Lo97;)V",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "Ljava/util/concurrent/CopyOnWriteArraySet;",
         "listeners",
@@ -80,16 +80,16 @@
 
 # virtual methods
 .method public addListener(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public onNewMessage(Lo27;)V
+.method public onNewMessage(Lo97;)V
     .locals 4
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
@@ -115,7 +115,7 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->participantStore:Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;
 
-    invoke-virtual {v2, p1, v3}, Lru/ok/android/externcalls/sdk/chat/message/InboundMessageMapper;->fromInternal(Lo27;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
+    invoke-virtual {v2, p1, v3}, Lru/ok/android/externcalls/sdk/chat/message/InboundMessageMapper;->fromInternal(Lo97;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
 
     move-result-object v2
 
@@ -128,11 +128,11 @@
 .end method
 
 .method public removeListener(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/chat/internal/listener/ChatListenerManagerImpl;->listeners:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     return-void
 .end method

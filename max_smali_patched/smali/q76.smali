@@ -1,130 +1,149 @@
-.class public final synthetic Lq76;
+.class public final Lq76;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:Lp93;
 
-.field public final synthetic b:Lrlg;
+.field public B:I
+
+.field public C:I
+
+.field public D:I
+
+.field public E:I
+
+.field public F:I
+
+.field public G:I
+
+.field public H:I
+
+.field public I:I
+
+.field public J:I
+
+.field public K:I
+
+.field public L:I
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Le77;
+
+.field public d:Ljava/lang/String;
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:Ljava/lang/String;
+
+.field public k:Lgk9;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:I
+
+.field public o:I
+
+.field public p:Ljava/util/List;
+
+.field public q:Lsy4;
+
+.field public r:J
+
+.field public s:Z
+
+.field public t:I
+
+.field public u:I
+
+.field public v:F
+
+.field public w:I
+
+.field public x:F
+
+.field public y:[B
+
+.field public z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrlg;I)V
-    .locals 0
-
-    iput p2, p0, Lq76;->a:I
-
-    iput-object p1, p0, Lq76;->b:Lrlg;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    sget-object v0, Le77;->b:Ld06;
+
+    sget-object v0, Lxyc;->X:Lxyc;
+
+    iput-object v0, p0, Lq76;->c:Le77;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lq76;->h:I
+
+    iput v0, p0, Lq76;->i:I
+
+    iput v0, p0, Lq76;->n:I
+
+    iput v0, p0, Lq76;->o:I
+
+    const-wide v1, 0x7fffffffffffffffL
+
+    iput-wide v1, p0, Lq76;->r:J
+
+    iput v0, p0, Lq76;->t:I
+
+    iput v0, p0, Lq76;->u:I
+
+    const/high16 v1, -0x40800000    # -1.0f
+
+    iput v1, p0, Lq76;->v:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, p0, Lq76;->x:F
+
+    iput v0, p0, Lq76;->z:I
+
+    iput v0, p0, Lq76;->B:I
+
+    iput v0, p0, Lq76;->C:I
+
+    iput v0, p0, Lq76;->D:I
+
+    iput v0, p0, Lq76;->E:I
+
+    iput v0, p0, Lq76;->H:I
+
+    const/4 v1, 0x1
+
+    iput v1, p0, Lq76;->I:I
+
+    iput v0, p0, Lq76;->J:I
+
+    iput v0, p0, Lq76;->K:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lq76;->L:I
+
+    iput v0, p0, Lq76;->g:I
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lq76;->a:I
-
-    iget-object p0, p0, Lq76;->b:Lrlg;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    iget-object p0, p0, Lrlg;->b:Ljava/lang/Object;
-
-    check-cast p0, Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyca;
-
-    sget-object v1, Lyca;->p:[Lof7;
-
-    const/4 v1, 0x5
-
-    const-string v2, "frsc-sch"
-
-    invoke-virtual {p0, v0, v2, v0, v1}, Lyca;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, v2}, Lyca;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lrlg;->b:Ljava/lang/Object;
-
-    check-cast p0, Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyca;
-
-    invoke-virtual {p0}, Lyca;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lrlg;->b:Ljava/lang/Object;
-
-    check-cast p0, Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyca;
-
-    invoke-virtual {p0}, Lyca;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Lrlg;->b:Ljava/lang/Object;
-
-    check-cast p0, Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyca;
-
-    invoke-virtual {p0}, Lyca;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

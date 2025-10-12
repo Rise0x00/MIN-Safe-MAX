@@ -1,72 +1,49 @@
-.class public final synthetic Lvne;
-.super Ljava/lang/Object;
+.class public final Lvne;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lwe9;
 
-.field public final synthetic b:Lfc0;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfc0;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lvne;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvne;->b:Lfc0;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lfc0;Landroid/graphics/Bitmap;)V
+.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 2
-    const/4 p2, 0x0
+    iput-object p1, p0, Lvne;->X:Lwe9;
 
-    iput p2, p0, Lvne;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvne;->b:Lfc0;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lvne;->a:I
+    iput-object p1, p0, Lvne;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lvne;->b:Lfc0;
+    iget p1, p0, Lvne;->Y:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lfc0;->c:Lf02;
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lvne;->Y:I
 
-    :pswitch_0
-    iget-object p0, p0, Lfc0;->c:Lf02;
+    iget-object p1, p0, Lvne;->X:Lwe9;
 
-    return-void
+    const/4 v0, 0x0
 
-    nop
+    invoke-virtual {p1, v0, p0}, Lwe9;->b(ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,89 +1,150 @@
-.class public final Lny1;
+.class public final synthetic Lny1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljm3;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/Executor;
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Ld02;
+.field public final synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Loy1;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Loy1;Ljava/util/concurrent/Executor;Ld02;)V
-    .locals 0
+.method public synthetic constructor <init>(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JLjava/lang/Runnable;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lny1;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lny1;->c:Loy1;
+    iput-object p1, p0, Lny1;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Lny1;->a:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lny1;->o:Ljava/lang/Object;
 
-    iput-object p3, p0, Lny1;->b:Ld02;
+    iput-object p3, p0, Lny1;->X:Ljava/lang/Object;
+
+    iput-wide p4, p0, Lny1;->b:J
+
+    iput-object p6, p0, Lny1;->Y:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lhw1;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lny1;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lny1;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lny1;->o:Ljava/lang/Object;
+
+    iput-object p3, p0, Lny1;->X:Ljava/lang/Object;
+
+    iput-object p4, p0, Lny1;->Y:Ljava/lang/Object;
+
+    iput-wide p5, p0, Lny1;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final run()V
+    .locals 8
 
-    check-cast p1, Ldvf;
+    iget v0, p0, Lny1;->a:I
 
-    instance-of v0, p1, Lyuf;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lny1;->c:Ljava/lang/Object;
 
-    invoke-static {}, Lxwe;->q()Z
+    move-object v1, v0
 
-    move-result v0
+    check-cast v1, Lcom/my/tracker/obfuscated/t;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lny1;->o:Ljava/lang/Object;
 
-    new-instance v0, Lzv1;
+    move-object v2, v0
 
-    const/4 v1, 0x4
+    check-cast v2, Ljava/lang/String;
 
-    invoke-direct {v0, v1, p0}, Lzv1;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lny1;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lny1;->a:Ljava/util/concurrent/Executor;
+    move-object v3, v0
 
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    check-cast v3, Ljava/lang/String;
 
-    goto :goto_0
+    iget-object v0, p0, Lny1;->Y:Ljava/lang/Object;
 
-    :cond_0
-    iget-object v0, p0, Lny1;->c:Loy1;
+    move-object v6, v0
 
-    iget-object v1, v0, Loy1;->h:Ljava/util/HashMap;
+    check-cast v6, Ljava/lang/Runnable;
 
-    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v4, p0, Lny1;->b:J
 
-    move-result-object v1
-
-    check-cast v1, Ltgc;
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Loy1;->g:Ltgc;
-
-    if-ne v2, v1, :cond_1
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Loy1;->g:Ltgc;
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Lny1;->b:Ld02;
-
-    invoke-virtual {p0, p1}, Ld02;->accept(Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/my/tracker/obfuscated/t;->l(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;JLjava/lang/Runnable;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lny1;->c:Ljava/lang/Object;
+
+    check-cast v0, Lhw1;
+
+    iget-object v1, p0, Lny1;->o:Ljava/lang/Object;
+
+    move-object v3, v1
+
+    check-cast v3, Landroid/hardware/camera2/CameraCaptureSession;
+
+    iget-object v1, p0, Lny1;->X:Ljava/lang/Object;
+
+    move-object v4, v1
+
+    check-cast v4, Landroid/hardware/camera2/CaptureRequest;
+
+    iget-object v1, p0, Lny1;->Y:Ljava/lang/Object;
+
+    move-object v5, v1
+
+    check-cast v5, Landroid/view/Surface;
+
+    iget-object v0, v0, Lhw1;->b:Ljava/lang/Object;
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    iget-wide v6, p0, Lny1;->b:J
+
+    invoke-virtual/range {v2 .. v7}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

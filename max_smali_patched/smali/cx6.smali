@@ -1,43 +1,35 @@
 .class public final Lcx6;
-.super Lbx6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Lyy6;)Lwy6;
+# instance fields
+.field public final a:J
+
+.field public final b:Z
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Z
+
+
+# direct methods
+.method public synthetic constructor <init>(JZJJZ)V
     .locals 0
 
-    invoke-interface {p1}, Lyy6;->k()Lwy6;
+    iput-wide p1, p0, Lcx6;->a:J
 
-    move-result-object p0
+    iput-boolean p3, p0, Lcx6;->b:Z
 
-    return-object p0
-.end method
+    iput-wide p4, p0, Lcx6;->c:J
 
-.method public final c()V
-    .locals 0
+    iput-wide p6, p0, Lcx6;->d:J
 
-    return-void
-.end method
+    iput-boolean p8, p0, Lcx6;->e:Z
 
-.method public final e(Lwy6;)V
-    .locals 2
-
-    invoke-virtual {p0, p1}, Lbx6;->b(Lwy6;)Lyp7;
-
-    move-result-object p0
-
-    new-instance v0, Lw15;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1, p1}, Lw15;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lgog;->i()Lbo4;
-
-    move-result-object p1
-
-    invoke-static {p0, v0, p1}, Lcp;->b(Lyp7;Lta6;Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

@@ -1,125 +1,182 @@
-.class public final Lbfc;
-.super Leje;
-.source "SourceFile"
-
-# interfaces
-.implements Lt96;
+.class public abstract Lbfc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static profile_avatar_select_screen:I = 0x7f0a0927
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_change_inactive_ttl_delete_1_month:I = 0x7f0a092b
 
+.field public static profile_change_inactive_ttl_delete_3_month:I = 0x7f0a092c
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-    .locals 0
+.field public static profile_change_inactive_ttl_delete_6_month:I = 0x7f0a092d
 
-    iput-object p2, p0, Lbfc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_confirmation_sheet_cancel:I = 0x7f0a0938
 
-    const/4 p2, 0x2
+.field public static profile_delete_contact_confirmation_sheet_confirm:I = 0x7f0a0946
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static profile_edit_admin_channel_type:I = 0x7f0a0948
 
-    return-void
-.end method
+.field public static profile_edit_admin_chat_type:I = 0x7f0a0949
 
+.field public static profile_edit_admin_clear_channel_history:I = 0x7f0a094a
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static profile_edit_admin_clear_channel_history_cancel:I = 0x7f0a094b
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static profile_edit_admin_clear_channel_history_confirm:I = 0x7f0a094c
 
-    invoke-virtual {p0, p1, p2}, Lbfc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static profile_edit_admin_clear_chat_history:I = 0x7f0a094d
 
-    move-result-object p0
+.field public static profile_edit_admin_clear_chat_history_cancel:I = 0x7f0a094e
 
-    check-cast p0, Lbfc;
+.field public static profile_edit_admin_clear_chat_history_confirm:I = 0x7f0a094f
 
-    sget-object p1, Ltcf;->a:Ltcf;
+.field public static profile_edit_admin_close_channel:I = 0x7f0a0950
 
-    invoke-virtual {p0, p1}, Lbfc;->o(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static profile_edit_admin_close_channel_cancel:I = 0x7f0a0951
 
-    return-object p1
-.end method
+.field public static profile_edit_admin_close_channel_certain_confirm:I = 0x7f0a0952
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.field public static profile_edit_admin_close_channel_confirm:I = 0x7f0a0953
 
-    new-instance v0, Lbfc;
+.field public static profile_edit_admin_close_chat:I = 0x7f0a0954
 
-    iget-object p0, p0, Lbfc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_edit_admin_close_chat_cancel:I = 0x7f0a0955
 
-    invoke-direct {v0, p2, p0}, Lbfc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static profile_edit_admin_close_chat_certain_confirm:I = 0x7f0a0956
 
-    iput-object p1, v0, Lbfc;->X:Ljava/lang/Object;
+.field public static profile_edit_admin_close_chat_confirm:I = 0x7f0a0957
 
-    return-object v0
-.end method
+.field public static profile_edit_admin_leave_channel:I = 0x7f0a0958
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static profile_edit_admin_leave_channel_and_change_owner_confirm:I = 0x7f0a0959
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+.field public static profile_edit_admin_leave_channel_cancel:I = 0x7f0a095a
 
-    iget-object p1, p0, Lbfc;->X:Ljava/lang/Object;
+.field public static profile_edit_admin_leave_channel_confirm:I = 0x7f0a095b
 
-    check-cast p1, Llec;
+.field public static profile_edit_admin_leave_chat:I = 0x7f0a095c
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:[Lof7;
+.field public static profile_edit_admin_leave_chat_and_change_owner_confirm:I = 0x7f0a095d
 
-    iget-object p0, p0, Lbfc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static profile_edit_admin_leave_chat_cancel:I = 0x7f0a095e
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
+.field public static profile_edit_admin_leave_chat_confirm:I = 0x7f0a095f
 
-    move-result-object v0
+.field public static profile_edit_admin_move_rights:I = 0x7f0a0960
 
-    new-instance v1, Luc1;
+.field public static profile_edit_admin_participants_permission:I = 0x7f0a0961
 
-    const/4 v2, 0x5
+.field public static profile_edit_admin_permissions_change_chat_info:I = 0x7f0a0962
 
-    invoke-direct {v1, p1, v2, p0}, Luc1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.field public static profile_edit_admin_permissions_change_owner_cancel_action:I = 0x7f0a0963
 
-    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+.field public static profile_edit_admin_permissions_change_owner_change_action:I = 0x7f0a0964
 
-    move-result p0
+.field public static profile_edit_admin_permissions_control_admin:I = 0x7f0a0965
 
-    if-eqz p0, :cond_0
+.field public static profile_edit_admin_permissions_delete_from_admins_cancel_action:I = 0x7f0a0966
 
-    invoke-virtual {v1}, Luc1;->invoke()Ljava/lang/Object;
+.field public static profile_edit_admin_permissions_delete_from_admins_delete_action:I = 0x7f0a0967
 
-    goto :goto_0
+.field public static profile_edit_admin_permissions_delete_messages:I = 0x7f0a0968
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+.field public static profile_edit_admin_permissions_edit_chat_link:I = 0x7f0a0969
 
-    move-result p0
+.field public static profile_edit_admin_permissions_edit_chat_members:I = 0x7f0a096a
 
-    if-eqz p0, :cond_1
+.field public static profile_edit_admin_permissions_edit_messages:I = 0x7f0a096b
 
-    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
+.field public static profile_edit_admin_permissions_pin_messages:I = 0x7f0a096c
 
-    move-result p0
+.field public static profile_edit_admin_permissions_recycler_view:I = 0x7f0a096d
 
-    if-nez p0, :cond_1
+.field public static profile_edit_admin_permissions_send_messages:I = 0x7f0a096e
 
-    invoke-virtual {v1}, Luc1;->invoke()Ljava/lang/Object;
+.field public static profile_edit_admin_permissions_superadmin:I = 0x7f0a096f
 
-    goto :goto_0
+.field public static profile_edit_admin_permissions_toolbar_view:I = 0x7f0a0970
 
-    :cond_1
-    new-instance p0, Lir0;
+.field public static profile_edit_appbar_layout:I = 0x7f0a0971
 
-    const/16 p1, 0xd
+.field public static profile_edit_avatar:I = 0x7f0a0972
 
-    invoke-direct {p0, p1, v1}, Lir0;-><init>(ILjava/lang/Object;)V
+.field public static profile_edit_change_avatar_cancel:I = 0x7f0a0973
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+.field public static profile_edit_change_avatar_remove_current:I = 0x7f0a0974
 
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+.field public static profile_edit_change_avatar_select_neuro_avatar:I = 0x7f0a0975
 
-    return-object p0
-.end method
+.field public static profile_edit_change_avatar_upload_from_camera:I = 0x7f0a0976
+
+.field public static profile_edit_change_avatar_upload_from_gallery:I = 0x7f0a0977
+
+.field public static profile_edit_collapsible_container_layout:I = 0x7f0a0978
+
+.field public static profile_edit_confirm_exit_button:I = 0x7f0a0979
+
+.field public static profile_edit_confirm_save_button:I = 0x7f0a097a
+
+.field public static profile_edit_contact_delete_action:I = 0x7f0a097b
+
+.field public static profile_edit_delete_profile_button:I = 0x7f0a097c
+
+.field public static profile_edit_delete_profile_cancel_button:I = 0x7f0a097d
+
+.field public static profile_edit_description_field:I = 0x7f0a097e
+
+.field public static profile_edit_first_name_field:I = 0x7f0a097f
+
+.field public static profile_edit_invite_by_link:I = 0x7f0a0980
+
+.field public static profile_edit_last_name_field:I = 0x7f0a0981
+
+.field public static profile_edit_link_private:I = 0x7f0a0982
+
+.field public static profile_edit_link_public:I = 0x7f0a0983
+
+.field public static profile_edit_logout_confirm_action:I = 0x7f0a0984
+
+.field public static profile_edit_member_permissions_add_user:I = 0x7f0a0985
+
+.field public static profile_edit_member_permissions_call_to_chat:I = 0x7f0a0986
+
+.field public static profile_edit_member_permissions_change_photo:I = 0x7f0a0987
+
+.field public static profile_edit_member_permissions_pin_message:I = 0x7f0a0988
+
+.field public static profile_edit_member_permissions_see_private_link:I = 0x7f0a0989
+
+.field public static profile_edit_oneme_toolbar:I = 0x7f0a098a
+
+.field public static profile_edit_recycler_view:I = 0x7f0a098b
+
+.field public static profile_edit_selectable_item_checkbox:I = 0x7f0a098c
+
+.field public static profile_edit_selectable_item_subtitle:I = 0x7f0a098d
+
+.field public static profile_edit_selectable_item_title:I = 0x7f0a098e
+
+.field public static profile_edit_short_link:I = 0x7f0a098f
+
+.field public static profile_edit_short_link_input_button:I = 0x7f0a0990
+
+.field public static profile_edit_short_link_recycler:I = 0x7f0a0991
+
+.field public static profile_edit_short_link_toolbar:I = 0x7f0a0992
+
+.field public static profile_edit_shortlink_action_copy:I = 0x7f0a0993
+
+.field public static profile_edit_shortlink_action_qr_code:I = 0x7f0a0994
+
+.field public static profile_edit_shortlink_action_refresh_link:I = 0x7f0a0995
+
+.field public static profile_edit_shortlink_action_share:I = 0x7f0a0996
+
+.field public static profile_edit_shortlink_action_share_external:I = 0x7f0a0997
+
+.field public static profile_edit_shortlink_confirm_button:I = 0x7f0a0998
+
+.field public static profile_edit_shortlink_confirm_update:I = 0x7f0a0999
+
+.field public static profile_selectable_item_tag:I = 0x7f0a09f8

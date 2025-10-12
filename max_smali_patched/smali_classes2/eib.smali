@@ -1,23 +1,24 @@
 .class public final Leib;
-.super Lpd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgib;
 
 
 # static fields
-.field public static final b:Leib;
+.field public static final a:Leib;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Leib;
 
-    const/16 v1, 0xd
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
-
-    sput-object v0, Leib;->b:Leib;
+    sput-object v0, Leib;->a:Leib;
 
     return-void
 .end method
@@ -34,30 +35,30 @@
     return v0
 
     :cond_0
-    instance-of p0, p1, Leib;
+    instance-of p1, p1, Leib;
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    const p0, -0x28fc5ec6
+    const v0, 0x2dab04c7
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 1
 
-    const-string p0, "PopToChatsList"
+    const-string v0, "Empty"
 
-    return-object p0
+    return-object v0
 .end method

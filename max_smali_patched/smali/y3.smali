@@ -1,369 +1,341 @@
-.class public Ly3;
+.class public final Ly3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Landroid/view/View$AccessibilityDelegate;
+# interfaces
+.implements Lfi5;
 
 
 # instance fields
-.field public final a:Landroid/view/View$AccessibilityDelegate;
+.field public final a:Lw3;
 
-.field public final b:Lx3;
+.field public final b:Ly4b;
+
+.field public c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/view/View$AccessibilityDelegate;
-
-    invoke-direct {v0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
-
-    sput-object v0, Ly3;->c:Landroid/view/View$AccessibilityDelegate;
+    new-instance v0, Llx0;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 5
 
-    .line 1
-    sget-object v0, Ly3;->c:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-direct {p0, v0}, Ly3;-><init>(Landroid/view/View$AccessibilityDelegate;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/View$AccessibilityDelegate;)V
-    .locals 0
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p1, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
+    new-instance v0, Lw3;
 
-    .line 4
-    new-instance p1, Lx3;
+    const/4 v1, 0x0
 
-    invoke-direct {p1, p0}, Lx3;-><init>(Ly3;)V
+    const/4 v2, 0x1
 
-    iput-object p1, p0, Ly3;->b:Lx3;
+    const/4 v3, 0x0
+
+    const-string v4, "audio/ac4"
+
+    invoke-direct {v0, v3, v1, v2, v4}, Lw3;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput-object v0, p0, Ly3;->a:Lw3;
+
+    new-instance v0, Ly4b;
+
+    const/16 v1, 0x4000
+
+    invoke-direct {v0, v1}, Ly4b;-><init>(I)V
+
+    iput-object v0, p0, Ly3;->b:Ly4b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+.method public final d(JJ)V
     .locals 0
 
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->dispatchPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    iput-boolean p1, p0, Ly3;->c:Z
 
-    move-result p0
+    iget-object p1, p0, Ly3;->a:Lw3;
 
-    return p0
-.end method
-
-.method public b(Landroid/view/View;)Llud;
-    .locals 1
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1}, Landroid/view/View$AccessibilityDelegate;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    new-instance p1, Llud;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0, p0}, Llud;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-virtual {p1}, Lw3;->a()V
 
     return-void
 .end method
 
-.method public d(Landroid/view/View;Li4;)V
-    .locals 0
+.method public final i(Lhi5;)Z
+    .locals 14
 
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
+    new-instance v0, Ly4b;
 
-    iget-object p2, p2, Li4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+    const/16 v1, 0xa
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    invoke-direct {v0, v1}, Ly4b;-><init>(I)V
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-.end method
-
-.method public f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 0
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public g(Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 6
-
-    sget v0, Lvzb;->tag_accessibility_actions:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    move v2, v1
+    move v3, v2
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object v4, v0, Ly4b;->a:[B
 
-    move-result v3
+    invoke-interface {p1, v2, v4, v1}, Lhi5;->d(I[BI)V
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, v2}, Ly4b;->G(I)V
 
-    if-ge v2, v3, :cond_4
+    invoke-virtual {v0}, Ly4b;->x()I
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v3
+    const v5, 0x494433
 
-    check-cast v3, Ld4;
+    const/4 v6, 0x3
 
-    invoke-virtual {v3}, Ld4;->a()I
+    if-eq v4, v5, :cond_7
+
+    invoke-interface {p1}, Lhi5;->x()V
+
+    invoke-interface {p1, v3}, Lhi5;->p(I)V
+
+    move v1, v2
+
+    move v4, v3
+
+    :goto_1
+    iget-object v5, v0, Ly4b;->a:[B
+
+    const/4 v7, 0x7
+
+    invoke-interface {p1, v2, v5, v7}, Lhi5;->d(I[BI)V
+
+    invoke-virtual {v0, v2}, Ly4b;->G(I)V
+
+    invoke-virtual {v0}, Ly4b;->A()I
 
     move-result v5
 
-    if-ne v5, p2, :cond_3
+    const v8, 0xac40
 
-    iget-object v0, v3, Ld4;->c:Ljava/lang/Class;
+    const v9, 0xac41
 
-    iget-object v2, v3, Ld4;->d:Lr4;
+    if-eq v5, v8, :cond_1
 
-    if-eqz v2, :cond_4
+    if-eq v5, v9, :cond_1
 
-    if-nez v0, :cond_1
+    invoke-interface {p1}, Lhi5;->x()V
+
+    add-int/lit8 v4, v4, 0x1
+
+    sub-int v1, v4, v3
+
+    const/16 v5, 0x2000
+
+    if-lt v1, v5, :cond_0
+
+    goto :goto_4
+
+    :cond_0
+    invoke-interface {p1, v4}, Lhi5;->p(I)V
+
+    move v1, v2
 
     goto :goto_1
 
     :cond_1
-    :try_start_0
-    invoke-virtual {v0, v4}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    const/4 v8, 0x1
 
-    move-result-object v0
+    add-int/2addr v1, v8
 
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v10, 0x4
 
-    move-result-object v0
+    if-lt v1, v10, :cond_2
 
-    if-nez v0, :cond_2
-
-    throw v4
+    return v8
 
     :cond_2
-    new-instance v0, Ljava/lang/ClassCastException;
+    iget-object v8, v0, Ly4b;->a:[B
 
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+    array-length v11, v8
 
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v12, -0x1
 
-    :catch_0
-    :goto_1
-    invoke-interface {v2, p1}, Lr4;->b(Landroid/view/View;)Z
+    if-ge v11, v7, :cond_3
 
-    move-result v0
-
-    goto :goto_2
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    move v0, v1
-
-    :goto_2
-    if-nez v0, :cond_5
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1, p2, p3}, Landroid/view/View$AccessibilityDelegate;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result v0
-
-    :cond_5
-    if-nez v0, :cond_9
-
-    sget p0, Lvzb;->accessibility_action_clickable_span:I
-
-    if-ne p2, p0, :cond_9
-
-    if-eqz p3, :cond_9
-
-    const-string p0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
-
-    const/4 p2, -0x1
-
-    invoke-virtual {p3, p0, p2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p0
-
-    sget p2, Lvzb;->tag_accessibility_clickable_spans:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/util/SparseArray;
-
-    if-eqz p2, :cond_8
-
-    invoke-virtual {p2, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/ref/WeakReference;
-
-    if-eqz p0, :cond_8
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/text/style/ClickableSpan;
-
-    if-eqz p0, :cond_8
-
-    invoke-virtual {p1}, Landroid/view/View;->createAccessibilityNodeInfo()Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p2
-
-    instance-of p3, p2, Landroid/text/Spanned;
-
-    if-eqz p3, :cond_6
-
-    move-object p3, p2
-
-    check-cast p3, Landroid/text/Spanned;
-
-    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
-
-    move-result p2
-
-    const-class v0, Landroid/text/style/ClickableSpan;
-
-    invoke-interface {p3, v1, p2, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v4, p2
-
-    check-cast v4, [Landroid/text/style/ClickableSpan;
-
-    :cond_6
-    move p2, v1
-
-    :goto_3
-    if-eqz v4, :cond_8
-
-    array-length p3, v4
-
-    if-ge p2, p3, :cond_8
-
-    aget-object p3, v4, p2
-
-    invoke-virtual {p0, p3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_7
-
-    invoke-virtual {p0, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
-
-    const/4 v1, 0x1
-
-    goto :goto_4
-
-    :cond_7
-    add-int/lit8 p2, p2, 0x1
+    move v11, v12
 
     goto :goto_3
 
-    :cond_8
-    :goto_4
-    move v0, v1
+    :cond_3
+    const/4 v11, 0x2
 
-    :cond_9
-    return v0
+    aget-byte v11, v8, v11
+
+    and-int/lit16 v11, v11, 0xff
+
+    shl-int/lit8 v11, v11, 0x8
+
+    aget-byte v13, v8, v6
+
+    and-int/lit16 v13, v13, 0xff
+
+    or-int/2addr v11, v13
+
+    const v13, 0xffff
+
+    if-ne v11, v13, :cond_4
+
+    aget-byte v10, v8, v10
+
+    and-int/lit16 v10, v10, 0xff
+
+    shl-int/lit8 v10, v10, 0x10
+
+    const/4 v11, 0x5
+
+    aget-byte v11, v8, v11
+
+    and-int/lit16 v11, v11, 0xff
+
+    shl-int/lit8 v11, v11, 0x8
+
+    or-int/2addr v10, v11
+
+    const/4 v11, 0x6
+
+    aget-byte v8, v8, v11
+
+    and-int/lit16 v8, v8, 0xff
+
+    or-int v11, v10, v8
+
+    goto :goto_2
+
+    :cond_4
+    move v7, v10
+
+    :goto_2
+    if-ne v5, v9, :cond_5
+
+    add-int/lit8 v7, v7, 0x2
+
+    :cond_5
+    add-int/2addr v11, v7
+
+    :goto_3
+    if-ne v11, v12, :cond_6
+
+    :goto_4
+    return v2
+
+    :cond_6
+    add-int/lit8 v11, v11, -0x7
+
+    invoke-interface {p1, v11}, Lhi5;->p(I)V
+
+    goto :goto_1
+
+    :cond_7
+    invoke-virtual {v0, v6}, Ly4b;->H(I)V
+
+    invoke-virtual {v0}, Ly4b;->t()I
+
+    move-result v4
+
+    add-int/lit8 v5, v4, 0xa
+
+    add-int/2addr v3, v5
+
+    invoke-interface {p1, v4}, Lhi5;->p(I)V
+
+    goto/16 :goto_0
 .end method
 
-.method public h(Landroid/view/View;I)V
-    .locals 0
+.method public final n(Lji5;)V
+    .locals 5
 
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
+    new-instance v0, Lzrf;
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->sendAccessibilityEvent(Landroid/view/View;I)V
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lzrf;-><init>(IIIB)V
+
+    iget-object v1, p0, Ly3;->a:Lw3;
+
+    invoke-virtual {v1, p1, v0}, Lw3;->j(Lji5;Lzrf;)V
+
+    invoke-interface {p1}, Lji5;->v()V
+
+    new-instance v0, Lae0;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {v0, v1, v2}, Lae0;-><init>(J)V
+
+    invoke-interface {p1, v0}, Lji5;->O(Lend;)V
 
     return-void
 .end method
 
-.method public i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.method public final o(Lhi5;Lc7;)I
+    .locals 5
+
+    iget-object p2, p0, Ly3;->b:Ly4b;
+
+    iget-object v0, p2, Ly4b;->a:[B
+
+    const/16 v1, 0x4000
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v2, v1}, Ld94;->read([BII)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {p2, v2}, Ly4b;->G(I)V
+
+    invoke-virtual {p2, p1}, Ly4b;->F(I)V
+
+    iget-boolean p1, p0, Ly3;->c:Z
+
+    iget-object v0, p0, Ly3;->a:Lw3;
+
+    if-nez p1, :cond_1
+
+    const-wide/16 v3, 0x0
+
+    iput-wide v3, v0, Lw3;->o:J
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ly3;->c:Z
+
+    :cond_1
+    invoke-virtual {v0, p2}, Lw3;->e(Ly4b;)V
+
+    return v2
+.end method
+
+.method public final release()V
     .locals 0
-
-    iget-object p0, p0, Ly3;->a:Landroid/view/View$AccessibilityDelegate;
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->sendAccessibilityEventUnchecked(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method

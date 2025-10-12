@@ -1,183 +1,500 @@
 .class public final Lyrb;
-.super Ljava/lang/Object;
+.super Lxl;
 .source "SourceFile"
 
 # interfaces
-.implements Lubd;
+.implements Loaf;
+.implements Lcab;
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final X:Ljava/lang/String;
 
-.field public final b:Lth7;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final w0:Lf10;
+
+.field public final x0:Ljava/lang/String;
+
+.field public final y0:Ljava/lang/String;
+
+.field public final z0:I
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lth7;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLf10;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
 
-    iput-object p1, p0, Lyrb;->a:Lth7;
+    iput-object p3, p0, Lyrb;->o:Ljava/lang/String;
 
-    iput-object p2, p0, Lyrb;->b:Lth7;
+    iput-object p4, p0, Lyrb;->X:Ljava/lang/String;
+
+    iput-object p5, p0, Lyrb;->Y:Ljava/lang/String;
+
+    iput-wide p6, p0, Lyrb;->Z:J
+
+    iput-object p8, p0, Lyrb;->w0:Lf10;
+
+    iput-object p9, p0, Lyrb;->x0:Ljava/lang/String;
+
+    iput-object p10, p0, Lyrb;->y0:Ljava/lang/String;
+
+    iput p11, p0, Lyrb;->z0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public final c()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "onProxyEnableChange: oldValue="
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final d(Ll9f;)V
+    .locals 8
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lbub;
 
-    const-string p1, ", newValue="
+    invoke-virtual {p0}, Lxl;->q()Lxob;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lzob;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, v0, Lzob;->a:Lt63;
 
-    move-result-object p1
+    const-string v1, "user.deviceAvatarPath"
 
-    const-string v0, "yrb"
+    const/4 v2, 0x0
 
-    invoke-static {v0, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lh3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p0, Lyrb;->a:Lth7;
+    iget-object v0, p0, Lxl;->c:Lyl;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpoe;
-
-    invoke-virtual {p1, p2}, Lpoe;->f(Ljava/lang/String;)V
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lyrb;->b:Lth7;
+    move-object v0, v2
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    :goto_0
+    iget-object v0, v0, Lyl;->U:Lbp7;
 
-    move-result-object p0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Lq14;
+    move-result-object v0
 
-    const-string p1, "proxy"
+    check-cast v0, Ll2c;
 
-    invoke-virtual {p0, p1, p2}, Lq14;->b(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p1, Lbub;->c:Lurb;
+
+    invoke-virtual {v0, v1}, Ll2c;->b(Lurb;)V
+
+    invoke-virtual {p0}, Lxl;->l()Lov0;
+
+    move-result-object v0
+
+    new-instance v1, Llyb;
+
+    iget-object v3, p1, Lbub;->c:Lurb;
+
+    iget-object v3, v3, Lurb;->a:Lds3;
+
+    iget-wide v4, p0, Lxl;->a:J
+
+    invoke-direct {v1, v4, v5, v3}, Llyb;-><init>(JLds3;)V
+
+    invoke-virtual {v0, v1}, Lov0;->c(Ljava/lang/Object;)V
+
+    iget-object p1, p1, Lbub;->c:Lurb;
+
+    iget-object p1, p1, Lurb;->a:Lds3;
+
+    if-eqz p1, :cond_1
+
+    iget-wide v0, p1, Lds3;->Y:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
 
     :cond_1
-    :goto_0
+    iget-wide v0, p0, Lyrb;->Z:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long p1, v0, v6
+
+    if-eqz p1, :cond_2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Lxl;->l()Lov0;
+
+    move-result-object p1
+
+    new-instance v0, Lbsb;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v1
+
+    invoke-direct {v0, v4, v5, v1, v2}, Lbsb;-><init>(JJ)V
+
+    invoke-virtual {p1, v0}, Lov0;->c(Ljava/lang/Object;)V
+
+    :cond_2
     return-void
 .end method
 
-.method public final b(Ljava/util/List;Ljava/util/List;)V
-    .locals 6
+.method public final e(Lv8f;)V
+    .locals 2
 
-    const-string v0, "yrb"
+    iget-object v0, p1, Lv8f;->b:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lgh5;->v(Ljava/lang/String;)Z
 
-    const-string v2, "onProxyDomainsChanged: oldValue="
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lyrb;->f()V
 
-    const-string p1, ", newValue="
+    :cond_0
+    invoke-virtual {p0}, Lxl;->l()Lov0;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v1, Lhyb;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, p1}, Laj0;-><init>(Lv8f;)V
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lov0;->c(Ljava/lang/Object;)V
 
-    invoke-static {v0, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object p1, p0, Lyrb;->a:Lth7;
+.method public final f()V
+    .locals 3
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lxl;->s()Licf;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lpoe;
+    iget-wide v1, p0, Lxl;->a:J
 
-    monitor-enter p1
+    invoke-virtual {v0, v1, v2}, Licf;->d(J)V
 
-    :try_start_0
-    iput-object p2, p1, Lpoe;->g:Ljava/util/List;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return-void
+.end method
 
-    monitor-exit p1
+.method public final g()[B
+    .locals 4
 
-    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    move-result p1
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    if-nez p1, :cond_0
+    iget-wide v1, p0, Lxl;->a:J
 
-    iget-object p0, p0, Lyrb;->b:Lth7;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    iget-wide v1, p0, Lyrb;->Z:J
 
-    move-result-object p0
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
 
-    check-cast p0, Lq14;
+    iget-object v1, p0, Lyrb;->o:Ljava/lang/String;
 
-    const-string p1, "proxyDomains"
+    if-eqz v1, :cond_1
 
-    const/4 v4, 0x0
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    const/16 v5, 0x3f
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+
+    :cond_1
+    :goto_0
+    iget-object v1, p0, Lyrb;->X:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Lyrb;->Y:Ljava/lang/String;
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+
+    :cond_5
+    :goto_2
+    iget-object v1, p0, Lyrb;->x0:Ljava/lang/String;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
+
+    :cond_7
+    :goto_3
+    iget-object v1, p0, Lyrb;->y0:Ljava/lang/String;
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
+
+    :cond_9
+    :goto_4
+    iget v1, p0, Lyrb;->z0:I
+
+    invoke-static {v1}, Lqw1;->e(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    invoke-static {v1}, Lqw1;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+
+    :goto_5
+    iget-object v1, p0, Lyrb;->w0:Lf10;
+
+    if-eqz v1, :cond_b
+
+    new-instance v2, Lru/ok/tamtam/nano/Tasks$Rect;
+
+    invoke-direct {v2}, Lru/ok/tamtam/nano/Tasks$Rect;-><init>()V
+
+    iget v3, v1, Lf10;->b:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v3, v1, Lf10;->c:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v3, v1, Lf10;->d:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v1, v1, Lf10;->e:F
+
+    iput v1, v2, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+
+    :cond_b
+    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lxl;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Ldab;
+    .locals 1
+
+    sget-object v0, Ldab;->o:Ldab;
+
+    return-object v0
+.end method
+
+.method public final i()Li9f;
+    .locals 5
+
+    new-instance v0, Ll38;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/16 v2, 0x12
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ll38;-><init>(Ln0b;I)V
 
-    move-object v0, p2
+    iget-object v1, p0, Lyrb;->o:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v5}, Lg73;->v0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lf96;I)Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object p2
+    const-string v2, "firstName"
 
-    invoke-virtual {p0, p1, p2}, Lq14;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    return-void
+    iget-object v1, p0, Lyrb;->X:Ljava/lang/String;
 
-    :catchall_0
-    move-exception v0
+    if-eqz v1, :cond_1
 
-    move-object p0, v0
+    const-string v2, "lastName"
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v0, v2, v1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
 
-    throw p0
+    :cond_1
+    iget-object v1, p0, Lyrb;->Y:Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    const-string v2, "photoToken"
+
+    invoke-virtual {v0, v2, v1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Lyrb;->Z:J
+
+    cmp-long v1, v3, v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "photoId"
+
+    invoke-virtual {v0, v3, v4, v1}, Li9f;->j(JLjava/lang/String;)V
+
+    :cond_3
+    iget-object v1, p0, Lyrb;->w0:Lf10;
+
+    if-eqz v1, :cond_4
+
+    const-string v2, "crop"
+
+    invoke-virtual {v1}, Lf10;->a()Ljava/util/HashMap;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Li9f;->o(Ljava/lang/String;Ljava/util/Map;)V
+
+    :cond_4
+    iget-object v1, p0, Lyrb;->x0:Ljava/lang/String;
+
+    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const-string v3, ""
+
+    const-string v4, "$REMOVE$"
+
+    if-nez v2, :cond_6
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    move-object v1, v3
+
+    :cond_5
+    const-string v2, "description"
+
+    invoke-virtual {v0, v2, v1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_6
+    iget-object v1, p0, Lyrb;->y0:Ljava/lang/String;
+
+    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    move-object v3, v1
+
+    :goto_0
+    const-string v1, "link"
+
+    invoke-virtual {v0, v1, v3}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    const-string v1, "avatarType"
+
+    iget v2, p0, Lyrb;->z0:I
+
+    invoke-static {v2}, Lqw1;->e(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

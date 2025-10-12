@@ -36,9 +36,9 @@
 
 
 # instance fields
-.field public final a:Lth7;
+.field public final a:Lbp7;
 
-.field public final b:Lqy5;
+.field public final b:Lr36;
 
 
 # direct methods
@@ -51,7 +51,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     new-instance v0, Ll;
 
@@ -59,75 +59,73 @@
 
     invoke-direct {v0, v1}, Ll;-><init>(I)V
 
-    new-instance v1, Lr;
+    new-instance v1, Lq;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Lr;-><init>(ILd96;)V
+    invoke-direct {v1, v2, v0}, Lq;-><init>(ILve6;)V
 
-    const-class v0, Lu;
+    const-class v0, Lt;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ld96;)Lth7;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->a:Lth7;
+    iput-object v0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->a:Lbp7;
 
-    new-instance v0, Lqy5;
+    new-instance v0, Lr36;
 
-    sget-object v1, Lg;->a:Lg;
+    sget-object v1, Lf;->a:Lf;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Lyca;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lkle;->getValue()Ljava/lang/Object;
+    const-class v2, Ljna;
+
+    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
     move-result-object v1
 
-    check-cast v1, Lyca;
-
-    invoke-virtual {v1}, Lyca;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Lm;
+    check-cast v1, Ljna;
 
-    const/4 v3, 0x0
+    invoke-virtual {v1}, Ljna;->a()Ljava/util/concurrent/ExecutorService;
 
-    invoke-direct {v2, v3, p0}, Lm;-><init>(ILjava/lang/Object;)V
+    move-result-object v1
+
+    new-instance v2, Leqd;
+
+    invoke-direct {v2, p0}, Leqd;-><init>(Ljava/lang/Object;)V
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lqy5;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
+    invoke-direct {v0, v1, v2, v3}, Lr36;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
 
-    iput-object v0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lqy5;
+    iput-object v0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lr36;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Lc67;
-    .locals 0
+.method public final getInsetsConfig()Led7;
+    .locals 1
 
-    sget-object p0, Lc67;->c:Lc67;
+    sget-object v0, Led7;->c:Led7;
 
-    sget-object p0, Lc67;->d:Lc67;
+    sget-object v0, Led7;->d:Led7;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 8
 
-    new-instance p1, Lkna;
+    new-instance p1, Ltya;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
@@ -135,17 +133,17 @@
 
     const/4 p3, 0x6
 
-    invoke-direct {p1, p2, p3}, Lkna;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p2, p3}, Ltya;-><init>(Landroid/content/Context;I)V
 
-    sget-object p2, Lcna;->a:Lcna;
+    sget-object p2, Llya;->a:Llya;
 
-    invoke-virtual {p1, p2}, Lkna;->setForm(Lcna;)V
+    invoke-virtual {p1, p2}, Ltya;->setForm(Llya;)V
 
-    sget p2, Lf3c;->about_app_settings_toolbar_title:I
+    sget p2, Lkic;->about_app_settings_toolbar_title:I
 
-    invoke-virtual {p1, p2}, Lkna;->setTitle(I)V
+    invoke-virtual {p1, p2}, Ltya;->setTitle(I)V
 
-    new-instance p2, Lsma;
+    new-instance p2, Lbya;
 
     new-instance p3, Lk;
 
@@ -153,9 +151,9 @@
 
     invoke-direct {p3, v0, p0}, Lk;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, p3}, Lsma;-><init>(Lf96;)V
+    invoke-direct {p2, p3}, Lbya;-><init>(Lxe6;)V
 
-    invoke-virtual {p1, p2}, Lkna;->setLeftActions(Lyma;)V
+    invoke-virtual {p1, p2}, Ltya;->setLeftActions(Lhya;)V
 
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -177,7 +175,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -189,11 +187,11 @@
 
     mul-float/2addr v3, v2
 
-    invoke-static {v3}, Litg;->z(F)I
+    invoke-static {v3}, Lv63;->r0(F)I
 
     move-result v3
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -205,7 +203,7 @@
 
     mul-float/2addr v2, v4
 
-    invoke-static {v2}, Litg;->z(F)I
+    invoke-static {v2}, Lv63;->r0(F)I
 
     move-result v2
 
@@ -229,21 +227,21 @@
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p3, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lqy5;
+    iget-object p3, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lr36;
 
-    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lygc;)V
+    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
 
-    new-instance v4, Lmx0;
+    new-instance v4, Llx0;
 
     const/4 p3, 0x7
 
-    invoke-direct {v4, p3}, Lmx0;-><init>(I)V
+    invoke-direct {v4, p3}, Llx0;-><init>(I)V
 
-    new-instance v2, Ln5d;
+    new-instance v2, Lzmd;
 
-    sget-object p3, Lzs4;->p0:Lqs9;
+    sget-object p3, Lbx4;->y0:Lsed;
 
-    invoke-virtual {p3, p2}, Lqs9;->e(Landroid/view/View;)Lnma;
+    invoke-virtual {p3, p2}, Lsed;->l(Landroid/view/View;)Luxa;
 
     move-result-object v3
 
@@ -253,135 +251,127 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v2 .. v7}, Ln5d;-><init>(Lnma;Ll5d;Lk;Looc;I)V
+    invoke-direct/range {v2 .. v7}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
 
-    invoke-virtual {p2, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lehc;)V
+    invoke-virtual {p2, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
 
     new-instance p3, Landroid/widget/LinearLayout;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v2
 
-    invoke-direct {p3, p0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {p0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v2, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p3, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/4 p0, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {p3, p0}, Landroid/widget/LinearLayout;->setOrientation(I)V
+    invoke-virtual {p3, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
     invoke-virtual {p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {p3, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p0, Ln;
+    new-instance p1, Lm;
 
-    const/4 p1, 0x3
+    const/4 p2, 0x3
 
-    const/4 p2, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, v0, p2}, Ln;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p1, p2, v0, v1}, Lm;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p0, p3}, Lu77;->J(Lv96;Landroid/view/View;)V
+    invoke-static {p1, p3}, Lk74;->K(Lnf6;Landroid/view/View;)V
 
     return-object p3
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 5
+    .locals 6
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/aboutappsettings/AboutAppSettingsScreen;->x0()Lu;
+    iget-object p1, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->a:Lbp7;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt;
+
+    iget-object v0, v0, Lt;->X:Lsqc;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcs7;->L()Les7;
+
+    move-result-object v1
+
+    sget-object v2, Ler7;->o:Ler7;
+
+    invoke-static {v0, v1, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+
+    move-result-object v0
+
+    new-instance v1, Ln;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3, p0}, Ln;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
+
+    new-instance v4, Ljx5;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v0, v1, v5}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Ltp;->a0(Lev5;Le34;)Lqle;
+
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p1, p1, Lu;->X:Ljbc;
+    check-cast p1, Lt;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
+    iget-object p1, p1, Lt;->c:Ljb5;
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lsk7;->L()Luk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
 
     move-result-object v0
 
-    sget-object v1, Lvj7;->o:Lvj7;
+    invoke-interface {v0}, Lcs7;->L()Les7;
 
-    invoke-static {p1, v0, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    move-result-object v0
+
+    invoke-static {p1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
 
     move-result-object p1
 
     new-instance v0, Lo;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v3, p0}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
 
-    invoke-direct {v0, v2, p0}, Lo;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
-
-    new-instance v3, Lgs5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, p1, v0, v4}, Lgs5;-><init>(Lbq5;Lt96;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
-
-    invoke-virtual {p0}, Lone/me/aboutappsettings/AboutAppSettingsScreen;->x0()Lu;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lu;->c:Lt65;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lsk7;->L()Luk7;
-
-    move-result-object v0
-
-    invoke-static {p1, v0, v1}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
-
-    move-result-object p1
-
-    new-instance v0, Lp;
-
-    invoke-direct {v0, v2, p0}, Lp;-><init>(Lkotlin/coroutines/Continuation;Lone/me/aboutappsettings/AboutAppSettingsScreen;)V
-
-    new-instance v1, Lgs5;
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
-.end method
-
-.method public final x0()Lu;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->a:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lu;
-
-    return-object p0
 .end method

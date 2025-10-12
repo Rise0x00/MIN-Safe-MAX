@@ -1,86 +1,73 @@
-.class public final Lgqb;
-.super Ljava/lang/Object;
+.class public final enum Lgqb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final enum a:Lgqb;
 
-.field public final b:Z
+.field public static final enum b:Lgqb;
+
+.field public static final synthetic c:[Lgqb;
 
 
 # direct methods
-.method public constructor <init>(IZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgqb;
 
-    iput p1, p0, Lgqb;->a:I
+    const-string v1, "Gallery"
 
-    iput-boolean p2, p0, Lgqb;->b:Z
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lgqb;->a:Lgqb;
+
+    new-instance v1, Lgqb;
+
+    const-string v2, "Permissions"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lgqb;->b:Lgqb;
+
+    filled-new-array {v0, v1}, [Lgqb;
+
+    move-result-object v0
+
+    sput-object v0, Lgqb;->c:[Lgqb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
+.method public static valueOf(Ljava/lang/String;)Lgqb;
+    .locals 1
 
     const-class v0, Lgqb;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object v1
+    move-result-object p0
 
-    if-eq v0, v1, :cond_1
+    check-cast p0, Lgqb;
 
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lgqb;
-
-    iget v0, p0, Lgqb;->a:I
-
-    iget v1, p1, Lgqb;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean p0, p0, Lgqb;->b:Z
-
-    iget-boolean p1, p1, Lgqb;->b:Z
-
-    if-ne p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[Lgqb;
     .locals 1
 
-    iget v0, p0, Lgqb;->a:I
+    sget-object v0, Lgqb;->c:[Lgqb;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lgqb;->b:Z
+    move-result-object v0
 
-    add-int/2addr v0, p0
+    check-cast v0, [Lgqb;
 
-    return v0
+    return-object v0
 .end method

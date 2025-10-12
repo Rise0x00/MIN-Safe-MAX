@@ -1,94 +1,49 @@
-.class public final synthetic Ldr;
-.super Ljava/lang/Object;
+.class public final Ldr;
+.super Lnz3;
 .source "SourceFile"
-
-# interfaces
-.implements Lf82;
-.implements Lfa6;
 
 
 # instance fields
-.field public final synthetic a:Lor;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lhr;
+
+.field public Z:I
+
+.field public o:Lhr;
 
 
 # direct methods
-.method public constructor <init>(Lor;)V
+.method public constructor <init>(Lhr;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldr;->Y:Lhr;
 
-    iput-object p1, p0, Ldr;->a:Lor;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Lf82;
+    iput-object p1, p0, Ldr;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Ldr;->Z:I
 
-    instance-of v0, p1, Lfa6;
+    const/high16 v0, -0x80000000
 
-    if-eqz v0, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0}, Ldr;->getFunctionDelegate()Ly96;
+    iput p1, p0, Ldr;->Z:I
 
-    move-result-object p0
+    iget-object p1, p0, Ldr;->Y:Lhr;
 
-    check-cast p1, Lfa6;
-
-    invoke-interface {p1}, Lfa6;->getFunctionDelegate()Ly96;
+    invoke-virtual {p1, p0}, Lhr;->s(Lnz3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final getFunctionDelegate()Ly96;
-    .locals 7
-
-    new-instance v0, Lia6;
-
-    const-string v6, "backgroundSelected(Lone/me/appearancesettings/singletheme/model/ChatBackground;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v3, Lor;
-
-    iget-object v4, p0, Ldr;->a:Lor;
-
-    const-string v5, "backgroundSelected"
-
-    invoke-direct/range {v0 .. v6}, Lha6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    invoke-virtual {p0}, Ldr;->getFunctionDelegate()Ly96;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
+    return-object p1
 .end method

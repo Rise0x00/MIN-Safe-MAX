@@ -1,169 +1,165 @@
-.class public final synthetic Le91;
-.super Ljava/lang/Object;
+.class public final Le91;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Ld96;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Z
 
-.field public final synthetic b:Lone/me/calllist/ui/CallHistoryScreen;
+.field public final synthetic Y:Lh91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;I)V
+.method public constructor <init>(Lh91;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Le91;->a:I
+    iput-object p1, p0, Le91;->Y:Lh91;
 
-    iput-object p1, p0, Le91;->b:Lone/me/calllist/ui/CallHistoryScreen;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Le91;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object p0, p0, Le91;->b:Lone/me/calllist/ui/CallHistoryScreen;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/calllist/ui/CallHistoryScreen;->x0:[Lof7;
+    invoke-virtual {p0, p1, p2}, Le91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
+    move-result-object p1
 
-    move-result-object p0
+    check-cast p1, Le91;
 
-    return-object p0
+    sget-object p2, Loyf;->a:Loyf;
 
-    :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/CallHistoryScreen;->x0:[Lof7;
+    invoke-virtual {p1, p2}, Le91;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v0, Lmh1;
+    return-object p2
+.end method
 
-    new-instance v1, Le91;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v2, 0x3
+    new-instance v0, Le91;
 
-    invoke-direct {v1, p0, v2}, Le91;-><init>(Lone/me/calllist/ui/CallHistoryScreen;I)V
+    iget-object v1, p0, Le91;->Y:Lh91;
 
-    new-instance v2, Lkle;
+    invoke-direct {v0, v1, p2}, Le91;-><init>(Lh91;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v2, v1}, Lkle;-><init>(Ld96;)V
+    check-cast p1, Ljava/lang/Boolean;
 
-    new-instance v1, Lcjg;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 v3, 0x0
+    move-result p1
 
-    invoke-direct {v1, p0, v3}, Lcjg;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-direct {v0, v2, v1}, Lmh1;-><init>(Lkle;Lcjg;)V
+    iput-boolean p1, v0, Le91;->X:Z
 
     return-object v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lone/me/calllist/ui/CallHistoryScreen;->a:Lth7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    sget-object v1, Lf2d;->p:Lth7;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sget-object v2, Lf2d;->d:Lth7;
+    iget-boolean p1, p0, Le91;->X:Z
 
-    sget-object v3, Lf2d;->g:Lth7;
+    if-eqz p1, :cond_0
 
-    new-instance v4, Lybd;
+    sget-object p1, Lb75;->a:Lb75;
 
-    invoke-direct {v4, v1, v2, v0, v3}, Lybd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lone/me/calllist/ui/CallHistoryScreen;->o:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmh1;
-
-    sget-object v1, Lg2d;->a:Lg2d;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v2, Llh5;
-
-    invoke-virtual {v1, v2}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lone/me/calllist/ui/CallHistoryScreen;->b:Lth7;
-
-    new-instance v2, Lk91;
-
-    invoke-direct {v2, p0, v1, v4, v0}, Lk91;-><init>(Lth7;Lth7;Lybd;Lmh1;)V
-
-    return-object v2
-
-    :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/CallHistoryScreen;->x0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/calllist/ui/CallHistoryScreen;->y0()Lk91;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lk91;->Z:Lq4e;
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v0}, Lq4e;->getValue()Ljava/lang/Object;
+    sget-object p1, Li91;->X:Lla5;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {p1, v1}, Lg93;->V(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    new-instance v1, Lu1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, p1}, Lu1;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {v1}, Lu1;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v1}, Lu1;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Li91;
+
+    new-instance v2, Lj91;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    iget v4, p1, Li91;->a:I
+
+    invoke-direct {v2, v3, v4, p1}, Lj91;-><init>(IILi91;)V
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    move-object p1, v0
+
+    :goto_1
+    iget-object v0, p0, Le91;->Y:Lh91;
+
+    iget-object v0, v0, Lh91;->Z:Lmoe;
+
+    :cond_2
+    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v2, v1
 
-    check-cast v2, Li91;
+    check-cast v2, Lxu1;
 
-    new-instance v2, Li91;
+    iget-boolean v3, v2, Lxu1;->b:Z
 
-    invoke-direct {v2}, Li91;-><init>()V
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1, v2}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Lxu1;
+
+    invoke-direct {v2, p1, v3}, Lxu1;-><init>(Ljava/util/List;Z)V
+
+    invoke-virtual {v0, v1, v2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_2
 
-    iget-object v0, p0, Lone/me/calllist/ui/CallHistoryScreen;->Y:Ldbc;
+    sget-object p1, Loyf;->a:Loyf;
 
-    sget-object v1, Lone/me/calllist/ui/CallHistoryScreen;->x0:[Lof7;
-
-    const/4 v2, 0x1
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p0, v1}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkna;
-
-    invoke-virtual {p0}, Lkna;->a()V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

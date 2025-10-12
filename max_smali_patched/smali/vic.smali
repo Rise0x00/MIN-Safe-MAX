@@ -1,117 +1,72 @@
-.class public final Lvic;
-.super Lg07;
-.source "SourceFile"
+.class public abstract Lvic;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final X:Lvic;
+.field public static oneme_chatmedia_viewer_all_media_download_complete:I = 0x7f1307e5
 
+.field public static oneme_chatmedia_viewer_all_photo_download_complete:I = 0x7f1307e6
 
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
+.field public static oneme_chatmedia_viewer_all_video_download_complete:I = 0x7f1307e7
 
-.field public final transient o:I
+.field public static oneme_chatmedia_viewer_close_reason_content_delete_text:I = 0x7f1307e8
 
+.field public static oneme_chatmedia_viewer_close_reason_photo_delete_text:I = 0x7f1307e9
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.field public static oneme_chatmedia_viewer_close_reason_video_delete_text:I = 0x7f1307ea
 
-    new-instance v0, Lvic;
+.field public static oneme_chatmedia_viewer_content_level_subtitle:I = 0x7f1307eb
 
-    const/4 v1, 0x0
+.field public static oneme_chatmedia_viewer_content_level_title:I = 0x7f1307ec
 
-    new-array v2, v1, [Ljava/lang/Object;
+.field public static oneme_chatmedia_viewer_load_photo_fail:I = 0x7f1307ed
 
-    invoke-direct {v0, v1, v2}, Lvic;-><init>(I[Ljava/lang/Object;)V
+.field public static oneme_chatmedia_viewer_load_video_fail:I = 0x7f1307ee
 
-    sput-object v0, Lvic;->X:Lvic;
+.field public static oneme_chatmedia_viewer_media_download_error:I = 0x7f1307ef
 
-    return-void
-.end method
+.field public static oneme_chatmedia_viewer_photo_download_complete:I = 0x7f1307f0
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+.field public static oneme_chatmedia_viewer_photo_download_error:I = 0x7f1307f1
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+.field public static oneme_chatmedia_viewer_save_all_medias:I = 0x7f1307f2
 
-    iput-object p2, p0, Lvic;->c:[Ljava/lang/Object;
+.field public static oneme_chatmedia_viewer_save_all_photos:I = 0x7f1307f3
 
-    iput p1, p0, Lvic;->o:I
+.field public static oneme_chatmedia_viewer_save_all_videos:I = 0x7f1307f4
 
-    return-void
-.end method
+.field public static oneme_chatmedia_viewer_save_single_photo:I = 0x7f1307f5
 
+.field public static oneme_chatmedia_viewer_save_single_video:I = 0x7f1307f6
 
-# virtual methods
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 2
+.field public static oneme_chatmedia_viewer_seek_seconds:I = 0x7f1307f7
 
-    iget-object v0, p0, Lvic;->c:[Ljava/lang/Object;
+.field public static oneme_chatmedia_viewer_start_downloading_many_medias:I = 0x7f1307f8
 
-    const/4 v1, 0x0
+.field public static oneme_chatmedia_viewer_start_downloading_many_photo:I = 0x7f1307f9
 
-    iget p0, p0, Lvic;->o:I
+.field public static oneme_chatmedia_viewer_start_downloading_many_video:I = 0x7f1307fa
 
-    invoke-static {v0, v1, p2, p1, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+.field public static oneme_chatmedia_viewer_start_downloading_single_photo:I = 0x7f1307fb
 
-    add-int/2addr p1, p0
+.field public static oneme_chatmedia_viewer_start_downloading_single_video:I = 0x7f1307fc
 
-    return p1
-.end method
+.field public static oneme_chatmedia_viewer_toolbar_action_forward_photo:I = 0x7f1307fd
 
-.method public final c()[Ljava/lang/Object;
-    .locals 0
+.field public static oneme_chatmedia_viewer_toolbar_action_forward_video:I = 0x7f1307fe
 
-    iget-object p0, p0, Lvic;->c:[Ljava/lang/Object;
+.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f1307ff
 
-    return-object p0
-.end method
+.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f130800
 
-.method public final d()I
-    .locals 0
+.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f130801
 
-    iget p0, p0, Lvic;->o:I
+.field public static oneme_chatmedia_viewer_toolbar_countable_title:I = 0x7f130802
 
-    return p0
-.end method
+.field public static oneme_chatmedia_viewer_toolbar_photo_title:I = 0x7f130803
 
-.method public final e()I
-    .locals 0
+.field public static oneme_chatmedia_viewer_toolbar_video_title:I = 0x7f130804
 
-    const/4 p0, 0x0
+.field public static oneme_chatmedia_viewer_video_download_complete:I = 0x7f130805
 
-    return p0
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lvic;->o:I
-
-    invoke-static {p1, v0}, Lr7;->k(II)V
-
-    iget-object p0, p0, Lvic;->c:[Ljava/lang/Object;
-
-    aget-object p0, p0, p1
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget p0, p0, Lvic;->o:I
-
-    return p0
-.end method
+.field public static oneme_chatmedia_viewer_video_download_error:I = 0x7f130806

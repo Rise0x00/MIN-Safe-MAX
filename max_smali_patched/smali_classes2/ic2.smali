@@ -1,172 +1,144 @@
 .class public final Lic2;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/io/Serializable;
+.implements Ln43;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lwc2;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lwc2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 4
 
-    iput-object p1, p0, Lic2;->Y:Lwc2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lic2;->a:J
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lic2;->b:J
 
+    const-wide/16 v0, -0x1
+
+    cmp-long p1, p1, v0
+
+    const-string p2, ""
+
+    const-string v2, "Chunk"
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v3, "start time is -1"
+
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    cmp-long p1, p3, v0
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, "end time is -1"
+
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()J
+    .locals 2
 
-    check-cast p1, Lcy4;
+    iget-wide v0, p0, Lic2;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lic2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lic2;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lic2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-wide v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final c()J
+    .locals 2
 
-    new-instance v0, Lic2;
+    iget-wide v0, p0, Lic2;->b:J
 
-    iget-object p0, p0, Lic2;->Y:Lwc2;
+    return-wide v0
+.end method
 
-    invoke-direct {v0, p0, p2}, Lic2;-><init>(Lwc2;Lkotlin/coroutines/Continuation;)V
+.method public final d()Lhp0;
+    .locals 6
 
-    iput-object p1, v0, Lic2;->X:Ljava/lang/Object;
+    new-instance v0, Lhp0;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lhp0;-><init>(I)V
+
+    const-wide/16 v1, -0x1
+
+    iget-wide v3, p0, Lic2;->a:J
+
+    cmp-long v1, v3, v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "start time is -1"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "Chunk.Builder"
+
+    const-string v5, ""
+
+    invoke-static {v2, v5, v1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    iput-wide v3, v0, Lhp0;->b:J
+
+    iget-wide v1, p0, Lic2;->b:J
+
+    invoke-virtual {v0, v1, v2}, Lhp0;->b(J)V
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lic2;->X:Ljava/lang/Object;
+    const-string v1, "Chunk(startTime="
 
-    check-cast p1, Lcy4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lic2;->Y:Lwc2;
+    iget-wide v1, p0, Lic2;->a:J
 
-    sget-object v0, Lwc2;->E:[Lof7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    new-instance v1, Ldhb;
+    const-string v1, ", endTime="
 
-    iget-object v2, p1, Lcy4;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p1, Lcy4;->b:J
+    iget-wide v1, p0, Lic2;->b:J
 
-    iget-object v5, p1, Lcy4;->d:Ljava/lang/String;
+    const/16 v3, 0x29
 
-    iget-object v6, p1, Lcy4;->c:Ljava/lang/CharSequence;
+    invoke-static {v0, v1, v2, v3}, Lvpb;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    iget-object p1, p0, Lmy4;->i:Lq4e;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcy4;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget-object v7, p0, Lmy4;->j:Lq4e;
-
-    invoke-virtual {v7}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lpy4;
-
-    invoke-virtual {p1, v7}, Lcy4;->a(Lpy4;)Z
-
-    move-result p1
-
-    const/4 v7, 0x1
-
-    if-ne p1, v7, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v7, v0
-
-    :goto_0
-    iget-boolean v8, p0, Lwc2;->p:Z
-
-    const/4 v9, 0x1
-
-    invoke-direct/range {v1 .. v9}, Ldhb;-><init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
-
-    invoke-virtual {p0}, Lmy4;->f()Lfy4;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lfy4;->a(Lmy4;)Ljava/util/List;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lmy4;->b:Lq4e;
-
-    :cond_1
-    invoke-virtual {v0}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Ldhb;
-
-    invoke-virtual {v0, v2, v1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lmy4;->c:Lq4e;
-
-    :cond_2
-    invoke-virtual {v2}, Lq4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v0, p0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-virtual {v2, p0, p1}, Lq4e;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

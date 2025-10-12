@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract i()Ljava/lang/String;
+.method public abstract c(Landroid/text/style/ClickableSpan;IILjava/lang/String;Lpv7;Landroid/view/MotionEvent;)Z
 .end method

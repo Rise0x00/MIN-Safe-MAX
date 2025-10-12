@@ -1,85 +1,186 @@
 .class public final Lrz5;
-.super Leje;
+.super Lym4;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Lyz5;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Z
 
-.field public final synthetic Y:Lone/me/folders/list/FoldersListScreen;
+.field public final c:Z
+
+.field public o:Leze;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+.method public constructor <init>(Lcze;Z)V
     .locals 0
 
-    iput-object p2, p0, Lrz5;->Y:Lone/me/folders/list/FoldersListScreen;
+    invoke-direct {p0, p1}, Lym4;-><init>(Lcze;)V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lrz5;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()V
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-boolean v0, p0, Lrz5;->X:Z
 
-    invoke-virtual {p0, p1, p2}, Lrz5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Lrz5;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lrz5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lrz5;
-
-    iget-object p0, p0, Lrz5;->Y:Lone/me/folders/list/FoldersListScreen;
-
-    invoke-direct {v0, p2, p0}, Lrz5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
-
-    iput-object p1, v0, Lrz5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lrz5;->X:Ljava/lang/Object;
-
-    check-cast p0, Lep9;
-
-    instance-of p1, p0, Ly94;
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lby5;->c:Lby5;
-
-    check-cast p0, Ly94;
-
-    invoke-virtual {p1, p0}, Lt2;->r0(Ly94;)V
+    return-void
 
     :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    const/4 v0, 0x1
 
-    return-object p0
+    iput-boolean v0, p0, Lrz5;->X:Z
+
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lym4;->b:Ljava/lang/Object;
+
+    if-nez v0, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lrz5;->c:Z
+
+    iget-object v1, p0, Lym4;->a:Lcze;
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v1, v0}, Lcze;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_2
+    invoke-interface {v1}, Lcze;->b()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0, v0}, Lym4;->g(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lym4;->b:Ljava/lang/Object;
+
+    iget-object v0, p0, Lrz5;->o:Leze;
+
+    invoke-interface {v0}, Leze;->cancel()V
+
+    return-void
+.end method
+
+.method public final d(Leze;)V
+    .locals 2
+
+    iget-object v0, p0, Lrz5;->o:Leze;
+
+    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lrz5;->o:Leze;
+
+    iget-object v0, p0, Lym4;->a:Lcze;
+
+    invoke-interface {v0, p0}, Lcze;->d(Leze;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Leze;->i(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lrz5;->X:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lrz5;->X:Z
+
+    iget-object p1, p0, Lrz5;->o:Leze;
+
+    invoke-interface {p1}, Leze;->cancel()V
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Sequence contains more than one element!"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lym4;->a:Lcze;
+
+    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_1
+    iput-object p1, p0, Lym4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lrz5;->X:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lrz5;->X:Z
+
+    iget-object v0, p0, Lym4;->a:Lcze;
+
+    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

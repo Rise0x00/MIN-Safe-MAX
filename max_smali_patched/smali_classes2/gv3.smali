@@ -1,87 +1,47 @@
 .class public final Lgv3;
-.super Lhj0;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/util/List;
+.field public final synthetic X:Lhv3;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lhv3;Lnz3;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Lhj0;-><init>()V
+    iput-object p1, p0, Lgv3;->X:Lhv3;
 
-    .line 2
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgv3;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/util/Collection;)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0, p1, p2}, Lhj0;-><init>(J)V
-
-    .line 6
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object p1, p0, Lgv3;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/Collection;)V
-    .locals 1
-
-    .line 3
-    invoke-direct {p0}, Lhj0;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lgv3;->b:Ljava/util/List;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lgv3;->o:Ljava/lang/Object;
 
-    const-string v1, "ContactsUpdateEvent{idList="
+    iget p1, p0, Lgv3;->Y:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lgv3;->b:Ljava/util/List;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lgv3;->Y:I
 
-    const/16 p0, 0x7d
+    iget-object p1, p0, Lgv3;->X:Lhv3;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Lhv3;->t(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

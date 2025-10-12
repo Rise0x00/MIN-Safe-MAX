@@ -3,51 +3,55 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:[Lof7;
-
-
 # instance fields
-.field public final a:Lcq4;
+.field public final a:I
+
+.field public final b:Ljava/nio/ByteBuffer;
+
+.field public final c:Landroid/media/MediaCodec$BufferInfo;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lvqb;
-
-    const-class v1, Lju9;
-
-    const-string v2, "liveLocationManager"
-
-    const-string v3, "getLiveLocationManager()Lru/ok/tamtam/location/live/manager/LiveLocationManager;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Ldic;->a:Leic;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lof7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lju9;->b:[Lof7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcq4;)V
-    .locals 0
+.method public constructor <init>(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lju9;->a:Lcq4;
+    iput p1, p0, Lju9;->a:I
+
+    invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lju9;->b:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    new-instance v0, Landroid/media/MediaCodec$BufferInfo;
+
+    invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
+
+    iput-object v0, p0, Lju9;->c:Landroid/media/MediaCodec$BufferInfo;
+
+    iget v1, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
+
+    iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
+
+    iget-wide v3, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+
+    iget v5, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
+
+    invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
 
     return-void
 .end method

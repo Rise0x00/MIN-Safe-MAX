@@ -1,348 +1,143 @@
-.class public final synthetic Lnmf;
-.super Ljava/lang/Object;
+.class public final Lnmf;
+.super Lmo7;
 .source "SourceFile"
 
 # interfaces
-.implements Lu96;
-.implements Lgm3;
+.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lomf;
+.field public final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lomf;I)V
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
     iput p2, p0, Lnmf;->a:I
 
-    iput-object p1, p0, Lnmf;->b:Lomf;
+    iput-object p1, p0, Lnmf;->b:Landroid/content/Context;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lnmf;->a:I
 
-    iget-object p0, p0, Lnmf;->b:Lomf;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lemf;
+    new-instance v0, Lanf;
 
-    iget-object p0, p0, Lomf;->b:Lrmf;
+    iget-object v1, p0, Lnmf;->b:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lrmf;->a()Lpud;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v1
 
-    new-instance v0, Lmmf;
+    new-instance v2, Lymf;
 
-    const/4 v1, 0x2
+    invoke-direct {v2}, Lymf;-><init>()V
 
-    invoke-direct {v0, p1, v1}, Lmmf;-><init>(Lemf;I)V
+    new-instance v3, Lode;
 
-    new-instance v1, Lwb3;
+    const-string v4, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    const/4 v2, 0x3
+    invoke-direct {v3, v4}, Lode;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, p0, v2, v0}, Lwb3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iput-object v3, v2, Lymf;->b:Lode;
 
-    invoke-virtual {v1}, Lvb3;->l()Lt0a;
+    new-instance v3, Leab;
 
-    move-result-object p0
+    invoke-direct {v3, v2}, Leab;-><init>(Lymf;)V
 
-    sget-object v0, Lr7;->g:Lv1d;
+    const-string v2, "ru.ok.android.externcalls"
 
-    new-instance v1, Lmmf;
+    invoke-direct {v0, v1, v2, v3}, Lanf;-><init>(Landroid/content/Context;Ljava/lang/String;Leab;)V
 
-    const/4 v2, 0x0
+    const-string v1, "calls-sdk-version"
 
-    invoke-direct {v1, p1, v2}, Lmmf;-><init>(Lemf;I)V
+    const-string v2, "125.1.0.67"
 
-    new-instance v2, Lb5;
+    invoke-virtual {v0, v1, v2}, Lanf;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v3, 0x17
-
-    invoke-direct {v2, v3, p1}, Lb5;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0, v0, v1, v2}, Lkv0;->B(Lt0a;Lgm3;Lgm3;Lz5;)V
-
-    return-void
+    return-object v0
 
     :pswitch_0
-    check-cast p1, Lkp4;
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lomf;->h:Lq2g;
-
-    invoke-virtual {v0, p1}, Lq2g;->a(Lkp4;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lnmf;->a:I
-
-    iget-object p0, p0, Lnmf;->b:Lomf;
-
-    const/4 v1, 0x1
-
-    check-cast p1, Lemf;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lwtc;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, p0, v2, p1}, Lwtc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Ln3a;
-
-    invoke-direct {p1, v1, v0}, Ln3a;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lomf;->e:Lbyc;
-
-    iget-object v0, v0, Lbyc;->a:Lvxc;
-
-    invoke-virtual {p1, v0}, Lfud;->m(Lvxc;)Lyud;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lomf;->f:Lvxc;
-
-    invoke-virtual {p1, p0}, Lfud;->i(Lvxc;)Lyud;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-boolean v0, p1, Lemf;->b:Z
-
-    const-string v2, "omf"
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lemf;->d:Ljava/lang/String;
-
-    invoke-static {v0}, Lxxc;->h(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string p0, "convertVideo: exists result = %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-static {}, Lgh5;->r()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v2, p0, v0}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v1, p0, Lnmf;->b:Landroid/content/Context;
 
-    invoke-static {p1}, Lfud;->g(Ljava/lang/Object;)Ln3a;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v2
 
-    goto/16 :goto_1
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v0, "tracer"
+
+    goto :goto_0
 
     :cond_0
-    const-string v0, "convertVideo: start convert = %s"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    const-string v3, "tracer-"
 
-    move-result-object v3
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v0, v3}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/16 v3, 0x2d
 
-    iget-object v0, p1, Lemf;->c:Ljava/lang/String;
+    const/4 v4, 0x0
 
-    invoke-static {v0}, Lno9;->p(Ljava/lang/CharSequence;)Z
+    const/16 v5, 0x3a
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p1}, Lfud;->g(Ljava/lang/Object;)Ln3a;
+    invoke-static {v0, v5, v3, v4}, Lgye;->Z(Ljava/lang/String;CCZ)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lomf;->a:Lci8;
-
-    iget-object v2, p1, Lemf;->a:Lfmf;
-
-    iget-object v2, v2, Lfmf;->a:Ljava/lang/String;
-
-    check-cast v0, Luj0;
-
-    invoke-virtual {v0, v2}, Luj0;->c(Ljava/lang/String;)Lbw3;
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
-
-    const-string v2, "failed to prepare videoConversion files"
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lfud;->f(Ljava/lang/Throwable;)Ln3a;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v2, v0, Lbw3;->e:Ljava/lang/String;
-
-    iget-wide v3, v0, Lbw3;->b:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v3, v3, v5
-
-    if-nez v3, :cond_3
-
-    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
-
-    const-string v2, "content is zero length"
-
-    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lfud;->f(Ljava/lang/Throwable;)Ln3a;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {v2}, Lno9;->p(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    new-instance v2, Lk00;
-
-    const/16 v3, 0x1a
-
-    invoke-direct {v2, p0, p1, v0, v3}, Lk00;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance v0, Ln3a;
-
-    invoke-direct {v0, v1, v2}, Ln3a;-><init>(ILjava/lang/Object;)V
-
-    iget-object v2, p0, Lomf;->g:Layc;
-
-    iget-object v2, v2, Layc;->a:Lvxc;
-
-    invoke-virtual {v0, v2}, Lfud;->m(Lvxc;)Lyud;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lomf;->f:Lvxc;
-
-    invoke-virtual {v0, v2}, Lfud;->i(Lvxc;)Lyud;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lemf;->a()Lr76;
-
-    move-result-object v0
-
-    iput-object v2, v0, Lr76;->c:Ljava/lang/Object;
-
-    new-instance v2, Lemf;
-
-    invoke-direct {v2, v0}, Lemf;-><init>(Lr76;)V
-
-    invoke-static {v2}, Lfud;->g(Ljava/lang/Object;)Ln3a;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     :goto_0
-    new-instance v2, Lnmf;
+    new-instance v2, Ljava/io/File;
 
-    const/4 v3, 0x2
+    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    invoke-direct {v2, p0, v3}, Lnmf;-><init>(Lomf;I)V
+    move-result-object v1
 
-    new-instance v4, Lmud;
+    invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-direct {v4, v0, v2, v1}, Lmud;-><init>(Lfud;Lgm3;I)V
+    invoke-static {v2}, Lq9e;->r(Ljava/io/File;)V
 
-    new-instance v0, Lnmf;
+    const-string v0, "settings.data"
 
-    const/4 v2, 0x3
+    invoke-static {v2, v0}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
-    invoke-direct {v0, p0, v2}, Lnmf;-><init>(Lomf;I)V
+    move-result-object v0
 
-    new-instance v2, Lpud;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, v4, v0, v5}, Lpud;-><init>(Lfud;Lu96;I)V
-
-    new-instance v0, Lmmf;
-
-    invoke-direct {v0, p1, v1}, Lmmf;-><init>(Lemf;I)V
-
-    new-instance p1, Lmud;
-
-    invoke-direct {p1, v2, v0, v5}, Lmud;-><init>(Lfud;Lgm3;I)V
-
-    new-instance v0, Lnmf;
-
-    invoke-direct {v0, p0, v3}, Lnmf;-><init>(Lomf;I)V
-
-    new-instance p0, Lmud;
-
-    invoke-direct {p0, p1, v0, v1}, Lmud;-><init>(Lfud;Lgm3;I)V
-
-    :goto_1
-    return-object p0
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

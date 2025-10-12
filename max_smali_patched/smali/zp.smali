@@ -1,83 +1,106 @@
 .class public final Lzp;
-.super Leud;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyc4;
 
-# virtual methods
-.method public final F(Lvp;)V
-    .locals 3
 
-    iget-object v0, p1, Lvp;->a:Lrp;
+# static fields
+.field public static final a:Lzp;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+.field public static final b:Laq;
 
-    move-result v0
 
-    if-eqz v0, :cond_2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v1, 0x1
+    new-instance v0, Lzp;
 
-    if-eq v0, v1, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
+    sput-object v0, Lzp;->a:Lzp;
 
-    if-ne v0, v1, :cond_0
+    sget-object v0, Laq;->b:Laq;
 
-    sget v0, La6a;->b:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    sget v0, La6a;->e:I
-
-    goto :goto_0
-
-    :cond_2
-    sget v0, La6a;->l:I
-
-    :goto_0
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
-
-    move-object v1, p0
-
-    check-cast v1, Lxp;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lr7;->E(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lxp;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lvp;->b:Ljava/lang/Boolean;
-
-    check-cast p0, Lxp;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Lxp;->setSelected(Z)V
+    sput-object v0, Lzp;->b:Laq;
 
     return-void
 .end method
 
-.method public final bridge synthetic x(Llp7;)V
-    .locals 0
 
-    check-cast p1, Lvp;
+# virtual methods
+.method public final a()Lgd4;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lzp;->F(Lvp;)V
+    sget-object v0, Lzp;->b:Laq;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
+    .locals 9
+
+    sget-object v0, Lzp;->b:Laq;
+
+    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    sget-object v0, Laq;->c:Lbd4;
+
+    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v7, Lg;
+
+    const/4 v0, 0x1
+
+    invoke-direct {v7, v0}, Lg;-><init>(I)V
+
+    new-instance v1, Ljd4;
+
+    const/4 v6, 0x0
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Unknown route="
+
+    invoke-static {p2, v3}, Lqw1;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

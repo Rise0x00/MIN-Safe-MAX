@@ -1,24 +1,19 @@
-.class public abstract Lsg4;
-.super Ljava/lang/Object;
+.class public final Lsg4;
+.super Llee;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
-
-# static fields
-.field public static final a:Lyad;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final l(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
     .locals 1
 
-    new-instance v0, Lyad;
+    const/16 v0, 0x40
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    sput-object v0, Lsg4;->a:Lyad;
+    move-result-object p1
 
-    return-void
+    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+
+    return-object p1
 .end method

@@ -1,146 +1,2714 @@
 .class public final Lwl7;
-.super Leje;
+.super Ls1;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# static fields
+.field public static final b:Lgl7;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lyl7;
-
-.field public final synthetic Z:Lvl7;
+.field public final a:Lz4b;
 
 
 # direct methods
-.method public constructor <init>(Lyl7;Lvl7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lwl7;->Y:Lyl7;
+    new-instance v0, Lgl7;
 
-    iput-object p2, p0, Lwl7;->Z:Lvl7;
+    invoke-direct {v0}, Lgl7;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lwl7;->b:Lgl7;
 
     return-void
 .end method
 
+.method public constructor <init>(Lz4b;)V
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lp04;
+    iput-object p1, p0, Lwl7;->a:Lz4b;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    :try_start_0
+    invoke-virtual {p1}, Lql7;->i0()Lzl7;
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0, p1, p2}, Lwl7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static c(Ljava/io/BufferedInputStream;)Lwl7;
+    .locals 2
+
+    new-instance v0, Lwl7;
+
+    :try_start_0
+    sget-object v1, Lwl7;->b:Lgl7;
+
+    invoke-virtual {v1, p0}, Lgl7;->b(Ljava/io/BufferedInputStream;)Lz4b;
+
+    move-result-object p0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-direct {v0, p0}, Lwl7;-><init>(Lz4b;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static d(Ljava/lang/String;)Lwl7;
+    .locals 2
+
+    new-instance v0, Lwl7;
+
+    :try_start_0
+    sget-object v1, Lwl7;->b:Lgl7;
+
+    invoke-virtual {v1, p0}, Lgl7;->c(Ljava/lang/String;)Lqqc;
+
+    move-result-object p0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-direct {v0, p0}, Lwl7;-><init>(Lz4b;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public static i(Lz4b;)Ljava/lang/String;
+    .locals 8
+
+    new-instance v0, Ljava/io/CharArrayWriter;
+
+    invoke-direct {v0}, Ljava/io/CharArrayWriter;-><init>()V
+
+    sget-object v1, Lwl7;->b:Lgl7;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lgl7;->a(Ljava/lang/Object;Z)Lg27;
+
+    move-result-object v3
+
+    new-instance v4, Lgbh;
+
+    iget v5, v1, Lgl7;->X:I
+
+    iget-char v6, v1, Lgl7;->Z:C
+
+    invoke-direct {v4, v3, v5, v0, v6}, Lgbh;-><init>(Lg27;ILjava/io/CharArrayWriter;C)V
+
+    iget-object v1, v1, Lgl7;->Y:Lmsd;
+
+    sget-object v3, Lgl7;->z0:Lmsd;
+
+    if-eq v1, v3, :cond_0
+
+    iput-object v1, v4, Ljl7;->Z:Ljsd;
+
+    :cond_0
+    iget-object v1, p0, Lz4b;->b:Lzl7;
+
+    const/4 v3, -0x1
+
+    if-nez v1, :cond_1
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_1
+    iget v1, v1, Lzl7;->o:I
+
+    :goto_0
+    const/4 v5, 0x5
+
+    if-ne v1, v5, :cond_3
+
+    invoke-virtual {p0}, Lz4b;->K0()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Lgbh;->o(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lql7;->i0()Lzl7;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    move v1, v3
+
+    goto :goto_1
+
+    :cond_2
+    iget v1, v1, Lzl7;->o:I
+
+    :cond_3
+    :goto_1
+    const/4 v5, 0x1
+
+    if-eq v1, v5, :cond_d
+
+    const/4 v6, 0x3
+
+    if-eq v1, v6, :cond_c
+
+    iget-object v1, p0, Lz4b;->b:Lzl7;
+
+    if-nez v1, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iget v3, v1, Lzl7;->o:I
+
+    :goto_2
+    const-string v7, "write a null"
+
+    packed-switch v3, :pswitch_data_0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Internal error: unknown current token, "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_1
+    invoke-virtual {v4, v7}, Lgbh;->E0(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Lgbh;->F0()V
+
+    goto/16 :goto_4
+
+    :pswitch_2
+    invoke-virtual {v4, v7}, Lgbh;->E0(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Lgbh;->F0()V
+
+    goto/16 :goto_4
+
+    :pswitch_3
+    invoke-virtual {v4, v2}, Lgbh;->i(Z)V
+
+    goto/16 :goto_4
+
+    :pswitch_4
+    invoke-virtual {v4, v5}, Lgbh;->i(Z)V
+
+    goto/16 :goto_4
+
+    :pswitch_5
+    invoke-virtual {p0}, Lz4b;->P0()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    if-ne v1, v2, :cond_5
+
+    invoke-virtual {p0}, Lz4b;->L0()Ljava/math/BigDecimal;
 
     move-result-object p0
 
-    check-cast p0, Lwl7;
+    invoke-virtual {v4, p0}, Lgbh;->r0(Ljava/math/BigDecimal;)V
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    goto/16 :goto_4
 
-    invoke-virtual {p0, p1}, Lwl7;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_5
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_6
+
+    invoke-virtual {p0}, Lz4b;->M0()D
+
+    move-result-wide v1
+
+    double-to-float p0, v1
+
+    invoke-virtual {v4, p0}, Lgbh;->X(F)V
+
+    goto/16 :goto_4
+
+    :cond_6
+    invoke-virtual {p0}, Lz4b;->M0()D
+
+    move-result-wide v1
+
+    invoke-virtual {v4, v1, v2}, Lgbh;->W(D)V
+
+    goto/16 :goto_4
+
+    :pswitch_6
+    invoke-virtual {p0}, Lz4b;->P0()I
+
+    move-result v1
+
+    if-ne v1, v5, :cond_7
+
+    invoke-virtual {p0}, Lz4b;->N0()I
+
+    move-result p0
+
+    invoke-virtual {v4, p0}, Lgbh;->i0(I)V
+
+    goto/16 :goto_4
+
+    :cond_7
+    if-ne v1, v6, :cond_8
+
+    invoke-virtual {p0}, Lz4b;->J0()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    invoke-virtual {v4, p0}, Lgbh;->s0(Ljava/math/BigInteger;)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {p0}, Lz4b;->O0()J
+
+    move-result-wide v1
+
+    invoke-virtual {v4, v1, v2}, Lgbh;->q0(J)V
+
+    goto :goto_4
+
+    :pswitch_7
+    sget-object v3, Lzl7;->B0:Lzl7;
+
+    if-ne v1, v3, :cond_9
+
+    move v2, v5
+
+    goto :goto_3
+
+    :cond_9
+    sget-object v3, Lzl7;->A0:Lzl7;
+
+    if-ne v1, v3, :cond_a
+
+    iget-boolean v2, p0, Lz4b;->E0:Z
+
+    :cond_a
+    :goto_3
+    if-eqz v2, :cond_b
+
+    invoke-virtual {p0}, Lql7;->o()[C
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lql7;->X()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lql7;->W()I
+
+    move-result p0
+
+    invoke-virtual {v4, v1, v2, p0}, Lgbh;->w0([CII)V
+
+    goto :goto_4
+
+    :cond_b
+    invoke-virtual {p0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v4, p0}, Lgbh;->v0(Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :pswitch_8
+    invoke-virtual {p0}, Lz4b;->K0()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v4, p0}, Lgbh;->o(Ljava/lang/String;)V
+
+    goto :goto_4
+
+    :pswitch_9
+    invoke-virtual {v4}, Lgbh;->m()V
+
+    goto :goto_4
+
+    :pswitch_a
+    invoke-virtual {v4}, Lgbh;->t0()V
+
+    goto :goto_4
+
+    :pswitch_b
+    invoke-virtual {v4}, Lgbh;->n()V
+
+    goto :goto_4
+
+    :pswitch_c
+    invoke-virtual {v4}, Lgbh;->u0()V
+
+    goto :goto_4
+
+    :pswitch_d
+    const-string p0, "No current event to copy"
+
+    invoke-static {p0}, Lil7;->d(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_c
+    invoke-virtual {v4}, Lgbh;->t0()V
+
+    invoke-virtual {v4, p0}, Lil7;->c(Lz4b;)V
+
+    goto :goto_4
+
+    :cond_d
+    invoke-virtual {v4}, Lgbh;->u0()V
+
+    invoke-virtual {v4, p0}, Lil7;->c(Lz4b;)V
+
+    :goto_4
+    invoke-virtual {v4}, Lgbh;->close()V
+
+    invoke-virtual {v0}, Ljava/io/CharArrayWriter;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_d
+        :pswitch_0
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
 
-    new-instance p1, Lwl7;
+# virtual methods
+.method public final B()V
+    .locals 4
 
-    iget-object v0, p0, Lwl7;->Y:Lyl7;
+    iget-object v0, p0, Lwl7;->a:Lz4b;
 
-    iget-object p0, p0, Lwl7;->Z:Lvl7;
+    const-string v1, "Unknown JsonTokenId "
 
-    invoke-direct {p1, v0, p0, p2}, Lwl7;-><init>(Lyl7;Lvl7;Lkotlin/coroutines/Continuation;)V
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
 
-    return-object p1
-.end method
+    move-result v2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    packed-switch v2, :pswitch_data_0
 
-    iget v0, p0, Lwl7;->X:I
+    new-instance v2, Ljava/lang/AssertionError;
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :pswitch_2
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_3
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    iget-object v1, v0, Lz4b;->b:Lzl7;
+
+    sget-object v2, Lzl7;->w0:Lzl7;
+
+    if-eq v1, v2, :cond_0
+
+    sget-object v2, Lzl7;->y0:Lzl7;
+
+    if-eq v1, v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    if-nez v2, :cond_2
+
+    invoke-virtual {v0}, Lz4b;->t0()V
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v3, v2, Lzl7;->X:Z
+
+    if-eqz v3, :cond_3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v3, v2, Lzl7;->Y:Z
+
+    if-eqz v3, :cond_4
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-nez v1, :cond_1
+
+    :goto_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :cond_4
+    sget-object v3, Lzl7;->Z:Lzl7;
+
+    if-eq v2, v3, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Not enough content available for `skipChildren()`: non-blocking parser? ("
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    invoke-direct {v2, v0, v1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lql7;Ljava/lang/String;)V
+
+    throw v2
+
+    :pswitch_6
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_7
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_2
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final E()I
+    .locals 2
+
+    invoke-virtual {p0}, Lwl7;->y()J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    return v0
+.end method
+
+.method public final H()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    const-string v0, "null"
+
+    return-object v0
+
+    :pswitch_2
+    invoke-virtual {v0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_3
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    invoke-static {v0}, Lwl7;->i(Lz4b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_7
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_6
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final Y()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_2
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_3
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    invoke-static {v0}, Lwl7;->i(Lz4b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_6
+    const-string v0, ""
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+        :pswitch_3
+        :pswitch_2
+        :pswitch_5
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    invoke-virtual {v0}, Lz4b;->close()V
+
+    return-void
+.end method
+
+.method public final e0()Z
+    .locals 7
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    const-string v2, "Cannot parse boolean from string "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v3
+
+    const/16 v4, 0x62
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    packed-switch v3, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto/16 :goto_3
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return v6
+
+    :pswitch_2
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return v6
+
+    :pswitch_3
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return v5
+
+    :pswitch_4
+    invoke-virtual {v0}, Lz4b;->M0()D
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    const-wide/16 v3, 0x0
+
+    cmpl-double v0, v1, v3
+
+    if-eqz v0, :cond_3
+
+    goto :goto_2
+
+    :pswitch_5
+    invoke-virtual {v0}, Lz4b;->O0()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v0, v1, v3
+
+    if-eqz v0, :cond_3
+
+    goto :goto_2
+
+    :pswitch_6
+    invoke-virtual {v0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    const v4, 0x36758e
+
+    if-eq v3, v4, :cond_1
+
+    const v4, 0x5cb1923
+
+    if-eq v3, v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-string v3, "false"
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p0
+    if-eqz v0, :cond_2
+
+    move v0, v5
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const-string v3, "true"
 
-    iget-object p1, p0, Lwl7;->Y:Lyl7;
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lyl7;->a:Lkpd;
+    move-result v0
 
-    new-instance v2, Lql7;
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lwl7;->Z:Lvl7;
+    move v0, v6
 
-    iget-wide v3, v0, Lhj0;->a:J
-
-    iget-object v5, v0, Lvl7;->b:Ljava/lang/Long;
-
-    iget-wide v6, v0, Lvl7;->c:J
-
-    move-wide v7, v6
-
-    new-instance v6, Ljava/lang/Long;
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v7, v0, Lvl7;->o:Lct3;
-
-    iget-object v8, v0, Lvl7;->X:Lal6;
-
-    iget-object v9, v0, Lvl7;->Y:Lxlf;
-
-    iget-object v10, v0, Lvl7;->Z:Ljava/lang/Long;
-
-    iget-object v11, v0, Lvl7;->n0:Ljava/lang/String;
-
-    invoke-direct/range {v2 .. v11}, Lql7;-><init>(JLjava/lang/Long;Ljava/lang/Long;Lct3;Lal6;Lxlf;Ljava/lang/Long;Ljava/lang/String;)V
-
-    iput v1, p0, Lwl7;->X:I
-
-    invoke-virtual {p1, v2, p0}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    goto :goto_1
 
     :cond_2
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    const/4 v0, -0x1
 
-    return-object p0
+    :goto_1
+    if-eqz v0, :cond_5
+
+    if-ne v0, v5, :cond_4
+
+    :cond_3
+    return v6
+
+    :cond_4
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    :goto_2
+    return v5
+
+    :pswitch_7
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x5b
+
+    invoke-direct {v0, v4, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_a
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x7b
+
+    invoke-direct {v0, v4, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_c
+    invoke-static {v6}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_d
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_3
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final hasNext()Z
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    new-instance v1, Ljava/lang/AssertionError;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unknown JsonTokenId "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    const/4 v0, 0x1
+
+    return v0
+
+    :pswitch_2
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_3
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j0()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-virtual {v0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_3
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    invoke-static {v0}, Lwl7;->i(Lz4b;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_7
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_6
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final name()Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    const/16 v0, 0x6e
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_2
+    const/16 v0, 0x62
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_3
+    const/16 v0, 0x31
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x22
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    invoke-virtual {v0}, Lz4b;->K0()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-object v1
+
+    :pswitch_6
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_7
+    const/16 v0, 0x5b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    const/16 v0, 0x7b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->c(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final peek()I
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v1
+
+    packed-switch v1, :pswitch_data_0
+
+    new-instance v1, Ljava/lang/AssertionError;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Unknown JsonTokenId "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    const/16 v0, 0x6e
+
+    return v0
+
+    :pswitch_2
+    const/16 v0, 0x62
+
+    return v0
+
+    :pswitch_3
+    const/16 v0, 0x31
+
+    return v0
+
+    :pswitch_4
+    const/16 v0, 0x22
+
+    return v0
+
+    :pswitch_5
+    const/16 v0, 0x27
+
+    return v0
+
+    :pswitch_6
+    const/16 v0, 0x5d
+
+    return v0
+
+    :pswitch_7
+    const/16 v0, 0x5b
+
+    return v0
+
+    :pswitch_8
+    const/16 v0, 0x7d
+
+    return v0
+
+    :pswitch_9
+    const/16 v0, 0x7b
+
+    return v0
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final q()V
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    const/16 v0, 0x6e
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_2
+    const/16 v0, 0x62
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_3
+    const/16 v0, 0x31
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x22
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_7
+    const/16 v0, 0x5b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :pswitch_9
+    const/16 v0, 0x7b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->b(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s()V
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    const/16 v3, 0x7b
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x6e
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_2
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x62
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_3
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x31
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_4
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x22
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_7
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x5b
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_8
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final t()V
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    const/16 v0, 0x6e
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_2
+    const/16 v0, 0x62
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_3
+    const/16 v0, 0x31
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_4
+    const/16 v0, 0x22
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :pswitch_7
+    const/16 v0, 0x5b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    const/16 v0, 0x7b
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->a(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final u()V
+    .locals 4
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v2
+
+    const/16 v3, 0x5b
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x6e
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_2
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x62
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_3
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x31
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_4
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x22
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_5
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_6
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_7
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-void
+
+    :pswitch_8
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x7b
+
+    invoke-direct {v0, v3, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_a
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final y()J
+    .locals 7
+
+    iget-object v0, p0, Lwl7;->a:Lz4b;
+
+    const-string v1, "Unknown JsonTokenId "
+
+    const-string v2, "Cannot parse long from string "
+
+    :try_start_0
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v3
+
+    const/16 v4, 0x31
+
+    const-wide/16 v5, 0x0
+
+    packed-switch v3, :pswitch_data_0
+
+    new-instance v2, Ljava/lang/AssertionError;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lz4b;->I0()I
+
+    move-result v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v2
+
+    :catch_0
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Embedded objects not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-wide v5
+
+    :pswitch_2
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-wide v5
+
+    :pswitch_3
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    const-wide/16 v0, 0x1
+
+    return-wide v0
+
+    :pswitch_4
+    invoke-virtual {v0}, Lz4b;->M0()D
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    double-to-long v0, v1
+
+    return-wide v0
+
+    :pswitch_5
+    invoke-virtual {v0}, Lz4b;->P0()I
+
+    move-result v1
+
+    invoke-static {v1}, Lqw1;->u(I)I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0}, Lz4b;->Q0()Ljava/lang/Number;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lz4b;->O0()J
+
+    move-result-wide v1
+
+    :goto_0
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+
+    return-wide v1
+
+    :pswitch_6
+    invoke-virtual {v0}, Lql7;->n()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lql7;->i0()Lzl7;
+    :try_end_0
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lsjb;->n(Ljava/lang/String;)J
+
+    move-result-wide v0
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-wide v0
+
+    :catch_1
+    :try_start_2
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_7
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_8
+    const/16 v0, 0x5d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_9
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x5b
+
+    invoke-direct {v0, v4, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_a
+    const/16 v0, 0x7d
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_b
+    new-instance v0, Lru/ok/android/api/json/JsonTypeMismatchException;
+
+    const/16 v1, 0x7b
+
+    invoke-direct {v0, v4, v1}, Lru/ok/android/api/json/JsonTypeMismatchException;-><init>(II)V
+
+    throw v0
+
+    :pswitch_c
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
+
+    move-result-object v0
+
+    throw v0
+
+    :pswitch_d
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Non-blocking parsing not supported"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_2
+    .catch Lcom/fasterxml/jackson/core/JsonParseException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_1
+    new-instance v1, Lru/ok/android/api/json/JsonSyntaxException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch -0x1
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

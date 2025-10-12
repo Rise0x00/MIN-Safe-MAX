@@ -1,42 +1,55 @@
 .class public final Ltv8;
-.super Llo5;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lss2;
 
 
 # instance fields
-.field public final synthetic Z:Landroid/graphics/drawable/Drawable;
+.field public final a:Ln50;
+
+.field public b:J
+
+.field public final c:Lst2;
+
+.field public final d:Lst2;
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+.method public constructor <init>()V
     .locals 2
 
-    iput-object p1, p0, Ltv8;->Z:Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ln50;
 
-    const/4 v1, 0x6
+    invoke-direct {v0}, Ln50;-><init>()V
 
-    invoke-direct {p0, p1, v0, v1}, Llo5;-><init>(Landroid/graphics/drawable/Drawable;Lfo5;I)V
+    iput-object v0, p0, Ltv8;->a:Ln50;
 
-    return-void
-.end method
+    new-instance v0, Lst2;
 
+    const/4 v1, 0x3
 
-# virtual methods
-.method public final a(Lzs0;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lst2;-><init>(I)V
 
-    iget-object p1, p1, Lzs0;->b:Lat0;
+    iput-object v0, p0, Ltv8;->c:Lst2;
 
-    iget p1, p1, Lat0;->i:I
+    new-instance v0, Lst2;
 
-    iget-object p0, p0, Ltv8;->Z:Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v1}, Lst2;-><init>(I)V
 
-    invoke-static {p0, p1}, Lz8c;->M(Landroid/graphics/drawable/Drawable;I)V
+    iput-object v0, p0, Ltv8;->d:Lst2;
 
     return-void
 .end method

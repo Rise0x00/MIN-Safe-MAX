@@ -2,1642 +2,299 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljp4;
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+
 
 # instance fields
-.field public final a:Ll7c;
+.field public final a:Lr63;
 
-.field public final b:Li7c;
+.field public final b:Lbp7;
 
-.field public final c:Landroid/os/Handler;
+.field public final c:J
 
-.field public final d:Landroid/os/Handler;
+.field public final d:J
 
-.field public final e:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final e:Lmoe;
 
-.field public final f:Ljava/lang/Object;
-
-.field public final g:Ll1g;
-
-.field public final h:Ljava/util/ArrayList;
-
-.field public final i:Landroid/util/LongSparseArray;
-
-.field public final j:Ljava/util/ArrayList;
-
-.field public final k:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final l:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:Laz3;
-
-.field public p:Z
-
-.field public q:Z
-
-.field public r:Z
-
-.field public volatile s:J
-
-.field public volatile t:J
-
-.field public final u:Z
-
-.field public final v:Z
+.field public final f:Lsqc;
 
 
 # direct methods
-.method public constructor <init>(Ll1g;Lbz3;Li7c;Ll7c;ZZ)V
-    .locals 3
+.method public constructor <init>(Lbp7;Lr63;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/os/Handler;
+    iput-object p2, p0, Lpsd;->a:Lr63;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput-object p1, p0, Lpsd;->b:Lbp7;
 
-    move-result-object v1
+    sget-object p1, Lap4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    iput-object v0, p0, Lpsd;->c:Landroid/os/Handler;
+    move-result-wide v0
 
-    new-instance v0, Landroid/os/Handler;
+    iput-wide v0, p0, Lpsd;->c:J
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    move-result-object v1
+    move-result-wide v0
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-wide v0, p0, Lpsd;->d:J
 
-    iput-object v0, p0, Lpsd;->d:Landroid/os/Handler;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    const-wide/16 v1, 0x1
-
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
-
-    iput-object v0, p0, Lpsd;->e:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lpsd;->f:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lpsd;->h:Ljava/util/ArrayList;
-
-    new-instance v0, Landroid/util/LongSparseArray;
-
-    invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
-
-    iput-object v0, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lpsd;->j:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lpsd;->k:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lpsd;->l:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lpsd;->p:Z
-
-    iput-object p1, p0, Lpsd;->g:Ll1g;
-
-    iput-object p2, p0, Lpsd;->o:Laz3;
-
-    iput-object p3, p0, Lpsd;->b:Li7c;
-
-    iput-object p4, p0, Lpsd;->a:Ll7c;
-
-    const/4 p2, 0x5
-
-    iput p2, p0, Lpsd;->n:I
-
-    const/16 p2, 0x7530
-
-    iput p2, p0, Lpsd;->m:I
-
-    iput-boolean p5, p0, Lpsd;->u:Z
-
-    iput-boolean p6, p0, Lpsd;->v:Z
-
-    new-instance p2, Lf02;
-
-    const/4 p3, 0x4
-
-    invoke-direct {p2, p3, p0}, Lf02;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p1, Ll1g;->m:Lf02;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lssd;J)Ly44;
-    .locals 2
-
-    :try_start_0
-    new-instance v0, Ly44;
-
-    invoke-interface {p1}, Lssd;->a()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lpsd;->e()Ljava/util/List;
 
     move-result-object p1
 
-    const-string v1, "sequence"
-
-    invoke-virtual {p1, v1, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    iput-object p1, p0, Lpsd;->e:Lmoe;
 
-    move-result-object p1
+    new-instance v0, Lsqc;
 
-    invoke-direct {v0, p1, p2, p3}, Ly44;-><init>(Ljava/lang/String;J)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, p1}, Lsqc;-><init>(Lzt9;)V
 
-    return-object v0
+    iput-object v0, p0, Lpsd;->f:Lsqc;
 
-    :catch_0
-    move-exception p1
+    instance-of p1, p2, Lh3;
 
-    const-string p2, "OKSignaling"
+    if-eqz p1, :cond_0
 
-    const-string p3, "signaling.create.command"
-
-    iget-object p0, p0, Lpsd;->b:Li7c;
-
-    invoke-interface {p0, p2, p3, p1}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final b(J)Lpd5;
-    .locals 2
-
-    iget-object v0, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->indexOfKey(J)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    iget-object p2, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {p2, p1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lpd5;
-
-    iget-object p0, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {p0, p1}, Landroid/util/LongSparseArray;->removeAt(I)V
+    check-cast p2, Lh3;
 
     goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
 
     :cond_0
     const/4 p2, 0x0
 
     :goto_0
-    monitor-exit v0
+    if-eqz p2, :cond_1
 
-    return-object p2
+    iget-object p1, p2, Lh3;->g:Lep7;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final c(Lssd;Losd;Losd;)V
-    .locals 10
-
-    const-string v0, "<!> postpone send "
-
-    iget-object v1, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, p0, Lpsd;->b:Li7c;
-
-    const-string v3, "OKSignaling"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2, v3, v0}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Lpsd;->v:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1, p2, p3}, Lpsd;->e(Lssd;Losd;Losd;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lpsd;->e:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, p1, v2, v3}, Lpsd;->a(Lssd;J)Ly44;
-
-    move-result-object v7
-
-    if-nez v7, :cond_1
-
-    monitor-exit v1
-
-    return-void
+    invoke-virtual {p1, p0}, Lep7;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     :cond_1
-    iget-object v0, p0, Lpsd;->h:Ljava/util/ArrayList;
-
-    new-instance v4, Lpd5;
-
-    move-object v5, p0
-
-    move-object v6, p1
-
-    move-object v8, p2
-
-    move-object v9, p3
-
-    invoke-direct/range {v4 .. v9}, Lpd5;-><init>(Lpsd;Lssd;Ly44;Losd;Losd;)V
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    monitor-exit v1
-
     return-void
-
-    :goto_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
-.method public final d(Lssd;ZLosd;Losd;)V
-    .locals 10
 
-    iget-object v1, p0, Lpsd;->f:Ljava/lang/Object;
+# virtual methods
+.method public final a()V
+    .locals 2
 
-    monitor-enter v1
+    iget-object v0, p0, Lpsd;->a:Lr63;
 
-    :try_start_0
-    iget-boolean v0, p0, Lpsd;->u:Z
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-nez v0, :cond_0
-
-    iget-boolean v4, p0, Lpsd;->q:Z
-
-    if-eqz v4, :cond_0
-
-    move v4, v3
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_3
-
-    :cond_0
-    move v4, v2
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lpsd;->r:Z
-
-    if-eqz v0, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    if-nez v4, :cond_3
-
-    if-nez v2, :cond_3
-
-    if-eqz p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0, p1, p3, p4}, Lpsd;->c(Lssd;Losd;Losd;)V
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    iget-object p2, p0, Lpsd;->e:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, p1, v2, v3}, Lpsd;->a(Lssd;J)Ly44;
-
-    move-result-object v7
-
-    if-nez v7, :cond_4
-
-    monitor-exit v1
-
-    return-void
-
-    :cond_4
-    new-instance v4, Lpd5;
-
-    move-object v5, p0
-
-    move-object v6, p1
-
-    move-object v8, p3
-
-    move-object v9, p4
-
-    invoke-direct/range {v4 .. v9}, Lpd5;-><init>(Lpsd;Lssd;Ly44;Losd;Losd;)V
-
-    iget-object p0, v5, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    iget-wide p1, v7, Ly44;->b:J
-
-    invoke-virtual {p0, p1, p2, v4}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
-
-    iget-object p0, v5, Lpsd;->g:Ll1g;
-
-    iget-object p1, v7, Ly44;->a:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ll1g;->f(Ljava/lang/String;)V
-
-    :goto_2
-    monitor-exit v1
-
-    return-void
-
-    :goto_3
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final e(Lssd;Losd;Losd;)Z
-    .locals 11
-
-    instance-of v0, p1, Lusd;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lku8;
-
-    check-cast p1, Lusd;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v2}, Lku8;-><init>(Lssd;I)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Ltsd;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lku8;
-
-    check-cast p1, Ltsd;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v2}, Lku8;-><init>(Lssd;I)V
-
-    goto :goto_0
-
-    :cond_1
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    goto/16 :goto_4
-
-    :cond_2
-    iget-object p1, p0, Lpsd;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    :cond_3
-    if-lez v2, :cond_9
-
-    if-lez v2, :cond_8
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lpd5;
-
-    iget-object v3, v3, Lpd5;->a:Lssd;
-
-    invoke-virtual {v0, v3}, Lcr0;->y(Lssd;)Lysd;
-
-    move-result-object v3
-
-    sget-object v4, Lvsd;->a:Lvsd;
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    instance-of v0, v3, Lxsd;
-
-    const/4 v4, 0x1
-
-    if-eqz v0, :cond_6
-
-    check-cast v3, Lxsd;
-
-    iget-object v7, v3, Lxsd;->a:Lssd;
-
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v3, v0
-
-    check-cast v3, Lpd5;
-
-    iget-wide v5, v3, Lpd5;->b:J
-
-    invoke-virtual {p0, v7, v5, v6}, Lpsd;->a(Lssd;J)Ly44;
-
-    move-result-object v8
-
-    if-nez v8, :cond_4
-
-    move-object v6, p0
-
-    goto :goto_1
-
-    :cond_4
-    new-instance v5, Lpd5;
-
-    move-object v6, p0
-
-    move-object v9, p2
-
-    move-object v10, p3
-
-    invoke-direct/range {v5 .. v10}, Lpd5;-><init>(Lpsd;Lssd;Ly44;Losd;Losd;)V
-
-    move-object v1, v5
-
-    :goto_1
-    if-eqz v1, :cond_9
-
-    :try_start_0
-    iget-object p0, v3, Lpd5;->e:Losd;
-
-    if-nez p0, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iget-object p0, v3, Lpd5;->f:Lpsd;
-
-    iget-object p0, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance p2, Lsd4;
-
-    const/16 p3, 0x17
-
-    invoke-direct {p2, p3, v3}, Lsd4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    iget-object p2, v3, Lpd5;->a:Lssd;
-
-    :try_start_1
-    invoke-interface {p2}, Lssd;->a()Lorg/json/JSONObject;
-
-    move-result-object p2
-
-    const-string p3, "command"
-
-    invoke-virtual {p2, p3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    const-string p2, ""
-
-    :goto_2
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    const-string v0, "Error on discard command "
-
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "SignalingCommandQueueIterator"
-
-    iget-object v0, v6, Lpsd;->b:Li7c;
-
-    invoke-interface {v0, p3, p2, p0}, Li7c;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_3
-    invoke-virtual {p1, v2, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return v4
-
-    :cond_6
-    sget-object p0, Lwsd;->a:Lwsd;
-
-    invoke-virtual {v3, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    return v4
-
-    :cond_7
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_8
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string p1, "No more elements in the list"
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_9
-    :goto_4
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final f(Lorg/json/JSONObject;)V
-    .locals 10
-
-    const-string v0, "type"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "stamp"
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {p1, v1, v2, v3}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
-
-    move-result-wide v4
-
-    cmp-long v1, v4, v2
+    instance-of v1, v0, Lh3;
 
     if-eqz v1, :cond_0
 
-    iget-wide v6, p0, Lpsd;->s:J
+    check-cast v0, Lh3;
 
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v4
-
-    iput-wide v4, p0, Lpsd;->s:J
+    goto :goto_0
 
     :cond_0
-    const-string v1, "response"
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    if-eqz v0, :cond_1
 
-    move-result v1
+    iget-object v0, v0, Lh3;->g:Lep7;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0, p0}, Lep7;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    const/4 v5, 0x0
+    :cond_1
+    return-void
+.end method
 
-    if-eqz v1, :cond_6
+.method public final c()Lfoe;
+    .locals 1
 
-    const-string v0, "response"
+    iget-object v0, p0, Lpsd;->f:Lsqc;
 
-    invoke-virtual {p1, v0, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final d(Lub4;)V
+    .locals 6
 
-    const-string v1, "sequence"
+    iget-wide v0, p1, Lub4;->a:J
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+    iget-wide v2, p0, Lpsd;->c:J
 
-    move-result-wide v1
+    invoke-static {v0, v1, v2, v3}, Lap4;->a(JJ)Z
 
-    const-string v3, "recover"
+    move-result p1
 
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
-    move-result v0
+    iget-object v3, p0, Lpsd;->b:Lbp7;
 
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_0
 
-    iget-boolean v0, p0, Lpsd;->u:Z
-
-    if-nez v0, :cond_4
-
-    const-string v0, "messages"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
+    check-cast p1, Ldd4;
+
+    sget-object v0, Lcp4;->b:Lcp4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lcp4;->h:Lbd4;
+
+    iget-object v0, v0, Lbd4;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Lkd4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    :cond_0
+    iget-wide v4, p0, Lpsd;->d:J
+
+    invoke-static {v0, v1, v4, v5}, Lap4;->a(JJ)Z
+
+    move-result p1
+
     if-eqz p1, :cond_1
 
-    move v0, v4
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :goto_0
-    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
+    move-result-object p1
 
-    move-result v3
+    check-cast p1, Ldd4;
 
-    if-ge v0, v3, :cond_1
+    sget-object v0, Lcp4;->b:Lcp4;
 
-    invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    sget-object v0, Lcp4;->i:Lbd4;
 
-    invoke-virtual {p0, v3}, Lpsd;->f(Lorg/json/JSONObject;)V
+    iget-object v0, v0, Lbd4;->a:Landroid/net/Uri;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-static {v0}, Lkd4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lub4;
+
+    iget-object v2, v0, Lpsd;->a:Lr63;
+
+    move-object v9, v2
+
+    check-cast v9, Lt63;
+
+    invoke-virtual {v9}, Lt63;->y()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v10, ""
+
+    if-nez v2, :cond_0
+
+    move-object v2, v10
+
+    :cond_0
+    new-instance v4, Lnef;
+
+    invoke-direct {v4, v2}, Lnef;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v6, Lnef;
+
+    const-string v2, "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+
+    invoke-direct {v6, v2}, Lnef;-><init>(Ljava/lang/CharSequence;)V
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    iget-wide v2, v0, Lpsd;->c:J
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
+
+    new-instance v11, Lub4;
+
+    invoke-virtual {v9}, Lt63;->z()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :goto_1
-    :try_start_0
-    iget-object p1, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {p1}, Landroid/util/LongSparseArray;->size()I
-
-    move-result p1
-
-    if-ge v4, p1, :cond_3
-
-    iget-object p1, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {p1, v4}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpd5;
-
-    iget-object p1, p1, Lpd5;->c:Ly44;
-
-    iget-wide v5, p1, Ly44;->b:J
-
-    cmp-long v3, v5, v1
-
-    if-lez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v3, p0, Lpsd;->g:Ll1g;
-
-    iget-object p1, p1, Ly44;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, p1}, Ll1g;->f(Ljava/lang/String;)V
-
-    :goto_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_3
-    monitor-exit v0
-
-    return-void
-
-    :goto_3
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_4
-    invoke-virtual {p0, v1, v2}, Lpsd;->b(J)Lpd5;
-
-    move-result-object v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    iget-object v5, v0, Lpd5;->d:Losd;
-
-    :goto_4
-    if-eqz v5, :cond_18
-
-    iget-object v0, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v1, Lnsd;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v5, p1, v2}, Lnsd;-><init>(Lpsd;Losd;Lorg/json/JSONObject;I)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_6
-    const-string v1, "notification"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const-wide/16 v6, 0x2
-
-    if-eqz v1, :cond_f
-
-    const-string v0, "notification"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "connection"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    const-string v0, "recoverMessages"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    iget-boolean v1, p0, Lpsd;->u:Z
-
-    if-eqz v1, :cond_7
-
-    move v1, v4
-
-    :goto_5
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
-
-    move-result v5
-
-    if-ge v1, v5, :cond_7
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v5}, Lpsd;->f(Lorg/json/JSONObject;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_5
-
-    :cond_7
-    const-string v0, "conversation"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v1, "id"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lpsd;->b:Li7c;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v8, "cur cid="
-
-    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v8, p0, Lpsd;->o:Laz3;
-
-    check-cast v8, Lbz3;
-
-    iget-object v8, v8, Lbz3;->a:Ljava/lang/String;
-
-    const-string v9, ", new cid="
-
-    invoke-static {v5, v8, v9, v0}, Llge;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v8, "OKSignaling"
-
-    invoke-interface {v1, v8, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpsd;->o:Laz3;
-
-    instance-of v5, v1, Lbz3;
-
-    if-eqz v5, :cond_8
-
-    check-cast v1, Lbz3;
-
-    iput-object v0, v1, Lbz3;->a:Ljava/lang/String;
-
-    :cond_8
-    const-string v0, "conversationParams"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    if-nez v0, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    const-string v1, "activityTimeout"
-
-    const-wide/16 v8, -0x1
-
-    invoke-virtual {v0, v1, v8, v9}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    cmp-long v5, v0, v2
-
-    if-lez v5, :cond_b
-
-    iget-object v5, p0, Lpsd;->g:Ll1g;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    div-long v6, v0, v6
-
-    const-wide/32 v8, 0xea60
-
-    sub-long v8, v0, v8
-
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v6
-
-    const-wide/16 v8, 0x7530
-
-    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v6
-
-    iput-wide v6, v5, Ll1g;->i:J
-
-    iget-wide v6, v5, Ll1g;->r:J
-
-    cmp-long v2, v6, v2
-
-    if-lez v2, :cond_a
-
-    const-wide/16 v2, 0x4
-
-    div-long/2addr v0, v2
-
-    const-wide/32 v2, 0xee48
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x2af8
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
-
-    iput-wide v0, v5, Ll1g;->r:J
-
-    :cond_a
-    iget-object v0, v5, Ll1g;->q:Lybc;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "updateTimeoutMS timeoutMS="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, v5, Ll1g;->i:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " serverPingTimeoutMs="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v2, v5, Ll1g;->r:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lybc;->l(Ljava/lang/String;)V
-
-    :cond_b
-    :goto_6
-    iget-object v0, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_1
-    iput-boolean v1, p0, Lpsd;->r:Z
-
-    iget-boolean v2, p0, Lpsd;->q:Z
-
-    if-eqz v2, :cond_c
-
-    iget-boolean v2, p0, Lpsd;->u:Z
-
-    if-nez v2, :cond_c
-
-    iget-wide v1, p0, Lpsd;->t:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v4, "stamp"
-
-    invoke-virtual {v3, v4, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    const-string v1, "recover"
-
-    invoke-static {v3, v1}, Lds0;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lee6;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lpsd;->e:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide v2
-
-    invoke-virtual {p0, v1, v2, v3}, Lpsd;->a(Lssd;J)Ly44;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_d
-
-    iget-object v2, p0, Lpsd;->g:Ll1g;
-
-    iget-object v1, v1, Ly44;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v1}, Ll1g;->f(Ljava/lang/String;)V
-    :try_end_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_8
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_9
-
-    :catch_0
-    move-exception v1
-
-    :try_start_3
-    iget-object v2, p0, Lpsd;->b:Li7c;
-
-    const-string v3, "OKSignaling"
-
-    const-string v4, "signaling.recover"
-
-    invoke-interface {v2, v3, v4, v1}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_8
-
-    :cond_c
-    iput-boolean v1, p0, Lpsd;->q:Z
-
-    :goto_7
-    iget-object v1, p0, Lpsd;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_d
-
-    iget-object v1, p0, Lpsd;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpd5;
-
-    iget-object v2, v1, Lpd5;->c:Ly44;
-
-    iget-object v3, p0, Lpsd;->b:Li7c;
-
-    const-string v5, "OKSignaling"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "send postponed "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v3, v5, v2}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v1, Lpd5;->c:Ly44;
-
-    iget-object v3, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    iget-wide v5, v2, Ly44;->b:J
-
-    invoke-virtual {v3, v5, v6, v1}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
-
-    iget-object v1, p0, Lpsd;->g:Ll1g;
-
-    iget-object v2, v2, Ly44;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ll1g;->f(Ljava/lang/String;)V
-
-    goto :goto_7
-
-    :cond_d
-    :goto_8
-    monitor-exit v0
-
-    goto :goto_a
-
-    :goto_9
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p0
-
-    :cond_e
-    :goto_a
-    iget-object v0, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v1, Lhsc;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, p0, v2, p1}, Lhsc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_f
-    const-string v1, "error"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    const-string v0, "sequence"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_17
-
-    const-string v0, "sequence"
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, v0, v1}, Lpsd;->b(J)Lpd5;
-
-    move-result-object v2
-
-    if-nez v2, :cond_10
-
-    move-object v2, v5
-
-    goto :goto_b
-
-    :cond_10
-    iget-object v2, v2, Lpd5;->e:Losd;
-
-    :goto_b
-    if-eqz v2, :cond_11
-
-    iget-object v3, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v8, Lnsd;
-
-    const/4 v9, 0x1
-
-    invoke-direct {v8, p0, v2, p1, v9}, Lnsd;-><init>(Lpsd;Losd;Lorg/json/JSONObject;I)V
-
-    invoke-virtual {v3, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_11
-    const-string v2, "error"
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "service-unavailable"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_16
-
-    iget-object v2, p0, Lpsd;->a:Ll7c;
-
-    sget-object v3, Le4e;->q0:Le4e;
-
-    const-string v8, "rtc.cmd.service.unavailable"
-
-    invoke-virtual {v2, v3, v8, v5}, Ll7c;->log(Le4e;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "recoverable"
-
-    invoke-virtual {p1, v2, v4}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_12
-
-    const-string v0, "signaling.listener.response.error.seq"
-
-    iget-object v1, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v2, Ljpc;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, p0, p1, v0, v3}, Ljpc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_12
-    const-string p1, "<!> retrying "
-
-    const-string v2, "<!> quit retrying "
-
-    iget-object v3, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_4
-    iget-object v4, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {v4, v0, v1}, Landroid/util/LongSparseArray;->indexOfKey(J)I
-
-    move-result v0
-
-    if-ltz v0, :cond_13
-
-    iget-object v1, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {v1, v0}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v5, v1
-
-    check-cast v5, Lpd5;
-
-    goto :goto_c
-
-    :catchall_2
-    move-exception p0
-
-    goto/16 :goto_d
-
-    :cond_13
-    :goto_c
-    if-eqz v5, :cond_15
-
-    iget-object v1, v5, Lpd5;->c:Ly44;
-
-    iget-wide v4, v1, Ly44;->d:J
-
-    const-wide/16 v8, 0x1
-
-    add-long/2addr v4, v8
-
-    iput-wide v4, v1, Ly44;->d:J
-
-    iget v8, p0, Lpsd;->n:I
-
-    int-to-long v8, v8
-
-    cmp-long v4, v4, v8
-
-    if-ltz v4, :cond_14
-
-    iget-object p1, p0, Lpsd;->b:Li7c;
-
-    const-string v4, "OKSignaling"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lpsd;->o:Laz3;
-
-    check-cast v2, Lbz3;
-
-    iget-object v2, v2, Lbz3;->a:Ljava/lang/String;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " "
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v4, v1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lpsd;->b:Li7c;
-
-    const-string v1, "OKSignaling"
-
-    const-string v2, "signaling.retry"
-
-    new-instance v4, Ljava/lang/RuntimeException;
-
-    const-string v5, "retry.fail"
-
-    invoke-direct {v4, v5}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1, v1, v2, v4}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lpsd;->i:Landroid/util/LongSparseArray;
-
-    invoke-virtual {p0, v0}, Landroid/util/LongSparseArray;->removeAt(I)V
-
-    monitor-exit v3
-
-    return-void
-
-    :cond_14
-    new-instance v0, Lab6;
-
-    const/16 v2, 0x8
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, p0, v1, v4, v2}, Lab6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object v2, p0, Lpsd;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v2, p0, Lpsd;->b:Li7c;
-
-    const-string v4, "OKSignaling"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v2, v4, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lpsd;->d:Landroid/os/Handler;
-
-    iget-wide v4, v1, Ly44;->c:J
-
-    invoke-virtual {p1, v0, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iget-wide v4, v1, Ly44;->c:J
-
-    mul-long/2addr v4, v6
-
-    iput-wide v4, v1, Ly44;->c:J
-
-    iget p0, p0, Lpsd;->m:I
-
-    int-to-long p0, p0
-
-    invoke-static {v4, v5, p0, p1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p0
-
-    iput-wide p0, v1, Ly44;->c:J
-
-    :cond_15
-    monitor-exit v3
-
-    return-void
-
-    :goto_d
-    monitor-exit v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw p0
-
-    :cond_16
-    iget-object v0, p0, Lpsd;->a:Ll7c;
-
-    sget-object v1, Le4e;->q0:Le4e;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.cmd.error."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2, v5}, Ll7c;->log(Le4e;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "signaling.listener.response.error.seq"
-
-    iget-object v1, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v2, Ljpc;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, p0, p1, v0, v3}, Ljpc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_17
-    const-string v0, "listener.response.error"
-
-    iget-object v1, p0, Lpsd;->c:Landroid/os/Handler;
-
-    new-instance v2, Ljpc;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, p0, p1, v0, v3}, Ljpc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_18
-    return-void
-.end method
-
-.method public final g()V
-    .locals 4
-
-    iget-object v0, p0, Lpsd;->g:Ll1g;
-
-    invoke-virtual {v0}, Ll1g;->b()V
-
-    iget-object v0, p0, Lpsd;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lpsd;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
+    move-object v10, v2
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v14, Lnef;
 
-    move-result v2
+    invoke-direct {v14, v10}, Lnef;-><init>(Ljava/lang/CharSequence;)V
 
-    if-eqz v2, :cond_0
+    new-instance v2, Lnef;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v3, "\u041f\u043e\u0440\u0442 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
 
-    move-result-object v2
+    invoke-direct {v2, v3}, Lnef;-><init>(Ljava/lang/CharSequence;)V
 
-    check-cast v2, Ljava/lang/Runnable;
+    const/16 v17, 0x0
 
-    iget-object v3, p0, Lpsd;->d:Landroid/os/Handler;
+    const/16 v18, 0x14
 
-    invoke-virtual {v3, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    iget-wide v12, v0, Lpsd;->d:J
 
-    goto :goto_0
+    const/4 v15, 0x0
 
-    :catchall_0
-    move-exception p0
+    move-object/from16 v16, v2
 
-    goto :goto_1
+    invoke-direct/range {v11 .. v18}, Lub4;-><init>(JLoef;ILoef;Lnu3;I)V
 
-    :cond_0
-    iget-object p0, p0, Lpsd;->j:Ljava/util/ArrayList;
+    filled-new-array {v1, v11}, [Lub4;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+    move-result-object v1
 
-    monitor-exit v0
+    invoke-static {v1}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
 
-    return-void
+    move-result-object v1
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
+    return-object v1
 .end method
 
-.method public final h(Lee6;Losd;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v1, p2, v0}, Lpsd;->d(Lssd;ZLosd;Losd;)V
-
-    return-void
-.end method
-
-.method public final i(Lssd;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v1, v0, v0}, Lpsd;->d(Lssd;ZLosd;Losd;)V
-
-    return-void
-.end method
-
-.method public final j(Lorg/json/JSONObject;Losd;Losd;)V
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, Lee6;
+    invoke-virtual {p0}, Lpsd;->e()Ljava/util/List;
 
-    invoke-direct {v0, p1}, Lee6;-><init>(Lorg/json/JSONObject;)V
+    move-result-object p1
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
-    invoke-virtual {p0, v0, p1, p2, p3}, Lpsd;->d(Lssd;ZLosd;Losd;)V
+    iget-object v0, p0, Lpsd;->e:Lmoe;
+
+    invoke-virtual {v0, p2, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
 .end method

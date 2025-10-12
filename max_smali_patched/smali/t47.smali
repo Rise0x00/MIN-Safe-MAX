@@ -1,28 +1,23 @@
-.class public abstract Lt47;
+.class public interface abstract Lt47;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final v:Lyn6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "InputMerger"
+    new-instance v0, Lyn6;
 
-    invoke-static {v0}, Lyr3;->s0(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lyn6;-><init>(I)V
 
-    sput-object v0, Lt47;->a:Ljava/lang/String;
+    sput-object v0, Lt47;->v:Lyn6;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a(Ljava/util/ArrayList;)Lz54;
 .end method

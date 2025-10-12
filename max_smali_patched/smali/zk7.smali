@@ -1,226 +1,147 @@
 .class public final Lzk7;
-.super Ljava/io/FilterInputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Z
 
-.field public b:I
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
+
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;I)V
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ltz p2, :cond_0
+    iput-boolean p4, p0, Lzk7;->a:Z
 
-    iput p2, p0, Lzk7;->a:I
+    iput-boolean p5, p0, Lzk7;->b:Z
 
-    const/4 p1, -0x1
+    iput-boolean p6, p0, Lzk7;->c:Z
 
-    iput p1, p0, Lzk7;->b:I
+    iput-object p2, p0, Lzk7;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lzk7;->e:Ljava/lang/String;
+
+    iput-boolean p7, p0, Lzk7;->f:Z
+
+    iput p1, p0, Lzk7;->g:I
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "limit must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final available()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget p0, p0, Lzk7;->a:I
+    iget-boolean v1, p0, Lzk7;->a:Z
 
-    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v1, ", isLenient="
 
-    return p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final mark(I)V
-    .locals 1
+    iget-boolean v1, p0, Lzk7;->b:Z
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
+    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    iget-boolean v1, p0, Lzk7;->c:Z
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
+    const-string v1, ", prettyPrintIndent=\'"
 
-    iget p1, p0, Lzk7;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lzk7;->b:I
+    iget-object v1, p0, Lzk7;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzk7;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lzk7;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lzk7;->g:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    const-string v1, "POLYMORPHIC"
 
-.method public final read()I
-    .locals 2
-
-    .line 1
-    iget v0, p0, Lzk7;->a:I
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    .line 3
-    iget v1, p0, Lzk7;->a:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lzk7;->a:I
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    const-string v1, "ALL_JSON_OBJECTS"
 
-.method public final read([BII)I
-    .locals 1
+    goto :goto_0
 
-    .line 4
-    iget v0, p0, Lzk7;->a:I
+    :cond_2
+    const-string v1, "NONE"
 
-    if-nez v0, :cond_0
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p0, -0x1
+    const/16 v1, 0x29
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 5
-    :cond_0
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result p3
+    move-result-object v0
 
-    .line 6
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-
-    if-lez p1, :cond_1
-
-    .line 7
-    iget p2, p0, Lzk7;->a:I
-
-    sub-int/2addr p2, p1
-
-    iput p2, p0, Lzk7;->a:I
-
-    :cond_1
-    return p1
-.end method
-
-.method public final reset()V
-    .locals 2
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lzk7;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    iget v0, p0, Lzk7;->b:I
-
-    iput v0, p0, Lzk7;->a:I
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/io/IOException;
-
-    const-string v0, "mark not set"
-
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/io/IOException;
-
-    const-string v0, "mark is not supported"
-
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    iget v0, p0, Lzk7;->a:I
-
-    int-to-long v0, v0
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    move-result-wide p1
-
-    iget v0, p0, Lzk7;->a:I
-
-    int-to-long v0, v0
-
-    sub-long/2addr v0, p1
-
-    long-to-int v0, v0
-
-    iput v0, p0, Lzk7;->a:I
-
-    return-wide p1
+    return-object v0
 .end method

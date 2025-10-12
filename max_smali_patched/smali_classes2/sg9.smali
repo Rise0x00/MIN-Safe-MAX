@@ -1,421 +1,367 @@
 .class public final Lsg9;
-.super Lil;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Leqe;
-.implements Lqwa;
-.implements Lb9c;
-
-
-# static fields
-.field public static final synthetic n0:I
+.implements Llf6;
 
 
 # instance fields
-.field public final X:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:J
-
-.field public final Z:J
-
-.field public final o:J
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(JJJJJ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lil;-><init>(J)V
+    iput-object p2, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    iput-wide p3, p0, Lsg9;->o:J
+    const/4 p2, 0x2
 
-    iput-wide p5, p0, Lsg9;->X:J
-
-    iput-wide p7, p0, Lsg9;->Y:J
-
-    iput-wide p9, p0, Lsg9;->Z:J
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 12
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Lil;->o()Lpw8;
+    check-cast p1, Ljava/util/List;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, p0, Lsg9;->X:J
-
-    invoke-virtual {v0, v1, v2}, Lpw8;->q(J)Lrw8;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lil;->m()Lbb2;
-
-    move-result-object v3
-
-    iget-wide v4, p0, Lsg9;->o:J
-
-    invoke-virtual {v3, v4, v5}, Lbb2;->C(J)Ll72;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lil;->s()Lxre;
-
-    move-result-object v6
-
-    iget-wide v7, p0, Lil;->a:J
-
-    sget-object v9, Lrwa;->U0:Lrwa;
-
-    invoke-virtual {v6, v7, v8, v9}, Lxre;->h(JLrwa;)Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    const/4 v8, 0x3
-
-    const-string v9, "sg9"
-
-    if-eqz v7, :cond_1
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lnre;
-
-    iget-object v7, v7, Lnre;->f:Lqwa;
-
-    check-cast v7, Lsg9;
-
-    iget-wide v10, v7, Lsg9;->o:J
-
-    cmp-long v10, v10, v4
-
-    if-nez v10, :cond_0
-
-    iget-wide v10, v7, Lsg9;->X:J
-
-    cmp-long v7, v10, v1
-
-    if-nez v7, :cond_0
-
-    const-string p0, "onPreExecute: later cancel_reaction task found, REMOVE"
-
-    invoke-static {v9, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v8
-
-    :cond_1
-    if-eqz v0, :cond_5
-
-    iget-object v0, v0, Lrw8;->p0:Lg09;
-
-    sget-object v1, Lg09;->c:Lg09;
-
-    if-eq v0, v1, :cond_5
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {v3}, Ll72;->B()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-virtual {v3}, Ll72;->Q()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lsg9;->Z:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_3
-
-    const-string p0, "onPreExecute: message serverId == 0, REMOVE"
-
-    invoke-static {v9, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v8
-
-    :cond_3
-    iget-object v0, v3, Ll72;->b:Lxb2;
-
-    iget-wide v0, v0, Lxb2;->a:J
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p0}, Lil;->m()Lbb2;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v3}, Lbb2;->P(Ll72;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    const-string p0, "onPreExecute: chat serverId == 0, SKIP"
-
-    invoke-static {v9, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_4
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_5
-    :goto_0
-    const-string p0, "onPreExecute: message or chat not found, REMOVE"
-
-    invoke-static {v9, p0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v8
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lil;->s()Lxre;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lil;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lxre;->d(J)V
-
-    return-void
-.end method
-
-.method public final e()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;-><init>()V
-
-    iget-wide v1, p0, Lil;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;->requestId:J
-
-    iget-wide v1, p0, Lsg9;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;->chatId:J
-
-    iget-wide v1, p0, Lsg9;->Y:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;->chatServerId:J
-
-    iget-wide v1, p0, Lsg9;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;->messageId:J
-
-    iget-wide v1, p0, Lsg9;->Z:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;->messageServerId:J
-
-    invoke-static {v0}, Lgz8;->toByteArray(Lgz8;)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final f(Lape;)V
-    .locals 4
-
-    check-cast p1, Ltg9;
-
-    iget-object p1, p1, Ltg9;->c:Lvz8;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget v1, p1, Lvz8;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "reactions, cancelTask onSuccess, reactionInfoTotalCount = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "sg9"
-
-    invoke-static {v2, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lil;->c:Ljl;
-
-    if-eqz v1, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    iget-object v0, v0, Ljl;->I:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lb09;
-
-    iget-wide v1, p0, Lsg9;->Z:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1, p1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+    invoke-virtual {p0, p1, p2}, Lsg9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-wide v1, p0, Lsg9;->o:J
+    check-cast p1, Lsg9;
 
-    invoke-virtual {v0, v1, v2, p1}, Lb09;->f(JLjava/util/Map;)V
+    sget-object p2, Loyf;->a:Loyf;
 
-    return-void
+    invoke-virtual {p1, p2}, Lsg9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final g()I
-    .locals 0
-
-    const p0, 0xf4240
-
-    return p0
-.end method
-
-.method public final getId()J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lil;->a:J
+    new-instance v0, Lsg9;
 
-    return-wide v0
+    iget-object v1, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-direct {v0, p2, v1}, Lsg9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    iput-object p1, v0, Lsg9;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final getType()Lrwa;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    sget-object p0, Lrwa;->U0:Lrwa;
+    sget-object v0, Ly38;->o:Ly38;
 
-    return-object p0
-.end method
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-.method public final h(Lloe;)V
-    .locals 4
+    iget-object p1, p0, Lsg9;->X:Ljava/lang/Object;
 
-    iget-object v0, p1, Lloe;->X:Lwne;
+    check-cast p1, Ljava/util/List;
 
-    const-string v1, "reactions, cancelTask onFail %s"
+    iget-object v1, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcs7;->L()Les7;
+
+    move-result-object v1
+
+    iget-object v1, v1, Les7;->d:Ler7;
+
+    sget-object v2, Ler7;->o:Ler7;
+
+    invoke-virtual {v1, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result v1
+
+    const-string v2, ", last="
+
+    const-string v3, ", first="
+
+    const/4 v4, 0x0
+
+    if-ltz v1, :cond_7
+
+    iget-object v1, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+
+    sget-object v5, Lox9;->j:Lqpa;
+
+    if-nez v5, :cond_0
+
+    goto :goto_4
+
+    :cond_0
+    invoke-virtual {v5, v0}, Lqpa;->b(Ly38;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-static {p1}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v8, :cond_1
+
+    check-cast v7, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_0
+
+    :cond_1
+    move-object v7, v4
+
+    :goto_0
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_1
+
+    :cond_2
+    move-object v7, v4
+
+    :goto_1
+    invoke-static {p1}, Le93;->v0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v9, :cond_3
+
+    check-cast v8, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_2
+
+    :cond_3
+    move-object v8, v4
+
+    :goto_2
+    if-eqz v8, :cond_4
+
+    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_3
+
+    :cond_4
+    move-object v8, v4
+
+    :goto_3
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Got new messages on UI, size="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v3, "sg9"
+    invoke-virtual {v5, v0, v1, v2, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v3, v0, v1, v2}, Lz76;->r(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_5
+    :goto_4
+    iget-object v0, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {p0}, Lil;->l()Lrv0;
+    sget v1, Lvec;->messages_list_recycler_view:I
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lgj0;
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-wide v2, p0, Lil;->a:J
+    if-nez v0, :cond_6
 
-    invoke-direct {v1, v2, v3, p1}, Lgj0;-><init>(JLloe;)V
+    iget-object v0, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-virtual {v0, v1}, Lrv0;->c(Ljava/lang/Object;)V
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lgd9;
 
-    invoke-static {p0, p1}, Lb9c;->a(Lil;Lloe;)V
+    new-instance v2, Lrg9;
 
-    return-void
-.end method
+    const/4 v3, 0x0
 
-.method public final i()Lxoe;
-    .locals 7
+    invoke-direct {v2, v0, p1, v3}, Lrg9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    new-instance v0, Lld2;
+    invoke-virtual {v1, p1, v2}, Lgd9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
 
-    const/4 v1, 0x0
+    goto/16 :goto_a
 
-    const/16 v2, 0x1d
+    :cond_6
+    iget-object v1, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-direct {v0, v1, v2}, Lld2;-><init>(Lboa;I)V
+    new-instance v2, Lrg9;
 
-    const-wide/16 v1, 0x0
+    const/4 v3, 0x1
 
-    iget-wide v3, p0, Lsg9;->Z:J
+    invoke-direct {v2, v1, p1, v3}, Lrg9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    cmp-long v1, v3, v1
+    new-instance v3, Lrg9;
 
-    if-eqz v1, :cond_0
+    const/4 v4, 0x2
 
-    const-string v1, "chatId"
+    invoke-direct {v3, v1, p1, v4}, Lrg9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
 
-    iget-wide v5, p0, Lsg9;->Y:J
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v5, v6, v1}, Lxoe;->i(JLjava/lang/String;)V
+    invoke-static {p1, v0, v2, v3}, Loch;->y(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    const-string p0, "messageId"
+    goto/16 :goto_a
 
-    invoke-virtual {v0, v3, v4, p0}, Lxoe;->i(JLjava/lang/String;)V
+    :cond_7
+    iget-object v1, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    return-object v0
+    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    sget-object v5, Lox9;->j:Lqpa;
 
-    const-string v0, "param messageId can\'t be 0"
+    if-nez v5, :cond_8
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    goto :goto_9
 
-    throw p0
+    :cond_8
+    invoke-virtual {v5, v0}, Lqpa;->b(Ly38;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_d
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-static {p1}, Le93;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v8, :cond_9
+
+    check-cast v7, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_5
+
+    :cond_9
+    move-object v7, v4
+
+    :goto_5
+    if-eqz v7, :cond_a
+
+    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_6
+
+    :cond_a
+    move-object v7, v4
+
+    :goto_6
+    invoke-static {p1}, Le93;->v0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz v9, :cond_b
+
+    check-cast v8, Lone/me/messages/list/loader/MessageModel;
+
+    goto :goto_7
+
+    :cond_b
+    move-object v8, v4
+
+    :goto_7
+    if-eqz v8, :cond_c
+
+    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_8
+
+    :cond_c
+    move-object v8, v4
+
+    :goto_8
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Got new messages (lifecycle scope), size="
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v5, v0, v1, v2, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    :goto_9
+    iget-object v0, p0, Lsg9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->H0:Lgd9;
+
+    new-instance v2, Lrg9;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, p1, v3}, Lrg9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
+
+    invoke-virtual {v1, p1, v2}, Lgd9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :goto_a
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

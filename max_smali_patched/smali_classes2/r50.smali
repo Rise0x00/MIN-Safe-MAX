@@ -3,510 +3,547 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf6b;
-
-
-# static fields
-.field public static final synthetic p0:[Lof7;
+.implements Lgvc;
+.implements Landroid/media/MediaRecorder$OnInfoListener;
 
 
 # instance fields
-.field public final X:Lkpd;
+.field public X:Landroid/media/MediaRecorder;
 
-.field public final Y:Libc;
+.field public Y:Lcvc;
 
-.field public final Z:Ljbc;
+.field public volatile Z:Ljava/lang/String;
 
-.field public final a:Lhoe;
+.field public final a:Lbp7;
 
-.field public final b:Lg50;
+.field public final b:Lbp7;
 
-.field public final c:Lij9;
+.field public final c:Lbp7;
 
-.field public final n0:Lvfd;
-
-.field public final o:Lp04;
-
-.field public final o0:Lr8;
+.field public final o:Lbp7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
+    .locals 2
 
-    new-instance v0, Lvk9;
+    sget-object v0, Lzah;->a:Lzah;
 
-    const-string v1, "updatePlayerJob"
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    const-string v2, "getUpdatePlayerJob()Lkotlinx/coroutines/Job;"
+    move-result-object v0
 
-    const-class v3, Lr50;
+    const-class v1, Lktd;
 
-    invoke-direct {v0, v3, v1, v2}, Lvk9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    sget-object v1, Ldic;->a:Leic;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lof7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lr50;->p0:[Lof7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhoe;Lg50;Lij9;Lp04;)V
-    .locals 0
+    move-result-object v0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr50;->a:Lhoe;
+    iput-object p1, p0, Lr50;->a:Lbp7;
 
-    iput-object p2, p0, Lr50;->b:Lg50;
+    iput-object v0, p0, Lr50;->b:Lbp7;
 
-    iput-object p3, p0, Lr50;->c:Lij9;
+    iput-object p2, p0, Lr50;->c:Lbp7;
 
-    iput-object p4, p0, Lr50;->o:Lp04;
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x6
-
-    const/4 p4, 0x1
-
-    invoke-static {p4, p1, p2}, Llpd;->b(III)Lkpd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lr50;->X:Lkpd;
-
-    new-instance p2, Libc;
-
-    invoke-direct {p2, p1}, Libc;-><init>(Lzk9;)V
-
-    iput-object p2, p0, Lr50;->Y:Libc;
-
-    check-cast p3, Lyj9;
-
-    iget-object p1, p3, Lyj9;->H:Ljbc;
-
-    iput-object p1, p0, Lr50;->Z:Ljbc;
-
-    invoke-static {}, Lx28;->E()Lvfd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lr50;->n0:Lvfd;
-
-    new-instance p1, Lr8;
-
-    new-instance p2, Lt5;
-
-    const/16 p3, 0x10
-
-    invoke-direct {p2, p3, p0}, Lt5;-><init>(ILjava/lang/Object;)V
-
-    const/4 p3, 0x2
-
-    invoke-direct {p1, p3, p2}, Lr8;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lr50;->o0:Lr8;
+    iput-object p3, p0, Lr50;->o:Lbp7;
 
     return-void
-.end method
-
-.method public static final a(Lr50;Leje;)Ljava/lang/Object;
-    .locals 11
-
-    iget-object v0, p0, Lr50;->X:Lkpd;
-
-    iget-object p0, p0, Lr50;->c:Lij9;
-
-    move-object v1, p0
-
-    check-cast v1, Lyj9;
-
-    invoke-virtual {v1}, Lyj9;->n()Lhj9;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lyj9;->B:Lte8;
-
-    sget-object v4, Lq04;->a:Lq04;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, v3, Lte8;->d:Lhg8;
-
-    if-eqz v3, :cond_1
-
-    iget-object v3, v3, Lhg8;->H:Ljava/lang/Integer;
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    const/4 v5, 0x2
-
-    if-ne v3, v5, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    :goto_0
-    iget-object v3, v1, Lyj9;->B:Lte8;
-
-    if-eqz v3, :cond_3
-
-    iget-object v3, v3, Lte8;->d:Lhg8;
-
-    if-eqz v3, :cond_3
-
-    iget-object v3, v3, Lhg8;->H:Ljava/lang/Integer;
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    const/4 v5, 0x3
-
-    if-ne v3, v5, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    :goto_1
-    iget v1, v1, Lyj9;->v:I
-
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    if-eqz v2, :cond_9
-
-    invoke-interface {p0}, Lij9;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    iget-object v1, v2, Lhj9;->a:Ljava/lang/CharSequence;
-
-    if-nez v1, :cond_6
-
-    const-string v1, ""
-
-    :cond_6
-    new-instance v6, Lcue;
-
-    invoke-direct {v6, v1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v2, Lhj9;->b:Ljava/lang/CharSequence;
-
-    new-instance v7, Lcue;
-
-    invoke-direct {v7, v1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    check-cast p0, Lyj9;
-
-    iget-boolean v9, p0, Lyj9;->x:Z
-
-    iget p0, p0, Lyj9;->F:F
-
-    const/high16 v1, 0x3fe00000    # 1.75f
-
-    cmpl-float v1, p0, v1
-
-    if-ltz v1, :cond_7
-
-    sget-object p0, Ll5b;->o:Ll5b;
-
-    :goto_2
-    move-object v8, p0
-
-    goto :goto_3
-
-    :cond_7
-    const/high16 v1, 0x3fa00000    # 1.25f
-
-    cmpl-float p0, p0, v1
-
-    if-ltz p0, :cond_8
-
-    sget-object p0, Ll5b;->c:Ll5b;
-
-    goto :goto_2
-
-    :cond_8
-    sget-object p0, Ll5b;->b:Ll5b;
-
-    goto :goto_2
-
-    :goto_3
-    new-instance v5, Ljd9;
-
-    const/4 v10, 0x1
-
-    invoke-direct/range {v5 .. v10}, Ljd9;-><init>(Ldue;Ldue;Ll5b;ZI)V
-
-    invoke-virtual {v0, v5, p1}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v4, :cond_a
-
-    return-object p0
-
-    :cond_9
-    :goto_4
-    sget-object p0, Lid9;->a:Lid9;
-
-    invoke-virtual {v0, p0, p1}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v4, :cond_a
-
-    return-object p0
-
-    :cond_a
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lr50;->c:Lij9;
-
-    move-object v1, v0
-
-    check-cast v1, Lyj9;
-
-    iget-boolean v1, v1, Lyj9;->x:Z
-
-    iget-object p0, p0, Lr50;->b:Lg50;
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Lg50;->a:Lij9;
-
-    check-cast p0, Lyj9;
-
-    invoke-virtual {p0}, Lyj9;->q()V
-
-    return-void
-
-    :cond_0
-    check-cast v0, Lyj9;
-
-    iget-boolean v0, v0, Lyj9;->w:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lg50;->a:Lij9;
-
-    check-cast p0, Lyj9;
-
-    invoke-virtual {p0}, Lyj9;->r()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final h()V
-    .locals 4
-
-    iget-object v0, p0, Lr50;->c:Lij9;
-
-    check-cast v0, Lyj9;
-
-    invoke-virtual {v0}, Lyj9;->t()V
-
-    iget-object v0, p0, Lr50;->a:Lhoe;
-
-    check-cast v0, Loba;
-
-    invoke-virtual {v0}, Loba;->a()Lj04;
-
-    move-result-object v0
-
-    new-instance v1, Lo50;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lo50;-><init>(Lr50;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x2
-
-    iget-object p0, p0, Lr50;->o:Lp04;
-
-    invoke-static {p0, v0, v2, v1, v3}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
-
-    return-void
-.end method
-
-.method public final k(Ll5b;)V
+.method public final a()I
     .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
 
-    move-result p1
+    if-eqz v0, :cond_0
 
-    add-int/lit8 p1, p1, 0x1
+    :try_start_0
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->getMaxAmplitude()I
 
-    sget-object v0, Ll5b;->Y:Ly55;
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Lx1;->getSize()I
+    return v0
 
-    move-result v1
+    :catch_0
+    move-exception v0
 
-    rem-int/2addr p1, v1
+    const-class v1, Lr50;
 
-    invoke-virtual {v0, p1}, Ly55;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll5b;
-
-    iget p1, p1, Ll5b;->a:F
-
-    iget-object p0, p0, Lr50;->c:Lij9;
-
-    check-cast p0, Lyj9;
-
-    iget-object v0, p0, Lyj9;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lvj9;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lvj9;-><init>(Lyj9;FLkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x3
-
-    invoke-static {v0, v2, v2, v1, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
-
-    return-void
-.end method
-
-.method public final l(Ljava/lang/Long;Z)Ly94;
-    .locals 5
-
-    iget-object p0, p0, Lr50;->c:Lij9;
-
-    check-cast p0, Lyj9;
-
-    invoke-virtual {p0}, Lyj9;->n()Lhj9;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_3
-
-    iget-object p0, p0, Lhj9;->c:Ljava/lang/Object;
-
-    const-string v1, "MediaMetadata.Extra.MESSAGE_ID"
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    instance-of v2, v1, Ljava/lang/Long;
+    const-string v2, "Can\'t getRecorderAmplitude illegal state"
 
-    if-eqz v2, :cond_0
+    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast v1, Ljava/lang/Long;
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c(IILjava/lang/Integer;Ljava/lang/String;)Z
+    .locals 6
+
+    :try_start_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Landroid/media/MediaRecorder;
+
+    iget-object v0, p0, Lr50;->a:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    invoke-static {v0}, Lo20;->h(Landroid/content/Context;)Landroid/media/MediaRecorder;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v0
+    new-instance v0, Landroid/media/MediaRecorder;
+
+    invoke-direct {v0}, Landroid/media/MediaRecorder;-><init>()V
 
     :goto_0
-    if-eqz v1, :cond_3
+    iput-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    const/4 v1, 0x1
 
-    move-result-wide v1
+    invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioSource(I)V
 
-    if-nez p1, :cond_2
+    const/4 v2, 0x6
 
-    const-string p1, "MediaMetadata.Extra.CHAT_ID"
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
 
-    move-result-object p0
+    invoke-virtual {v0, p0}, Landroid/media/MediaRecorder;->setOnInfoListener(Landroid/media/MediaRecorder$OnInfoListener;)V
 
-    instance-of p1, p0, Ljava/lang/Long;
+    iget-object v2, p0, Lr50;->b:Lbp7;
 
-    if-eqz p1, :cond_1
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Ljava/lang/Long;
+    move-result-object v2
+
+    check-cast v2, Lktd;
+
+    check-cast v2, Lgjd;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->max-audio-length:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v4, 0xe10
+
+    int-to-long v4, v4
+
+    invoke-virtual {v2, v3, v4, v5}, Lgjd;->n(Ljava/lang/Enum;J)J
+
+    move-result-wide v2
+
+    long-to-int v2, v2
+
+    mul-int/lit16 v2, v2, 0x3e8
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setMaxDuration(I)V
+
+    invoke-virtual {v0, p2}, Landroid/media/MediaRecorder;->setAudioSamplingRate(I)V
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    invoke-virtual {v0, p2}, Landroid/media/MediaRecorder;->setAudioEncodingBitRate(I)V
 
     goto :goto_1
 
+    :catch_0
+    move-exception p2
+
+    goto :goto_2
+
     :cond_1
-    move-object p0, v0
-
     :goto_1
-    if-eqz p0, :cond_3
+    invoke-virtual {v0, v1}, Landroid/media/MediaRecorder;->setAudioChannels(I)V
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v0, p4}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/lang/String;)V
 
-    move-result-wide p0
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->prepare()V
 
-    sget-object v0, Lx2b;->c:Lx2b;
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->start()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v1
 
-    invoke-static {p0, p1, v1, v2, p2}, Lx2b;->w0(JJZ)Ly94;
+    :goto_2
+    const-class p3, Lr50;
 
-    move-result-object p0
+    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    return-object p0
+    move-result-object p3
+
+    sget-object p4, Lox9;->j:Lqpa;
+
+    if-nez p4, :cond_2
+
+    goto :goto_3
 
     :cond_2
-    sget-object p0, Lx2b;->c:Lx2b;
+    sget-object v0, Ly38;->Z:Ly38;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {p4, v0}, Lqpa;->b(Ly38;)Z
 
-    move-result-wide v3
+    move-result v1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v1, :cond_3
 
-    invoke-static {v3, v4, v1, v2, p2}, Lx2b;->w0(JJZ)Ly94;
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    return-object p0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " encoder: "
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p4, v0, p3, p1, p2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
+    :goto_3
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final d()V
+    .locals 4
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->stop()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
+
+    :cond_0
+    iput-object v1, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    const-class v2, Lr50;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Can\'t stopRecordAudio"
+
+    invoke-static {v2, v3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
+
+    :cond_1
+    iput-object v1, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    return-void
+
+    :goto_0
+    iget-object v2, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Landroid/media/MediaRecorder;->release()V
+
+    :cond_2
+    iput-object v1, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    throw v0
+
+    :cond_3
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->resume()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object p3, Loyf;->a:Loyf;
+
+    iget-object v0, p0, Lr50;->o:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcq5;
+
+    check-cast v0, Lpr5;
+
+    invoke-virtual {v0, p1, p2}, Lpr5;->d(J)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-class p1, Lr50;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "Couldn\'t create a file for the audio message"
+
+    invoke-static {p1, p2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+
+    :cond_0
+    iput-object p1, p0, Lr50;->Z:Ljava/lang/String;
+
+    new-instance p2, Ljava/lang/Integer;
+
+    const v0, 0xea60
+
+    invoke-direct {p2, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    const v0, 0x15f90
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v1, v0, p2, p1}, Lr50;->c(IILjava/lang/Integer;Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    new-instance p2, Ljava/lang/Integer;
+
+    const/16 v0, 0x7530
+
+    invoke-direct {p2, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    const v0, 0xafc8
+
+    invoke-virtual {p0, v1, v0, p2, p1}, Lr50;->c(IILjava/lang/Integer;Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    const/16 p2, 0x3e80
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v1, p2, v0, p1}, Lr50;->c(IILjava/lang/Integer;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, p2, v0, p1}, Lr50;->c(IILjava/lang/Integer;Ljava/lang/String;)Z
+
+    :cond_1
+    return-object p3
+.end method
+
+.method public final g(Lfvc;)Ljava/lang/Object;
+    .locals 4
+
+    instance-of v0, p1, Ldvc;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lr50;->Z:Ljava/lang/String;
+
+    if-nez v0, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    new-instance v1, Lk40;
+
+    check-cast p1, Ldvc;
+
+    iget-wide v2, p1, Ldvc;->a:J
+
+    iget-object p1, p1, Ldvc;->b:[B
+
+    invoke-direct {v1, v0, v2, v3, p1}, Lk40;-><init>(Ljava/lang/String;J[B)V
+
+    return-object v1
+.end method
+
+.method public final h()V
+    .locals 1
+
+    iget-object v0, p0, Lr50;->X:Landroid/media/MediaRecorder;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->pause()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final i()Z
+    .locals 2
+
+    iget-object v0, p0, Lr50;->c:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz9b;
+
+    sget-object v1, Lz9b;->h:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lz9b;->c([Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
     return-object v0
+.end method
+
+.method public final k(Lkuc;)V
+    .locals 0
+
+    iput-object p1, p0, Lr50;->Y:Lcvc;
+
+    return-void
+.end method
+
+.method public final onInfo(Landroid/media/MediaRecorder;II)V
+    .locals 0
+
+    const/16 p1, 0x320
+
+    if-eq p2, p1, :cond_0
+
+    const/16 p1, 0x321
+
+    if-eq p2, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lr50;->Y:Lcvc;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lkuc;
+
+    invoke-virtual {p1}, Lkuc;->D()V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

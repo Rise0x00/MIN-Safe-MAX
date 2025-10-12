@@ -2,230 +2,146 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpy8;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
 
-.field public final b:I
+.field public final b:J
 
-.field public final c:Landroid/text/Layout;
+.field public final c:Lov0;
 
-.field public final d:Landroid/net/Uri;
+.field public final d:Le8e;
 
-.field public final e:Z
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILandroid/text/Layout;Landroid/net/Uri;Z)V
+.method public constructor <init>(JJLov0;Lr8f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmy8;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lmy8;->a:J
 
-    iput p2, p0, Lmy8;->b:I
+    iput-wide p3, p0, Lmy8;->b:J
 
-    iput-object p3, p0, Lmy8;->c:Landroid/text/Layout;
+    iput-object p5, p0, Lmy8;->c:Lov0;
 
-    iput-object p4, p0, Lmy8;->d:Landroid/net/Uri;
+    const/4 p1, 0x0
 
-    iput-boolean p5, p0, Lmy8;->e:Z
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Lf8e;->b(III)Le8e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmy8;->d:Le8e;
+
+    check-cast p6, Lwla;
+
+    invoke-virtual {p6}, Lwla;->a()Ly24;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmy8;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p5, p0}, Lov0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onEvent(La33;)V
+    .locals 3
+    .annotation runtime Lxye;
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 7
+    iget-object p1, p1, La33;->b:Ljava/util/Collection;
 
-    if-ne p0, p1, :cond_0
+    iget-wide v0, p0, Lmy8;->b:J
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmy8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmy8;
-
-    iget-object v1, p0, Lmy8;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lmy8;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lmy8;->b:I
-
-    iget v3, p1, Lmy8;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lmy8;->c:Landroid/text/Layout;
-
-    iget-object v3, p1, Lmy8;->c:Landroid/text/Layout;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lmy8;->d:Landroid/net/Uri;
-
-    iget-object v3, p1, Lmy8;->d:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean p0, p0, Lmy8;->e:Z
-
-    iget-boolean p1, p1, Lmy8;->e:Z
-
-    if-eq p0, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lmy8;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget v3, p0, Lmy8;->b:I
-
-    invoke-static {v3, v1, v2}, Llge;->m(III)I
-
-    move-result v1
-
-    iget-object v3, p0, Lmy8;->c:Landroid/text/Layout;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    mul-int/2addr v3, v2
-
-    iget-object v1, p0, Lmy8;->d:Landroid/net/Uri;
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v3, v0
-
-    mul-int/2addr v3, v2
-
-    iget-boolean p0, p0, Lmy8;->e:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v3
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", attachCount="
-
-    const-string v1, ", description="
-
-    iget v2, p0, Lmy8;->b:I
-
-    const-string v3, "Media(url="
-
-    iget-object v4, p0, Lmy8;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4, v0, v1}, Lw68;->p(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lmy8;->c:Landroid/text/Layout;
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", lowResPreviewUri="
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-object v1, p0, Lmy8;->d:Landroid/net/Uri;
+    .line 8
+    :cond_0
+    new-instance p1, Lky8;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, ", isRoundPreview="
+    invoke-direct {p1, p0, v0}, Lky8;-><init>(Lmy8;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x3
 
-    const-string v1, ")"
+    iget-object v2, p0, Lmy8;->e:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-boolean p0, p0, Lmy8;->e:Z
+    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
 
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final onEvent(Ln0g;)V
+    .locals 4
+    .annotation runtime Lxye;
+    .end annotation
 
-    return-object p0
+    .line 1
+    iget-wide v0, p1, Ln0g;->b:J
+
+    .line 2
+    iget-wide v2, p0, Lmy8;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    .line 3
+    iget-wide v0, p1, Ln0g;->c:J
+
+    .line 4
+    iget-wide v2, p0, Lmy8;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    iget-boolean p1, p1, Ln0g;->X:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance p1, Lly8;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lly8;-><init>(Lmy8;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lmy8;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

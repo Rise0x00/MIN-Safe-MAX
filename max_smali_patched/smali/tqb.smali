@@ -1,72 +1,212 @@
-.class public abstract Ltqb;
-.super Lwqb;
+.class public final Ltqb;
+.super Lrje;
 .source "SourceFile"
 
-# interfaces
-.implements Lmf7;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:J
+
+.field public final c:J
+
+
+# direct methods
+.method public constructor <init>(IJJ)V
+    .locals 0
+
+    iput p1, p0, Ltqb;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-wide p4, p0, Ltqb;->b:J
+
+    .line 3
+    iput-wide p2, p0, Ltqb;->c:J
+
+    return-void
+
+    .line 4
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-wide p2, p0, Ltqb;->b:J
+
+    .line 6
+    iput-wide p4, p0, Ltqb;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(JJLjava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ltqb;->a:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput-wide p1, p0, Ltqb;->b:J
+
+    .line 9
+    iput-wide p3, p0, Ltqb;->c:J
+
+    .line 10
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    return-void
+.end method
+
+.method public static b(JLy4b;)J
+    .locals 6
+
+    invoke-virtual {p2}, Ly4b;->u()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x80
+
+    and-long/2addr v2, v0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    and-long/2addr v0, v2
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    invoke-virtual {p2}, Ly4b;->w()J
+
+    move-result-wide v2
+
+    or-long/2addr v0, v2
+
+    add-long/2addr v0, p0
+
+    const-wide p0, 0x1ffffffffL
+
+    and-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_0
+    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p0
+.end method
 
 
 # virtual methods
-.method public computeReflected()Lze7;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    sget-object v0, Ldic;->a:Leic;
+    iget v0, p0, Ltqb;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public getDelegate()Ljava/lang/Object;
-    .locals 0
+    const-string v1, "SCTE-35 TimeSignalCommand { ptsTime="
 
-    invoke-virtual {p0}, Lwqb;->getReflected()Lof7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-wide v1, p0, Ltqb;->b:J
 
-    check-cast p0, Lmf7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Lmf7;->getDelegate()Ljava/lang/Object;
+    const-string v1, ", playbackPositionUs= "
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p0
-.end method
+    iget-wide v1, p0, Ltqb;->c:J
 
-.method public bridge synthetic getGetter()Lkf7;
-    .locals 0
+    const-string v3, " }"
 
-    .line 1
-    invoke-virtual {p0}, Ltqb;->getGetter()Llf7;
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    const/4 p0, 0x0
+    move-result-object v0
 
-    return-object p0
-.end method
+    return-object v0
 
-.method public getGetter()Llf7;
-    .locals 0
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 2
-    invoke-virtual {p0}, Lwqb;->getReflected()Lof7;
+    const-string v1, "SCTE-35 SpliceInsertCommand { programSplicePts="
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast p0, Lmf7;
+    iget-wide v1, p0, Ltqb;->b:J
 
-    invoke-interface {p0}, Lmf7;->getGetter()Llf7;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x0
+    const-string v1, ", programSplicePlaybackPositionUs= "
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public invoke()Ljava/lang/Object;
-    .locals 0
+    iget-wide v1, p0, Ltqb;->c:J
 
-    invoke-interface {p0}, Lmf7;->get()Ljava/lang/Object;
+    const-string v3, " }"
 
-    move-result-object p0
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SCTE-35 PrivateCommand { ptsAdjustment="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ltqb;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", identifier= "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ltqb;->c:J
+
+    const-string v3, " }"
+
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

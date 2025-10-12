@@ -1,197 +1,114 @@
 .class public final Lmp7;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/util/TreeSet;
 
-.field public final synthetic b:Lnp7;
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Lnp7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lmp7;->b:Lnp7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    new-instance v0, Ljava/util/TreeSet;
 
-    const/4 p1, -0x1
+    new-instance v1, Lpl4;
 
-    iput p1, p0, Lmp7;->a:I
+    const/4 v2, 0x6
 
-    invoke-virtual {p0}, Lmp7;->a()V
+    invoke-direct {v1, v2}, Lpl4;-><init>(I)V
+
+    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+
+    iput-object v0, p0, Lmp7;->a:Ljava/util/TreeSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
-
-    iget-object v0, p0, Lmp7;->b:Lnp7;
-
-    iget-object v0, v0, Lnp7;->c:Lpt8;
-
-    iget-object v1, v0, Lpt8;->B0:Ltt8;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lpt8;->i()V
-
-    iget-object v0, v0, Lpt8;->p0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
+.method public final a(Lvw0;J)V
+    .locals 4
 
     :goto_0
-    if-ge v3, v2, :cond_1
+    iget-wide v0, p0, Lmp7;->b:J
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    add-long/2addr v0, p2
 
-    move-result-object v4
+    const-wide/32 v2, 0x6400000
 
-    check-cast v4, Ltt8;
+    cmp-long v0, v0, v2
 
-    if-ne v4, v1, :cond_0
+    if-lez v0, :cond_0
 
-    iput v3, p0, Lmp7;->a:I
+    iget-object v0, p0, Lmp7;->a:Ljava/util/TreeSet;
 
-    return-void
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
 
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lmp7;->a:Ljava/util/TreeSet;
+
+    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lrx0;
+
+    move-object v1, p1
+
+    check-cast v1, Lbde;
+
+    monitor-enter v1
+
+    :try_start_0
+    invoke-virtual {v1, v0}, Lbde;->j(Lrx0;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, -0x1
+    :catchall_0
+    move-exception p1
 
-    iput v0, p0, Lmp7;->a:I
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    throw p1
+
+    :cond_0
     return-void
 .end method
 
-.method public final b(I)Ltt8;
-    .locals 2
+.method public final b(Lbde;Lede;)V
+    .locals 4
 
-    iget-object v0, p0, Lmp7;->b:Lnp7;
+    iget-object v0, p0, Lmp7;->a:Ljava/util/TreeSet;
 
-    iget-object v1, v0, Lnp7;->c:Lpt8;
+    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Lpt8;->i()V
+    iget-wide v0, p0, Lmp7;->b:J
 
-    iget-object v1, v1, Lpt8;->p0:Ljava/util/ArrayList;
+    iget-wide v2, p2, Lrx0;->c:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    add-long/2addr v0, v2
 
-    iget p0, p0, Lmp7;->a:I
+    iput-wide v0, p0, Lmp7;->b:J
 
-    if-ltz p0, :cond_0
+    const-wide/16 v0, 0x0
 
-    if-lt p1, p0, :cond_0
-
-    add-int/lit8 p1, p1, 0x1
-
-    :cond_0
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ltt8;
-
-    return-object p0
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    iget-object v0, p0, Lmp7;->b:Lnp7;
-
-    iget-object v1, v0, Lnp7;->c:Lpt8;
-
-    invoke-virtual {v1}, Lpt8;->i()V
-
-    iget-object v1, v1, Lpt8;->p0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget p0, p0, Lmp7;->a:I
-
-    if-gez p0, :cond_0
-
-    return v1
-
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
-
-    return v1
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lmp7;->b(I)Ltt8;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getItemId(I)J
-    .locals 0
-
-    int-to-long p0, p1
-
-    return-wide p0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lmp7;->b:Lnp7;
-
-    iget-object v0, p2, Lnp7;->b:Landroid/view/LayoutInflater;
-
-    iget p2, p2, Lnp7;->X:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    :cond_0
-    move-object p3, p2
-
-    check-cast p3, Lhu8;
-
-    invoke-virtual {p0, p1}, Lmp7;->b(I)Ltt8;
-
-    move-result-object p0
-
-    invoke-interface {p3, p0}, Lhu8;->c(Ltt8;)V
-
-    return-object p2
-.end method
-
-.method public final notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lmp7;->a()V
-
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    invoke-virtual {p0, p1, v0, v1}, Lmp7;->a(Lvw0;J)V
 
     return-void
 .end method

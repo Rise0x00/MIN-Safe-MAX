@@ -1,145 +1,200 @@
 .class public final Lag7;
-.super Lhk6;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/GridLayoutManager;Lygc;)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Lag7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    iput v0, p0, Lag7;->c:I
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0}, Lhk6;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lag7;->d:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lag7;->e:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lag7;->c:I
-
-    iput-object p1, p0, Lag7;->d:Ljava/lang/Object;
-
-    iput-object p2, p0, Lag7;->e:Ljava/lang/Object;
-
-    .line 4
-    invoke-direct {p0}, Lhk6;-><init>()V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)I
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lag7;->c:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lag7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lag7;->e:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lygc;
+    check-cast p1, Lag7;
 
-    invoke-virtual {v0}, Lygc;->j()I
+    sget-object p2, Loyf;->a:Loyf;
 
-    move-result v1
+    invoke-virtual {p1, p2}, Lag7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ge p1, v1, :cond_1
+    return-object p2
+.end method
 
-    invoke-virtual {v0, p1}, Lygc;->l(I)I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result p1
+    new-instance v0, Lag7;
 
-    sget v0, Lvia;->k:I
+    iget-object v1, p0, Lag7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    if-eq p1, v0, :cond_0
+    invoke-direct {v0, p2, v1}, Lag7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
 
-    sget v0, Lvia;->l:I
+    iput-object p1, v0, Lag7;->X:Ljava/lang/Object;
 
-    if-eq p1, v0, :cond_0
+    return-object v0
+.end method
 
-    sget v0, Lpea;->r:I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    if-ne p1, v0, :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    :cond_0
-    iget-object p0, p0, Lag7;->d:Ljava/lang/Object;
+    iget-object p1, p0, Lag7;->X:Ljava/lang/Object;
 
-    check-cast p0, Landroidx/recyclerview/widget/GridLayoutManager;
+    check-cast p1, Ly34;
 
-    iget p0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+    iget-object v0, p0, Lag7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    iget-object v1, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->B0:Lbp7;
+
+    iget-object v2, p1, Ly34;->a:Lema;
+
+    iget v3, p1, Ly34;->b:I
+
+    iget-object v4, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->D0:Lpr;
+
+    sget-object v5, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->F0:[Ltm7;
+
+    const/4 v6, 0x6
+
+    aget-object v5, v5, v6
+
+    invoke-virtual {v4, v0, v2}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    iget-object v4, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0:Lre7;
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Lre7;
+
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lkbb;
+
+    iget-object v6, v2, Lema;->a:Ljava/lang/String;
+
+    iget v7, v2, Lema;->b:I
+
+    invoke-direct {v4, v5, v6, v7, v3}, Lre7;-><init>(Lkbb;Ljava/lang/String;II)V
+
+    iput-object v4, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0:Lre7;
+
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->D0()Llra;
+
+    move-result-object v3
+
+    iget-object v3, v3, Llra;->A0:Landroid/widget/EditText;
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     goto :goto_0
 
+    :cond_0
+    iget-object v5, v2, Lema;->a:Ljava/lang/String;
+
+    iget v6, v2, Lema;->b:I
+
+    invoke-virtual {v4, v6, v5}, Lre7;->b(ILjava/lang/String;)V
+
+    iget-object v4, v0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->C0:Lre7;
+
+    if-eqz v4, :cond_1
+
+    iput v3, v4, Lre7;->Y:I
+
     :cond_1
-    const/4 p0, 0x1
-
     :goto_0
-    return p0
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->E0()Log7;
 
-    :pswitch_0
-    iget-object v0, p0, Lag7;->d:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lqy5;
+    move-result-object v1
 
-    invoke-virtual {v1}, Ldp7;->j()I
+    check-cast v1, Lkbb;
+
+    iget-object v4, v2, Lema;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Lkbb;->e(Ljava/lang/String;)Lbcb;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Lkbb;->m(Lbcb;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    const v1, 0x7fffffff
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v5, 0x1
+
+    invoke-virtual {v1, v4, v5}, Lkbb;->d(Lbcb;I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    const/4 v2, 0x1
+    :goto_1
+    iput v1, v3, Log7;->I0:I
 
-    if-ge p1, v1, :cond_2
+    iget-object p1, p1, Ly34;->c:Loef;
 
-    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lqy5;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lqy5;->l(I)I
+    move-result-object v1
 
-    move-result p1
+    invoke-virtual {p1, v1}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    sget v0, Lpea;->q:I
+    move-result-object p1
 
-    if-ne p1, v0, :cond_2
+    if-nez p1, :cond_3
 
-    iget-object p0, p0, Lag7;->e:Ljava/lang/Object;
+    const-string p1, ""
 
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
+    :cond_3
+    invoke-virtual {v0}, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->D0()Llra;
 
-    invoke-static {p0}, Liud;->n(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Llra;->setHint(Ljava/lang/CharSequence;)V
 
-    if-eqz p0, :cond_2
+    invoke-virtual {v0, v2}, Llra;->setCountry(Lema;)V
 
-    iget v2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+    sget-object p1, Loyf;->a:Loyf;
 
-    :cond_2
-    return v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

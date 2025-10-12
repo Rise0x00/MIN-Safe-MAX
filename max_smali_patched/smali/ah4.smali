@@ -1,80 +1,114 @@
-.class public final Lah4;
-.super Lzxc;
+.class public final synthetic Lah4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lch4;
 
-# static fields
-.field public static final b:Lah4;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    new-instance v0, Lah4;
+    iput p3, p0, Lah4;->a:I
 
-    sget v5, Lcse;->c:I
+    iput-object p1, p0, Lah4;->b:Ljava/lang/String;
 
-    sget v6, Lcse;->d:I
+    iput p2, p0, Lah4;->c:I
 
-    sget-wide v2, Lcse;->e:J
-
-    sget-object v4, Lcse;->a:Ljava/lang/String;
-
-    invoke-direct {v0}, Lj04;-><init>()V
-
-    new-instance v1, Lo04;
-
-    invoke-direct/range {v1 .. v6}, Lo04;-><init>(JLjava/lang/String;II)V
-
-    iput-object v1, v0, Lzxc;->a:Lo04;
-
-    sput-object v0, Lah4;->b:Lah4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public final a(Landroid/media/MediaCodecInfo;)I
+    .locals 3
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lah4;->a:I
 
-    const-string v0, "Dispatchers.Default cannot be closed"
+    iget v1, p0, Lah4;->c:I
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object v2, p0, Lah4;->b:Ljava/lang/String;
 
-    throw p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final limitedParallelism(ILjava/lang/String;)Lj04;
-    .locals 1
+    sget-object v0, Lv85;->a:Lvr;
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    sget v0, Lcse;->c:I
+    move-result-object p1
 
-    if-lt p1, v0, :cond_0
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getEncoderCapabilities()Landroid/media/MediaCodecInfo$EncoderCapabilities;
 
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lj04;Ljava/lang/String;)Lj04;
+    move-result-object p1
 
-    move-result-object p0
+    invoke-virtual {p1, v1}, Landroid/media/MediaCodecInfo$EncoderCapabilities;->isBitrateModeSupported(I)Z
 
-    return-object p0
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1, p2}, Lj04;->limitedParallelism(ILjava/lang/String;)Lj04;
+    const p1, 0x7fffffff
 
-    move-result-object p0
+    :goto_0
+    return p1
 
-    return-object p0
-.end method
+    :pswitch_0
+    sget-object v0, Lv85;->a:Lvr;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {p1, v2}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-    const-string p0, "Dispatchers.Default"
+    move-result-object p1
 
-    return-object p0
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getBitrateRange()Landroid/util/Range;
+
+    move-result-object p1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/util/Range;->clamp(Ljava/lang/Comparable;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    sub-int/2addr p1, v1
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

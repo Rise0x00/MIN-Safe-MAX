@@ -1,101 +1,109 @@
-.class public final synthetic Lkuf;
-.super Ljava/lang/Object;
+.class public final Lkuf;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+.field public final synthetic X:Lruf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+.method public constructor <init>(Lruf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lkuf;->a:I
+    iput-object p1, p0, Lkuf;->X:Lruf;
 
-    iput-object p1, p0, Lkuf;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkuf;->a:I
+    check-cast p1, Le34;
 
-    iget-object p0, p0, Lkuf;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lkuf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    move-result-object p1
 
-    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:I
+    check-cast p1, Lkuf;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    sget-object p2, Loyf;->a:Loyf;
 
-    move-result-wide v0
+    invoke-virtual {p1, p2}, Lkuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-wide v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:J
+    return-object p2
+.end method
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->p0:Lfh7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-static {v0}, Lrtc;->b(Lkp4;)V
+    new-instance p1, Lkuf;
 
-    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    iget-object v0, p0, Lkuf;->X:Lruf;
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->n0:Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-direct {p1, v0, p2}, Lkuf;-><init>(Lruf;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    return-object p1
+.end method
 
-    const/4 p1, 0x0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lkuf;->X:Lruf;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
+    iget-object p1, p1, Lruf;->B0:Lmoe;
 
-    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:I
+    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast v0, Lxwf;
 
-    move-result-wide v0
+    instance-of v1, v0, Luwf;
 
-    iget-wide v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:J
+    sget-object v2, Loyf;->a:Loyf;
 
-    sub-long/2addr v0, v2
+    if-eqz v1, :cond_1
 
-    const-wide/16 v2, 0x3e8
+    check-cast v0, Luwf;
 
-    cmp-long p1, v0, v2
+    iget-object v1, v0, Luwf;->c:Lvwf;
 
-    if-lez p1, :cond_0
+    iget-object v3, v1, Lvwf;->c:Loef;
 
-    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    if-nez v3, :cond_0
 
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 v3, 0x0
 
-    nop
+    invoke-static {v1, v3}, Lvwf;->a(Lvwf;Loef;)Lvwf;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v1
+
+    const/4 v4, 0x7
+
+    invoke-static {v0, v3, v1, v4}, Luwf;->c(Luwf;Lvwf;Lvwf;I)Luwf;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v3, v0}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_1
+    :goto_0
+    return-object v2
 .end method

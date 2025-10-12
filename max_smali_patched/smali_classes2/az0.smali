@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onCustomData(Lwg1;Lorg/json/JSONObject;)V
+.method public abstract onCustomData(Lxg1;Lorg/json/JSONObject;)V
 .end method

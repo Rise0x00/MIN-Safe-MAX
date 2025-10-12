@@ -1,75 +1,114 @@
-.class public final Liu;
-.super Lhj0;
+.class public final synthetic Liu;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lth2;
+
+.field public final synthetic c:Lw29;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lth2;Lw29;I)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Liu;->b:I
+    iput p3, p0, Liu;->a:I
 
-    invoke-direct {p0}, Lhj0;-><init>()V
+    iput-object p1, p0, Liu;->b:Lth2;
 
-    return-void
-.end method
+    iput-object p2, p0, Liu;->c:Lw29;
 
-.method public synthetic constructor <init>(JI)V
-    .locals 0
-
-    .line 2
-    iput p3, p0, Liu;->b:I
-
-    invoke-direct {p0, p1, p2}, Lhj0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iget v0, p0, Liu;->b:I
+    iget v0, p0, Liu;->a:I
 
-    sparse-switch v0, :sswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Lhj0;->toString()Ljava/lang/String;
+    iget-object v0, p0, Liu;->b:Lth2;
 
-    move-result-object p0
+    iget-object v1, p0, Liu;->c:Lw29;
 
-    return-object p0
+    :try_start_0
+    iget-object v2, v0, Lth2;->b:Lbw6;
 
-    :sswitch_0
-    const-string p0, "PhonesSortEvent"
+    invoke-virtual {v2, v1}, Lbw6;->r(Liv6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
+    goto :goto_0
 
-    :sswitch_1
-    const-string p0, "ContactSortEvent"
+    :catchall_0
+    move-exception v1
 
-    return-object p0
+    iget-object v2, v0, Lth2;->a:Ljava/lang/String;
 
-    :sswitch_2
-    const-string p0, "AudioRecordLimitEvent{}"
+    const-string v3, "updateHistoryItemSync: exception"
 
-    return-object p0
+    invoke-static {v2, v3, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :sswitch_3
-    const-string p0, "AssetsUpdateEvent{chatId=0}"
+    iget-object v0, v0, Lth2;->Y:Lec5;
 
-    return-object p0
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    :sswitch_data_0
-    .sparse-switch
-        0x0 -> :sswitch_3
-        0x1 -> :sswitch_2
-        0x2 -> :sswitch_1
-        0x8 -> :sswitch_0
-    .end sparse-switch
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lec5;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Liu;->b:Lth2;
+
+    iget-object v1, p0, Liu;->c:Lw29;
+
+    :try_start_1
+    iget-object v2, v0, Lth2;->b:Lbw6;
+
+    invoke-virtual {v2, v1}, Lbw6;->b(Liv6;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v1
+
+    iget-object v2, v0, Lth2;->a:Ljava/lang/String;
+
+    const-string v3, "addHistoryItem: exception"
+
+    invoke-static {v2, v3, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Lth2;->Y:Lec5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Lec5;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

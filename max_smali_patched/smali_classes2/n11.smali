@@ -1,42 +1,41 @@
 .class public final Ln11;
-.super Ljava/lang/Object;
+.super Lcy;
 .source "SourceFile"
-
-# interfaces
-.implements Le00;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final X:Ljava/lang/String;
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final Y:I
 
-.field public final c:Z
+.field public final Z:I
 
-.field public final d:Landroid/graphics/drawable/Drawable;
+.field public final o:Ljava/lang/String;
 
-.field public final e:Ll11;
+.field public final w0:Ljava/lang/Long;
 
-.field public final f:Z
+.field public final x0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLandroid/graphics/drawable/Drawable;Ll11;Z)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;IILjava/lang/Long;Ljava/util/List;ZZ)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Li00;->y0:Li00;
 
-    iput-object p1, p0, Ln11;->a:Ljava/lang/CharSequence;
+    invoke-direct {p0, v0, p7, p8}, Lcy;-><init>(Li00;ZZ)V
 
-    iput-object p2, p0, Ln11;->b:Ljava/lang/CharSequence;
+    iput-object p1, p0, Ln11;->o:Ljava/lang/String;
 
-    iput-boolean p3, p0, Ln11;->c:Z
+    iput-object p2, p0, Ln11;->X:Ljava/lang/String;
 
-    iput-object p4, p0, Ln11;->d:Landroid/graphics/drawable/Drawable;
+    iput p3, p0, Ln11;->Y:I
 
-    iput-object p5, p0, Ln11;->e:Ll11;
+    iput p4, p0, Ln11;->Z:I
 
-    iput-boolean p6, p0, Ln11;->f:Z
+    iput-object p5, p0, Ln11;->w0:Ljava/lang/Long;
+
+    iput-object p6, p0, Ln11;->x0:Ljava/util/List;
 
     return-void
 .end method

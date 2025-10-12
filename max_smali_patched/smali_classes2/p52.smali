@@ -1,135 +1,90 @@
 .class public final Lp52;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements La59;
+.implements Llf6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lu52;
 
 
 # direct methods
-.method public static b(Ldue;Lyte;Ll72;)Ljava/util/List;
-    .locals 7
+.method public constructor <init>(Lu52;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lhc2;
+    iput-object p1, p0, Lp52;->Y:Lu52;
 
-    sget-object v1, Lcl0;->b:Lcl0;
+    const/4 p1, 0x2
 
-    sget-object v2, Lbl0;->a:Lbl0;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p2, v1, v2}, Ll72;->g(Lcl0;Lbl0;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p2}, Ll72;->k0()V
-
-    iget-object v4, p2, Ll72;->s0:Ljava/lang/CharSequence;
-
-    invoke-virtual {p2}, Ll72;->f()J
-
-    move-result-wide v5
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    invoke-direct/range {v0 .. v6}, Lhc2;-><init>(Ldue;Lyte;Ljava/lang/String;Ljava/lang/CharSequence;J)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ll72;)Ljava/util/List;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lh52;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lp52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lp52;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lp52;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    if-eqz p1, :cond_2
+    new-instance v0, Lp52;
 
-    invoke-virtual {p1}, Ll72;->H()Z
+    iget-object v1, p0, Lp52;->Y:Lu52;
 
-    move-result p0
+    invoke-direct {v0, v1, p2}, Lp52;-><init>(Lu52;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x1
+    iput-object p1, v0, Lp52;->X:Ljava/lang/Object;
 
-    if-ne p0, v0, :cond_2
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Ll72;->a0()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result p0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    if-eqz p0, :cond_0
+    iget-object p1, p0, Lp52;->X:Ljava/lang/Object;
 
-    sget p0, Lsfa;->E0:I
+    check-cast p1, Lh52;
 
-    new-instance v0, Lyte;
+    iget-object v0, p0, Lp52;->Y:Lu52;
 
-    invoke-direct {v0, p0}, Lyte;-><init>(I)V
+    iget-object v1, v0, Lu52;->X:Lmoe;
 
-    sget p0, Lsfa;->D0:I
+    iget-object v2, p1, Lh52;->a:Lv52;
 
-    new-instance v1, Lyte;
+    invoke-virtual {v1, v2}, Lmoe;->setValue(Ljava/lang/Object;)V
 
-    invoke-direct {v1, p0}, Lyte;-><init>(I)V
+    iget-object v0, v0, Lu52;->c:Lmoe;
 
-    invoke-static {v0, v1, p1}, Lp52;->b(Ldue;Lyte;Ll72;)Ljava/util/List;
+    iget-object p1, p1, Lh52;->b:Ljava/util/List;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Lmoe;->setValue(Ljava/lang/Object;)V
 
-    return-object p0
+    sget-object p1, Loyf;->a:Loyf;
 
-    :cond_0
-    invoke-virtual {p1}, Ll72;->Y()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p1}, Ll72;->q()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Lcue;
-
-    invoke-direct {v0, p0}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    sget p0, Lsfa;->F0:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, p0}, Lyte;-><init>(I)V
-
-    invoke-static {v0, v1, p1}, Lp52;->b(Ldue;Lyte;Ll72;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {p1}, Ll72;->q()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Lcue;
-
-    invoke-direct {v0, p0}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    sget p0, Lsfa;->G0:I
-
-    new-instance v1, Lyte;
-
-    invoke-direct {v1, p0}, Lyte;-><init>(I)V
-
-    invoke-static {v0, v1, p1}, Lp52;->b(Ldue;Lyte;Ll72;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    sget-object p0, Lr25;->a:Lr25;
-
-    return-object p0
+    return-object p1
 .end method

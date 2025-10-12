@@ -1,67 +1,51 @@
 .class public final Lw4a;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lw4a;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:La5a;
+
+.field public Z:I
+
+.field public o:Lo57;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(La5a;Lnz3;)V
+    .locals 0
 
-    new-instance v0, Lw4a;
+    iput-object p1, p0, Lw4a;->Y:La5a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lw4a;->a:Lw4a;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld96;)Landroid/window/OnBackInvokedCallback;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ld96;",
-            ")",
-            "Landroid/window/OnBackInvokedCallback;"
-        }
-    .end annotation
 
-    new-instance p0, Lpm;
+    iput-object p1, p0, Lw4a;->X:Ljava/lang/Object;
 
-    const/4 v0, 0x2
+    iget p1, p0, Lw4a;->Z:I
 
-    invoke-direct {p0, v0, p1}, Lpm;-><init>(ILjava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public final b(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
+    iput p1, p0, Lw4a;->Z:I
 
-    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
+    iget-object p1, p0, Lw4a;->Y:La5a;
 
-    check-cast p3, Landroid/window/OnBackInvokedCallback;
+    const/4 v0, 0x0
 
-    invoke-interface {p1, p2, p3}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+    invoke-virtual {p1, v0, v0, p0}, La5a;->a(Lo57;Lb67;Lnz3;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Landroid/window/OnBackInvokedDispatcher;
-
-    check-cast p2, Landroid/window/OnBackInvokedCallback;
-
-    invoke-interface {p1, p2}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
-
-    return-void
+    return-object p1
 .end method

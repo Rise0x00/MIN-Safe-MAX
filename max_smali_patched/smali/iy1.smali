@@ -1,102 +1,152 @@
-.class public final Liy1;
+.class public interface abstract Liy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljy1;
-
 
 # virtual methods
-.method public final b(F)Lyp7;
-    .locals 0
+.method public b(Lkd5;)V
+    .locals 5
 
-    sget-object p0, Llz6;->c:Llz6;
+    iget-object v0, p1, Lkd5;->a:Ljava/util/ArrayList;
 
-    return-object p0
-.end method
+    invoke-interface {p0}, Liy1;->e()I
 
-.method public final c(Lpf3;)V
-    .locals 0
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {v1}, Lqw1;->u(I)I
+
+    move-result v3
+
+    if-eq v3, v2, :cond_7
+
+    const/4 v4, 0x2
+
+    if-eq v3, v4, :cond_6
+
+    const/4 v4, 0x3
+
+    if-eq v3, v4, :cond_5
+
+    const/4 p1, 0x1
+
+    if-eq v1, p1, :cond_4
+
+    const/4 p1, 0x2
+
+    if-eq v1, p1, :cond_3
+
+    const/4 p1, 0x3
+
+    if-eq v1, p1, :cond_2
+
+    const/4 p1, 0x4
+
+    if-eq v1, p1, :cond_1
+
+    const-string p1, "null"
+
+    goto :goto_0
+
+    :cond_1
+    const-string p1, "FIRED"
+
+    goto :goto_0
+
+    :cond_2
+    const-string p1, "READY"
+
+    goto :goto_0
+
+    :cond_3
+    const-string p1, "NONE"
+
+    goto :goto_0
+
+    :cond_4
+    const-string p1, "UNKNOWN"
+
+    :goto_0
+    const-string v0, "Unknown flash state: "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ExifData"
+
+    invoke-static {v0, p1}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_5
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_7
+    const/16 v1, 0x20
+
+    :goto_1
+    and-int/lit8 v3, v1, 0x1
+
+    if-ne v3, v2, :cond_8
+
+    const/4 v2, 0x4
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "LightSource"
+
+    invoke-virtual {p1, v3, v2, v0}, Lkd5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_8
+    const-string v2, "Flash"
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v2, v1, v0}, Lkd5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public final d(F)Lyp7;
-    .locals 0
-
-    sget-object p0, Llz6;->c:Llz6;
-
-    return-object p0
+.method public abstract c()Lw7f;
 .end method
 
-.method public final e()Landroid/graphics/Rect;
-    .locals 0
-
-    new-instance p0, Landroid/graphics/Rect;
-
-    invoke-direct {p0}, Landroid/graphics/Rect;-><init>()V
-
-    return-object p0
+.method public abstract d()Lfy1;
 .end method
 
-.method public final f(I)V
-    .locals 0
-
-    return-void
+.method public abstract e()I
 .end method
 
-.method public final h(Lhz4;)Lyp7;
-    .locals 0
-
-    new-instance p0, Lkv5;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lkv5;-><init>(Z)V
-
-    invoke-static {p0}, Lcp;->C(Ljava/lang/Object;)Llz6;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract f()Ldy1;
 .end method
 
-.method public final i(Ljava/util/ArrayList;II)Lyp7;
-    .locals 0
-
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-static {p0}, Lcp;->C(Ljava/lang/Object;)Llz6;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract getTimestamp()J
 .end method
 
-.method public final j(Ludd;)V
-    .locals 0
+.method public h()Landroid/hardware/camera2/CaptureResult;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
-.method public final k(Z)Lyp7;
-    .locals 0
-
-    sget-object p0, Llz6;->c:Llz6;
-
-    return-object p0
-.end method
-
-.method public final m()Lpf3;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final n()V
-    .locals 0
-
-    return-void
+.method public abstract k()Ley1;
 .end method

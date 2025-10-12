@@ -1,259 +1,325 @@
-.class public final Lfk5;
+.class public final synthetic Lfk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic f:[Lof7;
-
-.field public static final g:Ljava/lang/String;
+# interfaces
+.implements Lwo3;
+.implements Lou8;
+.implements Lqu8;
+.implements Lvo3;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:Lcq4;
+.field public final synthetic b:J
 
-.field public final c:Lcq4;
+.field public final synthetic c:I
 
-.field public final d:Lcq4;
-
-.field public final e:Lkle;
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public synthetic constructor <init>(Ljava/lang/Object;IJI)V
+    .locals 0
 
-    new-instance v0, Lvqb;
+    .line 1
+    iput p5, p0, Lfk5;->a:I
 
-    const-class v1, Lfk5;
+    iput-object p1, p0, Lfk5;->o:Ljava/lang/Object;
 
-    const-string v2, "fileSystem"
+    iput p2, p0, Lfk5;->c:I
 
-    const-string v3, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+    iput-wide p3, p0, Lfk5;->b:J
 
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Ldic;->a:Leic;
-
-    const-string v3, "exceptionHandler"
-
-    const-string v5, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Ldl5;->g(Leic;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lvqb;
-
-    move-result-object v2
-
-    new-instance v3, Lvqb;
-
-    const-string v5, "dispatcher"
-
-    const-string v6, "getDispatcher()Lru/ok/tamtam/coroutines/IoDispatcher;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lvqb;
-
-    const-string v6, "serverPrefs"
-
-    const-string v7, "getServerPrefs()Lru/ok/tamtam/prefs/ServerPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Lof7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lfk5;->f:[Lof7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lfk5;->g:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcq4;Lcq4;Lcq4;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
     .locals 0
 
+    .line 2
+    iput p5, p0, Lfk5;->a:I
+
+    iput-object p1, p0, Lfk5;->o:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lfk5;->b:J
+
+    iput p4, p0, Lfk5;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfk5;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lfk5;->b:Lcq4;
-
-    iput-object p3, p0, Lfk5;->c:Lcq4;
-
-    iput-object p4, p0, Lfk5;->d:Lcq4;
-
-    new-instance p1, Lqm4;
-
-    const/16 p2, 0x11
-
-    invoke-direct {p1, p2}, Lqm4;-><init>(I)V
-
-    new-instance p2, Lkle;
-
-    invoke-direct {p2, p1}, Lkle;-><init>(Ld96;)V
-
-    iput-object p2, p0, Lfk5;->e:Lkle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/io/File;Z)V
-    .locals 5
+.method public accept(Ljava/lang/Object;)V
+    .locals 14
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lfk5;->a:I
 
-    sget-object p0, Lfk5;->g:Ljava/lang/String;
+    const-string v1, " to position="
 
-    const-string p1, "file is null!"
+    const-string v2, "onNotifMoved: failed to move id="
 
-    invoke-static {p0, p1}, Lz76;->M(Ljava/lang/String;Ljava/lang/String;)V
+    iget v3, p0, Lfk5;->c:I
+
+    iget-wide v4, p0, Lfk5;->b:J
+
+    iget-object v6, p0, Lfk5;->o:Ljava/lang/Object;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast v6, Lzze;
+
+    move-object v0, p1
+
+    check-cast v0, Ln64;
+
+    iget-object v1, v6, Lzze;->h:Lt76;
+
+    invoke-static {v1}, Lpih;->p(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Ln64;->a:Le77;
+
+    iget-wide v7, v0, Ln64;->c:J
+
+    invoke-static {v1, v7, v8}, Le2a;->o(Le77;J)[B
+
+    move-result-object v1
+
+    iget-object v2, v6, Lzze;->c:Ly4b;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    array-length v7, v1
+
+    invoke-virtual {v2, v7, v1}, Ly4b;->E(I[B)V
+
+    iget-object v7, v6, Lzze;->a:Lcof;
+
+    array-length v8, v1
+
+    const/4 v9, 0x0
+
+    invoke-interface {v7, v2, v8, v9}, Lcof;->b(Ly4b;II)V
+
+    iget-wide v7, v0, Ln64;->b:J
+
+    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, v7, v10
+
+    const/4 v2, 0x1
+
+    const-wide v10, 0x7fffffffffffffffL
+
+    if-nez v0, :cond_1
+
+    iget-object v0, v6, Lzze;->h:Lt76;
+
+    iget-wide v7, v0, Lt76;->s:J
+
+    cmp-long v0, v7, v10
+
+    if-nez v0, :cond_0
+
+    move v9, v2
+
+    :cond_0
+    invoke-static {v9}, Lpih;->o(Z)V
+
+    :goto_0
+    move-wide v8, v4
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, v6, Lzze;->h:Lt76;
+
+    iget-wide v12, v0, Lt76;->s:J
+
+    cmp-long v0, v12, v10
+
+    if-nez v0, :cond_2
+
+    add-long/2addr v4, v7
+
+    goto :goto_0
+
+    :cond_2
+    add-long v4, v7, v12
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v7, v6, Lzze;->a:Lcof;
+
+    or-int/lit8 v10, v3, 0x1
+
+    array-length v11, v1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    invoke-interface/range {v7 .. v13}, Lcof;->a(JIIILaof;)V
 
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lfk5;->e:Lkle;
+    :pswitch_0
+    check-cast v6, Lil5;
 
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
+    move-object v0, p1
 
-    move-result-object v0
+    check-cast v0, Ljava/lang/Throwable;
 
-    check-cast v0, Lp04;
+    sget-object v7, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    sget-object v1, Lfk5;->f:[Lof7;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x2
+    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v1, v1, v2
+    invoke-virtual {v7, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lfk5;->c:Lcq4;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcq4;->get()Ljava/lang/Object;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    check-cast v1, Laa7;
-
-    iget-object v1, v1, Laa7;->a:Lj04;
-
-    sget-object v3, Lct9;->a:Lct9;
-
-    invoke-virtual {v1, v3}, Ld0;->plus(Lh04;)Lh04;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v3, Lek5;
+    const-string v2, "il5"
 
-    const/4 v4, 0x0
+    invoke-static {v2, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {v3, p1, p0, p2, v4}, Lek5;-><init>(Ljava/io/File;Lfk5;ZLkotlin/coroutines/Continuation;)V
+    invoke-virtual {v6}, Lil5;->I()V
 
-    invoke-static {v0, v1, v4, v3, v2}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    return-void
+
+    :pswitch_1
+    check-cast v6, Lok5;
+
+    move-object v0, p1
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    sget-object v7, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "ok5"
+
+    invoke-static {v2, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v6}, Lok5;->J()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b(Lgmb;Lls8;)V
+    .locals 3
+
+    iget-object v0, p0, Lfk5;->o:Ljava/lang/Object;
+
+    check-cast v0, Lru8;
+
+    iget v1, p0, Lfk5;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lru8;->b0(Lls8;Lgmb;I)I
+
+    move-result p2
+
+    invoke-virtual {p1}, Lgmb;->p0()V
+
+    iget-object p1, p1, Lgmb;->a:Lif5;
+
+    const/4 v0, 0x0
+
+    iget-wide v1, p0, Lfk5;->b:J
+
+    invoke-virtual {p1, p2, v1, v2, v0}, Lif5;->Y0(IJZ)V
 
     return-void
 .end method
 
-.method public final b(Ljava/io/File;)V
-    .locals 9
+.method public j(Lft8;Lls8;I)Ljava/lang/Object;
+    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Lfk5;->d:Lcq4;
+    iget-object p3, p0, Lfk5;->o:Ljava/lang/Object;
 
-    sget-object v1, Lfk5;->f:[Lof7;
+    move-object v2, p3
 
-    const/4 v2, 0x3
+    check-cast v2, Ljava/util/List;
 
-    aget-object v1, v1, v2
+    iget p3, p0, Lfk5;->c:I
 
-    invoke-virtual {v0}, Lcq4;->get()Ljava/lang/Object;
+    const/4 v0, -0x1
 
-    move-result-object v0
+    if-ne p3, v0, :cond_0
 
-    check-cast v0, Lvbd;
+    iget-object v1, p1, Lft8;->t:Lgmb;
 
-    check-cast v0, Ln2d;
+    invoke-virtual {v1}, Lgmb;->z()I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v1
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->max-downloaded-size-for-notify-kb:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v2, 0x400
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Ln2d;->n(Ljava/lang/Enum;J)J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    int-to-long v0, v0
-
-    invoke-virtual {p1}, Ljava/io/File;->length()J
-
-    move-result-wide v4
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v8, v4, v6
-
-    if-gez v8, :cond_0
-
-    move-wide v4, v6
-
-    :cond_0
-    div-long/2addr v4, v2
-
-    cmp-long v0, v0, v4
-
-    if-gez v0, :cond_1
-
-    const/4 v0, 0x1
+    move v3, v1
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    move v3, p3
 
     :goto_0
-    invoke-virtual {p0, p1, v0}, Lfk5;->a(Ljava/io/File;Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne p3, v0, :cond_1
 
-    return-void
+    iget-object p3, p1, Lft8;->t:Lgmb;
 
-    :catchall_0
-    move-exception p0
+    invoke-virtual {p3}, Lgmb;->c()J
 
-    sget-object p1, Lfk5;->g:Ljava/lang/String;
+    move-result-wide v0
 
-    const-string v0, "notifyWithForegroundCheckAndSize fail!"
+    :goto_1
+    move-wide v4, v0
 
-    invoke-static {p1, v0, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-object v0, p1
 
-    return-void
+    move-object v1, p2
+
+    goto :goto_2
+
+    :cond_1
+    iget-wide v0, p0, Lfk5;->b:J
+
+    goto :goto_1
+
+    :goto_2
+    invoke-virtual/range {v0 .. v5}, Lft8;->p(Lls8;Ljava/util/List;IJ)Lsxd;
+
+    move-result-object p1
+
+    return-object p1
 .end method

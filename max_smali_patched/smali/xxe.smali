@@ -1,23 +1,19 @@
-.class public final Lxxe;
-.super Lyxe;
+.class public abstract Lxxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final d(J)Lyxe;
-    .locals 0
+# static fields
+.field public static final synthetic a:I
 
-    return-object p0
-.end method
 
-.method public final f()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-string v0, "\\$\\{(.*?)\\}"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     return-void
-.end method
-
-.method public final g(JLjava/util/concurrent/TimeUnit;)Lyxe;
-    .locals 0
-
-    return-object p0
 .end method

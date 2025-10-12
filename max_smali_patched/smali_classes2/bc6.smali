@@ -1,64 +1,78 @@
-.class public final Lbc6;
+.class public final synthetic Lbc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lec6;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lbc6;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcc6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lcc6;I)V
+    .locals 0
 
-    new-instance v0, Lbc6;
+    iput p2, p0, Lbc6;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbc6;->b:Lcc6;
 
-    sput-object v0, Lbc6;->a:Lbc6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lbc6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lbc6;->b:Lcc6;
 
-    :cond_0
-    instance-of p0, p1, Lbc6;
+    invoke-virtual {v0}, Lcc6;->a()V
 
-    if-nez p0, :cond_1
+    const/4 v1, 0x0
 
-    const/4 p0, 0x0
+    iput-object v1, v0, Lcc6;->Z:Lqc6;
 
-    return p0
+    iput-object v1, v0, Lcc6;->w0:Lqc6;
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lbc6;->b:Lcc6;
 
-    const p0, -0x6ebc12d1
+    invoke-virtual {v0}, Lcc6;->a()V
 
-    return p0
-.end method
+    return-void
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    :pswitch_1
+    iget-object v0, p0, Lbc6;->b:Lcc6;
 
-    const-string p0, "ClearSelectionAndScrollUp"
+    const/4 v1, 0x1
 
-    return-object p0
+    iput-boolean v1, v0, Lcc6;->B0:Z
+
+    new-instance v1, Lorg/webrtc/VpxEncoderWrapper;
+
+    invoke-direct {v1}, Lorg/webrtc/VpxEncoderWrapper;-><init>()V
+
+    invoke-virtual {v1, v0}, Lorg/webrtc/VpxEncoderWrapper;->setConsumerCallback(Lorg/webrtc/EncoderCallback;)V
+
+    iput-object v1, v0, Lcc6;->Y:Lorg/webrtc/VpxEncoderWrapper;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

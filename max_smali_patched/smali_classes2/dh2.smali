@@ -2,112 +2,86 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhh2;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;ZZIII)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldh2;->a:Ljava/util/List;
-
-    iput-boolean p2, p0, Ldh2;->b:Z
-
-    iput-boolean p3, p0, Ldh2;->c:Z
-
-    iput p4, p0, Ldh2;->e:I
-
-    iput p5, p0, Ldh2;->f:I
-
-    iput p6, p0, Ldh2;->d:I
+    iput-wide p1, p0, Ldh2;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "ChatMediaResult{messages="
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldh2;->a:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v1, p1, Ldh2;
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v1, ", forward="
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v2
 
-    iget-boolean v1, p0, Ldh2;->b:Z
+    :cond_1
+    check-cast p1, Ldh2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-wide v3, p0, Ldh2;->a:J
 
-    const-string v1, ", isNetworkLoading="
+    iget-wide v5, p1, Ldh2;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    cmp-long p1, v3, v5
 
-    iget-boolean v1, p0, Ldh2;->c:Z
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return v2
 
-    const-string v1, ", responseCount="
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final hashCode()I
+    .locals 2
 
-    iget v1, p0, Ldh2;->d:I
+    iget-wide v0, p0, Ldh2;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    const-string v1, ", forwardCount="
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    iget v1, p0, Ldh2;->e:I
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v0, "DownloadError(messageId="
 
-    const-string v1, ", backwardCount="
+    const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Ldh2;->a:J
 
-    iget p0, p0, Ldh2;->f:I
+    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v1, 0x7d
+    move-result-object v0
 
-    invoke-static {v0, p0, v1}, Ldw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

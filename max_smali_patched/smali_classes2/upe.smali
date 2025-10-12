@@ -1,125 +1,85 @@
-.class public final Lupe;
-.super Ljava/lang/Object;
+.class public final enum Lupe;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lhq0;
 
+# static fields
+.field public static final enum a:Lupe;
 
-# instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public static final enum b:Lupe;
 
-.field public final b:Ljava/lang/Object;
+.field public static final enum c:Lupe;
+
+.field public static final synthetic o:[Lupe;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lupe;
 
-    new-instance v0, Landroid/graphics/Paint;
+    const-string v1, "DEFAULT"
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    const/4 v2, 0x0
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
+    sput-object v0, Lupe;->a:Lupe;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    new-instance v1, Lupe;
 
-    iput-object v0, p0, Lupe;->a:Landroid/graphics/Paint;
+    const-string v2, "WITH_CALL_PIP"
 
-    new-instance v0, Ltud;
+    const/4 v3, 0x1
 
-    const/4 v1, 0x6
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, p1, v1}, Ltud;-><init>(Landroid/content/Context;I)V
+    sput-object v1, Lupe;->b:Lupe;
 
-    const/4 p1, 0x2
+    new-instance v2, Lupe;
 
-    invoke-static {p1, v0}, Lltg;->s(ILd96;)Lth7;
+    const-string v3, "WITH_VIDEO_PIP"
 
-    move-result-object p1
+    const/4 v4, 0x2
 
-    iput-object p1, p0, Lupe;->b:Ljava/lang/Object;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lupe;->c:Lupe;
+
+    filled-new-array {v0, v1, v2}, [Lupe;
+
+    move-result-object v0
+
+    sput-object v0, Lupe;->o:[Lupe;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final b()V
+.method public static valueOf(Ljava/lang/String;)Lupe;
     .locals 1
 
-    iget-object p0, p0, Lupe;->b:Ljava/lang/Object;
+    const-class v0, Lupe;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Lnx6;
+    check-cast p0, Lupe;
 
-    iget-object p0, p0, Lnx6;->a:Lkle;
-
-    invoke-virtual {p0}, Lkle;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/renderscript/RenderScript;
-
-    invoke-virtual {p0}, Landroid/renderscript/RenderScript;->destroy()V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final f(I)V
-    .locals 0
-
-    iget-object p0, p0, Lupe;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final h(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
+.method public static values()[Lupe;
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lupe;->o:[Lupe;
 
-    iget-object p0, p0, Lupe;->a:Landroid/graphics/Paint;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2, v0, v0, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    move-result-object v0
 
-    return-void
-.end method
+    check-cast v0, [Lupe;
 
-.method public final i(Landroid/graphics/Bitmap;F)V
-    .locals 1
-
-    iget-object p0, p0, Lupe;->b:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lnx6;
-
-    invoke-static {p2}, Litg;->z(F)I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, p2, v0}, Lnx6;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
-
-    return-void
+    return-object v0
 .end method

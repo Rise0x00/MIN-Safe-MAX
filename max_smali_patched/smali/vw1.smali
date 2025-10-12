@@ -1,99 +1,71 @@
-.class public final Lvw1;
+.class public final synthetic Lvw1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltv1;
+.implements Lyda;
 
 
 # instance fields
-.field public a:Ljs1;
+.field public final synthetic a:I
 
-.field public final b:Lms1;
-
-.field public final c:Llo0;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Llo0;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lvw1;->a:I
+
+    iput-object p2, p0, Lvw1;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lprc;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, p0}, Lprc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lpo9;->o(Lks1;)Lms1;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lvw1;->b:Lms1;
-
-    iput-object p1, p0, Lvw1;->c:Llo0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+.method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object v0, p0, Lvw1;->c:Llo0;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Llo0;->a:I
+    iget v0, p0, Lvw1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lvw1;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lh40;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
+    check-cast v0, Lda6;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lfy7;->k(Ljava/lang/Object;)V
 
-    goto :goto_0
+    return-void
 
     :pswitch_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lvw1;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lh40;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
+    check-cast v0, Lqrb;
 
-    move-result v0
+    check-cast v0, Lnrb;
 
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lnrb;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 
     :pswitch_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lvw1;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lh40;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
+    check-cast v0, Lww1;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lfy7;->k(Ljava/lang/Object;)V
 
-    :goto_0
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    iget-object p0, p0, Lvw1;->a:Ljs1;
-
-    invoke-virtual {p0, p1}, Ljs1;->b(Ljava/lang/Object;)Z
-
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0xb
+    .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch

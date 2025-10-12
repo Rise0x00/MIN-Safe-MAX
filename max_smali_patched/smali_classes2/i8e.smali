@@ -1,60 +1,89 @@
-.class public final Li8e;
-.super Lape;
+.class public final synthetic Li8e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lk8e;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lq09;)V
+.method public synthetic constructor <init>(Lk8e;ZI)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lape;-><init>(Lq09;)V
+    iput p3, p0, Li8e;->a:I
+
+    iput-object p1, p0, Li8e;->b:Lk8e;
+
+    iput-boolean p2, p0, Li8e;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lq09;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "url"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Lq09;->D0()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li8e;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lq09;->B()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    iget-object p0, p0, Li8e;->c:Ljava/lang/String;
+    iget v0, p0, Li8e;->a:I
 
-    const-string v0, "{url=\'"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "\'}"
+    iget-object v0, p0, Li8e;->b:Lk8e;
 
-    invoke-static {v0, p0, v1}, Lw68;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lk8e;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    return-object p0
+    iget-boolean v1, p0, Li8e;->c:Z
+
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setNoiseSuppressorEnabled(Z)Z
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Li8e;->b:Lk8e;
+
+    iget-object v0, v0, Lk8e;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v1, p0, Li8e;->c:Z
+
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setSpeakerMute(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li8e;->b:Lk8e;
+
+    iget-object v0, v0, Lk8e;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v1, p0, Li8e;->c:Z
+
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setMicrophoneMute(Z)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

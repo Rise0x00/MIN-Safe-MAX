@@ -1,258 +1,124 @@
-.class public abstract Lx6d;
+.class public final synthetic Lx6d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
 
-# static fields
-.field public static final a:Lg6d;
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:[Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic b:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/android/root/RootController;I)V
+    .locals 0
 
-    new-instance v0, Lg6d;
+    iput p2, p0, Lx6d;->a:I
 
-    const/4 v6, 0x0
+    iput-object p1, p0, Lx6d;->b:Lone/me/android/root/RootController;
 
-    new-array v1, v6, [B
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lg6d;-><init>([BIIZZ)V
-
-    sput-object v0, Lx6d;->a:Lg6d;
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    sput v0, Lx6d;->b:I
-
-    new-array v1, v0, [Ljava/util/concurrent/atomic/AtomicReference;
-
-    :goto_0
-    if-ge v6, v0, :cond_0
-
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    aput-object v2, v1, v6
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v1, Lx6d;->c:[Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Lg6d;)V
-    .locals 6
 
-    iget-object v0, p0, Lg6d;->f:Lg6d;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    if-nez v0, :cond_6
+    iget v0, p0, Lx6d;->a:I
 
-    iget-object v0, p0, Lg6d;->g:Lg6d;
+    const/4 v1, -0x1
 
-    if-nez v0, :cond_6
+    iget-object v2, p0, Lx6d;->b:Lone/me/android/root/RootController;
 
-    iget-boolean v0, p0, Lg6d;->d:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    sget-object v0, Lone/me/android/root/RootController;->x0:[Ltm7;
 
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v0
-
-    sget v2, Lx6d;->b:I
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v2, v4
-
-    and-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    sget-object v1, Lx6d;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    aget-object v0, v1, v0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lg6d;
-
-    sget-object v2, Lx6d;->a:Lg6d;
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    iget v3, v1, Lg6d;->c:I
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v2
-
-    :goto_0
-    const/high16 v4, 0x10000
-
-    if-lt v3, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iput-object v1, p0, Lg6d;->f:Lg6d;
-
-    iput v2, p0, Lg6d;->b:I
-
-    add-int/lit16 v3, v3, 0x2000
-
-    iput v3, p0, Lg6d;->c:I
-
-    :cond_4
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    :goto_1
-    return-void
-
-    :cond_5
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lg6d;->f:Lg6d;
-
-    return-void
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Failed requirement."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final b()Lg6d;
-    .locals 6
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-static {v0}, Lk98;->a(Landroid/content/Context;)Lf52;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+    sget v2, Lqdc;->root_top_indicator:I
 
-    move-result-wide v0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    sget v2, Lx6d;->b:I
+    new-instance v2, Lc24;
 
-    int-to-long v2, v2
+    const/4 v3, -0x2
 
-    const-wide/16 v4, 0x1
+    invoke-direct {v2, v1, v3}, Lc24;-><init>(II)V
 
-    sub-long/2addr v2, v4
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    and-long/2addr v0, v2
+    const/16 v1, 0x64
 
-    long-to-int v0, v0
+    int-to-float v1, v1
 
-    sget-object v1, Lx6d;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    aget-object v0, v1, v0
-
-    sget-object v1, Lx6d;->a:Lg6d;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    check-cast v2, Lg6d;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-ne v2, v1, :cond_0
+    move-result-object v2
 
-    new-instance v0, Lg6d;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct {v0}, Lg6d;-><init>()V
+    mul-float/2addr v1, v2
 
-    return-object v0
+    invoke-static {v1}, Lv63;->r0(F)I
 
-    :cond_0
-    const/4 v1, 0x0
+    move-result v1
 
-    if-nez v2, :cond_1
+    int-to-float v1, v1
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    neg-float v1, v1
 
-    new-instance v0, Lg6d;
-
-    invoke-direct {v0}, Lg6d;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     return-object v0
 
-    :cond_1
-    iget-object v3, v2, Lg6d;->f:Lg6d;
+    :pswitch_0
+    sget-object v0, Lone/me/android/root/RootController;->x0:[Ltm7;
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iput-object v1, v2, Lg6d;->f:Lg6d;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lk98;->a(Landroid/content/Context;)Lf52;
 
-    iput v0, v2, Lg6d;->c:I
+    move-result-object v0
 
-    return-object v2
+    sget v2, Lqdc;->root_screen:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    new-instance v2, Lc24;
+
+    invoke-direct {v2, v1, v1}, Lc24;-><init>(II)V
+
+    new-instance v1, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
+
+    invoke-direct {v1}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
+
+    invoke-virtual {v2, v1}, Lc24;->b(Lz14;)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

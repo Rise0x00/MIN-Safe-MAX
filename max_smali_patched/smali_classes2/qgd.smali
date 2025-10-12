@@ -1,129 +1,235 @@
 .class public final Lqgd;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Landroid/content/Intent;
+.field public final a:J
 
-.field public final synthetic Y:Lwgd;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:J
+
+.field public final j:J
+
+.field public final k:J
+
+.field public final l:D
+
+.field public final m:D
+
+.field public final n:D
+
+.field public final o:D
+
+.field public final p:Lgd6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Lwgd;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJJJJJJJJJJDDDDLgd6;)V
     .locals 0
 
-    iput-object p1, p0, Lqgd;->X:Landroid/content/Intent;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqgd;->Y:Lwgd;
+    iput-wide p1, p0, Lqgd;->a:J
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Lqgd;->b:J
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p5, p0, Lqgd;->c:J
+
+    iput-wide p7, p0, Lqgd;->d:J
+
+    iput-wide p9, p0, Lqgd;->e:J
+
+    iput-wide p11, p0, Lqgd;->f:J
+
+    iput-wide p13, p0, Lqgd;->g:J
+
+    move-wide p1, p15
+
+    iput-wide p1, p0, Lqgd;->h:J
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lqgd;->i:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lqgd;->j:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lqgd;->k:J
+
+    move-wide/from16 p1, p23
+
+    iput-wide p1, p0, Lqgd;->l:D
+
+    move-wide/from16 p1, p25
+
+    iput-wide p1, p0, Lqgd;->m:D
+
+    move-wide/from16 p1, p27
+
+    iput-wide p1, p0, Lqgd;->n:D
+
+    move-wide/from16 p1, p29
+
+    iput-wide p1, p0, Lqgd;->o:D
+
+    move-object/from16 p1, p31
+
+    iput-object p1, p0, Lqgd;->p:Lgd6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqgd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqgd;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lqgd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lqgd;
-
-    iget-object v0, p0, Lqgd;->X:Landroid/content/Intent;
-
-    iget-object p0, p0, Lqgd;->Y:Lwgd;
-
-    invoke-direct {p1, v0, p0, p2}, Lqgd;-><init>(Landroid/content/Intent;Lwgd;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lqgd;->X:Landroid/content/Intent;
+    const-string v1, "ScreenshareRecvStat{packetsRecvStat="
 
-    if-nez p1, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    iget-wide v1, p0, Lqgd;->a:J
 
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const-class v0, Landroid/graphics/RectF;
+    const-string v1, ", frameStartsRecvStat="
 
-    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, v1, v0}, Lkc5;->A(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    iget-wide v1, p0, Lqgd;->b:J
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast p1, Landroid/os/Parcelable;
+    const-string v1, ", recvOdditiesStat="
 
-    :goto_0
-    check-cast p1, Landroid/graphics/RectF;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ltcf;->a:Ltcf;
+    iget-wide v1, p0, Lqgd;->c:J
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    return-object v0
+    const-string v1, ", completeFramesStat="
 
-    :cond_1
-    sget-object v1, Lwgd;->F0:[Lof7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lqgd;->Y:Lwgd;
+    iget-wide v1, p0, Lqgd;->d:J
 
-    invoke-virtual {p0}, Lwgd;->s()Lxm5;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, ", keyFramesEnqStat="
 
-    iget-object v2, p0, Lwgd;->A0:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget-wide v1, p0, Lqgd;->e:J
 
-    move-result-object v2
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast v2, Ljava/lang/String;
+    const-string v1, ", deltaFramesEnqStat="
 
-    invoke-virtual {v1, v2}, Lxm5;->r(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    iget-wide v1, p0, Lqgd;->f:J
 
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, ", framesDroppedOnEnqStat="
 
-    invoke-virtual {p0, v1, p1}, Lwgd;->v(Ljava/lang/String;Landroid/graphics/RectF;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->g:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesDecodedStat="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->h:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", decodeErrors="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->i:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", allocatedBuffersStat="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->j:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", allocatedMemStat="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->k:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", packetReceivedEventRateMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->l:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameReceivedEventRateMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->m:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameDecodedEventRateMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->n:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameDecodeErrorEventRateMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lqgd;->o:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

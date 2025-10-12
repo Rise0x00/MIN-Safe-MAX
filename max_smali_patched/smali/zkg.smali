@@ -3,23 +3,21 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Landroid/view/ViewGroup;I)I
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildDrawingOrder(I)I
 
-    const-wide/16 v1, 0x1
+    move-result p0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    return p0
+.end method
 
-    move-result-wide v0
+.method public static b(Landroid/view/ViewGroup;Z)V
+    .locals 0
 
-    sput-wide v0, Lzkg;->a:J
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
     return-void
 .end method

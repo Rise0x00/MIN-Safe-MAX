@@ -1,307 +1,470 @@
 .class public final Lgcf;
-.super Lcj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:I
+.field public a:Z
 
-.field public final Y:[B
+.field public b:Lpbf;
 
-.field public final Z:Ljava/net/DatagramPacket;
+.field public final c:Ljava/util/ArrayList;
 
-.field public n0:Landroid/net/Uri;
+.field public d:Z
 
-.field public o0:Ljava/net/DatagramSocket;
+.field public final e:Ljcf;
 
-.field public p0:Ljava/net/MulticastSocket;
-
-.field public q0:Ljava/net/InetAddress;
-
-.field public r0:Z
-
-.field public s0:I
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Ljcf;Ljava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lcj0;-><init>(Z)V
+    iput-object p1, p0, Lgcf;->e:Ljcf;
 
-    const/16 v0, 0x1f40
+    iput-object p2, p0, Lgcf;->f:Ljava/lang/String;
 
-    iput v0, p0, Lgcf;->X:I
+    new-instance p1, Ljava/util/ArrayList;
 
-    const/16 v0, 0x7d0
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    new-array v1, v0, [B
-
-    iput-object v1, p0, Lgcf;->Y:[B
-
-    new-instance v2, Ljava/net/DatagramPacket;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v1, v3, v0}, Ljava/net/DatagramPacket;-><init>([BII)V
-
-    iput-object v2, p0, Lgcf;->Z:Ljava/net/DatagramPacket;
+    iput-object p1, p0, Lgcf;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lw64;)J
-    .locals 3
-
-    iget-object v0, p1, Lw64;->a:Landroid/net/Uri;
-
-    iput-object v0, p0, Lgcf;->n0:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p0, Lgcf;->n0:Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcj0;->d()V
-
-    :try_start_0
-    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    new-instance v0, Ljava/net/InetSocketAddress;
-
-    iget-object v2, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    invoke-direct {v0, v2, v1}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
-
-    iget-object v1, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    invoke-virtual {v1}, Ljava/net/InetAddress;->isMulticastAddress()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/net/MulticastSocket;
-
-    invoke-direct {v1, v0}, Ljava/net/MulticastSocket;-><init>(Ljava/net/SocketAddress;)V
-
-    iput-object v1, p0, Lgcf;->p0:Ljava/net/MulticastSocket;
-
-    iget-object v0, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    invoke-virtual {v1, v0}, Ljava/net/MulticastSocket;->joinGroup(Ljava/net/InetAddress;)V
-
-    iget-object v0, p0, Lgcf;->p0:Ljava/net/MulticastSocket;
-
-    iput-object v0, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ljava/net/DatagramSocket;
-
-    invoke-direct {v1, v0}, Ljava/net/DatagramSocket;-><init>(Ljava/net/SocketAddress;)V
-
-    iput-object v1, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
-
-    :goto_0
-    iget-object v0, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
-
-    iget v1, p0, Lgcf;->X:I
-
-    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lgcf;->r0:Z
-
-    invoke-virtual {p0, p1}, Lcj0;->e(Lw64;)V
-
-    const-wide/16 p0, -0x1
-
-    return-wide p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
-
-    const/16 v0, 0x7d1
-
-    invoke-direct {p1, p0, v0}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
-
-    const/16 v0, 0x7d6
-
-    invoke-direct {p1, p0, v0}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-.end method
-
-.method public final close()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lgcf;->n0:Landroid/net/Uri;
-
-    iget-object v1, p0, Lgcf;->p0:Ljava/net/MulticastSocket;
-
-    if-eqz v1, :cond_0
-
-    :try_start_0
-    iget-object v2, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v2}, Ljava/net/MulticastSocket;->leaveGroup(Ljava/net/InetAddress;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    iput-object v0, p0, Lgcf;->p0:Ljava/net/MulticastSocket;
-
-    :cond_0
-    iget-object v1, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
-
-    iput-object v0, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
-
-    :cond_1
-    iput-object v0, p0, Lgcf;->q0:Ljava/net/InetAddress;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lgcf;->s0:I
-
-    iget-boolean v1, p0, Lgcf;->r0:Z
-
-    if-eqz v1, :cond_2
-
-    iput-boolean v0, p0, Lgcf;->r0:Z
-
-    invoke-virtual {p0}, Lcj0;->c()V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 0
-
-    iget-object p0, p0, Lgcf;->n0:Landroid/net/Uri;
-
-    return-object p0
-.end method
-
-.method public final read([BII)I
+.method public final a()V
     .locals 2
 
-    if-nez p3, :cond_0
+    sget-object v0, Ls4g;->a:[B
 
-    const/4 p0, 0x0
+    iget-object v0, p0, Lgcf;->e:Ljcf;
 
-    return p0
-
-    :cond_0
-    iget v0, p0, Lgcf;->s0:I
-
-    iget-object v1, p0, Lgcf;->Z:Ljava/net/DatagramPacket;
-
-    if-nez v0, :cond_1
+    monitor-enter v0
 
     :try_start_0
-    iget-object v0, p0, Lgcf;->o0:Ljava/net/DatagramSocket;
+    invoke-virtual {p0}, Lgcf;->b()Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lgcf;->e:Ljcf;
+
+    invoke-virtual {v1, p0}, Ljcf;->d(Lgcf;)V
     :try_end_0
-    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
-
-    move-result v0
-
-    iput v0, p0, Lgcf;->s0:I
-
-    invoke-virtual {p0, v0}, Lcj0;->b(I)V
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception p0
+    :catchall_0
+    move-exception v1
 
-    new-instance p1, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
+    goto :goto_1
 
-    const/16 p2, 0x7d1
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    invoke-direct {p1, p0, p2}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+    return-void
 
-    throw p1
+    :goto_1
+    monitor-exit v0
 
-    :catch_1
-    move-exception p0
+    throw v1
+.end method
 
-    new-instance p1, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
+.method public final b()Z
+    .locals 6
 
-    const/16 p2, 0x7d2
+    iget-object v0, p0, Lgcf;->b:Lpbf;
 
-    invoke-direct {p1, p0, p2}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+    const/4 v1, 0x1
 
-    throw p1
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, v0, Lpbf;->d:Z
+
+    if-eqz v0, :cond_0
+
+    iput-boolean v1, p0, Lgcf;->d:Z
+
+    :cond_0
+    iget-object v0, p0, Lgcf;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    sub-int/2addr v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ltz v2, :cond_3
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lpbf;
+
+    iget-boolean v4, v4, Lpbf;->d:Z
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lpbf;
+
+    sget-object v4, Ljcf;->i:Ljava/util/logging/Logger;
+
+    sget-object v5, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+
+    invoke-virtual {v4, v5}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "canceled"
+
+    invoke-static {v3, p0, v4}, Lgh5;->b(Lpbf;Lgcf;Ljava/lang/String;)V
 
     :cond_1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move v3, v1
+
+    :cond_2
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    :cond_3
+    return v3
+.end method
+
+.method public final c(Lpbf;J)V
+    .locals 2
+
+    iget-object v0, p0, Lgcf;->e:Ljcf;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lgcf;->a:Z
+
+    if-eqz v1, :cond_3
+
+    iget-boolean p2, p1, Lpbf;->d:Z
+
+    if-eqz p2, :cond_1
+
+    sget-object p2, Ljcf;->i:Ljava/util/logging/Logger;
+
+    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+
+    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const-string p2, "schedule canceled (queue is shutdown)"
+
+    invoke-static {p1, p0, p2}, Lgh5;->b(Lpbf;Lgcf;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
     :goto_0
-    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+    monitor-exit v0
 
-    move-result v0
+    return-void
 
-    iget v1, p0, Lgcf;->s0:I
+    :cond_1
+    :try_start_1
+    sget-object p2, Ljcf;->i:Ljava/util/logging/Logger;
 
-    sub-int/2addr v0, v1
+    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
-    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
 
-    move-result p3
+    move-result p2
 
-    iget-object v1, p0, Lgcf;->Y:[B
+    if-eqz p2, :cond_2
 
-    invoke-static {v1, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    const-string p2, "schedule failed (queue is shutdown)"
 
-    iget p1, p0, Lgcf;->s0:I
+    invoke-static {p1, p0, p2}, Lgh5;->b(Lpbf;Lgcf;Ljava/lang/String;)V
 
-    sub-int/2addr p1, p3
+    :cond_2
+    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
 
-    iput p1, p0, Lgcf;->s0:I
+    invoke-direct {p1}, Ljava/util/concurrent/RejectedExecutionException;-><init>()V
 
-    return p3
+    throw p1
+
+    :cond_3
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, p1, p2, p3, v1}, Lgcf;->d(Lpbf;JZ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lgcf;->e:Ljcf;
+
+    invoke-virtual {p1, p0}, Ljcf;->d(Lgcf;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_4
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final d(Lpbf;JZ)Z
+    .locals 10
+
+    iget-object v0, p1, Lpbf;->a:Lgcf;
+
+    if-ne v0, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-nez v0, :cond_9
+
+    iput-object p0, p1, Lpbf;->a:Lgcf;
+
+    :goto_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    add-long v2, v0, p2
+
+    iget-object v4, p0, Lgcf;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    if-eq v5, v7, :cond_2
+
+    iget-wide v8, p1, Lpbf;->b:J
+
+    cmp-long v8, v8, v2
+
+    if-gtz v8, :cond_1
+
+    sget-object p2, Ljcf;->i:Ljava/util/logging/Logger;
+
+    sget-object p3, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+
+    invoke-virtual {p2, p3}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_8
+
+    const-string p2, "already scheduled"
+
+    invoke-static {p1, p0, p2}, Lgh5;->b(Lpbf;Lgcf;Ljava/lang/String;)V
+
+    return v6
+
+    :cond_1
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    :cond_2
+    iput-wide v2, p1, Lpbf;->b:J
+
+    sget-object v5, Ljcf;->i:Ljava/util/logging/Logger;
+
+    sget-object v8, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
+
+    invoke-virtual {v5, v8}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    if-eqz p4, :cond_3
+
+    sub-long/2addr v2, v0
+
+    invoke-static {v2, v3}, Lgh5;->n(J)Ljava/lang/String;
+
+    move-result-object p4
+
+    const-string v2, "run again after "
+
+    invoke-virtual {v2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p4
+
+    goto :goto_1
+
+    :cond_3
+    sub-long/2addr v2, v0
+
+    invoke-static {v2, v3}, Lgh5;->n(J)Ljava/lang/String;
+
+    move-result-object p4
+
+    const-string v2, "scheduled after "
+
+    invoke-virtual {v2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p4
+
+    :goto_1
+    invoke-static {p1, p0, p4}, Lgh5;->b(Lpbf;Lgcf;Ljava/lang/String;)V
+
+    :cond_4
+    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p4
+
+    move v2, v6
+
+    :goto_2
+    invoke-interface {p4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-interface {p4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lpbf;
+
+    iget-wide v8, v3, Lpbf;->b:J
+
+    sub-long/2addr v8, v0
+
+    cmp-long v3, v8, p2
+
+    if-lez v3, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    move v2, v7
+
+    :goto_3
+    if-ne v2, v7, :cond_7
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    :cond_7
+    invoke-virtual {v4, v2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    if-nez v2, :cond_8
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_8
+    return v6
+
+    :cond_9
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "task is in multiple queues"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final e()V
+    .locals 2
+
+    sget-object v0, Ls4g;->a:[B
+
+    iget-object v0, p0, Lgcf;->e:Ljcf;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Lgcf;->a:Z
+
+    invoke-virtual {p0}, Lgcf;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lgcf;->e:Ljcf;
+
+    invoke-virtual {v1, p0}, Ljcf;->d(Lgcf;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lgcf;->f:Ljava/lang/String;
+
+    return-object v0
 .end method

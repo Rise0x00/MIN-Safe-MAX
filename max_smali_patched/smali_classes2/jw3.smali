@@ -1,53 +1,21 @@
-.class public interface abstract Ljw3;
-.super Ljava/lang/Object;
+.class public final Ljw3;
+.super Lbp;
 .source "SourceFile"
 
 
-# virtual methods
-.method public E()Ljw3;
-    .locals 0
+# static fields
+.field public static final a:Ljw3;
 
-    return-object p0
-.end method
 
-.method public abstract F(Landroid/view/View;)Ljw3;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract G()Ljw3;
-.end method
+    new-instance v0, Ljw3;
 
-.method public abstract I(Ldue;)Ljw3;
-.end method
+    invoke-direct {v0}, Lbp;-><init>()V
 
-.method public abstract a()Ljw3;
-.end method
+    sput-object v0, Ljw3;->a:Ljw3;
 
-.method public abstract build()Lkw3;
-.end method
-
-.method public abstract d()Ljw3;
-.end method
-
-.method public abstract i(Landroid/graphics/Rect;F)Ljw3;
-.end method
-
-.method public n()Ljw3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract p(Ljava/util/Collection;)Ljw3;
-.end method
-
-.method public q(FF)Ljw3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract x(F)Ljw3;
-.end method
-
-.method public abstract y(Landroid/os/Bundle;)Ljw3;
+    return-void
 .end method

@@ -2,28 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwo3;
+
+
+# instance fields
+.field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+.field public final synthetic b:Lxo3;
+
+.field public final synthetic c:Lxo3;
+
 
 # direct methods
-.method public static a(Ljava/lang/Object;)Ljava/lang/String;
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Lxo3;Lxo3;)V
     .locals 0
 
-    check-cast p0, Lorg/webrtc/PeerConnection$IceServer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->n(Lorg/webrtc/PeerConnection$IceServer;)Ljava/lang/String;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/u;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    move-result-object p0
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/u;->b:Lxo3;
 
-    return-object p0
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/u;->c:Lxo3;
+
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Z
-    .locals 0
 
-    check-cast p0, Lorg/webrtc/PeerConnection$IceServer;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->S(Lorg/webrtc/PeerConnection$IceServer;)Z
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/u;->c:Lxo3;
 
-    move-result p0
+    check-cast p1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;
 
-    return p0
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/u;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/u;->b:Lxo3;
+
+    invoke-static {v1, v2, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->D(Lru/ok/android/externcalls/sdk/ConversationImpl;Lxo3;Lxo3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+
+    return-void
 .end method

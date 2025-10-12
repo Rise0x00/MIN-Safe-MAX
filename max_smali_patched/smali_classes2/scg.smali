@@ -1,64 +1,115 @@
 .class public final Lscg;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lrcg;
+.implements Llf6;
 
 
-# static fields
-.field public static final a:Lscg;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lscg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lscg;->a:Lscg;
-
-    return-void
-.end method
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lh9h;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lscg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lscg;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lscg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lscg;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lscg;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lscg;->X:Ljava/lang/Object;
+
+    check-cast p1, Lh9h;
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    iget-object v1, p1, Lh9h;->b:Lg9h;
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lscg;
+    move-object v1, v0
 
-    if-nez p0, :cond_1
+    :goto_0
+    sget-object v2, Lg9h;->c:Lg9h;
 
-    const/4 p0, 0x0
+    if-eq v1, v2, :cond_4
 
-    return p0
+    if-eqz p1, :cond_1
+
+    iget-object v1, p1, Lh9h;->b:Lg9h;
+
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    move-object v1, v0
 
-.method public final hashCode()I
-    .locals 0
+    :goto_1
+    sget-object v2, Lg9h;->o:Lg9h;
 
-    const p0, 0x294c79ad
+    if-eq v1, v2, :cond_4
 
-    return p0
-.end method
+    if-eqz p1, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    iget-object v0, p1, Lh9h;->b:Lg9h;
 
-    const-string p0, "ShowError"
+    :cond_2
+    sget-object p1, Lg9h;->Y:Lg9h;
 
-    return-object p0
+    if-ne v0, p1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const/4 p1, 0x0
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    const/4 p1, 0x1
+
+    :goto_3
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

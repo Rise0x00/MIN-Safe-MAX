@@ -1,99 +1,188 @@
-.class public final Lc14;
-.super Leje;
+.class public final synthetic Lc14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/Callable;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lv02;
+.field public final synthetic b:Le14;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lv02;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Le14;I)V
     .locals 0
 
-    iput-object p1, p0, Lc14;->X:Ljava/util/concurrent/Callable;
+    iput p2, p0, Lc14;->a:I
 
-    iput-object p2, p0, Lc14;->Y:Lv02;
+    iput-object p1, p0, Lc14;->b:Le14;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    check-cast p1, Lp04;
+    iget p2, p0, Lc14;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lc14;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result-object p0
+    move-result p2
 
-    check-cast p0, Lc14;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result p3
 
-    invoke-virtual {p0, p1}, Lc14;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p4, p0, Lc14;->b:Le14;
 
-    return-object p1
-.end method
+    iget-object p5, p4, Le14;->j:Ly04;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget p6, p5, Ly04;->a:I
 
-    new-instance p1, Lc14;
+    if-ne p3, p6, :cond_0
 
-    iget-object v0, p0, Lc14;->X:Ljava/util/concurrent/Callable;
+    goto :goto_2
 
-    iget-object p0, p0, Lc14;->Y:Lv02;
+    :cond_0
+    invoke-static {p1}, Lj40;->C(Landroid/view/View;)Ljava/lang/Integer;
 
-    invoke-direct {p1, v0, p0, p2}, Lc14;-><init>(Ljava/util/concurrent/Callable;Lv02;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    return-object p1
-.end method
+    const/4 p3, 0x0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lc14;->Y:Lv02;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object p0, p0, Lc14;->X:Ljava/util/concurrent/Callable;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lv02;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result p1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    new-instance p1, Lfnc;
-
-    invoke-direct {p1, p0}, Lfnc;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, p1}, Lv02;->resumeWith(Ljava/lang/Object;)V
+    :cond_1
+    move p1, p3
 
     :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    const/4 p6, 0x4
 
-    return-object p0
+    invoke-static {p5, p2, p1, p3, p6}, Ly04;->a(Ly04;IIZI)Ly04;
+
+    move-result-object p1
+
+    iput-object p1, p4, Le14;->j:Ly04;
+
+    iget-object p1, p4, Le14;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lz04;
+
+    iget-object p3, p4, Le14;->j:Ly04;
+
+    invoke-interface {p2, p3}, Lz04;->J(Ly04;)V
+
+    goto :goto_1
+
+    :cond_2
+    :goto_2
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    iget-object p3, p0, Lc14;->b:Le14;
+
+    iget-object p4, p3, Le14;->k:Ly04;
+
+    iget p5, p4, Ly04;->a:I
+
+    if-ne p2, p5, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    invoke-static {p1}, Lj40;->s(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const/4 p5, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_3
+
+    :cond_4
+    move p1, p5
+
+    :goto_3
+    const/4 p6, 0x4
+
+    invoke-static {p4, p2, p1, p5, p6}, Ly04;->a(Ly04;IIZI)Ly04;
+
+    move-result-object p1
+
+    iput-object p1, p3, Le14;->k:Ly04;
+
+    iget-object p1, p3, Le14;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lz04;
+
+    iget-object p4, p3, Le14;->k:Ly04;
+
+    invoke-interface {p2, p4}, Lz04;->B(Ly04;)V
+
+    goto :goto_4
+
+    :cond_5
+    :goto_5
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

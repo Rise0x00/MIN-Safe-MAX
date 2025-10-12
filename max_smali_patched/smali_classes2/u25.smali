@@ -1,159 +1,25 @@
-.class public final Lu25;
-.super Lt2;
+.class public abstract synthetic Lu25;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
+# static fields
+.field public static final synthetic a:Lla5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EmptyRecyclerView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lu25;->c:I
+    invoke-static {}, Ll4g;->values()[Ll4g;
 
-    iput-object p1, p0, Lu25;->o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
+    move-result-object v0
 
-    const/4 p1, 0x0
+    new-instance v1, Lla5;
 
-    const/16 p2, 0x8
+    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
 
-    invoke-direct {p0, p2, p1}, Lt2;-><init>(ILjava/lang/Object;)V
+    sput-object v1, Lu25;->a:Lla5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final d0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
-
-    iget v0, p0, Lu25;->c:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Lu25;->o:Lone/me/sdk/lists/widgets/EmptyRecyclerView;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Landroid/view/View;
-
-    check-cast p1, Landroid/view/View;
-
-    if-eqz p2, :cond_0
-
-    sget-object p1, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->T1:[Lof7;
-
-    new-instance p1, Lt25;
-
-    invoke-direct {p1, v2, p0}, Lt25;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p0, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-static {p1, p0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->H0(Lygc;Lahc;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lygc;Lahc;)V
-
-    :cond_1
-    iput-object v1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p2, Landroid/view/View;
-
-    check-cast p1, Landroid/view/View;
-
-    if-eqz p2, :cond_3
-
-    sget-object p1, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->T1:[Lof7;
-
-    new-instance p1, Lt25;
-
-    invoke-direct {p1, v2, p0}, Lt25;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p0, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-static {p1, p0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->H0(Lygc;Lahc;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lygc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p2, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    invoke-static {p1, p2}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lygc;Lahc;)V
-
-    :cond_4
-    iput-object v1, p0, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->R1:Lt25;
-
-    :cond_5
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

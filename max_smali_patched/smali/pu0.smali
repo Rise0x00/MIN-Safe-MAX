@@ -1,62 +1,287 @@
-.class public final synthetic Lpu0;
-.super Lia6;
+.class public final Lpu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
 
+# instance fields
+.field public final a:Lao5;
 
-# static fields
-.field public static final a:Lpu0;
+.field public final b:Lbb8;
+
+.field public final c:Lqi;
+
+.field public final d:Ljava/util/concurrent/Executor;
+
+.field public final e:Ljava/util/concurrent/Executor;
+
+.field public final f:Li2a;
+
+.field public final g:Lmle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lao5;Lbb8;Lqi;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Li2a;)V
+    .locals 0
 
-    new-instance v0, Lpu0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;"
+    iput-object p1, p0, Lpu0;->a:Lao5;
 
-    const/4 v5, 0x1
+    iput-object p2, p0, Lpu0;->b:Lbb8;
 
-    const/4 v1, 0x2
+    iput-object p3, p0, Lpu0;->c:Lqi;
 
-    const-class v2, Lqu0;
+    iput-object p4, p0, Lpu0;->d:Ljava/util/concurrent/Executor;
 
-    const-string v3, "createSegment"
+    iput-object p5, p0, Lpu0;->e:Ljava/util/concurrent/Executor;
 
-    invoke-direct/range {v0 .. v5}, Lia6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-object p6, p0, Lpu0;->f:Li2a;
 
-    sput-object v0, Lpu0;->a:Lpu0;
+    new-instance p1, Lmle;
+
+    const/4 p2, 0x0
+
+    const/4 p3, 0x0
+
+    invoke-direct {p1, p2, p3}, Lmle;-><init>(IZ)V
+
+    new-instance p2, Ljava/util/HashMap;
+
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p1, Lmle;->b:Ljava/lang/Object;
+
+    iput-object p1, p0, Lpu0;->g:Lmle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a()V
+    .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    iget-object v0, p0, Lpu0;->g:Lmle;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0}, Lmle;->g()V
 
-    move-result-wide v1
+    :try_start_0
+    new-instance v0, Lp5;
 
-    move-object v3, p2
+    const/4 v1, 0x1
 
-    check-cast v3, Ln62;
+    invoke-direct {v0, v1, p0}, Lp5;-><init>(ILjava/lang/Object;)V
 
-    sget-object p0, Lqu0;->a:Ln62;
+    iget-object v1, p0, Lpu0;->e:Ljava/util/concurrent/Executor;
 
-    new-instance v0, Ln62;
+    invoke-static {v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v4, v3, Ln62;->a:Lou0;
+    return-void
 
-    const/4 v5, 0x0
+    :catch_0
+    move-exception v0
 
-    invoke-direct/range {v0 .. v5}, Ln62;-><init>(JLn62;Lou0;I)V
+    const/4 v1, 0x0
 
-    return-object v0
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Failed to schedule disk-cache clear"
+
+    invoke-static {v0, v2, v1}, Lni5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
+
+    return-void
+.end method
+
+.method public final b(Ldde;)Lh19;
+    .locals 7
+
+    iget-object v0, p1, Ldde;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Lpu0;->f:Li2a;
+
+    const-class v2, Lpu0;
+
+    :try_start_0
+    const-string v3, "Disk cache read for %s"
+
+    invoke-static {v2, v0, v3}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v3, p0, Lpu0;->a:Lao5;
+
+    check-cast v3, Lzr4;
+
+    invoke-virtual {v3, p1}, Lzr4;->b(Lkx0;)Lzn5;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "Disk cache miss for %s"
+
+    invoke-static {v2, v0, p1}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v3, "Found entry in disk cache for %s"
+
+    invoke-static {v2, v0, v3}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Ljava/io/FileInputStream;
+
+    iget-object v4, p1, Lzn5;->a:Ljava/io/File;
+
+    invoke-direct {v3, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v4, p0, Lpu0;->b:Lbb8;
+
+    iget-object p1, p1, Lzn5;->a:Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->length()J
+
+    move-result-wide v5
+
+    long-to-int p1, v5
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v5, Li19;
+
+    iget-object v6, v4, Lbb8;->b:Ljava/lang/Object;
+
+    check-cast v6, Lg19;
+
+    invoke-direct {v5, v6, p1}, Li19;-><init>(Lg19;I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    iget-object p1, v4, Lbb8;->c:Ljava/lang/Object;
+
+    check-cast p1, Lqi;
+
+    invoke-virtual {p1, v3, v5}, Lqi;->f(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    invoke-virtual {v5}, Li19;->n()Lh19;
+
+    move-result-object p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    invoke-virtual {v5}, Li19;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    const-string v3, "Successful read from disk cache for %s"
+
+    invoke-static {v2, v0, v3}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_5
+    invoke-virtual {v5}, Li19;->close()V
+
+    throw p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_6
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    throw p1
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
+    :goto_0
+    const-string v2, "Exception reading from cache for %s"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, v2, v0}, Lni5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    throw p1
+.end method
+
+.method public final c(Ldde;Lw75;)V
+    .locals 5
+
+    iget-object v0, p1, Ldde;->a:Ljava/lang/String;
+
+    const-class v1, Lpu0;
+
+    const-string v2, "About to write to disk-cache for key %s"
+
+    invoke-static {v1, v0, v2}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v2, p0, Lpu0;->a:Lao5;
+
+    new-instance v3, Lrz;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, p2, v4, p0}, Lrz;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    check-cast v2, Lzr4;
+
+    invoke-virtual {v2, p1, v3}, Lzr4;->d(Ldde;Lrz;)Lzn5;
+
+    iget-object p1, p0, Lpu0;->f:Li2a;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "Successful disk-cache write for key %s"
+
+    invoke-static {v1, v0, p1}, Lni5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "Failed to write to disk-cache for key %s"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, p2, v0}, Lni5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
 .end method

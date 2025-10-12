@@ -1,375 +1,97 @@
-.class public final Lxb6;
+.class public final synthetic Lxb6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxb6;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final o0:Lxb6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final Y:Z
-
-.field public final Z:Z
-
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final n0:Z
-
-.field public final o:Z
+.field public final synthetic b:Lyb6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Ldj3;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Ldj3;-><init>(I)V
-
-    sput-object v0, Lxb6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    new-instance v2, Lxb6;
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    sget-object v7, Lr25;->a:Lr25;
-
-    invoke-direct/range {v2 .. v9}, Lxb6;-><init>(ZZZZLjava/util/List;ZZ)V
-
-    sput-object v2, Lxb6;->o0:Lxb6;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZLjava/util/List;ZZ)V
+.method public synthetic constructor <init>(Lyb6;I)V
     .locals 0
 
+    iput p2, p0, Lxb6;->a:I
+
+    iput-object p1, p0, Lxb6;->b:Lyb6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lxb6;->a:Z
-
-    iput-boolean p2, p0, Lxb6;->b:Z
-
-    iput-boolean p3, p0, Lxb6;->c:Z
-
-    iput-boolean p4, p0, Lxb6;->o:Z
-
-    iput-object p5, p0, Lxb6;->X:Ljava/lang/Object;
-
-    iput-boolean p6, p0, Lxb6;->Y:Z
-
-    iput-boolean p7, p0, Lxb6;->Z:Z
-
-    xor-int/lit8 p1, p2, 0x1
-
-    iput-boolean p1, p0, Lxb6;->n0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lxb6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lxb6;
-
-    iget-boolean v0, p0, Lxb6;->a:Z
-
-    iget-boolean v1, p1, Lxb6;->a:Z
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lxb6;->b:Z
-
-    iget-boolean v1, p1, Lxb6;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lxb6;->c:Z
-
-    iget-boolean v1, p1, Lxb6;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lxb6;->o:Z
-
-    iget-boolean v1, p1, Lxb6;->o:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lxb6;->X:Ljava/lang/Object;
-
-    iget-object v1, p1, Lxb6;->X:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Lxb6;->Y:Z
-
-    iget-boolean v1, p1, Lxb6;->Y:Z
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-boolean p0, p0, Lxb6;->Z:Z
-
-    iget-boolean p1, p1, Lxb6;->Z:Z
-
-    if-eq p0, p1, :cond_8
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_8
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final run()V
     .locals 3
 
-    iget-boolean v0, p0, Lxb6;->a:Z
+    iget v0, p0, Lxb6;->a:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lxb6;->b:Lyb6;
 
-    const/16 v1, 0x1f
+    const/4 v1, 0x0
 
-    mul-int/2addr v0, v1
+    iput-boolean v1, v0, Lyb6;->x0:Z
 
-    iget-boolean v2, p0, Lxb6;->b:Z
+    iget-object v2, v0, Lyb6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
+    if-eqz v2, :cond_0
 
-    move-result v0
+    iget-object v2, v0, Lyb6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    iget-boolean v2, p0, Lxb6;->c:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lxb6;->o:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lxb6;->X:Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lxb6;->Y:Z
-
-    invoke-static {v2, v1, v0}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lxb6;->Z:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", useVideos="
-
-    const-string v1, ", multiSelectionEnabled="
-
-    const-string v2, "GalleryMode(needCameraView="
-
-    iget-boolean v3, p0, Lxb6;->a:Z
-
-    iget-boolean v4, p0, Lxb6;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Ldl5;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", isMessageEdit="
-
-    const-string v2, ", selectedItems="
-
-    iget-boolean v3, p0, Lxb6;->c:Z
-
-    iget-boolean v4, p0, Lxb6;->o:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Ldw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-object v1, p0, Lxb6;->X:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profileCreation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lxb6;->Y:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", useTopInset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lxb6;->Z:Z
-
-    invoke-static {v0, p0, v1}, Ldw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-boolean v0, p0, Lxb6;->a:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Lxb6;->b:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Lxb6;->c:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean v0, p0, Lxb6;->o:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lxb6;->X:Ljava/lang/Object;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/Parcelable;
-
-    invoke-virtual {p1, v1, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    goto :goto_0
+    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
 
     :cond_0
-    iget-boolean p2, p0, Lxb6;->Y:Z
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iput-object v2, v0, Lyb6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    iget-boolean p0, p0, Lxb6;->Z:Z
+    iput-boolean v1, v0, Lyb6;->y0:Z
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, v0, Lyb6;->X:Lorg/webrtc/SurfaceTextureHelper;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lyb6;->X:Lorg/webrtc/SurfaceTextureHelper;
+
+    invoke-virtual {v1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
+
+    :cond_1
+    iput-object v2, v0, Lyb6;->X:Lorg/webrtc/SurfaceTextureHelper;
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lxb6;->b:Lyb6;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lyb6;->x0:Z
+
+    iget-object v2, v0, Lyb6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, v0, Lyb6;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v2}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+
+    :cond_2
+    iput-boolean v1, v0, Lyb6;->y0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,41 +1,80 @@
-.class public final synthetic Lcj4;
+.class public final Lcj4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzg6;
-.implements Lpnf;
+.implements Llu9;
+
+
+# static fields
+.field public static final b:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltnf;
+.field public final a:Lwc6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltnf;I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lwc6;->f:Ljava/lang/String;
+
+    sput-object v0, Lcj4;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwc6;)V
     .locals 0
 
-    iput p2, p0, Lcj4;->a:I
-
-    iput-object p1, p0, Lcj4;->b:Ltnf;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcj4;->a:Lwc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroidx/media3/common/VideoFrameProcessingException;)V
+.method public final a(Lek9;)V
     .locals 1
 
-    iget v0, p0, Lcj4;->a:I
+    iget-object v0, p0, Lcj4;->a:Lwc6;
 
-    iget-object p0, p0, Lcj4;->b:Ltnf;
+    invoke-virtual {v0, p1}, Lwc6;->a(Lek9;)V
 
-    invoke-interface {p0, p1}, Ltnf;->c(Landroidx/media3/common/VideoFrameProcessingException;)V
+    return-void
+.end method
+
+.method public final b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+    .locals 1
+
+    iget-object v0, p0, Lcj4;->a:Lwc6;
+
+    invoke-virtual {v0, p1, p2, p3}, Lwc6;->b(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+
+    return-void
+.end method
+
+.method public final c(Lt76;)I
+    .locals 1
+
+    iget-object v0, p0, Lcj4;->a:Lwc6;
+
+    invoke-virtual {v0, p1}, Lwc6;->c(Lt76;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lcj4;->a:Lwc6;
+
+    invoke-virtual {v0}, Lwc6;->close()V
 
     return-void
 .end method

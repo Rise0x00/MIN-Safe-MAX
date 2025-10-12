@@ -1,244 +1,107 @@
-.class public abstract Lye;
-.super Lg5e;
+.class public final Lye;
+.super Lwe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final j:I
-
-.field public k:I
-
-
-# direct methods
-.method public constructor <init>(Landroid/view/View;Lc67;Lf96;I)V
-    .locals 0
-
-    and-int/lit8 p4, p4, 0x10
-
-    if-eqz p4, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lg5e;-><init>(Landroid/view/View;Lc67;Lf96;)V
-
-    const/16 p2, 0x8
-
-    iput p2, p0, Lye;->j:I
-
-    const/4 p2, -0x1
-
-    iput p2, p0, Lye;->k:I
-
-    new-instance p2, Lxe;
-
-    invoke-direct {p2, p0}, Lxe;-><init>(Lye;)V
-
-    invoke-static {p1, p2}, Lixf;->l(Landroid/view/View;Lu62;)V
-
-    return-void
-.end method
-
-.method public static final f(Lye;Lpkg;)Lpkg;
-    .locals 4
-
-    iget v0, p0, Lg5e;->f:I
-
-    if-nez v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, p1, Lpkg;->a:Lnkg;
-
-    const/4 v1, 0x7
-
-    invoke-virtual {v0, v1}, Lnkg;->f(I)La67;
-
-    move-result-object v0
-
-    iget v2, v0, La67;->d:I
-
-    iget v3, p0, Lg5e;->f:I
-
-    if-le v2, v3, :cond_1
-
-    return-object p1
-
-    :cond_1
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1e
-
-    if-lt v2, v3, :cond_2
-
-    new-instance v2, Lfkg;
-
-    invoke-direct {v2, p1}, Lfkg;-><init>(Lpkg;)V
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v2, Lekg;
-
-    invoke-direct {v2, p1}, Lekg;-><init>(Lpkg;)V
-
-    :goto_0
-    iget p1, v0, La67;->a:I
-
-    iget v3, v0, La67;->b:I
-
-    iget v0, v0, La67;->c:I
-
-    iget p0, p0, Lg5e;->f:I
-
-    invoke-static {p1, v3, v0, p0}, La67;->b(IIII)La67;
-
-    move-result-object p0
-
-    invoke-virtual {v2, v1, p0}, Lgkg;->c(ILa67;)V
-
-    invoke-virtual {v2}, Lekg;->b()Lpkg;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
 # virtual methods
-.method public final b(Lpkg;Lqr0;)V
-    .locals 3
+.method public final h(Lq8h;)Lq8h;
+    .locals 6
 
-    iget-object p1, p1, Lpkg;->a:Lnkg;
+    iget-object v0, p1, Lq8h;->a:Lo8h;
 
-    iget v0, p0, Lg5e;->d:I
+    iget v1, p0, Lwe;->j:I
 
-    invoke-virtual {p1, v0}, Lnkg;->f(I)La67;
+    invoke-virtual {v0, v1}, Lo8h;->f(I)Lcd7;
+
+    move-result-object v1
+
+    iget v2, p0, Lepe;->d:I
+
+    invoke-virtual {v0, v2}, Lo8h;->f(I)Lcd7;
 
     move-result-object v0
 
-    iget v1, p0, Lye;->j:I
+    iget v2, v1, Lcd7;->a:I
 
-    invoke-virtual {p1, v1}, Lnkg;->f(I)La67;
+    iget v3, v0, Lcd7;->a:I
 
-    move-result-object v2
+    sub-int/2addr v2, v3
 
-    invoke-virtual {p1, v1}, Lnkg;->o(I)Z
+    iget v3, v1, Lcd7;->b:I
 
-    move-result p1
+    iget v4, v0, Lcd7;->b:I
 
-    if-eqz p1, :cond_0
+    sub-int/2addr v3, v4
 
-    move-object v0, v2
+    iget v4, v1, Lcd7;->c:I
 
-    :cond_0
-    invoke-virtual {p0, v0, p2}, Lg5e;->a(La67;Lqr0;)V
+    iget v5, v0, Lcd7;->c:I
 
-    return-void
-.end method
+    sub-int/2addr v4, v5
 
-.method public final c(Lpkg;)V
-    .locals 2
+    iget v1, v1, Lcd7;->d:I
 
-    iget v0, p0, Lye;->k:I
+    iget v0, v0, Lcd7;->d:I
 
-    const/4 v1, -0x1
+    sub-int/2addr v1, v0
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v2, v3, v4, v1}, Lcd7;->b(IIII)Lcd7;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget v1, v0, Lcd7;->a:I
 
-    const/16 v1, 0x1e
+    const/4 v2, 0x0
 
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Lfkg;
-
-    invoke-direct {v0, p1}, Lfkg;-><init>(Lpkg;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lekg;
-
-    invoke-direct {v0, p1}, Lekg;-><init>(Lpkg;)V
-
-    :goto_0
-    sget-object p1, La67;->e:La67;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1, p1}, Lgkg;->c(ILa67;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lgkg;->h(IZ)V
-
-    invoke-virtual {v0}, Lekg;->b()Lpkg;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-super {p0, p1}, Lg5e;->c(Lpkg;)V
-
-    return-void
-.end method
-
-.method public final d(Lpkg;)Lpkg;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public final e()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lg5e;->g:Z
-
-    iget-object p0, p0, Lg5e;->a:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    iget v3, v0, Lcd7;->b:I
 
-    sget-object v0, Lixf;->a:Ljava/util/WeakHashMap;
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
 
-    invoke-static {p0}, Lvwf;->c(Landroid/view/View;)V
+    move-result v3
 
-    return-void
+    iget v4, v0, Lcd7;->c:I
 
-    :cond_0
-    new-instance v1, Lwe;
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
 
-    invoke-direct {v1, p0, v0}, Lwe;-><init>(Landroid/view/View;I)V
+    move-result v4
 
-    invoke-virtual {p0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget v0, v0, Lcd7;->d:I
 
-    return-void
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-static {v1, v3, v4, v0}, Lcd7;->b(IIII)Lcd7;
+
+    move-result-object v0
+
+    iget v1, v0, Lcd7;->b:I
+
+    iget v0, v0, Lcd7;->d:I
+
+    sub-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    iget-object v1, p0, Lepe;->a:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object p1
 .end method
 
-.method public g(Lpkg;Ldlc;)V
-    .locals 0
+.method public final i()V
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Lepe;->a:Landroid/view/View;
 
-.method public abstract h(Lpkg;)Lpkg;
-.end method
+    const/4 v1, 0x0
 
-.method public abstract i()V
-.end method
-
-.method public j()V
-    .locals 0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method

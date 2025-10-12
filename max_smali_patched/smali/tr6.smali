@@ -1,181 +1,302 @@
 .class public final Ltr6;
-.super Lwg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+# static fields
+.field public static final f:[B
 
-    const/4 v0, 0x0
+.field public static final g:[B
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:I
+
+.field public e:Ljava/io/Serializable;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [B
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Ltr6;->f:[B
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Ltr6;->g:[B
+
+    return-void
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
     .line 1
-    invoke-direct {p0, v0}, Lwg;-><init>(I)V
+    iput p1, p0, Ltr6;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Lc02;Landroid/util/Rational;)V
+    .locals 1
 
-    const-wide/16 v0, 0xc8
+    const/4 v0, 0x2
 
-    const/4 p1, 0x2
+    iput v0, p0, Ltr6;->a:I
 
     .line 2
-    invoke-direct {p0, v0, v1, p1}, Lwg;-><init>(JI)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    invoke-interface {p1}, Lc02;->b()I
+
+    move-result v0
+
+    iput v0, p0, Ltr6;->c:I
+
+    .line 4
+    invoke-interface {p1}, Lc02;->h()I
+
+    move-result p1
+
+    iput p1, p0, Ltr6;->d:I
+
+    .line 5
+    iput-object p2, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    const/4 p1, 0x1
+
+    if-eqz p2, :cond_1
+
+    .line 6
+    invoke-virtual {p2}, Landroid/util/Rational;->getNumerator()I
+
+    move-result v0
+
+    .line 7
+    invoke-virtual {p2}, Landroid/util/Rational;->getDenominator()I
+
+    move-result p2
+
+    if-lt v0, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :cond_1
+    :goto_0
+    iput-boolean p1, p0, Ltr6;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ltx3;
-    .locals 3
+.method public a(Lm57;)Landroid/util/Size;
+    .locals 5
 
-    new-instance v0, Ltr6;
+    const/4 v0, 0x0
 
-    iget-wide v1, p0, Lwg;->o:J
+    invoke-interface {p1, v0}, Lm57;->H(I)I
 
-    iget-boolean p0, p0, Lwg;->p0:Z
+    move-result v1
 
-    invoke-direct {v0, v1, v2, p0}, Lwg;-><init>(JZ)V
+    const/4 v2, 0x0
 
-    return-object v0
-.end method
+    sget-object v3, Lm57;->C:Ln90;
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 4
-
-    new-instance p0, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorSet;-><init>()V
-
-    const/4 p1, 0x2
-
-    const/4 p5, 0x0
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz p4, :cond_1
-
-    if-eqz p2, :cond_0
-
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    neg-float v2, v2
-
-    new-array v3, v0, [F
-
-    aput v2, v3, p5
-
-    invoke-static {p2, p4, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_0
-    if-eqz p3, :cond_4
-
-    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    new-array p1, p1, [F
-
-    aput p4, p1, p5
-
-    aput v1, p1, v0
-
-    invoke-static {p3, p2, p1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-interface {p1, v3, v2}, Lpqc;->e(Ln90;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    check-cast p1, Landroid/util/Size;
 
-    return-object p0
+    iget v2, p0, Ltr6;->d:I
+
+    iget v3, p0, Ltr6;->c:I
+
+    if-eqz p1, :cond_2
+
+    invoke-static {v1}, Lnu3;->J(I)I
+
+    move-result v1
+
+    const/4 v4, 0x1
+
+    if-ne v4, v2, :cond_0
+
+    move v0, v4
+
+    :cond_0
+    invoke-static {v1, v3, v0}, Lnu3;->j(IIZ)I
+
+    move-result v0
+
+    const/16 v1, 0x5a
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x10e
+
+    if-ne v0, v1, :cond_2
 
     :cond_1
-    if-eqz p2, :cond_2
+    new-instance v0, Landroid/util/Size;
 
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+    move-result v1
 
-    move-result v2
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    int-to-float v2, v2
+    move-result p1
 
-    new-array v3, v0, [F
+    invoke-direct {v0, v1, p1}, Landroid/util/Size;-><init>(II)V
 
-    aput v2, v3, p5
-
-    invoke-static {p2, p4, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p4
-
-    invoke-virtual {p0, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+    return-object v0
 
     :cond_2
-    if-eqz p3, :cond_4
+    return-object p1
+.end method
 
-    if-eqz p2, :cond_3
+.method public b(I[BI)V
+    .locals 3
 
-    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
+    iget v0, p0, Ltr6;->a:I
 
-    move-result p2
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ltr6;->b:Z
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    move p2, v1
+    :cond_0
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    array-length v1, v0
+
+    iget v2, p0, Ltr6;->c:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_1
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    :cond_1
+    iget-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    iget v1, p0, Ltr6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Ltr6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Ltr6;->c:I
 
     :goto_0
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    sub-float/2addr p2, v2
-
-    new-array p1, p1, [F
-
-    aput p2, p1, p5
-
-    aput v1, p1, v0
-
-    invoke-static {p3, p4, p1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_4
-    return-object p0
-.end method
-
-.method public final n(Landroid/view/View;)V
-    .locals 0
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationX(F)V
-
     return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Ltr6;->b:Z
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    array-length v1, v0
+
+    iget v2, p0, Ltr6;->c:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    :cond_3
+    iget-object v0, p0, Ltr6;->e:Ljava/io/Serializable;
+
+    check-cast v0, [B
+
+    iget v1, p0, Ltr6;->c:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Ltr6;->c:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Ltr6;->c:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

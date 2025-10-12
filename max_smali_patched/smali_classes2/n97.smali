@@ -1,47 +1,83 @@
 .class public final Ln97;
-.super Landroid/widget/FrameLayout;
+.super Ltxb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public final J0:Lt1e;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 14
 
-    iput-object p1, p0, Ln97;->a:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    new-instance v0, Ls1e;
 
-    invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Ls1e;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Lnxc;-><init>(Landroid/view/View;)V
+
+    new-instance v2, Lt1e;
+
+    const/16 p1, 0x40
+
+    int-to-long v3, p1
+
+    sget p1, Lvra;->d0:I
+
+    new-instance v12, Ljef;
+
+    invoke-direct {v12, p1}, Ljef;-><init>(I)V
+
+    const/16 v13, 0x38
+
+    const/4 v5, 0x0
+
+    sget-object v6, Loef;->a:Lnef;
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    sget-object v10, La1e;->a:La1e;
+
+    const/4 v11, 0x0
+
+    invoke-direct/range {v2 .. v13}, Lt1e;-><init>(JILoef;Li1e;Loef;Llp7;Lg1e;Lx0e;Loef;I)V
+
+    iput-object v2, p0, Ln97;->J0:Lt1e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 1
+.method public final x(Lww7;)V
+    .locals 4
 
-    sget-object p1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->H0:[Lof7;
+    check-cast p1, Lm97;
 
-    iget-object p0, p0, Ln97;->a:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-    iget-object p1, p0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->D0:Lth7;
+    check-cast v0, Ls1e;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lm97;->a:Lhef;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x1fb
+
+    iget-object v3, p0, Ln97;->J0:Lt1e;
+
+    invoke-static {v3, p1, v1, v2}, Lt1e;->l(Lt1e;Lhef;Lc1e;I)Lt1e;
 
     move-result-object p1
 
-    check-cast p1, Lr97;
-
-    invoke-virtual {p0}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0()Lctb;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, p0, v0}, Lr97;->q(Lctb;Z)V
+    invoke-virtual {v0, p1}, Ls1e;->setModelItem(Lj1e;)V
 
     return-void
 .end method

@@ -1,109 +1,87 @@
 .class public final Ljs3;
-.super Lhj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/util/AbstractCollection;
+.field public final a:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(JLmz;)V
-    .locals 1
+.method public constructor <init>(Lbp7;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Ljs3;->b:I
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lhj0;-><init>(J)V
-
-    .line 2
-    iput-object p3, p0, Ljs3;->c:Ljava/util/AbstractCollection;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljs3;->b:I
-
-    .line 3
-    invoke-direct {p0}, Lhj0;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Ljs3;->c:Ljava/util/AbstractCollection;
+    iput-object p1, p0, Ljs3;->a:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a(Landroid/content/Context;Landroid/net/Uri;)V
+    .locals 4
 
-    iget v0, p0, Ljs3;->b:I
+    iget-object v0, p0, Ljs3;->a:Lbp7;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "SharePreviewEvent{attaches="
+    check-cast v0, Lktd;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lgjd;
 
-    iget-object p0, p0, Ljs3;->c:Ljava/util/AbstractCollection;
+    const/4 v1, 0x0
 
-    check-cast p0, Lmz;
+    iget-object v2, v0, Lh3;->g:Lep7;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v3, "invite-long"
 
-    const/16 p0, 0x7d
+    invoke-virtual {v2, v3, v1}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    move-result-object p0
+    goto :goto_0
 
-    return-object p0
+    :cond_0
+    sget v1, Ln9d;->J:I
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    const-string v1, "ContactNotFoundEvent{contactServerIds="
+    move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lgjd;->m()Ljava/lang/String;
 
-    iget-object p0, p0, Ljs3;->c:Ljava/util/AbstractCollection;
+    move-result-object v0
 
-    check-cast p0, Ljava/util/LinkedHashSet;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const/16 p0, 0x7d
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    return-object p0
+    move-result-object v1
 
-    nop
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lx63;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    sget-object v0, Lvd7;->a:Ljava/lang/String;
+
+    invoke-static {p1, v1, p2}, Lvd7;->g(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
+
+    return-void
 .end method

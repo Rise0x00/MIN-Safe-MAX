@@ -4,160 +4,155 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public c:Z
+.field public final c:Ljava/lang/String;
 
-.field public d:Z
 
-.field public e:Z
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-.field public f:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public g:Ljava/lang/Object;
+    iput-object p1, p0, Lml9;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lml9;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lml9;->c:Ljava/lang/String;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lml9;->g:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljava/util/ArrayList;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lll9;
-
-    iget-object v3, p0, Lml9;->f:Ljava/lang/Object;
-
-    check-cast v3, Landroid/media/MediaMuxer;
-
-    iget v4, v2, Lll9;->a:I
-
-    iget-object v5, v2, Lll9;->b:Ljava/nio/ByteBuffer;
-
-    iget-object v2, v2, Lll9;->c:Landroid/media/MediaCodec$BufferInfo;
-
-    invoke-virtual {v3, v4, v5, v2}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+    instance-of v1, p1, Lml9;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public b()Z
-    .locals 6
-
-    iget-boolean v0, p0, Lml9;->d:Z
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v3, -0x1
-
-    if-eqz v0, :cond_0
-
-    iget v4, p0, Lml9;->a:I
-
-    if-ne v4, v3, :cond_1
-
-    :cond_0
-    if-nez v0, :cond_2
-
-    iget v0, p0, Lml9;->a:I
-
-    if-ne v0, v3, :cond_2
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    :goto_0
-    iget-boolean v4, p0, Lml9;->e:Z
-
-    if-eqz v4, :cond_3
-
-    iget v5, p0, Lml9;->b:I
-
-    if-ne v5, v3, :cond_4
-
-    :cond_3
-    if-nez v4, :cond_5
-
-    iget p0, p0, Lml9;->b:I
-
-    if-ne p0, v3, :cond_5
-
-    :cond_4
-    move p0, v2
-
-    goto :goto_1
-
-    :cond_5
-    move p0, v1
-
-    :goto_1
-    if-eqz v0, :cond_6
-
-    if-eqz p0, :cond_6
+    if-nez v1, :cond_1
 
     return v2
 
-    :cond_6
-    return v1
+    :cond_1
+    check-cast p1, Lml9;
+
+    iget-object v1, p0, Lml9;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lml9;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lml9;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lml9;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lml9;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lml9;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public c()V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    const/4 v0, -0x1
+    iget-object v0, p0, Lml9;->a:Ljava/lang/String;
 
-    iput v0, p0, Lml9;->a:I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    const/high16 v1, -0x80000000
+    move-result v0
 
-    iput v1, p0, Lml9;->b:I
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lml9;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lml9;->c:Ljava/lang/String;
+
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lml9;->c:Z
-
-    iput-boolean v1, p0, Lml9;->d:Z
-
-    iput-boolean v1, p0, Lml9;->e:Z
-
-    iget-object p0, p0, Lml9;->f:Ljava/lang/Object;
-
-    check-cast p0, [I
-
-    if-eqz p0, :cond_0
-
-    invoke-static {p0, v0}, Ljava/util/Arrays;->fill([II)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", url="
+
+    const-string v1, ", queryId="
+
+    const-string v2, "MiniAppData(title="
+
+    iget-object v3, p0, Lml9;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lml9;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lml9;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

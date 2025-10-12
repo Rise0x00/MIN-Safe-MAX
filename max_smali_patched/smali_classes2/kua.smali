@@ -1,583 +1,277 @@
-.class public final synthetic Lkua;
+.class public abstract Lkua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhm3;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final B:I
 
-.field public final synthetic b:Lwua;
+.field public static final C:I
 
-.field public final synthetic c:Lorg/webrtc/IceCandidate;
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;Lorg/webrtc/IceCandidate;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lkua;->a:I
+    sget v0, Lfkc;->oneme_settings_privace_screen_dialog_content_level_access_title:I
 
-    iput-object p1, p0, Lkua;->b:Lwua;
+    sput v0, Lkua;->a:I
 
-    iput-object p2, p0, Lkua;->c:Lorg/webrtc/IceCandidate;
+    sget v0, Lfkc;->oneme_settings_privacy_black_list_dialog_title:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lkua;->b:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_black_list_dialog_unblock:I
+
+    sput v0, Lkua;->c:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_black_list_empty_state_desc:I
+
+    sput v0, Lkua;->d:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_black_list_toolbar_title:I
+
+    sput v0, Lkua;->e:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_black_list_unblocked_success:I
+
+    sput v0, Lkua;->f:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_content_level_access:I
+
+    sput v0, Lkua;->g:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_content_level_access_all:I
+
+    sput v0, Lkua;->h:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_content_level_access_message_success:I
+
+    sput v0, Lkua;->i:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_content_level_access_safe:I
+
+    sput v0, Lkua;->j:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_info_header:I
+
+    sput v0, Lkua;->k:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_safe_files:I
+
+    sput v0, Lkua;->l:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_add_me_to_chat:I
+
+    sput v0, Lkua;->m:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_black_list:I
+
+    sput v0, Lkua;->n:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_black_list_description:I
+
+    sput v0, Lkua;->o:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_call_me:I
+
+    sput v0, Lkua;->p:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_current_session_online:I
+
+    sput v0, Lkua;->q:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_current_sessions:I
+
+    sput v0, Lkua;->r:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_add_chat_title:I
+
+    sput v0, Lkua;->s:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_call_title:I
+
+    sput v0, Lkua;->t:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I
+
+    sput v0, Lkua;->u:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_finished_session_title:I
+
+    sput v0, Lkua;->v:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_online_never_accept_btn:I
+
+    sput v0, Lkua;->w:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_online_never_title:I
+
+    sput v0, Lkua;->x:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_online_title:I
+
+    sput v0, Lkua;->y:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_safe_file_no_btn:I
+
+    sput v0, Lkua;->z:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I
+
+    sput v0, Lkua;->A:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_safe_files_title:I
+
+    sput v0, Lkua;->B:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_dialog_seach_by_phone_title:I
+
+    sput v0, Lkua;->C:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_failed_close_sessions:I
+
+    sput v0, Lkua;->D:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_finished_all:I
+
+    sput v0, Lkua;->E:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_how_session:I
+
+    sput v0, Lkua;->F:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_safe_mode:I
+
+    sput v0, Lkua;->G:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_safe_mode_change_disabled_snackbar_title:I
+
+    sput v0, Lkua;->H:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_safe_mode_disabled_snackbar_title:I
+
+    sput v0, Lkua;->I:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_safe_mode_enabled_snackbar_title:I
+
+    sput v0, Lkua;->J:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_search_by_phone:I
+
+    sput v0, Lkua;->K:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_see_online_state:I
+
+    sput v0, Lkua;->L:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_toolbar_title:I
+
+    sput v0, Lkua;->M:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_twofa_disabled:I
+
+    sput v0, Lkua;->N:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_twofa_email_warning:I
+
+    sput v0, Lkua;->O:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_twofa_enabled:I
+
+    sput v0, Lkua;->P:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_twofa_title:I
+
+    sput v0, Lkua;->Q:I
+
+    sget v0, Lfkc;->oneme_settings_privacy_screen_web_apps:I
+
+    sput v0, Lkua;->R:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Lkua;->a:I
-
-    const-string v2, "PCRTCClient"
-
-    iget-object v3, v0, Lkua;->c:Lorg/webrtc/IceCandidate;
-
-    iget-object v0, v0, Lkua;->b:Lwua;
-
-    packed-switch v1, :pswitch_data_0
-
-    move-object/from16 v1, p1
-
-    check-cast v1, Lorg/webrtc/PeerConnection;
-
-    iget-object v1, v0, Lwua;->x:Ll7c;
-
-    iget-object v4, v0, Lwua;->w:Landroid/content/Context;
-
-    iget-object v5, v0, Lwua;->B:Lkv6;
-
-    iget-object v6, v5, Lkv6;->b:Li7c;
-
-    iget-object v7, v5, Lkv6;->c:Ljava/util/HashMap;
-
-    iget-boolean v8, v5, Lkv6;->f:Z
-
-    if-eqz v8, :cond_0
-
-    goto/16 :goto_7
-
-    :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v10
-
-    iget-wide v12, v5, Lkv6;->d:J
-
-    sub-long/2addr v10, v12
-
-    sget-object v8, Lkv6;->h:Ljava/util/regex/Pattern;
-
-    iget-object v12, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    invoke-virtual {v8, v12}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v12
-
-    if-nez v12, :cond_1
-
-    goto/16 :goto_7
-
-    :cond_1
-    const/4 v12, 0x1
-
-    invoke-virtual {v8, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    if-nez v8, :cond_2
-
-    goto/16 :goto_7
-
-    :cond_2
-    invoke-virtual {v8}, Ljava/lang/String;->hashCode()I
-
-    move-result v13
-
-    const-string v14, "srflx"
-
-    const-string v15, "relay"
-
-    const/16 v16, -0x1
-
-    sparse-switch v13, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    invoke-virtual {v8, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/16 v16, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    invoke-virtual {v8, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/16 v16, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v13, "prflx"
-
-    invoke-virtual {v8, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move/from16 v16, v12
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v13, "host"
-
-    invoke-virtual {v8, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    const/16 v16, 0x0
-
-    :goto_0
-    packed-switch v16, :pswitch_data_1
-
-    const/4 v9, 0x0
-
-    goto :goto_2
-
-    :pswitch_0
-    iget-object v13, v3, Lorg/webrtc/IceCandidate;->serverUrl:Ljava/lang/String;
-
-    if-eqz v13, :cond_7
-
-    sget-object v9, Lkv6;->i:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v9, v13}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_7
-
-    invoke-virtual {v9, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    goto :goto_1
-
-    :cond_7
-    const/4 v9, 0x0
-
-    :goto_1
-    if-nez v9, :cond_8
-
-    const-string v9, "udp"
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {v9}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v9
-
-    :goto_2
-    invoke-virtual {v15, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_b
-
-    const-string v6, "tcp"
-
-    invoke-virtual {v6, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_9
-
-    sget-object v6, Lwpg;->b:Lwpg;
-
-    goto :goto_3
-
-    :cond_9
-    sget-object v6, Lwpg;->c:Lwpg;
-
-    :goto_3
-    sget-object v8, Lkv6;->j:Ljava/util/regex/Pattern;
-
-    iget-object v9, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    invoke-virtual {v8, v9}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_a
-
-    invoke-virtual {v8, v12}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    goto :goto_5
-
-    :cond_a
-    :goto_4
-    const/4 v13, 0x0
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {v14, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_e
-
-    sget-object v6, Lwpg;->o:Lwpg;
-
-    goto :goto_4
-
-    :goto_5
-    invoke-virtual {v7, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Integer;
-
-    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
-
-    move-result v8
-
-    add-int/lit8 v9, v8, 0x1
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    invoke-virtual {v7, v6, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v7, v5, Lkv6;->g:Ljava/lang/String;
-
-    if-eqz v7, :cond_c
-
-    goto :goto_6
-
-    :cond_c
-    const-string v7, "direct"
-
-    iput-object v7, v5, Lkv6;->g:Ljava/lang/String;
-
-    :goto_6
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, ":"
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, v6, Lwpg;->a:Ljava/lang/String;
-
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez v13, :cond_d
-
-    const-string v13, "0.0.0.0"
-
-    :cond_d
-    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "param"
-
-    invoke-static {v7, v6}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
-
-    move-result-object v6
-
-    iget-object v5, v5, Lkv6;->a:Ll7c;
-
-    sget-object v7, Ll7c;->COLLECTOR_VIDEO:Ljava/lang/String;
-
-    const-string v8, "callCandidatesGenerate"
-
-    invoke-virtual {v5, v7, v8, v6}, Ll7c;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    goto :goto_7
-
-    :cond_e
-    const-string v5, "not logging (unknown?) type: "
-
-    invoke-virtual {v5, v8}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v7, "CandidateLog"
-
-    invoke-interface {v6, v7, v5}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_7
-    :pswitch_1
-    iget-wide v5, v0, Lwua;->I:J
-
-    const-wide/16 v7, -0x1
-
-    cmp-long v5, v5, v7
-
-    if-nez v5, :cond_f
-
-    goto :goto_8
-
-    :cond_f
-    const-string v5, "connectivity"
-
-    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/net/ConnectivityManager;
-
-    const-string v6, "phone"
-
-    invoke-virtual {v4, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/telephony/TelephonyManager;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    iget-wide v8, v0, Lwua;->I:J
-
-    sub-long/2addr v6, v8
-
-    new-instance v8, Ljava/util/HashMap;
-
-    invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v9, v1, Ll7c;->conversationId:Ljava/lang/String;
-
-    const-string v10, "vcid"
-
-    invoke-virtual {v8, v10, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v9, v3, Lorg/webrtc/IceCandidate;->sdp:Ljava/lang/String;
-
-    const-string v10, "candidate_sdp"
-
-    invoke-virtual {v8, v10, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v9, v3, Lorg/webrtc/IceCandidate;->sdpMid:Ljava/lang/String;
-
-    const-string v10, "candidate_sdp_mid"
-
-    invoke-virtual {v8, v10, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget v9, v3, Lorg/webrtc/IceCandidate;->sdpMLineIndex:I
-
-    invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string v10, "candidate_sdp_m_line_index"
-
-    invoke-virtual {v8, v10, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "stat_time_delta"
-
-    invoke-virtual {v8, v7, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v5, v4}, Lsd9;->b(Landroid/net/ConnectivityManager;Landroid/telephony/TelephonyManager;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "network_type"
-
-    invoke-virtual {v8, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Ll7c;->COLLECTOR_WEBRTC:Ljava/lang/String;
-
-    const-string v5, "callStatCandidate"
-
-    invoke-virtual {v1, v4, v5, v8}, Ll7c;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    :goto_8
-    iget-object v1, v0, Lwua;->T:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, v0, Lwua;->y:Li7c;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "\u2744 -> ice candidate: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v1, v2, v4}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lwua;->r:Landroid/os/Handler;
-
-    new-instance v2, Lrua;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v0, v4, v3}, Lrua;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    move-object/from16 v1, p1
-
-    check-cast v1, Lorg/webrtc/PeerConnection;
-
-    invoke-virtual {v1, v3}, Lorg/webrtc/PeerConnection;->addIceCandidate(Lorg/webrtc/IceCandidate;)Z
-
-    move-result v1
-
-    iget-object v4, v0, Lwua;->B:Lkv6;
-
-    iget-wide v5, v4, Lkv6;->e:J
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v5, v5, v7
-
-    if-nez v5, :cond_10
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v5
-
-    iput-wide v5, v4, Lkv6;->e:J
-
-    :cond_10
-    if-nez v1, :cond_11
-
-    iget-object v1, v0, Lwua;->y:Li7c;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Lwua;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ": \u2744\ufe0f FAILED to add remote ice candidate "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v3, Ljava/lang/Exception;
-
-    const-string v4, "add.ice.candidate.fail"
-
-    invoke-direct {v3, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1, v2, v0, v3}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_11
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-    .end packed-switch
-
-    :sswitch_data_0
-    .sparse-switch
-        0x30f5a8 -> :sswitch_3
-        0x65fa730 -> :sswitch_2
-        0x6760291 -> :sswitch_1
-        0x689edb3 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,82 +3,155 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk3f;
+.implements Lord;
 
 
 # instance fields
-.field public final a:[B
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/CharSequence;Llf6;)V
     .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lfo4;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lfo4;->b:Ljava/lang/Object;
+
+    .line 5
+    check-cast p2, Lmo7;
+
+    iput-object p2, p0, Lfo4;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lord;Ljava/lang/Object;I)V
+    .locals 0
+
+    .line 1
+    iput p3, p0, Lfo4;->a:I
+
+    iput-object p1, p0, Lfo4;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lfo4;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x1000
+    return-void
+.end method
 
-    new-array v0, v0, [B
+.method public constructor <init>(Lve6;Lxe6;)V
+    .locals 1
 
-    iput-object v0, p0, Lfo4;->a:[B
+    const/4 v0, 0x2
+
+    iput v0, p0, Lfo4;->a:I
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    check-cast p1, Lmo7;
+
+    iput-object p1, p0, Lfo4;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lfo4;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JIIILi3f;)V
-    .locals 0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    return-void
-.end method
+    iget v0, p0, Lfo4;->a:I
 
-.method public final b(Lfsa;II)V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p2}, Lfsa;->H(I)V
+    iget-object v0, p0, Lfo4;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lvr5;
 
-.method public final c(Li64;IZ)I
-    .locals 1
+    new-instance v1, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lfo4;->a:[B
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    array-length v0, p0
+    invoke-static {v0, v1}, Lxrd;->b0(Lord;Ljava/util/Collection;)V
 
-    invoke-static {v0, p2}, Ljava/lang/Math;->min(II)I
+    iget-object v0, p0, Lfo4;->c:Ljava/lang/Object;
 
-    move-result p2
+    check-cast v0, Ljava/util/Comparator;
 
-    const/4 v0, 0x0
+    invoke-static {v1, v0}, Lj93;->X(Ljava/util/List;Ljava/util/Comparator;)V
 
-    invoke-interface {p1, p0, v0, p2}, Li64;->read([BII)I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result p0
+    move-result-object v0
 
-    const/4 p1, -0x1
+    return-object v0
 
-    if-ne p0, p1, :cond_1
+    :pswitch_0
+    new-instance v0, Lv29;
 
-    if-eqz p3, :cond_0
+    invoke-direct {v0, p0}, Lv29;-><init>(Lfo4;)V
 
-    return p1
+    return-object v0
 
-    :cond_0
-    new-instance p0, Ljava/io/EOFException;
+    :pswitch_1
+    new-instance v0, Lvj6;
 
-    invoke-direct {p0}, Ljava/io/EOFException;-><init>()V
+    invoke-direct {v0, p0}, Lvj6;-><init>(Lfo4;)V
 
-    throw p0
+    return-object v0
 
-    :cond_1
-    return p0
-.end method
+    :pswitch_2
+    new-instance v0, Lct4;
 
-.method public final d(Lp26;)V
-    .locals 0
+    iget-object v1, p0, Lfo4;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v1, Ljs;
+
+    iget-object v1, v1, Ljs;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Iterable;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lfo4;->c:Ljava/lang/Object;
+
+    check-cast v2, Lt03;
+
+    invoke-direct {v0, v1, v2}, Lct4;-><init>(Ljava/util/Iterator;Lt03;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Leo4;
+
+    invoke-direct {v0, p0}, Leo4;-><init>(Lfo4;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

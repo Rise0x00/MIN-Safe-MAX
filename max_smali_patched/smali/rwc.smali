@@ -3,21 +3,47 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyk9;
+# virtual methods
+.method public a()V
+    .locals 0
 
+    return-void
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public b(II)V
+    .locals 0
 
-    new-instance v0, Lyk9;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public c(IILjava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {v0, v1}, Lyk9;-><init>(I)V
+    invoke-virtual {p0, p1, p2}, Lrwc;->b(II)V
 
-    sput-object v0, Lrwc;->a:Lyk9;
+    return-void
+.end method
+
+.method public d(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public f(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public g()V
+    .locals 0
 
     return-void
 .end method

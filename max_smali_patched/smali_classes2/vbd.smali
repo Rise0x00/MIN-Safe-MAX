@@ -1,82 +1,125 @@
-.class public interface abstract Lvbd;
-.super Ljava/lang/Object;
+.class public final Lvbd;
+.super Lm3f;
 .source "SourceFile"
 
+# interfaces
+.implements Llf6;
 
-# static fields
-.field public static final a:Lms;
 
-.field public static final b:[Ljava/lang/String;
+# instance fields
+.field public X:I
 
-.field public static final c:[J
+.field public final synthetic Y:Lybd;
 
-.field public static final d:[I
+.field public final synthetic Z:Ljava/lang/String;
+
+.field public final synthetic w0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lybd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lms;
+    iput-object p1, p0, Lvbd;->Y:Lybd;
 
-    const-string v5, "error.message.like.unknown.like"
+    iput-object p2, p0, Lvbd;->Z:Ljava/lang/String;
 
-    const-string v6, "error.message.like.unknown.reaction"
+    iput-boolean p3, p0, Lvbd;->w0:Z
 
-    const-string v1, "error.comment.chat.access"
+    const/4 p1, 0x2
 
-    const-string v2, "error.comment.invalid"
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-string v3, "error.message.invalid"
+    return-void
+.end method
 
-    const-string v4, "error.message.chat.access"
 
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object v1
+    check-cast p1, Le34;
 
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Lvbd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Lms;-><init>(Ljava/util/Collection;)V
+    move-result-object p1
 
-    sput-object v0, Lvbd;->a:Lms;
+    check-cast p1, Lvbd;
 
-    const-string v0, "modifiers"
+    sget-object p2, Loyf;->a:Loyf;
 
-    const-string v1, "accessFlags"
+    invoke-virtual {p1, p2}, Lvbd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    sput-object v0, Lvbd;->b:[Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    const/4 v0, 0x3
+    new-instance p1, Lvbd;
 
-    new-array v1, v0, [J
+    iget-object v0, p0, Lvbd;->Z:Ljava/lang/String;
 
-    fill-array-data v1, :array_0
+    iget-boolean v1, p0, Lvbd;->w0:Z
 
-    sput-object v1, Lvbd;->c:[J
+    iget-object v2, p0, Lvbd;->Y:Lybd;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lvbd;-><init>(Lybd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lvbd;->X:I
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x4
+    if-eqz v0, :cond_1
 
-    filled-new-array {v1, v0, v2}, [I
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    sput-object v0, Lvbd;->d:[I
+    return-object p1
 
-    return-void
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :array_0
-    .array-data 8
-        0x3a98
-        0x2710
-        0x1388
-    .end array-data
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iput v1, p0, Lvbd;->X:I
+
+    iget-object p1, p0, Lvbd;->Y:Lybd;
+
+    iget-object v0, p0, Lvbd;->Z:Ljava/lang/String;
+
+    iget-boolean v1, p0, Lvbd;->w0:Z
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v0, v1, v2, p0}, Lybd;->a(Lybd;Ljava/lang/String;ZZLnz3;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

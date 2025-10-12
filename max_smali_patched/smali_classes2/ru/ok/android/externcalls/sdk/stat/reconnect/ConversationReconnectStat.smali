@@ -19,16 +19,16 @@
         "",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
         "statReporter",
-        "Laz3;",
+        "Lo14;",
         "cidProvider",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/log/ExtLogger;Laz3;)V",
-        "Ltcf;",
+        "(Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo14;)V",
+        "Loyf;",
         "onDisconnected",
         "()V",
         "onConnected",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
-        "Laz3;",
+        "Lo14;",
         "",
         "wasDisconnected",
         "Z",
@@ -54,7 +54,7 @@
 
 
 # instance fields
-.field private final cidProvider:Laz3;
+.field private final cidProvider:Lo14;
 
 .field private final statReporter:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
@@ -69,21 +69,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat$Companion;-><init>(Luc4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat$Companion;-><init>(Lof4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->Companion:Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/log/ExtLogger;Laz3;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo14;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->statReporter:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Laz3;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Lo14;
 
     return-void
 .end method
@@ -102,17 +102,17 @@
     :cond_0
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->statReporter:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Laz3;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Lo14;
 
-    check-cast v1, Lbz3;
+    check-cast v1, Lp14;
 
-    iget-object v1, v1, Lbz3;->a:Ljava/lang/String;
+    iget-object v1, v1, Lp14;->a:Ljava/lang/String;
 
     const-string v2, "0"
 
-    sget-object v3, Le4e;->s0:Le4e;
+    sget-object v3, Laoe;->B0:Laoe;
 
-    invoke-virtual {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Le4e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Laoe;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -122,7 +122,7 @@
 .end method
 
 .method public final onDisconnected()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -130,17 +130,17 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->statReporter:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Laz3;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stat/reconnect/ConversationReconnectStat;->cidProvider:Lo14;
 
-    check-cast p0, Lbz3;
+    check-cast v1, Lp14;
 
-    iget-object p0, p0, Lbz3;->a:Ljava/lang/String;
+    iget-object v1, v1, Lp14;->a:Ljava/lang/String;
 
-    const-string v1, "1"
+    const-string v2, "1"
 
-    sget-object v2, Le4e;->s0:Le4e;
+    sget-object v3, Laoe;->B0:Laoe;
 
-    invoke-virtual {v0, v2, p0, v1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Le4e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Laoe;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

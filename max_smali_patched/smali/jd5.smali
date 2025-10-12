@@ -1,36 +1,60 @@
-.class public interface abstract Ljd5;
+.class public final Ljd5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Enumeration;
+
+
+# instance fields
+.field public final a:Ljava/util/Enumeration;
+
+
+# direct methods
+.method public constructor <init>(Lkd5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object p1, p1, Lkd5;->a:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Ljava/util/Collections;->enumeration(Ljava/util/Collection;)Ljava/util/Enumeration;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljd5;->a:Ljava/util/Enumeration;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract W(Lnd5;)V
+.method public final hasMoreElements()Z
+    .locals 1
+
+    iget-object v0, p0, Ljd5;->a:Ljava/util/Enumeration;
+
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public abstract X(Lld5;Le7;)I
-.end method
+.method public final nextElement()Ljava/lang/Object;
+    .locals 2
 
-.method public abstract d(JJ)V
-.end method
+    new-instance v0, Ljava/util/HashMap;
 
-.method public m()Ljd5;
-    .locals 0
+    iget-object v1, p0, Ljd5;->a:Ljava/util/Enumeration;
 
-    return-object p0
-.end method
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
-.method public abstract n(Lld5;)Z
-.end method
+    move-result-object v1
 
-.method public o()Ljava/util/List;
-    .locals 0
+    check-cast v1, Ljava/util/Map;
 
-    sget-object p0, Lg07;->b:Lzu5;
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    sget-object p0, Lvic;->X:Lvic;
-
-    return-object p0
-.end method
-
-.method public abstract release()V
+    return-object v0
 .end method

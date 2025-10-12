@@ -1,57 +1,39 @@
-.class public abstract Lx66;
+.class public final Lx66;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln34;
 
+# instance fields
+.field public final a:Ljava/lang/String;
 
-# static fields
-.field public static final a:Z
+.field public final b:I
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:I
+
+.field public final f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    const-string v0, "Amazon"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Ldif;->c:Ljava/lang/String;
+    iput-object p4, p0, Lx66;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput p1, p0, Lx66;->b:I
 
-    move-result v0
+    iput-boolean p6, p0, Lx66;->c:Z
 
-    if-eqz v0, :cond_1
+    iput-object p5, p0, Lx66;->d:Ljava/lang/String;
 
-    sget-object v0, Ldif;->d:Ljava/lang/String;
+    iput p2, p0, Lx66;->e:I
 
-    const-string v1, "AFTM"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "AFTB"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-boolean v0, Lx66;->a:Z
+    iput p3, p0, Lx66;->f:I
 
     return-void
 .end method

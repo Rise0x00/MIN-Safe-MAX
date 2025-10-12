@@ -1,258 +1,136 @@
 .class public final Ldad;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lkotlin/coroutines/Continuation;
-.implements Ldf7;
+.implements Llf6;
 
 
 # instance fields
-.field public a:I
+.field public X:I
 
-.field public b:Ljava/lang/Object;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:Ljava/util/Iterator;
+.field public final synthetic Z:Lnda;
 
-.field public o:Lkotlin/coroutines/Continuation;
+
+# direct methods
+.method public constructor <init>(Lnda;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ldad;->Z:Lnda;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/RuntimeException;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldad;->a:I
+    check-cast p1, Lqrb;
 
-    const/4 v1, 0x4
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {p0, p1, p2}, Ldad;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x5
+    move-result-object p1
 
-    if-eq v0, v1, :cond_0
+    check-cast p1, Ldad;
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    sget-object p2, Loyf;->a:Loyf;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Ldad;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v2, "Unexpected state of the iterator: "
+    move-result-object p1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object p1
+.end method
 
-    iget p0, p0, Ldad;->a:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Ldad;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Ldad;->Z:Lnda;
 
-    move-result-object p0
+    invoke-direct {v0, v1, p2}, Ldad;-><init>(Lnda;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object p1, v0, Ldad;->Y:Ljava/lang/Object;
 
     return-object v0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Iterator has failed."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    return-object p0
-
-    :cond_1
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    return-object p0
 .end method
 
-.method public final b(Ljava/lang/Object;Lanc;)V
-    .locals 0
-
-    iput-object p1, p0, Ldad;->b:Ljava/lang/Object;
-
-    const/4 p1, 0x3
-
-    iput p1, p0, Ldad;->a:I
-
-    iput-object p2, p0, Ldad;->o:Lkotlin/coroutines/Continuation;
-
-    return-void
-.end method
-
-.method public final getContext()Lh04;
-    .locals 0
-
-    sget-object p0, Ll25;->a:Ll25;
-
-    return-object p0
-.end method
-
-.method public final hasNext()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    :goto_0
-    iget v0, p0, Ldad;->a:I
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_4
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ldad;->a()Ljava/lang/RuntimeException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_1
-    return v3
-
-    :cond_2
-    iget-object v0, p0, Ldad;->c:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iput v2, p0, Ldad;->a:I
-
-    return v3
-
-    :cond_3
-    iput-object v1, p0, Ldad;->c:Ljava/util/Iterator;
-
-    :cond_4
-    const/4 v0, 0x5
-
-    iput v0, p0, Ldad;->a:I
-
-    iget-object v0, p0, Ldad;->o:Lkotlin/coroutines/Continuation;
-
-    iput-object v1, p0, Ldad;->o:Lkotlin/coroutines/Continuation;
-
-    sget-object v1, Ltcf;->a:Ltcf;
-
-    invoke-interface {v0, v1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Ldad;->a:I
-
-    if-eqz v0, :cond_2
+    iget v0, p0, Ldad;->X:I
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_2
-
-    const/4 v2, 0x2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v1, 0x3
+    if-eqz v0, :cond_1
 
     if-ne v0, v1, :cond_0
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iput v0, p0, Ldad;->a:I
+    goto :goto_0
 
-    iget-object v0, p0, Ldad;->b:Ljava/lang/Object;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iput-object v1, p0, Ldad;->b:Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldad;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lqrb;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance v2, Lhcb;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, p1, v3, v0}, Lhcb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v3, p0, Ldad;->Z:Lnda;
+
+    invoke-interface {v3, v2}, Lnda;->a(Lxda;)V
+
+    new-instance v2, Ls14;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v3}, Ls14;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    iput v1, p0, Ldad;->X:I
+
+    invoke-static {p1, v2, p0}, Lhd6;->e(Lqrb;Lve6;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :cond_0
-    invoke-virtual {p0}, Ldad;->a()Ljava/lang/RuntimeException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_1
-    iput v1, p0, Ldad;->a:I
-
-    iget-object p0, p0, Ldad;->c:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
     :cond_2
-    invoke-virtual {p0}, Ldad;->hasNext()Z
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
 
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Ldad;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final resumeWith(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    const/4 p1, 0x4
-
-    iput p1, p0, Ldad;->a:I
-
-    return-void
+    return-object p1
 .end method

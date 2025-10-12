@@ -1,57 +1,64 @@
 .class public final Lmi;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lni;
 
-# instance fields
-.field public X:Ljava/util/ArrayList;
 
-.field public Y:Ljava/util/ArrayList;
-
-.field public Z:Ljava/util/Map;
-
-.field public synthetic n0:Ljava/lang/Object;
-
-.field public o:Laj;
-
-.field public final synthetic o0:Laj;
-
-.field public p0:I
+# static fields
+.field public static final a:Lmi;
 
 
 # direct methods
-.method public constructor <init>(Laj;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lmi;->o0:Laj;
+    new-instance v0, Lmi;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmi;->a:Lmi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lmi;->n0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lmi;->p0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lmi;
 
-    iput p1, p0, Lmi;->p0:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lmi;->o0:Laj;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-static {p1, v0, p0}, Laj;->b(Laj;Lhu;Lax3;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p0
+.method public final hashCode()I
+    .locals 1
 
-    return-object p0
+    const v0, -0x17c656d8
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Empty"
+
+    return-object v0
 .end method

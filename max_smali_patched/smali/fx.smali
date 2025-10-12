@@ -1,40 +1,104 @@
-.class public final Lfx;
-.super Lsj4;
+.class public final synthetic Lfx;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lr1f;
 
 
 # instance fields
-.field public final c:Lgx;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Ly3a;Lgx;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lsj4;-><init>(Ly3a;)V
+    iput p2, p0, Lfx;->a:I
 
-    iput-object p2, p0, Lfx;->c:Lgx;
+    iput p1, p0, Lfx;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x4
+    iget v0, p0, Lfx;->a:I
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndSet(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    new-instance v0, Landroid/os/HandlerThread;
 
-    if-eq v1, v0, :cond_0
+    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
 
-    iget-object v0, p0, Lfx;->c:Lgx;
+    iget v2, p0, Lfx;->b:I
 
-    invoke-virtual {v0, p0}, Lgx;->x(Lfx;)V
+    invoke-static {v2, v1}, Lhx;->r(ILjava/lang/String;)Ljava/lang/String;
 
-    :cond_0
-    return-void
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
+
+    iget v2, p0, Lfx;->b:I
+
+    invoke-static {v2, v1}, Lgx;->b(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
+
+    iget v2, p0, Lfx;->b:I
+
+    invoke-static {v2, v1}, Lhx;->r(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
+
+    iget v2, p0, Lfx;->b:I
+
+    invoke-static {v2, v1}, Lgx;->b(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

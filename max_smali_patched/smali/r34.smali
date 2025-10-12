@@ -1,65 +1,99 @@
-.class public abstract Lr34;
-.super Ljava/lang/Object;
+.class public final Lr34;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
+
+
+# instance fields
+.field public final synthetic X:Ljava/util/concurrent/Callable;
+
+.field public final synthetic Y:Lz12;
 
 
 # direct methods
-.method public static a(Ljava/security/Signature;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljava/security/Signature;)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljavax/crypto/Cipher;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Cipher;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljavax/crypto/Mac;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Mac;)V
-
-    return-object v0
-.end method
-
-.method public static d(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Cipher;
+.method public constructor <init>(Ljava/util/concurrent/Callable;Lz12;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getCipher()Ljavax/crypto/Cipher;
+    iput-object p1, p0, Lr34;->X:Ljava/util/concurrent/Callable;
 
-    move-result-object p0
+    iput-object p2, p0, Lr34;->Y:Lz12;
 
-    return-object p0
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
 .end method
 
-.method public static e(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Mac;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getMac()Ljavax/crypto/Mac;
+    check-cast p1, Le34;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    invoke-virtual {p0, p1, p2}, Lr34;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr34;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Lr34;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static f(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljava/security/Signature;
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getSignature()Ljava/security/Signature;
+    new-instance p1, Lr34;
 
-    move-result-object p0
+    iget-object v0, p0, Lr34;->X:Ljava/util/concurrent/Callable;
 
-    return-object p0
+    iget-object v1, p0, Lr34;->Y:Lz12;
+
+    invoke-direct {p1, v0, v1, p2}, Lr34;-><init>(Ljava/util/concurrent/Callable;Lz12;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lr34;->Y:Lz12;
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object p1, p0, Lr34;->X:Ljava/util/concurrent/Callable;
+
+    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lz12;->resumeWith(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance v1, Lv3d;
+
+    invoke-direct {v1, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1}, Lz12;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

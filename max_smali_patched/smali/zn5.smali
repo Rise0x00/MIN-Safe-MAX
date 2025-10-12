@@ -1,112 +1,64 @@
-.class public final synthetic Lzn5;
+.class public final Lzn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lm5a;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
+.field public final a:Ljava/io/File;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+.method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    iput p2, p0, Lzn5;->a:I
-
-    iput-object p1, p0, Lzn5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzn5;->a:Ljava/io/File;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lzn5;->a:I
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lzn5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+    instance-of v0, p1, Lzn5;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, La63;
-
-    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Lr8;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, La63;->a:Landroid/content/Intent;
-
-    invoke-static {p1}, Lnoa;->y(Landroid/content/Intent;)V
-
-    invoke-virtual {p0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    check-cast p1, Le1f;
-
-    iget-object p0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lr76;
-
-    invoke-virtual {p0}, Lr76;->p()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    iget-object p0, p1, Le1f;->h:Lc1f;
-
-    invoke-virtual {p0}, Lc1f;->a()Lb1f;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-boolean p0, p1, Le1f;->g:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    if-nez p0, :cond_1
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1}, Le1f;->f(J)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_0
+    check-cast p1, Lzn5;
 
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object p1, p1, Lzn5;->a:Ljava/io/File;
 
-    throw p0
+    iget-object v0, p0, Lzn5;->a:Ljava/io/File;
+
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 
     :cond_1
     :goto_0
-    return-void
+    const/4 p1, 0x0
 
-    nop
+    return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lzn5;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

@@ -1,298 +1,39 @@
 .class public final Lirb;
-.super Lgz8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lnrb;
+.field public final a:J
 
-.field public b:F
+.field public final b:J
 
-.field public c:[F
+.field public final c:J
 
+.field public final d:J
 
-# virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.field public final e:J
 
-    iget-object v0, p0, Lirb;->a:Lnrb;
+.field public final f:J
 
-    if-eqz v0, :cond_0
 
-    const/4 v1, 0x1
+# direct methods
+.method public constructor <init>(JJJJJJ)V
+    .locals 0
 
-    invoke-static {v1, v0}, Lh63;->i(ILgz8;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-wide p1, p0, Lirb;->a:J
 
-    goto :goto_0
+    iput-wide p3, p0, Lirb;->b:J
 
-    :cond_0
-    const/4 v0, 0x0
+    iput-wide p5, p0, Lirb;->c:J
 
-    :goto_0
-    iget v1, p0, Lirb;->b:F
+    iput-wide p7, p0, Lirb;->d:J
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iput-wide p9, p0, Lirb;->e:J
 
-    move-result v1
+    iput-wide p11, p0, Lirb;->f:J
 
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lh63;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget-object p0, p0, Lirb;->c:[F
-
-    array-length v1, p0
-
-    if-lez v1, :cond_2
-
-    array-length v1, p0
-
-    mul-int/lit8 v1, v1, 0x4
-
-    add-int/2addr v1, v0
-
-    array-length p0, p0
-
-    add-int/2addr v1, p0
-
-    return v1
-
-    :cond_2
-    return v0
-.end method
-
-.method public final mergeFrom(Lg63;)Lgz8;
-    .locals 6
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x1a
-
-    const/4 v2, 0x0
-
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lv44;->p(Lg63;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lirb;->c:[F
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [F
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_3
-
-    invoke-virtual {p1}, Lg63;->i()F
-
-    move-result v1
-
-    aput v1, v4, v3
-
-    invoke-virtual {p1}, Lg63;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Lg63;->i()F
-
-    move-result v0
-
-    aput v0, v4, v3
-
-    iput-object v4, p0, Lirb;->c:[F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lg63;->p()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lg63;->e(I)I
-
-    move-result v1
-
-    div-int/lit8 v0, v0, 0x4
-
-    iget-object v3, p0, Lirb;->c:[F
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v5, v0, [F
-
-    if-eqz v4, :cond_5
-
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
-
-    invoke-virtual {p1}, Lg63;->i()F
-
-    move-result v2
-
-    aput v2, v5, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    iput-object v5, p0, Lirb;->c:[F
-
-    invoke-virtual {p1, v1}, Lg63;->d(I)V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p1}, Lg63;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lirb;->b:F
-
-    goto :goto_0
-
-    :cond_8
-    iget-object v0, p0, Lirb;->a:Lnrb;
-
-    if-nez v0, :cond_9
-
-    new-instance v0, Lnrb;
-
-    invoke-direct {v0}, Lnrb;-><init>()V
-
-    iput-object v0, p0, Lirb;->a:Lnrb;
-
-    :cond_9
-    iget-object v0, p0, Lirb;->a:Lnrb;
-
-    invoke-virtual {p1, v0}, Lg63;->j(Lgz8;)V
-
-    goto/16 :goto_0
-
-    :cond_a
-    :goto_3
-    return-object p0
-.end method
-
-.method public final writeTo(Lh63;)V
-    .locals 3
-
-    iget-object v0, p0, Lirb;->a:Lnrb;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lh63;->y(ILgz8;)V
-
-    :cond_0
-    iget v0, p0, Lirb;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lirb;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lh63;->v(IF)V
-
-    :cond_1
-    iget-object v0, p0, Lirb;->c:[F
-
-    array-length v0, v0
-
-    if-lez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lirb;->c:[F
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_2
-
-    const/4 v2, 0x3
-
-    aget v1, v1, v0
-
-    invoke-virtual {p1, v2, v1}, Lh63;->v(IF)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method

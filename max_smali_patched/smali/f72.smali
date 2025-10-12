@@ -1,67 +1,68 @@
 .class public final Lf72;
-.super Ljava/lang/Object;
+.super La72;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:[Ljava/lang/String;
-
-.field public final d:[Le72;
+.field public final X:Lm3f;
 
 
 # direct methods
-.method public constructor <init>(Lg72;)V
-    .locals 1
+.method public constructor <init>(Lnf6;Lev5;Lw24;II)V
+    .locals 0
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p4, p5, p3, p2}, La72;-><init>(IILw24;Lev5;)V
 
-    .line 7
-    iget v0, p1, Lg72;->h:I
+    check-cast p1, Lm3f;
 
-    iput v0, p0, Lf72;->a:I
-
-    .line 8
-    iget v0, p1, Lg72;->k:I
-
-    iput v0, p0, Lf72;->b:I
-
-    .line 9
-    iget-object v0, p1, Lg72;->f:[Ljava/lang/String;
-
-    iput-object v0, p0, Lf72;->c:[Ljava/lang/String;
-
-    .line 10
-    iget-object p1, p1, Lg72;->g:[Le72;
-
-    iput-object p1, p0, Lf72;->d:[Le72;
+    iput-object p1, p0, Lf72;->X:Lm3f;
 
     return-void
 .end method
 
-.method public constructor <init>([Ljava/lang/String;[Le72;)V
-    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final k(Lw24;II)Lt62;
+    .locals 6
 
-    const/4 v0, 0x0
+    new-instance v0, Lf72;
 
-    .line 2
-    iput v0, p0, Lf72;->a:I
+    iget-object v1, p0, Lf72;->X:Lm3f;
 
-    .line 3
-    iput v0, p0, Lf72;->b:I
+    iget-object v2, p0, La72;->o:Lev5;
 
-    .line 4
-    iput-object p1, p0, Lf72;->c:[Ljava/lang/String;
+    move-object v3, p1
 
-    .line 5
-    iput-object p2, p0, Lf72;->d:[Le72;
+    move v4, p2
 
-    return-void
+    move v5, p3
+
+    invoke-direct/range {v0 .. v5}, Lf72;-><init>(Lnf6;Lev5;Lw24;II)V
+
+    return-object v0
+.end method
+
+.method public final n(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
+
+    new-instance v0, Le72;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Le72;-><init>(Lf72;Lgv5;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, p2}, Lipe;->h(Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lf34;->a:Lf34;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

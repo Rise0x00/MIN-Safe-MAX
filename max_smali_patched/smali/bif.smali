@@ -1,43 +1,73 @@
-.class public abstract synthetic Lbif;
-.super Ljava/lang/Object;
+.class public final enum Lbif;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum a:Lbif;
+
+.field public static final enum b:Lbif;
+
+.field public static final synthetic c:[Lbif;
+
+
 # direct methods
-.method public static bridge synthetic a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
+    new-instance v0, Lbif;
+
+    const-string v1, "UPTIME"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lbif;->a:Lbif;
+
+    new-instance v1, Lbif;
+
+    const-string v2, "REALTIME"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbif;->b:Lbif;
+
+    filled-new-array {v0, v1}, [Lbif;
+
+    move-result-object v0
+
+    sput-object v0, Lbif;->c:[Lbif;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lbif;
+    .locals 1
+
+    const-class v0, Lbif;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    return-object p0
-.end method
-
-.method public static bridge synthetic b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
-
-    move-result-object p0
+    check-cast p0, Lbif;
 
     return-object p0
 .end method
 
-.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/os/VibratorManager;
-    .locals 0
+.method public static values()[Lbif;
+    .locals 1
 
-    check-cast p0, Landroid/os/VibratorManager;
+    sget-object v0, Lbif;->c:[Lbif;
 
-    return-object p0
-.end method
+    invoke-virtual {v0}, [Lbif;->clone()Ljava/lang/Object;
 
-.method public static bridge synthetic d(Landroid/util/SparseArray;Landroid/util/SparseArray;)Z
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/util/SparseArray;->contentEquals(Landroid/util/SparseArray;)Z
+    check-cast v0, [Lbif;
 
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

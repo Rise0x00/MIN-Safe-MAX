@@ -1,124 +1,54 @@
 .class public final Lx67;
-.super Ljava/lang/Object;
+.super Ln2;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final X:F
+.field public final a:Ljava/lang/Object;
 
-.field public final Y:F
-
-.field public final Z:F
-
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:F
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly67;FFFF)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lx67;->a:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lx67;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lx67;->c:J
-
-    const-wide/16 v0, 0xc8
-
-    iput-wide v0, p0, Lx67;->b:J
-
-    iput p2, p0, Lx67;->o:F
-
-    iput p3, p0, Lx67;->X:F
-
-    iput p4, p0, Lx67;->Y:F
-
-    iput p5, p0, Lx67;->Z:F
+    iput-object p2, p0, Lx67;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lx67;->a:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lx67;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
 
-    check-cast v0, Ly67;
+    iget-object v0, p0, Lx67;->b:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    return-void
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result-wide v1
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget-wide v3, p0, Lx67;->c:J
-
-    sub-long/2addr v1, v3
-
-    iget-wide v3, p0, Lx67;->b:J
-
-    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v1
-
-    long-to-float v1, v1
-
-    long-to-float v2, v3
-
-    iget v3, p0, Lx67;->X:F
-
-    invoke-static {v1, v3, v2}, Ld7c;->i(FFF)F
-
-    move-result v3
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_1
-
-    iget v1, p0, Lx67;->o:F
-
-    add-float/2addr v1, v3
-
-    iget v2, p0, Lx67;->Y:F
-
-    iget v3, p0, Lx67;->Z:F
-
-    invoke-virtual {v0, v1, v2, v3}, Ly67;->j(FFF)V
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    const/4 p0, 0x1
-
-    invoke-virtual {v0, p0}, Ly67;->setImageToWrapCropBounds(Z)V
-
-    return-void
+    throw p1
 .end method

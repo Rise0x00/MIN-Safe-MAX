@@ -1,141 +1,236 @@
-.class public abstract Lixe;
+.class public final Lixe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
+
+# instance fields
+.field public final a:Landroid/os/Handler;
+
+.field public final b:Lbf5;
+
+.field public final c:Landroid/media/AudioManager;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:Z
 
 
 # direct methods
-.method public static a(J)J
-    .locals 14
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lbf5;)V
+    .locals 2
 
-    sget v0, Lse9;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-wide v0
+    move-result-object p1
 
-    sget-wide v2, Lse9;->a:J
+    iput-object p2, p0, Lixe;->a:Landroid/os/Handler;
 
-    sub-long/2addr v0, v2
+    iput-object p3, p0, Lixe;->b:Lbf5;
 
-    sget-object v2, Lnw4;->b:Lnw4;
+    const-string p2, "audio"
 
-    const-wide/16 v3, 0x1
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    sub-long v5, p0, v3
+    move-result-object p2
 
-    or-long/2addr v5, v3
+    check-cast p2, Landroid/media/AudioManager;
 
-    const-wide v7, 0x7fffffffffffffffL
+    invoke-static {p2}, Lyhh;->h(Ljava/lang/Object;)V
 
-    cmp-long v5, v5, v7
+    iput-object p2, p0, Lixe;->c:Landroid/media/AudioManager;
 
-    const-wide/16 v6, 0x0
+    const/4 p3, 0x3
 
-    if-nez v5, :cond_1
+    iput p3, p0, Lixe;->d:I
 
-    cmp-long p0, p0, v6
+    invoke-static {p2, p3}, Lixe;->a(Landroid/media/AudioManager;I)I
 
-    if-gez p0, :cond_0
+    move-result p3
 
-    sget-wide p0, Liw4;->c:J
+    iput p3, p0, Lixe;->e:I
+
+    iget p3, p0, Lixe;->d:I
+
+    sget v0, Lr4g;->a:I
+
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_0
+
+    invoke-virtual {p2, p3}, Landroid/media/AudioManager;->isStreamMute(I)Z
+
+    move-result p2
 
     goto :goto_0
 
     :cond_0
-    sget-wide p0, Liw4;->b:J
+    invoke-static {p2, p3}, Lixe;->a(Landroid/media/AudioManager;I)I
 
-    :goto_0
-    invoke-static {p0, p1}, Liw4;->k(J)J
+    move-result p2
 
-    move-result-wide p0
+    if-nez p2, :cond_1
 
-    return-wide p0
+    const/4 p2, 0x1
+
+    goto :goto_0
 
     :cond_1
-    sub-long v8, v0, p0
+    const/4 p2, 0x0
 
-    xor-long v10, v8, v0
+    :goto_0
+    iput-boolean p2, p0, Lixe;->f:Z
 
-    xor-long v12, v8, p0
+    new-instance p2, Lhn;
 
-    not-long v12, v12
+    const/16 p3, 0xc
 
-    and-long/2addr v10, v12
+    invoke-direct {p2, p3, p0}, Lhn;-><init>(ILjava/lang/Object;)V
 
-    cmp-long v5, v10, v6
+    new-instance p3, Landroid/content/IntentFilter;
 
-    if-gez v5, :cond_4
+    const-string v0, "android.media.VOLUME_CHANGED_ACTION"
 
-    sget-object v5, Lnw4;->c:Lnw4;
+    invoke-direct {p3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v5}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    :try_start_0
+    invoke-virtual {p1, p2, p3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v10
+    return-void
 
-    if-gez v10, :cond_2
+    :catch_0
+    move-exception p1
 
-    iget-object v6, v2, Lnw4;->a:Ljava/util/concurrent/TimeUnit;
+    const-string p2, "StreamVolumeManager"
 
-    iget-object v7, v5, Lnw4;->a:Ljava/util/concurrent/TimeUnit;
+    const-string p3, "Error registering stream volume receiver"
 
-    invoke-virtual {v6, v3, v4, v7}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-static {p2, p3, p1}, Lf09;->P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
-    move-result-wide v3
+    return-void
+.end method
 
-    div-long v6, v0, v3
+.method public static a(Landroid/media/AudioManager;I)I
+    .locals 3
 
-    div-long v8, p0, v3
+    :try_start_0
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamVolume(I)I
 
-    sub-long/2addr v6, v8
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    rem-long/2addr v0, v3
+    return p0
 
-    rem-long/2addr p0, v3
+    :catch_0
+    move-exception v0
 
-    sub-long/2addr v0, p0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget p0, Liw4;->o:I
+    const/16 v2, 0x3c
 
-    invoke-static {v6, v7, v5}, Lj5e;->D(JLnw4;)J
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    move-result-wide p0
+    const-string v2, "Could not retrieve stream volume for stream type "
 
-    invoke-static {v0, v1, v2}, Lj5e;->D(JLnw4;)J
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, p1, v0, v1}, Liw4;->h(JJ)J
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-wide p0
+    move-result-object v1
 
-    return-wide p0
+    const-string v2, "StreamVolumeManager"
 
-    :cond_2
-    cmp-long p0, v8, v6
+    invoke-static {v2, v1, v0}, Lf09;->P(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
 
-    if-gez p0, :cond_3
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
-    sget-wide p0, Liw4;->c:J
+    move-result p0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 5
+
+    iget v0, p0, Lixe;->d:I
+
+    iget-object v1, p0, Lixe;->c:Landroid/media/AudioManager;
+
+    invoke-static {v1, v0}, Lixe;->a(Landroid/media/AudioManager;I)I
+
+    move-result v0
+
+    iget v2, p0, Lixe;->d:I
+
+    sget v3, Lr4g;->a:I
+
+    const/16 v4, 0x17
+
+    if-lt v3, v4, :cond_0
+
+    invoke-virtual {v1, v2}, Landroid/media/AudioManager;->isStreamMute(I)Z
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v1, v2}, Lixe;->a(Landroid/media/AudioManager;I)I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    iget v2, p0, Lixe;->e:I
+
+    if-ne v2, v0, :cond_3
+
+    iget-boolean v2, p0, Lixe;->f:Z
+
+    if-eq v2, v1, :cond_2
 
     goto :goto_1
 
+    :cond_2
+    return-void
+
     :cond_3
-    sget-wide p0, Liw4;->b:J
-
     :goto_1
-    invoke-static {p0, p1}, Liw4;->k(J)J
+    iput v0, p0, Lixe;->e:I
 
-    move-result-wide p0
+    iput-boolean v1, p0, Lixe;->f:Z
 
-    return-wide p0
+    iget-object v2, p0, Lixe;->b:Lbf5;
 
-    :cond_4
-    invoke-static {v8, v9, v2}, Lj5e;->D(JLnw4;)J
+    iget-object v2, v2, Lbf5;->a:Lhf5;
 
-    move-result-wide p0
+    iget-object v2, v2, Lhf5;->B0:La63;
 
-    return-wide p0
+    new-instance v3, Laf5;
+
+    invoke-direct {v3, v0, v1}, Laf5;-><init>(IZ)V
+
+    const/16 v0, 0x1e
+
+    invoke-virtual {v2, v0, v3}, La63;->l(ILrx7;)V
+
+    return-void
 .end method

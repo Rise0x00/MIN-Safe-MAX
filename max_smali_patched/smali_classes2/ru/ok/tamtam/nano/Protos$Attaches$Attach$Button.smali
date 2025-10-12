@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
-.super Lgz8;
+.super Lg79;
 .source "SourceFile"
 
 
@@ -64,7 +64,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgz8;-><init>()V
+    invoke-direct {p0}, Lg79;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->clear()Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
 
@@ -78,7 +78,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Ld77;->b:Ljava/lang/Object;
+    sget-object v0, Lfe7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -120,7 +120,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
+.method public static parseFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -133,7 +133,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
 
     move-result-object p0
 
@@ -153,7 +153,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;-><init>()V
 
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
 
     move-result-object p0
 
@@ -191,7 +191,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lgz8;->cachedSize:I
+    iput v0, p0, Lg79;->cachedSize:I
 
     return-object p0
 .end method
@@ -213,7 +213,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->title:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v0, v2}, Le83;->l(ILjava/lang/String;)I
 
     move-result v0
 
@@ -229,7 +229,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v3, v2}, Lh63;->f(II)I
+    invoke-static {v3, v2}, Le83;->f(II)I
 
     move-result v2
 
@@ -242,7 +242,7 @@
 
     const/4 v3, 0x3
 
-    invoke-static {v3, v2}, Lh63;->f(II)I
+    invoke-static {v3, v2}, Le83;->f(II)I
 
     move-result v2
 
@@ -261,7 +261,7 @@
 
     iget-object v3, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->url:Ljava/lang/String;
 
-    invoke-static {v2, v3}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v2, v3}, Le83;->l(ILjava/lang/String;)I
 
     move-result v2
 
@@ -280,7 +280,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->payload:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lh63;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Le83;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -293,7 +293,7 @@
 
     const/4 v1, 0x6
 
-    invoke-static {v1}, Lh63;->a(I)I
+    invoke-static {v1}, Le83;->a(I)I
 
     move-result v1
 
@@ -306,7 +306,7 @@
 
     const/4 v1, 0x7
 
-    invoke-static {v1}, Lh63;->a(I)I
+    invoke-static {v1}, Le83;->a(I)I
 
     move-result v1
 
@@ -317,25 +317,25 @@
 
     const-wide/16 v3, 0x0
 
-    cmp-long p0, v1, v3
+    cmp-long v3, v1, v3
 
-    if-eqz p0, :cond_7
+    if-eqz v3, :cond_7
 
-    const/16 p0, 0x8
+    const/16 v3, 0x8
 
-    invoke-static {p0, v1, v2}, Lh63;->h(IJ)I
+    invoke-static {v3, v1, v2}, Le83;->h(IJ)I
 
-    move-result p0
+    move-result v1
 
-    add-int/2addr p0, v0
+    add-int/2addr v1, v0
 
-    return p0
+    return v1
 
     :cond_7
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lg63;)Lgz8;
+.method public bridge synthetic mergeFrom(Ld83;)Lg79;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -344,14 +344,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public mergeFrom(Lg63;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
+.method public mergeFrom(Ld83;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -362,7 +362,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lg63;->s()I
+    invoke-virtual {p1}, Ld83;->s()I
 
     move-result v0
 
@@ -401,7 +401,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lg63;->u(I)Z
+    invoke-virtual {p1, v0}, Ld83;->u(I)Z
 
     move-result v0
 
@@ -411,7 +411,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lg63;->q()J
+    invoke-virtual {p1}, Ld83;->q()J
 
     move-result-wide v0
 
@@ -422,7 +422,7 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p1}, Lg63;->f()Z
+    invoke-virtual {p1}, Ld83;->f()Z
 
     move-result v0
 
@@ -432,7 +432,7 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Lg63;->f()Z
+    invoke-virtual {p1}, Ld83;->f()Z
 
     move-result v0
 
@@ -442,7 +442,7 @@
 
     .line 8
     :cond_4
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -452,7 +452,7 @@
 
     .line 9
     :cond_5
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -462,7 +462,7 @@
 
     .line 10
     :cond_6
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
@@ -490,7 +490,7 @@
 
     .line 12
     :cond_8
-    invoke-virtual {p1}, Lg63;->p()I
+    invoke-virtual {p1}, Ld83;->p()I
 
     move-result v0
 
@@ -506,7 +506,7 @@
 
     .line 14
     :cond_9
-    invoke-virtual {p1}, Lg63;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -531,7 +531,7 @@
     .end packed-switch
 .end method
 
-.method public writeTo(Lh63;)V
+.method public writeTo(Le83;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -553,7 +553,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->title:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Le83;->E(ILjava/lang/String;)V
 
     :cond_0
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->type:I
@@ -562,7 +562,7 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p1, v2, v0}, Lh63;->w(II)V
+    invoke-virtual {p1, v2, v0}, Le83;->w(II)V
 
     :cond_1
     iget v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->intent:I
@@ -571,7 +571,7 @@
 
     const/4 v2, 0x3
 
-    invoke-virtual {p1, v2, v0}, Lh63;->w(II)V
+    invoke-virtual {p1, v2, v0}, Le83;->w(II)V
 
     :cond_2
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->url:Ljava/lang/String;
@@ -586,7 +586,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->url:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Le83;->E(ILjava/lang/String;)V
 
     :cond_3
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->payload:Ljava/lang/String;
@@ -601,7 +601,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->payload:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lh63;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
 
     :cond_4
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->showLoading:Z
@@ -610,7 +610,7 @@
 
     const/4 v1, 0x6
 
-    invoke-virtual {p1, v1, v0}, Lh63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Le83;->r(IZ)V
 
     :cond_5
     iget-boolean v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->quickLocation:Z
@@ -619,20 +619,20 @@
 
     const/4 v1, 0x7
 
-    invoke-virtual {p1, v1, v0}, Lh63;->r(IZ)V
+    invoke-virtual {p1, v1, v0}, Le83;->r(IZ)V
 
     :cond_6
     iget-wide v0, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$Button;->contactId:J
 
     const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, v2
+    cmp-long v2, v0, v2
 
-    if-eqz p0, :cond_7
+    if-eqz v2, :cond_7
 
-    const/16 p0, 0x8
+    const/16 v2, 0x8
 
-    invoke-virtual {p1, p0, v0, v1}, Lh63;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Le83;->x(IJ)V
 
     :cond_7
     return-void

@@ -1,37 +1,40 @@
-.class public abstract Lnm4;
+.class public final Lnm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lolg;
+
 
 # static fields
-.field public static volatile a:Lu8d;
+.field public static final a:Lnm4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    sget-object v0, Lxub;->c:Lxub;
+    new-instance v0, Lnm4;
 
-    invoke-static {}, Lgog;->i()Lbo4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
-
-    new-instance v2, Lxj0;
-
-    const/16 v3, 0xd
-
-    invoke-direct {v2, v3}, Lxj0;-><init>(I)V
-
-    iget-object v0, v0, Lxub;->a:Lbl9;
-
-    new-instance v3, Lwub;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v2}, Lwub;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1, v3}, Lbl9;->g(Ljava/util/concurrent/Executor;Ls0a;)V
+    sput-object v0, Lnm4;->a:Lnm4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final c(Ll53;Lys9;)Ljlg;
+    .locals 0
+
+    invoke-interface {p1}, Lj53;->a()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lo7;->f(Ljava/lang/Class;)Ljlg;
+
+    move-result-object p1
+
+    return-object p1
 .end method

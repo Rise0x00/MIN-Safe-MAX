@@ -3,32 +3,153 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll2f;
+.implements Lr1f;
+
+
+# static fields
+.field public static final o:Ll94;
+
+
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public volatile b:Lr1f;
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ll94;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ll94;-><init>(I)V
+
+    sput-object v0, Lw1f;->o:Ll94;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lr1f;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lw1f;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lw1f;->b:Lr1f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final appToken()Ljava/lang/String;
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 3
 
-    const/4 p0, 0x0
+    iget-object v0, p0, Lw1f;->b:Lr1f;
 
-    throw p0
+    sget-object v1, Lw1f;->o:Ll94;
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lw1f;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v2, p0, Lw1f;->b:Lr1f;
+
+    if-eq v2, v1, :cond_0
+
+    iget-object v2, p0, Lw1f;->b:Lr1f;
+
+    invoke-interface {v2}, Lr1f;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lw1f;->c:Ljava/lang/Object;
+
+    iput-object v1, p0, Lw1f;->b:Lr1f;
+
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_1
+    iget-object v0, p0, Lw1f;->c:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final buildUuid()Ljava/lang/String;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 p0, 0x0
+    iget-object v0, p0, Lw1f;->b:Lr1f;
 
-    throw p0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Suppliers.memoize("
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v2, Lw1f;->o:Ll94;
+
+    if-ne v0, v2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "<supplier that returned "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lw1f;->c:Ljava/lang/Object;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ">"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

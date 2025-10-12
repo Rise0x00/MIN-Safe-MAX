@@ -1,108 +1,69 @@
-.class public final synthetic Ldf4;
+.class public abstract Ldf4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lk9b;
 
-
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Ldf4;->a:I
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+
+    sput-object v0, Ldf4;->a:Landroid/util/SparseIntArray;
 
     return-void
 .end method
 
+.method public static final a()Lxmb;
+    .locals 5
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 0
+    new-instance v0, Lxmb;
 
-    iget p0, p0, Ldf4;->a:I
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    packed-switch p0, :pswitch_data_0
+    move-result-object v1
 
-    check-cast p1, Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
 
-    if-eqz p1, :cond_0
+    move-result-wide v1
 
-    const/4 p0, 0x1
+    const-wide/32 v3, 0x7fffffff
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v1
+
+    long-to-int v1, v1
+
+    const/high16 v2, 0x1000000
+
+    if-le v1, v2, :cond_0
+
+    div-int/lit8 v1, v1, 0x4
+
+    mul-int/lit8 v1, v1, 0x3
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    div-int/lit8 v1, v1, 0x2
 
     :goto_0
-    return p0
+    sget-object v2, Ldf4;->a:Landroid/util/SparseIntArray;
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    const/4 v3, -0x1
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object p0
+    invoke-direct {v0, v4, v1, v2, v3}, Lxmb;-><init>(IILandroid/util/SparseIntArray;I)V
 
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_1
-    return p0
-
-    :pswitch_1
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p0, 0x0
-
-    :goto_2
-    return p0
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    const/4 p0, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p0, 0x0
-
-    :goto_3
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

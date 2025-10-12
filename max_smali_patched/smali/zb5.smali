@@ -2,157 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgc5;
-
 
 # instance fields
-.field public final a:I
+.field public final a:[Ltb5;
+
+.field public final b:[J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Ltb5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lzb5;->a:I
+    iput-object p1, p0, Lzb5;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lzb5;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lzb5;->b:[J
+
+    iput-object p4, p0, Lzb5;->a:[Ltb5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/String;
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x1
 
-    goto :goto_1
+    iget-object v1, p0, Lzb5;->c:Ljava/lang/String;
 
-    :cond_0
-    instance-of v0, p1, Lzb5;
+    invoke-static {v0, v1}, Lnd5;->d(ILjava/lang/String;)I
 
-    if-nez v0, :cond_1
+    move-result v0
 
-    goto :goto_0
+    iget-object v2, p0, Lzb5;->d:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lzb5;
+    invoke-static {v0, v2}, Lnd5;->d(ILjava/lang/String;)I
 
-    iget p0, p0, Lzb5;->a:I
+    move-result v0
 
-    iget p1, p1, Lzb5;->a:I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-eq p0, p1, :cond_2
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    const-string v0, "/"
 
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final hashCode()I
-    .locals 0
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget p0, p0, Lzb5;->a:I
+    move-result-object v0
 
-    invoke-static {p0}, Ldw1;->t(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed(reason="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget p0, p0, Lzb5;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    goto :goto_0
-
-    :pswitch_0
-    const-string p0, "CALL_WAIT_ADMIN"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string p0, "TARGET_USER_NOT_IN_CHAT"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string p0, "REMOVE_FROM_WAITING_ROOM"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string p0, "REMOVE_FROM_CALL"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string p0, "CONNECTION_ERROR"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string p0, "FAILED"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string p0, "PRIVACY"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string p0, "BUSY"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string p0, "UNAVAILABLE"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

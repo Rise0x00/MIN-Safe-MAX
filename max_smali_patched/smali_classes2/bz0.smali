@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onEvent(Lez0;Lo61;Ljava/lang/Object;)V
+.method public abstract onEvent(Lfz0;Lh61;Ljava/lang/Object;)V
 .end method

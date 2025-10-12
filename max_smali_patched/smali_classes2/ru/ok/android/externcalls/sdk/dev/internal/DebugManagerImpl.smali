@@ -20,25 +20,25 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;",
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
-        "Lez0;",
+        "Lfz0;",
         "underlyingCall",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
         "stat",
-        "Laz3;",
+        "Lo14;",
         "cidProvider",
-        "Li7c;",
+        "Lpmc;",
         "log",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "<init>",
-        "(Lez0;Lru/ok/android/externcalls/sdk/log/ExtLogger;Laz3;Li7c;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
-        "Le4e;",
+        "(Lfz0;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo14;Lpmc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
+        "Laoe;",
         "operation",
         "",
         "param",
-        "Ltcf;",
+        "Loyf;",
         "report",
-        "(Le4e;Ljava/lang/String;)V",
+        "(Laoe;Ljava/lang/String;)V",
         "",
         "error",
         "reportError",
@@ -46,22 +46,22 @@
         "dumpPath",
         "enableFullAudioDump",
         "(Ljava/lang/String;)V",
-        "Lm5e;",
+        "Lkpe;",
         "listener",
         "",
         "period",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "registerStatListener",
-        "(Lm5e;ILjava/util/concurrent/TimeUnit;)V",
+        "(Lkpe;ILjava/util/concurrent/TimeUnit;)V",
         "removeStatListener",
-        "(Lm5e;)V",
-        "Lez0;",
+        "(Lkpe;)V",
+        "Lfz0;",
         "getUnderlyingCall",
-        "()Lez0;",
+        "()Lfz0;",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
-        "Laz3;",
-        "Li7c;",
+        "Lo14;",
+        "Lpmc;",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
         "mediaDumpManager",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
@@ -87,15 +87,15 @@
 
 
 # instance fields
-.field private final cidProvider:Laz3;
+.field private final cidProvider:Lo14;
 
-.field private final log:Li7c;
+.field private final log:Lpmc;
 
 .field private final mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
 .field private final stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-.field private final underlyingCall:Lez0;
+.field private final underlyingCall:Lfz0;
 
 
 # direct methods
@@ -106,33 +106,33 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Luc4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Lof4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lez0;Lru/ok/android/externcalls/sdk/log/ExtLogger;Laz3;Li7c;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+.method public constructor <init>(Lfz0;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo14;Lpmc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lez0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lfz0;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Laz3;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lo14;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Li7c;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lpmc;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lez0;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lfz0;
 
     move-result-object p2
 
-    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Lez0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Lfz0;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
@@ -142,120 +142,128 @@
 
 # virtual methods
 .method public enableFullAudioDump(Ljava/lang/String;)V
-    .locals 4
+    .locals 5
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lez0;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lfz0;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object v0, p0, Lez0;->Z:Lqpd;
+    iget-object v1, v0, Lfz0;->b0:Lk8e;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    sget-object v1, Lez0;->d1:Ljava/util/concurrent/ExecutorService;
+    sget-object v2, Lfz0;->f1:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lc5;
+    new-instance v3, Lk5;
 
-    const/4 v3, 0x5
+    const/4 v4, 0x7
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lc5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v3, v0, v1, p1, v4}, Lk5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 .method public bridge synthetic getMediaDumpManager()Lru/ok/android/externcalls/sdk/dev/MediaDumpManager;
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getMediaDumpManager()Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getMediaDumpManager()Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
-    .locals 0
+    .locals 1
 
     .line 2
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public getUnderlyingCall()Lez0;
-    .locals 0
-
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lez0;
-
-    return-object p0
-.end method
-
-.method public registerStatListener(Lm5e;ILjava/util/concurrent/TimeUnit;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lez0;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lez0;->G0:Ltn8;
-
-    int-to-long v0, p2
-
-    invoke-virtual {p0, p1, v0, v1, p3}, Ltn8;->c(Lm5e;JLjava/util/concurrent/TimeUnit;)V
-
-    return-void
-.end method
-
-.method public removeStatListener(Lm5e;)V
-    .locals 0
-
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lez0;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lez0;->G0:Ltn8;
-
-    iget-object p0, p0, Ltn8;->d:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/HashMap;
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public report(Le4e;Ljava/lang/String;)V
+.method public getUnderlyingCall()Lfz0;
     .locals 1
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lfz0;
+
+    return-object v0
+.end method
+
+.method public registerStatListener(Lkpe;ILjava/util/concurrent/TimeUnit;)V
+    .locals 3
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lfz0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lfz0;->I0:Lsv8;
+
+    int-to-long v1, p2
+
+    iget-object p2, v0, Lsv8;->d:Ljava/lang/Object;
+
+    check-cast p2, Ljava/util/HashMap;
+
+    new-instance v0, Lr7c;
+
+    invoke-direct {v0, v1, v2, p3}, Lr7c;-><init>(JLjava/util/concurrent/TimeUnit;)V
+
+    invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public removeStatListener(Lkpe;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lfz0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lfz0;->I0:Lsv8;
+
+    iget-object v0, v0, Lsv8;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public report(Laoe;Ljava/lang/String;)V
+    .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Laz3;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lo14;
 
-    check-cast p0, Lbz3;
+    check-cast v1, Lp14;
 
-    iget-object p0, p0, Lbz3;->a:Ljava/lang/String;
+    iget-object v1, v1, Lp14;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, p0, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Le4e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Laoe;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public reportError(Ljava/lang/Throwable;)V
-    .locals 2
+    .locals 3
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Li7c;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lpmc;
 
-    const-string v0, "DebugManager"
+    const-string v1, "DebugManager"
 
-    const-string v1, "error"
+    const-string v2, "error"
 
-    invoke-interface {p0, v0, v1, p1}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,93 +1,63 @@
 .class public final Lu22;
-.super Ljava/lang/Object;
+.super Lay1;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ll00;
-
-
 # instance fields
-.field public final a:Lv34;
-
-.field public final b:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ll00;
+    iput p1, p0, Lu22;->a:I
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Ll00;-><init>(I)V
-
-    sput-object v0, Lu22;->c:Ll00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
-    .locals 20
+.method private final e(I)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.method private final f(ILiy1;)V
+    .locals 0
 
-    if-eqz p7, :cond_0
+    return-void
+.end method
 
-    move/from16 v17, p8
+.method private final g(ILh2a;)V
+    .locals 0
 
-    goto :goto_0
+    return-void
+.end method
 
-    :cond_0
-    const/high16 v1, -0x1000000
 
-    move/from16 v17, v1
+# virtual methods
+.method public a(I)V
+    .locals 0
 
-    :goto_0
-    new-instance v2, Lv34;
+    iget p1, p0, Lu22;->a:I
 
-    const/4 v5, 0x0
+    return-void
+.end method
 
-    const/4 v8, 0x0
+.method public b(ILiy1;)V
+    .locals 0
 
-    const/high16 v12, -0x80000000
+    iget p1, p0, Lu22;->a:I
 
-    const v13, -0x800001
+    return-void
+.end method
 
-    const v14, -0x800001
+.method public c(ILh2a;)V
+    .locals 0
 
-    const/16 v19, 0x0
-
-    move-object v6, v5
-
-    move v15, v13
-
-    move/from16 v18, v12
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v4, p2
-
-    move/from16 v7, p3
-
-    move/from16 v9, p4
-
-    move/from16 v10, p5
-
-    move/from16 v11, p6
-
-    move/from16 v16, p7
-
-    invoke-direct/range {v2 .. v19}, Lv34;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
-
-    iput-object v2, v0, Lu22;->a:Lv34;
-
-    move/from16 v1, p9
-
-    iput v1, v0, Lu22;->b:I
+    iget p1, p0, Lu22;->a:I
 
     return-void
 .end method

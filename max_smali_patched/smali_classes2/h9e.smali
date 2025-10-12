@@ -1,206 +1,184 @@
-.class public final synthetic Lh9e;
-.super Ljava/lang/Object;
+.class public final Lh9e;
+.super Lps;
 .source "SourceFile"
-
-# interfaces
-.implements Ld96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final i:Ljef;
 
-.field public final synthetic b:Lone/me/stickerssearch/StickersSearchScreen;
+.field public final j:Ljef;
+
+.field public final k:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
+.method public constructor <init>(Ljef;Ljef;Ljava/lang/Integer;)V
     .locals 0
 
-    iput p2, p0, Lh9e;->a:I
-
-    iput-object p1, p0, Lh9e;->b:Lone/me/stickerssearch/StickersSearchScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh9e;->i:Ljef;
+
+    iput-object p2, p0, Lh9e;->j:Ljef;
+
+    iput-object p3, p0, Lh9e;->k:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lh9e;->a:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x0
+    goto :goto_1
 
-    iget-object p0, p0, Lh9e;->b:Lone/me/stickerssearch/StickersSearchScreen;
+    :cond_0
+    instance-of v0, p1, Lh9e;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_1
 
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->p0:[Lof7;
+    goto :goto_0
 
-    new-instance v0, Lrca;
+    :cond_1
+    check-cast p1, Lh9e;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object v0, p0, Lh9e;->i:Ljef;
 
-    move-result-object p0
+    iget-object v1, p1, Lh9e;->i:Ljef;
 
-    invoke-direct {v0, p0, v1}, Lrca;-><init>(Landroid/content/Context;I)V
+    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-    sget p0, Losc;->N0:I
+    move-result v0
 
-    invoke-virtual {v0, p0}, Lrca;->setIcon(I)V
+    if-nez v0, :cond_2
 
-    sget p0, Lqsc;->d:I
+    goto :goto_0
 
-    new-instance v1, Lyte;
+    :cond_2
+    iget-object v0, p0, Lh9e;->j:Ljef;
 
-    invoke-direct {v1, p0}, Lyte;-><init>(I)V
+    iget-object v1, p1, Lh9e;->j:Ljef;
 
-    invoke-virtual {v0, v1}, Lrca;->setTitle(Ldue;)V
+    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-    sget p0, Lqsc;->c:I
+    move-result v0
 
-    new-instance v1, Lyte;
+    if-nez v0, :cond_3
 
-    invoke-direct {v1, p0}, Lyte;-><init>(I)V
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lrca;->setSubtitle(Ldue;)V
+    :cond_3
+    iget-object v0, p0, Lh9e;->k:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lh9e;->k:Ljava/lang/Integer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lh9e;->i:Ljef;
+
+    iget v0, v0, Ljef;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lh9e;->j:Ljef;
+
+    iget v2, v2, Ljef;->b:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lh9e;->k:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final o()Loef;
+    .locals 1
+
+    iget-object v0, p0, Lh9e;->j:Ljef;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->p0:[Lof7;
+.method public final p()Ljava/lang/Integer;
+    .locals 1
 
-    new-instance v0, Lqha;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lqha;-><init>(Landroid/content/Context;)V
-
-    new-instance p0, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v1, -0x2
-
-    invoke-direct {p0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v1, 0x11
-
-    iput v1, p0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object p0, Liha;->a:Liha;
-
-    invoke-virtual {v0, p0}, Lqha;->setAppearance(Ljha;)V
-
-    sget-object p0, Lkha;->a:Lkha;
-
-    invoke-virtual {v0, p0}, Lqha;->setSize(Loha;)V
+    iget-object v0, p0, Lh9e;->k:Ljava/lang/Integer;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->p0:[Lof7;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    new-instance v2, Lr9e;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->a:Lvr;
+    const-string v1, "Button(text="
 
-    sget-object v3, Lone/me/stickerssearch/StickersSearchScreen;->p0:[Lof7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v1, v3, v1
+    iget-object v1, p0, Lh9e;->i:Ljef;
 
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", hint="
 
-    check-cast p0, Ljava/lang/Number;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+    iget-object v1, p0, Lh9e;->j:Ljef;
 
-    move-result-wide v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p0, Lf9e;->a:Lf9e;
+    const-string v1, ", hintColor="
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object v1, p0, Lh9e;->k:Ljava/lang/Integer;
 
-    const-class v1, Lz8e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    const-string v1, ")"
 
-    move-result-object v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v6, Lbsd;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v1, Ll6e;
-
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v1
-
-    const-class v7, Lbae;
-
-    invoke-virtual {v1, v7}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v1
-
-    invoke-direct {v6, v0, v1}, Lbsd;-><init>(Lth7;Lth7;)V
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v1, Lkmg;
-
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object v0
-
-    const-class v1, Llh5;
-
-    invoke-virtual {v0, v1}, Ls4;->d(Ljava/lang/Class;)Lkle;
-
-    move-result-object v8
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    const-class v0, Lhoe;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v9, p0
-
-    check-cast v9, Lhoe;
-
-    invoke-direct/range {v2 .. v9}, Lr9e;-><init>(JLth7;Lbsd;Lth7;Lth7;Lhoe;)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -2,162 +2,71 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lq83;
 
-.field public final c:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
-.field public final d:I
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public synthetic constructor <init>(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
     .locals 0
 
+    iput p4, p0, Lp83;->a:I
+
+    iput-object p1, p0, Lp83;->b:Lq83;
+
+    iput-object p2, p0, Lp83;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lp83;->o:Ljava/lang/Runnable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lp83;->a:I
-
-    iput p2, p0, Lp83;->b:I
-
-    iput p3, p0, Lp83;->c:I
-
-    iput p4, p0, Lp83;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lp83;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lp83;
-
-    iget v0, p0, Lp83;->a:I
-
-    iget v1, p1, Lp83;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lp83;->b:I
-
-    iget v1, p1, Lp83;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lp83;->c:I
-
-    iget v1, p1, Lp83;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget p0, p0, Lp83;->d:I
-
-    iget p1, p1, Lp83;->d:I
-
-    if-eq p0, p1, :cond_5
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_5
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final run()V
     .locals 3
 
     iget v0, p0, Lp83;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lp83;->c:Landroid/graphics/drawable/Drawable;
 
-    const/16 v1, 0x1f
+    iget-object v1, p0, Lp83;->o:Ljava/lang/Runnable;
 
-    mul-int/2addr v0, v1
+    iget-object v2, p0, Lp83;->b:Lq83;
 
-    iget v2, p0, Lp83;->b:I
+    invoke-static {v2, v0, v1}, Lq83;->A(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object v0, p0, Lp83;->c:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Lp83;->c:I
+    iget-object v1, p0, Lp83;->o:Ljava/lang/Runnable;
 
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
+    iget-object v2, p0, Lp83;->b:Lq83;
 
-    move-result v0
+    invoke-static {v2, v0, v1}, Lq83;->A(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    iget p0, p0, Lp83;->d:I
+    return-void
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    nop
 
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", neutral="
-
-    const-string v1, ", themed="
-
-    const-string v2, "CommonActionBackgroundColors(error="
-
-    iget v3, p0, Lp83;->a:I
-
-    iget v4, p0, Lp83;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", themedFade="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lp83;->c:I
-
-    iget p0, p0, Lp83;->d:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lmh0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

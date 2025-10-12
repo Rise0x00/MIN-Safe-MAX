@@ -1,121 +1,198 @@
-.class public final synthetic Lef8;
-.super Ljava/lang/Object;
+.class public final Lef8;
+.super Lv2;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lhf8;
+.field public final synthetic o:Lff8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhf8;I)V
+.method public synthetic constructor <init>(Lff8;I)V
     .locals 0
 
-    iput p2, p0, Lef8;->a:I
+    .line 1
+    iput p2, p0, Lef8;->c:I
 
-    iput-object p1, p0, Lef8;->b:Lhf8;
+    iput-object p1, p0, Lef8;->o:Lff8;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
+
+    const/16 p2, 0x9
+
+    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Lff8;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lef8;->c:I
+
+    iput-object p2, p0, Lef8;->o:Lff8;
+
+    const/16 p2, 0x9
+
+    .line 2
+    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 3
 
-    iget v0, p0, Lef8;->a:I
+    iget v0, p0, Lef8;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object p0, p0, Lef8;->b:Lhf8;
-
-    iget-object p0, p0, Lhf8;->c:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    if-nez v0, :cond_0
 
-    move-result v1
+    check-cast p2, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    check-cast p1, Landroid/graphics/drawable/Drawable;
 
-    move-result v2
+    iget-object p1, p0, Lef8;->o:Lff8;
 
-    invoke-virtual {p0, v0, v1, v2, p1}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
 
-    return-void
+    move-result-object p2
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    check-cast p2, Lyj6;
+
+    invoke-virtual {p1}, Lff8;->getOverlayDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p2, p1}, Lyj6;->k(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :cond_0
+    return-void
 
-    move-result p1
+    :pswitch_0
+    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lef8;->b:Lhf8;
+    move-result v0
 
-    invoke-virtual {p0}, Lhf8;->d()Lone/me/keyboardmedia/MediaKeyboardWidget;
+    if-nez v0, :cond_1
 
-    move-result-object p0
+    check-cast p2, Lh47;
 
-    if-eqz p0, :cond_1
+    check-cast p1, Lh47;
 
-    invoke-virtual {p0}, Lox3;->getView()Landroid/view/View;
+    iget-object p1, p0, Lef8;->o:Lff8;
 
-    move-result-object p0
+    invoke-static {p1, p2}, Lff8;->q(Lff8;Lh47;)V
 
-    if-eqz p0, :cond_1
+    :cond_1
+    return-void
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    :pswitch_1
+    check-cast p2, La57;
 
-    move-result-object v0
+    check-cast p1, La57;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {p1}, La57;->getWidth()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    :cond_2
+    move-object v1, v0
 
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
     :goto_0
+    if-eqz p2, :cond_3
+
+    invoke-interface {p2}, La57;->getWidth()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    goto :goto_1
+
+    :cond_3
+    move-object v2, v0
+
+    :goto_1
+    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    if-eqz p1, :cond_4
+
+    invoke-interface {p1}, La57;->getHeight()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v0
+
+    :goto_2
+    if-eqz p2, :cond_5
+
+    invoke-interface {p2}, La57;->getHeight()I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    :cond_6
+    new-instance p1, Lyn7;
+
+    const/4 p2, 0x5
+
+    iget-object v0, p0, Lef8;->o:Lff8;
+
+    invoke-direct {p1, p2, v0}, Lyn7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_7
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

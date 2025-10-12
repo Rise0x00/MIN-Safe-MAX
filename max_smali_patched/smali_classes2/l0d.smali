@@ -1,116 +1,80 @@
-.class public final Ll0d;
+.class public final synthetic Ll0d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lo0d;
-
-.field public final synthetic c:Lj0d;
-
-.field public final synthetic d:Lo0d;
-
-.field public final synthetic e:Lf0d;
+.field public final synthetic b:Lgx0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lo0d;Lj0d;Lo0d;Lf0d;)V
-    .locals 0
+.method public synthetic constructor <init>(Lgx0;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x1
+
+    iput v0, p0, Ll0d;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll0d;->a:Landroid/view/View;
+    iput-object p1, p0, Ll0d;->b:Lgx0;
 
-    iput-object p2, p0, Ll0d;->b:Lo0d;
+    return-void
+.end method
 
-    iput-object p3, p0, Ll0d;->c:Lj0d;
+.method public synthetic constructor <init>(Lgx0;J)V
+    .locals 0
 
-    iput-object p4, p0, Ll0d;->d:Lo0d;
+    .line 2
+    const/4 p2, 0x0
 
-    iput-object p5, p0, Ll0d;->e:Lf0d;
+    iput p2, p0, Ll0d;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll0d;->b:Lgx0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final run()V
     .locals 2
 
-    const/16 p1, 0x8
+    iget v0, p0, Ll0d;->a:I
 
-    iget-object v0, p0, Ll0d;->a:Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Ll0d;->b:Lgx0;
 
-    const/4 p1, 0x0
+    iget-object v0, v0, Lgx0;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+    check-cast v0, Lqza;
 
-    iget-object p1, p0, Ll0d;->b:Lo0d;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lo0d;->q0:Ljava/util/EnumMap;
+    iget-object v1, v0, Lzk0;->i:Lba6;
 
-    iget-object v0, p0, Ll0d;->c:Lj0d;
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p0, Ll0d;->d:Lo0d;
-
-    iget-object p0, p0, Ll0d;->e:Lf0d;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-virtual {v1, v0}, Lba6;->t(Lb0b;)V
 
     return-void
-.end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Ll0d;->b:Lgx0;
 
-    const/16 p1, 0x8
-
-    iget-object v0, p0, Ll0d;->a:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    iget-object p1, p0, Ll0d;->b:Lo0d;
-
-    iget-object p1, p1, Lo0d;->q0:Ljava/util/EnumMap;
-
-    iget-object v0, p0, Ll0d;->c:Lj0d;
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p0, Ll0d;->d:Lo0d;
-
-    iget-object p0, p0, Ll0d;->e:Lf0d;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
-.end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

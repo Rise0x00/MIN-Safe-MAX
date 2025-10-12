@@ -3,22 +3,19 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Lwo3;
+.implements Lwea;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lru/ok/messages/views/ActAvatarCrop;
+.field public final synthetic a:Lru/ok/messages/media/attaches/ActAttachesView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/views/ActAvatarCrop;I)V
+.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/ActAttachesView;)V
     .locals 0
 
-    iput p2, p0, Li5;->a:I
-
-    iput-object p1, p0, Li5;->b:Lru/ok/messages/views/ActAvatarCrop;
+    iput-object p1, p0, Li5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,167 +24,86 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 8
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget v0, p0, Li5;->a:I
+    check-cast p1, Lw29;
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Li5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
-    iget-object p0, p0, Li5;->b:Lru/ok/messages/views/ActAvatarCrop;
+    iget-object v1, v0, Lru/ok/messages/media/attaches/ActAttachesView;->a1:Lv10;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, v1, Lv10;->j:Ljava/util/List;
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-interface {v2}, Ljava/util/List;->clear()V
 
-    sget v0, Lru/ok/messages/views/ActAvatarCrop;->Z0:I
+    iget-object v1, v1, Lv10;->i:Ljava/util/ArrayList;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    const-string v2, "Error occurred during applying image transformation. Error: "
+    iget-object v1, v0, Lru/ok/messages/media/attaches/ActAttachesView;->a1:Lv10;
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p1, v2}, Lv10;->e(Ljava/util/List;Z)V
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    const-string v0, "ru.ok.messages.views.ActAvatarCrop"
-
-    invoke-static {v0, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1}, Landroid/app/Activity;->setResult(I)V
-
-    sget p1, Lbtc;->H:I
-
-    sget-object v0, Lr7;->l:Landroid/os/Handler;
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, p0, p1}, Lr7;->V(ILandroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lm5;->finish()V
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/attaches/ActAttachesView;->h0(I)V
 
     return-void
+.end method
 
-    :pswitch_0
-    check-cast p1, Landroid/graphics/Rect;
+.method public x(Landroid/view/View;Lq8h;)Lq8h;
+    .locals 4
 
-    sget v0, Lru/ok/messages/views/ActAvatarCrop;->Z0:I
+    iget-object p1, p0, Li5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p1, Lru/ok/messages/media/attaches/ActAttachesView;->c1:Landroid/view/View;
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    move-result-object v0
 
-    const-string v2, "ru.ok.tamtam.extra.CROPPED_ABSOLUTE"
+    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {p2}, Lq8h;->a()I
 
-    iget-object v2, p0, Lru/ok/messages/views/ActAvatarCrop;->W0:Landroid/graphics/Point;
+    move-result v1
 
-    new-instance v3, Landroid/graphics/RectF;
+    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    iget v4, p1, Landroid/graphics/Rect;->left:I
+    iget-object v1, p1, Lru/ok/messages/media/attaches/ActAttachesView;->c1:Landroid/view/View;
 
-    int-to-float v4, v4
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget v5, v2, Landroid/graphics/Point;->x:I
+    iget-object v0, p1, Lru/ok/messages/media/attaches/ActAttachesView;->c1:Landroid/view/View;
 
-    int-to-float v5, v5
+    invoke-virtual {p2}, Lq8h;->b()I
 
-    div-float/2addr v4, v5
+    move-result v1
 
-    iget v6, p1, Landroid/graphics/Rect;->top:I
+    iget-object v2, p1, Lru/ok/messages/media/attaches/ActAttachesView;->c1:Landroid/view/View;
 
-    int-to-float v6, v6
+    invoke-virtual {v2}, Landroid/view/View;->getPaddingTop()I
 
-    iget v2, v2, Landroid/graphics/Point;->y:I
+    move-result v2
 
-    int-to-float v2, v2
+    invoke-virtual {p2}, Lq8h;->c()I
 
-    div-float/2addr v6, v2
+    move-result v3
 
-    iget v7, p1, Landroid/graphics/Rect;->right:I
+    iget-object p1, p1, Lru/ok/messages/media/attaches/ActAttachesView;->c1:Landroid/view/View;
 
-    int-to-float v7, v7
-
-    div-float/2addr v7, v5
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float p1, p1
-
-    div-float/2addr p1, v2
-
-    invoke-direct {v3, v4, v6, v7, p1}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    const-string p1, "ru.ok.tamtam.extra.CROPPED_RECT"
-
-    invoke-virtual {v0, p1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object p1
-
-    const-string v2, "ru.ok.tamtam.extra.URI"
-
-    invoke-virtual {p1, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/Uri;
-
-    invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object p1
-
-    const-string v2, "ru.ok.tamtam.extra.FILE_PATH"
-
-    invoke-virtual {p1, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const/4 p1, -0x1
-
-    invoke-virtual {p0, p1, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
-
-    invoke-virtual {p0}, Lm5;->finish()V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object p1
-
-    const-string v0, "ru.ok.tamtam.extra.NO_ANIM "
-
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1, v2, v3, p1}, Landroid/view/View;->setPadding(IIII)V
 
-    invoke-virtual {p0, v1, v1}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method

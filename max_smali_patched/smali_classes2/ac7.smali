@@ -1,32 +1,26 @@
 .class public final Lac7;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lny5;
-
-.field public final synthetic n0:Liv2;
+.field public final synthetic Y:Lone/me/login/inputname/InputNameScreen;
 
 
 # direct methods
-.method public constructor <init>(Lny5;Liv2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lac7;->Z:Lny5;
+    iput-object p2, p0, Lac7;->Y:Lone/me/login/inputname/InputNameScreen;
 
-    iput-object p2, p0, Lac7;->n0:Liv2;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,23 +30,21 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lyb7;
+    check-cast p1, Lvb7;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lac7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lac7;
+    check-cast p1, Lac7;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lac7;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lac7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -60,167 +52,107 @@
 
     new-instance v0, Lac7;
 
-    iget-object v1, p0, Lac7;->Z:Lny5;
+    iget-object v1, p0, Lac7;->Y:Lone/me/login/inputname/InputNameScreen;
 
-    iget-object p0, p0, Lac7;->n0:Liv2;
+    invoke-direct {v0, p2, v1}, Lac7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
 
-    invoke-direct {v0, v1, p0, p2}, Lac7;-><init>(Lny5;Liv2;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lac7;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lac7;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lac7;->Z:Lny5;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lny5;->b:Ljava/lang/Object;
+    iget-object p1, p0, Lac7;->X:Ljava/lang/Object;
 
-    check-cast v1, Ljava/lang/String;
+    check-cast p1, Lvb7;
 
-    iget-object v2, v0, Lny5;->a:Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    check-cast v2, Lsi0;
+    iget-object v0, p0, Lac7;->Y:Lone/me/login/inputname/InputNameScreen;
 
-    iget v3, p0, Lac7;->X:I
+    invoke-static {v0}, Lps;->t(Lb04;)V
 
-    sget-object v4, Ltcf;->a:Ltcf;
+    sget-object v1, Lone/me/login/inputname/InputNameScreen;->F0:[Ltm7;
 
-    const/4 v5, 0x2
+    iget-object v1, v0, Lone/me/login/inputname/InputNameScreen;->w0:Ljava/lang/Object;
 
-    const/4 v6, 0x1
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    sget-object v7, Lq04;->a:Lq04;
+    move-result-object v1
 
-    if-eqz v3, :cond_2
+    check-cast v1, Lee7;
 
-    if-eq v3, v6, :cond_1
+    iget-object p1, p1, Lvb7;->b:Lkyc;
 
-    if-ne v3, v5, :cond_0
+    invoke-virtual {v0}, Lb04;->getArgs()Landroid/os/Bundle;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v0
 
-    goto/16 :goto_3
+    const-string v2, "screen:input_name:avatars"
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-class v3, Lnpb;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v0, v2, v3}, Lihf;->q(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
+    if-eqz v0, :cond_0
 
-    :cond_1
-    iget-object v3, p0, Lac7;->Y:Ljava/lang/Object;
+    check-cast v0, Landroid/os/Parcelable;
 
-    check-cast v3, Ljava/lang/String;
+    check-cast v0, Lnpb;
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_0
+    new-instance v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    :cond_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lac7;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lyb7;
-
-    iget-object v3, p1, Lyb7;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lyb7;->b:Lt1e;
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "Peek from queue job="
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v2, v1, v8}, Lsi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p1}, Ljc7;->isCancelled()Z
-
-    move-result v8
-
-    if-nez v8, :cond_4
-
-    iput-object v3, p0, Lac7;->Y:Ljava/lang/Object;
-
-    iput v6, p0, Lac7;->X:I
-
-    invoke-virtual {p1, p0}, Ljc7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_0
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v6, "Executed job="
-
-    invoke-direct {p1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v2, v1, p1}, Lsi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v6, "Cancelled job="
-
-    invoke-direct {p1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v2, v1, p1}, Lsi0;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_1
-    iget-object p1, v0, Lny5;->e:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, p1, v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(Lkyc;Lnpb;)V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lac7;->Y:Ljava/lang/Object;
+    invoke-static {v2, p1, p1}, Lvr0;->e(Lb04;Lxg;Lxg;)Ll8d;
 
-    iput v5, p0, Lac7;->X:I
+    move-result-object p1
 
-    iget-object p1, p0, Lac7;->n0:Liv2;
+    const-string v0, "InputNameScreen"
 
-    invoke-virtual {p1, p0}, Liv2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lee7;->a(Ll8d;Ljava/lang/String;)V
 
-    if-ne v4, v7, :cond_5
+    sget-object p1, Loyf;->a:Loyf;
 
-    :goto_2
-    return-object v7
+    return-object p1
 
-    :cond_5
-    :goto_3
-    return-object v4
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "No value passed for key screen:input_name:avatars of type "
+
+    const-string v1, " in bundle"
+
+    invoke-static {v0, p1, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

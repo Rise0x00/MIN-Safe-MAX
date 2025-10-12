@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsx3;
+.implements Lf04;
 
 
 # instance fields
@@ -23,42 +23,42 @@
 
 
 # virtual methods
-.method public final a(Lox3;Lox3;Z)V
+.method public final a(Lb04;Lb04;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public final b(Lox3;Lox3;Z)V
+.method public final b(Lb04;Lb04;Z)V
     .locals 0
 
     if-eqz p3, :cond_0
 
-    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->o0:[Lof7;
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
 
-    iget-object p0, p0, Ls01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    iget-object p1, p0, Ls01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0()Lb11;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lb11;->q()Ltz0;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->B0()Lb11;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Lb11;->q()Luz0;
 
-    check-cast p1, Lo01;
+    move-result-object p2
 
-    iget-object p1, p1, Lo01;->A0:Lq4e;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lq4e;->getValue()Ljava/lang/Object;
+    check-cast p2, Lp01;
 
-    move-result-object p1
+    iget-object p2, p2, Lp01;->K0:Lmoe;
 
-    check-cast p1, Lu9;
+    invoke-virtual {p2}, Lmoe;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lb11;->r(Lu9;)V
+    move-result-object p2
+
+    check-cast p2, Lr9;
+
+    invoke-virtual {p1, p2}, Lb11;->r(Lr9;)V
 
     :cond_0
     return-void

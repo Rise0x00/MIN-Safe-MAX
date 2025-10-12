@@ -1,175 +1,169 @@
-.class public final Loa9;
-.super Leje;
+.class public final synthetic Loa9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lva9;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lva9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Loa9;->X:Lva9;
+    iput p2, p0, Loa9;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Loa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Loa9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Loa9;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Loa9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Loa9;
-
-    iget-object p0, p0, Loa9;->X:Lva9;
-
-    invoke-direct {p1, p0, p2}, Loa9;-><init>(Lva9;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 5
 
-    sget-object v0, Ltcf;->a:Ltcf;
+    iget p1, p0, Loa9;->a:I
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p1, p0, Loa9;->X:Lva9;
+    iget-object p1, p0, Loa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    iget-object p1, p1, Lva9;->i:Ljava/lang/String;
+    iget-object v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->X:Le18;
 
-    sget-object v1, Lz76;->f:Lvea;
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
 
-    if-nez v1, :cond_0
+    move-result-object v1
+
+    invoke-virtual {v1}, Lh69;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    iget-object v0, v0, Le18;->f:Lwpd;
+
+    iput-object v1, v0, Lwpd;->k:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Lma9;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lma9;->E0:Ljb5;
+
+    sget-object v0, Lx99;->a:Lx99;
+
+    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Loa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    iget v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:I
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lhw7;->o:Lhw7;
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Lma9;
 
-    invoke-virtual {v1, v2}, Lvea;->a(Lhw7;)Z
+    move-result-object v1
 
-    move-result v3
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
 
-    if-eqz v3, :cond_1
+    move-result-object v2
 
-    const-string v3, "Scrolling to last message"
+    invoke-virtual {v2}, Lh69;->getMessageState()Lfoe;
 
-    const/4 v4, 0x0
+    move-result-object v2
 
-    invoke-virtual {v1, v2, p1, v3, v4}, Lvea;->b(Lhw7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2}, Lfoe;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lh69;->getMessagePosition()Lfoe;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lqw1;->u(I)I
+
+    move-result v0
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_3
+
+    const/4 v4, 0x1
+
+    if-eq v0, v4, :cond_2
+
+    const/4 p1, 0x2
+
+    if-ne v0, p1, :cond_1
+
+    iget-object p1, v1, Lma9;->E0:Ljb5;
+
+    new-instance v0, Lw99;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_1
-    :goto_0
-    iget-object p1, p0, Loa9;->X:Lva9;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object p1, p1, Lva9;->e:Lj4e;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lu49;
-
-    iget-object p1, p1, Lu49;->a:Ljava/util/List;
-
-    invoke-static {p1}, Lg73;->y0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lone/me/messages/list/loader/MessageModel;
-
-    if-nez p1, :cond_2
-
-    return-object v0
+    throw p1
 
     :cond_2
-    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->x0:J
+    iget-object v0, v1, Lma9;->U0:Lmoe;
 
-    iget-object v3, p0, Loa9;->X:Lva9;
+    new-instance v4, Lp99;
 
-    iget-object v3, v3, Lva9;->k:Lth7;
+    invoke-direct {v4, v2, p1}, Lp99;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
 
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v3, v4}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v3
+    invoke-virtual {v1, v3}, Lma9;->D(Ljava/lang/Long;)V
 
-    check-cast v3, Lz43;
-
-    check-cast v3, Le2d;
-
-    invoke-virtual {v3}, Le2d;->p()J
-
-    move-result-wide v3
-
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_3
-
-    iget-object p0, p0, Loa9;->X:Lva9;
-
-    iget-object p0, p0, Lva9;->i:Ljava/lang/String;
-
-    const-string p1, "Don\'t scroll to last self message because we handle it with scrollWork"
-
-    invoke-static {p0, p1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Loa9;->X:Lva9;
+    const/16 p1, 0xe
 
-    iget-object v1, v1, Lva9;->m:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v1, v3, v3, v3, p1}, Lma9;->C(Lma9;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
 
-    new-instance v2, Lvf2;
+    :goto_0
+    return-void
 
-    const/16 v3, 0x8
+    nop
 
-    invoke-direct {v2, v3}, Lvf2;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
-
-    iget-object p0, p0, Loa9;->X:Lva9;
-
-    iget-object p0, p0, Lva9;->p:Lt0d;
-
-    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    const/4 p1, 0x0
-
-    const/4 v3, 0x4
-
-    invoke-static {p0, v1, v2, p1, v3}, Lt0d;->i(Lt0d;JZI)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

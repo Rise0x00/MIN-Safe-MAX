@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract E(ILandroid/os/Bundle;)V
-.end method
-
-.method public onDismiss()V
-    .locals 0
-
-    return-void
+.method public abstract b0()V
 .end method

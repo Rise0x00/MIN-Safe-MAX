@@ -1,35 +1,42 @@
 .class public final Lvr5;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lord;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lord;
 
-.field public Y:I
+.field public final b:Z
 
-.field public o:Ljava/lang/Object;
+.field public final c:Lxe6;
+
+
+# direct methods
+.method public constructor <init>(Lord;ZLxe6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvr5;->a:Lord;
+
+    iput-boolean p2, p0, Lvr5;->b:Z
+
+    iput-object p3, p0, Lvr5;->c:Lxe6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    iput-object p1, p0, Lvr5;->X:Ljava/lang/Object;
+    new-instance v0, Lur5;
 
-    iget p1, p0, Lvr5;->Y:I
+    invoke-direct {v0, p0}, Lur5;-><init>(Lvr5;)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvr5;->Y:I
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1, p1, p0}, Lltg;->c(Ldq5;Ljava/lang/Object;Ljava/lang/Object;Lax3;)V
-
-    sget-object p0, Lq04;->a:Lq04;
-
-    return-object p0
+    return-object v0
 .end method

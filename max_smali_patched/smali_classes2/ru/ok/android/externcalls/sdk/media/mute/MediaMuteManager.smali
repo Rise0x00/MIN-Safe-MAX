@@ -13,18 +13,18 @@
         "",
         "Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;",
         "listener",
-        "Ltcf;",
+        "Loyf;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;)V",
         "removeListener",
         "",
-        "Lqg8;",
-        "Lrg8;",
+        "Lno8;",
+        "Loo8;",
         "statesToUpdate",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
-        "Lsed;",
+        "Lnwd;",
         "roomId",
         "Lkotlin/Function0;",
         "onSuccess",
@@ -32,20 +32,20 @@
         "",
         "onError",
         "updateMediaOptionsForParticipant",
-        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V",
+        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V",
         "updateMediaOptionsForAll",
-        "(Ljava/util/Map;Lsed;Ld96;Lf96;)V",
+        "(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V",
         "",
         "mediaOptions",
         "requestToEnableMediaForParticipant",
-        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V",
+        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V",
         "requestToEnableMediaForAll",
-        "(Ljava/util/Set;Lsed;Ld96;Lf96;)V",
-        "Lsg8;",
+        "(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V",
+        "Lpo8;",
         "getMediaOptionsForCall",
-        "(Lsed;)Lsg8;",
+        "(Lnwd;)Lpo8;",
         "getMediaOptionsForCurrentUser",
-        "()Lsg8;",
+        "()Lpo8;",
         "",
         "mute",
         "setAudioPlayoutMuted",
@@ -63,7 +63,7 @@
 
 
 # direct methods
-.method public static synthetic getMediaOptionsForCall$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Lsed;ILjava/lang/Object;)Lsg8;
+.method public static synthetic getMediaOptionsForCall$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Lnwd;ILjava/lang/Object;)Lpo8;
     .locals 0
 
     if-nez p3, :cond_1
@@ -75,7 +75,7 @@
     const/4 p1, 0x0
 
     :cond_0
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->getMediaOptionsForCall(Lsed;)Lsg8;
+    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->getMediaOptionsForCall(Lnwd;)Lpo8;
 
     move-result-object p0
 
@@ -91,7 +91,7 @@
     throw p0
 .end method
 
-.method public static synthetic requestToEnableMediaForAll$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Set;Lsed;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic requestToEnableMediaForAll$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Set;Lnwd;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_3
@@ -119,7 +119,7 @@
     move-object p4, v0
 
     :cond_2
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->requestToEnableMediaForAll(Ljava/util/Set;Lsed;Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->requestToEnableMediaForAll(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V
 
     return-void
 
@@ -133,7 +133,7 @@
     throw p0
 .end method
 
-.method public static synthetic requestToEnableMediaForParticipant$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic requestToEnableMediaForParticipant$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p7, :cond_3
@@ -161,7 +161,7 @@
     move-object p5, v0
 
     :cond_2
-    invoke-interface/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V
+    invoke-interface/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
 
     return-void
 
@@ -175,7 +175,7 @@
     throw p0
 .end method
 
-.method public static synthetic updateMediaOptionsForAll$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Map;Lsed;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic updateMediaOptionsForAll$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Map;Lnwd;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p6, :cond_3
@@ -203,7 +203,7 @@
     move-object p4, v0
 
     :cond_2
-    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->updateMediaOptionsForAll(Ljava/util/Map;Lsed;Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->updateMediaOptionsForAll(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V
 
     return-void
 
@@ -217,7 +217,7 @@
     throw p0
 .end method
 
-.method public static synthetic updateMediaOptionsForParticipant$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic updateMediaOptionsForParticipant$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p7, :cond_3
@@ -245,7 +245,7 @@
     move-object p5, v0
 
     :cond_2
-    invoke-interface/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V
+    invoke-interface/range {p0 .. p5}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
 
     return-void
 
@@ -264,43 +264,43 @@
 .method public abstract addListener(Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;)V
 .end method
 
-.method public abstract getMediaOptionsForCall(Lsed;)Lsg8;
+.method public abstract getMediaOptionsForCall(Lnwd;)Lpo8;
 .end method
 
-.method public abstract getMediaOptionsForCurrentUser()Lsg8;
+.method public abstract getMediaOptionsForCurrentUser()Lpo8;
 .end method
 
 .method public abstract removeListener(Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;)V
 .end method
 
-.method public abstract requestToEnableMediaForAll(Ljava/util/Set;Lsed;Ld96;Lf96;)V
+.method public abstract requestToEnableMediaForAll(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lqg8;",
+            "Lno8;",
             ">;",
-            "Lsed;",
-            "Ld96;",
-            "Lf96;",
+            "Lnwd;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V
+.method public abstract requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lqg8;",
+            "Lno8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsed;",
-            "Ld96;",
-            "Lf96;",
+            "Lnwd;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
@@ -309,36 +309,36 @@
 .method public abstract setAudioPlayoutMuted(Z)V
 .end method
 
-.method public abstract updateMediaOptionsForAll(Ljava/util/Map;Lsed;Ld96;Lf96;)V
+.method public abstract updateMediaOptionsForAll(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lqg8;",
+            "Lno8;",
             "+",
-            "Lrg8;",
+            "Loo8;",
             ">;",
-            "Lsed;",
-            "Ld96;",
-            "Lf96;",
+            "Lnwd;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lsed;Ld96;Lf96;)V
+.method public abstract updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lqg8;",
+            "Lno8;",
             "+",
-            "Lrg8;",
+            "Loo8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lsed;",
-            "Ld96;",
-            "Lf96;",
+            "Lnwd;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation

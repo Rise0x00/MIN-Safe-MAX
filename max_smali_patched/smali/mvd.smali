@@ -1,40 +1,61 @@
-.class public final Lmvd;
+.class public abstract Lmvd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls5d;
+
+# instance fields
+.field public final a:Ljava/util/LinkedHashSet;
+
+.field public final b:Lu30;
+
+.field public final c:Ljava/util/ArrayList;
+
+.field public final d:Ljava/util/ArrayList;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public f:Lovd;
+
+.field public g:Landroid/hardware/camera2/params/InputConfiguration;
+
+.field public h:Lfb0;
 
 
-# virtual methods
-.method public final c()Z
-    .locals 0
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-    const/4 p0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
-.end method
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-.method public final e(J)Lq5d;
-    .locals 3
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    new-instance p0, Lq5d;
+    iput-object v0, p0, Lmvd;->a:Ljava/util/LinkedHashSet;
 
-    new-instance v0, Lw5d;
+    new-instance v0, Lu30;
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v0}, Lu30;-><init>()V
 
-    invoke-direct {v0, p1, p2, v1, v2}, Lw5d;-><init>(JJ)V
+    iput-object v0, p0, Lmvd;->b:Lu30;
 
-    invoke-direct {p0, v0, v0}, Lq5d;-><init>(Lw5d;Lw5d;)V
+    new-instance v0, Ljava/util/ArrayList;
 
-    return-object p0
-.end method
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-.method public final f()J
-    .locals 2
+    iput-object v0, p0, Lmvd;->c:Ljava/util/ArrayList;
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    new-instance v0, Ljava/util/ArrayList;
 
-    return-wide v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lmvd;->d:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lmvd;->e:Ljava/util/ArrayList;
+
+    return-void
 .end method

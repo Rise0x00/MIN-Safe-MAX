@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract A(FF)V
+.method public abstract k()Landroid/graphics/PointF;
 .end method
 
-.method public abstract o()Landroid/graphics/PointF;
+.method public abstract u(FF)V
 .end method

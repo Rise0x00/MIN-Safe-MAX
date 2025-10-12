@@ -1,97 +1,223 @@
-.class public final enum Lhb2;
-.super Ljava/lang/Enum;
+.class public final synthetic Lhb2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwo3;
+.implements Lel8;
 
-# static fields
-.field public static final synthetic X:[Lhb2;
 
-.field public static final enum a:Lhb2;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum b:Lhb2;
-
-.field public static final enum c:Lhb2;
-
-.field public static final enum o:Lhb2;
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(ILxyc;)V
+    .locals 0
 
-    new-instance v0, Lhb2;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TITLE"
+    iput p1, p0, Lhb2;->a:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lhb2;->a:Lhb2;
-
-    new-instance v1, Lhb2;
-
-    const-string v2, "ICON"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lhb2;->b:Lhb2;
-
-    new-instance v2, Lhb2;
-
-    const-string v3, "CHANGE_PARTICIPANT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lhb2;->c:Lhb2;
-
-    new-instance v3, Lhb2;
-
-    const-string v4, "PIN_MESSAGE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lhb2;->o:Lhb2;
-
-    filled-new-array {v0, v1, v2, v3}, [Lhb2;
-
-    move-result-object v0
-
-    sput-object v0, Lhb2;->X:[Lhb2;
+    iput-object p2, p0, Lhb2;->b:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhb2;
-    .locals 1
+.method public synthetic constructor <init>(Lub2;Ljava/util/List;I)V
+    .locals 0
 
-    const-class v0, Lhb2;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p2, p0, Lhb2;->b:Ljava/util/List;
 
-    move-result-object p0
+    iput p3, p0, Lhb2;->a:I
 
-    check-cast p0, Lhb2;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lhb2;
-    .locals 1
 
-    sget-object v0, Lhb2;->X:[Lhb2;
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-virtual {v0}, [Lhb2;->clone()Ljava/lang/Object;
+    check-cast p1, Lzb2;
 
-    move-result-object v0
+    new-instance v0, Lds;
 
-    check-cast v0, [Lhb2;
+    const/4 v1, 0x0
 
-    return-object v0
+    invoke-direct {v0, v1}, Lade;-><init>(I)V
+
+    iget-object v1, p0, Lhb2;->b:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    new-instance v3, Lxb2;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iput-wide v4, v3, Lxb2;->b:J
+
+    iget v4, p0, Lhb2;->a:I
+
+    iput v4, v3, Lxb2;->a:I
+
+    new-instance v4, Lyb2;
+
+    invoke-direct {v4, v3}, Lyb2;-><init>(Lxb2;)V
+
+    invoke-virtual {v0, v2, v4}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Lzb2;->Q:Lds;
+
+    invoke-virtual {p1, v0}, Lds;->putAll(Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public e(Lvk8;)V
+    .locals 7
+
+    invoke-virtual {p1}, Lvk8;->isConnected()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p1, Lvk8;->r:Lxyc;
+
+    iget-object v1, p1, Lvk8;->s:Lxyc;
+
+    iget-object v2, p0, Lhb2;->b:Ljava/util/List;
+
+    invoke-static {v2}, Le77;->j(Ljava/util/Collection;)Le77;
+
+    move-result-object v3
+
+    iput-object v3, p1, Lvk8;->p:Le77;
+
+    iget-object v3, p1, Lvk8;->q:Le77;
+
+    iget-object v4, p1, Lvk8;->t:Llvd;
+
+    iget-object v5, p1, Lvk8;->w:Lrkb;
+
+    iget-object v6, p1, Lvk8;->D:Landroid/os/Bundle;
+
+    invoke-static {v3, v2, v4, v5, v6}, Lvk8;->G(Ljava/util/List;Ljava/util/List;Llvd;Lrkb;Landroid/os/Bundle;)Lxyc;
+
+    move-result-object v3
+
+    iput-object v3, p1, Lvk8;->r:Lxyc;
+
+    iget-object v4, p1, Lvk8;->D:Landroid/os/Bundle;
+
+    iget-object v5, p1, Lvk8;->t:Llvd;
+
+    iget-object v6, p1, Lvk8;->w:Lrkb;
+
+    invoke-static {v3, v2, v4, v5, v6}, Lvk8;->D(Lxyc;Ljava/util/List;Landroid/os/Bundle;Llvd;Lrkb;)Lxyc;
+
+    move-result-object v2
+
+    iput-object v2, p1, Lvk8;->s:Lxyc;
+
+    iget-object v2, p1, Lvk8;->r:Lxyc;
+
+    invoke-virtual {v2, v0}, Le77;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    iget-object v2, p1, Lvk8;->s:Lxyc;
+
+    invoke-virtual {v2, v1}, Le77;->equals(Ljava/lang/Object;)Z
+
+    iget-object v1, p1, Lvk8;->a:Lak8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lak8;->X:Landroid/os/Handler;
+
+    invoke-virtual {v3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    if-ne v2, v3, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-static {v2}, Lpih;->o(Z)V
+
+    iget-object v1, v1, Lak8;->o:Lyj8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lgwd;
+
+    const/4 v3, -0x6
+
+    invoke-direct {v2, v3}, Lgwd;-><init>(I)V
+
+    invoke-static {v2}, Lio7;->o(Ljava/lang/Object;)Lj67;
+
+    move-result-object v2
+
+    if-nez v0, :cond_2
+
+    invoke-interface {v1}, Lyj8;->c()V
+
+    :cond_2
+    new-instance v0, Lol1;
+
+    const/16 v1, 0xe
+
+    iget v3, p0, Lhb2;->a:I
+
+    invoke-direct {v0, p1, v2, v3, v1}, Lol1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    sget-object p1, Lfr4;->a:Lfr4;
+
+    invoke-virtual {v2, v0, p1}, Lj67;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    return-void
 .end method

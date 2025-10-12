@@ -1,894 +1,294 @@
-.class public abstract Lo72;
-.super Ljava/lang/Object;
+.class public final Lo72;
+.super Lkotlinx/coroutines/internal/Segment;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lej3;
+# instance fields
+.field public final a:Llu0;
 
-.field public static final b:Lkle;
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JLo72;Llu0;I)V
+    .locals 0
 
-    new-instance v0, Lej3;
+    invoke-direct {p0, p1, p2, p3, p5}, Lkotlinx/coroutines/internal/Segment;-><init>(JLkotlinx/coroutines/internal/Segment;I)V
 
-    sget v1, Lfaa;->R:I
+    iput-object p4, p0, Lo72;->a:Llu0;
 
-    sget v2, Lhaa;->a:I
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    new-instance v3, Lyte;
+    sget p2, Lnu0;->b:I
 
-    invoke-direct {v3, v2}, Lyte;-><init>(I)V
+    mul-int/lit8 p2, p2, 0x2
 
-    const/4 v2, 0x2
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
-    const/16 v4, 0x38
-
-    invoke-direct {v0, v1, v3, v2, v4}, Lej3;-><init>(ILdue;II)V
-
-    sput-object v0, Lo72;->a:Lej3;
-
-    new-instance v0, Lys1;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lys1;-><init>(I)V
-
-    new-instance v1, Lkle;
-
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
-
-    sput-object v1, Lo72;->b:Lkle;
+    iput-object p1, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
     return-void
 .end method
 
-.method public static a(Ll72;)Lfrd;
-    .locals 9
 
-    new-instance v0, Lfrd;
+# virtual methods
+.method public final a(Ljava/lang/Object;ILjava/lang/Object;)Z
+    .locals 3
 
-    iget-wide v1, p0, Ll72;->a:J
+    mul-int/lit8 p2, p2, 0x2
 
-    sget v3, Lhaa;->D:I
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Ll72;->l()Lkm3;
+    add-int/2addr p2, v0
 
-    move-result-object p0
+    :cond_0
+    iget-object v1, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v1, p2, p1, p3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->compareAndSet(ILjava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lkm3;->d()Ljava/lang/String;
+    move-result v2
 
-    move-result-object p0
+    if-eqz v2, :cond_1
+
+    return v0
+
+    :cond_1
+    invoke-virtual {v1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eq v1, p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final c(I)Ljava/lang/Object;
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/lit8 p1, p1, 0x1
+
+    iget-object v0, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d(IZ)V
+    .locals 4
+
+    if-eqz p2, :cond_0
+
+    iget-wide v0, p0, Lkotlinx/coroutines/internal/Segment;->id:J
+
+    sget p2, Lnu0;->b:I
+
+    int-to-long v2, p2
+
+    mul-long/2addr v0, v2
+
+    int-to-long p1, p1
+
+    add-long/2addr v0, p1
+
+    iget-object p1, p0, Lo72;->a:Llu0;
+
+    invoke-virtual {p1, v0, v1}, Llu0;->I(J)V
+
+    :cond_0
+    invoke-virtual {p0}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
+
+    return-void
+.end method
+
+.method public final e(ILjava/lang/Object;)V
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    iget-object v0, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final f(ILjava/lang/Object;)V
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/lit8 p1, p1, 0x1
+
+    iget-object v0, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final getNumberOfSlots()I
+    .locals 1
+
+    sget v0, Lnu0;->b:I
+
+    return v0
+.end method
+
+.method public final onCancellation(ILjava/lang/Throwable;Lw24;)V
+    .locals 3
+
+    sget p2, Lnu0;->b:I
+
+    if-lt p1, p2, :cond_0
+
+    const/4 p3, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p3, 0x0
 
     :goto_0
-    if-eqz p0, :cond_1
+    if-eqz p3, :cond_1
 
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    sget p0, Lbtc;->S:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, p0}, Lyte;-><init>(I)V
-
-    new-instance p0, Lej3;
-
-    sget v5, Lfaa;->Q:I
-
-    sget v6, Lhaa;->z:I
-
-    new-instance v7, Lyte;
-
-    invoke-direct {v7, v6}, Lyte;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v5, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v5}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
+    sub-int/2addr p1, p2
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    mul-int/lit8 p2, p1, 0x2
 
-    const-string v0, "Required value was null."
+    iget-object v0, p0, Lo72;->b:Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
 
-    throw p0
-.end method
+    :cond_2
+    :goto_1
+    invoke-virtual {p0, p1}, Lo72;->c(I)Ljava/lang/Object;
 
-.method public static b(J)Lfrd;
-    .locals 7
+    move-result-object p2
 
-    new-instance v0, Lfrd;
+    instance-of v0, p2, Lapg;
 
-    sget v1, Lhaa;->b:I
+    iget-object v1, p0, Lo72;->a:Llu0;
 
-    new-instance v3, Lyte;
+    const/4 v2, 0x0
 
-    invoke-direct {v3, v1}, Lyte;-><init>(I)V
+    if-nez v0, :cond_9
 
-    new-instance v1, Lej3;
+    instance-of v0, p2, Lbpg;
 
-    sget v2, Lfaa;->T:I
+    if-eqz v0, :cond_3
 
-    sget v4, Lhaa;->A:I
+    goto :goto_3
 
-    new-instance v5, Lyte;
+    :cond_3
+    sget-object v0, Lnu0;->j:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {v5, v4}, Lyte;-><init>(I)V
+    if-eq p2, v0, :cond_8
 
-    const/4 v4, 0x1
+    sget-object v0, Lnu0;->k:Lkotlinx/coroutines/internal/Symbol;
 
-    const/16 v6, 0x38
+    if-ne p2, v0, :cond_4
 
-    invoke-direct {v1, v2, v5, v4, v6}, Lej3;-><init>(ILdue;II)V
+    goto :goto_2
 
-    sget-object v2, Lo72;->a:Lej3;
+    :cond_4
+    sget-object v0, Lnu0;->g:Lkotlinx/coroutines/internal/Symbol;
 
-    filled-new-array {v1, v2}, [Lej3;
+    if-eq p2, v0, :cond_2
 
-    move-result-object v1
+    sget-object v0, Lnu0;->f:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-static {v1}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
+    if-ne p2, v0, :cond_5
 
-    move-result-object v5
+    goto :goto_1
 
-    const/4 v4, 0x0
+    :cond_5
+    sget-object p1, Lnu0;->i:Lkotlinx/coroutines/internal/Symbol;
 
-    move-wide v1, p0
+    if-eq p2, p1, :cond_b
 
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
+    sget-object p1, Lnu0;->d:Lkotlinx/coroutines/internal/Symbol;
 
-    return-object v0
-.end method
+    if-ne p2, p1, :cond_6
 
-.method public static c(J)Lfrd;
-    .locals 7
+    goto :goto_5
 
-    new-instance v0, Lfrd;
+    :cond_6
+    sget-object p1, Lnu0;->l:Lkotlinx/coroutines/internal/Symbol;
 
-    sget v1, Lhaa;->j:I
+    if-ne p2, p1, :cond_7
 
-    new-instance v3, Lyte;
+    goto :goto_5
 
-    invoke-direct {v3, v1}, Lyte;-><init>(I)V
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v1, Lej3;
+    new-instance p3, Ljava/lang/StringBuilder;
 
-    sget v2, Lfaa;->T:I
+    const-string v0, "unexpected state: "
 
-    sget v4, Lhaa;->i:I
+    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v5, Lyte;
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v4}, Lyte;-><init>(I)V
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x1
+    move-result-object p2
 
-    const/16 v6, 0x38
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-direct {v1, v2, v5, v4, v6}, Lej3;-><init>(ILdue;II)V
+    move-result-object p2
 
-    sget-object v2, Lo72;->a:Lej3;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {v1, v2}, [Lej3;
+    throw p1
 
-    move-result-object v1
+    :cond_8
+    :goto_2
+    invoke-virtual {p0, p1, v2}, Lo72;->e(ILjava/lang/Object;)V
 
-    invoke-static {v1}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
+    if-eqz p3, :cond_b
 
-    move-result-object v5
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v4, 0x0
+    return-void
 
-    move-wide v1, p0
+    :cond_9
+    :goto_3
+    if-eqz p3, :cond_a
 
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
+    sget-object v0, Lnu0;->j:Lkotlinx/coroutines/internal/Symbol;
 
-    return-object v0
-.end method
+    goto :goto_4
 
-.method public static d(Ll72;)Lfrd;
-    .locals 11
+    :cond_a
+    sget-object v0, Lnu0;->k:Lkotlinx/coroutines/internal/Symbol;
 
-    new-instance v0, Lfrd;
+    :goto_4
+    invoke-virtual {p0, p2, p1, v0}, Lo72;->a(Ljava/lang/Object;ILjava/lang/Object;)Z
 
-    iget-wide v1, p0, Ll72;->a:J
+    move-result p2
 
-    sget v3, Lhaa;->d:I
+    if-eqz p2, :cond_2
 
-    invoke-virtual {p0}, Ll72;->j0()V
+    invoke-virtual {p0, p1, v2}, Lo72;->e(ILjava/lang/Object;)V
 
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
+    xor-int/lit8 p2, p3, 0x1
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lo72;->d(IZ)V
 
-    move-result-object p0
+    if-eqz p3, :cond_b
 
-    move v4, v3
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    sget p0, Lbtc;->z:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, p0}, Lyte;-><init>(I)V
-
-    new-instance p0, Lej3;
-
-    sget v5, Lfaa;->I:I
-
-    sget v6, Lhaa;->f:I
-
-    new-instance v7, Lyte;
-
-    invoke-direct {v7, v6}, Lyte;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v5, Lej3;
-
-    sget v7, Lfaa;->B:I
-
-    sget v9, Lhaa;->c:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v9}, Lyte;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v6, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v5, v6}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static e(Ll72;)Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->m:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->S:I
-
-    sget v5, Lhaa;->h:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v4, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v4}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static f(Ll72;)Lfrd;
-    .locals 11
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->m:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    sget p0, Lbtc;->G:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, p0}, Lyte;-><init>(I)V
-
-    new-instance p0, Lej3;
-
-    sget v5, Lfaa;->I:I
-
-    sget v6, Lhaa;->r:I
-
-    new-instance v7, Lyte;
-
-    invoke-direct {v7, v6}, Lyte;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v5, Lej3;
-
-    sget v7, Lfaa;->C:I
-
-    sget v9, Lhaa;->k:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v9}, Lyte;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v6, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v5, v6}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static g(Ll72;)Lfrd;
-    .locals 11
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->J:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    sget p0, Lbtc;->B:I
-
-    new-instance v4, Lyte;
-
-    invoke-direct {v4, p0}, Lyte;-><init>(I)V
-
-    new-instance p0, Lej3;
-
-    sget v5, Lfaa;->S:I
-
-    sget v6, Lhaa;->l:I
-
-    new-instance v7, Lyte;
-
-    invoke-direct {v7, v6}, Lyte;-><init>(I)V
-
-    const/4 v6, 0x1
-
-    const/16 v8, 0x38
-
-    invoke-direct {p0, v5, v7, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v5, Lej3;
-
-    sget v7, Lfaa;->T:I
-
-    sget v9, Lhaa;->k:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v9}, Lyte;-><init>(I)V
-
-    invoke-direct {v5, v7, v10, v6, v8}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v6, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v5, v6}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static h(Ll72;)Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->e:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->U:I
-
-    sget v5, Lhaa;->B:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v4, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v4}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static i(Ll72;)Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->e:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->I:I
-
-    sget v5, Lhaa;->f:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v4, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v4}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static j(Ll72;)Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->o:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->U:I
-
-    sget v5, Lhaa;->C:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v4, Lo72;->b:Lkle;
-
-    invoke-virtual {v4}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lej3;
-
-    filled-new-array {p0, v4}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static k(Ll72;)Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget v3, Lhaa;->o:I
-
-    invoke-virtual {p0}, Ll72;->j0()V
-
-    iget-object p0, p0, Ll72;->p0:Ljava/lang/CharSequence;
-
-    filled-new-array {p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    move v4, v3
-
-    new-instance v3, Laue;
-
-    invoke-static {p0}, Lns;->U([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-direct {v3, v4, p0}, Laue;-><init>(ILjava/util/List;)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->I:I
-
-    sget v5, Lhaa;->r:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x1
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v4, Lo72;->b:Lkle;
-
-    invoke-virtual {v4}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lej3;
-
-    filled-new-array {p0, v4}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static l(Ll72;)Lfrd;
-    .locals 11
-
-    new-instance v0, Lfrd;
-
-    iget-wide v1, p0, Ll72;->a:J
-
-    sget p0, Lhaa;->N:I
-
-    new-instance v3, Lyte;
-
-    invoke-direct {v3, p0}, Lyte;-><init>(I)V
-
-    new-instance p0, Lej3;
-
-    sget v4, Lfaa;->W:I
-
-    sget v5, Lhaa;->L:I
-
-    new-instance v6, Lyte;
-
-    invoke-direct {v6, v5}, Lyte;-><init>(I)V
-
-    const/4 v5, 0x3
-
-    const/16 v7, 0x38
-
-    invoke-direct {p0, v4, v6, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v4, Lej3;
-
-    sget v6, Lfaa;->X:I
-
-    sget v8, Lhaa;->M:I
-
-    new-instance v9, Lyte;
-
-    invoke-direct {v9, v8}, Lyte;-><init>(I)V
-
-    invoke-direct {v4, v6, v9, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v6, Lej3;
-
-    sget v8, Lfaa;->V:I
-
-    sget v9, Lhaa;->K:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v9}, Lyte;-><init>(I)V
-
-    invoke-direct {v6, v8, v10, v5, v7}, Lej3;-><init>(ILdue;II)V
-
-    new-instance v5, Lej3;
-
-    sget v8, Lfaa;->Y:I
-
-    sget v9, Lhaa;->O:I
-
-    new-instance v10, Lyte;
-
-    invoke-direct {v10, v9}, Lyte;-><init>(I)V
-
-    const/4 v9, 0x1
-
-    invoke-direct {v5, v8, v10, v9, v7}, Lej3;-><init>(ILdue;II)V
-
-    sget-object v7, Lo72;->a:Lej3;
-
-    filled-new-array {p0, v4, v6, v5, v7}, [Lej3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lh73;->S([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
-.end method
-
-.method public static m()Lfrd;
-    .locals 8
-
-    new-instance v0, Lfrd;
-
-    new-instance v3, Lcue;
-
-    const-string v1, "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u0432 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435!"
-
-    invoke-direct {v3, v1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v4, Lcue;
-
-    const-string v1, "\u0412\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0439\u0442\u0435\u0441\u044c \u043f\u043e\u0437\u0436\u0435 :)"
-
-    invoke-direct {v4, v1}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lej3;
-
-    new-instance v2, Lcue;
-
-    const-string v5, "\u0412\u0435\u0440\u043d\u0443\u0441\u044c \u043f\u043e\u0437\u0436\u0435"
-
-    invoke-direct {v2, v5}, Lcue;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v5, 0x3
-
-    const/16 v6, 0x38
-
-    const/high16 v7, -0x80000000
-
-    invoke-direct {v1, v7, v2, v5, v6}, Lej3;-><init>(ILdue;II)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    invoke-direct/range {v0 .. v5}, Lfrd;-><init>(JLdue;Ldue;Ljava/util/List;)V
-
-    return-object v0
+    :cond_b
+    :goto_5
+    return-void
 .end method

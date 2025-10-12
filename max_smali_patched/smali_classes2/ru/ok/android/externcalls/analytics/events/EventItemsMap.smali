@@ -73,7 +73,7 @@
 .end method
 
 .method public constructor <init>(Ljava/util/Map;)V
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -89,9 +89,9 @@
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
 
     .line 4
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->items:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->items:Ljava/util/Map;
 
-    invoke-interface {p0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+    invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 .end method
 
 .method public final getItems()Ljava/util/Map;
-    .locals 0
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -145,9 +145,9 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->items:Ljava/util/Map;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->items:Ljava/util/Map;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final set(Ljava/lang/String;Ljava/lang/Float;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;

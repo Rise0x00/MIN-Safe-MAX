@@ -3,172 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
+.implements Llz8;
 
 
-# instance fields
-.field public X:I
-
-.field public a:Ljava/nio/charset/CodingErrorAction;
-
-.field public b:Ljava/nio/charset/CodingErrorAction;
-
-.field public c:I
-
-.field public o:I
+# static fields
+.field public static final a:Lkz8;
 
 
-# virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
     new-instance v0, Lkz8;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+    sput-object v0, Lkz8;->a:Lkz8;
 
-    iput-object v1, v0, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    const v1, 0x7fffffff
-
-    iput v1, v0, Lkz8;->c:I
-
-    const/16 v1, 0x2000
-
-    iput v1, v0, Lkz8;->o:I
-
-    iput v1, v0, Lkz8;->X:I
-
-    iget-object v1, p0, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p0, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget v1, p0, Lkz8;->c:I
-
-    iput v1, v0, Lkz8;->c:I
-
-    iget p0, p0, Lkz8;->o:I
-
-    iput p0, v0, Lkz8;->o:I
-
-    return-object v0
+    return-void
 .end method
 
+
+# virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
-    instance-of v0, p1, Lkz8;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    check-cast p1, Lkz8;
+    instance-of p1, p1, Lkz8;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_1
 
-    iget-object v0, p0, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
+    const/4 p1, 0x0
 
-    iget-object v1, p1, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lkz8;->c:I
-
-    iget v1, p1, Lkz8;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lkz8;->X:I
-
-    iget v1, p1, Lkz8;->X:I
-
-    if-ne v0, v1, :cond_1
-
-    iget p0, p0, Lkz8;->o:I
-
-    iget p1, p1, Lkz8;->o:I
-
-    if-ne p0, p1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
+    return p1
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lkz8;->a:Ljava/nio/charset/CodingErrorAction;
+    const v0, -0x27fcdd22
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const-string v0, "OnSelfClicked"
 
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    const/16 v2, 0x3e0
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lkz8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lkz8;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lkz8;->o:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget p0, p0, Lkz8;->X:I
-
-    add-int/2addr v2, p0
-
-    return v2
+    return-object v0
 .end method

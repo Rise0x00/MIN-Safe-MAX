@@ -1,49 +1,85 @@
-.class public final Lv7d;
-.super Lax3;
+.class public abstract Lv7d;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lw7d;
-
-.field public Z:I
-
-.field public o:Lw7d;
+# static fields
+.field public static final a:D
 
 
 # direct methods
-.method public constructor <init>(Lw7d;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lv7d;->Y:Lw7d;
+    const-wide v0, 0x4046800000000000L    # 45.0
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v0
+
+    sput-wide v0, Lv7d;->a:D
 
     return-void
 .end method
 
+.method public static a(FFZ)F
+    .locals 6
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-eqz p2, :cond_0
 
-    iput-object p1, p0, Lv7d;->X:Ljava/lang/Object;
+    float-to-double v0, p0
 
-    iget p1, p0, Lv7d;->Z:I
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    const/high16 v0, -0x80000000
+    sget-wide v4, Lv7d;->a:D
 
-    or-int/2addr p1, v0
+    sub-double/2addr v2, v4
 
-    iput p1, p0, Lv7d;->Z:I
+    float-to-double p0, p1
 
-    iget-object p1, p0, Lv7d;->Y:Lw7d;
+    mul-double/2addr v2, p0
 
-    invoke-virtual {p1, p0}, Lw7d;->d(Lax3;)Ljava/lang/Object;
+    add-double/2addr v2, v0
 
-    move-result-object p0
+    double-to-float p0, v2
 
-    return-object p0
+    :cond_0
+    return p0
+.end method
+
+.method public static b(FFZ)F
+    .locals 6
+
+    const/high16 v0, 0x3fc00000    # 1.5f
+
+    if-eqz p2, :cond_0
+
+    mul-float/2addr p0, v0
+
+    float-to-double v0, p0
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    sget-wide v4, Lv7d;->a:D
+
+    sub-double/2addr v2, v4
+
+    float-to-double p0, p1
+
+    mul-double/2addr v2, p0
+
+    add-double/2addr v2, v0
+
+    double-to-float p0, v2
+
+    return p0
+
+    :cond_0
+    mul-float/2addr p0, v0
+
+    return p0
 .end method

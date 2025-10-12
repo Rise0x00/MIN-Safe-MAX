@@ -13,7 +13,7 @@
         "Landroid/widget/FrameLayout;",
         "",
         "highlighted",
-        "Ltcf;",
+        "Loyf;",
         "setHighlighted",
         "(Z)V",
         "tamtam-app_release"
@@ -42,9 +42,9 @@
 
     invoke-direct {p0, p1, p2, v0, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    sget p2, Lysc;->l:I
+    sget p2, Lq9d;->s:I
 
-    invoke-static {p1, p2}, Ldw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -56,7 +56,7 @@
 
 # virtual methods
 .method public final dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 3
+    .locals 4
 
     invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
 
@@ -75,13 +75,13 @@
 
     move-result v1
 
-    iget-object p0, p0, Lru/ok/messages/views/widgets/HighlightableFrameLayout;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lru/ok/messages/views/widgets/HighlightableFrameLayout;->a:Landroid/graphics/drawable/Drawable;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p0, v2, v2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method

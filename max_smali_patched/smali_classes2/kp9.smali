@@ -1,53 +1,46 @@
 .class public final Lkp9;
-.super Ljava/lang/Object;
+.super Ll9f;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:[Lof7;
-
-
 # instance fields
-.field public final a:Lcq4;
+.field public c:Lv79;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public final c(Ls89;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lvqb;
+    const-string v0, "reactionInfo"
 
-    const-class v1, Lkp9;
+    invoke-static {p2, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, "serverPrefs"
+    move-result p2
 
-    const-string v3, "getServerPrefs()Lru/ok/tamtam/prefs/ServerPrefs;"
+    if-eqz p2, :cond_0
 
-    const/4 v4, 0x0
+    invoke-static {p1}, Lipe;->u(Ls89;)Lv79;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    move-result-object p1
 
-    sget-object v1, Ldic;->a:Leic;
+    iput-object p1, p0, Lkp9;->c:Lv79;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lof7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lkp9;->b:[Lof7;
+    :cond_0
+    invoke-virtual {p1}, Ls89;->B()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcq4;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lkp9;->c:Lv79;
 
-    iput-object p1, p0, Lkp9;->a:Lcq4;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

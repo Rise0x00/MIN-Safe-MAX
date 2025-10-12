@@ -1,26 +1,48 @@
-.class public abstract Lnzb;
-.super Ljava/lang/Object;
+.class public final Lnzb;
+.super Lnz3;
 
 
-# static fields
-.field public static oneme_main_bottom_bar:I = 0x7f0a0721
+# instance fields
+.field public X:I
 
-.field public static oneme_main_calls_bottom_item:I = 0x7f0a0722
+.field public final synthetic Y:Lozb;
 
-.field public static oneme_main_calls_container:I = 0x7f0a0723
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static oneme_main_chats_bottom_item:I = 0x7f0a0724
 
-.field public static oneme_main_chats_container:I = 0x7f0a0725
+# direct methods
+.method public constructor <init>(Lozb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_main_contacts_bottom_item:I = 0x7f0a0726
+    iput-object p1, p0, Lnzb;->Y:Lozb;
 
-.field public static oneme_main_contacts_container:I = 0x7f0a0727
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_main_container:I = 0x7f0a0728
+    return-void
+.end method
 
-.field public static oneme_main_root:I = 0x7f0a0729
 
-.field public static oneme_main_settings_bottom_item:I = 0x7f0a072a
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_main_settings_container:I = 0x7f0a072b
+    iput-object p1, p0, Lnzb;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lnzb;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lnzb;->X:I
+
+    iget-object p1, p0, Lnzb;->Y:Lozb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lozb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

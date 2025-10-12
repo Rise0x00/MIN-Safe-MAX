@@ -1,26 +1,26 @@
 .class public final Lxq2;
-.super Leje;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lxr2;
+.field public final synthetic Y:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
-.method public constructor <init>(Lxr2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lxq2;->Y:Lxr2;
+    iput-object p2, p0, Lxq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,108 +30,53 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lp04;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lxq2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lxq2;
+    check-cast p1, Lxq2;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-virtual {p0, p1}, Lxq2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lxq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    .locals 2
 
-    new-instance p1, Lxq2;
+    new-instance v0, Lxq2;
 
-    iget-object p0, p0, Lxq2;->Y:Lxr2;
+    iget-object v1, p0, Lxq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p1, p0, p2}, Lxq2;-><init>(Lxr2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lxq2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lxq2;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lxq2;->X:I
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lxq2;->X:Ljava/lang/Object;
 
-    sget-object v2, Ltcf;->a:Ltcf;
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-ne v0, v1, :cond_0
+    move-result p1
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v0, p0, Lxq2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    return-object v2
+    iput-boolean p1, v0, Lone/me/chatscreen/ChatScreen;->E0:Z
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    sget-object p1, Loyf;->a:Loyf;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxq2;->Y:Lxr2;
-
-    iget-object v0, p1, Lxr2;->T0:Ljbc;
-
-    iget-object v0, v0, Ljbc;->a:Lj4e;
-
-    invoke-interface {v0}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll72;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ll72;->l()Lkm3;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Lkm3;->n()J
-
-    move-result-wide v3
-
-    iget-object p1, p1, Lxr2;->x0:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lit3;
-
-    iput v1, p0, Lxq2;->X:I
-
-    invoke-virtual {p1, v3, v4}, Lit3;->a(J)V
-
-    sget-object p0, Lq04;->a:Lq04;
-
-    if-ne v2, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    return-object v2
+    return-object p1
 .end method

@@ -4,95 +4,98 @@
 
 
 # instance fields
-.field public final a:Lkie;
+.field public a:Lbb8;
 
+.field public b:Landroid/util/Range;
 
-# direct methods
-.method public constructor <init>(Lkie;)V
-    .locals 0
+.field public c:Landroid/util/Range;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzb0;->a:Lkie;
-
-    return-void
-.end method
+.field public d:Ljava/lang/Integer;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Lac0;
+    .locals 5
 
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lzb0;->a:Lbb8;
+
+    if-nez v0, :cond_0
+
+    const-string v0, " qualitySelector"
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lzb0;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lzb0;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p0, p0, Lzb0;->a:Lkie;
-
-    iget-object p1, p1, Lzb0;->a:Lkie;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    const-string v0, ""
 
     :goto_0
-    const/4 p0, 0x1
+    iget-object v1, p0, Lzb0;->b:Landroid/util/Range;
 
-    return p0
+    if-nez v1, :cond_1
+
+    const-string v1, " frameRate"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     :cond_1
-    const/4 p0, 0x0
+    iget-object v1, p0, Lzb0;->c:Landroid/util/Range;
 
-    return p0
-.end method
+    if-nez v1, :cond_2
 
-.method public final hashCode()I
-    .locals 1
+    const-string v1, " bitrate"
 
-    iget-object p0, p0, Lzb0;->a:Lkie;
+    invoke-static {v0, v1}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    move-result-object v0
 
-    move-result p0
+    :cond_2
+    iget-object v1, p0, Lzb0;->d:Ljava/lang/Integer;
 
-    const v0, -0x2aff6277
+    if-nez v1, :cond_3
 
-    xor-int/2addr p0, v0
+    const-string v1, " aspectRatio"
 
-    return p0
-.end method
+    invoke-static {v0, v1}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_3
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    const-string v1, "Event{eventCode=0, surfaceOutput="
+    move-result v1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_4
 
-    iget-object p0, p0, Lzb0;->a:Lkie;
+    new-instance v0, Lac0;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lzb0;->a:Lbb8;
 
-    const-string p0, "}"
+    iget-object v2, p0, Lzb0;->b:Landroid/util/Range;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lzb0;->c:Landroid/util/Range;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v4, p0, Lzb0;->d:Ljava/lang/Integer;
 
-    move-result-object p0
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
-    return-object p0
+    move-result v4
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lac0;-><init>(Lbb8;Landroid/util/Range;Landroid/util/Range;I)V
+
+    return-object v0
+
+    :cond_4
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Missing required properties:"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method

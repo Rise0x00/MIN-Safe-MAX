@@ -1,159 +1,373 @@
 .class public final Lgsd;
-.super Lcom/google/android/gms/common/internal/a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lik;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final E0:Z
+.field public final X:Ljava/lang/Object;
 
-.field public final F0:Lic9;
+.field public final synthetic a:I
 
-.field public final G0:Landroid/os/Bundle;
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public final H0:Ljava/lang/Integer;
+.field public final c:Ljava/util/ArrayDeque;
+
+.field public o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lic9;Landroid/os/Bundle;Lci6;Ldi6;)V
-    .locals 8
+.method public constructor <init>(Lgr4;)V
+    .locals 1
 
-    const/16 v3, 0x2c
+    const/4 v0, 0x2
 
-    const/4 v7, 0x0
+    iput v0, p0, Lgsd;->a:I
 
-    move-object v0, p0
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v1, p1
+    .line 9
+    new-instance v0, Ljava/lang/Object;
 
-    move-object v2, p2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-object v4, p3
+    iput-object v0, p0, Lgsd;->X:Ljava/lang/Object;
 
-    move-object v5, p5
+    .line 10
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    move-object v6, p6
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILic9;Lci6;Ldi6;I)V
+    iput-object v0, p0, Lgsd;->c:Ljava/util/ArrayDeque;
 
-    const/4 p0, 0x1
-
-    iput-boolean p0, v0, Lgsd;->E0:Z
-
-    iput-object v4, v0, Lgsd;->F0:Lic9;
-
-    iput-object p4, v0, Lgsd;->G0:Landroid/os/Bundle;
-
-    iget-object p0, v4, Lic9;->f:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Integer;
-
-    iput-object p0, v0, Lgsd;->H0:Ljava/lang/Integer;
+    .line 11
+    iput-object p1, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/concurrent/Executor;I)V
+    .locals 0
+
+    iput p2, p0, Lgsd;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
+
+    .line 3
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    .line 4
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgsd;->X:Ljava/lang/Object;
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
+
+    .line 6
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    .line 7
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgsd;->X:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
 
 # virtual methods
-.method public final g()I
-    .locals 0
+.method public final a()V
+    .locals 3
 
-    const p0, 0xbdfcb8
+    iget v0, p0, Lgsd;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final j()Z
-    .locals 0
+    iget-object v0, p0, Lgsd;->X:Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lgsd;->E0:Z
+    monitor-enter v0
 
-    return p0
-.end method
+    :try_start_0
+    iget-object v1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
 
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 2
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    move-result-object v1
 
-    const/4 p0, 0x0
+    check-cast v1, Ljava/lang/Runnable;
 
-    return-object p0
+    iput-object v1, p0, Lgsd;->o:Ljava/lang/Runnable;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
+
+    check-cast v2, Lgr4;
+
+    invoke-virtual {v2, v1}, Lgr4;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
 
     :cond_0
-    const-string p0, "com.google.android.gms.signin.internal.ISignInService"
+    :goto_0
+    monitor-exit v0
 
-    invoke-interface {p1, p0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    return-void
 
-    move-result-object v0
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    instance-of v1, v0, Lxrg;
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, Lgsd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    iput-object v2, p0, Lgsd;->o:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lxrg;
+    iget-object v1, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
 
-    return-object v0
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
 
     :cond_1
-    new-instance v0, Lxrg;
+    :goto_2
+    monitor-exit v0
 
-    const/4 v1, 0x0
+    return-void
 
-    invoke-direct {v0, p1, p0, v1}, Luqg;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    :goto_3
+    monitor-exit v0
 
-    return-object v0
+    throw v1
+
+    :pswitch_1
+    iget-object v0, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    iput-object v0, p0, Lgsd;->o:Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lgsd;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final n()Landroid/os/Bundle;
-    .locals 3
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 4
 
-    iget-object v0, p0, Lgsd;->F0:Lic9;
+    iget v0, p0, Lgsd;->a:I
 
-    iget-object v1, v0, Lic9;->c:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v1, Ljava/lang/String;
+    iget-object v0, p0, Lgsd;->X:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/google/android/gms/common/internal/a;->c:Landroid/content/Context;
+    monitor-enter v0
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    :try_start_0
+    iget-object v1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
 
-    move-result-object v2
+    new-instance v2, Lid;
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v3, 0x3
 
-    move-result v1
+    invoke-direct {v2, p0, v3, p1}, Lid;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object p0, p0, Lgsd;->G0:Landroid/os/Bundle;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_0
+    iget-object p1, p0, Lgsd;->o:Ljava/lang/Runnable;
 
-    iget-object v0, v0, Lic9;->c:Ljava/lang/Object;
+    if-nez p1, :cond_0
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p0}, Lgsd;->a()V
 
-    const-string v1, "com.google.android.gms.signin.internal.realClientPackageName"
+    goto :goto_0
 
-    invoke-virtual {p0, v1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    return-object p0
-.end method
+    :goto_0
+    monitor-exit v0
 
-.method public final p()Ljava/lang/String;
-    .locals 0
+    return-void
 
-    const-string p0, "com.google.android.gms.signin.internal.ISignInService"
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
-.end method
+    throw p1
 
-.method public final q()Ljava/lang/String;
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lgsd;->X:Ljava/lang/Object;
 
-    const-string p0, "com.google.android.gms.signin.service.START"
+    monitor-enter v0
 
-    return-object p0
+    :try_start_1
+    iget-object v1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    new-instance v2, Lowd;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, p1, v3, p0}, Lowd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lgsd;->o:Ljava/lang/Runnable;
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Lgsd;->a()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_1
+    :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_3
+    monitor-exit v0
+
+    throw p1
+
+    :pswitch_1
+    iget-object v0, p0, Lgsd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_2
+    iget-object v1, p0, Lgsd;->c:Ljava/util/ArrayDeque;
+
+    new-instance v2, Ltg6;
+
+    const/16 v3, 0x19
+
+    invoke-direct {v2, p0, v3, p1}, Ltg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lgsd;->o:Ljava/lang/Runnable;
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p0}, Lgsd;->a()V
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception p1
+
+    goto :goto_5
+
+    :cond_2
+    :goto_4
+    monitor-exit v0
+
+    return-void
+
+    :goto_5
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

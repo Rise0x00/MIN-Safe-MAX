@@ -1,184 +1,189 @@
-.class public final synthetic Loza;
+.class public final Loza;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lxc;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final synthetic a:Lqza;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+.method public constructor <init>(Lqza;)V
     .locals 0
 
-    iput p2, p0, Loza;->a:I
-
-    iput-object p1, p0, Loza;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loza;->a:Lqza;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final F(Lwc;Ljava/lang/String;)V
+    .locals 0
 
-    iget p1, p0, Loza;->a:I
+    iget-object p1, p0, Loza;->a:Lqza;
 
-    const/4 v0, 0x0
+    iput-object p2, p1, Lzk0;->h:Ljava/lang/String;
 
-    iget-object p0, p0, Loza;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    return-void
+.end method
 
-    packed-switch p1, :pswitch_data_0
+.method public final H0(Lwc;Ljava/lang/String;)V
+    .locals 0
 
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->v0:[Lof7;
+    iget-object p1, p0, Loza;->a:Lqza;
 
-    invoke-virtual {p0}, Lone/me/startconversation/channel/PickSubscribersScreen;->I0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-object p2, p1, Lzk0;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final I(Lhz7;Lnn8;)V
+    .locals 4
+
+    iget-object v0, p0, Loza;->a:Lqza;
+
+    iget-object v1, v0, Lzk0;->l:Lk96;
+
+    iget-object p1, p1, Lhz7;->a:Lr94;
+
+    invoke-static {p1}, Lv63;->A0(Lr94;)Lmza;
+
+    move-result-object v2
+
+    sget-object v3, Lt94;->a:Lfab;
+
+    iget p2, p2, Lnn8;->a:I
+
+    invoke-static {p2}, Lt94;->a(I)Lwza;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, v2, p2}, Lk96;->b(Lb0b;Lmza;Lwza;)V
+
+    iget-object p1, p1, Lr94;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    iput-object p1, v0, Lqza;->K:Ljava/lang/String;
 
-    invoke-virtual {p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->G0()La0b;
+.method public final R(Lhz7;Lnn8;)V
+    .locals 3
 
-    move-result-object p1
+    iget-object v0, p2, Lnn8;->g:Ljava/lang/Object;
 
-    iget-object p1, p1, La0b;->c:Ly1b;
+    check-cast v0, Lt76;
 
-    check-cast p1, Leza;
+    iget v1, p2, Lnn8;->b:I
 
-    iget-object v1, p0, Lone/me/startconversation/channel/PickSubscribersScreen;->p0:Lvr;
+    const/4 v2, 0x1
 
-    sget-object v2, Lone/me/startconversation/channel/PickSubscribersScreen;->v0:[Lof7;
+    if-eq v1, v2, :cond_1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x2
 
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [J
-
-    iget-object v1, p1, Leza;->d:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsz2;
-
-    iget-wide v4, p1, Leza;->a:J
-
-    check-cast v1, Ls03;
-
-    invoke-virtual {v1, v4, v5}, Ls03;->N(J)Ljbc;
-
-    move-result-object v1
-
-    iget-object v1, v1, Ljbc;->a:Lj4e;
-
-    invoke-interface {v1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll72;
-
-    if-nez v1, :cond_0
+    if-eq v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, p1, Leza;->f:Lth7;
+    if-eqz v0, :cond_1
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lak3;
-
-    invoke-interface {v2}, Lak3;->f()Z
-
-    iget-object v2, p1, Leza;->k:Lp04;
-
-    if-eqz v2, :cond_1
-
-    iget-object v4, p1, Leza;->c:Lth7;
-
-    invoke-interface {v4}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lhoe;
-
-    check-cast v4, Loba;
-
-    invoke-virtual {v4}, Loba;->b()Lj04;
-
-    move-result-object v4
-
-    new-instance v5, Lbza;
-
-    invoke-direct {v5, p1, v1, p0, v0}, Lbza;-><init>(Leza;Ll72;[JLkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {v2, v4, v0, v5, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
-
-    move-result-object v0
+    invoke-static {v0}, Lgh5;->G(Lt76;)Lhag;
 
     :cond_1
-    iget-object p0, p1, Leza;->j:Lvfd;
-
-    sget-object v1, Leza;->l:[Lof7;
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {p0, p1, v1, v0}, Lvfd;->N(Ljava/lang/Object;Lof7;Ljava/lang/Object;)V
-
     :goto_0
+    iget-object v0, p0, Loza;->a:Lqza;
+
+    iget-object v1, v0, Lzk0;->l:Lk96;
+
+    iget-object p1, p1, Lhz7;->a:Lr94;
+
+    invoke-static {p1}, Lv63;->A0(Lr94;)Lmza;
+
+    move-result-object p1
+
+    sget-object v2, Lt94;->a:Lfab;
+
+    iget p2, p2, Lnn8;->a:I
+
+    invoke-static {p2}, Lt94;->a(I)Lwza;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2}, Lk96;->d(Lb0b;Lmza;Lwza;)V
+
     return-void
+.end method
 
-    :pswitch_0
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->v0:[Lof7;
+.method public final c0(Lwc;Lhz7;Lnn8;Ljava/io/IOException;Z)V
+    .locals 1
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->G0()La0b;
+    iget-object p1, p0, Loza;->a:Lqza;
 
-    move-result-object p0
+    iget-object p5, p1, Lzk0;->l:Lk96;
 
-    iget-object p0, p0, La0b;->c:Ly1b;
+    iget-object p2, p2, Lhz7;->a:Lr94;
 
-    check-cast p0, Leza;
+    invoke-static {p2}, Lv63;->A0(Lr94;)Lmza;
 
-    iget-object p1, p0, Leza;->k:Lp04;
+    move-result-object p2
 
-    if-eqz p1, :cond_2
+    sget-object v0, Lt94;->a:Lfab;
 
-    new-instance v1, Ldza;
+    iget p3, p3, Lnn8;->a:I
 
-    invoke-direct {v1, p0, v0}, Ldza;-><init>(Leza;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p3}, Lt94;->a(I)Lwza;
 
-    const/4 p0, 0x3
+    move-result-object p3
 
-    invoke-static {p1, v0, v0, v1, p0}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    invoke-virtual {p5, p1, p2, p3, p4}, Lk96;->c(Lb0b;Lmza;Lwza;Ljava/io/IOException;)V
 
-    :cond_2
     return-void
+.end method
 
-    nop
+.method public final m0(Lwc;Ljava/lang/String;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p0, Loza;->a:Lqza;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Lzk0;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final y0(Lwc;IJJ)V
+    .locals 0
+
+    iget-object p1, p0, Loza;->a:Lqza;
+
+    iget-object p2, p1, Lzk0;->l:Lk96;
+
+    invoke-virtual {p2, p1}, Lk96;->a(Lb0b;)V
+
+    return-void
+.end method
+
+.method public final z(Lwc;Ljava/lang/String;)V
+    .locals 0
+
+    iget-object p1, p0, Loza;->a:Lqza;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Lzk0;->h:Ljava/lang/String;
+
+    return-void
 .end method

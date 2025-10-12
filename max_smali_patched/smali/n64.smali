@@ -1,28 +1,52 @@
-.class public interface abstract Ln64;
+.class public final Ln64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh64;
+
+# instance fields
+.field public final a:Le77;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
 
 
-# virtual methods
-.method public abstract O(Lv64;)J
-.end method
+# direct methods
+.method public constructor <init>(JJLjava/util/List;)V
+    .locals 2
 
-.method public abstract P(Lj4f;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract close()V
-.end method
+    invoke-static {p5}, Le77;->j(Ljava/util/Collection;)Le77;
 
-.method public abstract getUri()Landroid/net/Uri;
-.end method
+    move-result-object p5
 
-.method public w()Ljava/util/Map;
-    .locals 0
+    iput-object p5, p0, Ln64;->a:Le77;
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    iput-wide p1, p0, Ln64;->b:J
 
-    return-object p0
+    iput-wide p3, p0, Ln64;->c:J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p5, p1, v0
+
+    if-eqz p5, :cond_1
+
+    cmp-long p5, p3, v0
+
+    if-nez p5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    add-long v0, p1, p3
+
+    :cond_1
+    :goto_0
+    iput-wide v0, p0, Ln64;->d:J
+
+    return-void
 .end method

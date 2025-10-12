@@ -1,57 +1,67 @@
-.class public final Lmn7;
-.super Lax3;
+.class public abstract synthetic Lmn7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ldq5;
-
-.field public Y:Lzo7;
-
-.field public Z:Landroid/net/Uri;
-
-.field public synthetic n0:Ljava/lang/Object;
-
-.field public o:Lrn7;
-
-.field public final synthetic o0:Lrn7;
-
-.field public p0:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lrn7;Lax3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lmn7;->o0:Lrn7;
+    invoke-static {}, Lvn7;->values()[Lvn7;
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_0
+    sget-object v1, Lvn7;->Y:Lvn7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lvn7;->Z:Lvn7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lvn7;->w0:Lvn7;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lmn7;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lmn7;->n0:Ljava/lang/Object;
-
-    iget p1, p0, Lmn7;->p0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmn7;->p0:I
-
-    iget-object p1, p0, Lmn7;->o0:Lrn7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, v0, p0}, Lrn7;->j(Ldq5;Lzo7;Landroid/net/Uri;Lax3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

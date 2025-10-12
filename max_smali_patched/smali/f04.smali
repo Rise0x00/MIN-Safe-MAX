@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh04;
-
 
 # virtual methods
-.method public abstract getKey()Lg04;
+.method public abstract a(Lb04;Lb04;Z)V
+.end method
+
+.method public abstract b(Lb04;Lb04;Z)V
 .end method

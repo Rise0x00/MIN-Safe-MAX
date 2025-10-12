@@ -1,262 +1,237 @@
-.class public final synthetic Lzx9;
+.class public abstract Lzx9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld96;
 
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lbp7;
 
-.field public final synthetic b:Lru/ok/tamtam/android/services/NotificationTamService;
+.field public static final c:Lrxd;
+
+.field public static final d:Ls5f;
+
+.field public static final e:Ls5f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/android/services/NotificationTamService;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lzx9;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p1, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
+    new-instance v1, Ljava/util/HashMap;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lzx9;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v0, Lv63;->Z:Lux9;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object v2, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_0
+    iget-object v2, v2, Lux9;->a:Ls5f;
+
+    sput-object v2, Lzx9;->b:Lbp7;
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, v1
+
+    :goto_1
+    iget-object v0, v0, Lux9;->c:Lrxd;
+
+    sput-object v0, Lzx9;->c:Lrxd;
+
+    new-instance v0, Lbh8;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lbh8;-><init>(I)V
+
+    new-instance v1, Ls5f;
+
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+
+    sput-object v1, Lzx9;->d:Ls5f;
+
+    new-instance v0, Lbh8;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lbh8;-><init>(I)V
+
+    new-instance v1, Ls5f;
+
+    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+
+    sput-object v1, Lzx9;->e:Ls5f;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;IZ)Lxx9;
+    .locals 11
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+    :goto_0
+    sget-object v0, Lzx9;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget v0, p0, Lzx9;->a:I
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v1
 
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
+    check-cast v1, Ljava/util/HashMap;
 
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
+    new-instance v2, Ljava/util/HashMap;
 
-    if-nez p0, :cond_0
+    invoke-direct {v2, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    const/4 p0, 0x0
+    invoke-virtual {v2, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lxx9;
+
+    const/4 v4, 0x1
+
+    if-nez v3, :cond_3
+
+    new-instance v5, Lxx9;
+
+    sget-object v3, Lv63;->Z:Lux9;
+
+    if-eqz v3, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {p0}, Lg2d;->l()Lepe;
+    const/4 v3, 0x0
 
-    move-result-object p0
+    :goto_1
+    iget-object v6, v3, Lux9;->b:Lr4;
 
-    iget-object p0, p0, Lepe;->g:Lth7;
+    invoke-static {p1}, Lqw1;->u(I)I
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    move-result v3
 
-    move-result-object p0
+    if-eqz v3, :cond_2
 
-    check-cast p0, Lvy9;
+    if-ne v3, v4, :cond_1
 
-    return-object p0
+    sget-object v3, Lzx9;->e:Ls5f;
 
-    :pswitch_0
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
+    invoke-virtual {v3}, Ls5f;->getValue()Ljava/lang/Object;
 
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
+    move-result-object v3
 
-    if-nez p0, :cond_1
+    check-cast v3, Lej4;
 
-    const/4 p0, 0x0
+    :goto_2
+    move-object v7, v3
+
+    goto :goto_3
 
     :cond_1
-    invoke-virtual {p0}, Lg2d;->l()Lepe;
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object p0
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-object p0, p0, Lepe;->h:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ltz9;
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
-
-    if-nez p0, :cond_2
-
-    const/4 p0, 0x0
+    throw p0
 
     :cond_2
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    sget-object v3, Lzx9;->d:Ls5f;
 
-    move-result-object p0
+    invoke-virtual {v3}, Ls5f;->getValue()Ljava/lang/Object;
 
-    const-class v0, Lcbc;
+    move-result-object v3
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    check-cast v3, Lej4;
 
-    move-result-object p0
+    goto :goto_2
 
-    check-cast p0, Lcbc;
+    :goto_3
+    sget-object v3, Lzx9;->b:Lbp7;
 
-    return-object p0
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :pswitch_2
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
+    move-result-object v3
 
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
+    move-object v8, v3
 
-    if-nez p0, :cond_3
+    check-cast v8, Ljava/util/concurrent/ExecutorService;
 
-    const/4 p0, 0x0
+    move-object v9, p0
+
+    move v10, p2
+
+    invoke-direct/range {v5 .. v10}, Lxx9;-><init>(Lr4;Lej4;Ljava/util/concurrent/ExecutorService;Ljava/lang/String;Z)V
+
+    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v5}, Lxx9;->d()V
+
+    invoke-virtual {v2, v9, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-object v3, v5
+
+    goto :goto_4
 
     :cond_3
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+    move-object v9, p0
 
-    move-result-object p0
-
-    const-class v0, Ly64;
-
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ly64;
-
-    check-cast p0, Lg64;
-
-    iget-object p0, p0, Lg64;->b:Lbpc;
-
-    return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
-
-    if-nez p0, :cond_4
-
-    const/4 p0, 0x0
+    move v10, p2
 
     :cond_4
-    invoke-virtual {p0}, Lg2d;->f()Lbb2;
+    :goto_4
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result p0
 
-    return-object p0
+    if-eqz p0, :cond_6
 
-    :pswitch_4
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
+    if-eqz v10, :cond_5
 
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
+    iget-boolean p0, v3, Lxx9;->e:Z
+
+    iput-boolean v4, v3, Lxx9;->e:Z
 
     if-nez p0, :cond_5
 
-    const/4 p0, 0x0
+    iget-boolean p0, v3, Lxx9;->e:Z
+
+    if-eqz p0, :cond_5
+
+    invoke-virtual {v3}, Lxx9;->d()V
 
     :cond_5
-    invoke-virtual {p0}, Lg2d;->l()Lepe;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lepe;->f:Lth7;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lfga;
-
-    return-object p0
-
-    :pswitch_5
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object v0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_6
-
-    move-object v0, v1
+    return-object v3
 
     :cond_6
-    invoke-virtual {v0}, Lg2d;->s()Lhoe;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Loba;
+    if-eq p0, v1, :cond_4
 
-    invoke-virtual {v0}, Loba;->b()Lj04;
+    move-object p0, v9
 
-    move-result-object v0
-
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
-
-    if-nez p0, :cond_7
+    move p2, v10
 
     goto :goto_0
-
-    :cond_7
-    move-object v1, p0
-
-    :goto_0
-    invoke-virtual {v1}, Lg2d;->i()Lo75;
-
-    move-result-object p0
-
-    new-instance v1, Lkj;
-
-    invoke-direct {v1, p0}, Lkj;-><init>(Lo75;)V
-
-    invoke-virtual {v0, v1}, Ld0;->plus(Lh04;)Lh04;
-
-    move-result-object p0
-
-    invoke-static {}, Lus;->a()Lghe;
-
-    move-result-object v0
-
-    invoke-interface {p0, v0}, Lh04;->plus(Lh04;)Lh04;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    iget-object p0, p0, Lzx9;->b:Lru/ok/tamtam/android/services/NotificationTamService;
-
-    iget-object p0, p0, Lru/ok/tamtam/android/services/NotificationTamService;->a:Lg2d;
-
-    if-nez p0, :cond_8
-
-    const/4 p0, 0x0
-
-    :cond_8
-    invoke-virtual {p0}, Lg2d;->q()Lx9b;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

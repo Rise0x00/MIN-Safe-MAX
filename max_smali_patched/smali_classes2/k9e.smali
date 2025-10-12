@@ -1,41 +1,184 @@
 .class public final Lk9e;
-.super Lfa4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnwb;
 
-# static fields
-.field public static final b:Lk9e;
 
-.field public static final c:Laa4;
+# instance fields
+.field public final a:Lps;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lps;)V
+    .locals 0
 
-    new-instance v0, Lk9e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lfa4;-><init>()V
+    iput-object p1, p0, Lk9e;->a:Lps;
 
-    sput-object v0, Lk9e;->b:Lk9e;
+    return-void
+.end method
 
-    const/4 v1, 0x0
 
-    new-array v2, v1, [Ljava/lang/String;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const/16 v5, 0xe
+    const/4 v0, 0x1
 
-    const/4 v4, 0x0
+    if-ne p0, p1, :cond_0
 
-    const-string v1, ":stickers/search"
+    return v0
 
-    const/4 v3, 0x0
+    :cond_0
+    instance-of v1, p1, Lk9e;
 
-    invoke-static/range {v0 .. v5}, Lfa4;->a(Lfa4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Laa4;
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lk9e;
+
+    iget-object v1, p0, Lk9e;->a:Lps;
+
+    iget-object p1, p1, Lk9e;->a:Lps;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x10
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lww7;)Z
+    .locals 4
+
+    const/16 v0, 0x10
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lww7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lk9e;->a:Lps;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, -0x7ffffff0
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Lww7;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lk9e;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lfxb;
+
+    check-cast p1, Lk9e;
+
+    iget-object p1, p1, Lk9e;->a:Lps;
+
+    invoke-direct {v0, p1}, Lfxb;-><init>(Lps;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const v0, -0x7ffffff0
+
+    return v0
+.end method
+
+.method public final q(Lww7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lk9e;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShortLinkInputItem(state="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk9e;->a:Lps;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType=-2147483632)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lk9e;->c:Laa4;
-
-    return-void
+    return-object v0
 .end method

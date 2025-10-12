@@ -1,158 +1,51 @@
 .class public final Losb;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:Z
+.field public X:Lab8;
 
-.field public final b:Ljava/lang/Object;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lab8;
+
+.field public o:Lab8;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lab8;Lnz3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Losb;->Z:Lab8;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Losb;->a:Z
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Losb;->b:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Losb;->b:Ljava/lang/Object;
+    iput-object p1, p0, Losb;->Y:Ljava/lang/Object;
 
-    monitor-enter v0
+    iget p1, p0, Losb;->w0:I
 
-    const/4 v1, 0x1
+    const/high16 v0, -0x80000000
 
-    :try_start_0
-    iput-boolean v1, p0, Losb;->a:Z
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Losb;->b:Ljava/lang/Object;
+    iput p1, p0, Losb;->w0:I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->notify()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object p1, p0, Losb;->Z:Lab8;
 
-    monitor-exit v0
+    invoke-virtual {p1, p0}, Lab8;->a(Lnz3;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public final b(J)V
-    .locals 5
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr p1, v0
-
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_1
-
-    iget-object p1, p0, Losb;->b:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :goto_0
-    :try_start_0
-    iget-boolean p2, p0, Losb;->a:Z
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Losb;->b:Ljava/lang/Object;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    iput-boolean v3, p0, Losb;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p1
-
-    return-void
-
-    :goto_1
-    monitor-exit p1
-
-    throw p0
-
-    :cond_1
-    iget-object v2, p0, Losb;->b:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :goto_2
-    :try_start_1
-    iget-boolean v4, p0, Losb;->a:Z
-
-    if-nez v4, :cond_2
-
-    cmp-long v4, v0, p1
-
-    if-gez v4, :cond_2
-
-    iget-object v4, p0, Losb;->b:Ljava/lang/Object;
-
-    sub-long v0, p1, v0
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_2
-    iput-boolean v3, p0, Losb;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit v2
-
-    return-void
-
-    :goto_3
-    monitor-exit v2
-
-    throw p0
+    return-object p1
 .end method

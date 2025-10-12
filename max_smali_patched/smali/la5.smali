@@ -1,111 +1,157 @@
 .class public final Lla5;
-.super Ljava/lang/Object;
+.super Lx1;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/SurfaceHolder$Callback;
-.implements Landroid/view/TextureView$SurfaceTextureListener;
+.implements Lka5;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:Lra5;
+.field public final a:[Ljava/lang/Enum;
 
 
 # direct methods
-.method public constructor <init>(Lra5;)V
+.method public constructor <init>([Ljava/lang/Enum;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lla5;->a:Lra5;
+    iput-object p1, p0, Lla5;->a:[Ljava/lang/Enum;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Ljava/lang/Enum;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Ljava/lang/Enum;
+
+    iget-object v0, p0, Lla5;->a:[Ljava/lang/Enum;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    invoke-static {v2, v0}, Lhs;->j0(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Enum;
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lla5;->a:[Ljava/lang/Enum;
+
+    array-length v1, v0
+
+    if-ltz p1, :cond_0
+
+    if-ge p1, v1, :cond_0
+
+    aget-object p1, v0, p1
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v2, "index: "
+
+    const-string v3, ", size: "
+
+    invoke-static {v2, p1, v1, v3}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final getSize()I
     .locals 1
 
-    new-instance v0, Landroid/view/Surface;
+    iget-object v0, p0, Lla5;->a:[Ljava/lang/Enum;
 
-    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
+    array-length v0, v0
 
-    iget-object p0, p0, Lla5;->a:Lra5;
-
-    invoke-virtual {p0, v0}, Lra5;->m0(Landroid/view/Surface;)V
-
-    iput-object v0, p0, Lra5;->Q:Landroid/view/Surface;
-
-    invoke-virtual {p0, p2, p3}, Lra5;->a0(II)V
-
-    return-void
+    return v0
 .end method
 
-.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
-    .locals 0
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 3
 
-    const/4 p1, 0x0
+    instance-of v0, p1, Ljava/lang/Enum;
 
-    iget-object p0, p0, Lla5;->a:Lra5;
+    const/4 v1, -0x1
 
-    invoke-virtual {p0, p1}, Lra5;->m0(Landroid/view/Surface;)V
+    if-nez v0, :cond_0
 
-    const/4 p1, 0x0
+    return v1
 
-    invoke-virtual {p0, p1, p1}, Lra5;->a0(II)V
+    :cond_0
+    check-cast p1, Ljava/lang/Enum;
 
-    const/4 p0, 0x1
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    return p0
+    move-result v0
+
+    iget-object v2, p0, Lla5;->a:[Ljava/lang/Enum;
+
+    invoke-static {v0, v2}, Lhs;->j0(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Enum;
+
+    if-ne v2, p1, :cond_1
+
+    return v0
+
+    :cond_1
+    return v1
 .end method
 
-.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
-    .locals 0
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 1
 
-    iget-object p0, p0, Lla5;->a:Lra5;
+    instance-of v0, p1, Ljava/lang/Enum;
 
-    invoke-virtual {p0, p2, p3}, Lra5;->a0(II)V
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    const/4 p1, -0x1
 
-.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
-    .locals 0
+    return p1
 
-    return-void
-.end method
+    :cond_0
+    check-cast p1, Ljava/lang/Enum;
 
-.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
-    .locals 0
+    invoke-virtual {p0, p1}, Lla5;->indexOf(Ljava/lang/Object;)I
 
-    iget-object p0, p0, Lla5;->a:Lra5;
+    move-result p1
 
-    invoke-virtual {p0, p3, p4}, Lra5;->a0(II)V
-
-    return-void
-.end method
-
-.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
-    .locals 0
-
-    iget-object p0, p0, Lla5;->a:Lra5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
-    .locals 0
-
-    iget-object p0, p0, Lla5;->a:Lra5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1, p1}, Lra5;->a0(II)V
-
-    return-void
+    return p1
 .end method

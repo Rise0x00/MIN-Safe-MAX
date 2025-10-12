@@ -1,23 +1,41 @@
-.class public final Lolg;
+.class public interface abstract Lolg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# virtual methods
+.method public a(Ljava/lang/Class;)Ljlg;
+    .locals 1
 
-.field public final b:Ljava/lang/String;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
+    const-string v0, "`Factory.create(String, CreationExtras)` is not implemented. You may need to override the method and provide a custom implementation. Note that using `Factory.create(String)` is not supported and considered an error."
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b(Ljava/lang/Class;Lys9;)Ljlg;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0, p1}, Lolg;->a(Ljava/lang/Class;)Ljlg;
 
-    iput-object p1, p0, Lolg;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iput-object p2, p0, Lolg;->b:Ljava/lang/String;
+    return-object p1
+.end method
 
-    return-void
+.method public c(Ll53;Lys9;)Ljlg;
+    .locals 0
+
+    invoke-interface {p1}, Lj53;->a()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1, p2}, Lolg;->b(Ljava/lang/Class;Lys9;)Ljlg;
+
+    move-result-object p1
+
+    return-object p1
 .end method

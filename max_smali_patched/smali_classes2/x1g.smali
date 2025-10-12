@@ -1,99 +1,67 @@
-.class public final Lx1g;
+.class public abstract synthetic Lx1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfsc;
 
-
-# instance fields
-.field public final a:Lvf9;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lvf9;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx1g;->a:Lvf9;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 3
 
-    const/4 v0, 0x1
+    invoke-static {}, Lk10;->values()[Lk10;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    array-length v0, v0
 
-    :cond_0
-    instance-of v1, p1, Lx1g;
+    new-array v0, v0, [I
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    if-nez v1, :cond_1
+    const/4 v2, 0x2
 
-    return v2
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
-    check-cast p1, Lx1g;
+    :catch_0
+    const/4 v1, 0x4
 
-    iget-object p0, p0, Lx1g;->a:Lvf9;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p1, Lx1g;->a:Lvf9;
+    :catch_1
+    const/4 v2, 0x3
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :try_start_2
+    aput v2, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result p0
+    :catch_2
+    const/16 v2, 0x9
 
-    if-nez p0, :cond_2
+    :try_start_3
+    aput v1, v0, v2
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    return v2
+    :catch_3
+    const/4 v1, 0x5
 
-    :cond_2
-    return v0
-.end method
+    :try_start_4
+    aput v1, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-.method public final hashCode()I
-    .locals 0
+    :catch_4
+    sput-object v0, Lx1g;->$EnumSwitchMapping$0:[I
 
-    iget-object p0, p0, Lx1g;->a:Lvf9;
-
-    iget-object p0, p0, Lvf9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WatchTogetherUpdateNotification(updates="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lx1g;->a:Lvf9;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

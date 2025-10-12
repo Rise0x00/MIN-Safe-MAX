@@ -1,34 +1,33 @@
-.class public interface abstract Loa8;
+.class public final Loa8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final L:Lcy9;
+# instance fields
+.field public final a:I
+
+.field public final b:[I
+
+.field public final c:[Lwnf;
+
+.field public final d:[[[I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>([I[Lwnf;[I[[[ILwnf;)V
+    .locals 0
 
-    new-instance v0, Lcy9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xd
+    iput-object p1, p0, Loa8;->b:[I
 
-    invoke-direct {v0, v1}, Lcy9;-><init>(I)V
+    iput-object p2, p0, Loa8;->c:[Lwnf;
 
-    sput-object v0, Loa8;->L:Lcy9;
+    iput-object p4, p0, Loa8;->d:[[[I
+
+    array-length p1, p1
+
+    iput p1, p0, Loa8;->a:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()J
-.end method
-
-.method public abstract b()J
-.end method
-
-.method public abstract next()Z
 .end method

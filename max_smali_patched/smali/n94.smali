@@ -1,194 +1,373 @@
 .class public final Ln94;
-.super Ljava/lang/Object;
+.super Ljava/io/InputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final X:Ljava/lang/Object;
 
-.field public final b:Ln26;
+.field public final Y:Ljava/lang/Object;
 
-.field public final c:Ln26;
+.field public final synthetic a:I
 
-.field public final d:I
+.field public final b:[B
 
-.field public final e:I
+.field public c:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ln26;Ln26;II)V
+.method public constructor <init>(Li94;Lq94;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-eqz p4, :cond_1
-
-    if-nez p5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_1
+    iput v0, p0, Ln94;->a:I
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    .line 1
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    :goto_1
-    invoke-static {v0}, Lkc5;->g(Z)V
+    .line 2
+    iput-boolean v0, p0, Ln94;->c:Z
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 3
+    iput-boolean v0, p0, Ln94;->o:Z
 
-    move-result v0
+    .line 4
+    iput-object p1, p0, Ln94;->X:Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    .line 5
+    iput-object p2, p0, Ln94;->Y:Ljava/lang/Object;
 
-    iput-object p1, p0, Ln94;->a:Ljava/lang/String;
+    const/4 p1, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 6
+    new-array p1, p1, [B
 
-    iput-object p2, p0, Ln94;->b:Ln26;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p3, p0, Ln94;->c:Ln26;
-
-    iput p4, p0, Ln94;->d:I
-
-    iput p5, p0, Ln94;->e:I
+    iput-object p1, p0, Ln94;->b:[B
 
     return-void
+.end method
 
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+.method public constructor <init>(Lk94;Lr94;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    const/4 v0, 0x1
 
-    throw p0
+    iput v0, p0, Ln94;->a:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 8
+    iput-boolean v0, p0, Ln94;->c:Z
+
+    .line 9
+    iput-boolean v0, p0, Ln94;->o:Z
+
+    .line 10
+    iput-object p1, p0, Ln94;->X:Ljava/lang/Object;
+
+    .line 11
+    iput-object p2, p0, Ln94;->Y:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    .line 12
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Ln94;->b:[B
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final close()V
+    .locals 1
+
+    iget v0, p0, Ln94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ln94;->o:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
+
+    check-cast v0, Lk94;
+
+    invoke-interface {v0}, Lk94;->close()V
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    iput-boolean v0, p0, Ln94;->o:Z
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
 
-    if-eqz p1, :cond_2
+    :pswitch_0
+    iget-boolean v0, p0, Ln94;->o:Z
 
-    const-class v2, Ln94;
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
 
-    move-result-object v3
+    check-cast v0, Li94;
 
-    if-eq v2, v3, :cond_1
+    invoke-interface {v0}, Li94;->close()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ln94;->o:Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m()V
+    .locals 2
+
+    iget v0, p0, Ln94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ln94;->c:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
+
+    check-cast v0, Lk94;
+
+    iget-object v1, p0, Ln94;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lr94;
+
+    invoke-interface {v0, v1}, Lk94;->G(Lr94;)J
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ln94;->c:Z
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Ln94;->c:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
+
+    check-cast v0, Li94;
+
+    iget-object v1, p0, Ln94;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lq94;
+
+    invoke-interface {v0, v1}, Li94;->P(Lq94;)J
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ln94;->c:Z
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final read()I
+    .locals 4
+
+    iget v0, p0, Ln94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1
+    iget-object v0, p0, Ln94;->b:[B
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v2, v1}, Ln94;->read([BII)I
+
+    move-result v1
+
+    const/4 v3, -0x1
+
+    if-ne v1, v3, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Ln94;
+    .line 2
+    :cond_0
+    aget-byte v0, v0, v2
 
-    iget v2, p0, Ln94;->d:I
+    and-int/lit16 v3, v0, 0xff
 
-    iget v3, p1, Ln94;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ln94;->e:I
-
-    iget v3, p1, Ln94;->e:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ln94;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Ln94;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ln94;->b:Ln26;
-
-    iget-object v3, p1, Ln94;->b:Ln26;
-
-    invoke-virtual {v2, v3}, Ln26;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object p0, p0, Ln94;->c:Ln26;
-
-    iget-object p1, p1, Ln94;->c:Ln26;
-
-    invoke-virtual {p0, p1}, Ln26;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
+    return v3
+
+    .line 3
+    :pswitch_0
+    iget-object v0, p0, Ln94;->b:[B
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v0, v2, v1}, Ln94;->read([BII)I
+
+    move-result v1
+
+    const/4 v3, -0x1
+
+    if-ne v1, v3, :cond_1
+
+    goto :goto_1
+
+    .line 4
+    :cond_1
+    aget-byte v0, v0, v2
+
+    and-int/lit16 v3, v0, 0xff
+
+    :goto_1
+    return v3
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final read([B)I
+    .locals 2
 
-    const/16 v0, 0x20f
+    iget v0, p0, Ln94;->a:I
 
-    iget v1, p0, Ln94;->d:I
+    packed-switch v0, :pswitch_data_0
 
-    add-int/2addr v0, v1
+    const/4 v0, 0x0
 
-    const/16 v1, 0x1f
+    .line 5
+    array-length v1, p1
 
-    mul-int/2addr v0, v1
+    invoke-virtual {p0, p1, v0, v1}, Ln94;->read([BII)I
 
-    iget v2, p0, Ln94;->e:I
+    move-result p1
 
-    add-int/2addr v0, v2
+    return p1
 
-    mul-int/2addr v0, v1
+    :pswitch_0
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Ln94;->a:Ljava/lang/String;
+    .line 6
+    array-length v1, p1
 
-    invoke-static {v0, v1, v2}, Lcx3;->d(IILjava/lang/String;)I
+    invoke-virtual {p0, p1, v0, v1}, Ln94;->read([BII)I
 
-    move-result v0
+    move-result p1
 
-    iget-object v2, p0, Ln94;->b:Ln26;
+    return p1
 
-    invoke-virtual {v2}, Ln26;->hashCode()I
+    nop
 
-    move-result v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    add-int/2addr v2, v0
+.method public final read([BII)I
+    .locals 1
 
-    mul-int/2addr v2, v1
+    iget v0, p0, Ln94;->a:I
 
-    iget-object p0, p0, Ln94;->c:Ln26;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Ln26;->hashCode()I
+    .line 7
+    iget-boolean v0, p0, Ln94;->o:Z
 
-    move-result p0
+    xor-int/lit8 v0, v0, 0x1
 
-    add-int/2addr p0, v2
+    invoke-static {v0}, Lpih;->o(Z)V
 
-    return p0
+    .line 8
+    invoke-virtual {p0}, Ln94;->m()V
+
+    .line 9
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
+
+    check-cast v0, Lk94;
+
+    invoke-interface {v0, p1, p2, p3}, Ld94;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    move p1, p2
+
+    :cond_0
+    return p1
+
+    .line 10
+    :pswitch_0
+    iget-boolean v0, p0, Ln94;->o:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {v0}, Lyhh;->g(Z)V
+
+    .line 11
+    invoke-virtual {p0}, Ln94;->m()V
+
+    .line 12
+    iget-object v0, p0, Ln94;->X:Ljava/lang/Object;
+
+    check-cast v0, Li94;
+
+    invoke-interface {v0, p1, p2, p3}, Lc94;->read([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_1
+
+    move p1, p2
+
+    :cond_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,65 +1,184 @@
 .class public final Lry5;
-.super Lrca;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyz5;
+.implements Lss4;
+
+
+# instance fields
+.field public X:Z
+
+.field public final a:Lnee;
+
+.field public final b:Lyl0;
+
+.field public final c:Ljava/lang/Object;
+
+.field public o:Leze;
+
+
+# direct methods
+.method public constructor <init>(Lnee;Ljava/lang/Object;Lyl0;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lry5;->a:Lnee;
+
+    iput-object p3, p0, Lry5;->b:Lyl0;
+
+    iput-object p2, p0, Lry5;->c:Ljava/lang/Object;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final b()V
+    .locals 2
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iget-boolean v0, p0, Lry5;->X:Z
 
-    move-result p2
+    if-eqz v0, :cond_0
 
-    const/16 v0, 0x8
+    return-void
 
-    int-to-float v0, v0
+    :cond_0
+    const/4 v0, 0x1
 
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
+    iput-boolean v0, p0, Lry5;->X:Z
 
-    move-result-object v1
+    sget-object v0, Lgze;->a:Lgze;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput-object v0, p0, Lry5;->o:Leze;
 
-    move-result-object v1
+    iget-object v0, p0, Lry5;->a:Lnee;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    iget-object v1, p0, Lry5;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1, v2, p2}, Lc22;->e(FFII)I
+    return-void
+.end method
 
-    move-result p2
+.method public final d(Leze;)V
+    .locals 2
 
-    const/16 v0, 0x80
+    iget-object v0, p0, Lry5;->o:Leze;
 
-    int-to-float v0, v0
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Litg;->z(F)I
+    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
 
     move-result v0
 
-    sub-int/2addr p2, v0
+    if-eqz v0, :cond_0
 
-    const/high16 v0, 0x40000000    # 2.0f
+    iput-object p1, p0, Lry5;->o:Leze;
 
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    iget-object v0, p0, Lry5;->a:Lnee;
 
-    move-result p2
+    invoke-interface {v0, p0}, Lnee;->c(Lss4;)V
 
-    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Leze;->i(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lry5;->X:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lry5;->b:Lyl0;
+
+    iget-object v1, p0, Lry5;->c:Ljava/lang/Object;
+
+    invoke-interface {v0, v1, p1}, Lyl0;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Lry5;->o:Leze;
+
+    invoke-interface {v0}, Leze;->cancel()V
+
+    invoke-virtual {p0, p1}, Lry5;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lry5;->o:Leze;
+
+    invoke-interface {v0}, Leze;->cancel()V
+
+    sget-object v0, Lgze;->a:Lgze;
+
+    iput-object v0, p0, Lry5;->o:Leze;
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 2
+
+    iget-object v0, p0, Lry5;->o:Leze;
+
+    sget-object v1, Lgze;->a:Lgze;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lry5;->X:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lry5;->X:Z
+
+    sget-object v0, Lgze;->a:Lgze;
+
+    iput-object v0, p0, Lry5;->o:Leze;
+
+    iget-object v0, p0, Lry5;->a:Lnee;
+
+    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

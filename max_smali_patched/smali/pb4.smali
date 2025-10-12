@@ -1,31 +1,35 @@
-.class public final Lpb4;
+.class public final synthetic Lpb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+
 # instance fields
-.field public final a:Lj5b;
+.field private volatile synthetic installations$volatile:I
 
-.field public final b:Z
-
-.field public final c:J
-
-.field public final d:J
+.field private volatile synthetic sequenceNumber$volatile:J
 
 
 # direct methods
-.method public constructor <init>(Lj5b;ZJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "installations$volatile"
 
-    iput-object p1, p0, Lpb4;->a:Lj5b;
+    const-class v1, Lpb4;
 
-    iput-boolean p2, p0, Lpb4;->b:Z
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    iput-wide p3, p0, Lpb4;->c:J
+    move-result-object v0
 
-    iput-wide p5, p0, Lpb4;->d:J
+    sput-object v0, Lpb4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    const-string v0, "sequenceNumber$volatile"
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
 
     return-void
 .end method

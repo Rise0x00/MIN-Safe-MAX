@@ -1,118 +1,62 @@
-.class public final Lu03;
+.class public final synthetic Lu03;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx94;
+.implements Lbva;
 
 
-# static fields
-.field public static final a:Lu03;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:Lv03;
+.field public final synthetic b:Lx9e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lx9e;I)V
+    .locals 0
 
-    new-instance v0, Lu03;
+    iput p2, p0, Lu03;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu03;->b:Lx9e;
 
-    sput-object v0, Lu03;->a:Lu03;
-
-    sget-object v0, Lv03;->b:Lv03;
-
-    sput-object v0, Lu03;->b:Lv03;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfa4;
-    .locals 0
+.method public final k(Lcva;)V
+    .locals 2
 
-    sget-object p0, Lu03;->b:Lv03;
+    iget v0, p0, Lu03;->a:I
 
-    return-object p0
-.end method
+    iget-object v1, p0, Lu03;->b:Lx9e;
 
-.method public final b(Ljava/lang/String;Laa4;Landroid/os/Bundle;)Lia4;
-    .locals 7
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p0, Lu03;->b:Lv03;
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->T0:[Ltm7;
 
-    iget-object p0, p0, Lfa4;->a:Ljava/util/LinkedHashSet;
+    iget-object v0, v1, Lx9e;->b:Lxe6;
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p0
+    return-void
 
-    if-nez p0, :cond_0
+    :pswitch_0
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->P0:[Ltm7;
 
-    const/4 p0, 0x0
+    iget-object v0, v1, Lx9e;->b:Lxe6;
 
-    return-object p0
+    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance v5, Lga4;
+    return-void
 
-    new-instance p0, Lsl2;
+    nop
 
-    const/16 v0, 0x1a
-
-    invoke-direct {p0, v0}, Lsl2;-><init>(I)V
-
-    new-instance v0, Lsl2;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lsl2;-><init>(I)V
-
-    invoke-direct {v5, p0, v0}, Lga4;-><init>(Ld96;Ld96;)V
-
-    sget-object p0, Lv03;->c:Laa4;
-
-    invoke-virtual {p2, p0}, Laa4;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance v0, Lia4;
-
-    new-instance v6, Lh;
-
-    const/4 p0, 0x7
-
-    invoke-direct {v6, p0}, Lh;-><init>(I)V
-
-    const/4 v4, 0x1
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v6}, Lia4;-><init>(Ljava/lang/String;Laa4;Landroid/os/Bundle;ILga4;Lha4;)V
-
-    return-object v0
-
-    :cond_1
-    move-object v2, p2
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "invalid route "
-
-    invoke-static {p1, v2}, Ldw1;->g(Ljava/lang/String;Laa4;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

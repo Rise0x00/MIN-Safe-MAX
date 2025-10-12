@@ -1,97 +1,73 @@
 .class public final Lhq6;
-.super Ljq6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final r0:Ljava/lang/String;
+.field public final a:Llq6;
 
-.field public final s0:Lg07;
+.field public final b:Lnq6;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 19
+.method public constructor <init>(Llq6;Lnq6;)V
+    .locals 1
 
-    .line 1
-    sget-object v0, Lg07;->b:Lzu5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    sget-object v18, Lvic;->X:Lvic;
+    const/4 v0, 0x1
 
-    const/4 v3, 0x0
+    iput-boolean v0, p0, Lhq6;->c:Z
 
-    .line 3
-    const-string v4, ""
+    iput-object p1, p0, Lhq6;->a:Llq6;
 
-    const-wide/16 v5, 0x0
-
-    const/4 v7, -0x1
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v10, 0x0
-
-    const/16 v17, 0x0
-
-    move-object/from16 v1, p0
-
-    move-wide/from16 v13, p1
-
-    move-wide/from16 v15, p3
-
-    move-object/from16 v2, p5
-
-    move-object/from16 v11, p6
-
-    move-object/from16 v12, p7
-
-    invoke-direct/range {v1 .. v18}, Lhq6;-><init>(Ljava/lang/String;Lhq6;Ljava/lang/String;JIJLmu4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    iput-object p2, p0, Lhq6;->b:Lnq6;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lhq6;Ljava/lang/String;JIJLmu4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
-    .locals 16
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-object/from16 v1, p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object/from16 v2, p2
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-wide/from16 v3, p4
+    iget-object v1, p0, Lhq6;->a:Llq6;
 
-    move/from16 v5, p6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v6, p7
+    const-string v1, " "
 
-    move-object/from16 v8, p9
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v9, p10
+    iget-boolean v2, p0, Lhq6;->c:Z
 
-    move-object/from16 v10, p11
+    if-nez v2, :cond_0
 
-    move-wide/from16 v11, p12
+    const-string v2, "+>"
 
-    move-wide/from16 v13, p14
+    goto :goto_0
 
-    move/from16 v15, p16
+    :cond_0
+    const-string v2, "->"
 
-    .line 4
-    invoke-direct/range {v0 .. v15}, Ljq6;-><init>(Ljava/lang/String;Lhq6;JIJLmu4;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    :goto_0
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v1, p3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 5
-    iput-object v1, v0, Lhq6;->r0:Ljava/lang/String;
+    iget-object v1, p0, Lhq6;->b:Lnq6;
 
-    .line 6
-    invoke-static/range {p17 .. p17}, Lg07;->j(Ljava/util/Collection;)Lg07;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object v1, v0, Lhq6;->s0:Lg07;
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method

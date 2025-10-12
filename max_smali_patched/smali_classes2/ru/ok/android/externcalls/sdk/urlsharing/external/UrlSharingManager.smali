@@ -14,15 +14,15 @@
         "",
         "url",
         "Lkotlin/Function0;",
-        "Ltcf;",
+        "Loyf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "start",
-        "(Ljava/lang/String;Ld96;Lf96;)V",
+        "(Ljava/lang/String;Lve6;Lxe6;)V",
         "stop",
-        "(Ld96;Lf96;)V",
+        "(Lve6;Lxe6;)V",
         "Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;",
         "listener",
         "addListener",
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public static synthetic start$default(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;Ljava/lang/String;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic start$default(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;Ljava/lang/String;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p5, :cond_2
@@ -62,7 +62,7 @@
     move-object p3, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;->start(Ljava/lang/String;Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;->start(Ljava/lang/String;Lve6;Lxe6;)V
 
     return-void
 
@@ -76,7 +76,7 @@
     throw p0
 .end method
 
-.method public static synthetic stop$default(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;Ld96;Lf96;ILjava/lang/Object;)V
+.method public static synthetic stop$default(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;Lve6;Lxe6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p4, :cond_2
@@ -97,7 +97,7 @@
     move-object p2, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;->stop(Ld96;Lf96;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingManager;->stop(Lve6;Lxe6;)V
 
     return-void
 
@@ -119,24 +119,24 @@
 .method public abstract removeListener(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V
 .end method
 
-.method public abstract start(Ljava/lang/String;Ld96;Lf96;)V
+.method public abstract start(Ljava/lang/String;Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract stop(Ld96;Lf96;)V
+.method public abstract stop(Lve6;Lxe6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
-            "Lf96;",
+            "Lve6;",
+            "Lxe6;",
             ")V"
         }
     .end annotation

@@ -1,119 +1,79 @@
-.class public final Lpoa;
-.super Lep9;
+.class public abstract Lpoa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final a:I
 
-.field public final c:Z
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Ltcf;->a:Ltcf;
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    invoke-direct {p0, v0}, Lep9;-><init>(Ljava/lang/Object;)V
+    sput v0, Lpoa;->a:I
 
-    iput-wide p1, p0, Lpoa;->b:J
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
-    iput-boolean p3, p0, Lpoa;->c:Z
+    sput v0, Lpoa;->b:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
+
+    sput v0, Lpoa;->c:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
+
+    sput v0, Lpoa;->d:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
+
+    sput v0, Lpoa;->e:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+
+    sput v0, Lpoa;->f:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_rate_view_title:I
+
+    sput v0, Lpoa;->g:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view:I
+
+    sput v0, Lpoa;->h:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
+
+    sput v0, Lpoa;->i:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_icon:I
+
+    sput v0, Lpoa;->j:I
+
+    sget v0, Lmec;->fake_in_app_review_bottom_sheet_thank_view_title:I
+
+    sput v0, Lpoa;->k:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpoa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpoa;
-
-    iget-wide v3, p0, Lpoa;->b:J
-
-    iget-wide v5, p1, Lpoa;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lpoa;->c:Z
-
-    iget-boolean p1, p1, Lpoa;->c:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lpoa;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lpoa;->c:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenOneToOneCall(opponentId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lpoa;->b:J
-
-    iget-boolean p0, p0, Lpoa;->c:Z
-
-    invoke-static {v2, v3, v0, v1, p0}, Lmh0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

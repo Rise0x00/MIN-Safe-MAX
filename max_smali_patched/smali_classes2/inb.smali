@@ -1,49 +1,83 @@
-.class public final Linb;
-.super Lax3;
+.class public final synthetic Linb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lknb;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lpnb;
 
 
 # direct methods
-.method public constructor <init>(Lknb;Lax3;)V
+.method public synthetic constructor <init>(Lpnb;I)V
     .locals 0
 
-    iput-object p1, p0, Linb;->X:Lknb;
+    iput p2, p0, Linb;->a:I
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Linb;->b:Lpnb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Linb;->o:Ljava/lang/Object;
+    iget v0, p0, Linb;->a:I
 
-    iget p1, p0, Linb;->Y:I
+    check-cast p1, Ljava/lang/Float;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    or-int/2addr p1, v0
+    move-result p1
 
-    iput p1, p0, Linb;->Y:I
+    check-cast p2, Ljava/lang/Float;
 
-    iget-object p1, p0, Linb;->X:Lknb;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0, p0}, Lknb;->i(Ljava/lang/Long;Lax3;)Ljava/lang/Object;
+    iget-object p2, p0, Linb;->b:Lpnb;
 
-    move-result-object p0
+    invoke-static {p2, p1}, Lpnb;->a(Lpnb;F)V
 
-    return-object p0
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    move-result p2
+
+    iget-object v0, p0, Linb;->b:Lpnb;
+
+    invoke-static {v0, p1, p2}, Lpnb;->c(Lpnb;FF)V
+
+    goto :goto_0
+
+    :pswitch_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p0, Linb;->b:Lpnb;
+
+    invoke-static {p2, p1}, Lpnb;->b(Lpnb;F)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

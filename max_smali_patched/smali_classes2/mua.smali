@@ -1,69 +1,151 @@
-.class public final synthetic Lmua;
+.class public abstract Lmua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhm3;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lwua;
+.field public static final b:I
 
-.field public final synthetic b:Z
+.field public static final c:I
 
-.field public final synthetic c:Lorg/webrtc/SessionDescription;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwua;ZLorg/webrtc/SessionDescription;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ldkc;->oneme_setting_item_about:I
 
-    iput-object p1, p0, Lmua;->a:Lwua;
+    sput v0, Lmua;->a:I
 
-    iput-boolean p2, p0, Lmua;->b:Z
+    sget v0, Ldkc;->oneme_setting_item_appearance:I
 
-    iput-object p3, p0, Lmua;->c:Lorg/webrtc/SessionDescription;
+    sput v0, Lmua;->b:I
 
-    return-void
-.end method
+    sget v0, Ldkc;->oneme_setting_item_battery:I
 
+    sput v0, Lmua;->c:I
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    sget v0, Ldkc;->oneme_setting_item_esia_connected_title:I
 
-    check-cast p1, Lorg/webrtc/PeerConnection;
+    sput v0, Lmua;->d:I
 
-    iget-object p1, p0, Lmua;->a:Lwua;
+    sget v0, Ldkc;->oneme_setting_item_esia_not_connected_subtitle:I
 
-    iget-object v0, p1, Lwua;->r:Landroid/os/Handler;
+    sput v0, Lmua;->e:I
 
-    iget-boolean v1, p0, Lmua;->b:Z
+    sget v0, Ldkc;->oneme_setting_item_esia_not_connected_title:I
 
-    iget-object p0, p0, Lmua;->c:Lorg/webrtc/SessionDescription;
+    sput v0, Lmua;->f:I
 
-    if-eqz v1, :cond_0
+    sget v0, Ldkc;->oneme_setting_item_folders:I
 
-    new-instance v1, Lqua;
+    sput v0, Lmua;->g:I
 
-    const/4 v2, 0x0
+    sget v0, Ldkc;->oneme_setting_item_invite_friends_title:I
 
-    invoke-direct {v1, p1, p0, v2}, Lqua;-><init>(Lwua;Lorg/webrtc/SessionDescription;I)V
+    sput v0, Lmua;->h:I
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget v0, Ldkc;->oneme_setting_item_messages:I
 
-    return-void
+    sput v0, Lmua;->i:I
 
-    :cond_0
-    new-instance v1, Lqua;
+    sget v0, Ldkc;->oneme_setting_item_notification:I
 
-    const/4 v2, 0x1
+    sput v0, Lmua;->j:I
 
-    invoke-direct {v1, p1, p0, v2}, Lqua;-><init>(Lwua;Lorg/webrtc/SessionDescription;I)V
+    sget v0, Ldkc;->oneme_setting_item_notification_and_sound:I
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput v0, Lmua;->k:I
+
+    sget v0, Ldkc;->oneme_setting_item_privacy:I
+
+    sput v0, Lmua;->l:I
+
+    sget v0, Ldkc;->oneme_setting_item_storage:I
+
+    sput v0, Lmua;->m:I
+
+    sget v0, Ldkc;->oneme_setting_item_support:I
+
+    sput v0, Lmua;->n:I
+
+    sget v0, Ldkc;->oneme_settings_cant_open_camera:I
+
+    sput v0, Lmua;->o:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_error:I
+
+    sput v0, Lmua;->p:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_success:I
+
+    sput v0, Lmua;->q:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_title:I
+
+    sput v0, Lmua;->r:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_camera:I
+
+    sput v0, Lmua;->s:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Lmua;->t:I
+
+    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Lmua;->u:I
+
+    sget v0, Ldkc;->oneme_settings_link_copied_snackbar_title:I
+
+    sput v0, Lmua;->v:I
+
+    sget v0, Ldkc;->oneme_settings_phonenumber_copied_snackbar_title:I
+
+    sput v0, Lmua;->w:I
 
     return-void
 .end method

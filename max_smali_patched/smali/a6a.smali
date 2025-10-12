@@ -1,127 +1,68 @@
-.class public abstract La6a;
-.super Ljava/lang/Object;
+.class public final La6a;
+.super Li6a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public e:[I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
+.field public f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final b(Lyqd;)V
+    .locals 4
 
-    sget v0, Li3c;->oneme_appearance_settings_background_title:I
+    iget-object p1, p1, Lyqd;->b:Ljava/lang/Object;
 
-    sput v0, La6a;->a:I
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    sget v0, Li3c;->oneme_appearance_settings_dark_mode:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    sput v0, La6a;->b:I
+    const/16 v1, 0x22
 
-    sget v0, Li3c;->oneme_appearance_settings_font_size_reset:I
+    if-lt v0, v1, :cond_0
 
-    sput v0, La6a;->c:I
+    invoke-static {}, Li5a;->a()Landroid/app/Notification$MediaStyle;
 
-    sget v0, Li3c;->oneme_appearance_settings_font_size_title:I
+    move-result-object v0
 
-    sput v0, La6a;->d:I
+    const/4 v1, 0x0
 
-    sget v0, Li3c;->oneme_appearance_settings_light_mode:I
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    sput v0, La6a;->e:I
+    const/4 v3, 0x0
 
-    sget v0, Li3c;->oneme_appearance_settings_message_incoming:I
+    invoke-static {v0, v3, v1, v3, v2}, Lo5a;->a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
 
-    sput v0, La6a;->f:I
+    move-result-object v0
 
-    sget v0, Li3c;->oneme_appearance_settings_message_incoming_first:I
+    iget-object v1, p0, La6a;->e:[I
 
-    sput v0, La6a;->g:I
+    iget-object v2, p0, La6a;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    sget v0, Li3c;->oneme_appearance_settings_message_incoming_second:I
+    invoke-static {v0, v1, v2}, Li5a;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
 
-    sput v0, La6a;->h:I
+    move-result-object v0
 
-    sget v0, Li3c;->oneme_appearance_settings_message_outgoing:I
+    invoke-static {p1, v0}, Li5a;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
 
-    sput v0, La6a;->i:I
+    return-void
 
-    sget v0, Li3c;->oneme_appearance_settings_message_outgoing_new:I
+    :cond_0
+    invoke-static {}, Li5a;->a()Landroid/app/Notification$MediaStyle;
 
-    sput v0, La6a;->j:I
+    move-result-object v0
 
-    sget v0, Li3c;->oneme_appearance_settings_mode_title:I
+    iget-object v1, p0, La6a;->e:[I
 
-    sput v0, La6a;->k:I
+    iget-object v2, p0, La6a;->f:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    sget v0, Li3c;->oneme_appearance_settings_system_mode:I
+    invoke-static {v0, v1, v2}, Li5a;->b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
 
-    sput v0, La6a;->l:I
+    move-result-object v0
 
-    sget v0, Li3c;->oneme_appearance_settings_toolbar_title:I
-
-    sput v0, La6a;->m:I
-
-    sget v0, Li3c;->oneme_appearance_theme_moscow_name:I
-
-    sput v0, La6a;->n:I
-
-    sget v0, Li3c;->oneme_appearance_theme_nature_name:I
-
-    sput v0, La6a;->o:I
-
-    sget v0, Li3c;->oneme_appearance_theme_neon_name:I
-
-    sput v0, La6a;->p:I
-
-    sget v0, Li3c;->oneme_appearance_theme_simple_name:I
-
-    sput v0, La6a;->q:I
-
-    sget v0, Li3c;->oneme_appearance_theme_space_name:I
-
-    sput v0, La6a;->r:I
-
-    sget v0, Li3c;->oneme_appearance_theme_unknown_name:I
-
-    sput v0, La6a;->s:I
+    invoke-static {p1, v0}, Li5a;->d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
 
     return-void
 .end method

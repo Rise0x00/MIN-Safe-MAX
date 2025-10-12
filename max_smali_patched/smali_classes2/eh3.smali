@@ -2,125 +2,280 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:I
-
-.field public static final d:I
+# interfaces
+.implements Lq8g;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final a:Ljava/util/List;
 
-.field public b:Landroid/content/res/Configuration;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Landroid/net/Uri;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:I
+
+.field public final h:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(JLjava/util/List;)V
     .locals 3
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1f
-
-    if-lt v0, v1, :cond_0
-
-    const v2, 0x10003d84
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v2, 0x3d84
-
-    :goto_0
-    sput v2, Leh3;->c:I
-
-    if-lt v0, v1, :cond_1
-
-    const/high16 v0, 0x50000000
-
-    goto :goto_1
-
-    :cond_1
-    const/high16 v0, 0x40000000    # 2.0f
-
-    :goto_1
-    sput v0, Leh3;->d:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p3, p0, Leh3;->a:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    iput-wide p1, p0, Leh3;->b:J
 
-    iput-object v0, p0, Leh3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 v0, 0x0
 
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    check-cast v1, Ldh3;
+
+    invoke-virtual {v1}, Ldh3;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    iput-object v0, p0, Leh3;->b:Landroid/content/res/Configuration;
+    move-result v1
 
-    new-instance v0, Lme2;
+    int-to-long v1, v1
 
-    invoke-direct {v0, p0, p1}, Lme2;-><init>(Leh3;Landroid/content/Context;)V
+    iput-wide v1, p0, Leh3;->c:J
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+    iput-wide p1, p0, Leh3;->d:J
+
+    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+
+    iput-object p1, p0, Leh3;->e:Landroid/net/Uri;
+
+    const-string p1, "video/mp4"
+
+    iput-object p1, p0, Leh3;->f:Ljava/lang/String;
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldh3;
+
+    iget p1, p1, Ldh3;->b:I
+
+    iput p1, p0, Leh3;->g:I
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldh3;
+
+    iget p1, p1, Ldh3;->c:I
+
+    iput p1, p0, Leh3;->h:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILdh3;)V
-    .locals 1
+.method public final d()J
+    .locals 2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-wide/16 v0, 0x0
 
-    move-result-object p1
+    return-wide v0
+.end method
 
-    iget-object p0, p0, Leh3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+.method public final e()J
+    .locals 2
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v0, p0, Leh3;->c:J
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    if-nez v0, :cond_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    new-instance v0, Ljava/util/HashSet;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Leh3;
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    move-object v0, p0
-
     :cond_1
+    check-cast p1, Leh3;
+
+    iget-object v1, p0, Leh3;->a:Ljava/util/List;
+
+    iget-object v2, p1, Leh3;->a:Ljava/util/List;
+
+    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v1, p0, Leh3;->b:J
+
+    iget-wide v3, p1, Leh3;->b:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_3
+
     :goto_0
-    check-cast v0, Ljava/util/Set;
+    const/4 p1, 0x0
 
-    invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    return p1
 
-    return-void
+    :cond_3
+    return v0
+.end method
+
+.method public final getContentType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Leh3;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDuration()J
+    .locals 2
+
+    iget-wide v0, p0, Leh3;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Leh3;->h:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Leh3;->g:I
+
+    return v0
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-wide v0, p0, Leh3;->d:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Leh3;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Leh3;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Leh3;->e:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ConcatenatedMp4VideoContent(items="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Leh3;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Leh3;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMute=true)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final w()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

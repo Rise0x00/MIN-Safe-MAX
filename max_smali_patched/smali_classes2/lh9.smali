@@ -1,120 +1,119 @@
-.class public abstract Llh9;
-.super Ljava/lang/Object;
+.class public final Llh9;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public static a([B)Lmh9;
-    .locals 17
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
+    iput-object p2, p0, Llh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgReact;-><init>()V
+    const/4 p2, 0x2
 
-    move-object/from16 v1, p0
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    :try_start_0
-    invoke-static {v0, v1}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    return-void
+.end method
 
-    move-result-object v0
 
-    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgReact;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v1, Lmh9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->requestId:J
+    invoke-virtual {p0, p1, p2}, Llh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatId:J
+    move-result-object p1
 
-    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageId:J
+    check-cast p1, Llh9;
 
-    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->chatServerId:J
+    sget-object p2, Loyf;->a:Loyf;
 
-    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->messageServerId:J
+    invoke-virtual {p1, p2}, Llh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v12, Lrz8;
+    return-object p2
+.end method
 
-    iget v13, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reactionType:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v14, Lwz8;->o:Ly55;
+    new-instance v0, Llh9;
 
-    invoke-virtual {v14}, Lx1;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Llh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result-object v14
+    invoke-direct {v0, p2, v1}, Llh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    :goto_0
-    move-object v15, v14
+    iput-object p1, v0, Llh9;->X:Ljava/lang/Object;
 
-    check-cast v15, Lu1;
+    return-object v0
+.end method
 
-    invoke-virtual {v15}, Lu1;->hasNext()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    move-result v16
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    if-eqz v16, :cond_1
+    iget-object p1, p0, Llh9;->X:Ljava/lang/Object;
 
-    invoke-virtual {v15}, Lu1;->next()Ljava/lang/Object;
+    check-cast p1, Lipc;
 
-    move-result-object v15
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    move-object/from16 p0, v1
+    iget-object v0, p0, Llh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-object v1, v15
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lwz8;
+    if-eqz p1, :cond_2
 
-    iget v1, v1, Lwz8;->a:I
+    iget-boolean v1, p1, Lipc;->e:Z
 
-    if-ne v1, v13, :cond_0
+    if-eqz v1, :cond_0
 
-    goto :goto_1
-
-    :cond_0
-    move-object/from16 v1, p0
-
-    goto :goto_0
-
-    :cond_1
-    move-object/from16 p0, v1
-
-    const/4 v15, 0x0
-
-    :goto_1
-    check-cast v15, Lwz8;
-
-    if-eqz v15, :cond_2
-
-    iget-object v0, v0, Lru/ok/tamtam/nano/Tasks$MsgReact;->reaction:Ljava/lang/String;
-
-    invoke-direct {v12, v15, v0}, Lrz8;-><init>(Lwz8;Ljava/lang/String;)V
-
-    move-object/from16 v1, p0
-
-    invoke-direct/range {v1 .. v12}, Lmh9;-><init>(JJJJJLrz8;)V
-
-    return-object v1
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unknown reactionType = "
-
-    invoke-static {v13, v1}, Lw68;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lnj9;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p1, Lipc;->c:J
 
-    throw v0
+    invoke-virtual {v1, v2, v3}, Lnj9;->a(J)Z
 
-    :catch_0
-    move-exception v0
+    move-result v1
 
-    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+    if-eqz v1, :cond_1
 
-    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    :cond_0
+    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->g1:Lqpc;
 
-    throw v1
+    if-eqz v0, :cond_1
+
+    iget-wide v1, p1, Lipc;->b:J
+
+    iget-object v3, p1, Lipc;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lipc;->a:Lkoc;
+
+    invoke-virtual {v0, v1, v2, p1, v3}, Lqpc;->d(JLkoc;Ljava/lang/String;)V
+
+    :cond_1
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

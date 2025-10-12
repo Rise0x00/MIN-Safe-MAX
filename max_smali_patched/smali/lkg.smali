@@ -1,177 +1,156 @@
-.class public abstract synthetic Llkg;
+.class public abstract Llkg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static bridge synthetic a()I
-    .locals 1
+.method public static a(Landroid/view/View;Lqkg;)V
+    .locals 2
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->statusBars()I
+    sget v0, Lafc;->tag_unhandled_key_listeners:I
 
-    move-result v0
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Lade;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lade;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lade;-><init>(I)V
+
+    sget v1, Lafc;->tag_unhandled_key_listeners:I
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_0
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Lkkg;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, p1, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->addOnUnhandledKeyEventListener(Landroid/view/View$OnUnhandledKeyEventListener;)V
+
+    return-void
 .end method
 
-.method public static bridge synthetic b(Landroid/view/WindowInsetsController;)I
+.method public static b(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-interface {p0}, Landroid/view/WindowInsetsController;->getSystemBarsAppearance()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c()Landroid/view/WindowInsets;
-    .locals 1
-
-    sget-object v0, Landroid/view/WindowInsets;->CONSUMED:Landroid/view/WindowInsets;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/Window;->getInsetsController()Landroid/view/WindowInsetsController;
+    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityPaneTitle()Ljava/lang/CharSequence;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static bridge synthetic e(Landroid/view/WindowInsetsController;)V
-    .locals 1
-
-    const/16 v0, 0x8
-
-    invoke-interface {p0, v0, v0}, Landroid/view/WindowInsetsController;->setSystemBarsAppearance(II)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic f(Landroid/view/WindowInsets;I)Z
+.method public static c(Landroid/view/View;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets;->isVisible(I)Z
+    invoke-virtual {p0}, Landroid/view/View;->isAccessibilityHeading()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static bridge synthetic g()I
-    .locals 1
+.method public static d(Landroid/view/View;)Z
+    .locals 0
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->navigationBars()I
+    invoke-virtual {p0}, Landroid/view/View;->isScreenReaderFocusable()Z
 
-    move-result v0
+    move-result p0
 
-    return v0
+    return p0
 .end method
 
-.method public static bridge synthetic h(Landroid/view/WindowInsetsController;)V
-    .locals 2
+.method public static e(Landroid/view/View;Lqkg;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lafc;->tag_unhandled_key_listeners:I
 
-    const/16 v1, 0x8
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    invoke-interface {p0, v0, v1}, Landroid/view/WindowInsetsController;->setSystemBarsAppearance(II)V
+    move-result-object v0
+
+    check-cast v0, Lade;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View$OnUnhandledKeyEventListener;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->removeOnUnhandledKeyEventListener(Landroid/view/View$OnUnhandledKeyEventListener;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public static f(Landroid/view/View;I)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/view/View;",
+            "I)TT;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->requireViewById(I)Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Landroid/view/View;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityHeading(Z)V
 
     return-void
 .end method
 
-.method public static bridge synthetic i()I
-    .locals 1
+.method public static h(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->captionBar()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static bridge synthetic j(Landroid/view/WindowInsetsController;)V
-    .locals 1
-
-    const/16 v0, 0x10
-
-    invoke-interface {p0, v0, v0}, Landroid/view/WindowInsetsController;->setSystemBarsAppearance(II)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAccessibilityPaneTitle(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public static bridge synthetic k()I
-    .locals 1
+.method public static i(Landroid/view/View;Lcc0;)V
+    .locals 0
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->systemGestures()I
+    const/4 p1, 0x0
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public static bridge synthetic l(Landroid/view/WindowInsetsController;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x10
-
-    invoke-interface {p0, v0, v1}, Landroid/view/WindowInsetsController;->setSystemBarsAppearance(II)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAutofillId(Landroid/view/autofill/AutofillId;)V
 
     return-void
 .end method
 
-.method public static bridge synthetic m()I
-    .locals 1
+.method public static j(Landroid/view/View;Z)V
+    .locals 0
 
-    invoke-static {}, Landroid/view/WindowInsets$Type;->mandatorySystemGestures()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static bridge synthetic n(Landroid/view/WindowInsetsController;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0, v0}, Landroid/view/WindowInsetsController;->setSystemBarsAppearance(II)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->setScreenReaderFocusable(Z)V
 
     return-void
-.end method
-
-.method public static bridge synthetic o()I
-    .locals 1
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->tappableElement()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static bridge synthetic p(Landroid/view/WindowInsetsController;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    invoke-interface {p0, v0}, Landroid/view/WindowInsetsController;->setSystemBarsBehavior(I)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic q()I
-    .locals 1
-
-    invoke-static {}, Landroid/view/WindowInsets$Type;->displayCutout()I
-
-    move-result v0
-
-    return v0
 .end method

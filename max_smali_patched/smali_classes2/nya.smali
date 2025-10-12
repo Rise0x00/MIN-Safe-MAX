@@ -2,149 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpya;
+
 
 # instance fields
-.field public final a:Lkle;
+.field public final a:I
 
-.field public final b:Lkle;
+.field public final b:I
 
-.field public final c:Lkle;
+.field public final c:F
+
+.field public final d:I
+
+.field public final e:Lxe6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lth7;)V
-    .locals 2
+.method public constructor <init>(ILxe6;I)V
+    .locals 1
 
+    sget v0, Lvsa;->R:I
+
+    and-int/lit8 p3, p3, 0x8
+
+    if-eqz p3, :cond_0
+
+    sget v0, Lvsa;->P:I
+
+    :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lmya;
+    iput p1, p0, Lnya;->a:I
 
-    const/4 v1, 0x0
+    const/4 p1, 0x4
 
-    invoke-direct {v0, p2, p1, v1}, Lmya;-><init>(Lth7;Landroid/content/Context;I)V
+    iput p1, p0, Lnya;->b:I
 
-    new-instance v1, Lkle;
+    const/high16 p1, 0x41400000    # 12.0f
 
-    invoke-direct {v1, v0}, Lkle;-><init>(Ld96;)V
+    iput p1, p0, Lnya;->c:F
 
-    iput-object v1, p0, Lnya;->a:Lkle;
+    iput v0, p0, Lnya;->d:I
 
-    new-instance v0, Lmya;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p2, p1, v1}, Lmya;-><init>(Lth7;Landroid/content/Context;I)V
-
-    new-instance p1, Lkle;
-
-    invoke-direct {p1, v0}, Lkle;-><init>(Ld96;)V
-
-    iput-object p1, p0, Lnya;->b:Lkle;
-
-    new-instance p1, Lnwa;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Lnwa;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lkle;
-
-    invoke-direct {p2, p1}, Lkle;-><init>(Ld96;)V
-
-    iput-object p2, p0, Lnya;->c:Lkle;
+    iput-object p2, p0, Lnya;->e:Lxe6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lzlc;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lnya;->b:Lkle;
-
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    iget-object p0, p0, Lnya;->a:Lkle;
-
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    mul-int p0, p2, p1
-
-    mul-int v1, v0, v0
-
-    if-ge p0, v1, :cond_0
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-gt p2, v0, :cond_1
+    instance-of v0, p1, Lnya;
 
-    if-gt p1, v0, :cond_1
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_1
-    if-le p2, p1, :cond_2
-
-    int-to-float p0, v0
-
-    int-to-float p1, p1
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    mul-float/2addr p1, p0
-
-    float-to-int p0, p1
-
-    move v2, v0
-
-    move v0, p0
-
-    move p0, v2
+    if-nez v0, :cond_1
 
     goto :goto_1
 
+    :cond_1
+    check-cast p1, Lnya;
+
+    iget v0, p1, Lnya;->a:I
+
+    iget v1, p0, Lnya;->a:I
+
+    if-ne v1, v0, :cond_2
+
+    iget v0, p0, Lnya;->b:I
+
+    iget v1, p1, Lnya;->b:I
+
+    if-ne v0, v1, :cond_2
+
+    iget v0, p0, Lnya;->c:F
+
+    iget v1, p1, Lnya;->c:F
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_2
+
+    iget v0, p0, Lnya;->d:I
+
+    iget p1, p1, Lnya;->d:I
+
+    if-ne v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
     :cond_2
-    int-to-float p0, v0
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    mul-float/2addr p2, p0
-
-    float-to-int p0, p2
-
     :goto_1
-    new-instance p1, Lzlc;
+    const/4 p1, 0x0
 
-    const/4 p2, 0x0
+    return p1
+.end method
 
-    const/16 v1, 0xc
+.method public final hashCode()I
+    .locals 3
 
-    invoke-direct {p1, p2, v0, p0, v1}, Lzlc;-><init>(FIII)V
+    iget v0, p0, Lnya;->a:I
 
-    return-object p1
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lnya;->b:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnya;->c:F
+
+    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lnya;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

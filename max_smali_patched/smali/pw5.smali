@@ -1,77 +1,243 @@
-.class public final synthetic Lpw5;
+.class public final Lpw5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lev5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lev5;
 
-.field public final synthetic b:Lone/me/folders/edit/FolderEditScreen;
+.field public final synthetic b:Lm3f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/folders/edit/FolderEditScreen;I)V
+.method public constructor <init>(Lev5;Lnf6;)V
     .locals 0
 
-    iput p2, p0, Lpw5;->a:I
-
-    iput-object p1, p0, Lpw5;->b:Lone/me/folders/edit/FolderEditScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpw5;->a:Lev5;
+
+    check-cast p2, Lm3f;
+
+    iput-object p2, p0, Lpw5;->b:Lm3f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lpw5;->a:I
+    instance-of v0, p2, Low5;
 
-    sget-object v1, Ltcf;->a:Ltcf;
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lpw5;->b:Lone/me/folders/edit/FolderEditScreen;
+    move-object v0, p2
 
-    check-cast p1, Landroid/view/View;
+    check-cast v0, Low5;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, v0, Low5;->X:I
 
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->n0:[Lof7;
+    const/high16 v2, -0x80000000
 
-    invoke-virtual {p0}, Lone/me/folders/edit/FolderEditScreen;->y0()Lkx5;
+    and-int v3, v1, v2
 
-    move-result-object p1
+    if-eqz v3, :cond_0
 
-    invoke-virtual {p1}, Lkx5;->u()V
+    sub-int/2addr v1, v2
 
-    invoke-virtual {p0}, Lone/me/folders/edit/FolderEditScreen;->z0()V
+    iput v1, v0, Low5;->X:I
 
-    return-object v1
-
-    :pswitch_0
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->n0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/folders/edit/FolderEditScreen;->z0()V
-
-    invoke-virtual {p0}, Lox3;->getOnBackPressedDispatcher()Lb5a;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lb5a;->d()V
+    goto :goto_0
 
     :cond_0
-    return-object v1
+    new-instance v0, Low5;
 
-    nop
+    invoke-direct {v0, p0, p2}, Low5;-><init>(Lpw5;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    iget-object p2, v0, Low5;->o:Ljava/lang/Object;
+
+    iget v1, v0, Low5;->X:I
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lf34;->a:Lf34;
+
+    if-eqz v1, :cond_4
+
+    if-eq v1, v4, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object p1, v0, Low5;->Z:Ljava/lang/Object;
+
+    check-cast p1, Lnad;
+
+    :try_start_0
+    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_3
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    iget-object p1, v0, Low5;->Z:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+
+    goto :goto_6
+
+    :cond_3
+    iget-object p1, v0, Low5;->w0:Lgv5;
+
+    iget-object v1, v0, Low5;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lpw5;
+
+    :try_start_1
+    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_4
+    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
+
+    :try_start_2
+    iget-object p2, p0, Lpw5;->a:Lev5;
+
+    iput-object p0, v0, Low5;->Z:Ljava/lang/Object;
+
+    iput-object p1, v0, Low5;->w0:Lgv5;
+
+    iput v4, v0, Low5;->X:I
+
+    invoke-interface {p2, p1, v0}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+
+    if-ne p2, v6, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    move-object v1, p0
+
+    :goto_1
+    new-instance p2, Lnad;
+
+    iget-object v3, v0, Lnz3;->b:Lw24;
+
+    invoke-direct {p2, p1, v3}, Lnad;-><init>(Lgv5;Lw24;)V
+
+    :try_start_3
+    iget-object p1, v1, Lpw5;->b:Lm3f;
+
+    iput-object p2, v0, Low5;->Z:Ljava/lang/Object;
+
+    iput-object v5, v0, Low5;->w0:Lgv5;
+
+    iput v2, v0, Low5;->X:I
+
+    invoke-interface {p1, p2, v5, v0}, Lnf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    if-ne p1, v6, :cond_6
+
+    goto :goto_5
+
+    :cond_6
+    move-object p1, p2
+
+    :goto_2
+    invoke-virtual {p1}, Lnz3;->o()V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
+
+    :catchall_2
+    move-exception p1
+
+    move-object v7, p2
+
+    move-object p2, p1
+
+    move-object p1, v7
+
+    :goto_3
+    invoke-virtual {p1}, Lnz3;->o()V
+
+    throw p2
+
+    :catchall_3
+    move-exception p1
+
+    move-object v1, p0
+
+    :goto_4
+    new-instance p2, Ldhf;
+
+    invoke-direct {p2, p1}, Ldhf;-><init>(Ljava/lang/Throwable;)V
+
+    iget-object v1, v1, Lpw5;->b:Lm3f;
+
+    iput-object p1, v0, Low5;->Z:Ljava/lang/Object;
+
+    iput-object v5, v0, Low5;->w0:Lgv5;
+
+    iput v3, v0, Low5;->X:I
+
+    invoke-static {p2, v1, p1, v0}, Lj40;->a(Ldhf;Lnf6;Ljava/lang/Throwable;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-ne p2, v6, :cond_7
+
+    :goto_5
+    return-object v6
+
+    :cond_7
+    :goto_6
+    throw p1
 .end method

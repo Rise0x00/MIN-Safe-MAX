@@ -1,375 +1,217 @@
-.class public final Ldxe;
+.class public abstract Ldxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzg8;
-.implements Lxg8;
-
 
 # instance fields
-.field public final a:Lzg8;
+.field public final synthetic a:I
 
-.field public final b:J
+.field public b:J
 
-.field public c:Lxg8;
+.field public c:J
+
+.field public d:J
+
+.field public e:I
+
+.field public f:I
+
+.field public g:J
+
+.field public h:Z
+
+.field public i:Z
+
+.field public final j:Ljava/lang/Object;
+
+.field public k:Ljava/lang/Object;
+
+.field public l:Ljava/lang/Object;
+
+.field public m:Ljava/lang/Object;
+
+.field public n:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lzg8;J)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
+
+    iput p1, p0, Ldxe;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldxe;->a:Lzg8;
+    new-instance p1, Lgea;
 
-    iput-wide p2, p0, Ldxe;->b:J
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lgea;-><init>(I)V
+
+    iput-object p1, p0, Ldxe;->j:Ljava/lang/Object;
+
+    new-instance p1, Lw7b;
+
+    const/16 v0, 0x9
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lw7b;-><init>(IZ)V
+
+    iput-object p1, p0, Ldxe;->n:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lgea;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0}, Lgea;-><init>(I)V
+
+    iput-object p1, p0, Ldxe;->j:Ljava/lang/Object;
+
+    new-instance p1, La4d;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p1, v0}, La4d;-><init>(I)V
+
+    iput-object p1, p0, Ldxe;->n:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d()J
-    .locals 5
+.method public a(J)V
+    .locals 1
 
-    iget-object v0, p0, Ldxe;->a:Lzg8;
+    iget v0, p0, Ldxe;->a:I
 
-    invoke-interface {v0}, Lhad;->d()J
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Ldxe;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final f()V
-    .locals 0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0}, Lzg8;->f()V
+    iput-wide p1, p0, Ldxe;->d:J
 
     return-void
-.end method
 
-.method public final h(J)J
-    .locals 2
-
-    iget-wide v0, p0, Ldxe;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0, p1, p2}, Lzg8;->h(J)J
-
-    move-result-wide p0
-
-    add-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public final i()Z
-    .locals 0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0}, Lhad;->i()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final j(Lzg8;)V
-    .locals 0
-
-    iget-object p1, p0, Ldxe;->c:Lxg8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lxg8;->j(Lzg8;)V
+    :pswitch_0
+    iput-wide p1, p0, Ldxe;->d:J
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final k([Lkb5;[Z[Lyuc;[ZJ)J
-    .locals 11
+.method public abstract b(Ly4b;)J
+.end method
 
-    array-length v0, p3
+.method public abstract c(Lg5g;)J
+.end method
 
-    new-array v4, v0, [Lyuc;
+.method public abstract d(Ly4b;JLa4d;)Z
+.end method
 
-    const/4 v0, 0x0
+.method public abstract e(Lg5g;JLw7b;)Z
+.end method
 
-    move v1, v0
+.method public f(Z)V
+    .locals 4
 
-    :goto_0
-    array-length v2, p3
+    iget v0, p0, Ldxe;->a:I
 
-    const/4 v8, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-ge v1, v2, :cond_1
+    const-wide/16 v0, 0x0
 
-    aget-object v2, p3, v1
+    if-eqz p1, :cond_0
 
-    check-cast v2, Lcxe;
+    new-instance p1, La4d;
 
-    if-eqz v2, :cond_0
+    const/4 v2, 0x5
 
-    iget-object v8, v2, Lcxe;->a:Lyuc;
+    invoke-direct {p1, v2}, La4d;-><init>(I)V
 
-    :cond_0
-    aput-object v8, v4, v1
+    iput-object p1, p0, Ldxe;->n:Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    iput-wide v0, p0, Ldxe;->c:J
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Ldxe;->e:I
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Ldxe;->a:Lzg8;
+    :cond_0
+    const/4 p1, 0x1
 
-    iget-wide v9, p0, Ldxe;->b:J
+    iput p1, p0, Ldxe;->e:I
 
-    sub-long v6, p5, v9
+    :goto_0
+    const-wide/16 v2, -0x1
 
-    move-object v2, p1
+    iput-wide v2, p0, Ldxe;->b:J
 
-    move-object v3, p2
+    iput-wide v0, p0, Ldxe;->d:J
 
-    move-object v5, p4
+    return-void
 
-    invoke-interface/range {v1 .. v7}, Lzg8;->k([Lkb5;[Z[Lyuc;[ZJ)J
+    :pswitch_0
+    const-wide/16 v0, 0x0
 
-    move-result-wide p0
+    if-eqz p1, :cond_1
 
-    :goto_1
-    array-length p2, p3
+    new-instance p1, Lw7b;
 
-    if-ge v0, p2, :cond_5
+    const/16 v2, 0x9
 
-    aget-object p2, v4, v0
+    const/4 v3, 0x0
 
-    if-nez p2, :cond_2
+    invoke-direct {p1, v2, v3}, Lw7b;-><init>(IZ)V
 
-    aput-object v8, p3, v0
+    iput-object p1, p0, Ldxe;->n:Ljava/lang/Object;
 
-    goto :goto_2
+    iput-wide v0, p0, Ldxe;->c:J
 
-    :cond_2
-    aget-object v1, p3, v0
+    const/4 p1, 0x0
 
-    if-eqz v1, :cond_3
-
-    check-cast v1, Lcxe;
-
-    iget-object v1, v1, Lcxe;->a:Lyuc;
-
-    if-eq v1, p2, :cond_4
-
-    :cond_3
-    new-instance v1, Lcxe;
-
-    invoke-direct {v1, p2, v9, v10}, Lcxe;-><init>(Lyuc;J)V
-
-    aput-object v1, p3, v0
-
-    :cond_4
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
+    iput p1, p0, Ldxe;->e:I
 
     goto :goto_1
 
-    :cond_5
-    add-long/2addr p0, v9
+    :cond_1
+    const/4 p1, 0x1
 
-    return-wide p0
-.end method
+    iput p1, p0, Ldxe;->e:I
 
-.method public final l()J
-    .locals 5
+    :goto_1
+    const-wide/16 v2, -0x1
 
-    iget-object v0, p0, Ldxe;->a:Lzg8;
+    iput-wide v2, p0, Ldxe;->b:J
 
-    invoke-interface {v0}, Lzg8;->l()J
-
-    move-result-wide v0
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Ldxe;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final m()Lf3f;
-    .locals 0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0}, Lzg8;->m()Lf3f;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final n()J
-    .locals 5
-
-    iget-object v0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {v0}, Lhad;->n()J
-
-    move-result-wide v0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v4, v0, v2
-
-    if-nez v4, :cond_0
-
-    return-wide v2
-
-    :cond_0
-    iget-wide v2, p0, Ldxe;->b:J
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final o(J)V
-    .locals 2
-
-    iget-wide v0, p0, Ldxe;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0, p1, p2}, Lhad;->o(J)V
+    iput-wide v0, p0, Ldxe;->d:J
 
     return-void
-.end method
 
-.method public final p(Lhad;)V
-    .locals 0
+    nop
 
-    check-cast p1, Lzg8;
-
-    iget-object p1, p0, Ldxe;->c:Lxg8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1, p0}, Lfad;->p(Lhad;)V
-
-    return-void
-.end method
-
-.method public final q(JLu5d;)J
-    .locals 2
-
-    iget-wide v0, p0, Ldxe;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0, p1, p2, p3}, Lzg8;->q(JLu5d;)J
-
-    move-result-wide p0
-
-    add-long/2addr p0, v0
-
-    return-wide p0
-.end method
-
-.method public final r(Lxg8;J)V
-    .locals 2
-
-    iput-object p1, p0, Ldxe;->c:Lxg8;
-
-    iget-wide v0, p0, Ldxe;->b:J
-
-    sub-long/2addr p2, v0
-
-    iget-object p1, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p1, p0, p2, p3}, Lzg8;->r(Lxg8;J)V
-
-    return-void
-.end method
-
-.method public final s(Los7;)Z
-    .locals 5
-
-    new-instance v0, Lns7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v1, p1, Los7;->a:J
-
-    iget v3, p1, Los7;->b:F
-
-    iput v3, v0, Lns7;->b:F
-
-    iget-wide v3, p1, Los7;->c:J
-
-    iput-wide v3, v0, Lns7;->c:J
-
-    iget-wide v3, p0, Ldxe;->b:J
-
-    sub-long/2addr v1, v3
-
-    iput-wide v1, v0, Lns7;->a:J
-
-    new-instance p1, Los7;
-
-    invoke-direct {p1, v0}, Los7;-><init>(Lns7;)V
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0, p1}, Lhad;->s(Los7;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final t(JZ)V
-    .locals 2
-
-    iget-wide v0, p0, Ldxe;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object p0, p0, Ldxe;->a:Lzg8;
-
-    invoke-interface {p0, p1, p2, p3}, Lzg8;->t(JZ)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

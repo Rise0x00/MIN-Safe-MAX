@@ -14,7 +14,7 @@
         "completion",
         "probeCoroutineCreated",
         "(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;",
-        "Ltcf;",
+        "Loyf;",
         "probeCoroutineResumed",
         "(Lkotlin/coroutines/Continuation;)V",
         "kotlinx-coroutines-core"
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lr7;->N(Lkotlin/coroutines/Continuation;)V
+    invoke-static {p0}, Lnf2;->C(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method

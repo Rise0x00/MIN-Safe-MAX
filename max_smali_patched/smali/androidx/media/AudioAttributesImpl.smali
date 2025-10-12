@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lekf;
+.implements Ls6g;
 
 
 # virtual methods

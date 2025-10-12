@@ -1,24 +1,34 @@
-.class public final Lc20;
+.class public final synthetic Lc20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ld20;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ld20;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lc20;->a:I
+    .line 1
+    iput p1, p0, Lc20;->a:I
 
-    iput-object p1, p0, Lc20;->b:Ld20;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lli0;Lpn6;Lo92;)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x3
+
+    iput p1, p0, Lc20;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,40 +37,40 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onLongClick(Landroid/view/View;)Z
     .locals 1
 
-    iget v0, p0, Lc20;->a:I
+    iget p1, p0, Lc20;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lc20;->b:Ld20;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Ld20;->o:Landroid/animation/ValueAnimator;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
-
-    :cond_0
-    return-void
+    return v0
 
     :pswitch_0
-    iget-object p0, p0, Lc20;->b:Ld20;
+    sget-object p1, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->F0:Lxt6;
 
-    iget-object p0, p0, Ld20;->o:Landroid/animation/ValueAnimator;
+    const/4 p1, 0x0
 
-    if-eqz p0, :cond_1
+    return p1
 
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->cancel()V
+    :pswitch_1
+    sget p1, Lru/ok/messages/media/audio/AudioListenView;->G0:I
 
-    :cond_1
-    return-void
+    return v0
+
+    :pswitch_2
+    sget p1, Lru/ok/messages/media/attaches/AudioAttachView;->A0:I
+
+    return v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

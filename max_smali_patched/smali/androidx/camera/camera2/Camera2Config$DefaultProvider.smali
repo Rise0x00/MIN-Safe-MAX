@@ -14,52 +14,52 @@
 
 
 # virtual methods
-.method public getCameraXConfig()Lc02;
-    .locals 5
+.method public getCameraXConfig()Lh12;
+    .locals 6
 
-    new-instance p0, Lbx1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lcx1;
+    new-instance v0, Lrx1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ldx1;
+    new-instance v1, Lsx1;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    new-instance v2, Lu8d;
+    new-instance v2, Ltx1;
 
-    const/4 v3, 0x7
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    const/4 v4, 0x0
+    new-instance v3, Lzo6;
 
-    invoke-direct {v2, v3, v4}, Lu8d;-><init>(IB)V
+    const/4 v4, 0x7
 
-    iget-object v2, v2, Lu8d;->b:Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    check-cast v2, Ltk9;
+    invoke-direct {v3, v4, v5}, Lzo6;-><init>(IB)V
 
-    sget-object v3, Lc02;->b:Lz90;
+    iget-object v3, v3, Lzo6;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v3, p0}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    check-cast v3, Lst9;
 
-    sget-object p0, Lc02;->c:Lz90;
+    sget-object v4, Lh12;->b:Ln90;
 
-    invoke-virtual {v2, p0, v0}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v0}, Lst9;->i(Ln90;Ljava/lang/Object;)V
 
-    sget-object p0, Lc02;->o:Lz90;
+    sget-object v0, Lh12;->c:Ln90;
 
-    invoke-virtual {v2, p0, v1}, Ltk9;->l(Lz90;Ljava/lang/Object;)V
+    invoke-virtual {v3, v0, v1}, Lst9;->i(Ln90;Ljava/lang/Object;)V
 
-    new-instance p0, Lc02;
+    sget-object v0, Lh12;->o:Ln90;
 
-    invoke-static {v2}, Lgpa;->a(Lpf3;)Lgpa;
+    invoke-virtual {v3, v0, v2}, Lst9;->i(Ln90;Ljava/lang/Object;)V
 
-    move-result-object v0
+    new-instance v0, Lh12;
 
-    invoke-direct {p0, v0}, Lc02;-><init>(Lgpa;)V
+    invoke-static {v3}, Ls1b;->a(Lci3;)Ls1b;
 
-    return-object p0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lh12;-><init>(Ls1b;)V
+
+    return-object v0
 .end method

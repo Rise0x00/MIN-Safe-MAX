@@ -1,181 +1,64 @@
-.class public final Lvmf;
+.class public final synthetic Lvmf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(La80;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, La80;->b:I
+    iput-object p1, p0, Lvmf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput v0, p0, Lvmf;->a:I
-
-    iget v0, p1, La80;->c:I
-
-    iput v0, p0, Lvmf;->b:I
-
-    iget p1, p1, La80;->d:I
-
-    iput p1, p0, Lvmf;->c:I
+    iput-object p2, p0, Lvmf;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lvmf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    :cond_0
-    if-eqz p1, :cond_2
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Ljava/lang/Thread;
 
-    move-result-object v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-class v1, Lvmf;
+    const-string v3, "tracer-io-"
 
-    if-eq v1, v0, :cond_1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    iget-object v3, p0, Lvmf;->b:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lvmf;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lvmf;->a:I
+    const/16 v3, 0x2d
 
-    iget v1, p1, Lvmf;->a:I
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-ne v0, v1, :cond_2
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lvmf;->b:I
-
-    iget v1, p1, Lvmf;->b:I
-
-    if-ne v0, v1, :cond_2
-
-    iget p0, p0, Lvmf;->c:I
-
-    iget p1, p1, Lvmf;->c:I
-
-    if-ne p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lvmf;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v1, p0, Lvmf;->b:I
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    iget p0, p0, Lvmf;->c:I
-
-    invoke-static {p0}, Ldw1;->a(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    filled-new-array {v0, v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "VideoDisplayLayout{width="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lvmf;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lvmf;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fit="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget p0, p0, Lvmf;->c:I
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_0
-
-    const-string p0, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "CONTAIN"
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "COVER"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v1
 .end method

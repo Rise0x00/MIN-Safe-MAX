@@ -1,195 +1,373 @@
-.class public abstract Lakf;
-.super Ljava/lang/Object;
+.class public final Lakf;
+.super Lhi0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final i:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-string v0, "media3.database"
+    const/high16 v0, 0x7fc00000    # Float.NaN
 
-    invoke-static {v0}, Lof8;->a(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/database/sqlite/SQLiteDatabase;ILjava/lang/String;)I
-    .locals 10
-
-    :try_start_0
-    const-string v0, "ExoPlayerVersions"
-
-    invoke-static {p0, v0}, Lfif;->c0(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v0
 
-    const/4 v1, -0x1
+    sput v0, Lakf;->i:I
 
-    if-nez v0, :cond_0
+    return-void
+.end method
 
-    return v1
+.method public static l(ILjava/nio/ByteBuffer;)V
+    .locals 4
+
+    const-wide v0, 0x3e00000000200000L    # 4.656612875245797E-10
+
+    int-to-double v2, p0
+
+    mul-double/2addr v2, v0
+
+    double-to-float p0, v2
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p0
+
+    sget v0, Lakf;->i:I
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p0
 
     :cond_0
-    const-string v3, "ExoPlayerVersions"
+    invoke-virtual {p1, p0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    const-string v0, "version"
+    return-void
+.end method
 
-    filled-new-array {v0}, [Ljava/lang/String;
 
-    move-result-object v4
+# virtual methods
+.method public final b(Ljava/nio/ByteBuffer;)V
+    .locals 5
 
-    const-string v5, "feature = ? AND instance_uid = ?"
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    filled-new-array {p1, p2}, [Ljava/lang/String;
+    move-result v1
 
-    move-result-object v6
+    sub-int v2, v1, v0
 
-    const/4 v8, 0x0
+    iget-object v3, p0, Lhi0;->b:Ll50;
 
-    const/4 v9, 0x0
+    iget v3, v3, Ll50;->c:I
 
-    const/4 v7, 0x0
+    const/16 v4, 0x15
 
-    move-object v2, p0
+    if-eq v3, v4, :cond_3
 
-    invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    const/16 v4, 0x16
 
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eq v3, v4, :cond_2
 
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
+    const/high16 v4, 0x50000000
 
-    move-result p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eq v3, v4, :cond_1
 
-    if-nez p1, :cond_1
+    const/high16 v4, 0x60000000
 
-    :try_start_2
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_2
-    .catch Landroid/database/SQLException; {:try_start_2 .. :try_end_2} :catch_0
+    if-ne v3, v4, :cond_0
 
-    return v1
+    invoke-virtual {p0, v2}, Lhi0;->k(I)Ljava/nio/ByteBuffer;
 
-    :cond_1
-    :try_start_3
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
+    move-result-object v2
 
-    const/4 p1, 0x0
+    :goto_0
+    if-ge v0, v1, :cond_4
 
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
+    add-int/lit8 v3, v0, 0x3
 
-    move-result p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
-    :try_start_4
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Landroid/database/SQLException; {:try_start_4 .. :try_end_4} :catch_0
+    move-result v3
 
-    return p1
+    and-int/lit16 v3, v3, 0xff
 
-    :catchall_0
-    move-exception v0
+    add-int/lit8 v4, v0, 0x2
 
-    move-object p1, v0
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
-    if-eqz p0, :cond_2
+    move-result v4
 
-    :try_start_5
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x8
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x10
+
+    or-int/2addr v3, v4
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    invoke-static {v3, v2}, Lakf;->l(ILjava/nio/ByteBuffer;)V
+
+    add-int/lit8 v0, v0, 0x4
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-object p0, v0
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    :try_start_6
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    throw p1
+
+    :cond_1
+    div-int/lit8 v2, v2, 0x3
+
+    mul-int/lit8 v2, v2, 0x4
+
+    invoke-virtual {p0, v2}, Lhi0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    :goto_1
+    if-ge v0, v1, :cond_4
+
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x10
+
+    or-int/2addr v3, v4
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    invoke-static {v3, v2}, Lakf;->l(ILjava/nio/ByteBuffer;)V
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    throw p1
-    :try_end_6
-    .catch Landroid/database/SQLException; {:try_start_6 .. :try_end_6} :catch_0
+    invoke-virtual {p0, v2}, Lhi0;->k(I)Ljava/nio/ByteBuffer;
 
-    :catch_0
-    move-exception v0
+    move-result-object v2
 
-    move-object p0, v0
+    :goto_2
+    if-ge v0, v1, :cond_4
 
-    new-instance p1, Landroidx/media3/database/DatabaseIOException;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
-    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    move-result v3
 
-    throw p1
-.end method
+    and-int/lit16 v3, v3, 0xff
 
-.method public static b(Landroid/database/sqlite/SQLiteDatabase;ILjava/lang/String;I)V
-    .locals 2
+    add-int/lit8 v4, v0, 0x1
 
-    :try_start_0
-    const-string v0, "CREATE TABLE IF NOT EXISTS ExoPlayerVersions (feature INTEGER NOT NULL,instance_uid TEXT NOT NULL,version INTEGER NOT NULL,PRIMARY KEY (feature, instance_uid))"
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    move-result v4
 
-    new-instance v0, Landroid/content/ContentValues;
+    and-int/lit16 v4, v4, 0xff
 
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+    shl-int/lit8 v4, v4, 0x8
 
-    const-string v1, "feature"
+    or-int/2addr v3, v4
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-int/lit8 v4, v0, 0x2
 
-    move-result-object p1
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    move-result v4
 
-    const-string p1, "instance_uid"
+    and-int/lit16 v4, v4, 0xff
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    shl-int/lit8 v4, v4, 0x10
 
-    const-string p1, "version"
+    or-int/2addr v3, v4
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-int/lit8 v4, v0, 0x3
 
-    move-result-object p2
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    move-result v4
 
-    const-string p1, "ExoPlayerVersions"
+    and-int/lit16 v4, v4, 0xff
 
-    const/4 p2, 0x0
+    shl-int/lit8 v4, v4, 0x18
 
-    invoke-virtual {p0, p1, p2, v0}, Landroid/database/sqlite/SQLiteDatabase;->replaceOrThrow(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-    :try_end_0
-    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
+    or-int/2addr v3, v4
+
+    invoke-static {v3, v2}, Lakf;->l(ILjava/nio/ByteBuffer;)V
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_2
+
+    :cond_3
+    div-int/lit8 v2, v2, 0x3
+
+    mul-int/lit8 v2, v2, 0x4
+
+    invoke-virtual {p0, v2}, Lhi0;->k(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    :goto_3
+    if-ge v0, v1, :cond_4
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    shl-int/lit8 v3, v3, 0x8
+
+    add-int/lit8 v4, v0, 0x1
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x10
+
+    or-int/2addr v3, v4
+
+    add-int/lit8 v4, v0, 0x2
+
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    and-int/lit16 v4, v4, 0xff
+
+    shl-int/lit8 v4, v4, 0x18
+
+    or-int/2addr v3, v4
+
+    invoke-static {v3, v2}, Lakf;->l(ILjava/nio/ByteBuffer;)V
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-void
+.end method
 
-    :catch_0
-    move-exception p0
+.method public final g(Ll50;)Ll50;
+    .locals 3
 
-    new-instance p1, Landroidx/media3/database/DatabaseIOException;
+    iget v0, p1, Ll50;->c:I
 
-    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    const/16 v1, 0x15
 
-    throw p1
+    const/4 v2, 0x4
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x50000000
+
+    if-eq v0, v1, :cond_1
+
+    const/16 v1, 0x16
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x60000000
+
+    if-eq v0, v1, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ll50;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    if-eq v0, v2, :cond_2
+
+    new-instance v0, Ll50;
+
+    iget v1, p1, Ll50;->a:I
+
+    iget p1, p1, Ll50;->b:I
+
+    invoke-direct {v0, v1, p1, v2}, Ll50;-><init>(III)V
+
+    return-object v0
+
+    :cond_2
+    sget-object p1, Ll50;->e:Ll50;
+
+    return-object p1
 .end method

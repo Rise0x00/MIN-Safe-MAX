@@ -1,134 +1,133 @@
-.class public final Lisc;
+.class public abstract Lisc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgsc;
 
-
-# instance fields
-.field public final a:Li7c;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Li7c;)V
-    .locals 0
+.method public static a(Ldsc;J)Lasc;
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lasc;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lisc;->a:Li7c;
+    iget-object v1, p0, Ldsc;->a:Lrsc;
 
-    return-void
+    iput-object v1, v0, Lasc;->b:Lrsc;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-wide v2, p0, Ldsc;->b:J
 
-    const-string p1, "Illegal \'logger\' value: null"
+    iput-wide v2, v0, Lasc;->d:J
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-wide p1, v0, Lasc;->c:J
 
-    throw p0
-.end method
-
-
-# virtual methods
-.method public final a(I[B)V
-    .locals 1
-
-    sget-object v0, Lbpg;->a:[I
-
-    invoke-static {p1}, Ldw1;->t(I)I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    aget p1, v0, p1
+    const/4 p2, 0x1
 
-    const/4 v0, 0x1
+    if-eq p1, p2, :cond_3
 
-    if-eq p1, v0, :cond_1
+    const/4 p2, 0x2
 
-    const/4 v0, 0x2
+    if-eq p1, p2, :cond_2
 
-    if-eq p1, v0, :cond_0
+    const/4 p2, 0x3
 
-    const-string p1, "<unknown>"
+    if-eq p1, p2, :cond_1
 
-    goto :goto_0
+    const/4 p2, 0x4
+
+    if-ne p1, p2, :cond_0
+
+    return-object v0
 
     :cond_0
-    invoke-static {p2}, Lsn6;->a([B)Ljava/lang/String;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object p1
+    sget-object p2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    goto :goto_0
+    iget-object p0, p0, Ldsc;->a:Lrsc;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "Unexpected value: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    new-instance p1, Ljava/lang/String;
+    check-cast p0, Ltm6;
 
-    invoke-direct {p1, p2}, Ljava/lang/String;-><init>([B)V
+    iget-object p0, p0, Ltm6;->c:Lc10;
 
-    :goto_0
-    const-string p2, "<- "
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lru/ok/tamtam/nano/b;->o(Lc10;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$Photo;
 
     move-result-object p1
 
-    iget-object p0, p0, Lisc;->a:Li7c;
-
-    const-string p2, "RtcNotifications"
-
-    invoke-interface {p0, p2, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final b(Lfsc;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "<- "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lg79;->toByteArray(Lg79;)[B
 
     move-result-object p1
 
-    iget-object p0, p0, Lisc;->a:Li7c;
+    new-instance p2, Lm33;
 
-    const-string v0, "RtcNotifications"
+    const/4 v1, 0x7
 
-    invoke-interface {p0, v0, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    invoke-direct {p2, v1, v2}, Lm33;-><init>(IZ)V
 
-.method public final c(Ljava/lang/Throwable;)V
-    .locals 2
+    iput-object p1, p2, Lm33;->c:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-wide p0, p0, Lc10;->w0:J
 
-    const-string v1, "<- "
+    iput-wide p0, p2, Lm33;->b:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object p2, v0, Lasc;->g:Lm33;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    check-cast p0, Ljre;
 
-    move-result-object p1
+    new-instance p1, Lc7;
 
-    iget-object p0, p0, Lisc;->a:Li7c;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "RtcNotifications"
+    iget-wide v1, p0, Ljre;->c:J
 
-    invoke-interface {p0, v0, p1}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    iput-wide v1, p1, Lc7;->a:J
 
-    return-void
+    iput-object p1, v0, Lasc;->e:Lc7;
+
+    return-object v0
+
+    :cond_3
+    check-cast p0, Lq55;
+
+    new-instance p1, Lr55;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iget-object p0, p0, Lq55;->c:Ljava/lang/String;
+
+    iput-object p0, p1, Lr55;->a:Ljava/lang/String;
+
+    iput-object p1, v0, Lasc;->f:Lr55;
+
+    return-object v0
 .end method

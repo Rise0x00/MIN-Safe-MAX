@@ -1,23 +1,92 @@
 .class public final Ln70;
-.super Lxoe;
+.super Ll9f;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Lds;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lds;)V
+    .locals 0
 
-    sget-object v0, Lboa;->E0:Lboa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lxoe;-><init>(Lboa;)V
-
-    const-string v0, "trackId"
-
-    invoke-virtual {p0, v0, p1}, Lxoe;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "verifyCode"
-
-    invoke-virtual {p0, p1, p2}, Lxoe;->p(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Ln70;->c:Lds;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ln70;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ln70;
+
+    iget-object v0, p0, Ln70;->c:Lds;
+
+    iget-object p1, p1, Ln70;->c:Lds;
+
+    invoke-virtual {v0, p1}, Lade;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ln70;->c:Lds;
+
+    invoke-virtual {v0}, Lade;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ln70;->c:Lds;
+
+    invoke-static {v0}, Lk98;->v(Ljava/util/Map;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Response(tokenTypes=\'"
+
+    const-string v2, "\')"
+
+    invoke-static {v1, v0, v2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,88 +1,58 @@
-.class public interface abstract Ljy1;
+.class public final Ljy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb57;
 
-# static fields
-.field public static final a:Liy1;
+
+# instance fields
+.field public final a:Liy1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Liy1;)V
+    .locals 0
 
-    new-instance v0, Liy1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljy1;->a:Liy1;
+    iput-object p1, p0, Ljy1;->a:Liy1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final b(Lkd5;)V
+    .locals 1
+
+    iget-object v0, p0, Ljy1;->a:Liy1;
+
+    invoke-interface {v0, p1}, Liy1;->b(Lkd5;)V
 
     return-void
 .end method
 
-.method public abstract b(F)Lyp7;
+.method public final c()Lw7f;
+    .locals 1
+
+    iget-object v0, p0, Ljy1;->a:Liy1;
+
+    invoke-interface {v0}, Liy1;->c()Lw7f;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract c(Lpf3;)V
-.end method
+.method public final getTimestamp()J
+    .locals 2
 
-.method public abstract d(F)Lyp7;
-.end method
+    iget-object v0, p0, Ljy1;->a:Liy1;
 
-.method public abstract e()Landroid/graphics/Rect;
-.end method
+    invoke-interface {v0}, Liy1;->getTimestamp()J
 
-.method public abstract f(I)V
-.end method
+    move-result-wide v0
 
-.method public g(Lpx6;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract h(Lhz4;)Lyp7;
-.end method
-
-.method public abstract i(Ljava/util/ArrayList;II)Lyp7;
-.end method
-
-.method public abstract j(Ludd;)V
-.end method
-
-.method public abstract k(Z)Lyp7;
-.end method
-
-.method public l(II)Lyp7;
-    .locals 0
-
-    new-instance p0, Lhy1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p0}, Lcp;->C(Ljava/lang/Object;)Llz6;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public abstract m()Lpf3;
-.end method
-
-.method public abstract n()V
-.end method
-
-.method public o()V
-    .locals 0
-
-    return-void
+    return-wide v0
 .end method

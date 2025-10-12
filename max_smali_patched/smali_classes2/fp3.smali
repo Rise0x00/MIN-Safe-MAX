@@ -1,114 +1,87 @@
 .class public final Lfp3;
-.super Leje;
+.super Lcy;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:I
+.field public final X:J
 
-.field public final synthetic Y:Ljp3;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
+
+.field public final w0:Ljava/lang/String;
+
+.field public final x0:Ljava/lang/String;
+
+.field public final y0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljp3;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
+    .locals 1
 
-    iput-object p1, p0, Lfp3;->Y:Ljp3;
+    sget-object v0, Li00;->A0:Li00;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0, p9, p10}, Lcy;-><init>(Li00;ZZ)V
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfp3;->o:Ljava/lang/String;
+
+    iput-wide p2, p0, Lfp3;->X:J
+
+    iput-object p4, p0, Lfp3;->Y:Ljava/lang/String;
+
+    iput-object p7, p0, Lfp3;->x0:Ljava/lang/String;
+
+    iput-object p8, p0, Lfp3;->y0:Ljava/lang/String;
+
+    iput-object p5, p0, Lfp3;->Z:Ljava/lang/String;
+
+    iput-object p6, p0, Lfp3;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 5
 
-    check-cast p1, Lp04;
+    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lfp3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lfp3;->o:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
 
-    check-cast p0, Lfp3;
+    move-result v2
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    if-nez v2, :cond_0
 
-    invoke-virtual {p0, p1}, Lfp3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "vcfBody"
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lfp3;
-
-    iget-object p0, p0, Lfp3;->Y:Ljp3;
-
-    invoke-direct {p1, p0, p2}, Lfp3;-><init>(Ljp3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lfp3;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-wide/16 v1, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-wide v3, p0, Lfp3;->X:J
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    cmp-long v1, v3, v1
 
-    throw p0
+    if-eqz v1, :cond_1
+
+    const-string v1, "contactId"
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfp3;->Y:Ljp3;
-
-    iget-object p1, p1, Ljp3;->a:Lkpd;
-
-    iput v1, p0, Lfp3;->X:I
-
-    sget-object v0, Lbp3;->a:Lbp3;
-
-    invoke-virtual {p1, v0, p0}, Lkpd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq04;->a:Lq04;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
+    return-object v0
 .end method

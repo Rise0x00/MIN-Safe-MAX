@@ -1,34 +1,23 @@
-.class public abstract Lwq6;
+.class public final Lwq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbn5;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:F
 
-.field public final b:Ljava/util/List;
-
-.field public final c:Z
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLjava/util/List;)V
+.method public constructor <init>(IF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwq6;->a:Ljava/lang/String;
+    iput p2, p0, Lwq6;->a:F
 
-    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwq6;->b:Ljava/util/List;
-
-    iput-boolean p2, p0, Lwq6;->c:Z
+    iput p1, p0, Lwq6;->b:I
 
     return-void
 .end method

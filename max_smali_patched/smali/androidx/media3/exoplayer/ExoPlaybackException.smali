@@ -3,95 +3,23 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final A0:Ljava/lang/String;
-
-.field public static final B0:Ljava/lang/String;
-
-.field public static final w0:Ljava/lang/String;
-
-.field public static final x0:Ljava/lang/String;
-
-.field public static final y0:Ljava/lang/String;
-
-.field public static final z0:Ljava/lang/String;
-
-
 # instance fields
-.field public final p0:I
+.field public final A0:I
 
-.field public final q0:Ljava/lang/String;
+.field public final B0:Lt76;
 
-.field public final r0:I
+.field public final C0:I
 
-.field public final s0:Lp26;
+.field public final D0:Lvu8;
 
-.field public final t0:I
+.field public final E0:Z
 
-.field public final u0:Lxm8;
+.field public final y0:I
 
-.field public final v0:Z
+.field public final z0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Lfif;->a:I
-
-    const/16 v0, 0x3e9
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->w0:Ljava/lang/String;
-
-    const/16 v0, 0x3ea
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->x0:Ljava/lang/String;
-
-    const/16 v0, 0x3eb
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:Ljava/lang/String;
-
-    const/16 v0, 0x3ec
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
-
-    const/16 v0, 0x3ed
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:Ljava/lang/String;
-
-    const/16 v0, 0x3ee
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>(ILjava/lang/Exception;I)V
     .locals 9
 
@@ -114,12 +42,12 @@
     move v3, p3
 
     .line 1
-    invoke-direct/range {v0 .. v8}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(ILjava/lang/Exception;ILjava/lang/String;ILp26;IZ)V
+    invoke-direct/range {v0 .. v8}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(ILjava/lang/Exception;ILjava/lang/String;ILt76;IZ)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/Exception;ILjava/lang/String;ILp26;IZ)V
+.method public constructor <init>(ILjava/lang/Exception;ILjava/lang/String;ILt76;IZ)V
     .locals 13
 
     if-eqz p1, :cond_2
@@ -181,7 +109,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 15
-    invoke-static/range {p7 .. p7}, Lfif;->y(I)Ljava/lang/String;
+    invoke-static/range {p7 .. p7}, Lt4g;->C(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -217,7 +145,7 @@
     const-string v1, ": null"
 
     .line 19
-    invoke-static {v0, v1}, Ldw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,12 +172,12 @@
     move/from16 v12, p8
 
     .line 21
-    invoke-direct/range {v0 .. v12}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILp26;ILxm8;JZ)V
+    invoke-direct/range {v0 .. v12}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILt76;ILvu8;JZ)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILp26;ILxm8;JZ)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILt76;ILvu8;JZ)V
     .locals 8
 
     move/from16 v0, p12
@@ -290,7 +218,7 @@
 
     .line 3
     :goto_1
-    invoke-static {v2}, Ln76;->j(Z)V
+    invoke-static {v2}, Lpih;->i(Z)V
 
     if-nez p2, :cond_2
 
@@ -303,32 +231,32 @@
 
     .line 4
     :cond_3
-    invoke-static {p1}, Ln76;->j(Z)V
+    invoke-static {p1}, Lpih;->i(Z)V
 
     .line 5
-    iput p4, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->p0:I
+    iput p4, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:I
 
     .line 6
-    iput-object p5, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->q0:Ljava/lang/String;
+    iput-object p5, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
 
     .line 7
-    iput p6, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->r0:I
+    iput p6, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:I
 
     .line 8
-    iput-object p7, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->s0:Lp26;
+    iput-object p7, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Lt76;
 
     move/from16 p1, p8
 
     .line 9
-    iput p1, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->t0:I
+    iput p1, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->C0:I
 
     move-object/from16 p1, p9
 
     .line 10
-    iput-object p1, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->u0:Lxm8;
+    iput-object p1, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->D0:Lvu8;
 
     .line 11
-    iput-boolean v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->v0:Z
+    iput-boolean v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->E0:Z
 
     return-void
 .end method
@@ -347,131 +275,76 @@
     goto :goto_0
 
     :cond_0
-    sget v0, Lfif;->a:I
+    sget v0, Lt4g;->a:I
 
     check-cast p1, Landroidx/media3/exoplayer/ExoPlaybackException;
 
-    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->p0:I
+    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:I
 
-    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->p0:I
+    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:I
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->q0:Ljava/lang/String;
+    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
 
-    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->q0:Ljava/lang/String;
+    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->r0:I
+    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:I
 
-    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->r0:I
+    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:I
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->s0:Lp26;
+    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Lt76;
 
-    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->s0:Lp26;
+    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Lt76;
 
-    invoke-static {v0, v1}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->t0:I
+    iget v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->C0:I
 
-    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->t0:I
+    iget v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->C0:I
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->u0:Lxm8;
+    iget-object v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->D0:Lvu8;
 
-    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->u0:Lxm8;
+    iget-object v1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->D0:Lvu8;
 
-    invoke-static {v0, v1}, Lfif;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-boolean p0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->v0:Z
+    iget-boolean v0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->E0:Z
 
-    iget-boolean p1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->v0:Z
+    iget-boolean p1, p1, Landroidx/media3/exoplayer/ExoPlaybackException;->E0:Z
 
-    if-ne p0, p1, :cond_1
+    if-ne v0, p1, :cond_1
 
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 
     :cond_1
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
-.method public final c()Landroid/os/Bundle;
-    .locals 3
-
-    invoke-super {p0}, Landroidx/media3/common/PlaybackException;->c()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    sget-object v1, Landroidx/media3/exoplayer/ExoPlaybackException;->w0:Ljava/lang/String;
-
-    iget v2, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->p0:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Landroidx/media3/exoplayer/ExoPlaybackException;->x0:Ljava/lang/String;
-
-    iget-object v2, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->q0:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:Ljava/lang/String;
-
-    iget v2, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->r0:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iget-object v1, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->s0:Lp26;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lp26;->c(Z)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    :cond_0
-    sget-object v1, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:Ljava/lang/String;
-
-    iget v2, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->t0:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Ljava/lang/String;
-
-    iget-boolean p0, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->v0:Z
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
-.method public final d(Lxm8;)Landroidx/media3/exoplayer/ExoPlaybackException;
+.method public final c(Lvu8;)Landroidx/media3/exoplayer/ExoPlaybackException;
     .locals 13
 
     new-instance v0, Landroidx/media3/exoplayer/ExoPlaybackException;
@@ -480,7 +353,7 @@
 
     move-result-object v1
 
-    sget v2, Lfif;->a:I
+    sget v2, Lt4g;->a:I
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
@@ -488,23 +361,23 @@
 
     iget-wide v10, p0, Landroidx/media3/common/PlaybackException;->b:J
 
-    iget-boolean v12, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->v0:Z
+    iget-boolean v12, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->E0:Z
 
     iget v3, p0, Landroidx/media3/common/PlaybackException;->a:I
 
-    iget v4, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->p0:I
+    iget v4, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->y0:I
 
-    iget-object v5, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->q0:Ljava/lang/String;
+    iget-object v5, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->z0:Ljava/lang/String;
 
-    iget v6, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->r0:I
+    iget v6, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->A0:I
 
-    iget-object v7, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->s0:Lp26;
+    iget-object v7, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->B0:Lt76;
 
-    iget v8, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->t0:I
+    iget v8, p0, Landroidx/media3/exoplayer/ExoPlaybackException;->C0:I
 
     move-object v9, p1
 
-    invoke-direct/range {v0 .. v12}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILp26;ILxm8;JZ)V
+    invoke-direct/range {v0 .. v12}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;IILjava/lang/String;ILt76;ILvu8;JZ)V
 
     return-object v0
 .end method

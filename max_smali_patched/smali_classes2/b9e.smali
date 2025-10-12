@@ -6,7 +6,7 @@
 # static fields
 .field public static final synthetic X:[Lb9e;
 
-.field public static final synthetic Y:Ly55;
+.field public static final enum a:Lb9e;
 
 .field public static final enum b:Lb9e;
 
@@ -15,71 +15,55 @@
 .field public static final enum o:Lb9e;
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
     new-instance v0, Lb9e;
 
-    const/4 v1, 0x0
+    const-string v1, "DEFAULT"
 
-    const-string v2, "recent"
+    const/4 v2, 0x0
 
-    const-string v3, "RECENT"
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v3, v1, v2}, Lb9e;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lb9e;->b:Lb9e;
+    sput-object v0, Lb9e;->a:Lb9e;
 
     new-instance v1, Lb9e;
 
-    const/4 v2, 0x1
+    const-string v2, "INCOMING"
 
-    const-string v3, "favorite"
+    const/4 v3, 0x1
 
-    const-string v4, "FAVORITE"
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v4, v2, v3}, Lb9e;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lb9e;->c:Lb9e;
+    sput-object v1, Lb9e;->b:Lb9e;
 
     new-instance v2, Lb9e;
 
-    const/4 v3, 0x2
+    const-string v3, "ACTIVE"
 
-    const-string v4, "set"
+    const/4 v4, 0x2
 
-    const-string v5, "SET"
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v2, v5, v3, v4}, Lb9e;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    sput-object v2, Lb9e;->c:Lb9e;
 
-    sput-object v2, Lb9e;->o:Lb9e;
+    new-instance v3, Lb9e;
 
-    filled-new-array {v0, v1, v2}, [Lb9e;
+    const-string v4, "NO_CONNECTION"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lb9e;->o:Lb9e;
+
+    filled-new-array {v0, v1, v2, v3}, [Lb9e;
 
     move-result-object v0
 
     sput-object v0, Lb9e;->X:[Lb9e;
-
-    new-instance v1, Ly55;
-
-    invoke-direct {v1, v0}, Ly55;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lb9e;->Y:Ly55;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lb9e;->a:Ljava/lang/String;
 
     return-void
 .end method

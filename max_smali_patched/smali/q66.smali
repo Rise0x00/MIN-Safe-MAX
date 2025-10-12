@@ -3,80 +3,57 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:Lxm9;
+
+.field public static final synthetic h:I
+
+
 # instance fields
-.field public final a:Lr73;
+.field public final a:Lk45;
 
-.field public final b:I
+.field public b:Z
 
-.field public final c:I
+.field public c:[I
 
-.field public final d:F
+.field public d:Lgs;
 
-.field public final e:J
+.field public e:I
+
+.field public final f:Lmh4;
 
 
 # direct methods
-.method public constructor <init>(Lr73;IIFJ)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lxm9;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lxm9;-><init>(I)V
+
+    sput-object v0, Lq66;->g:Lxm9;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lk45;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iput v0, p0, Lq66;->e:I
 
-    if-lez p2, :cond_0
+    new-instance v0, Lmh4;
 
-    move v2, v1
+    invoke-direct {v0}, Lmh4;-><init>()V
 
-    goto :goto_0
+    iput-object v0, p0, Lq66;->f:Lmh4;
 
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "width must be positive, but is: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3, v2}, Ln76;->i(Ljava/lang/Object;Z)V
-
-    if-lez p3, :cond_1
-
-    move v0, v1
-
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "height must be positive, but is: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Ln76;->i(Ljava/lang/Object;Z)V
-
-    iput-object p1, p0, Lq66;->a:Lr73;
-
-    iput p2, p0, Lq66;->b:I
-
-    iput p3, p0, Lq66;->c:I
-
-    iput p4, p0, Lq66;->d:F
-
-    iput-wide p5, p0, Lq66;->e:J
+    iput-object p1, p0, Lq66;->a:Lk45;
 
     return-void
 .end method

@@ -54,7 +54,7 @@
 
 # virtual methods
 .method public final a(Lsx0;)I
-    .locals 2
+    .locals 4
 
     iget-object v0, p1, Lsx0;->a:Ljava/lang/String;
 
@@ -66,42 +66,42 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p1, Lsx0;->a:Ljava/lang/String;
+    iget-object p1, p1, Lsx0;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    invoke-virtual {v1, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 
     :cond_0
     iget-wide v0, p0, Lsx0;->b:J
 
-    iget-wide p0, p1, Lsx0;->b:J
+    iget-wide v2, p1, Lsx0;->b:J
 
-    sub-long/2addr v0, p0
+    sub-long/2addr v0, v2
 
-    const-wide/16 p0, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long p0, v0, p0
+    cmp-long p1, v0, v2
 
-    if-nez p0, :cond_1
+    if-nez p1, :cond_1
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_1
-    if-gez p0, :cond_2
+    if-gez p1, :cond_2
 
-    const/4 p0, -0x1
+    const/4 p1, -0x1
 
-    return p0
+    return p1
 
     :cond_2
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final bridge synthetic compareTo(Ljava/lang/Object;)I
@@ -111,9 +111,9 @@
 
     invoke-virtual {p0, p1}, Lsx0;->a(Lsx0;)I
 
-    move-result p0
+    move-result p1
 
-    return p0
+    return p1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -121,13 +121,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x2c
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
     const-string v1, "["
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-wide v1, p0, Lsx0;->b:J
 
@@ -137,13 +133,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "]"
+    iget-wide v1, p0, Lsx0;->c:J
 
-    iget-wide v2, p0, Lsx0;->c:J
+    const-string v3, "]"
 
-    invoke-static {v0, v2, v3, v1}, Lw68;->n(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

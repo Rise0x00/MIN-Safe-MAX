@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lve6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/stickerspreview/StickerPreviewScreen;
+.field public final synthetic b:Lone/me/sharedata/ShareDataPickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerspreview/StickerPreviewScreen;I)V
+.method public synthetic constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
     .locals 0
 
     iput p2, p0, Lx6e;->a:I
 
-    iput-object p1, p0, Lx6e;->b:Lone/me/stickerspreview/StickerPreviewScreen;
+    iput-object p1, p0, Lx6e;->b:Lone/me/sharedata/ShareDataPickerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,248 +27,101 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 9
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    iget p1, p0, Lx6e;->a:I
-
-    const/4 v0, 0x2
+    iget v0, p0, Lx6e;->a:I
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    sget-object v2, Loyf;->a:Loyf;
 
-    iget-object p0, p0, Lx6e;->b:Lone/me/stickerspreview/StickerPreviewScreen;
+    iget-object v3, p0, Lx6e;->b:Lone/me/sharedata/ShareDataPickerScreen;
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->v0:[Lof7;
+    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->G0:Lz86;
 
-    invoke-virtual {p0}, Lone/me/stickerspreview/StickerPreviewScreen;->y0()Lf7e;
+    return-object v0
 
-    move-result-object p0
+    :pswitch_0
+    iget-object v0, v3, Lone/me/sharedata/ShareDataPickerScreen;->G0:Lz86;
 
-    iget-object p1, p0, Lf7e;->t0:Ljbc;
+    invoke-virtual {v0}, Lz86;->l()V
 
-    iget-object p1, p1, Ljbc;->a:Lj4e;
+    return-object v2
 
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
+    :pswitch_1
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->J0:[Ltm7;
 
-    move-result-object p1
+    new-instance v0, Lh69;
 
-    check-cast p1, Lw6e;
-
-    if-eqz p1, :cond_1
-
-    sget-object v3, Lw6e;->s0:Lw6e;
-
-    invoke-virtual {p1, v3}, Lw6e;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    iget-object v3, p0, Lf7e;->A0:Lt1e;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Lc0;->isActive()Z
-
-    move-result v3
-
-    if-ne v3, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, p0, Lf7e;->c:Lhoe;
-
-    check-cast v2, Loba;
-
-    invoke-virtual {v2}, Loba;->b()Lj04;
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    new-instance v3, Ld7e;
+    invoke-direct {v0, v2}, Lh69;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v3, p1, p0, v1}, Ld7e;-><init>(Lw6e;Lf7e;Lkotlin/coroutines/Continuation;)V
+    sget v2, Luua;->c:I
 
-    invoke-static {p0, v2, v3, v0}, Lyxf;->n(Lyxf;Lh04;Lt96;I)Lt1e;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    move-result-object p1
+    sget v2, Lvua;->d:I
 
-    iput-object p1, p0, Lf7e;->A0:Lt1e;
+    invoke-virtual {v0, v2}, Lh69;->setInputHint(I)V
 
-    :cond_1
-    :goto_0
-    return-void
+    sget-object v2, Lz59;->a:Lz59;
 
-    :pswitch_0
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->v0:[Lof7;
+    invoke-virtual {v0, v2}, Lh69;->setRightOuterIconActionState(Lc69;)V
 
-    invoke-virtual {p0}, Lone/me/stickerspreview/StickerPreviewScreen;->y0()Lf7e;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object v2
 
-    iget-object p1, p0, Lf7e;->t0:Ljbc;
+    new-instance v4, Lzxa;
 
-    iget-object p1, p1, Ljbc;->a:Lj4e;
+    const/16 v5, 0x17
 
-    invoke-interface {p1}, Lj4e;->getValue()Ljava/lang/Object;
+    invoke-direct {v4, v3, v5, v0}, Lzxa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object p1
+    invoke-static {v2, v4}, Lsx9;->a(Landroid/content/Context;Lve6;)Lgk6;
 
-    check-cast p1, Lw6e;
+    move-result-object v2
 
-    iget-wide v4, p0, Lf7e;->b:J
+    invoke-virtual {v0, v2}, Lh69;->setRightOuterIconTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    cmp-long v0, v4, v0
+    move-result-object v2
 
-    if-lez v0, :cond_3
+    new-instance v4, Lx6e;
 
-    if-eqz p1, :cond_3
+    invoke-direct {v4, v3, v1}, Lx6e;-><init>(Lone/me/sharedata/ShareDataPickerScreen;I)V
 
-    sget-object v0, Lw6e;->s0:Lw6e;
+    invoke-static {v2, v4}, Lsx9;->a(Landroid/content/Context;Lve6;)Lgk6;
 
-    invoke-virtual {p1, v0}, Lw6e;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lh69;->setLeftInnerIconTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    if-eqz v0, :cond_2
+    return-object v0
 
-    goto :goto_1
+    :pswitch_2
+    sget-object v0, Lone/me/sharedata/ShareDataPickerScreen;->J0:[Ltm7;
 
-    :cond_2
-    iget-wide v6, p1, Lw6e;->a:J
-
-    new-instance v3, Lqcd;
-
-    const/4 v8, 0x1
-
-    invoke-direct/range {v3 .. v8}, Lqcd;-><init>(JJI)V
-
-    new-instance p1, Lrcd;
-
-    invoke-direct {p1, v3}, Lrcd;-><init>(Lqcd;)V
-
-    iget-object v0, p0, Lf7e;->o0:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
 
     move-result-object v0
 
-    check-cast v0, Lkmg;
+    iget-object v0, v0, Lveb;->c:Lugb;
 
-    invoke-virtual {v0, p1}, Lkmg;->a(Lzbd;)V
+    check-cast v0, Lq6e;
 
-    iget-object p0, p0, Lf7e;->q0:Lt65;
+    iget-object v0, v0, Lq6e;->l:Lrob;
 
-    sget-object p1, Lp53;->b:Lp53;
+    invoke-virtual {v0, v1}, Lrob;->z(I)V
 
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_1
-    sget-object p0, Lq8e;->a:Lq8e;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ls4;->e()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lb17;
-
-    if-eqz p0, :cond_4
-
-    new-instance p1, La17;
-
-    sget-object v0, Ly07;->b:Ly07;
-
-    invoke-direct {p1, v0, v2}, La17;-><init>(Ly07;I)V
-
-    new-instance v0, La17;
-
-    sget-object v1, Ly07;->Y:Ly07;
-
-    invoke-direct {v0, v1, v2}, La17;-><init>(Ly07;I)V
-
-    filled-new-array {p1, v0}, [La17;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lufd;->M([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object p1
-
-    sget-object v0, Lsyc;->I0:Lsyc;
-
-    invoke-virtual {p0, p1, v0}, Lb17;->f(Ljava/util/Set;Lsyc;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->v0:[Lof7;
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lqrc;->C()Z
-
-    sget-object p1, Lr8e;->c:Lr8e;
-
-    iget-object v2, p0, Lone/me/stickerspreview/StickerPreviewScreen;->b:Lvr;
-
-    sget-object v3, Lone/me/stickerspreview/StickerPreviewScreen;->v0:[Lof7;
-
-    aget-object v0, v3, v0
-
-    invoke-virtual {v2, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Lt2;->o0()Lca4;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, ":chats/forward?messages_ids="
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, v1}, Lca4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->v0:[Lof7;
-
-    invoke-virtual {p0}, Lox3;->getRouter()Lqrc;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqrc;->C()Z
-
-    return-void
+    return-object v2
 
     :pswitch_data_0
     .packed-switch 0x0

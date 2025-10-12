@@ -1,31 +1,23 @@
 .class public final Lkr9;
-.super Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 3
+# instance fields
+.field public final a:I
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+.field public final b:Ljava/util/List;
 
-    move-result v0
 
-    const/4 v1, 0x0
+# direct methods
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 0
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    iput p1, p0, Lkr9;->a:I
 
-    move-result-object v2
+    iput-object p2, p0, Lkr9;->b:Ljava/util/List;
 
-    invoke-virtual {v2, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p1
+    return-void
 .end method

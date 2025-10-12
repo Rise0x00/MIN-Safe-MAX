@@ -1,29 +1,15 @@
-.class public final Lm6a;
-.super Landroid/content/ContextWrapper;
+.class public abstract Lm6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lone/me/android/OneMeApplication;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lone/me/android/OneMeApplication;)V
+.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    iput-object p2, p0, Lm6a;->a:Lone/me/android/OneMeApplication;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAuthenticationRequired(Z)Landroid/app/Notification$Action$Builder;
 
-    invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getApplicationContext()Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lm6a;->a:Lone/me/android/OneMeApplication;
+    move-result-object p0
 
     return-object p0
 .end method

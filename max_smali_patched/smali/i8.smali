@@ -2,53 +2,164 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljv0;
-
 
 # static fields
-.field public static final n0:Lmx0;
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
+
+.field public static final p:Ljava/lang/String;
+
+.field public static final q:Ljava/lang/String;
+
+.field public static final r:Ljava/lang/String;
+
+.field public static final s:Ljava/lang/String;
+
+.field public static final t:Ljava/lang/String;
+
+.field public static final u:Ljava/lang/String;
+
+.field public static final v:Ljava/lang/String;
 
 
 # instance fields
-.field public final X:[J
-
-.field public final Y:J
-
-.field public final Z:Z
-
 .field public final a:J
 
 .field public final b:I
 
-.field public final c:[Landroid/net/Uri;
+.field public final c:I
 
-.field public final o:[I
+.field public final d:[Landroid/net/Uri;
+
+.field public final e:[Lrm8;
+
+.field public final f:[I
+
+.field public final g:[J
+
+.field public final h:[Ljava/lang/String;
+
+.field public final i:J
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lmx0;
+    sget v0, Lt4g;->a:I
 
-    const/16 v1, 0x11
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Lmx0;-><init>(I)V
+    const/16 v1, 0x24
 
-    sput-object v0, Li8;->n0:Lmx0;
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->l:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->m:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->n:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->o:Ljava/lang/String;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->p:Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->q:Ljava/lang/String;
+
+    const/4 v0, 0x6
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->r:Ljava/lang/String;
+
+    const/4 v0, 0x7
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->s:Ljava/lang/String;
+
+    const/16 v0, 0x8
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->t:Ljava/lang/String;
+
+    const/16 v0, 0x9
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->u:Ljava/lang/String;
+
+    const/16 v0, 0xa
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Li8;->v:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(JI[I[Landroid/net/Uri;[JJZ)V
-    .locals 2
+.method public constructor <init>(JII[I[Lrm8;[JJZ[Ljava/lang/String;Z)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, p4
+    array-length v0, p5
 
-    array-length v1, p5
+    array-length v1, p6
+
+    const/4 v2, 0x0
 
     if-ne v0, v1, :cond_0
 
@@ -57,24 +168,66 @@
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v2
 
     :goto_0
-    invoke-static {v0}, Lkc5;->g(Z)V
+    invoke-static {v0}, Lpih;->i(Z)V
 
     iput-wide p1, p0, Li8;->a:J
 
     iput p3, p0, Li8;->b:I
 
-    iput-object p4, p0, Li8;->o:[I
+    iput p4, p0, Li8;->c:I
 
-    iput-object p5, p0, Li8;->c:[Landroid/net/Uri;
+    iput-object p5, p0, Li8;->f:[I
 
-    iput-object p6, p0, Li8;->X:[J
+    iput-object p6, p0, Li8;->e:[Lrm8;
 
-    iput-wide p7, p0, Li8;->Y:J
+    iput-object p7, p0, Li8;->g:[J
 
-    iput-boolean p9, p0, Li8;->Z:Z
+    iput-wide p8, p0, Li8;->i:J
+
+    iput-boolean p10, p0, Li8;->j:Z
+
+    array-length p1, p6
+
+    new-array p1, p1, [Landroid/net/Uri;
+
+    iput-object p1, p0, Li8;->d:[Landroid/net/Uri;
+
+    :goto_1
+    iget-object p1, p0, Li8;->d:[Landroid/net/Uri;
+
+    array-length p2, p1
+
+    if-ge v2, p2, :cond_2
+
+    aget-object p2, p6, v2
+
+    if-nez p2, :cond_1
+
+    const/4 p2, 0x0
+
+    goto :goto_2
+
+    :cond_1
+    iget-object p2, p2, Lrm8;->b:Lhm8;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p2, Lhm8;->a:Landroid/net/Uri;
+
+    :goto_2
+    aput-object p2, p1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    iput-object p11, p0, Li8;->h:[Ljava/lang/String;
+
+    iput-boolean p12, p0, Li8;->k:Z
 
     return-void
 .end method
@@ -89,13 +242,13 @@
     add-int/2addr p1, v0
 
     :goto_0
-    iget-object v1, p0, Li8;->o:[I
+    iget-object v1, p0, Li8;->f:[I
 
     array-length v2, v1
 
     if-ge p1, v2, :cond_1
 
-    iget-boolean v2, p0, Li8;->Z:Z
+    iget-boolean v2, p0, Li8;->j:Z
 
     if-nez v2, :cond_1
 
@@ -158,9 +311,15 @@
 
     if-ne v2, v3, :cond_2
 
-    iget-object v2, p0, Li8;->c:[Landroid/net/Uri;
+    iget v2, p0, Li8;->c:I
 
-    iget-object v3, p1, Li8;->c:[Landroid/net/Uri;
+    iget v3, p1, Li8;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Li8;->e:[Lrm8;
+
+    iget-object v3, p1, Li8;->e:[Lrm8;
 
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
@@ -168,9 +327,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Li8;->o:[I
+    iget-object v2, p0, Li8;->f:[I
 
-    iget-object v3, p1, Li8;->o:[I
+    iget-object v3, p1, Li8;->f:[I
 
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
 
@@ -178,9 +337,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Li8;->X:[J
+    iget-object v2, p0, Li8;->g:[J
 
-    iget-object v3, p1, Li8;->X:[J
+    iget-object v3, p1, Li8;->g:[J
 
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([J[J)Z
 
@@ -188,19 +347,35 @@
 
     if-eqz v2, :cond_2
 
-    iget-wide v2, p0, Li8;->Y:J
+    iget-wide v2, p0, Li8;->i:J
 
-    iget-wide v4, p1, Li8;->Y:J
+    iget-wide v4, p1, Li8;->i:J
 
     cmp-long v2, v2, v4
 
     if-nez v2, :cond_2
 
-    iget-boolean p0, p0, Li8;->Z:Z
+    iget-boolean v2, p0, Li8;->j:Z
 
-    iget-boolean p1, p1, Li8;->Z:Z
+    iget-boolean v3, p1, Li8;->j:Z
 
-    if-ne p0, p1, :cond_2
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Li8;->h:[Ljava/lang/String;
+
+    iget-object v3, p1, Li8;->h:[Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-boolean v2, p0, Li8;->k:Z
+
+    iget-boolean p1, p1, Li8;->k:Z
+
+    if-ne v2, p1, :cond_2
 
     return v0
 
@@ -213,6 +388,12 @@
     .locals 6
 
     iget v0, p0, Li8;->b:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Li8;->c:I
+
+    add-int/2addr v0, v1
 
     mul-int/lit8 v0, v0, 0x1f
 
@@ -230,19 +411,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Li8;->c:[Landroid/net/Uri;
+    iget-object v1, p0, Li8;->e:[Lrm8;
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Li8;->o:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v1
 
@@ -250,9 +421,9 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    iget-object v0, p0, Li8;->X:[J
+    iget-object v0, p0, Li8;->f:[I
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
@@ -260,21 +431,47 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p0, Li8;->Y:J
+    iget-object v1, p0, Li8;->g:[J
 
-    ushr-long v3, v1, v3
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([J)I
 
-    xor-long/2addr v1, v3
+    move-result v1
 
-    long-to-int v1, v1
+    add-int/2addr v1, v0
 
-    add-int/2addr v0, v1
+    mul-int/lit8 v1, v1, 0x1f
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-wide v4, p0, Li8;->i:J
 
-    iget-boolean p0, p0, Li8;->Z:Z
+    ushr-long v2, v4, v3
 
-    add-int/2addr v0, p0
+    xor-long/2addr v2, v4
 
-    return v0
+    long-to-int v0, v2
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Li8;->j:Z
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Li8;->h:[Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Li8;->k:Z
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

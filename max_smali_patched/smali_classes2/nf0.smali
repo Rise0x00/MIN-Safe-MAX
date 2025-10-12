@@ -1,84 +1,55 @@
 .class public final Lnf0;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Ljava/util/List;
+
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+.field public final synthetic w0:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lnz3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnf0;->w0:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iput p1, p0, Lnf0;->a:I
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lnf0;->Z:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lnf0;->x0:I
 
-    :cond_0
-    instance-of v0, p1, Lnf0;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lnf0;->x0:I
 
-    :cond_1
-    check-cast p1, Lnf0;
+    iget-object p1, p0, Lnf0;->w0:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iget p0, p0, Lnf0;->a:I
+    const/4 v0, 0x0
 
-    iget p1, p1, Lnf0;->a:I
+    invoke-virtual {p1, v0, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->g(Ljava/util/List;Lnz3;)Ljava/lang/Object;
 
-    if-eq p0, p1, :cond_2
+    move-result-object p1
 
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Lnf0;->a:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "BackgroundLocalTabBarColors(primary="
-
-    const-string v1, ")"
-
-    iget p0, p0, Lnf0;->a:I
-
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

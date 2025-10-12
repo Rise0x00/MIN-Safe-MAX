@@ -1,118 +1,208 @@
-.class public final Lngd;
-.super Leje;
+.class public final synthetic Lngd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lwgd;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwgd;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JI)V
     .locals 0
 
-    iput-object p1, p0, Lngd;->Y:Lwgd;
+    iput p6, p0, Lngd;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lngd;->c:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lngd;->o:Ljava/lang/Object;
+
+    iput-object p3, p0, Lngd;->X:Ljava/lang/Object;
+
+    iput-wide p4, p0, Lngd;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 8
 
-    check-cast p1, Lp04;
+    iget v0, p0, Lngd;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lngd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lngd;->c:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Lcom/my/tracker/obfuscated/t;
 
-    check-cast p0, Lngd;
+    iget-object v1, p0, Lngd;->o:Ljava/lang/Object;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    check-cast v1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lngd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Lngd;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v2, Ljava/lang/String;
 
-    return-object p0
-.end method
+    iget-wide v3, p0, Lngd;->b:J
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/my/tracker/obfuscated/t;->e(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;J)V
 
-    new-instance p1, Lngd;
+    return-void
 
-    iget-object p0, p0, Lngd;->Y:Lwgd;
+    :pswitch_0
+    iget-object v0, p0, Lngd;->c:Ljava/lang/Object;
 
-    invoke-direct {p1, p0, p2}, Lngd;-><init>(Lwgd;Lkotlin/coroutines/Continuation;)V
+    move-object v2, v0
 
-    return-object p1
-.end method
+    check-cast v2, Lrtd;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-object v0, p0, Lngd;->o:Ljava/lang/Object;
 
-    iget v0, p0, Lngd;->X:I
+    check-cast v0, Lxg1;
 
-    iget-object v1, p0, Lngd;->Y:Lwgd;
+    iget-object v1, p0, Lngd;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    check-cast v1, Landroid/util/Size;
 
-    if-eqz v0, :cond_1
+    iget-wide v3, p0, Lngd;->b:J
 
-    if-ne v0, v2, :cond_0
+    monitor-enter v2
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    :try_start_0
+    iget-object v5, v2, Lrtd;->X:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v5, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v5, :cond_0
+
+    monitor-exit v2
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_1
+    iget-object v5, v2, Lrtd;->o:Ljava/lang/Object;
+
+    check-cast v5, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v5, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Long;
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v5}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    sub-long/2addr v3, v5
+
+    const-string v5, "width"
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v6
+
+    invoke-static {v6}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
+
+    move-result-object v6
+
+    new-instance v7, Ln4b;
+
+    invoke-direct {v7, v5, v6}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const-string v5, "height"
+
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
+
+    move-result v1
+
+    invoke-static {v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
+
+    move-result-object v1
+
+    new-instance v6, Ln4b;
+
+    invoke-direct {v6, v5, v1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v7, v6}, [Ln4b;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lwa8;->W([Ln4b;)Ljava/util/Map;
+
+    move-result-object v5
+
+    invoke-static {}, Lrd;->a()Lked;
+
+    move-result-object v7
+
+    new-instance v1, Lle2;
+
+    const/4 v6, 0x4
+
+    invoke-direct/range {v1 .. v6}, Lle2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
+
+    invoke-virtual {v7, v1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+
+    iget-object v1, v2, Lrtd;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashMap;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v1, v2, Lrtd;->X:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :catchall_0
+    move-exception v0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    goto :goto_2
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, v1, Lwgd;->b:Lff6;
-
-    iput v2, p0, Lngd;->X:I
-
-    invoke-virtual {p1, p0}, Lff6;->d(Lax3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p0, Lq04;->a:Lq04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
     :goto_0
-    check-cast p1, Lcmd;
+    monitor-exit v2
 
-    iget-object p0, v1, Lwgd;->w0:Lq4e;
+    :goto_1
+    return-void
 
-    invoke-virtual {p0, p1}, Lq4e;->setValue(Ljava/lang/Object;)V
+    :goto_2
+    monitor-exit v2
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    throw v0
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,90 +1,99 @@
-.class public final Lfe4;
+.class public final synthetic Lfe4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhhe;
+.implements Lsx7;
+.implements Lvo3;
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic a:Lhz7;
+
+.field public final synthetic b:Lnn8;
+
+.field public final synthetic c:Ljava/io/IOException;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;Lhz7;Lnn8;Ljava/io/IOException;Z)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Lfe4;->X:Ljava/lang/Object;
 
-    const-wide/16 v1, 0x5
+    iput-object p2, p0, Lfe4;->a:Lhz7;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    iput-object p3, p0, Lfe4;->b:Lnn8;
 
-    move-result-wide v0
+    iput-object p4, p0, Lfe4;->c:Ljava/io/IOException;
 
-    sput-wide v0, Lfe4;->a:J
+    iput-boolean p5, p0, Lfe4;->o:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public accept(Ljava/lang/Object;)V
+    .locals 8
+
+    iget-object v0, p0, Lfe4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lvc6;
+
+    move-object v1, p1
+
+    check-cast v1, Lfv8;
+
+    iget v2, v0, Lvc6;->b:I
+
+    iget-object p1, v0, Lvc6;->c:Ljava/lang/Object;
+
+    move-object v3, p1
+
+    check-cast v3, Lvu8;
+
+    iget-object v4, p0, Lfe4;->a:Lhz7;
+
+    iget-object v5, p0, Lfe4;->b:Lnn8;
+
+    iget-object v6, p0, Lfe4;->c:Ljava/io/IOException;
+
+    iget-boolean v7, p0, Lfe4;->o:Z
+
+    invoke-interface/range {v1 .. v7}, Lfv8;->a(ILvu8;Lhz7;Lnn8;Ljava/io/IOException;Z)V
+
+    return-void
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
     .locals 7
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    iget-object v0, p0, Lfe4;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    move-object v2, v0
 
-    invoke-virtual {p0}, Ljava/lang/Runtime;->maxMemory()J
+    check-cast v2, Lwc;
 
-    move-result-wide v0
+    iget-boolean v6, p0, Lfe4;->o:Z
 
-    const-wide/32 v2, 0x7fffffff
+    move-object v1, p1
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    check-cast v1, Lxc;
 
-    move-result-wide v0
+    iget-object v3, p0, Lfe4;->a:Lhz7;
 
-    long-to-int p0, v0
+    iget-object v4, p0, Lfe4;->b:Lnn8;
 
-    const/high16 v0, 0x1000000
+    iget-object v5, p0, Lfe4;->c:Ljava/io/IOException;
 
-    if-ge p0, v0, :cond_0
+    invoke-interface/range {v1 .. v6}, Lxc;->c0(Lwc;Lhz7;Lnn8;Ljava/io/IOException;Z)V
 
-    const/high16 p0, 0x100000
-
-    :goto_0
-    move v1, p0
-
-    goto :goto_1
-
-    :cond_0
-    const/high16 v0, 0x2000000
-
-    if-ge p0, v0, :cond_1
-
-    const/high16 p0, 0x200000
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 p0, 0x400000
-
-    goto :goto_0
-
-    :goto_1
-    div-int/lit8 v6, v1, 0x8
-
-    new-instance v0, Lft8;
-
-    const v2, 0x7fffffff
-
-    sget-wide v4, Lfe4;->a:J
-
-    move v3, v1
-
-    invoke-direct/range {v0 .. v6}, Lft8;-><init>(IIIJI)V
-
-    return-object v0
+    return-void
 .end method

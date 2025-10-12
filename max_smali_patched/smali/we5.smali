@@ -1,24 +1,31 @@
-.class public final Lwe5;
+.class public final synthetic Lwe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Lsx7;
+.implements Lrx7;
+.implements Lvo3;
+.implements Lwo3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:I
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(III)V
     .locals 0
 
-    iput p1, p0, Lwe5;->a:I
+    iput p3, p0, Lwe5;->a:I
 
-    iput-object p2, p0, Lwe5;->b:Ljava/lang/Object;
+    iput p1, p0, Lwe5;->b:I
+
+    iput p2, p0, Lwe5;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,258 +34,186 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 6
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
 
     iget v0, p0, Lwe5;->a:I
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Lwe5;->b:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/widget/Checkable;
+    check-cast p1, Lp00;
 
-    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
+    invoke-static {p1}, Lv63;->a0(Lp00;)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_0
+    iget-object v1, p1, Lp00;->d:Ln10;
 
-    check-cast p0, Landroid/view/GestureDetector;
-
-    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v2
-
-    :cond_0
-    return v2
-
-    :pswitch_0
-    check-cast p0, Ltp7;
-
-    iget-object p1, p0, Ltp7;->x0:Lrp7;
-
-    iget-object v0, p0, Ltp7;->B0:Landroid/os/Handler;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v3
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    if-nez v3, :cond_1
-
-    iget-object v5, p0, Ltp7;->F0:Ldn;
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    if-ltz v4, :cond_1
-
-    iget-object v5, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {v5}, Landroid/widget/PopupWindow;->getWidth()I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_1
-
-    if-ltz p2, :cond_1
-
-    iget-object p0, p0, Ltp7;->F0:Ldn;
-
-    invoke-virtual {p0}, Landroid/widget/PopupWindow;->getHeight()I
-
-    move-result p0
-
-    if-ge p2, p0, :cond_1
-
-    const-wide/16 v3, 0xfa
-
-    invoke-virtual {v0, p1, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    if-ne v3, v1, :cond_2
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    :cond_2
-    :goto_0
-    return v2
-
-    :pswitch_1
-    check-cast p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_3
+    :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_3
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    :cond_1
+    :goto_0
+    iget v1, p0, Lwe5;->b:I
 
-    move-result p1
+    iget v2, p0, Lwe5;->c:I
 
-    if-ne p1, v1, :cond_4
+    if-eqz v0, :cond_2
 
-    iput-boolean v2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->u0:Z
+    invoke-virtual {p1}, Lp00;->b()Lx00;
 
-    goto :goto_4
+    move-result-object v0
 
-    :cond_4
-    move v1, v2
+    iget-object v0, v0, Lx00;->d:Lo10;
 
-    goto :goto_4
+    iget-object v0, v0, Lo10;->d:Ln10;
 
-    :cond_5
+    invoke-virtual {v0}, Ln10;->a()Ll10;
+
+    move-result-object v0
+
+    iput v1, v0, Ll10;->o:I
+
+    iput v2, v0, Ll10;->p:I
+
+    new-instance v1, Ln10;
+
+    invoke-direct {v1, v0}, Ln10;-><init>(Ll10;)V
+
+    invoke-virtual {p1}, Lp00;->b()Lx00;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lx00;->d:Lo10;
+
+    invoke-virtual {v0}, Lo10;->j()Lp00;
+
+    move-result-object v0
+
+    iput-object v1, v0, Lp00;->d:Ln10;
+
+    invoke-virtual {v0}, Lp00;->a()Lo10;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lp00;->b()Lx00;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lx00;->a()Lw00;
+
+    move-result-object v1
+
+    iput-object v0, v1, Lw00;->e:Ljava/lang/Object;
+
+    new-instance v0, Lx00;
+
+    invoke-direct {v0, v1}, Lx00;-><init>(Lw00;)V
+
+    iput-object v0, p1, Lp00;->r:Lx00;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Lp00;->c()Ln10;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ln10;->a()Ll10;
+
+    move-result-object v0
+
+    iput v1, v0, Ll10;->o:I
+
+    iput v2, v0, Ll10;->p:I
+
+    new-instance v1, Ln10;
+
+    invoke-direct {v1, v0}, Ln10;-><init>(Ll10;)V
+
+    iput-object v1, p1, Lp00;->d:Ln10;
+
     :goto_1
-    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->w0:I
+    return-void
 
-    iput-boolean v1, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->u0:Z
+    :pswitch_0
+    check-cast p1, Lgmb;
 
-    invoke-virtual {p0}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
+    invoke-virtual {p1}, Lgmb;->p0()V
 
-    move-result p1
+    iget-object p1, p1, Lgmb;->a:Lif5;
 
-    if-eqz p1, :cond_6
+    iget v0, p0, Lwe5;->b:I
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+    iget v1, p0, Lwe5;->c:I
 
-    move-result p1
+    if-eq v0, v1, :cond_3
 
-    iget-object p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    add-int/lit8 v2, v0, 0x1
 
-    invoke-virtual {p2}, Landroid/view/View;->getY()F
+    invoke-virtual {p1, v0, v2, v1}, Lif5;->w1(III)V
 
-    move-result v0
+    :cond_3
+    return-void
 
-    float-to-int v0, v0
+    :pswitch_1
+    iget v0, p0, Lwe5;->c:I
 
-    filled-new-array {v2, v0}, [I
+    check-cast p1, Lgmb;
 
-    move-result-object v0
+    iget v1, p0, Lwe5;->b:I
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p1, v1, v0}, Lgmb;->i0(II)V
 
-    move-result-object p2
+    return-void
 
-    check-cast p2, Landroid/view/View;
+    nop
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    aget p2, v0, v1
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    int-to-float p2, p2
+    iget v0, p0, Lwe5;->a:I
 
-    sub-float/2addr p1, p2
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+    iget v0, p0, Lwe5;->c:I
 
-    move-result p2
+    check-cast p1, Ltkb;
 
-    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
+    iget v1, p0, Lwe5;->b:I
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    invoke-interface {p1, v1, v0}, Ltkb;->p(II)V
 
-    move-result v0
+    return-void
 
-    :goto_2
-    sub-int/2addr p2, v0
+    :pswitch_0
+    iget v0, p0, Lwe5;->c:I
 
-    int-to-float p2, p2
+    check-cast p1, Lukb;
 
-    div-float/2addr p1, p2
+    iget v1, p0, Lwe5;->b:I
 
-    goto :goto_3
+    invoke-interface {p1, v1, v0}, Lukb;->p(II)V
 
-    :cond_6
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+    return-void
 
-    move-result p1
-
-    iget-object p2, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    filled-new-array {v0, v2}, [I
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
-
-    aget p2, v0, v2
-
-    int-to-float p2, p2
-
-    sub-float/2addr p1, p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    iget-object v0, p0, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->o:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :goto_3
-    invoke-virtual {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setScrollerPosition(F)V
-
-    invoke-static {p0, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a(Lcom/futuremind/recyclerviewfastscroll/FastScroller;F)V
-
-    :goto_4
-    return v1
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

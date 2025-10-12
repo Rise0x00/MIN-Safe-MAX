@@ -1,102 +1,85 @@
-.class public abstract Liq6;
-.super Ljava/lang/Object;
+.class public final Liq6;
+.super Ljava/util/ArrayList;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final X:J
+.field public final a:Ljava/lang/Class;
 
-.field public final Y:Llu4;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lgq6;
-
-.field public final c:J
-
-.field public final n0:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final o0:J
-
-.field public final p0:J
-
-.field public final q0:Z
+.field public final b:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lgq6;JIJLlu4;Ljava/lang/String;Ljava/lang/String;JJZ)V
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Liq6;->a:Ljava/lang/String;
+    iput-object p1, p0, Liq6;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Liq6;->b:Lgq6;
-
-    iput-wide p3, p0, Liq6;->c:J
-
-    iput p5, p0, Liq6;->o:I
-
-    iput-wide p6, p0, Liq6;->X:J
-
-    iput-object p8, p0, Liq6;->Y:Llu4;
-
-    iput-object p9, p0, Liq6;->Z:Ljava/lang/String;
-
-    iput-object p10, p0, Liq6;->n0:Ljava/lang/String;
-
-    iput-wide p11, p0, Liq6;->o0:J
-
-    iput-wide p13, p0, Liq6;->p0:J
-
-    iput-boolean p15, p0, Liq6;->q0:Z
+    iput-object p2, p0, Liq6;->b:Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final a()Lalh;
+    .locals 5
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    move-result v0
 
-    move-result-wide v0
+    iget-object v1, p0, Liq6;->a:Ljava/lang/Class;
 
-    iget-wide v2, p0, Liq6;->X:J
+    invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
-    cmp-long p0, v2, v0
+    move-result-object v1
 
-    if-lez p0, :cond_0
+    check-cast v1, [Ljava/lang/Object;
 
-    const/4 p0, 0x1
+    iget-object v2, p0, Liq6;->b:Ljava/lang/Class;
 
-    return p0
+    invoke-static {v2, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v0, :cond_0
+
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/util/Pair;
+
+    iget-object v4, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    aput-object v4, v1, v3
+
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/util/Pair;
+
+    iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    aput-object v4, v2, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    new-instance v0, Lalh;
 
-    move-result-wide p0
+    invoke-direct {v0, v1, v2}, Lalh;-><init>([Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    cmp-long p0, v2, p0
-
-    if-gez p0, :cond_1
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-object v0
 .end method

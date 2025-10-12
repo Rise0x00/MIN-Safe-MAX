@@ -1,64 +1,69 @@
-.class public abstract Lt23;
-.super Ljava/lang/Object;
+.class public final enum Lt23;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Les7;
 
+# static fields
+.field public static final enum a:Lt23;
 
-# instance fields
-.field public final X:I
-
-.field public final Y:Ljava/lang/Object;
-
-.field public final Z:J
-
-.field public final a:J
-
-.field public final b:Lw64;
-
-.field public final c:I
-
-.field public final n0:J
-
-.field public final o:Lp26;
-
-.field public final o0:Lr5e;
+.field public static final synthetic b:[Lt23;
 
 
 # direct methods
-.method public constructor <init>(Lp64;Lw64;ILp26;ILjava/lang/Object;JJ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lt23;
 
-    new-instance v0, Lr5e;
+    const-string v1, "EDIT"
 
-    invoke-direct {v0, p1}, Lr5e;-><init>(Lp64;)V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lt23;->o0:Lr5e;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, p0, Lt23;->b:Lw64;
+    new-instance v1, Lt23;
 
-    iput p3, p0, Lt23;->c:I
+    const-string v2, "DELETE"
 
-    iput-object p4, p0, Lt23;->o:Lp26;
+    const/4 v3, 0x1
 
-    iput p5, p0, Lt23;->X:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p6, p0, Lt23;->Y:Ljava/lang/Object;
+    sput-object v1, Lt23;->a:Lt23;
 
-    iput-wide p7, p0, Lt23;->Z:J
+    filled-new-array {v0, v1}, [Lt23;
 
-    iput-wide p9, p0, Lt23;->n0:J
+    move-result-object v0
 
-    sget-object p1, Lwr7;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lt23;->a:J
+    sput-object v0, Lt23;->b:[Lt23;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lt23;
+    .locals 1
+
+    const-class v0, Lt23;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lt23;
+
+    return-object p0
+.end method
+
+.method public static values()[Lt23;
+    .locals 1
+
+    sget-object v0, Lt23;->b:[Lt23;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lt23;
+
+    return-object v0
 .end method

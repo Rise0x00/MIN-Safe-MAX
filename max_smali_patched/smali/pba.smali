@@ -1,109 +1,177 @@
-.class public final enum Lpba;
-.super Ljava/lang/Enum;
+.class public final Lpba;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxda;
+.implements Lss4;
 
-# static fields
-.field public static final enum X:Lpba;
 
-.field public static final synthetic Y:[Lpba;
+# instance fields
+.field public X:Z
 
-.field public static final enum a:Lpba;
+.field public final a:Lxda;
 
-.field public static final enum b:Lpba;
+.field public final b:Z
 
-.field public static final enum c:Lpba;
+.field public c:Lss4;
 
-.field public static final enum o:Lpba;
+.field public o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lxda;Z)V
+    .locals 0
 
-    new-instance v0, Lpba;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Themed"
+    iput-object p1, p0, Lpba;->a:Lxda;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpba;->a:Lpba;
-
-    new-instance v1, Lpba;
-
-    const-string v2, "ContrastPinned"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpba;->b:Lpba;
-
-    new-instance v2, Lpba;
-
-    const-string v3, "NeutralStack"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpba;->c:Lpba;
-
-    new-instance v3, Lpba;
-
-    const-string v4, "AccentRed"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpba;->o:Lpba;
-
-    new-instance v4, Lpba;
-
-    const-string v5, "Contrast"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lpba;->X:Lpba;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lpba;
-
-    move-result-object v0
-
-    sput-object v0, Lpba;->Y:[Lpba;
+    iput-boolean p2, p0, Lpba;->b:Z
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpba;
-    .locals 1
 
-    const-class v0, Lpba;
+# virtual methods
+.method public final b()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-boolean v0, p0, Lpba;->X:Z
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    check-cast p0, Lpba;
+    const/4 v0, 0x1
 
-    return-object p0
+    iput-boolean v0, p0, Lpba;->X:Z
+
+    iget-boolean v0, p0, Lpba;->b:Z
+
+    iget-object v1, p0, Lpba;->a:Lxda;
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v1, v0}, Lxda;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {v1}, Lxda;->b()V
+
+    :cond_1
+    return-void
 .end method
 
-.method public static values()[Lpba;
+.method public final c(Lss4;)V
     .locals 1
 
-    sget-object v0, Lpba;->Y:[Lpba;
+    iget-object v0, p0, Lpba;->c:Lss4;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, [Lpba;
+    if-eqz v0, :cond_0
 
-    return-object v0
+    iput-object p1, p0, Lpba;->c:Lss4;
+
+    iget-object p1, p0, Lpba;->a:Lxda;
+
+    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-boolean v0, p0, Lpba;->X:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-wide v0, p0, Lpba;->o:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lpba;->X:Z
+
+    iget-object v0, p0, Lpba;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    iget-object v0, p0, Lpba;->a:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lxda;->b()V
+
+    return-void
+
+    :cond_1
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lpba;->o:J
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 1
+
+    iget-object v0, p0, Lpba;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->g()V
+
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    iget-object v0, p0, Lpba;->c:Lss4;
+
+    invoke-interface {v0}, Lss4;->h()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Lpba;->X:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lpba;->X:Z
+
+    iget-object v0, p0, Lpba;->a:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

@@ -1,140 +1,117 @@
 .class public final Lmg5;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public final synthetic Y:Lpg5;
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Lpg5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 6
 
-    iput-object p1, p0, Lmg5;->Y:Lpg5;
+    and-int/lit8 v0, p1, 0x1
 
-    const/4 p1, 0x2
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lp04;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmg5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lmg5;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lmg5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lmg5;
-
-    iget-object p0, p0, Lmg5;->Y:Lpg5;
-
-    invoke-direct {p1, p0, p2}, Lmg5;-><init>(Lpg5;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lmg5;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-wide/16 v0, 0x1f4
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-wide/16 v0, 0x3e8
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    and-int/lit8 p1, p1, 0x4
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz p1, :cond_1
 
-    throw p0
+    const/high16 p1, 0x3fc00000    # 1.5f
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    const/high16 p1, 0x40000000    # 2.0f
 
-    iget-object p1, p0, Lmg5;->Y:Lpg5;
+    :goto_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_1
-    iput v1, p0, Lmg5;->X:I
+    iput-wide v0, p0, Lmg5;->a:J
 
-    iget-object v0, p1, Lpg5;->a:Lfpc;
+    iput p1, p0, Lmg5;->b:F
 
-    new-instance v1, Lce4;
+    const-wide/16 v2, 0x1
 
-    const/4 v2, 0x4
+    cmp-long v2, v0, v2
 
-    invoke-direct {v1, v2, p1}, Lce4;-><init>(ILjava/lang/Object;)V
+    if-ltz v2, :cond_5
 
-    invoke-static {v0, v1, p0}, Lno9;->l(Lfpc;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-wide/16 v2, 0x7530
 
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    cmp-long v0, v2, v0
 
-    sget-object p1, Lq04;->a:Lq04;
+    if-ltz v0, :cond_4
 
-    if-ne p0, p1, :cond_2
+    float-to-double v0, p1
 
-    return-object p1
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    :catchall_0
-    move-exception p0
+    cmpl-double p1, v0, v2
 
-    const-string p1, "FcmAnalyticsDao"
+    if-ltz p1, :cond_3
 
-    const-string v0, "onLogout: clear failed"
+    const p1, 0x3e4ccccd    # 0.2f
 
-    invoke-static {p1, v0, p0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    float-to-double v0, p1
+
+    const-wide/16 v4, 0x0
+
+    cmpg-double p1, v0, v4
+
+    if-ltz p1, :cond_2
+
+    cmpg-double p1, v2, v0
+
+    if-lez p1, :cond_2
+
+    return-void
 
     :cond_2
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    return-object p0
+    const-string v0, "Range is invalid. Must be greater or equal 0.0 and lower than 1.0."
 
-    :catch_0
-    move-exception p0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Multiplier is invalid. Must be greater than 1.0."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "maxInterval is invalid. Must be greater or equal than Interval."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Interval is invalid. Must be greater than 1."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

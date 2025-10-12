@@ -1,209 +1,114 @@
-.class public interface abstract Lehf;
-.super Ljava/lang/Object;
+.class public final Lehf;
+.super Lsnc;
 .source "SourceFile"
 
-# interfaces
-.implements Lvqe;
-.implements Lfy6;
 
+# instance fields
+.field public final b:Z
 
-# static fields
-.field public static final b0:Lz90;
-
-.field public static final c0:Lz90;
-
-.field public static final d0:Lz90;
-
-.field public static final e0:Lz90;
-
-.field public static final f0:Lz90;
-
-.field public static final g0:Lz90;
-
-.field public static final h0:Lz90;
-
-.field public static final i0:Lz90;
-
-.field public static final j0:Lz90;
-
-.field public static final k0:Lz90;
-
-.field public static final l0:Lz90;
+.field public final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 0
 
-    new-instance v0, Lz90;
+    return-void
+.end method
 
-    const-string v1, "camerax.core.useCase.defaultSessionConfig"
+.method public constructor <init>()V
+    .locals 1
 
-    const-class v2, Lydd;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    .line 2
+    iput-boolean v0, p0, Lehf;->b:Z
 
-    sput-object v0, Lehf;->b0:Lz90;
+    .line 3
+    iput-boolean v0, p0, Lehf;->c:Z
 
-    new-instance v0, Lz90;
+    return-void
+.end method
 
-    const-string v1, "camerax.core.useCase.defaultCaptureConfig"
+.method public constructor <init>(Z)V
+    .locals 1
 
-    const-class v2, Ll12;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    const/4 v0, 0x1
 
-    sput-object v0, Lehf;->c0:Lz90;
+    .line 5
+    iput-boolean v0, p0, Lehf;->b:Z
 
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.sessionConfigUnpacker"
-
-    const-class v2, Lfx1;
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->d0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.captureConfigUnpacker"
-
-    const-class v2, Lmw1;
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->e0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.surfaceOccupancyPriority"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->f0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.targetFrameRate"
-
-    const-class v4, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->g0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.zslDisabled"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->h0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.highResolutionDisabled"
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->i0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.captureType"
-
-    const-class v4, Lghf;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->j0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.previewStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->k0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.videoStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lehf;->l0:Lz90;
+    .line 6
+    iput-boolean p1, p0, Lehf;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public D()Lghf;
-    .locals 1
-
-    sget-object v0, Lehf;->j0:Lz90;
-
-    invoke-interface {p0, v0}, Lgbc;->h(Lz90;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lghf;
-
-    return-object p0
-.end method
-
-.method public G()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Lehf;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lehf;
+
+    iget-boolean v0, p0, Lehf;->c:Z
+
+    iget-boolean v1, p1, Lehf;->c:Z
+
+    if-ne v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lehf;->b:Z
+
+    iget-boolean p1, p1, Lehf;->b:Z
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lehf;->b:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    sget-object v1, Lehf;->l0:Lz90;
+    iget-boolean v1, p0, Lehf;->c:Z
 
-    invoke-interface {p0, v1, v0}, Lgbc;->c(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public M()I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Lehf;->k0:Lz90;
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    invoke-interface {p0, v1, v0}, Lgbc;->c(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method

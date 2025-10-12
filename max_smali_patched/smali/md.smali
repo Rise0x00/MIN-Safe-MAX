@@ -1,190 +1,198 @@
 .class public final Lmd;
-.super Ljava/util/logging/Handler;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrrf;
 
-# static fields
-.field public static final a:Lmd;
+
+# instance fields
+.field public final a:Ljavax/net/ssl/X509TrustManager;
+
+.field public final b:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Ljava/lang/reflect/Method;)V
+    .locals 0
 
-    new-instance v0, Lmd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/logging/Handler;-><init>()V
+    iput-object p1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
 
-    sput-object v0, Lmd;->a:Lmd;
+    iput-object p2, p0, Lmd;->b:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+    .locals 2
 
-    return-void
-.end method
+    :try_start_0
+    iget-object v0, p0, Lmd;->b:Ljava/lang/reflect/Method;
 
-.method public final flush()V
-    .locals 0
+    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
 
-    return-void
-.end method
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-.method public final publish(Ljava/util/logging/LogRecord;)V
-    .locals 4
+    move-result-object p1
 
-    sget-object p0, Lld;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLoggerName()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+    check-cast p1, Ljava/security/cert/TrustAnchor;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/security/cert/TrustAnchor;->getTrustedCert()Ljava/security/cert/X509Certificate;
 
-    invoke-virtual {v0}, Ljava/util/logging/Level;->intValue()I
+    move-result-object p1
 
-    move-result v0
+    return-object p1
 
-    sget-object v1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
-
-    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
-
-    move-result v2
-
-    const/4 v3, 0x4
-
-    if-le v0, v2, :cond_0
-
-    const/4 v0, 0x5
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    move-result-object v0
+    const-string v0, "null cannot be cast to non-null type java.security.cert.TrustAnchor"
 
-    invoke-virtual {v0}, Ljava/util/logging/Level;->intValue()I
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :catch_1
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :goto_0
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "unable to get issues and signature"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-eq p0, p1, :cond_1
+
+    instance-of v0, p1, Lmd;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lmd;
+
+    iget-object v0, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    iget-object v1, p1, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    iget-object v0, p0, Lmd;->b:Ljava/lang/reflect/Method;
 
-    if-ne v0, v1, :cond_1
+    iget-object p1, p1, Lmd;->b:Ljava/lang/reflect/Method;
 
-    move v0, v3
+    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x3
-
-    :goto_0
-    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getThrown()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    sget-object v2, Lld;->b:Ljava/util/Map;
-
-    invoke-interface {v2, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    const/16 v2, 0x17
-
-    invoke-static {v2, p0}, Lwde;->X0(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-static {v2, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    if-eqz p1, :cond_3
-
-    const-string p0, "\n"
-
-    invoke-static {v1, p0}, Ldl5;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_3
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result p0
-
+    :cond_0
     const/4 p1, 0x0
 
-    :goto_2
-    if-ge p1, p0, :cond_6
+    return p1
 
-    const/16 v0, 0xa
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    invoke-static {v1, v0, p1, v3}, Lwde;->A0(Ljava/lang/CharSequence;CII)I
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lmd;->b:Ljava/lang/reflect/Method;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v2, -0x1
+    :cond_1
+    add-int/2addr v1, v0
 
-    if-eq v0, v2, :cond_4
+    return v1
+.end method
 
-    goto :goto_3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_4
-    move v0, p0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_3
-    add-int/lit16 v2, p1, 0xfa0
+    const-string v1, "CustomTrustRootIndex(trustManager="
 
-    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v2
+    iget-object v1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
 
-    invoke-virtual {v1, p1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-lt v2, v0, :cond_5
+    const-string v1, ", findByIssuerAndSignatureMethod="
 
-    add-int/lit8 p1, v2, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2
+    iget-object v1, p0, Lmd;->b:Ljava/lang/reflect/Method;
 
-    :cond_5
-    move p1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_3
+    const-string v1, ")"
 
-    :cond_6
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

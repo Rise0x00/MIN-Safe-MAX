@@ -1,46 +1,52 @@
-.class public final Lnw3;
+.class public final synthetic Lnw3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llp7;
-
-
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnw3;->a:Ljava/util/List;
-
-    sget p1, Lqfa;->D:I
-
-    iput p1, p0, Lnw3;->b:I
-
-    return-void
-.end method
+.implements Lp7;
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final a(Li8d;)V
+    .locals 3
 
-    const-wide/high16 v0, -0x8000000000000000L
+    new-instance v0, Landroid/content/Intent;
 
-    return-wide v0
-.end method
+    const-string v1, "android.intent.action.INSERT"
 
-.method public final m()I
-    .locals 0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget p0, p0, Lnw3;->b:I
+    const-string v1, "vnd.android.cursor.dir/raw_contact"
 
-    return p0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "finishActivityOnSaveCompleted"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-static {p1}, Lgh5;->A(Li8d;)Landroid/app/Activity;
+
+    move-result-object p1
+
+    const/16 v1, 0x66
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const-string p1, "createContact: failed, no activity found"
+
+    const/4 v0, 0x0
+
+    const-string v1, "ContactsDeepLinkFactory"
+
+    invoke-static {v1, p1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

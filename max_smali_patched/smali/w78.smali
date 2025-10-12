@@ -1,66 +1,72 @@
-.class public final synthetic Lw78;
-.super Ljava/lang/Object;
+.class public final Lw78;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+.field public final synthetic X:Lone/me/android/MainActivity;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lw78;->a:I
+    iput-object p1, p0, Lw78;->X:Lone/me/android/MainActivity;
 
-    iput-object p1, p0, Lw78;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p1, p0, Lw78;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object p0, p0, Lw78;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lw78;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Lof7;
+    move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->x0()V
+    check-cast p1, Lw78;
 
-    return-void
+    sget-object p2, Loyf;->a:Loyf;
 
-    :pswitch_0
-    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Lof7;
+    invoke-virtual {p1, p2}, Lw78;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->x0()V
+    return-object p2
+.end method
 
-    return-void
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_1
-    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Lof7;
+    new-instance p1, Lw78;
 
-    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->x0()V
+    iget-object v0, p0, Lw78;->X:Lone/me/android/MainActivity;
 
-    return-void
+    invoke-direct {p1, v0, p2}, Lw78;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-    nop
+    return-object p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw78;->X:Lone/me/android/MainActivity;
+
+    invoke-virtual {p1}, Lu5;->Y()V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

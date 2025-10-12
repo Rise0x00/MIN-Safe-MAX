@@ -3,138 +3,101 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:Lc28;
+.field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:J
+.field public final synthetic b:Ljw9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc28;JZJ)V
+.method public synthetic constructor <init>(Ljw9;I)V
     .locals 0
 
+    iput p2, p0, Loj0;->a:I
+
+    iput-object p1, p0, Loj0;->b:Ljw9;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Loj0;->a:Lc28;
-
-    iput-wide p2, p0, Loj0;->b:J
-
-    iput-boolean p4, p0, Loj0;->c:Z
-
-    iput-wide p5, p0, Loj0;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/util/Map;
+    iget v0, p0, Loj0;->a:I
 
-    iget-object v0, p0, Loj0;->a:Lc28;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Lc28;->b:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Loj0;->b:Ljw9;
 
-    iget-wide v1, p0, Loj0;->b:J
+    iget-object v1, v0, Ljw9;->Z:Lqc;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v2, "LOCATION_MAP_TYPE_HYBRID"
 
-    move-result-object v1
+    invoke-virtual {v1, v2}, Lqc;->e(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lmj0;
 
-    move-result-object v1
+    const/16 v2, 0x9
 
-    check-cast v1, Lpj0;
+    invoke-direct {v1, v2}, Lmj0;-><init>(I)V
 
-    iget-boolean v2, p0, Loj0;->c:Z
+    invoke-virtual {v0, v1}, Lw2;->p(Lzo3;)V
 
-    if-eqz v1, :cond_1
+    :goto_0
+    sget-object v0, Loyf;->a:Loyf;
 
-    iget-object v1, v1, Lpj0;->a:Llud;
+    return-object v0
 
-    if-eqz v2, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Loj0;->b:Ljw9;
 
-    sget-object v3, Lg28;->a:Lg28;
+    iget-object v1, v0, Ljw9;->Z:Lqc;
 
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "LOCATION_MAP_TYPE_SATELLITE"
 
-    move-result-object v3
+    invoke-virtual {v1, v2}, Lqc;->e(Ljava/lang/String;)V
 
-    check-cast v3, Ljo0;
+    new-instance v1, Lmj0;
 
-    invoke-virtual {v1, v3}, Llud;->q(Ljo0;)V
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2}, Lmj0;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lw2;->p(Lzo3;)V
 
     goto :goto_0
 
-    :cond_0
-    sget-object v3, Lg28;->c:Lg28;
+    :pswitch_1
+    iget-object v0, p0, Loj0;->b:Ljw9;
 
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v0, Ljw9;->Z:Lqc;
 
-    move-result-object v3
+    const-string v2, "LOCATION_MAP_TYPE_NORMAL"
 
-    check-cast v3, Ljo0;
+    invoke-virtual {v1, v2}, Lqc;->e(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Llud;->q(Ljo0;)V
+    new-instance v1, Lmj0;
 
-    :goto_0
-    invoke-virtual {v1}, Llud;->v()V
+    const/4 v2, 0x7
 
-    :cond_1
-    iget-wide v3, p0, Loj0;->o:J
+    invoke-direct {v1, v2}, Lmj0;-><init>(I)V
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, v1}, Lw2;->p(Lzo3;)V
 
-    move-result-object p0
+    goto :goto_0
 
-    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    nop
 
-    move-result-object p0
-
-    check-cast p0, Lpj0;
-
-    if-eqz p0, :cond_3
-
-    iget-object p0, p0, Lpj0;->a:Llud;
-
-    if-eqz v2, :cond_2
-
-    sget-object v0, Lg28;->b:Lg28;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljo0;
-
-    invoke-virtual {p0, p1}, Llud;->q(Ljo0;)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v0, Lg28;->o:Lg28;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljo0;
-
-    invoke-virtual {p0, p1}, Llud;->q(Ljo0;)V
-
-    :goto_1
-    invoke-virtual {p0}, Llud;->v()V
-
-    :cond_3
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

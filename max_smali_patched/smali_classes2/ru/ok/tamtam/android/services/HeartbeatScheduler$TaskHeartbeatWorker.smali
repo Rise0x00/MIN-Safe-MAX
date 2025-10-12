@@ -15,10 +15,10 @@
         "context",
         "Landroidx/work/WorkerParameters;",
         "workerParams",
-        "Lmn6;",
+        "Ldu6;",
         "heartbeatLogic",
         "<init>",
-        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lmn6;)V",
+        "(Landroid/content/Context;Landroidx/work/WorkerParameters;Ldu6;)V",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,16 +32,16 @@
 
 
 # instance fields
-.field public final a:Lmn6;
+.field public final a:Ldu6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Lmn6;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;Ldu6;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p3, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Lmn6;
+    iput-object p3, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Ldu6;
 
     return-void
 .end method
@@ -49,9 +49,9 @@
 
 # virtual methods
 .method public final doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 9
+    .locals 10
 
-    invoke-virtual {p0}, Ldq7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
 
     move-result-object p1
 
@@ -59,61 +59,67 @@
 
     move-result-object p1
 
-    const-string v0, "nn6"
+    const-string v0, "eu6"
 
     const-string v1, "work %s started"
 
-    invoke-static {v0, v1, p1}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, p1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Lmn6;
+    iget-object p1, p0, Lru/ok/tamtam/android/services/HeartbeatScheduler$TaskHeartbeatWorker;->a:Ldu6;
 
-    iget-object v1, p1, Lmn6;->a:Lth7;
+    iget-object v1, p1, Ldu6;->a:Ljava/lang/String;
 
-    iget-object v2, p1, Lmn6;->c:Lth7;
+    iget-object v2, p1, Ldu6;->d:Lbp7;
 
-    iget-object v3, p1, Lmn6;->b:Lth7;
+    iget-object v3, p1, Ldu6;->c:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    const-string v4, "onHeartbeat"
 
-    move-result-object v1
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    check-cast v1, Lp6a;
+    iget-object v4, p1, Ldu6;->b:Lbp7;
 
-    invoke-virtual {v1}, Lp6a;->d()Z
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v4
 
-    if-eqz v1, :cond_1
+    check-cast v4, Lxga;
 
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v4}, Lxga;->d()Z
 
-    move-result-object v1
+    move-result v4
 
-    check-cast v1, Lem4;
+    if-eqz v4, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Llp4;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v6
 
-    check-cast v1, Lx9b;
+    check-cast v6, Lxob;
 
-    check-cast v1, Laab;
+    check-cast v6, Lzob;
 
-    iget-object v1, v1, Laab;->a:Lb53;
+    iget-object v6, v6, Lzob;->a:Lt63;
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v7, 0x0
 
-    iget-object v1, v1, Ld3;->g:Lwh7;
+    iget-object v6, v6, Lh3;->g:Lep7;
 
-    const-string v8, "app.lastSuccessfulRequestTime"
+    const-string v9, "app.lastSuccessfulRequestTime"
 
-    invoke-virtual {v1, v8, v6, v7}, Lwh7;->getLong(Ljava/lang/String;J)J
+    invoke-virtual {v6, v9, v7, v8}, Lep7;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v6
 
@@ -127,123 +133,127 @@
 
     const-wide v6, 0x417b774000000000L    # 2.88E7
 
-    cmpl-double v1, v4, v6
+    cmpl-double v4, v4, v6
 
-    if-lez v1, :cond_0
+    if-lez v4, :cond_0
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    const-string v4, "time since last successful request less than needed, force connection"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lx9b;
+    check-cast v1, Lxob;
 
-    check-cast v1, Laab;
+    check-cast v1, Lzob;
 
-    iget-object v1, v1, Laab;->a:Lb53;
+    iget-object v1, v1, Lzob;->a:Lt63;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Le2d;->t(Z)V
+    invoke-virtual {v1, v2}, Lxid;->u(Z)V
 
-    iget-object v1, p1, Lmn6;->d:Lth7;
+    iget-object v1, p1, Ldu6;->e:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lure;
+    check-cast v1, Lfcf;
 
-    invoke-virtual {v1}, Lure;->a()V
+    invoke-virtual {v1}, Lfcf;->a()V
 
     :cond_0
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lem4;
+    check-cast v1, Llp4;
 
-    invoke-virtual {v1}, Lem4;->d()Z
+    invoke-virtual {v1}, Llp4;->d()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    iget-object v1, p1, Lmn6;->e:Lth7;
+    iget-object v1, p1, Ldu6;->f:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lwj3;
+    check-cast v1, Llm3;
 
-    invoke-virtual {v1}, Lwj3;->f()Z
+    invoke-virtual {v1}, Llm3;->f()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p1, Lmn6;->f:Lth7;
+    iget-object v1, p1, Ldu6;->g:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljk;
+    check-cast v1, Ltk;
 
-    invoke-interface {v3}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lem4;
+    check-cast v2, Llp4;
 
-    invoke-virtual {v2}, Lem4;->d()Z
+    invoke-virtual {v2}, Llp4;->d()Z
 
     move-result v2
 
-    check-cast v1, Lw5a;
+    check-cast v1, Lbga;
 
-    invoke-virtual {v1, v2}, Lw5a;->F(Z)J
+    invoke-virtual {v1, v2}, Lbga;->F(Z)J
 
-    iget-object v1, p1, Lmn6;->g:Lth7;
+    iget-object v1, p1, Ldu6;->h:Lbp7;
 
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lkmg;
+    check-cast v1, Lnah;
 
-    invoke-static {v1}, Lkdd;->y(Lkmg;)V
+    invoke-static {v1}, Ldvd;->x(Lnah;)V
 
     :cond_1
-    iget-object p1, p1, Lmn6;->h:Lth7;
+    iget-object p1, p1, Ldu6;->i:Lbp7;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Law7;
+    check-cast p1, Lr38;
 
     const-string v1, "heartbeat"
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v1, v2}, Law7;->f(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v1, v2}, Lr38;->f(Ljava/lang/String;Z)Z
 
-    invoke-virtual {p0}, Ldq7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
 
-    move-result-object p0
+    move-result-object p1
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    const-string p1, "work %s finished"
+    const-string v1, "work %s finished"
 
-    invoke-static {v0, p1, p0}, Lz76;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, p1}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcq7;->b()Lbq7;
+    invoke-static {}, Lnx7;->b()Lmx7;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method

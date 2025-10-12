@@ -3,310 +3,543 @@
 .source "SourceFile"
 
 # interfaces
-.implements Losd;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ljava/lang/Object;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:I
 
 .field public final synthetic c:Ljava/lang/Object;
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 2
-    iput p4, p0, Lty0;->a:I
+    .line 1
+    iput p6, p0, Lty0;->a:I
 
-    iput-object p1, p0, Lty0;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lty0;->c:Ljava/lang/Object;
 
-    iput-object p2, p0, Lty0;->c:Ljava/lang/Object;
+    iput-object p2, p0, Lty0;->o:Ljava/lang/Object;
 
-    iput-object p3, p0, Lty0;->d:Ljava/lang/Object;
+    iput p3, p0, Lty0;->b:I
+
+    iput-object p4, p0, Lty0;->X:Ljava/lang/Object;
+
+    iput-object p5, p0, Lty0;->Y:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Losd;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x3
+    .line 2
+    iput p6, p0, Lty0;->a:I
 
-    iput v0, p0, Lty0;->a:I
+    iput-object p1, p0, Lty0;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lty0;->o:Ljava/lang/Object;
+
+    iput-object p3, p0, Lty0;->X:Ljava/lang/Object;
+
+    iput-object p4, p0, Lty0;->Y:Ljava/lang/Object;
+
+    iput p5, p0, Lty0;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lty0;->d:Ljava/lang/Object;
-
-    iput-object p2, p0, Lty0;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lty0;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Lorg/json/JSONObject;)V
-    .locals 5
+.method public final run()V
+    .locals 12
 
     iget v0, p0, Lty0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lty0;->c:Ljava/lang/Object;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    check-cast v0, Lnv8;
 
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lty0;->o:Ljava/lang/Object;
 
-    check-cast v1, Lf96;
+    check-cast v1, Landroid/util/Pair;
 
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
+    iget-object v2, p0, Lty0;->X:Ljava/lang/Object;
 
-    check-cast p0, Lv96;
+    move-object v6, v2
 
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->d(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lf96;Lv96;Lorg/json/JSONObject;)V
+    check-cast v6, Lhz7;
+
+    iget-object v2, p0, Lty0;->Y:Ljava/lang/Object;
+
+    move-object v7, v2
+
+    check-cast v7, Lnn8;
+
+    iget v8, p0, Lty0;->b:I
+
+    iget-object v0, v0, Lnv8;->b:Lsv8;
+
+    iget-object v0, v0, Lsv8;->j:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Lie4;
+
+    iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    iget-object v0, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lvu8;
+
+    invoke-virtual/range {v3 .. v8}, Lie4;->b(ILvu8;Lhz7;Lnn8;I)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lty0;->c:Ljava/lang/Object;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
+    check-cast v0, Lot8;
 
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lty0;->o:Ljava/lang/Object;
 
-    check-cast v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;
+    check-cast v1, Lkvd;
 
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
+    iget v2, p0, Lty0;->b:I
 
-    check-cast p0, Lf96;
+    iget-object v3, p0, Lty0;->X:Ljava/lang/Object;
 
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->b(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lf96;Lorg/json/JSONObject;)V
+    check-cast v3, Lut8;
 
-    return-void
+    iget-object v4, p0, Lty0;->Y:Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
+    check-cast v4, Lnt8;
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;
+    iget-object v5, v0, Lot8;->f:Lrtd;
 
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
+    iget-object v6, v0, Lot8;->g:Lft8;
 
-    check-cast v1, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;
+    invoke-virtual {v6}, Lft8;->h()Z
 
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
+    move-result v6
 
-    check-cast p0, Lf96;
-
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->f(Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lf96;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lty0;->d:Ljava/lang/Object;
-
-    check-cast v0, Losd;
-
-    iget-object v1, p0, Lty0;->b:Ljava/lang/Object;
-
-    check-cast v1, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;
-
-    iget-object p0, p0, Lty0;->c:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/Map;
-
-    invoke-static {v0, v1, p0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->c(Losd;Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;Ljava/util/Map;Lorg/json/JSONObject;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lel4;
-
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
-
-    check-cast v1, Leq8;
-
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
-
-    check-cast p0, Leq8;
-
-    const-string v2, "rooms"
-
-    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v0, Lel4;->a:Ljava/lang/Object;
-
-    check-cast v0, Lbsb;
-
-    invoke-virtual {v0, v2}, Lbsb;->m(Lorg/json/JSONObject;)Lgtd;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Can\'t parse rooms from "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Leq8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v6, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    iget-object v6, v0, Lot8;->k:Lys8;
+
+    iget-object v6, v6, Lys8;->a:Ljava/lang/Object;
+
+    check-cast v6, Lss8;
+
+    iget-object v6, v6, Lss8;->a:Landroid/media/session/MediaSession;
+
+    invoke-virtual {v6}, Landroid/media/session/MediaSession;->isActive()Z
+
+    move-result v6
+
+    const-string v7, "MediaSessionLegacyStub"
+
+    if-nez v6, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v4, "Ignore incoming session command before initialization. command="
+
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-nez v1, :cond_1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    goto :goto_0
+
     :cond_1
-    invoke-virtual {p0, v0}, Leq8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v1, Lkvd;->b:Ljava/lang/String;
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, v3, Lut8;->a:Ltt8;
+
+    iget v1, v1, Ltt8;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v7, v0}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0, v3}, Lot8;->K(Lut8;)Lls8;
+
+    move-result-object v3
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v5, v3, v1}, Lrtd;->z(Lls8;Lkvd;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v5, v3, v2}, Lrtd;->y(Lls8;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_0
+    invoke-interface {v4, v3}, Lnt8;->b(Lls8;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Exception in "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v7, v1, v0}, Lj40;->X(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_1
     return-void
 
-    :pswitch_4
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
+    :pswitch_1
+    iget-object v0, p0, Lty0;->c:Ljava/lang/Object;
 
-    check-cast v0, Lez0;
+    move-object v1, v0
 
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
+    check-cast v1, Lbl8;
 
-    check-cast v1, Lpua;
+    iget-object v0, p0, Lty0;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    check-cast p0, Lr1g;
+    iget-object v2, p0, Lty0;->X:Ljava/lang/Object;
 
-    iget-object v0, v0, Lez0;->C0:Lu8d;
+    check-cast v2, Ljava/util/List;
 
-    invoke-virtual {v0, p1}, Lu8d;->v(Lorg/json/JSONObject;)Lbs1;
+    iget-object v3, p0, Lty0;->Y:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v3, Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_2
+    iget v4, p0, Lty0;->b:I
 
-    invoke-virtual {v1, p1}, Lpua;->accept(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v0
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-ne v0, v5, :cond_7
+
+    const/4 v0, 0x0
+
+    move v5, v0
+
+    :goto_2
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v5, v0, :cond_7
+
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljx7;
+
+    if-eqz v0, :cond_5
+
+    :try_start_1
+    invoke-static {v0}, Lio7;->j(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_2
+    move-exception v0
+
+    :goto_3
+    const-string v6, "MCImplLegacy"
+
+    const-string v7, "Failed to get bitmap"
+
+    invoke-static {v6, v7, v0}, Lj40;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    :cond_5
+    const/4 v0, 0x0
+
+    :goto_4
+    iget-object v6, v1, Lbl8;->h:Lr6d;
+
+    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lrm8;
+
+    invoke-static {v7, v0}, Lcq7;->g(Lrm8;Landroid/graphics/Bitmap;)Lgl8;
+
+    move-result-object v0
+
+    add-int v7, v4, v5
+
+    iget-object v6, v6, Lr6d;->a:Ljava/lang/Object;
+
+    check-cast v6, Lek8;
+
+    iget-object v8, v6, Lek8;->a:Landroid/media/session/MediaController;
+
+    invoke-virtual {v8}, Landroid/media/session/MediaController;->getFlags()J
+
+    move-result-wide v8
+
+    const-wide/16 v10, 0x4
+
+    and-long/2addr v8, v10
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v8, v8, v10
+
+    if-eqz v8, :cond_6
+
+    new-instance v8, Landroid/os/Bundle;
+
+    invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
+
+    sget-object v9, Landroid/support/v4/media/MediaDescriptionCompat;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {v0, v9}, Liq7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    const-string v9, "android.support.v4.media.session.command.ARGUMENT_MEDIA_DESCRIPTION"
+
+    invoke-virtual {v8, v9, v0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string v0, "android.support.v4.media.session.command.ARGUMENT_INDEX"
+
+    invoke-virtual {v8, v0, v7}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const/4 v0, 0x0
+
+    iget-object v6, v6, Lek8;->a:Landroid/media/session/MediaController;
+
+    const-string v7, "android.support.v4.media.session.command.ADD_QUEUE_ITEM_AT"
+
+    invoke-virtual {v6, v7, v8, v0}, Landroid/media/session/MediaController;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
+
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    :cond_2
-    invoke-virtual {p0}, Lr1g;->run()V
+    :cond_6
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    :goto_2
+    const-string v1, "This session doesn\'t support queue management operations"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
     return-void
 
-    :pswitch_5
-    iget-object v0, p0, Lty0;->b:Ljava/lang/Object;
+    :pswitch_2
+    iget-object v0, p0, Lty0;->c:Ljava/lang/Object;
 
-    check-cast v0, Lez0;
+    move-object v2, v0
 
-    iget-object v1, p0, Lty0;->c:Ljava/lang/Object;
+    check-cast v2, Ls81;
 
-    check-cast v1, Lwg1;
+    iget-object v0, p0, Lty0;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lty0;->d:Ljava/lang/Object;
+    move-object v3, v0
 
-    check-cast p0, Losd;
+    check-cast v3, Landroidx/viewpager2/widget/ViewPager2;
 
-    iget-object v2, v0, Lez0;->K:Li7c;
+    iget v0, p0, Lty0;->b:I
 
-    const-string v3, "OKRTCCall"
+    iget-object v1, p0, Lty0;->X:Ljava/lang/Object;
 
-    const-string v4, "handle response from signaling on add-participant command"
+    move-object v5, v1
 
-    invoke-interface {v2, v3, v4}, Li7c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v5, Lar;
 
-    const-string v4, "participant"
+    iget-object v1, p0, Lty0;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    move-object v6, v1
 
-    move-result-object p1
+    check-cast v6, Lz5;
 
-    :try_start_0
-    invoke-virtual {v0, v1, p1}, Lez0;->y(Lwg1;Lorg/json/JSONObject;)I
+    add-int/lit8 v4, v0, 0x1
 
-    move-result p1
+    invoke-virtual {v3}, Landroid/view/View;->isInLayout()Z
 
-    sget-object v0, Lfpg;->b:[I
+    move-result v0
 
-    invoke-static {p1}, Ldw1;->t(I)I
+    if-eqz v0, :cond_9
 
-    move-result p1
+    const/4 v0, 0x5
 
-    aget p1, v0, p1
+    if-ne v4, v0, :cond_8
 
-    const/4 v0, 0x1
+    invoke-virtual {v6}, Lz5;->invoke()Ljava/lang/Object;
 
-    if-eq p1, v0, :cond_4
+    goto :goto_5
 
-    const/4 v0, 0x2
+    :cond_8
+    new-instance v1, Lty0;
 
-    if-eq p1, v0, :cond_3
+    const/4 v7, 0x1
 
-    goto :goto_3
+    invoke-direct/range {v1 .. v7}, Lty0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
 
-    :cond_3
-    new-instance p1, Lorg/json/JSONObject;
+    invoke-virtual {v3, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-direct {p1}, Lorg/json/JSONObject;-><init>()V
+    goto :goto_5
 
-    const-string v0, "error"
+    :cond_9
+    invoke-virtual {v5}, Lar;->invoke()Ljava/lang/Object;
 
-    const-string v1, "state.accepted"
+    :goto_5
+    return-void
 
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :pswitch_3
+    iget-object v0, p0, Lty0;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    move-object v1, v0
 
-    invoke-interface {p0, p1}, Losd;->j(Lorg/json/JSONObject;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v1, Lfz0;
 
-    goto :goto_3
+    iget-object v0, p0, Lty0;->o:Ljava/lang/Object;
 
-    :catch_0
-    move-exception p0
+    check-cast v0, Ljava/lang/String;
 
-    const-string p1, "add.participant.success"
+    iget v2, p0, Lty0;->b:I
 
-    invoke-interface {v2, v3, p1, p0}, Li7c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v3, p0, Lty0;->X:Ljava/lang/Object;
 
-    :cond_4
-    :goto_3
+    check-cast v3, Ljava/util/Set;
+
+    iget-object v4, p0, Lty0;->Y:Ljava/lang/Object;
+
+    check-cast v4, Lorg/webrtc/NativeDumpCallback;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_2
+    iget-object v5, v1, Lfz0;->b0:Lk8e;
+
+    iget-object v5, v5, Lk8e;->d:Lorg/webrtc/PeerConnectionFactory;
+
+    if-nez v5, :cond_a
+
+    goto :goto_6
+
+    :cond_a
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    int-to-long v7, v2
+
+    invoke-virtual {v6, v7, v8}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v6
+
+    long-to-int v2, v6
+
+    invoke-virtual {v5, v0, v2, v3, v4}, Lorg/webrtc/PeerConnectionFactory;->submitDumpRequest(Ljava/lang/String;ILjava/util/Set;Lorg/webrtc/DumpCallback;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_6
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v1, v1, Lfz0;->L:Lpmc;
+
+    const-string v2, "OKRTCCall"
+
+    const-string v3, "Error starting local audio dump"
+
+    invoke-interface {v1, v2, v3, v0}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_6
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1

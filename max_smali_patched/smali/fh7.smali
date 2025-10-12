@@ -1,214 +1,154 @@
 .class public final Lfh7;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ly3a;
-.implements Lkp4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lgm3;
+.field public final X:Ljava/util/concurrent/ScheduledFuture;
 
-.field public final b:Lgm3;
+.field public final Y:Ljava/util/concurrent/ThreadFactory;
 
-.field public final c:Lz5;
+.field public final a:J
 
-.field public final o:Lv1d;
+.field public final b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public final c:Lbg3;
+
+.field public final o:Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # direct methods
-.method public constructor <init>(Lgm3;Lgm3;Lz5;)V
-    .locals 1
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
+    .locals 7
 
-    sget-object v0, Lr7;->g:Lv1d;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    if-eqz p3, :cond_0
 
-    iput-object p1, p0, Lfh7;->a:Lgm3;
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    iput-object p2, p0, Lfh7;->b:Lgm3;
+    move-result-wide p1
 
-    iput-object p3, p0, Lfh7;->c:Lz5;
+    :goto_0
+    move-wide v2, p1
 
-    iput-object v0, p0, Lfh7;->o:Lv1d;
+    goto :goto_1
+
+    :cond_0
+    const-wide/16 p1, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iput-wide v2, p0, Lfh7;->a:J
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object p1, p0, Lfh7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    new-instance p1, Lbg3;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfh7;->c:Lbg3;
+
+    iput-object p4, p0, Lfh7;->Y:Ljava/util/concurrent/ThreadFactory;
+
+    if-eqz p3, :cond_1
+
+    const/4 p1, 0x1
+
+    sget-object p2, Lih7;->e:Lgad;
+
+    invoke-static {p1, p2}, Ljava/util/concurrent/Executors;->newScheduledThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    move-wide v4, v2
+
+    move-object v1, p0
+
+    invoke-interface/range {v0 .. v6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_1
+    move-object v1, p0
+
+    const/4 v0, 0x0
+
+    move-object p1, v0
+
+    :goto_2
+    iput-object v0, v1, Lfh7;->o:Ljava/util/concurrent/ScheduledExecutorService;
+
+    iput-object p1, v1, Lfh7;->X:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final run()V
+    .locals 7
 
-    invoke-virtual {p0}, Lfh7;->g()Z
+    iget-object v0, p0, Lfh7;->b:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
 
-    if-nez v0, :cond_0
+    move-result v1
 
-    sget-object v0, Lop4;->a:Lop4;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    :try_start_0
-    iget-object p0, p0, Lfh7;->c:Lz5;
+    move-result-wide v1
 
-    invoke-interface {p0}, Lz5;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
 
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-static {p0}, Lkv0;->v(Ljava/lang/Throwable;)V
+    move-result-object v3
 
     :cond_0
-    return-void
-.end method
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final c(Lkp4;)V
-    .locals 1
+    move-result v4
 
-    invoke-static {p0, p1}, Lop4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lkp4;)Z
+    if-eqz v4, :cond_1
 
-    move-result v0
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v4
 
-    :try_start_0
-    iget-object v0, p0, Lfh7;->o:Lv1d;
+    check-cast v4, Lhh7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v5, v4, Lhh7;->c:J
 
-    return-void
+    cmp-long v5, v5, v1
 
-    :catchall_0
-    move-exception v0
+    if-gtz v5, :cond_1
 
-    invoke-static {v0}, Lve2;->b0(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v4}, Ljava/util/concurrent/ConcurrentLinkedQueue;->remove(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Lkp4;->f()V
+    move-result v5
 
-    invoke-virtual {p0, v0}, Lfh7;->onError(Ljava/lang/Throwable;)V
+    if-eqz v5, :cond_0
 
-    :cond_0
-    return-void
-.end method
+    iget-object v5, p0, Lfh7;->c:Lbg3;
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 1
+    invoke-virtual {v5, v4}, Lbg3;->b(Lss4;)Z
 
-    invoke-virtual {p0}, Lfh7;->g()Z
+    goto :goto_0
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lfh7;->a:Lgm3;
-
-    invoke-interface {v0, p1}, Lgm3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkp4;
-
-    invoke-interface {v0}, Lkp4;->f()V
-
-    invoke-virtual {p0, p1}, Lfh7;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    invoke-static {p0}, Lop4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object v0, Lop4;->a:Lop4;
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lfh7;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lop4;->a:Lop4;
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object p0, p0, Lfh7;->b:Lgm3;
-
-    invoke-interface {p0, p1}, Lgm3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    new-instance v0, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, p0}, [Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
-
-    invoke-static {v0}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lkv0;->v(Ljava/lang/Throwable;)V
-
+    :cond_1
     return-void
 .end method

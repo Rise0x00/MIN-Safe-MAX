@@ -1,21 +1,21 @@
 .class public final Lab1;
-.super Lpd0;
+.super Ldd0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lyte;
+.field public final b:Ljef;
 
 
 # direct methods
-.method public constructor <init>(Lyte;)V
+.method public constructor <init>(Ljef;)V
     .locals 1
 
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-    iput-object p1, p0, Lab1;->b:Lyte;
+    iput-object p1, p0, Lab1;->b:Ljef;
 
     return-void
 .end method
@@ -39,40 +39,40 @@
     :cond_1
     check-cast p1, Lab1;
 
-    iget-object p0, p0, Lab1;->b:Lyte;
+    iget-object v0, p0, Lab1;->b:Ljef;
 
-    iget-object p1, p1, Lab1;->b:Lyte;
+    iget-object p1, p1, Lab1;->b:Ljef;
 
-    invoke-virtual {p0, p1}, Lyte;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-nez p1, :cond_2
 
     :goto_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 
     :cond_2
     :goto_1
-    const/4 p0, 0x1
+    const/4 p1, 0x1
 
-    return p0
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lab1;->b:Lyte;
+    iget-object v0, p0, Lab1;->b:Ljef;
 
-    iget p0, p0, Lyte;->b:I
+    iget v0, v0, Ljef;->b:I
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -84,17 +84,17 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lab1;->b:Lyte;
+    iget-object v1, p0, Lab1;->b:Ljef;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

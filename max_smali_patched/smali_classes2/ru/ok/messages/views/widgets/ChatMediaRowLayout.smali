@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final a:Lon4;
+.field public final a:Ltq4;
 
 
 # direct methods
@@ -15,11 +15,11 @@
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {}, Lon4;->b()Lon4;
+    invoke-static {}, Ltq4;->a()Ltq4;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/messages/views/widgets/ChatMediaRowLayout;->a:Lon4;
+    iput-object p1, p0, Lru/ok/messages/views/widgets/ChatMediaRowLayout;->a:Ltq4;
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     sub-int/2addr v0, v1
 
     :cond_2
-    iget-object v1, p0, Lru/ok/messages/views/widgets/ChatMediaRowLayout;->a:Lon4;
+    iget-object v1, p0, Lru/ok/messages/views/widgets/ChatMediaRowLayout;->a:Ltq4;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -111,7 +111,7 @@
 
     float-to-int v1, v1
 
-    invoke-static {v1}, Lsn4;->b(I)I
+    invoke-static {v1}, Lxq4;->b(I)I
 
     move-result v1
 
@@ -135,7 +135,7 @@
     return-void
 .end method
 
-.method public setListener(Lgi2;)V
+.method public setListener(Ldj2;)V
     .locals 0
 
     return-void

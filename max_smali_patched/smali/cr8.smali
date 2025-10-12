@@ -4,139 +4,50 @@
 
 
 # instance fields
-.field public final a:Lkpd;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final c:Lhn3;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lrv0;Lhoe;)V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcr8;->a:Ljava/lang/Object;
 
-    const/4 v1, 0x7
+    instance-of v0, p1, Ljava/lang/String;
 
-    invoke-static {v0, v0, v1}, Llpd;->b(III)Lkpd;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    iput-object v0, p0, Lcr8;->a:Lkpd;
-
-    check-cast p2, Loba;
-
-    invoke-virtual {p2}, Loba;->c()Li08;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lis8;->a(Lh04;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcr8;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget p2, Liw4;->o:I
-
-    const/16 p2, 0x3e8
-
-    sget-object v1, Lnw4;->c:Lnw4;
-
-    invoke-static {p2, v1}, Lj5e;->C(ILnw4;)J
-
-    move-result-wide v1
-
-    new-instance p2, Lsi0;
-
-    const/16 v3, 0x11
-
-    invoke-direct {p2, v3}, Lsi0;-><init>(I)V
-
-    invoke-static {v0, v1, v2, p2}, Lqbf;->g(Lbq5;JLt96;)Lhn3;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lcr8;->c:Lhn3;
-
-    invoke-virtual {p1, p0}, Lrv0;->d(Ljava/lang/Object;)V
+    iput p1, p0, Lcr8;->b:I
 
     return-void
-.end method
 
+    :cond_0
+    instance-of p1, p1, Lbs8;
 
-# virtual methods
-.method public final a()V
-    .locals 3
+    if-eqz p1, :cond_1
 
-    new-instance v0, Lxq8;
+    const/4 p1, 0x2
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lxq8;-><init>(Lcr8;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x3
-
-    iget-object p0, p0, Lcr8;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p0, v1, v1, v0, v2}, Lyr3;->Y(Lp04;Lh04;Ls04;Lt96;I)Lt1e;
+    iput p1, p0, Lcr8;->b:I
 
     return-void
-.end method
 
-.method public final onEvent(Lbya;)V
-    .locals 0
-    .annotation runtime Lvee;
-    .end annotation
+    :cond_1
+    const/4 p1, 0x0
 
-    .line 2
-    invoke-virtual {p0}, Lcr8;->a()V
+    iput p1, p0, Lcr8;->b:I
 
-    return-void
-.end method
+    const-string p1, "RecyclerAdapter"
 
-.method public final onEvent(Lf13;)V
-    .locals 0
-    .annotation runtime Lvee;
-    .end annotation
+    const-string v0, "Wrong type of data passed to Item constructor"
 
-    .line 5
-    invoke-virtual {p0}, Lcr8;->a()V
-
-    return-void
-.end method
-
-.method public final onEvent(Lgv3;)V
-    .locals 0
-    .annotation runtime Lvee;
-    .end annotation
-
-    .line 3
-    invoke-virtual {p0}, Lcr8;->a()V
-
-    return-void
-.end method
-
-.method public final onEvent(Lhx7;)V
-    .locals 0
-    .annotation runtime Lvee;
-    .end annotation
-
-    .line 1
-    invoke-virtual {p0}, Lcr8;->a()V
-
-    return-void
-.end method
-
-.method public final onEvent(Ludf;)V
-    .locals 0
-    .annotation runtime Lvee;
-    .end annotation
-
-    .line 4
-    invoke-virtual {p0}, Lcr8;->a()V
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

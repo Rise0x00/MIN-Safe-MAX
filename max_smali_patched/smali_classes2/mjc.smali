@@ -1,19 +1,26 @@
-.class public final Lmjc;
-.super Lhj0;
-.source "SourceFile"
+.class public abstract Lmjc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static media_picker_default_toolbar_title:I = 0x7f130637
 
+.field public static media_picker_default_toolbar_title_only_photo:I = 0x7f130638
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static media_picker_empty_media_data:I = 0x7f130639
 
-    invoke-direct {p0}, Lhj0;-><init>()V
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f130673
 
-    iput-wide p1, p0, Lmjc;->b:J
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f130674
 
-    return-void
-.end method
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f130675
+
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f130676
+
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f130677
+
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130678
+
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130679
+
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f13067a

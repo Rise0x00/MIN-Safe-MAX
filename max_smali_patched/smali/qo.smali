@@ -1,13 +1,14 @@
-.class public abstract Lqo;
+.class public interface abstract Lqo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()I
-    .locals 1
+# virtual methods
+.method public abstract A(I)V
+.end method
 
-    const/16 v0, 0x200
+.method public abstract I(I)V
+.end method
 
-    return v0
+.method public abstract J(IF)V
 .end method

@@ -1,157 +1,42 @@
-.class public final enum Lqgc;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lqgc;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum X:Lqgc;
+.field public static action0:I = 0x7f0a00a3
 
-.field public static final enum Y:Lqgc;
+.field public static action_divider:I = 0x7f0a00b0
 
-.field public static final enum Z:Lqgc;
+.field public static cancel_action:I = 0x7f0a0237
 
-.field public static final enum a:Lqgc;
+.field public static chronometer:I = 0x7f0a02b0
 
-.field public static final enum b:Lqgc;
+.field public static end_padder:I = 0x7f0a0342
 
-.field public static final enum c:Lqgc;
+.field public static icon:I = 0x7f0a0413
 
-.field public static final enum n0:Lqgc;
+.field public static info:I = 0x7f0a0422
 
-.field public static final enum o:Lqgc;
+.field public static line1:I = 0x7f0a0457
 
-.field public static final enum o0:Lqgc;
+.field public static line3:I = 0x7f0a0458
 
-.field public static final synthetic p0:[Lqgc;
+.field public static media_actions:I = 0x7f0a04b2
 
+.field public static media_controller_compat_view_tag:I = 0x7f0a04db
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.field public static notification_main_column:I = 0x7f0a0608
 
-    new-instance v0, Lqgc;
+.field public static notification_main_column_container:I = 0x7f0a0609
 
-    const-string v1, "CONFIGURING"
+.field public static right_side:I = 0x7f0a0a16
 
-    const/4 v2, 0x0
+.field public static status_bar_latest_event_content:I = 0x7f0a0bf0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static text:I = 0x7f0a0c10
 
-    sput-object v0, Lqgc;->a:Lqgc;
+.field public static text2:I = 0x7f0a0c11
 
-    new-instance v1, Lqgc;
+.field public static time:I = 0x7f0a0c2f
 
-    const-string v2, "PENDING_RECORDING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lqgc;->b:Lqgc;
-
-    new-instance v2, Lqgc;
-
-    const-string v3, "PENDING_PAUSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lqgc;->c:Lqgc;
-
-    new-instance v3, Lqgc;
-
-    const-string v4, "IDLING"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lqgc;->o:Lqgc;
-
-    new-instance v4, Lqgc;
-
-    const-string v5, "RECORDING"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lqgc;->X:Lqgc;
-
-    new-instance v5, Lqgc;
-
-    const-string v6, "PAUSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lqgc;->Y:Lqgc;
-
-    new-instance v6, Lqgc;
-
-    const-string v7, "STOPPING"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lqgc;->Z:Lqgc;
-
-    new-instance v7, Lqgc;
-
-    const-string v8, "RESETTING"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lqgc;->n0:Lqgc;
-
-    new-instance v8, Lqgc;
-
-    const-string v9, "ERROR"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lqgc;->o0:Lqgc;
-
-    filled-new-array/range {v0 .. v8}, [Lqgc;
-
-    move-result-object v0
-
-    sput-object v0, Lqgc;->p0:[Lqgc;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lqgc;
-    .locals 1
-
-    const-class v0, Lqgc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lqgc;
-
-    return-object p0
-.end method
-
-.method public static values()[Lqgc;
-    .locals 1
-
-    sget-object v0, Lqgc;->p0:[Lqgc;
-
-    invoke-virtual {v0}, [Lqgc;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lqgc;
-
-    return-object v0
-.end method
+.field public static title:I = 0x7f0a0c31

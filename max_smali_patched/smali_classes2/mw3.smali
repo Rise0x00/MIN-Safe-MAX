@@ -1,295 +1,146 @@
-.class public final Lmw3;
+.class public final synthetic Lmw3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp7;
+
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ldue;
-
-.field public final c:Ljava/lang/Integer;
-
-.field public final d:Ljava/lang/Integer;
-
-.field public final e:Ljava/lang/Integer;
+.field public final synthetic a:Low3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-    .locals 2
-
-    and-int/lit8 v0, p5, 0x8
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object p3, v1
-
-    :cond_0
-    and-int/lit8 p5, p5, 0x10
-
-    if-eqz p5, :cond_1
-
-    move-object p5, v1
-
-    :goto_0
-    move-object p4, p3
-
-    goto :goto_1
-
-    :cond_1
-    move-object p5, p4
-
-    goto :goto_0
-
-    :goto_1
-    const/4 p3, 0x0
-
-    .line 1
-    invoke-direct/range {p0 .. p5}, Lmw3;-><init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ILdue;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+.method public synthetic constructor <init>(Low3;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput p1, p0, Lmw3;->a:I
-
-    .line 4
-    iput-object p2, p0, Lmw3;->b:Ldue;
-
-    .line 5
-    iput-object p3, p0, Lmw3;->c:Ljava/lang/Integer;
-
-    .line 6
-    iput-object p4, p0, Lmw3;->d:Ljava/lang/Integer;
-
-    .line 7
-    iput-object p5, p0, Lmw3;->e:Ljava/lang/Integer;
+    iput-object p1, p0, Lmw3;->a:Low3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Li8d;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lmw3;->a:Low3;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, v0, Low3;->b:Lbp7;
 
-    return v0
+    const/4 v1, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lmw3;
+    :try_start_0
+    invoke-static {p1}, Lgh5;->A(Li8d;)Landroid/app/Activity;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-nez v1, :cond_1
+    new-instance v2, Lr26;
 
-    return v2
+    const/16 v3, 0xb
 
-    :cond_1
-    check-cast p1, Lmw3;
+    invoke-direct {v2, p1, v3}, Lr26;-><init>(Landroid/content/Context;I)V
 
-    iget v1, p0, Lmw3;->a:I
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    iget v3, p1, Lmw3;->a:I
+    move-result-object v3
 
-    if-eq v1, v3, :cond_2
+    check-cast v3, Lktd;
 
-    return v2
+    check-cast v3, Lgjd;
 
-    :cond_2
-    iget-object v1, p0, Lmw3;->b:Ldue;
+    const-string v4, "invite-header"
 
-    iget-object v3, p1, Lmw3;->b:Ldue;
+    iget-object v3, v3, Lh3;->g:Lep7;
 
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v3, v4, v1}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lmw3;->c:Ljava/lang/Integer;
-
-    iget-object v3, p1, Lmw3;->c:Ljava/lang/Integer;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lmw3;->d:Ljava/lang/Integer;
-
-    iget-object v3, p1, Lmw3;->d:Ljava/lang/Integer;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object p0, p0, Lmw3;->e:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lmw3;->e:Ljava/lang/Integer;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget v0, p0, Lmw3;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lmw3;->b:Ldue;
-
-    invoke-static {v0, v1, v2}, Lmh0;->c(IILdue;)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lmw3;->c:Ljava/lang/Integer;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    if-eqz v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    sget v3, Ln9d;->C:I
 
-    move-result v3
+    invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
 
     :goto_0
-    add-int/2addr v0, v3
+    iput-object v3, v2, Lr26;->a:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    const-string v3, "text/plain"
 
-    iget-object v3, p0, Lmw3;->d:Ljava/lang/Integer;
+    iget-object v4, v2, Lr26;->c:Ljava/lang/Object;
 
-    if-nez v3, :cond_1
+    check-cast v4, Landroid/content/Intent;
 
-    move v3, v2
+    invoke-virtual {v4, v3}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lktd;
+
+    check-cast v0, Lgjd;
+
+    const-string v3, "invite-long"
+
+    iget-object v4, v0, Lh3;->g:Lep7;
+
+    invoke-virtual {v4, v3, v1}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    sget v3, Ln9d;->J:I
 
-    move-result v3
+    invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Lgjd;->m()Ljava/lang/String;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
 
     :goto_1
-    add-int/2addr v0, v3
+    invoke-virtual {v2, v3}, Lr26;->y(Ljava/lang/CharSequence;)V
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v2}, Lr26;->z()V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p0, p0, Lmw3;->e:Ljava/lang/Integer;
+    return-void
 
-    if-nez p0, :cond_2
+    :catch_0
+    const-string p1, "ContactsDeepLinkFactory"
 
-    goto :goto_2
+    const-string v0, "shareInvite: failed, no activity found"
 
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {p1, v0, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result v2
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContextMenuAction(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lmw3;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmw3;->b:Ldue;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textColor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmw3;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmw3;->d:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconColor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lmw3;->e:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

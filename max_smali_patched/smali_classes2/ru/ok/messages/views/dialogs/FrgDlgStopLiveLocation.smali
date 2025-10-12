@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lru/ok/messages/views/dialogs/FrgDlgChecked<",
-        "Lq86;",
+        "Lhe6;",
         ">;"
     }
 .end annotation
@@ -24,16 +24,16 @@
 
 
 # virtual methods
-.method public final V0()Landroid/app/Dialog;
+.method public final U0()Landroid/app/Dialog;
     .locals 5
 
-    invoke-static {}, Lpl;->b()Lke3;
+    invoke-static {}, Lem;->b()Lsg3;
 
     move-result-object v0
 
-    check-cast v0, Loaa;
+    check-cast v0, Lyka;
 
-    invoke-virtual {v0}, Loaa;->e()Lbb2;
+    invoke-virtual {v0}, Lyka;->e()Lub2;
 
     move-result-object v0
 
@@ -45,83 +45,83 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lbb2;->C(J)Ll72;
+    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
 
     move-result-object v0
 
-    new-instance v1, Lc48;
+    new-instance v1, Lbc8;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->I0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->H0()Landroid/content/Context;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3}, Lc48;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, v2, v3}, Lbc8;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0}, Ll72;->j0()V
+    invoke-virtual {v0}, Lm82;->k0()V
 
-    iget-object v2, v0, Ll72;->p0:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lm82;->y0:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v2}, Lc48;->d(Ljava/lang/CharSequence;)Lc48;
+    invoke-virtual {v1, v2}, Lbc8;->d(Ljava/lang/CharSequence;)Lbc8;
 
     move-result-object v1
 
-    sget v2, Lbtc;->w0:I
+    sget v2, Lt9d;->x0:I
 
-    iget-object v3, v1, Llc;->a:Lhc;
+    iget-object v3, v1, Lic;->a:Lec;
 
-    iget-object v4, v3, Lhc;->a:Landroid/view/ContextThemeWrapper;
+    iget-object v4, v3, Lec;->a:Landroid/view/ContextThemeWrapper;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    iput-object v2, v3, Lhc;->f:Ljava/lang/CharSequence;
+    iput-object v2, v3, Lec;->f:Ljava/lang/CharSequence;
 
-    sget v2, Lvsc;->a:I
+    sget v2, Ln9d;->a:I
 
-    new-instance v2, Lj86;
+    new-instance v2, Lee6;
 
     const/4 v3, 0x3
 
-    invoke-direct {v2, p0, v0, v3}, Lj86;-><init>(Landroidx/fragment/app/a;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, v3}, Lee6;-><init>(Landroidx/fragment/app/a;Ljava/lang/Object;I)V
 
-    invoke-virtual {v1, v2}, Lc48;->b(Lj86;)Lc48;
+    invoke-virtual {v1, v2}, Lbc8;->b(Lee6;)Lbc8;
 
     move-result-object v0
 
-    sget v1, Lbtc;->r:I
+    sget v1, Lt9d;->r:I
 
-    new-instance v2, Lt00;
+    new-instance v2, Lk00;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, v3, p0}, Lt00;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, p0}, Lk00;-><init>(ILjava/lang/Object;)V
 
-    iget-object p0, v0, Llc;->a:Lhc;
+    iget-object v3, v0, Lic;->a:Lec;
 
-    iget-object v3, p0, Lhc;->a:Landroid/view/ContextThemeWrapper;
+    iget-object v4, v3, Lec;->a:Landroid/view/ContextThemeWrapper;
 
-    invoke-virtual {v3, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    iput-object v1, p0, Lhc;->k:Ljava/lang/CharSequence;
+    iput-object v1, v3, Lec;->k:Ljava/lang/CharSequence;
 
-    iput-object v2, p0, Lhc;->l:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v2, v3, Lec;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {v0}, Llc;->a()Lmc;
+    invoke-virtual {v0}, Lic;->a()Ljc;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method
 
-.method public final b1()Ljava/lang/Class;
-    .locals 0
+.method public final a1()Ljava/lang/Class;
+    .locals 1
 
-    const-class p0, Lq86;
+    const-class v0, Lhe6;
 
-    return-object p0
+    return-object v0
 .end method

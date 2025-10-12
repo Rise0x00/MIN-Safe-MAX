@@ -1,110 +1,188 @@
 .class public final Lj9e;
-.super Ljava/lang/Object;
+.super Lps;
 .source "SourceFile"
 
-# interfaces
-.implements Lx94;
 
+# instance fields
+.field public final i:Lnef;
 
-# static fields
-.field public static final a:Lj9e;
+.field public final j:Ljef;
 
-.field public static final b:Lk9e;
+.field public final k:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnef;Ljef;Ljava/lang/Integer;)V
+    .locals 0
 
-    new-instance v0, Lj9e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj9e;->i:Lnef;
 
-    sput-object v0, Lj9e;->a:Lj9e;
+    iput-object p2, p0, Lj9e;->j:Ljef;
 
-    sget-object v0, Lk9e;->b:Lk9e;
-
-    sput-object v0, Lj9e;->b:Lk9e;
+    iput-object p3, p0, Lj9e;->k:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfa4;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object p0, Lj9e;->b:Lk9e;
+    if-ne p0, p1, :cond_0
 
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;Laa4;Landroid/os/Bundle;)Lia4;
-    .locals 8
-
-    sget-object p0, Lj9e;->b:Lk9e;
-
-    iget-object p0, p0, Lfa4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
+    goto :goto_1
 
     :cond_0
-    sget-object p0, Lk9e;->b:Lk9e;
+    instance-of v0, p1, Lj9e;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v0, :cond_1
 
-    sget-object p0, Lk9e;->c:Laa4;
-
-    invoke-virtual {p2, p0}, Laa4;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance v0, Lia4;
-
-    new-instance v6, Lbn1;
-
-    const/16 p0, 0xc
-
-    invoke-direct {v6, p3, p0}, Lbn1;-><init>(Landroid/os/Bundle;I)V
-
-    const/16 v7, 0x10
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v7}, Lia4;-><init>(Ljava/lang/String;Laa4;Landroid/os/Bundle;ILga4;Lha4;I)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_1
-    move-object v2, p2
+    check-cast p1, Lj9e;
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lj9e;->i:Lnef;
 
-    const-string p1, "invalid route "
+    iget-object v1, p1, Lj9e;->i:Lnef;
 
-    invoke-static {p1, v2}, Ldw1;->g(Ljava/lang/String;Laa4;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lnef;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
-    throw p0
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lj9e;->j:Ljef;
+
+    iget-object v1, p1, Lj9e;->j:Ljef;
+
+    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lj9e;->k:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lj9e;->k:Ljava/lang/Integer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lj9e;->i:Lnef;
+
+    invoke-virtual {v0}, Lnef;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lj9e;->j:Ljef;
+
+    iget v2, v2, Ljef;->b:I
+
+    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lj9e;->k:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final o()Loef;
+    .locals 1
+
+    iget-object v0, p0, Lj9e;->j:Ljef;
+
+    return-object v0
+.end method
+
+.method public final p()Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lj9e;->k:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Text(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj9e;->i:Lnef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", shouldShowMore=true, hint="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj9e;->j:Ljef;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hintColor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj9e;->k:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

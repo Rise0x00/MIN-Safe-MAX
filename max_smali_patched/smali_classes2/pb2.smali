@@ -1,116 +1,123 @@
-.class public final Lpb2;
+.class public final synthetic Lpb2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-.implements Ls23;
+.implements Ljava/util/function/BiConsumer;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    iput p2, p0, Lpb2;->a:I
+
+    iput-object p1, p0, Lpb2;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lpb2;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpb2;->a:J
-
-    iput-wide p3, p0, Lpb2;->b:J
-
-    const-wide/16 v0, -0x1
-
-    cmp-long p0, p1, v0
-
-    const-string p1, ""
-
-    const-string p2, "Chunk"
-
-    if-nez p0, :cond_0
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v2, "start time is -1"
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p1, p0}, Lz76;->K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    cmp-long p0, p3, v0
-
-    if-nez p0, :cond_1
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p3, "end time is -1"
-
-    invoke-direct {p0, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p1, p0}, Lz76;->K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 4
 
-    iget-wide v0, p0, Lpb2;->a:J
+    iget v0, p0, Lpb2;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b()J
-    .locals 2
+    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
 
-    iget-wide v0, p0, Lpb2;->b:J
+    check-cast v0, Ljava/util/Collection;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
 
-.method public final c()Lop0;
-    .locals 6
+    check-cast v1, Lds;
 
-    new-instance v0, Lop0;
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v1, 0x2
+    check-cast p2, Lap3;
 
-    invoke-direct {v0, v1}, Lop0;-><init>(I)V
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    const-wide/16 v1, -0x1
+    move-result v0
 
-    iget-wide v3, p0, Lpb2;->a:J
+    if-eqz v0, :cond_0
 
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "start time is -1"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "Chunk.Builder"
-
-    const-string v5, ""
-
-    invoke-static {v2, v5, v1}, Lz76;->K(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, p1, p2}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    iput-wide v3, v0, Lop0;->b:J
+    return-void
 
-    iget-wide v1, p0, Lpb2;->b:J
+    :pswitch_0
+    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Lop0;->b(J)V
+    check-cast v0, Ljava/util/Collection;
 
-    return-object v0
+    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    check-cast p1, Ljava/lang/Long;
+
+    check-cast p2, Lm82;
+
+    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
+
+    check-cast v0, Lit9;
+
+    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    check-cast p1, Ljava/lang/Long;
+
+    check-cast p2, Lm82;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lit9;->d(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,8 +1,6 @@
-.class public interface abstract Lis7;
+.class public interface abstract annotation Lis7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract c()V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

@@ -1,35 +1,43 @@
 .class public final Lnpd;
-.super Ljava/lang/Object;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lqpd;
+# virtual methods
+.method public final onMeasure(II)V
+    .locals 3
 
-.field public b:Lv40;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-.field public c:Lnk9;
+    move-result v0
 
-.field public d:Landroid/content/Context;
+    const/16 v1, 0x96
 
-.field public e:Li7c;
+    int-to-float v1, v1
 
-.field public f:Lvg1;
+    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
 
-.field public g:Loy0;
+    move-result-object v2
 
-.field public h:Lc2f;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.field public i:Ljava/lang/Integer;
+    move-result-object v2
 
-.field public j:Z
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-.field public k:Lorg/webrtc/EglBase$Context;
+    invoke-static {v1, v2, v0}, Lnd5;->q(FFI)I
 
-.field public l:Lxt7;
+    move-result v0
 
-.field public m:Lfxe;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-.field public n:Ltqc;
+    move-result p2
 
-.field public o:Lprc;
+    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
+
+    return-void
+.end method

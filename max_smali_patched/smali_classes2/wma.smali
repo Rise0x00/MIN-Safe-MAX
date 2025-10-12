@@ -3,97 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyma;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ldna;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
 
 # direct methods
-.method public constructor <init>(Ldna;)V
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lwma;->a:I
 
-    iput-object p1, p0, Lwma;->a:Ldna;
+    iput-object p1, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lwma;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lwma;
+    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    goto :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    :cond_1
-    check-cast p1, Lwma;
+    return-void
 
-    iget-object p0, p0, Lwma;->a:Ldna;
+    :pswitch_0
+    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iget-object p1, p1, Lwma;->a:Ldna;
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    invoke-virtual {p0, p1}, Ldna;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    move-result p0
+    return-void
 
-    if-nez p0, :cond_2
+    :pswitch_1
+    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    return p0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    return-void
 
-    return p0
-.end method
+    :pswitch_2
+    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.method public final hashCode()I
-    .locals 0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    iget-object p0, p0, Lwma;->a:Ldna;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    invoke-virtual {p0}, Ldna;->hashCode()I
+    return-void
 
-    move-result p0
+    nop
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Icon(icon="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lwma;->a:Ldna;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,149 +1,128 @@
-.class public final Lhl5;
+.class public final synthetic Lhl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls1f;
+
 
 # instance fields
-.field public final a:F
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public c:F
-
-.field public d:F
-
-.field public final e:F
-
-.field public f:F
-
-.field public g:F
-
-.field public h:F
-
-.field public i:F
-
-.field public j:I
-
-.field public k:F
-
-.field public final l:Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-.field public final synthetic m:Lil5;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lil5;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lhl5;->a:I
+
+    iput-object p2, p0, Lhl5;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhl5;->m:Lil5;
-
-    const/high16 p1, 0x40000000    # 2.0f
-
-    float-to-double v0, p1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    double-to-float p1, v0
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    div-float p1, v0, p1
-
-    iput p1, p0, Lhl5;->a:F
-
-    const/4 p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Litg;->z(F)I
-
-    move-result v1
-
-    iput v1, p0, Lhl5;->b:I
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Litg;->z(F)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    iput p1, p0, Lhl5;->e:F
-
-    iput v0, p0, Lhl5;->i:F
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lhl5;->j:I
-
-    new-instance p1, Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-    invoke-direct {p1}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    iput-object p1, p0, Lhl5;->l:Landroid/view/animation/AccelerateDecelerateInterpolator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Lhl5;->f:F
+    iget v0, p0, Lhl5;->a:I
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v1, p0, Lhl5;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, p0, Lhl5;->g:F
+    check-cast v1, Lq9h;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget-object v0, v1, Lq9h;->d:Lwl0;
+
+    invoke-virtual {v0}, Lwl0;->z()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget p0, p0, Lhl5;->h:F
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const-string v3, "getWorkManager: enable = "
 
-    move-result-object p0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {v0, v1, p0}, [Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v0, "(%.1f, %.1f, %.1f)"
+    move-result-object v1
 
-    invoke-static {v0, p0}, Leif;->h(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const-string v2, "q9h"
 
-    move-result-object p0
+    invoke-static {v2, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object p0
+    invoke-virtual {v0}, Lwl0;->z()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Lraa;->l(Ljava/lang/Object;)Lmca;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "waiting for enable ..."
+
+    invoke-static {v2, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-object v0
+
+    :pswitch_0
+    check-cast v1, Lil5;
+
+    iget-object v0, v1, Lil5;->a:Ljt4;
+
+    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lek5;
+
+    invoke-virtual {v0}, Lek5;->a()Ldee;
+
+    move-result-object v0
+
+    new-instance v1, Lcz4;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v1, v2}, Lcz4;-><init>(I)V
+
+    new-instance v2, Lae8;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v1, v3}, Lae8;-><init>(Ljava/lang/Object;Lmf6;I)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

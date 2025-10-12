@@ -1,55 +1,49 @@
 .class public final Lun8;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ly50;
+.field public final synthetic X:Lwn8;
 
-.field public b:J
+.field public Y:I
 
-.field public final c:Lcs2;
-
-.field public final d:Lcs2;
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
-
-.field public i:J
-
-.field public j:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lwn8;Lnz3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lun8;->X:Lwn8;
 
-    new-instance v0, Ly50;
-
-    invoke-direct {v0}, Ly50;-><init>()V
-
-    iput-object v0, p0, Lun8;->a:Ly50;
-
-    new-instance v0, Lcs2;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lcs2;-><init>(I)V
-
-    iput-object v0, p0, Lun8;->c:Lcs2;
-
-    new-instance v0, Lcs2;
-
-    invoke-direct {v0, v1}, Lcs2;-><init>(I)V
-
-    iput-object v0, p0, Lun8;->d:Lcs2;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lun8;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lun8;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lun8;->Y:I
+
+    iget-object p1, p0, Lun8;->X:Lwn8;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lwn8;->c(Lw29;Ljava/util/Set;Lnz3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

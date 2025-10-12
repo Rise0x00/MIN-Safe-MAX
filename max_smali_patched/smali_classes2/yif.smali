@@ -1,221 +1,100 @@
-.class public final Lyif;
+.class public final synthetic Lyif;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lve6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Z
-
-.field public final f:I
+.field public final synthetic b:Lsjf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IIIZI)V
+.method public synthetic constructor <init>(Lsjf;I)V
     .locals 0
 
+    iput p2, p0, Lyif;->a:I
+
+    iput-object p1, p0, Lyif;->b:Lsjf;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyif;->a:Ljava/lang/String;
-
-    iput p2, p0, Lyif;->b:I
-
-    iput p3, p0, Lyif;->c:I
-
-    iput p4, p0, Lyif;->d:I
-
-    iput-boolean p5, p0, Lyif;->e:Z
-
-    iput p6, p0, Lyif;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyif;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lyif;->b:Lsjf;
 
-    :cond_0
-    instance-of v1, p1, Lyif;
+    iget-object v0, v0, Lsjf;->a:Ljavax/net/ssl/SSLEngine;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lyif;
-
-    iget-object v1, p0, Lyif;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lyif;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lyif;->b:I
-
-    iget v3, p1, Lyif;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lyif;->c:I
-
-    iget v3, p1, Lyif;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lyif;->d:I
-
-    iget v3, p1, Lyif;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lyif;->e:Z
-
-    iget-boolean v3, p1, Lyif;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget p0, p0, Lyif;->f:I
-
-    iget p1, p1, Lyif;->f:I
-
-    if-eq p0, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lyif;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lyif;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lyif;->c:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lyif;->d:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lyif;->e:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget p0, p0, Lyif;->f:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", width="
-
-    const-string v1, ", height="
-
-    iget v2, p0, Lyif;->b:I
-
-    const-string v3, "Pattern(image="
-
-    iget-object v4, p0, Lyif;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4, v0, v1}, Lw68;->p(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
     move-result-object v0
 
-    const-string v1, ", opacity="
+    if-eqz v0, :cond_0
 
-    const-string v2, ", isOverlay="
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget v3, p0, Lyif;->c:I
+    sget-object v0, Loyf;->a:Loyf;
 
-    iget v4, p0, Lyif;->d:I
+    goto :goto_0
 
-    invoke-static {v0, v3, v1, v4, v2}, Lcx3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v1, p0, Lyif;->e:Z
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object v0, p0, Lyif;->b:Lsjf;
 
-    const-string v1, ", color="
+    iget-object v0, v0, Lsjf;->a:Ljavax/net/ssl/SSLEngine;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
 
-    iget p0, p0, Lyif;->f:I
+    sget-object v0, Loyf;->a:Loyf;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-object v0
 
-    const-string p0, ")"
+    :pswitch_1
+    iget-object v0, p0, Lyif;->b:Lsjf;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lsjf;->a:Ljavax/net/ssl/SSLEngine;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    sget-object v0, Loyf;->a:Loyf;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

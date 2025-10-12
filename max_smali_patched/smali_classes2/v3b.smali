@@ -1,174 +1,287 @@
-.class public final Lv3b;
-.super Landroid/content/BroadcastReceiver;
+.class public abstract synthetic Lv3b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:La4b;
-
-.field public final c:Landroid/content/IntentFilter;
-
-.field public d:Z
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;La4b;)V
+.method public static bridge synthetic A()I
+    .locals 1
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->systemBars()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static bridge synthetic B(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
     .locals 0
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getLowerBound()Landroid/graphics/Insets;
 
-    iput-object p1, p0, Lv3b;->a:Landroid/content/Context;
+    move-result-object p0
 
-    iput-object p2, p0, Lv3b;->b:La4b;
+    return-object p0
+.end method
 
-    new-instance p1, Landroid/content/IntentFilter;
+.method public static bridge synthetic C(Landroid/view/WindowInsetsController;I)V
+    .locals 0
 
-    invoke-direct {p1}, Landroid/content/IntentFilter;-><init>()V
-
-    iput-object p1, p0, Lv3b;->c:Landroid/content/IntentFilter;
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
-
-    invoke-virtual {p1, p2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lv3b;->d:Z
+    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->hide(I)V
 
     return-void
 .end method
 
+.method public static bridge synthetic D(Landroid/view/WindowInsetsController;Leie;)V
+    .locals 0
 
-# virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p2, p0, Lv3b;->c:Landroid/content/IntentFilter;
-
-    invoke-virtual {p2, p1}, Landroid/content/IntentFilter;->hasAction(Ljava/lang/String;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result p2
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x1
-
-    const/4 v2, -0x1
-
-    sparse-switch p2, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PAUSE"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v0
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string p2, "ru.ok.video.ACTION_VIDEO_STOP"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string p2, "ru.ok.video.ACTION_VIDEO_PLAY"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :goto_0
-    iget-object p0, p0, Lv3b;->b:La4b;
-
-    packed-switch v2, :pswitch_data_0
-
-    goto :goto_1
-
-    :pswitch_0
-    invoke-virtual {p0, v0}, La4b;->d(I)V
+    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->removeOnControllableInsetsChangedListener(Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    const/4 p1, 0x3
+.method public static bridge synthetic a(Landroid/view/WindowInsetsAnimation;)F
+    .locals 0
 
-    invoke-virtual {p0, p1}, La4b;->d(I)V
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getInterpolatedFraction()F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic b()I
+    .locals 1
+
+    invoke-static {}, Landroid/view/WindowInsets$Type;->ime()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static bridge synthetic c(Landroid/view/WindowInsetsAnimation;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getTypeMask()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic d(Landroid/view/WindowInsetsAnimation;)J
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getDurationMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public static bridge synthetic e(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/pm/InstallSourceInfo;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/content/pm/PackageManager;->getInstallSourceInfo(Ljava/lang/String;)Landroid/content/pm/InstallSourceInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic f(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+    .locals 1
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Landroid/view/WindowInsets;->getInsets(I)Landroid/graphics/Insets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic g(Landroid/view/WindowInsets;I)Landroid/graphics/Insets;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/WindowInsets;->getInsetsIgnoringVisibility(I)Landroid/graphics/Insets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic h(Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/graphics/Insets;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation$Bounds;->getUpperBound()Landroid/graphics/Insets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic i(Landroid/view/WindowMetrics;)Landroid/graphics/Rect;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/WindowMetrics;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic j(Landroid/view/WindowMetrics;)Landroid/view/WindowInsets;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/WindowMetrics;->getWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic k(Landroid/graphics/Insets;Landroid/graphics/Insets;)Landroid/view/WindowInsetsAnimation$Bounds;
+    .locals 1
+
+    new-instance v0, Landroid/view/WindowInsetsAnimation$Bounds;
+
+    invoke-direct {v0, p0, p1}, Landroid/view/WindowInsetsAnimation$Bounds;-><init>(Landroid/graphics/Insets;Landroid/graphics/Insets;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic l(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
+    .locals 1
+
+    new-instance v0, Landroid/view/WindowInsetsAnimation;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/view/WindowInsetsAnimation;-><init>(ILandroid/view/animation/Interpolator;J)V
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic m(Ljava/lang/Object;)Landroid/view/WindowInsetsAnimation;
+    .locals 0
+
+    check-cast p0, Landroid/view/WindowInsetsAnimation;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic n(Landroid/view/View;)Landroid/view/WindowInsetsController;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowInsetsController()Landroid/view/WindowInsetsController;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic o(Landroid/view/WindowManager;)Landroid/view/WindowMetrics;
+    .locals 0
+
+    invoke-interface {p0}, Landroid/view/WindowManager;->getMaximumWindowMetrics()Landroid/view/WindowMetrics;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic p(Landroid/content/pm/InstallSourceInfo;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/content/pm/InstallSourceInfo;->getInstallingPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic q()V
+    .locals 1
+
+    new-instance v0, Landroid/view/WindowInsetsAnimation$Bounds;
 
     return-void
+.end method
 
-    :pswitch_2
-    invoke-virtual {p0, v1}, La4b;->d(I)V
+.method public static bridge synthetic r(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
+    .locals 2
 
-    :cond_4
-    :goto_1
+    const/16 v0, 0x78
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v0, v1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setUserAuthenticationParameters(II)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+
     return-void
+.end method
 
-    nop
+.method public static bridge synthetic s(Landroid/view/Surface;FI)V
+    .locals 0
 
-    :sswitch_data_0
-    .sparse-switch
-        -0x610323f9 -> :sswitch_2
-        -0x6101a72b -> :sswitch_1
-        0x4099ef63 -> :sswitch_0
-    .end sparse-switch
+    invoke-virtual {p0, p1, p2}, Landroid/view/Surface;->setFrameRate(FI)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public static bridge synthetic t(Landroid/view/View;Lz7h;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setWindowInsetsAnimationCallback(Landroid/view/WindowInsetsAnimation$Callback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Landroid/view/WindowInsets$Builder;ILandroid/graphics/Insets;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setInsets(ILandroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic v(Landroid/view/WindowInsets$Builder;IZ)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/WindowInsets$Builder;->setVisible(IZ)Landroid/view/WindowInsets$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic w(Landroid/view/WindowInsetsAnimation;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/WindowInsetsAnimation;->setFraction(F)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic x(Landroid/view/WindowInsetsController;I)V
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->show(I)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic y(Landroid/view/WindowInsetsController;Leie;)V
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroid/view/WindowInsetsController;->addOnControllableInsetsChangedListener(Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic z(Landroid/view/WindowInsetsAnimation;)F
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/WindowInsetsAnimation;->getFraction()F
+
+    move-result p0
+
+    return p0
 .end method

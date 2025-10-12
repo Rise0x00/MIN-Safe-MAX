@@ -1,73 +1,23 @@
-.class public final enum Liqd;
-.super Ljava/lang/Enum;
+.class public interface abstract Liqd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Liqd;
-
-.field public static final enum b:Liqd;
-
-.field public static final synthetic c:[Liqd;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Liqd;
-
-    const-string v1, "CLOCKWISE"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Liqd;->a:Liqd;
-
-    new-instance v1, Liqd;
-
-    const-string v2, "COUNTERCLOCKWISE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Liqd;->b:Liqd;
-
-    filled-new-array {v0, v1}, [Liqd;
-
-    move-result-object v0
-
-    sput-object v0, Liqd;->c:[Liqd;
-
-    return-void
+# virtual methods
+.method public abstract a(Lopd;)V
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Liqd;
-    .locals 1
-
-    const-class v0, Liqd;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Liqd;
-
-    return-object p0
+.method public abstract b(Lqpd;)V
 .end method
 
-.method public static values()[Liqd;
-    .locals 1
+.method public abstract c()Lsqc;
+.end method
 
-    sget-object v0, Liqd;->c:[Liqd;
+.method public abstract d(Lzz9;)V
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+.method public abstract e()Lrqc;
+.end method
 
-    move-result-object v0
-
-    check-cast v0, [Liqd;
-
-    return-object v0
+.method public abstract g()Llff;
 .end method

@@ -2,90 +2,137 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbp7;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final b:Lbp7;
 
-.field public final synthetic c:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final c:Lbp7;
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final e:Ls5f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lone/me/messages/list/ui/MessagesListWidget;I)V
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
     .locals 0
 
-    iput p3, p0, Lv89;->a:I
-
-    iput-object p1, p0, Lv89;->b:Landroid/view/View;
-
-    iput-object p2, p0, Lv89;->c:Lone/me/messages/list/ui/MessagesListWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lv89;->a:Lbp7;
+
+    iput-object p2, p0, Lv89;->b:Lbp7;
+
+    iput-object p4, p0, Lv89;->c:Lbp7;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object p1, p0, Lv89;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p1, Lwy;
+
+    const/16 p2, 0x14
+
+    invoke-direct {p1, p3, p2}, Lwy;-><init>(Lbp7;I)V
+
+    new-instance p2, Ls5f;
+
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+
+    iput-object p2, p0, Lv89;->e:Ls5f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a(JLjava/lang/String;J)V
     .locals 3
 
-    iget v0, p0, Lv89;->a:I
+    iget-object v0, p0, Lv89;->c:Lbp7;
 
-    const/4 v1, 0x1
-
-    iget-object p0, p0, Lv89;->c:Lone/me/messages/list/ui/MessagesListWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->A0()Lalf;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    check-cast v0, Ltn5;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p0, v1}, Lalf;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "UploadFileAttachWorker:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p4, ":"
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, v0, Ltn5;->a:Lq9h;
+
+    invoke-virtual {p2, p1}, Lq9h;->c(Ljava/lang/String;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lhac;
+.method public final b()V
+    .locals 3
+
+    const-class v0, Lv89;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "try to restore uploads"
+
+    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lv89;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object v0, p0, Lv89;->e:Ls5f;
 
-    move-result-object v2
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->r0(Lkhc;)V
+    move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->G0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v2
+    new-instance v1, Li56;
 
-    invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lkhc;)V
+    const/16 v2, 0x15
 
-    iget-object p0, p0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Lhac;
+    invoke-direct {v1, v2, p0}, Li56;-><init>(ILjava/lang/Object;)V
 
-    if-eqz p0, :cond_0
-
-    iput-boolean v1, p0, Lhac;->g:Z
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

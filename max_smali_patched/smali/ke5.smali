@@ -1,342 +1,147 @@
 .class public final Lke5;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lv96;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:Landroid/content/Context;
 
-.field public synthetic Y:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final b:Ly5f;
 
-.field public synthetic Z:Lnma;
+.field public final c:Lwi4;
+
+.field public final d:Li30;
+
+.field public e:Lr1f;
+
+.field public f:Lr1f;
+
+.field public final g:Li30;
+
+.field public final h:Landroid/os/Looper;
+
+.field public final i:Lh20;
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Lfnd;
+
+.field public final m:Lqi4;
+
+.field public final n:J
+
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lr26;)V
+    .locals 6
 
-    .line 1
-    iput p3, p0, Lke5;->X:I
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;Lkotlin/coroutines/Continuation;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lke5;->X:I
-
-    .line 2
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lke5;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    check-cast p2, Lnma;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p0, Lke5;
-
-    const/4 v0, 0x3
+    new-instance v0, Lwi4;
 
     const/4 v1, 0x5
 
-    invoke-direct {p0, v0, p3, v1}, Lke5;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v1, p2}, Lwi4;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iput-object p2, p0, Lke5;->Z:Lnma;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    check-cast p2, Lnma;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p0, Lke5;
-
-    const/4 v0, 0x3
+    new-instance p2, Li30;
 
     const/4 v1, 0x4
 
-    invoke-direct {p0, v0, p3, v1}, Lke5;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, p1, v1}, Li30;-><init>(Landroid/content/Context;I)V
 
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    new-instance v1, Li30;
 
-    iput-object p2, p0, Lke5;->Z:Lnma;
+    const/4 v2, 0x6
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    invoke-direct {v1, p1, v2}, Li30;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {p0, p1}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v2, Ll94;
 
-    return-object p1
+    const/4 v3, 0x3
 
-    :pswitch_1
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-direct {v2, v3}, Ll94;-><init>(I)V
 
-    check-cast p2, Lnma;
+    new-instance v3, Li30;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/16 v4, 0x8
 
-    new-instance p0, Lke5;
+    invoke-direct {v3, p1, v4}, Li30;-><init>(Landroid/content/Context;I)V
 
-    const/4 v0, 0x3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x3
+    iput-object p1, p0, Lke5;->a:Landroid/content/Context;
 
-    invoke-direct {p0, v0, p3, v1}, Lke5;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-object v0, p0, Lke5;->c:Lwi4;
 
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    iput-object p2, p0, Lke5;->d:Li30;
 
-    iput-object p2, p0, Lke5;->Z:Lnma;
+    iput-object v1, p0, Lke5;->e:Lr1f;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iput-object v2, p0, Lke5;->f:Lr1f;
 
-    invoke-virtual {p0, p1}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v3, p0, Lke5;->g:Li30;
 
-    return-object p1
+    sget p1, Lr4g;->a:I
 
-    :pswitch_2
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    check-cast p2, Lnma;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p0, Lke5;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v0, p3, v1}, Lke5;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iput-object p2, p0, Lke5;->Z:Lnma;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    check-cast p2, Lnma;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p0, Lke5;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, p3, v1}, Lke5;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iput-object p2, p0, Lke5;->Z:Lnma;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Landroid/widget/FrameLayout;
-
-    check-cast p2, Lnma;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lke5;
-
-    iget-object p0, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {p1, p0, p3}, Lke5;-><init>(Landroidx/appcompat/widget/AppCompatTextView;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p2, p1, Lke5;->Z:Lnma;
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p1, p0}, Lke5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lke5;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object p0, p0, Lke5;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->j:I
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object p0, p0, Lke5;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->h:I
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object p0, p0, Lke5;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->g:I
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object p0, p0, Lke5;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->e:I
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_3
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    iget-object p0, p0, Lke5;->Z:Lnma;
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->b:I
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
-
-    :pswitch_4
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lke5;->Z:Lnma;
-
-    iget-object p0, p0, Lke5;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-interface {p1}, Lnma;->getText()Lqse;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
 
-    iget p1, p1, Lqse;->e:I
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    goto :goto_0
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    return-object p0
+    move-result-object p1
 
-    nop
+    :goto_0
+    iput-object p1, p0, Lke5;->h:Landroid/os/Looper;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object p1, Lh20;->Z:Lh20;
+
+    iput-object p1, p0, Lke5;->i:Lh20;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lke5;->j:I
+
+    iput-boolean p1, p0, Lke5;->k:Z
+
+    sget-object p1, Lfnd;->c:Lfnd;
+
+    iput-object p1, p0, Lke5;->l:Lfnd;
+
+    const-wide/16 p1, 0x14
+
+    invoke-static {p1, p2}, Lr4g;->B(J)J
+
+    move-result-wide v2
+
+    const-wide/16 p1, 0x1f4
+
+    invoke-static {p1, p2}, Lr4g;->B(J)J
+
+    move-result-wide v4
+
+    new-instance v0, Lqi4;
+
+    const/4 v1, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lqi4;-><init>(IJJ)V
+
+    iput-object v0, p0, Lke5;->m:Lqi4;
+
+    sget-object p1, Ly5f;->a:Ly5f;
+
+    iput-object p1, p0, Lke5;->b:Ly5f;
+
+    const-wide/16 p1, 0x7d0
+
+    iput-wide p1, p0, Lke5;->n:J
+
+    return-void
 .end method

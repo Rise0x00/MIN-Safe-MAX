@@ -1,113 +1,54 @@
-.class public final Lpg8;
-.super Ljava/lang/Object;
+.class public final synthetic Lpg8;
+.super Ln8;
 .source "SourceFile"
 
 # interfaces
-.implements Lcc8;
-.implements Lu5b;
+.implements Lnf6;
 
 
-# instance fields
-.field public final a:Lcm8;
-
-.field public final b:Lqk8;
+# static fields
+.field public static final w0:Lpg8;
 
 
 # direct methods
-.method public constructor <init>(Lcm8;Lqk8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpg8;
 
-    iput-object p1, p0, Lpg8;->a:Lcm8;
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    iput-object p2, p0, Lpg8;->b:Lqk8;
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Ln4b;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Ln8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lpg8;->w0:Lpg8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final X(Lx5b;Ls5b;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 p1, 0x4
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v0, 0x5
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/16 v1, 0xe
+    check-cast p2, Ljava/util/List;
 
-    const/4 v2, 0x0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    filled-new-array {p1, v0, v1, v2}, [I
+    sget-object p3, Lxg8;->O0:[Ltm7;
 
-    move-result-object p1
+    new-instance p3, Ln4b;
 
-    iget-object p2, p2, Ls5b;->a:Lhp5;
+    invoke-direct {p3, p1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p2, p1}, Lhp5;->a([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lpg8;->a:Lcm8;
-
-    iget-object p0, p0, Lpg8;->b:Lqk8;
-
-    invoke-virtual {p1, p0, v2}, Lcm8;->g(Lqk8;Z)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onDisconnected()V
-    .locals 2
-
-    iget-object v0, p0, Lpg8;->a:Lcm8;
-
-    iget-object p0, p0, Lpg8;->b:Lqk8;
-
-    invoke-virtual {v0, p0}, Lcm8;->d(Lqk8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Lcm8;->h(Lqk8;)V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Lcm8;->g(Lqk8;Z)Z
-
-    return-void
-.end method
-
-.method public final s()V
-    .locals 2
-
-    iget-object v0, p0, Lpg8;->b:Lqk8;
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lpg8;->a:Lcm8;
-
-    invoke-virtual {p0, v0, v1}, Lcm8;->g(Lqk8;Z)Z
-
-    return-void
-.end method
-
-.method public final t()V
-    .locals 2
-
-    iget-object v0, p0, Lpg8;->b:Lqk8;
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lpg8;->a:Lcm8;
-
-    invoke-virtual {p0, v0, v1}, Lcm8;->g(Lqk8;Z)Z
-
-    return-void
+    return-object p3
 .end method

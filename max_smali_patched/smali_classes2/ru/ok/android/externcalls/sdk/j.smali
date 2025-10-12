@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgm3;
+.implements Lcce;
 
 
 # instance fields
@@ -11,11 +11,13 @@
 
 .field public final synthetic b:Z
 
-.field public final synthetic c:Lhm3;
+.field public final synthetic c:Ldz0;
+
+.field public final synthetic d:Lxo3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhm3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLdz0;Lxo3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,25 +26,27 @@
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/j;->c:Lhm3;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/j;->c:Ldz0;
+
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/j;->d:Lxo3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/j;->c:Lhm3;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/j;->c:Ldz0;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/api/InternalIdResponse;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/j;->d:Lxo3;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/j;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/j;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iget-boolean p0, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
+    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/j;->b:Z
 
-    invoke-static {v1, p0, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->M(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhm3;Lru/ok/android/externcalls/sdk/api/InternalIdResponse;)V
+    invoke-static {v2, v3, v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->R(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLdz0;Lxo3;Lorg/json/JSONObject;)V
 
     return-void
 .end method

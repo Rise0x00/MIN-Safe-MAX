@@ -1,87 +1,123 @@
-.class public abstract Ljt4;
+.class public final Ljt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljavax/inject/Provider;
+
+
+# static fields
+.field public static final c:Ljava/lang/Object;
+
+
+# instance fields
+.field public volatile a:Lzlh;
+
+.field public volatile b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
+    new-instance v0, Ljava/lang/Object;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public static b(Landroid/graphics/drawable/Drawable;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    sput-object v0, Ljt4;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static e(Landroid/graphics/drawable/Drawable;FF)V
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    return-void
-.end method
+    iget-object v0, p0, Ljt4;->b:Ljava/lang/Object;
 
-.method public static f(Landroid/graphics/drawable/Drawable;IIII)V
-    .locals 0
+    sget-object v1, Ljt4;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
+    if-ne v0, v1, :cond_3
 
-    return-void
-.end method
+    monitor-enter p0
 
-.method public static g(Landroid/graphics/drawable/Drawable;I)V
-    .locals 0
+    :try_start_0
+    iget-object v0, p0, Ljt4;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+    if-ne v0, v1, :cond_2
 
-    return-void
-.end method
+    iget-object v0, p0, Ljt4;->a:Lzlh;
 
-.method public static h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-    .locals 0
+    invoke-virtual {v0}, Lzlh;->get()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+    move-result-object v0
 
-    return-void
-.end method
+    iget-object v2, p0, Ljt4;->b:Ljava/lang/Object;
 
-.method public static i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    if-eq v2, v1, :cond_1
 
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    if-ne v2, v0, :cond_0
 
-    return-void
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Scoped provider was invoked recursively returning different results: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " & "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    :goto_0
+    iput-object v0, p0, Ljt4;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Ljt4;->a:Lzlh;
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    monitor-exit p0
+
+    return-object v0
+
+    :goto_2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_3
+    return-object v0
 .end method

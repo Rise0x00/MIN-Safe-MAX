@@ -1,73 +1,75 @@
-.class public final enum Lyyc;
-.super Ljava/lang/Enum;
+.class public final Lyyc;
+.super Le77;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lyyc;
-
-.field public static final enum b:Lyyc;
-
-.field public static final synthetic c:[Lyyc;
+# instance fields
+.field public final synthetic c:Lzyc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lzyc;)V
+    .locals 0
 
-    new-instance v0, Lyyc;
+    iput-object p1, p0, Lyyc;->c:Lzyc;
 
-    const-string v1, "PREVIEW_VIEW"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lyyc;->a:Lyyc;
-
-    new-instance v1, Lyyc;
-
-    const-string v2, "SCREEN_FLASH_VIEW"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lyyc;->b:Lyyc;
-
-    filled-new-array {v0, v1}, [Lyyc;
-
-    move-result-object v0
-
-    sput-object v0, Lyyc;->c:[Lyyc;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyyc;
+
+# virtual methods
+.method public final f()Z
     .locals 1
 
-    const-class v0, Lyyc;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lyyc;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static values()[Lyyc;
-    .locals 1
+.method public final get(I)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lyyc;->c:[Lyyc;
+    iget-object v0, p0, Lyyc;->c:Lzyc;
 
-    invoke-virtual {v0}, [Lyyc;->clone()Ljava/lang/Object;
+    iget v1, v0, Lzyc;->Z:I
 
-    move-result-object v0
+    invoke-static {p1, v1}, Lnf2;->o(II)V
 
-    check-cast v0, [Lyyc;
+    iget-object v1, v0, Lzyc;->X:[Ljava/lang/Object;
+
+    mul-int/lit8 p1, p1, 0x2
+
+    iget v0, v0, Lzyc;->Y:I
+
+    add-int v2, p1, v0
+
+    aget-object v2, v1, v2
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    xor-int/lit8 v0, v0, 0x1
+
+    add-int/2addr p1, v0
+
+    aget-object p1, v1, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
+
+    invoke-direct {v0, v2, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lyyc;->c:Lzyc;
+
+    iget v0, v0, Lzyc;->Z:I
+
+    return v0
 .end method

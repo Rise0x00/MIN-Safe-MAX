@@ -2,201 +2,129 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbp7;
+.implements Ljava/io/Serializable;
+
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public a:Lve6;
 
-.field public final b:Landroid/view/View;
+.field public volatile b:Ljava/lang/Object;
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Lve6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Ls5f;->a:Lve6;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    sget-object p1, Lmf2;->w0:Lmf2;
 
-    iput-object v0, p0, Ls5f;->a:Ljava/util/HashMap;
+    iput-object p1, p0, Ls5f;->b:Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ls5f;->c:Ljava/util/ArrayList;
-
-    iput-object p1, p0, Ls5f;->b:Landroid/view/View;
+    iput-object p0, p0, Ls5f;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Z
     .locals 2
 
-    instance-of v0, p1, Ls5f;
+    iget-object v0, p0, Ls5f;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    sget-object v1, Lmf2;->w0:Lmf2;
 
-    check-cast p1, Ls5f;
+    if-eq v0, v1, :cond_0
 
-    iget-object v0, p1, Ls5f;->b:Landroid/view/View;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Ls5f;->b:Landroid/view/View;
-
-    if-ne v1, v0, :cond_0
-
-    iget-object p0, p0, Ls5f;->a:Ljava/util/HashMap;
-
-    iget-object p1, p1, Ls5f;->a:Ljava/util/HashMap;
-
-    invoke-interface {p0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
+    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Ls5f;->b:Landroid/view/View;
+    iget-object v0, p0, Ls5f;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    sget-object v1, Lmf2;->w0:Lmf2;
 
-    move-result v0
+    if-eq v0, v1, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object v0
 
-    iget-object p0, p0, Ls5f;->a:Ljava/util/HashMap;
+    :cond_0
+    iget-object v0, p0, Ls5f;->c:Ljava/lang/Object;
 
-    invoke-interface {p0}, Ljava/util/Map;->hashCode()I
+    monitor-enter v0
 
-    move-result p0
+    :try_start_0
+    iget-object v2, p0, Ls5f;->b:Ljava/lang/Object;
 
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "TransitionValues@"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ls5f;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ":\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "    view = "
-
-    invoke-static {v0, v1}, Ldl5;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ls5f;->b:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "    values:"
-
-    invoke-static {v0, v2}, Ldw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object p0, p0, Ls5f;->a:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "    "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ": "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    if-eq v2, v1, :cond_1
 
     goto :goto_0
 
+    :cond_1
+    iget-object v1, p0, Ls5f;->a:Lve6;
+
+    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iput-object v2, p0, Ls5f;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Ls5f;->a:Lve6;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+
+    throw v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ls5f;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
     :cond_0
+    const-string v0, "Lazy value not initialized yet."
+
     return-object v0
 .end method

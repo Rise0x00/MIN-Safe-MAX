@@ -1,111 +1,28 @@
 .class public abstract Lub7;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnp4;
-.implements Ls27;
+
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
-# instance fields
-.field public a:Ljc7;
-
-
-# virtual methods
-.method public final b()Lys9;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d(Ljava/lang/Throwable;)V
-.end method
-
-.method public final dispose()V
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Lub7;->a:Ljc7;
+    const-string v0, "InputMerger"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljc7;->removeNode$kotlinx_coroutines_core(Lub7;)V
+    sput-object v0, Lub7;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final isActive()Z
-    .locals 0
 
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Ly84;->u(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "[job@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lub7;->a:Ljc7;
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Ly84;->u(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x5d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract a(Ljava/util/ArrayList;)Lu84;
 .end method

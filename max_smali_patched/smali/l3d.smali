@@ -3,188 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp3d;
-
-
-# static fields
-.field public static final e:Ll3d;
+.implements Lvwd;
+.implements Lx58;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Ljava/lang/String;
 
-.field public final b:I
+.field public final a:Lbp7;
 
-.field public final c:Z
+.field public final b:Lbp7;
 
-.field public final d:Z
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final o:Lmoe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ll3d;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1, v1, v1}, Ll3d;-><init>(IIZZ)V
-
-    sput-object v0, Ll3d;->e:Ll3d;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIZZ)V
+.method public constructor <init>(Lbp7;Lbp7;Lr8f;Lz24;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ll3d;->a:I
+    iput-object p1, p0, Ll3d;->a:Lbp7;
 
-    iput p2, p0, Ll3d;->b:I
+    iput-object p2, p0, Ll3d;->b:Lbp7;
 
-    iput-boolean p3, p0, Ll3d;->c:Z
+    check-cast p3, Lwla;
 
-    iput-boolean p4, p0, Ll3d;->d:Z
+    invoke-virtual {p3}, Lwla;->a()Ly24;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    const-string p3, "restore-tasks-on-connect"
+
+    invoke-virtual {p1, p2, p3}, Ly24;->limitedParallelism(ILjava/lang/String;)Ly24;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p4}, Le0;->plus(Lw24;)Lw24;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll3d;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ll3d;->o:Lmoe;
+
+    const-string p1, "RestoreScheduledTaskExecutor"
+
+    iput-object p1, p0, Ll3d;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final f()V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ll3d;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ll3d;
-
-    iget v1, p0, Ll3d;->a:I
-
-    iget v3, p1, Ll3d;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Ll3d;->b:I
-
-    iget v3, p1, Ll3d;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Ll3d;->c:Z
-
-    iget-boolean v3, p1, Ll3d;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean p0, p0, Ll3d;->d:Z
-
-    iget-boolean p1, p1, Ll3d;->d:Z
-
-    if-eq p0, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final p(I)V
+    .locals 2
 
-    iget v0, p0, Ll3d;->a:I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object p1
 
-    move-result v0
+    const/4 v0, 0x0
 
-    const/16 v1, 0x1f
+    iget-object v1, p0, Ll3d;->o:Lmoe;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v1, v0, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget v2, p0, Ll3d;->b:I
-
-    invoke-static {v2, v0, v1}, Llge;->m(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Ll3d;->c:Z
-
-    invoke-static {v0, v1, v2}, Lcx3;->e(IIZ)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Ll3d;->d:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", selectMessagePosition="
-
-    const-string v1, ", hasPrev="
-
-    const-string v2, "Active(totalMessages="
-
-    iget v3, p0, Ll3d;->a:I
-
-    iget v4, p0, Ll3d;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lmh0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Ll3d;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasAfter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Ll3d;->d:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

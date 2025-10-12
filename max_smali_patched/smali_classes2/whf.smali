@@ -1,756 +1,232 @@
 .class public final Lwhf;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Boolean;
+.field public final a:J
 
-.field public final b:Ljava/lang/Long;
+.field public final b:Ln0c;
 
-.field public final c:Ljava/lang/String;
+.field public volatile c:J
 
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/lang/Boolean;
-
-.field public final i:Ljava/lang/Integer;
-
-.field public final j:Ljava/lang/Integer;
-
-.field public final k:Ljava/lang/Integer;
-
-.field public final l:Ljava/lang/Boolean;
-
-.field public final m:Ljava/lang/Boolean;
-
-.field public final n:Ljava/lang/Boolean;
-
-.field public final o:I
-
-.field public final p:I
-
-.field public final q:Lvhf;
-
-.field public final r:I
-
-.field public final s:I
-
-.field public final t:Ljava/lang/Boolean;
-
-.field public final u:Ljava/lang/Boolean;
-
-.field public final v:Ljava/lang/Boolean;
-
-.field public final w:I
-
-.field public final x:Ljava/lang/Boolean;
+.field public volatile d:J
 
 
 # direct methods
-.method public constructor <init>(Luhf;)V
-    .locals 1
+.method public constructor <init>(JLn0c;Landroid/os/Looper;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p4, :cond_0
 
-    iget-object v0, p1, Luhf;->a:Ljava/lang/Boolean;
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    iput-object v0, p0, Lwhf;->a:Ljava/lang/Boolean;
+    move-result-object p4
 
-    iget-object v0, p1, Luhf;->b:Ljava/lang/Long;
+    if-nez p4, :cond_0
 
-    iput-object v0, p0, Lwhf;->b:Ljava/lang/Long;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    iget-object v0, p1, Luhf;->c:Ljava/lang/String;
+    move-result-object p4
 
-    iput-object v0, p0, Lwhf;->c:Ljava/lang/String;
+    :cond_0
+    invoke-direct {p0, p4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    iget-object v0, p1, Luhf;->d:Ljava/lang/String;
+    iput-wide p1, p0, Lwhf;->a:J
 
-    iput-object v0, p0, Lwhf;->d:Ljava/lang/String;
+    iput-object p3, p0, Lwhf;->b:Ln0c;
 
-    iget-object v0, p1, Luhf;->e:Ljava/lang/String;
+    const-wide/16 p1, -0x1
 
-    iput-object v0, p0, Lwhf;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Luhf;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lwhf;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Luhf;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Lwhf;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Luhf;->h:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->h:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Luhf;->i:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lwhf;->i:Ljava/lang/Integer;
-
-    iget-object v0, p1, Luhf;->j:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lwhf;->j:Ljava/lang/Integer;
-
-    iget-object v0, p1, Luhf;->k:Ljava/lang/Integer;
-
-    iput-object v0, p0, Lwhf;->k:Ljava/lang/Integer;
-
-    iget-object v0, p1, Luhf;->l:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->l:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Luhf;->m:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->m:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Luhf;->n:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->n:Ljava/lang/Boolean;
-
-    iget v0, p1, Luhf;->o:I
-
-    iput v0, p0, Lwhf;->o:I
-
-    iget v0, p1, Luhf;->p:I
-
-    iput v0, p0, Lwhf;->p:I
-
-    iget-object v0, p1, Luhf;->q:Lvhf;
-
-    iput-object v0, p0, Lwhf;->q:Lvhf;
-
-    iget v0, p1, Luhf;->r:I
-
-    iput v0, p0, Lwhf;->r:I
-
-    iget v0, p1, Luhf;->s:I
-
-    iput v0, p0, Lwhf;->s:I
-
-    iget-object v0, p1, Luhf;->t:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->t:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Luhf;->u:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->u:Ljava/lang/Boolean;
-
-    iget-object v0, p1, Luhf;->v:Ljava/lang/Boolean;
-
-    iput-object v0, p0, Lwhf;->v:Ljava/lang/Boolean;
-
-    iget v0, p1, Luhf;->w:I
-
-    iput v0, p0, Lwhf;->w:I
-
-    iget-object p1, p1, Luhf;->x:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lwhf;->x:Ljava/lang/Boolean;
+    iput-wide p1, p0, Lwhf;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()J
+    .locals 6
 
-    if-ne p0, p1, :cond_0
+    monitor-enter p0
 
-    goto/16 :goto_0
+    :try_start_0
+    iget-wide v0, p0, Lwhf;->c:J
+
+    iget-wide v2, p0, Lwhf;->d:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lwhf;->d:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sub-long v4, v2, v4
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lwhf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto/16 :goto_1
-
-    :cond_1
-    check-cast p1, Lwhf;
-
-    iget-object v0, p0, Lwhf;->a:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->a:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->b:Ljava/lang/Long;
-
-    iget-object v1, p1, Lwhf;->b:Ljava/lang/Long;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lwhf;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->d:Ljava/lang/String;
-
-    iget-object v1, p1, Lwhf;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->e:Ljava/lang/String;
-
-    iget-object v1, p1, Lwhf;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lwhf;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->g:Ljava/lang/String;
-
-    iget-object v1, p1, Lwhf;->g:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->h:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->h:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->i:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lwhf;->i:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->j:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lwhf;->j:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->k:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lwhf;->k:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->l:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->l:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->m:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->m:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->n:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->n:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lwhf;->o:I
-
-    iget v1, p1, Lwhf;->o:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lwhf;->p:I
-
-    iget v1, p1, Lwhf;->p:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lwhf;->q:Lvhf;
-
-    iget-object v1, p1, Lwhf;->q:Lvhf;
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lwhf;->r:I
-
-    iget v1, p1, Lwhf;->r:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lwhf;->s:I
-
-    iget v1, p1, Lwhf;->s:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lwhf;->t:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->t:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->u:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->u:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lwhf;->v:Ljava/lang/Boolean;
-
-    iget-object v1, p1, Lwhf;->v:Ljava/lang/Boolean;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lwhf;->w:I
-
-    iget v1, p1, Lwhf;->w:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object p0, p0, Lwhf;->x:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lwhf;->x:Ljava/lang/Boolean;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
     :goto_0
-    const/4 p0, 0x1
+    add-long/2addr v0, v4
 
-    return p0
+    monitor-exit p0
 
-    :cond_2
+    return-wide v0
+
     :goto_1
-    const/4 p0, 0x0
+    monitor-exit p0
 
-    return p0
+    throw v0
 .end method
 
-.method public final hashCode()I
-    .locals 26
+.method public final b()V
+    .locals 8
 
-    move-object/from16 v0, p0
+    monitor-enter p0
 
-    iget v1, v0, Lwhf;->o:I
+    :try_start_0
+    iget-wide v0, p0, Lwhf;->d:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v1}, Ldw1;->a(I)Ljava/lang/Integer;
+    const-wide/16 v2, -0x1
 
-    move-result-object v16
+    cmp-long v0, v0, v2
 
-    iget v1, v0, Lwhf;->p:I
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Ldw1;->a(I)Ljava/lang/Integer;
+    const/4 v0, 0x1
 
-    move-result-object v17
+    goto :goto_0
 
-    iget v1, v0, Lwhf;->r:I
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Ldw1;->a(I)Ljava/lang/Integer;
+    :goto_0
+    if-nez v0, :cond_1
 
-    move-result-object v19
+    monitor-exit p0
 
-    iget v1, v0, Lwhf;->s:I
+    return-void
 
-    invoke-static {v1}, Ldw1;->a(I)Ljava/lang/Integer;
+    :cond_1
+    :try_start_1
+    iget-wide v0, p0, Lwhf;->c:J
 
-    move-result-object v20
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    iget v1, v0, Lwhf;->w:I
+    move-result-wide v4
 
-    invoke-static {v1}, Ldw1;->a(I)Ljava/lang/Integer;
+    iget-wide v6, p0, Lwhf;->d:J
 
-    move-result-object v24
+    sub-long/2addr v4, v6
 
-    iget-object v2, v0, Lwhf;->a:Ljava/lang/Boolean;
+    add-long/2addr v4, v0
 
-    iget-object v3, v0, Lwhf;->b:Ljava/lang/Long;
+    iput-wide v4, p0, Lwhf;->c:J
 
-    iget-object v4, v0, Lwhf;->c:Ljava/lang/String;
+    iput-wide v2, p0, Lwhf;->d:J
 
-    iget-object v5, v0, Lwhf;->d:Ljava/lang/String;
+    invoke-virtual {p0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v6, v0, Lwhf;->e:Ljava/lang/String;
+    monitor-exit p0
 
-    iget-object v7, v0, Lwhf;->f:Ljava/lang/String;
+    return-void
 
-    iget-object v8, v0, Lwhf;->g:Ljava/lang/String;
+    :catchall_0
+    move-exception v0
 
-    iget-object v9, v0, Lwhf;->h:Ljava/lang/Boolean;
+    monitor-exit p0
 
-    iget-object v10, v0, Lwhf;->i:Ljava/lang/Integer;
+    throw v0
+.end method
 
-    iget-object v11, v0, Lwhf;->j:Ljava/lang/Integer;
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 5
 
-    iget-object v12, v0, Lwhf;->k:Ljava/lang/Integer;
+    iget-wide v0, p0, Lwhf;->d:J
 
-    iget-object v13, v0, Lwhf;->l:Ljava/lang/Boolean;
+    const-wide/16 v2, -0x1
 
-    iget-object v14, v0, Lwhf;->m:Ljava/lang/Boolean;
+    cmp-long v0, v0, v2
 
-    iget-object v15, v0, Lwhf;->n:Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
-    iget-object v1, v0, Lwhf;->q:Lvhf;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    move-object/from16 v18, v1
+    const/4 v1, 0x1
 
-    iget-object v1, v0, Lwhf;->t:Ljava/lang/Boolean;
+    if-ne v0, v1, :cond_1
 
-    move-object/from16 v21, v1
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget-object v1, v0, Lwhf;->u:Ljava/lang/Boolean;
+    if-ne p1, p0, :cond_1
 
-    move-object/from16 v22, v1
+    iget-object p1, p0, Lwhf;->b:Ln0c;
 
-    iget-object v1, v0, Lwhf;->v:Ljava/lang/Boolean;
+    invoke-virtual {p0}, Lwhf;->a()J
 
-    iget-object v0, v0, Lwhf;->x:Ljava/lang/Boolean;
+    move-result-wide v2
 
-    move-object/from16 v25, v0
+    iget-object p1, p1, Ln0c;->b:Ljava/lang/Object;
 
-    move-object/from16 v23, v1
+    check-cast p1, Ljava/util/LinkedHashSet;
 
-    filled-new-array/range {v2 .. v25}, [Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    check-cast v0, Lwk0;
 
-    move-result v0
+    iget-object v0, v0, Lwk0;->a:Lqza;
 
-    return v0
-.end method
+    iget-object v4, v0, Lzk0;->c:Ln0c;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-object v4, v4, Ln0c;->c:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v4, Lwhf;
 
-    const-string v1, "UserSettings{pushNewContacts="
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwhf;->a:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dontDustirbUntil="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->b:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dialogsPushNotification=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', chatsPushNotification=\'"
-
-    const-string v2, "\', pushSound=\'"
-
-    iget-object v3, p0, Lwhf;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lwhf;->d:Ljava/lang/String;
-
-    invoke-static {v0, v3, v1, v4, v2}, Ldl5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "\', dialogsPushSound=\'"
-
-    const-string v2, "\', chatsPushSound=\'"
-
-    iget-object v3, p0, Lwhf;->e:Ljava/lang/String;
-
-    iget-object v4, p0, Lwhf;->f:Ljava/lang/String;
-
-    invoke-static {v0, v3, v1, v4, v2}, Ldl5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwhf;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', hiddenOnline="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->h:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", led="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->i:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dialogsLed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->j:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatsLed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->k:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", vibration="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->l:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dialogsVibration="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->m:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatsVibration="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->n:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatsInvite="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lwhf;->o:I
-
-    invoke-static {v1}, Llge;->D(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", incomingCall="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lwhf;->p:I
-
-    invoke-static {v1}, Llge;->D(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inactiveTtl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->q:Lvhf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", groupChatCallNotificationStatus="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lwhf;->r:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
+    invoke-virtual {v0, v2, v3}, Lzk0;->b(J)V
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "OFF"
+    invoke-virtual {p0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    goto :goto_0
+    move-result-object p1
+
+    iget-wide v0, p0, Lwhf;->a:J
+
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_1
-    const-string v1, "ON"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", suggestStickersStatus="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lwhf;->s:I
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_2
-
-    const-string v1, "null"
-
-    goto :goto_1
-
-    :cond_2
-    const-string v1, "OFF"
-
-    goto :goto_1
-
-    :cond_3
-    const-string v1, "ON"
-
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", audioTranscriptionEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->t:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", safeMode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->u:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", safeModeNoPin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwhf;->v:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", searchByPhone="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lwhf;->w:I
-
-    invoke-static {v1}, Llge;->D(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", unsafeFiles="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lwhf;->x:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

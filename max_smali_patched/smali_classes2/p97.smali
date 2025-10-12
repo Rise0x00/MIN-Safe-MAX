@@ -1,211 +1,231 @@
 .class public final Lp97;
-.super Leje;
+.super Lbj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Lhn4;
 
-.field public final synthetic Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public final Y:Z
+
+.field public final Z:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJZLhn4;ZJ)V
     .locals 0
 
-    iput-object p1, p0, Lp97;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    invoke-direct {p0}, Lbj0;-><init>()V
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lp97;->b:J
 
-    invoke-direct {p0, p1, p2}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lp97;->c:J
+
+    iput-boolean p5, p0, Lp97;->o:Z
+
+    iput-object p6, p0, Lp97;->X:Lhn4;
+
+    iput-boolean p7, p0, Lp97;->Y:Z
+
+    iput-wide p8, p0, Lp97;->Z:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lp04;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lp97;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lp97;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lp97;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lp97;
-
-    iget-object p0, p0, Lp97;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    invoke-direct {v0, p0, p2}, Lp97;-><init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lp97;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    sget-object v0, Ltcf;->a:Ltcf;
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp97;->X:Ljava/lang/Object;
-
-    check-cast p1, Lp04;
-
-    iget-object p0, p0, Lp97;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
-
-    :try_start_0
-    sget-object v1, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->H0:[Lof7;
-
-    iget-object v1, p0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->D0:Lth7;
-
-    invoke-interface {v1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr97;
-
-    iget-object v1, v1, Lr97;->X:Ljbc;
-
-    iget-object v1, v1, Ljbc;->a:Lj4e;
-
-    invoke-interface {v1}, Lj4e;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwsb;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, v1, Lwsb;->a:Landroid/net/Uri;
-
-    if-nez v1, :cond_0
-
-    goto :goto_3
+    return v0
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->M0()Lctb;
+    instance-of v1, p1, Lp97;
 
-    move-result-object v2
+    const/4 v2, 0x0
 
-    iget-wide v2, v2, Lctb;->a:J
+    if-nez v1, :cond_1
 
-    iget-object v4, p0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->B0:Lth7;
-
-    invoke-interface {v4}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lz43;
-
-    check-cast v4, Le2d;
-
-    invoke-virtual {v4}, Le2d;->p()J
-
-    move-result-wide v4
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->F0:Lkle;
-
-    invoke-virtual {v2}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltp3;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3, v1}, Ltp3;->a(Landroid/content/Context;Landroid/net/Uri;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    sget-object v2, Lt67;->a:Ljava/lang/String;
+    check-cast p1, Lp97;
 
-    const-string v2, "image/*"
+    iget-wide v3, p0, Lp97;->b:J
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-wide v5, p1, Lp97;->b:J
 
-    move-result-object v3
-
-    invoke-static {v3, v1, v2}, Lt67;->c(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    :goto_0
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object v2, v0
-
-    goto :goto_2
-
-    :goto_1
-    new-instance v2, Lfnc;
-
-    invoke-direct {v2, v1}, Lfnc;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_2
-    invoke-static {v2}, Lhnc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v1
+    cmp-long v1, v3, v5
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v2, "shareQrCode: failed to share qr code"
-
-    invoke-static {p1, v2, v1}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->A0:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzja;
-
-    invoke-virtual {p0}, Lzja;->i()Lyja;
+    return v2
 
     :cond_2
-    :goto_3
+    iget-wide v3, p0, Lp97;->c:J
+
+    iget-wide v5, p1, Lp97;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lp97;->o:Z
+
+    iget-boolean v3, p1, Lp97;->o:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lp97;->X:Lhn4;
+
+    iget-object v3, p1, Lp97;->X:Lhn4;
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lp97;->Y:Z
+
+    iget-boolean v3, p1, Lp97;->Y:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-wide v3, p0, Lp97;->Z:J
+
+    iget-wide v5, p1, Lp97;->Z:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lp97;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lp97;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lp97;->o:Z
+
+    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lp97;->X:Lhn4;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lp97;->Y:Z
+
+    invoke-static {v2, v1, v0}, Lvl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lp97;->Z:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "IncomingMessageEvent(chatId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lp97;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lp97;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isInvisiblePush="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lp97;->o:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", itemType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp97;->X:Lhn4;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isControl="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lp97;->Y:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sender="
+
+    const-string v2, ")"
+
+    iget-wide v3, p0, Lp97;->Z:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lnd5;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

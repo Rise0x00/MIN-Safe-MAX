@@ -22,7 +22,7 @@
         "renderer",
         "Lorg/webrtc/RendererCommon$GlDrawer;",
         "drawer",
-        "Ltcf;",
+        "Loyf;",
         "init",
         "(Lef1;Lorg/webrtc/RendererCommon$GlDrawer;)V",
         "Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;",
@@ -55,7 +55,7 @@
         "Lkotlin/Function0;",
         "onDone",
         "releaseEglSurface",
-        "(Ld96;)V",
+        "(Lve6;)V",
         "release",
         "Companion",
         "FrameSizeListener",
@@ -112,11 +112,11 @@
 .method public abstract release()V
 .end method
 
-.method public abstract releaseEglSurface(Ld96;)V
+.method public abstract releaseEglSurface(Lve6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ld96;",
+            "Lve6;",
             ")V"
         }
     .end annotation

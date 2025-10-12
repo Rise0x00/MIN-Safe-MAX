@@ -1,31 +1,50 @@
-.class public final Ll63;
+.class public interface abstract Ll63;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Landroid/graphics/Rect;
-
-
-# direct methods
-.method public constructor <init>(IIILandroid/graphics/Rect;)V
+# virtual methods
+.method public a()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput p1, p0, Ll63;->a:I
+.method public abstract b()Lgn3;
+.end method
 
-    iput p2, p0, Ll63;->b:I
+.method public abstract c(Ljava/net/Socket;)V
+.end method
 
-    iput p3, p0, Ll63;->c:I
+.method public abstract close()V
+.end method
 
-    iput-object p4, p0, Ll63;->d:Landroid/graphics/Rect;
+.method public abstract connect()Ljava/net/Socket;
+.end method
+
+.method public abstract d()I
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public f()V
+    .locals 0
 
     return-void
+.end method
+
+.method public abstract g(Z)V
+.end method
+
+.method public abstract h(I)J
+.end method
+
+.method public abstract i()Ljava/lang/String;
+.end method
+
+.method public abstract j()I
+.end method
+
+.method public abstract k()Ldm3;
 .end method

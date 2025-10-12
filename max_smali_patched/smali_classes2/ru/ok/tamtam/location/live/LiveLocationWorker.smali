@@ -30,11 +30,11 @@
 
 
 # instance fields
-.field public final a:Lkle;
+.field public final a:Ls5f;
 
-.field public final b:Lkle;
+.field public final b:Ls5f;
 
-.field public final c:Lkle;
+.field public final c:Ls5f;
 
 
 # direct methods
@@ -43,41 +43,41 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    new-instance p1, Lfr7;
+    new-instance p1, Lpy7;
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Lfr7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
+    invoke-direct {p1, p0, p2}, Lpy7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
 
-    new-instance p2, Lkle;
+    new-instance p2, Ls5f;
 
-    invoke-direct {p2, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->a:Lkle;
+    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->a:Ls5f;
 
-    new-instance p1, Lfr7;
+    new-instance p1, Lpy7;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p0, p2}, Lfr7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
+    invoke-direct {p1, p0, p2}, Lpy7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
 
-    new-instance p2, Lkle;
+    new-instance p2, Ls5f;
 
-    invoke-direct {p2, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->b:Lkle;
+    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->b:Ls5f;
 
-    new-instance p1, Lfr7;
+    new-instance p1, Lpy7;
 
     const/4 p2, 0x2
 
-    invoke-direct {p1, p0, p2}, Lfr7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
+    invoke-direct {p1, p0, p2}, Lpy7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;I)V
 
-    new-instance p2, Lkle;
+    new-instance p2, Ls5f;
 
-    invoke-direct {p2, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Lkle;
+    iput-object p2, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Ls5f;
 
     return-void
 .end method
@@ -87,15 +87,15 @@
 .method public final b()J
     .locals 2
 
-    iget-object p0, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->a:Lkle;
+    iget-object v0, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->a:Ls5f;
 
-    invoke-virtual {p0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Ljava/lang/Number;
+    check-cast v0, Ljava/lang/Number;
 
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
     move-result-wide v0
 
@@ -103,17 +103,17 @@
 .end method
 
 .method public final doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+    .locals 11
 
-    instance-of v0, p1, Lgr7;
+    instance-of v0, p1, Lqy7;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lgr7;
+    check-cast v0, Lqy7;
 
-    iget v1, v0, Lgr7;->o0:I
+    iget v1, v0, Lqy7;->x0:I
 
     const/high16 v2, -0x80000000
 
@@ -123,21 +123,21 @@
 
     sub-int/2addr v1, v2
 
-    iput v1, v0, Lgr7;->o0:I
+    iput v1, v0, Lqy7;->x0:I
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lgr7;
+    new-instance v0, Lqy7;
 
-    check-cast p1, Lax3;
+    check-cast p1, Lnz3;
 
-    invoke-direct {v0, p0, p1}, Lgr7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;Lax3;)V
+    invoke-direct {v0, p0, p1}, Lqy7;-><init>(Lru/ok/tamtam/location/live/LiveLocationWorker;Lnz3;)V
 
     :goto_0
-    iget-object p1, v0, Lgr7;->Z:Ljava/lang/Object;
+    iget-object p1, v0, Lqy7;->Z:Ljava/lang/Object;
 
-    iget v1, v0, Lgr7;->o0:I
+    iget v1, v0, Lqy7;->x0:I
 
     const-string v2, "LIVE_LOCATION_WORKER"
 
@@ -147,7 +147,7 @@
 
     const/4 v5, 0x1
 
-    sget-object v6, Lq04;->a:Lq04;
+    sget-object v6, Lf34;->a:Lf34;
 
     if-eqz v1, :cond_4
 
@@ -157,122 +157,104 @@
 
     if-ne v1, v3, :cond_1
 
-    iget-object p0, v0, Lgr7;->X:Ljava/lang/String;
+    iget-object v1, v0, Lqy7;->X:Ljava/lang/String;
 
-    iget-object v1, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    iget-object v7, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
     :try_start_0
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-object p1, p0
-
-    move-object p0, v1
 
     goto/16 :goto_2
 
     :catchall_0
     move-exception p1
 
-    move-object v0, p1
-
-    move-object p1, p0
-
-    move-object p0, v1
-
     goto/16 :goto_6
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p0
+    throw p1
 
     :cond_2
-    iget-object p0, v0, Lgr7;->X:Ljava/lang/String;
+    iget-object v1, v0, Lqy7;->X:Ljava/lang/String;
 
-    iget-object v1, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    iget-object v7, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
     :try_start_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object p1, p0
-
-    move-object p0, v1
 
     goto/16 :goto_4
 
     :cond_3
-    iget-object p0, v0, Lgr7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    iget-object v1, v0, Lqy7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
-    iget-object v1, v0, Lgr7;->X:Ljava/lang/String;
+    iget-object v7, v0, Lqy7;->X:Ljava/lang/String;
 
-    iget-object v7, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    iget-object v8, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
     :try_start_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    move-object v11, v1
-
-    move-object v1, p1
-
-    move-object p1, v11
 
     goto/16 :goto_3
 
     :catchall_1
     move-exception p1
 
-    move-object v0, p1
+    move-object v1, v7
 
-    move-object p1, v1
-
-    :goto_1
-    move-object p0, v7
+    move-object v7, v8
 
     goto/16 :goto_6
 
     :cond_4
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ldq7;->getInputData()Lz54;
+    invoke-virtual {p0}, Lox7;->getInputData()Lu84;
 
     move-result-object p1
 
     const-string v1, "workName"
 
-    invoke-virtual {p1, v1}, Lz54;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lu84;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-nez p1, :cond_5
 
-    move-object p1, v2
+    move-object v1, v2
+
+    goto :goto_1
 
     :cond_5
-    const-string v1, "doWork"
+    move-object v1, p1
 
-    invoke-static {p1, v1}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_1
+    const-string p1, "doWork"
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lcoe;
+    invoke-static {v1, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
 
-    check-cast v1, Lg2d;
+    move-result-object p1
 
-    invoke-virtual {v1}, Lg2d;->h()Lem4;
+    check-cast p1, Lzid;
 
-    move-result-object v1
+    invoke-virtual {p1}, Lzid;->h()Llp4;
 
-    invoke-virtual {v1, p1}, Lem4;->f(Ljava/lang/String;)V
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Llp4;->f(Ljava/lang/String;)V
 
     :try_start_3
     invoke-virtual {p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
@@ -281,266 +263,273 @@
 
     const-wide/16 v9, 0x0
 
-    cmp-long v1, v7, v9
+    cmp-long p1, v7, v9
 
-    if-gez v1, :cond_6
+    if-gez p1, :cond_6
 
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lcoe;
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lg2d;
+    check-cast p1, Lzid;
 
-    invoke-virtual {v0}, Lg2d;->h()Lem4;
+    invoke-virtual {p1}, Lzid;->h()Llp4;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Lem4;->g(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Llp4;->g(Ljava/lang/String;)V
 
-    invoke-static {}, Lcq7;->a()Lzp7;
+    invoke-static {}, Lnx7;->a()Lkx7;
 
-    move-result-object p0
+    move-result-object p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    return-object p0
+    return-object p1
 
     :catchall_2
-    move-exception v0
+    move-exception p1
+
+    move-object v7, p0
 
     goto/16 :goto_6
 
     :cond_6
-    :goto_2
-    invoke-virtual {p0}, Ldq7;->isStopped()Z
-
-    move-result v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    if-nez v1, :cond_a
-
-    const/4 v1, 0x0
-
-    :try_start_4
-    iget-object v7, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Lkle;
-
-    invoke-virtual {v7}, Lkle;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lar7;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
-
-    check-cast v7, Lbr7;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v7, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v7}, Lfud;->g(Ljava/lang/Object;)Ln3a;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lfud;->e()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    :catchall_3
-    :cond_7
-    if-eqz v1, :cond_a
-
-    :try_start_5
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lcoe;
-
-    move-result-object v1
-
-    check-cast v1, Lg2d;
-
-    invoke-virtual {v1}, Lg2d;->q()Lx9b;
-
-    move-result-object v1
-
-    check-cast v1, Laab;
-
-    iget-object v1, v1, Laab;->b:Lwbd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v7, Lru/ok/tamtam/android/prefs/PmsKey;->live-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v1, v7, v5}, Ln2d;->k(Ljava/lang/Enum;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    iput-object p0, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
-
-    iput-object p1, v0, Lgr7;->X:Ljava/lang/String;
-
-    iput-object p0, v0, Lgr7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
-
-    iput v5, v0, Lgr7;->o0:I
-
-    invoke-virtual {p0, v0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    if-ne v1, v6, :cond_8
-
-    goto :goto_5
-
-    :cond_8
     move-object v7, p0
 
-    :goto_3
+    :cond_7
+    :goto_2
+    :try_start_4
+    invoke-virtual {v7}, Lox7;->isStopped()Z
+
+    move-result p1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    if-nez p1, :cond_b
+
+    const/4 p1, 0x0
+
+    :try_start_5
+    iget-object v8, v7, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Ls5f;
+
+    invoke-virtual {v8}, Ls5f;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lky7;
+
+    invoke-virtual {v7}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
+
+    check-cast v8, Lly7;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v8, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v8}, Lude;->g(Ljava/lang/Object;)Lmda;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lude;->e()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Boolean;
+
+    if-eqz v8, :cond_8
+
+    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    :catchall_3
+    :cond_8
+    if-eqz p1, :cond_b
+
     :try_start_6
-    check-cast v1, La26;
+    invoke-virtual {v7}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
 
-    iput-object v7, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    move-result-object p1
 
-    iput-object p1, v0, Lgr7;->X:Ljava/lang/String;
+    check-cast p1, Lzid;
 
-    const/4 v8, 0x0
+    invoke-virtual {p1}, Lzid;->q()Lxob;
 
-    iput-object v8, v0, Lgr7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    move-result-object p1
 
-    iput v4, v0, Lgr7;->o0:I
+    check-cast p1, Lzob;
 
-    invoke-virtual {p0, v1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(La26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p1, p1, Lzob;->b:Lltd;
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->live-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {p1, v8, v5}, Lgjd;->k(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_b
+
+    iput-object v7, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    iput-object v1, v0, Lqy7;->X:Ljava/lang/String;
+
+    iput-object v7, v0, Lqy7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    iput v5, v0, Lqy7;->x0:I
+
+    invoke-virtual {v7, v0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_4
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    if-ne p0, v6, :cond_9
+    if-ne p1, v6, :cond_9
 
     goto :goto_5
 
     :cond_9
-    move-object p0, v7
+    move-object v8, v7
+
+    move-object v7, v1
+
+    move-object v1, v8
+
+    :goto_3
+    :try_start_7
+    check-cast p1, Ld76;
+
+    iput-object v8, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    iput-object v7, v0, Lqy7;->X:Ljava/lang/String;
+
+    const/4 v9, 0x0
+
+    iput-object v9, v0, Lqy7;->Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    iput v4, v0, Lqy7;->x0:I
+
+    invoke-virtual {v1, p1, v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->setForeground(Ld76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    if-ne p1, v6, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    move-object v1, v7
+
+    move-object v7, v8
 
     :goto_4
-    :try_start_7
-    iput-object p0, v0, Lgr7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+    :try_start_8
+    iput-object v7, v0, Lqy7;->o:Lru/ok/tamtam/location/live/LiveLocationWorker;
 
-    iput-object p1, v0, Lgr7;->X:Ljava/lang/String;
+    iput-object v1, v0, Lqy7;->X:Ljava/lang/String;
 
-    iput v3, v0, Lgr7;->o0:I
+    iput v3, v0, Lqy7;->x0:I
 
-    const-wide/16 v7, 0xbb8
+    const-wide/16 v8, 0xbb8
 
-    invoke-static {v7, v8, v0}, Lyr3;->w(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v8, v9, v0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    if-ne v1, v6, :cond_6
+    if-ne p1, v6, :cond_7
 
     :goto_5
     return-object v6
 
-    :catchall_4
-    move-exception p0
+    :cond_b
+    invoke-static {}, Lnx7;->b()Lmx7;
 
-    move-object v0, p0
-
-    goto/16 :goto_1
-
-    :cond_a
-    invoke-static {}, Lcq7;->b()Lbq7;
-
-    move-result-object v0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+    move-result-object p1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     goto :goto_7
 
     :goto_6
-    const-string v1, "failure!"
+    const-string v0, "failure!"
 
-    invoke-static {v2, v1, v0}, Lz76;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    instance-of v0, v0, Ljava/util/concurrent/CancellationException;
+    instance-of p1, p1, Ljava/util/concurrent/CancellationException;
 
-    if-eqz v0, :cond_b
+    if-eqz p1, :cond_c
 
-    iget-object v0, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Lkle;
+    iget-object p1, v7, Lru/ok/tamtam/location/live/LiveLocationWorker;->c:Ls5f;
 
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lar7;
+    check-cast p1, Lky7;
 
-    invoke-virtual {p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
+    invoke-virtual {v7}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_b
-    invoke-static {}, Lcq7;->a()Lzp7;
+    :cond_c
+    invoke-static {}, Lnx7;->a()Lkx7;
 
-    move-result-object v0
+    move-result-object p1
 
     :goto_7
-    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lcoe;
+    invoke-virtual {v7}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lg2d;
+    check-cast v0, Lzid;
 
-    invoke-virtual {p0}, Lg2d;->h()Lem4;
+    invoke-virtual {v0}, Lzid;->h()Llp4;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lem4;->g(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Llp4;->g(Ljava/lang/String;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final getForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
-    invoke-virtual {p0}, Ldq7;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lox7;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lklg;->d(Landroid/content/Context;)Lklg;
+    invoke-static {p1}, Lm9h;->d(Landroid/content/Context;)Lm9h;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Ldq7;->getId()Ljava/util/UUID;
+    invoke-virtual {p0}, Lox7;->getId()Ljava/util/UUID;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lklg;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
+    invoke-virtual {p1, v0}, Lm9h;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
 
     move-result-object p1
 
-    iget-object v0, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->b:Lkle;
+    iget-object v0, p0, Lru/ok/tamtam/location/live/LiveLocationWorker;->b:Ls5f;
 
-    invoke-virtual {v0}, Lkle;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ler7;
+    check-cast v0, Loy7;
 
     invoke-virtual {p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->b()J
 
     move-result-wide v1
 
-    invoke-interface {v0, v1, v2, p1}, Ler7;->a(JLandroid/app/PendingIntent;)Landroid/app/Notification;
+    invoke-interface {v0, v1, v2, p1}, Loy7;->a(JLandroid/app/PendingIntent;)Landroid/app/Notification;
 
     move-result-object p1
 
@@ -550,17 +539,17 @@
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result p0
+    move-result v0
 
-    const v0, -0x335cc9ec
+    const v1, -0x335cc9ec
 
-    xor-int/2addr p0, v0
+    xor-int/2addr v0, v1
 
-    new-instance v0, La26;
+    new-instance v1, Ld76;
 
-    const/16 v1, 0x8
+    sget v2, Lqtd;->c:I
 
-    invoke-direct {v0, p0, p1, v1}, La26;-><init>(ILandroid/app/Notification;I)V
+    invoke-direct {v1, v0, p1, v2}, Ld76;-><init>(ILandroid/app/Notification;I)V
 
-    return-object v0
+    return-object v1
 .end method

@@ -3,153 +3,132 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsnf;
+.implements Lend;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:Lwg6;
-
-.field public final d:Ljava/util/concurrent/ExecutorService;
-
-.field public final e:Leh6;
-
-.field public final f:I
+.field public final synthetic a:Lhj4;
 
 
 # direct methods
-.method public constructor <init>(IZLwg6;Ljava/util/concurrent/ExecutorService;Leh6;I)V
+.method public constructor <init>(Lhj4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lgj4;->a:I
-
-    iput-boolean p2, p0, Lgj4;->b:Z
-
-    iput-object p3, p0, Lgj4;->c:Lwg6;
-
-    iput-object p4, p0, Lgj4;->d:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p5, p0, Lgj4;->e:Leh6;
-
-    iput p6, p0, Lgj4;->f:I
+    iput-object p1, p0, Lgj4;->a:Lhj4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a(Landroid/content/Context;Lmx0;Lr73;ZLs13;)Lunf;
-    .locals 0
-
-    invoke-virtual/range {p0 .. p5}, Lgj4;->b(Landroid/content/Context;Lmx0;Lr73;ZLtnf;)Lhj4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b(Landroid/content/Context;Lmx0;Lr73;ZLtnf;)Lhj4;
-    .locals 10
+.method public final b()Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    iget-object v1, p0, Lgj4;->d:Ljava/util/concurrent/ExecutorService;
+    return v0
+.end method
 
-    if-nez v1, :cond_0
+.method public final e(J)Lcnd;
+    .locals 13
 
-    move v3, v0
+    iget-object v0, p0, Lgj4;->a:Lhj4;
 
-    goto :goto_0
+    iget-object v1, v0, Lhj4;->B0:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v3, 0x0
+    check-cast v1, Ldxe;
 
-    :goto_0
-    if-nez v1, :cond_1
+    iget v1, v1, Ldxe;->f:I
 
-    sget v1, Lfif;->a:I
+    int-to-long v1, v1
 
-    new-instance v1, Lbf3;
+    mul-long/2addr v1, p1
 
-    const/4 v4, 0x2
+    const-wide/32 v3, 0xf4240
 
-    const-string v5, "Effect:DefaultVideoFrameProcessor:GlThread"
+    div-long/2addr v1, v3
 
-    invoke-direct {v1, v4, v5}, Lbf3;-><init>(ILjava/io/Serializable;)V
+    iget-wide v3, v0, Lhj4;->b:J
 
-    invoke-static {v1}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    :cond_1
-    move-object v9, v1
-
-    new-instance v7, Lmv1;
-
-    new-instance v1, Lcj4;
-
-    invoke-direct {v1, p5, v0}, Lcj4;-><init>(Ltnf;I)V
-
-    invoke-direct {v7, v9, v3, v1}, Lmv1;-><init>(Ljava/util/concurrent/ExecutorService;ZLpnf;)V
-
-    new-instance v1, Lfj4;
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    move v6, p4
-
-    move-object v8, p5
-
-    invoke-direct/range {v1 .. v8}, Lfj4;-><init>(Lgj4;Landroid/content/Context;Lmx0;Lr73;ZLmv1;Ltnf;)V
-
-    invoke-interface {v9, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object v0
-
-    :try_start_0
-    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhj4;
-    :try_end_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+    iget-wide v5, v0, Lhj4;->c:J
 
-    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
+    sub-long v7, v5, v3
 
-    invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    throw v1
+    move-result-object v2
 
-    :catch_1
-    move-exception v0
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
-    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
+    move-result-object v1
 
-    invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+    iget-wide v7, v0, Lhj4;->X:J
 
-    throw v1
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v1
+
+    add-long/2addr v1, v3
+
+    const-wide/16 v3, 0x7530
+
+    sub-long v7, v1, v3
+
+    iget-wide v9, v0, Lhj4;->b:J
+
+    const-wide/16 v0, 0x1
+
+    sub-long v11, v5, v0
+
+    invoke-static/range {v7 .. v12}, Lt4g;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lcnd;
+
+    new-instance v3, Lind;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lind;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lcnd;-><init>(Lind;Lind;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 6
+
+    iget-object v0, p0, Lgj4;->a:Lhj4;
+
+    iget-object v1, v0, Lhj4;->B0:Ljava/lang/Object;
+
+    check-cast v1, Ldxe;
+
+    iget-wide v2, v0, Lhj4;->X:J
+
+    const-wide/32 v4, 0xf4240
+
+    mul-long/2addr v2, v4
+
+    iget v0, v1, Ldxe;->f:I
+
+    int-to-long v0, v0
+
+    div-long/2addr v2, v0
+
+    return-wide v2
 .end method

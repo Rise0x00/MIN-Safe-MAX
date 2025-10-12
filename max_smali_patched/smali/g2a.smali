@@ -1,93 +1,49 @@
 .class public final Lg2a;
-.super Lt0a;
+.super Lg04;
 .source "SourceFile"
-
-# interfaces
-.implements Ljhe;
 
 
 # instance fields
-.field public final a:Lh5;
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Lh5;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lg04;-><init>()V
 
-    iput-object p1, p0, Lg2a;->a:Lh5;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lg2a;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final b()Lg04;
     .locals 1
 
-    iget-object p0, p0, Lg2a;->a:Lh5;
+    new-instance v0, Lg2a;
 
-    invoke-virtual {p0}, Lh5;->call()Ljava/lang/Object;
+    invoke-direct {v0}, Lg2a;-><init>()V
 
-    move-result-object p0
-
-    sget-object v0, Lq75;->a:Lp75;
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public final o(Ly3a;)V
-    .locals 2
+.method public final e()Z
+    .locals 1
 
-    new-instance v0, Lsj4;
+    iget-boolean v0, p0, Lg2a;->o:Z
 
-    invoke-direct {v0, p1}, Lsj4;-><init>(Ly3a;)V
+    return v0
+.end method
 
-    invoke-interface {p1, v0}, Ly3a;->c(Lkp4;)V
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLe04;)V
+    .locals 0
 
-    invoke-virtual {v0}, Lsj4;->g()Z
+    invoke-virtual {p5}, Le04;->n()V
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    iget-object p0, p0, Lg2a;->a:Lh5;
-
-    invoke-virtual {p0}, Lh5;->call()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lq75;->a:Lp75;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, p0}, Lsj4;->e(Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lve2;->b0(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Lsj4;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1, p0}, Ly3a;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p0}, Lkv0;->v(Ljava/lang/Throwable;)V
-
-    :goto_0
     return-void
 .end method

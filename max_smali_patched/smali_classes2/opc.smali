@@ -1,175 +1,211 @@
 .class public final Lopc;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lmpc;
 
-.field public final synthetic Y:Ltpc;
+.field public final synthetic Y:Z
 
-.field public final synthetic Z:J
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:Lqpc;
+
+.field public final synthetic c:Lnxc;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method public constructor <init>(Ltpc;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/view/View;Lqpc;Lnxc;JLmpc;Z)V
     .locals 0
 
-    iput-object p1, p0, Lopc;->Y:Ltpc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lopc;->Z:J
+    iput-object p1, p0, Lopc;->a:Landroid/view/View;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lopc;->b:Lqpc;
 
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lopc;->c:Lnxc;
+
+    iput-wide p4, p0, Lopc;->o:J
+
+    iput-object p6, p0, Lopc;->X:Lmpc;
+
+    iput-boolean p7, p0, Lopc;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 9
 
-    check-cast p1, Lp04;
+    iget-object v0, p0, Lopc;->b:Lqpc;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lopc;->c:Lnxc;
 
-    invoke-virtual {p0, p1, p2}, Lopc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v1}, Lnxc;->h()I
 
-    move-result-object p0
+    move-result v1
 
-    check-cast p0, Lopc;
+    invoke-virtual {v0, v1}, Lqpc;->e(I)Z
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lopc;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lopc;
-
-    iget-object v0, p0, Lopc;->Y:Ltpc;
-
-    iget-wide v1, p0, Lopc;->Z:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lopc;-><init>(Ltpc;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lopc;->X:I
-
-    iget-object v1, p0, Lopc;->Y:Ltpc;
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lq04;->a:Lq04;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lopc;->b:Lqpc;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v0, v0, Lqpc;->f:Ljava/util/LinkedList;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-wide v1, p0, Lopc;->o:J
 
-    throw p0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    :cond_2
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    iget-object v0, p0, Lopc;->b:Lqpc;
 
-    invoke-virtual {v1}, Ltpc;->d()Le49;
+    iget-object v0, v0, Lqpc;->e:Ljava/util/LinkedHashSet;
 
-    move-result-object p1
+    iget-object v1, p0, Lopc;->X:Lmpc;
 
-    iput v3, p0, Lopc;->X:I
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lopc;->c:Lnxc;
 
-    const-string v0, "SELECT * FROM messages WHERE id = ?"
+    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
 
-    invoke-static {v3, v0}, Lvpc;->c(ILjava/lang/String;)Lvpc;
+    iget-object v1, p0, Lopc;->X:Lmpc;
+
+    iget-object v1, v1, Lmpc;->c:Lkoc;
+
+    iget-object v1, v1, Lkoc;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget-wide v5, p0, Lopc;->Z:J
+    iget-object v1, p0, Lopc;->b:Lqpc;
 
-    invoke-virtual {v0, v3, v5, v6}, Lvpc;->k(IJ)V
+    iget-object v1, v1, Lqpc;->c:Lzf7;
 
-    new-instance v3, Landroid/os/CancellationSignal;
+    iget-object v1, v1, Lzf7;->b:Ljava/lang/Object;
 
-    invoke-direct {v3}, Landroid/os/CancellationSignal;-><init>()V
+    check-cast v1, Landroid/view/View;
 
-    iget-object v5, p1, Le49;->a:Lfpc;
+    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
 
-    new-instance v6, Lc49;
+    const/4 v2, 0x0
 
-    const/4 v7, 0x0
+    if-nez v0, :cond_1
 
-    invoke-direct {v6, p1, v0, v7}, Lc49;-><init>(Le49;Lvpc;I)V
+    move-object v1, v2
 
-    invoke-static {v5, v3, v6, p0}, Lno9;->k(Lfpc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_1
+    invoke-static {v0, v1}, Lcng;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
-    if-ne p1, v4, :cond_3
+    move-result-object v1
+
+    :goto_0
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v3, p0, Lopc;->b:Lqpc;
+
+    iget-object v3, v3, Lqpc;->d:Ljava/lang/String;
+
+    sget-object v4, Lox9;->j:Lqpa;
+
+    if-nez v4, :cond_3
 
     goto :goto_1
 
     :cond_3
-    :goto_0
-    check-cast p1, Lgx8;
+    sget-object v5, Ly38;->o:Ly38;
 
-    if-eqz p1, :cond_5
+    invoke-virtual {v4, v5}, Lqpa;->b(Ly38;)Z
 
-    iput v2, p0, Lopc;->X:I
+    move-result v6
 
-    invoke-virtual {v1, p1, p0}, Ltpc;->h(Lgx8;Lax3;)Ljava/lang/Object;
+    if-eqz v6, :cond_4
 
-    move-result-object p1
+    iget-boolean v6, p0, Lopc;->Y:Z
 
-    if-ne p1, v4, :cond_4
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    :goto_1
-    return-object v4
+    const-string v8, "Play pending reaction effect, by place:"
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v8, ", onCreation:"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v3, v6, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_4
-    :goto_2
-    check-cast p1, Lrw8;
+    :goto_1
+    iget-object v2, p0, Lopc;->b:Lqpc;
 
-    return-object p1
+    iget-object v3, p0, Lopc;->X:Lmpc;
+
+    iget-object v4, v3, Lmpc;->b:Ljava/lang/String;
+
+    iget-wide v5, v3, Lmpc;->a:J
+
+    invoke-static {v2, v4, v5, v6, v1}, Lqpc;->c(Lqpc;Ljava/lang/String;JLandroid/graphics/Rect;)V
+
+    iget-boolean v1, p0, Lopc;->Y:Z
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, p0, Lopc;->c:Lnxc;
+
+    iget-object v1, v1, Lnxc;->a:Landroid/view/View;
+
+    new-instance v2, Lppc;
+
+    iget-object v3, p0, Lopc;->b:Lqpc;
+
+    iget-wide v4, p0, Lopc;->o:J
+
+    invoke-direct {v2, v3, v0, v4, v5}, Lppc;-><init>(Lqpc;Landroid/view/View;J)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     :cond_5
-    const/4 p0, 0x0
-
-    return-object p0
+    :goto_2
+    return-void
 .end method

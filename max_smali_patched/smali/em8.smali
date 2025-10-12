@@ -1,81 +1,212 @@
-.class public final synthetic Lem8;
+.class public final Lem8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqm8;
-.implements Lrm8;
+.implements Lgv0;
+
+
+# static fields
+.field public static final Y:Lem8;
 
 
 # instance fields
-.field public final synthetic a:Ltm8;
+.field public final X:F
 
-.field public final synthetic b:I
+.field public final a:J
 
-.field public final synthetic c:I
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltm8;II)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Lem8;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    const v7, -0x800001
+
+    move-wide v3, v1
+
+    move-wide v5, v1
+
+    move v8, v7
+
+    invoke-direct/range {v0 .. v8}, Lem8;-><init>(JJJFF)V
+
+    sput-object v0, Lem8;->Y:Lem8;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJJFF)V
     .locals 0
 
-    iput-object p1, p0, Lem8;->a:Ltm8;
-
-    iput p2, p0, Lem8;->b:I
-
-    iput p3, p0, Lem8;->c:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lem8;->a:J
+
+    iput-wide p3, p0, Lem8;->b:J
+
+    iput-wide p5, p0, Lem8;->c:J
+
+    iput p7, p0, Lem8;->o:F
+
+    iput p8, p0, Lem8;->X:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Li7b;Lok8;Ljava/util/List;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lem8;->a:Ltm8;
+    const/4 v0, 0x1
 
-    iget v1, p0, Lem8;->b:I
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0, p2, p1, v1}, Ltm8;->Y(Lok8;Li7b;I)I
+    return v0
 
-    move-result v1
+    :cond_0
+    instance-of v1, p1, Lem8;
 
-    iget p0, p0, Lem8;->c:I
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p2, p1, p0}, Ltm8;->Y(Lok8;Li7b;I)I
+    if-nez v1, :cond_1
 
-    move-result p0
+    return v2
 
-    invoke-virtual {p1, p3, v1, p0}, Li7b;->a0(Ljava/util/List;II)V
+    :cond_1
+    check-cast p1, Lem8;
 
-    return-void
+    iget-wide v3, p0, Lem8;->a:J
+
+    iget-wide v5, p1, Lem8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lem8;->b:J
+
+    iget-wide v5, p1, Lem8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lem8;->c:J
+
+    iget-wide v5, p1, Lem8;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lem8;->o:F
+
+    iget v3, p1, Lem8;->o:F
+
+    cmpl-float v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lem8;->X:F
+
+    iget p1, p1, Lem8;->X:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public d(Li7b;Lok8;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 7
 
-    iget-object v0, p0, Lem8;->a:Ltm8;
+    iget-wide v0, p0, Lem8;->a:J
 
-    iget v1, p0, Lem8;->b:I
+    const/16 v2, 0x20
 
-    invoke-virtual {v0, p2, p1, v1}, Ltm8;->Y(Lok8;Li7b;I)I
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Lem8;->b:J
+
+    ushr-long v5, v3, v2
+
+    xor-long/2addr v3, v5
+
+    long-to-int v1, v3
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v3, p0, Lem8;->c:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lem8;->o:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v3, v1, v2
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
-    iget p0, p0, Lem8;->c:I
+    goto :goto_0
 
-    invoke-virtual {v0, p2, p1, p0}, Ltm8;->Y(Lok8;Li7b;I)I
+    :cond_0
+    move v1, v4
 
-    move-result p0
+    :goto_0
+    add-int/2addr v0, v1
 
-    invoke-virtual {p1}, Li7b;->r0()V
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p1, p1, Li7b;->a:Lra5;
+    iget v1, p0, Lem8;->X:F
 
-    invoke-virtual {p1, v1, p0}, Lra5;->d0(II)V
+    cmpl-float v2, v1, v2
 
-    return-void
+    if-eqz v2, :cond_1
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v4
+
+    :cond_1
+    add-int/2addr v0, v4
+
+    return v0
 .end method

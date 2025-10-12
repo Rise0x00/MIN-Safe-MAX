@@ -25,19 +25,19 @@
         "cause",
         "",
         "issueKey",
-        "Ltcf;",
+        "Loyf;",
         "reportCrash",
         "(Ljava/lang/Throwable;Ljava/lang/String;)V",
-        "Li2f;",
+        "Lanf;",
         "tracerLite$delegate",
-        "Lth7;",
+        "Lbp7;",
         "getTracerLite",
-        "()Li2f;",
+        "()Lanf;",
         "tracerLite",
-        "La2f;",
+        "Lumf;",
         "crashReport$delegate",
         "getCrashReport",
-        "()La2f;",
+        "()Lumf;",
         "crashReport",
         "Companion",
         "calls-audiomanager_release"
@@ -62,9 +62,9 @@
 
 
 # instance fields
-.field private final crashReport$delegate:Lth7;
+.field private final crashReport$delegate:Lbp7;
 
-.field private final tracerLite$delegate:Lth7;
+.field private final tracerLite$delegate:Lbp7;
 
 
 # direct methods
@@ -75,7 +75,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$Companion;-><init>(Luc4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$Companion;-><init>(Lof4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$Companion;
 
@@ -91,61 +91,61 @@
 
     invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$tracerLite$2;-><init>(Landroid/content/Context;)V
 
-    new-instance p1, Lkle;
+    new-instance p1, Ls5f;
 
-    invoke-direct {p1, v0}, Lkle;-><init>(Ld96;)V
+    invoke-direct {p1, v0}, Ls5f;-><init>(Lve6;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->tracerLite$delegate:Lth7;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->tracerLite$delegate:Lbp7;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;
 
     invoke-direct {p1, p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade$crashReport$2;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;)V
 
-    new-instance v0, Lkle;
+    new-instance v0, Ls5f;
 
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->crashReport$delegate:Lth7;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->crashReport$delegate:Lbp7;
 
     return-void
 .end method
 
-.method public static final synthetic access$getTracerLite(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;)Li2f;
+.method public static final synthetic access$getTracerLite(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;)Lanf;
     .locals 0
 
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->getTracerLite()Li2f;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->getTracerLite()Lanf;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final getCrashReport()La2f;
-    .locals 0
+.method private final getCrashReport()Lumf;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->crashReport$delegate:Lth7;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->crashReport$delegate:Lbp7;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, La2f;
+    check-cast v0, Lumf;
 
-    return-object p0
+    return-object v0
 .end method
 
-.method private final getTracerLite()Li2f;
-    .locals 0
+.method private final getTracerLite()Lanf;
+    .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->tracerLite$delegate:Lth7;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->tracerLite$delegate:Lbp7;
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Li2f;
+    check-cast v0, Lanf;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public static synthetic reportCrash$default(Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)V
@@ -179,18 +179,29 @@
 .end method
 
 .method public final reportCrash(Ljava/lang/Throwable;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
     .line 2
     :try_start_0
-    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->getCrashReport()La2f;
+    invoke-direct {p0}, Lru/ok/android/externcalls/sdk/audio/internal/tracer/TracerLiteFacade;->getCrashReport()Lumf;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {p0, p2, p1}, La2f;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p2, p1}, Lumf;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    return-void
+
     :catchall_0
+    move-exception p1
+
+    .line 3
+    const-string p2, "TracerLiteFacade"
+
+    const-string v0, "Crash report failed"
+
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return-void
 .end method

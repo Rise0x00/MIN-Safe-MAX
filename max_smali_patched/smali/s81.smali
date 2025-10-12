@@ -1,83 +1,158 @@
-.class public final synthetic Ls81;
-.super Ljava/lang/Object;
+.class public final Ls81;
+.super La74;
 .source "SourceFile"
-
-# interfaces
-.implements Lf96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final A0:Ljava/lang/String;
 
-.field public final synthetic b:Lt81;
+.field public B0:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt81;I)V
+.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
     .locals 0
 
-    iput p2, p0, Ls81;->a:I
+    invoke-direct {p0, p1}, La74;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-object p1, p0, Ls81;->b:Lt81;
+    const-class p1, Ls81;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls81;->A0:Ljava/lang/String;
+
+    sget-object p1, Lb75;->a:Lb75;
+
+    iput-object p1, p0, Ls81;->B0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final E(Li8d;I)V
+    .locals 8
 
-    iget v0, p0, Ls81;->a:I
+    invoke-virtual {p1}, Li8d;->n()Z
 
-    check-cast p1, Lnma;
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    return-void
 
-    iget-object p0, p0, Ls81;->b:Lt81;
+    :cond_0
+    iget-object v0, p0, Ls81;->B0:Ljava/util/List;
 
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
+    move-result-object p2
 
-    move-result-object p0
+    check-cast p2, Lj91;
 
-    invoke-interface {p0}, Lnma;->b()Ldf0;
+    iget-object p2, p2, Lj91;->c:Li91;
 
-    const/4 p0, 0x0
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_1
+
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
+
+    sget-object v0, Li91;->c:Li91;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Li91;)V
 
     :goto_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-object v2, p2
 
-    move-result-object p0
+    goto :goto_1
 
-    return-object p0
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    :pswitch_0
-    sget-object p1, Lzs4;->p0:Lqs9;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-object p0, p0, Ls81;->b:Lt81;
+    throw p1
 
-    iget-object p0, p0, Luhc;->a:Landroid/view/View;
+    :cond_2
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->z0:Li25;
 
-    invoke-virtual {p1, p0}, Lqs9;->e(Landroid/view/View;)Lnma;
+    sget-object v0, Li91;->b:Li91;
 
-    move-result-object p0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p0}, Lnma;->getIcon()Lmv6;
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    const/4 p0, -0x1
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Li91;)V
 
     goto :goto_0
 
-    nop
+    :goto_1
+    sget-object p2, La04;->b:La04;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v2, p2}, Lb04;->setRetainViewMode(La04;)V
+
+    new-instance v1, Ll8d;
+
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
+
+    invoke-virtual {p1, v1}, Li8d;->S(Ll8d;)V
+
+    return-void
+.end method
+
+.method public final J(Ln8d;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Ln8d;->K0:Li8d;
+
+    invoke-super {p0, p1}, La74;->J(Ln8d;)V
+
+    return-void
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Ls81;->B0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final bridge synthetic y(Lnxc;)V
+    .locals 0
+
+    check-cast p1, Ln8d;
+
+    invoke-virtual {p0, p1}, Ls81;->J(Ln8d;)V
+
+    return-void
 .end method

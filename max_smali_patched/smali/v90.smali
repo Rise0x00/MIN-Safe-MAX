@@ -4,116 +4,117 @@
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final a:Lbk9;
 
-.field public final b:Landroid/os/Handler;
+.field public final b:Lya0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+.method public constructor <init>(Lbk9;Lya0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-object p1, p0, Lv90;->a:Lbk9;
 
-    iput-object p1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
-
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lv90;->b:Landroid/os/Handler;
+    iput-object p2, p0, Lv90;->b:Lya0;
 
     return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null schedulerHandler"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string p1, "Null cameraExecutor"
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lv90;
+    instance-of v0, p1, Lv90;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Lv90;
 
-    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, p1, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v0, p1, Lv90;->a:Lbk9;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lv90;->b:Lya0;
 
-    move-result v1
+    iget-object v1, p0, Lv90;->a:Lbk9;
 
-    if-eqz v1, :cond_1
-
-    iget-object p0, p0, Lv90;->b:Landroid/os/Handler;
-
-    iget-object p1, p1, Lv90;->b:Landroid/os/Handler;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lv90;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const v1, 0xf4243
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lkqb;->a:Lkqb;
+
+    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lv90;->b:Lya0;
+
+    invoke-virtual {v0, p1}, Lya0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const v0, 0xf4243
+
+    mul-int v1, v0, v0
+
+    iget-object v2, p0, Lv90;->a:Lbk9;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    sget-object v2, Lkqb;->a:Lkqb;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    iget-object v0, p0, Lv90;->b:Lya0;
+
+    invoke-virtual {v0}, Lya0;->hashCode()I
+
+    move-result v0
 
     xor-int/2addr v0, v1
 
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Lv90;->b:Landroid/os/Handler;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    xor-int/2addr p0, v0
-
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -121,29 +122,37 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CameraThreadConfig{cameraExecutor="
+    const-string v1, "Event{code=null, payload="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Lv90;->a:Lbk9;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", schedulerHandler="
+    const-string v1, ", priority="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lv90;->b:Landroid/os/Handler;
+    sget-object v1, Lkqb;->a:Lkqb;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, "}"
+    const-string v1, ", productData="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lv90;->b:Lya0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

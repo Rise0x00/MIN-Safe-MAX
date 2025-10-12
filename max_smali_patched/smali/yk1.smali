@@ -1,26 +1,61 @@
-.class public interface abstract Lyk1;
-.super Ljava/lang/Object;
+.class public final Lyk1;
+.super Lgl1;
 .source "SourceFile"
 
 
+# static fields
+.field public static final D:Lyk1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lyk1;
+
+    invoke-direct {v0}, Lgl1;-><init>()V
+
+    sput-object v0, Lyk1;->D:Lyk1;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public c(Landroid/graphics/RectF;Z)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lyk1;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public d(Z)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, -0x6cfea200
+
+    return v0
 .end method
 
-.method public abstract f(Lgp7;ZJ)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract getShouldScaleMainOpponent()Z
-.end method
+    const-string v0, "RecordStateScreen"
 
-.method public abstract n(Z)V
+    return-object v0
 .end method

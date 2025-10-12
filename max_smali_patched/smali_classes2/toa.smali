@@ -1,133 +1,96 @@
-.class public final Ltoa;
-.super Lpd0;
+.class public final synthetic Ltoa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final b:Lyte;
+.field public final synthetic X:Lbp7;
 
-.field public final c:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbp7;
+
+.field public final synthetic c:Lbp7;
+
+.field public final synthetic o:Lbp7;
 
 
 # direct methods
-.method public constructor <init>(Lyte;)V
-    .locals 2
+.method public synthetic constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;I)V
+    .locals 0
 
-    sget v0, Losc;->f1:I
+    iput p5, p0, Ltoa;->a:I
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ltoa;->b:Lbp7;
 
-    invoke-direct {p0, v1}, Lpd0;-><init>(I)V
+    iput-object p2, p0, Ltoa;->c:Lbp7;
 
-    iput-object p1, p0, Ltoa;->b:Lyte;
+    iput-object p3, p0, Ltoa;->o:Lbp7;
 
-    iput v0, p0, Ltoa;->c:I
+    iput-object p4, p0, Ltoa;->X:Lbp7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Ltoa;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Ltoa;
+    new-instance v0, Lgj1;
 
-    if-nez v0, :cond_1
+    iget-object v1, p0, Ltoa;->b:Lbp7;
 
-    goto :goto_0
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Ltoa;
+    move-result-object v1
 
-    iget-object v0, p0, Ltoa;->b:Lyte;
+    check-cast v1, Landroid/content/Context;
 
-    iget-object v1, p1, Ltoa;->b:Lyte;
+    iget-object v2, p0, Ltoa;->c:Lbp7;
 
-    invoke-static {v0, v1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v2
 
-    if-nez v0, :cond_2
+    check-cast v2, Lktd;
 
-    goto :goto_0
+    iget-object v3, p0, Ltoa;->o:Lbp7;
 
-    :cond_2
-    iget p0, p0, Ltoa;->c:I
+    iget-object v4, p0, Ltoa;->X:Lbp7;
 
-    iget p1, p1, Ltoa;->c:I
+    invoke-direct {v0, v1, v2, v3, v4}, Lgj1;-><init>(Landroid/content/Context;Lktd;Lbp7;Lbp7;)V
 
-    if-eq p0, p1, :cond_3
+    return-object v0
 
-    :goto_0
-    const/4 p0, 0x0
+    :pswitch_0
+    new-instance v0, Lxl9;
 
-    return p0
+    iget-object v1, p0, Ltoa;->b:Lbp7;
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
+    iget-object v2, p0, Ltoa;->c:Lbp7;
 
-    return p0
-.end method
+    iget-object v3, p0, Ltoa;->o:Lbp7;
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v4, p0, Ltoa;->X:Lbp7;
 
-    iget-object v0, p0, Ltoa;->b:Lyte;
+    invoke-direct {v0, v1, v2, v3, v4}, Lxl9;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
 
-    iget v0, v0, Lyte;->b:I
+    return-object v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    nop
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget p0, p0, Ltoa;->c:I
-
-    invoke-static {p0, v0, v1}, Llge;->m(III)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltoa;->b:Lyte;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Ltoa;->c:I
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", description=null)"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,120 +1,104 @@
 .class public final Lvg;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final X:Le04;
 
-.field public final synthetic b:Landroid/view/View;
+.field public Y:Z
 
-.field public final synthetic c:Landroid/view/ViewGroup;
+.field public final synthetic Z:Lxg;
 
-.field public final synthetic d:Lwg;
+.field public final a:Landroid/view/ViewGroup;
 
-.field public final synthetic e:Lrx3;
+.field public final b:Landroid/view/View;
 
-.field public final synthetic f:Z
+.field public final c:Landroid/view/View;
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Lwg;Lrx3;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public constructor <init>(Lxg;Le04;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
     .locals 0
 
-    iput-object p3, p0, Lvg;->a:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lvg;->b:Landroid/view/View;
+    iput-object p1, p0, Lvg;->Z:Lxg;
 
-    iput-object p5, p0, Lvg;->c:Landroid/view/ViewGroup;
+    iput-object p5, p0, Lvg;->a:Landroid/view/ViewGroup;
 
-    iput-object p1, p0, Lvg;->d:Lwg;
+    iput-object p3, p0, Lvg;->b:Landroid/view/View;
 
-    iput-object p2, p0, Lvg;->e:Lrx3;
+    iput-object p4, p0, Lvg;->c:Landroid/view/View;
 
-    iput-boolean p6, p0, Lvg;->f:Z
+    iput-boolean p6, p0, Lvg;->o:Z
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p2, p0, Lvg;->X:Le04;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.method public final a()V
+    .locals 9
 
-    iget-object p1, p0, Lvg;->d:Lwg;
+    iget-boolean v0, p0, Lvg;->Y:Z
 
-    iget-object v0, p0, Lvg;->a:Landroid/view/View;
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvg;->Y:Z
+
+    iget-object v0, p0, Lvg;->c:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lwg;->n(Landroid/view/View;)V
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     :cond_0
-    iget-object v0, p0, Lvg;->b:Landroid/view/View;
+    const/4 v7, 0x1
 
-    if-eqz v0, :cond_1
+    iget-object v8, p0, Lvg;->X:Le04;
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    iget-object v2, p0, Lvg;->Z:Lxg;
 
-    move-result-object v1
+    iget-object v3, p0, Lvg;->a:Landroid/view/ViewGroup;
 
-    iget-object v2, p0, Lvg;->c:Landroid/view/ViewGroup;
+    iget-object v4, p0, Lvg;->b:Landroid/view/View;
 
-    if-ne v1, v2, :cond_1
+    iget-object v5, p0, Lvg;->c:Landroid/view/View;
 
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    iget-boolean v6, p0, Lvg;->o:Z
+
+    invoke-virtual/range {v2 .. v8}, Lxg;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLe04;)V
 
     :cond_1
-    iget-object v0, p0, Lvg;->e:Lrx3;
-
-    invoke-virtual {p1, v0, p0}, Lwg;->k(Lrx3;Lvg;)V
-
     return-void
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+.method public final onPreDraw()Z
+    .locals 1
 
-    iget-object p1, p0, Lvg;->d:Lwg;
+    invoke-virtual {p0}, Lvg;->a()V
 
-    iget-boolean v0, p1, Lwg;->X:Z
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_2
-
-    iget-object v0, p1, Lwg;->n0:Landroid/animation/Animator;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Lvg;->f:Z
-
-    iget-object v1, p0, Lvg;->a:Landroid/view/View;
-
-    if-eqz v1, :cond_1
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v2, p1, Lwg;->p0:Z
-
-    if-eqz v2, :cond_1
-
-    :cond_0
-    iget-object v2, p0, Lvg;->c:Landroid/view/ViewGroup;
-
-    invoke-virtual {v2, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_1
-    iget-object v2, p0, Lvg;->e:Lrx3;
-
-    invoke-virtual {p1, v2, p0}, Lwg;->k(Lrx3;Lvg;)V
-
-    if-eqz v0, :cond_2
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p1, v1}, Lwg;->n(Landroid/view/View;)V
-
-    :cond_2
-    return-void
+    return v0
 .end method

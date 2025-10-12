@@ -1,80 +1,55 @@
 .class public final Lu20;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/media/AudioAttributes;
+.field public final a:Landroid/content/ContentResolver;
+
+.field public final b:Landroid/net/Uri;
+
+.field public final synthetic c:Lv20;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/AudioAttributes;I)V
+.method public constructor <init>(Lv20;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu20;->c:Lv20;
 
-    iput-object p1, p0, Lu20;->a:Landroid/media/AudioAttributes;
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    iput-object p3, p0, Lu20;->a:Landroid/content/ContentResolver;
+
+    iput-object p4, p0, Lu20;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onChange(Z)V
+    .locals 3
 
-    instance-of v0, p1, Lu20;
+    iget-object p1, p0, Lu20;->c:Lv20;
 
-    if-nez v0, :cond_0
+    iget-object v0, p1, Lv20;->b:Ljava/lang/Object;
 
-    const/4 p0, 0x0
+    check-cast v0, Landroid/content/Context;
 
-    return p0
+    iget-object v1, p1, Lv20;->j:Ljava/lang/Object;
 
-    :cond_0
-    check-cast p1, Lu20;
+    check-cast v1, Li20;
 
-    iget-object p0, p0, Lu20;->a:Landroid/media/AudioAttributes;
+    iget-object v2, p1, Lv20;->i:Ljava/lang/Object;
 
-    iget-object p1, p1, Lu20;->a:Landroid/media/AudioAttributes;
+    check-cast v2, Lkbh;
 
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1, v2}, Ls20;->b(Landroid/content/Context;Li20;Lkbh;)Ls20;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
+    invoke-virtual {p1, v0}, Lv20;->a(Ls20;)V
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lu20;->a:Landroid/media/AudioAttributes;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Landroid/media/AudioAttributes;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AudioAttributesCompat: audioattributes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lu20;->a:Landroid/media/AudioAttributes;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

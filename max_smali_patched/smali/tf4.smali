@@ -1,123 +1,121 @@
-.class public abstract synthetic Ltf4;
-.super Ljava/lang/Object;
+.class public final Ltf4;
+.super Lhj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final synthetic X:I
+
+.field public final Y:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+    .locals 6
 
-    invoke-static {}, Luj7;->values()[Luj7;
+    iput p1, p0, Ltf4;->X:I
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    array-length v0, v0
+    move-object v0, p0
 
-    new-array v0, v0, [I
+    move-wide v2, p2
 
-    :try_start_0
-    sget-object v1, Luj7;->ON_CREATE:Luj7;
+    move-wide v4, p4
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct/range {v0 .. v5}, Lhj0;-><init>(IJJ)V
 
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Luj7;->ON_START:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Luj7;->ON_RESUME:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Luj7;->ON_PAUSE:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Luj7;->ON_STOP:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v1, Luj7;->ON_DESTROY:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Luj7;->ON_ANY:Luj7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Ltf4;->$EnumSwitchMapping$0:[I
+    iput-object p6, v0, Ltf4;->Y:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 3
+
+    iget v0, p0, Ltf4;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lhj0;->c()V
+
+    iget-object v0, p0, Ltf4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lrf4;
+
+    iget-wide v1, p0, Lhj0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lrf4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lhj0;->c()V
+
+    iget-object v0, p0, Ltf4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lrf4;
+
+    iget-wide v1, p0, Lhj0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lrf4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()J
+    .locals 3
+
+    iget v0, p0, Ltf4;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lhj0;->c()V
+
+    iget-object v0, p0, Ltf4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lrf4;
+
+    iget-wide v1, p0, Lhj0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lrf4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lhj0;->c()V
+
+    iget-object v0, p0, Ltf4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lrf4;
+
+    iget-wide v1, p0, Lhj0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lrf4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

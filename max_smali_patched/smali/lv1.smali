@@ -1,80 +1,39 @@
-.class public final synthetic Llv1;
-.super Ljava/lang/Object;
+.class public final Llv1;
+.super Lgd4;
 .source "SourceFile"
 
-# interfaces
-.implements Lks1;
 
+# static fields
+.field public static final b:Llv1;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lmv1;
+.field public static final c:Lbd4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmv1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Llv1;->a:I
+    new-instance v0, Llv1;
 
-    iput-object p1, p0, Llv1;->b:Lmv1;
+    invoke-direct {v0}, Lgd4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Llv1;->b:Llv1;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-
-# virtual methods
-.method public final N(Ljs1;)Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Llv1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Llv1;->b:Lmv1;
-
-    iget-object v0, p0, Lmv1;->d:Ljava/lang/Object;
-
-    check-cast v0, Load;
-
-    new-instance v1, Lkv1;
+    new-array v1, v1, [Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, v2}, Lkv1;-><init>(Lmv1;Ljs1;I)V
+    const/16 v3, 0xe
 
-    invoke-virtual {v0, v1}, Load;->execute(Ljava/lang/Runnable;)V
+    const-string v4, ":chats/callshare"
 
-    const-string p0, "clearCaptureRequestOptions"
+    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_0
-    iget-object p0, p0, Llv1;->b:Lmv1;
+    sput-object v0, Llv1;->c:Lbd4;
 
-    iget-object v0, p0, Lmv1;->d:Ljava/lang/Object;
-
-    check-cast v0, Load;
-
-    new-instance v1, Lkv1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, p1, v2}, Lkv1;-><init>(Lmv1;Ljs1;I)V
-
-    invoke-virtual {v0, v1}, Load;->execute(Ljava/lang/Runnable;)V
-
-    const-string p0, "addCaptureRequestOptions"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

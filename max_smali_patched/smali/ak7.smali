@@ -1,76 +1,87 @@
 .class public final Lak7;
-.super Ljava/lang/Object;
+.super Lilg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Luk7;
+.field public final X:Ljb5;
 
-.field public final b:Lvj7;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lvo4;
+.field public final c:Lbp7;
 
-.field public final d:Lzc3;
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Luk7;Lvj7;Lvo4;Lhb7;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lrj7;->a:Lrj7;
 
-    iput-object p1, p0, Lak7;->a:Luk7;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    iput-object p2, p0, Lak7;->b:Lvj7;
+    move-result-object v1
 
-    iput-object p3, p0, Lak7;->c:Lvo4;
+    const-class v2, Lve2;
 
-    new-instance p2, Lzc3;
+    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 p3, 0x1
+    move-result-object v1
 
-    invoke-direct {p2, p0, p3, p4}, Lzc3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    check-cast v1, Lve2;
 
-    iput-object p2, p0, Lak7;->d:Lzc3;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
 
-    iget-object p3, p1, Luk7;->d:Lvj7;
+    move-result-object v0
 
-    sget-object v0, Lvj7;->a:Lvj7;
+    const-class v2, Ltk;
 
-    if-ne p3, v0, :cond_0
+    invoke-virtual {v0, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    invoke-interface {p4, p1}, Lhb7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-direct {p0}, Lilg;-><init>()V
 
-    invoke-virtual {p0}, Lak7;->a()V
+    iput-object p1, p0, Lak7;->b:Ljava/lang/String;
 
-    return-void
+    iput-object v0, p0, Lak7;->c:Lbp7;
 
-    :cond_0
-    invoke-virtual {p1, p2}, Luk7;->a(Lok7;)V
+    const-wide/16 v2, -0x1
 
-    return-void
-.end method
+    iput-wide v2, p0, Lak7;->o:J
 
+    new-instance p1, Ljb5;
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lak7;->a:Luk7;
+    invoke-direct {p1, v0}, Ljb5;-><init>(I)V
 
-    iget-object v1, p0, Lak7;->d:Lzc3;
+    iput-object p1, p0, Lak7;->X:Ljb5;
 
-    invoke-virtual {v0, v1}, Luk7;->f(Lok7;)V
+    iget-object p1, v1, Lve2;->a:Le8e;
 
-    const/4 v0, 0x1
+    new-instance v0, Lir3;
 
-    iget-object p0, p0, Lak7;->c:Lvo4;
+    const/16 v1, 0xb
 
-    iput-boolean v0, p0, Lvo4;->b:Z
+    invoke-direct {v0, p1, v1, p0}, Lir3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Lvo4;->a()V
+    new-instance p1, Lxj7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1}, Lxj7;-><init>(Lak7;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Ljx5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+
+    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method

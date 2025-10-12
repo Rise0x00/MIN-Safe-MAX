@@ -1,11 +1,3 @@
-.class public interface abstract Lkl9;
-.super Ljava/lang/Object;
+.class public final Lkl9;
+.super Ljava/lang/UnsatisfiedLinkError;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract b(I)Lg07;
-.end method
-
-.method public abstract c(Ljava/lang/String;)Lnl9;
-.end method

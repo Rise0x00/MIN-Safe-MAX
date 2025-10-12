@@ -1,198 +1,363 @@
-.class public abstract Lb75;
-.super Lj04;
+.class public final Lb75;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/io/Serializable;
+.implements Ljava/util/RandomAccess;
+.implements Lim7;
 
 
 # static fields
-.field public static final synthetic o:I
+.field public static final a:Lb75;
 
 
-# instance fields
-.field public a:J
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public b:Z
+    new-instance v0, Lb75;
 
-.field public c:Lxr;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lb75;->a:Lb75;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final W(Z)V
-    .locals 4
+.method public final bridge synthetic add(ILjava/lang/Object;)V
+    .locals 0
 
-    iget-wide v0, p0, Lb75;->a:J
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 0
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
 
     if-eqz p1, :cond_0
-
-    const-wide v2, 0x100000000L
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v2, 0x1
-
-    :goto_0
-    add-long/2addr v2, v0
-
-    iput-wide v2, p0, Lb75;->a:J
-
-    if-nez p1, :cond_1
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lb75;->b:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final X()Z
-    .locals 4
-
-    iget-wide v0, p0, Lb75;->a:J
-
-    const-wide v2, 0x100000000L
-
-    cmp-long p0, v0, v2
-
-    if-ltz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return p1
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    return p1
 .end method
 
-.method public final d(Z)V
-    .locals 4
+.method public final get(I)Ljava/lang/Object;
+    .locals 3
 
-    iget-wide v0, p0, Lb75;->a:J
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    if-eqz p1, :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-wide v2, 0x100000000L
+    const-string v2, "Empty list doesn\'t contain element at index "
 
-    goto :goto_0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    const-wide/16 v2, 0x1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :goto_0
-    sub-long/2addr v0, v2
+    const/16 p1, 0x2e
 
-    iput-wide v0, p0, Lb75;->a:J
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    cmp-long p1, v0, v2
+    move-result-object p1
 
-    if-lez p1, :cond_1
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
-
-    :cond_1
-    iget-boolean p1, p0, Lb75;->b:Z
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Lb75;->shutdown()V
-
-    :cond_2
-    :goto_1
-    return-void
+    throw v0
 .end method
 
-.method public abstract i0()J
-.end method
-
-.method public final limitedParallelism(ILjava/lang/String;)Lj04;
-    .locals 0
-
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
-
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lj04;Ljava/lang/String;)Lj04;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final n(Lzo4;)V
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lb75;->c:Lxr;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lxr;
-
-    invoke-direct {v0}, Lxr;-><init>()V
-
-    iput-object v0, p0, Lb75;->c:Lxr;
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lxr;->addLast(Ljava/lang/Object;)V
-
-    return-void
+    return v0
 .end method
 
-.method public abstract o()Ljava/lang/Thread;
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, -0x1
+
+    return p1
 .end method
 
-.method public final q0()Z
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    sget-object v0, La75;->a:La75;
+
+    return-object v0
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .locals 0
+
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
+
+    .line 1
+    sget-object v0, La75;->a:La75;
+
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
     .locals 2
 
-    iget-object p0, p0, Lb75;->c:Lxr;
+    if-nez p1, :cond_0
+
+    .line 2
+    sget-object p1, La75;->a:La75;
+
+    return-object p1
+
+    .line 3
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Index: "
+
+    .line 4
+    invoke-static {p1, v1}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 5
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final bridge synthetic remove(I)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final bridge size()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    if-nez p0, :cond_0
-
     return v0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    if-nez p2, :cond_0
+
+    return-object p0
 
     :cond_0
-    invoke-virtual {p0}, Lxr;->isEmpty()Z
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    move-result v1
+    const-string v1, "fromIndex: "
 
-    if-eqz v1, :cond_1
+    const-string v2, ", toIndex: "
 
-    const/4 p0, 0x0
+    invoke-static {v1, p1, p2, v2}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_1
-    invoke-virtual {p0}, Lxr;->removeFirst()Ljava/lang/Object;
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
-
-    :goto_0
-    check-cast p0, Lzo4;
-
-    if-nez p0, :cond_2
-
-    return v0
-
-    :cond_2
-    invoke-virtual {p0}, Lzo4;->run()V
-
-    const/4 p0, 0x1
-
-    return p0
+    throw v0
 .end method
 
-.method public r0(JLy65;)V
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 0
 
-    sget-object p0, Lje4;->n0:Lje4;
+    .line 2
+    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2, p3}, La75;->w0(JLy65;)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method
 
-.method public abstract shutdown()V
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "[]"
+
+    return-object v0
 .end method

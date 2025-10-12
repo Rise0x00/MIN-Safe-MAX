@@ -1,58 +1,27 @@
-.class public final Lsx1;
+.class public final synthetic Lsx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ley6;
-
-
-# instance fields
-.field public final a:Lrx1;
-
 
 # direct methods
-.method public constructor <init>(Lrx1;)V
-    .locals 0
+.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Lrob;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    new-instance v0, Lrob;
 
-    iput-object p1, p0, Lsx1;->a:Lrx1;
+    invoke-direct {v0, p0, p1, p2}, Lrob;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
+    :try_end_0
+    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    return-object v0
 
+    :catch_0
+    move-exception p0
 
-# virtual methods
-.method public final d(Lt85;)V
-    .locals 0
+    new-instance p1, Landroidx/camera/core/InitializationException;
 
-    iget-object p0, p0, Lsx1;->a:Lrx1;
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-interface {p0, p1}, Lrx1;->d(Lt85;)V
-
-    return-void
-.end method
-
-.method public final e()Llne;
-    .locals 0
-
-    iget-object p0, p0, Lsx1;->a:Lrx1;
-
-    invoke-interface {p0}, Lrx1;->e()Llne;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getTimestamp()J
-    .locals 2
-
-    iget-object p0, p0, Lsx1;->a:Lrx1;
-
-    invoke-interface {p0}, Lrx1;->getTimestamp()J
-
-    move-result-wide v0
-
-    return-wide v0
+    throw p1
 .end method

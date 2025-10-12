@@ -1,58 +1,51 @@
 .class public final Live;
-.super Ljava/lang/Object;
+.super Lnz3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Llve;
+
+.field public Z:I
+
+.field public o:Ljbe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Llve;Lnz3;)V
+    .locals 0
 
-    new-instance v0, Landroid/util/LruCache;
+    iput-object p1, p0, Live;->Y:Llve;
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
-
-    sput-object v0, Live;->a:Landroid/util/LruCache;
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Lpf0;Lnve;)V
-    .locals 2
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iput-object p1, p0, Live;->X:Ljava/lang/Object;
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p1, p0, Live;->Z:I
 
-    const-string v1, "Save theme "
+    const/high16 v0, -0x80000000
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Live;->Z:I
 
-    const-string v1, " to cache."
+    iget-object p1, p0, Live;->Y:Llve;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Llve;->s(Lgue;Lnz3;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "ThemeBackgroundCache"
-
-    invoke-static {v1, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Live;->a:Landroid/util/LruCache;
-
-    invoke-virtual {v0, p0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

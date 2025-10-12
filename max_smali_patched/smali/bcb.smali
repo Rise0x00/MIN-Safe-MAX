@@ -1,106 +1,276 @@
-.class public final synthetic Lbcb;
+.class public final Lbcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljm3;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Z
 
-.field public final synthetic b:Ldcb;
+.field public Y:Z
 
+.field public Z:Z
 
-# direct methods
-.method public synthetic constructor <init>(Ldcb;I)V
-    .locals 0
+.field public a:I
 
-    iput p2, p0, Lbcb;->a:I
+.field public b:J
 
-    iput-object p1, p0, Lbcb;->b:Ldcb;
+.field public c:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public o:Ljava/lang/String;
 
-    return-void
-.end method
+.field public w0:I
+
+.field public x0:Ljava/lang/String;
+
+.field public y0:I
+
+.field public z0:Ljava/lang/String;
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
+    instance-of v0, p1, Lbcb;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lbcb;
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     iget v0, p0, Lbcb;->a:I
 
-    check-cast p1, Ljb0;
+    iget v1, p1, Lbcb;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    if-ne v0, v1, :cond_2
 
-    iget-object v0, p1, Ljb0;->a:Lecb;
+    iget-wide v0, p0, Lbcb;->b:J
 
-    iget-object v0, v0, Lecb;->f:Lnlc;
+    iget-wide v2, p1, Lbcb;->b:J
 
-    iget-boolean v0, v0, Lnlc;->g:Z
+    cmp-long v0, v0, v2
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_2
 
-    iget-object p0, p1, Ljb0;->b:Lwy6;
+    iget-object v0, p0, Lbcb;->o:Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+    iget-object v1, p1, Lbcb;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lbcb;->Y:Z
+
+    iget-boolean v1, p1, Lbcb;->Y:Z
+
+    if-ne v0, v1, :cond_2
+
+    iget v0, p0, Lbcb;->w0:I
+
+    iget v1, p1, Lbcb;->w0:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lbcb;->x0:Ljava/lang/String;
+
+    iget-object v1, p1, Lbcb;->x0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lbcb;->y0:I
+
+    iget v1, p1, Lbcb;->y0:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lbcb;->z0:Ljava/lang/String;
+
+    iget-object p1, p1, Lbcb;->z0:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/16 v0, 0x87d
+
+    iget v1, p0, Lbcb;->a:I
+
+    add-int/2addr v0, v1
+
+    const/16 v1, 0x35
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lbcb;->b:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Long;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lbcb;->o:Ljava/lang/String;
+
+    invoke-static {v2, v1, v0}, Lvl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lbcb;->Y:Z
+
+    const/16 v3, 0x4d5
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x4cf
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lbcb;->b:Ldcb;
-
-    iget-object v0, p0, Ldcb;->a:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lccb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lccb;-><init>(Ldcb;Ljb0;I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    move v2, v3
 
     :goto_0
-    return-void
+    add-int/2addr v0, v2
 
-    :pswitch_0
-    iget-object v0, p1, Ljb0;->a:Lecb;
+    mul-int/2addr v0, v1
 
-    iget-object v0, v0, Lecb;->f:Lnlc;
+    iget v2, p0, Lbcb;->w0:I
 
-    iget-boolean v0, v0, Lnlc;->g:Z
+    add-int/2addr v0, v2
 
-    if-eqz v0, :cond_1
+    mul-int/2addr v0, v1
 
-    iget-object p0, p1, Ljb0;->b:Lwy6;
+    iget-object v2, p0, Lbcb;->x0:Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
+    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
 
-    goto :goto_1
+    move-result v0
+
+    iget v2, p0, Lbcb;->y0:I
+
+    invoke-static {v2, v0, v1}, Lq89;->h(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lbcb;->z0:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    add-int/2addr v2, v3
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Country Code: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lbcb;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " National Number: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lbcb;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lbcb;->X:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lbcb;->Y:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, " Leading Zero(s): true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    iget-boolean v1, p0, Lbcb;->Z:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, " Number of leading zeros: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lbcb;->w0:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_1
-    iget-object p0, p0, Lbcb;->b:Ldcb;
+    iget-boolean v1, p0, Lbcb;->c:Z
 
-    iget-object v0, p0, Ldcb;->a:Ljava/util/concurrent/Executor;
+    if-eqz v1, :cond_2
 
-    new-instance v1, Lccb;
+    const-string v1, " Extension: "
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, p0, p1, v2}, Lccb;-><init>(Ldcb;Ljb0;I)V
+    iget-object v1, p0, Lbcb;->o:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    return-void
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

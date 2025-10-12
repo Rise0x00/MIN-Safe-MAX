@@ -9,20 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Runnable;
-
-.field public final synthetic c:Lu8d;
+.field public final synthetic b:Lts1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Lu8d;I)V
+.method public synthetic constructor <init>(Lts1;I)V
     .locals 0
 
-    iput p3, p0, Lmk4;->a:I
+    iput p2, p0, Lmk4;->a:I
 
-    iput-object p1, p0, Lmk4;->b:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Lmk4;->c:Lu8d;
+    iput-object p1, p0, Lmk4;->b:Lts1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,89 +28,37 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 2
 
     iget v0, p0, Lmk4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lmk4;->b:Ljava/lang/Runnable;
+    iget-object v0, p0, Lmk4;->b:Lts1;
 
-    iget-object p0, p0, Lmk4;->c:Lu8d;
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lu8d;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lts1;->b(Ljava/lang/Object;)Z
 
-    check-cast p0, Lsk4;
-
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ll3;->j(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {p0, v0}, Ll3;->k(Ljava/lang/Throwable;)Z
-
-    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lmk4;->b:Ljava/lang/Runnable;
+    new-instance v0, Ljava/lang/Exception;
 
-    :try_start_1
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
 
-    goto :goto_1
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    :catch_1
-    move-exception v0
+    iget-object v1, p0, Lmk4;->b:Lts1;
 
-    iget-object p0, p0, Lmk4;->c:Lu8d;
-
-    iget-object p0, p0, Lu8d;->b:Ljava/lang/Object;
-
-    check-cast p0, Lsk4;
-
-    invoke-virtual {p0, v0}, Ll3;->k(Ljava/lang/Throwable;)Z
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lmk4;->b:Ljava/lang/Runnable;
-
-    :try_start_2
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v1, v0}, Lts1;->d(Ljava/lang/Throwable;)Z
 
     return-void
 
-    :catch_2
-    move-exception v0
-
-    iget-object p0, p0, Lmk4;->c:Lu8d;
-
-    iget-object p0, p0, Lu8d;->b:Ljava/lang/Object;
-
-    check-cast p0, Lsk4;
-
-    invoke-virtual {p0, v0}, Ll3;->k(Ljava/lang/Throwable;)Z
-
-    throw v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

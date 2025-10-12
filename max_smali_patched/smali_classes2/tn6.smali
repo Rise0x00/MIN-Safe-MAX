@@ -1,122 +1,82 @@
 .class public final Ltn6;
-.super Lp65;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lww7;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Z
+
+.field public final Y:Landroid/net/Uri;
+
+.field public final Z:Lds3;
+
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lgob;
+
+.field public final o:Lgob;
+
+.field public final w0:Ljava/util/List;
+
+.field public final x0:Z
+
+.field public final y0:I
+
+.field public final z0:J
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(JLjava/lang/String;Lgob;Lgob;ZLandroid/net/Uri;Lds3;Ljava/util/List;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ltn6;->a:I
+    iput-wide p1, p0, Ltn6;->a:J
+
+    iput-object p3, p0, Ltn6;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Ltn6;->c:Lgob;
+
+    iput-object p5, p0, Ltn6;->o:Lgob;
+
+    iput-boolean p6, p0, Ltn6;->X:Z
+
+    iput-object p7, p0, Ltn6;->Y:Landroid/net/Uri;
+
+    iput-object p8, p0, Ltn6;->Z:Lds3;
+
+    iput-object p9, p0, Ltn6;->w0:Ljava/util/List;
+
+    iput-boolean p10, p0, Ltn6;->x0:Z
+
+    sget p3, Lzka;->p:I
+
+    iput p3, p0, Ltn6;->y0:I
+
+    iput-wide p1, p0, Ltn6;->z0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ltn6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ltn6;
-
-    iget p0, p0, Ltn6;->a:I
-
-    iget p1, p1, Ltn6;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Ltn6;->a:I
-
-    invoke-static {p0}, Ldw1;->t(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final getItemId()J
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Ltn6;->z0:J
 
-    const-string v1, "HideErrorInputEvent(typeInput="
+    return-wide v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final m()I
+    .locals 1
 
-    const/4 v1, 0x1
+    iget v0, p0, Ltn6;->y0:I
 
-    iget p0, p0, Ltn6;->a:I
-
-    if-eq p0, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_0
-
-    const-string p0, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, "TITLE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "SURNAME"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p0, "NAME"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method

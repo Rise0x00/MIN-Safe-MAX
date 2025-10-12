@@ -1,112 +1,117 @@
-.class public final Lg89;
-.super Leje;
+.class public final enum Lg89;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lt96;
+
+# static fields
+.field public static final enum X:Lg89;
+
+.field public static final synthetic Y:[Lg89;
+
+.field public static final enum b:Lg89;
+
+.field public static final enum c:Lg89;
+
+.field public static final enum o:Lg89;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p2, p0, Lg89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    new-instance v0, Lg89;
 
-    const/4 p2, 0x2
+    const-string v1, "ACTIVE"
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v2}, Lg89;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lg89;->b:Lg89;
+
+    new-instance v1, Lg89;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0xa
+
+    const-string v4, "DELETED"
+
+    invoke-direct {v1, v4, v2, v3}, Lg89;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lg89;->c:Lg89;
+
+    new-instance v2, Lg89;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x14
+
+    const-string v5, "EDITED"
+
+    invoke-direct {v2, v5, v3, v4}, Lg89;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lg89;->o:Lg89;
+
+    new-instance v3, Lg89;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x1e
+
+    const-string v6, "DELAYED_FIRE_ERROR"
+
+    invoke-direct {v3, v6, v4, v5}, Lg89;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lg89;->X:Lg89;
+
+    filled-new-array {v0, v1, v2, v3}, [Lg89;
+
+    move-result-object v0
+
+    sput-object v0, Lg89;->Y:[Lg89;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lg89;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput p3, p0, Lg89;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lg89;
+    .locals 1
+
+    const-class v0, Lg89;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lg89;
 
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Lg89;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static values()[Lg89;
     .locals 1
 
-    new-instance v0, Lg89;
+    sget-object v0, Lg89;->Y:[Lg89;
 
-    iget-object p0, p0, Lg89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, p0}, Lg89;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lg89;->X:Ljava/lang/Object;
+    check-cast v0, [Lg89;
 
     return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg89;->X:Ljava/lang/Object;
-
-    check-cast p1, Lz0d;
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lof7;
-
-    iget-object p0, p0, Lg89;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->w()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    new-instance v1, Lh89;
-
-    invoke-direct {v1, p0, p1}, Lh89;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lz0d;)V
-
-    invoke-virtual {v0, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lk49;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->D0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    const-string v1, "ScrollButton"
-
-    invoke-virtual {v0, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->t1(Ljava/lang/String;)V
-
-    invoke-static {p0, p1}, Lone/me/messages/list/ui/MessagesListWidget;->z0(Lone/me/messages/list/ui/MessagesListWidget;Lz0d;)V
-
-    :goto_0
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

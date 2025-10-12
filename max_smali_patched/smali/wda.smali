@@ -1,109 +1,144 @@
-.class public abstract Lwda;
-.super Ljava/lang/Object;
+.class public final Lwda;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
 
+# interfaces
+.implements Lxda;
+.implements Lss4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lxda;
 
-.field public static final c:I
+.field public final b:Lwc5;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public c:Lss4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lxda;Lwc5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object p1, p0, Lwda;->a:Lxda;
+
+    iput-object p2, p0, Lwda;->b:Lwc5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
     .locals 1
 
-    sget v0, La4c;->oneme_fodlers_delete_folder_bottom_sheet_title:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    sput v0, Lwda;->a:I
+    move-result v0
 
-    sget v0, La4c;->oneme_folder_list_recommended_folders_section_title:I
+    if-nez v0, :cond_0
 
-    sput v0, Lwda;->b:I
+    iget-object v0, p0, Lwda;->a:Lxda;
 
-    sget v0, La4c;->oneme_folder_list_toolbar_title:I
+    invoke-interface {v0}, Lxda;->b()V
 
-    sput v0, Lwda;->c:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, La4c;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
+.method public final c(Lss4;)V
+    .locals 1
 
-    sput v0, Lwda;->d:I
+    iget-object v0, p0, Lwda;->c:Lss4;
 
-    sget v0, La4c;->oneme_folders_delete_folder_bottom_sheet_description:I
+    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
 
-    sput v0, Lwda;->e:I
+    move-result v0
 
-    sget v0, La4c;->oneme_folders_edit_add_chats_button:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lwda;->f:I
+    iput-object p1, p0, Lwda;->c:Lss4;
 
-    sget v0, La4c;->oneme_folders_edit_create_button:I
+    iget-object p1, p0, Lwda;->a:Lxda;
 
-    sput v0, Lwda;->g:I
+    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
 
-    sget v0, La4c;->oneme_folders_edit_delete_button:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Lwda;->h:I
+.method public final f(Ljava/lang/Object;)V
+    .locals 1
 
-    sget v0, La4c;->oneme_folders_edit_name_hint:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    sput v0, Lwda;->i:I
+    move-result v0
 
-    sget v0, La4c;->oneme_folders_edit_toolbar_title_creation:I
+    if-nez v0, :cond_0
 
-    sput v0, Lwda;->j:I
+    iget-object v0, p0, Lwda;->a:Lxda;
 
-    sget v0, La4c;->oneme_folders_edit_toolbar_title_edit:I
+    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
 
-    sput v0, Lwda;->k:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, La4c;->oneme_folders_list_create_folder:I
+.method public final g()V
+    .locals 2
 
-    sput v0, Lwda;->l:I
+    const/4 v0, 0x0
 
-    sget v0, La4c;->oneme_folders_list_menu_action_change:I
+    const/4 v1, 0x1
 
-    sput v0, Lwda;->m:I
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    sget v0, La4c;->oneme_folders_list_menu_action_delete_folder:I
+    move-result v0
 
-    sput v0, Lwda;->n:I
+    if-eqz v0, :cond_0
 
-    sget v0, La4c;->oneme_folders_picker_empty_title:I
+    new-instance v0, Lyn7;
 
-    sput v0, Lwda;->o:I
+    const/16 v1, 0xb
 
-    sget v0, La4c;->oneme_folders_picker_toolbar_title:I
+    invoke-direct {v0, v1, p0}, Lyn7;-><init>(ILjava/lang/Object;)V
 
-    sput v0, Lwda;->p:I
+    iget-object v1, p0, Lwda;->b:Lwc5;
+
+    invoke-virtual {v1, v0}, Lwc5;->b(Ljava/lang/Runnable;)Lss4;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lwda;->a:Lxda;
+
+    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

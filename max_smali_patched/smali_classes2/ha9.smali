@@ -2,118 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lev5;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Lmoe;
+
+.field public final synthetic c:Lma9;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Lmoe;Lma9;I)V
     .locals 0
 
+    iput p3, p0, Lha9;->a:I
+
+    iput-object p1, p0, Lha9;->b:Lmoe;
+
+    iput-object p2, p0, Lha9;->c:Lma9;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lha9;->a:J
-
-    iput-boolean p3, p0, Lha9;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lha9;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lha9;
+    new-instance v0, Lga9;
 
-    if-nez v0, :cond_1
+    iget-object v1, p0, Lha9;->c:Lma9;
 
-    goto :goto_0
+    const/4 v2, 0x1
 
-    :cond_1
-    check-cast p1, Lha9;
+    invoke-direct {v0, p1, v1, v2}, Lga9;-><init>(Lgv5;Lma9;I)V
 
-    iget-wide v0, p0, Lha9;->a:J
+    iget-object p1, p0, Lha9;->b:Lmoe;
 
-    iget-wide v2, p1, Lha9;->a:J
+    invoke-virtual {p1, v0, p2}, Lmoe;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    sget-object p1, Lf34;->a:Lf34;
 
-    if-eqz v0, :cond_2
+    return-object p1
 
-    goto :goto_0
+    :pswitch_0
+    new-instance v0, Lga9;
 
-    :cond_2
-    iget-boolean p0, p0, Lha9;->b:Z
+    iget-object v1, p0, Lha9;->c:Lma9;
 
-    iget-boolean p1, p1, Lha9;->b:Z
+    const/4 v2, 0x0
 
-    if-eq p0, p1, :cond_3
+    invoke-direct {v0, p1, v1, v2}, Lga9;-><init>(Lgv5;Lma9;I)V
 
-    :goto_0
-    const/4 p0, 0x0
+    iget-object p1, p0, Lha9;->b:Lmoe;
 
-    return p0
+    invoke-virtual {p1, v0, p2}, Lmoe;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
+    sget-object p1, Lf34;->a:Lf34;
 
-    return p0
-.end method
+    return-object p1
 
-.method public final hashCode()I
-    .locals 2
+    nop
 
-    iget-wide v0, p0, Lha9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lha9;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "AnchorState(anchor="
-
-    const-string v1, ", byChatReadMark="
-
-    iget-wide v2, p0, Lha9;->a:J
-
-    iget-boolean p0, p0, Lha9;->b:Z
-
-    invoke-static {v2, v3, v0, v1, p0}, Lmh0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

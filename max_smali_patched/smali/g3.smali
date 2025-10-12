@@ -1,41 +1,102 @@
-.class public final Lg3;
-.super Ljava/lang/Object;
+.class public abstract Lg3;
+.super Lbnc;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Throwable;
+# virtual methods
+.method public final a(I)I
+    .locals 2
 
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    move-result-object v0
 
-    new-instance v0, Lg3;
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
-    new-instance v1, Lr0;
+    move-result v0
 
-    const-string v2, "Failure occurred while trying to finish a future."
+    rsub-int/lit8 v1, p1, 0x20
 
-    const/4 v3, 0x2
+    ushr-int/2addr v0, v1
 
-    invoke-direct {v1, v2, v3}, Lr0;-><init>(Ljava/lang/String;I)V
+    neg-int p1, p1
 
-    invoke-direct {v0, v1}, Lg3;-><init>(Ljava/lang/Throwable;)V
+    shr-int/lit8 p1, p1, 0x1f
 
-    return-void
+    and-int/2addr p1, v0
+
+    return p1
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method public final b()I
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
 
-    sget-boolean v0, Ll3;->o:Z
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
 
-    iput-object p1, p0, Lg3;->a:Ljava/lang/Throwable;
+    move-result v0
 
-    return-void
+    return v0
+.end method
+
+.method public final c(I)I
+    .locals 1
+
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/util/Random;->nextInt(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d()J
+    .locals 2
+
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public abstract g()Ljava/util/Random;
+.end method
+
+.method public final h()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextBoolean()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()F
+    .locals 1
+
+    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextFloat()F
+
+    move-result v0
+
+    return v0
 .end method

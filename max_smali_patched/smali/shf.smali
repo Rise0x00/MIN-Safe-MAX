@@ -1,47 +1,91 @@
 .class public final Lshf;
-.super Lax3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lobd;
 
 
 # instance fields
-.field public final synthetic X:Lmtc;
+.field public final a:Lobd;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lmtc;Lax3;)V
+.method public constructor <init>(Lobd;J)V
     .locals 0
 
-    iput-object p1, p0, Lshf;->X:Lmtc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lax3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lshf;->a:Lobd;
+
+    iput-wide p2, p0, Lshf;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()V
     .locals 1
 
-    iput-object p1, p0, Lshf;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lshf;->a:Lobd;
 
-    iget p1, p0, Lshf;->Y:I
+    invoke-interface {v0}, Lobd;->b()V
 
-    const/high16 v0, -0x80000000
+    return-void
+.end method
 
-    or-int/2addr p1, v0
+.method public final e()Z
+    .locals 1
 
-    iput p1, p0, Lshf;->Y:I
+    iget-object v0, p0, Lshf;->a:Lobd;
 
-    iget-object p1, p0, Lshf;->X:Lmtc;
+    invoke-interface {v0}, Lobd;->e()Z
 
-    invoke-virtual {p1, p0}, Lmtc;->q(Lax3;)Ljava/lang/Comparable;
+    move-result v0
 
-    move-result-object p0
+    return v0
+.end method
 
-    return-object p0
+.method public final h(J)I
+    .locals 2
+
+    iget-wide v0, p0, Lshf;->b:J
+
+    sub-long/2addr p1, v0
+
+    iget-object v0, p0, Lshf;->a:Lobd;
+
+    invoke-interface {v0, p1, p2}, Lobd;->h(J)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final q(Lrob;Lkc4;I)I
+    .locals 4
+
+    iget-object v0, p0, Lshf;->a:Lobd;
+
+    invoke-interface {v0, p1, p2, p3}, Lobd;->q(Lrob;Lkc4;I)I
+
+    move-result p1
+
+    const/4 p3, -0x4
+
+    if-ne p1, p3, :cond_0
+
+    iget-wide v0, p2, Lkc4;->Z:J
+
+    iget-wide v2, p0, Lshf;->b:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p2, Lkc4;->Z:J
+
+    :cond_0
+    return p1
 .end method

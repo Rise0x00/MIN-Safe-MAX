@@ -1,141 +1,73 @@
-.class public abstract Lkyf;
-.super Lkz3;
+.class public final Lkyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lu24;
+.implements Lv24;
 
-# instance fields
-.field public a:Llyf;
 
-.field public b:I
+# static fields
+.field public static final a:Lkyf;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkyf;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput v0, p0, Lkyf;->b:I
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 4
-    iput p1, p0, Lkyf;->b:I
+    sput-object v0, Lkyf;->a:Lkyf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+.method public final fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0, p1, p2, p3}, Lkyf;->y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+    invoke-interface {p2, p1, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lkyf;->a:Llyf;
+    move-result-object p1
 
-    if-nez p1, :cond_0
-
-    new-instance p1, Llyf;
-
-    invoke-direct {p1, p2}, Llyf;-><init>(Landroid/view/View;)V
-
-    iput-object p1, p0, Lkyf;->a:Llyf;
-
-    :cond_0
-    iget-object p1, p0, Lkyf;->a:Llyf;
-
-    iget-object p2, p1, Llyf;->a:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
-
-    move-result p3
-
-    iput p3, p1, Llyf;->b:I
-
-    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iput p2, p1, Llyf;->c:I
-
-    iget-object p1, p0, Lkyf;->a:Llyf;
-
-    invoke-virtual {p1}, Llyf;->a()V
-
-    iget p1, p0, Lkyf;->b:I
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lkyf;->a:Llyf;
-
-    invoke-virtual {p2, p1}, Llyf;->b(I)Z
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lkyf;->b:I
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
+    return-object p1
 .end method
 
-.method public final x()I
+.method public final get(Lv24;)Lu24;
     .locals 0
 
-    iget-object p0, p0, Lkyf;->a:Llyf;
+    invoke-static {p0, p1}, Lhoc;->j(Lu24;Lv24;)Lu24;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    iget p0, p0, Llyf;->d:I
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-object p1
 .end method
 
-.method public y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+.method public final getKey()Lv24;
     .locals 0
 
-    invoke-virtual {p1, p2, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->p(Landroid/view/View;I)V
-
-    return-void
+    return-object p0
 .end method
 
-.method public z(I)Z
-    .locals 1
+.method public final minusKey(Lv24;)Lw24;
+    .locals 0
 
-    iget-object v0, p0, Lkyf;->a:Llyf;
+    invoke-static {p0, p1}, Lhoc;->v(Lu24;Lv24;)Lw24;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Llyf;->b(I)Z
+    return-object p1
+.end method
 
-    move-result p0
+.method public final plus(Lw24;)Lw24;
+    .locals 0
 
-    return p0
+    invoke-static {p0, p1}, Lkmc;->t(Lw24;Lw24;)Lw24;
 
-    :cond_0
-    iput p1, p0, Lkyf;->b:I
+    move-result-object p1
 
-    const/4 p0, 0x0
-
-    return p0
+    return-object p1
 .end method

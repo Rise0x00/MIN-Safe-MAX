@@ -1,11 +1,23 @@
-.class public interface abstract Le15;
+.class public final Le15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract E(Ljava/lang/CharSequence;IILsbf;)Z
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract getResult()Ljava/lang/Object;
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Le15;->a:I
+
+    iput p2, p0, Le15;->b:I
+
+    return-void
 .end method

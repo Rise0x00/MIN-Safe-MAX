@@ -1,94 +1,170 @@
-.class public final Lk06;
-.super Leje;
+.class public final synthetic Lk06;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Liw1;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lm06;
 
-.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final synthetic b:Z
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+.method public synthetic constructor <init>(Lm06;ZJ)V
     .locals 0
 
-    iput-object p2, p0, Lk06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lk06;->a:Lm06;
 
-    invoke-direct {p0, p2, p1}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lk06;->b:Z
+
+    iput-wide p3, p0, Lk06;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lk06;->a:Lm06;
 
-    invoke-virtual {p0, p1, p2}, Lk06;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    check-cast p0, Lk06;
+    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Lk06;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Ljava/lang/Integer;
 
-    return-object p1
-.end method
+    iget-object v2, v0, Lm06;->p:[Landroid/hardware/camera2/params/MeteringRectangle;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    array-length v2, v2
 
-    new-instance v0, Lk06;
+    const/4 v3, 0x0
 
-    iget-object p0, p0, Lk06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    const/4 v4, 0x1
 
-    invoke-direct {v0, p2, p0}, Lk06;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    if-lez v2, :cond_3
 
-    iput-object p1, v0, Lk06;->X:Ljava/lang/Object;
+    iget-boolean v2, p0, Lk06;->b:Z
 
-    return-object v0
-.end method
+    if-eqz v2, :cond_2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    if-nez v1, :cond_0
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    goto :goto_0
 
-    iget-object p1, p0, Lk06;->X:Ljava/lang/Object;
+    :cond_0
+    iget-object v2, v0, Lm06;->h:Ljava/lang/Integer;
 
-    check-cast p1, Ljava/util/Set;
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->n0:[Lof7;
+    move-result v2
 
-    iget-object p0, p0, Lk06;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    const/4 v5, 0x3
 
-    iget-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Ldbc;
+    if-ne v2, v5, :cond_3
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->n0:[Lof7;
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    const/4 v1, 0x1
+    move-result v2
 
-    aget-object v0, v0, v1
+    const/4 v5, 0x4
 
-    invoke-interface {p1, p0, v0}, Ldbc;->t(Ljava/lang/Object;Lof7;)Ljava/lang/Object;
+    if-ne v2, v5, :cond_1
 
-    move-result-object p0
+    iput-boolean v4, v0, Lm06;->m:Z
 
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
+    iput-boolean v4, v0, Lm06;->l:Z
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    goto :goto_1
 
-    sget-object p0, Ltcf;->a:Ltcf;
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    return-object p0
+    move-result v2
+
+    const/4 v5, 0x5
+
+    if-ne v2, v5, :cond_3
+
+    iput-boolean v3, v0, Lm06;->m:Z
+
+    iput-boolean v4, v0, Lm06;->l:Z
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    iput-boolean v4, v0, Lm06;->m:Z
+
+    iput-boolean v4, v0, Lm06;->l:Z
+
+    :cond_3
+    :goto_1
+    iget-boolean v2, v0, Lm06;->l:Z
+
+    if-eqz v2, :cond_6
+
+    iget-wide v5, p0, Lk06;->c:J
+
+    invoke-static {p1, v5, v6}, Ljw1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-boolean p1, v0, Lm06;->m:Z
+
+    iget-object v1, v0, Lm06;->j:Ljava/util/concurrent/ScheduledFuture;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    iput-object v2, v0, Lm06;->j:Ljava/util/concurrent/ScheduledFuture;
+
+    :cond_4
+    iget-object v1, v0, Lm06;->s:Lts1;
+
+    if-eqz v1, :cond_5
+
+    new-instance v3, Ln06;
+
+    invoke-direct {v3, p1}, Ln06;-><init>(Z)V
+
+    invoke-virtual {v1, v3}, Lts1;->b(Ljava/lang/Object;)Z
+
+    iput-object v2, v0, Lm06;->s:Lts1;
+
+    :cond_5
+    return v4
+
+    :cond_6
+    iget-object p1, v0, Lm06;->h:Ljava/lang/Integer;
+
+    invoke-virtual {p1, v1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    if-eqz v1, :cond_7
+
+    iput-object v1, v0, Lm06;->h:Ljava/lang/Integer;
+
+    :cond_7
+    return v3
 .end method

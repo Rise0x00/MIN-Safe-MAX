@@ -1,129 +1,206 @@
 .class public final Le92;
-.super Leje;
+.super Lilg;
 .source "SourceFile"
-
-# interfaces
-.implements Lt96;
 
 
 # instance fields
-.field public final synthetic X:Lt92;
+.field public final X:Lbp7;
 
-.field public final synthetic Y:Z
+.field public final Y:Ljava/lang/Object;
+
+.field public final Z:Lbp7;
+
+.field public final b:J
+
+.field public final c:Lbp7;
+
+.field public final o:Lbp7;
+
+.field public final w0:Lj6f;
+
+.field public x0:Lqle;
+
+.field public final y0:Ljava/util/ArrayList;
+
+.field public final z0:Ljb5;
 
 
 # direct methods
-.method public constructor <init>(Lt92;ZLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 6
 
-    iput-object p1, p0, Le92;->X:Lt92;
+    sget-object v0, Lcub;->a:Lcub;
 
-    iput-boolean p2, p0, Le92;->Y:Z
+    invoke-virtual {v0}, Lcub;->c()Lbp7;
 
-    const/4 p1, 0x2
+    move-result-object v1
 
-    invoke-direct {p0, p1, p3}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lcub;->e()Lbp7;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lcub;->f()Lbp7;
+
+    move-result-object v3
+
+    new-instance v4, Lw82;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Lw82;-><init>(I)V
+
+    const/4 v5, 0x3
+
+    invoke-static {v5, v4}, Lvr0;->r(ILve6;)Lbp7;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Lcub;->g()Lbp7;
+
+    invoke-virtual {v0}, Lcub;->d()Lbp7;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lilg;-><init>()V
+
+    iput-wide p1, p0, Le92;->b:J
+
+    iput-object v1, p0, Le92;->c:Lbp7;
+
+    iput-object v2, p0, Le92;->o:Lbp7;
+
+    iput-object v3, p0, Le92;->X:Lbp7;
+
+    iput-object v4, p0, Le92;->Y:Ljava/lang/Object;
+
+    iput-object v0, p0, Le92;->Z:Lbp7;
+
+    new-instance p1, Lj6f;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p2}, Lj6f;-><init>(I)V
+
+    iput-object p1, p0, Le92;->w0:Lj6f;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Le92;->y0:Ljava/util/ArrayList;
+
+    new-instance p1, Ljb5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ljb5;-><init>(I)V
+
+    iput-object p1, p0, Le92;->z0:Ljb5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final q()Lm82;
+    .locals 3
 
-    check-cast p1, Lp04;
+    iget-object v0, p0, Le92;->c:Lbp7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Le92;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Le92;
-
-    sget-object p1, Ltcf;->a:Ltcf;
-
-    invoke-virtual {p0, p1}, Le92;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Le92;
-
-    iget-object v0, p0, Le92;->X:Lt92;
-
-    iget-boolean p0, p0, Le92;->Y:Z
-
-    invoke-direct {p1, v0, p0, p2}, Le92;-><init>(Lt92;ZLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Le92;->X:Lt92;
-
-    invoke-virtual {p1}, Lt92;->o()Ll72;
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Ltcf;->a:Ltcf;
+    check-cast v0, Lm13;
 
-    if-nez v0, :cond_0
+    iget-wide v1, p0, Le92;->b:J
 
-    return-object v1
+    check-cast v0, Lm23;
 
-    :cond_0
-    iget-object v2, p1, Lt92;->q:Lth7;
+    invoke-virtual {v0, v1, v2}, Lm23;->N(J)Lsqc;
 
-    invoke-interface {v2}, Lth7;->getValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v2
+    iget-object v0, v0, Lsqc;->a:Lfoe;
 
-    check-cast v2, Ljk;
+    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
 
-    iget-wide v4, v0, Ll72;->a:J
+    move-result-object v0
 
-    iget-object v0, v0, Ll72;->b:Lxb2;
+    check-cast v0, Lm82;
 
-    iget-wide v6, v0, Lxb2;->a:J
+    return-object v0
+.end method
 
-    move-object v3, v2
+.method public final r()V
+    .locals 4
 
-    check-cast v3, Lw5a;
+    iget-object v0, p0, Le92;->y0:Ljava/util/ArrayList;
 
-    const/4 v8, 0x0
+    invoke-static {v0}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
 
-    const/4 v9, 0x0
+    move-result-object v1
 
-    const/4 v10, 0x1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    const/4 v11, 0x0
+    iget-object v0, p0, Le92;->x0:Lqle;
 
-    invoke-virtual/range {v3 .. v11}, Lw5a;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
+    if-eqz v0, :cond_0
 
-    move-result-wide v2
+    invoke-virtual {v0}, Ld0;->isActive()Z
 
-    iget-boolean p0, p0, Le92;->Y:Z
+    move-result v0
 
-    if-eqz p0, :cond_1
+    const/4 v2, 0x1
 
-    iget-object p0, p1, Lt92;->w:Ljava/util/concurrent/atomic/AtomicLong;
-
-    :goto_0
-    invoke-virtual {p0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
-
-    return-object v1
-
-    :cond_1
-    iget-object p0, p1, Lt92;->x:Ljava/util/concurrent/atomic/AtomicLong;
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Le92;->X:Lbp7;
+
+    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr8f;
+
+    check-cast v0, Lwla;
+
+    invoke-virtual {v0}, Lwla;->b()Ly24;
+
+    move-result-object v0
+
+    sget-object v2, Lq2a;->a:Lq2a;
+
+    invoke-virtual {v0, v2}, Le0;->plus(Lw24;)Lw24;
+
+    move-result-object v0
+
+    new-instance v2, Ld92;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, v1, v3}, Ld92;-><init>(Le92;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x2
+
+    invoke-static {p0, v0, v2, v1}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
+
+    move-result-object v0
+
+    iput-object v0, p0, Le92;->x0:Lqle;
+
+    return-void
 .end method

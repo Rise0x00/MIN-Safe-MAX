@@ -1,173 +1,119 @@
-.class public final synthetic Lt2e;
-.super Ljava/lang/Object;
+.class public final Lt2e;
+.super Ldd0;
 .source "SourceFile"
-
-# interfaces
-.implements Lf96;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
-
-.field public final synthetic c:Landroidx/recyclerview/widget/RecyclerView;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iput p3, p0, Lt2e;->a:I
+    const/16 v0, 0x12
 
-    iput-object p1, p0, Lt2e;->b:Lone/me/startconversation/StartConversationScreen;
+    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
 
-    iput-object p2, p0, Lt2e;->c:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object p1, p0, Lt2e;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lt2e;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lt2e;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lt2e;->c:Landroidx/recyclerview/widget/RecyclerView;
+    return v0
 
-    iget-object p0, p0, Lt2e;->b:Lone/me/startconversation/StartConversationScreen;
+    :cond_0
+    instance-of v1, p1, Lt2e;
 
-    check-cast p1, Ljava/lang/Integer;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lt2e;
+
+    iget-object v1, p0, Lt2e;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lt2e;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lt2e;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lt2e;->c:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    packed-switch v0, :pswitch_data_0
+    if-nez p1, :cond_3
 
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->A0:Lte3;
-
-    invoke-virtual {p0, p1}, Lte3;->l(I)I
-
-    move-result p0
-
-    sget p1, Lpaa;->s:I
-
-    if-ne p0, p1, :cond_1
-
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lgla;->w:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_1
-    return-object v1
-
-    :pswitch_0
-    sget-object v0, Lone/me/startconversation/StartConversationScreen;->D0:[Lof7;
-
-    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->A0:Lte3;
-
-    invoke-virtual {p0, p1}, Lte3;->l(I)I
-
-    move-result p0
-
-    sget p1, Lpaa;->m:I
-
-    if-ne p0, p1, :cond_3
-
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    sget p1, Lqsc;->z0:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
+    return v2
 
     :cond_3
-    sget p1, Lpaa;->p:I
+    return v0
+.end method
 
-    if-ne p0, p1, :cond_4
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    iget-object v0, p0, Lt2e;->b:Ljava/lang/String;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    sget p1, Lqsc;->B0:I
+    move-result v0
 
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v1
+    iget-object v1, p0, Lt2e;->c:Ljava/lang/String;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    :cond_4
-    sget p1, Lpaa;->s:I
+    move-result v1
 
-    if-ne p0, p1, :cond_5
+    add-int/2addr v1, v0
 
-    invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    return v1
+.end method
 
-    move-result-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sget p1, Lqsc;->C0:I
+    const-string v0, ", path="
 
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    const-string v1, ")"
 
-    move-result-object v1
+    const-string v2, "CropAvatar(uriAsString="
 
-    :cond_5
-    :goto_0
-    return-object v1
+    iget-object v3, p0, Lt2e;->b:Ljava/lang/String;
 
-    nop
+    iget-object v4, p0, Lt2e;->c:Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,14 +1,62 @@
-.class public interface abstract Lice;
+.class public final Lice;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgce;
+
+
+# instance fields
+.field public final a:Lpce;
+
+.field public final b:Z
+
+.field public final c:Z
+
+
+# direct methods
+.method public constructor <init>(Lpce;ZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lice;->a:Lpce;
+
+    iput-boolean p2, p0, Lice;->b:Z
+
+    iput-boolean p3, p0, Lice;->c:Z
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract E(Landroid/view/ViewGroup;)Lcce;
-.end method
+.method public final a()Lorg/json/JSONObject;
+    .locals 4
 
-.method public abstract O(Lcce;I)V
-.end method
+    new-instance v0, Lorg/json/JSONObject;
 
-.method public abstract v(I)Ljava/lang/Object;
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "command"
+
+    const-string v2, "change-media-settings"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    iget-boolean v1, p0, Lice;->b:Z
+
+    iget-boolean v2, p0, Lice;->c:Z
+
+    iget-object v3, p0, Lice;->a:Lpce;
+
+    invoke-static {v3, v1, v2}, Lv63;->t(Lpce;ZZ)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    const-string v2, "mediaSettings"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    return-object v0
 .end method

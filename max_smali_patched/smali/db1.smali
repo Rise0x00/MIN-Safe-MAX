@@ -1,99 +1,64 @@
-.class public final synthetic Ldb1;
+.class public final Ldb1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf96;
+.implements Lmb1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lel4;
+# static fields
+.field public static final a:Ldb1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lel4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Ldb1;->a:I
+    new-instance v0, Ldb1;
 
-    iput-object p1, p0, Ldb1;->b:Lel4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldb1;->a:Ldb1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Ldb1;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lnma;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object p0, p0, Ldb1;->b:Lel4;
+    :cond_0
+    instance-of p1, p1, Ldb1;
 
-    iget-object p0, p0, Lel4;->a:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    check-cast p0, Landroid/content/Context;
+    const/4 p1, 0x0
 
-    sget-object p1, Lzs4;->p0:Lqs9;
+    return p1
 
-    invoke-virtual {p1, p0}, Lqs9;->c(Landroid/content/Context;)Lzs4;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p0}, Lzs4;->k()Lnma;
+    const v0, -0x195c98c1
 
-    move-result-object p0
+    return v0
+.end method
 
-    invoke-interface {p0}, Lnma;->getText()Lqse;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p0
+    const-string v0, "AcceptCall"
 
-    iget p0, p0, Lqse;->j:I
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Ldb1;->b:Lel4;
-
-    iget-object p0, p0, Lel4;->a:Ljava/lang/Object;
-
-    check-cast p0, Landroid/content/Context;
-
-    sget-object p1, Lzs4;->p0:Lqs9;
-
-    invoke-virtual {p1, p0}, Lqs9;->c(Landroid/content/Context;)Lzs4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lzs4;->k()Lnma;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lnma;->getText()Lqse;
-
-    move-result-object p0
-
-    iget p0, p0, Lqse;->g:I
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,71 +1,48 @@
-.class public final Ljj7;
-.super Ljava/lang/Object;
+.class public final synthetic Ljj7;
+.super Lag6;
 .source "SourceFile"
 
 # interfaces
-.implements Lvy1;
+.implements Lnf6;
 
 
-# instance fields
-.field public final b:I
+# static fields
+.field public static final a:Ljj7;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljj7;
 
-    iput p1, p0, Ljj7;->b:I
+    const-string v4, "onAwaitInternalProcessResFunc(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x3
+
+    const-class v2, Llj7;
+
+    const-string v3, "onAwaitInternalProcessResFunc"
+
+    invoke-direct/range {v0 .. v5}, Lag6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ljj7;->a:Ljj7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Ljava/util/List;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/util/ArrayList;
+    check-cast p1, Llj7;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {p1, p2, p3}, Llj7;->access$onAwaitInternalProcessResFunc(Llj7;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbz1;
-
-    instance-of v2, v1, Lbz1;
-
-    const-string v3, "The camera info doesn\'t contain internal implementation."
-
-    invoke-static {v3, v2}, Lcr0;->e(Ljava/lang/String;Z)V
-
-    invoke-interface {v1}, Lbz1;->h()I
-
-    move-result v2
-
-    iget v3, p0, Ljj7;->b:I
-
-    if-ne v2, v3, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v0
+    return-object p1
 .end method

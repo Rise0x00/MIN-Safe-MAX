@@ -4,30 +4,30 @@
 
 
 # static fields
-.field public static final i1:I
+.field public static final r1:I
 
-.field public static final j1:[Landroid/widget/ImageView$ScaleType;
+.field public static final s1:[Landroid/widget/ImageView$ScaleType;
 
 
 # instance fields
-.field public d1:Ljava/lang/Integer;
+.field public m1:Ljava/lang/Integer;
 
-.field public e1:Z
+.field public n1:Z
 
-.field public f1:Z
+.field public o1:Z
 
-.field public g1:Landroid/widget/ImageView$ScaleType;
+.field public p1:Landroid/widget/ImageView$ScaleType;
 
-.field public h1:Ljava/lang/Boolean;
+.field public q1:Ljava/lang/Boolean;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    sget v0, Lw5c;->Widget_MaterialComponents_Toolbar:I
+    sget v0, Ldlc;->Widget_MaterialComponents_Toolbar:I
 
-    sput v0, Lcom/google/android/material/appbar/MaterialToolbar;->i1:I
+    sput v0, Lcom/google/android/material/appbar/MaterialToolbar;->r1:I
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/android/material/appbar/MaterialToolbar;->j1:[Landroid/widget/ImageView$ScaleType;
+    sput-object v0, Lcom/google/android/material/appbar/MaterialToolbar;->s1:[Landroid/widget/ImageView$ScaleType;
 
     return-void
 .end method
@@ -57,11 +57,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 6
 
-    sget v3, Lsvb;->toolbarStyle:I
+    sget v3, Lvac;->toolbarStyle:I
 
-    sget v4, Lcom/google/android/material/appbar/MaterialToolbar;->i1:I
+    sget v4, Lcom/google/android/material/appbar/MaterialToolbar;->r1:I
 
-    invoke-static {p1, p2, v3, v4}, Li58;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    invoke-static {p1, p2, v3, v4}, Lid8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    sget-object v2, Lj6c;->MaterialToolbar:[I
+    sget-object v2, Lqlc;->MaterialToolbar:[I
 
     const/4 p1, 0x0
 
@@ -79,11 +79,11 @@
 
     move-object v1, p2
 
-    invoke-static/range {v0 .. v5}, Love;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    invoke-static/range {v0 .. v5}, Lagf;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
-    sget v1, Lj6c;->MaterialToolbar_navigationIconTint:I
+    sget v1, Lqlc;->MaterialToolbar_navigationIconTint:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -93,7 +93,7 @@
 
     if-eqz v1, :cond_0
 
-    sget v1, Lj6c;->MaterialToolbar_navigationIconTint:I
+    sget v1, Lqlc;->MaterialToolbar_navigationIconTint:I
 
     invoke-virtual {p2, v1, v2}, Landroid/content/res/TypedArray;->getColor(II)I
 
@@ -102,23 +102,23 @@
     invoke-virtual {p0, v1}, Lcom/google/android/material/appbar/MaterialToolbar;->setNavigationIconTint(I)V
 
     :cond_0
-    sget v1, Lj6c;->MaterialToolbar_titleCentered:I
+    sget v1, Lqlc;->MaterialToolbar_titleCentered:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->e1:Z
+    iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->n1:Z
 
-    sget v1, Lj6c;->MaterialToolbar_subtitleCentered:I
+    sget v1, Lqlc;->MaterialToolbar_subtitleCentered:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->f1:Z
+    iput-boolean v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->o1:Z
 
-    sget v1, Lj6c;->MaterialToolbar_logoScaleType:I
+    sget v1, Lqlc;->MaterialToolbar_logoScaleType:I
 
     invoke-virtual {p2, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -126,7 +126,7 @@
 
     if-ltz v1, :cond_1
 
-    sget-object v2, Lcom/google/android/material/appbar/MaterialToolbar;->j1:[Landroid/widget/ImageView$ScaleType;
+    sget-object v2, Lcom/google/android/material/appbar/MaterialToolbar;->s1:[Landroid/widget/ImageView$ScaleType;
 
     array-length v3, v2
 
@@ -134,10 +134,10 @@
 
     aget-object v1, v2, v1
 
-    iput-object v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->g1:Landroid/widget/ImageView$ScaleType;
+    iput-object v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->p1:Landroid/widget/ImageView$ScaleType;
 
     :cond_1
-    sget v1, Lj6c;->MaterialToolbar_logoAdjustViewBounds:I
+    sget v1, Lqlc;->MaterialToolbar_logoAdjustViewBounds:I
 
     invoke-virtual {p2, v1}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -145,7 +145,7 @@
 
     if-eqz v1, :cond_2
 
-    sget v1, Lj6c;->MaterialToolbar_logoAdjustViewBounds:I
+    sget v1, Lqlc;->MaterialToolbar_logoAdjustViewBounds:I
 
     invoke-virtual {p2, v1, p1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->h1:Ljava/lang/Boolean;
+    iput-object v1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->q1:Ljava/lang/Boolean;
 
     :cond_2
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
@@ -173,28 +173,28 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {p2}, Lcsa;->j(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
+    invoke-static {p2}, Lxkg;->q(Landroid/graphics/drawable/Drawable;)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
     :goto_0
     if-eqz p1, :cond_4
 
-    new-instance p2, La58;
+    new-instance p2, Lad8;
 
-    invoke-direct {p2}, La58;-><init>()V
+    invoke-direct {p2}, Lad8;-><init>()V
 
-    invoke-virtual {p2, p1}, La58;->k(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p2, p1}, Lad8;->k(Landroid/content/res/ColorStateList;)V
 
-    invoke-virtual {p2, v0}, La58;->i(Landroid/content/Context;)V
+    invoke-virtual {p2, v0}, Lad8;->i(Landroid/content/Context;)V
 
-    sget-object p1, Lixf;->a:Ljava/util/WeakHashMap;
+    sget-object p1, Lskg;->a:Ljava/util/WeakHashMap;
 
-    invoke-static {p0}, Lxwf;->i(Landroid/view/View;)F
+    invoke-static {p0}, Lgkg;->i(Landroid/view/View;)F
 
     move-result p1
 
-    invoke-virtual {p2, p1}, La58;->j(F)V
+    invoke-virtual {p2, p1}, Lad8;->j(F)V
 
     invoke-virtual {p0, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -205,19 +205,19 @@
 
 # virtual methods
 .method public getLogoScaleType()Landroid/widget/ImageView$ScaleType;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->g1:Landroid/widget/ImageView$ScaleType;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->p1:Landroid/widget/ImageView$ScaleType;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public getNavigationIconTint()Ljava/lang/Integer;
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->d1:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->m1:Ljava/lang/Integer;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final m(I)V
@@ -227,24 +227,24 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lpt8;
+    instance-of v1, v0, Ln19;
 
     if-eqz v1, :cond_0
 
     move-object v2, v0
 
-    check-cast v2, Lpt8;
+    check-cast v2, Ln19;
 
-    invoke-virtual {v2}, Lpt8;->w()V
+    invoke-virtual {v2}, Ln19;->w()V
 
     :cond_0
     invoke-super {p0, p1}, Landroidx/appcompat/widget/Toolbar;->m(I)V
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lpt8;
+    check-cast v0, Ln19;
 
-    invoke-virtual {v0}, Lpt8;->v()V
+    invoke-virtual {v0}, Ln19;->v()V
 
     :cond_1
     return-void
@@ -259,215 +259,217 @@
 
     move-result-object v0
 
-    instance-of v1, v0, La58;
+    instance-of v1, v0, Lad8;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, La58;
+    check-cast v0, Lad8;
 
-    invoke-static {p0, v0}, Lgog;->J(Landroid/view/View;La58;)V
+    invoke-static {p0, v0}, Lbf0;->B(Landroid/view/View;Lad8;)V
 
     :cond_0
     return-void
 .end method
 
 .method public final onLayout(ZIIII)V
-    .locals 6
+    .locals 7
 
     invoke-super/range {p0 .. p5}, Landroidx/appcompat/widget/Toolbar;->onLayout(ZIIII)V
 
-    sget-object p1, Lyu0;->c:Lp17;
+    move-object p1, p0
 
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/MaterialToolbar;->e1:Z
+    sget-object p2, Ly6b;->b:Lp87;
 
-    const/4 p3, 0x0
+    iget-boolean p3, p1, Lcom/google/android/material/appbar/MaterialToolbar;->n1:Z
 
     const/4 p4, 0x0
 
-    if-nez p2, :cond_0
+    const/4 p5, 0x0
 
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/MaterialToolbar;->f1:Z
+    if-nez p3, :cond_0
 
-    if-nez p2, :cond_0
+    iget-boolean p3, p1, Lcom/google/android/material/appbar/MaterialToolbar;->o1:Z
+
+    if-nez p3, :cond_0
 
     goto/16 :goto_3
 
     :cond_0
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getTitle()Ljava/lang/CharSequence;
 
-    move-result-object p2
+    move-result-object p3
 
-    invoke-static {p0, p2}, Lyu0;->o(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    invoke-static {p0, p3}, Ly6b;->q(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
 
-    move-result-object p2
+    move-result-object p3
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
 
-    move-result p5
+    move-result v0
 
-    if-eqz p5, :cond_1
+    if-eqz v0, :cond_1
 
-    move-object p2, p4
+    move-object p3, p5
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p2, p1}, Ljava/util/Collections;->min(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
+    invoke-static {p3, p2}, Ljava/util/Collections;->min(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/widget/TextView;
+
+    :goto_0
+    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getSubtitle()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Ly6b;->q(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    move-object p2, p5
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v0, p2}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Landroid/widget/TextView;
 
-    :goto_0
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getSubtitle()Ljava/lang/CharSequence;
-
-    move-result-object p5
-
-    invoke-static {p0, p5}, Lyu0;->o(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move-object p1, p4
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {p5, p1}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
     :goto_1
-    if-nez p2, :cond_3
+    if-nez p3, :cond_3
 
-    if-nez p1, :cond_3
+    if-nez p2, :cond_3
 
     goto :goto_3
 
     :cond_3
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result p5
+    move-result v0
 
-    div-int/lit8 v0, p5, 0x2
+    div-int/lit8 v1, v0, 0x2
 
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    move-result v1
+    move-result v2
 
     invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    move-result v2
+    move-result v3
 
-    sub-int/2addr p5, v2
+    sub-int/2addr v0, v3
 
-    move v2, p3
+    move v3, p4
 
     :goto_2
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result v3
-
-    if-ge v2, v3, :cond_6
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
-
     move-result v4
 
-    const/16 v5, 0x8
+    if-ge v3, v4, :cond_6
 
-    if-eq v4, v5, :cond_5
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    if-eq v3, p2, :cond_5
+    move-result-object v4
 
-    if-eq v3, p1, :cond_5
+    invoke-virtual {v4}, Landroid/view/View;->getVisibility()I
 
-    invoke-virtual {v3}, Landroid/view/View;->getRight()I
+    move-result v5
 
-    move-result v4
+    const/16 v6, 0x8
 
-    if-ge v4, v0, :cond_4
+    if-eq v5, v6, :cond_5
 
-    invoke-virtual {v3}, Landroid/view/View;->getRight()I
+    if-eq v4, p3, :cond_5
 
-    move-result v4
+    if-eq v4, p2, :cond_5
 
-    if-le v4, v1, :cond_4
+    invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
-    invoke-virtual {v3}, Landroid/view/View;->getRight()I
+    move-result v5
 
-    move-result v1
+    if-ge v5, v1, :cond_4
+
+    invoke-virtual {v4}, Landroid/view/View;->getRight()I
+
+    move-result v5
+
+    if-le v5, v2, :cond_4
+
+    invoke-virtual {v4}, Landroid/view/View;->getRight()I
+
+    move-result v2
 
     :cond_4
-    invoke-virtual {v3}, Landroid/view/View;->getLeft()I
+    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
-    move-result v4
+    move-result v5
 
-    if-le v4, v0, :cond_5
+    if-le v5, v1, :cond_5
 
-    invoke-virtual {v3}, Landroid/view/View;->getLeft()I
+    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
-    move-result v4
+    move-result v5
 
-    if-ge v4, p5, :cond_5
+    if-ge v5, v0, :cond_5
 
-    invoke-virtual {v3}, Landroid/view/View;->getLeft()I
+    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
-    move-result p5
+    move-result v0
 
     :cond_5
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
     :cond_6
-    new-instance v0, Landroid/util/Pair;
+    new-instance v1, Landroid/util/Pair;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p5
+    move-result-object v0
 
-    invoke-direct {v0, v1, p5}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-boolean p5, p0, Lcom/google/android/material/appbar/MaterialToolbar;->e1:Z
+    iget-boolean v0, p1, Lcom/google/android/material/appbar/MaterialToolbar;->n1:Z
 
-    if-eqz p5, :cond_7
+    if-eqz v0, :cond_7
 
-    if-eqz p2, :cond_7
+    if-eqz p3, :cond_7
 
-    invoke-virtual {p0, p2, v0}, Lcom/google/android/material/appbar/MaterialToolbar;->y(Landroid/widget/TextView;Landroid/util/Pair;)V
+    invoke-virtual {p0, p3, v1}, Lcom/google/android/material/appbar/MaterialToolbar;->y(Landroid/widget/TextView;Landroid/util/Pair;)V
 
     :cond_7
-    iget-boolean p2, p0, Lcom/google/android/material/appbar/MaterialToolbar;->f1:Z
+    iget-boolean p3, p1, Lcom/google/android/material/appbar/MaterialToolbar;->o1:Z
+
+    if-eqz p3, :cond_8
 
     if-eqz p2, :cond_8
 
-    if-eqz p1, :cond_8
-
-    invoke-virtual {p0, p1, v0}, Lcom/google/android/material/appbar/MaterialToolbar;->y(Landroid/widget/TextView;Landroid/util/Pair;)V
+    invoke-virtual {p0, p2, v1}, Lcom/google/android/material/appbar/MaterialToolbar;->y(Landroid/widget/TextView;Landroid/util/Pair;)V
 
     :cond_8
     :goto_3
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getLogo()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    move-result-object p2
 
-    if-nez p1, :cond_9
+    if-nez p2, :cond_9
 
     goto :goto_5
 
@@ -475,96 +477,96 @@
     :goto_4
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result p2
+    move-result p3
 
-    if-ge p3, p2, :cond_b
+    if-ge p4, p3, :cond_b
 
-    invoke-virtual {p0, p3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p0, p4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object p2
+    move-result-object p3
 
-    instance-of p5, p2, Landroid/widget/ImageView;
+    instance-of v0, p3, Landroid/widget/ImageView;
 
-    if-eqz p5, :cond_a
+    if-eqz v0, :cond_a
 
-    check-cast p2, Landroid/widget/ImageView;
+    check-cast p3, Landroid/widget/ImageView;
 
-    invoke-virtual {p2}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p5
-
-    if-eqz p5, :cond_a
-
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    invoke-virtual {p5}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
-    move-result-object p5
+    move-result-object v1
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    if-eqz v1, :cond_a
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v0
 
-    invoke-virtual {p5, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
-    move-result p5
+    move-result-object v1
 
-    if-eqz p5, :cond_a
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-object p4, p2
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    move-object p5, p3
 
     goto :goto_5
 
     :cond_a
-    add-int/lit8 p3, p3, 0x1
+    add-int/lit8 p4, p4, 0x1
 
     goto :goto_4
 
     :cond_b
     :goto_5
-    if-eqz p4, :cond_d
+    if-eqz p5, :cond_d
 
-    iget-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->h1:Ljava/lang/Boolean;
+    iget-object p2, p1, Lcom/google/android/material/appbar/MaterialToolbar;->q1:Ljava/lang/Boolean;
 
-    if-eqz p1, :cond_c
+    if-eqz p2, :cond_c
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p1
+    move-result p2
 
-    invoke-virtual {p4, p1}, Landroid/widget/ImageView;->setAdjustViewBounds(Z)V
+    invoke-virtual {p5, p2}, Landroid/widget/ImageView;->setAdjustViewBounds(Z)V
 
     :cond_c
-    iget-object p0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->g1:Landroid/widget/ImageView$ScaleType;
+    iget-object p2, p1, Lcom/google/android/material/appbar/MaterialToolbar;->p1:Landroid/widget/ImageView$ScaleType;
 
-    if-eqz p0, :cond_d
+    if-eqz p2, :cond_d
 
-    invoke-virtual {p4, p0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    invoke-virtual {p5, p2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     :cond_d
     return-void
 .end method
 
 .method public setElevation(F)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1}, Landroid/view/View;->setElevation(F)V
 
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p0
+    move-result-object v0
 
-    instance-of v0, p0, La58;
+    instance-of v1, v0, Lad8;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    check-cast p0, La58;
+    check-cast v0, Lad8;
 
-    invoke-virtual {p0, p1}, La58;->j(F)V
+    invoke-virtual {v0, p1}, Lad8;->j(F)V
 
     :cond_0
     return-void
@@ -573,7 +575,7 @@
 .method public setLogoAdjustViewBounds(Z)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->h1:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->q1:Ljava/lang/Boolean;
 
     if-eqz v0, :cond_1
 
@@ -594,7 +596,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->h1:Ljava/lang/Boolean;
+    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->q1:Ljava/lang/Boolean;
 
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -604,11 +606,11 @@
 .method public setLogoScaleType(Landroid/widget/ImageView$ScaleType;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->g1:Landroid/widget/ImageView$ScaleType;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->p1:Landroid/widget/ImageView$ScaleType;
 
     if-eq v0, p1, :cond_0
 
-    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->g1:Landroid/widget/ImageView$ScaleType;
+    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->p1:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -621,7 +623,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->d1:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->m1:Ljava/lang/Integer;
 
     if-eqz v0, :cond_0
 
@@ -629,13 +631,13 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->d1:Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->m1:Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Ljt4;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-static {p1, v0}, Llx4;->g(Landroid/graphics/drawable/Drawable;I)V
 
     :cond_0
     invoke-super {p0, p1}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
@@ -650,7 +652,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->d1:Ljava/lang/Integer;
+    iput-object p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->m1:Ljava/lang/Integer;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->getNavigationIcon()Landroid/graphics/drawable/Drawable;
 
@@ -667,11 +669,11 @@
 .method public setSubtitleCentered(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->f1:Z
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->o1:Z
 
     if-eq v0, p1, :cond_0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->f1:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->o1:Z
 
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -682,11 +684,11 @@
 .method public setTitleCentered(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->e1:Z
+    iget-boolean v0, p0, Lcom/google/android/material/appbar/MaterialToolbar;->n1:Z
 
     if-eq v0, p1, :cond_0
 
-    iput-boolean p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->e1:Z
+    iput-boolean p1, p0, Lcom/google/android/material/appbar/MaterialToolbar;->n1:Z
 
     invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
@@ -695,39 +697,39 @@
 .end method
 
 .method public final y(Landroid/widget/TextView;Landroid/util/Pair;)V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result p0
+    move-result v0
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
 
-    move-result v0
-
-    div-int/lit8 p0, p0, 0x2
-
-    div-int/lit8 v1, v0, 0x2
-
-    sub-int/2addr p0, v1
-
-    add-int/2addr v0, p0
-
-    iget-object v1, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
     move-result v1
 
-    sub-int/2addr v1, p0
+    div-int/lit8 v0, v0, 0x2
 
-    const/4 v2, 0x0
+    div-int/lit8 v2, v1, 0x2
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+    sub-int/2addr v0, v2
 
-    move-result v1
+    add-int/2addr v1, v0
+
+    iget-object v2, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sub-int/2addr v2, v0
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
 
     iget-object p2, p2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -737,35 +739,35 @@
 
     move-result p2
 
-    sub-int p2, v0, p2
+    sub-int p2, v1, p2
 
-    invoke-static {p2, v2}, Ljava/lang/Math;->max(II)I
+    invoke-static {p2, v3}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
-    invoke-static {v1, p2}, Ljava/lang/Math;->max(II)I
+    invoke-static {v2, p2}, Ljava/lang/Math;->max(II)I
 
     move-result p2
 
     if-lez p2, :cond_0
 
-    add-int/2addr p0, p2
+    add-int/2addr v0, p2
 
-    sub-int/2addr v0, p2
+    sub-int/2addr v1, p2
 
-    sub-int p2, v0, p0
+    sub-int p2, v1, v0
 
-    const/high16 v1, 0x40000000    # 2.0f
+    const/high16 v2, 0x40000000    # 2.0f
 
-    invoke-static {p2, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-static {p2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p2
 
     invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeightAndState()I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p1, p2, v1}, Landroid/view/View;->measure(II)V
+    invoke-virtual {p1, p2, v2}, Landroid/view/View;->measure(II)V
 
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
@@ -774,9 +776,9 @@
 
     invoke-virtual {p1}, Landroid/view/View;->getBottom()I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p1, p0, p2, v0, v1}, Landroid/view/View;->layout(IIII)V
+    invoke-virtual {p1, v0, p2, v1, v2}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method

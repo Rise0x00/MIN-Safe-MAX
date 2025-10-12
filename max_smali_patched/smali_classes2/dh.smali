@@ -1,19 +1,19 @@
 .class public final Ldh;
-.super Lgh;
+.super Lhh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:F
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(F)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ldh;->a:I
+    iput p1, p0, Ldh;->a:F
 
     return-void
 .end method
@@ -41,11 +41,15 @@
     :cond_1
     check-cast p1, Ldh;
 
-    iget p0, p0, Ldh;->a:I
+    iget v1, p0, Ldh;->a:F
 
-    iget p1, p1, Ldh;->a:I
+    iget p1, p1, Ldh;->a:F
 
-    if-eq p0, p1, :cond_2
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -54,29 +58,37 @@
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget p0, p0, Ldh;->a:I
+    iget v0, p0, Ldh;->a:F
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
-    move-result p0
+    move-result v0
 
-    return p0
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "IntNumber(value="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FloatNumber(value="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ldh;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget p0, p0, Ldh;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v0, v1}, Lmh0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    return-object v0
 .end method

@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/Collection;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

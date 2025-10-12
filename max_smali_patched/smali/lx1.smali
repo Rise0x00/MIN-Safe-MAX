@@ -1,174 +1,100 @@
 .class public final Llx1;
-.super Lkx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liw1;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public a:Lts1;
+
+.field public final b:Lws1;
+
+.field public final c:Lb71;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Lb71;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Lfx1;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Llx1;->a:Ljava/util/ArrayList;
+    invoke-direct {v0, v1, p0}, Lfx1;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lvr0;->k(Lus1;)Lws1;
 
     move-result-object v0
 
-    check-cast v0, Lkx1;
+    iput-object v0, p0, Llx1;->b:Lws1;
 
-    instance-of v1, v0, Lmx1;
+    iput-object p1, p0, Llx1;->c:Lb71;
 
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Llx1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 1
 
-    iget-object p0, p0, Llx1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    iget-object v0, p0, Llx1;->c:Lb71;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget v0, v0, Lb71;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Lkx1;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Lkx1;->a(I)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(ILrx1;)V
-    .locals 1
-
-    iget-object p0, p0, Llx1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkx1;
-
-    invoke-virtual {v0, p1, p2}, Lkx1;->b(ILrx1;)V
-
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
+    :pswitch_0
+    const/4 v0, 0x0
 
-.method public final c(ILwr3;)V
-    .locals 1
-
-    iget-object p0, p0, Llx1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkx1;
-
-    invoke-virtual {v0, p1, p2}, Lkx1;->c(ILwr3;)V
-
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
+    :pswitch_1
+    const/4 v0, 0x0
 
-.method public final d(I)V
-    .locals 1
-
-    iget-object p0, p0, Llx1;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1, v0}, Lu30;->g(Landroid/hardware/camera2/TotalCaptureResult;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    :goto_0
+    if-nez v0, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Lkx1;
-
-    invoke-virtual {v0, p1}, Lkx1;->d(I)V
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    return-void
+    iget-object v0, p0, Llx1;->a:Lts1;
+
+    invoke-virtual {v0, p1}, Lts1;->b(Ljava/lang/Object;)Z
+
+    const/4 p1, 0x1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

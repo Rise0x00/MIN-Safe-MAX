@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lrlg;
+.field public final a:Lj6f;
 
 
 # direct methods
-.method public constructor <init>(Lrlg;)V
+.method public constructor <init>(Lj6f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Lrlg;
+    iput-object p1, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Lj6f;
 
     return-void
 .end method
@@ -21,43 +21,43 @@
 
 # virtual methods
 .method public returnResultToJava(Ljava/lang/String;)V
-    .locals 3
+    .locals 4
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    iget-object p0, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Lrlg;
+    iget-object v0, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Lj6f;
 
-    iget-object v0, p0, Lrlg;->o:Ljava/lang/Object;
+    iget-object v1, v0, Lj6f;->c:Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lmng;
+    check-cast v1, Lubh;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Lrlg;->X:Ljava/lang/Object;
+    iget-object v0, v0, Lj6f;->o:Ljava/lang/Object;
 
-    check-cast p0, Landroid/os/Handler;
+    check-cast v0, Landroid/os/Handler;
 
-    new-instance v1, Lbb6;
+    new-instance v2, Ltg6;
 
-    const/16 v2, 0x9
+    const/16 v3, 0xb
 
-    invoke-direct {v1, p1, v2, v0}, Lbb6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p1, v3, v1}, Ltg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

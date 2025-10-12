@@ -4,24 +4,24 @@
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final a:I
 
-.field public final b:Z
+.field public final b:[Ljava/lang/String;
 
-.field public final c:Ljava/lang/CharSequence;
+.field public final c:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;ZLjava/lang/CharSequence;)V
+.method public constructor <init>(I[Ljava/lang/String;[I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbab;->a:Ljava/util/List;
+    iput p1, p0, Lbab;->a:I
 
-    iput-boolean p2, p0, Lbab;->b:Z
+    iput-object p2, p0, Lbab;->b:[Ljava/lang/String;
 
-    iput-object p3, p0, Lbab;->c:Ljava/lang/CharSequence;
+    iput-object p3, p0, Lbab;->c:[I
 
     return-void
 .end method

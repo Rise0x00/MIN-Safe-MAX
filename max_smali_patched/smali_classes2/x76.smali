@@ -2,100 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzx6;
 
+# instance fields
+.field public final a:Lbp7;
 
-# static fields
-.field public static final a:Lx76;
+.field public final b:Lbp7;
 
-.field public static final b:[B
-
-.field public static final c:[B
-
-.field public static final d:I
+.field public final c:Lbp7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
+    .locals 0
 
-    new-instance v0, Lx76;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx76;->a:Lbp7;
 
-    sput-object v0, Lx76;->a:Lx76;
+    iput-object p2, p0, Lx76;->b:Lbp7;
 
-    sget-object v0, Lh72;->b:Ljava/nio/charset/Charset;
-
-    const-string v1, "<svg"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    invoke-static {v1}, Lus;->e(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Lx76;->b:[B
-
-    const-string v1, "<?xm"
-
-    invoke-static {v1}, Lus;->e(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    sput-object v1, Lx76;->c:[B
-
-    sput v0, Lx76;->d:I
+    iput-object p3, p0, Lx76;->c:Lbp7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(I[B)Lay6;
-    .locals 0
-
-    sget-object p0, Lx76;->b:[B
-
-    const/4 p1, 0x0
-
-    invoke-static {p2, p0, p1}, Lus;->F([B[BI)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    sget-object p0, Lx76;->c:[B
-
-    invoke-static {p2, p0, p1}, Lus;->F([B[BI)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p0, Lay6;->c:Lay6;
-
-    return-object p0
-
-    :cond_1
-    :goto_0
-    sget-object p0, Laug;->a:Lay6;
-
-    return-object p0
-.end method
-
-.method public final b()I
-    .locals 0
-
-    sget p0, Lx76;->d:I
-
-    return p0
 .end method

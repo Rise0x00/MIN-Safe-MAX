@@ -1,80 +1,125 @@
-.class public final synthetic Ltm9;
-.super Ljava/lang/Object;
+.class public final Ltm9;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lz5;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lum9;
+.field public final synthetic Y:Lwm9;
+
+.field public final synthetic Z:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lum9;I)V
+.method public constructor <init>(Lwm9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ltm9;->a:I
+    iput-object p1, p0, Ltm9;->Y:Lwm9;
 
-    iput-object p1, p0, Ltm9;->b:Lum9;
+    iput-object p2, p0, Ltm9;->Z:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Le34;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ltm9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ltm9;
+
+    sget-object p2, Loyf;->a:Loyf;
+
+    invoke-virtual {p1, p2}, Ltm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Ltm9;->a:I
+    new-instance p1, Ltm9;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Ltm9;->Y:Lwm9;
 
-    new-instance v0, Lxj0;
+    iget-object v1, p0, Ltm9;->Z:Ljava/lang/Object;
 
-    const/16 v1, 0x13
+    invoke-direct {p1, v0, v1, p2}, Ltm9;-><init>(Lwm9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1}, Lxj0;-><init>(I)V
+    return-object p1
+.end method
 
-    iget-object p0, p0, Ltm9;->b:Lum9;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {p0, v0}, Lu2;->m(Ljm3;)V
+    iget v0, p0, Ltm9;->X:I
 
-    return-void
+    const/4 v1, 0x1
 
-    :pswitch_0
-    new-instance v0, Lxj0;
+    if-eqz v0, :cond_1
 
-    const/16 v1, 0x11
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v0, v1}, Lxj0;-><init>(I)V
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ltm9;->b:Lum9;
+    return-object p1
 
-    invoke-virtual {p0, v0}, Lu2;->m(Ljm3;)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_1
-    new-instance v0, Lxj0;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x11
+    throw p1
 
-    invoke-direct {v0, v1}, Lxj0;-><init>(I)V
+    :cond_1
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ltm9;->b:Lum9;
+    sget p1, Ln05;->o:I
 
-    invoke-virtual {p0, v0}, Lu2;->m(Ljm3;)V
+    const-wide/16 v2, 0x3e8
 
-    return-void
+    sget-object p1, Ls05;->o:Ls05;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v2, v3, p1}, Lyhh;->P(JLs05;)J
+
+    move-result-wide v2
+
+    iput v1, p0, Ltm9;->X:I
+
+    iget-object p1, p0, Ltm9;->Y:Lwm9;
+
+    iget-object v0, p0, Ltm9;->Z:Ljava/lang/Object;
+
+    invoke-virtual {p1, v2, v3, p0, v0}, Lwm9;->M(JLnz3;Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

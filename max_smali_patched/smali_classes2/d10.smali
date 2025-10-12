@@ -1,181 +1,51 @@
-.class public final enum Ld10;
-.super Ljava/lang/Enum;
+.class public final Ld10;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Ld10;
+# instance fields
+.field public a:J
 
-.field public static final enum Y:Ld10;
+.field public b:J
 
-.field public static final enum Z:Ld10;
+.field public c:J
 
-.field public static final enum a:Ld10;
+.field public d:J
 
-.field public static final enum b:Ld10;
+.field public e:I
 
-.field public static final enum c:Ld10;
-
-.field public static final enum n0:Ld10;
-
-.field public static final enum o:Ld10;
-
-.field public static final enum o0:Ld10;
-
-.field public static final enum p0:Ld10;
-
-.field public static final enum q0:Ld10;
-
-.field public static final synthetic r0:[Ld10;
+.field public f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
+.method public constructor <init>(Ld10;)V
+    .locals 2
 
-    new-instance v0, Ld10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iget-wide v0, p1, Ld10;->a:J
 
-    const/4 v2, 0x0
+    iput-wide v0, p0, Ld10;->a:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-wide v0, p1, Ld10;->b:J
 
-    sput-object v0, Ld10;->a:Ld10;
+    iput-wide v0, p0, Ld10;->b:J
 
-    new-instance v1, Ld10;
+    iget-wide v0, p1, Ld10;->c:J
 
-    const-string v2, "NEW"
+    iput-wide v0, p0, Ld10;->c:J
 
-    const/4 v3, 0x1
+    iget-wide v0, p1, Ld10;->d:J
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide v0, p0, Ld10;->d:J
 
-    sput-object v1, Ld10;->b:Ld10;
+    iget v0, p1, Ld10;->e:I
 
-    new-instance v2, Ld10;
+    iput v0, p0, Ld10;->e:I
 
-    const-string v3, "ADD"
+    iget-object p1, p1, Ld10;->f:Ljava/lang/String;
 
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ld10;->c:Ld10;
-
-    new-instance v3, Ld10;
-
-    const-string v4, "REMOVE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ld10;->o:Ld10;
-
-    new-instance v4, Ld10;
-
-    const-string v5, "LEAVE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ld10;->X:Ld10;
-
-    new-instance v5, Ld10;
-
-    const-string v6, "TITLE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Ld10;->Y:Ld10;
-
-    new-instance v6, Ld10;
-
-    const-string v7, "ICON"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Ld10;->Z:Ld10;
-
-    new-instance v7, Ld10;
-
-    const-string v8, "SYSTEM"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Ld10;->n0:Ld10;
-
-    new-instance v8, Ld10;
-
-    const-string v9, "JOIN_BY_LINK"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Ld10;->o0:Ld10;
-
-    new-instance v9, Ld10;
-
-    const-string v10, "PIN"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Ld10;->p0:Ld10;
-
-    new-instance v10, Ld10;
-
-    const-string v11, "BOT_STARTED"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Ld10;->q0:Ld10;
-
-    filled-new-array/range {v0 .. v10}, [Ld10;
-
-    move-result-object v0
-
-    sput-object v0, Ld10;->r0:[Ld10;
+    iput-object p1, p0, Ld10;->f:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ld10;
-    .locals 1
-
-    const-class v0, Ld10;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ld10;
-
-    return-object p0
-.end method
-
-.method public static values()[Ld10;
-    .locals 1
-
-    sget-object v0, Ld10;->r0:[Ld10;
-
-    invoke-virtual {v0}, [Ld10;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ld10;
-
-    return-object v0
 .end method

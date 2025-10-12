@@ -1,210 +1,203 @@
 .class public final Lj3g;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Li3g;
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final a:Ljava/io/OutputStream;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Li3g;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lj3g;->Companion:Li3g;
+    .locals 0
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 3
+.method public constructor <init>(Ljava/io/OutputStream;)V
+    .locals 0
 
-    and-int/lit8 v0, p2, 0x3
+    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x3
-
-    if-ne v2, v0, :cond_1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj3g;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lj3g;->b:Ljava/lang/String;
-
-    and-int/lit8 p1, p2, 0x4
-
-    if-nez p1, :cond_0
-
-    iput-object v1, p0, Lj3g;->c:Ljava/lang/String;
+    iput-object p1, p0, Lj3g;->a:Ljava/io/OutputStream;
 
     return-void
-
-    :cond_0
-    iput-object p4, p0, Lj3g;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_1
-    sget-object p0, Lh3g;->a:Lh3g;
-
-    invoke-virtual {p0}, Lh3g;->d()Lpad;
-
-    move-result-object p0
-
-    invoke-static {p2, v2, p0}, Lfog;->X(IILpad;)V
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final close()V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lj3g;->a:Ljava/io/OutputStream;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lj3g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lj3g;
-
-    iget-object v1, p0, Lj3g;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lj3g;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lj3g;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lj3g;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object p0, p0, Lj3g;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lj3g;->c:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final flush()V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lj3g;->a:Ljava/io/OutputStream;
 
-    iget-object v1, p0, Lj3g;->a:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    if-nez v1, :cond_0
+    return-void
+.end method
 
-    move v1, v0
+.method public final write(I)V
+    .locals 3
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lj3g;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lcx3;->d(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object p0, p0, Lj3g;->c:Ljava/lang/String;
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    .line 1
+    invoke-static {p1}, Lpid;->n(I)Z
 
     move-result v0
 
-    :goto_1
-    add-int/2addr v1, v0
+    iget-object v1, p0, Lj3g;->a:Ljava/io/OutputStream;
 
-    return v1
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
+
+    return-void
+
+    :cond_0
+    const/16 v0, 0x25
+
+    .line 3
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    shr-int/lit8 v0, p1, 0x4
+
+    and-int/lit8 v0, v0, 0xf
+
+    const/16 v2, 0x9
+
+    if-gt v0, v2, :cond_1
+
+    add-int/lit8 v0, v0, 0x30
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x37
+
+    .line 4
+    :goto_0
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    and-int/lit8 p1, p1, 0xf
+
+    if-gt p1, v2, :cond_2
+
+    add-int/lit8 p1, p1, 0x30
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 p1, p1, 0x37
+
+    .line 5
+    :goto_1
+    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final write([BII)V
+    .locals 4
 
-    const-string v0, ", requestId="
+    add-int/2addr p3, p2
 
-    const-string v1, ", reason="
+    move v0, p2
 
-    const-string v2, "WebAppBiometryAuthRequest(queryId="
+    .line 6
+    :goto_0
+    iget-object v1, p0, Lj3g;->a:Ljava/io/OutputStream;
 
-    iget-object v3, p0, Lj3g;->a:Ljava/lang/String;
+    if-ge p2, p3, :cond_4
 
-    iget-object v4, p0, Lj3g;->b:Ljava/lang/String;
+    .line 7
+    aget-byte v2, p1, p2
 
-    invoke-static {v2, v3, v0, v4, v1}, Llge;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 8
+    invoke-static {v2}, Lpid;->n(I)Z
 
-    move-result-object v0
+    move-result v3
 
-    const-string v1, ")"
+    if-eqz v3, :cond_0
 
-    iget-object p0, p0, Lj3g;->c:Ljava/lang/String;
+    goto :goto_3
 
-    invoke-static {v0, p0, v1}, Lw68;->o(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    if-le p2, v0, :cond_1
 
-    move-result-object p0
+    sub-int v3, p2, v0
 
-    return-object p0
+    .line 9
+    invoke-virtual {v1, p1, v0, v3}, Ljava/io/OutputStream;->write([BII)V
+
+    :cond_1
+    const/16 v0, 0x25
+
+    .line 10
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    shr-int/lit8 v0, v2, 0x4
+
+    and-int/lit8 v0, v0, 0xf
+
+    const/16 v3, 0x9
+
+    if-gt v0, v3, :cond_2
+
+    add-int/lit8 v0, v0, 0x30
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v0, v0, 0x37
+
+    .line 11
+    :goto_1
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    and-int/lit8 v0, v2, 0xf
+
+    if-gt v0, v3, :cond_3
+
+    add-int/lit8 v0, v0, 0x30
+
+    goto :goto_2
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x37
+
+    .line 12
+    :goto_2
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write(I)V
+
+    add-int/lit8 v0, p2, 0x1
+
+    :goto_3
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    if-ge v0, p3, :cond_5
+
+    sub-int/2addr p3, v0
+
+    .line 13
+    invoke-virtual {v1, p1, v0, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    :cond_5
+    return-void
 .end method

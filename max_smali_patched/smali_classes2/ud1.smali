@@ -4,36 +4,36 @@
 
 
 # instance fields
-.field public final a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+.field public final a:Lbp7;
 
-.field public final b:Lnh;
+.field public final b:Ls5f;
+
+.field public final c:Ls5f;
+
+.field public d:Lqs1;
+
+.field public final e:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;)V
-    .locals 2
+.method public constructor <init>(Lbp7;Ls5f;Ls5f;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lud1;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    new-instance v0, Lmh;
+    new-instance v0, Ljava/util/HashSet;
 
-    const/4 v1, 0x2
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-direct {v0, p1, v1}, Lmh;-><init>(Lfpc;I)V
+    iput-object v0, p0, Lud1;->e:Ljava/util/HashSet;
 
-    new-instance v0, Lnh;
+    iput-object p1, p0, Lud1;->a:Lbp7;
 
-    invoke-direct {v0, p1, v1}, Lnh;-><init>(Lfpc;I)V
+    iput-object p2, p0, Lud1;->b:Ls5f;
 
-    iput-object v0, p0, Lud1;->b:Lnh;
-
-    new-instance p0, Lnh;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, p1, v0}, Lnh;-><init>(Lfpc;I)V
+    iput-object p3, p0, Lud1;->c:Ls5f;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfj3;
+.implements Lul3;
 
 
 # annotations
@@ -15,19 +15,21 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0002\u0008\u0003\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u0002B\u0013\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006B\u0011\u0008\u0010\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u00a2\u0006\u0004\u0008\u0005\u0010\t\u00a8\u0006\n"
+        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0016\n\u0002\u0008\u0003\u0008\u0001\u0018\u00002\u00020\u00012\u00020\u0002B\u0013\u0012\n\u0008\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006B\u001b\u0008\u0010\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u00a2\u0006\u0004\u0008\u0005\u0010\u000b\u00a8\u0006\u000c"
     }
     d2 = {
         "Lone/me/complaintbottomsheet/ComplaintBottomSheet;",
         "Lone/me/sdk/arch/Widget;",
-        "Lfj3;",
+        "Lul3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "",
-        "chatId",
-        "(J)V",
+        "parentId",
+        "",
+        "ids",
+        "(Ljava/lang/Long;[J)V",
         "complaint-bottomsheet_release"
     }
     k = 0x1
@@ -41,46 +43,58 @@
 
 
 # static fields
-.field public static final synthetic X:[Lof7;
+.field public static final synthetic Y:[Ltm7;
 
 
 # instance fields
-.field public final a:Lvr;
+.field public final X:Ls5f;
 
-.field public final b:Lth7;
+.field public final a:Lpr;
 
-.field public final c:Lkle;
+.field public final b:Lpr;
 
-.field public final o:Lkle;
+.field public final c:Lbp7;
+
+.field public final o:Ls5f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
-    new-instance v0, Lvqb;
+    new-instance v0, Lt5c;
 
     const-class v1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
-    const-string v2, "chatId"
+    const-string v2, "ids"
 
-    const-string v3, "getChatId()J"
+    const-string v3, "getIds()[J"
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lvqb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v1, Ldic;->a:Leic;
+    sget-object v2, Lxxc;->a:Lyxc;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v3, "parentId"
 
-    const/4 v1, 0x1
+    const-string v5, "getParentId()Ljava/lang/Long;"
 
-    new-array v1, v1, [Lof7;
+    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
 
-    aput-object v0, v1, v4
+    move-result-object v1
 
-    sput-object v1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lof7;
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ltm7;
+
+    aput-object v0, v2, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sput-object v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->Y:[Ltm7;
 
     return-void
 .end method
@@ -93,38 +107,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Landroid/os/Bundle;ILuc4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(J)V
-    .locals 1
-
-    .line 15
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    .line 16
-    new-instance p2, Ltra;
-
-    const-string v0, "chat_id"
-
-    invoke-direct {p2, v0, p1}, Ltra;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 17
-    filled-new-array {p2}, [Ltra;
-
-    move-result-object p1
-
-    .line 18
-    invoke-static {p1}, Ly84;->c([Ltra;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    .line 19
-    invoke-direct {p0, p1}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Landroid/os/Bundle;ILof4;)V
 
     return-void
 .end method
@@ -139,77 +122,89 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILuc4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
 
     .line 4
-    new-instance p1, Lvr;
+    new-instance p1, Lpr;
+
+    const-class v0, [J
+
+    const-string v1, "ids"
+
+    invoke-direct {p1, v0, v1}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+
+    .line 5
+    iput-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->a:Lpr;
+
+    .line 6
+    new-instance p1, Lpr;
 
     const-class v0, Ljava/lang/Long;
 
-    const-string v1, "chat_id"
+    const-string v1, "parent_id"
 
-    invoke-direct {p1, v0, v1}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 5
-    iput-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->a:Lvr;
+    .line 7
+    iput-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lpr;
 
-    .line 6
-    new-instance p1, Ljb3;
+    .line 8
+    new-instance p1, Lwd3;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Ljb3;-><init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
+    invoke-direct {p1, p0, v0}, Lwd3;-><init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
 
-    .line 7
-    new-instance v0, Lpi2;
+    .line 9
+    new-instance v0, Llj2;
 
     const/16 v1, 0x1c
 
-    invoke-direct {v0, v1, p1}, Lpi2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Llj2;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lub3;
+    const-class p1, Lke3;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ld96;)Lth7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
 
     move-result-object p1
 
-    .line 8
-    iput-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lth7;
-
-    .line 9
-    new-instance p1, Lkb3;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lkb3;-><init>(I)V
-
     .line 10
-    new-instance v0, Lkle;
-
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
+    iput-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->c:Lbp7;
 
     .line 11
-    iput-object v0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->c:Lkle;
+    new-instance p1, Lyp2;
+
+    const/16 v0, 0x10
+
+    invoke-direct {p1, v0}, Lyp2;-><init>(I)V
 
     .line 12
-    new-instance p1, Ljb3;
+    new-instance v0, Ls5f;
+
+    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
+
+    .line 13
+    iput-object v0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->o:Ls5f;
+
+    .line 14
+    new-instance p1, Lwd3;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Ljb3;-><init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
+    invoke-direct {p1, p0, v0}, Lwd3;-><init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
 
-    .line 13
-    new-instance v0, Lkle;
+    .line 15
+    new-instance v0, Ls5f;
 
-    invoke-direct {v0, p1}, Lkle;-><init>(Ld96;)V
+    invoke-direct {v0, p1}, Ls5f;-><init>(Lve6;)V
 
-    .line 14
-    iput-object v0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->o:Lkle;
+    .line 16
+    iput-object v0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:Ls5f;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Bundle;ILuc4;)V
+.method public synthetic constructor <init>(Landroid/os/Bundle;ILof4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -225,100 +220,60 @@
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/Long;[J)V
+    .locals 2
 
-# virtual methods
-.method public final i(ILandroid/os/Bundle;)V
-    .locals 6
+    .line 17
+    new-instance v0, Ln4b;
 
-    iget-object p0, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lth7;
+    const-string v1, "parent_id"
 
-    invoke-interface {p0}, Lth7;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, v1, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result-object p0
+    .line 18
+    new-instance p1, Ln4b;
 
-    check-cast p0, Lub3;
+    const-string v1, "ids"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p1, v1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {}, Lib3;->values()[Lib3;
-
-    move-result-object p2
-
-    if-ltz p1, :cond_1
-
-    array-length v0, p2
-
-    add-int/lit8 v0, v0, -0x1
-
-    if-le p1, v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    aget-object p1, p2, p1
-
-    :goto_0
-    move-object v5, p1
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :goto_2
-    if-nez v5, :cond_2
-
-    return-void
-
-    :cond_2
-    iget-object p1, p0, Lub3;->c:Lth7;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
+    .line 19
+    filled-new-array {v0, p1}, [Ln4b;
 
     move-result-object p1
 
-    check-cast p1, Ljk;
+    .line 20
+    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
 
-    iget-wide v3, p0, Lub3;->b:J
+    move-result-object p1
 
-    check-cast p1, Lw5a;
+    .line 21
+    invoke-direct {p0, p1}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(Landroid/os/Bundle;)V
 
-    invoke-virtual {p1, v3, v4}, Lw5a;->n(J)Z
+    return-void
+.end method
 
-    move-result p2
 
-    if-nez p2, :cond_3
+# virtual methods
+.method public final i(ILandroid/os/Bundle;)V
+    .locals 0
 
-    goto :goto_3
+    sget p2, Llma;->a:I
 
-    :cond_3
-    new-instance v0, Lx92;
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {p1}, Lw5a;->x()Lx9b;
+    return-void
+
+    :cond_0
+    iget-object p2, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->c:Lbp7;
+
+    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Laab;
+    check-cast p2, Lke3;
 
-    iget-object p2, p2, Laab;->a:Lb53;
-
-    invoke-virtual {p2}, Le2d;->l()J
-
-    move-result-wide v1
-
-    invoke-direct/range {v0 .. v5}, Lx92;-><init>(JJLib3;)V
-
-    invoke-static {p1, v0}, Lw5a;->v(Lw5a;Lil;)J
-
-    :goto_3
-    iget-object p0, p0, Lub3;->X:Lt65;
-
-    sget-object p1, Lsb3;->a:Lsb3;
-
-    invoke-static {p0, p1}, Lyxf;->o(Lt65;Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Lke3;->s(I)V
 
     return-void
 .end method
@@ -326,109 +281,117 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 0
 
-    new-instance p0, Landroid/widget/FrameLayout;
+    new-instance p2, Landroid/widget/FrameLayout;
 
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     new-instance p1, Landroid/app/ActionBar$LayoutParams;
 
-    const/4 p2, -0x1
+    const/4 p3, -0x1
 
-    invoke-direct {p1, p2, p2}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
+    invoke-direct {p1, p3, p3}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p2, p1}, Landroid/view/View;->setAlpha(F)V
 
-    return-object p0
+    return-object p2
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 4
+    .locals 6
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->b:Lth7;
+    iget-object p1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->c:Lbp7;
 
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lub3;
-
-    iget-object v0, v0, Lub3;->o:Ljbc;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lsk7;->L()Luk7;
-
-    move-result-object v1
-
-    sget-object v2, Lvj7;->o:Lvj7;
-
-    invoke-static {v0, v1, v2}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lnb3;
+    check-cast v0, Lke3;
+
+    iget-object v0, v0, Lke3;->C0:Lsqc;
+
+    new-instance v1, Lg13;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v0, v2}, Lg13;-><init>(Lev5;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcs7;->L()Les7;
+
+    move-result-object v0
+
+    sget-object v2, Ler7;->o:Ler7;
+
+    invoke-static {v1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+
+    move-result-object v0
+
+    new-instance v1, Lxd3;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, v0, v3, p0}, Lnb3;-><init>(Lis1;Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+    invoke-direct {v1, v3, p0}, Lxd3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
 
-    new-instance v0, Lbuc;
+    new-instance v4, Ljx5;
 
-    invoke-direct {v0, v1}, Lbuc;-><init>(Lt96;)V
+    const/4 v5, 0x1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-direct {v4, v0, v1, v5}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lfog;->G(Lbq5;Lp04;)Lt1e;
-
-    invoke-interface {p1}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lub3;
-
-    iget-object p1, p1, Lub3;->X:Lt65;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lsk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lsk7;->L()Luk7;
+    invoke-static {v4, v0}, Ltp;->a0(Lev5;Le34;)Lqle;
 
-    move-result-object v0
-
-    invoke-static {p1, v0, v2}, Ldjg;->n(Lbq5;Luk7;Lvj7;)Lis1;
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Llb3;
+    check-cast p1, Lke3;
 
-    invoke-direct {v0, v3, p0}, Llb3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+    iget-object p1, p1, Lke3;->E0:Ljb5;
 
-    new-instance v1, Lgs5;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcs7;->L()Les7;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+
+    move-result-object p1
+
+    new-instance v0, Lyd3;
+
+    invoke-direct {v0, v3, p0}, Lyd3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/complaintbottomsheet/ComplaintBottomSheet;)V
+
+    new-instance v1, Ljx5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgs5;-><init>(Lbq5;Lt96;I)V
+    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lfk7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {v1, p0}, Lfog;->G(Lbq5;Lp04;)Lt1e;
+    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
 
     return-void
 .end method

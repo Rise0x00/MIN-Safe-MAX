@@ -2,168 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    .line 1
-    iput p2, p0, Lrk0;->a:I
-
-    iput-object p3, p0, Lrk0;->c:Ljava/lang/Object;
-
-    iput p1, p0, Lrk0;->b:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lrk0;->a:Ljava/lang/String;
 
-.method public constructor <init>(ILazf;)V
-    .locals 1
+    iput-object p4, p0, Lrk0;->b:Ljava/lang/String;
 
-    const/4 v0, 0x4
+    iput p2, p0, Lrk0;->c:I
 
-    iput v0, p0, Lrk0;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput p1, p0, Lrk0;->b:I
-
-    .line 4
-    iput-object p2, p0, Lrk0;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Luk0;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lrk0;->a:I
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrk0;->c:Ljava/lang/Object;
-
-    const/4 p1, -0x1
-
-    .line 6
-    iput p1, p0, Lrk0;->b:I
+    iput p3, p0, Lrk0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lrk0;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
-
-    check-cast v0, Lcrg;
-
-    iget p0, p0, Lrk0;->b:I
-
-    invoke-virtual {v0, p0}, Lcrg;->f(I)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
-
-    iget p0, p0, Lrk0;->b:I
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->A0(I)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/work/impl/foreground/SystemForegroundService;
-
-    iget-object v0, v0, Landroidx/work/impl/foreground/SystemForegroundService;->X:Landroid/app/NotificationManager;
-
-    iget p0, p0, Lrk0;->b:I
-
-    invoke-virtual {v0, p0}, Landroid/app/NotificationManager;->cancel(I)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/datepicker/MaterialCalendar;
-
-    iget-object v0, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget p0, p0, Lrk0;->b:I
-
-    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->A0(I)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
-
-    check-cast v0, Lqze;
-
-    iget p0, p0, Lrk0;->b:I
-
-    iget-object v0, v0, Lqze;->a:Ljava/lang/Object;
-
-    check-cast v0, Litg;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p0}, Litg;->u(I)V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lrk0;
 
-    :pswitch_4
-    iget-object v0, p0, Lrk0;->c:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v0, Luk0;
+    if-nez v1, :cond_1
 
-    iget-object v0, v0, Luk0;->q0:Lsk0;
+    return v2
 
-    iget p0, p0, Lrk0;->b:I
+    :cond_1
+    check-cast p1, Lrk0;
 
-    const/4 v1, 0x4
+    iget v1, p0, Lrk0;->c:I
 
-    invoke-virtual {v0, p0, v1}, Lob5;->x(II)V
+    iget v3, p1, Lrk0;->c:I
 
-    return-void
+    if-ne v1, v3, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget v1, p0, Lrk0;->d:I
+
+    iget v3, p1, Lrk0;->d:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lrk0;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lrk0;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lrk0;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lrk0;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lrk0;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget v1, p0, Lrk0;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lrk0;->a:Ljava/lang/String;
+
+    iget-object v3, p0, Lrk0;->b:Ljava/lang/String;
+
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

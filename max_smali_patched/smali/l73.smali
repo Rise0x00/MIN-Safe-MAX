@@ -1,22 +1,58 @@
-.class public abstract Ll73;
-.super Lk73;
+.class public final Ll73;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lm73;
+
+
+# instance fields
+.field public final a:Landroid/util/CloseGuard;
 
 
 # direct methods
-.method public static a0(Ljava/util/List;Ljava/util/Comparator;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    new-instance v0, Landroid/util/CloseGuard;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Landroid/util/CloseGuard;-><init>()V
 
-    if-le v0, v1, :cond_0
+    iput-object v0, p0, Ll73;->a:Landroid/util/CloseGuard;
 
-    invoke-static {p0, p1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+    return-void
+.end method
 
-    :cond_0
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    iget-object v0, p0, Ll73;->a:Landroid/util/CloseGuard;
+
+    invoke-virtual {v0}, Landroid/util/CloseGuard;->warnIfOpen()V
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Ll73;->a:Landroid/util/CloseGuard;
+
+    invoke-virtual {v0, p1}, Landroid/util/CloseGuard;->open(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Ll73;->a:Landroid/util/CloseGuard;
+
+    invoke-virtual {v0}, Landroid/util/CloseGuard;->close()V
+
     return-void
 .end method

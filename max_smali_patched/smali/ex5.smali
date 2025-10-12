@@ -1,82 +1,50 @@
 .class public final Lex5;
-.super Leje;
-.source "SourceFile"
-
-# interfaces
-.implements Lt96;
+.super Lnz3;
 
 
 # instance fields
-.field public final synthetic X:Lkx5;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:J
+.field public Y:I
+
+.field public final synthetic Z:Lfx5;
+
+.field public o:Lfx5;
 
 
 # direct methods
-.method public constructor <init>(Lkx5;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfx5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lex5;->X:Lkx5;
+    iput-object p1, p0, Lex5;->Z:Lfx5;
 
-    iput-wide p2, p0, Lex5;->Y:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lp04;
+    iput-object p1, p0, Lex5;->X:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lex5;->Y:I
 
-    invoke-virtual {p0, p1, p2}, Lex5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    check-cast p0, Lex5;
+    iput p1, p0, Lex5;->Y:I
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    iget-object p1, p0, Lex5;->Z:Lfx5;
 
-    invoke-virtual {p0, p1}, Lex5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    return-object p1
-.end method
+    invoke-virtual {p1, v0, p0}, Lfx5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lex5;
-
-    iget-object v0, p0, Lex5;->X:Lkx5;
-
-    iget-wide v1, p0, Lex5;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lex5;-><init>(Lkx5;JLkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
     return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
-
-    sget-object p1, Lkx5;->C0:[Lof7;
-
-    iget-object p1, p0, Lex5;->X:Lkx5;
-
-    iget-wide v0, p0, Lex5;->Y:J
-
-    invoke-virtual {p1, v0, v1}, Lkx5;->s(J)V
-
-    sget-object p0, Ltcf;->a:Ltcf;
-
-    return-object p0
 .end method

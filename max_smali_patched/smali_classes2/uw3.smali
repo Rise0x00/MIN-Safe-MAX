@@ -1,404 +1,492 @@
 .class public final Luw3;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lfve;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+.field public final a:Lov0;
+
+.field public final b:Lked;
+
+.field public final c:Lkq3;
+
+.field public final d:Ltv3;
+
+.field public final e:Llld;
+
+.field public volatile f:Ljava/util/List;
+
+.field public volatile g:Ljava/util/List;
+
+.field public final h:Lked;
+
+.field public final i:Li7c;
+
+.field public final j:Ljava/util/HashSet;
+
+.field public volatile k:Ljava/lang/String;
+
+.field public final l:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final m:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/view/LayoutInflater;Landroid/content/Context;)V
-    .locals 16
+.method public constructor <init>(Lec5;Lov0;Lked;Lked;Lkq3;Ltv3;Llld;)V
+    .locals 8
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v1, p1
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput-object v1, v0, Luw3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iput-object v1, p0, Luw3;->f:Ljava/util/List;
 
-    move-object/from16 v2, p3
+    iput-object v1, p0, Luw3;->g:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v1, p0, Luw3;->j:Ljava/util/HashSet;
+
+    const-string v1, ""
+
+    iput-object v1, p0, Luw3;->k:Ljava/lang/String;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v1, p0, Luw3;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v1, p0, Luw3;->m:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    new-instance v3, Lz4;
+    iput-object v1, p0, Luw3;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/16 v4, 0x1d
+    iput-object p2, p0, Luw3;->a:Lov0;
 
-    invoke-direct {v3, v4, v1}, Lz4;-><init>(ILjava/lang/Object;)V
+    iput-object p3, p0, Luw3;->b:Lked;
 
-    invoke-static {v0, v3}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    iput-object p5, p0, Luw3;->c:Lkq3;
 
-    sget-object v3, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->q0:[Lof7;
+    iput-object p6, p0, Luw3;->d:Ltv3;
 
-    new-instance v3, Ls8b;
+    move-object v1, p7
 
-    invoke-virtual/range {p2 .. p2}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
+    iput-object v1, p0, Luw3;->e:Llld;
 
-    move-result-object v4
+    iput-object p4, p0, Luw3;->h:Lked;
 
-    invoke-virtual {v1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->y0()Z
+    new-instance v2, Li7c;
 
-    move-result v5
+    invoke-direct {v2}, Li7c;-><init>()V
 
-    invoke-direct {v3, v4, v5}, Ls8b;-><init>(Landroid/content/Context;Z)V
+    iput-object v2, p0, Luw3;->i:Li7c;
 
-    sget v4, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->r0:I
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {v1}, Lox3;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v4
-
-    const-string v5, "actions"
-
-    invoke-virtual {v4, v5}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v4
-
-    const/4 v6, 0x0
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v4}, Le64;->c(Landroid/os/Bundle;)Ljava/util/List;
-
-    move-result-object v4
-
-    goto :goto_0
-
-    :cond_0
-    move-object v4, v6
-
-    :goto_0
-    sget-object v7, Lr25;->a:Lr25;
-
-    if-nez v4, :cond_1
-
-    move-object v4, v7
-
-    :cond_1
-    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v8
-
-    const/4 v9, 0x0
-
-    if-eqz v8, :cond_3
-
-    :cond_2
-    move v15, v9
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_4
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lmw3;
-
-    iget-object v8, v8, Lmw3;->d:Ljava/lang/Integer;
-
-    if-eqz v8, :cond_4
-
-    move v15, v2
-
-    :goto_1
-    invoke-virtual {v1}, Lox3;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v4
-
-    const-string v8, "header"
-
-    const-class v10, Ldue;
-
-    invoke-static {v4, v8, v10}, Le64;->i(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/os/Parcelable;
-
-    check-cast v4, Ldue;
-
-    const/4 v8, -0x1
-
-    const/4 v10, -0x2
-
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v11
-
-    new-instance v12, Ltw3;
-
-    invoke-direct {v12, v4, v1, v11}, Ltw3;-><init>(Ldue;Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;Landroid/content/Context;)V
-
-    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-direct {v4, v8, v10}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v11, 0xc
-
-    int-to-float v11, v11
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v13, v11
-
-    invoke-static {v13}, Litg;->z(F)I
-
-    move-result v13
-
-    iput v13, v4, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v13, v11
-
-    invoke-static {v13}, Litg;->z(F)I
-
-    move-result v13
-
-    iput v13, v4, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v13, v11
-
-    invoke-static {v13}, Litg;->z(F)I
-
-    move-result v13
-
-    invoke-virtual {v4, v13}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v11, v13
-
-    invoke-static {v11}, Litg;->z(F)I
-
-    move-result v11
-
-    invoke-virtual {v4, v11}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v3, v12, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_5
-    invoke-virtual {v1}, Lox3;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v5}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_6
-
-    invoke-static {v4}, Le64;->c(Landroid/os/Bundle;)Ljava/util/List;
+    invoke-static {}, Lxed;->a()Lked;
 
     move-result-object v6
 
-    :cond_6
-    if-nez v6, :cond_7
+    const-string v1, "unit is null"
 
-    goto :goto_2
+    invoke-static {v5, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    :cond_7
-    move-object v7, v6
+    const-string v1, "scheduler is null"
 
-    :goto_2
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {v6, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v4
+    new-instance v1, Lkda;
 
-    :goto_3
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v7, 0x0
 
-    move-result v5
+    const-wide/16 v3, 0x1
 
-    if-eqz v5, :cond_9
+    invoke-direct/range {v1 .. v7}, Lkda;-><init>(Lnda;JLjava/util/concurrent/TimeUnit;Lked;Z)V
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1, p4}, Lraa;->m(Lked;)Loca;
 
-    move-result-object v5
+    move-result-object v0
 
-    check-cast v5, Lmw3;
+    new-instance v1, Lfx1;
 
-    move v6, v10
+    const/16 v2, 0x1b
 
-    new-instance v10, Lr8b;
+    invoke-direct {v1, v2, p0}, Lfx1;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
+    new-instance v2, Lfx1;
 
-    move-result-object v7
+    const/16 v3, 0x1c
 
-    invoke-virtual {v1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->y0()Z
+    invoke-direct {v2, v3, p1}, Lfx1;-><init>(ILjava/lang/Object;)V
 
-    move-result v11
+    sget-object v3, Loch;->c:Lcg6;
 
-    invoke-direct {v10, v7, v11}, Lr8b;-><init>(Landroid/content/Context;Z)V
+    new-instance v4, Lno7;
 
-    iget-object v12, v5, Lmw3;->b:Ldue;
+    invoke-direct {v4, v1, v2, v3}, Lno7;-><init>(Lwo3;Lwo3;Le6;)V
 
-    iget-object v7, v5, Lmw3;->d:Ljava/lang/Integer;
+    invoke-virtual {v0, v4}, Lraa;->a(Lxda;)V
 
-    iget-object v13, v5, Lmw3;->c:Ljava/lang/Integer;
-
-    if-eqz v7, :cond_8
-
-    move v14, v2
-
-    goto :goto_4
-
-    :cond_8
-    move v14, v9
-
-    :goto_4
-    move-object v11, v10
-
-    invoke-virtual/range {v10 .. v15}, Lr8b;->c(Lr8b;Ldue;Ljava/lang/Integer;ZZ)V
-
-    iget-object v11, v5, Lmw3;->e:Ljava/lang/Integer;
-
-    invoke-virtual {v10, v7, v11}, Lr8b;->b(Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    new-instance v7, Lmb;
-
-    const/16 v11, 0x19
-
-    invoke-direct {v7, v1, v11, v5}, Lmb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v10, v7}, Laug;->y(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v3, v10, v8, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    move v10, v6
-
-    goto :goto_3
-
-    :cond_9
-    move v6, v10
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/16 v4, 0xfa
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lsn4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Litg;->z(F)I
-
-    move-result v4
-
-    const/16 v5, 0x33
-
-    invoke-direct {v2, v4, v6, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    invoke-virtual {v0, v3, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-static {v1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->x0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lnma;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Luw3;->onThemeChanged(Lnma;)V
+    invoke-virtual {p0}, Luw3;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lnma;)V
-    .locals 2
+.method public final a()V
+    .locals 4
 
-    iget-object p1, p0, Luw3;->a:Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;
+    iget-object v0, p0, Luw3;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p1}, Lox3;->getArgs()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v1, "dim"
-
-    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    invoke-static {p1}, Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;->x0(Lone/me/sdk/contextmenu/popup/ContextMenuPopupWindow;)Lnma;
+    iget-object v0, p0, Luw3;->k:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v1, p0, Luw3;->k:Ljava/lang/String;
 
-    invoke-interface {p1}, Lnma;->b()Ldf0;
+    invoke-static {v1, v0}, Lk98;->d(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    move-result-object p1
+    move-result v1
 
-    iget p1, p1, Ldf0;->f:I
+    const/4 v2, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Luw3;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     :cond_0
+    iput-object v0, p0, Luw3;->k:Ljava/lang/String;
+
+    new-instance v0, Lj5;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p0}, Lj5;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lb71;
+
+    const/16 v3, 0x17
+
+    invoke-direct {v1, v3}, Lb71;-><init>(I)V
+
+    iget-object v3, p0, Luw3;->h:Lked;
+
+    invoke-static {v0, v1, v3}, Liad;->a(Le6;Lwo3;Lked;)Lqs1;
+
+    iget-object v0, p0, Luw3;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Luw3;->i:Li7c;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Li7c;->f(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 14
+
+    const-string v0, "updateDataWorker: start"
+
+    const-string v1, "uw3"
+
+    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iget-object v0, p0, Luw3;->c:Lkq3;
+
+    invoke-virtual {v0}, Lkq3;->b()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    iget-object v0, p0, Luw3;->c:Lkq3;
+
+    invoke-virtual {v0}, Lkq3;->k()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v8
+
+    iget-object v10, p0, Luw3;->k:Ljava/lang/String;
+
+    invoke-static {v10}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    const/4 v11, 0x1
+
+    if-eqz v10, :cond_0
+
+    iget-object v10, p0, Luw3;->d:Ltv3;
+
+    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v12, Lhd3;
+
+    const/4 v13, 0x3
+
+    invoke-direct {v12, v13, v10}, Lhd3;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v12}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v12
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v10
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    sub-long v6, v8, v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    sub-long/2addr v12, v8
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    filled-new-array {v10, v6, v7}, [Ljava/lang/Object;
+
+    move-result-object v6
+
+    const-string v7, "updateDataWorker: update %d contacts. fetchTime=%dms, sortTime=%dms"
+
+    invoke-static {v1, v7, v6}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iput-object v0, p0, Luw3;->f:Ljava/util/List;
+
+    goto :goto_2
+
+    :cond_0
+    iget-object v6, p0, Luw3;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v11, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    iget-object v6, p0, Luw3;->k:Ljava/lang/String;
+
+    iget-object v7, p0, Luw3;->e:Llld;
+
+    invoke-static {v6}, Lk98;->r(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_3
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_4
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    :try_start_0
+    move-object v10, v9
+
+    check-cast v10, Lap3;
+
+    invoke-virtual {v7, v10, v6}, Llld;->h(Lap3;Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_3
+
+    invoke-virtual {v8, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_4
+    move-object v0, v8
+
+    :goto_1
+    iget-object v6, p0, Luw3;->d:Ltv3;
+
+    invoke-virtual {v6, v0}, Ltv3;->b(Ljava/util/List;)V
+
+    iput-object v0, p0, Luw3;->g:Ljava/util/List;
+
+    :cond_5
+    :goto_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v6
+
+    sub-long v8, v4, v2
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    sub-long v4, v6, v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    sub-long/2addr v6, v2
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    filled-new-array {v0, v4, v2}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v2, "updateDataWorker: done. awaitLoading=%dms, update=%dms, total=%dms"
+
+    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Luw3;->m:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v11}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v0, p0, Luw3;->b:Lked;
+
+    new-instance v1, Lzv1;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v2, p0}, Lzv1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+
+    return-void
+.end method
+
+.method public onEvent(Lc0g;)V
+    .locals 0
+    .annotation runtime Lxye;
+    .end annotation
+
+    .line 4
+    invoke-virtual {p0}, Luw3;->a()V
+
+    return-void
+.end method
+
+.method public onEvent(Lrx3;)V
+    .locals 1
+    .annotation runtime Lxye;
+    .end annotation
+
+    .line 2
+    iget-object p1, p0, Luw3;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 3
+    invoke-virtual {p0}, Luw3;->a()V
+
+    return-void
+.end method
+
+.method public onEvent(Ly48;)V
+    .locals 0
+    .annotation runtime Lxye;
+    .end annotation
+
+    .line 1
+    invoke-virtual {p0}, Luw3;->a()V
+
     return-void
 .end method

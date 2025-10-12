@@ -1,100 +1,196 @@
-.class public final Lgs5;
+.class public abstract Lgs5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbq5;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbq5;
-
-.field public final synthetic c:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lbq5;Lt96;I)V
+.method public static a(Ljava/lang/Object;Ljava/lang/Object;Landroid/os/CancellationSignal;ILjava/lang/Object;Landroid/os/Handler;)V
     .locals 0
 
-    iput p3, p0, Lgs5;->a:I
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    iput-object p1, p0, Lgs5;->b:Lbq5;
+    check-cast p1, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
 
-    iput-object p2, p0, Lgs5;->c:Ljava/lang/Object;
+    check-cast p4, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual/range {p0 .. p5}, Landroid/hardware/fingerprint/FingerprintManager;->authenticate(Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;Landroid/os/CancellationSignal;ILandroid/hardware/fingerprint/FingerprintManager$AuthenticationCallback;Landroid/os/Handler;)V
 
     return-void
 .end method
 
+.method public static b(Ljava/lang/Object;)Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+    .locals 0
 
-# virtual methods
-.method public final d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationResult;
 
-    iget v0, p0, Lgs5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lfs5;
-
-    iget-object v1, p0, Lgs5;->c:Ljava/lang/Object;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p1, v1, v2}, Lfs5;-><init>(Ldq5;Lt96;I)V
-
-    iget-object p0, p0, Lgs5;->b:Lbq5;
-
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$AuthenticationResult;->getCryptoObject()Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
 
     move-result-object p0
 
-    sget-object p1, Lq04;->a:Lq04;
+    return-object p0
+.end method
 
-    if-ne p0, p1, :cond_0
+.method public static c(Landroid/content/Context;)Landroid/hardware/fingerprint/FingerprintManager;
+    .locals 2
 
-    goto :goto_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    const-string v1, "android.hardware.fingerprint"
+
+    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-class v0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    return-object p0
 
     :cond_0
-    sget-object p0, Ltcf;->a:Ltcf;
+    const/4 p0, 0x0
 
-    :goto_0
     return-object p0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lfs5;
+.method public static d(Ljava/lang/Object;)Z
+    .locals 0
 
-    iget-object v1, p0, Lgs5;->c:Ljava/lang/Object;
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager;
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager;->hasEnrolledFingerprints()Z
 
-    invoke-direct {v0, p1, v1, v2}, Lfs5;-><init>(Ldq5;Lt96;I)V
+    move-result p0
 
-    iget-object p0, p0, Lgs5;->b:Lbq5;
+    return p0
+.end method
 
-    invoke-interface {p0, v0, p2}, Lbq5;->d(Ldq5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public static e(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager;
+
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager;->isHardwareDetected()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static f(Ljava/lang/Object;)Lhs5;
+    .locals 2
+
+    check-cast p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getCipher()Ljavax/crypto/Cipher;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v0, Lhs5;
+
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getCipher()Ljavax/crypto/Cipher;
 
     move-result-object p0
 
-    sget-object p1, Lq04;->a:Lq04;
+    invoke-direct {v0, p0}, Lhs5;-><init>(Ljavax/crypto/Cipher;)V
 
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
+    return-object v0
 
     :cond_1
-    sget-object p0, Ltcf;->a:Ltcf;
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getSignature()Ljava/security/Signature;
 
-    :goto_1
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    new-instance v0, Lhs5;
+
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getSignature()Ljava/security/Signature;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lhs5;-><init>(Ljava/security/Signature;)V
+
+    return-object v0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getMac()Ljavax/crypto/Mac;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    new-instance v0, Lhs5;
+
+    invoke-virtual {p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;->getMac()Ljavax/crypto/Mac;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lhs5;-><init>(Ljavax/crypto/Mac;)V
+
+    :cond_3
+    return-object v0
+.end method
+
+.method public static g(Lhs5;)Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lhs5;->c:Ljavax/crypto/Mac;
+
+    iget-object v2, p0, Lhs5;->a:Ljava/security/Signature;
+
+    iget-object p0, p0, Lhs5;->b:Ljavax/crypto/Cipher;
+
+    if-eqz p0, :cond_1
+
+    new-instance v0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+
+    invoke-direct {v0, p0}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;-><init>(Ljavax/crypto/Cipher;)V
+
+    return-object v0
+
+    :cond_1
+    if-eqz v2, :cond_2
+
+    new-instance p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+
+    invoke-direct {p0, v2}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;-><init>(Ljava/security/Signature;)V
+
     return-object p0
 
-    nop
+    :cond_2
+    if-eqz v1, :cond_3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-instance p0, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;
+
+    invoke-direct {p0, v1}, Landroid/hardware/fingerprint/FingerprintManager$CryptoObject;-><init>(Ljavax/crypto/Mac;)V
+
+    return-object p0
+
+    :cond_3
+    return-object v0
 .end method

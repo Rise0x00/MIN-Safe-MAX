@@ -92,7 +92,11 @@
 
     const/4 p0, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/FloatBuffer;
+    invoke-virtual {v0, p0}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/nio/FloatBuffer;
 
     return-object v0
 .end method

@@ -1,222 +1,253 @@
-.class public final synthetic Lf86;
-.super Ljava/lang/Object;
+.class public final Lf86;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lz5;
+.implements Llf6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+.field public final synthetic Y:Lg86;
+
+.field public final synthetic Z:Lh86;
+
+.field public final synthetic w0:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;I)V
+.method public constructor <init>(Lg86;Lh86;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lf86;->a:I
+    iput-object p1, p0, Lf86;->Y:Lg86;
 
-    iput-object p1, p0, Lf86;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    iput-object p2, p0, Lf86;->Z:Lh86;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lf86;->w0:Ljava/util/List;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lf86;->a:I
+    check-cast p1, Le34;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lf86;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    invoke-virtual {p0, p1, p2}, Lf86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Lx10;
+    move-result-object p1
 
-    iget-object v0, v0, Lx10;->d:Lw10;
+    check-cast p1, Lf86;
 
-    iget-wide v0, v0, Lw10;->a:J
+    sget-object p2, Loyf;->a:Loyf;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p1, p2}, Lf86;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    return-object p1
+.end method
 
-    iget-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lg2d;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {v0}, Lg2d;->n()Lpw8;
+    new-instance p1, Lf86;
 
-    move-result-object v2
+    iget-object v0, p0, Lf86;->Z:Lh86;
 
-    iget-object v3, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->x1:Lwu8;
+    iget-object v1, p0, Lf86;->w0:Ljava/util/List;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Lx10;
+    iget-object v2, p0, Lf86;->Y:Lg86;
 
-    iget-object v4, v0, Lx10;->r:Ljava/lang/String;
+    invoke-direct {p1, v2, v0, v1, p2}, Lf86;-><init>(Lg86;Lh86;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lg2d;
+    return-object p1
+.end method
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Ls4;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    move-result-object p0
+    iget v0, p0, Lf86;->X:I
 
-    const-class v0, Lt09;
+    iget-object v1, p0, Lf86;->Z:Lh86;
 
-    invoke-virtual {p0, v0}, Ls4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v2, p0, Lf86;->Y:Lg86;
 
-    move-result-object p0
+    const/4 v3, 0x1
 
-    move-object v5, p0
+    if-eqz v0, :cond_1
 
-    check-cast v5, Lt09;
+    if-ne v0, v3, :cond_0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Llw8;
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v1 .. v6}, Llw8;-><init>(Lpw8;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;I)V
-
-    new-instance p0, Lim8;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p0, v0}, Lim8;-><init>(I)V
-
-    iget-object v0, v2, Lpw8;->h:Lvxc;
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2, p0, v2}, Lrtc;->a(Lz5;Lvxc;Lz5;Lgm3;Lvxc;)Lgs1;
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->x1()V
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    return-void
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_0
-    iget-object p0, p0, Lf86;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Lh86;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    check-cast p0, Lru/ok/messages/media/attaches/ActAttachesView;
-
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/ActAttachesView;->e()V
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    :pswitch_1
-    iget-object p0, p0, Lf86;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    iget-object p1, v2, Lg86;->a:Lbp7;
 
-    iget-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->j1:Z
+    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    move-result-object p1
 
-    goto :goto_2
+    check-cast p1, Lql6;
+
+    iput v3, p0, Lf86;->X:I
+
+    invoke-virtual {p1, v1, p0}, Lql6;->b(Lh86;Lm3f;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lf34;->a:Lf34;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->z1()V
+    :goto_0
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    move-result-object v0
+    move-result v0
 
-    instance-of v1, v0, Lbm;
+    if-eqz v0, :cond_3
 
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
+    goto :goto_3
 
     :cond_3
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Lh86;
+    iget-object v0, v1, Lh86;->d:Ljava/lang/CharSequence;
 
-    move-result-object v0
+    invoke-static {}, Lvhh;->p()Lsw7;
 
-    if-eqz v0, :cond_8
+    move-result-object v1
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Lx10;
+    if-eqz v0, :cond_5
 
-    iget-object v1, v1, Lx10;->r:Ljava/lang/String;
+    invoke-static {v0}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
 
-    check-cast v0, Lru/ok/messages/media/attaches/ActAttachesView;
+    move-result v4
 
-    iget-object v2, v0, Lru/ok/messages/media/attaches/ActAttachesView;->R0:Le20;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_7
-
-    iget-object v0, v0, Lru/ok/messages/media/attaches/ActAttachesView;->b1:Landroidx/viewpager/widget/ViewPager;
-
-    if-nez v0, :cond_4
+    if-eqz v4, :cond_4
 
     goto :goto_1
 
     :cond_4
-    invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
+    iget-object v4, v2, Lg86;->c:Lbp7;
 
-    move-result v0
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v0}, Le20;->l(I)Lvra;
+    move-result-object v4
+
+    check-cast v4, Lwl6;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, v0}, Lwl6;->a(Lm82;Ljava/lang/CharSequence;)Ljava/util/List;
+
+    move-result-object v11
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v6, Luud;
+
+    const-wide/16 v7, 0x0
+
+    const/4 v10, 0x1
+
+    invoke-direct/range {v6 .. v11}, Luud;-><init>(JLjava/lang/String;ZLjava/util/List;)V
+
+    new-instance v0, Lwud;
+
+    invoke-direct {v0, v6}, Lwud;-><init>(Luud;)V
+
+    invoke-virtual {v1, v0}, Lsw7;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    :goto_1
+    invoke-virtual {v1, p1}, Lsw7;->addAll(Ljava/util/Collection;)Z
+
+    invoke-static {v1}, Lvhh;->e(Ljava/util/List;)Lsw7;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lf86;->w0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    if-nez v0, :cond_5
+    :goto_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_1
+    move-result v1
 
-    :cond_5
-    iget-object v0, v0, Lvra;->a:Ljava/lang/Object;
+    if-eqz v1, :cond_6
 
-    check-cast v0, Lx10;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-nez v0, :cond_6
+    move-result-object v1
 
-    goto :goto_1
+    check-cast v1, Ljava/lang/Number;
 
-    :cond_6
-    iget-object v0, v0, Lx10;->r:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    invoke-static {v0, v1}, Lno9;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    move-result-wide v4
 
-    move-result v3
+    new-instance v1, Ljava/util/LinkedList;
 
-    :cond_7
-    :goto_1
-    if-eqz v3, :cond_8
+    invoke-direct {v1, p1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->I1:Lul9;
+    new-instance v6, Lwtd;
 
-    if-nez v0, :cond_8
+    const/4 v7, 0x2
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->t1()V
+    invoke-direct {v6, v4, v5, v1, v7}, Lwtd;-><init>(JLjava/lang/Object;I)V
+
+    iput-boolean v3, v6, Lrud;->d:Z
+
+    new-instance v1, Ltud;
+
+    invoke-direct {v1, v6}, Ltud;-><init>(Lwtd;)V
+
+    iget-object v4, v2, Lg86;->b:Lbp7;
+
+    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lnah;
+
+    invoke-virtual {v4, v1}, Lnah;->b(Lstd;)V
 
     goto :goto_2
 
-    :cond_8
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->x1()V
+    :cond_6
+    :goto_3
+    sget-object p1, Loyf;->a:Loyf;
 
-    :goto_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

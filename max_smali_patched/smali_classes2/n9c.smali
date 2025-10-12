@@ -1,73 +1,78 @@
 .class public final Ln9c;
-.super Ljava/lang/Object;
+.super Lm3f;
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;
+.implements Llf6;
 
 
 # instance fields
-.field public a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lo9c;
-
-.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
+.field public final synthetic Y:Lp9c;
 
 
 # direct methods
-.method public constructor <init>(Lo9c;Lone/me/rlottie/RLottieImageView;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lp9c;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ln9c;->Y:Lp9c;
 
-    iput-object p1, p0, Ln9c;->b:Lo9c;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Ln9c;->c:Lone/me/rlottie/RLottieImageView;
+    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAllFramesRendered(Lone/me/rlottie/RLottieDrawable;Z)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Ln9c;->b:Lo9c;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p2, p1, Lo9c;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ln9c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v0, p0, Ln9c;->a:Z
+    move-result-object p1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast p1, Ln9c;
 
-    const-string v2, "Reaction effect. OnAllFramesRendered, called:"
+    sget-object p2, Loyf;->a:Loyf;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Ln9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return-object p2
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Ln9c;
 
-    invoke-static {p2, v0}, Lz76;->n(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Ln9c;->Y:Lp9c;
 
-    iget-boolean p2, p0, Ln9c;->a:Z
+    invoke-direct {v0, p2, v1}, Ln9c;-><init>(Lkotlin/coroutines/Continuation;Lp9c;)V
 
-    if-eqz p2, :cond_0
+    iput-object p1, v0, Ln9c;->X:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
 
-    :cond_0
-    new-instance p2, Lz35;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/16 v0, 0x19
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Ln9c;->c:Lone/me/rlottie/RLottieImageView;
+    iget-object p1, p0, Ln9c;->X:Ljava/lang/Object;
 
-    invoke-direct {p2, p0, p1, v1, v0}, Lz35;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    check-cast p1, Lyx1;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    iget-object v0, p0, Ln9c;->Y:Lp9c;
 
-    return-void
+    invoke-static {v0, p1}, Lp9c;->b(Lp9c;Lyx1;)V
+
+    sget-object p1, Loyf;->a:Loyf;
+
+    return-object p1
 .end method

@@ -19,23 +19,13 @@
 
 # virtual methods
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p0
-
-    const-string v0, "backendName"
-
-    invoke-virtual {p0, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
+    .locals 4
 
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v0
 
-    const-string v1, "extras"
+    const-string v1, "backendName"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
@@ -45,78 +35,88 @@
 
     move-result-object v1
 
-    const-string v2, "priority"
+    const-string v2, "extras"
 
     invoke-virtual {v1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    const-string v3, "priority"
 
-    move-result v1
+    invoke-virtual {v2, v3}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p2
 
-    const-string v2, "attemptNumber"
+    const-string v3, "attemptNumber"
 
-    invoke-virtual {p2, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p2, v3}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
-    invoke-static {p1}, Ly5f;->b(Landroid/content/Context;)V
+    invoke-static {p1}, Lzqf;->b(Landroid/content/Context;)V
 
-    invoke-static {}, Lhc0;->a()Lru7;
+    invoke-static {}, Lvb0;->a()Lc28;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lru7;->x(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lc28;->G(Ljava/lang/String;)V
 
-    invoke-static {v1}, Lmbb;->b(I)Ljbb;
+    invoke-static {v2}, Lnqb;->b(I)Lkqb;
 
-    move-result-object p0
+    move-result-object v0
 
-    iput-object p0, p1, Lru7;->c:Ljava/lang/Object;
+    iput-object v0, p1, Lc28;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+    invoke-static {v1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    move-result-object p0
+    move-result-object v0
 
-    iput-object p0, p1, Lru7;->b:Ljava/lang/Object;
+    iput-object v0, p1, Lc28;->b:Ljava/lang/Object;
 
     :cond_0
-    invoke-static {}, Ly5f;->a()Ly5f;
+    invoke-static {}, Lzqf;->a()Lzqf;
 
-    move-result-object p0
+    move-result-object v0
 
-    iget-object p0, p0, Ly5f;->d:Lkgf;
+    iget-object v0, v0, Lzqf;->d:Lx2g;
 
-    invoke-virtual {p1}, Lru7;->i()Lhc0;
+    invoke-virtual {p1}, Lc28;->t()Lvb0;
 
     move-result-object p1
 
-    new-instance v0, Ldc;
+    new-instance v1, Lac;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Ldc;-><init>(I)V
+    invoke-direct {v1, v2}, Lac;-><init>(I)V
 
-    iget-object v1, p0, Lkgf;->e:Ljava/util/concurrent/Executor;
+    iget-object v2, v0, Lx2g;->e:Ljava/util/concurrent/Executor;
 
-    new-instance v2, Lx35;
+    new-instance v3, Li85;
 
-    invoke-direct {v2, p0, p1, p2, v0}, Lx35;-><init>(Lkgf;Lhc0;ILjava/lang/Runnable;)V
+    invoke-direct {v3, v0, p1, p2, v1}, Li85;-><init>(Lx2g;Lvb0;ILjava/lang/Runnable;)V
 
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

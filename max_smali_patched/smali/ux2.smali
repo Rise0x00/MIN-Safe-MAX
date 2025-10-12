@@ -1,199 +1,122 @@
 .class public final Lux2;
-.super Leje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lzy2;
+.field public final synthetic b:Landroid/view/View;
 
-.field public final synthetic Z:J
+.field public final synthetic c:Lvx2;
 
 
 # direct methods
-.method public constructor <init>(Lzy2;JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/view/View;Lvx2;I)V
     .locals 0
 
-    iput-object p1, p0, Lux2;->Y:Lzy2;
+    iput p3, p0, Lux2;->a:I
 
-    iput-wide p2, p0, Lux2;->Z:J
+    iput-object p1, p0, Lux2;->b:Landroid/view/View;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lux2;->c:Lvx2;
 
-    invoke-direct {p0, p1, p4}, Leje;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    check-cast p1, Lp04;
+    iget v0, p0, Lux2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lux2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lux2;->c:Lvx2;
 
-    move-result-object p0
+    iget-object v1, v0, Lvx2;->b:Ls03;
 
-    check-cast p0, Lux2;
+    invoke-virtual {v1}, Ls03;->invoke()Ljava/lang/Object;
 
-    sget-object p1, Ltcf;->a:Ltcf;
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Lux2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v1, Ljava/lang/Boolean;
 
-    move-result-object p0
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return-object p0
-.end method
+    move-result v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    if-eqz v1, :cond_0
 
-    new-instance p1, Lux2;
+    sget-object v1, Ltv2;->a:Ltv2;
 
-    iget-object v0, p0, Lux2;->Y:Lzy2;
+    invoke-virtual {v1}, Ltv2;->b()Ls88;
 
-    iget-wide v1, p0, Lux2;->Z:J
+    move-result-object v1
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lux2;-><init>(Lzy2;JLkotlin/coroutines/Continuation;)V
+    new-instance v2, Lu8b;
 
-    return-object p1
-.end method
+    const/4 v3, 0x1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-direct {v2, v3}, Lu8b;-><init>(I)V
 
-    iget v0, p0, Lux2;->X:I
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    const/4 v1, 0x1
+    move-result-object v2
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, v2}, Ls88;->b(Ljava/util/List;)V
 
-    if-ne v0, v1, :cond_0
+    iget-boolean v1, v0, Lvx2;->o:Z
 
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    goto :goto_0
+    iget-object v1, v0, Lvx2;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lzwc;)V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_0
+    iget-object v0, p0, Lux2;->c:Lvx2;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Lvx2;->c:Lbp7;
 
-    throw p0
+    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lzg7;
+
+    const-string v2, "main"
+
+    const-string v3, "invite_friends"
+
+    const-string v4, "show"
+
+    invoke-virtual {v1, v4, v2, v3}, Lzg7;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v1, v0, Lvx2;->X:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lvx2;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lzwc;)V
 
     :cond_1
-    invoke-static {p1}, Lltg;->C(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Lux2;->Y:Lzy2;
+    nop
 
-    iget-object v0, p1, Lzy2;->u0:Lth7;
-
-    invoke-interface {v0}, Lth7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr72;
-
-    iget-object p1, p1, Lzy2;->c:Ljava/lang/String;
-
-    iput v1, p0, Lux2;->X:I
-
-    iget-wide v1, p0, Lux2;->Z:J
-
-    invoke-virtual {v0, v1, v2, p0, p1}, Lr72;->a(JLax3;Ljava/lang/String;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    sget-object p0, Lq04;->a:Lq04;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/lang/Iterable;
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ln72;
-
-    sget-object v2, Ln72;->u0:Ln72;
-
-    if-ne v1, v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/16 v0, 0xa
-
-    invoke-static {p0, v0}, Li73;->Y(Ljava/lang/Iterable;I)I
-
-    move-result v0
-
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ln72;
-
-    invoke-static {v0}, Lv44;->i(Ln72;)Lmw3;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_5
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

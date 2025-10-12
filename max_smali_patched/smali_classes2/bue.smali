@@ -1,47 +1,84 @@
-.class public final Lbue;
+.class public final synthetic Lbue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/util/function/UnaryOperator;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lyse;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lyse;I)V
+    .locals 0
+
+    iput p2, p0, Lbue;->a:I
+
+    iput-object p1, p0, Lbue;->b:Lyse;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object p0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
+    iget v0, p0, Lbue;->a:I
 
-    invoke-interface {p0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    check-cast p1, Lfue;
 
-    check-cast p0, Ljava/lang/CharSequence;
+    iget-object v0, p0, Lbue;->b:Lyse;
 
-    const-string p1, ""
+    iget-wide v0, v0, Lyse;->b:J
 
-    invoke-static {p0, p1}, Lg67;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p1, Lfue;->b:Ljava/lang/String;
 
-    move-result p1
+    new-instance v2, Lfue;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v2, v0, v1, p1}, Lfue;-><init>(JLjava/lang/String;)V
 
-    sget-object p0, Ldue;->a:Lcue;
+    return-object v2
 
-    return-object p0
+    :pswitch_0
+    check-cast p1, Lfue;
 
-    :cond_0
-    new-instance p1, Lcue;
+    iget-object v0, p0, Lbue;->b:Lyse;
 
-    invoke-direct {p1, p0}, Lcue;-><init>(Ljava/lang/CharSequence;)V
+    iget-wide v0, v0, Lyse;->b:J
+
+    iget-object p1, p1, Lfue;->b:Ljava/lang/String;
+
+    new-instance v2, Lfue;
+
+    invoke-direct {v2, v0, v1, p1}, Lfue;-><init>(JLjava/lang/String;)V
+
+    return-object v2
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Long;
+
+    iget-object p1, p0, Lbue;->b:Lyse;
+
+    iget-wide v0, p1, Lyse;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
 
     return-object p1
-.end method
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p0, p1, [Lcue;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

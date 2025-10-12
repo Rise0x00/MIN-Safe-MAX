@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsid;
-
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:La5;
 
 
 # direct methods
-.method public constructor <init>(Lgp7;)V
+.method public constructor <init>(La5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqid;->a:Ljava/util/List;
+    iput-object p1, p0, Lqid;->a:La5;
 
     return-void
 .end method

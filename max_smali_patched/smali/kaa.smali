@@ -1,283 +1,123 @@
-.class public abstract Lkaa;
-.super Ljava/lang/Object;
+.class public final Lkaa;
+.super Lct0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public e:Ljava/util/LinkedList;
 
-.field public static final B:I
 
-.field public static final C:I
+# virtual methods
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-.field public static final D:I
+    iget-object v0, p0, Lkaa;->e:Ljava/util/LinkedList;
 
-.field public static final E:I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
 
-.field public static final F:I
+    move-result-object v0
 
-.field public static final G:I
+    check-cast v0, Ljaa;
 
-.field public static final H:I
+    if-nez v0, :cond_0
 
-.field public static final I:I
+    new-instance v0, Ljaa;
 
-.field public static final J:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static final K:I
+    const/4 v1, 0x0
 
-.field public static final L:I
+    iput-object v1, v0, Ljaa;->a:Ljava/lang/ref/SoftReference;
 
-.field public static final M:I
+    iput-object v1, v0, Ljaa;->b:Ljava/lang/ref/SoftReference;
 
-.field public static final N:I
+    iput-object v1, v0, Ljaa;->c:Ljava/lang/ref/SoftReference;
 
-.field public static final O:I
+    :cond_0
+    new-instance v1, Ljava/lang/ref/SoftReference;
 
-.field public static final P:I
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
 
-.field public static final Q:I
+    iput-object v1, v0, Ljaa;->a:Ljava/lang/ref/SoftReference;
 
-.field public static final R:I
+    new-instance v1, Ljava/lang/ref/SoftReference;
 
-.field public static final S:I
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
 
-.field public static final a:I
+    iput-object v1, v0, Ljaa;->b:Ljava/lang/ref/SoftReference;
 
-.field public static final b:I
+    new-instance v1, Ljava/lang/ref/SoftReference;
 
-.field public static final c:I
+    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
 
-.field public static final d:I
+    iput-object v1, v0, Ljaa;->c:Ljava/lang/ref/SoftReference;
 
-.field public static final e:I
+    iget-object p1, p0, Lct0;->c:Ljava/util/LinkedList;
 
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget v0, Lt3c;->chat_screen__leave_chat_action:I
-
-    sput v0, Lkaa;->a:I
-
-    sget v0, Lt3c;->chat_screen__leave_chat_title:I
-
-    sput v0, Lkaa;->b:I
-
-    sget v0, Lt3c;->chat_screen__remove_chat_action:I
-
-    sput v0, Lkaa;->c:I
-
-    sget v0, Lt3c;->chat_screen__remove_chat_title:I
-
-    sput v0, Lkaa;->d:I
-
-    sget v0, Lt3c;->chat_screen__search_result_down_button_accessibility:I
-
-    sput v0, Lkaa;->e:I
-
-    sget v0, Lt3c;->chat_screen__search_result_not_found:I
-
-    sput v0, Lkaa;->f:I
-
-    sget v0, Lt3c;->chat_screen__search_result_success:I
-
-    sput v0, Lkaa;->g:I
-
-    sget v0, Lt3c;->chat_screen__search_result_up_button_accessibility:I
-
-    sput v0, Lkaa;->h:I
-
-    sget v0, Lt3c;->chat_screen__start_chat_with_bot:I
-
-    sput v0, Lkaa;->i:I
-
-    sget v0, Lt3c;->chat_screen_channel_search_hint:I
-
-    sput v0, Lkaa;->j:I
-
-    sget v0, Lt3c;->chat_screen_file_too_big_caption:I
-
-    sput v0, Lkaa;->k:I
-
-    sget v0, Lt3c;->chat_screen_file_too_big_title:I
-
-    sput v0, Lkaa;->l:I
-
-    sget v0, Lt3c;->chat_screen_join_channel:I
-
-    sput v0, Lkaa;->m:I
-
-    sget v0, Lt3c;->chat_screen_join_chat:I
-
-    sput v0, Lkaa;->n:I
-
-    sget v0, Lt3c;->chat_screen_leave_chat:I
-
-    sput v0, Lkaa;->o:I
-
-    sget v0, Lt3c;->chat_screen_remove_chat:I
-
-    sput v0, Lkaa;->p:I
-
-    sget v0, Lt3c;->chat_screen_search_hint:I
-
-    sput v0, Lkaa;->q:I
-
-    sget v0, Lt3c;->chat_screen_status_mute_chat:I
-
-    sput v0, Lkaa;->r:I
-
-    sget v0, Lt3c;->chat_screen_status_subscribe_chat:I
-
-    sput v0, Lkaa;->s:I
-
-    sget v0, Lt3c;->chat_screen_status_unmute_chat:I
-
-    sput v0, Lkaa;->t:I
-
-    sget v0, Lt3c;->chat_screen_unblock_contact:I
-
-    sput v0, Lkaa;->u:I
-
-    sget v0, Lt3c;->media_bar_restricted_media_action:I
-
-    sput v0, Lkaa;->v:I
-
-    sget v0, Lt3c;->media_bar_restricted_media_subtitle:I
-
-    sput v0, Lkaa;->w:I
-
-    sget v0, Lt3c;->media_bar_restricted_media_title:I
-
-    sput v0, Lkaa;->x:I
-
-    sget v0, Lt3c;->media_type_picker__close_dialog__accept:I
-
-    sput v0, Lkaa;->y:I
-
-    sget v0, Lt3c;->media_type_picker__close_dialog__title:I
-
-    sput v0, Lkaa;->z:I
-
-    sget v0, Lt3c;->media_type_picker__contact:I
-
-    sput v0, Lkaa;->A:I
-
-    sget v0, Lt3c;->media_type_picker__file:I
-
-    sput v0, Lkaa;->B:I
-
-    sget v0, Lt3c;->media_type_picker__file_dialog__from_file_manager:I
-
-    sput v0, Lkaa;->C:I
-
-    sget v0, Lt3c;->media_type_picker__file_dialog__from_gallery:I
-
-    sput v0, Lkaa;->D:I
-
-    sget v0, Lt3c;->media_type_picker__file_dialog__title:I
-
-    sput v0, Lkaa;->E:I
-
-    sget v0, Lt3c;->media_type_picker__gallery:I
-
-    sput v0, Lkaa;->F:I
-
-    sget v0, Lt3c;->media_type_picker__input_hint:I
-
-    sput v0, Lkaa;->G:I
-
-    sget v0, Lt3c;->media_type_picker__money:I
-
-    sput v0, Lkaa;->H:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Lkaa;->I:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__camera_permission:I
-
-    sput v0, Lkaa;->J:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Lkaa;->K:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Lkaa;->L:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Lkaa;->M:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Lkaa;->N:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Lkaa;->O:I
-
-    sget v0, Lt3c;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Lkaa;->P:I
-
-    sget v0, Lt3c;->media_type_picker__place:I
-
-    sput v0, Lkaa;->Q:I
-
-    sget v0, Lt3c;->media_type_picker__snack_file:I
-
-    sput v0, Lkaa;->R:I
-
-    sget v0, Lt3c;->media_type_picker__snack_media:I
-
-    sput v0, Lkaa;->S:I
+    invoke-virtual {p1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     return-void
+.end method
+
+.method public final b()Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lct0;->c:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljaa;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Ljaa;->a:Ljava/lang/ref/SoftReference;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    :goto_0
+    iget-object v3, v0, Ljaa;->a:Ljava/lang/ref/SoftReference;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Ljaa;->a:Ljava/lang/ref/SoftReference;
+
+    :cond_1
+    iget-object v3, v0, Ljaa;->b:Ljava/lang/ref/SoftReference;
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Ljaa;->b:Ljava/lang/ref/SoftReference;
+
+    :cond_2
+    iget-object v3, v0, Ljaa;->c:Ljava/lang/ref/SoftReference;
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    iput-object v2, v0, Ljaa;->c:Ljava/lang/ref/SoftReference;
+
+    :cond_3
+    iget-object v2, p0, Lkaa;->e:Ljava/util/LinkedList;
+
+    invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-object v1
 .end method

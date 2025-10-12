@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final a:[Lfb5;
+.field public final a:[Lzf5;
 
 
 # direct methods
-.method public constructor <init>(Lgb5;Lgb5;)V
+.method public constructor <init>(Lag5;Lag5;)V
     .locals 17
 
     const-string v0, ".so"
@@ -17,7 +17,7 @@
 
     move-object/from16 v1, p1
 
-    iget-object v1, v1, Ledf;->d:Landroid/content/Context;
+    iget-object v1, v1, Lzyf;->d:Landroid/content/Context;
 
     new-instance v2, Ljava/io/File;
 
@@ -165,9 +165,9 @@
 
     move-object/from16 v6, v16
 
-    check-cast v6, Lfb5;
+    check-cast v6, Lzf5;
 
-    iget-object v6, v6, Lxoe;->b:Ljava/lang/Object;
+    iget-object v6, v6, Li9f;->b:Ljava/lang/Object;
 
     check-cast v6, Ljava/lang/String;
 
@@ -217,13 +217,13 @@
 
     move-result-object v11
 
-    new-instance v12, Lfb5;
+    new-instance v12, Lzf5;
 
     new-instance v14, Ljava/io/File;
 
     invoke-direct {v14, v9, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    invoke-direct {v12, v13, v14, v11}, Lfb5;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    invoke-direct {v12, v13, v14, v11}, Lzf5;-><init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v1, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -330,113 +330,113 @@
 
     move-result v0
 
-    new-array v0, v0, [Lfb5;
+    new-array v0, v0, [Lzf5;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lfb5;
+    check-cast v0, [Lzf5;
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/facebook/soloader/c;->a:[Lfb5;
+    iput-object v0, v1, Lcom/facebook/soloader/c;->a:[Lzf5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()[Lxoe;
-    .locals 0
+.method public final m()[Li9f;
+    .locals 1
 
-    iget-object p0, p0, Lcom/facebook/soloader/c;->a:[Lfb5;
+    iget-object v0, p0, Lcom/facebook/soloader/c;->a:[Lzf5;
 
-    return-object p0
+    return-object v0
 .end method
 
 .method public final n(Ljava/io/File;)V
-    .locals 7
+    .locals 8
 
     const v0, 0x8000
 
     new-array v0, v0, [B
 
-    iget-object p0, p0, Lcom/facebook/soloader/c;->a:[Lfb5;
+    iget-object v1, p0, Lcom/facebook/soloader/c;->a:[Lzf5;
 
-    array-length v1, p0
+    array-length v2, v1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_1
+    if-ge v3, v2, :cond_1
 
-    aget-object v3, p0, v2
+    aget-object v4, v1, v3
 
-    new-instance v4, Ljava/io/FileInputStream;
+    new-instance v5, Ljava/io/FileInputStream;
 
-    iget-object v5, v3, Lfb5;->o:Ljava/io/File;
+    iget-object v6, v4, Lzf5;->o:Ljava/io/File;
 
-    invoke-direct {v4, v5}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v5, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
     :try_start_0
-    new-instance v5, Lkk5;
+    new-instance v6, Ldp5;
 
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
-    invoke-direct {v5, v3, v6, v4}, Lkk5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v6, v4, v7, v5}, Ldp5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     :try_start_1
-    invoke-static {v5, v0, p1}, Lcom/facebook/soloader/e;->c(Lkk5;[BLjava/io/File;)V
+    invoke-static {v6, v0, p1}, Lcom/facebook/soloader/e;->c(Ldp5;[BLjava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    invoke-virtual {v5}, Lkk5;->close()V
+    invoke-virtual {v6}, Ldp5;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
     goto :goto_2
 
     :catchall_1
-    move-exception p0
+    move-exception p1
 
     :try_start_3
-    invoke-virtual {v5}, Lkk5;->close()V
+    invoke-virtual {v6}, Ldp5;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     goto :goto_1
 
     :catchall_2
-    move-exception p1
+    move-exception v0
 
     :try_start_4
-    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :goto_1
-    throw p0
+    throw p1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :goto_2
-    if-eqz v4, :cond_0
+    if-eqz v5, :cond_0
 
-    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
 
     :cond_0
-    throw p0
+    throw p1
 
     :cond_1
     return-void

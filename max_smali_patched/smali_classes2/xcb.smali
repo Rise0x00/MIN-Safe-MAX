@@ -1,105 +1,108 @@
-.class public abstract Lxcb;
-.super Ljava/lang/Object;
+.class public final Lxcb;
+.super Lm3f;
 .source "SourceFile"
+
+# interfaces
+.implements Llf6;
+
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method public static a([B)Lycb;
-    .locals 14
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
+    iput-object p1, p0, Lxcb;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
+    const/4 p1, 0x2
 
-    :try_start_0
-    invoke-static {v0, p0}, Lgz8;->mergeFrom(Lgz8;[B)Lgz8;
+    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eqz v0, :cond_0
+    check-cast p1, Ljava/util/Set;
 
-    new-instance v1, Lo10;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+    invoke-virtual {p0, p1, p2}, Lxcb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+    move-result-object p1
 
-    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+    check-cast p1, Lxcb;
 
-    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+    sget-object p2, Loyf;->a:Loyf;
 
-    const/4 v6, 0x2
+    invoke-virtual {p1, p2}, Lxcb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v6}, Lo10;-><init>(FFFFI)V
+    return-object p2
+.end method
 
-    :goto_0
-    move-object v10, v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    goto :goto_1
+    new-instance v0, Lxcb;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v1, p0, Lxcb;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-direct {v0, v1, p2}, Lxcb;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lxcb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxcb;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lxcb;->Y:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    if-nez p1, :cond_0
+
+    sget p1, Ljwa;->u:I
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
     goto :goto_0
 
-    :goto_1
-    new-instance v2, Lycb;
+    :cond_0
+    sget v2, Ljwa;->t:I
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+    new-instance v2, Ljava/lang/Integer;
 
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
+    :goto_0
+    sget-object p1, Loyf;->a:Loyf;
 
-    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
-
-    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
-
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
-
-    const-string v0, "PRESET_AVATAR"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    :goto_2
-    move v13, p0
-
-    goto :goto_3
-
-    :cond_1
-    const/4 p0, 0x2
-
-    goto :goto_2
-
-    :goto_3
-    invoke-direct/range {v2 .. v13}, Lycb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLo10;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p1
 .end method
