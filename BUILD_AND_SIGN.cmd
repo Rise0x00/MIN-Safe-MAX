@@ -21,11 +21,13 @@ IF EXIST "ks.keystore" (
     echo Signing done!
     echo.
     echo Build complete!
+    TITLE Build complete successfuly!
 ) ELSE (
     echo ks.keystore not found!
     echo Sign failed!
+    TITLE Build complete via error!
 )
 
 :END
-TITLE Build complete!
+TITLE Build end!
 Pause
